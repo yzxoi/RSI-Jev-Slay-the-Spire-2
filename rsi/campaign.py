@@ -16,7 +16,7 @@ from .live_plan import plan_native
 
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--expected-run-id',required=True);p.add_argument('--max-actions',type=int,default=2000);p.add_argument('--max-seconds',type=int,default=3600);p.add_argument('--max-usd',type=float,default=3);p.add_argument('--output',required=True);p.add_argument('--execute',action='store_true');p.add_argument('--expert-choice');p.add_argument('--pause-on-danger',action='store_true');p.add_argument('--stop-file');p.add_argument('--review-macro',action='store_true');p.add_argument('--combat-policy',choices=['jev','planned'],default='planned');a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--expected-run-id',required=True);p.add_argument('--max-actions',type=int,default=2000);p.add_argument('--max-seconds',type=int,default=3600);p.add_argument('--max-usd',type=float,default=3);p.add_argument('--output',required=True);p.add_argument('--execute',action='store_true');p.add_argument('--expert-choice');p.add_argument('--pause-on-danger',action='store_true');p.add_argument('--danger-hp',type=int,default=20);p.add_argument('--stop-file');p.add_argument('--review-macro',action='store_true');p.add_argument('--combat-policy',choices=['jev','planned'],default='planned');a=p.parse_args()
     manifest=version_manifest()
     if manifest['tracked_dirty']:raise RuntimeError('Commit implementation before execution')
     # Cross-worktree lock follows the same local server, not each checkout.
@@ -36,7 +36,7 @@ def main():
                 if screen=='GAME_OVER':result['status']='victory' if (raw.get('game_over') or {}).get('is_victory') else 'normal_defeat';break
                 if result['actions']>=a.max_actions or time.monotonic()-start>a.max_seconds:result['status']='budget_boundary';break
                 if a.stop_file and Path(a.stop_file).exists():result['status']='requested_boundary';break
-                if a.pause_on_danger and not expert and screen=='COMBAT' and not raw.get('selection') and (raw.get('combat') or {}).get('player',{}).get('energy',0)>0 and (raw.get('run') or {}).get('current_hp',100)<=20:
+                if a.pause_on_danger and not expert and screen=='COMBAT' and not raw.get('selection') and (raw.get('combat') or {}).get('player',{}).get('energy',0)>0 and (raw.get('run') or {}).get('current_hp',100)<=a.danger_hp:
                     result['status']='expert_required';trace.write('expert_required',{'reason':'low_hp_before_spending_energy','state_hash':fingerprint(raw)});break
                 if screen in ['PAUSE_MENU','SETTINGS']:raise RuntimeError('User paused game')
                 cs=candidates(raw,history)
