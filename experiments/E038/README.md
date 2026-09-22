@@ -15,3 +15,7 @@ Iteration1 tested290d5e4: native9/9 HP/block observations match vs baseline3/9. 
 Iteration2 d60ca51: all50 unit tests pass. Six-run launcher enforces the preregistered1500action/300s/200modelcall/$0.50 per-run bounds plus shared1200calls/$3. Exact identical Jev requests are memoized between arms; this affects HTTP cost and matched-choice reproducibility, not game state. Run `PYTHONPATH=. python3 scripts/evaluate_retaliation.py`.
 
 Paired development at8386ca0: all6 normal defeats,0errors,0wins; all3 pairs tied (Act1floor13,Act2floor4,Act1floor8). Budget{'requests': 57, 'cost_usd': 0.00838614, 'unknown': False}. This cohort does not show a full-run benefit. Original errors are not filtered. A fresh native run continues under the preregistered few-Astra allowance.
+
+Fresh native EFUZ4NHFCXBT:129 accepted actions,2explicit Astra decisions (PommelStrike at a guaranteed-lethal low-HP boundary and BloodPotion), stopped at floor7turn6 for E005 shadow verification. Segment reports/raw trace gzip and aggregate native-summary.json retained. This trial is interrupted/transferred, not a full-run defeat or victory, and cannot support a win-rate estimate. E005 then independently verified exact game-engine state and completed this fight via Jev.
+
+Promotion: merge retaliation arithmetic as opt-in support after9/9factual observations and50tests; do not change default policy or claim improved win rate. The six fixed CLI runs are all ties; native transferred trial remains incomplete.
