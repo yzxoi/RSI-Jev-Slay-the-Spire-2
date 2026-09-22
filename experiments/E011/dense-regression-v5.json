@@ -1,0 +1,31 @@
+{
+  "manifest": {
+    "schema_version": 1,
+    "code_commit": "204eea87bd045b31615705eccfec41875fe1404b",
+    "tracked_dirty": false,
+    "headless_game_sha256": "17d8576d148a9c5efbb816b3b57495deeeac74b3698a983d0fce3177014c5c70",
+    "headless_assembly_sha256": "4f50dfadf8442f152cfa730578d4e1341366bd4e0c8ab1a0442c6d33ef55c59a",
+    "patches": {
+      "headless-event-sync.patch": "b55da2257f6cb65b810df8e0b59a626d4e8ee13d2e91df228b79db60f314b08f"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+  },
+  "source_trace": "/tmp/rsi-sts2-planner/artifacts/runs/36baacb0-a815-4da2-8689-13c84a085bb7/decisions.jsonl",
+  "before": {
+    "decision": "event_choice",
+    "hp": 9
+  },
+  "after": {
+    "decision": "event_choice",
+    "hp": 30
+  },
+  "progress": true,
+  "trace_path": "artifacts/runs/839d613c-d475-4267-bfad-c7f77ff51965/decisions.jsonl",
+  "trace_sha256": "8a2dabc454787b57840ae83d931801ded0425920040be5038e7879d572e61e8e"
+}
