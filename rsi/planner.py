@@ -1,0 +1,73 @@
+"""Bounded approximate turn planning; only execute the first fresh legal action."""
+import copy
+import math
+from .numerical import intent_damage
+
+SCOPE='Approximate current-hand search, not an engine clone. Draws, random effects, orbs, minions, triggers and unknown mechanics use heuristic utility; all plans re-evaluated after each real action.'
+
+
+def choose_plan(state, candidates, width=40, depth=8):
+    cards={c['index']:c for c in state.get('hand',[])}
+    enemies={e['index']:e for e in state.get('enemies',[])}
+    initial_hp={i:e['hp'] for i,e in enemies.items()}; incoming={i:intent_damage(e) for i,e in enemies.items()}
+    hp=state.get('player',{}).get('hp',100)
+    start={'energy':state.get('energy',0),'block':state.get('player',{}).get('block',0),'hp':dict(initial_hp),'eblock':{i:e.get('block',0) for i,e in enemies.items()},'used':frozenset(),'plan':[],'utility':0.,'strength':0,'vuln':set()}
+    def score(n):
+        loss=max(0,sum(incoming[i] for i,h in n['hp'].items() if h>0)-n['block'])
+        kills=sum(h<=0 for h in n['hp'].values());damage=sum(initial_hp[i]-max(0,h) for i,h in n['hp'].items())
+        return (damage*.85 + kills*9 + (150 if kills==len(enemies) else 0)
+                - loss*1.5 - (1000 if loss>=hp else 0) + n['utility'])
+    frontier=[start]; best=start;expanded=0
+    for _ in range(min(depth,len(cards))):
+        children=[]
+        for n in frontier:
+            for c in candidates:
+                cmd=c['action'];args=cmd.get('args',cmd)
+                if cmd['action']!='play_card':continue
+                idx=args['card_index'];card=cards[idx];stats=card.get('stats') or {};cost=max(0,card.get('cost',0))
+                if idx in n['used'] or cost>n['energy']:continue
+                target=args.get('target_index')
+                if target is not None and (target not in n['hp'] or n['hp'][target]<=0):continue
+                m=copy.deepcopy(n);m['used']=n['used']|{idx};m['plan']=n['plan']+[c['id']];m['energy']-=cost
+                ident=card.get('id','').split('.')[-1]
+                block=stats.get('block',0)
+                if ident=='ENTRENCH':block=m['block']
+                m['block']+=max(0,block)
+                previews=card.get('damage_by_target') or []
+                for preview in previews:
+                    t=preview['target_index']
+                    if t not in m['hp'] or m['hp'][t]<=0 or (target is not None and target!=t):continue
+                    base=preview.get('total_damage',preview.get('damage',0)) or 0
+                    if ident=='BODY_SLAM':base=m['block']
+                    base+=m['strength']
+                    if t in m['vuln']:base=math.floor(base*1.5)
+                    dealt=max(0,base-m['eblock'][t]);m['eblock'][t]=max(0,m['eblock'][t]-base);m['hp'][t]=max(0,m['hp'][t]-dealt)
+                if stats.get('vulnerablepower',0) and target is not None:
+                    already=any('vulnerab' in str(p.get('name','')).lower() or p.get('power_id')=='VULNERABLE_POWER' for p in enemies[target].get('powers') or [])
+                    if not already:m['vuln'].add(target)
+                    m['utility']+=stats['vulnerablepower']*1.5
+                if stats.get('strengthpower',0):
+                    m['strength']+=stats['strengthpower'];m['utility']+=stats['strengthpower']*7
+                # Utility does not claim the resulting unknown drawn/generated cards.
+                draw=stats.get('cards',0);m['utility']+=draw*3
+                if card.get('type')=='Power':
+                    m['utility']+=7 + stats.get('energy',0)*12 + stats.get('dexteritypower',0)*8
+                else:
+                    gain=stats.get('energy',0)
+                    if gain>0:m['energy']+=gain;m['utility']+=gain*1.5
+                if stats.get('weakpower',0):m['utility']+=min(8,sum(incoming.values())*.25)
+                # Unknown non-numeric utility is a small tie breaker, not proof.
+                if not previews and not block and not draw:m['utility']+=.4
+                if ident=='ARMAMENTS':m['utility']+=2
+                if ident=='BATTLE_TRANCE':m['utility']+=3
+                children.append(m);expanded+=1
+                if score(m)>score(best):best=m
+        if not children:break
+        # Equivalent plans retain only one abstract endpoint, reducing factorial duplication.
+        unique={}
+        for n in children:
+            key=(n['used'],n['energy'],n['block'],tuple(n['hp'].items()),tuple(n['eblock'].items()),n['strength'],tuple(sorted(n['vuln'])))
+            if key not in unique or score(n)>score(unique[key]):unique[key]=n
+        frontier=sorted(unique.values(),key=score,reverse=True)[:width]
+    chosen=next((c for c in candidates if best['plan'] and c['id']==best['plan'][0]),next(c for c in candidates if c['action']['action']=='end_turn'))
+    return chosen,{'scope':SCOPE,'plan_ids':best['plan'],'score':round(score(best),3),'predicted_block':best['block'],'predicted_enemy_hp':best['hp'],'expanded':expanded,'width':width,'depth':depth}
