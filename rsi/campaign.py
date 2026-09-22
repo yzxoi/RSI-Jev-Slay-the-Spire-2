@@ -17,7 +17,7 @@ from .encounters import sandpit_rule
 
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--expected-run-id',required=True);p.add_argument('--max-actions',type=int,default=2000);p.add_argument('--max-seconds',type=int,default=3600);p.add_argument('--max-usd',type=float,default=3);p.add_argument('--output',required=True);p.add_argument('--execute',action='store_true');p.add_argument('--expert-choice');p.add_argument('--pause-on-danger',action='store_true');p.add_argument('--danger-hp',type=int,default=20);p.add_argument('--stop-file');p.add_argument('--review-macro',action='store_true');p.add_argument('--review-cards',default='');p.add_argument('--combat-policy',choices=['jev','planned'],default='planned');a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--expected-run-id',required=True);p.add_argument('--max-actions',type=int,default=2000);p.add_argument('--max-seconds',type=int,default=3600);p.add_argument('--max-usd',type=float,default=3);p.add_argument('--output',required=True);p.add_argument('--execute',action='store_true');p.add_argument('--expert-choice');p.add_argument('--pause-on-danger',action='store_true');p.add_argument('--danger-hp',type=int,default=20);p.add_argument('--stop-file');p.add_argument('--review-macro',action='store_true');p.add_argument('--review-cards',default='');p.add_argument('--auto-combat-selections',action='store_true');p.add_argument('--combat-policy',choices=['jev','planned'],default='planned');a=p.parse_args()
     manifest=version_manifest()
     if manifest['tracked_dirty']:raise RuntimeError('Commit implementation before execution')
     # Cross-worktree lock follows the same local server, not each checkout.
@@ -48,7 +48,7 @@ def main():
                 review_ids=set(a.review_cards.split(','))
                 if not expert and screen=='COMBAT' and any(h.get('card_id') in review_ids and h.get('playable') and any(c['action'].get('action')=='play_card' and c['action'].get('card_index')==h['index'] for c in cs) for h in (raw.get('combat') or {}).get('hand',[])):
                     result['status']='expert_required';trace.write('expert_required',{'reason':'explicit_card_review','state_hash':fingerprint(raw)});break
-                if a.review_macro and not expert and screen!='COMBAT' and len(cs)>1:
+                if a.review_macro and not expert and screen!='COMBAT' and len(cs)>1 and not (a.auto_combat_selections and screen=='CARD_SELECTION' and raw.get('in_combat')):
                     result['status']='expert_required';trace.write('expert_required',{'reason':'macro_review','state_hash':fingerprint(raw)});break
                 encounter=sandpit_rule(raw,cs) if screen=='COMBAT' else None
                 if encounter:
