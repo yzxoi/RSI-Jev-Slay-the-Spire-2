@@ -1,0 +1,3498 @@
+{
+  "tested_commit": "8d3c716",
+  "reports": [
+    {
+      "report": "experiments/E012/heldout-v1.json",
+      "sha256": "4b942bca95e52e50eca2aad0a1483ad2742e355e09f7b60ccf929518d308eb4c",
+      "has_multi_act": false,
+      "groups": {
+        "hybrid": {
+          "normal_defeat:act1": 5,
+          "error:act1": 10
+        },
+        "planned": {
+          "normal_defeat:act1": 3,
+          "error:act1": 12
+        }
+      },
+      "comparisons": [
+        {
+          "baseline": "hybrid",
+          "treatment": "planned",
+          "outcomes": {
+            "better": 1,
+            "incomplete_or_error": 12,
+            "tie": 1,
+            "worse": 1
+          },
+          "pairs": [
+            {
+              "character": "Ironclad",
+              "seed": "full_eval_004",
+              "baseline": [
+                false,
+                1,
+                6
+              ],
+              "treatment": [
+                false,
+                1,
+                9
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Regent",
+              "seed": "full_eval_004",
+              "baseline": [
+                false,
+                1,
+                6
+              ],
+              "treatment": [
+                false,
+                1,
+                6
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Necrobinder",
+              "seed": "full_eval_004",
+              "baseline": [
+                false,
+                1,
+                9
+              ],
+              "treatment": [
+                false,
+                1,
+                8
+              ],
+              "outcome": "worse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "experiments/E012/macro-development-v1.json",
+      "sha256": "80ab1752492323269037cd3ad08ffa04a0320fafac568fecb3ef7661c87fc4b9",
+      "has_multi_act": false,
+      "groups": {
+        "hybrid": {
+          "error:act1": 5
+        },
+        "planned": {
+          "error:act1": 5
+        }
+      },
+      "comparisons": [
+        {
+          "baseline": "hybrid",
+          "treatment": "planned",
+          "outcomes": {
+            "incomplete_or_error": 5
+          },
+          "pairs": []
+        }
+      ]
+    },
+    {
+      "report": "experiments/E012/heldout-v3.json",
+      "sha256": "ae606ff665c21b0c03afc7cab09b6e845d3e135f4493f2713a33bfbacbe313f9",
+      "has_multi_act": false,
+      "groups": {
+        "hybrid": {
+          "normal_defeat:act1": 15
+        },
+        "planned": {
+          "normal_defeat:act1": 14,
+          "error:act1": 1
+        }
+      },
+      "comparisons": [
+        {
+          "baseline": "hybrid",
+          "treatment": "planned",
+          "outcomes": {
+            "better": 4,
+            "incomplete_or_error": 1,
+            "worse": 2,
+            "tie": 8
+          },
+          "pairs": [
+            {
+              "character": "Ironclad",
+              "seed": "full_eval_004",
+              "baseline": [
+                false,
+                1,
+                6
+              ],
+              "treatment": [
+                false,
+                1,
+                9
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Defect",
+              "seed": "full_eval_004",
+              "baseline": [
+                false,
+                1,
+                9
+              ],
+              "treatment": [
+                false,
+                1,
+                8
+              ],
+              "outcome": "worse"
+            },
+            {
+              "character": "Regent",
+              "seed": "full_eval_004",
+              "baseline": [
+                false,
+                1,
+                6
+              ],
+              "treatment": [
+                false,
+                1,
+                6
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Necrobinder",
+              "seed": "full_eval_004",
+              "baseline": [
+                false,
+                1,
+                9
+              ],
+              "treatment": [
+                false,
+                1,
+                9
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Ironclad",
+              "seed": "full_eval_005",
+              "baseline": [
+                false,
+                1,
+                17
+              ],
+              "treatment": [
+                false,
+                1,
+                17
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Silent",
+              "seed": "full_eval_005",
+              "baseline": [
+                false,
+                1,
+                13
+              ],
+              "treatment": [
+                false,
+                1,
+                13
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Defect",
+              "seed": "full_eval_005",
+              "baseline": [
+                false,
+                1,
+                17
+              ],
+              "treatment": [
+                false,
+                1,
+                17
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Regent",
+              "seed": "full_eval_005",
+              "baseline": [
+                false,
+                1,
+                14
+              ],
+              "treatment": [
+                false,
+                1,
+                15
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Necrobinder",
+              "seed": "full_eval_005",
+              "baseline": [
+                false,
+                1,
+                14
+              ],
+              "treatment": [
+                false,
+                1,
+                17
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Ironclad",
+              "seed": "full_eval_006",
+              "baseline": [
+                false,
+                1,
+                6
+              ],
+              "treatment": [
+                false,
+                1,
+                17
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Silent",
+              "seed": "full_eval_006",
+              "baseline": [
+                false,
+                1,
+                17
+              ],
+              "treatment": [
+                false,
+                1,
+                6
+              ],
+              "outcome": "worse"
+            },
+            {
+              "character": "Defect",
+              "seed": "full_eval_006",
+              "baseline": [
+                false,
+                1,
+                6
+              ],
+              "treatment": [
+                false,
+                1,
+                6
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Regent",
+              "seed": "full_eval_006",
+              "baseline": [
+                false,
+                1,
+                8
+              ],
+              "treatment": [
+                false,
+                1,
+                8
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Necrobinder",
+              "seed": "full_eval_006",
+              "baseline": [
+                false,
+                1,
+                6
+              ],
+              "treatment": [
+                false,
+                1,
+                6
+              ],
+              "outcome": "tie"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "experiments/E012/heldout-v2.json",
+      "sha256": "9b5c5209bce3ae72303bbe7e10bf2b977825b1d8fba15cc63ba2aeb9f7d96c00",
+      "has_multi_act": false,
+      "groups": {
+        "hybrid": {
+          "error:act1": 15
+        },
+        "planned": {
+          "error:act1": 15
+        }
+      },
+      "comparisons": [
+        {
+          "baseline": "hybrid",
+          "treatment": "planned",
+          "outcomes": {
+            "incomplete_or_error": 15
+          },
+          "pairs": []
+        }
+      ]
+    },
+    {
+      "report": "experiments/E012/development-v1.json",
+      "sha256": "ced7fddb46425c2e55002d46305aa67d97a56fd7d1ab711279d13a589b1e5de3",
+      "has_multi_act": false,
+      "groups": {
+        "greedy": {
+          "normal_defeat:act1": 5
+        },
+        "planfixed": {
+          "normal_defeat:act1": 5
+        }
+      },
+      "comparisons": [
+        {
+          "baseline": "greedy",
+          "treatment": "planfixed",
+          "outcomes": {
+            "better": 4,
+            "tie": 1
+          },
+          "pairs": [
+            {
+              "character": "Ironclad",
+              "seed": "full_dev_001",
+              "baseline": [
+                false,
+                1,
+                14
+              ],
+              "treatment": [
+                false,
+                1,
+                15
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Silent",
+              "seed": "full_dev_001",
+              "baseline": [
+                false,
+                1,
+                11
+              ],
+              "treatment": [
+                false,
+                1,
+                13
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Defect",
+              "seed": "full_dev_001",
+              "baseline": [
+                false,
+                1,
+                14
+              ],
+              "treatment": [
+                false,
+                1,
+                14
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Regent",
+              "seed": "full_dev_001",
+              "baseline": [
+                false,
+                1,
+                14
+              ],
+              "treatment": [
+                false,
+                1,
+                15
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Necrobinder",
+              "seed": "full_dev_001",
+              "baseline": [
+                false,
+                1,
+                8
+              ],
+              "treatment": [
+                false,
+                1,
+                14
+              ],
+              "outcome": "better"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "experiments/E012/heldout-v4.json",
+      "sha256": "ace0a02642cf5214e9c29a37f1ce2a7f5c73d5579b73c60f56254e22005480e9",
+      "has_multi_act": false,
+      "groups": {
+        "hybrid": {
+          "normal_defeat:act1": 15
+        },
+        "planned": {
+          "normal_defeat:act1": 13,
+          "error:act1": 2
+        }
+      },
+      "comparisons": [
+        {
+          "baseline": "hybrid",
+          "treatment": "planned",
+          "outcomes": {
+            "better": 6,
+            "incomplete_or_error": 2,
+            "tie": 6,
+            "worse": 1
+          },
+          "pairs": [
+            {
+              "character": "Ironclad",
+              "seed": "full_eval_004",
+              "baseline": [
+                false,
+                1,
+                6
+              ],
+              "treatment": [
+                false,
+                1,
+                9
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Regent",
+              "seed": "full_eval_004",
+              "baseline": [
+                false,
+                1,
+                6
+              ],
+              "treatment": [
+                false,
+                1,
+                6
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Necrobinder",
+              "seed": "full_eval_004",
+              "baseline": [
+                false,
+                1,
+                9
+              ],
+              "treatment": [
+                false,
+                1,
+                9
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Ironclad",
+              "seed": "full_eval_005",
+              "baseline": [
+                false,
+                1,
+                17
+              ],
+              "treatment": [
+                false,
+                1,
+                17
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Silent",
+              "seed": "full_eval_005",
+              "baseline": [
+                false,
+                1,
+                14
+              ],
+              "treatment": [
+                false,
+                1,
+                13
+              ],
+              "outcome": "worse"
+            },
+            {
+              "character": "Defect",
+              "seed": "full_eval_005",
+              "baseline": [
+                false,
+                1,
+                15
+              ],
+              "treatment": [
+                false,
+                1,
+                17
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Regent",
+              "seed": "full_eval_005",
+              "baseline": [
+                false,
+                1,
+                15
+              ],
+              "treatment": [
+                false,
+                1,
+                17
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Necrobinder",
+              "seed": "full_eval_005",
+              "baseline": [
+                false,
+                1,
+                14
+              ],
+              "treatment": [
+                false,
+                1,
+                17
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Ironclad",
+              "seed": "full_eval_006",
+              "baseline": [
+                false,
+                1,
+                6
+              ],
+              "treatment": [
+                false,
+                1,
+                17
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Silent",
+              "seed": "full_eval_006",
+              "baseline": [
+                false,
+                1,
+                17
+              ],
+              "treatment": [
+                false,
+                1,
+                17
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Defect",
+              "seed": "full_eval_006",
+              "baseline": [
+                false,
+                1,
+                6
+              ],
+              "treatment": [
+                false,
+                1,
+                6
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Regent",
+              "seed": "full_eval_006",
+              "baseline": [
+                false,
+                1,
+                8
+              ],
+              "treatment": [
+                false,
+                1,
+                8
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Necrobinder",
+              "seed": "full_eval_006",
+              "baseline": [
+                false,
+                1,
+                5
+              ],
+              "treatment": [
+                false,
+                1,
+                6
+              ],
+              "outcome": "better"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "experiments/E021/heldout-v1.json",
+      "sha256": "a824994be6f00ddd5705abe6b0e789cf3ebaeb164cc89178ed82bf04498da0a3",
+      "has_multi_act": false,
+      "groups": {
+        "advised": {
+          "normal_defeat:act1": 15
+        },
+        "planned": {
+          "normal_defeat:act1": 15
+        }
+      },
+      "comparisons": [
+        {
+          "baseline": "advised",
+          "treatment": "planned",
+          "outcomes": {
+            "tie": 15
+          },
+          "pairs": [
+            {
+              "character": "Ironclad",
+              "seed": "full_eval_019",
+              "baseline": [
+                false,
+                1,
+                17
+              ],
+              "treatment": [
+                false,
+                1,
+                17
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Silent",
+              "seed": "full_eval_019",
+              "baseline": [
+                false,
+                1,
+                17
+              ],
+              "treatment": [
+                false,
+                1,
+                17
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Defect",
+              "seed": "full_eval_019",
+              "baseline": [
+                false,
+                1,
+                17
+              ],
+              "treatment": [
+                false,
+                1,
+                17
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Regent",
+              "seed": "full_eval_019",
+              "baseline": [
+                false,
+                1,
+                17
+              ],
+              "treatment": [
+                false,
+                1,
+                17
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Necrobinder",
+              "seed": "full_eval_019",
+              "baseline": [
+                false,
+                1,
+                17
+              ],
+              "treatment": [
+                false,
+                1,
+                17
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Ironclad",
+              "seed": "full_eval_020",
+              "baseline": [
+                false,
+                1,
+                17
+              ],
+              "treatment": [
+                false,
+                1,
+                17
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Silent",
+              "seed": "full_eval_020",
+              "baseline": [
+                false,
+                1,
+                9
+              ],
+              "treatment": [
+                false,
+                1,
+                9
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Defect",
+              "seed": "full_eval_020",
+              "baseline": [
+                false,
+                1,
+                9
+              ],
+              "treatment": [
+                false,
+                1,
+                9
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Regent",
+              "seed": "full_eval_020",
+              "baseline": [
+                false,
+                1,
+                9
+              ],
+              "treatment": [
+                false,
+                1,
+                9
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Necrobinder",
+              "seed": "full_eval_020",
+              "baseline": [
+                false,
+                1,
+                9
+              ],
+              "treatment": [
+                false,
+                1,
+                9
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Ironclad",
+              "seed": "full_eval_021",
+              "baseline": [
+                false,
+                1,
+                17
+              ],
+              "treatment": [
+                false,
+                1,
+                17
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Silent",
+              "seed": "full_eval_021",
+              "baseline": [
+                false,
+                1,
+                17
+              ],
+              "treatment": [
+                false,
+                1,
+                17
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Defect",
+              "seed": "full_eval_021",
+              "baseline": [
+                false,
+                1,
+                12
+              ],
+              "treatment": [
+                false,
+                1,
+                12
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Regent",
+              "seed": "full_eval_021",
+              "baseline": [
+                false,
+                1,
+                12
+              ],
+              "treatment": [
+                false,
+                1,
+                12
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Necrobinder",
+              "seed": "full_eval_021",
+              "baseline": [
+                false,
+                1,
+                13
+              ],
+              "treatment": [
+                false,
+                1,
+                13
+              ],
+              "outcome": "tie"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "experiments/E018/heldout-v1.json",
+      "sha256": "5c7ef7657260422ae1ad414a4efad26af9682bd9e6f1c6057597fd143ab40a4f",
+      "has_multi_act": false,
+      "groups": {
+        "hybrid": {
+          "normal_defeat:act1": 15
+        },
+        "jev": {
+          "normal_defeat:act1": 15
+        }
+      },
+      "comparisons": [
+        {
+          "baseline": "hybrid",
+          "treatment": "jev",
+          "outcomes": {
+            "tie": 5,
+            "worse": 7,
+            "better": 3
+          },
+          "pairs": [
+            {
+              "character": "Ironclad",
+              "seed": "full_eval_007",
+              "baseline": [
+                false,
+                1,
+                3
+              ],
+              "treatment": [
+                false,
+                1,
+                3
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Silent",
+              "seed": "full_eval_007",
+              "baseline": [
+                false,
+                1,
+                3
+              ],
+              "treatment": [
+                false,
+                1,
+                3
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Defect",
+              "seed": "full_eval_007",
+              "baseline": [
+                false,
+                1,
+                8
+              ],
+              "treatment": [
+                false,
+                1,
+                3
+              ],
+              "outcome": "worse"
+            },
+            {
+              "character": "Regent",
+              "seed": "full_eval_007",
+              "baseline": [
+                false,
+                1,
+                11
+              ],
+              "treatment": [
+                false,
+                1,
+                12
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Necrobinder",
+              "seed": "full_eval_007",
+              "baseline": [
+                false,
+                1,
+                3
+              ],
+              "treatment": [
+                false,
+                1,
+                12
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Ironclad",
+              "seed": "full_eval_008",
+              "baseline": [
+                false,
+                1,
+                8
+              ],
+              "treatment": [
+                false,
+                1,
+                6
+              ],
+              "outcome": "worse"
+            },
+            {
+              "character": "Silent",
+              "seed": "full_eval_008",
+              "baseline": [
+                false,
+                1,
+                14
+              ],
+              "treatment": [
+                false,
+                1,
+                8
+              ],
+              "outcome": "worse"
+            },
+            {
+              "character": "Defect",
+              "seed": "full_eval_008",
+              "baseline": [
+                false,
+                1,
+                8
+              ],
+              "treatment": [
+                false,
+                1,
+                6
+              ],
+              "outcome": "worse"
+            },
+            {
+              "character": "Regent",
+              "seed": "full_eval_008",
+              "baseline": [
+                false,
+                1,
+                17
+              ],
+              "treatment": [
+                false,
+                1,
+                14
+              ],
+              "outcome": "worse"
+            },
+            {
+              "character": "Necrobinder",
+              "seed": "full_eval_008",
+              "baseline": [
+                false,
+                1,
+                6
+              ],
+              "treatment": [
+                false,
+                1,
+                14
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Ironclad",
+              "seed": "full_eval_009",
+              "baseline": [
+                false,
+                1,
+                5
+              ],
+              "treatment": [
+                false,
+                1,
+                5
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Silent",
+              "seed": "full_eval_009",
+              "baseline": [
+                false,
+                1,
+                5
+              ],
+              "treatment": [
+                false,
+                1,
+                5
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Defect",
+              "seed": "full_eval_009",
+              "baseline": [
+                false,
+                1,
+                5
+              ],
+              "treatment": [
+                false,
+                1,
+                5
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Regent",
+              "seed": "full_eval_009",
+              "baseline": [
+                false,
+                1,
+                17
+              ],
+              "treatment": [
+                false,
+                1,
+                6
+              ],
+              "outcome": "worse"
+            },
+            {
+              "character": "Necrobinder",
+              "seed": "full_eval_009",
+              "baseline": [
+                false,
+                1,
+                17
+              ],
+              "treatment": [
+                false,
+                1,
+                6
+              ],
+              "outcome": "worse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "experiments/E018/potion-heldout-v1.json",
+      "sha256": "2132b97c0faf2b3d85971844c682f1a59b6d1ac05bd9b7c45af082e7dc1fd83b",
+      "has_multi_act": false,
+      "groups": {
+        "equipped": {
+          "normal_defeat:act1": 15
+        },
+        "guarded": {
+          "normal_defeat:act1": 15
+        }
+      },
+      "comparisons": [
+        {
+          "baseline": "equipped",
+          "treatment": "guarded",
+          "outcomes": {
+            "better": 4,
+            "tie": 9,
+            "worse": 2
+          },
+          "pairs": [
+            {
+              "character": "Ironclad",
+              "seed": "full_eval_013",
+              "baseline": [
+                false,
+                1,
+                12
+              ],
+              "treatment": [
+                false,
+                1,
+                17
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Silent",
+              "seed": "full_eval_013",
+              "baseline": [
+                false,
+                1,
+                5
+              ],
+              "treatment": [
+                false,
+                1,
+                5
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Defect",
+              "seed": "full_eval_013",
+              "baseline": [
+                false,
+                1,
+                5
+              ],
+              "treatment": [
+                false,
+                1,
+                17
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Regent",
+              "seed": "full_eval_013",
+              "baseline": [
+                false,
+                1,
+                12
+              ],
+              "treatment": [
+                false,
+                1,
+                15
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Necrobinder",
+              "seed": "full_eval_013",
+              "baseline": [
+                false,
+                1,
+                7
+              ],
+              "treatment": [
+                false,
+                1,
+                5
+              ],
+              "outcome": "worse"
+            },
+            {
+              "character": "Ironclad",
+              "seed": "full_eval_014",
+              "baseline": [
+                false,
+                1,
+                8
+              ],
+              "treatment": [
+                false,
+                1,
+                8
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Silent",
+              "seed": "full_eval_014",
+              "baseline": [
+                false,
+                1,
+                8
+              ],
+              "treatment": [
+                false,
+                1,
+                8
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Defect",
+              "seed": "full_eval_014",
+              "baseline": [
+                false,
+                1,
+                8
+              ],
+              "treatment": [
+                false,
+                1,
+                8
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Regent",
+              "seed": "full_eval_014",
+              "baseline": [
+                false,
+                1,
+                8
+              ],
+              "treatment": [
+                false,
+                1,
+                15
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Necrobinder",
+              "seed": "full_eval_014",
+              "baseline": [
+                false,
+                1,
+                8
+              ],
+              "treatment": [
+                false,
+                1,
+                8
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Ironclad",
+              "seed": "full_eval_015",
+              "baseline": [
+                false,
+                1,
+                17
+              ],
+              "treatment": [
+                false,
+                1,
+                8
+              ],
+              "outcome": "worse"
+            },
+            {
+              "character": "Silent",
+              "seed": "full_eval_015",
+              "baseline": [
+                false,
+                1,
+                8
+              ],
+              "treatment": [
+                false,
+                1,
+                8
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Defect",
+              "seed": "full_eval_015",
+              "baseline": [
+                false,
+                1,
+                8
+              ],
+              "treatment": [
+                false,
+                1,
+                8
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Regent",
+              "seed": "full_eval_015",
+              "baseline": [
+                false,
+                1,
+                8
+              ],
+              "treatment": [
+                false,
+                1,
+                8
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Necrobinder",
+              "seed": "full_eval_015",
+              "baseline": [
+                false,
+                1,
+                8
+              ],
+              "treatment": [
+                false,
+                1,
+                8
+              ],
+              "outcome": "tie"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "experiments/E011/validation-v2.json",
+      "sha256": "7b5e48d1a98af2462205c92b3d8892bf7550b37260032b8ffbd7222604ee6279",
+      "has_multi_act": false,
+      "groups": {
+        "greedy": {
+          "normal_defeat:act1": 15
+        },
+        "hybrid": {
+          "normal_defeat:act1": 12,
+          "error:act1": 3
+        }
+      },
+      "comparisons": [
+        {
+          "baseline": "greedy",
+          "treatment": "hybrid",
+          "outcomes": {
+            "worse": 7,
+            "tie": 4,
+            "incomplete_or_error": 3,
+            "better": 1
+          },
+          "pairs": [
+            {
+              "character": "Ironclad",
+              "seed": "full_eval_001",
+              "baseline": [
+                false,
+                1,
+                15
+              ],
+              "treatment": [
+                false,
+                1,
+                8
+              ],
+              "outcome": "worse"
+            },
+            {
+              "character": "Silent",
+              "seed": "full_eval_001",
+              "baseline": [
+                false,
+                1,
+                5
+              ],
+              "treatment": [
+                false,
+                1,
+                5
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Defect",
+              "seed": "full_eval_001",
+              "baseline": [
+                false,
+                1,
+                5
+              ],
+              "treatment": [
+                false,
+                1,
+                5
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Regent",
+              "seed": "full_eval_001",
+              "baseline": [
+                false,
+                1,
+                17
+              ],
+              "treatment": [
+                false,
+                1,
+                7
+              ],
+              "outcome": "worse"
+            },
+            {
+              "character": "Necrobinder",
+              "seed": "full_eval_001",
+              "baseline": [
+                false,
+                1,
+                17
+              ],
+              "treatment": [
+                false,
+                1,
+                7
+              ],
+              "outcome": "worse"
+            },
+            {
+              "character": "Ironclad",
+              "seed": "full_eval_002",
+              "baseline": [
+                false,
+                1,
+                9
+              ],
+              "treatment": [
+                false,
+                1,
+                9
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Silent",
+              "seed": "full_eval_002",
+              "baseline": [
+                false,
+                1,
+                9
+              ],
+              "treatment": [
+                false,
+                1,
+                9
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Defect",
+              "seed": "full_eval_002",
+              "baseline": [
+                false,
+                1,
+                9
+              ],
+              "treatment": [
+                false,
+                1,
+                8
+              ],
+              "outcome": "worse"
+            },
+            {
+              "character": "Regent",
+              "seed": "full_eval_002",
+              "baseline": [
+                false,
+                1,
+                7
+              ],
+              "treatment": [
+                false,
+                1,
+                6
+              ],
+              "outcome": "worse"
+            },
+            {
+              "character": "Necrobinder",
+              "seed": "full_eval_002",
+              "baseline": [
+                false,
+                1,
+                11
+              ],
+              "treatment": [
+                false,
+                1,
+                9
+              ],
+              "outcome": "worse"
+            },
+            {
+              "character": "Defect",
+              "seed": "full_eval_003",
+              "baseline": [
+                false,
+                1,
+                5
+              ],
+              "treatment": [
+                false,
+                1,
+                6
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Necrobinder",
+              "seed": "full_eval_003",
+              "baseline": [
+                false,
+                1,
+                6
+              ],
+              "treatment": [
+                false,
+                1,
+                5
+              ],
+              "outcome": "worse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "experiments/E011/hybrid-v1.json",
+      "sha256": "ea0839b2c4528c91c7509068591fdae4914ebbb3258c6c95f89605573aac110d",
+      "has_multi_act": false,
+      "groups": {
+        "hybrid": {
+          "normal_defeat:act1": 5
+        }
+      },
+      "comparisons": []
+    },
+    {
+      "report": "experiments/E011/validation-v3.json",
+      "sha256": "9b6553ca829aab53ce9569a3e0602bd154f520c2a5f9e1531fb8705bfb4d92dd",
+      "has_multi_act": false,
+      "groups": {
+        "hybrid": {
+          "error:act1": 15
+        }
+      },
+      "comparisons": []
+    },
+    {
+      "report": "experiments/E011/validation-v4.json",
+      "sha256": "c51b88e3407d14be8d8a45302afcff1d3a5ef0d64bea0ddf7fcb290b11132216",
+      "has_multi_act": false,
+      "groups": {
+        "hybrid": {
+          "normal_defeat:act1": 15
+        }
+      },
+      "comparisons": []
+    },
+    {
+      "report": "experiments/E011/validation-v5.json",
+      "sha256": "2ffcbaf767fc45c267b477025cfd5c8efe06809543149963338a98da47c74e0a",
+      "has_multi_act": false,
+      "groups": {
+        "hybrid": {
+          "normal_defeat:act1": 15
+        }
+      },
+      "comparisons": []
+    },
+    {
+      "report": "experiments/E011/development-v1.json",
+      "sha256": "c36cc5fe3a1f7bb07380f1dfd8662caf168ad47b12c93c19ae11913a2b14d968",
+      "has_multi_act": false,
+      "groups": {
+        "first": {
+          "normal_defeat:act1": 5
+        },
+        "greedy": {
+          "normal_defeat:act1": 5
+        }
+      },
+      "comparisons": [
+        {
+          "baseline": "first",
+          "treatment": "greedy",
+          "outcomes": {
+            "tie": 2,
+            "better": 3
+          },
+          "pairs": [
+            {
+              "character": "Ironclad",
+              "seed": "full_dev_001",
+              "baseline": [
+                false,
+                1,
+                14
+              ],
+              "treatment": [
+                false,
+                1,
+                14
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Silent",
+              "seed": "full_dev_001",
+              "baseline": [
+                false,
+                1,
+                6
+              ],
+              "treatment": [
+                false,
+                1,
+                11
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Defect",
+              "seed": "full_dev_001",
+              "baseline": [
+                false,
+                1,
+                13
+              ],
+              "treatment": [
+                false,
+                1,
+                14
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Regent",
+              "seed": "full_dev_001",
+              "baseline": [
+                false,
+                1,
+                6
+              ],
+              "treatment": [
+                false,
+                1,
+                14
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Necrobinder",
+              "seed": "full_dev_001",
+              "baseline": [
+                false,
+                1,
+                8
+              ],
+              "treatment": [
+                false,
+                1,
+                8
+              ],
+              "outcome": "tie"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "experiments/E011/validation-v1.json",
+      "sha256": "82d3277de5d4c4a6327ca679ae11558c495b2f59f8f299517e09c4910f704a13",
+      "has_multi_act": false,
+      "groups": {
+        "greedy": {
+          "normal_defeat:act1": 15
+        },
+        "hybrid": {
+          "normal_defeat:act1": 11,
+          "error:act1": 4
+        }
+      },
+      "comparisons": [
+        {
+          "baseline": "greedy",
+          "treatment": "hybrid",
+          "outcomes": {
+            "worse": 4,
+            "better": 3,
+            "tie": 4,
+            "incomplete_or_error": 4
+          },
+          "pairs": [
+            {
+              "character": "Ironclad",
+              "seed": "full_eval_001",
+              "baseline": [
+                false,
+                1,
+                15
+              ],
+              "treatment": [
+                false,
+                1,
+                8
+              ],
+              "outcome": "worse"
+            },
+            {
+              "character": "Silent",
+              "seed": "full_eval_001",
+              "baseline": [
+                false,
+                1,
+                5
+              ],
+              "treatment": [
+                false,
+                1,
+                17
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Defect",
+              "seed": "full_eval_001",
+              "baseline": [
+                false,
+                1,
+                5
+              ],
+              "treatment": [
+                false,
+                1,
+                5
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Regent",
+              "seed": "full_eval_001",
+              "baseline": [
+                false,
+                1,
+                17
+              ],
+              "treatment": [
+                false,
+                1,
+                7
+              ],
+              "outcome": "worse"
+            },
+            {
+              "character": "Necrobinder",
+              "seed": "full_eval_001",
+              "baseline": [
+                false,
+                1,
+                17
+              ],
+              "treatment": [
+                false,
+                1,
+                17
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Ironclad",
+              "seed": "full_eval_002",
+              "baseline": [
+                false,
+                1,
+                9
+              ],
+              "treatment": [
+                false,
+                1,
+                9
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Silent",
+              "seed": "full_eval_002",
+              "baseline": [
+                false,
+                1,
+                9
+              ],
+              "treatment": [
+                false,
+                1,
+                9
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Defect",
+              "seed": "full_eval_002",
+              "baseline": [
+                false,
+                1,
+                9
+              ],
+              "treatment": [
+                false,
+                1,
+                11
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Regent",
+              "seed": "full_eval_002",
+              "baseline": [
+                false,
+                1,
+                7
+              ],
+              "treatment": [
+                false,
+                1,
+                6
+              ],
+              "outcome": "worse"
+            },
+            {
+              "character": "Necrobinder",
+              "seed": "full_eval_002",
+              "baseline": [
+                false,
+                1,
+                11
+              ],
+              "treatment": [
+                false,
+                1,
+                9
+              ],
+              "outcome": "worse"
+            },
+            {
+              "character": "Defect",
+              "seed": "full_eval_003",
+              "baseline": [
+                false,
+                1,
+                5
+              ],
+              "treatment": [
+                false,
+                1,
+                6
+              ],
+              "outcome": "better"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "experiments/E002/results-v1.json",
+      "sha256": "98ff6032449fbfecd27d4220eca72cfdbf61409627318a3cca977f4bf79c3895",
+      "has_multi_act": false,
+      "groups": {
+        "first": {
+          "battle_completed:actNone": 1
+        },
+        "jev": {
+          "battle_completed:actNone": 1
+        }
+      },
+      "comparisons": [
+        {
+          "baseline": "first",
+          "treatment": "jev",
+          "outcomes": {
+            "incomplete_or_error": 1
+          },
+          "pairs": []
+        }
+      ]
+    },
+    {
+      "report": "experiments/E020/heldout-v1.json",
+      "sha256": "605a45e9658afa04ad41eaef6f14ecd2a7a74d8a7442c939ac41f32ed6665955",
+      "has_multi_act": true,
+      "groups": {
+        "advised": {
+          "normal_defeat:act2": 1,
+          "normal_defeat:act1": 14
+        },
+        "planned": {
+          "normal_defeat:act1": 15
+        }
+      },
+      "comparisons": [
+        {
+          "baseline": "advised",
+          "treatment": "planned",
+          "outcomes": {
+            "worse": 5,
+            "tie": 7,
+            "better": 3
+          },
+          "pairs": [
+            {
+              "character": "Ironclad",
+              "seed": "full_eval_016",
+              "baseline": [
+                false,
+                2,
+                10
+              ],
+              "treatment": [
+                false,
+                1,
+                6
+              ],
+              "outcome": "worse"
+            },
+            {
+              "character": "Silent",
+              "seed": "full_eval_016",
+              "baseline": [
+                false,
+                1,
+                17
+              ],
+              "treatment": [
+                false,
+                1,
+                6
+              ],
+              "outcome": "worse"
+            },
+            {
+              "character": "Defect",
+              "seed": "full_eval_016",
+              "baseline": [
+                false,
+                1,
+                17
+              ],
+              "treatment": [
+                false,
+                1,
+                6
+              ],
+              "outcome": "worse"
+            },
+            {
+              "character": "Regent",
+              "seed": "full_eval_016",
+              "baseline": [
+                false,
+                1,
+                17
+              ],
+              "treatment": [
+                false,
+                1,
+                5
+              ],
+              "outcome": "worse"
+            },
+            {
+              "character": "Necrobinder",
+              "seed": "full_eval_016",
+              "baseline": [
+                false,
+                1,
+                17
+              ],
+              "treatment": [
+                false,
+                1,
+                17
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Ironclad",
+              "seed": "full_eval_017",
+              "baseline": [
+                false,
+                1,
+                6
+              ],
+              "treatment": [
+                false,
+                1,
+                6
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Silent",
+              "seed": "full_eval_017",
+              "baseline": [
+                false,
+                1,
+                8
+              ],
+              "treatment": [
+                false,
+                1,
+                17
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Defect",
+              "seed": "full_eval_017",
+              "baseline": [
+                false,
+                1,
+                9
+              ],
+              "treatment": [
+                false,
+                1,
+                9
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Regent",
+              "seed": "full_eval_017",
+              "baseline": [
+                false,
+                1,
+                9
+              ],
+              "treatment": [
+                false,
+                1,
+                17
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Necrobinder",
+              "seed": "full_eval_017",
+              "baseline": [
+                false,
+                1,
+                17
+              ],
+              "treatment": [
+                false,
+                1,
+                17
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Ironclad",
+              "seed": "full_eval_018",
+              "baseline": [
+                false,
+                1,
+                7
+              ],
+              "treatment": [
+                false,
+                1,
+                7
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Silent",
+              "seed": "full_eval_018",
+              "baseline": [
+                false,
+                1,
+                6
+              ],
+              "treatment": [
+                false,
+                1,
+                7
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Defect",
+              "seed": "full_eval_018",
+              "baseline": [
+                false,
+                1,
+                7
+              ],
+              "treatment": [
+                false,
+                1,
+                7
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Regent",
+              "seed": "full_eval_018",
+              "baseline": [
+                false,
+                1,
+                7
+              ],
+              "treatment": [
+                false,
+                1,
+                6
+              ],
+              "outcome": "worse"
+            },
+            {
+              "character": "Necrobinder",
+              "seed": "full_eval_018",
+              "baseline": [
+                false,
+                1,
+                7
+              ],
+              "treatment": [
+                false,
+                1,
+                7
+              ],
+              "outcome": "tie"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "experiments/E020/development-v1.json",
+      "sha256": "68b7e44c2d898987b900f74a383ea435ab5da3335a69b39de1b7572fa02bbcfd",
+      "has_multi_act": false,
+      "groups": {
+        "advised": {
+          "normal_defeat:act1": 5
+        },
+        "planned": {
+          "normal_defeat:act1": 5
+        }
+      },
+      "comparisons": [
+        {
+          "baseline": "advised",
+          "treatment": "planned",
+          "outcomes": {
+            "worse": 3,
+            "better": 1,
+            "tie": 1
+          },
+          "pairs": [
+            {
+              "character": "Ironclad",
+              "seed": "full_eval_007",
+              "baseline": [
+                false,
+                1,
+                11
+              ],
+              "treatment": [
+                false,
+                1,
+                3
+              ],
+              "outcome": "worse"
+            },
+            {
+              "character": "Silent",
+              "seed": "full_eval_007",
+              "baseline": [
+                false,
+                1,
+                8
+              ],
+              "treatment": [
+                false,
+                1,
+                3
+              ],
+              "outcome": "worse"
+            },
+            {
+              "character": "Defect",
+              "seed": "full_eval_007",
+              "baseline": [
+                false,
+                1,
+                11
+              ],
+              "treatment": [
+                false,
+                1,
+                12
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Regent",
+              "seed": "full_eval_007",
+              "baseline": [
+                false,
+                1,
+                12
+              ],
+              "treatment": [
+                false,
+                1,
+                12
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Necrobinder",
+              "seed": "full_eval_007",
+              "baseline": [
+                false,
+                1,
+                8
+              ],
+              "treatment": [
+                false,
+                1,
+                3
+              ],
+              "outcome": "worse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "experiments/E016/development-v1.json",
+      "sha256": "e2be2ab53cb6004a38b691d2ec5cd4ea76efc362d935562fb3d9605bef2a1fac",
+      "has_multi_act": false,
+      "groups": {
+        "equipped": {
+          "normal_defeat:act1": 5
+        },
+        "guarded": {
+          "normal_defeat:act1": 5
+        }
+      },
+      "comparisons": [
+        {
+          "baseline": "equipped",
+          "treatment": "guarded",
+          "outcomes": {
+            "tie": 2,
+            "better": 3
+          },
+          "pairs": [
+            {
+              "character": "Ironclad",
+              "seed": "full_dev_003",
+              "baseline": [
+                false,
+                1,
+                7
+              ],
+              "treatment": [
+                false,
+                1,
+                7
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Silent",
+              "seed": "full_dev_003",
+              "baseline": [
+                false,
+                1,
+                5
+              ],
+              "treatment": [
+                false,
+                1,
+                7
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Defect",
+              "seed": "full_dev_003",
+              "baseline": [
+                false,
+                1,
+                5
+              ],
+              "treatment": [
+                false,
+                1,
+                7
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Regent",
+              "seed": "full_dev_003",
+              "baseline": [
+                false,
+                1,
+                5
+              ],
+              "treatment": [
+                false,
+                1,
+                7
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Necrobinder",
+              "seed": "full_dev_003",
+              "baseline": [
+                false,
+                1,
+                12
+              ],
+              "treatment": [
+                false,
+                1,
+                12
+              ],
+              "outcome": "tie"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "experiments/E012/heldout-v5.json",
+      "sha256": "65e503506506e9c76879aec9199f89b5c65e9c9390c6245ccd3fa5f70c01945c",
+      "has_multi_act": false,
+      "groups": {
+        "hybrid": {
+          "normal_defeat:act1": 15
+        },
+        "planned": {
+          "normal_defeat:act1": 15
+        }
+      },
+      "comparisons": [
+        {
+          "baseline": "hybrid",
+          "treatment": "planned",
+          "outcomes": {
+            "better": 7,
+            "tie": 8
+          },
+          "pairs": [
+            {
+              "character": "Ironclad",
+              "seed": "full_eval_004",
+              "baseline": [
+                false,
+                1,
+                6
+              ],
+              "treatment": [
+                false,
+                1,
+                9
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Silent",
+              "seed": "full_eval_004",
+              "baseline": [
+                false,
+                1,
+                8
+              ],
+              "treatment": [
+                false,
+                1,
+                9
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Defect",
+              "seed": "full_eval_004",
+              "baseline": [
+                false,
+                1,
+                6
+              ],
+              "treatment": [
+                false,
+                1,
+                9
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Regent",
+              "seed": "full_eval_004",
+              "baseline": [
+                false,
+                1,
+                6
+              ],
+              "treatment": [
+                false,
+                1,
+                6
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Necrobinder",
+              "seed": "full_eval_004",
+              "baseline": [
+                false,
+                1,
+                9
+              ],
+              "treatment": [
+                false,
+                1,
+                9
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Ironclad",
+              "seed": "full_eval_005",
+              "baseline": [
+                false,
+                1,
+                17
+              ],
+              "treatment": [
+                false,
+                1,
+                17
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Silent",
+              "seed": "full_eval_005",
+              "baseline": [
+                false,
+                1,
+                13
+              ],
+              "treatment": [
+                false,
+                1,
+                15
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Defect",
+              "seed": "full_eval_005",
+              "baseline": [
+                false,
+                1,
+                15
+              ],
+              "treatment": [
+                false,
+                1,
+                17
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Regent",
+              "seed": "full_eval_005",
+              "baseline": [
+                false,
+                1,
+                14
+              ],
+              "treatment": [
+                false,
+                1,
+                17
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Necrobinder",
+              "seed": "full_eval_005",
+              "baseline": [
+                false,
+                1,
+                14
+              ],
+              "treatment": [
+                false,
+                1,
+                14
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Ironclad",
+              "seed": "full_eval_006",
+              "baseline": [
+                false,
+                1,
+                6
+              ],
+              "treatment": [
+                false,
+                1,
+                6
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Silent",
+              "seed": "full_eval_006",
+              "baseline": [
+                false,
+                1,
+                6
+              ],
+              "treatment": [
+                false,
+                1,
+                17
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Defect",
+              "seed": "full_eval_006",
+              "baseline": [
+                false,
+                1,
+                6
+              ],
+              "treatment": [
+                false,
+                1,
+                6
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Regent",
+              "seed": "full_eval_006",
+              "baseline": [
+                false,
+                1,
+                8
+              ],
+              "treatment": [
+                false,
+                1,
+                8
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Necrobinder",
+              "seed": "full_eval_006",
+              "baseline": [
+                false,
+                1,
+                6
+              ],
+              "treatment": [
+                false,
+                1,
+                6
+              ],
+              "outcome": "tie"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "experiments/E015/heldout-v1.json",
+      "sha256": "48a7d0bd29bca5ddd708130cf96369353acb67deab67948ba91d76c24bf0e419",
+      "has_multi_act": false,
+      "groups": {
+        "guarded": {
+          "normal_defeat:act1": 15
+        },
+        "jev": {
+          "normal_defeat:act1": 15
+        }
+      },
+      "comparisons": [
+        {
+          "baseline": "guarded",
+          "treatment": "jev",
+          "outcomes": {
+            "tie": 10,
+            "worse": 3,
+            "better": 2
+          },
+          "pairs": [
+            {
+              "character": "Ironclad",
+              "seed": "full_eval_010",
+              "baseline": [
+                false,
+                1,
+                7
+              ],
+              "treatment": [
+                false,
+                1,
+                7
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Silent",
+              "seed": "full_eval_010",
+              "baseline": [
+                false,
+                1,
+                7
+              ],
+              "treatment": [
+                false,
+                1,
+                7
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Defect",
+              "seed": "full_eval_010",
+              "baseline": [
+                false,
+                1,
+                8
+              ],
+              "treatment": [
+                false,
+                1,
+                7
+              ],
+              "outcome": "worse"
+            },
+            {
+              "character": "Regent",
+              "seed": "full_eval_010",
+              "baseline": [
+                false,
+                1,
+                9
+              ],
+              "treatment": [
+                false,
+                1,
+                8
+              ],
+              "outcome": "worse"
+            },
+            {
+              "character": "Necrobinder",
+              "seed": "full_eval_010",
+              "baseline": [
+                false,
+                1,
+                7
+              ],
+              "treatment": [
+                false,
+                1,
+                7
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Ironclad",
+              "seed": "full_eval_011",
+              "baseline": [
+                false,
+                1,
+                5
+              ],
+              "treatment": [
+                false,
+                1,
+                5
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Silent",
+              "seed": "full_eval_011",
+              "baseline": [
+                false,
+                1,
+                5
+              ],
+              "treatment": [
+                false,
+                1,
+                6
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Defect",
+              "seed": "full_eval_011",
+              "baseline": [
+                false,
+                1,
+                5
+              ],
+              "treatment": [
+                false,
+                1,
+                5
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Regent",
+              "seed": "full_eval_011",
+              "baseline": [
+                false,
+                1,
+                5
+              ],
+              "treatment": [
+                false,
+                1,
+                5
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Necrobinder",
+              "seed": "full_eval_011",
+              "baseline": [
+                false,
+                1,
+                5
+              ],
+              "treatment": [
+                false,
+                1,
+                5
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Ironclad",
+              "seed": "full_eval_012",
+              "baseline": [
+                false,
+                1,
+                8
+              ],
+              "treatment": [
+                false,
+                1,
+                15
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Silent",
+              "seed": "full_eval_012",
+              "baseline": [
+                false,
+                1,
+                8
+              ],
+              "treatment": [
+                false,
+                1,
+                8
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Defect",
+              "seed": "full_eval_012",
+              "baseline": [
+                false,
+                1,
+                17
+              ],
+              "treatment": [
+                false,
+                1,
+                14
+              ],
+              "outcome": "worse"
+            },
+            {
+              "character": "Regent",
+              "seed": "full_eval_012",
+              "baseline": [
+                false,
+                1,
+                15
+              ],
+              "treatment": [
+                false,
+                1,
+                15
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Necrobinder",
+              "seed": "full_eval_012",
+              "baseline": [
+                false,
+                1,
+                8
+              ],
+              "treatment": [
+                false,
+                1,
+                8
+              ],
+              "outcome": "tie"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "experiments/E015/development-v1.json",
+      "sha256": "e991c0043066ee6337ae6b39972569029b2ac8df3a90bd84634938e7aa4fd215",
+      "has_multi_act": false,
+      "groups": {
+        "guarded": {
+          "normal_defeat:act1": 5
+        },
+        "jev": {
+          "normal_defeat:act1": 5
+        }
+      },
+      "comparisons": [
+        {
+          "baseline": "guarded",
+          "treatment": "jev",
+          "outcomes": {
+            "better": 1,
+            "tie": 4
+          },
+          "pairs": [
+            {
+              "character": "Ironclad",
+              "seed": "full_dev_002",
+              "baseline": [
+                false,
+                1,
+                6
+              ],
+              "treatment": [
+                false,
+                1,
+                7
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Silent",
+              "seed": "full_dev_002",
+              "baseline": [
+                false,
+                1,
+                6
+              ],
+              "treatment": [
+                false,
+                1,
+                6
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Defect",
+              "seed": "full_dev_002",
+              "baseline": [
+                false,
+                1,
+                7
+              ],
+              "treatment": [
+                false,
+                1,
+                7
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Regent",
+              "seed": "full_dev_002",
+              "baseline": [
+                false,
+                1,
+                17
+              ],
+              "treatment": [
+                false,
+                1,
+                17
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Necrobinder",
+              "seed": "full_dev_002",
+              "baseline": [
+                false,
+                1,
+                7
+              ],
+              "treatment": [
+                false,
+                1,
+                7
+              ],
+              "outcome": "tie"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "experiments/E014/heldout-v1.json",
+      "sha256": "04bbe49705a4da3fab5239775e0b5856325804882a4b753ae44e9f86e0743f23",
+      "has_multi_act": false,
+      "groups": {
+        "hybrid": {
+          "error:act1": 6,
+          "normal_defeat:act1": 9
+        },
+        "jev": {
+          "error:act1": 5,
+          "normal_defeat:act1": 10
+        }
+      },
+      "comparisons": [
+        {
+          "baseline": "hybrid",
+          "treatment": "jev",
+          "outcomes": {
+            "incomplete_or_error": 6,
+            "worse": 5,
+            "better": 2,
+            "tie": 2
+          },
+          "pairs": [
+            {
+              "character": "Ironclad",
+              "seed": "full_eval_008",
+              "baseline": [
+                false,
+                1,
+                8
+              ],
+              "treatment": [
+                false,
+                1,
+                6
+              ],
+              "outcome": "worse"
+            },
+            {
+              "character": "Silent",
+              "seed": "full_eval_008",
+              "baseline": [
+                false,
+                1,
+                14
+              ],
+              "treatment": [
+                false,
+                1,
+                8
+              ],
+              "outcome": "worse"
+            },
+            {
+              "character": "Defect",
+              "seed": "full_eval_008",
+              "baseline": [
+                false,
+                1,
+                8
+              ],
+              "treatment": [
+                false,
+                1,
+                6
+              ],
+              "outcome": "worse"
+            },
+            {
+              "character": "Regent",
+              "seed": "full_eval_008",
+              "baseline": [
+                false,
+                1,
+                17
+              ],
+              "treatment": [
+                false,
+                1,
+                8
+              ],
+              "outcome": "worse"
+            },
+            {
+              "character": "Necrobinder",
+              "seed": "full_eval_008",
+              "baseline": [
+                false,
+                1,
+                6
+              ],
+              "treatment": [
+                false,
+                1,
+                14
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Ironclad",
+              "seed": "full_eval_009",
+              "baseline": [
+                false,
+                1,
+                5
+              ],
+              "treatment": [
+                false,
+                1,
+                6
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Silent",
+              "seed": "full_eval_009",
+              "baseline": [
+                false,
+                1,
+                5
+              ],
+              "treatment": [
+                false,
+                1,
+                5
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Defect",
+              "seed": "full_eval_009",
+              "baseline": [
+                false,
+                1,
+                5
+              ],
+              "treatment": [
+                false,
+                1,
+                5
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Necrobinder",
+              "seed": "full_eval_009",
+              "baseline": [
+                false,
+                1,
+                17
+              ],
+              "treatment": [
+                false,
+                1,
+                8
+              ],
+              "outcome": "worse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "experiments/E014/development-v1.json",
+      "sha256": "f61278dc0d16fcdfb77d61428688924aee4c3c1f6ad51b5eeabb407f50fea722",
+      "has_multi_act": true,
+      "groups": {
+        "hybrid": {
+          "normal_defeat:act1": 5
+        },
+        "jev": {
+          "normal_defeat:act1": 5
+        },
+        "planned": {
+          "normal_defeat:act2": 2,
+          "normal_defeat:act1": 3
+        }
+      },
+      "comparisons": [
+        {
+          "baseline": "hybrid",
+          "treatment": "jev",
+          "outcomes": {
+            "worse": 2,
+            "tie": 2,
+            "better": 1
+          },
+          "pairs": [
+            {
+              "character": "Ironclad",
+              "seed": "full_dev_002",
+              "baseline": [
+                false,
+                1,
+                17
+              ],
+              "treatment": [
+                false,
+                1,
+                6
+              ],
+              "outcome": "worse"
+            },
+            {
+              "character": "Silent",
+              "seed": "full_dev_002",
+              "baseline": [
+                false,
+                1,
+                6
+              ],
+              "treatment": [
+                false,
+                1,
+                6
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Defect",
+              "seed": "full_dev_002",
+              "baseline": [
+                false,
+                1,
+                7
+              ],
+              "treatment": [
+                false,
+                1,
+                6
+              ],
+              "outcome": "worse"
+            },
+            {
+              "character": "Regent",
+              "seed": "full_dev_002",
+              "baseline": [
+                false,
+                1,
+                17
+              ],
+              "treatment": [
+                false,
+                1,
+                17
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Necrobinder",
+              "seed": "full_dev_002",
+              "baseline": [
+                false,
+                1,
+                6
+              ],
+              "treatment": [
+                false,
+                1,
+                7
+              ],
+              "outcome": "better"
+            }
+          ]
+        },
+        {
+          "baseline": "hybrid",
+          "treatment": "planned",
+          "outcomes": {
+            "better": 3,
+            "tie": 2
+          },
+          "pairs": [
+            {
+              "character": "Ironclad",
+              "seed": "full_dev_002",
+              "baseline": [
+                false,
+                1,
+                17
+              ],
+              "treatment": [
+                false,
+                2,
+                7
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Silent",
+              "seed": "full_dev_002",
+              "baseline": [
+                false,
+                1,
+                6
+              ],
+              "treatment": [
+                false,
+                1,
+                6
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Defect",
+              "seed": "full_dev_002",
+              "baseline": [
+                false,
+                1,
+                7
+              ],
+              "treatment": [
+                false,
+                1,
+                7
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Regent",
+              "seed": "full_dev_002",
+              "baseline": [
+                false,
+                1,
+                17
+              ],
+              "treatment": [
+                false,
+                2,
+                12
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Necrobinder",
+              "seed": "full_dev_002",
+              "baseline": [
+                false,
+                1,
+                6
+              ],
+              "treatment": [
+                false,
+                1,
+                17
+              ],
+              "outcome": "better"
+            }
+          ]
+        },
+        {
+          "baseline": "jev",
+          "treatment": "planned",
+          "outcomes": {
+            "better": 4,
+            "tie": 1
+          },
+          "pairs": [
+            {
+              "character": "Ironclad",
+              "seed": "full_dev_002",
+              "baseline": [
+                false,
+                1,
+                6
+              ],
+              "treatment": [
+                false,
+                2,
+                7
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Silent",
+              "seed": "full_dev_002",
+              "baseline": [
+                false,
+                1,
+                6
+              ],
+              "treatment": [
+                false,
+                1,
+                6
+              ],
+              "outcome": "tie"
+            },
+            {
+              "character": "Defect",
+              "seed": "full_dev_002",
+              "baseline": [
+                false,
+                1,
+                6
+              ],
+              "treatment": [
+                false,
+                1,
+                7
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Regent",
+              "seed": "full_dev_002",
+              "baseline": [
+                false,
+                1,
+                17
+              ],
+              "treatment": [
+                false,
+                2,
+                12
+              ],
+              "outcome": "better"
+            },
+            {
+              "character": "Necrobinder",
+              "seed": "full_dev_002",
+              "baseline": [
+                false,
+                1,
+                7
+              ],
+              "treatment": [
+                false,
+                1,
+                17
+              ],
+              "outcome": "better"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
