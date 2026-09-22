@@ -1,0 +1,770 @@
+{
+  "manifest": {
+    "schema_version": 1,
+    "code_commit": "b3fd7e48c84e16dd425b1cacf15ff4353a0a884b",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "2d3d7eec222b82c07d4b606e6e504ab44e5fa88f8ddeb28d99c8284b5d21e466",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+  },
+  "scope": "offline factual next-observation agreement; no counterfactual battle or win",
+  "cases": [
+    {
+      "segment": 104,
+      "card": "JUGGERNAUT",
+      "command": {
+        "action": "play_card",
+        "card_index": 1
+      },
+      "single_target": true,
+      "actual_block": 0,
+      "predicted_block": 0,
+      "baseline_block": 0,
+      "actual_enemy_hp": 67,
+      "predicted_enemy_hp": 67,
+      "baseline_enemy_hp": 67,
+      "block_exact": true,
+      "hp_exact": true,
+      "random_trigger_damage_unassigned": 0
+    },
+    {
+      "segment": 105,
+      "card": "SHRUG_IT_OFF",
+      "command": {
+        "action": "play_card",
+        "card_index": 0
+      },
+      "single_target": true,
+      "actual_block": 11,
+      "predicted_block": 11,
+      "baseline_block": 11,
+      "actual_enemy_hp": 59,
+      "predicted_enemy_hp": 59,
+      "baseline_enemy_hp": 67,
+      "block_exact": true,
+      "hp_exact": true,
+      "random_trigger_damage_unassigned": 0
+    },
+    {
+      "segment": 106,
+      "card": "POMMEL_STRIKE",
+      "command": {
+        "action": "play_card",
+        "card_index": 3,
+        "target_index": 0
+      },
+      "single_target": true,
+      "actual_block": 12,
+      "predicted_block": 12,
+      "baseline_block": 11,
+      "actual_enemy_hp": 38,
+      "predicted_enemy_hp": 38,
+      "baseline_enemy_hp": 46,
+      "block_exact": true,
+      "hp_exact": true,
+      "random_trigger_damage_unassigned": 0
+    },
+    {
+      "segment": 107,
+      "card": "IRON_WAVE",
+      "command": {
+        "action": "play_card",
+        "card_index": 3,
+        "target_index": 0
+      },
+      "single_target": true,
+      "actual_block": 18,
+      "predicted_block": 18,
+      "baseline_block": 17,
+      "actual_enemy_hp": 17,
+      "predicted_enemy_hp": 17,
+      "baseline_enemy_hp": 33,
+      "block_exact": true,
+      "hp_exact": true,
+      "random_trigger_damage_unassigned": 0
+    },
+    {
+      "segment": 162,
+      "card": "FEEL_NO_PAIN",
+      "command": {
+        "action": "play_card",
+        "card_index": 2
+      },
+      "single_target": false,
+      "actual_block": 10,
+      "predicted_block": 10,
+      "baseline_block": 10,
+      "actual_enemy_hp": null,
+      "predicted_enemy_hp": null,
+      "baseline_enemy_hp": null,
+      "block_exact": true,
+      "hp_exact": null,
+      "random_trigger_damage_unassigned": 0
+    },
+    {
+      "segment": 165,
+      "card": "JUGGERNAUT",
+      "command": {
+        "action": "play_card",
+        "card_index": 9
+      },
+      "single_target": false,
+      "actual_block": 14,
+      "predicted_block": 14,
+      "baseline_block": 14,
+      "actual_enemy_hp": null,
+      "predicted_enemy_hp": null,
+      "baseline_enemy_hp": null,
+      "block_exact": true,
+      "hp_exact": null,
+      "random_trigger_damage_unassigned": 0
+    },
+    {
+      "segment": 168,
+      "card": "POMMEL_STRIKE",
+      "command": {
+        "action": "play_card",
+        "card_index": 2,
+        "target_index": 0
+      },
+      "single_target": false,
+      "actual_block": 19,
+      "predicted_block": 19,
+      "baseline_block": 18,
+      "actual_enemy_hp": null,
+      "predicted_enemy_hp": null,
+      "baseline_enemy_hp": null,
+      "block_exact": true,
+      "hp_exact": null,
+      "random_trigger_damage_unassigned": 8
+    },
+    {
+      "segment": 171,
+      "card": "IRON_WAVE",
+      "command": {
+        "action": "play_card",
+        "card_index": 3,
+        "target_index": 0
+      },
+      "single_target": false,
+      "actual_block": 36,
+      "predicted_block": 36,
+      "baseline_block": 35,
+      "actual_enemy_hp": null,
+      "predicted_enemy_hp": null,
+      "baseline_enemy_hp": null,
+      "block_exact": true,
+      "hp_exact": null,
+      "random_trigger_damage_unassigned": 16
+    },
+    {
+      "segment": 173,
+      "card": "POMMEL_STRIKE",
+      "command": {
+        "action": "play_card",
+        "card_index": 0,
+        "target_index": 0
+      },
+      "single_target": false,
+      "actual_block": 1,
+      "predicted_block": 1,
+      "baseline_block": 0,
+      "actual_enemy_hp": null,
+      "predicted_enemy_hp": null,
+      "baseline_enemy_hp": null,
+      "block_exact": true,
+      "hp_exact": null,
+      "random_trigger_damage_unassigned": 8
+    },
+    {
+      "segment": 174,
+      "card": "FEEL_NO_PAIN",
+      "command": {
+        "action": "play_card",
+        "card_index": 4
+      },
+      "single_target": false,
+      "actual_block": 1,
+      "predicted_block": 1,
+      "baseline_block": 1,
+      "actual_enemy_hp": null,
+      "predicted_enemy_hp": null,
+      "baseline_enemy_hp": null,
+      "block_exact": true,
+      "hp_exact": null,
+      "random_trigger_damage_unassigned": 0
+    },
+    {
+      "segment": 178,
+      "card": "SECOND_WIND",
+      "command": {
+        "action": "play_card",
+        "card_index": 2
+      },
+      "single_target": false,
+      "actual_block": 21,
+      "predicted_block": 21,
+      "baseline_block": 13,
+      "actual_enemy_hp": null,
+      "predicted_enemy_hp": null,
+      "baseline_enemy_hp": null,
+      "block_exact": true,
+      "hp_exact": null,
+      "random_trigger_damage_unassigned": 17
+    },
+    {
+      "segment": 181,
+      "card": "SHRUG_IT_OFF",
+      "command": {
+        "action": "play_card",
+        "card_index": 4
+      },
+      "single_target": false,
+      "actual_block": 8,
+      "predicted_block": 8,
+      "baseline_block": 8,
+      "actual_enemy_hp": null,
+      "predicted_enemy_hp": null,
+      "baseline_enemy_hp": null,
+      "block_exact": true,
+      "hp_exact": null,
+      "random_trigger_damage_unassigned": 8
+    },
+    {
+      "segment": 182,
+      "card": "SHRUG_IT_OFF",
+      "command": {
+        "action": "play_card",
+        "card_index": 0
+      },
+      "single_target": false,
+      "actual_block": 17,
+      "predicted_block": 17,
+      "baseline_block": 17,
+      "actual_enemy_hp": null,
+      "predicted_enemy_hp": null,
+      "baseline_enemy_hp": null,
+      "block_exact": true,
+      "hp_exact": null,
+      "random_trigger_damage_unassigned": 8
+    },
+    {
+      "segment": 183,
+      "card": "SHRUG_IT_OFF",
+      "command": {
+        "action": "play_card",
+        "card_index": 4
+      },
+      "single_target": false,
+      "actual_block": 24,
+      "predicted_block": 24,
+      "baseline_block": 24,
+      "actual_enemy_hp": null,
+      "predicted_enemy_hp": null,
+      "baseline_enemy_hp": null,
+      "block_exact": true,
+      "hp_exact": null,
+      "random_trigger_damage_unassigned": 8
+    },
+    {
+      "segment": 184,
+      "card": "DEFEND_IRONCLAD",
+      "command": {
+        "action": "play_card",
+        "card_index": 4
+      },
+      "single_target": false,
+      "actual_block": 29,
+      "predicted_block": 29,
+      "baseline_block": 29,
+      "actual_enemy_hp": null,
+      "predicted_enemy_hp": null,
+      "baseline_enemy_hp": null,
+      "block_exact": true,
+      "hp_exact": null,
+      "random_trigger_damage_unassigned": 8
+    },
+    {
+      "segment": 184,
+      "card": "STRIKE_IRONCLAD",
+      "command": {
+        "action": "play_card",
+        "card_index": 3,
+        "target_index": 0
+      },
+      "single_target": false,
+      "actual_block": 30,
+      "predicted_block": 30,
+      "baseline_block": 29,
+      "actual_enemy_hp": null,
+      "predicted_enemy_hp": null,
+      "baseline_enemy_hp": null,
+      "block_exact": true,
+      "hp_exact": null,
+      "random_trigger_damage_unassigned": 8
+    },
+    {
+      "segment": 187,
+      "card": "POMMEL_STRIKE",
+      "command": {
+        "action": "play_card",
+        "card_index": 3,
+        "target_index": 0
+      },
+      "single_target": false,
+      "actual_block": 2,
+      "predicted_block": 2,
+      "baseline_block": 1,
+      "actual_enemy_hp": null,
+      "predicted_enemy_hp": null,
+      "baseline_enemy_hp": null,
+      "block_exact": true,
+      "hp_exact": null,
+      "random_trigger_damage_unassigned": 8
+    },
+    {
+      "segment": 188,
+      "card": "RAGE",
+      "command": {
+        "action": "play_card",
+        "card_index": 3
+      },
+      "single_target": false,
+      "actual_block": 2,
+      "predicted_block": 2,
+      "baseline_block": 2,
+      "actual_enemy_hp": null,
+      "predicted_enemy_hp": null,
+      "baseline_enemy_hp": null,
+      "block_exact": true,
+      "hp_exact": null,
+      "random_trigger_damage_unassigned": 0
+    },
+    {
+      "segment": 189,
+      "card": "BASH",
+      "command": {
+        "action": "play_card",
+        "card_index": 2,
+        "target_index": 0
+      },
+      "single_target": false,
+      "actual_block": 6,
+      "predicted_block": 6,
+      "baseline_block": 2,
+      "actual_enemy_hp": null,
+      "predicted_enemy_hp": null,
+      "baseline_enemy_hp": null,
+      "block_exact": true,
+      "hp_exact": null,
+      "random_trigger_damage_unassigned": 16
+    },
+    {
+      "segment": 191,
+      "card": "DEFEND_IRONCLAD",
+      "command": {
+        "action": "play_card",
+        "card_index": 2
+      },
+      "single_target": true,
+      "actual_block": 17,
+      "predicted_block": 17,
+      "baseline_block": 10,
+      "actual_enemy_hp": 296,
+      "predicted_enemy_hp": 296,
+      "baseline_enemy_hp": 304,
+      "block_exact": true,
+      "hp_exact": true,
+      "random_trigger_damage_unassigned": 0
+    },
+    {
+      "segment": 192,
+      "card": "SHRUG_IT_OFF",
+      "command": {
+        "action": "play_card",
+        "card_index": 4
+      },
+      "single_target": true,
+      "actual_block": 7,
+      "predicted_block": 7,
+      "baseline_block": 7,
+      "actual_enemy_hp": 270,
+      "predicted_enemy_hp": 270,
+      "baseline_enemy_hp": 278,
+      "block_exact": true,
+      "hp_exact": true,
+      "random_trigger_damage_unassigned": 0
+    },
+    {
+      "segment": 193,
+      "card": "IRON_WAVE",
+      "command": {
+        "action": "play_card",
+        "card_index": 4,
+        "target_index": 0
+      },
+      "single_target": true,
+      "actual_block": 14,
+      "predicted_block": 14,
+      "baseline_block": 13,
+      "actual_enemy_hp": 249,
+      "predicted_enemy_hp": 249,
+      "baseline_enemy_hp": 265,
+      "block_exact": true,
+      "hp_exact": true,
+      "random_trigger_damage_unassigned": 0
+    },
+    {
+      "segment": 194,
+      "card": "DEFEND_IRONCLAD",
+      "command": {
+        "action": "play_card",
+        "card_index": 3
+      },
+      "single_target": true,
+      "actual_block": 19,
+      "predicted_block": 19,
+      "baseline_block": 19,
+      "actual_enemy_hp": 241,
+      "predicted_enemy_hp": 241,
+      "baseline_enemy_hp": 249,
+      "block_exact": true,
+      "hp_exact": true,
+      "random_trigger_damage_unassigned": 0
+    },
+    {
+      "segment": 195,
+      "card": "SHRUG_IT_OFF",
+      "command": {
+        "action": "play_card",
+        "card_index": 3
+      },
+      "single_target": true,
+      "actual_block": 26,
+      "predicted_block": 26,
+      "baseline_block": 26,
+      "actual_enemy_hp": 233,
+      "predicted_enemy_hp": 233,
+      "baseline_enemy_hp": 241,
+      "block_exact": true,
+      "hp_exact": true,
+      "random_trigger_damage_unassigned": 0
+    },
+    {
+      "segment": 196,
+      "card": "SECOND_WIND",
+      "command": {
+        "action": "play_card",
+        "card_index": 2
+      },
+      "single_target": true,
+      "actual_block": 55,
+      "predicted_block": 55,
+      "baseline_block": 33,
+      "actual_enemy_hp": 184,
+      "predicted_enemy_hp": 184,
+      "baseline_enemy_hp": 218,
+      "block_exact": true,
+      "hp_exact": true,
+      "random_trigger_damage_unassigned": 0
+    },
+    {
+      "segment": 200,
+      "card": "SHRUG_IT_OFF",
+      "command": {
+        "action": "play_card",
+        "card_index": 0
+      },
+      "single_target": true,
+      "actual_block": 18,
+      "predicted_block": 18,
+      "baseline_block": 18,
+      "actual_enemy_hp": 127,
+      "predicted_enemy_hp": 127,
+      "baseline_enemy_hp": 135,
+      "block_exact": true,
+      "hp_exact": true,
+      "random_trigger_damage_unassigned": 0
+    },
+    {
+      "segment": 201,
+      "card": "IRON_WAVE",
+      "command": {
+        "action": "play_card",
+        "card_index": 3,
+        "target_index": 0
+      },
+      "single_target": true,
+      "actual_block": 25,
+      "predicted_block": 25,
+      "baseline_block": 24,
+      "actual_enemy_hp": 106,
+      "predicted_enemy_hp": 106,
+      "baseline_enemy_hp": 122,
+      "block_exact": true,
+      "hp_exact": true,
+      "random_trigger_damage_unassigned": 0
+    },
+    {
+      "segment": 202,
+      "card": "STRIKE_IRONCLAD",
+      "command": {
+        "action": "play_card",
+        "card_index": 2,
+        "target_index": 0
+      },
+      "single_target": true,
+      "actual_block": 26,
+      "predicted_block": 26,
+      "baseline_block": 25,
+      "actual_enemy_hp": 89,
+      "predicted_enemy_hp": 89,
+      "baseline_enemy_hp": 97,
+      "block_exact": true,
+      "hp_exact": true,
+      "random_trigger_damage_unassigned": 0
+    },
+    {
+      "segment": 203,
+      "card": "POMMEL_STRIKE",
+      "command": {
+        "action": "play_card",
+        "card_index": 3,
+        "target_index": 0
+      },
+      "single_target": true,
+      "actual_block": 27,
+      "predicted_block": 27,
+      "baseline_block": 26,
+      "actual_enemy_hp": 72,
+      "predicted_enemy_hp": 72,
+      "baseline_enemy_hp": 80,
+      "block_exact": true,
+      "hp_exact": true,
+      "random_trigger_damage_unassigned": 0
+    },
+    {
+      "segment": 204,
+      "card": "STRIKE_IRONCLAD",
+      "command": {
+        "action": "play_card",
+        "card_index": 4,
+        "target_index": 0
+      },
+      "single_target": true,
+      "actual_block": 28,
+      "predicted_block": 28,
+      "baseline_block": 27,
+      "actual_enemy_hp": 58,
+      "predicted_enemy_hp": 58,
+      "baseline_enemy_hp": 66,
+      "block_exact": true,
+      "hp_exact": true,
+      "random_trigger_damage_unassigned": 0
+    }
+  ],
+  "excluded": [
+    {
+      "segment": 107,
+      "card": "SPITE",
+      "command": {
+        "action": "play_card",
+        "card_index": 0,
+        "target_index": 0
+      },
+      "reason": "outside declared typed support"
+    },
+    {
+      "segment": 107,
+      "card": "STRIKE_IRONCLAD",
+      "command": {
+        "action": "play_card",
+        "card_index": 1,
+        "target_index": 0
+      },
+      "reason": "selection/terminal/turn boundary; no comparable next settled observation"
+    },
+    {
+      "segment": 163,
+      "card": "STONE_ARMOR",
+      "command": {
+        "action": "play_card",
+        "card_index": 3
+      },
+      "reason": "outside declared typed support"
+    },
+    {
+      "segment": 164,
+      "card": "OFFERING",
+      "command": {
+        "action": "play_card",
+        "card_index": 0
+      },
+      "reason": "outside declared typed support"
+    },
+    {
+      "segment": 166,
+      "card": "FORGOTTEN_RITUAL",
+      "command": {
+        "action": "play_card",
+        "card_index": 6
+      },
+      "reason": "outside declared typed support"
+    },
+    {
+      "segment": 169,
+      "card": "PYRE",
+      "command": {
+        "action": "play_card",
+        "card_index": 7
+      },
+      "reason": "outside declared typed support"
+    },
+    {
+      "segment": 170,
+      "card": "ARMAMENTS",
+      "command": {
+        "action": "play_card",
+        "card_index": 1
+      },
+      "reason": "outside declared typed support"
+    },
+    {
+      "segment": 175,
+      "card": "HEADBUTT",
+      "command": {
+        "action": "play_card",
+        "card_index": 5,
+        "target_index": 0
+      },
+      "reason": "outside declared typed support"
+    },
+    {
+      "segment": 177,
+      "card": "BREAKTHROUGH",
+      "command": {
+        "action": "play_card",
+        "card_index": 4
+      },
+      "reason": "outside declared typed support"
+    },
+    {
+      "segment": 178,
+      "card": "SPITE",
+      "command": {
+        "action": "play_card",
+        "card_index": 2,
+        "target_index": 0
+      },
+      "reason": "outside declared typed support"
+    },
+    {
+      "segment": 179,
+      "card": "SEEKER_STRIKE",
+      "command": {
+        "action": "play_card",
+        "card_index": 3,
+        "target_index": 0
+      },
+      "reason": "outside declared typed support"
+    },
+    {
+      "segment": 185,
+      "card": "HEADBUTT",
+      "command": {
+        "action": "play_card",
+        "card_index": 3,
+        "target_index": 0
+      },
+      "reason": "outside declared typed support"
+    },
+    {
+      "segment": 186,
+      "card": "ROLLING_BOULDER",
+      "command": {
+        "action": "play_card",
+        "card_index": 0
+      },
+      "reason": "outside declared typed support"
+    },
+    {
+      "segment": 190,
+      "card": "SPITE",
+      "command": {
+        "action": "play_card",
+        "card_index": 2,
+        "target_index": 0
+      },
+      "reason": "outside declared typed support"
+    },
+    {
+      "segment": 196,
+      "card": "RAMPAGE",
+      "command": {
+        "action": "play_card",
+        "card_index": 0,
+        "target_index": 0
+      },
+      "reason": "outside declared typed support"
+    },
+    {
+      "segment": 197,
+      "card": "DARK_SHACKLES",
+      "command": {
+        "action": "play_card",
+        "card_index": 4,
+        "target_index": 0
+      },
+      "reason": "outside declared typed support"
+    },
+    {
+      "segment": 198,
+      "card": "SEEKER_STRIKE",
+      "command": {
+        "action": "play_card",
+        "card_index": 3,
+        "target_index": 0
+      },
+      "reason": "outside declared typed support"
+    },
+    {
+      "segment": 206,
+      "card": "RAMPAGE",
+      "command": {
+        "action": "play_card",
+        "card_index": 4,
+        "target_index": 0
+      },
+      "reason": "outside declared typed support"
+    },
+    {
+      "segment": 207,
+      "card": "POMMEL_STRIKE",
+      "command": {
+        "action": "play_card",
+        "card_index": 3,
+        "target_index": 0
+      },
+      "reason": "selection/terminal/turn boundary; no comparable next settled observation"
+    }
+  ],
+  "counts": {
+    "cases": 30,
+    "block_exact": 30,
+    "single_target": 15,
+    "hp_exact": 15
+  },
+  "failures": []
+}
