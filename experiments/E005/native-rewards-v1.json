@@ -1,0 +1,1084 @@
+{
+  "manifest": {
+    "schema_version": 1,
+    "code_commit": "4d09afa564314d4f88e105234423e4a925cef505",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "048f3533214ac7f7096d1614091fb27486e6d46a77348341328ad9057da61fd4",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+  },
+  "result": {
+    "run_id": "4c5e0363-3626-42f6-955a-410c30cda8d9",
+    "game_run_id": "EFUZ4NHFCXBT",
+    "status": "budget_boundary",
+    "actions": 5,
+    "rejections": 0,
+    "initial_run": {
+      "character_id": "IRONCLAD",
+      "character_name": "铁甲战士",
+      "ascension": 0,
+      "ascension_effects": [],
+      "floor": 7,
+      "current_hp": 21,
+      "max_hp": 80,
+      "gold": 75,
+      "max_energy": 3,
+      "base_orb_slots": 0,
+      "act_id": "0",
+      "boss_id": "WATERFALL_GIANT_BOSS",
+      "deck": [
+        {
+          "index": 0,
+          "card_id": "STRIKE_IRONCLAD",
+          "name": "打击",
+          "upgraded": false,
+          "card_type": "Attack",
+          "rarity": "Basic",
+          "costs_x": false,
+          "star_costs_x": false,
+          "energy_cost": 1,
+          "star_cost": 0,
+          "rules_text": "造成{Damage:diff()}点伤害。",
+          "resolved_rules_text": "造成6点伤害。",
+          "dynamic_values": [
+            {
+              "name": "Damage",
+              "base_value": 6,
+              "current_value": 6,
+              "enchanted_value": 6,
+              "is_modified": false,
+              "was_just_upgraded": false
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "card_id": "STRIKE_IRONCLAD",
+          "name": "打击",
+          "upgraded": false,
+          "card_type": "Attack",
+          "rarity": "Basic",
+          "costs_x": false,
+          "star_costs_x": false,
+          "energy_cost": 1,
+          "star_cost": 0,
+          "rules_text": "造成{Damage:diff()}点伤害。",
+          "resolved_rules_text": "造成6点伤害。",
+          "dynamic_values": [
+            {
+              "name": "Damage",
+              "base_value": 6,
+              "current_value": 6,
+              "enchanted_value": 6,
+              "is_modified": false,
+              "was_just_upgraded": false
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "card_id": "STRIKE_IRONCLAD",
+          "name": "打击",
+          "upgraded": false,
+          "card_type": "Attack",
+          "rarity": "Basic",
+          "costs_x": false,
+          "star_costs_x": false,
+          "energy_cost": 1,
+          "star_cost": 0,
+          "rules_text": "造成{Damage:diff()}点伤害。",
+          "resolved_rules_text": "造成6点伤害。",
+          "dynamic_values": [
+            {
+              "name": "Damage",
+              "base_value": 6,
+              "current_value": 6,
+              "enchanted_value": 6,
+              "is_modified": false,
+              "was_just_upgraded": false
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "card_id": "STRIKE_IRONCLAD",
+          "name": "打击",
+          "upgraded": false,
+          "card_type": "Attack",
+          "rarity": "Basic",
+          "costs_x": false,
+          "star_costs_x": false,
+          "energy_cost": 1,
+          "star_cost": 0,
+          "rules_text": "造成{Damage:diff()}点伤害。",
+          "resolved_rules_text": "造成6点伤害。",
+          "dynamic_values": [
+            {
+              "name": "Damage",
+              "base_value": 6,
+              "current_value": 6,
+              "enchanted_value": 6,
+              "is_modified": false,
+              "was_just_upgraded": false
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "card_id": "STRIKE_IRONCLAD",
+          "name": "打击",
+          "upgraded": false,
+          "card_type": "Attack",
+          "rarity": "Basic",
+          "costs_x": false,
+          "star_costs_x": false,
+          "energy_cost": 1,
+          "star_cost": 0,
+          "rules_text": "造成{Damage:diff()}点伤害。",
+          "resolved_rules_text": "造成6点伤害。",
+          "dynamic_values": [
+            {
+              "name": "Damage",
+              "base_value": 6,
+              "current_value": 6,
+              "enchanted_value": 6,
+              "is_modified": false,
+              "was_just_upgraded": false
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "card_id": "DEFEND_IRONCLAD",
+          "name": "防御",
+          "upgraded": false,
+          "card_type": "Skill",
+          "rarity": "Basic",
+          "costs_x": false,
+          "star_costs_x": false,
+          "energy_cost": 1,
+          "star_cost": 0,
+          "rules_text": "获得{Block:diff()}点格挡。",
+          "resolved_rules_text": "获得5点格挡。",
+          "dynamic_values": [
+            {
+              "name": "Block",
+              "base_value": 5,
+              "current_value": 5,
+              "enchanted_value": 5,
+              "is_modified": false,
+              "was_just_upgraded": false
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "card_id": "DEFEND_IRONCLAD",
+          "name": "防御",
+          "upgraded": false,
+          "card_type": "Skill",
+          "rarity": "Basic",
+          "costs_x": false,
+          "star_costs_x": false,
+          "energy_cost": 1,
+          "star_cost": 0,
+          "rules_text": "获得{Block:diff()}点格挡。",
+          "resolved_rules_text": "获得5点格挡。",
+          "dynamic_values": [
+            {
+              "name": "Block",
+              "base_value": 5,
+              "current_value": 5,
+              "enchanted_value": 5,
+              "is_modified": false,
+              "was_just_upgraded": false
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "card_id": "DEFEND_IRONCLAD",
+          "name": "防御",
+          "upgraded": false,
+          "card_type": "Skill",
+          "rarity": "Basic",
+          "costs_x": false,
+          "star_costs_x": false,
+          "energy_cost": 1,
+          "star_cost": 0,
+          "rules_text": "获得{Block:diff()}点格挡。",
+          "resolved_rules_text": "获得5点格挡。",
+          "dynamic_values": [
+            {
+              "name": "Block",
+              "base_value": 5,
+              "current_value": 5,
+              "enchanted_value": 5,
+              "is_modified": false,
+              "was_just_upgraded": false
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "card_id": "DEFEND_IRONCLAD",
+          "name": "防御",
+          "upgraded": false,
+          "card_type": "Skill",
+          "rarity": "Basic",
+          "costs_x": false,
+          "star_costs_x": false,
+          "energy_cost": 1,
+          "star_cost": 0,
+          "rules_text": "获得{Block:diff()}点格挡。",
+          "resolved_rules_text": "获得5点格挡。",
+          "dynamic_values": [
+            {
+              "name": "Block",
+              "base_value": 5,
+              "current_value": 5,
+              "enchanted_value": 5,
+              "is_modified": false,
+              "was_just_upgraded": false
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "card_id": "BASH",
+          "name": "痛击",
+          "upgraded": false,
+          "card_type": "Attack",
+          "rarity": "Basic",
+          "costs_x": false,
+          "star_costs_x": false,
+          "energy_cost": 2,
+          "star_cost": 0,
+          "rules_text": "造成{Damage:diff()}点伤害。 给予{VulnerablePower:diff()}层易伤。",
+          "resolved_rules_text": "造成8点伤害。 给予2层易伤。",
+          "dynamic_values": [
+            {
+              "name": "Damage",
+              "base_value": 8,
+              "current_value": 8,
+              "enchanted_value": 8,
+              "is_modified": false,
+              "was_just_upgraded": false
+            },
+            {
+              "name": "VulnerablePower",
+              "base_value": 2,
+              "current_value": 2,
+              "enchanted_value": 2,
+              "is_modified": false,
+              "was_just_upgraded": false
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "card_id": "POMMEL_STRIKE",
+          "name": "剑柄打击",
+          "upgraded": false,
+          "card_type": "Attack",
+          "rarity": "Common",
+          "costs_x": false,
+          "star_costs_x": false,
+          "energy_cost": 1,
+          "star_cost": 0,
+          "rules_text": "造成{Damage:diff()}点伤害。 抽{Cards:diff()}张牌。",
+          "resolved_rules_text": "造成9点伤害。 抽1张牌。",
+          "dynamic_values": [
+            {
+              "name": "Cards",
+              "base_value": 1,
+              "current_value": 1,
+              "enchanted_value": 1,
+              "is_modified": false,
+              "was_just_upgraded": false
+            },
+            {
+              "name": "Damage",
+              "base_value": 9,
+              "current_value": 9,
+              "enchanted_value": 9,
+              "is_modified": false,
+              "was_just_upgraded": false
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "card_id": "ARMAMENTS",
+          "name": "武装",
+          "upgraded": false,
+          "card_type": "Skill",
+          "rarity": "Common",
+          "costs_x": false,
+          "star_costs_x": false,
+          "energy_cost": 1,
+          "star_cost": 0,
+          "rules_text": "获得{Block:diff()}点格挡。 升级你手牌中的{IfUpgraded:show:所有牌|一张牌}。",
+          "resolved_rules_text": "获得5点格挡。 升级你手牌中的一张牌。",
+          "dynamic_values": [
+            {
+              "name": "Block",
+              "base_value": 5,
+              "current_value": 5,
+              "enchanted_value": 5,
+              "is_modified": false,
+              "was_just_upgraded": false
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "card_id": "FEEL_NO_PAIN",
+          "name": "无惧疼痛",
+          "upgraded": false,
+          "card_type": "Power",
+          "rarity": "Uncommon",
+          "costs_x": false,
+          "star_costs_x": false,
+          "energy_cost": 1,
+          "star_cost": 0,
+          "rules_text": "每当有一张牌被消耗时，获得{Power:diff()}点格挡。",
+          "resolved_rules_text": "每当有一张牌被消耗时，获得3点格挡。",
+          "dynamic_values": [
+            {
+              "name": "Power",
+              "base_value": 3,
+              "current_value": 3,
+              "enchanted_value": 3,
+              "is_modified": false,
+              "was_just_upgraded": false
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "card_id": "PERFECTED_STRIKE",
+          "name": "完美打击",
+          "upgraded": false,
+          "card_type": "Attack",
+          "rarity": "Common",
+          "costs_x": false,
+          "star_costs_x": false,
+          "energy_cost": 2,
+          "star_cost": 0,
+          "rules_text": "造成{CalculatedDamage:diff()}点伤害。 你每有一张名字中含有“打击”的牌，伤害+{ExtraDamage:diff()}。",
+          "resolved_rules_text": "造成6点伤害。 你每有一张名字中含有“打击”的牌，伤害+2。",
+          "dynamic_values": [
+            {
+              "name": "CalculatedDamage",
+              "base_value": 6,
+              "current_value": 6,
+              "enchanted_value": 6,
+              "is_modified": false,
+              "was_just_upgraded": false
+            },
+            {
+              "name": "CalculationBase",
+              "base_value": 6,
+              "current_value": 6,
+              "enchanted_value": 6,
+              "is_modified": false,
+              "was_just_upgraded": false
+            },
+            {
+              "name": "ExtraDamage",
+              "base_value": 2,
+              "current_value": 2,
+              "enchanted_value": 2,
+              "is_modified": false,
+              "was_just_upgraded": false
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "card_id": "BATTLE_TRANCE",
+          "name": "战斗专注",
+          "upgraded": false,
+          "card_type": "Skill",
+          "rarity": "Uncommon",
+          "costs_x": false,
+          "star_costs_x": false,
+          "energy_cost": 0,
+          "star_cost": 0,
+          "rules_text": "抽{Cards:diff()}张牌。 你在本回合内不能再抽任何牌。",
+          "resolved_rules_text": "抽3张牌。 你在本回合内不能再抽任何牌。",
+          "dynamic_values": [
+            {
+              "name": "Cards",
+              "base_value": 3,
+              "current_value": 3,
+              "enchanted_value": 3,
+              "is_modified": false,
+              "was_just_upgraded": false
+            }
+          ]
+        }
+      ],
+      "relics": [
+        {
+          "index": 0,
+          "relic_id": "BURNING_BLOOD",
+          "name": "燃烧之血",
+          "description": "在战斗结束时，回复[green]{Heal}[/green]点生命。",
+          "stack": null,
+          "is_melted": false
+        },
+        {
+          "index": 1,
+          "relic_id": "BOOMING_CONCH",
+          "name": "轰鸣海螺",
+          "description": "在[gold]精英[/gold]战的战斗开始时，额外抽[blue]{Cards}[/blue]张牌并获得{Energy:energyIcons()}。",
+          "stack": null,
+          "is_melted": false
+        }
+      ],
+      "players": [
+        {
+          "player_id": "1",
+          "slot_index": 0,
+          "is_local": true,
+          "is_connected": true,
+          "character_id": "IRONCLAD",
+          "character_name": "铁甲战士",
+          "current_hp": 21,
+          "max_hp": 80,
+          "gold": 75,
+          "is_alive": true
+        }
+      ],
+      "potions": [
+        {
+          "index": 0,
+          "potion_id": "DUPLICATOR",
+          "name": "复制药水",
+          "description": "本回合，你打出的下一张牌会额外打出一次。",
+          "rarity": "Uncommon",
+          "occupied": true,
+          "usage": "CombatOnly",
+          "target_type": "AnyPlayer",
+          "is_queued": false,
+          "requires_target": false,
+          "target_index_space": null,
+          "valid_target_indices": [],
+          "can_use": false,
+          "can_discard": false
+        },
+        {
+          "index": 1,
+          "potion_id": "STRENGTH_POTION",
+          "name": "力量药水",
+          "description": "获得[blue]{StrengthPower}[/blue]点[gold]力量[/gold]。",
+          "rarity": "Common",
+          "occupied": true,
+          "usage": "CombatOnly",
+          "target_type": "AnyPlayer",
+          "is_queued": false,
+          "requires_target": false,
+          "target_index_space": null,
+          "valid_target_indices": [],
+          "can_use": false,
+          "can_discard": false
+        },
+        {
+          "index": 2,
+          "potion_id": null,
+          "name": null,
+          "description": null,
+          "rarity": null,
+          "occupied": false,
+          "usage": null,
+          "target_type": null,
+          "is_queued": false,
+          "requires_target": false,
+          "target_index_space": null,
+          "valid_target_indices": [],
+          "can_use": false,
+          "can_discard": false
+        }
+      ]
+    },
+    "health": {
+      "service": "sts2-ai-agent",
+      "mod_version": "0.15.0",
+      "protocol_version": "2026-03-11-v1",
+      "game_version": "v0.111.0",
+      "status": "ready",
+      "api_host": "127.0.0.1",
+      "api_port": 8080,
+      "process_id": 68762,
+      "instance_role": "human",
+      "mcp_enabled": true,
+      "mcp_url": "http://127.0.0.1:8080/mcp",
+      "play_running": false,
+      "play_phase": "paused",
+      "session_requests": 0,
+      "companion_process_alive": false,
+      "companion_process_exited": false,
+      "dual_status": "尚未启动双开。",
+      "team_control_status": "队友控制尚未连接。",
+      "compatibility": {
+        "reflected_members_checked": 27,
+        "reflected_members_missing": 0,
+        "missing_members": []
+      },
+      "state_build": {
+        "slow_threshold_ms": 100,
+        "samples": 36654,
+        "slow_builds": 0,
+        "last_ms": 0.9,
+        "max_ms": 55.2,
+        "max_screen": "CRYSTAL_SPHERE",
+        "recent_samples": 256,
+        "recent_p50_ms": 2.6,
+        "recent_p95_ms": 11
+      }
+    },
+    "final_screen": "MAP",
+    "final_run": {
+      "character_id": "IRONCLAD",
+      "character_name": "铁甲战士",
+      "ascension": 0,
+      "ascension_effects": [],
+      "floor": 7,
+      "current_hp": 21,
+      "max_hp": 80,
+      "gold": 90,
+      "max_energy": 3,
+      "base_orb_slots": 0,
+      "act_id": "0",
+      "boss_id": "WATERFALL_GIANT_BOSS",
+      "deck": [
+        {
+          "index": 0,
+          "card_id": "STRIKE_IRONCLAD",
+          "name": "打击",
+          "upgraded": false,
+          "card_type": "Attack",
+          "rarity": "Basic",
+          "costs_x": false,
+          "star_costs_x": false,
+          "energy_cost": 1,
+          "star_cost": 0,
+          "rules_text": "造成{Damage:diff()}点伤害。",
+          "resolved_rules_text": "造成6点伤害。",
+          "dynamic_values": [
+            {
+              "name": "Damage",
+              "base_value": 6,
+              "current_value": 6,
+              "enchanted_value": 6,
+              "is_modified": false,
+              "was_just_upgraded": false
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "card_id": "STRIKE_IRONCLAD",
+          "name": "打击",
+          "upgraded": false,
+          "card_type": "Attack",
+          "rarity": "Basic",
+          "costs_x": false,
+          "star_costs_x": false,
+          "energy_cost": 1,
+          "star_cost": 0,
+          "rules_text": "造成{Damage:diff()}点伤害。",
+          "resolved_rules_text": "造成6点伤害。",
+          "dynamic_values": [
+            {
+              "name": "Damage",
+              "base_value": 6,
+              "current_value": 6,
+              "enchanted_value": 6,
+              "is_modified": false,
+              "was_just_upgraded": false
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "card_id": "STRIKE_IRONCLAD",
+          "name": "打击",
+          "upgraded": false,
+          "card_type": "Attack",
+          "rarity": "Basic",
+          "costs_x": false,
+          "star_costs_x": false,
+          "energy_cost": 1,
+          "star_cost": 0,
+          "rules_text": "造成{Damage:diff()}点伤害。",
+          "resolved_rules_text": "造成6点伤害。",
+          "dynamic_values": [
+            {
+              "name": "Damage",
+              "base_value": 6,
+              "current_value": 6,
+              "enchanted_value": 6,
+              "is_modified": false,
+              "was_just_upgraded": false
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "card_id": "STRIKE_IRONCLAD",
+          "name": "打击",
+          "upgraded": false,
+          "card_type": "Attack",
+          "rarity": "Basic",
+          "costs_x": false,
+          "star_costs_x": false,
+          "energy_cost": 1,
+          "star_cost": 0,
+          "rules_text": "造成{Damage:diff()}点伤害。",
+          "resolved_rules_text": "造成6点伤害。",
+          "dynamic_values": [
+            {
+              "name": "Damage",
+              "base_value": 6,
+              "current_value": 6,
+              "enchanted_value": 6,
+              "is_modified": false,
+              "was_just_upgraded": false
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "card_id": "STRIKE_IRONCLAD",
+          "name": "打击",
+          "upgraded": false,
+          "card_type": "Attack",
+          "rarity": "Basic",
+          "costs_x": false,
+          "star_costs_x": false,
+          "energy_cost": 1,
+          "star_cost": 0,
+          "rules_text": "造成{Damage:diff()}点伤害。",
+          "resolved_rules_text": "造成6点伤害。",
+          "dynamic_values": [
+            {
+              "name": "Damage",
+              "base_value": 6,
+              "current_value": 6,
+              "enchanted_value": 6,
+              "is_modified": false,
+              "was_just_upgraded": false
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "card_id": "DEFEND_IRONCLAD",
+          "name": "防御",
+          "upgraded": false,
+          "card_type": "Skill",
+          "rarity": "Basic",
+          "costs_x": false,
+          "star_costs_x": false,
+          "energy_cost": 1,
+          "star_cost": 0,
+          "rules_text": "获得{Block:diff()}点格挡。",
+          "resolved_rules_text": "获得5点格挡。",
+          "dynamic_values": [
+            {
+              "name": "Block",
+              "base_value": 5,
+              "current_value": 5,
+              "enchanted_value": 5,
+              "is_modified": false,
+              "was_just_upgraded": false
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "card_id": "DEFEND_IRONCLAD",
+          "name": "防御",
+          "upgraded": false,
+          "card_type": "Skill",
+          "rarity": "Basic",
+          "costs_x": false,
+          "star_costs_x": false,
+          "energy_cost": 1,
+          "star_cost": 0,
+          "rules_text": "获得{Block:diff()}点格挡。",
+          "resolved_rules_text": "获得5点格挡。",
+          "dynamic_values": [
+            {
+              "name": "Block",
+              "base_value": 5,
+              "current_value": 5,
+              "enchanted_value": 5,
+              "is_modified": false,
+              "was_just_upgraded": false
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "card_id": "DEFEND_IRONCLAD",
+          "name": "防御",
+          "upgraded": false,
+          "card_type": "Skill",
+          "rarity": "Basic",
+          "costs_x": false,
+          "star_costs_x": false,
+          "energy_cost": 1,
+          "star_cost": 0,
+          "rules_text": "获得{Block:diff()}点格挡。",
+          "resolved_rules_text": "获得5点格挡。",
+          "dynamic_values": [
+            {
+              "name": "Block",
+              "base_value": 5,
+              "current_value": 5,
+              "enchanted_value": 5,
+              "is_modified": false,
+              "was_just_upgraded": false
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "card_id": "DEFEND_IRONCLAD",
+          "name": "防御",
+          "upgraded": false,
+          "card_type": "Skill",
+          "rarity": "Basic",
+          "costs_x": false,
+          "star_costs_x": false,
+          "energy_cost": 1,
+          "star_cost": 0,
+          "rules_text": "获得{Block:diff()}点格挡。",
+          "resolved_rules_text": "获得5点格挡。",
+          "dynamic_values": [
+            {
+              "name": "Block",
+              "base_value": 5,
+              "current_value": 5,
+              "enchanted_value": 5,
+              "is_modified": false,
+              "was_just_upgraded": false
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "card_id": "BASH",
+          "name": "痛击",
+          "upgraded": false,
+          "card_type": "Attack",
+          "rarity": "Basic",
+          "costs_x": false,
+          "star_costs_x": false,
+          "energy_cost": 2,
+          "star_cost": 0,
+          "rules_text": "造成{Damage:diff()}点伤害。 给予{VulnerablePower:diff()}层易伤。",
+          "resolved_rules_text": "造成8点伤害。 给予2层易伤。",
+          "dynamic_values": [
+            {
+              "name": "Damage",
+              "base_value": 8,
+              "current_value": 8,
+              "enchanted_value": 8,
+              "is_modified": false,
+              "was_just_upgraded": false
+            },
+            {
+              "name": "VulnerablePower",
+              "base_value": 2,
+              "current_value": 2,
+              "enchanted_value": 2,
+              "is_modified": false,
+              "was_just_upgraded": false
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "card_id": "POMMEL_STRIKE",
+          "name": "剑柄打击",
+          "upgraded": false,
+          "card_type": "Attack",
+          "rarity": "Common",
+          "costs_x": false,
+          "star_costs_x": false,
+          "energy_cost": 1,
+          "star_cost": 0,
+          "rules_text": "造成{Damage:diff()}点伤害。 抽{Cards:diff()}张牌。",
+          "resolved_rules_text": "造成9点伤害。 抽1张牌。",
+          "dynamic_values": [
+            {
+              "name": "Cards",
+              "base_value": 1,
+              "current_value": 1,
+              "enchanted_value": 1,
+              "is_modified": false,
+              "was_just_upgraded": false
+            },
+            {
+              "name": "Damage",
+              "base_value": 9,
+              "current_value": 9,
+              "enchanted_value": 9,
+              "is_modified": false,
+              "was_just_upgraded": false
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "card_id": "ARMAMENTS",
+          "name": "武装",
+          "upgraded": false,
+          "card_type": "Skill",
+          "rarity": "Common",
+          "costs_x": false,
+          "star_costs_x": false,
+          "energy_cost": 1,
+          "star_cost": 0,
+          "rules_text": "获得{Block:diff()}点格挡。 升级你手牌中的{IfUpgraded:show:所有牌|一张牌}。",
+          "resolved_rules_text": "获得5点格挡。 升级你手牌中的一张牌。",
+          "dynamic_values": [
+            {
+              "name": "Block",
+              "base_value": 5,
+              "current_value": 5,
+              "enchanted_value": 5,
+              "is_modified": false,
+              "was_just_upgraded": false
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "card_id": "FEEL_NO_PAIN",
+          "name": "无惧疼痛",
+          "upgraded": false,
+          "card_type": "Power",
+          "rarity": "Uncommon",
+          "costs_x": false,
+          "star_costs_x": false,
+          "energy_cost": 1,
+          "star_cost": 0,
+          "rules_text": "每当有一张牌被消耗时，获得{Power:diff()}点格挡。",
+          "resolved_rules_text": "每当有一张牌被消耗时，获得3点格挡。",
+          "dynamic_values": [
+            {
+              "name": "Power",
+              "base_value": 3,
+              "current_value": 3,
+              "enchanted_value": 3,
+              "is_modified": false,
+              "was_just_upgraded": false
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "card_id": "PERFECTED_STRIKE",
+          "name": "完美打击",
+          "upgraded": false,
+          "card_type": "Attack",
+          "rarity": "Common",
+          "costs_x": false,
+          "star_costs_x": false,
+          "energy_cost": 2,
+          "star_cost": 0,
+          "rules_text": "造成{CalculatedDamage:diff()}点伤害。 你每有一张名字中含有“打击”的牌，伤害+{ExtraDamage:diff()}。",
+          "resolved_rules_text": "造成6点伤害。 你每有一张名字中含有“打击”的牌，伤害+2。",
+          "dynamic_values": [
+            {
+              "name": "CalculatedDamage",
+              "base_value": 6,
+              "current_value": 6,
+              "enchanted_value": 6,
+              "is_modified": false,
+              "was_just_upgraded": false
+            },
+            {
+              "name": "CalculationBase",
+              "base_value": 6,
+              "current_value": 6,
+              "enchanted_value": 6,
+              "is_modified": false,
+              "was_just_upgraded": false
+            },
+            {
+              "name": "ExtraDamage",
+              "base_value": 2,
+              "current_value": 2,
+              "enchanted_value": 2,
+              "is_modified": false,
+              "was_just_upgraded": false
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "card_id": "BATTLE_TRANCE",
+          "name": "战斗专注",
+          "upgraded": false,
+          "card_type": "Skill",
+          "rarity": "Uncommon",
+          "costs_x": false,
+          "star_costs_x": false,
+          "energy_cost": 0,
+          "star_cost": 0,
+          "rules_text": "抽{Cards:diff()}张牌。 你在本回合内不能再抽任何牌。",
+          "resolved_rules_text": "抽3张牌。 你在本回合内不能再抽任何牌。",
+          "dynamic_values": [
+            {
+              "name": "Cards",
+              "base_value": 3,
+              "current_value": 3,
+              "enchanted_value": 3,
+              "is_modified": false,
+              "was_just_upgraded": false
+            }
+          ]
+        },
+        {
+          "index": 15,
+          "card_id": "TRUE_GRIT",
+          "name": "坚毅",
+          "upgraded": false,
+          "card_type": "Skill",
+          "rarity": "Common",
+          "costs_x": false,
+          "star_costs_x": false,
+          "energy_cost": 1,
+          "star_cost": 0,
+          "rules_text": "获得{Block:diff()}点格挡。 {IfUpgraded:show:| 随机}消耗1张牌。",
+          "resolved_rules_text": "获得7点格挡。 随机消耗1张牌。",
+          "dynamic_values": [
+            {
+              "name": "Block",
+              "base_value": 7,
+              "current_value": 7,
+              "enchanted_value": 7,
+              "is_modified": false,
+              "was_just_upgraded": false
+            }
+          ]
+        }
+      ],
+      "relics": [
+        {
+          "index": 0,
+          "relic_id": "BURNING_BLOOD",
+          "name": "燃烧之血",
+          "description": "在战斗结束时，回复[green]{Heal}[/green]点生命。",
+          "stack": null,
+          "is_melted": false
+        },
+        {
+          "index": 1,
+          "relic_id": "BOOMING_CONCH",
+          "name": "轰鸣海螺",
+          "description": "在[gold]精英[/gold]战的战斗开始时，额外抽[blue]{Cards}[/blue]张牌并获得{Energy:energyIcons()}。",
+          "stack": null,
+          "is_melted": false
+        }
+      ],
+      "players": [
+        {
+          "player_id": "1",
+          "slot_index": 0,
+          "is_local": true,
+          "is_connected": true,
+          "character_id": "IRONCLAD",
+          "character_name": "铁甲战士",
+          "current_hp": 21,
+          "max_hp": 80,
+          "gold": 90,
+          "is_alive": true
+        }
+      ],
+      "potions": [
+        {
+          "index": 0,
+          "potion_id": "DUPLICATOR",
+          "name": "复制药水",
+          "description": "本回合，你打出的下一张牌会额外打出一次。",
+          "rarity": "Uncommon",
+          "occupied": true,
+          "usage": "CombatOnly",
+          "target_type": "AnyPlayer",
+          "is_queued": false,
+          "requires_target": false,
+          "target_index_space": null,
+          "valid_target_indices": [],
+          "can_use": false,
+          "can_discard": true
+        },
+        {
+          "index": 1,
+          "potion_id": "STRENGTH_POTION",
+          "name": "力量药水",
+          "description": "获得[blue]{StrengthPower}[/blue]点[gold]力量[/gold]。",
+          "rarity": "Common",
+          "occupied": true,
+          "usage": "CombatOnly",
+          "target_type": "AnyPlayer",
+          "is_queued": false,
+          "requires_target": false,
+          "target_index_space": null,
+          "valid_target_indices": [],
+          "can_use": false,
+          "can_discard": true
+        },
+        {
+          "index": 2,
+          "potion_id": "DISTILLED_CHAOS",
+          "name": "精炼混沌",
+          "description": "打出你[gold]抽牌堆[/gold]顶部的[blue]{Repeat}[/blue]张牌。",
+          "rarity": "Rare",
+          "occupied": true,
+          "usage": "CombatOnly",
+          "target_type": "AnyPlayer",
+          "is_queued": false,
+          "requires_target": false,
+          "target_index_space": null,
+          "valid_target_indices": [],
+          "can_use": false,
+          "can_discard": true
+        }
+      ]
+    },
+    "game_over": null,
+    "scenes": {
+      "REWARD": 5,
+      "MAP": 1
+    },
+    "seconds": 1.596,
+    "model_calls": 1,
+    "cost_usd": 0.000160314,
+    "usage_unknown": false,
+    "estimated_usd": 0.0,
+    "uncertain_calls": 0,
+    "trace_path": "artifacts/runs/4c5e0363-3626-42f6-955a-410c30cda8d9/decisions.jsonl",
+    "trace_sha256": "a45d3731ca6cec942ac47bf40e5344606f9203e03ef9bdd2d1332e0e845e79d3"
+  }
+}

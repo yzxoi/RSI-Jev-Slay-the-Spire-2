@@ -21,3 +21,5 @@ Phase2 (preregister before execution): fork each current legal combat action (in
 Phase2 result at3cf2901:8branches in7.9394s, all compute normally. Jev1request/$0.000074382 selects the2Strike plan without potions. Both real transitions match; native battle ends on the reward screen at21/80HP, floor7. No Astra tactical choice in this demo. Native screenshot visibly confirms the reward screen andHP.
 
 Phase3 coverage check: reuse the existing campaign macro controller for at most5actions on this reward screen, covering gold/potion claiming and Jev card selection, then stop at its action boundary. No new combat policy and no further branch-search strength claim. Store exact controller segment and native state.
+
+Phase3 at4d09afa:5normal reward actions,1Jev request/$0.000160314,0rejections; claimed15gold andDistilledChaos, Jev selectedTrueGrit, returned to MAP floor7 at21HP. Battle+reward demo totals7actions,2Jev requests,$0.000234696,0newAstra decisions. This is a real combat/loot loop, not an entire-run victory. Integrate current main including E036/E038; rebuild the combined patch stack and replay the frozen prefix again before promotion.
