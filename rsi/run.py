@@ -8,7 +8,7 @@ import time
 import uuid
 from .engine import ROOT, CHARACTERS, Headless, first_action
 from .jev import Budget, Jev
-from .policy import combat_candidates, model_state
+from .policy import combat_candidates, model_state, computed_candidates, greedy_choice
 from .trace import Trace, digest, version_manifest
 
 
@@ -46,9 +46,13 @@ def episode(config, manifest, jev=None):
             trace.write("before", {"state": state, "state_hash": digest(state)})
             if decision == "combat_play":
                 candidates = combat_candidates(state)
+                if config["policy"] in ["greedy", "jev_features"]:
+                    candidates = computed_candidates(state, candidates)
                 trace.write("candidates", candidates)
                 if config["policy"] == "first" or len(candidates) == 1:
                     selected = candidates[0]
+                elif config["policy"] == "greedy":
+                    selected = greedy_choice(state, candidates)
                 else:
                     selected, call = jev.choose(model_state(state), candidates, trace)
                     result["model_calls"] += 1
@@ -95,13 +99,13 @@ def main():
     parser.add_argument("--output", required=True)
     args = parser.parse_args()
     chars, policies = args.characters.split(","), args.policies.split(",")
-    if set(chars) - set(CHARACTERS) or set(policies) - {"first", "jev"}:
+    if set(chars) - set(CHARACTERS) or set(policies) - {"first", "greedy", "jev", "jev_features"}:
         parser.error("Unsupported character or policy")
     manifest = version_manifest()
     if manifest["tracked_dirty"]:
         raise RuntimeError("Commit implementation changes before evaluation")
     budget = Budget(args.max_calls, args.max_usd)
-    jev = Jev(budget) if set(policies) - {"first"} else None
+    jev = Jev(budget) if set(policies) - {"first", "greedy"} else None
     configs = [{"character": char, "seed": seed, "ascension": args.ascension, "policy": policy}
                for seed in args.seeds.split(",") for char in chars for policy in policies]
     with ThreadPoolExecutor(max_workers=args.workers) as pool:
