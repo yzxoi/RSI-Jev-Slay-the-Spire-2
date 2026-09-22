@@ -1,0 +1,49 @@
+{
+  "manifest": {
+    "schema_version": 1,
+    "code_commit": "a086be7f20464c2f2ba76a963274b6e11bb88557",
+    "tracked_dirty": false,
+    "headless_game_sha256": "1916d7171751313ff78aaa03d8aa6f2779c3bbea574dd4192cff49b663908fbe",
+    "headless_assembly_sha256": "4f50dfadf8442f152cfa730578d4e1341366bd4e0c8ab1a0442c6d33ef55c59a",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4",
+    "scope": "DenseVegetation-prefix-regression",
+    "source": "/tmp/rsi-sts2-planner/artifacts/runs/12f9b96f-a57e-4ed5-9378-481bce4607fd/decisions.jsonl"
+  },
+  "result": {
+    "before_hp": 9,
+    "after_hp": 30,
+    "after_options": [
+      {
+        "index": 0,
+        "title": "Fight!",
+        "description": "",
+        "text_key": "DENSE_VEGETATION.pages.REST.options.FIGHT",
+        "is_locked": false,
+        "vars": {
+          "Gold": 69,
+          "Heal": 21,
+          "HpLoss": 8
+        }
+      }
+    ],
+    "fight_decision": "combat_play",
+    "enemies": [
+      "Wriggler",
+      "Wriggler",
+      "Wriggler",
+      "Wriggler"
+    ],
+    "trace_path": "artifacts/runs/47920a68-020c-4a37-b17b-6f4b3165ff6e/decisions.jsonl",
+    "trace_sha256": "ab90baf0fe3e0b226d4507df71c38c8545828c1d3109e27009e6d59e2a98d823",
+    "harness_error": "First reporting attempt indexed absent enemy id after fight transition succeeded; corrected reporting only."
+  }
+}
