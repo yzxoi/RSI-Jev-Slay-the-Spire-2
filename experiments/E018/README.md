@@ -1,0 +1,5 @@
+# E018 — Stable headless combat boundaries
+
+Issue #31. Exact E014 errors: hand enumeration mutates while entering a Dense Vegetation fight/turn; Particle Wall returns to hand after spending2stars and gaining9block, falsely rejected by identical hand position. Add player-side/turn readiness and a30ms stable hand/energy/star signature with settled action queues before exporting a playable state, bounded at2seconds. Snapshot the hand before enumeration. Recognize resource/block/targetHP changes as evidence of an accepted returning card; never resubmit an action.
+
+Before evaluation, reproduce the old prefix from Ironclad full_eval_007 (26ebeffb) and Regent full_eval_009 (d43cce0d), then replay on the committed adapter. Use actual combat transitions and original reward effects; do not replace failed states with fabricated wins. Full rerun: E014 hybrid/jev five-character A10 full_eval_007..009, followed by broader integration if new mechanics fail. Budget$5/20000calls. Promotion only after no remaining errors in that fixed set. E016's current batch finishes before rebuilding the shared binaries.
