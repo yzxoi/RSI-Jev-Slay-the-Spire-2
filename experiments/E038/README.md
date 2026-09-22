@@ -13,3 +13,5 @@ Implementation notes: forecast own HP loss and consume block before each powered
 Iteration1 tested290d5e4: native9/9 HP/block observations match vs baseline3/9. Unit suite42existing pass,8new fixture errors due to missing required card name; no mechanic assertions executed in those8. Preserve tests-v1.txt. Iteration2 fills required names without changing policy.
 
 Iteration2 d60ca51: all50 unit tests pass. Six-run launcher enforces the preregistered1500action/300s/200modelcall/$0.50 per-run bounds plus shared1200calls/$3. Exact identical Jev requests are memoized between arms; this affects HTTP cost and matched-choice reproducibility, not game state. Run `PYTHONPATH=. python3 scripts/evaluate_retaliation.py`.
+
+Paired development at8386ca0: all6 normal defeats,0errors,0wins; all3 pairs tied (Act1floor13,Act2floor4,Act1floor8). Budget{'requests': 57, 'cost_usd': 0.00838614, 'unknown': False}. This cohort does not show a full-run benefit. Original errors are not filtered. A fresh native run continues under the preregistered few-Astra allowance.
