@@ -16,7 +16,7 @@ from .live_plan import plan_native
 
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--expected-run-id',required=True);p.add_argument('--max-actions',type=int,default=2000);p.add_argument('--max-seconds',type=int,default=3600);p.add_argument('--max-usd',type=float,default=3);p.add_argument('--output',required=True);p.add_argument('--execute',action='store_true');p.add_argument('--expert-choice');p.add_argument('--pause-on-danger',action='store_true');p.add_argument('--stop-file');p.add_argument('--combat-policy',choices=['jev','planned'],default='planned');a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--expected-run-id',required=True);p.add_argument('--max-actions',type=int,default=2000);p.add_argument('--max-seconds',type=int,default=3600);p.add_argument('--max-usd',type=float,default=3);p.add_argument('--output',required=True);p.add_argument('--execute',action='store_true');p.add_argument('--expert-choice');p.add_argument('--pause-on-danger',action='store_true');p.add_argument('--stop-file');p.add_argument('--review-macro',action='store_true');p.add_argument('--combat-policy',choices=['jev','planned'],default='planned');a=p.parse_args()
     manifest=version_manifest()
     if manifest['tracked_dirty']:raise RuntimeError('Commit implementation before execution')
     # Cross-worktree lock follows the same local server, not each checkout.
@@ -44,6 +44,8 @@ def main():
                     waits+=1
                     if waits>6:raise RuntimeError(f'No supported action: {screen} {raw.get("available_actions")}')
                     mcp.call('wait_until_actionable',{'timeout_seconds':10,'raw_state':True});time.sleep(.15);raw=mcp.call('get_raw_game_state');continue
+                if a.review_macro and not expert and screen!='COMBAT' and len(cs)>1:
+                    result['status']='expert_required';trace.write('expert_required',{'reason':'macro_review','state_hash':fingerprint(raw)});break
                 waits=0;trace.write('before',{'state':raw,'state_hash':fingerprint(raw)});trace.write('candidates',cs)
                 if not a.execute:result['status']='read_only_ready';break
                 expert_this_action=False

@@ -13,7 +13,7 @@ def choose_plan(state, candidates, width=40, depth=8):
     hp=state.get('player',{}).get('hp',100)
     start={'energy':state.get('energy',0),'block':state.get('player',{}).get('block',0),'hp':dict(initial_hp),'eblock':{i:e.get('block',0) for i,e in enemies.items()},'used':frozenset(),'plan':[],'utility':0.,'strength':0,'vuln':set()}
     def score(n):
-        loss=max(0,sum(incoming[i] for i,h in n['hp'].items() if h>0)-n['block'])
+        loss=max(0,sum(incoming[i] for i,h in n['hp'].items() if h>0)-n['block']-state.get('player',{}).get('end_turn_block',0))
         kills=sum(h<=0 for h in n['hp'].values());damage=sum(initial_hp[i]-max(0,h) for i,h in n['hp'].items())
         return (damage*.85 + kills*9 + (150 if kills==len(enemies) else 0)
                 - loss*1.5 - (1000 if loss>=hp else 0) + n['utility'])

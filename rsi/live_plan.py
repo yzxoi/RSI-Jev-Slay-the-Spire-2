@@ -14,23 +14,22 @@ def normalize(raw):
         kind=deck.get(card['card_id'],{}).get('card_type',card.get('card_type','Skill'))
         previews=[]
         targets=card.get('valid_target_indices',[]) if card.get('requires_target') else [e['index'] for e in enemies]
-        base=stats.get('damage',0)
+        base=stats.get('calculateddamage',stats.get('damage',0))
         if card['card_id']=='BODY_SLAM':base=p['block']
         if base or card['card_id']=='BODY_SLAM':
             for e in combat['enemies']:
                 if e['index'] not in targets:continue
                 vulnerable=1.5 if power(e,'VULNERABLE_POWER') else 1
-                damage=math.floor(max(0,base+strength)*weak*vulnerable)
+                # current_value already includes owner strength/weak in native preview.
+                damage=math.floor(max(0,base)*vulnerable)
                 previews.append({'target_index':e['index'],'damage':damage})
-        # Native dynamic block is a base preview; model known global modifiers.
-        if stats.get('block'):
-            stats['block']=math.floor(max(0,stats['block']+power(p,'DEXTERITY_POWER'))*(.75 if power(p,'FRAIL_POWER') else 1))
+        # Block preview already includes dexterity/frail; do not apply twice.
         hand.append({'index':card['index'],'id':card['card_id'],'name':card['name'],'cost':card['energy_cost'],'type':kind,'stats':stats,'damage_by_target':previews,'can_play':card['playable'],'target_type':card['target_type']})
-    return {'energy':p['energy'],'player':{'hp':p['current_hp'],'block':p['block']},'hand':hand,'enemies':enemies}
+    return {'energy':p['energy'],'player':{'hp':p['current_hp'],'block':p['block'],'end_turn_block':power(p,'PLATING_POWER')},'hand':hand,'enemies':enemies}
 
 
 def plan_native(raw,cs):
     plays=[c for c in cs if c['action']['action'] in ['play_card','end_turn']]
     state=normalize(raw);selected,plan=choose_plan(state,plays)
-    plan['native_preview_limit']='Damage modifiers approximate; no full native combat simulator. Unknown mechanics remain heuristics.'
+    plan['native_preview_limit']='Native current_value already includes owner modifiers; CalculatedDamage supported. Target vulnerability has integer rounding limits. Slow, triggers and other target effects remain approximate.'
     return selected,plan
