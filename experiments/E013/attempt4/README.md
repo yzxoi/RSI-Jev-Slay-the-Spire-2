@@ -1,0 +1,1 @@
+Native MDGN86P6N6BF continuation after E017 preview corrections and E019 reward lifecycle fixes. Initial floor1..6 traces in E017; these segments include floor6..18. All actual actions, expert choices and failures retained. Act1 boss defeated; not yet a complete victory. Native A0 profile limitation remains; headless A10 strength reported separately.
