@@ -3,6 +3,18 @@ import json
 import urllib.request
 
 
+class ActionNotAccepted(RuntimeError):
+    """Native MCP rejected legality before calling the game action bridge."""
+
+
+def is_pre_execution_rejection(name, data):
+    error = data.get("error") or {}
+    return (name == "act" and error.get("code") == "invalid_action"
+            and error.get("message") == "Action is not in available_actions."
+            and error.get("status_code") == 409
+            and isinstance(data.get("available_actions"), list))
+
+
 class MCP:
     def __init__(self, url, trace):
         self.url, self.trace, self.sequence = url, trace, 0
@@ -37,6 +49,8 @@ class MCP:
         if not blocks:
             raise RuntimeError(f"MCP {name} returned no structured text")
         data = json.loads(blocks[0]["text"])
+        if is_pre_execution_rejection(name, data):
+            raise ActionNotAccepted(f"MCP action was not accepted: {data}")
         if result.get("isError") or data.get("error") or data.get("status") == "failed":
             raise RuntimeError(f"MCP {name} failed: {data}")
         return data
@@ -80,3 +94,9 @@ def stable_fingerprint(raw):
     combat.pop("action_readiness", None)
     return digest({"run_id": raw.get("run_id"), "screen": raw.get("screen"), "turn": raw.get("turn"),
                    "combat": combat, "run": raw.get("run"), "selection": raw.get("selection")})
+
+
+def proposal_is_current(before, fresh, selected):
+    return (bool((fresh.get("combat") or {}).get("action_readiness", {}).get("can_use_combat_actions"))
+            and stable_fingerprint(before) == stable_fingerprint(fresh)
+            and selected["action"] in [c["action"] for c in live_candidates(fresh)])

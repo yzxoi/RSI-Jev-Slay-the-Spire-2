@@ -7,7 +7,7 @@ import time
 import uuid
 from .engine import ROOT
 from .jev import Budget, Jev
-from .mcp import MCP, live_candidates, stable_fingerprint
+from .mcp import MCP, ActionNotAccepted, live_candidates, stable_fingerprint, proposal_is_current
 from .trace import Trace, version_manifest
 
 
@@ -30,7 +30,7 @@ def main():
         run_id = str(uuid.uuid4())
         trace = Trace(ROOT / "artifacts/runs" / run_id, {**manifest, "mode": "native_mcp", "config": vars(args), "run_id": run_id})
         budget = Budget(100, .15)
-        result = {"run_id": run_id, "status": "error", "actions": 0, "execution_enabled": args.execute}
+        result = {"run_id": run_id, "status": "error", "actions": 0, "explicit_rejections": 0, "execution_enabled": args.execute}
         started = time.monotonic()
         raw = {}
         try:
@@ -77,7 +77,7 @@ def main():
                 selected = candidates[0] if len(candidates) == 1 else jev.choose(raw.get("agent_view", raw), candidates, trace)[0]
                 trace.write("selected", selected)
                 fresh = mcp.call("get_raw_game_state")
-                if stable_fingerprint(fresh) != stable_fingerprint(raw) or selected["action"] not in [c["action"] for c in live_candidates(fresh)]:
+                if not proposal_is_current(raw, fresh, selected):
                     trace.write("stale_proposal_discarded", {"before": stable_fingerprint(raw), "after": stable_fingerprint(fresh)})
                     raw = fresh
                     continue
@@ -88,7 +88,18 @@ def main():
                     raise RuntimeError("Another autoplay writer became active")
                 command = {**selected["action"], "raw_state": True,
                            "reason": f"程序摘要：Jev 选择 {selected['name']}；回合 {fresh['turn']}，能量 {fresh['combat']['player']['energy']}。"}
-                answer = mcp.call("act", command)
+                try:
+                    answer = mcp.call("act", command)
+                except ActionNotAccepted as exc:
+                    # This specific native error precedes ActAsync in the audited
+                    # server. Forget the proposal; never replay an uncertain action.
+                    result["explicit_rejections"] += 1
+                    trace.write("explicit_rejection", {"error": str(exc), "discarded": selected})
+                    if result["explicit_rejections"] > 6:
+                        raise RuntimeError("Repeated native pre-execution rejections") from exc
+                    mcp.call("wait_until_actionable", {"timeout_seconds": 10, "raw_state": True})
+                    raw = mcp.call("get_raw_game_state")
+                    continue
                 result["actions"] += 1
                 trace.write("action_result", answer)
                 raw = mcp.call("get_raw_game_state")

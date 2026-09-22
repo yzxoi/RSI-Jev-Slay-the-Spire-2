@@ -1,9 +1,26 @@
 import copy
 import unittest
-from rsi.mcp import live_candidates, stable_fingerprint
+from rsi.mcp import live_candidates, stable_fingerprint, is_pre_execution_rejection, proposal_is_current
 
 
 class MCPTests(unittest.TestCase):
+    def test_only_audited_pre_execution_error_is_recoverable(self):
+        error = {"error": {"code": "invalid_action", "status_code": 409,
+                           "message": "Action is not in available_actions."}, "available_actions": ["save_and_quit"]}
+        self.assertTrue(is_pre_execution_rejection("act", error))
+        self.assertFalse(is_pre_execution_rejection("get_raw_game_state", error))
+        error["error"]["message"] = "Action timed out after execution"
+        self.assertFalse(is_pre_execution_rejection("act", error))
+        self.assertFalse(is_pre_execution_rejection("act", {"status": "pending"}))
+
+    def test_proposal_must_remain_actionable_even_with_unchanged_cards(self):
+        before = {"available_actions": ["end_turn"], "combat": {"action_readiness": {"can_use_combat_actions": True}}}
+        selected = {"action": {"action": "end_turn"}}
+        self.assertTrue(proposal_is_current(before, before, selected))
+        after = copy.deepcopy(before)
+        after["combat"]["action_readiness"]["can_use_combat_actions"] = False
+        self.assertFalse(proposal_is_current(before, after, selected))
+
     def test_live_target_indices_and_admin_actions(self):
         raw = {"available_actions": ["play_card", "end_turn", "save_and_quit", "discard_potion", "use_potion"],
                "combat": {"hand": [{"index": 3, "card_id": "STRIKE", "name": "Strike", "playable": True,
