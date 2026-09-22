@@ -43,9 +43,10 @@ def main():
                     mcp.call('wait_until_actionable',{'timeout_seconds':10,'raw_state':True});time.sleep(.15);raw=mcp.call('get_raw_game_state');continue
                 waits=0;trace.write('before',{'state':raw,'state_hash':fingerprint(raw)});trace.write('candidates',cs)
                 if not a.execute:result['status']='read_only_ready';break
+                expert_this_action=False
                 if expert:
                     if expert['state_hash']!=fingerprint(raw):raise RuntimeError('Expert decision does not match current state')
-                    selected=next(c for c in cs if c['action']==expert['action']);trace.write('expert_decision',expert);expert=None
+                    selected=next(c for c in cs if c['action']==expert['action']);trace.write('expert_decision',expert);expert_this_action=True;expert=None
                 elif len(cs)==1:selected=cs[0]
                 elif a.combat_policy=='planned' and screen=='COMBAT' and not raw.get('selection'):
                     selected,planning=plan_native(raw,cs);trace.write('planning',planning)
@@ -62,7 +63,7 @@ def main():
                 fresh=mcp.call('get_raw_game_state')
                 if fingerprint(raw)!=fingerprint(fresh) or selected['action'] not in [c['action'] for c in candidates(fresh,history)]:
                     trace.write('stale_proposal_discarded',{'before':fingerprint(raw),'after':fingerprint(fresh)});raw=fresh;continue
-                if selected['action']['action']=='end_turn' and (fresh.get('combat') or {}).get('end_turn_will_kill_player'):
+                if not expert_this_action and selected['action']['action']=='end_turn' and (fresh.get('combat') or {}).get('end_turn_will_kill_player'):
                     result['status']='expert_required';trace.write('expert_required',{'reason':'lethal_end_turn','state_hash':fingerprint(fresh)});raw=fresh;break
                 signature=(fingerprint(fresh),json.dumps(selected['action'],sort_keys=True));repeated=repeated+1 if signature==last_action else 0
                 if repeated>=2:raise RuntimeError('Repeated action without state progress')
