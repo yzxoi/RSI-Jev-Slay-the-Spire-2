@@ -1,0 +1,61 @@
+{
+  "request": {
+    "model": "typesafe/jev-1.13",
+    "state": {
+      "task": "Slay the Spire 2 synthetic decision probe; all outcomes already computed by code.",
+      "enemy_hp": 12,
+      "incoming_damage": 20,
+      "player_hp": 10,
+      "candidates": [
+        {
+          "id": "kill",
+          "result": "Enemy dies now; combat ends; player loses 0 HP."
+        },
+        {
+          "id": "block",
+          "result": "Gain 5 block; enemy survives; player loses 15 HP and dies."
+        }
+      ]
+    },
+    "questions": {
+      "action": {
+        "type": "choice",
+        "instructions": "Choose the candidate maximizing probability of winning the run. Use the supplied computed outcomes.",
+        "criteria": {
+          "kill": "Take the kill line",
+          "block": "Take the block line"
+        }
+      },
+      "danger": {
+        "type": "noul",
+        "instructions": "Will the block candidate kill the player, according to the supplied result?"
+      }
+    }
+  },
+  "elapsed_ms": 946,
+  "response": {
+    "model": "typesafe/jev-1.13-20260917",
+    "answers": {
+      "action": {
+        "type": "choice",
+        "choice": "kill",
+        "probabilities": {
+          "block": 0,
+          "kill": 1
+        },
+        "confidence": 1
+      },
+      "danger": {
+        "type": "noul",
+        "noul": 0.99
+      }
+    },
+    "usage": {
+      "input_tokens": 463,
+      "output_tokens": 48,
+      "cost": 1.9446e-05
+    },
+    "id": "gen-dec-1790071717-pVspTxsIYbgBd82B5cEL",
+    "provider": "TypeSafe"
+  }
+}
