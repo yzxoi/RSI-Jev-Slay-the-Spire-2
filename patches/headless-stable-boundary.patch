@@ -28,7 +28,7 @@
          var p = (_runState != null && _runState.Players.Count > 0) ? _runState.Players[0] : null;
 -        return p?.PlayerCombatState?.Phase == MegaCrit.Sts2.Core.Combat.PlayerTurnPhase.Play;
 +        return p?.PlayerCombatState?.Phase == MegaCrit.Sts2.Core.Combat.PlayerTurnPhase.Play
-+            && CombatManager.Instance.DebugOnlyGetState()?.CurrentSide == MegaCrit.Sts2.Core.Combat.CombatSide.Player
++            && CombatManager.Instance.DebugOnlyGetState()?.CurrentSide == CombatSide.Player
 +            && CombatManager.Instance.IsPartOfPlayerTurn(p);
      }
  
@@ -81,3 +81,12 @@
          {
              // Export the *currently resolved* stat values, not the card base: refresh the
              // DynamicVar previews (mirrors NCard.UpdateVisuals) so damage reflects Strength/Weak,
+@@ -1660,7 +1660,7 @@
+                         _eventOptionChosen = true;
+                         _lastEventOptionCount = options.Count;
+                         // Run on thread pool so GetSelectedCards/GetSelectedCardReward can block
+-                        var task = Task.Run(() => eventSync!.ChooseLocalOption(optionIndex));
++                        var task = Task.Run(() => options[optionIndex].Chosen());
+                         for (int i = 0; i < 100; i++)
+                         {
+                             _syncCtx.Pump();
