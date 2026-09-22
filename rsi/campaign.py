@@ -13,6 +13,7 @@ from .mcp import MCP,ActionNotAccepted
 from .scenes import candidates,fingerprint
 from .trace import Trace,version_manifest
 from .live_plan import plan_native
+from .encounters import sandpit_rule
 
 
 def main():
@@ -46,12 +47,18 @@ def main():
                     mcp.call('wait_until_actionable',{'timeout_seconds':10,'raw_state':True});time.sleep(.15);raw=mcp.call('get_raw_game_state');continue
                 if a.review_macro and not expert and screen!='COMBAT' and len(cs)>1:
                     result['status']='expert_required';trace.write('expert_required',{'reason':'macro_review','state_hash':fingerprint(raw)});break
+                encounter=sandpit_rule(raw,cs) if screen=='COMBAT' else None
+                if encounter:
+                    trace.write('encounter_rule',encounter)
+                    if encounter['requires_expert'] and not expert:
+                        result['status']='expert_required';trace.write('expert_required',{'reason':'sandpit_expiry_before_spending_energy','state_hash':fingerprint(raw)});break
                 waits=0;trace.write('before',{'state':raw,'state_hash':fingerprint(raw)});trace.write('candidates',cs)
                 if not a.execute:result['status']='read_only_ready';break
                 expert_this_action=False
                 if expert:
                     if expert['state_hash']!=fingerprint(raw):raise RuntimeError('Expert decision does not match current state')
                     selected=next(c for c in cs if c['action']==expert['action']);trace.write('expert_decision',expert);expert_this_action=True;expert=None
+                elif encounter and encounter['selected']:selected=encounter['selected']
                 elif len(cs)==1:selected=cs[0]
                 elif a.combat_policy=='planned' and screen=='COMBAT' and not raw.get('selection'):
                     selected,planning=plan_native(raw,cs);trace.write('planning',planning)
