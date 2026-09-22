@@ -1,0 +1,2045 @@
+{
+  "manifest": {
+    "schema_version": 1,
+    "code_commit": "f26e229b83d45449ce18a75aed37ef7832423a26",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "f37fd30c18e3101c841f07a06124e8856b6cab9b14c2f58779c07087bf83ce90",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+  },
+  "scope": "exact wire replay; no model or game-value edits",
+  "commands": 189,
+  "status": "passed",
+  "pending": {
+    "type": "decision",
+    "decision": "card_select",
+    "context": {
+      "act": 1,
+      "act_name": "Overgrowth",
+      "floor": 17,
+      "room_type": "Boss",
+      "boss": {
+        "id": "CEREMONIAL_BEAST_BOSS",
+        "name": "Ceremonial Beast"
+      }
+    },
+    "cards": [
+      {
+        "index": 0,
+        "id": "CARD.DEFEND_REGENT",
+        "name": "Defend",
+        "cost": 1,
+        "type": "Skill",
+        "rarity": "Basic",
+        "upgraded": false,
+        "stats": {
+          "block": 5
+        },
+        "description": "Gain {Block:diff()} Block.",
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "block": 8
+          },
+          "description": "Gain {Block:diff()} Block.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "index": 1,
+        "id": "CARD.DEFEND_REGENT",
+        "name": "Defend",
+        "cost": 1,
+        "type": "Skill",
+        "rarity": "Basic",
+        "upgraded": false,
+        "stats": {
+          "block": 5
+        },
+        "description": "Gain {Block:diff()} Block.",
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "block": 8
+          },
+          "description": "Gain {Block:diff()} Block.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "index": 2,
+        "id": "CARD.DEFEND_REGENT",
+        "name": "Defend",
+        "cost": 1,
+        "type": "Skill",
+        "rarity": "Basic",
+        "upgraded": false,
+        "stats": {
+          "block": 5
+        },
+        "description": "Gain {Block:diff()} Block.",
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "block": 8
+          },
+          "description": "Gain {Block:diff()} Block.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "index": 3,
+        "id": "CARD.DEFEND_REGENT",
+        "name": "Defend",
+        "cost": 1,
+        "type": "Skill",
+        "rarity": "Basic",
+        "upgraded": false,
+        "stats": {
+          "block": 5
+        },
+        "description": "Gain {Block:diff()} Block.",
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "block": 8
+          },
+          "description": "Gain {Block:diff()} Block.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "index": 4,
+        "id": "CARD.FALLING_STAR",
+        "name": "Falling Star",
+        "cost": 0,
+        "type": "Attack",
+        "rarity": "Basic",
+        "upgraded": false,
+        "stats": {
+          "damage": 8,
+          "vulnerablepower": 1,
+          "weakpower": 1
+        },
+        "description": "Deal {Damage:diff()} damage.\nApply {WeakPower:diff()} Weak.\nApply {VulnerablePower:diff()} Vulnerable.",
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 0,
+          "stats": {
+            "damage": 12,
+            "vulnerablepower": 1,
+            "weakpower": 1
+          },
+          "description": "Deal {Damage:diff()} damage.\nApply {WeakPower:diff()} Weak.\nApply {VulnerablePower:diff()} Vulnerable.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "index": 5,
+        "id": "CARD.STRIKE_REGENT",
+        "name": "Strike",
+        "cost": 1,
+        "type": "Attack",
+        "rarity": "Basic",
+        "upgraded": false,
+        "stats": {
+          "damage": 6
+        },
+        "description": "Deal {Damage:diff()} damage.",
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "damage": 9
+          },
+          "description": "Deal {Damage:diff()} damage.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "index": 6,
+        "id": "CARD.STRIKE_REGENT",
+        "name": "Strike",
+        "cost": 1,
+        "type": "Attack",
+        "rarity": "Basic",
+        "upgraded": false,
+        "stats": {
+          "damage": 6
+        },
+        "description": "Deal {Damage:diff()} damage.",
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "damage": 9
+          },
+          "description": "Deal {Damage:diff()} damage.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "index": 7,
+        "id": "CARD.STRIKE_REGENT",
+        "name": "Strike",
+        "cost": 1,
+        "type": "Attack",
+        "rarity": "Basic",
+        "upgraded": false,
+        "stats": {
+          "damage": 6
+        },
+        "description": "Deal {Damage:diff()} damage.",
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "damage": 9
+          },
+          "description": "Deal {Damage:diff()} damage.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "index": 8,
+        "id": "CARD.STRIKE_REGENT",
+        "name": "Strike",
+        "cost": 1,
+        "type": "Attack",
+        "rarity": "Basic",
+        "upgraded": false,
+        "stats": {
+          "damage": 6
+        },
+        "description": "Deal {Damage:diff()} damage.",
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "damage": 9
+          },
+          "description": "Deal {Damage:diff()} damage.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "index": 9,
+        "id": "CARD.VENERATE",
+        "name": "Venerate",
+        "cost": 1,
+        "type": "Skill",
+        "rarity": "Basic",
+        "upgraded": false,
+        "stats": {
+          "stars": 2
+        },
+        "description": "Gain {Stars:starIcons()}.",
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "stars": 3
+          },
+          "description": "Gain {Stars:starIcons()}.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "index": 10,
+        "id": "CARD.CLOAK_OF_STARS",
+        "name": "Cloak of Stars",
+        "cost": 0,
+        "type": "Skill",
+        "rarity": "Common",
+        "upgraded": false,
+        "stats": {
+          "block": 7
+        },
+        "description": "Gain {Block:diff()} Block.",
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 0,
+          "stats": {
+            "block": 10
+          },
+          "description": "Gain {Block:diff()} Block.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "index": 11,
+        "id": "CARD.COSMIC_INDIFFERENCE",
+        "name": "Cosmic Indifference",
+        "cost": 1,
+        "type": "Skill",
+        "rarity": "Common",
+        "upgraded": false,
+        "stats": {
+          "block": 6
+        },
+        "description": "Gain {Block:diff()} Block.\nPut a card from your Discard Pile on top of your Draw Pile.",
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "block": 9
+          },
+          "description": "Gain {Block:diff()} Block.\nPut a card from your Discard Pile on top of your Draw Pile.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "index": 12,
+        "id": "CARD.COSMIC_INDIFFERENCE",
+        "name": "Cosmic Indifference",
+        "cost": 1,
+        "type": "Skill",
+        "rarity": "Common",
+        "upgraded": false,
+        "stats": {
+          "block": 6
+        },
+        "description": "Gain {Block:diff()} Block.\nPut a card from your Discard Pile on top of your Draw Pile.",
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "block": 9
+          },
+          "description": "Gain {Block:diff()} Block.\nPut a card from your Discard Pile on top of your Draw Pile.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "index": 13,
+        "id": "CARD.CRUSH_UNDER",
+        "name": "Crush Under",
+        "cost": 1,
+        "type": "Attack",
+        "rarity": "Common",
+        "upgraded": false,
+        "stats": {
+          "damage": 8,
+          "strengthloss": 1
+        },
+        "description": "Deal {Damage:diff()} damage to ALL enemies. All enemies lose {StrengthLoss:diff()} Strength this turn.",
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "damage": 9,
+            "strengthloss": 2
+          },
+          "description": "Deal {Damage:diff()} damage to ALL enemies. All enemies lose {StrengthLoss:diff()} Strength this turn.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "index": 14,
+        "id": "CARD.GUIDING_STAR",
+        "name": "Guiding Star",
+        "cost": 1,
+        "type": "Attack",
+        "rarity": "Common",
+        "upgraded": false,
+        "stats": {
+          "damage": 12,
+          "cards": 2
+        },
+        "description": "Deal {Damage:diff()} damage.\nNext turn, draw {Cards:diff()} {Cards:plural:card|cards}.",
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "damage": 13,
+            "cards": 3
+          },
+          "description": "Deal {Damage:diff()} damage.\nNext turn, draw {Cards:diff()} {Cards:plural:card|cards}.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "index": 15,
+        "id": "CARD.DEVASTATE",
+        "name": "Devastate",
+        "cost": 1,
+        "type": "Attack",
+        "rarity": "Uncommon",
+        "upgraded": false,
+        "stats": {
+          "damage": 35
+        },
+        "description": "Deal {Damage:diff()} damage.",
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "damage": 45
+          },
+          "description": "Deal {Damage:diff()} damage.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "index": 16,
+        "id": "CARD.GLIMMER",
+        "name": "Glimmer",
+        "cost": 1,
+        "type": "Skill",
+        "rarity": "Uncommon",
+        "upgraded": false,
+        "stats": {
+          "cards": 3,
+          "putback": 1
+        },
+        "description": "Draw {Cards:diff()} {Cards:plural:card|cards}.\nPut {PutBack:diff()} {PutBack:plural:card|cards} from your Hand on top of your Draw Pile.",
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "cards": 4,
+            "putback": 1
+          },
+          "description": "Draw {Cards:diff()} {Cards:plural:card|cards}.\nPut {PutBack:diff()} {PutBack:plural:card|cards} from your Hand on top of your Draw Pile.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "index": 17,
+        "id": "CARD.HEGEMONY",
+        "name": "Hegemony",
+        "cost": 2,
+        "type": "Attack",
+        "rarity": "Uncommon",
+        "upgraded": false,
+        "stats": {
+          "damage": 15,
+          "energy": 2
+        },
+        "description": "Deal {Damage:diff()} damage.\nNext turn, gain {Energy:energyIcons()}.",
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 2,
+          "stats": {
+            "damage": 18,
+            "energy": 3
+          },
+          "description": "Deal {Damage:diff()} damage.\nNext turn, gain {Energy:energyIcons()}.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "index": 18,
+        "id": "CARD.HEGEMONY",
+        "name": "Hegemony",
+        "cost": 2,
+        "type": "Attack",
+        "rarity": "Uncommon",
+        "upgraded": false,
+        "stats": {
+          "damage": 15,
+          "energy": 2
+        },
+        "description": "Deal {Damage:diff()} damage.\nNext turn, gain {Energy:energyIcons()}.",
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 2,
+          "stats": {
+            "damage": 18,
+            "energy": 3
+          },
+          "description": "Deal {Damage:diff()} damage.\nNext turn, gain {Energy:energyIcons()}.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "index": 19,
+        "id": "CARD.KINGLY_PUNCH",
+        "name": "Kingly Punch",
+        "cost": 1,
+        "type": "Attack",
+        "rarity": "Uncommon",
+        "upgraded": false,
+        "stats": {
+          "damage": 16,
+          "increase": 4
+        },
+        "description": "Deal {Damage:diff()} damage.\nWhenever you draw this card, increase its damage by {Increase:diff()} this combat.",
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "damage": 10,
+            "increase": 6
+          },
+          "description": "Deal {Damage:diff()} damage.\nWhenever you draw this card, increase its damage by {Increase:diff()} this combat.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "index": 20,
+        "id": "CARD.LUNAR_BLAST",
+        "name": "Lunar Blast",
+        "cost": 0,
+        "type": "Attack",
+        "rarity": "Uncommon",
+        "upgraded": false,
+        "stats": {
+          "damage": 4,
+          "calculationbase": 0,
+          "calculationextra": 1,
+          "calculatedhits": 0
+        },
+        "description": "Deal {Damage:diff()} damage for each Skill already played this turn.{InCombat:\n(Hits {CalculatedHits:diff()} {CalculatedHits:plural:time|times})|}",
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 0,
+          "stats": {
+            "damage": 5,
+            "calculationbase": 0,
+            "calculationextra": 1,
+            "calculatedhits": 0
+          },
+          "description": "Deal {Damage:diff()} damage for each Skill already played this turn.{InCombat:\n(Hits {CalculatedHits:diff()} {CalculatedHits:plural:time|times})|}",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "index": 21,
+        "id": "CARD.QUASAR",
+        "name": "Quasar",
+        "cost": 0,
+        "type": "Skill",
+        "rarity": "Uncommon",
+        "upgraded": false,
+        "stats": null,
+        "description": "Choose 1 of 3 random{IfUpgraded:show: Upgraded|} Colorless cards to add into your Hand.",
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 0,
+          "stats": null,
+          "description": "Choose 1 of 3 random{IfUpgraded:show: Upgraded|} Colorless cards to add into your Hand.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "index": 22,
+        "id": "CARD.SHINING_STRIKE",
+        "name": "Shining Strike",
+        "cost": 1,
+        "type": "Attack",
+        "rarity": "Uncommon",
+        "upgraded": false,
+        "stats": {
+          "damage": 8,
+          "stars": 2
+        },
+        "description": "Deal {Damage:diff()} damage.\nGain {Stars:starIcons()}.\nPut this card on top of your Draw Pile.",
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "damage": 11,
+            "stars": 2
+          },
+          "description": "Deal {Damage:diff()} damage.\nGain {Stars:starIcons()}.\nPut this card on top of your Draw Pile.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "index": 23,
+        "id": "CARD.ULTIMATE_STRIKE",
+        "name": "Ultimate Strike",
+        "cost": 1,
+        "type": "Attack",
+        "rarity": "Uncommon",
+        "upgraded": false,
+        "stats": {
+          "damage": 14
+        },
+        "description": "Deal {Damage:diff()} damage.",
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "damage": 20
+          },
+          "description": "Deal {Damage:diff()} damage.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "index": 24,
+        "id": "CARD.DECISIONS_DECISIONS",
+        "name": "Decisions, Decisions",
+        "cost": 0,
+        "type": "Skill",
+        "rarity": "Rare",
+        "upgraded": false,
+        "stats": {
+          "cards": 3,
+          "repeat": 3
+        },
+        "description": "Draw {Cards:diff()} cards.\nChoose a Skill in your Hand and play it {Repeat:diff()} times.",
+        "keywords": [
+          "Exhaust"
+        ],
+        "after_upgrade": {
+          "cost": 0,
+          "stats": {
+            "cards": 5,
+            "repeat": 3
+          },
+          "description": "Draw {Cards:diff()} cards.\nChoose a Skill in your Hand and play it {Repeat:diff()} times.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      }
+    ],
+    "min_select": 1,
+    "max_select": 1,
+    "player": {
+      "name": "The Regent",
+      "hp": 6,
+      "max_hp": 75,
+      "block": 0,
+      "gold": 59,
+      "relics": [
+        {
+          "name": "Divine Right",
+          "description": "At the start of each combat, gain {Stars:starIcons()}.",
+          "vars": {
+            "Stars": 3
+          }
+        },
+        {
+          "name": "Lead Paperweight",
+          "description": "Upon pickup, choose 1 of 2 Colorless cards to add to your Deck.",
+          "vars": null
+        },
+        {
+          "name": "Letter Opener",
+          "description": "Every time you play {Cards} {Cards:plural:Skill|Skills} in a single turn, deal {Damage} damage to ALL enemies.",
+          "vars": {
+            "Cards": 3,
+            "Damage": 5
+          }
+        },
+        {
+          "name": "Red Mask",
+          "description": "At the start of each combat, apply {WeakPower} Weak to ALL enemies.",
+          "vars": {
+            "WeakPower": 1
+          }
+        }
+      ],
+      "potions": [
+        {
+          "index": 0,
+          "name": "Weak Potion",
+          "description": "Apply {WeakPower} Weak.",
+          "vars": {
+            "WeakPower": 3
+          },
+          "target_type": "AnyEnemy"
+        },
+        {
+          "index": 1,
+          "name": "Weak Potion",
+          "description": "Apply {WeakPower} Weak.",
+          "vars": {
+            "WeakPower": 3
+          },
+          "target_type": "AnyEnemy"
+        },
+        {
+          "index": 2,
+          "name": "King's Courage",
+          "description": "Forge {Forge}.",
+          "vars": {
+            "Forge": 15
+          },
+          "target_type": "AnyPlayer"
+        }
+      ],
+      "deck_size": 25,
+      "deck": [
+        {
+          "id": "CARD.STRIKE_REGENT",
+          "name": "Strike",
+          "cost": 1,
+          "type": "Attack",
+          "upgraded": false,
+          "description": "Deal {Damage:diff()} damage.",
+          "stats": {
+            "damage": 6
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "damage": 9
+            },
+            "description": "Deal {Damage:diff()} damage.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.STRIKE_REGENT",
+          "name": "Strike",
+          "cost": 1,
+          "type": "Attack",
+          "upgraded": false,
+          "description": "Deal {Damage:diff()} damage.",
+          "stats": {
+            "damage": 6
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "damage": 9
+            },
+            "description": "Deal {Damage:diff()} damage.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.STRIKE_REGENT",
+          "name": "Strike",
+          "cost": 1,
+          "type": "Attack",
+          "upgraded": false,
+          "description": "Deal {Damage:diff()} damage.",
+          "stats": {
+            "damage": 6
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "damage": 9
+            },
+            "description": "Deal {Damage:diff()} damage.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.STRIKE_REGENT",
+          "name": "Strike",
+          "cost": 1,
+          "type": "Attack",
+          "upgraded": false,
+          "description": "Deal {Damage:diff()} damage.",
+          "stats": {
+            "damage": 6
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "damage": 9
+            },
+            "description": "Deal {Damage:diff()} damage.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.DEFEND_REGENT",
+          "name": "Defend",
+          "cost": 1,
+          "type": "Skill",
+          "upgraded": false,
+          "description": "Gain {Block:diff()} Block.",
+          "stats": {
+            "block": 5
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "block": 8
+            },
+            "description": "Gain {Block:diff()} Block.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.DEFEND_REGENT",
+          "name": "Defend",
+          "cost": 1,
+          "type": "Skill",
+          "upgraded": false,
+          "description": "Gain {Block:diff()} Block.",
+          "stats": {
+            "block": 5
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "block": 8
+            },
+            "description": "Gain {Block:diff()} Block.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.DEFEND_REGENT",
+          "name": "Defend",
+          "cost": 1,
+          "type": "Skill",
+          "upgraded": false,
+          "description": "Gain {Block:diff()} Block.",
+          "stats": {
+            "block": 5
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "block": 8
+            },
+            "description": "Gain {Block:diff()} Block.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.DEFEND_REGENT",
+          "name": "Defend",
+          "cost": 1,
+          "type": "Skill",
+          "upgraded": false,
+          "description": "Gain {Block:diff()} Block.",
+          "stats": {
+            "block": 5
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "block": 8
+            },
+            "description": "Gain {Block:diff()} Block.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.FALLING_STAR",
+          "name": "Falling Star",
+          "cost": 0,
+          "type": "Attack",
+          "upgraded": false,
+          "description": "Deal {Damage:diff()} damage.\nApply {WeakPower:diff()} Weak.\nApply {VulnerablePower:diff()} Vulnerable.",
+          "stats": {
+            "damage": 8,
+            "vulnerablepower": 1,
+            "weakpower": 1
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 0,
+            "stats": {
+              "damage": 12,
+              "vulnerablepower": 1,
+              "weakpower": 1
+            },
+            "description": "Deal {Damage:diff()} damage.\nApply {WeakPower:diff()} Weak.\nApply {VulnerablePower:diff()} Vulnerable.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.VENERATE",
+          "name": "Venerate",
+          "cost": 1,
+          "type": "Skill",
+          "upgraded": false,
+          "description": "Gain {Stars:starIcons()}.",
+          "stats": {
+            "stars": 2
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "stars": 3
+            },
+            "description": "Gain {Stars:starIcons()}.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.ULTIMATE_STRIKE",
+          "name": "Ultimate Strike",
+          "cost": 1,
+          "type": "Attack",
+          "upgraded": false,
+          "description": "Deal {Damage:diff()} damage.",
+          "stats": {
+            "damage": 14
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "damage": 20
+            },
+            "description": "Deal {Damage:diff()} damage.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.HEGEMONY",
+          "name": "Hegemony",
+          "cost": 2,
+          "type": "Attack",
+          "upgraded": false,
+          "description": "Deal {Damage:diff()} damage.\nNext turn, gain {Energy:energyIcons()}.",
+          "stats": {
+            "damage": 15,
+            "energy": 2
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 2,
+            "stats": {
+              "damage": 18,
+              "energy": 3
+            },
+            "description": "Deal {Damage:diff()} damage.\nNext turn, gain {Energy:energyIcons()}.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.GUIDING_STAR",
+          "name": "Guiding Star",
+          "cost": 1,
+          "type": "Attack",
+          "upgraded": false,
+          "description": "Deal {Damage:diff()} damage.\nNext turn, draw {Cards:diff()} {Cards:plural:card|cards}.",
+          "stats": {
+            "damage": 12,
+            "cards": 2
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "damage": 13,
+              "cards": 3
+            },
+            "description": "Deal {Damage:diff()} damage.\nNext turn, draw {Cards:diff()} {Cards:plural:card|cards}.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.KINGLY_PUNCH",
+          "name": "Kingly Punch",
+          "cost": 1,
+          "type": "Attack",
+          "upgraded": false,
+          "description": "Deal {Damage:diff()} damage.\nWhenever you draw this card, increase its damage by {Increase:diff()} this combat.",
+          "stats": {
+            "damage": 8,
+            "increase": 4
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "damage": 10,
+              "increase": 6
+            },
+            "description": "Deal {Damage:diff()} damage.\nWhenever you draw this card, increase its damage by {Increase:diff()} this combat.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.CRUSH_UNDER",
+          "name": "Crush Under",
+          "cost": 1,
+          "type": "Attack",
+          "upgraded": false,
+          "description": "Deal {Damage:diff()} damage to ALL enemies. All enemies lose {StrengthLoss:diff()} Strength this turn.",
+          "stats": {
+            "damage": 8,
+            "strengthloss": 1
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "damage": 9,
+              "strengthloss": 2
+            },
+            "description": "Deal {Damage:diff()} damage to ALL enemies. All enemies lose {StrengthLoss:diff()} Strength this turn.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.GLIMMER",
+          "name": "Glimmer",
+          "cost": 1,
+          "type": "Skill",
+          "upgraded": false,
+          "description": "Draw {Cards:diff()} {Cards:plural:card|cards}.\nPut {PutBack:diff()} {PutBack:plural:card|cards} from your Hand on top of your Draw Pile.",
+          "stats": {
+            "cards": 3,
+            "putback": 1
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "cards": 4,
+              "putback": 1
+            },
+            "description": "Draw {Cards:diff()} {Cards:plural:card|cards}.\nPut {PutBack:diff()} {PutBack:plural:card|cards} from your Hand on top of your Draw Pile.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.SHINING_STRIKE",
+          "name": "Shining Strike",
+          "cost": 1,
+          "type": "Attack",
+          "upgraded": false,
+          "description": "Deal {Damage:diff()} damage.\nGain {Stars:starIcons()}.\nPut this card on top of your Draw Pile.",
+          "stats": {
+            "damage": 8,
+            "stars": 2
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "damage": 11,
+              "stars": 2
+            },
+            "description": "Deal {Damage:diff()} damage.\nGain {Stars:starIcons()}.\nPut this card on top of your Draw Pile.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.COSMIC_INDIFFERENCE",
+          "name": "Cosmic Indifference",
+          "cost": 1,
+          "type": "Skill",
+          "upgraded": false,
+          "description": "Gain {Block:diff()} Block.\nPut a card from your Discard Pile on top of your Draw Pile.",
+          "stats": {
+            "block": 6
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "block": 9
+            },
+            "description": "Gain {Block:diff()} Block.\nPut a card from your Discard Pile on top of your Draw Pile.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.QUASAR",
+          "name": "Quasar",
+          "cost": 0,
+          "type": "Skill",
+          "upgraded": false,
+          "description": "Choose 1 of 3 random{IfUpgraded:show: Upgraded|} Colorless cards to add into your Hand.",
+          "stats": null,
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 0,
+            "stats": null,
+            "description": "Choose 1 of 3 random{IfUpgraded:show: Upgraded|} Colorless cards to add into your Hand.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.HEGEMONY",
+          "name": "Hegemony",
+          "cost": 2,
+          "type": "Attack",
+          "upgraded": false,
+          "description": "Deal {Damage:diff()} damage.\nNext turn, gain {Energy:energyIcons()}.",
+          "stats": {
+            "damage": 15,
+            "energy": 2
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 2,
+            "stats": {
+              "damage": 18,
+              "energy": 3
+            },
+            "description": "Deal {Damage:diff()} damage.\nNext turn, gain {Energy:energyIcons()}.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.DEVASTATE",
+          "name": "Devastate",
+          "cost": 1,
+          "type": "Attack",
+          "upgraded": false,
+          "description": "Deal {Damage:diff()} damage.",
+          "stats": {
+            "damage": 35
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "damage": 45
+            },
+            "description": "Deal {Damage:diff()} damage.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.COSMIC_INDIFFERENCE",
+          "name": "Cosmic Indifference",
+          "cost": 1,
+          "type": "Skill",
+          "upgraded": false,
+          "description": "Gain {Block:diff()} Block.\nPut a card from your Discard Pile on top of your Draw Pile.",
+          "stats": {
+            "block": 6
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "block": 9
+            },
+            "description": "Gain {Block:diff()} Block.\nPut a card from your Discard Pile on top of your Draw Pile.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.CLOAK_OF_STARS",
+          "name": "Cloak of Stars",
+          "cost": 0,
+          "type": "Skill",
+          "upgraded": false,
+          "description": "Gain {Block:diff()} Block.",
+          "stats": {
+            "block": 7
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 0,
+            "stats": {
+              "block": 10
+            },
+            "description": "Gain {Block:diff()} Block.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.LUNAR_BLAST",
+          "name": "Lunar Blast",
+          "cost": 0,
+          "type": "Attack",
+          "upgraded": false,
+          "description": "Deal {Damage:diff()} damage for each Skill already played this turn.{InCombat:\n(Hits {CalculatedHits:diff()} {CalculatedHits:plural:time|times})|}",
+          "stats": {
+            "damage": 4,
+            "calculationbase": 0,
+            "calculationextra": 1,
+            "calculatedhits": 0
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 0,
+            "stats": {
+              "damage": 5,
+              "calculationbase": 0,
+              "calculationextra": 1,
+              "calculatedhits": 0
+            },
+            "description": "Deal {Damage:diff()} damage for each Skill already played this turn.{InCombat:\n(Hits {CalculatedHits:diff()} {CalculatedHits:plural:time|times})|}",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.DECISIONS_DECISIONS",
+          "name": "Decisions, Decisions",
+          "cost": 0,
+          "type": "Skill",
+          "upgraded": false,
+          "description": "Draw {Cards:diff()} cards.\nChoose a Skill in your Hand and play it {Repeat:diff()} times.",
+          "stats": {
+            "cards": 3,
+            "repeat": 3
+          },
+          "keywords": [
+            "Exhaust"
+          ],
+          "after_upgrade": {
+            "cost": 0,
+            "stats": {
+              "cards": 5,
+              "repeat": 3
+            },
+            "description": "Draw {Cards:diff()} cards.\nChoose a Skill in your Hand and play it {Repeat:diff()} times.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        }
+      ]
+    }
+  },
+  "selection": {
+    "cmd": "action",
+    "action": "select_cards",
+    "args": {
+      "indices": "0"
+    }
+  },
+  "after": {
+    "type": "decision",
+    "decision": "combat_play",
+    "context": {
+      "act": 1,
+      "act_name": "Overgrowth",
+      "floor": 17,
+      "room_type": "Boss",
+      "boss": {
+        "id": "CEREMONIAL_BEAST_BOSS",
+        "name": "Ceremonial Beast"
+      }
+    },
+    "round": 10,
+    "energy": 3,
+    "max_energy": 3,
+    "hand": [
+      {
+        "index": 0,
+        "id": "CARD.PANIC_BUTTON",
+        "name": "Panic Button",
+        "cost": 0,
+        "type": "Skill",
+        "rarity": "Uncommon",
+        "can_play": true,
+        "target_type": "Self",
+        "stats": {
+          "block": 30,
+          "turns": 2
+        },
+        "description": "Gain {Block:diff()} Block.\nYou cannot gain Block from cards for {Turns:diff()} {Turns:plural:turn|turns}.",
+        "keywords": [
+          "Exhaust"
+        ]
+      },
+      {
+        "index": 1,
+        "id": "CARD.DEFEND_REGENT",
+        "name": "Defend",
+        "cost": 1,
+        "type": "Skill",
+        "rarity": "Basic",
+        "can_play": true,
+        "target_type": "Self",
+        "stats": {
+          "block": 5
+        },
+        "description": "Gain {Block:diff()} Block."
+      },
+      {
+        "index": 2,
+        "id": "CARD.CLOAK_OF_STARS",
+        "name": "Cloak of Stars",
+        "cost": 0,
+        "type": "Skill",
+        "rarity": "Common",
+        "can_play": false,
+        "target_type": "Self",
+        "stats": {
+          "block": 7
+        },
+        "description": "Gain {Block:diff()} Block.",
+        "star_cost": 1
+      },
+      {
+        "index": 3,
+        "id": "CARD.DEVASTATE",
+        "name": "Devastate",
+        "cost": 1,
+        "type": "Attack",
+        "rarity": "Uncommon",
+        "can_play": false,
+        "target_type": "AnyEnemy",
+        "stats": {
+          "damage": 35
+        },
+        "description": "Deal {Damage:diff()} damage.",
+        "star_cost": 4,
+        "damage_by_target": [
+          {
+            "target_index": 0,
+            "name": "Ceremonial Beast",
+            "damage": 35
+          }
+        ]
+      },
+      {
+        "index": 4,
+        "id": "CARD.DEFEND_REGENT",
+        "name": "Defend",
+        "cost": 1,
+        "type": "Skill",
+        "rarity": "Basic",
+        "can_play": true,
+        "target_type": "Self",
+        "stats": {
+          "block": 5
+        },
+        "description": "Gain {Block:diff()} Block."
+      },
+      {
+        "index": 5,
+        "id": "CARD.STRIKE_REGENT",
+        "name": "Strike",
+        "cost": 1,
+        "type": "Attack",
+        "rarity": "Basic",
+        "can_play": true,
+        "target_type": "AnyEnemy",
+        "stats": {
+          "damage": 6
+        },
+        "description": "Deal {Damage:diff()} damage.",
+        "damage_by_target": [
+          {
+            "target_index": 0,
+            "name": "Ceremonial Beast",
+            "damage": 6
+          }
+        ]
+      }
+    ],
+    "enemies": [
+      {
+        "index": 0,
+        "name": "Ceremonial Beast",
+        "hp": 48,
+        "max_hp": 252,
+        "block": 0,
+        "intents": [
+          {
+            "type": "Attack",
+            "damage": 20
+          },
+          {
+            "type": "Buff"
+          }
+        ],
+        "intends_attack": true,
+        "powers": [
+          {
+            "name": "Strength",
+            "description": "Strength adds additional damage to Attacks.",
+            "amount": 3
+          }
+        ]
+      }
+    ],
+    "player": {
+      "name": "The Regent",
+      "hp": 6,
+      "max_hp": 75,
+      "block": 0,
+      "gold": 59,
+      "relics": [
+        {
+          "name": "Divine Right",
+          "description": "At the start of each combat, gain {Stars:starIcons()}.",
+          "vars": {
+            "Stars": 3
+          }
+        },
+        {
+          "name": "Lead Paperweight",
+          "description": "Upon pickup, choose 1 of 2 Colorless cards to add to your Deck.",
+          "vars": null
+        },
+        {
+          "name": "Letter Opener",
+          "description": "Every time you play {Cards} {Cards:plural:Skill|Skills} in a single turn, deal {Damage} damage to ALL enemies.",
+          "vars": {
+            "Cards": 3,
+            "Damage": 5
+          }
+        },
+        {
+          "name": "Red Mask",
+          "description": "At the start of each combat, apply {WeakPower} Weak to ALL enemies.",
+          "vars": {
+            "WeakPower": 1
+          }
+        }
+      ],
+      "potions": [
+        {
+          "index": 0,
+          "name": "Weak Potion",
+          "description": "Apply {WeakPower} Weak.",
+          "vars": {
+            "WeakPower": 3
+          },
+          "target_type": "AnyEnemy"
+        },
+        {
+          "index": 1,
+          "name": "Weak Potion",
+          "description": "Apply {WeakPower} Weak.",
+          "vars": {
+            "WeakPower": 3
+          },
+          "target_type": "AnyEnemy"
+        },
+        {
+          "index": 2,
+          "name": "King's Courage",
+          "description": "Forge {Forge}.",
+          "vars": {
+            "Forge": 15
+          },
+          "target_type": "AnyPlayer"
+        }
+      ],
+      "deck_size": 25,
+      "deck": [
+        {
+          "id": "CARD.STRIKE_REGENT",
+          "name": "Strike",
+          "cost": 1,
+          "type": "Attack",
+          "upgraded": false,
+          "description": "Deal {Damage:diff()} damage.",
+          "stats": {
+            "damage": 6
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "damage": 9
+            },
+            "description": "Deal {Damage:diff()} damage.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.STRIKE_REGENT",
+          "name": "Strike",
+          "cost": 1,
+          "type": "Attack",
+          "upgraded": false,
+          "description": "Deal {Damage:diff()} damage.",
+          "stats": {
+            "damage": 6
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "damage": 9
+            },
+            "description": "Deal {Damage:diff()} damage.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.STRIKE_REGENT",
+          "name": "Strike",
+          "cost": 1,
+          "type": "Attack",
+          "upgraded": false,
+          "description": "Deal {Damage:diff()} damage.",
+          "stats": {
+            "damage": 6
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "damage": 9
+            },
+            "description": "Deal {Damage:diff()} damage.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.STRIKE_REGENT",
+          "name": "Strike",
+          "cost": 1,
+          "type": "Attack",
+          "upgraded": false,
+          "description": "Deal {Damage:diff()} damage.",
+          "stats": {
+            "damage": 6
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "damage": 9
+            },
+            "description": "Deal {Damage:diff()} damage.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.DEFEND_REGENT",
+          "name": "Defend",
+          "cost": 1,
+          "type": "Skill",
+          "upgraded": false,
+          "description": "Gain {Block:diff()} Block.",
+          "stats": {
+            "block": 5
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "block": 8
+            },
+            "description": "Gain {Block:diff()} Block.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.DEFEND_REGENT",
+          "name": "Defend",
+          "cost": 1,
+          "type": "Skill",
+          "upgraded": false,
+          "description": "Gain {Block:diff()} Block.",
+          "stats": {
+            "block": 5
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "block": 8
+            },
+            "description": "Gain {Block:diff()} Block.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.DEFEND_REGENT",
+          "name": "Defend",
+          "cost": 1,
+          "type": "Skill",
+          "upgraded": false,
+          "description": "Gain {Block:diff()} Block.",
+          "stats": {
+            "block": 5
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "block": 8
+            },
+            "description": "Gain {Block:diff()} Block.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.DEFEND_REGENT",
+          "name": "Defend",
+          "cost": 1,
+          "type": "Skill",
+          "upgraded": false,
+          "description": "Gain {Block:diff()} Block.",
+          "stats": {
+            "block": 5
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "block": 8
+            },
+            "description": "Gain {Block:diff()} Block.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.FALLING_STAR",
+          "name": "Falling Star",
+          "cost": 0,
+          "type": "Attack",
+          "upgraded": false,
+          "description": "Deal {Damage:diff()} damage.\nApply {WeakPower:diff()} Weak.\nApply {VulnerablePower:diff()} Vulnerable.",
+          "stats": {
+            "damage": 8,
+            "vulnerablepower": 1,
+            "weakpower": 1
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 0,
+            "stats": {
+              "damage": 12,
+              "vulnerablepower": 1,
+              "weakpower": 1
+            },
+            "description": "Deal {Damage:diff()} damage.\nApply {WeakPower:diff()} Weak.\nApply {VulnerablePower:diff()} Vulnerable.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.VENERATE",
+          "name": "Venerate",
+          "cost": 1,
+          "type": "Skill",
+          "upgraded": false,
+          "description": "Gain {Stars:starIcons()}.",
+          "stats": {
+            "stars": 2
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "stars": 3
+            },
+            "description": "Gain {Stars:starIcons()}.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.ULTIMATE_STRIKE",
+          "name": "Ultimate Strike",
+          "cost": 1,
+          "type": "Attack",
+          "upgraded": false,
+          "description": "Deal {Damage:diff()} damage.",
+          "stats": {
+            "damage": 14
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "damage": 20
+            },
+            "description": "Deal {Damage:diff()} damage.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.HEGEMONY",
+          "name": "Hegemony",
+          "cost": 2,
+          "type": "Attack",
+          "upgraded": false,
+          "description": "Deal {Damage:diff()} damage.\nNext turn, gain {Energy:energyIcons()}.",
+          "stats": {
+            "damage": 15,
+            "energy": 2
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 2,
+            "stats": {
+              "damage": 18,
+              "energy": 3
+            },
+            "description": "Deal {Damage:diff()} damage.\nNext turn, gain {Energy:energyIcons()}.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.GUIDING_STAR",
+          "name": "Guiding Star",
+          "cost": 1,
+          "type": "Attack",
+          "upgraded": false,
+          "description": "Deal {Damage:diff()} damage.\nNext turn, draw {Cards:diff()} {Cards:plural:card|cards}.",
+          "stats": {
+            "damage": 12,
+            "cards": 2
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "damage": 13,
+              "cards": 3
+            },
+            "description": "Deal {Damage:diff()} damage.\nNext turn, draw {Cards:diff()} {Cards:plural:card|cards}.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.KINGLY_PUNCH",
+          "name": "Kingly Punch",
+          "cost": 1,
+          "type": "Attack",
+          "upgraded": false,
+          "description": "Deal {Damage:diff()} damage.\nWhenever you draw this card, increase its damage by {Increase:diff()} this combat.",
+          "stats": {
+            "damage": 8,
+            "increase": 4
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "damage": 10,
+              "increase": 6
+            },
+            "description": "Deal {Damage:diff()} damage.\nWhenever you draw this card, increase its damage by {Increase:diff()} this combat.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.CRUSH_UNDER",
+          "name": "Crush Under",
+          "cost": 1,
+          "type": "Attack",
+          "upgraded": false,
+          "description": "Deal {Damage:diff()} damage to ALL enemies. All enemies lose {StrengthLoss:diff()} Strength this turn.",
+          "stats": {
+            "damage": 8,
+            "strengthloss": 1
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "damage": 9,
+              "strengthloss": 2
+            },
+            "description": "Deal {Damage:diff()} damage to ALL enemies. All enemies lose {StrengthLoss:diff()} Strength this turn.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.GLIMMER",
+          "name": "Glimmer",
+          "cost": 1,
+          "type": "Skill",
+          "upgraded": false,
+          "description": "Draw {Cards:diff()} {Cards:plural:card|cards}.\nPut {PutBack:diff()} {PutBack:plural:card|cards} from your Hand on top of your Draw Pile.",
+          "stats": {
+            "cards": 3,
+            "putback": 1
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "cards": 4,
+              "putback": 1
+            },
+            "description": "Draw {Cards:diff()} {Cards:plural:card|cards}.\nPut {PutBack:diff()} {PutBack:plural:card|cards} from your Hand on top of your Draw Pile.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.SHINING_STRIKE",
+          "name": "Shining Strike",
+          "cost": 1,
+          "type": "Attack",
+          "upgraded": false,
+          "description": "Deal {Damage:diff()} damage.\nGain {Stars:starIcons()}.\nPut this card on top of your Draw Pile.",
+          "stats": {
+            "damage": 8,
+            "stars": 2
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "damage": 11,
+              "stars": 2
+            },
+            "description": "Deal {Damage:diff()} damage.\nGain {Stars:starIcons()}.\nPut this card on top of your Draw Pile.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.COSMIC_INDIFFERENCE",
+          "name": "Cosmic Indifference",
+          "cost": 1,
+          "type": "Skill",
+          "upgraded": false,
+          "description": "Gain {Block:diff()} Block.\nPut a card from your Discard Pile on top of your Draw Pile.",
+          "stats": {
+            "block": 6
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "block": 9
+            },
+            "description": "Gain {Block:diff()} Block.\nPut a card from your Discard Pile on top of your Draw Pile.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.QUASAR",
+          "name": "Quasar",
+          "cost": 0,
+          "type": "Skill",
+          "upgraded": false,
+          "description": "Choose 1 of 3 random{IfUpgraded:show: Upgraded|} Colorless cards to add into your Hand.",
+          "stats": null,
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 0,
+            "stats": null,
+            "description": "Choose 1 of 3 random{IfUpgraded:show: Upgraded|} Colorless cards to add into your Hand.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.HEGEMONY",
+          "name": "Hegemony",
+          "cost": 2,
+          "type": "Attack",
+          "upgraded": false,
+          "description": "Deal {Damage:diff()} damage.\nNext turn, gain {Energy:energyIcons()}.",
+          "stats": {
+            "damage": 15,
+            "energy": 2
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 2,
+            "stats": {
+              "damage": 18,
+              "energy": 3
+            },
+            "description": "Deal {Damage:diff()} damage.\nNext turn, gain {Energy:energyIcons()}.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.DEVASTATE",
+          "name": "Devastate",
+          "cost": 1,
+          "type": "Attack",
+          "upgraded": false,
+          "description": "Deal {Damage:diff()} damage.",
+          "stats": {
+            "damage": 35
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "damage": 45
+            },
+            "description": "Deal {Damage:diff()} damage.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.COSMIC_INDIFFERENCE",
+          "name": "Cosmic Indifference",
+          "cost": 1,
+          "type": "Skill",
+          "upgraded": false,
+          "description": "Gain {Block:diff()} Block.\nPut a card from your Discard Pile on top of your Draw Pile.",
+          "stats": {
+            "block": 6
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "block": 9
+            },
+            "description": "Gain {Block:diff()} Block.\nPut a card from your Discard Pile on top of your Draw Pile.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.CLOAK_OF_STARS",
+          "name": "Cloak of Stars",
+          "cost": 0,
+          "type": "Skill",
+          "upgraded": false,
+          "description": "Gain {Block:diff()} Block.",
+          "stats": {
+            "block": 7
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 0,
+            "stats": {
+              "block": 10
+            },
+            "description": "Gain {Block:diff()} Block.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.LUNAR_BLAST",
+          "name": "Lunar Blast",
+          "cost": 0,
+          "type": "Attack",
+          "upgraded": false,
+          "description": "Deal {Damage:diff()} damage for each Skill already played this turn.{InCombat:\n(Hits {CalculatedHits:diff()} {CalculatedHits:plural:time|times})|}",
+          "stats": {
+            "damage": 4,
+            "calculationbase": 0,
+            "calculationextra": 1,
+            "calculatedhits": 0
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 0,
+            "stats": {
+              "damage": 5,
+              "calculationbase": 0,
+              "calculationextra": 1,
+              "calculatedhits": 0
+            },
+            "description": "Deal {Damage:diff()} damage for each Skill already played this turn.{InCombat:\n(Hits {CalculatedHits:diff()} {CalculatedHits:plural:time|times})|}",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        {
+          "id": "CARD.DECISIONS_DECISIONS",
+          "name": "Decisions, Decisions",
+          "cost": 0,
+          "type": "Skill",
+          "upgraded": false,
+          "description": "Draw {Cards:diff()} cards.\nChoose a Skill in your Hand and play it {Repeat:diff()} times.",
+          "stats": {
+            "cards": 3,
+            "repeat": 3
+          },
+          "keywords": [
+            "Exhaust"
+          ],
+          "after_upgrade": {
+            "cost": 0,
+            "stats": {
+              "cards": 5,
+              "repeat": 3
+            },
+            "description": "Draw {Cards:diff()} cards.\nChoose a Skill in your Hand and play it {Repeat:diff()} times.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        }
+      ]
+    },
+    "player_powers": [
+      {
+        "name": "Stratagem",
+        "description": "Whenever you shuffle your Draw Pile, choose 1 card from it to put into your Hand.",
+        "amount": 1
+      }
+    ],
+    "draw_pile_count": 20,
+    "discard_pile_count": 0,
+    "stars": 0
+  },
+  "wire_sha256": "6268a7d247eb2177759abdec64824b55665bf6e4009ffc7c6261fa7d44096dbb",
+  "engine_log_tail": "emonialBeast\n[INFO] Player 1 playing card FALLING_STAR (targeting CEREMONIAL_BEAST.name (index 1))\n[SIM] Ending turn once (round=6)\n[SIM] Playing card Stratagem (index 2) targeting none\n[INFO] Player 1 playing card STRATAGEM (no target)\n[SIM] Playing card Glimmer (index 1) targeting none\n[INFO] Player 1 playing card GLIMMER (no target)\n[SIM] Card selection pending: 6 options, select 1-1\n[SIM] Card selection: indices [0]\n[INFO] Player 1 chose cards [DECISIONS_DECISIONS]\n[SIM] Playing card UltimateStrike (index 3) targeting CeremonialBeast\n[INFO] Player 1 playing card ULTIMATE_STRIKE (targeting CEREMONIAL_BEAST.name (index 1))\n[SIM] Playing card LunarBlast (index 0) targeting CeremonialBeast\n[INFO] Player 1 playing card LUNAR_BLAST (targeting CEREMONIAL_BEAST.name (index 1))\n[SIM] Ending turn once (round=7)\n[SIM] Playing card Hegemony (index 1) targeting CeremonialBeast\n[INFO] Player 1 playing card HEGEMONY (targeting CEREMONIAL_BEAST.name (index 1))\n[SIM] Playing card ShiningStrike (index 3) targeting CeremonialBeast\n[INFO] Player 1 playing card SHINING_STRIKE (targeting CEREMONIAL_BEAST.name (index 1))\n[SIM] Playing card Quasar (index 2) targeting none\n[INFO] Player 1 playing card QUASAR (no target)\n[SIM] Card selection pending: 3 options, select 0-1\n[SIM] Card selection: indices [2]\n[INFO] Player 1 chose cards [PANIC_BUTTON]\n[SIM] Ending turn once (round=8)\n[SIM] Playing card CosmicIndifference (index 1) targeting none\n[INFO] Player 1 playing card COSMIC_INDIFFERENCE (no target)\n[SIM] Card selection pending: 21 options, select 1-1\n[SIM] Card selection: indices [20]\n[INFO] Player 1 chose cards [PANIC_BUTTON]\n[SIM] Ending turn once (round=9)\n[SIM] Card selection pending: 25 options, select 1-1\n[SIM] Card selection: indices [0]\n[INFO] Player 1 chose cards [DEFEND_REGENT]\n"
+}
