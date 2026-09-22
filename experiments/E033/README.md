@@ -12,3 +12,5 @@ If treatment produces more wins or improves at least2/3 pairs without lower mean
 
 ## Decision
 Keep as optional experiment unless held-out results improve wins or paired progress with no extra execution errors. Negative/mixed results remain committed/commented and closed. Separate causal improvement from offline imitation agreement; don't optimize reward choices on held-out seeds.
+
+Implementation v1: shared native/headless retrieval module provides observed mechanic lessons, explicit capability counts and limitations. Guided combat asks Jev only for playable setup/specific draw-exhaust cards or active unmodeled trigger mechanics; ordinary current-hand planning stays unchanged. Macro choices receive the same contextual lesson pack. No confidence-to-win conversion, policy mutation mid-run, additional Astra or forced winning archetype. Baseline remains unchanged. This is a bundled decision-support policy experiment; it cannot attribute effects to an individual lesson.
