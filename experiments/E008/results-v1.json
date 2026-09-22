@@ -1,0 +1,45 @@
+{
+  "manifest": {
+    "schema_version": 1,
+    "code_commit": "4abc9ef2249f024b273e5b1ec6c434d4785b3d91",
+    "tracked_dirty": false,
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+  },
+  "result": {
+    "run_id": "3ec290c2-3e25-45be-ad2d-1c8057f7df10",
+    "status": "error",
+    "actions": 12,
+    "execution_enabled": true,
+    "health": {
+      "game_version": "v0.111.0",
+      "mod_version": "0.15.0",
+      "process_id": 82395,
+      "instance_role": "human"
+    },
+    "character": "IRONCLAD",
+    "ascension": 0,
+    "floor": 3,
+    "initial_hp": 80,
+    "initial_enemies": [
+      {
+        "id": "NIBBIT",
+        "hp": 46
+      }
+    ],
+    "error": "RuntimeError: MCP act failed: {'error': {'code': 'invalid_action', 'message': 'Action is not in available_actions.', 'details': {'action': 'play_card', 'available_actions': ['save_and_quit', 'discard_potion']}, 'retryable': False, 'status_code': 409}, 'action': 'play_card', 'available_actions': ['save_and_quit', 'discard_potion']}",
+    "final_screen": "COMBAT",
+    "final_hp": 68,
+    "seconds": 46.644,
+    "model_calls": 14,
+    "cost_usd": 0.002225664,
+    "usage_unknown": false,
+    "trace_path": "artifacts/runs/3ec290c2-3e25-45be-ad2d-1c8057f7df10/decisions.jsonl",
+    "trace_sha256": "576db46d65e4c15282d62c14e40a13b533a7f5c454dc9b77e8a5afa7f6686397"
+  }
+}
