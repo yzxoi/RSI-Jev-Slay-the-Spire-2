@@ -9,3 +9,5 @@ Development: `full_dev_001`, five characters A10, compare greedy/planfixed (iden
 Iteration 1 results: fixed-macro development mean act-1 floor improves from 12.2 to 14.2 (four better, one tied), 0/5 wins in both, no errors. The Jev-macro development batch was interrupted by a transport EOF; shared unknown-usage accounting stopped remaining runs. Held-out batch also had a timeout and an event stall, followed by budget-guard stops. All attempted runs remain recorded; incomplete batches cannot support a policy promotion. Rerun network-stopped experiments only after improving the inference failure handling, preserving both attempts.
 
 Held-out rerun v2: 30/30 infrastructure errors at Neow due to E011's failed audio interception, not tactical outcomes. Preserve these rows; rerun unchanged planner after the headless JIT fix.
+
+Held-out v3: 29 normal defeats and one Dense Vegetation execution error, zero wins. That new event invokes a different cosmetic audio method; E011 extends its patch. Keep the entire 30-row set and rerun after the compatibility fix. No policy promotion yet.
