@@ -1,5 +1,5 @@
 """Audited expert choice followed by bounded automatic native play."""
-import argparse,json,pathlib,subprocess,sys,uuid
+import argparse,json,pathlib,subprocess,sys,time,uuid
 from .mcp import MCP
 from .trace import Trace,version_manifest
 from .engine import ROOT
@@ -20,6 +20,9 @@ def main():
  if manifest['tracked_dirty']:raise RuntimeError('Commit before execution')
  t=Trace(ROOT/'artifacts/runs'/str(uuid.uuid4()),{**manifest,'scope':'pilot_boundary_observation'});m=MCP('http://127.0.0.1:8080/mcp',t);s=m.call('get_raw_game_state');assert s['run_id']==a.run_id
  if a.action:
+  for _ in range(6):
+   if candidates(s,{}) or s.get('screen')!='COMBAT':break
+   m.call('wait_until_actionable',{'timeout_seconds':5,'raw_state':True});time.sleep(.15);s=m.call('get_raw_game_state');assert s['run_id']==a.run_id
   cmd=json.loads(a.action);assert cmd in [c['action'] for c in candidates(s,{})];assert a.output and a.reason
   d=ROOT/'artifacts/private';d.mkdir(exist_ok=True);expert=d/(str(uuid.uuid4())+'.json');expert.write_text(json.dumps({'state_hash':fingerprint(s),'action':cmd,'source':'Astra','reason':a.reason},ensure_ascii=False));t.write('expert_handoff',{'path':str(expert),'choice':cmd,'reason':a.reason});t.close()
   with (d/(pathlib.Path(a.output).stem+'.log')).open('w') as log:
