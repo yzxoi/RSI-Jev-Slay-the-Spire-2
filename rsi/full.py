@@ -104,7 +104,7 @@ def episode(config, manifest, jev=None):
                 if config['policy'] not in ['hybrid','planned','jev','guarded','equipped','advised'] or len(choices)==1: selected=fixed_macro(state,choices)
                 else:
                     context={'state':model_state(state),'strategy':STRATEGY,'previous_decision':history.get('previous')}
-                    if config['policy']=='advised' and d=='event_choice':context['event_analysis']=event_context(state)
+                    if config['policy']=='advised' and (advice:=event_context(state)):context['event_analysis']=advice
                     selected,call=jev.choose(context,choices,trace)
                     result['model_calls']+=1; result['cost_usd']+=call['usage'].get('cost',0)
             trace.write('candidates',choices);trace.write('selected',selected)
