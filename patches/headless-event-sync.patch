@@ -1,3 +1,29 @@
+diff --git a/setup.sh b/setup.sh
+index 23c7d02..1787580 100755
+--- a/setup.sh
++++ b/setup.sh
+@@ -216,6 +216,21 @@ foreach (var type in module.Types)
+     }
+ }
+ 
++// Cosmetic debug audio references unavailable Godot setters; neutralize before JIT.
++foreach (var type in module.Types)
++{
++    if (type.FullName != "MegaCrit.Sts2.Core.Audio.Debug.NDebugAudioManager") continue;
++    foreach (var method in type.Methods)
++    {
++        if (method.Name != "Play" || method.ReturnType.FullName != "System.Int32") continue;
++        method.Body = new MethodBody(method);
++        var il = method.Body.GetILProcessor();
++        il.Emit(OpCodes.Ldc_I4_0);
++        il.Emit(OpCodes.Ret);
++        patches++;
++    }
++}
++
+ Console.WriteLine($"Applied {patches} patches");
+ var outPath = dllPath + ".patched";
+ module.Write(outPath);
 diff --git a/src/Sts2Headless/RunSimulator.cs b/src/Sts2Headless/RunSimulator.cs
 index d780b2a..c151308 100644
 --- a/src/Sts2Headless/RunSimulator.cs
