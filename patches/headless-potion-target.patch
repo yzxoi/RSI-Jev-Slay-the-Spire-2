@@ -1,0 +1,32 @@
+--- a/src/Sts2Headless/RunSimulator.cs
++++ b/src/Sts2Headless/RunSimulator.cs
+@@ -1500,7 +1500,7 @@
+ 
+         // Self-targeting potions (Flex, Fortifier, etc.) ALWAYS target the player
+         // regardless of any target_index the caller provides
+-        if (potionTargetType == TargetType.Self || potionTargetType == TargetType.TargetedNoCreature)
++        if (potionTargetType == TargetType.Self || potionTargetType == TargetType.AnyPlayer || potionTargetType == TargetType.TargetedNoCreature)
+         {
+             target = player.Creature;
+         }
+@@ -1548,17 +1548,14 @@
+             var afterPotions = player.Potions?.ToList() ?? new();
+             if (afterPotions.Contains(potion))
+             {
+-                // Potion wasn't consumed — manually discard it
+-                Log("Potion not consumed by action, manually discarding");
+-                MegaCrit.Sts2.Core.Commands.PotionCmd.Discard(potion).GetAwaiter().GetResult();
+-                _syncCtx.Pump();
++                // A failed action is not a consumed potion; preserve inventory and fail loudly.
++                return Error($"Potion {potion.Id.Entry} was not consumed by real UsePotionAction");
+             }
+         }
+         catch (Exception ex)
+         {
+             Log($"Use potion failed: {ex.Message}");
+-            // Try manual discard as fallback
+-            try { MegaCrit.Sts2.Core.Commands.PotionCmd.Discard(potion).GetAwaiter().GetResult(); } catch { }
++            return ErrorWithTrace("Use potion failed without synthetic discard", ex);
+         }
+ 
+         return DetectDecisionPoint();
