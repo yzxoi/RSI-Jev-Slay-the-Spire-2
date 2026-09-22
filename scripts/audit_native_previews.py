@@ -24,7 +24,7 @@ for path in pathlib.Path(args.trace_root).glob('*/decisions.jsonl'):
     if target is not None:
      be=next((e for e in before['combat']['enemies'] if e['index']==target),None);ae=next((e for e in after['combat']['enemies'] if e['index']==target),None)
      if be and ae and len(before['combat']['enemies'])==len(after['combat']['enemies']) and be.get('enemy_id')==ae.get('enemy_id') and be.get('max_hp')==ae.get('max_hp'):
-      damage=next((x.get('total_damage',x.get('damage',0)) for x in c['damage_by_target'] if x['target_index']==target),0);record[label+'_damage']=min(be['current_hp'],max(0,damage-be['block']));record['damage_actual']=be['current_hp']-ae['current_hp']
+      damage=next((x.get('total_damage',x.get('damage',0)) for x in c['damage_by_target'] if x['target_index']==target),0);cap=next((x.get('hp_damage_cap') for x in c['damage_by_target'] if x['target_index']==target),None);record[label+'_damage']=min(be['current_hp'],max(0,damage-be['block']),cap if cap is not None else float('inf'));record['damage_actual']=be['current_hp']-ae['current_hp']
    rows.append(record)
  if any(r['trace']==path.parent.name for r in rows):sources.append({'path':str(path),'sha256':hashlib.sha256(path.read_bytes()).hexdigest()})
 summary={}

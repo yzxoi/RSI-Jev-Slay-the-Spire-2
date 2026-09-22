@@ -11,7 +11,7 @@ def choose_plan(state, candidates, width=40, depth=8):
     enemies={e['index']:e for e in state.get('enemies',[])}
     initial_hp={i:e['hp'] for i,e in enemies.items()}; incoming={i:intent_damage(e) for i,e in enemies.items()}
     hp=state.get('player',{}).get('hp',100)
-    start={'energy':state.get('energy',0),'block':state.get('player',{}).get('block',0),'hp':dict(initial_hp),'eblock':{i:e.get('block',0) for i,e in enemies.items()},'used':frozenset(),'plan':[],'utility':0.,'strength':0,'vuln':set()}
+    start={'energy':state.get('energy',0),'block':state.get('player',{}).get('block',0),'hp':dict(initial_hp),'eblock':{i:e.get('block',0) for i,e in enemies.items()},'used':frozenset(),'plan':[],'utility':0.,'strength':0,'vuln':set(),'native_caps':{i:e.get('native_slippery',0) for i,e in enemies.items()}}
     def score(n):
         loss=max(0,sum(incoming[i] for i,h in n['hp'].items() if h>0)-n['block']-state.get('player',{}).get('end_turn_block',0))
         kills=sum(h<=0 for h in n['hp'].values());damage=sum(initial_hp[i]-max(0,h) for i,h in n['hp'].items())
@@ -37,11 +37,15 @@ def choose_plan(state, candidates, width=40, depth=8):
                 for preview in previews:
                     t=preview['target_index']
                     if t not in m['hp'] or m['hp'][t]<=0 or (target is not None and target!=t):continue
-                    base=preview.get('total_damage',preview.get('damage',0)) or 0
-                    if ident=='BODY_SLAM':base=m['block']
+                    base=preview.get('native_base_damage',preview.get('total_damage',preview.get('damage',0))) or 0
+                    if ident=='BODY_SLAM':base=m['block']*preview.get('native_target_multiplier',1)
                     base+=m['strength']
-                    if t in m['vuln']:base=math.floor(base*1.5)
-                    dealt=max(0,base-m['eblock'][t]);m['eblock'][t]=max(0,m['eblock'][t]-base);m['hp'][t]=max(0,m['hp'][t]-dealt)
+                    if t in m['vuln']:base=base*1.5
+                    if preview.get('native_slow_count') is not None:base*=1+.1*(preview['native_slow_count']+len(n['used']))
+                    base=math.floor(base)
+                    dealt=max(0,base-m['eblock'][t]);m['eblock'][t]=max(0,m['eblock'][t]-base)
+                    if dealt>0 and m['native_caps'].get(t,0)>0:dealt=min(1,dealt);m['native_caps'][t]-=1
+                    m['hp'][t]=max(0,m['hp'][t]-dealt)
                 if stats.get('vulnerablepower',0) and target is not None:
                     already=any('vulnerab' in str(p.get('name','')).lower() or p.get('power_id')=='VULNERABLE_POWER' for p in enemies[target].get('powers') or [])
                     if not already:m['vuln'].add(target)
@@ -66,7 +70,7 @@ def choose_plan(state, candidates, width=40, depth=8):
         # Equivalent plans retain only one abstract endpoint, reducing factorial duplication.
         unique={}
         for n in children:
-            key=(n['used'],n['energy'],n['block'],tuple(n['hp'].items()),tuple(n['eblock'].items()),n['strength'],tuple(sorted(n['vuln'])))
+            key=(n['used'],n['energy'],n['block'],tuple(n['hp'].items()),tuple(n['eblock'].items()),n['strength'],tuple(sorted(n['vuln'])),tuple(n['native_caps'].items()))
             if key not in unique or score(n)>score(unique[key]):unique[key]=n
         frontier=sorted(unique.values(),key=score,reverse=True)[:width]
     chosen=next((c for c in candidates if best['plan'] and c['id']==best['plan'][0]),next(c for c in candidates if c['action']['action']=='end_turn'))
