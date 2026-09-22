@@ -1,0 +1,28 @@
+{
+  "manifest": {
+    "schema_version": 1,
+    "code_commit": "5acee7144918c311f9cb4ffa8b30a38ffa956192",
+    "tracked_dirty": false,
+    "headless_game_sha256": "1916d7171751313ff78aaa03d8aa6f2779c3bbea574dd4192cff49b663908fbe",
+    "headless_assembly_sha256": "2d3d7eec222b82c07d4b606e6e504ab44e5fa88f8ddeb28d99c8284b5d21e466",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "4ba4b70b8fc2be2c4e882c8b34877b85272513a48c08025b842acfcbe8b1a837"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+  },
+  "source_wire": "/tmp/e034-prefix.jsonl",
+  "command_count": 215,
+  "wire_path": "/Users/yzxoi/.codex/worktrees/sts2-event-continuation/RSI-Jev-Slay-the-Spire-2/artifacts/runs/bc2ee64e-55d3-4753-b626-8a04239cb77c/wire.jsonl",
+  "status": "error",
+  "replayed": 214,
+  "error": "Action 'select_cards' failed: NullReferenceException: Object reference not set to an instance of an object."
+}
