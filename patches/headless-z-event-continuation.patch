@@ -51,3 +51,14 @@
          if (_runState == null)
              return Error("No run in progress");
  
+--- a/setup.sh
++++ b/setup.sh
+@@ -240,7 +240,7 @@
+     foreach (var instruction in method.Body.Instructions.ToArray())
+     {
+         if (instruction.OpCode != OpCodes.Call && instruction.OpCode != OpCodes.Callvirt) continue;
+-        if (instruction.Operand is not MethodReference target || target.Name != "ScreenRumble" || target.DeclaringType.FullName != "MegaCrit.Sts2.Core.Nodes.NGame" || target.ReturnType.FullName != "System.Void") continue;
++        if (instruction.Operand is not MethodReference target || (target.Name != "ScreenRumble" && target.Name != "ScreenShakeTrauma") || target.DeclaringType.FullName != "MegaCrit.Sts2.Core.Nodes.NGame" || target.ReturnType.FullName != "System.Void") continue;
+         var il = method.Body.GetILProcessor();
+         for (int i = 0; i < target.Parameters.Count + (target.HasThis ? 1 : 0); i++) il.InsertBefore(instruction, il.Create(OpCodes.Pop));
+         instruction.OpCode = OpCodes.Nop; instruction.Operand = null; patches++;
