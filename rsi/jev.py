@@ -4,6 +4,7 @@ from pathlib import Path
 import threading
 import time
 import urllib.request
+import urllib.error
 from .engine import ROOT
 
 MODEL = "typesafe/jev-1.13"
@@ -26,17 +27,20 @@ class Budget:
     # The provider's reported cost remains authoritative; unknown usage stops calls.
     reserve_usd = 32000 * 0.042 / 1_000_000
 
-    def __init__(self, max_calls=200, max_usd=0.25):
+    def __init__(self, max_calls=200, max_usd=0.25, conservative_failures=False):
         self.max_calls, self.max_usd = max_calls, max_usd
         self.calls = 0
         self.spent = 0.0
         self.reserved = 0.0
         self.unknown = False
+        self.conservative_failures = conservative_failures
+        self.estimated_usd = 0.0
+        self.uncertain_calls = 0
         self.lock = threading.Lock()
 
     def acquire(self):
         with self.lock:
-            if self.unknown or self.calls >= self.max_calls or self.spent + self.reserved + self.reserve_usd > self.max_usd:
+            if (self.unknown and not self.conservative_failures) or self.calls >= self.max_calls or self.spent + self.reserved + self.reserve_usd > self.max_usd:
                 raise RuntimeError("Jev budget exhausted or usage unknown")
             self.calls += 1
             self.reserved += self.reserve_usd
@@ -47,6 +51,10 @@ class Budget:
             cost = usage.get("cost")
             if not isinstance(cost, (int, float)) or cost < 0:
                 self.unknown = True
+                self.uncertain_calls += 1
+                if self.conservative_failures:
+                    self.spent += self.reserve_usd
+                    self.estimated_usd += self.reserve_usd
             else:
                 self.spent += cost
 
@@ -56,7 +64,7 @@ class Jev:
         self.key = read_key()
         self.budget = budget
 
-    def choose(self, state, candidates, trace):
+    def choose(self, state, candidates, trace, _attempt=0):
         body = {"model": MODEL, "state": state, "questions": {"action": {
             "type": "choice",
             "instructions": "Choose the action that best preserves the chance to win the entire Slay the Spire 2 run. Consider action order, enemy threats, future turns, card/power/relic effects and resources. Use the supplied current rules rather than memories of another game version. The engine will observe the result and decide again after this one action. End turn only when further plays are worse. Candidate numeric features, when present, are limited estimates, not full simulations.",
@@ -72,6 +80,11 @@ class Jev:
         except Exception as exc:
             self.budget.settle({})
             trace.write("model_failure", {"error": type(exc).__name__, "message": str(exc).replace(self.key, "[redacted]")})
+            transient = isinstance(exc, (TimeoutError, urllib.error.URLError)) and not (isinstance(exc, urllib.error.HTTPError) and exc.code < 500 and exc.code != 429)
+            if transient and self.budget.conservative_failures and _attempt < 2:
+                trace.write("model_retry", {"attempt": _attempt + 1, "reserved_unknown_cost": self.budget.reserve_usd, "reason": type(exc).__name__})
+                time.sleep(.5 * (_attempt + 1))
+                return self.choose(state, candidates, trace, _attempt + 1)
             raise
         elapsed = time.monotonic() - started
         self.budget.settle(result.get("usage", {}))
