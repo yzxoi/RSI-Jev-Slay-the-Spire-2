@@ -24,7 +24,8 @@ def normalize(raw):
                 slow_count=p.get('cards_played_this_turn',0) if power(e,'SLOW_POWER') else None
                 native_base=max(0,base)*vulnerable
                 damage=math.floor(native_base*(1+.1*slow_count if slow_count is not None else 1))
-                previews.append({'target_index':e['index'],'damage':damage,'native_base_damage':native_base,'native_target_multiplier':vulnerable,'native_slow_count':slow_count,'hp_damage_cap':1 if power(e,'SLIPPERY_POWER') else None})
+                hits=2 if card['card_id']=='TWIN_STRIKE' else max(1,int(stats.get('repeat',stats.get('hits',1))))
+                previews.append({'target_index':e['index'],'damage':damage,'total_damage':damage*hits,'native_hits':hits,'native_base_damage':native_base,'native_target_multiplier':vulnerable,'native_slow_count':slow_count,'hp_damage_cap':1 if power(e,'SLIPPERY_POWER') else None})
         # Block preview already includes dexterity/frail; do not apply twice.
         hand.append({'index':card['index'],'id':card['card_id'],'name':card['name'],'cost':card['energy_cost'],'type':kind,'stats':stats,'damage_by_target':previews,'can_play':card['playable'],'target_type':card['target_type']})
     return {'energy':p['energy'],'player':{'hp':p['current_hp'],'block':p['block'],'end_turn_block':power(p,'PLATING_POWER')},'hand':hand,'enemies':enemies}

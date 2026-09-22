@@ -43,9 +43,10 @@ def choose_plan(state, candidates, width=40, depth=8):
                     if t in m['vuln']:base=base*1.5
                     if preview.get('native_slow_count') is not None:base*=1+.1*(preview['native_slow_count']+len(n['used']))
                     base=math.floor(base)
-                    dealt=max(0,base-m['eblock'][t]);m['eblock'][t]=max(0,m['eblock'][t]-base)
-                    if dealt>0 and m['native_caps'].get(t,0)>0:dealt=min(1,dealt);m['native_caps'][t]-=1
-                    m['hp'][t]=max(0,m['hp'][t]-dealt)
+                    for _hit in range(preview.get('native_hits',1)):
+                        dealt=max(0,base-m['eblock'][t]);m['eblock'][t]=max(0,m['eblock'][t]-base)
+                        if dealt>0 and m['native_caps'].get(t,0)>0:dealt=min(1,dealt);m['native_caps'][t]-=1
+                        m['hp'][t]=max(0,m['hp'][t]-dealt)
                 if stats.get('vulnerablepower',0) and target is not None:
                     already=any('vulnerab' in str(p.get('name','')).lower() or p.get('power_id')=='VULNERABLE_POWER' for p in enemies[target].get('powers') or [])
                     if not already:m['vuln'].add(target)
