@@ -11,3 +11,5 @@ Iteration 1 results: fixed-macro development mean act-1 floor improves from 12.2
 Held-out rerun v2: 30/30 infrastructure errors at Neow due to E011's failed audio interception, not tactical outcomes. Preserve these rows; rerun unchanged planner after the headless JIT fix.
 
 Held-out v3: 29 normal defeats and one Dense Vegetation execution error, zero wins. That new event invokes a different cosmetic audio method; E011 extends its patch. Keep the entire 30-row set and rerun after the compatibility fix. No policy promotion yet.
+
+Held-out v4 (after audio Stop shim): 28 normal defeats, 2 Dense Vegetation errors, zero victories. Raw mean floors: hybrid 10.0, planned 12.07; incomplete paired data cannot meet promotion rule. Provider reported $0.096055806 plus $0.001344 conservative reserve for one uncertain call. Errors now occur after healing at screen rumble, a cosmetic native-window call. E011 fixes that separately; next evaluation retains all seed/character pairs. Live E013 reached a normal floor-9 defeat despite three expert rescues, reinforcing that current-hand search alone is inadequate.
