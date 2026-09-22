@@ -1,0 +1,8 @@
+## Hypothesis
+E033 guided a0_e033_dev_003 died holding Block12, Energy2 and Gigantification. The final state had4HP/19block against33 damage; a Block Potion alone would cover12 of the14 deficit, although later survival is unknown. Prior E016 extra potion prompts did not improve raw Jev. Test a distinct programmatic alternative: compare the approximate best current-hand plan before/after a supported potion, then automatically use it only for a predicted substantial survival gain.
+
+## Baseline / scope
+Main planned combat plus Jev macro. Treatment `rescue` keeps those choices, but considers Block/Energy/Fire/Explosive potions using exported values; no invented potion quantity, no source-of-truth victory edits. Energy unlock forecast uses only explicitly modeled ordinary cards and is revalidated against real state after using the potion. Unknown mechanics remain labeled approximate. Other potion types are not claimed supported. No extra model calls or Astra in batch tests.
+
+## Fixed evaluation
+First synthetic controls and captured terminal diagnosis (not a counterfactual win). Ironclad A0 development seeds a0_e035_dev_001,002,003, planned vs rescue,3workers,matched identical Jev decisions,4000actions/run,6000Jev calls/$2 total. Measure victory, act-aware paired progress, normal defeat vs adapter error, potions used/held at death, costs and latency. If more wins or >=2 improved pairs and no worse pair, fresh five-character A0 seeds a0_e035_hold_001,002. Promote optional policy only if held-out has more wins or more better than worse pairs and no extra errors. No stability claim before separate10-run A0/visible checks. Record all negative results and close if unsupported.
