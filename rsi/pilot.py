@@ -17,7 +17,7 @@ def compact(s):
  return out
 
 def main():
- p=argparse.ArgumentParser();p.add_argument('--run-id',required=True);p.add_argument('--action');p.add_argument('--reason');p.add_argument('--output');p.add_argument('--max-actions',type=int,default=2000);p.add_argument('--review-cards',default='');p.add_argument('--auto-combat-selections',action='store_true');p.add_argument('--danger-hp',type=int,default=35);p.add_argument('--combat-policy',choices=['planned','jev','triggered'],default='planned');a=p.parse_args();manifest=version_manifest()
+ p=argparse.ArgumentParser();p.add_argument('--run-id',required=True);p.add_argument('--action');p.add_argument('--reason');p.add_argument('--output');p.add_argument('--max-actions',type=int,default=2000);p.add_argument('--review-cards',default='');p.add_argument('--auto-combat-selections',action='store_true');p.add_argument('--danger-hp',type=int,default=35);p.add_argument('--combat-policy',choices=['planned','jev','triggered','retaliate'],default='planned');a=p.parse_args();manifest=version_manifest()
  if manifest['tracked_dirty']:raise RuntimeError('Commit before execution')
  t=Trace(ROOT/'artifacts/runs'/str(uuid.uuid4()),{**manifest,'scope':'pilot_boundary_observation'});m=MCP('http://127.0.0.1:8080/mcp',t);s=m.call('get_raw_game_state');assert s['run_id']==a.run_id;s=settle_turn(m,s,t)
  if a.action:
