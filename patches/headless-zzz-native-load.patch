@@ -1,0 +1,24 @@
+--- a/src/Sts2Headless/RunSimulator.cs
++++ b/src/Sts2Headless/RunSimulator.cs
+@@ -565,6 +565,21 @@
+                     _runState.ActFloor = savedVisitedCoords.Count;
+                     var last = savedVisitedCoords[^1];
+                     Log($"Restored map position: floor={_runState.ActFloor}, coord=({last.col},{last.row})");
++                    if (Environment.GetEnvironmentVariable("RSI_RESUME_NATIVE_ROOM") == "1")
++                    {
++                        if (save.PreFinishedRoom != null)
++                            return Error("Native-room probe supports unfinished rooms only");
++                        var resume = RunManager.Instance.LoadIntoLatestMapCoord(null);
++                        var deadline = DateTime.UtcNow.AddSeconds(5);
++                        while (!resume.IsCompleted && DateTime.UtcNow < deadline)
++                        {
++                            _syncCtx.Pump();
++                            Thread.Sleep(1);
++                        }
++                        if (!resume.IsCompleted) return Error("Native-room resume deadline");
++                        resume.GetAwaiter().GetResult();
++                        _syncCtx.Pump();
++                    }
+                 }
+             }
+             else

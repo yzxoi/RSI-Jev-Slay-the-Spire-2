@@ -4,7 +4,7 @@ from pathlib import Path
 from rsi.engine import Headless,ROOT
 from rsi.trace import Trace,version_manifest
 from rsi.mcp import MCP
-ap=argparse.ArgumentParser();ap.add_argument('--version',default='v1');a=ap.parse_args();suffix='-v2' if a.version=='v2' else ''
+ap=argparse.ArgumentParser();ap.add_argument('--version',default='v1');a=ap.parse_args();suffix='-v2' if a.version!='v1' else ''
 manifest=version_manifest();assert not manifest['tracked_dirty'];t=Trace(ROOT/'artifacts/runs'/str(uuid.uuid4()),{**manifest,'scope':'E005 readonly native parity capture'})
 m=MCP('http://127.0.0.1:8080/mcp',t);native=m.call('get_raw_game_state');assert native['run_id']=='EFUZ4NHFCXBT' and native['run']['floor']==7
 (ROOT/'artifacts/private/native-floor7-state.json').write_text(json.dumps(native));native_sha=t.close()

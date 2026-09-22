@@ -1,0 +1,67 @@
+{
+  "manifest": {
+    "schema_version": 1,
+    "code_commit": "dbcf0310cf5b27e0a9cc1e7cb0eaf1c183fe088e",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "f37fd30c18e3101c841f07a06124e8856b6cab9b14c2f58779c07087bf83ce90",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+  },
+  "scope": "two isolated copies; no game mutations",
+  "native_trace_sha256": "bc1ad5e9c2e7d6a208de60d7bc83c51ec73b6d3e5200ad4f252a3182821b7119",
+  "loads": [
+    {
+      "seconds": 1.1576,
+      "state_sha256": "19f7088df007ba551795bebc0afe8a77d9e0c3cd85d58e78ea4cfdf2acf9761d",
+      "decision": "map_select",
+      "context": {
+        "act": 1,
+        "act_name": "Underdocks",
+        "floor": 7,
+        "room_type": "Map",
+        "boss": {
+          "id": "WATERFALL_GIANT_BOSS",
+          "name": "Waterfall Giant"
+        }
+      },
+      "hp": 24,
+      "hand": [],
+      "enemies": [],
+      "error": null,
+      "wire_path": "artifacts/runs/cc876d42-a168-435d-ac75-d3665b85e2e3/wire.jsonl"
+    },
+    {
+      "seconds": 0.9263,
+      "state_sha256": "19f7088df007ba551795bebc0afe8a77d9e0c3cd85d58e78ea4cfdf2acf9761d",
+      "decision": "map_select",
+      "context": {
+        "act": 1,
+        "act_name": "Underdocks",
+        "floor": 7,
+        "room_type": "Map",
+        "boss": {
+          "id": "WATERFALL_GIANT_BOSS",
+          "name": "Waterfall Giant"
+        }
+      },
+      "hp": 24,
+      "hand": [],
+      "enemies": [],
+      "error": null,
+      "wire_path": "artifacts/runs/2955f171-73b9-43d7-8734-692d30b565be/wire.jsonl"
+    }
+  ],
+  "repeat_load_equal": true
+}
