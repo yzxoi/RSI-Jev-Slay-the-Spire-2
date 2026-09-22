@@ -1,0 +1,46 @@
+diff --git a/src/Sts2Headless/RunSimulator.cs b/src/Sts2Headless/RunSimulator.cs
+index d780b2a..c151308 100644
+--- a/src/Sts2Headless/RunSimulator.cs
++++ b/src/Sts2Headless/RunSimulator.cs
+@@ -1648,7 +1648,7 @@ public class RunSimulator
+                         _eventOptionChosen = true;
+                         _lastEventOptionCount = options.Count;
+                         // Run on thread pool so GetSelectedCards/GetSelectedCardReward can block
+-                        var task = Task.Run(() => options[optionIndex].Chosen());
++                        var task = Task.Run(() => eventSync!.ChooseLocalOption(optionIndex));
+                         for (int i = 0; i < 100; i++)
+                         {
+                             _syncCtx.Pump();
+@@ -3258,6 +3258,13 @@ public class RunSimulator
+         try
+         {
+             var harmony = new Harmony("sts2headless.talkpatch");
++            // Headless has no NGame/DebugAudio. Supply an inert audio receiver;
++            // events retain their own reward/HP logic after cosmetic Play calls.
++            var audioType = typeof(MegaCrit.Sts2.Core.Audio.Debug.NDebugAudioManager);
++            harmony.Patch(audioType.GetProperty("Instance")!.GetMethod!, new HarmonyMethod(typeof(YieldPatches).GetMethod(nameof(YieldPatches.DebugAudioInstancePrefix))!));
++            foreach (var method in audioType.GetMethods().Where(m => m.Name == "Play" && m.ReturnType == typeof(int)))
++                harmony.Patch(method, new HarmonyMethod(typeof(YieldPatches).GetMethod(nameof(YieldPatches.DebugAudioPlayPrefix))!));
++
+             var talkType = typeof(CombatManager).Assembly.GetType("MegaCrit.Sts2.Core.Commands.TalkCmd");
+             var playMethod = talkType?.GetMethods(System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static)
+                 .FirstOrDefault(m => m.Name == "Play");
+@@ -3455,6 +3462,18 @@ public class RunSimulator
+         /// the EndTurn nuclear fallback / false game_over. The bubble is purely cosmetic and
+         /// its return value is ignored by callers, so returning null is safe.
+         /// </summary>
++        public static bool DebugAudioInstancePrefix(ref MegaCrit.Sts2.Core.Audio.Debug.NDebugAudioManager __result)
++        {
++            __result = (MegaCrit.Sts2.Core.Audio.Debug.NDebugAudioManager)System.Runtime.CompilerServices.RuntimeHelpers.GetUninitializedObject(typeof(MegaCrit.Sts2.Core.Audio.Debug.NDebugAudioManager));
++            return false;
++        }
++
++        public static bool DebugAudioPlayPrefix(ref int __result)
++        {
++            __result = 0;
++            return false;
++        }
++
+         public static bool TalkCmdPlayPrefix(ref MegaCrit.Sts2.Core.Nodes.Vfx.NSpeechBubbleVfx? __result)
+         {
+             __result = null;

@@ -1,0 +1,171 @@
+{
+  "manifest": {
+    "schema_version": 1,
+    "code_commit": "a6c2caef0cbd37fb39a666079135411689522b26",
+    "tracked_dirty": false,
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+  },
+  "configuration": {
+    "characters": "Ironclad,Silent,Defect,Regent,Necrobinder",
+    "seeds": "full_dev_001",
+    "policies": "hybrid",
+    "ascension": 10,
+    "workers": 3,
+    "max_calls": 12000,
+    "max_usd": 3,
+    "output": "experiments/E011/hybrid-v1.json"
+  },
+  "results": [
+    {
+      "character": "Ironclad",
+      "seed": "full_dev_001",
+      "ascension": 10,
+      "policy": "hybrid",
+      "run_id": "801913a1-93e6-4125-8a9d-dc1d347b7c6f",
+      "status": "normal_defeat",
+      "steps": 152,
+      "model_calls": 22,
+      "cost_usd": 0.0032098919999999998,
+      "initial_state_hash": "04891ce48b1d5a3beb8ad0bee97482e5ed7c460db92f32ad76ef757f3fe432e0",
+      "act": 1,
+      "floor": 15,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 22.749,
+      "scenes": {
+        "event_choice": 6,
+        "card_reward": 9,
+        "map_select": 14,
+        "combat_play": 120,
+        "card_select": 1,
+        "rest_site": 2,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/801913a1-93e6-4125-8a9d-dc1d347b7c6f/decisions.jsonl",
+      "trace_sha256": "286460eaabb644e0d7b19c9be49a7cf15590cd036cc14972365cfdd616989807"
+    },
+    {
+      "character": "Silent",
+      "seed": "full_dev_001",
+      "ascension": 10,
+      "policy": "hybrid",
+      "run_id": "a284c5e0-4f97-4836-a6af-c06fa4b7459f",
+      "status": "normal_defeat",
+      "steps": 178,
+      "model_calls": 31,
+      "cost_usd": 0.005699862,
+      "initial_state_hash": "c2261a41a5a40a9d8ed3a33445d20dd774cef345e370fa9c24e8535206a5eb67",
+      "act": 1,
+      "floor": 13,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 32.167,
+      "scenes": {
+        "event_choice": 5,
+        "card_reward": 8,
+        "map_select": 12,
+        "combat_play": 139,
+        "card_select": 12,
+        "rest_site": 2,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/a284c5e0-4f97-4836-a6af-c06fa4b7459f/decisions.jsonl",
+      "trace_sha256": "1e3777d23d88c0dec1ae990bdb5dfe98c7f28b18128b43a14b47296968563908"
+    },
+    {
+      "character": "Defect",
+      "seed": "full_dev_001",
+      "ascension": 10,
+      "policy": "hybrid",
+      "run_id": "ad43ba95-6489-417f-8223-742f0412405f",
+      "status": "normal_defeat",
+      "steps": 108,
+      "model_calls": 17,
+      "cost_usd": 0.0023937060000000002,
+      "initial_state_hash": "4306e717e28ea74ba176d1398ccc8116e534f19fa0d766271d2a09d7c31663ce",
+      "act": 1,
+      "floor": 11,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 17.328,
+      "scenes": {
+        "event_choice": 5,
+        "card_reward": 7,
+        "map_select": 10,
+        "combat_play": 84,
+        "card_select": 1,
+        "rest_site": 1,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/ad43ba95-6489-417f-8223-742f0412405f/decisions.jsonl",
+      "trace_sha256": "f5ed7b923dd2b0f70b2c9da56455361aee212338e23cfe9e2f8bb10d4bd245c5"
+    },
+    {
+      "character": "Regent",
+      "seed": "full_dev_001",
+      "ascension": 10,
+      "policy": "hybrid",
+      "run_id": "62f00931-5706-4b52-9119-5bb4eb32cc0d",
+      "status": "normal_defeat",
+      "steps": 111,
+      "model_calls": 21,
+      "cost_usd": 0.0032459279999999995,
+      "initial_state_hash": "5cf0dd800d3aa72d6b5b7b50e6bdbc299d7ddc0111a8a76dcd80359693509855",
+      "act": 1,
+      "floor": 11,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 18.309,
+      "scenes": {
+        "event_choice": 5,
+        "card_reward": 7,
+        "map_select": 10,
+        "combat_play": 83,
+        "card_select": 5,
+        "rest_site": 1,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/62f00931-5706-4b52-9119-5bb4eb32cc0d/decisions.jsonl",
+      "trace_sha256": "c7f476069191faf7c417eac44ab0fb9582489e6e06453028e2bfbfd3c7aca0c1"
+    },
+    {
+      "character": "Necrobinder",
+      "seed": "full_dev_001",
+      "ascension": 10,
+      "policy": "hybrid",
+      "run_id": "ca349526-dd79-4ffd-a920-9813c605bb80",
+      "status": "normal_defeat",
+      "steps": 134,
+      "model_calls": 17,
+      "cost_usd": 0.0024535979999999995,
+      "initial_state_hash": "1c6323923e3a9143adebead6d79afd03cfd73f120dae6f17657d84f437eb65cd",
+      "act": 1,
+      "floor": 11,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 17.915,
+      "scenes": {
+        "event_choice": 5,
+        "card_reward": 7,
+        "map_select": 10,
+        "combat_play": 110,
+        "card_select": 1,
+        "rest_site": 1,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/ca349526-dd79-4ffd-a920-9813c605bb80/decisions.jsonl",
+      "trace_sha256": "f8b0c4f6e60972653e5a4a9f09d6044d6f8bb2b11663942e6fbe4ca9483b0cf9"
+    }
+  ],
+  "budget": {
+    "requests": 108,
+    "cost_usd": 0.017002986,
+    "unknown": false
+  }
+}

@@ -35,7 +35,7 @@ def macro_candidates(state, history=None):
         cards = state.get('cards', []); lo = state.get('min_select', 1); hi = state.get('max_select', 1)
         for n in range(max(1, lo), min(len(cards), hi) + 1):
             for combo in itertools.islice(itertools.combinations(cards, n), 128):
-                add('select_cards', list(combo), indices=','.join(str(c['index']) for c in combo))
+                add('select_cards', [{'index':c['index'],'name':c.get('name'),'id':c.get('id')} for c in combo], indices=','.join(str(c['index']) for c in combo))
             if len(out) >= 128: break
         if lo == 0: add('skip_select')
     elif d == 'shop':
@@ -103,7 +103,12 @@ def episode(config, manifest, jev=None):
     except Exception as exc:
         result['error']=f'{type(exc).__name__}: {exc}';trace.write('failure',{'error':result['error']})
     finally:
-        if engine:engine.close()
+        if engine:
+            engine.close()
+            diagnostic=(trace.directory/'engine.stderr.log').read_text()
+            if 'forcing game_over' in diagnostic:
+                result['status']='error';result['error']='Upstream forced game_over after deadlock; not a normal defeat'
+            result['engine_log_sha256']=__import__('hashlib').sha256(diagnostic.encode()).hexdigest()
     context=state.get('context') or {}
     result.update(act=state.get('act',context.get('act')),floor=state.get('floor',context.get('floor')),final_decision=state.get('decision'),final_hp=state.get('player',{}).get('hp'),seconds=round(time.monotonic()-start,3),scenes=dict(scenes))
     trace.write('summary',result);result['trace_path']=str(trace.path.relative_to(ROOT));result['trace_sha256']=trace.close();print(json.dumps(result),flush=True);return result
@@ -115,10 +120,10 @@ def main():
     if set(chars)-set(CHARACTERS) or set(policies)-{'first','greedy','hybrid'}:p.error('Invalid character or policy')
     manifest=version_manifest()
     if manifest['tracked_dirty']:raise RuntimeError('Commit implementation before evaluation')
-    budget=Budget(a.max_calls,a.max_usd);jev=Jev(budget) if 'hybrid' in policies else None
+    budget=Budget(a.max_calls,a.max_usd,conservative_failures=True);jev=Jev(budget) if 'hybrid' in policies else None
     configs=[{'character':c,'seed':s,'ascension':a.ascension,'policy':policy} for s in a.seeds.split(',') for c in chars for policy in policies]
     with ThreadPoolExecutor(max_workers=a.workers) as pool: results=list(pool.map(lambda c:episode(c,manifest,jev),configs))
-    out=Path(a.output);out.parent.mkdir(parents=True,exist_ok=True);out.write_text(json.dumps({'manifest':manifest,'configuration':vars(a),'results':results,'budget':{'requests':budget.calls,'cost_usd':budget.spent,'unknown':budget.unknown}},indent=2)+'\n')
+    out=Path(a.output);out.parent.mkdir(parents=True,exist_ok=True);out.write_text(json.dumps({'manifest':manifest,'configuration':vars(a),'results':results,'budget':{'requests':budget.calls,'cost_usd':budget.spent,'unknown':budget.unknown,'estimated_usd':budget.estimated_usd,'uncertain_calls':budget.uncertain_calls}},indent=2)+'\n')
     if any(r['status']=='error' for r in results):raise SystemExit(1)
 
 if __name__=='__main__':main()
