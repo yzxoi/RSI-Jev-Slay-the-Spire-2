@@ -1,0 +1,3 @@
+# E022 — Native Artifact-aware Vulnerable
+
+Issue #39. Native floor23 trace showed Artifact2 on Chomper. Track native Artifact charges per abstract endpoint; a modeled Vulnerable application consumes one charge and gives no Vulnerable utility or multiplier while blocked. Headless defaults unchanged pending separate schema validation. Synthetic counterexample:52HP enemy, Bash11+Perfected30 cannot kill through Artifact, but old planner forecast56. Corrected plan should use30+12 with remaining block instead. Test all existing mechanics, then captured native-state reranking; this is arithmetic validation, not counterfactual battle or win rate. Other unmodeled debuffs (including Uppercut generic Power) remain limitations.
