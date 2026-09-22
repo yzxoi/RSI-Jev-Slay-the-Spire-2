@@ -80,6 +80,7 @@ def main():
                     mcp.call('wait_until_actionable',{'timeout_seconds':10,'raw_state':True});raw=mcp.call('get_raw_game_state');continue
                 result['actions']+=1;trace.write('action_result',answer)
                 if screen=='MAP':history['shop_closed']=False
+                if selected['action']['action']=='skip_reward_cards':history['skipped_card_reward']=(raw.get('run_id'),(raw.get('run') or {}).get('floor'))
                 if selected['action']['action']=='close_shop_inventory':history['shop_closed']=True
                 if not raw.get('selection'):history['previous']={'screen':screen,'choice':selected}
                 mcp.call('wait_until_actionable',{'timeout_seconds':10,'raw_state':True})
