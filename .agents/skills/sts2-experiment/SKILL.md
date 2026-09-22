@@ -5,7 +5,7 @@ description: Run and evaluate versioned Astra/Jev/STS2 experiments in this repos
 
 # STS2 experiment workflow
 
-Read the repository AGENTS.md and the relevant issue. The user has authorized experiment issues, private-repository PRs, result comments, and evidence-based merging/closing; the visible MCP milestone is the acceptance boundary.
+Read the repository AGENTS.md and the relevant issue. The user has authorized experiment issues, repository PRs, result comments, and evidence-based merging/closing; milestone 1 has been accepted and the current objective includes full-run high-ascension evaluation and one genuine visible complete victory.
 
 Before execution, record the hypothesis, strongest practical simple baseline, fixed seeds/characters/ascension, budget and decision rule in `experiments/E###/README.md`. Commit the runnable implementation, then record its SHA in the run manifest. Changes to hypotheses or sample sets are new iterations, not silent replacements.
 
@@ -15,4 +15,4 @@ After each evaluation, commit the compact results and why the next change is jus
 
 Use the local, ignored dependency checkout and SDK. Copy/patch only local game DLL copies. Do not add game binaries or credentials to Git. Read project `.env` in process and never log authorization headers.
 
-For visible demonstrations, confirm the selected live run and a single writer, execute MCP actions one at a time, and stop at the agreed combat/room boundary. Report what was actually observed, then stop for user acceptance.
+For visible runs, confirm the selected live run and a single writer, execute MCP actions one at a time, and respect explicit run/budget boundaries. The current authorization covers rewards, cards, routes, shops, events and combat. Preserve losses and restarts; never edit game values or pass a rollback-selected branch off as a single-run win.
