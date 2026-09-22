@@ -1,0 +1,1528 @@
+{
+  "manifest": {
+    "schema_version": 1,
+    "code_commit": "4ac7c67658e0ba3483bc19d1d5f99134c449fc0c",
+    "tracked_dirty": false,
+    "headless_assembly_sha256": "4f50dfadf8442f152cfa730578d4e1341366bd4e0c8ab1a0442c6d33ef55c59a",
+    "patches": {
+      "headless-event-sync.patch": "13f5f0866fd85fad07bc1fdd8f4a2f2b693f185e5e523b60382fa852f4728276"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+  },
+  "old_ref": "eea1b87^",
+  "summary": {
+    "block": {
+      "n": 153,
+      "old": {
+        "exact": 147,
+        "absolute_error": 14
+      },
+      "new": {
+        "exact": 151,
+        "absolute_error": 10
+      }
+    },
+    "damage": {
+      "n": 72,
+      "old": {
+        "exact": 57,
+        "absolute_error": 116
+      },
+      "new": {
+        "exact": 71,
+        "absolute_error": 1
+      }
+    }
+  },
+  "sources": [
+    {
+      "path": "/Users/yzxoi/.codex/worktrees/sts2-live-full-run/RSI-Jev-Slay-the-Spire-2/artifacts/runs/bcdbceb4-6981-402f-b063-28f1552a877f/decisions.jsonl",
+      "sha256": "26d86dcaa80adecf3842f53396dd90db7817824b833b0e0ac2cdbc0b5033e7fd"
+    },
+    {
+      "path": "/Users/yzxoi/.codex/worktrees/sts2-live-full-run/RSI-Jev-Slay-the-Spire-2/artifacts/runs/8e83ff52-c94e-47e2-8145-b3391f4b077f/decisions.jsonl",
+      "sha256": "4f11b095a1c5d598ed327b2e94e73eb7526cb50d69a640c7b899d08ada32f4b4"
+    },
+    {
+      "path": "/Users/yzxoi/.codex/worktrees/sts2-live-full-run/RSI-Jev-Slay-the-Spire-2/artifacts/runs/a7ad3ea0-9478-4319-a2cf-9733a9b154d7/decisions.jsonl",
+      "sha256": "06f7dc4b8473353c0f08476512a2523b8d595f15c61c8adda769241f39c54032"
+    },
+    {
+      "path": "/Users/yzxoi/.codex/worktrees/sts2-live-full-run/RSI-Jev-Slay-the-Spire-2/artifacts/runs/f1cf234b-16b8-4ac6-b53b-e1d3af0e5920/decisions.jsonl",
+      "sha256": "390fbee386754ad9cced50a8e9997740ffe01bbb42fa71f4c2875d24a276a454"
+    },
+    {
+      "path": "/Users/yzxoi/.codex/worktrees/sts2-live-full-run/RSI-Jev-Slay-the-Spire-2/artifacts/runs/9285955d-129e-43af-9d77-cb9e374d600f/decisions.jsonl",
+      "sha256": "faecf6169f7bec37f5022634dbb48c1dc37ff2db4feac1ee1aa704f0d00f93c7"
+    },
+    {
+      "path": "/Users/yzxoi/.codex/worktrees/sts2-live-full-run/RSI-Jev-Slay-the-Spire-2/artifacts/runs/1f460b79-08e3-4960-9b80-a3ab44b490ec/decisions.jsonl",
+      "sha256": "71fcec81f44d785127ea986a987fc6c0cd2fbec0b99ca5a35e4e8685c712ab99"
+    },
+    {
+      "path": "/Users/yzxoi/.codex/worktrees/sts2-live-full-run/RSI-Jev-Slay-the-Spire-2/artifacts/runs/14a740fc-4130-47eb-810b-844626e35dfb/decisions.jsonl",
+      "sha256": "a0649eba826c291e72dbe9b8e6d72dc0da971dad720c5342cfc2ecc9789a061c"
+    },
+    {
+      "path": "/Users/yzxoi/.codex/worktrees/sts2-live-full-run/RSI-Jev-Slay-the-Spire-2/artifacts/runs/6c15a4a1-6f03-4dfd-9a2d-13eaed603c40/decisions.jsonl",
+      "sha256": "a20b53ff69f443f8cc7725061ab74d399048706b3baf417faac97b48bf026602"
+    },
+    {
+      "path": "/Users/yzxoi/.codex/worktrees/sts2-live-full-run/RSI-Jev-Slay-the-Spire-2/artifacts/runs/0f081742-a605-4686-b57d-6e088d7132af/decisions.jsonl",
+      "sha256": "95f7d99c0e47c27aeba8951b3eda290e6180c82f83a0977934714894eabd010a"
+    },
+    {
+      "path": "/Users/yzxoi/.codex/worktrees/sts2-live-full-run/RSI-Jev-Slay-the-Spire-2/artifacts/runs/cd740278-8619-456f-a336-259b35b1ac44/decisions.jsonl",
+      "sha256": "c9894e4f6dfa4bab6587581df305073fa1bf8b89d30757bff3218c252733af54"
+    }
+  ],
+  "observations": [
+    {
+      "trace": "bcdbceb4-6981-402f-b063-28f1552a877f",
+      "seq": 24,
+      "card": "RAMPAGE",
+      "block_actual": 0,
+      "old_block": 0,
+      "new_block": 0
+    },
+    {
+      "trace": "bcdbceb4-6981-402f-b063-28f1552a877f",
+      "seq": 166,
+      "card": "ARMAMENTS",
+      "block_actual": 5,
+      "old_block": 5,
+      "new_block": 5
+    },
+    {
+      "trace": "bcdbceb4-6981-402f-b063-28f1552a877f",
+      "seq": 199,
+      "card": "BASH",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 10,
+      "damage_actual": 10,
+      "new_block": 0,
+      "new_damage": 10
+    },
+    {
+      "trace": "bcdbceb4-6981-402f-b063-28f1552a877f",
+      "seq": 253,
+      "card": "IRON_WAVE",
+      "block_actual": 5,
+      "old_block": 5,
+      "old_damage": 5,
+      "damage_actual": 5,
+      "new_block": 5,
+      "new_damage": 5
+    },
+    {
+      "trace": "bcdbceb4-6981-402f-b063-28f1552a877f",
+      "seq": 269,
+      "card": "DEFEND_IRONCLAD",
+      "block_actual": 5,
+      "old_block": 5,
+      "new_block": 5
+    },
+    {
+      "trace": "bcdbceb4-6981-402f-b063-28f1552a877f",
+      "seq": 285,
+      "card": "BODY_SLAM",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 10,
+      "damage_actual": 10,
+      "new_block": 0,
+      "new_damage": 10
+    },
+    {
+      "trace": "bcdbceb4-6981-402f-b063-28f1552a877f",
+      "seq": 328,
+      "card": "RAMPAGE",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 15,
+      "damage_actual": 15,
+      "new_block": 0,
+      "new_damage": 15
+    },
+    {
+      "trace": "bcdbceb4-6981-402f-b063-28f1552a877f",
+      "seq": 344,
+      "card": "BATTLE_TRANCE",
+      "block_actual": 0,
+      "old_block": 0,
+      "new_block": 0
+    },
+    {
+      "trace": "bcdbceb4-6981-402f-b063-28f1552a877f",
+      "seq": 360,
+      "card": "STRIKE_IRONCLAD",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 9,
+      "damage_actual": 9,
+      "new_block": 0,
+      "new_damage": 9
+    },
+    {
+      "trace": "bcdbceb4-6981-402f-b063-28f1552a877f",
+      "seq": 376,
+      "card": "STRIKE_IRONCLAD",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 9,
+      "damage_actual": 9,
+      "new_block": 0,
+      "new_damage": 9
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 74,
+      "card": "BASH",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 8,
+      "damage_actual": 8,
+      "new_block": 0,
+      "new_damage": 8
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 116,
+      "card": "DEFEND_IRONCLAD",
+      "block_actual": 5,
+      "old_block": 5,
+      "new_block": 5
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 154,
+      "card": "DEFEND_IRONCLAD",
+      "block_actual": 5,
+      "old_block": 5,
+      "new_block": 5
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 171,
+      "card": "STRIKE_IRONCLAD",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 4,
+      "damage_actual": 4,
+      "new_block": 0,
+      "new_damage": 4
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 188,
+      "card": "DEFEND_IRONCLAD",
+      "block_actual": 5,
+      "old_block": 5,
+      "new_block": 5
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 228,
+      "card": "BASH",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 5,
+      "damage_actual": 5,
+      "new_block": 0,
+      "new_damage": 5
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 245,
+      "card": "DEFEND_IRONCLAD",
+      "block_actual": 5,
+      "old_block": 5,
+      "new_block": 5
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 281,
+      "card": "BASH",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 7,
+      "damage_actual": 8,
+      "new_block": 0,
+      "new_damage": 7
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 298,
+      "card": "DEFEND_IRONCLAD",
+      "block_actual": 5,
+      "old_block": 5,
+      "new_block": 5
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 330,
+      "card": "STRIKE_IRONCLAD",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 6,
+      "damage_actual": 6,
+      "new_block": 0,
+      "new_damage": 6
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 347,
+      "card": "STRIKE_IRONCLAD",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 6,
+      "damage_actual": 6,
+      "new_block": 0,
+      "new_damage": 6
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 385,
+      "card": "STRIKE_IRONCLAD",
+      "block_actual": 0,
+      "old_block": 0,
+      "new_block": 0
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 485,
+      "card": "BASH",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 8,
+      "damage_actual": 8,
+      "new_block": 0,
+      "new_damage": 8
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 502,
+      "card": "DEFEND_IRONCLAD",
+      "block_actual": 5,
+      "old_block": 5,
+      "new_block": 5
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 534,
+      "card": "PERFECTED_STRIKE",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 0,
+      "damage_actual": 27,
+      "new_block": 0,
+      "new_damage": 27
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 568,
+      "card": "STRIKE_IRONCLAD",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 1,
+      "damage_actual": 1,
+      "new_block": 0,
+      "new_damage": 1
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 585,
+      "card": "BASH",
+      "block_actual": 0,
+      "old_block": 0,
+      "new_block": 0
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 840,
+      "card": "DEFEND_IRONCLAD",
+      "block_actual": 5,
+      "old_block": 5,
+      "new_block": 5
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 857,
+      "card": "PERFECTED_STRIKE",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 0,
+      "damage_actual": 22,
+      "new_block": 0,
+      "new_damage": 22
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 911,
+      "card": "POMMEL_STRIKE",
+      "block_actual": 0,
+      "old_block": 0,
+      "new_block": 0
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 966,
+      "card": "PERFECTED_STRIKE",
+      "block_actual": 0,
+      "old_block": 0,
+      "new_block": 0
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 983,
+      "card": "POMMEL_STRIKE",
+      "block_actual": 0,
+      "old_block": 0,
+      "new_block": 0
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 1087,
+      "card": "SETUP_STRIKE",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 7,
+      "damage_actual": 7,
+      "new_block": 0,
+      "new_damage": 7
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 1104,
+      "card": "STRIKE_IRONCLAD",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 12,
+      "damage_actual": 9,
+      "new_block": 0,
+      "new_damage": 9
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 1121,
+      "card": "DEFEND_IRONCLAD",
+      "block_actual": 5,
+      "old_block": 5,
+      "new_block": 5
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 1153,
+      "card": "PILLAGE",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 6,
+      "damage_actual": 6,
+      "new_block": 0,
+      "new_damage": 6
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 1170,
+      "card": "DEFEND_IRONCLAD",
+      "block_actual": 5,
+      "old_block": 5,
+      "new_block": 5
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 1187,
+      "card": "POMMEL_STRIKE",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 9,
+      "damage_actual": 9,
+      "new_block": 0,
+      "new_damage": 9
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 1223,
+      "card": "BASH",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 8,
+      "damage_actual": 8,
+      "new_block": 0,
+      "new_damage": 8
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 1240,
+      "card": "DEFEND_IRONCLAD",
+      "block_actual": 3,
+      "old_block": 2,
+      "new_block": 3
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 1280,
+      "card": "DEFEND_IRONCLAD",
+      "block_actual": 3,
+      "old_block": 2,
+      "new_block": 3
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 1297,
+      "card": "PERFECTED_STRIKE",
+      "block_actual": 0,
+      "old_block": 0,
+      "new_block": 0
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 1333,
+      "card": "POMMEL_STRIKE",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 9,
+      "damage_actual": 9,
+      "new_block": 0,
+      "new_damage": 9
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 1350,
+      "card": "DEFEND_IRONCLAD",
+      "block_actual": 5,
+      "old_block": 5,
+      "new_block": 5
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 1384,
+      "card": "PERFECTED_STRIKE",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 0,
+      "damage_actual": 22,
+      "new_block": 0,
+      "new_damage": 22
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 1401,
+      "card": "DEFEND_IRONCLAD",
+      "block_actual": 3,
+      "old_block": 2,
+      "new_block": 3
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 1470,
+      "card": "DEFEND_IRONCLAD",
+      "block_actual": 5,
+      "old_block": 5,
+      "new_block": 5
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 1487,
+      "card": "BASH",
+      "block_actual": -5,
+      "old_block": 0,
+      "new_block": 0
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 1752,
+      "card": "ARMAMENTS",
+      "block_actual": 5,
+      "old_block": 5,
+      "new_block": 5
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 1786,
+      "card": "STRIKE_IRONCLAD",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 9,
+      "damage_actual": 9,
+      "new_block": 0,
+      "new_damage": 9
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 1836,
+      "card": "PERFECTED_STRIKE",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 0,
+      "damage_actual": 22,
+      "new_block": 0,
+      "new_damage": 22
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 1853,
+      "card": "POMMEL_STRIKE",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 9,
+      "damage_actual": 9,
+      "new_block": 0,
+      "new_damage": 9
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 1895,
+      "card": "DEFEND_IRONCLAD",
+      "block_actual": 5,
+      "old_block": 5,
+      "new_block": 5
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 1912,
+      "card": "SETUP_STRIKE",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 7,
+      "damage_actual": 7,
+      "new_block": 0,
+      "new_damage": 7
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 1962,
+      "card": "PERFECTED_STRIKE",
+      "block_actual": 0,
+      "old_block": 0,
+      "new_block": 0
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 2070,
+      "card": "FEED",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 10,
+      "damage_actual": 1,
+      "new_block": 0,
+      "new_damage": 1
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 2087,
+      "card": "DEFEND_IRONCLAD",
+      "block_actual": 5,
+      "old_block": 5,
+      "new_block": 5
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 2104,
+      "card": "PILLAGE",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 6,
+      "damage_actual": 6,
+      "new_block": 0,
+      "new_damage": 6
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 2146,
+      "card": "DEFEND_IRONCLAD",
+      "block_actual": 5,
+      "old_block": 5,
+      "new_block": 5
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 2163,
+      "card": "POMMEL_STRIKE",
+      "block_actual": 0,
+      "old_block": 0,
+      "new_block": 0
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 2180,
+      "card": "DEFEND_IRONCLAD",
+      "block_actual": 5,
+      "old_block": 5,
+      "new_block": 5
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 2232,
+      "card": "PERFECTED_STRIKE",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 0,
+      "damage_actual": 1,
+      "new_block": 0,
+      "new_damage": 1
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 2249,
+      "card": "ARMAMENTS",
+      "block_actual": 5,
+      "old_block": 5,
+      "new_block": 5
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 2300,
+      "card": "DEFEND_IRONCLAD",
+      "block_actual": 5,
+      "old_block": 5,
+      "new_block": 5
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 2317,
+      "card": "PILLAGE",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 6,
+      "damage_actual": 6,
+      "new_block": 0,
+      "new_damage": 6
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 2355,
+      "card": "ARMAMENTS",
+      "block_actual": 5,
+      "old_block": 5,
+      "new_block": 5
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 2389,
+      "card": "PERFECTED_STRIKE",
+      "block_actual": 0,
+      "old_block": 0,
+      "new_block": 0
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 2423,
+      "card": "DEFEND_IRONCLAD",
+      "block_actual": 5,
+      "old_block": 5,
+      "new_block": 5
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 2440,
+      "card": "PERFECTED_STRIKE",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 0,
+      "damage_actual": 1,
+      "new_block": 0,
+      "new_damage": 1
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 2486,
+      "card": "SETUP_STRIKE",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 7,
+      "damage_actual": 7,
+      "new_block": 0,
+      "new_damage": 7
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 2503,
+      "card": "PILLAGE",
+      "block_actual": 0,
+      "old_block": 0,
+      "new_block": 0
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 2612,
+      "card": "SHRUG_IT_OFF",
+      "block_actual": 8,
+      "old_block": 8,
+      "new_block": 8
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 2663,
+      "card": "DEFEND_IRONCLAD",
+      "block_actual": 5,
+      "old_block": 5,
+      "new_block": 5
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 2697,
+      "card": "ARMAMENTS",
+      "block_actual": 5,
+      "old_block": 5,
+      "new_block": 5
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 2731,
+      "card": "PERFECTED_STRIKE",
+      "block_actual": 0,
+      "old_block": 0,
+      "new_block": 0
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 2771,
+      "card": "DEFEND_IRONCLAD",
+      "block_actual": 5,
+      "old_block": 5,
+      "new_block": 5
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 2788,
+      "card": "POMMEL_STRIKE",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 4,
+      "damage_actual": 4,
+      "new_block": 0,
+      "new_damage": 4
+    },
+    {
+      "trace": "8e83ff52-c94e-47e2-8145-b3391f4b077f",
+      "seq": 2805,
+      "card": "DEFEND_IRONCLAD",
+      "block_actual": 5,
+      "old_block": 5,
+      "new_block": 5
+    },
+    {
+      "trace": "a7ad3ea0-9478-4319-a2cf-9733a9b154d7",
+      "seq": 24,
+      "card": "SHRUG_IT_OFF",
+      "block_actual": 8,
+      "old_block": 8,
+      "new_block": 8
+    },
+    {
+      "trace": "f1cf234b-16b8-4ac6-b53b-e1d3af0e5920",
+      "seq": 26,
+      "card": "DEFEND_IRONCLAD",
+      "block_actual": 5,
+      "old_block": 5,
+      "new_block": 5
+    },
+    {
+      "trace": "f1cf234b-16b8-4ac6-b53b-e1d3af0e5920",
+      "seq": 42,
+      "card": "DEFEND_IRONCLAD",
+      "block_actual": 5,
+      "old_block": 5,
+      "new_block": 5
+    },
+    {
+      "trace": "f1cf234b-16b8-4ac6-b53b-e1d3af0e5920",
+      "seq": 58,
+      "card": "BODY_SLAM",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 10,
+      "damage_actual": 10,
+      "new_block": 0,
+      "new_damage": 10
+    },
+    {
+      "trace": "f1cf234b-16b8-4ac6-b53b-e1d3af0e5920",
+      "seq": 96,
+      "card": "BATTLE_TRANCE",
+      "block_actual": 0,
+      "old_block": 0,
+      "new_block": 0
+    },
+    {
+      "trace": "f1cf234b-16b8-4ac6-b53b-e1d3af0e5920",
+      "seq": 112,
+      "card": "IRON_WAVE",
+      "block_actual": 3,
+      "old_block": 2,
+      "old_damage": 5,
+      "damage_actual": 5,
+      "new_block": 3,
+      "new_damage": 5
+    },
+    {
+      "trace": "f1cf234b-16b8-4ac6-b53b-e1d3af0e5920",
+      "seq": 128,
+      "card": "STRIKE_IRONCLAD",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 6,
+      "damage_actual": 6,
+      "new_block": 0,
+      "new_damage": 6
+    },
+    {
+      "trace": "f1cf234b-16b8-4ac6-b53b-e1d3af0e5920",
+      "seq": 144,
+      "card": "STRIKE_IRONCLAD",
+      "block_actual": 0,
+      "old_block": 0,
+      "new_block": 0
+    },
+    {
+      "trace": "f1cf234b-16b8-4ac6-b53b-e1d3af0e5920",
+      "seq": 191,
+      "card": "BATTLE_TRANCE",
+      "block_actual": 0,
+      "old_block": 0,
+      "new_block": 0
+    },
+    {
+      "trace": "f1cf234b-16b8-4ac6-b53b-e1d3af0e5920",
+      "seq": 207,
+      "card": "BASH",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 8,
+      "damage_actual": 8,
+      "new_block": 0,
+      "new_damage": 8
+    },
+    {
+      "trace": "f1cf234b-16b8-4ac6-b53b-e1d3af0e5920",
+      "seq": 223,
+      "card": "STRIKE_IRONCLAD",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 9,
+      "damage_actual": 9,
+      "new_block": 0,
+      "new_damage": 9
+    },
+    {
+      "trace": "f1cf234b-16b8-4ac6-b53b-e1d3af0e5920",
+      "seq": 265,
+      "card": "IRON_WAVE",
+      "block_actual": 5,
+      "old_block": 5,
+      "old_damage": 7,
+      "damage_actual": 7,
+      "new_block": 5,
+      "new_damage": 7
+    },
+    {
+      "trace": "f1cf234b-16b8-4ac6-b53b-e1d3af0e5920",
+      "seq": 281,
+      "card": "ARMAMENTS",
+      "block_actual": 5,
+      "old_block": 5,
+      "new_block": 5
+    },
+    {
+      "trace": "f1cf234b-16b8-4ac6-b53b-e1d3af0e5920",
+      "seq": 314,
+      "card": "AGGRESSION",
+      "block_actual": 0,
+      "old_block": 0,
+      "new_block": 0
+    },
+    {
+      "trace": "f1cf234b-16b8-4ac6-b53b-e1d3af0e5920",
+      "seq": 361,
+      "card": "STRIKE_IRONCLAD",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 6,
+      "damage_actual": 6,
+      "new_block": 0,
+      "new_damage": 6
+    },
+    {
+      "trace": "f1cf234b-16b8-4ac6-b53b-e1d3af0e5920",
+      "seq": 377,
+      "card": "STRIKE_IRONCLAD",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 6,
+      "damage_actual": 6,
+      "new_block": 0,
+      "new_damage": 6
+    },
+    {
+      "trace": "f1cf234b-16b8-4ac6-b53b-e1d3af0e5920",
+      "seq": 393,
+      "card": "STRIKE_IRONCLAD",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 6,
+      "damage_actual": 6,
+      "new_block": 0,
+      "new_damage": 6
+    },
+    {
+      "trace": "f1cf234b-16b8-4ac6-b53b-e1d3af0e5920",
+      "seq": 444,
+      "card": "BASH",
+      "block_actual": 0,
+      "old_block": 0,
+      "new_block": 0
+    },
+    {
+      "trace": "f1cf234b-16b8-4ac6-b53b-e1d3af0e5920",
+      "seq": 594,
+      "card": "STRIKE_IRONCLAD",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 6,
+      "damage_actual": 6,
+      "new_block": 0,
+      "new_damage": 6
+    },
+    {
+      "trace": "f1cf234b-16b8-4ac6-b53b-e1d3af0e5920",
+      "seq": 610,
+      "card": "ARMAMENTS",
+      "block_actual": 5,
+      "old_block": 5,
+      "new_block": 5
+    },
+    {
+      "trace": "f1cf234b-16b8-4ac6-b53b-e1d3af0e5920",
+      "seq": 673,
+      "card": "AGGRESSION",
+      "block_actual": 0,
+      "old_block": 0,
+      "new_block": 0
+    },
+    {
+      "trace": "f1cf234b-16b8-4ac6-b53b-e1d3af0e5920",
+      "seq": 689,
+      "card": "STRIKE_IRONCLAD",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 6,
+      "damage_actual": 6,
+      "new_block": 0,
+      "new_damage": 6
+    },
+    {
+      "trace": "f1cf234b-16b8-4ac6-b53b-e1d3af0e5920",
+      "seq": 705,
+      "card": "STRIKE_IRONCLAD",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 6,
+      "damage_actual": 7,
+      "new_block": 0,
+      "new_damage": 7
+    },
+    {
+      "trace": "f1cf234b-16b8-4ac6-b53b-e1d3af0e5920",
+      "seq": 756,
+      "card": "BATTLE_TRANCE",
+      "block_actual": 0,
+      "old_block": 0,
+      "new_block": 0
+    },
+    {
+      "trace": "f1cf234b-16b8-4ac6-b53b-e1d3af0e5920",
+      "seq": 772,
+      "card": "IRON_WAVE",
+      "block_actual": 5,
+      "old_block": 5,
+      "old_damage": 5,
+      "damage_actual": 5,
+      "new_block": 5,
+      "new_damage": 5
+    },
+    {
+      "trace": "f1cf234b-16b8-4ac6-b53b-e1d3af0e5920",
+      "seq": 788,
+      "card": "RAMPAGE",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 10,
+      "damage_actual": 12,
+      "new_block": 0,
+      "new_damage": 12
+    },
+    {
+      "trace": "f1cf234b-16b8-4ac6-b53b-e1d3af0e5920",
+      "seq": 804,
+      "card": "STRIKE_IRONCLAD",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 9,
+      "damage_actual": 11,
+      "new_block": 0,
+      "new_damage": 11
+    },
+    {
+      "trace": "f1cf234b-16b8-4ac6-b53b-e1d3af0e5920",
+      "seq": 855,
+      "card": "ARMAMENTS",
+      "block_actual": 5,
+      "old_block": 5,
+      "new_block": 5
+    },
+    {
+      "trace": "f1cf234b-16b8-4ac6-b53b-e1d3af0e5920",
+      "seq": 888,
+      "card": "DEFEND_IRONCLAD",
+      "block_actual": 8,
+      "old_block": 8,
+      "new_block": 8
+    },
+    {
+      "trace": "f1cf234b-16b8-4ac6-b53b-e1d3af0e5920",
+      "seq": 904,
+      "card": "STRIKE_IRONCLAD",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 9,
+      "damage_actual": 10,
+      "new_block": 0,
+      "new_damage": 10
+    },
+    {
+      "trace": "f1cf234b-16b8-4ac6-b53b-e1d3af0e5920",
+      "seq": 951,
+      "card": "DEFEND_IRONCLAD",
+      "block_actual": 8,
+      "old_block": 8,
+      "new_block": 8
+    },
+    {
+      "trace": "f1cf234b-16b8-4ac6-b53b-e1d3af0e5920",
+      "seq": 967,
+      "card": "DEFEND_IRONCLAD",
+      "block_actual": 8,
+      "old_block": 8,
+      "new_block": 8
+    },
+    {
+      "trace": "f1cf234b-16b8-4ac6-b53b-e1d3af0e5920",
+      "seq": 983,
+      "card": "IRON_WAVE",
+      "block_actual": 5,
+      "old_block": 5,
+      "old_damage": 5,
+      "damage_actual": 6,
+      "new_block": 5,
+      "new_damage": 6
+    },
+    {
+      "trace": "f1cf234b-16b8-4ac6-b53b-e1d3af0e5920",
+      "seq": 1034,
+      "card": "BATTLE_TRANCE",
+      "block_actual": 0,
+      "old_block": 0,
+      "new_block": 0
+    },
+    {
+      "trace": "f1cf234b-16b8-4ac6-b53b-e1d3af0e5920",
+      "seq": 1050,
+      "card": "RAMPAGE",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 15,
+      "damage_actual": 16,
+      "new_block": 0,
+      "new_damage": 16
+    },
+    {
+      "trace": "f1cf234b-16b8-4ac6-b53b-e1d3af0e5920",
+      "seq": 1066,
+      "card": "ARMAMENTS",
+      "block_actual": 5,
+      "old_block": 5,
+      "new_block": 5
+    },
+    {
+      "trace": "f1cf234b-16b8-4ac6-b53b-e1d3af0e5920",
+      "seq": 1099,
+      "card": "DEFEND_IRONCLAD",
+      "block_actual": 8,
+      "old_block": 8,
+      "new_block": 8
+    },
+    {
+      "trace": "f1cf234b-16b8-4ac6-b53b-e1d3af0e5920",
+      "seq": 1146,
+      "card": "STRIKE_IRONCLAD",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 9,
+      "damage_actual": 9,
+      "new_block": 0,
+      "new_damage": 9
+    },
+    {
+      "trace": "f1cf234b-16b8-4ac6-b53b-e1d3af0e5920",
+      "seq": 1162,
+      "card": "DEFEND_IRONCLAD",
+      "block_actual": 8,
+      "old_block": 8,
+      "new_block": 8
+    },
+    {
+      "trace": "f1cf234b-16b8-4ac6-b53b-e1d3af0e5920",
+      "seq": 1178,
+      "card": "DEFEND_IRONCLAD",
+      "block_actual": 8,
+      "old_block": 8,
+      "new_block": 8
+    },
+    {
+      "trace": "9285955d-129e-43af-9d77-cb9e374d600f",
+      "seq": 24,
+      "card": "BASH",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 8,
+      "damage_actual": 8,
+      "new_block": 0,
+      "new_damage": 8
+    },
+    {
+      "trace": "1f460b79-08e3-4960-9b80-a3ab44b490ec",
+      "seq": 108,
+      "card": "ARMAMENTS",
+      "block_actual": 5,
+      "old_block": 5,
+      "new_block": 5
+    },
+    {
+      "trace": "1f460b79-08e3-4960-9b80-a3ab44b490ec",
+      "seq": 142,
+      "card": "BODY_SLAM",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 5,
+      "damage_actual": 5,
+      "new_block": 0,
+      "new_damage": 5
+    },
+    {
+      "trace": "1f460b79-08e3-4960-9b80-a3ab44b490ec",
+      "seq": 180,
+      "card": "BASH",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 8,
+      "damage_actual": 8,
+      "new_block": 0,
+      "new_damage": 8
+    },
+    {
+      "trace": "1f460b79-08e3-4960-9b80-a3ab44b490ec",
+      "seq": 232,
+      "card": "STRIKE_IRONCLAD",
+      "block_actual": 0,
+      "old_block": 0,
+      "new_block": 0
+    },
+    {
+      "trace": "1f460b79-08e3-4960-9b80-a3ab44b490ec",
+      "seq": 249,
+      "card": "DEFEND_IRONCLAD",
+      "block_actual": 5,
+      "old_block": 5,
+      "new_block": 5
+    },
+    {
+      "trace": "1f460b79-08e3-4960-9b80-a3ab44b490ec",
+      "seq": 266,
+      "card": "BODY_SLAM",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 7,
+      "damage_actual": 7,
+      "new_block": 0,
+      "new_damage": 7
+    },
+    {
+      "trace": "1f460b79-08e3-4960-9b80-a3ab44b490ec",
+      "seq": 308,
+      "card": "BASH",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 8,
+      "damage_actual": 8,
+      "new_block": 0,
+      "new_damage": 8
+    },
+    {
+      "trace": "1f460b79-08e3-4960-9b80-a3ab44b490ec",
+      "seq": 325,
+      "card": "DEFEND_IRONCLAD",
+      "block_actual": 5,
+      "old_block": 5,
+      "new_block": 5
+    },
+    {
+      "trace": "1f460b79-08e3-4960-9b80-a3ab44b490ec",
+      "seq": 377,
+      "card": "STRIKE_IRONCLAD",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 9,
+      "damage_actual": 9,
+      "new_block": 0,
+      "new_damage": 9
+    },
+    {
+      "trace": "1f460b79-08e3-4960-9b80-a3ab44b490ec",
+      "seq": 394,
+      "card": "STRIKE_IRONCLAD",
+      "block_actual": 0,
+      "old_block": 0,
+      "new_block": 0
+    },
+    {
+      "trace": "1f460b79-08e3-4960-9b80-a3ab44b490ec",
+      "seq": 428,
+      "card": "SLIMED",
+      "block_actual": 0,
+      "old_block": 0,
+      "new_block": 0
+    },
+    {
+      "trace": "1f460b79-08e3-4960-9b80-a3ab44b490ec",
+      "seq": 445,
+      "card": "BASH",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 8,
+      "damage_actual": 8,
+      "new_block": 0,
+      "new_damage": 8
+    },
+    {
+      "trace": "1f460b79-08e3-4960-9b80-a3ab44b490ec",
+      "seq": 508,
+      "card": "STRIKE_IRONCLAD",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 6,
+      "damage_actual": 6,
+      "new_block": 0,
+      "new_damage": 6
+    },
+    {
+      "trace": "1f460b79-08e3-4960-9b80-a3ab44b490ec",
+      "seq": 546,
+      "card": "STRIKE_IRONCLAD",
+      "block_actual": 0,
+      "old_block": 0,
+      "new_block": 0
+    },
+    {
+      "trace": "1f460b79-08e3-4960-9b80-a3ab44b490ec",
+      "seq": 671,
+      "card": "DEFEND_IRONCLAD",
+      "block_actual": 5,
+      "old_block": 5,
+      "new_block": 5
+    },
+    {
+      "trace": "1f460b79-08e3-4960-9b80-a3ab44b490ec",
+      "seq": 688,
+      "card": "STRIKE_IRONCLAD",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 6,
+      "damage_actual": 6,
+      "new_block": 0,
+      "new_damage": 6
+    },
+    {
+      "trace": "1f460b79-08e3-4960-9b80-a3ab44b490ec",
+      "seq": 740,
+      "card": "BASH",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 8,
+      "damage_actual": 8,
+      "new_block": 0,
+      "new_damage": 8
+    },
+    {
+      "trace": "1f460b79-08e3-4960-9b80-a3ab44b490ec",
+      "seq": 757,
+      "card": "DEFEND_IRONCLAD",
+      "block_actual": 5,
+      "old_block": 5,
+      "new_block": 5
+    },
+    {
+      "trace": "1f460b79-08e3-4960-9b80-a3ab44b490ec",
+      "seq": 813,
+      "card": "IRON_WAVE",
+      "block_actual": 5,
+      "old_block": 5,
+      "old_damage": 7,
+      "damage_actual": 7,
+      "new_block": 5,
+      "new_damage": 7
+    },
+    {
+      "trace": "1f460b79-08e3-4960-9b80-a3ab44b490ec",
+      "seq": 830,
+      "card": "STRIKE_IRONCLAD",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 9,
+      "damage_actual": 9,
+      "new_block": 0,
+      "new_damage": 9
+    },
+    {
+      "trace": "1f460b79-08e3-4960-9b80-a3ab44b490ec",
+      "seq": 847,
+      "card": "BODY_SLAM",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 7,
+      "damage_actual": 7,
+      "new_block": 0,
+      "new_damage": 7
+    },
+    {
+      "trace": "1f460b79-08e3-4960-9b80-a3ab44b490ec",
+      "seq": 893,
+      "card": "ARMAMENTS",
+      "block_actual": 5,
+      "old_block": 5,
+      "new_block": 5
+    },
+    {
+      "trace": "1f460b79-08e3-4960-9b80-a3ab44b490ec",
+      "seq": 927,
+      "card": "STRIKE_IRONCLAD",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 6,
+      "damage_actual": 6,
+      "new_block": 0,
+      "new_damage": 6
+    },
+    {
+      "trace": "14a740fc-4130-47eb-810b-844626e35dfb",
+      "seq": 24,
+      "card": "BATTLE_TRANCE",
+      "block_actual": 0,
+      "old_block": 0,
+      "new_block": 0
+    },
+    {
+      "trace": "6c15a4a1-6f03-4dfd-9a2d-13eaed603c40",
+      "seq": 24,
+      "card": "PILLAGE",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 6,
+      "damage_actual": 6,
+      "new_block": 0,
+      "new_damage": 6
+    },
+    {
+      "trace": "0f081742-a605-4686-b57d-6e088d7132af",
+      "seq": 26,
+      "card": "DEFEND_IRONCLAD",
+      "block_actual": 5,
+      "old_block": 5,
+      "new_block": 5
+    },
+    {
+      "trace": "0f081742-a605-4686-b57d-6e088d7132af",
+      "seq": 42,
+      "card": "DEFEND_IRONCLAD",
+      "block_actual": 5,
+      "old_block": 5,
+      "new_block": 5
+    },
+    {
+      "trace": "0f081742-a605-4686-b57d-6e088d7132af",
+      "seq": 58,
+      "card": "STRIKE_IRONCLAD",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 6,
+      "damage_actual": 6,
+      "new_block": 0,
+      "new_damage": 6
+    },
+    {
+      "trace": "0f081742-a605-4686-b57d-6e088d7132af",
+      "seq": 116,
+      "card": "ARMAMENTS",
+      "block_actual": 5,
+      "old_block": 5,
+      "new_block": 5
+    },
+    {
+      "trace": "0f081742-a605-4686-b57d-6e088d7132af",
+      "seq": 149,
+      "card": "STRIKE_IRONCLAD",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 9,
+      "damage_actual": 9,
+      "new_block": 0,
+      "new_damage": 9
+    },
+    {
+      "trace": "0f081742-a605-4686-b57d-6e088d7132af",
+      "seq": 165,
+      "card": "AGGRESSION",
+      "block_actual": 0,
+      "old_block": 0,
+      "new_block": 0
+    },
+    {
+      "trace": "0f081742-a605-4686-b57d-6e088d7132af",
+      "seq": 216,
+      "card": "IRON_WAVE",
+      "block_actual": 5,
+      "old_block": 5,
+      "old_damage": 5,
+      "damage_actual": 5,
+      "new_block": 5,
+      "new_damage": 5
+    },
+    {
+      "trace": "0f081742-a605-4686-b57d-6e088d7132af",
+      "seq": 232,
+      "card": "STRIKE_IRONCLAD",
+      "block_actual": -5,
+      "old_block": 0,
+      "new_block": 0
+    },
+    {
+      "trace": "cd740278-8619-456f-a336-259b35b1ac44",
+      "seq": 24,
+      "card": "BASH",
+      "block_actual": 0,
+      "old_block": 0,
+      "old_damage": 8,
+      "damage_actual": 8,
+      "new_block": 0,
+      "new_damage": 8
+    }
+  ],
+  "scope": "Observed immediate transitions only; omitted terminal transitions, no counterfactual strength inference. Unknown triggers and rounded previews may mismatch."
+}
