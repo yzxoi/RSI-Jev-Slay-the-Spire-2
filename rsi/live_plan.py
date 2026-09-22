@@ -31,8 +31,8 @@ def normalize(raw):
     return {'energy':p['energy'],'player':{'hp':p['current_hp'],'block':p['block'],'end_turn_block':power(p,'PLATING_POWER'),'powers':p.get('powers',[]),'relics':raw['run'].get('relics',[])},'hand':hand,'enemies':enemies}
 
 
-def plan_native(raw,cs,triggers=False):
+def plan_native(raw,cs,triggers=False,retaliation=False):
     plays=[c for c in cs if c['action']['action'] in ['play_card','end_turn']]
-    state=normalize(raw);selected,plan=choose_plan(state,plays,triggers=triggers)
+    state=normalize(raw);selected,plan=choose_plan(state,plays,triggers=triggers,retaliation=retaliation)
     plan['native_preview_limit']='Native current_value already includes owner modifiers; CalculatedDamage supported. Target vulnerability has integer rounding limits. Slow uses prior cards played in this single-player turn; Slippery HP cap is tracked. Other triggers, fractional preview rounding and multi-hit effects remain approximate.'
     return selected,plan

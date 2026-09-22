@@ -1,0 +1,11 @@
+E033 held-out Silent a0_e033_hold_002 planned (ecb6721d-a87e-4aac-9d06-c67203c0af55) triggers Tools of the Trade discard at the next turn start. Headless DoEndTurn interprets this legitimate pending selection as a deadlock, cancels/retries, then returns a forced game_over. The evaluator correctly reports error, not defeat.
+
+Hypothesis: bounded read-only/pump waiting must stop on pending card/reward/bundle selection as well as play phase/combat completion. Remove end-turn cancellation/re-execution fallback; timeout is an adapter error, never a fabricated defeat.
+
+Freeze exact failed wire prefix through that end_turn. Require card_select with the original6-card options, select a legal card, resume the same new turn without replaying EndTurn or applying enemy damage twice. Also replay E018 Particle Wall and Dense Vegetation and E034 Amalgamator prefixes. Commit patch before build; do not change shared binaries while E033 held-out processes run. Separate compatibility from policy strength; preserve the failed20-run batch.
+
+Additional regression after diagnosis: the same held-out batch has Regent a0_e033_hold_002 planned stopping on a 25-card turn-start prompt at round10. Freeze its failed prefix and require that real prompt, then one legal choice must resume round10 with unchangedHP. This extends adapter coverage; the failed held-out outcome remains an error.
+
+Results: implementation48026e8 restored Tools of the Trade6-card prompt and same round3; additional regression implementationf26e229 restored Regent25-card prompt and same round10. Both preserve HP across the selection and no EndTurn retry occurs. DenseVegetation31-command plus next-turn, ParticleWall173-command plus next-turn, and Amalgamator215-command replay controls pass. Integration8f5ea6c1a32167880a17d8cf941f4a409eb561ff with E030:42 unit tests pass. Exact version/hash metadata and full wire gzip accompany each result. Commands: `python3 scripts/setup_headless.py`; `PYTHONPATH=. python3 scripts/replay_turn_selection.py [--case regent]`; `python3 -m unittest discover -s tests -v`.
+
+Merge as execution compatibility only. No additional win-rate claim; all original held-out errors remain reported. CrystalSphere missing-vector issue64 remains unresolved.
