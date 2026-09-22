@@ -1,0 +1,17 @@
+# E012 — Current-hand turn planning
+
+Issue #18. E011 single-action greedy undervalues setup, and E013's live Jev repeatedly ends turns with energy and useful cards remaining. Hypothesis: searching card order and energy allocation over the current hand improves outcomes without changing macro choices.
+
+Iteration 1: width-40 depth-8 beam search with state merging. Evaluate damage/block/kill combinations, Bash-before-attacks, block-before-Body Slam, strength, draw/energy and powers. Execute only the first currently legal action, then replan on the real engine result. This is explicitly an approximate scoring model, not exact cloned simulation: random draws, character-specific triggers, orbs, minions, resurrection and many card mechanics are not simulated. Trace records searched plan and scope.
+
+Development: `full_dev_001`, five characters A10, compare greedy/planfixed (identical fixed macro decisions), then hybrid/planned (identical Jev macro instruction). Held-out: `full_eval_004..006`, five characters A10, hybrid versus planned. 4,000 steps/run; $3 / 12,000 Jev calls; width/depth fixed before evaluation. Promote only with no new execution errors, non-decreased wins and improved mean progress; if both have zero wins call it exploratory improvement and expand rather than claim strong play. Known E011 event stall stays an error, not a filtered sample or a defeat.
+
+Iteration 1 results: fixed-macro development mean act-1 floor improves from 12.2 to 14.2 (four better, one tied), 0/5 wins in both, no errors. The Jev-macro development batch was interrupted by a transport EOF; shared unknown-usage accounting stopped remaining runs. Held-out batch also had a timeout and an event stall, followed by budget-guard stops. All attempted runs remain recorded; incomplete batches cannot support a policy promotion. Rerun network-stopped experiments only after improving the inference failure handling, preserving both attempts.
+
+Held-out rerun v2: 30/30 infrastructure errors at Neow due to E011's failed audio interception, not tactical outcomes. Preserve these rows; rerun unchanged planner after the headless JIT fix.
+
+Held-out v3: 29 normal defeats and one Dense Vegetation execution error, zero wins. That new event invokes a different cosmetic audio method; E011 extends its patch. Keep the entire 30-row set and rerun after the compatibility fix. No policy promotion yet.
+
+Held-out v4 (after audio Stop shim): 28 normal defeats, 2 Dense Vegetation errors, zero victories. Raw mean floors: hybrid 10.0, planned 12.07; incomplete paired data cannot meet promotion rule. Provider reported $0.096055806 plus $0.001344 conservative reserve for one uncertain call. Errors now occur after healing at screen rumble, a cosmetic native-window call. E011 fixes that separately; next evaluation retains all seed/character pairs. Live E013 reached a normal floor-9 defeat despite three expert rescues, reinforcing that current-hand search alone is inadequate.
+
+Held-out v5: 30/30 normal defeats, no execution errors, zero wins. Same 15 paired character/seed cases: hybrid mean floor 9.33, planned 11.0; seven better, eight ties, no worse. Provider cost $0.084785526, 593 requests, no uncertain usage. This satisfies the predeclared exploratory-progress rule, not evidence of strong full-run play. Promote as an optional experimental comparator and expand in E014/E015; do not present it as a winning default. The comparison has stochastic Jev macro choices, so paired seeds alone do not isolate all downstream causes.
