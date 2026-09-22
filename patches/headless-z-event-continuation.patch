@@ -1,0 +1,64 @@
+--- a/src/Sts2Headless/RunSimulator.cs
++++ b/src/Sts2Headless/RunSimulator.cs
+@@ -216,6 +216,7 @@
+     private readonly ManualResetEventSlim _combatEnded = new(false);
+     private static readonly LocLookup _loc = new();
+     private bool _eventOptionChosen;
++    private Task? _eventChoiceTask;
+     private int _lastEventOptionCount;
+ 
+     // Pending rewards for card selection (populated after combat, before proceeding)
+@@ -1653,7 +1654,7 @@
+                         _eventOptionChosen = true;
+                         _lastEventOptionCount = options.Count;
+                         // Run on thread pool so GetSelectedCards/GetSelectedCardReward can block
+-                        var task = Task.Run(() => options[optionIndex].Chosen());
++                        var task = _eventChoiceTask = Task.Run(() => options[optionIndex].Chosen());
+                         for (int i = 0; i < 100; i++)
+                         {
+                             _syncCtx.Pump();
+@@ -1770,8 +1771,33 @@
+ 
+     #region Decision Point Detection
+ 
++    // An event callback can suspend at selection/reward boundaries. Retain its
++    // task until the original callback has finished; never re-enter Chosen while
++    // its continuation is still mutating the deck and event page.
++    private void WaitForEventContinuation()
++    {
++        if (_eventChoiceTask == null) return;
++        var deadline = Environment.TickCount64 + 5000;
++        while (true)
++        {
++            _syncCtx.Pump();
++            if (_eventChoiceTask.IsCompleted)
++            {
++                var finished = _eventChoiceTask;
++                _eventChoiceTask = null;
++                finished.GetAwaiter().GetResult();
++                return;
++            }
++            if (_cardSelector.HasPending || _cardSelector.HasPendingReward || _pendingBundles != null) return;
++            if (Environment.TickCount64 >= deadline)
++                throw new TimeoutException("Event continuation did not reach a boundary; action was not retried");
++            Thread.Sleep(1);
++        }
++    }
++
+     private Dictionary<string, object?> DetectDecisionPoint()
+     {
++        WaitForEventContinuation();
+         if (_runState == null)
+             return Error("No run in progress");
+ 
+--- a/setup.sh
++++ b/setup.sh
+@@ -240,7 +240,7 @@
+     foreach (var instruction in method.Body.Instructions.ToArray())
+     {
+         if (instruction.OpCode != OpCodes.Call && instruction.OpCode != OpCodes.Callvirt) continue;
+-        if (instruction.Operand is not MethodReference target || target.Name != "ScreenRumble" || target.DeclaringType.FullName != "MegaCrit.Sts2.Core.Nodes.NGame" || target.ReturnType.FullName != "System.Void") continue;
++        if (instruction.Operand is not MethodReference target || (target.Name != "ScreenRumble" && target.Name != "ScreenShakeTrauma") || target.DeclaringType.FullName != "MegaCrit.Sts2.Core.Nodes.NGame" || target.ReturnType.FullName != "System.Void") continue;
+         var il = method.Body.GetILProcessor();
+         for (int i = 0; i < target.Parameters.Count + (target.HasThis ? 1 : 0); i++) il.InsertBefore(instruction, il.Create(OpCodes.Pop));
+         instruction.OpCode = OpCodes.Nop; instruction.Operand = null; patches++;
