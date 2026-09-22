@@ -15,3 +15,9 @@ python3 -m unittest discover -s tests -v
 python3 -m rsi.live --expected-run-id 9JKXVG5BK1D8 --output experiments/E008/preflight-v1.json
 python3 -m rsi.live --expected-run-id 9JKXVG5BK1D8 --execute --output experiments/E008/results-v1.json
 ```
+
+## Iteration 1 result — stopped on an explicit rejection
+
+Implementation `4abc9ef`. Five unit tests passed. Read-only preflight had seven supported candidates, zero actions and zero model calls. The visible run accepted 12 actions and then returned `invalid_action` (409) on the next card: `available_actions` had become passive-only between the fresh observation and execution. The controller stopped without resending; one earlier stale proposal had also been discarded. Jev made 14 requests, costing $0.002225664; elapsed 46.644 seconds. Current player HP is 68; the battle is unfinished. Full preflight and failed traces are preserved as compressed JSONL with hashes in the result manifests.
+
+This fails the milestone acceptance rule. Next iteration must handle transient readiness and explicit pre-execution rejections while continuing to stop on uncertain delivery. The existing run is resumed, not reset or represented as an independent battle.
