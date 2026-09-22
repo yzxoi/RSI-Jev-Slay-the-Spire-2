@@ -14,6 +14,7 @@ from .scenes import candidates,fingerprint
 from .trace import Trace,version_manifest
 from .live_plan import plan_native
 from .encounters import sandpit_rule
+from .settle import settle_turn,turn_key
 
 
 def main():
@@ -31,7 +32,10 @@ def main():
             mcp=MCP('http://127.0.0.1:8080/mcp',trace);health=mcp.call('health_check')
             if health.get('play_running') or health.get('status')!='ready':raise RuntimeError('Not a healthy single-writer game')
             raw=mcp.call('get_raw_game_state');result['initial_run']=raw.get('run');result['health']=health
+            settled_key=None
             while True:
+                if turn_key(raw) is not None and turn_key(raw)!=settled_key:
+                    raw=settle_turn(mcp,raw,trace);settled_key=turn_key(raw)
                 if raw.get('run_id')!=a.expected_run_id:raise RuntimeError('Game run identity changed')
                 screen=raw.get('screen');scenes[screen]+=1
                 if screen=='GAME_OVER':result['status']='victory' if (raw.get('game_over') or {}).get('is_victory') else 'normal_defeat';break

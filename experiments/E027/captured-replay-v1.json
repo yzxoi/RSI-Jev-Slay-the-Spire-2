@@ -1,0 +1,141 @@
+{
+  "manifest": {
+    "schema_version": 1,
+    "code_commit": "bae818a63a01dce4033919bbf8f7c9d315cd6a16",
+    "tracked_dirty": false,
+    "headless_game_sha256": "1916d7171751313ff78aaa03d8aa6f2779c3bbea574dd4192cff49b663908fbe",
+    "headless_assembly_sha256": "fafbf79fa3837e8b28c440854c8155ca1c3324c77be53ede36bb9d05670c7806",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+  },
+  "scope": "offline captured state replay with synthetic observation timing, not live strength",
+  "sources": [
+    "E013 attempt5 s205 after",
+    "E013 attempt5 s206 before"
+  ],
+  "partial_hand": 1,
+  "complete_hand": 5,
+  "seconds": 1.2,
+  "read_only_calls": [
+    "get_raw_game_state",
+    "get_raw_game_state",
+    "get_raw_game_state",
+    "get_raw_game_state",
+    "get_raw_game_state",
+    "get_raw_game_state",
+    "get_raw_game_state",
+    "get_raw_game_state"
+  ],
+  "events": [
+    {
+      "kind": "turn_settle_probe",
+      "data": {
+        "elapsed": 0.0,
+        "ready": true,
+        "state_hash": "2bdde7cb16e2e5816b7842a41d6dd85c67e343664b00a6554cf8005b1a5c025b",
+        "hand_count": 1,
+        "turn": 7
+      }
+    },
+    {
+      "kind": "turn_settle_probe",
+      "data": {
+        "elapsed": 0.15,
+        "ready": true,
+        "state_hash": "2bdde7cb16e2e5816b7842a41d6dd85c67e343664b00a6554cf8005b1a5c025b",
+        "hand_count": 1,
+        "turn": 7
+      }
+    },
+    {
+      "kind": "turn_settle_probe",
+      "data": {
+        "elapsed": 0.3,
+        "ready": true,
+        "state_hash": "2bdde7cb16e2e5816b7842a41d6dd85c67e343664b00a6554cf8005b1a5c025b",
+        "hand_count": 1,
+        "turn": 7
+      }
+    },
+    {
+      "kind": "turn_settle_probe",
+      "data": {
+        "elapsed": 0.44999999999999996,
+        "ready": true,
+        "state_hash": "2bdde7cb16e2e5816b7842a41d6dd85c67e343664b00a6554cf8005b1a5c025b",
+        "hand_count": 1,
+        "turn": 7
+      }
+    },
+    {
+      "kind": "turn_settle_probe",
+      "data": {
+        "elapsed": 0.6,
+        "ready": true,
+        "state_hash": "d91ef9f331244ea951ab55fddb9b900a725d26516fb99680da974dd64252e6ab",
+        "hand_count": 5,
+        "turn": 7
+      }
+    },
+    {
+      "kind": "turn_settle_probe",
+      "data": {
+        "elapsed": 0.75,
+        "ready": true,
+        "state_hash": "d91ef9f331244ea951ab55fddb9b900a725d26516fb99680da974dd64252e6ab",
+        "hand_count": 5,
+        "turn": 7
+      }
+    },
+    {
+      "kind": "turn_settle_probe",
+      "data": {
+        "elapsed": 0.9,
+        "ready": true,
+        "state_hash": "d91ef9f331244ea951ab55fddb9b900a725d26516fb99680da974dd64252e6ab",
+        "hand_count": 5,
+        "turn": 7
+      }
+    },
+    {
+      "kind": "turn_settle_probe",
+      "data": {
+        "elapsed": 1.05,
+        "ready": true,
+        "state_hash": "d91ef9f331244ea951ab55fddb9b900a725d26516fb99680da974dd64252e6ab",
+        "hand_count": 5,
+        "turn": 7
+      }
+    },
+    {
+      "kind": "turn_settle_probe",
+      "data": {
+        "elapsed": 1.2,
+        "ready": true,
+        "state_hash": "d91ef9f331244ea951ab55fddb9b900a725d26516fb99680da974dd64252e6ab",
+        "hand_count": 5,
+        "turn": 7
+      }
+    },
+    {
+      "kind": "turn_settle",
+      "data": {
+        "outcome": "stable",
+        "seconds": 1.2,
+        "probes": 9,
+        "state_hash": "d91ef9f331244ea951ab55fddb9b900a725d26516fb99680da974dd64252e6ab"
+      }
+    }
+  ],
+  "result": "passed"
+}
