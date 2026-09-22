@@ -22,7 +22,7 @@ def filter_end_turn(state,candidates):
     # Unknown powers can punish plays or retain energy. Pain triggers from hand.
     if unknown or any('ICE_CREAM' in str(r).upper().replace(' ','_') for r in relics) or any((c.get('card_id') or c.get('id','')).split('.')[-1] in {'PAIN','NORMALITY'} for c in hand):
         report.update(reason='unknown_or_card_play_downside',unknown_powers=unknown);return candidates,report
-    byindex={c['index']:c for c in hand};incoming=sum(intent_damage(e) for e in enemies)
+    byindex={c['index']:c for c in hand};incoming=sum(sum(i.get('total_damage') or 0 for i in e.get('intents',[])) for e in enemies) if native else sum(intent_damage(e) for e in enemies)
     useful=[]
     for choice in candidates:
         cmd=choice['action'];args=cmd.get('args',cmd)
