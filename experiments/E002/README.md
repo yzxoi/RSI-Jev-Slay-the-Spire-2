@@ -14,3 +14,7 @@ Iteration 1: implement closed candidate choices, bounded process and network cal
 python3 -m unittest discover -s tests -v
 python3 -m rsi.run --characters Ironclad --seeds trace_001 --policies first,jev --max-calls 100 --max-usd .15 --output experiments/E002/results-v1.json
 ```
+
+Results (implementation `4d5fc8c`): 3 runtime tests passed. Both runs completed with identical initial state hashes. Baseline final HP 57 in 33 steps; Jev HP 53 in 20 steps. Jev used 12 requests, 35,166 input tokens, $0.001476972; model P50 0.994s, P95 2.127s. All model calls and state transitions reconciled. Complete sanitized compressed traces are committed.
+
+Decision: merge the trace infrastructure. The Jev sample lost 4 more HP despite fewer actions, so capability success is not a tactical-improvement claim. E003 will use fixed unseen seeds and a stronger numerical baseline.

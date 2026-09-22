@@ -1,0 +1,79 @@
+{
+  "manifest": {
+    "schema_version": 1,
+    "code_commit": "4d5fc8c12325f28a3c99001315fdda65ed6d328f",
+    "tracked_dirty": false,
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+  },
+  "configuration": {
+    "characters": "Ironclad",
+    "seeds": "trace_001",
+    "policies": "first,jev",
+    "ascension": 10,
+    "max_calls": 100,
+    "max_usd": 0.15,
+    "workers": 1,
+    "output": "experiments/E002/results-v1.json"
+  },
+  "results": [
+    {
+      "character": "Ironclad",
+      "seed": "trace_001",
+      "ascension": 10,
+      "policy": "first",
+      "run_id": "eaea8bbb-833e-4d1c-98d8-97ce16e8f760",
+      "status": "battle_completed",
+      "steps": 33,
+      "model_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost_usd": 0.0,
+      "initial_hp": 64,
+      "initial_state_hash": "0b5664b0653bbe17280d3aa473ebda8e77857154efacc44af580a73cbfcee697",
+      "final_hp": 57,
+      "final_decision": "card_reward",
+      "final_state_hash": "3f7c86cd3568ffefc68de2bc7934013d624e4bdbfc8207801d863728f390f0dd",
+      "seconds": 4.178,
+      "model_p50_seconds": null,
+      "model_p95_seconds": null,
+      "net_hp_lost": 7,
+      "trace_path": "artifacts/runs/eaea8bbb-833e-4d1c-98d8-97ce16e8f760/decisions.jsonl",
+      "trace_sha256": "713bd996dd86dd3424a4ddf9d28e62a7cab87f9ec7499dcd75a044b593592132"
+    },
+    {
+      "character": "Ironclad",
+      "seed": "trace_001",
+      "ascension": 10,
+      "policy": "jev",
+      "run_id": "c3c641ce-09d2-46c5-800b-26b58f1b7c04",
+      "status": "battle_completed",
+      "steps": 20,
+      "model_calls": 12,
+      "input_tokens": 35166,
+      "output_tokens": 1170,
+      "cost_usd": 0.0014769719999999998,
+      "initial_hp": 64,
+      "initial_state_hash": "0b5664b0653bbe17280d3aa473ebda8e77857154efacc44af580a73cbfcee697",
+      "final_hp": 53,
+      "final_decision": "card_reward",
+      "final_state_hash": "a6a180ec3a6c76f3279f79701bbf8e5c1ec1d138e1974b78a9e446cac888bdaa",
+      "seconds": 14.939,
+      "model_p50_seconds": 0.9935776250204071,
+      "model_p95_seconds": 2.127188333077356,
+      "net_hp_lost": 11,
+      "trace_path": "artifacts/runs/c3c641ce-09d2-46c5-800b-26b58f1b7c04/decisions.jsonl",
+      "trace_sha256": "832fc51ead6614655b500277e78a0bc8499cadd5983f3e389d84e846bf836c46"
+    }
+  ],
+  "budget": {
+    "requests": 12,
+    "cost_usd": 0.0014769719999999998,
+    "usage_unknown": false
+  }
+}
