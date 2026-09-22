@@ -26,7 +26,7 @@ def gain_block(node, amount):
     if amount and node['triggers']['juggernaut']:power_damage(node,node['triggers']['juggernaut'])
 
 def install(node, ident, stats):
-    if ident=='FEEL_NO_PAIN':node['triggers']['fnp']+=stats.get('power',stats.get('feel nopainpower',0))
+    if ident=='FEEL_NO_PAIN':node['triggers']['fnp']+=stats.get('power',stats.get('feelnopainpower',0))
     elif ident=='JUGGERNAUT':node['triggers']['juggernaut']+=stats.get('juggernautpower',0)
     elif ident=='RAGE':node['triggers']['rage']+=stats.get('power',stats.get('ragepower',0))
 
