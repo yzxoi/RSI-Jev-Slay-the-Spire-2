@@ -16,3 +16,7 @@ Iteration 1: add target-specific damage/kill previews, useful block, visible inc
 python3 -m unittest discover -s tests -v
 python3 -m rsi.run --seeds eval_001,eval_002 --policies first,greedy,jev,jev_features --workers 3 --max-calls 800 --max-usd 1.5 --output experiments/E003/results-v1.json
 ```
+
+Results on implementation `0f2b0d1`: 5 runtime/computation tests passed; 40/40 first battles completed with no execution errors; all paired initial state hashes matched. Mean net HP lost: first 11.1, numerical greedy 5.6, raw Jev 8.5, computed Jev 7.3. Computed vs raw: +1.2 HP mean, but only 1 win / 7 ties / 2 losses. Total 358 Jev requests, $0.042865368.
+
+Decision: close without merging. The predeclared pairwise criterion failed; the mean gain is driven by one Silent case. No claim of general improvement. Full sanitized compressed traces and per-case outcomes remain on this PR branch. A follow-up should test selective code/Jev allocation and candidate equivalence; full-turn search remains open as E005.
