@@ -15,6 +15,7 @@ from .trace import Trace, digest, version_manifest
 from .planner import choose_plan
 from .guard import filter_end_turn
 from .potions import with_potions
+from .event_lessons import context as event_context
 
 STRATEGY = """Maximize probability of completing all three acts. Evaluate current deck, next threats and resources. Early decks need efficient damage, then reliable block, draw/energy and scaling for bosses. Prefer cards that solve a concrete gap; skipping mediocre rewards is valid. Do not force a named archetype. Remove curses/weak starters when affordable. Rest when healing is needed to survive upcoming threats; otherwise upgrades have lasting value. Avoid risky elites with low health/weak damage. Buy useful relics/cards rather than spending all gold indiscriminately. For card selection interpret the preceding action and scene: removing, upgrading, discarding and exhausting require different choices. Supplied rules are authoritative; descriptions with placeholders use the supplied stats. Numerical combat previews are limited, not full simulation."""
 
@@ -94,15 +95,16 @@ def episode(config, manifest, jev=None):
                     selected,call=jev.choose({'state':model_state(state),'strategy':STRATEGY},choices,trace)
                     result['model_calls']+=1;result['cost_usd']+=call['usage'].get('cost',0)
                 elif config['policy']=='first': selected=choices[0]
-                elif config['policy'] in ['planned','planfixed']:
+                elif config['policy'] in ['planned','planfixed','advised']:
                     selected,planning=choose_plan(state,choices);trace.write('planning',planning)
                 else:
                     choices=computed_candidates(state,choices); selected=greedy_choice(state,choices)
             else:
                 choices=macro_candidates(state,history)
-                if config['policy'] not in ['hybrid','planned','jev','guarded','equipped'] or len(choices)==1: selected=fixed_macro(state,choices)
+                if config['policy'] not in ['hybrid','planned','jev','guarded','equipped','advised'] or len(choices)==1: selected=fixed_macro(state,choices)
                 else:
                     context={'state':model_state(state),'strategy':STRATEGY,'previous_decision':history.get('previous')}
+                    if config['policy']=='advised' and d=='event_choice':context['event_analysis']=event_context(state)
                     selected,call=jev.choose(context,choices,trace)
                     result['model_calls']+=1; result['cost_usd']+=call['usage'].get('cost',0)
             trace.write('candidates',choices);trace.write('selected',selected)
@@ -128,10 +130,10 @@ def episode(config, manifest, jev=None):
 def main():
     p=argparse.ArgumentParser();p.add_argument('--characters',default=','.join(CHARACTERS));p.add_argument('--seeds',default='full_dev_001');p.add_argument('--policies',default='first,greedy');p.add_argument('--ascension',type=int,default=10);p.add_argument('--workers',type=int,default=3);p.add_argument('--max-calls',type=int,default=12000);p.add_argument('--max-usd',type=float,default=3);p.add_argument('--output',required=True);a=p.parse_args()
     chars=a.characters.split(','); policies=a.policies.split(',')
-    if set(chars)-set(CHARACTERS) or set(policies)-{'first','greedy','hybrid','planned','planfixed','jev','guarded','equipped'}:p.error('Invalid character or policy')
+    if set(chars)-set(CHARACTERS) or set(policies)-{'first','greedy','hybrid','planned','planfixed','jev','guarded','equipped','advised'}:p.error('Invalid character or policy')
     manifest=version_manifest()
     if manifest['tracked_dirty']:raise RuntimeError('Commit implementation before evaluation')
-    budget=Budget(a.max_calls,a.max_usd,conservative_failures=True);jev=Jev(budget) if set(policies)&{'hybrid','planned','jev','guarded','equipped'} else None
+    budget=Budget(a.max_calls,a.max_usd,conservative_failures=True);jev=Jev(budget) if set(policies)&{'hybrid','planned','jev','guarded','equipped','advised'} else None
     configs=[{'character':c,'seed':s,'ascension':a.ascension,'policy':policy} for s in a.seeds.split(',') for c in chars for policy in policies]
     with ThreadPoolExecutor(max_workers=a.workers) as pool: results=list(pool.map(lambda c:episode(c,manifest,jev),configs))
     out=Path(a.output);out.parent.mkdir(parents=True,exist_ok=True);out.write_text(json.dumps({'manifest':manifest,'configuration':vars(a),'results':results,'budget':{'requests':budget.calls,'cost_usd':budget.spent,'unknown':budget.unknown,'estimated_usd':budget.estimated_usd,'uncertain_calls':budget.uncertain_calls}},indent=2)+'\n')
