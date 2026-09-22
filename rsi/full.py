@@ -123,10 +123,10 @@ def main():
     if set(chars)-set(CHARACTERS) or set(policies)-{'first','greedy','hybrid','planned','planfixed'}:p.error('Invalid character or policy')
     manifest=version_manifest()
     if manifest['tracked_dirty']:raise RuntimeError('Commit implementation before evaluation')
-    budget=Budget(a.max_calls,a.max_usd);jev=Jev(budget) if set(policies)&{'hybrid','planned'} else None
+    budget=Budget(a.max_calls,a.max_usd,conservative_failures=True);jev=Jev(budget) if set(policies)&{'hybrid','planned'} else None
     configs=[{'character':c,'seed':s,'ascension':a.ascension,'policy':policy} for s in a.seeds.split(',') for c in chars for policy in policies]
     with ThreadPoolExecutor(max_workers=a.workers) as pool: results=list(pool.map(lambda c:episode(c,manifest,jev),configs))
-    out=Path(a.output);out.parent.mkdir(parents=True,exist_ok=True);out.write_text(json.dumps({'manifest':manifest,'configuration':vars(a),'results':results,'budget':{'requests':budget.calls,'cost_usd':budget.spent,'unknown':budget.unknown}},indent=2)+'\n')
+    out=Path(a.output);out.parent.mkdir(parents=True,exist_ok=True);out.write_text(json.dumps({'manifest':manifest,'configuration':vars(a),'results':results,'budget':{'requests':budget.calls,'cost_usd':budget.spent,'unknown':budget.unknown,'estimated_usd':budget.estimated_usd,'uncertain_calls':budget.uncertain_calls}},indent=2)+'\n')
     if any(r['status']=='error' for r in results):raise SystemExit(1)
 
 if __name__=='__main__':main()

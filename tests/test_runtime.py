@@ -8,6 +8,15 @@ from rsi.trace import Trace
 
 
 class RuntimeTests(unittest.TestCase):
+    def test_unknown_inference_can_be_conservatively_charged(self):
+        b = Budget(2, .1, conservative_failures=True)
+        b.acquire(); b.settle({})
+        self.assertTrue(b.unknown)
+        self.assertEqual(b.spent, b.reserve_usd)
+        b.acquire(); b.settle({"cost": .0001})
+        self.assertEqual(b.uncertain_calls, 1)
+        with self.assertRaises(RuntimeError): b.acquire()
+
     def test_current_indices_and_unplayable_exclusion(self):
         state = {"hand": [{"index": 4, "id": "strike", "name": "Strike", "can_play": True, "target_type": "AnyEnemy"},
                            {"index": 9, "can_play": False}], "enemies": [{"index": 2}, {"index": 5}]}
