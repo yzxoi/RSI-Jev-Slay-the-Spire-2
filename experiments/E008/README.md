@@ -27,3 +27,19 @@ This fails the milestone acceptance rule. Next iteration must handle transient r
 The native server source returns this exact `invalid_action` 409 before calling `ActAsync` (`STS2AIAgent/Server/NativeMcpServer.Tools.cs`). A fresh-state check cannot prevent every observation/execution race. Classify only that explicit pre-execution rejection as recoverable; discard the choice, wait for readiness, read new state and ask Jev again, with a six-rejection ceiling. Transport failures, pending execution and all other errors remain non-retryable. Also require readiness explicitly when validating a proposal, since readiness is intentionally excluded from the stable state hash. Two focused regression tests exercise rejection classification and a readiness-only change.
 
 Resume the same run from its observed 68 HP / turn 5 state; write `results-v2.json`. This is a continuation of iteration 1 and must be reported together. The milestone still requires a reward boundary and full audit; an explicit rejection is acceptable only if recorded, known not executed, and followed by a fresh decision.
+
+## Iteration 2 result — visible milestone reached
+
+Tested implementation: `ccbe3db` (tracked working tree clean). Command:
+
+```sh
+python3 -m rsi.live --expected-run-id 9JKXVG5BK1D8 --execute --output experiments/E008/results-v2.json
+```
+
+The continuation accepted two actions (Bash, Strike), defeated Nibbit and reached `REWARD`. The controller exited before claiming gold, choosing a card, or leaving the room. Native decision history independently contains exactly 14 accepted decisions from `native_mcp` for this run, matching the 12 + 2 local trace action results. A native-window screenshot visibly confirmed the reward screen with 74/80 HP. Built-in autoplay is off.
+
+Across both execution segments: 14 accepted actions, 16 Jev requests, 61,105 input tokens, $0.002566410 reported model cost, and 53.671 seconds of controller runtime (excludes the debugging pause). Initial HP was 80, pre-victory HP 68, and post-combat HP 74; net loss is 6 after the normal heal. The exact returned model is `typesafe/jev-1.13-20260917`. No Astra call occurred inside the decision loop; Astra handled infrastructure and failure diagnosis outside it. This does not measure total development/review Astra tokens.
+
+Audit: JSONL sequence numbers and SHA-256 hashes verified; exact requests/responses, candidate sets, stale proposal, rejected request and observed transitions retained; no action issued after the reward boundary; no credentials in committed traces. `audit-v2.json` and `native-corroboration-v2.json` contain the compact evidence. Seven unit tests passed.
+
+Decision: merge the integration milestone after preserving both iterations. The first run's rejection is not hidden. The new recovery path is covered by focused tests but did not fire during the two-action live continuation, so repeated-transition reliability remains unproven. This A0 battle establishes visible MCP integration only; it is neither a full-run win nor evidence of high-ascension strength. Stop here for user acceptance.
