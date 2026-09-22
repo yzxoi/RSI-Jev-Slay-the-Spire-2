@@ -1,0 +1,798 @@
+[WARN] Game doesn't have ReleaseInfo. We can't check version compatibility, so assuming all mods are supported.
+[INFO] Registered 22 migrations
+[INFO] Current save versions: PrefsSave v2; ProfileSave v2; SerializableProgress v24; RunHistory v10; SerializableRun v20; SettingsSave v8
+[INFO] Profile-scoped data path initialized: user://default/1/profile0
+[INFO] Patched Task.Yield() to be synchronous
+[INFO] Found Cmd.Wait(Single,Boolean)
+[INFO] Patched Cmd.Wait variant
+[INFO] Found Cmd.Wait(Single,CancellationToken,Boolean)
+[INFO] Patched Cmd.Wait variant
+[INFO] Patched TalkCmd.Play() to no-op (prevents enemy-move VFX crash, issue #64)
+[INFO] Loaded 46 localization tables from /Users/yzxoi/RSI-Jev-Slay-the-Spire-2/vendor/sts2-cli/src/Sts2Headless/bin/Debug/net9.0/../../../../../localization_eng
+[DEBUG] LocManager inst field: _tables (Dictionary`2)
+[DEBUG] LocManager inst field: _engTables (Dictionary`2)
+[DEBUG] LocManager inst field: _stateBeforeOverridingWithEnglish (PreOverrideState)
+[DEBUG] LocManager inst field: _languageKeyCount (Dictionary`2)
+[DEBUG] LocManager inst field: <OverridesActive>k__BackingField (Boolean)
+[DEBUG] LocManager inst field: <ValidationErrors>k__BackingField (IReadOnlyList`1)
+[DEBUG] LocManager inst field: _localeChangeCallbacks (List`1)
+[DEBUG] LocManager inst field: <Language>k__BackingField (String)
+[DEBUG] LocManager inst field: <CultureInfo>k__BackingField (CultureInfo)
+[DEBUG] LocManager inst field: <StringComparer>k__BackingField (StringComparer)
+[DEBUG] LocManager static field: <Instance>k__BackingField (LocManager)
+[DEBUG] LocManager static field: _smartFormatter (SmartFormatter)
+[DEBUG] LocManager static field: _weblateToGameLanguage (Dictionary`2)
+[DEBUG] LocManager static field: _gameToWeblateLanguage (Dictionary`2)
+[DEBUG] LocManager static field: _supportedLanguages (ValueTuple`2[])
+[DEBUG] LocManager static field: <Languages>k__BackingField (List`1)
+[DEBUG] LocManager static field: _cultureCodeByLanguage (Dictionary`2)
+[DEBUG] LocManager static field: _englishCultureInfo (CultureInfo)
+[DEBUG] LocManager static field: _weblateProjectSlug (String)
+[DEBUG] LocManager static field: locOverrideDir (String)
+[DEBUG] sfField: _smartFormatter type: SmartFormatter
+[DEBUG] SmartFormatter has 1 constructors:
+  (SmartSettings settings)
+[INFO] SmartFormatter initialized via LoadLocFormatters
+[INFO] LocManager initialized with stub tables
+[INFO] Patched LocTable.GetRawText
+[INFO] Patched FromChooseABundleScreen
+[INFO] Patched Neutralize.OnPlay
+[INFO] ModelDb: 1660 registered, 0 failed out of 1660
+[INFO] ModelIdSerializationCache initialized. Categories: 20 Entries: 1658 Epochs: 57 Properties: 47 Hash: 1568834832
+[INFO] ModelIdSerializationCache initialized
+[SIM] Creating RunState with seed=a0_e033_dev_003
+[INFO] File `release_info.json` not found in any of the expected locations.
+[SIM] Rooms generated
+[SIM] Run launched
+[SIM] Starting relics finalized
+[WARN] Asset not cached: res://images/enchantments/missing_enchantment.png
+[WARN] Asset not cached: res://images/atlases/ui_atlas.sprites/card/energy_ironclad.tres
+[SIM] Entered Act 0
+[SIM] Choosing option 0
+[INFO] Player 1 obtained POTION.GIGANTIFICATION_POTION from potion reward
+[INFO] Player 1 selected card reward
+[SIM] Card reward pending: 3 cards (blocking)
+[SIM] Resolving event card reward: index 0
+[INFO] Player 1 obtained CARD.BURNING_PACT from card reward
+[SIM] Event Neow finished, proceeding
+[SIM] Moving to map coord (2,1)
+[SIM] Playing card Bash (index 2) targeting ShrinkerBeetle
+[INFO] Player 1 playing card BASH (targeting SHRINKER_BEETLE.name (index 1))
+[SIM] Playing card StrikeIronclad (index 0) targeting ShrinkerBeetle
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting SHRINKER_BEETLE.name (index 1))
+[SIM] Ending turn (round=1)
+[SIM] Playing card DefendIronclad (index 0) targeting none
+[INFO] Player 1 playing card DEFEND_IRONCLAD (no target)
+[SIM] Playing card StrikeIronclad (index 2) targeting ShrinkerBeetle
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting SHRINKER_BEETLE.name (index 1))
+[SIM] Playing card DefendIronclad (index 0) targeting none
+[INFO] Player 1 playing card DEFEND_IRONCLAD (no target)
+[SIM] Ending turn (round=2)
+[SIM] Playing card DefendIronclad (index 4) targeting none
+[INFO] Player 1 playing card DEFEND_IRONCLAD (no target)
+[SIM] Playing card Bash (index 2) targeting ShrinkerBeetle
+[INFO] Player 1 playing card BASH (targeting SHRINKER_BEETLE.name (index 1))
+[SIM] Ending turn (round=3)
+[SIM] Playing card DefendIronclad (index 1) targeting none
+[INFO] Player 1 playing card DEFEND_IRONCLAD (no target)
+[SIM] Playing card BurningPact (index 0) targeting none
+[INFO] Player 1 playing card BURNING_PACT (no target)
+[SIM] Card selection pending: 3 options, select 1-1
+[SIM] Card selection: indices [2]
+[INFO] Player 1 chose cards [STRIKE_IRONCLAD]
+[SIM] Playing card StrikeIronclad (index 2) targeting ShrinkerBeetle
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting SHRINKER_BEETLE.name (index 1))
+[SIM] Ending turn (round=4)
+[SIM] Playing card StrikeIronclad (index 1) targeting ShrinkerBeetle
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting SHRINKER_BEETLE.name (index 1))
+[INFO] CHARACTER.IRONCLAD fought ENCOUNTER.SHRINKER_BEETLE_WEAK for the first time and WON >:)
+[INFO] CHARACTER.IRONCLAD fought MONSTER.SHRINKER_BEETLE for the first time and WON >:(
+[SIM] Post-combat: RoomType=Monster, IsPreFinished=True
+[INFO] Card rarity: Rolled 0.750845, need < -0.020000001 for rare (offset = -0.05)
+[INFO] Card rarity: Rolled 0.425468, need < -0.01 for rare (offset = -0.04)
+[INFO] Card rarity: Rolled 0.8537602, need < 0 for rare (offset = -0.03)
+[INFO] Player 1 obtained 16 gold from reward
+[SIM] Selected card reward: PommelStrike
+[SIM] Post-combat: RoomType=Monster, IsPreFinished=True
+[SIM] Moving to map coord (1,2)
+[INFO] Card rarity: Rolled 0.78166234, need < 0.07000001 for rare (offset = -0.02)
+[INFO] Card rarity: Rolled 0.63290614, need < 0.07000001 for rare (offset = -0.02)
+[INFO] Card rarity: Rolled 0.22366057, need < 0.07000001 for rare (offset = -0.02)
+[INFO] Card rarity: Rolled 0.85733116, need < 0.07000001 for rare (offset = -0.02)
+[INFO] Card rarity: Rolled 0.27656925, need < 0.07000001 for rare (offset = -0.02)
+[SIM] Bought card: ? for 36g
+[SIM] Bought card: ? for 50g
+[SIM] Leaving room
+[SIM] Force leaving non-combat room to map
+[SIM] Moving to map coord (1,3)
+[SIM] Playing card DefendIronclad (index 0) targeting none
+[INFO] Player 1 playing card DEFEND_IRONCLAD (no target)
+[SIM] Playing card DefendIronclad (index 0) targeting none
+[INFO] Player 1 playing card DEFEND_IRONCLAD (no target)
+[SIM] Playing card StrikeIronclad (index 0) targeting Nibbit
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting NIBBIT.name (index 1))
+[SIM] Ending turn (round=1)
+[SIM] Playing card PommelStrike (index 1) targeting Nibbit
+[INFO] Player 1 playing card POMMEL_STRIKE (targeting NIBBIT.name (index 1))
+[SIM] Playing card DefendIronclad (index 0) targeting none
+[INFO] Player 1 playing card DEFEND_IRONCLAD (no target)
+[SIM] Playing card StrikeIronclad (index 0) targeting Nibbit
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting NIBBIT.name (index 1))
+[SIM] Ending turn (round=2)
+[SIM] Playing card PommelStrike (index 0) targeting Nibbit
+[INFO] Player 1 playing card POMMEL_STRIKE (targeting NIBBIT.name (index 1))
+[SIM] Playing card BurningPact (index 0) targeting none
+[INFO] Player 1 playing card BURNING_PACT (no target)
+[SIM] Card selection pending: 4 options, select 1-1
+[SIM] Card selection: indices [1]
+[INFO] Player 1 chose cards [DEFEND_IRONCLAD]
+[SIM] Playing card StrikeIronclad (index 0) targeting Nibbit
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting NIBBIT.name (index 1))
+[SIM] Ending turn (round=3)
+[SIM] Playing card Bash (index 0) targeting Nibbit
+[INFO] Player 1 playing card BASH (targeting NIBBIT.name (index 1))
+[SIM] Playing card StrikeIronclad (index 0) targeting Nibbit
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting NIBBIT.name (index 1))
+[INFO] CHARACTER.IRONCLAD fought ENCOUNTER.NIBBITS_WEAK for the first time and WON >:)
+[INFO] CHARACTER.IRONCLAD fought MONSTER.NIBBIT for the first time and WON >:(
+[SIM] Post-combat: RoomType=Monster, IsPreFinished=True
+[INFO] Card rarity: Rolled 0.25519267, need < 0.01 for rare (offset = -0.02)
+[INFO] Card rarity: Rolled 0.23916258, need < 0.02 for rare (offset = -0.01)
+[INFO] Card rarity: Rolled 0.8763733, need < 0.03 for rare (offset = 0)
+[INFO] Player 1 obtained 16 gold from reward
+[INFO] Player 1 obtained POTION.ENERGY_POTION from potion reward
+[SIM] Selected card reward: ForgottenRitual
+[SIM] Post-combat: RoomType=Monster, IsPreFinished=True
+[SIM] Moving to map coord (0,4)
+[SIM] Playing card PommelStrike (index 2) targeting FuzzyWurmCrawler
+[INFO] Player 1 playing card POMMEL_STRIKE (targeting FUZZY_WURM_CRAWLER.name (index 1))
+[SIM] Playing card Bash (index 3) targeting FuzzyWurmCrawler
+[INFO] Player 1 playing card BASH (targeting FUZZY_WURM_CRAWLER.name (index 1))
+[SIM] Ending turn (round=1)
+[SIM] Playing card StrikeIronclad (index 0) targeting FuzzyWurmCrawler
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting FUZZY_WURM_CRAWLER.name (index 1))
+[SIM] Playing card StrikeIronclad (index 1) targeting FuzzyWurmCrawler
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting FUZZY_WURM_CRAWLER.name (index 1))
+[SIM] Playing card StrikeIronclad (index 1) targeting FuzzyWurmCrawler
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting FUZZY_WURM_CRAWLER.name (index 1))
+[SIM] Ending turn (round=2)
+[SIM] Playing card PommelStrike (index 0) targeting FuzzyWurmCrawler
+[INFO] Player 1 playing card POMMEL_STRIKE (targeting FUZZY_WURM_CRAWLER.name (index 1))
+[SIM] Playing card PommelStrike (index 4) targeting FuzzyWurmCrawler
+[INFO] Player 1 playing card POMMEL_STRIKE (targeting FUZZY_WURM_CRAWLER.name (index 1))
+[INFO] CHARACTER.IRONCLAD fought ENCOUNTER.FUZZY_WURM_CRAWLER_WEAK for the first time and WON >:)
+[INFO] CHARACTER.IRONCLAD fought MONSTER.FUZZY_WURM_CRAWLER for the first time and WON >:(
+[SIM] Post-combat: RoomType=Monster, IsPreFinished=True
+[INFO] Card rarity: Rolled 0.749733, need < 0.04 for rare (offset = 0.01)
+[INFO] Card rarity: Rolled 0.008890821, need < 0.049999997 for rare (offset = 0.02)
+[INFO] Card rarity: Rolled 0.74920154, need < -0.020000001 for rare (offset = -0.05)
+[INFO] Player 1 obtained 15 gold from reward
+[SIM] Selected card reward: Unmovable
+[SIM] Post-combat: RoomType=Monster, IsPreFinished=True
+[SIM] Moving to map coord (0,5)
+[INFO] Card rarity: Rolled 0.86912906, need < 0.050000004 for rare (offset = -0.04)
+[INFO] Card rarity: Rolled 0.3332137, need < 0.050000004 for rare (offset = -0.04)
+[INFO] Card rarity: Rolled 0.85189015, need < 0.050000004 for rare (offset = -0.04)
+[INFO] Card rarity: Rolled 0.12593295, need < 0.050000004 for rare (offset = -0.04)
+[INFO] Card rarity: Rolled 0.6313829, need < 0.050000004 for rare (offset = -0.04)
+[SIM] Bought card: ? for 37g
+[SIM] Leaving room
+[SIM] Force leaving non-combat room to map
+[SIM] Moving to map coord (1,6)
+[SIM] Choosing option 1
+[SIM] Rest site: choosing option 1
+[SIM] Card selection pending: 17 options, select 1-1
+[SIM] Card selection: indices [15]
+[INFO] Player 1 chose cards [UNMOVABLE]
+[SIM] Card selection in rest site (SMITH), forcing to map
+[SIM] Moving to map coord (2,7)
+[SIM] Playing card Unmovable (index 3) targeting none
+[INFO] Player 1 playing card UNMOVABLE (no target)
+[SIM] Playing card BurningPact (index 2) targeting none
+[INFO] Player 1 playing card BURNING_PACT (no target)
+[SIM] Card selection pending: 3 options, select 1-1
+[SIM] Card selection: indices [1]
+[INFO] Player 1 chose cards [DEFEND_IRONCLAD]
+[SIM] Playing card Vicious (index 3) targeting none
+[INFO] Player 1 playing card VICIOUS (no target)
+[SIM] Ending turn (round=1)
+[SIM] Playing card DefendIronclad (index 1) targeting none
+[INFO] Player 1 playing card DEFEND_IRONCLAD (no target)
+[SIM] Playing card PommelStrike (index 0) targeting CubexConstruct
+[INFO] Player 1 playing card POMMEL_STRIKE (targeting CUBEX_CONSTRUCT.name (index 1))
+[SIM] Playing card StrikeIronclad (index 0) targeting CubexConstruct
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting CUBEX_CONSTRUCT.name (index 1))
+[SIM] Ending turn (round=2)
+[SIM] Playing card FlameBarrier (index 3) targeting none
+[INFO] Player 1 playing card FLAME_BARRIER (no target)
+[SIM] Playing card ForgottenRitual (index 1) targeting none
+[INFO] Player 1 playing card FORGOTTEN_RITUAL (no target)
+[SIM] Playing card Bash (index 0) targeting CubexConstruct
+[INFO] Player 1 playing card BASH (targeting CUBEX_CONSTRUCT.name (index 1))
+[SIM] Playing card PommelStrike (index 0) targeting CubexConstruct
+[INFO] Player 1 playing card POMMEL_STRIKE (targeting CUBEX_CONSTRUCT.name (index 1))
+[SIM] Ending turn (round=3)
+[SIM] Playing card DefendIronclad (index 1) targeting none
+[INFO] Player 1 playing card DEFEND_IRONCLAD (no target)
+[SIM] Playing card DefendIronclad (index 2) targeting none
+[INFO] Player 1 playing card DEFEND_IRONCLAD (no target)
+[SIM] Playing card StrikeIronclad (index 0) targeting CubexConstruct
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting CUBEX_CONSTRUCT.name (index 1))
+[SIM] Ending turn (round=4)
+[SIM] Playing card DefendIronclad (index 4) targeting none
+[INFO] Player 1 playing card DEFEND_IRONCLAD (no target)
+[SIM] Playing card PommelStrike (index 1) targeting CubexConstruct
+[INFO] Player 1 playing card POMMEL_STRIKE (targeting CUBEX_CONSTRUCT.name (index 1))
+[SIM] Playing card PommelStrike (index 3) targeting CubexConstruct
+[INFO] Player 1 playing card POMMEL_STRIKE (targeting CUBEX_CONSTRUCT.name (index 1))
+[SIM] Ending turn (round=5)
+[SIM] Playing card StrikeIronclad (index 0) targeting CubexConstruct
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting CUBEX_CONSTRUCT.name (index 1))
+[INFO] CHARACTER.IRONCLAD fought ENCOUNTER.CUBEX_CONSTRUCT_NORMAL for the first time and WON >:)
+[INFO] CHARACTER.IRONCLAD fought MONSTER.CUBEX_CONSTRUCT for the first time and WON >:(
+[SIM] Post-combat: RoomType=Monster, IsPreFinished=True
+[INFO] Card rarity: Rolled 0.24290808, need < -0.01 for rare (offset = -0.04)
+[INFO] Card rarity: Rolled 0.2991075, need < 0 for rare (offset = -0.03)
+[INFO] Card rarity: Rolled 0.9427977, need < 0.01 for rare (offset = -0.02)
+[INFO] Player 1 obtained 17 gold from reward
+[SIM] Selected card reward: Spite
+[SIM] Post-combat: RoomType=Monster, IsPreFinished=True
+[SIM] Moving to map coord (3,8)
+[SIM] Playing card PommelStrike (index 3) targeting PhrogParasite
+[INFO] Player 1 playing card POMMEL_STRIKE (targeting PHROG_PARASITE.name (index 1))
+[SIM] Playing card Vicious (index 3) targeting none
+[INFO] Player 1 playing card VICIOUS (no target)
+[SIM] Playing card Spite (index 3) targeting PhrogParasite
+[INFO] Player 1 playing card SPITE (targeting PHROG_PARASITE.name (index 1))
+[SIM] Playing card StrikeIronclad (index 1) targeting PhrogParasite
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting PHROG_PARASITE.name (index 1))
+[SIM] Ending turn (round=1)
+[SIM] Playing card PommelStrike (index 1) targeting PhrogParasite
+[INFO] Player 1 playing card POMMEL_STRIKE (targeting PHROG_PARASITE.name (index 1))
+[SIM] Playing card DefendIronclad (index 0) targeting none
+[INFO] Player 1 playing card DEFEND_IRONCLAD (no target)
+[SIM] Playing card ForgottenRitual (index 3) targeting none
+[INFO] Player 1 playing card FORGOTTEN_RITUAL (no target)
+[SIM] Playing card Unmovable (index 2) targeting none
+[INFO] Player 1 playing card UNMOVABLE (no target)
+[SIM] Playing card StrikeIronclad (index 0) targeting PhrogParasite
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting PHROG_PARASITE.name (index 1))
+[SIM] Playing card StrikeIronclad (index 0) targeting PhrogParasite
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting PHROG_PARASITE.name (index 1))
+[SIM] Ending turn (round=2)
+[SIM] Playing card BurningPact (index 0) targeting none
+[INFO] Player 1 playing card BURNING_PACT (no target)
+[SIM] Card selection pending: 4 options, select 1-1
+[SIM] Card selection: indices [0]
+[INFO] Player 1 chose cards [FLAME_BARRIER]
+[SIM] Playing card StrikeIronclad (index 1) targeting PhrogParasite
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting PHROG_PARASITE.name (index 1))
+[SIM] Playing card StrikeIronclad (index 2) targeting PhrogParasite
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting PHROG_PARASITE.name (index 1))
+[SIM] Ending turn (round=3)
+[SIM] Playing card Bash (index 1) targeting PhrogParasite
+[INFO] Player 1 playing card BASH (targeting PHROG_PARASITE.name (index 1))
+[SIM] Playing card PommelStrike (index 3) targeting Wriggler
+[INFO] Player 1 playing card POMMEL_STRIKE (targeting WRIGGLER.name (index 1))
+[SIM] Playing card Spite (index 0) targeting Wriggler
+[INFO] Player 1 playing card SPITE (targeting WRIGGLER.name (index 1))
+[SIM] Ending turn (round=4)
+[SIM] Playing card StrikeIronclad (index 0) targeting Wriggler
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting WRIGGLER.name (index 1))
+[SIM] Playing card DefendIronclad (index 0) targeting none
+[INFO] Player 1 playing card DEFEND_IRONCLAD (no target)
+[SIM] Playing card StrikeIronclad (index 0) targeting Wriggler
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting WRIGGLER.name (index 1))
+[SIM] Ending turn (round=5)
+[SIM] Playing card StrikeIronclad (index 1) targeting Wriggler
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting WRIGGLER.name (index 1))
+[SIM] Playing card StrikeIronclad (index 1) targeting Wriggler
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting WRIGGLER.name (index 1))
+[SIM] Playing card DefendIronclad (index 0) targeting none
+[INFO] Player 1 playing card DEFEND_IRONCLAD (no target)
+[SIM] Ending turn (round=6)
+[SIM] Playing card PommelStrike (index 0) targeting Wriggler
+[INFO] Player 1 playing card POMMEL_STRIKE (targeting WRIGGLER.name (index 1))
+[SIM] Playing card StrikeIronclad (index 1) targeting Wriggler
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting WRIGGLER.name (index 1))
+[SIM] Playing card StrikeIronclad (index 2) targeting Wriggler
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting WRIGGLER.name (index 1))
+[SIM] Playing card Spite (index 2) targeting Wriggler
+[INFO] Player 1 playing card SPITE (targeting WRIGGLER.name (index 1))
+[SIM] Ending turn (round=7)
+[SIM] Playing card DefendIronclad (index 1) targeting none
+[INFO] Player 1 playing card DEFEND_IRONCLAD (no target)
+[SIM] Playing card Bash (index 0) targeting Wriggler
+[INFO] Player 1 playing card BASH (targeting WRIGGLER.name (index 1))
+[SIM] Ending turn (round=8)
+[SIM] Ending turn (round=9)
+[SIM] Playing card PommelStrike (index 3) targeting Wriggler
+[INFO] Player 1 playing card POMMEL_STRIKE (targeting WRIGGLER.name (index 1))
+[INFO] CHARACTER.IRONCLAD fought ENCOUNTER.PHROG_PARASITE_ELITE for the first time and WON >:)
+[INFO] Elites Defeated: 1/12
+[INFO] CHARACTER.IRONCLAD fought MONSTER.PHROG_PARASITE for the first time and WON >:(
+[INFO] CHARACTER.IRONCLAD fought MONSTER.WRIGGLER for the first time and WON >:(
+[SIM] Post-combat: RoomType=Elite, IsPreFinished=True
+[INFO] Card rarity: Rolled 0.6274263, need < 0.09 for rare (offset = -0.01)
+[INFO] Card rarity: Rolled 0.31911817, need < 0.1 for rare (offset = 0)
+[INFO] Card rarity: Rolled 0.6346927, need < 0.11 for rare (offset = 0.01)
+[INFO] Player 1 obtained 35 gold from reward
+[INFO] Player 1 obtained POTION.BLOCK_POTION from potion reward
+[INFO] Player 1 obtained RELIC.CHARONS_ASHES from relic reward
+[SIM] Selected card reward: Thunderclap
+[SIM] Post-combat: RoomType=Elite, IsPreFinished=True
+[SIM] Moving to map coord (4,9)
+[SIM] Treasure room — collecting rewards
+[SIM] Auto-picking treasure relic 0 of 1
+[SIM] Moving to map coord (3,10)
+[SIM] Playing card Spite (index 2) targeting Mawler
+[INFO] Player 1 playing card SPITE (targeting MAWLER.name (index 1))
+[SIM] Playing card DefendIronclad (index 2) targeting none
+[INFO] Player 1 playing card DEFEND_IRONCLAD (no target)
+[SIM] Playing card StrikeIronclad (index 0) targeting Mawler
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting MAWLER.name (index 1))
+[SIM] Playing card StrikeIronclad (index 0) targeting Mawler
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting MAWLER.name (index 1))
+[SIM] Ending turn (round=1)
+[SIM] Playing card PommelStrike (index 1) targeting Mawler
+[INFO] Player 1 playing card POMMEL_STRIKE (targeting MAWLER.name (index 1))
+[SIM] Playing card PommelStrike (index 2) targeting Mawler
+[INFO] Player 1 playing card POMMEL_STRIKE (targeting MAWLER.name (index 1))
+[SIM] Playing card ForgottenRitual (index 1) targeting none
+[INFO] Player 1 playing card FORGOTTEN_RITUAL (no target)
+[SIM] Playing card DefendIronclad (index 2) targeting none
+[INFO] Player 1 playing card DEFEND_IRONCLAD (no target)
+[SIM] Playing card BurningPact (index 0) targeting none
+[INFO] Player 1 playing card BURNING_PACT (no target)
+[SIM] Card selection pending: 2 options, select 1-1
+[SIM] Card selection: indices [0]
+[INFO] Player 1 chose cards [THUNDERCLAP]
+[SIM] Playing card DefendIronclad (index 2) targeting none
+[INFO] Player 1 playing card DEFEND_IRONCLAD (no target)
+[SIM] Ending turn (round=2)
+[SIM] Playing card Vicious (index 1) targeting none
+[INFO] Player 1 playing card VICIOUS (no target)
+[SIM] Playing card Unmovable (index 3) targeting none
+[INFO] Player 1 playing card UNMOVABLE (no target)
+[SIM] Playing card StrikeIronclad (index 1) targeting Mawler
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting MAWLER.name (index 1))
+[SIM] Ending turn (round=3)
+[SIM] Playing card DefendIronclad (index 0) targeting none
+[INFO] Player 1 playing card DEFEND_IRONCLAD (no target)
+[SIM] Playing card BurningPact (index 0) targeting none
+[INFO] Player 1 playing card BURNING_PACT (no target)
+[SIM] Card selection pending: 3 options, select 1-1
+[SIM] Card selection: indices [0]
+[INFO] Player 1 chose cards [STRIKE_IRONCLAD]
+[SIM] Playing card StrikeIronclad (index 0) targeting Mawler
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting MAWLER.name (index 1))
+[SIM] Ending turn (round=4)
+[SIM] Playing card PommelStrike (index 2) targeting Mawler
+[INFO] Player 1 playing card POMMEL_STRIKE (targeting MAWLER.name (index 1))
+[SIM] Playing card Bash (index 4) targeting Mawler
+[INFO] Player 1 playing card BASH (targeting MAWLER.name (index 1))
+[INFO] CHARACTER.IRONCLAD fought ENCOUNTER.MAWLER_NORMAL for the first time and WON >:)
+[INFO] CHARACTER.IRONCLAD fought MONSTER.MAWLER for the first time and WON >:(
+[SIM] Post-combat: RoomType=Monster, IsPreFinished=True
+[INFO] Card rarity: Rolled 0.45445457, need < 0.049999997 for rare (offset = 0.02)
+[INFO] Card rarity: Rolled 0.19244733, need < 0.06 for rare (offset = 0.03)
+[INFO] Card rarity: Rolled 0.9610672, need < 0.07 for rare (offset = 0.04)
+[INFO] Player 1 obtained 17 gold from reward
+[SIM] Selected card reward: FlameBarrier
+[SIM] Post-combat: RoomType=Monster, IsPreFinished=True
+[SIM] Moving to map coord (3,11)
+[SIM] Choosing option 0
+[SIM] Rest site: choosing option 0
+[SIM] Rest site: option chosen (non-Smith), waiting for action then forcing to map
+[SIM] Moving to map coord (3,12)
+[SIM] Choosing option 1
+[SIM] Choosing option 0
+[SIM] Playing card FlameBarrier (index 3) targeting none
+[INFO] Player 1 playing card FLAME_BARRIER (no target)
+[SIM] Playing card ForgottenRitual (index 0) targeting none
+[INFO] Player 1 playing card FORGOTTEN_RITUAL (no target)
+[SIM] Playing card Thunderclap (index 1) targeting none
+[INFO] Player 1 playing card THUNDERCLAP (no target)
+[SIM] Playing card StrikeIronclad (index 0) targeting Wriggler
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting WRIGGLER.name (index 4))
+[SIM] Playing card StrikeIronclad (index 0) targeting Wriggler
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting WRIGGLER.name (index 4))
+[SIM] Ending turn (round=1)
+[SIM] Playing card FlameBarrier (index 0) targeting none
+[INFO] Player 1 playing card FLAME_BARRIER (no target)
+[SIM] Playing card DefendIronclad (index 1) targeting none
+[INFO] Player 1 playing card DEFEND_IRONCLAD (no target)
+[SIM] Ending turn (round=2)
+[SIM] Playing card Bash (index 1) targeting Wriggler
+[INFO] Player 1 playing card BASH (targeting WRIGGLER.name (index 1))
+[SIM] Playing card StrikeIronclad (index 2) targeting Wriggler
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting WRIGGLER.name (index 1))
+[SIM] Ending turn (round=3)
+[SIM] Playing card PommelStrike (index 0) targeting Wriggler
+[INFO] Player 1 playing card POMMEL_STRIKE (targeting WRIGGLER.name (index 1))
+[INFO] CHARACTER.IRONCLAD fought ENCOUNTER.DENSE_VEGETATION_EVENT_ENCOUNTER for the first time and WON >:)
+[INFO] CHARACTER.IRONCLAD has killed a MONSTER.WRIGGLER. That's 2 kills
+[SIM] Post-combat: RoomType=Monster, IsPreFinished=True
+[INFO] Card rarity: Rolled 0.5605338, need < 0.08 for rare (offset = 0.049999997)
+[INFO] Card rarity: Rolled 0.13366598, need < 0.089999996 for rare (offset = 0.059999995)
+[INFO] Card rarity: Rolled 0.26011592, need < 0.099999994 for rare (offset = 0.06999999)
+[INFO] Player 1 obtained 14 gold from reward
+[SIM] Selected card reward: FeelNoPain
+[SIM] Post-combat: RoomType=Monster, IsPreFinished=True
+[SIM] Moving to map coord (4,13)
+[SIM] Playing card Vicious (index 3) targeting none
+[INFO] Player 1 playing card VICIOUS (no target)
+[SIM] Playing card Spite (index 1) targeting SnappingJaxfruit
+[INFO] Player 1 playing card SPITE (targeting SNAPPING_JAXFRUIT.name (index 1))
+[SIM] Playing card BurningPact (index 1) targeting none
+[INFO] Player 1 playing card BURNING_PACT (no target)
+[SIM] Card selection pending: 2 options, select 1-1
+[SIM] Card selection: indices [0]
+[INFO] Player 1 chose cards [DEFEND_IRONCLAD]
+[SIM] Playing card Unmovable (index 2) targeting none
+[INFO] Player 1 playing card UNMOVABLE (no target)
+[SIM] Ending turn (round=1)
+[SIM] Playing card DefendIronclad (index 2) targeting none
+[INFO] Player 1 playing card DEFEND_IRONCLAD (no target)
+[SIM] Playing card PommelStrike (index 3) targeting SnappingJaxfruit
+[INFO] Player 1 playing card POMMEL_STRIKE (targeting SNAPPING_JAXFRUIT.name (index 1))
+[SIM] Playing card FeelNoPain (index 0) targeting none
+[INFO] Player 1 playing card FEEL_NO_PAIN (no target)
+[SIM] Ending turn (round=2)
+[SIM] Playing card FlameBarrier (index 2) targeting none
+[INFO] Player 1 playing card FLAME_BARRIER (no target)
+[SIM] Playing card ForgottenRitual (index 2) targeting none
+[INFO] Player 1 playing card FORGOTTEN_RITUAL (no target)
+[SIM] Playing card PommelStrike (index 2) targeting SnappingJaxfruit
+[INFO] Player 1 playing card POMMEL_STRIKE (targeting SNAPPING_JAXFRUIT.name (index 1))
+[SIM] Playing card StrikeIronclad (index 0) targeting SnappingJaxfruit
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting SNAPPING_JAXFRUIT.name (index 1))
+[SIM] Playing card StrikeIronclad (index 0) targeting SlitheringStrangler
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting SLITHERING_STRANGLER.name (index 1))
+[SIM] Ending turn (round=3)
+[SIM] Playing card FlameBarrier (index 2) targeting none
+[INFO] Player 1 playing card FLAME_BARRIER (no target)
+[SIM] Playing card Spite (index 2) targeting SlitheringStrangler
+[INFO] Player 1 playing card SPITE (targeting SLITHERING_STRANGLER.name (index 1))
+[SIM] Playing card Thunderclap (index 0) targeting none
+[INFO] Player 1 playing card THUNDERCLAP (no target)
+[SIM] Ending turn (round=4)
+[SIM] Playing card Bash (index 1) targeting SlitheringStrangler
+[INFO] Player 1 playing card BASH (targeting SLITHERING_STRANGLER.name (index 1))
+[SIM] Playing card PommelStrike (index 1) targeting SlitheringStrangler
+[INFO] Player 1 playing card POMMEL_STRIKE (targeting SLITHERING_STRANGLER.name (index 1))
+[SIM] Ending turn (round=5)
+[SIM] Playing card PommelStrike (index 1) targeting SlitheringStrangler
+[INFO] Player 1 playing card POMMEL_STRIKE (targeting SLITHERING_STRANGLER.name (index 1))
+[INFO] CHARACTER.IRONCLAD fought ENCOUNTER.SLITHERING_STRANGLER_NORMAL for the first time and WON >:)
+[INFO] CHARACTER.IRONCLAD fought MONSTER.SNAPPING_JAXFRUIT for the first time and WON >:(
+[INFO] CHARACTER.IRONCLAD fought MONSTER.SLITHERING_STRANGLER for the first time and WON >:(
+[SIM] Post-combat: RoomType=Monster, IsPreFinished=True
+[INFO] Card rarity: Rolled 0.62630516, need < 0.10999999 for rare (offset = 0.07999999)
+[INFO] Card rarity: Rolled 0.51660657, need < 0.11999999 for rare (offset = 0.08999999)
+[INFO] Card rarity: Rolled 0.8516735, need < 0.12999998 for rare (offset = 0.09999999)
+[INFO] Player 1 obtained 10 gold from reward
+[SIM] Selected card reward: Anger
+[SIM] Post-combat: RoomType=Monster, IsPreFinished=True
+[SIM] Moving to map coord (4,14)
+[SIM] Playing card FlameBarrier (index 2) targeting none
+[INFO] Player 1 playing card FLAME_BARRIER (no target)
+[SIM] Playing card BurningPact (index 2) targeting none
+[INFO] Player 1 playing card BURNING_PACT (no target)
+[SIM] Card selection pending: 3 options, select 1-1
+[SIM] Card selection: indices [2]
+[INFO] Player 1 chose cards [THUNDERCLAP]
+[SIM] Ending turn (round=1)
+[SIM] Playing card Vicious (index 1) targeting none
+[INFO] Player 1 playing card VICIOUS (no target)
+[SIM] Playing card ForgottenRitual (index 0) targeting none
+[INFO] Player 1 playing card FORGOTTEN_RITUAL (no target)
+[SIM] Playing card Bash (index 2) targeting VineShambler
+[INFO] Player 1 playing card BASH (targeting VINE_SHAMBLER.name (index 1))
+[SIM] Playing card Anger (index 0) targeting VineShambler
+[INFO] Player 1 playing card ANGER (targeting VINE_SHAMBLER.name (index 1))
+[SIM] Playing card DefendIronclad (index 0) targeting none
+[INFO] Player 1 playing card DEFEND_IRONCLAD (no target)
+[SIM] Playing card DefendIronclad (index 0) targeting none
+[INFO] Player 1 playing card DEFEND_IRONCLAD (no target)
+[SIM] Ending turn (round=2)
+[SIM] Playing card Spite (index 3) targeting VineShambler
+[INFO] Player 1 playing card SPITE (targeting VINE_SHAMBLER.name (index 1))
+[SIM] Playing card Unmovable (index 2) targeting none
+[INFO] Player 1 playing card UNMOVABLE (no target)
+[SIM] Ending turn (round=3)
+[SIM] Playing card DefendIronclad (index 1) targeting none
+[INFO] Player 1 playing card DEFEND_IRONCLAD (no target)
+[SIM] Playing card PommelStrike (index 0) targeting VineShambler
+[INFO] Player 1 playing card POMMEL_STRIKE (targeting VINE_SHAMBLER.name (index 1))
+[SIM] Playing card StrikeIronclad (index 2) targeting VineShambler
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting VINE_SHAMBLER.name (index 1))
+[SIM] Playing card Anger (index 2) targeting VineShambler
+[INFO] Player 1 playing card ANGER (targeting VINE_SHAMBLER.name (index 1))
+[INFO] CHARACTER.IRONCLAD fought ENCOUNTER.VINE_SHAMBLER_NORMAL for the first time and WON >:)
+[INFO] CHARACTER.IRONCLAD fought MONSTER.VINE_SHAMBLER for the first time and WON >:(
+[SIM] Post-combat: RoomType=Monster, IsPreFinished=True
+[INFO] Card rarity: Rolled 0.42919362, need < 0.13999999 for rare (offset = 0.109999985)
+[INFO] Card rarity: Rolled 0.5850781, need < 0.14999998 for rare (offset = 0.11999998)
+[INFO] Card rarity: Rolled 0.715148, need < 0.15999998 for rare (offset = 0.12999998)
+[INFO] Player 1 obtained 20 gold from reward
+[SIM] Selected card reward: Rage
+[SIM] Post-combat: RoomType=Monster, IsPreFinished=True
+[SIM] Moving to map coord (4,15)
+[SIM] Choosing option 0
+[SIM] Rest site: choosing option 0
+[SIM] Rest site: option chosen (non-Smith), waiting for action then forcing to map
+[SIM] Moving to map coord (3,16)
+[SIM] Playing card FlameBarrier (index 2) targeting none
+[INFO] Player 1 playing card FLAME_BARRIER (no target)
+[SIM] Playing card Unmovable (index 0) targeting none
+[INFO] Player 1 playing card UNMOVABLE (no target)
+[SIM] Playing card Anger (index 0) targeting Vantom
+[INFO] Player 1 playing card ANGER (targeting VANTOM.name (index 1))
+[SIM] Ending turn (round=1)
+[SIM] Playing card DefendIronclad (index 0) targeting none
+[INFO] Player 1 playing card DEFEND_IRONCLAD (no target)
+[SIM] Playing card PommelStrike (index 1) targeting Vantom
+[INFO] Player 1 playing card POMMEL_STRIKE (targeting VANTOM.name (index 1))
+[SIM] Playing card ForgottenRitual (index 3) targeting none
+[INFO] Player 1 playing card FORGOTTEN_RITUAL (no target)
+[SIM] Playing card StrikeIronclad (index 1) targeting Vantom
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting VANTOM.name (index 1))
+[SIM] Playing card DefendIronclad (index 0) targeting none
+[INFO] Player 1 playing card DEFEND_IRONCLAD (no target)
+[SIM] Playing card Rage (index 0) targeting none
+[INFO] Player 1 playing card RAGE (no target)
+[SIM] Ending turn (round=2)
+[SIM] Playing card DefendIronclad (index 3) targeting none
+[INFO] Player 1 playing card DEFEND_IRONCLAD (no target)
+[SIM] Playing card PommelStrike (index 2) targeting Vantom
+[INFO] Player 1 playing card POMMEL_STRIKE (targeting VANTOM.name (index 1))
+[SIM] Ending turn (round=3)
+[SIM] Playing card Vicious (index 3) targeting none
+[INFO] Player 1 playing card VICIOUS (no target)
+[SIM] Playing card BurningPact (index 3) targeting none
+[INFO] Player 1 playing card BURNING_PACT (no target)
+[SIM] Card selection pending: 3 options, select 1-1
+[SIM] Card selection: indices [1]
+[INFO] Player 1 chose cards [BASH]
+[SIM] Playing card Spite (index 2) targeting Vantom
+[INFO] Player 1 playing card SPITE (targeting VANTOM.name (index 1))
+[SIM] Playing card StrikeIronclad (index 0) targeting Vantom
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting VANTOM.name (index 1))
+[SIM] Ending turn (round=4)
+[SIM] Playing card DefendIronclad (index 2) targeting none
+[INFO] Player 1 playing card DEFEND_IRONCLAD (no target)
+[SIM] Playing card StrikeIronclad (index 0) targeting Vantom
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting VANTOM.name (index 1))
+[SIM] Playing card Anger (index 0) targeting Vantom
+[INFO] Player 1 playing card ANGER (targeting VANTOM.name (index 1))
+[SIM] Playing card StrikeIronclad (index 1) targeting Vantom
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting VANTOM.name (index 1))
+[SIM] Ending turn (round=5)
+[SIM] Playing card FlameBarrier (index 0) targeting none
+[INFO] Player 1 playing card FLAME_BARRIER (no target)
+[SIM] Playing card PommelStrike (index 2) targeting Vantom
+[INFO] Player 1 playing card POMMEL_STRIKE (targeting VANTOM.name (index 1))
+[SIM] Ending turn (round=6)
+[SIM] Playing card Thunderclap (index 4) targeting none
+[INFO] Player 1 playing card THUNDERCLAP (no target)
+[SIM] Playing card Rage (index 0) targeting none
+[INFO] Player 1 playing card RAGE (no target)
+[SIM] Playing card FeelNoPain (index 1) targeting none
+[INFO] Player 1 playing card FEEL_NO_PAIN (no target)
+[SIM] Playing card Anger (index 2) targeting Vantom
+[INFO] Player 1 playing card ANGER (targeting VANTOM.name (index 1))
+[SIM] Ending turn (round=7)
+[SIM] Playing card FlameBarrier (index 3) targeting none
+[INFO] Player 1 playing card FLAME_BARRIER (no target)
+[SIM] Playing card StrikeIronclad (index 0) targeting Vantom
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting VANTOM.name (index 1))
+[SIM] Ending turn (round=8)
+[SIM] Playing card Anger (index 1) targeting Vantom
+[INFO] Player 1 playing card ANGER (targeting VANTOM.name (index 1))
+[SIM] Playing card StrikeIronclad (index 0) targeting Vantom
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting VANTOM.name (index 1))
+[SIM] Playing card StrikeIronclad (index 0) targeting Vantom
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting VANTOM.name (index 1))
+[SIM] Ending turn (round=9)
+[SIM] Playing card DefendIronclad (index 2) targeting none
+[INFO] Player 1 playing card DEFEND_IRONCLAD (no target)
+[SIM] Playing card PommelStrike (index 1) targeting Vantom
+[INFO] Player 1 playing card POMMEL_STRIKE (targeting VANTOM.name (index 1))
+[SIM] Playing card Spite (index 3) targeting Vantom
+[INFO] Player 1 playing card SPITE (targeting VANTOM.name (index 1))
+[SIM] Playing card DefendIronclad (index 1) targeting none
+[INFO] Player 1 playing card DEFEND_IRONCLAD (no target)
+[SIM] Ending turn (round=10)
+[SIM] Playing card FlameBarrier (index 3) targeting none
+[INFO] Player 1 playing card FLAME_BARRIER (no target)
+[SIM] Playing card Anger (index 0) targeting Vantom
+[INFO] Player 1 playing card ANGER (targeting VANTOM.name (index 1))
+[SIM] Playing card Anger (index 0) targeting Vantom
+[INFO] Player 1 playing card ANGER (targeting VANTOM.name (index 1))
+[SIM] Ending turn (round=11)
+[SIM] Playing card PommelStrike (index 2) targeting Vantom
+[INFO] Player 1 playing card POMMEL_STRIKE (targeting VANTOM.name (index 1))
+[SIM] Playing card BurningPact (index 3) targeting none
+[INFO] Player 1 playing card BURNING_PACT (no target)
+[SIM] Card selection pending: 4 options, select 1-1
+[SIM] Card selection: indices [3]
+[INFO] Player 1 chose cards [RAGE]
+[SIM] Playing card Anger (index 2) targeting Vantom
+[INFO] Player 1 playing card ANGER (targeting VANTOM.name (index 1))
+[SIM] Playing card Anger (index 2) targeting Vantom
+[INFO] Player 1 playing card ANGER (targeting VANTOM.name (index 1))
+[SIM] Playing card StrikeIronclad (index 2) targeting Vantom
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting VANTOM.name (index 1))
+[SIM] Ending turn (round=12)
+[SIM] Playing card PommelStrike (index 3) targeting Vantom
+[INFO] Player 1 playing card POMMEL_STRIKE (targeting VANTOM.name (index 1))
+[INFO] CHARACTER.IRONCLAD fought ENCOUNTER.VANTOM_BOSS for the first time and WON >:)
+[INFO] Epoch obtained for completing Act 1
+[INFO] CHARACTER.IRONCLAD fought MONSTER.VANTOM for the first time and WON >:(
+[SIM] Post-combat: RoomType=Boss, IsPreFinished=True
+[INFO] Card rarity: Rolled 0.014955182, need < 1 for rare (offset = 0)
+[INFO] Card rarity: Rolled 0.72011673, need < 1 for rare (offset = 0)
+[INFO] Card rarity: Rolled 0.4995151, need < 1 for rare (offset = 0)
+[INFO] Player 1 obtained 100 gold from reward
+[SIM] Selected card reward: Pyre
+[SIM] Post-combat: RoomType=Boss, IsPreFinished=True
+[SIM] Boss defeated, entering next act
+[SIM] Between-act heal: 30 → 80 (missing=50, ascension2+=False)
+[SIM] Moving to map coord (1,1)
+[SIM] Playing card FlameBarrier (index 4) targeting none
+[INFO] Player 1 playing card FLAME_BARRIER (no target)
+[SIM] Playing card Anger (index 3) targeting Exoskeleton
+[INFO] Player 1 playing card ANGER (targeting EXOSKELETON.name (index 1))
+[SIM] Playing card Rage (index 1) targeting none
+[INFO] Player 1 playing card RAGE (no target)
+[SIM] Playing card DefendIronclad (index 1) targeting none
+[INFO] Player 1 playing card DEFEND_IRONCLAD (no target)
+[SIM] Ending turn (round=1)
+[SIM] Playing card PommelStrike (index 2) targeting Exoskeleton
+[INFO] Player 1 playing card POMMEL_STRIKE (targeting EXOSKELETON.name (index 1))
+[SIM] Playing card Thunderclap (index 0) targeting none
+[INFO] Player 1 playing card THUNDERCLAP (no target)
+[SIM] Playing card StrikeIronclad (index 1) targeting Exoskeleton
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting EXOSKELETON.name (index 2))
+[SIM] Ending turn (round=2)
+[SIM] Playing card Spite (index 1) targeting Exoskeleton
+[INFO] Player 1 playing card SPITE (targeting EXOSKELETON.name (index 1))
+[SIM] Playing card FlameBarrier (index 1) targeting none
+[INFO] Player 1 playing card FLAME_BARRIER (no target)
+[SIM] Playing card FeelNoPain (index 1) targeting none
+[INFO] Player 1 playing card FEEL_NO_PAIN (no target)
+[SIM] Ending turn (round=3)
+[SIM] Playing card PommelStrike (index 0) targeting Exoskeleton
+[INFO] Player 1 playing card POMMEL_STRIKE (targeting EXOSKELETON.name (index 2))
+[SIM] Playing card StrikeIronclad (index 0) targeting Exoskeleton
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting EXOSKELETON.name (index 2))
+[SIM] Playing card ForgottenRitual (index 3) targeting none
+[INFO] Player 1 playing card FORGOTTEN_RITUAL (no target)
+[SIM] Playing card StrikeIronclad (index 1) targeting Exoskeleton
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting EXOSKELETON.name (index 1))
+[INFO] CHARACTER.IRONCLAD fought ENCOUNTER.EXOSKELETONS_WEAK for the first time and WON >:)
+[INFO] CHARACTER.IRONCLAD fought MONSTER.EXOSKELETON for the first time and WON >:(
+[SIM] Post-combat: RoomType=Monster, IsPreFinished=True
+[INFO] Card rarity: Rolled 0.5935218, need < -0.020000001 for rare (offset = -0.05)
+[INFO] Card rarity: Rolled 0.55522305, need < -0.01 for rare (offset = -0.04)
+[INFO] Card rarity: Rolled 0.28151548, need < 0 for rare (offset = -0.03)
+[INFO] Player 1 obtained 16 gold from reward
+[SIM] Selected card reward: AshenStrike
+[SIM] Post-combat: RoomType=Monster, IsPreFinished=True
+[SIM] Moving to map coord (0,2)
+[SIM] Playing card FlameBarrier (index 3) targeting none
+[INFO] Player 1 playing card FLAME_BARRIER (no target)
+[SIM] Playing card AshenStrike (index 2) targeting BowlbugEgg
+[INFO] Player 1 playing card ASHEN_STRIKE (targeting BOWLBUG_EGG.name (index 2))
+[SIM] Ending turn (round=1)
+[SIM] Playing card PommelStrike (index 2) targeting BowlbugEgg
+[INFO] Player 1 playing card POMMEL_STRIKE (targeting BOWLBUG_EGG.name (index 2))
+[SIM] Playing card StrikeIronclad (index 1) targeting BowlbugEgg
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting BOWLBUG_EGG.name (index 2))
+[SIM] Playing card ForgottenRitual (index 0) targeting none
+[INFO] Player 1 playing card FORGOTTEN_RITUAL (no target)
+[SIM] Playing card DefendIronclad (index 2) targeting none
+[INFO] Player 1 playing card DEFEND_IRONCLAD (no target)
+[SIM] Playing card StrikeIronclad (index 0) targeting BowlbugRock
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting BOWLBUG_ROCK.name (index 1))
+[SIM] Playing card Rage (index 0) targeting none
+[INFO] Player 1 playing card RAGE (no target)
+[SIM] Ending turn (round=2)
+[SIM] Playing card PommelStrike (index 0) targeting BowlbugRock
+[INFO] Player 1 playing card POMMEL_STRIKE (targeting BOWLBUG_ROCK.name (index 1))
+[SIM] Playing card FlameBarrier (index 4) targeting none
+[INFO] Player 1 playing card FLAME_BARRIER (no target)
+[SIM] Playing card Spite (index 0) targeting BowlbugRock
+[INFO] Player 1 playing card SPITE (targeting BOWLBUG_ROCK.name (index 1))
+[SIM] Playing card Anger (index 1) targeting BowlbugRock
+[INFO] Player 1 playing card ANGER (targeting BOWLBUG_ROCK.name (index 1))
+[SIM] Ending turn (round=3)
+[SIM] Playing card DefendIronclad (index 2) targeting none
+[INFO] Player 1 playing card DEFEND_IRONCLAD (no target)
+[SIM] Playing card StrikeIronclad (index 0) targeting BowlbugRock
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting BOWLBUG_ROCK.name (index 1))
+[INFO] CHARACTER.IRONCLAD fought ENCOUNTER.BOWLBUGS_WEAK for the first time and WON >:)
+[INFO] CHARACTER.IRONCLAD fought MONSTER.BOWLBUG_ROCK for the first time and WON >:(
+[INFO] CHARACTER.IRONCLAD fought MONSTER.BOWLBUG_EGG for the first time and WON >:(
+[SIM] Post-combat: RoomType=Monster, IsPreFinished=True
+[INFO] Card rarity: Rolled 0.06595596, need < 0.01 for rare (offset = -0.02)
+[INFO] Card rarity: Rolled 0.37680554, need < 0.02 for rare (offset = -0.01)
+[INFO] Card rarity: Rolled 0.2544544, need < 0.03 for rare (offset = 0)
+[INFO] Player 1 obtained 10 gold from reward
+[SIM] Selected card reward: FeelNoPain
+[SIM] Post-combat: RoomType=Monster, IsPreFinished=True
+[SIM] Moving to map coord (0,3)
+[SIM] Playing card Bash (index 4) targeting Exoskeleton
+[INFO] Player 1 playing card BASH (targeting EXOSKELETON.name (index 4))
+[SIM] Playing card Anger (index 0) targeting Exoskeleton
+[INFO] Player 1 playing card ANGER (targeting EXOSKELETON.name (index 4))
+[SIM] Playing card StrikeIronclad (index 0) targeting Exoskeleton
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting EXOSKELETON.name (index 4))
+[SIM] Ending turn (round=1)
+[SIM] Playing card DefendIronclad (index 4) targeting none
+[INFO] Player 1 playing card DEFEND_IRONCLAD (no target)
+[SIM] Playing card FeelNoPain (index 3) targeting none
+[INFO] Player 1 playing card FEEL_NO_PAIN (no target)
+[SIM] Playing card PommelStrike (index 1) targeting Exoskeleton
+[INFO] Player 1 playing card POMMEL_STRIKE (targeting EXOSKELETON.name (index 1))
+[SIM] Ending turn (round=2)
+[SIM] Playing card Thunderclap (index 2) targeting none
+[INFO] Player 1 playing card THUNDERCLAP (no target)
+[SIM] Playing card Spite (index 3) targeting Exoskeleton
+[INFO] Player 1 playing card SPITE (targeting EXOSKELETON.name (index 2))
+[SIM] Playing card PommelStrike (index 2) targeting Exoskeleton
+[INFO] Player 1 playing card POMMEL_STRIKE (targeting EXOSKELETON.name (index 1))
+[SIM] Playing card DefendIronclad (index 0) targeting none
+[INFO] Player 1 playing card DEFEND_IRONCLAD (no target)
+[SIM] Ending turn (round=3)
+[SIM] Playing card FlameBarrier (index 3) targeting none
+[INFO] Player 1 playing card FLAME_BARRIER (no target)
+[SIM] Playing card StrikeIronclad (index 0) targeting Exoskeleton
+[INFO] Player 1 playing card STRIKE_IRONCLAD (targeting EXOSKELETON.name (index 1))
+[SIM] Ending turn (round=4)
+[SIM] Playing card Spite (index 4) targeting Exoskeleton
+[INFO] Player 1 playing card SPITE (targeting EXOSKELETON.name (index 1))
+[SIM] Playing card FlameBarrier (index 0) targeting none
+[INFO] Player 1 playing card FLAME_BARRIER (no target)
+[SIM] Playing card ForgottenRitual (index 1) targeting none
+[INFO] Player 1 playing card FORGOTTEN_RITUAL (no target)
+[SIM] Playing card Vicious (index 0) targeting none
+[INFO] Player 1 playing card VICIOUS (no target)
+[SIM] Playing card BurningPact (index 0) targeting none
+[INFO] Player 1 playing card BURNING_PACT (no target)
+[INFO] Player 1 chose cards []
+[SIM] Playing card PommelStrike (index 0) targeting Exoskeleton
+[INFO] Player 1 playing card POMMEL_STRIKE (targeting EXOSKELETON.name (index 1))
+[SIM] Ending turn (round=5)
+[SIM] Playing card AshenStrike (index 0) targeting Exoskeleton
+[INFO] Player 1 playing card ASHEN_STRIKE (targeting EXOSKELETON.name (index 1))
+[INFO] CHARACTER.IRONCLAD fought ENCOUNTER.EXOSKELETONS_NORMAL for the first time and WON >:)
+[INFO] CHARACTER.IRONCLAD has killed a MONSTER.EXOSKELETON. That's 2 kills
+[SIM] Post-combat: RoomType=Monster, IsPreFinished=True
+[INFO] Card rarity: Rolled 0.1479743, need < 0.04 for rare (offset = 0.01)
+[INFO] Card rarity: Rolled 0.3835402, need < 0.049999997 for rare (offset = 0.02)
+[INFO] Card rarity: Rolled 0.96970767, need < 0.06 for rare (offset = 0.03)
+[INFO] Player 1 obtained 15 gold from reward
+[SIM] Selected card reward: Juggling
+[SIM] Post-combat: RoomType=Monster, IsPreFinished=True
+[SIM] Moving to map coord (0,4)
+[SIM] Playing card Bash (index 3) targeting BowlbugRock
+[INFO] Player 1 playing card BASH (targeting BOWLBUG_ROCK.name (index 1))
+[SIM] Playing card Rage (index 2) targeting none
+[INFO] Player 1 playing card RAGE (no target)
+[SIM] Playing card Anger (index 2) targeting BowlbugRock
+[INFO] Player 1 playing card ANGER (targeting BOWLBUG_ROCK.name (index 1))
+[SIM] Playing card FeelNoPain (index 1) targeting none
+[INFO] Player 1 playing card FEEL_NO_PAIN (no target)
+[SIM] Ending turn (round=1)
+[SIM] Playing card FlameBarrier (index 0) targeting none
+[INFO] Player 1 playing card FLAME_BARRIER (no target)
+[SIM] Playing card PommelStrike (index 2) targeting BowlbugRock
+[INFO] Player 1 playing card POMMEL_STRIKE (targeting BOWLBUG_ROCK.name (index 1))
+[SIM] Ending turn (round=2)
+[SIM] Playing card FlameBarrier (index 3) targeting none
+[INFO] Player 1 playing card FLAME_BARRIER (no target)
+[SIM] Playing card DefendIronclad (index 1) targeting none
+[INFO] Player 1 playing card DEFEND_IRONCLAD (no target)
+[SIM] Ending turn (round=3)
