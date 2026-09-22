@@ -15,6 +15,9 @@ def version_manifest():
     return {"schema_version": 1,
             "code_commit": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip(),
             "tracked_dirty": bool(subprocess.check_output(["git", "status", "--porcelain", "--untracked-files=no"], cwd=ROOT, text=True).strip()),
+            "headless_game_sha256": hashlib.sha256((ROOT / "vendor/sts2-cli/lib/sts2.dll").read_bytes()).hexdigest(),
+            "headless_assembly_sha256": hashlib.sha256((ROOT / "vendor/sts2-cli/src/Sts2Headless/bin/Debug/net9.0/Sts2Headless.dll").read_bytes()).hexdigest(),
+            "patches": {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted((ROOT / "patches").glob("*.patch"))},
             "dependencies": json.loads((ROOT / "dependencies.json").read_text()),
             "game_dll_sha256": hashlib.sha256((ROOT / "vendor/sts2-cli/lib/sts2.dll.original").read_bytes()).hexdigest()}
 

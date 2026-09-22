@@ -4,7 +4,7 @@ Reason from the objective: high win rate across characters and high ascension, u
 
 ## Authorized workflow
 
-The user authorized creating this private repository, opening atomic experiment issues, implementing experiments, publishing a separate PR per experiment, commenting results, and merging or closing according to evidence. Continue autonomously within that scope. Stop at the visible MCP milestone for user acceptance.
+The user authorized maintaining this repository (made public by the user), opening atomic experiment issues, implementing experiments, publishing a separate PR per experiment, commenting results, and merging or closing according to evidence. Continue autonomously within that scope. The user accepted milestone 1 and authorized continuing full-run high-ascension evaluation, trace-driven improvements, and real visible gameplay until a legitimate complete victory.
 
 - Create an issue with hypothesis, baseline, fixed evaluation inputs and decision rule before testing an idea. Newly discovered distinct ideas get separate issues.
 - One experiment branch and PR per issue. Commit each coherent implementation/fix iteration before running its evaluation; commit results afterward. Never amend away failed attempts or force-push experiment history.

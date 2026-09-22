@@ -11,3 +11,6 @@
 - [E008: 完成可见 MCP 实战演示并在战斗边界停下](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/9)
 - [E009: 检验等价动作归并是否改善 Jev 的选择稳定性](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/15)
 - [E010: 比较数值策略与按局面调用 Jev 的分工](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/16)
+- [E011: 建立高进阶整局评估器](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/17)
+- [E012: 比较整回合候选计划](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/18)
+- [E013: 真实 MCP 整局通关与复盘](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/19)
