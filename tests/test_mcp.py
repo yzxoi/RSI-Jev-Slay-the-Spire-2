@@ -12,6 +12,10 @@ class MCPTests(unittest.TestCase):
         error["error"]["message"] = "Action timed out after execution"
         self.assertFalse(is_pre_execution_rejection("act", error))
         self.assertFalse(is_pre_execution_rejection("act", {"status": "pending"}))
+        gate = {"error": {"code": "invalid_action", "status_code": 409, "message": "Action is not available in the current state.", "details": {"action": "play_card", "screen": "COMBAT"}}}
+        self.assertTrue(is_pre_execution_rejection("act", gate))
+        gate["error"]["details"]["action"] = "buy_card"
+        self.assertFalse(is_pre_execution_rejection("act", gate))
 
     def test_proposal_must_remain_actionable_even_with_unchanged_cards(self):
         before = {"available_actions": ["end_turn"], "combat": {"action_readiness": {"can_use_combat_actions": True}}}

@@ -9,3 +9,5 @@ PR is stacked on E011 for the shared macro instruction. Promotion requires a rea
 ## Segment 1 result
 
 Tested cbe0a91. 48 accepted actions, 45 Jev requests, $0.009080274, 160.136 seconds. Rewards and card choices completed at floors 3 and 4, Armaments combat upgrade selections resolved, and battle continued at floor 5. Controller stopped on another explicit legality rejection (`Action is not available in the current state.`) after a readiness race. No uncertain command was replayed. Remaining HP 42. The complete failed segment is preserved. Trace also shows early end-turn choices with playable cards; a numerical turn-planning experiment will evaluate that separate tactical weakness before resuming.
+
+Iteration 2 transport fix: native `ExecutePlayCardAsync` also checks readiness before touching any card and returns a different exact error envelope. Extend recoverable rejection classification only to that audited play_card/COMBAT error, retaining stop-on-uncertain-delivery behavior. Add positive and negative regression cases.

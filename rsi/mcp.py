@@ -9,10 +9,15 @@ class ActionNotAccepted(RuntimeError):
 
 def is_pre_execution_rejection(name, data):
     error = data.get("error") or {}
-    return (name == "act" and error.get("code") == "invalid_action"
-            and error.get("message") == "Action is not in available_actions."
-            and error.get("status_code") == 409
-            and isinstance(data.get("available_actions"), list))
+    if name != "act" or error.get("code") != "invalid_action" or error.get("status_code") != 409:
+        return False
+    if error.get("message") == "Action is not in available_actions.":
+        return isinstance(data.get("available_actions"), list)
+    # ExecutePlayCardAsync checks the live gate before doing any card action.
+    details = error.get("details") or {}
+    return (error.get("message") == "Action is not available in the current state."
+            and details.get("action") == "play_card" and details.get("screen") == "COMBAT")
+
 
 
 class MCP:
