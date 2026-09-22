@@ -24,6 +24,11 @@ engine.parent.mkdir(exist_ok=True)
 if not engine.exists():
     subprocess.run(["git", "clone", lock["headless_url"], str(engine)], check=True)
 subprocess.run(["git", "checkout", "--detach", lock["headless_commit"]], cwd=engine, check=True)
+for patch in sorted((root / "patches").glob("*.patch")):
+    applied = subprocess.run(["git", "apply", "--reverse", "--check", str(patch)], cwd=engine, capture_output=True).returncode == 0
+    if not applied:
+        subprocess.run(["git", "apply", "--check", str(patch)], cwd=engine, check=True)
+        subprocess.run(["git", "apply", str(patch)], cwd=engine, check=True)
 env = dict(os.environ, PATH=str(sdk) + os.pathsep + os.environ["PATH"],
            DOTNET_ROOT=str(sdk), DOTNET_CLI_TELEMETRY_OPTOUT="1")
 subprocess.run(["bash", "setup.sh"], cwd=engine, env=env, check=True)

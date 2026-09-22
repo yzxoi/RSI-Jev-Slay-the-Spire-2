@@ -1,0 +1,13 @@
+diff --git a/src/Sts2Headless/RunSimulator.cs b/src/Sts2Headless/RunSimulator.cs
+index d780b2a..e7f2a0b 100644
+--- a/src/Sts2Headless/RunSimulator.cs
++++ b/src/Sts2Headless/RunSimulator.cs
+@@ -1648,7 +1648,7 @@ public class RunSimulator
+                         _eventOptionChosen = true;
+                         _lastEventOptionCount = options.Count;
+                         // Run on thread pool so GetSelectedCards/GetSelectedCardReward can block
+-                        var task = Task.Run(() => options[optionIndex].Chosen());
++                        var task = Task.Run(() => eventSync!.ChooseLocalOption(optionIndex));
+                         for (int i = 0; i < 100; i++)
+                         {
+                             _syncCtx.Pump();
