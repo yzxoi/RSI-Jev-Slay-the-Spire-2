@@ -60,7 +60,13 @@ def candidates(raw, history=None):
     elif screen=='MODAL':add('confirm_modal',raw.get('modal'));add('dismiss_modal',raw.get('modal'))
     elif screen in ['CARD_PILE','CARDS_VIEW','CARD_INSPECT','RELIC_INSPECT']:add('close_cards_view')
     elif screen=='UNLOCK':add('confirm_unlock')
-    elif screen=='CRYSTAL_SPHERE':add('proceed')
+    elif screen=='CRYSTAL_SPHERE':
+        sphere=raw.get('crystal_sphere') or {}
+        if not sphere.get('is_finished') and sphere.get('divinations_left',0)>0:
+            for x,y in sphere.get('hidden_cells',[]):
+                for tool in ['big','small']:
+                    add('crystal_clear_cell',{'tool':tool,'divinations_left':sphere['divinations_left']},x=x,y=y,tool=tool)
+        else:add('proceed')
     else:add('proceed')
     for i,c in enumerate(out):c['id']=f'a{i:03}'
     return out
