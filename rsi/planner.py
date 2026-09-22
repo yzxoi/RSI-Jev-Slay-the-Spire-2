@@ -6,7 +6,7 @@ from .numerical import intent_damage
 SCOPE='Approximate current-hand search, not an engine clone. Draws, random effects, orbs, minions, triggers and unknown mechanics use heuristic utility; all plans re-evaluated after each real action.'
 
 
-def choose_plan(state, candidates, width=40, depth=8):
+def choose_plan(state, candidates, width=40, depth=8, loss_weight=1.5):
     cards={c['index']:c for c in state.get('hand',[])}
     enemies={e['index']:e for e in state.get('enemies',[])}
     initial_hp={i:e['hp'] for i,e in enemies.items()}; incoming={i:intent_damage(e) for i,e in enemies.items()}
@@ -16,7 +16,7 @@ def choose_plan(state, candidates, width=40, depth=8):
         loss=max(0,sum(incoming[i] for i,h in n['hp'].items() if h>0)-n['block'])
         kills=sum(h<=0 for h in n['hp'].values());damage=sum(initial_hp[i]-max(0,h) for i,h in n['hp'].items())
         return (damage*.85 + kills*9 + (150 if kills==len(enemies) else 0)
-                - loss*1.5 - (1000 if loss>=hp else 0) + n['utility'])
+                - loss*loss_weight - (1000 if loss>=hp else 0) + n['utility'])
     frontier=[start]; best=start;expanded=0
     for _ in range(min(depth,len(cards))):
         children=[]

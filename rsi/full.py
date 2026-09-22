@@ -95,13 +95,13 @@ def episode(config, manifest, jev=None):
                     selected,call=jev.choose({'state':model_state(state),'strategy':STRATEGY},choices,trace)
                     result['model_calls']+=not call.get('cache_hit',False);result['cache_hits']=result.get('cache_hits',0)+call.get('cache_hit',False);result['cost_usd']+=call['usage'].get('cost',0)
                 elif config['policy']=='first': selected=choices[0]
-                elif config['policy'] in ['planned','planfixed']:
-                    selected,planning=choose_plan(state,choices);trace.write('planning',planning)
+                elif config['policy'] in ['planned','planfixed','cautious']:
+                    selected,planning=choose_plan(state,choices,loss_weight=3.0 if config['policy']=='cautious' else 1.5);trace.write('planning',planning)
                 else:
                     choices=computed_candidates(state,choices); selected=greedy_choice(state,choices)
             else:
                 choices=macro_candidates(state,history)
-                if config['policy'] not in ['hybrid','planned','jev','guarded','equipped'] or len(choices)==1: selected=fixed_macro(state,choices)
+                if config['policy'] not in ['hybrid','planned','cautious','jev','guarded','equipped'] or len(choices)==1: selected=fixed_macro(state,choices)
                 else:
                     context={'state':model_state(state),'strategy':STRATEGY,'previous_decision':history.get('previous')}
                     selected,call=jev.choose(context,choices,trace)
@@ -129,10 +129,10 @@ def episode(config, manifest, jev=None):
 def main():
     p=argparse.ArgumentParser();p.add_argument('--characters',default=','.join(CHARACTERS));p.add_argument('--seeds',default='full_dev_001');p.add_argument('--policies',default='first,greedy');p.add_argument('--ascension',type=int,default=10);p.add_argument('--workers',type=int,default=3);p.add_argument('--max-calls',type=int,default=12000);p.add_argument('--max-usd',type=float,default=3);p.add_argument('--output',required=True);p.add_argument('--matched-decisions',action='store_true');a=p.parse_args()
     chars=a.characters.split(','); policies=a.policies.split(',')
-    if set(chars)-set(CHARACTERS) or set(policies)-{'first','greedy','hybrid','planned','planfixed','jev','guarded','equipped'}:p.error('Invalid character or policy')
+    if set(chars)-set(CHARACTERS) or set(policies)-{'first','greedy','hybrid','planned','planfixed','cautious','jev','guarded','equipped'}:p.error('Invalid character or policy')
     manifest=version_manifest()
     if manifest['tracked_dirty']:raise RuntimeError('Commit implementation before evaluation')
-    budget=Budget(a.max_calls,a.max_usd,conservative_failures=True);jev=Jev(budget) if set(policies)&{'hybrid','planned','jev','guarded','equipped'} else None
+    budget=Budget(a.max_calls,a.max_usd,conservative_failures=True);jev=Jev(budget) if set(policies)&{'hybrid','planned','cautious','jev','guarded','equipped'} else None
     if a.matched_decisions and jev:jev=MatchedJev(jev)
     configs=[{'character':c,'seed':s,'ascension':a.ascension,'policy':policy} for s in a.seeds.split(',') for c in chars for policy in policies]
     with ThreadPoolExecutor(max_workers=a.workers) as pool: results=list(pool.map(lambda c:episode(c,manifest,jev),configs))
