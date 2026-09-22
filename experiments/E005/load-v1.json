@@ -1,0 +1,67 @@
+{
+  "manifest": {
+    "schema_version": 1,
+    "code_commit": "c9ac25e5c54d1891680093610c31b618b59144b0",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "f37fd30c18e3101c841f07a06124e8856b6cab9b14c2f58779c07087bf83ce90",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+  },
+  "scope": "two isolated copies; no game mutations",
+  "native_trace_sha256": "b7a62a1a2a94e18a84a76f40428c7069bee0d82d41bee3c155c1a6ab32fd4e81",
+  "loads": [
+    {
+      "seconds": 1.0266,
+      "state_sha256": "e0da1f3b40d0ab70169be010b8e123a0c25d73ef542e1659b4a04009681e846f",
+      "decision": "map_select",
+      "context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Map",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "hp": 42,
+      "hand": [],
+      "enemies": [],
+      "error": null,
+      "wire_path": "artifacts/runs/4d657e42-0c76-48b0-bd7a-4ab311ffe0e6/wire.jsonl"
+    },
+    {
+      "seconds": 0.96,
+      "state_sha256": "e0da1f3b40d0ab70169be010b8e123a0c25d73ef542e1659b4a04009681e846f",
+      "decision": "map_select",
+      "context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Map",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "hp": 42,
+      "hand": [],
+      "enemies": [],
+      "error": null,
+      "wire_path": "artifacts/runs/14ec54ed-d67f-43a4-a7bf-813039f6c718/wire.jsonl"
+    }
+  ],
+  "repeat_load_equal": true
+}
