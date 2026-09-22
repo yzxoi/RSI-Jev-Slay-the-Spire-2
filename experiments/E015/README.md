@@ -5,3 +5,5 @@ Issue #24. Native traces demonstrate wasted energy with useful basic cards. The 
 Native adapter correction before deployment: native nonattack intents use null damage/hits; sum explicit total_damage or zero instead of headless intent fields. Headless development v1 remains the original immutable implementation, unaffected by this native-only correction.
 
 Development v1: all10 normal defeats, no errors; raw Jev mean8.8 floors versus guarded8.6 (one lower, four ties), zero wins. Cost $0.150027150/1088calls. No promotion based on this result. Keep the predeclared held-out test to distinguish the concrete early-end correction from net strength; all failed/outperformed cases remain included.
+
+Held-out v1:30 normal defeats, zero errors/wins. Jev mean floor8.13 versus guarded7.93;3 better,2 worse,10 ties. Cost$0.403626384/2959calls, no unknown usage. The predefined promotion rule fails: no demonstrated net strength benefit. Close without merging. This small stochastic sample does not prove the filter is intrinsically harmful; it does not justify a default change. E016 retains this exact unpromoted baseline for its isolated potion-availability comparison.
