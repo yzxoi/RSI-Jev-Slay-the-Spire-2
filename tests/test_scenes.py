@@ -9,3 +9,9 @@ class SceneTests(unittest.TestCase):
     def test_shop_only_affordable_items(self):
         s={'screen':'SHOP','available_actions':['buy_card','close_shop_inventory'],'shop':{'cards':[{'index':4,'is_stocked':True,'enough_gold':False}]}}
         self.assertEqual([c['action']['action'] for c in candidates(s)],['close_shop_inventory'])
+
+    def test_native_nonattack_intent_nulls(self):
+        from rsi.live_plan import normalize
+        from rsi.numerical import intent_damage
+        raw={'run':{'deck':[]},'combat':{'player':{'energy':3,'current_hp':40,'block':0,'powers':[]},'hand':[],'enemies':[{'index':0,'current_hp':30,'block':0,'powers':[],'is_alive':True,'intents':[{'damage':None,'hits':None,'total_damage':None}]}]}}
+        self.assertEqual(intent_damage(normalize(raw)['enemies'][0]),0)

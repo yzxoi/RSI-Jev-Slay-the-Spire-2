@@ -7,7 +7,7 @@ def normalize(raw):
     combat=raw['combat'];p=combat['player'];deck={c['card_id']:c for c in raw['run']['deck']}
     def power(entity,key):return sum(x.get('amount',0) for x in entity.get('powers',[]) if x.get('power_id')==key)
     strength=power(p,'STRENGTH_POWER');weak=.75 if power(p,'WEAK_POWER') else 1
-    enemies=[{'index':e['index'],'hp':e['current_hp'],'block':e['block'],'intents':e['intents'],'powers':e['powers']} for e in combat['enemies'] if e.get('is_alive')]
+    enemies=[{'index':e['index'],'hp':e['current_hp'],'block':e['block'],'intents':[{'total_damage':i.get('total_damage') or 0,'damage':i.get('damage') or 0,'hits':i.get('hits') or 1} for i in e['intents']],'powers':e['powers']} for e in combat['enemies'] if e.get('is_alive')]
     hand=[]
     for card in combat['hand']:
         stats={v['name'].lower():v.get('current_value',v['base_value']) for v in card.get('dynamic_values',[])}
