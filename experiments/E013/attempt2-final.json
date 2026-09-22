@@ -1,0 +1,39 @@
+{
+  "manifest": {
+    "schema_version": 1,
+    "code_commit": "7863354db78ec2e22939911f9463c4ad2c5784a5",
+    "tracked_dirty": false,
+    "headless_assembly_sha256": "4f50dfadf8442f152cfa730578d4e1341366bd4e0c8ab1a0442c6d33ef55c59a",
+    "patches": {
+      "headless-event-sync.patch": "13f5f0866fd85fad07bc1fdd8f4a2f2b693f185e5e523b60382fa852f4728276"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+  },
+  "result": {
+    "game_run_id": "231MHS47QVUU",
+    "status": "normal_defeat",
+    "game_over": {
+      "is_victory": false,
+      "floor": 13,
+      "character_id": "IRONCLAD",
+      "phase": "summary_animating",
+      "can_continue": false,
+      "can_return_to_main_menu": false,
+      "showing_summary": false,
+      "waiting_for_other_players": false,
+      "save_status": "pending",
+      "save_verified": false,
+      "save_error": null
+    },
+    "screen": "GAME_OVER",
+    "hp": 0,
+    "trace_path": "artifacts/runs/cad7db45-932b-4442-8ec1-d3d173008501/decisions.jsonl",
+    "trace_sha256": "edc11fce7c279c2701526372c6da81792fa69e8f01c087022a5f466fe806dd48"
+  }
+}
