@@ -1,0 +1,195 @@
+{
+  "manifest": {
+    "schema_version": 1,
+    "code_commit": "290d5e4efb7e6fe1bfec3373a54ca959ffe2f3e0",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "f37fd30c18e3101c841f07a06124e8856b6cab9b14c2f58779c07087bf83ce90",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+  },
+  "source": "experiments/E038/source-native/0dc40c29-ec38-40ba-8bef-b9df0a6887f4.jsonl.gz",
+  "scope": "factual own HP/block after each observed attack; no claim about counterfactual decisions/wins",
+  "cases": [
+    {
+      "seq": 3125,
+      "turn": 1,
+      "card": "SWORD_BOOMERANG",
+      "actual": {
+        "block": 0,
+        "self_loss": 0
+      },
+      "predicted": {
+        "block": 0,
+        "self_loss": 0
+      },
+      "baseline": {
+        "block": 0,
+        "self_loss": 0
+      },
+      "exact": true
+    },
+    {
+      "seq": 3223,
+      "turn": 2,
+      "card": "ANGER",
+      "actual": {
+        "block": 17,
+        "self_loss": 0
+      },
+      "predicted": {
+        "block": 17,
+        "self_loss": 0
+      },
+      "baseline": {
+        "block": 22,
+        "self_loss": 0
+      },
+      "exact": true
+    },
+    {
+      "seq": 3255,
+      "turn": 2,
+      "card": "STRIKE_IRONCLAD",
+      "actual": {
+        "block": 20,
+        "self_loss": 0
+      },
+      "predicted": {
+        "block": 20,
+        "self_loss": 0
+      },
+      "baseline": {
+        "block": 25,
+        "self_loss": 0
+      },
+      "exact": true
+    },
+    {
+      "seq": 3271,
+      "turn": 2,
+      "card": "STRIKE_IRONCLAD",
+      "actual": {
+        "block": 15,
+        "self_loss": 0
+      },
+      "predicted": {
+        "block": 15,
+        "self_loss": 0
+      },
+      "baseline": {
+        "block": 20,
+        "self_loss": 0
+      },
+      "exact": true
+    },
+    {
+      "seq": 3386,
+      "turn": 3,
+      "card": "STRIKE_IRONCLAD",
+      "actual": {
+        "block": 18,
+        "self_loss": 0
+      },
+      "predicted": {
+        "block": 18,
+        "self_loss": 0
+      },
+      "baseline": {
+        "block": 18,
+        "self_loss": 0
+      },
+      "exact": true
+    },
+    {
+      "seq": 3484,
+      "turn": 4,
+      "card": "STRIKE_IRONCLAD",
+      "actual": {
+        "block": 13,
+        "self_loss": 0
+      },
+      "predicted": {
+        "block": 13,
+        "self_loss": 0
+      },
+      "baseline": {
+        "block": 13,
+        "self_loss": 0
+      },
+      "exact": true
+    },
+    {
+      "seq": 3533,
+      "turn": 5,
+      "card": "HEADBUTT",
+      "actual": {
+        "block": 5,
+        "self_loss": 0
+      },
+      "predicted": {
+        "block": 5,
+        "self_loss": 0
+      },
+      "baseline": {
+        "block": 10,
+        "self_loss": 0
+      },
+      "exact": true
+    },
+    {
+      "seq": 3549,
+      "turn": 5,
+      "card": "ANGER",
+      "actual": {
+        "block": 0,
+        "self_loss": 0
+      },
+      "predicted": {
+        "block": 0,
+        "self_loss": 0
+      },
+      "baseline": {
+        "block": 5,
+        "self_loss": 0
+      },
+      "exact": true
+    },
+    {
+      "seq": 3565,
+      "turn": 5,
+      "card": "STRIKE_IRONCLAD",
+      "actual": {
+        "block": 0,
+        "self_loss": 5
+      },
+      "predicted": {
+        "block": 0,
+        "self_loss": 5
+      },
+      "baseline": {
+        "block": 0,
+        "self_loss": 0
+      },
+      "exact": true
+    }
+  ],
+  "excluded": [],
+  "counts": {
+    "cases": 9,
+    "exact": 9,
+    "baseline_exact": 3
+  }
+}
