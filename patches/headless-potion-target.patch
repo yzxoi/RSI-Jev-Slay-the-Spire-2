@@ -9,7 +9,7 @@
          {
              target = player.Creature;
          }
-@@ -1548,10 +1548,8 @@
+@@ -1548,17 +1548,14 @@
              var afterPotions = player.Potions?.ToList() ?? new();
              if (afterPotions.Contains(potion))
              {
@@ -22,3 +22,11 @@
              }
          }
          catch (Exception ex)
+         {
+             Log($"Use potion failed: {ex.Message}");
+-            // Try manual discard as fallback
+-            try { MegaCrit.Sts2.Core.Commands.PotionCmd.Discard(potion).GetAwaiter().GetResult(); } catch { }
++            return ErrorWithTrace("Use potion failed without synthetic discard", ex);
+         }
+ 
+         return DetectDecisionPoint();
