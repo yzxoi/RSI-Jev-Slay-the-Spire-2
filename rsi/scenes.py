@@ -27,7 +27,9 @@ def candidates(raw, history=None):
             indexed('choose_reward_card',s.get('card_options'));add('skip_reward_cards')
         else:
             skipped=(history or {}).get('skipped_card_reward') == (raw.get('run_id'),(raw.get('run') or {}).get('floor'))
-            claimable=[r for r in s.get('rewards',[]) if r.get('claimable') and not (skipped and r.get('reward_type')=='Card')]
+            slots=(raw.get('run') or {}).get('potions',[])
+            full=bool(slots) and all(p.get('occupied') for p in slots)
+            claimable=[r for r in s.get('rewards',[]) if r.get('claimable') and not (skipped and r.get('reward_type')=='Card') and not (full and r.get('reward_type')=='Potion')]
             for r in claimable:add('claim_reward',r,option_index=r['index'])
             if not claimable:add('collect_rewards_and_proceed');add('proceed')
             # Receiving gold and opening a card offer do not choose the card.
