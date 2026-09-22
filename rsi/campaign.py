@@ -12,10 +12,11 @@ from .jev import Budget,Jev
 from .mcp import MCP,ActionNotAccepted
 from .scenes import candidates,fingerprint
 from .trace import Trace,version_manifest
+from .live_plan import plan_native
 
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--expected-run-id',required=True);p.add_argument('--max-actions',type=int,default=2000);p.add_argument('--max-seconds',type=int,default=3600);p.add_argument('--max-usd',type=float,default=3);p.add_argument('--output',required=True);p.add_argument('--execute',action='store_true');p.add_argument('--expert-choice');a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--expected-run-id',required=True);p.add_argument('--max-actions',type=int,default=2000);p.add_argument('--max-seconds',type=int,default=3600);p.add_argument('--max-usd',type=float,default=3);p.add_argument('--output',required=True);p.add_argument('--execute',action='store_true');p.add_argument('--expert-choice');p.add_argument('--combat-policy',choices=['jev','planned'],default='planned');a=p.parse_args()
     manifest=version_manifest()
     if manifest['tracked_dirty']:raise RuntimeError('Commit implementation before execution')
     # Cross-worktree lock follows the same local server, not each checkout.
@@ -23,7 +24,7 @@ def main():
     with lockpath.open('w') as lock:
         fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
         uid=str(uuid.uuid4());trace=Trace(ROOT/'artifacts/runs'/uid,{**manifest,'config':vars(a),'scope':'native_complete_run'})
-        budget=Budget(6000,a.max_usd);jev=Jev(budget) if a.execute else None;start=time.monotonic();raw={};history={};scenes=Counter();last_action=None;repeated=0;waits=0
+        budget=Budget(6000,a.max_usd,conservative_failures=True);jev=Jev(budget) if a.execute else None;start=time.monotonic();raw={};history={};scenes=Counter();last_action=None;repeated=0;waits=0
         result={'run_id':uid,'game_run_id':a.expected_run_id,'status':'error','actions':0,'rejections':0};expert=json.loads(Path(a.expert_choice).read_text()) if a.expert_choice else None
         try:
             mcp=MCP('http://127.0.0.1:8080/mcp',trace);health=mcp.call('health_check')
@@ -46,6 +47,15 @@ def main():
                     if expert['state_hash']!=fingerprint(raw):raise RuntimeError('Expert decision does not match current state')
                     selected=next(c for c in cs if c['action']==expert['action']);trace.write('expert_decision',expert);expert=None
                 elif len(cs)==1:selected=cs[0]
+                elif a.combat_policy=='planned' and screen=='COMBAT' and not raw.get('selection'):
+                    selected,planning=plan_native(raw,cs);trace.write('planning',planning)
+                    potions=[c for c in cs if c['action']['action']=='use_potion']
+                    turnkey=((raw.get('run') or {}).get('floor'),raw.get('turn'))
+                    if potions and history.get('potion_check')!=turnkey:
+                        reduced=[selected]+potions
+                        for i,c in enumerate(reduced):c={**c,'id':f'p{i:03}'};reduced[i]=c
+                        selected=jev.choose({'state':raw.get('agent_view',raw),'strategy':STRATEGY,'question':'Use a potion now to prevent meaningful HP loss or enable a kill, or execute the computed next card. Potions refill; do not hoard at risk of death.','plan':planning},reduced,trace)[0]
+                        history['potion_check']=turnkey
                 else:selected=jev.choose({'state':raw.get('agent_view',raw),'strategy':STRATEGY,'previous_decision':history.get('previous')},cs,trace)[0]
                 trace.write('selected',selected)
                 if mcp.call('health_check').get('play_running'):raise RuntimeError('Competing autoplay became active')
@@ -71,7 +81,7 @@ def main():
                 print(json.dumps({'step':result['actions'],'action':selected['name'],'screen':raw.get('screen'),'floor':(raw.get('run') or {}).get('floor'),'hp':(raw.get('run') or {}).get('current_hp')},ensure_ascii=False),flush=True)
         except Exception as exc:
             result['error']=f'{type(exc).__name__}: {exc}';trace.write('failure',{'error':result['error']})
-        result.update(final_screen=raw.get('screen'),final_run=raw.get('run'),game_over=raw.get('game_over'),scenes=dict(scenes),seconds=round(time.monotonic()-start,3),model_calls=budget.calls,cost_usd=budget.spent,usage_unknown=budget.unknown)
+        result.update(final_screen=raw.get('screen'),final_run=raw.get('run'),game_over=raw.get('game_over'),scenes=dict(scenes),seconds=round(time.monotonic()-start,3),model_calls=budget.calls,cost_usd=budget.spent,usage_unknown=budget.unknown,estimated_usd=budget.estimated_usd,uncertain_calls=budget.uncertain_calls)
         trace.write('summary',result);result['trace_path']=str(trace.path.relative_to(ROOT));result['trace_sha256']=trace.close();out=Path(a.output);out.parent.mkdir(parents=True,exist_ok=True);out.write_text(json.dumps({'manifest':manifest,'result':result},ensure_ascii=False,indent=2)+'\n')
         print(json.dumps({k:v for k,v in result.items() if k not in ['initial_run','final_run','health']},ensure_ascii=False),flush=True)
         if result['status']=='error':raise SystemExit(1)
