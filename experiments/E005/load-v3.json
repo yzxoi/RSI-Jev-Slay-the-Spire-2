@@ -1,0 +1,102 @@
+{
+  "manifest": {
+    "schema_version": 1,
+    "code_commit": "1e43d312c4202f2fcc022fe0b95d030e8b574806",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "048f3533214ac7f7096d1614091fb27486e6d46a77348341328ad9057da61fd4",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+  },
+  "scope": "two isolated copies; no game mutations",
+  "native_trace_sha256": "30f28dbc8bc05ed1fa404c90061d897e9bb822e9faf45f038dd0d0c97d9fa9d0",
+  "loads": [
+    {
+      "seconds": 1.1155,
+      "state_sha256": "04fb439b5ff4b765b4a6d099b20372f7c17bcea3e880350344560c40c0700626",
+      "decision": "combat_play",
+      "context": {
+        "act": 1,
+        "act_name": "Underdocks",
+        "floor": 7,
+        "room_type": "Monster",
+        "boss": {
+          "id": "WATERFALL_GIANT_BOSS",
+          "name": "Waterfall Giant"
+        }
+      },
+      "hp": 24,
+      "hand": [
+        "CARD.PERFECTED_STRIKE",
+        "CARD.BATTLE_TRANCE",
+        "CARD.ARMAMENTS",
+        "CARD.STRIKE_IRONCLAD",
+        "CARD.STRIKE_IRONCLAD"
+      ],
+      "enemies": [
+        {
+          "name": "Calcified Cultist",
+          "hp": 40,
+          "block": 0
+        },
+        {
+          "name": "Seapunk",
+          "hp": 44,
+          "block": 0
+        }
+      ],
+      "error": null,
+      "wire_path": "artifacts/runs/354fe43a-d81c-4448-89a5-bdbea1e27afa/wire.jsonl"
+    },
+    {
+      "seconds": 1.0252,
+      "state_sha256": "04fb439b5ff4b765b4a6d099b20372f7c17bcea3e880350344560c40c0700626",
+      "decision": "combat_play",
+      "context": {
+        "act": 1,
+        "act_name": "Underdocks",
+        "floor": 7,
+        "room_type": "Monster",
+        "boss": {
+          "id": "WATERFALL_GIANT_BOSS",
+          "name": "Waterfall Giant"
+        }
+      },
+      "hp": 24,
+      "hand": [
+        "CARD.PERFECTED_STRIKE",
+        "CARD.BATTLE_TRANCE",
+        "CARD.ARMAMENTS",
+        "CARD.STRIKE_IRONCLAD",
+        "CARD.STRIKE_IRONCLAD"
+      ],
+      "enemies": [
+        {
+          "name": "Calcified Cultist",
+          "hp": 40,
+          "block": 0
+        },
+        {
+          "name": "Seapunk",
+          "hp": 44,
+          "block": 0
+        }
+      ],
+      "error": null,
+      "wire_path": "artifacts/runs/617a6d66-549a-45f1-89c6-0263f0203146/wire.jsonl"
+    }
+  ],
+  "repeat_load_equal": true
+}

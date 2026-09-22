@@ -1,0 +1,216 @@
+{
+  "manifest": {
+    "schema_version": 1,
+    "code_commit": "13c92f2482c26e6737f4ad07a81ce9adc50dd955",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "048f3533214ac7f7096d1614091fb27486e6d46a77348341328ad9057da61fd4",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+  },
+  "results": [
+    {
+      "trial": 0,
+      "status": "error",
+      "error": "ValueError('Parity diverged before command 9')",
+      "seconds": 1.6944,
+      "comparisons": [
+        {
+          "step": 0,
+          "equal": true,
+          "difference": {}
+        },
+        {
+          "step": 1,
+          "equal": true,
+          "difference": {}
+        },
+        {
+          "step": 2,
+          "equal": true,
+          "difference": {}
+        },
+        {
+          "step": 3,
+          "equal": true,
+          "difference": {}
+        },
+        {
+          "step": 4,
+          "equal": true,
+          "difference": {}
+        },
+        {
+          "step": 5,
+          "equal": true,
+          "difference": {}
+        },
+        {
+          "step": 6,
+          "equal": true,
+          "difference": {}
+        },
+        {
+          "step": 7,
+          "equal": true,
+          "difference": {}
+        },
+        {
+          "step": 8,
+          "equal": true,
+          "difference": {}
+        },
+        {
+          "step": 9,
+          "equal": false,
+          "difference": {
+            "hand": {
+              "native": [
+                [
+                  "STRIKE_IRONCLAD",
+                  1
+                ],
+                [
+                  "FEEL_NO_PAIN",
+                  1
+                ]
+              ],
+              "shadow": [
+                [
+                  "STRIKE_IRONCLAD",
+                  1
+                ],
+                [
+                  "FEEL_NO_PAIN",
+                  1
+                ],
+                [
+                  "POMMEL_STRIKE",
+                  1
+                ],
+                [
+                  "ARMAMENTS",
+                  1
+                ],
+                [
+                  "PERFECTED_STRIKE",
+                  2
+                ]
+              ]
+            }
+          }
+        }
+      ],
+      "wire_sha256": "3c673213c75842c2b88fde1807096c83f787cc7b06947daf430ed10caf386c46",
+      "wire_path": "artifacts/runs/5c21747e-1084-44f6-8010-8feb5e6cb99b/wire.jsonl"
+    },
+    {
+      "trial": 1,
+      "status": "error",
+      "error": "ValueError('Parity diverged before command 9')",
+      "seconds": 1.366,
+      "comparisons": [
+        {
+          "step": 0,
+          "equal": true,
+          "difference": {}
+        },
+        {
+          "step": 1,
+          "equal": true,
+          "difference": {}
+        },
+        {
+          "step": 2,
+          "equal": true,
+          "difference": {}
+        },
+        {
+          "step": 3,
+          "equal": true,
+          "difference": {}
+        },
+        {
+          "step": 4,
+          "equal": true,
+          "difference": {}
+        },
+        {
+          "step": 5,
+          "equal": true,
+          "difference": {}
+        },
+        {
+          "step": 6,
+          "equal": true,
+          "difference": {}
+        },
+        {
+          "step": 7,
+          "equal": true,
+          "difference": {}
+        },
+        {
+          "step": 8,
+          "equal": true,
+          "difference": {}
+        },
+        {
+          "step": 9,
+          "equal": false,
+          "difference": {
+            "hand": {
+              "native": [
+                [
+                  "STRIKE_IRONCLAD",
+                  1
+                ],
+                [
+                  "FEEL_NO_PAIN",
+                  1
+                ]
+              ],
+              "shadow": [
+                [
+                  "STRIKE_IRONCLAD",
+                  1
+                ],
+                [
+                  "FEEL_NO_PAIN",
+                  1
+                ],
+                [
+                  "POMMEL_STRIKE",
+                  1
+                ],
+                [
+                  "ARMAMENTS",
+                  1
+                ],
+                [
+                  "PERFECTED_STRIKE",
+                  2
+                ]
+              ]
+            }
+          }
+        }
+      ],
+      "wire_sha256": "1f48ec63cd7801d9ff73945f6453d4bf8801a75339426d9068626461cb1c6f22",
+      "wire_path": "artifacts/runs/b1c9376f-8a5d-498c-9952-6e00dbc98528/wire.jsonl"
+    }
+  ],
+  "scope": "frozen observed combat projections only; unexported RNG/pile contents not yet checked"
+}
