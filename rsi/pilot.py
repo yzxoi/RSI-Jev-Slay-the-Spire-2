@@ -10,7 +10,7 @@ def compact(s):
  out={'run_id':s.get('run_id'),'screen':s.get('screen'),'floor':r.get('floor'),'hp':r.get('current_hp'),'max_hp':r.get('max_hp'),'gold':r.get('gold'),'turn':s.get('turn')}
  if c:
   out['player']=c.get('player');out['hand']=[{k:h.get(k) for k in ['index','card_id','name','energy_cost','playable','resolved_rules_text']} for h in c.get('hand',[])];out['enemies']=c.get('enemies');out['potions']=[p for p in r.get('potions',[]) if p.get('occupied')]
- for key in ['event','rest','reward','selection','shop','map','bundles','capstone','game_over']:
+ for key in ['event','rest','reward','selection','shop','map','bundles','capstone','game_over','crystal_sphere']:
   if s.get(key):out[key]=s[key]
  out['choices']=candidates(s,{}) if s.get('screen')!='GAME_OVER' else []
  return out
