@@ -13,3 +13,7 @@ python3 -m unittest discover -s tests -v
 python3 -m rsi.full --policies first,greedy --seeds full_dev_001 --output experiments/E011/development-v1.json
 python3 -m rsi.full --policies hybrid --seeds full_dev_001 --output experiments/E011/hybrid-v1.json
 ```
+
+## Iteration 1 outcomes
+
+Implementation a6c2cae: development 15/15 normal defeats, no wins; validation 26 normal defeats and 4 infrastructure errors out of 30 selected runs. All reports and traces preserved. Validation exposed two distinct problems: combinatorial card-selection criteria duplicated full card metadata (185,144 JSON characters, provider 400), which tripped the shared unknown-usage budget; and repeated Jungle Maze Adventure choices with no state progress. Two other runs stopped due to that shared budget guard. These are errors, not losses. No promotion yet. Next fix compacts selection references and supplies a bounded selection count; event progress needs separate diagnosis without silently changing game outcomes.
