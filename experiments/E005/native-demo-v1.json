@@ -1,0 +1,59 @@
+{
+  "manifest": {
+    "schema_version": 1,
+    "code_commit": "3cf2901eae6c32b3a8639b4fa09b7d6709030416",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "048f3533214ac7f7096d1614091fb27486e6d46a77348341328ad9057da61fd4",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+  },
+  "result": {
+    "status": "passed",
+    "actions": 2,
+    "jev_choice": {
+      "id": "b000",
+      "action": {
+        "action": "play_card",
+        "card_index": 0,
+        "target_index": 0
+      },
+      "name": "Strike",
+      "forecast": {
+        "end_hp": 21,
+        "end_decision": "card_reward",
+        "end_round": null,
+        "combat_won": true,
+        "potions_remaining": [
+          "Duplicator",
+          "Strength Potion",
+          "Distilled Chaos"
+        ],
+        "remaining_enemies": []
+      },
+      "planned_actions": 2,
+      "uses_potion": false,
+      "branch_index": 0
+    },
+    "final_screen": "REWARD",
+    "hp": 21,
+    "floor": 7,
+    "game_run_id": "EFUZ4NHFCXBT",
+    "model_calls": 1,
+    "cost_usd": 7.4382e-05,
+    "trace_path": "artifacts/runs/7b4c85e8-1958-4eb2-8989-3ea5db95deb7/decisions.jsonl",
+    "trace_sha256": "e173514d99e0b0ea159e94bc1c77455fc294f2674a56f71caae03c6f36243287"
+  }
+}
