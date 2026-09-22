@@ -1,0 +1,92 @@
+--- a/src/Sts2Headless/RunSimulator.cs
++++ b/src/Sts2Headless/RunSimulator.cs
+@@ -1007,6 +1007,10 @@
+         Log($"Playing card {card.GetType().Name} (index {cardIndex}) targeting {(target != null ? target.Monster?.GetType().Name ?? "creature" : "none")}");
+ 
+         var handCountBefore = hand.Count;
++        var energyBefore = pcs.Energy;
++        var starsBefore = pcs.Stars;
++        var blockBefore = player.Creature.Block;
++        var targetHpBefore = target?.CurrentHp;
+ 
+         var playAction = new PlayCardAction(card, target);
+         RunManager.Instance.ActionQueueSet.EnqueueWithoutSynchronizing(playAction);
+@@ -1014,7 +1018,9 @@
+ 
+         // Check if card play had no effect (hand unchanged, same card still at same index)
+         var handAfter = pcs.Hand.Cards;
+-        if (handAfter.Count == handCountBefore && cardIndex < handAfter.Count && handAfter[cardIndex] == card)
++        if (handAfter.Count == handCountBefore && cardIndex < handAfter.Count && handAfter[cardIndex] == card
++            && pcs.Energy == energyBefore && pcs.Stars == starsBefore
++            && player.Creature.Block == blockBefore && target?.CurrentHp == targetHpBefore)
+         {
+             return Error($"Card could not be played (still in hand after action): {card.GetType().Name} [{card.Id}]");
+         }
+@@ -1028,7 +1034,9 @@
+     private bool IsPlayPhase()
+     {
+         var p = (_runState != null && _runState.Players.Count > 0) ? _runState.Players[0] : null;
+-        return p?.PlayerCombatState?.Phase == MegaCrit.Sts2.Core.Combat.PlayerTurnPhase.Play;
++        return p?.PlayerCombatState?.Phase == MegaCrit.Sts2.Core.Combat.PlayerTurnPhase.Play
++            && CombatManager.Instance.DebugOnlyGetState()?.CurrentSide == CombatSide.Player
++            && CombatManager.Instance.IsPartOfPlayerTurn(p);
+     }
+ 
+     private Dictionary<string, object?> DoEndTurn(Player player)
+@@ -1660,7 +1660,7 @@
+                         _eventOptionChosen = true;
+                         _lastEventOptionCount = options.Count;
+                         // Run on thread pool so GetSelectedCards/GetSelectedCardReward can block
+-                        var task = Task.Run(() => eventSync!.ChooseLocalOption(optionIndex));
++                        var task = Task.Run(() => options[optionIndex].Chosen());
+                         for (int i = 0; i < 100; i++)
+                         {
+                             _syncCtx.Pump();
+@@ -2067,8 +2075,38 @@
+         };
+     }
+ 
++    private bool WaitForStablePlayerBoundary(Player player)
++    {
++        string? previous = null;
++        long stableSince = Environment.TickCount64;
++        for (int attempt = 0; attempt < 2000; attempt++)
++        {
++            _syncCtx.Pump();
++            if (_cardSelector.HasPending || _cardSelector.HasPendingReward || !CombatManager.Instance.IsInProgress || player.Creature.IsDead) return false;
++            try
++            {
++                var pcs = player.PlayerCombatState;
++                var state = CombatManager.Instance.DebugOnlyGetState();
++                var settled = IsPlayPhase() && !CombatManager.Instance.PlayerActionsDisabled
++                    && RunManager.Instance.ActionExecutor.CurrentlyRunningAction == null
++                    && RunManager.Instance.ActionQueueSet.GetReadyAction() == null;
++                var cards = pcs.Hand.Cards.ToArray();
++                var signature = $"{state?.RoundNumber}|{pcs.Energy}|{pcs.Stars}|{player.Creature.Block}|{cards.Length}|" + string.Join(",", cards.Select(c => c.Id.Entry));
++                if (settled && signature == previous)
++                {
++                    if (Environment.TickCount64 - stableSince >= 30) return true;
++                }
++                else { previous = settled ? signature : null; stableSince = Environment.TickCount64; }
++            }
++            catch (InvalidOperationException) { previous = null; stableSince = Environment.TickCount64; }
++            Thread.Sleep(1);
++        }
++        throw new TimeoutException("Combat never reached a stable actionable boundary; no action retried");
++    }
++
+     private Dictionary<string, object?> CombatPlayState(Player player)
+     {
++        if (!WaitForStablePlayerBoundary(player)) return DetectDecisionPoint();
+         var pcs = player.PlayerCombatState;
+         var combatState = CombatManager.Instance.DebugOnlyGetState();
+ 
+@@ -2081,7 +2119,7 @@
+         var aliveEnemiesForTargeting = combatState?.Enemies?
+             .Where(e => e != null && e.IsAlive).ToList() ?? new();
+ 
+-        var hand = pcs?.Hand?.Cards?.Select((c, i) =>
++        var hand = pcs?.Hand?.Cards?.ToArray().Select((c, i) =>
+         {
+             // Export the *currently resolved* stat values, not the card base: refresh the
+             // DynamicVar previews (mirrors NCard.UpdateVisuals) so damage reflects Strength/Weak,
