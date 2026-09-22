@@ -1,0 +1,166 @@
+{
+  "tested_code_sha": "2b5abd074528312e263c48877882e1da335b3bba",
+  "outcomes": {
+    "normal_defeat": 16,
+    "error": 4
+  },
+  "paired": {
+    "baseline": "planned",
+    "treatment": "guided",
+    "outcomes": {
+      "worse": 2,
+      "tie": 4,
+      "better": 1,
+      "incomplete_or_error": 3
+    },
+    "pairs": [
+      {
+        "character": "Ironclad",
+        "seed": "a0_e033_hold_001",
+        "baseline": [
+          false,
+          1,
+          17
+        ],
+        "treatment": [
+          false,
+          1,
+          15
+        ],
+        "outcome": "worse"
+      },
+      {
+        "character": "Silent",
+        "seed": "a0_e033_hold_001",
+        "baseline": [
+          false,
+          1,
+          17
+        ],
+        "treatment": [
+          false,
+          1,
+          17
+        ],
+        "outcome": "tie"
+      },
+      {
+        "character": "Defect",
+        "seed": "a0_e033_hold_001",
+        "baseline": [
+          false,
+          1,
+          15
+        ],
+        "treatment": [
+          false,
+          1,
+          17
+        ],
+        "outcome": "better"
+      },
+      {
+        "character": "Necrobinder",
+        "seed": "a0_e033_hold_001",
+        "baseline": [
+          false,
+          1,
+          17
+        ],
+        "treatment": [
+          false,
+          1,
+          14
+        ],
+        "outcome": "worse"
+      },
+      {
+        "character": "Ironclad",
+        "seed": "a0_e033_hold_002",
+        "baseline": [
+          false,
+          1,
+          17
+        ],
+        "treatment": [
+          false,
+          1,
+          17
+        ],
+        "outcome": "tie"
+      },
+      {
+        "character": "Defect",
+        "seed": "a0_e033_hold_002",
+        "baseline": [
+          false,
+          2,
+          6
+        ],
+        "treatment": [
+          false,
+          2,
+          6
+        ],
+        "outcome": "tie"
+      },
+      {
+        "character": "Necrobinder",
+        "seed": "a0_e033_hold_002",
+        "baseline": [
+          false,
+          1,
+          17
+        ],
+        "treatment": [
+          false,
+          1,
+          17
+        ],
+        "outcome": "tie"
+      }
+    ]
+  },
+  "budget": {
+    "requests": 748,
+    "cost_usd": 0.12707704799999991,
+    "unknown": false,
+    "estimated_usd": 0.0,
+    "uncertain_calls": 0
+  },
+  "model_request_latency_seconds": {
+    "p50": 0.7278053124900907,
+    "p95": 1.0504037080099806
+  },
+  "errors": [
+    {
+      "character": "Regent",
+      "seed": "a0_e033_hold_001",
+      "policy": "guided",
+      "error": "RuntimeError: Action 'choose_option' failed: MissingMethodException: Method not found: 'Godot.Vector2I Godot.Vector2I.get_One()'.",
+      "run_id": "957afb75-2539-45df-a67d-c4c3b3a8ba4b"
+    },
+    {
+      "character": "Silent",
+      "seed": "a0_e033_hold_002",
+      "policy": "planned",
+      "error": "Upstream forced game_over after deadlock; not a normal defeat",
+      "run_id": "ecb6721d-a87e-4aac-9d06-c67203c0af55"
+    },
+    {
+      "character": "Silent",
+      "seed": "a0_e033_hold_002",
+      "policy": "guided",
+      "error": "Upstream forced game_over after deadlock; not a normal defeat",
+      "run_id": "a4583d1b-3c4f-4d30-87e7-5d86accff158"
+    },
+    {
+      "character": "Regent",
+      "seed": "a0_e033_hold_002",
+      "policy": "planned",
+      "error": "Upstream forced game_over after deadlock; not a normal defeat",
+      "run_id": "1c314f62-ad2b-4db6-8bf9-6532522ff943"
+    }
+  ],
+  "decision": "close without merge;0 wins,valid pairs1better2worse4tie,3incomplete/error pairs; development gain not supported by holdout"
+}
