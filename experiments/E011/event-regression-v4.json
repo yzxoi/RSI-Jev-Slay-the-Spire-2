@@ -1,0 +1,40 @@
+{
+  "manifest": {
+    "schema_version": 1,
+    "code_commit": "11364d6e5e36ce5e5d89a831b9de3fffc51f5b8a",
+    "tracked_dirty": false,
+    "headless_game_sha256": "264f28923e048a5395913686fa2a7d6c7d23102fc658da9dfa887dc967a8e403",
+    "headless_assembly_sha256": "4f50dfadf8442f152cfa730578d4e1341366bd4e0c8ab1a0442c6d33ef55c59a",
+    "patches": {
+      "headless-event-sync.patch": "a67b5e45e70a2e715b1ac49665db043031c13fbb440a539b331789b6299dac2c"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+  },
+  "source_trace": "artifacts/runs/ad9a831c-cbdf-4d98-a59a-a93fd59a04d0/decisions.jsonl",
+  "command": {
+    "cmd": "action",
+    "action": "choose_option",
+    "args": {
+      "option_index": 1
+    }
+  },
+  "before": {
+    "event": "Jungle Maze Adventure",
+    "hp": 70,
+    "gold": 149
+  },
+  "after": {
+    "decision": "map_select",
+    "hp": 70,
+    "gold": 187
+  },
+  "progress": true,
+  "trace_path": "artifacts/runs/b837d1ed-b022-4dd7-8c46-95ad2b5e6d33/decisions.jsonl",
+  "trace_sha256": "007fa7ef1254c8788e267252c3a56ac92f05cc944936585e4eec97adb9e9c025"
+}
