@@ -3,22 +3,23 @@ import copy
 import math
 from .numerical import intent_damage
 from . import triggers as trigger_rules
+from . import scaling as scaling_rules
 
 SCOPE='Approximate current-hand search, not an engine clone. Draws, random effects, orbs, minions, triggers and unknown mechanics use heuristic utility; all plans re-evaluated after each real action.'
 
 
-def choose_plan(state, candidates, width=40, depth=8, triggers=False):
+def choose_plan(state, candidates, width=40, depth=8, triggers=False, horizon=False):
     cards={c['index']:c for c in state.get('hand',[])}
     enemies={e['index']:e for e in state.get('enemies',[])}
     initial_hp={i:e['hp'] for i,e in enemies.items()}; incoming={i:intent_damage(e) for i,e in enemies.items()}
     hp=state.get('player',{}).get('hp',100)
-    start={'energy':state.get('energy',0),'block':state.get('player',{}).get('block',0),'hp':dict(initial_hp),'eblock':{i:e.get('block',0) for i,e in enemies.items()},'used':frozenset(),'plan':[],'utility':0.,'strength':0,'vuln':set(),'native_caps':{i:e.get('native_slippery',0) for i,e in enemies.items()},'native_artifacts':{i:e.get('native_artifact',0) for i,e in enemies.items()}}
+    start={'future':[],'energy':state.get('energy',0),'block':state.get('player',{}).get('block',0),'hp':dict(initial_hp),'eblock':{i:e.get('block',0) for i,e in enemies.items()},'used':frozenset(),'plan':[],'utility':0.,'strength':0,'vuln':set(),'native_caps':{i:e.get('native_slippery',0) for i,e in enemies.items()},'native_artifacts':{i:e.get('native_artifact',0) for i,e in enemies.items()}}
     if triggers:start['triggers']=trigger_rules.initial(state)
     def score(n):
         loss=max(0,sum(incoming[i] for i,h in n['hp'].items() if h>0)-n['block']-state.get('player',{}).get('end_turn_block',0))
         kills=sum(h<=0 for h in n['hp'].values());damage=sum(initial_hp[i]-max(0,h) for i,h in n['hp'].items())
         return (damage*.85 + kills*9 + (150 if kills==len(enemies) else 0)
-                - loss*1.5 - (1000 if loss>=hp else 0) + n['utility'])
+                - loss*1.5 - (1000 if loss>=hp else 0) + n['utility'] + (scaling_rules.value(n['future'],n['hp']) if horizon and loss<hp else 0))
     frontier=[start]; best=start;expanded=0
     for _ in range(min(depth,len(cards))):
         children=[]
@@ -59,11 +60,13 @@ def choose_plan(state, candidates, width=40, depth=8, triggers=False):
                     already=any('vulnerab' in str(p.get('name','')).lower() or p.get('power_id')=='VULNERABLE_POWER' for p in enemies[target].get('powers') or [])
                     if not already:m['vuln'].add(target)
                     m['utility']+=stats['vulnerablepower']*1.5
-                if stats.get('strengthpower',0):
+                if stats.get('strengthpower',0) and not (horizon and ident=='DEMON_FORM'):
                     m['strength']+=stats['strengthpower'];m['utility']+=stats['strengthpower']*7
                 # Utility does not claim the resulting unknown drawn/generated cards.
                 draw=stats.get('cards',0);m['utility']+=draw*3
-                if card.get('type')=='Power':
+                if horizon and ident in {'ROLLING_BOULDER','DEMON_FORM'}:
+                    m['future'].append(scaling_rules.forecast(card))
+                elif card.get('type')=='Power':
                     m['utility']+=7 + stats.get('energy',0)*12 + stats.get('dexteritypower',0)*8
                 else:
                     gain=stats.get('energy',0)
@@ -84,4 +87,4 @@ def choose_plan(state, candidates, width=40, depth=8, triggers=False):
             if key not in unique or score(n)>score(unique[key]):unique[key]=n
         frontier=sorted(unique.values(),key=score,reverse=True)[:width]
     chosen=next((c for c in candidates if best['plan'] and c['id']==best['plan'][0]),next(c for c in candidates if c['action']['action']=='end_turn'))
-    return chosen,{'scope':SCOPE,'plan_ids':best['plan'],'score':round(score(best),3),'predicted_block':best['block'],'predicted_enemy_hp':best['hp'],'expanded':expanded,'width':width,'depth':depth,'trigger_forecast':best.get('triggers')}
+    return chosen,{'scope':SCOPE,'plan_ids':best['plan'],'score':round(score(best),3),'predicted_block':best['block'],'predicted_enemy_hp':best['hp'],'expanded':expanded,'width':width,'depth':depth,'trigger_forecast':best.get('triggers'),'delayed_forecasts':best['future'],'delayed_utility':scaling_rules.value(best['future'],best['hp']) if horizon else 0}
