@@ -1,0 +1,140 @@
+{
+  "run_id": "VTBCNVZABFJP",
+  "game_version": "0.111.0",
+  "mod_version": "0.15.0",
+  "model": "typesafe/jev-1.13-20260917",
+  "action_command": "python3 -m rsi.native_step --choice experiments/E065/<choice> --expected-run-id VTBCNVZABFJP --output artifacts/runs/e065-<choice> --execute",
+  "accepted_actions": 14,
+  "items": [
+    {
+      "choice": "floor30-turn7-swift-potion.json",
+      "tested_sha": "a66e6a530cc21eb0d06ce12d610b8d834b3c297d",
+      "status": "accepted",
+      "actions": 1,
+      "before_state_hash": "1ded9d8b2b56e9bfae3f1f2ee1d3a770b69a17e257c5bf59d927bae57b82a7ac",
+      "after_state_hash": "5d49d87e9988d8b91366e9a6a92125a62b7184324f6833f20d3a57a158ce4432",
+      "trace_sha256": "b9df74f42f5f07dc5b3a9f368caa722f79aa6cdb0ccbe90387be56bdf4d08acf"
+    },
+    {
+      "choice": "floor30-turn7-bash-minion.json",
+      "tested_sha": "bf99e2fe294618d04838a1b653316a67430dcc9d",
+      "status": "accepted",
+      "actions": 1,
+      "before_state_hash": "5d49d87e9988d8b91366e9a6a92125a62b7184324f6833f20d3a57a158ce4432",
+      "after_state_hash": "d72473adbe4ff9fa230d854b91c1642c68c2a76c91563b614acde47837caf47f",
+      "trace_sha256": "85b2d32046ba29485bf2d9c61c6b25c08169dca079fcf726feca1f265e9e2ccc"
+    },
+    {
+      "choice": "floor30-turn7-anger-minion.json",
+      "tested_sha": "c1099505300e2d157bccc29afb6cb32c5596dc0d",
+      "status": "accepted",
+      "actions": 1,
+      "before_state_hash": "d72473adbe4ff9fa230d854b91c1642c68c2a76c91563b614acde47837caf47f",
+      "after_state_hash": "9fb8fed591c9133a799c26c6f800162cc3c19a8af957fd4421d533f765248616",
+      "trace_sha256": "2c9ab8b00bcfc4aa2848a87865199ce44df00a3523a4c54aab8e57861f265bd0"
+    },
+    {
+      "choice": "floor30-turn7-battle-trance.json",
+      "tested_sha": "b04b89605cbacb6283646335ae03616c5659aeb7",
+      "status": "accepted",
+      "actions": 1,
+      "before_state_hash": "9fb8fed591c9133a799c26c6f800162cc3c19a8af957fd4421d533f765248616",
+      "after_state_hash": "aeb0f36017e855701fa51057ca7f8038772edf97c57569b649e5f21c21ec7aa8",
+      "trace_sha256": "988da25e9c5fc0806cacfded9e973c9130ca51fcda67e7d70ee1933189539389"
+    },
+    {
+      "choice": "floor30-turn7-strike-minion.json",
+      "tested_sha": "ab301cec8b9b8d4b341b9c5b22cbf6976b0c356b",
+      "status": "accepted",
+      "actions": 1,
+      "before_state_hash": "aeb0f36017e855701fa51057ca7f8038772edf97c57569b649e5f21c21ec7aa8",
+      "after_state_hash": "16340f8dcbbbb1e8afcacd96ab4fef160831c4ddf447ed19fef1f27e4069c848",
+      "trace_sha256": "59e1affaa97d56a3f163a845861831f85097a0fff491f641998a9dd930f32a22"
+    },
+    {
+      "choice": "floor30-turn7-headbutt-boss.json",
+      "tested_sha": "5e10087fd519a0827f898b04b9fa177ffff407a2",
+      "status": "accepted",
+      "actions": 1,
+      "before_state_hash": "16340f8dcbbbb1e8afcacd96ab4fef160831c4ddf447ed19fef1f27e4069c848",
+      "after_state_hash": "d32251dc4c2d9bcc2550535d3c214a371a2477b436b58ce23f1e7f1357a04c34",
+      "trace_sha256": "02c1af44d29d14e1879a975ad02a1452f3eb645345aa0e466ca029057d8691f4"
+    },
+    {
+      "choice": "floor30-turn7-headbutt-retrieve-bash.json",
+      "tested_sha": "bd7984dff3e6b3b0f79f5d0ab2a15665880b8327",
+      "status": "accepted",
+      "actions": 1,
+      "before_state_hash": "d32251dc4c2d9bcc2550535d3c214a371a2477b436b58ce23f1e7f1357a04c34",
+      "after_state_hash": "64829dc762e842f7a8392cf58d4c4664feb1f73e7464bc4ebe9dfdbc0e732abc",
+      "trace_sha256": "650350f59e24199bd45b8c64554b4e60a3543947d995e2055f5227fa6fe42347"
+    },
+    {
+      "choice": "floor30-turn7-skill-potion.json",
+      "tested_sha": "98500f8f33ace843e14f398d837db7e50892d1ff",
+      "status": "accepted",
+      "actions": 1,
+      "before_state_hash": "64829dc762e842f7a8392cf58d4c4664feb1f73e7464bc4ebe9dfdbc0e732abc",
+      "after_state_hash": "d353830241d4afc97e87959595b5d30c27d5c8bf9d156c45f074b3144af2dcce",
+      "trace_sha256": "03885b305bf32e04390e852ca18a595b1a67ce0022cc5f992834ea2fc21ed4c7"
+    },
+    {
+      "choice": "floor30-turn7-skill-select-ritual.json",
+      "tested_sha": "11f798fdeb409e32f486de9bb4a743bb286f09c0",
+      "status": "accepted",
+      "actions": 1,
+      "before_state_hash": "d353830241d4afc97e87959595b5d30c27d5c8bf9d156c45f074b3144af2dcce",
+      "after_state_hash": "a2561a07c87173ba023022facde604f71ce57fb7d23cb0f1c8903e6cc2fb802d",
+      "trace_sha256": "e56992b48c7ddfe6dd79bcf848ea13fdecf0dd394783b1ec5b4453308e682c27"
+    },
+    {
+      "choice": "floor30-turn7-play-ritual.json",
+      "tested_sha": "651eb8565d2cf0ddb6e492703f0968f3aa963368",
+      "status": "accepted",
+      "actions": 1,
+      "before_state_hash": "a2561a07c87173ba023022facde604f71ce57fb7d23cb0f1c8903e6cc2fb802d",
+      "after_state_hash": "ebb17bb6c5c86d52cd00c4e052bbde0db70729eff18499b9d86553ff4f2cd267",
+      "trace_sha256": "cfabc5b895213b2bb56904eff47ba3ec8f310176c0db65b335da7ff1e9dbb2db"
+    },
+    {
+      "choice": "floor30-turn7-aggression.json",
+      "tested_sha": "679bd5085a22418416c76cb0f73a7cdbc7cef993",
+      "status": "accepted",
+      "actions": 1,
+      "before_state_hash": "ebb17bb6c5c86d52cd00c4e052bbde0db70729eff18499b9d86553ff4f2cd267",
+      "after_state_hash": "eb58ceaeb738778a1b856a38254f47e0d7c59730eec8db138e8655914bf95b7e",
+      "trace_sha256": "8eed038d991b8924627a901b4ee2407fd3955f3d913eb51137f129d567dd08f0"
+    },
+    {
+      "choice": "floor30-turn7-taunt-boss.json",
+      "tested_sha": "a5ee1be058fade7445cf79899f7c787f14909841",
+      "status": "accepted",
+      "actions": 1,
+      "before_state_hash": "eb58ceaeb738778a1b856a38254f47e0d7c59730eec8db138e8655914bf95b7e",
+      "after_state_hash": "647ff135a0f15bcdcbdc88aaf6dfb40edffeb217dfb125f08c8b6af59fdeda45",
+      "trace_sha256": "f37751ce17f9c9dd0ceb4d0d04a0a362ff1bcc1b598148578800342430134da5"
+    },
+    {
+      "choice": "floor30-turn7-shrug.json",
+      "tested_sha": "13c2bdd2a09b3833c141813de464544ad0986a22",
+      "status": "accepted",
+      "actions": 1,
+      "before_state_hash": "29554aa62f4ea19d97ff24a1681e7b585a399ab5952c05c542547fc2a94826d3",
+      "after_state_hash": "93efb3221369cfb08af7cd214e95248360bf8b9250e17397818ca51ad02c3dbb",
+      "trace_sha256": "4fa14e6ce6bb0a33ea3cc8f1274bb2b7993cbb068a26ce9d22951486c344cb91"
+    },
+    {
+      "choice": "floor30-turn7-strike-boss.json",
+      "tested_sha": "d3dd7b05ecd534ad2b2fa9ae28effa4ff456101b",
+      "status": "accepted",
+      "actions": 1,
+      "before_state_hash": "93efb3221369cfb08af7cd214e95248360bf8b9250e17397818ca51ad02c3dbb",
+      "after_state_hash": "5200db1f8fd04f307b423f863f24d315be241947638220f688530d677e5da270",
+      "trace_sha256": "8b774438e18b602fc91bc4e2b277be618d108d4168520249279e16aeaa1e02a8"
+    }
+  ],
+  "limitations": [
+    "Native single-action summaries establish accepted delivery and trace hashes, not a battle or run result.",
+    "One preflight validation failure (missing reason) and one 0-action illegal selection proposal are documented in README; neither reached the game."
+  ]
+}
