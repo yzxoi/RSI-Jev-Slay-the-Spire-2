@@ -1,0 +1,7 @@
+# E058 — held-out headless route validation
+
+Issue: [#108](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/108). E057's optional cautious route policy changed four map decisions, all on one development seed. This held-out test evaluates whether the same unmodified rule is encountered and helpful on new seeds. Baseline is `planfixed`; treatment is `planfixed_cautious_route` at main merge `cded43435b18bba62191f3ece9f20736c11097d4`. No policy implementation change is permitted in this experiment.
+
+Fixed seeds: `e058_holdout_001` through `_006`; Ironclad and Silent; A0 and A10; 24 matched pairs / 48 episodes, each at most 1,500 actions or 180 seconds, three workers. Pinned `sts2-cli` commit `084d1aa3d8e118ca7ce8d8774ad16d6be9c92367`, game expected v0.111.0 and SDK 9.0.318. No Jev/Astra calls. Execute `python3 -m scripts.evaluate_route_e058`, with ignored local headless dependencies set up as in `scripts/setup_headless.py`.
+
+Decision rule fixed before execution: change the default only if all 24 pairs complete normally, ≥6 treatment route overrides occur across ≥3 distinct seeds, better−worse ≥3 pairs overall, and A10 better≥worse. Otherwise retain the optional policy and close this PR as negative or inconclusive. Report all outcomes, errors, raw trace hashes and dependency versions separately from native results. A headless matched cohort cannot estimate visible-game win rate.
