@@ -26,7 +26,7 @@ class SelectionGuardTests(unittest.TestCase):
         self.assertLess(len(kept), len(offered))
 
     def test_does_not_filter_other_selection_or_safe_threat(self):
-        for change in ('upgrade', 'no_attack', 'enough_block', 'unaffordable'):
+        for change in ('upgrade', 'no_attack', 'enough_block', 'unaffordable', 'invalid_cost'):
             with self.subTest(change=change):
                 raw = frozen()
                 if change == 'upgrade':
@@ -36,8 +36,10 @@ class SelectionGuardTests(unittest.TestCase):
                         enemy['intents'] = []
                 elif change == 'enough_block':
                     raw['combat']['player']['block'] = 31
-                else:
+                elif change == 'unaffordable':
                     raw['combat']['player']['energy'] = 0
+                else:
+                    raw['selection']['cards'][3]['energy_cost'] = -1
                 offered = candidates(raw)
                 kept, report = preserve_exhaust_block(raw, offered)
                 self.assertEqual(kept, offered)

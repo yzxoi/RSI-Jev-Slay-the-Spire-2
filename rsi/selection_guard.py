@@ -42,7 +42,7 @@ def preserve_exhaust_block(raw, offered):
         cost = card.get('energy_cost')
         block_value = next((v.get('current_value') for v in card.get('dynamic_values', [])
                             if v.get('name') == 'Block'), 0)
-        if not isinstance(cost, int) or cost > energy or not isinstance(block_value, (int, float)):
+        if not isinstance(cost, int) or not 0 <= cost <= energy or not isinstance(block_value, (int, float)):
             continue
         # Exhausting another card satisfies Evil Eye's same-turn bonus.
         if 2 * block_value >= 8:
