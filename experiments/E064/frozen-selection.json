@@ -1,0 +1,163 @@
+{
+  "source": {
+    "game_run_id": "EC0JQCUP6QMC",
+    "floor": 33,
+    "turn": 2,
+    "state_hash": "a56b1eea3dc519fb2810313ec2566f50a200d5f225d8c622adc88650713b39ef",
+    "trace_sha256": "57c5e0cb6903b9c70f6c30cb3ff232bdcc3d0dc8381f539330d86e54c216279e",
+    "baseline_selected": {
+      "action": "select_deck_card",
+      "option_index": 3
+    }
+  },
+  "raw": {
+    "screen": "CARD_SELECTION",
+    "in_combat": true,
+    "selection": {
+      "kind": "combat_hand_select",
+      "prompt": "[center]选择[blue]1[/blue]张牌来[gold]消耗[/gold]。[/center]",
+      "cards": [
+        {
+          "index": 0,
+          "selected": false,
+          "card_id": "INFLAME",
+          "name": "燃烧",
+          "upgraded": false,
+          "card_type": "Power",
+          "rarity": "Uncommon",
+          "costs_x": false,
+          "star_costs_x": false,
+          "energy_cost": 1,
+          "star_cost": 0,
+          "rules_text": "获得{StrengthPower:diff()}点力量。",
+          "resolved_rules_text": "获得2点力量。",
+          "dynamic_values": [
+            {
+              "name": "StrengthPower",
+              "base_value": 2,
+              "current_value": 2,
+              "enchanted_value": 2,
+              "is_modified": false,
+              "was_just_upgraded": false
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "selected": false,
+          "card_id": "TRUE_GRIT",
+          "name": "坚毅",
+          "upgraded": false,
+          "card_type": "Skill",
+          "rarity": "Common",
+          "costs_x": false,
+          "star_costs_x": false,
+          "energy_cost": 1,
+          "star_cost": 0,
+          "rules_text": "获得{Block:diff()}点格挡。 {IfUpgraded:show:| 随机}消耗1张牌。",
+          "resolved_rules_text": "获得8点格挡。 随机消耗1张牌。",
+          "dynamic_values": [
+            {
+              "name": "Block",
+              "base_value": 7,
+              "current_value": 8,
+              "enchanted_value": 7,
+              "is_modified": true,
+              "was_just_upgraded": false
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "selected": false,
+          "card_id": "STRIKE_IRONCLAD",
+          "name": "打击",
+          "upgraded": false,
+          "card_type": "Attack",
+          "rarity": "Basic",
+          "costs_x": false,
+          "star_costs_x": false,
+          "energy_cost": 1,
+          "star_cost": 0,
+          "rules_text": "造成{Damage:diff()}点伤害。",
+          "resolved_rules_text": "造成6点伤害。",
+          "dynamic_values": [
+            {
+              "name": "Damage",
+              "base_value": 6,
+              "current_value": 6,
+              "enchanted_value": 6,
+              "is_modified": false,
+              "was_just_upgraded": false
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "selected": false,
+          "card_id": "EVIL_EYE",
+          "name": "邪眼",
+          "upgraded": false,
+          "card_type": "Skill",
+          "rarity": "Uncommon",
+          "costs_x": false,
+          "star_costs_x": false,
+          "energy_cost": 1,
+          "star_cost": 0,
+          "rules_text": "获得{Block:diff()}点格挡。 如果你在本回合消耗过卡牌，则额外获得{Block:diff()}点格挡。",
+          "resolved_rules_text": "获得9点格挡。 如果你在本回合消耗过卡牌，则额外获得9点格挡。",
+          "dynamic_values": [
+            {
+              "name": "Block",
+              "base_value": 8,
+              "current_value": 9,
+              "enchanted_value": 8,
+              "is_modified": true,
+              "was_just_upgraded": false
+            }
+          ]
+        }
+      ]
+    },
+    "combat": {
+      "player": {
+        "current_hp": 36,
+        "block": 0,
+        "energy": 2
+      },
+      "enemies": [
+        {
+          "enemy_id": "CRUSHER",
+          "intents": [
+            {
+              "index": 0,
+              "intent_type": "Attack",
+              "label": "4",
+              "damage": 4,
+              "hits": 1,
+              "total_damage": 4,
+              "status_card_count": null
+            }
+          ]
+        },
+        {
+          "enemy_id": "ROCKET",
+          "intents": [
+            {
+              "index": 0,
+              "intent_type": "Attack",
+              "label": "27",
+              "damage": 27,
+              "hits": 1,
+              "total_damage": 27,
+              "status_card_count": null
+            }
+          ]
+        }
+      ]
+    },
+    "available_actions": [
+      "select_deck_card"
+    ]
+  }
+}
