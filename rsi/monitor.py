@@ -118,7 +118,7 @@ class Projection:
         elif kind in ("floor_plan", "room_plan"):
             data = data or {}
             self.plan = {"kind": kind, "floor": data.get("floor", data.get("start_floor")),
-                         "guidance": _short(data.get("guidance"), 360)}
+                         "guidance": _short(data.get("guidance"), 2000)}
             self.game_run_id = data.get("run_id") or self.game_run_id
         elif kind == "before":
             self.pending = {"context": _context(data or {}), "candidates": []}
@@ -367,9 +367,11 @@ def main():
                      replay_trace=args.replay_trace, replay_interval=args.replay_interval)
     server = serve(feed, port=args.port)
     if args.open:
+        profile = ROOT / "artifacts/runs/monitor-chrome-profile"
         subprocess.Popen(["open", "-na", "Google Chrome", "--args",
                           f"--app=http://127.0.0.1:{server.server_port}/",
-                          "--window-size=460,760"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                          "--window-size=460,760", "--window-position=30,90",
+                          f"--user-data-dir={profile}"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     try:
         server.serve_forever(poll_interval=0.2)
     except KeyboardInterrupt:
