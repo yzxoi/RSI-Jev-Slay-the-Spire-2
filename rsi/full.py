@@ -59,12 +59,13 @@ def macro_candidates(state, history=None):
     return out
 
 
-def fixed_macro(state, choices):
+def fixed_macro(state, choices, cautious_route=False):
     d=state['decision']; player=state.get('player', {})
     if d=='shop': return choices[-1]
     if d=='map_select':
         hp=player.get('hp',0)/max(1,player.get('max_hp',1))
         rank={'RestSite': 8 if hp<.6 else 4,'Rest':8 if hp<.6 else 4,'Treasure':9,'Shop':5 if player.get('gold',0)>150 else -1,'Monster':3,'Unknown':2,'Event':2,'Elite':-3,'Boss':0}
+        if cautious_route and hp<=.45:rank['Unknown']=4
         return max(choices,key=lambda c:rank.get((c.get('details') or {}).get('type'),0))
     if d=='rest_site':
         preferred='HEAL' if player.get('hp',0)<player.get('max_hp',1)*.65 else 'SMITH'
@@ -97,13 +98,21 @@ def episode(config, manifest, jev=None):
                     selected,call=jev.choose({'state':model_state(state),'strategy':STRATEGY},choices,trace)
                     result['model_calls']+=not call.get('cache_hit',False);result['cache_hits']=result.get('cache_hits',0)+call.get('cache_hit',False);result['cost_usd']+=call['usage'].get('cost',0)
                 elif config['policy']=='first': selected=choices[0]
-                elif config['policy'] in ['planned','planfixed','triggered','retaliate']:
+                elif config['policy'] in ['planned','planfixed','planfixed_cautious_route','triggered','retaliate']:
                     selected,planning=choose_plan(state,choices,triggers=config['policy'] in ['triggered','retaliate'],retaliation=config['policy']=='retaliate');trace.write('planning',planning)
                 else:
                     choices=computed_candidates(state,choices); selected=greedy_choice(state,choices)
             else:
                 choices=macro_candidates(state,history)
-                if config['policy'] not in ['hybrid','planned','jev','guarded','equipped','triggered','retaliate'] or len(choices)==1: selected=fixed_macro(state,choices)
+                if config['policy'] not in ['hybrid','planned','jev','guarded','equipped','triggered','retaliate'] or len(choices)==1:
+                    selected=fixed_macro(state,choices,cautious_route=config['policy']=='planfixed_cautious_route')
+                    if d=='map_select' and config['policy']=='planfixed_cautious_route':
+                        baseline_choice=fixed_macro(state,choices)
+                        if selected['action']!=baseline_choice['action']:
+                            result['route_overrides']=result.get('route_overrides',0)+1
+                            trace.write('route_override',{'hp':state.get('player',{}).get('hp'),
+                                                          'max_hp':state.get('player',{}).get('max_hp'),
+                                                          'baseline':baseline_choice,'treatment':selected})
                 else:
                     context={'state':model_state(state),'strategy':STRATEGY,'previous_decision':history.get('previous')}
                     selected,call=jev.choose(context,choices,trace)
@@ -131,7 +140,7 @@ def episode(config, manifest, jev=None):
 def main():
     p=argparse.ArgumentParser();p.add_argument('--characters',default=','.join(CHARACTERS));p.add_argument('--seeds',default='full_dev_001');p.add_argument('--policies',default='first,greedy');p.add_argument('--ascension',type=int,default=10);p.add_argument('--workers',type=int,default=3);p.add_argument('--max-calls',type=int,default=12000);p.add_argument('--max-usd',type=float,default=3);p.add_argument('--output',required=True);p.add_argument('--matched-decisions',action='store_true');a=p.parse_args()
     chars=a.characters.split(','); policies=a.policies.split(',')
-    if set(chars)-set(CHARACTERS) or set(policies)-{'first','greedy','hybrid','planned','planfixed','jev','guarded','equipped','triggered','retaliate'}:p.error('Invalid character or policy')
+    if set(chars)-set(CHARACTERS) or set(policies)-{'first','greedy','hybrid','planned','planfixed','planfixed_cautious_route','jev','guarded','equipped','triggered','retaliate'}:p.error('Invalid character or policy')
     manifest=version_manifest()
     if manifest['tracked_dirty']:raise RuntimeError('Commit implementation before evaluation')
     budget=Budget(a.max_calls,a.max_usd,conservative_failures=True);jev=Jev(budget) if set(policies)&{'hybrid','planned','jev','guarded','equipped','triggered','retaliate'} else None

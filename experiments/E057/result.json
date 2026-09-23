@@ -1,0 +1,1166 @@
+{
+  "schema_version": 1,
+  "experiment": "E057",
+  "manifest": {
+    "schema_version": 1,
+    "code_commit": "7ca1f5eea58a45b5618108ac9205946cc5d18923",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "675fdcb39662b7e5a9ed0eabcec13096a9cb2eb015ea53f588f5998e05dcaf21",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+  },
+  "configs": [
+    {
+      "character": "Ironclad",
+      "ascension": 0,
+      "seed": "e057_route_001",
+      "policy": "planfixed",
+      "max_steps": 1500,
+      "max_seconds": 180
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 0,
+      "seed": "e057_route_001",
+      "policy": "planfixed_cautious_route",
+      "max_steps": 1500,
+      "max_seconds": 180
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e057_route_001",
+      "policy": "planfixed",
+      "max_steps": 1500,
+      "max_seconds": 180
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e057_route_001",
+      "policy": "planfixed_cautious_route",
+      "max_steps": 1500,
+      "max_seconds": 180
+    },
+    {
+      "character": "Silent",
+      "ascension": 0,
+      "seed": "e057_route_001",
+      "policy": "planfixed",
+      "max_steps": 1500,
+      "max_seconds": 180
+    },
+    {
+      "character": "Silent",
+      "ascension": 0,
+      "seed": "e057_route_001",
+      "policy": "planfixed_cautious_route",
+      "max_steps": 1500,
+      "max_seconds": 180
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e057_route_001",
+      "policy": "planfixed",
+      "max_steps": 1500,
+      "max_seconds": 180
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e057_route_001",
+      "policy": "planfixed_cautious_route",
+      "max_steps": 1500,
+      "max_seconds": 180
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 0,
+      "seed": "e057_route_002",
+      "policy": "planfixed",
+      "max_steps": 1500,
+      "max_seconds": 180
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 0,
+      "seed": "e057_route_002",
+      "policy": "planfixed_cautious_route",
+      "max_steps": 1500,
+      "max_seconds": 180
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e057_route_002",
+      "policy": "planfixed",
+      "max_steps": 1500,
+      "max_seconds": 180
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e057_route_002",
+      "policy": "planfixed_cautious_route",
+      "max_steps": 1500,
+      "max_seconds": 180
+    },
+    {
+      "character": "Silent",
+      "ascension": 0,
+      "seed": "e057_route_002",
+      "policy": "planfixed",
+      "max_steps": 1500,
+      "max_seconds": 180
+    },
+    {
+      "character": "Silent",
+      "ascension": 0,
+      "seed": "e057_route_002",
+      "policy": "planfixed_cautious_route",
+      "max_steps": 1500,
+      "max_seconds": 180
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e057_route_002",
+      "policy": "planfixed",
+      "max_steps": 1500,
+      "max_seconds": 180
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e057_route_002",
+      "policy": "planfixed_cautious_route",
+      "max_steps": 1500,
+      "max_seconds": 180
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 0,
+      "seed": "e057_route_003",
+      "policy": "planfixed",
+      "max_steps": 1500,
+      "max_seconds": 180
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 0,
+      "seed": "e057_route_003",
+      "policy": "planfixed_cautious_route",
+      "max_steps": 1500,
+      "max_seconds": 180
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e057_route_003",
+      "policy": "planfixed",
+      "max_steps": 1500,
+      "max_seconds": 180
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e057_route_003",
+      "policy": "planfixed_cautious_route",
+      "max_steps": 1500,
+      "max_seconds": 180
+    },
+    {
+      "character": "Silent",
+      "ascension": 0,
+      "seed": "e057_route_003",
+      "policy": "planfixed",
+      "max_steps": 1500,
+      "max_seconds": 180
+    },
+    {
+      "character": "Silent",
+      "ascension": 0,
+      "seed": "e057_route_003",
+      "policy": "planfixed_cautious_route",
+      "max_steps": 1500,
+      "max_seconds": 180
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e057_route_003",
+      "policy": "planfixed",
+      "max_steps": 1500,
+      "max_seconds": 180
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e057_route_003",
+      "policy": "planfixed_cautious_route",
+      "max_steps": 1500,
+      "max_seconds": 180
+    }
+  ],
+  "results": [
+    {
+      "character": "Ironclad",
+      "ascension": 0,
+      "seed": "e057_route_001",
+      "policy": "planfixed",
+      "max_steps": 1500,
+      "max_seconds": 180,
+      "run_id": "d90c2ef9-25b6-4fed-9890-c4e1108fef8b",
+      "status": "normal_defeat",
+      "steps": 114,
+      "model_calls": 0,
+      "cost_usd": 0.0,
+      "initial_state_hash": "21d37ddcb68706f34bbbb0b8d79ad4fcaf37ec49e03fbc817ecc9171cc450e12",
+      "engine_log_sha256": "00d1afc8fdaec0f5411b09b37d40bc9ccbf636a4bcef5b0a2584776593725515",
+      "act": 1,
+      "floor": 8,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 4.769,
+      "scenes": {
+        "event_choice": 1,
+        "card_reward": 7,
+        "map_select": 7,
+        "combat_play": 94,
+        "card_select": 5,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/d90c2ef9-25b6-4fed-9890-c4e1108fef8b/decisions.jsonl",
+      "trace_sha256": "b40b6e9987fd9a77c40461c6ae2d6e7a8475ed98d79d0bb381c0694a55851235"
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 0,
+      "seed": "e057_route_001",
+      "policy": "planfixed_cautious_route",
+      "max_steps": 1500,
+      "max_seconds": 180,
+      "run_id": "14b0379a-8fd3-41c2-9082-11539514ba19",
+      "status": "normal_defeat",
+      "steps": 127,
+      "model_calls": 0,
+      "cost_usd": 0.0,
+      "initial_state_hash": "21d37ddcb68706f34bbbb0b8d79ad4fcaf37ec49e03fbc817ecc9171cc450e12",
+      "route_overrides": 1,
+      "engine_log_sha256": "e6d3f5eab7ab50f0cbdd499a7234dea73b32e09edecc3be83e7278f1a75af5df",
+      "act": 1,
+      "floor": 12,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 5.43,
+      "scenes": {
+        "event_choice": 6,
+        "card_reward": 8,
+        "map_select": 11,
+        "combat_play": 96,
+        "card_select": 5,
+        "rest_site": 1,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/14b0379a-8fd3-41c2-9082-11539514ba19/decisions.jsonl",
+      "trace_sha256": "b55f9a4a4fee70ec6dfc61d8afacf87d490abf9183300d58a96ce83a1152eecd"
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e057_route_001",
+      "policy": "planfixed",
+      "max_steps": 1500,
+      "max_seconds": 180,
+      "run_id": "382a44b1-f1f0-4631-890d-b64137ed3fae",
+      "status": "normal_defeat",
+      "steps": 93,
+      "model_calls": 0,
+      "cost_usd": 0.0,
+      "initial_state_hash": "d6b6e02317922737852e4128ec3412ca3b4b7e9c641b42fcba9e75f894783adf",
+      "engine_log_sha256": "78ec94db32a7d827a53bbc9307117a670d2dc5a6cea2a86a792d538638f91347",
+      "act": 1,
+      "floor": 6,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 4.24,
+      "scenes": {
+        "event_choice": 1,
+        "card_reward": 5,
+        "map_select": 5,
+        "combat_play": 75,
+        "card_select": 7,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/382a44b1-f1f0-4631-890d-b64137ed3fae/decisions.jsonl",
+      "trace_sha256": "92e37f20d9ae3f56b61279fd7ecb4029a1ec220fb2f507242d4fe97addd1fc1f"
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e057_route_001",
+      "policy": "planfixed_cautious_route",
+      "max_steps": 1500,
+      "max_seconds": 180,
+      "run_id": "6aac7239-8ff9-4428-a413-8b2b15205b1d",
+      "status": "normal_defeat",
+      "steps": 85,
+      "model_calls": 0,
+      "cost_usd": 0.0,
+      "initial_state_hash": "d6b6e02317922737852e4128ec3412ca3b4b7e9c641b42fcba9e75f894783adf",
+      "route_overrides": 1,
+      "engine_log_sha256": "ffc064e5de60dd54f17a49921870a3b1b8dc741b850f112d9c476e3fef392e6b",
+      "act": 1,
+      "floor": 7,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 3.268,
+      "scenes": {
+        "event_choice": 6,
+        "card_reward": 5,
+        "map_select": 6,
+        "combat_play": 63,
+        "card_select": 5,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/6aac7239-8ff9-4428-a413-8b2b15205b1d/decisions.jsonl",
+      "trace_sha256": "7e28fdc8ea4d7e6310143f706b301adfef31684b7a9fa98beb413c5d108ada64"
+    },
+    {
+      "character": "Silent",
+      "ascension": 0,
+      "seed": "e057_route_001",
+      "policy": "planfixed",
+      "max_steps": 1500,
+      "max_seconds": 180,
+      "run_id": "d5a7a80c-0ae4-4382-8374-e828066afb97",
+      "status": "normal_defeat",
+      "steps": 329,
+      "model_calls": 0,
+      "cost_usd": 0.0,
+      "initial_state_hash": "c39118a9e87806ef6698d3b7f7cc0fd3aefece84d84e377c3251f7b12826923b",
+      "engine_log_sha256": "9af28ea362d5e1cbaa4678b493ea7119e3fd837893dcb4b8193013b33ec52ea7",
+      "act": 1,
+      "floor": 12,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 10.511,
+      "scenes": {
+        "event_choice": 1,
+        "card_reward": 9,
+        "map_select": 11,
+        "combat_play": 275,
+        "card_select": 32,
+        "rest_site": 1,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/d5a7a80c-0ae4-4382-8374-e828066afb97/decisions.jsonl",
+      "trace_sha256": "9acde27826ea564bcda4c3f561ac2d1a08f0b9d768ac09b9be79e015e904a808"
+    },
+    {
+      "character": "Silent",
+      "ascension": 0,
+      "seed": "e057_route_001",
+      "policy": "planfixed_cautious_route",
+      "max_steps": 1500,
+      "max_seconds": 180,
+      "run_id": "657fe58b-590a-4a3c-a9ac-1b175c1df619",
+      "status": "normal_defeat",
+      "steps": 236,
+      "model_calls": 0,
+      "cost_usd": 0.0,
+      "initial_state_hash": "c39118a9e87806ef6698d3b7f7cc0fd3aefece84d84e377c3251f7b12826923b",
+      "route_overrides": 1,
+      "engine_log_sha256": "cf85d9b38e16b2102deaa888698ae93738a92859881e0bc01987028d81f3bd87",
+      "act": 1,
+      "floor": 11,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 7.807,
+      "scenes": {
+        "event_choice": 6,
+        "card_reward": 7,
+        "map_select": 10,
+        "combat_play": 191,
+        "card_select": 21,
+        "rest_site": 1,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/657fe58b-590a-4a3c-a9ac-1b175c1df619/decisions.jsonl",
+      "trace_sha256": "ae6c2a67575d301b50685f9198d434be05e43323e54124bbeb2bdc386a1056c9"
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e057_route_001",
+      "policy": "planfixed",
+      "max_steps": 1500,
+      "max_seconds": 180,
+      "run_id": "5e637004-0633-4e62-8cf4-a7ce24a8dcea",
+      "status": "normal_defeat",
+      "steps": 130,
+      "model_calls": 0,
+      "cost_usd": 0.0,
+      "initial_state_hash": "be7524984fe4cf906d5a217d4c0191d831883010d19d55d0242e32eb5b57c571",
+      "engine_log_sha256": "ea6fa41c5f50d44d0a4664bd8395ed36d58e55f0723f42972b2302691cc538fa",
+      "act": 1,
+      "floor": 6,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 4.79,
+      "scenes": {
+        "event_choice": 1,
+        "card_reward": 5,
+        "map_select": 5,
+        "combat_play": 110,
+        "card_select": 9,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/5e637004-0633-4e62-8cf4-a7ce24a8dcea/decisions.jsonl",
+      "trace_sha256": "81482e22f8ea5f7f1925b59fd2744e16822f86a302a4abf338f02d80f4848f9b"
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e057_route_001",
+      "policy": "planfixed_cautious_route",
+      "max_steps": 1500,
+      "max_seconds": 180,
+      "run_id": "95d89060-7a94-4331-97d6-dd8483eeb935",
+      "status": "normal_defeat",
+      "steps": 137,
+      "model_calls": 0,
+      "cost_usd": 0.0,
+      "initial_state_hash": "be7524984fe4cf906d5a217d4c0191d831883010d19d55d0242e32eb5b57c571",
+      "route_overrides": 1,
+      "engine_log_sha256": "b39be890fdb1a1f0b20f91f2abcf1a494491e961002e6581540ba6f8a4f44983",
+      "act": 1,
+      "floor": 7,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 4.989,
+      "scenes": {
+        "event_choice": 6,
+        "card_reward": 5,
+        "map_select": 6,
+        "combat_play": 112,
+        "card_select": 8,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/95d89060-7a94-4331-97d6-dd8483eeb935/decisions.jsonl",
+      "trace_sha256": "6d2195555039461c3f68ea845d70a0260a2b98c19acf863f5c5a6a3b2e7e26b3"
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 0,
+      "seed": "e057_route_002",
+      "policy": "planfixed",
+      "max_steps": 1500,
+      "max_seconds": 180,
+      "run_id": "487823ea-3185-4c80-ae72-85b8564a7066",
+      "status": "normal_defeat",
+      "steps": 127,
+      "model_calls": 0,
+      "cost_usd": 0.0,
+      "initial_state_hash": "543399d952a04a481537a21a1e8b02468cae8cbfbf178902e5a6a6fdcb5173c2",
+      "engine_log_sha256": "6ca60b8479cd1317a14ee988ed30e1b4e5b675bfedb3c861bd21cec7e22589dc",
+      "act": 1,
+      "floor": 9,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 4.969,
+      "scenes": {
+        "event_choice": 2,
+        "map_select": 8,
+        "combat_play": 110,
+        "card_reward": 5,
+        "card_select": 1,
+        "rest_site": 1,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/487823ea-3185-4c80-ae72-85b8564a7066/decisions.jsonl",
+      "trace_sha256": "009b1de0b0bd10372e0b19304ce340beb36f104074b05b7647e389e8a7f592cc"
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 0,
+      "seed": "e057_route_002",
+      "policy": "planfixed_cautious_route",
+      "max_steps": 1500,
+      "max_seconds": 180,
+      "run_id": "380fe56f-51b5-4109-805e-2c720260c847",
+      "status": "normal_defeat",
+      "steps": 127,
+      "model_calls": 0,
+      "cost_usd": 0.0,
+      "initial_state_hash": "543399d952a04a481537a21a1e8b02468cae8cbfbf178902e5a6a6fdcb5173c2",
+      "engine_log_sha256": "6ca60b8479cd1317a14ee988ed30e1b4e5b675bfedb3c861bd21cec7e22589dc",
+      "act": 1,
+      "floor": 9,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 4.916,
+      "scenes": {
+        "event_choice": 2,
+        "map_select": 8,
+        "combat_play": 110,
+        "card_reward": 5,
+        "card_select": 1,
+        "rest_site": 1,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/380fe56f-51b5-4109-805e-2c720260c847/decisions.jsonl",
+      "trace_sha256": "40123813ac1e0276a82ffa1a104f8965d1f7fbe5b4507591f6adf7b666a71934"
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e057_route_002",
+      "policy": "planfixed",
+      "max_steps": 1500,
+      "max_seconds": 180,
+      "run_id": "a0c7dc93-c51e-4a98-a005-9cffd688a541",
+      "status": "normal_defeat",
+      "steps": 101,
+      "model_calls": 0,
+      "cost_usd": 0.0,
+      "initial_state_hash": "9a950e97676659c1296c625502e6652db8fbb3b036981fceebba901bbd3836a6",
+      "engine_log_sha256": "53190b8e49a6fb7c3f4645f808c2dbe282904935517a7b12ebfaf710e38c517a",
+      "act": 1,
+      "floor": 6,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 4.084,
+      "scenes": {
+        "event_choice": 1,
+        "map_select": 5,
+        "combat_play": 91,
+        "card_reward": 4,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/a0c7dc93-c51e-4a98-a005-9cffd688a541/decisions.jsonl",
+      "trace_sha256": "f31926a2169250f7f01d7f5cc53c2449edeff0e5d624fce39e4e6b830db113e1"
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e057_route_002",
+      "policy": "planfixed_cautious_route",
+      "max_steps": 1500,
+      "max_seconds": 180,
+      "run_id": "ef951fda-d5d1-4bcf-bbb5-d029ffb2f2a5",
+      "status": "normal_defeat",
+      "steps": 101,
+      "model_calls": 0,
+      "cost_usd": 0.0,
+      "initial_state_hash": "9a950e97676659c1296c625502e6652db8fbb3b036981fceebba901bbd3836a6",
+      "engine_log_sha256": "53190b8e49a6fb7c3f4645f808c2dbe282904935517a7b12ebfaf710e38c517a",
+      "act": 1,
+      "floor": 6,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 4.076,
+      "scenes": {
+        "event_choice": 1,
+        "map_select": 5,
+        "combat_play": 91,
+        "card_reward": 4,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/ef951fda-d5d1-4bcf-bbb5-d029ffb2f2a5/decisions.jsonl",
+      "trace_sha256": "c50e91277c265fd1f8633499d47c7a809b31fbeaea418b057b1ab4279d59e8b2"
+    },
+    {
+      "character": "Silent",
+      "ascension": 0,
+      "seed": "e057_route_002",
+      "policy": "planfixed",
+      "max_steps": 1500,
+      "max_seconds": 180,
+      "run_id": "b724aab9-0085-4896-bb32-62dc3b724e14",
+      "status": "normal_defeat",
+      "steps": 308,
+      "model_calls": 0,
+      "cost_usd": 0.0,
+      "initial_state_hash": "89b32c12d36a19fb469c2c78601f3565f3c8ba93f582b5f63deb1e5f6a47de2f",
+      "engine_log_sha256": "e1eedf001dcd9ba5b772cf273beb31c8c29aa383ff7f8ecad7afaf6843055274",
+      "act": 1,
+      "floor": 17,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 10.265,
+      "scenes": {
+        "event_choice": 3,
+        "map_select": 16,
+        "combat_play": 258,
+        "card_select": 19,
+        "card_reward": 9,
+        "rest_site": 3,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/b724aab9-0085-4896-bb32-62dc3b724e14/decisions.jsonl",
+      "trace_sha256": "e46e62d90a8640f21210bcc0afa132069c453fdd4359ebf9b95c3bb1d9bf6ec5"
+    },
+    {
+      "character": "Silent",
+      "ascension": 0,
+      "seed": "e057_route_002",
+      "policy": "planfixed_cautious_route",
+      "max_steps": 1500,
+      "max_seconds": 180,
+      "run_id": "4560ae2b-1f0c-4879-9215-a3bb4d9ff49e",
+      "status": "normal_defeat",
+      "steps": 308,
+      "model_calls": 0,
+      "cost_usd": 0.0,
+      "initial_state_hash": "89b32c12d36a19fb469c2c78601f3565f3c8ba93f582b5f63deb1e5f6a47de2f",
+      "engine_log_sha256": "e1eedf001dcd9ba5b772cf273beb31c8c29aa383ff7f8ecad7afaf6843055274",
+      "act": 1,
+      "floor": 17,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 10.323,
+      "scenes": {
+        "event_choice": 3,
+        "map_select": 16,
+        "combat_play": 258,
+        "card_select": 19,
+        "card_reward": 9,
+        "rest_site": 3,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/4560ae2b-1f0c-4879-9215-a3bb4d9ff49e/decisions.jsonl",
+      "trace_sha256": "9c1c09008a8408b7453e911f30cf27ceb87184eabcf281129efbaaaf65c5cb17"
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e057_route_002",
+      "policy": "planfixed",
+      "max_steps": 1500,
+      "max_seconds": 180,
+      "run_id": "d900b432-f3ea-4a84-902b-bfce1ec6b81d",
+      "status": "normal_defeat",
+      "steps": 118,
+      "model_calls": 0,
+      "cost_usd": 0.0,
+      "initial_state_hash": "75cc9621635847ac7d0b89e0c48483f00c1074c644db9d8de3dac54bcaa856d4",
+      "engine_log_sha256": "10dc8d5abc48949ad96fea767beeaa6739d6e2180ec87415aadcadf1b95ea567",
+      "act": 1,
+      "floor": 6,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 4.393,
+      "scenes": {
+        "event_choice": 1,
+        "map_select": 5,
+        "combat_play": 103,
+        "card_select": 5,
+        "card_reward": 4,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/d900b432-f3ea-4a84-902b-bfce1ec6b81d/decisions.jsonl",
+      "trace_sha256": "218f39fed4e2c7f902a89ce357d0c0f1b5dd544e834e3f4223e28c030303a0c9"
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e057_route_002",
+      "policy": "planfixed_cautious_route",
+      "max_steps": 1500,
+      "max_seconds": 180,
+      "run_id": "fc503c17-23ff-4a91-9ead-a0868f2b1cfb",
+      "status": "normal_defeat",
+      "steps": 118,
+      "model_calls": 0,
+      "cost_usd": 0.0,
+      "initial_state_hash": "75cc9621635847ac7d0b89e0c48483f00c1074c644db9d8de3dac54bcaa856d4",
+      "engine_log_sha256": "10dc8d5abc48949ad96fea767beeaa6739d6e2180ec87415aadcadf1b95ea567",
+      "act": 1,
+      "floor": 6,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 4.446,
+      "scenes": {
+        "event_choice": 1,
+        "map_select": 5,
+        "combat_play": 103,
+        "card_select": 5,
+        "card_reward": 4,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/fc503c17-23ff-4a91-9ead-a0868f2b1cfb/decisions.jsonl",
+      "trace_sha256": "3aa3f6660d0e3a7cecfab732810eb86556e3dbc08fff5ab1046c3c052e72fa2e"
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 0,
+      "seed": "e057_route_003",
+      "policy": "planfixed",
+      "max_steps": 1500,
+      "max_seconds": 180,
+      "run_id": "6b49a764-f8df-41e5-ba2e-0853cbcc6e96",
+      "status": "normal_defeat",
+      "steps": 110,
+      "model_calls": 0,
+      "cost_usd": 0.0,
+      "initial_state_hash": "f6bb878ac2d505e485e1c81896b8deb4ab3ac027d15e3620be3a18848a26e30b",
+      "engine_log_sha256": "512921b2fe701462162f9ba9989028675410753970a20d15701cbb8e3a7157fc",
+      "act": 1,
+      "floor": 17,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 4.182,
+      "scenes": {
+        "event_choice": 6,
+        "card_select": 7,
+        "map_select": 16,
+        "combat_play": 72,
+        "card_reward": 5,
+        "shop": 1,
+        "rest_site": 3,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/6b49a764-f8df-41e5-ba2e-0853cbcc6e96/decisions.jsonl",
+      "trace_sha256": "bda18ad856486f4f41de2442d8831e5abdc3597e9a22ca0c31519e84b873d496"
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 0,
+      "seed": "e057_route_003",
+      "policy": "planfixed_cautious_route",
+      "max_steps": 1500,
+      "max_seconds": 180,
+      "run_id": "66983b0c-9e37-470e-86b6-4915b9c69f95",
+      "status": "normal_defeat",
+      "steps": 110,
+      "model_calls": 0,
+      "cost_usd": 0.0,
+      "initial_state_hash": "f6bb878ac2d505e485e1c81896b8deb4ab3ac027d15e3620be3a18848a26e30b",
+      "engine_log_sha256": "512921b2fe701462162f9ba9989028675410753970a20d15701cbb8e3a7157fc",
+      "act": 1,
+      "floor": 17,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 4.173,
+      "scenes": {
+        "event_choice": 6,
+        "card_select": 7,
+        "map_select": 16,
+        "combat_play": 72,
+        "card_reward": 5,
+        "shop": 1,
+        "rest_site": 3,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/66983b0c-9e37-470e-86b6-4915b9c69f95/decisions.jsonl",
+      "trace_sha256": "bf33b05a0f46068ff2f9090ad3610817da862916cccb795fcf6053f981ac767e"
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e057_route_003",
+      "policy": "planfixed",
+      "max_steps": 1500,
+      "max_seconds": 180,
+      "run_id": "f24b7061-fa65-4786-94e0-07f8f61e87f9",
+      "status": "normal_defeat",
+      "steps": 116,
+      "model_calls": 0,
+      "cost_usd": 0.0,
+      "initial_state_hash": "45ba137372461e39f1a6a2107f95097b644ae88750f85a3b5c35b5b9960d2bbc",
+      "engine_log_sha256": "2c92345dd7c5945f2e7fe8667a59363a07c7d249fe1e84875f0db66e2e55429a",
+      "act": 1,
+      "floor": 17,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 4.438,
+      "scenes": {
+        "event_choice": 6,
+        "card_select": 5,
+        "map_select": 16,
+        "combat_play": 80,
+        "card_reward": 5,
+        "shop": 1,
+        "rest_site": 3,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/f24b7061-fa65-4786-94e0-07f8f61e87f9/decisions.jsonl",
+      "trace_sha256": "8db77e68db96652c0c1f40905ff5e29d57071c45b4da05b30d66fe8bc873274e"
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e057_route_003",
+      "policy": "planfixed_cautious_route",
+      "max_steps": 1500,
+      "max_seconds": 180,
+      "run_id": "dc9bea5c-96ca-42ba-8480-1e6af459ed9b",
+      "status": "normal_defeat",
+      "steps": 116,
+      "model_calls": 0,
+      "cost_usd": 0.0,
+      "initial_state_hash": "45ba137372461e39f1a6a2107f95097b644ae88750f85a3b5c35b5b9960d2bbc",
+      "engine_log_sha256": "2c92345dd7c5945f2e7fe8667a59363a07c7d249fe1e84875f0db66e2e55429a",
+      "act": 1,
+      "floor": 17,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 4.465,
+      "scenes": {
+        "event_choice": 6,
+        "card_select": 5,
+        "map_select": 16,
+        "combat_play": 80,
+        "card_reward": 5,
+        "shop": 1,
+        "rest_site": 3,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/dc9bea5c-96ca-42ba-8480-1e6af459ed9b/decisions.jsonl",
+      "trace_sha256": "ed65fa16edb55a195563c838c41a2aaa1ebdad51b4607152f008c8753a9c0ff9"
+    },
+    {
+      "character": "Silent",
+      "ascension": 0,
+      "seed": "e057_route_003",
+      "policy": "planfixed",
+      "max_steps": 1500,
+      "max_seconds": 180,
+      "run_id": "265f646e-25d1-4509-9250-3ad5e8b33de6",
+      "status": "normal_defeat",
+      "steps": 257,
+      "model_calls": 0,
+      "cost_usd": 0.0,
+      "initial_state_hash": "14917d5c95a904885909d212096110598c23b4929da5297f64c9a886e513db20",
+      "engine_log_sha256": "decd425289575f252851bee15675299dc557b51580d89ab3dd58bf5c8d7261c7",
+      "act": 2,
+      "floor": 6,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 8.126,
+      "scenes": {
+        "event_choice": 6,
+        "card_select": 29,
+        "map_select": 21,
+        "combat_play": 187,
+        "card_reward": 9,
+        "shop": 2,
+        "rest_site": 3,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/265f646e-25d1-4509-9250-3ad5e8b33de6/decisions.jsonl",
+      "trace_sha256": "67fd9b8dcf42571491d7e077e23f099062afa0956a307e1b808d645096670008"
+    },
+    {
+      "character": "Silent",
+      "ascension": 0,
+      "seed": "e057_route_003",
+      "policy": "planfixed_cautious_route",
+      "max_steps": 1500,
+      "max_seconds": 180,
+      "run_id": "c1fa6547-3325-4f83-9f7c-bb0a56c858de",
+      "status": "normal_defeat",
+      "steps": 257,
+      "model_calls": 0,
+      "cost_usd": 0.0,
+      "initial_state_hash": "14917d5c95a904885909d212096110598c23b4929da5297f64c9a886e513db20",
+      "engine_log_sha256": "decd425289575f252851bee15675299dc557b51580d89ab3dd58bf5c8d7261c7",
+      "act": 2,
+      "floor": 6,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 8.206,
+      "scenes": {
+        "event_choice": 6,
+        "card_select": 29,
+        "map_select": 21,
+        "combat_play": 187,
+        "card_reward": 9,
+        "shop": 2,
+        "rest_site": 3,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/c1fa6547-3325-4f83-9f7c-bb0a56c858de/decisions.jsonl",
+      "trace_sha256": "1e1fbf29b1725725d760608f6e49fed00837bf9e382f7522f380610e510c87dd"
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e057_route_003",
+      "policy": "planfixed",
+      "max_steps": 1500,
+      "max_seconds": 180,
+      "run_id": "1256f48a-b847-4862-b543-ac25795d7760",
+      "status": "normal_defeat",
+      "steps": 111,
+      "model_calls": 0,
+      "cost_usd": 0.0,
+      "initial_state_hash": "7fa663bc11fcc200cc19ba76f34b32c86526868788932f2c095916e51c6feb23",
+      "engine_log_sha256": "e05d3d9e273fd10393964434416d73b96170bb0915609f52bf6ce82ec9870b98",
+      "act": 1,
+      "floor": 9,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 4.14,
+      "scenes": {
+        "event_choice": 3,
+        "card_select": 11,
+        "map_select": 8,
+        "combat_play": 84,
+        "card_reward": 3,
+        "shop": 1,
+        "rest_site": 1,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/1256f48a-b847-4862-b543-ac25795d7760/decisions.jsonl",
+      "trace_sha256": "7332bb4e8796fad7c674899e4e5655277147b9a91cffa727db1a3bde84cd1cc5"
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e057_route_003",
+      "policy": "planfixed_cautious_route",
+      "max_steps": 1500,
+      "max_seconds": 180,
+      "run_id": "deb4a66b-0ae5-4623-afc5-e432bfdbd98a",
+      "status": "normal_defeat",
+      "steps": 111,
+      "model_calls": 0,
+      "cost_usd": 0.0,
+      "initial_state_hash": "7fa663bc11fcc200cc19ba76f34b32c86526868788932f2c095916e51c6feb23",
+      "engine_log_sha256": "e05d3d9e273fd10393964434416d73b96170bb0915609f52bf6ce82ec9870b98",
+      "act": 1,
+      "floor": 9,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 4.104,
+      "scenes": {
+        "event_choice": 3,
+        "card_select": 11,
+        "map_select": 8,
+        "combat_play": 84,
+        "card_reward": 3,
+        "shop": 1,
+        "rest_site": 1,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/deb4a66b-0ae5-4623-afc5-e432bfdbd98a/decisions.jsonl",
+      "trace_sha256": "d7404ee34834680dc11cc7967199dca9b469ec0aa60de5f9ab64db76c287f5cd"
+    }
+  ],
+  "paired": {
+    "baseline": "planfixed",
+    "treatment": "planfixed_cautious_route",
+    "outcomes": {
+      "better": 3,
+      "worse": 1,
+      "tie": 8
+    },
+    "pairs": [
+      {
+        "character": "Ironclad",
+        "seed": "e057_route_001",
+        "baseline": [
+          false,
+          1,
+          8
+        ],
+        "treatment": [
+          false,
+          1,
+          12
+        ],
+        "outcome": "better"
+      },
+      {
+        "character": "Ironclad",
+        "seed": "e057_route_001",
+        "baseline": [
+          false,
+          1,
+          6
+        ],
+        "treatment": [
+          false,
+          1,
+          7
+        ],
+        "outcome": "better"
+      },
+      {
+        "character": "Silent",
+        "seed": "e057_route_001",
+        "baseline": [
+          false,
+          1,
+          12
+        ],
+        "treatment": [
+          false,
+          1,
+          11
+        ],
+        "outcome": "worse"
+      },
+      {
+        "character": "Silent",
+        "seed": "e057_route_001",
+        "baseline": [
+          false,
+          1,
+          6
+        ],
+        "treatment": [
+          false,
+          1,
+          7
+        ],
+        "outcome": "better"
+      },
+      {
+        "character": "Ironclad",
+        "seed": "e057_route_002",
+        "baseline": [
+          false,
+          1,
+          9
+        ],
+        "treatment": [
+          false,
+          1,
+          9
+        ],
+        "outcome": "tie"
+      },
+      {
+        "character": "Ironclad",
+        "seed": "e057_route_002",
+        "baseline": [
+          false,
+          1,
+          6
+        ],
+        "treatment": [
+          false,
+          1,
+          6
+        ],
+        "outcome": "tie"
+      },
+      {
+        "character": "Silent",
+        "seed": "e057_route_002",
+        "baseline": [
+          false,
+          1,
+          17
+        ],
+        "treatment": [
+          false,
+          1,
+          17
+        ],
+        "outcome": "tie"
+      },
+      {
+        "character": "Silent",
+        "seed": "e057_route_002",
+        "baseline": [
+          false,
+          1,
+          6
+        ],
+        "treatment": [
+          false,
+          1,
+          6
+        ],
+        "outcome": "tie"
+      },
+      {
+        "character": "Ironclad",
+        "seed": "e057_route_003",
+        "baseline": [
+          false,
+          1,
+          17
+        ],
+        "treatment": [
+          false,
+          1,
+          17
+        ],
+        "outcome": "tie"
+      },
+      {
+        "character": "Ironclad",
+        "seed": "e057_route_003",
+        "baseline": [
+          false,
+          1,
+          17
+        ],
+        "treatment": [
+          false,
+          1,
+          17
+        ],
+        "outcome": "tie"
+      },
+      {
+        "character": "Silent",
+        "seed": "e057_route_003",
+        "baseline": [
+          false,
+          2,
+          6
+        ],
+        "treatment": [
+          false,
+          2,
+          6
+        ],
+        "outcome": "tie"
+      },
+      {
+        "character": "Silent",
+        "seed": "e057_route_003",
+        "baseline": [
+          false,
+          1,
+          9
+        ],
+        "treatment": [
+          false,
+          1,
+          9
+        ],
+        "outcome": "tie"
+      }
+    ]
+  },
+  "a10_outcomes": {
+    "better": 2,
+    "worse": 0,
+    "tie": 4,
+    "incomplete_or_error": 0
+  },
+  "route_overrides": 4,
+  "model_requests": 0
+}
