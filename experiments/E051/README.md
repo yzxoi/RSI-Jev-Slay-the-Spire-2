@@ -129,3 +129,16 @@ actions/120 seconds/$0.03, and `--pause-on-danger --danger-hp 30` to inspect
 before another potentially lethal boss exchange. This safety threshold is
 intentionally higher than the earlier ordinary-combat threshold 20, and the
 result remains a guided, not purely autonomous, run.
+
+Segment 4 at tested SHA `f45926ef3eb7565efd2fa64284e1c48a2a3f4c9b`
+ran `room_guided` with `boss-room-plan.json` for 12 accepted actions, zero
+rejections, 13 Jev calls/$0.0032025; raw trace SHA-256
+`3dcb12b30c33cd3b55aa140173cc34c49613df45cca661aa67ceb12817bb6d4e`.
+The bound Regen Potion opener executed, Hellraiser was played during sleep,
+and native boss HP fell 222→115 while player HP ended at 43/91. At the next
+observed turn the boss intends Attack12 plus Defend, player has zero Block and
+3 energy, with Shrug It Off 8 Block/draw1 plus Defend 5 Block in hand. Strength
+Potion remains. Bind `boss-strength-plan.json` to this exact state as Astra
+intervention 3: use Strength Potion, then ask Jev to cover the shown attack
+before spending spare energy. Evaluate a short 10-action segment with danger
+threshold 30; do not attribute its outcome to unguided play.
