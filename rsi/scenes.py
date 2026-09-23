@@ -53,8 +53,8 @@ def candidates(raw, history=None):
         add('open_chest');indexed('choose_treasure_relic',(raw.get('chest') or {}).get('relic_options'))
         if not out:add('proceed')
     elif screen=='BUNDLE_SELECTION':
-        indexed('confirm_bundle',raw.get('bundles'))
-        if not out:indexed('choose_bundle',raw.get('bundles'))
+        if 'confirm_bundle' in legal:add('confirm_bundle')
+        else:indexed('choose_bundle',raw.get('bundles'))
     elif screen=='CAPSTONE_SELECTION':
         cap=raw.get('capstone') or {};indexed('choose_capstone_option',cap.get('options') if isinstance(cap,dict) else cap)
     elif screen=='MODAL':add('confirm_modal',raw.get('modal'));add('dismiss_modal',raw.get('modal'))
