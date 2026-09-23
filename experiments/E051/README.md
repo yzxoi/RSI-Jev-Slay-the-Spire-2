@@ -202,3 +202,14 @@ Flame Barrier alone leaves 10 unblocked from Attack22 and is lethal at HP3.
 Battle Trance remains playable at hand index3 for 0 energy and draws three;
 bind it next, then evaluate actual block/kill possibilities. This is
 intervention 6. Do not spend energy on Barricade or blind Strikes first.
+
+Battle Trance at tested SHA `6f12246e36522c6de96d6550a47d62830f5678cc`
+drew Iron Wave, Dismantle and Eternal Armor; HP3, energy3, Beetle68 HP.
+Trace SHA-256
+`86dca83b7fb0895204cf0a756178bdd806fb4c9977d262fbe2f531e5fd4506a1`.
+Flame Barrier12 plus Iron Wave5 is only 17 Block versus Attack22, lethal at
+HP3; Eternal Armor costs all 3 energy and does not provide enough immediate
+Block on its own. The only remaining flexible resource is Attack Potion index0,
+which offers one of three random free attacks. Bind its use as intervention 7
+to inspect real choices for Weak, extra Block or a kill. Opening an offer is
+not a survival result; do not guess the card before the native selection.
