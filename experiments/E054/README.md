@@ -35,3 +35,10 @@ comments and merge/close by observed evidence.
 Before the new run, bind one terminal-screen continuation action to the
 observed E051 game-over fingerprint. This is setup, not a rollback or an
 E054 in-run decision. Re-read the next screen before further action.
+
+Old-game-over continuation at tested SHA `0551905` was accepted once. The
+native E051 screen moved from intro to `summary_ready`; its save status is
+now **verified**. Trace SHA-256
+`9a20e3a19e958e44ae9b76080395d52171ad4af87bfee6bdf006dcba0a6ccd75`.
+This post-terminal UI step does not change E051's floor27 defeat. Bind
+`return_to_main_menu` from the verified summary as the next setup action.
