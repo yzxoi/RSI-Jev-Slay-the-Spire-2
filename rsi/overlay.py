@@ -2,6 +2,7 @@
 
 import argparse
 from pathlib import Path
+import time
 
 from .monitor import TraceFeed
 
@@ -87,7 +88,9 @@ def run(feed, *, opacity=0.84, width=410, height=490, margin=20, screen_index=No
             box(0, 0, W, H, 16, bg, stroke)
             box(13, H - 51, W - 26, 38, 9, surface)
             label("✦ STS2 决策", 24, H - 42, W - 155, 22, 15, white, True)
-            label("回放" if snap.get("mode") == "replay" else "LIVE · 只读", W - 112, H - 39, 90, 16, 11, teal, True)
+            stale = snap.get("mode") == "live" and snap.get("last_time") and time.time() - snap["last_time"] > 60
+            mode_label = "回放" if snap.get("mode") == "replay" else "等待新决策" if stale else "LIVE · 只读"
+            label(mode_label, W - 112, H - 39, 90, 16, 11, teal, True)
 
             run_id = snap.get("game_run_id") or context.get("run_id") or "—"
             floor = context.get("floor")
@@ -95,7 +98,7 @@ def run(feed, *, opacity=0.84, width=410, height=490, margin=20, screen_index=No
             hp = context.get("hp")
             max_hp = context.get("max_hp")
             position = f"{floor if floor is not None else '—'} 层 · {turn if turn is not None else '—'} 回合"
-            hp_text = f"HP {hp}/{max_hp}" if hp is not None and max_hp is not None else "HP —"
+            hp_text = "胜利" if context.get("is_victory") else f"HP {hp}/{max_hp}" if hp is not None and max_hp is not None else "HP —"
             label(run_id, 22, H - 83, W * .54, 18, 11, dim)
             label(position, 22, H - 104, W * .6, 18, 12, white, True)
             label(hp_text, W - 126, H - 104, 105, 18, 12, white, True)

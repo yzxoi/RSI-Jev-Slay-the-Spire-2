@@ -68,6 +68,18 @@ class MonitorTests(unittest.TestCase):
         self.assertEqual(latest["context"]["hp"], 9)
         self.assertIsNone(latest["confidence"])
 
+    def test_expert_action_uses_action_label_and_victory_context(self):
+        projection = Projection()
+        projection.new_segment("a/decisions.jsonl")
+        projection.consume(row(1, "before", {"state": {"screen": "GAME_OVER", "game_over": {"is_victory": True},
+                                                       "run": {"current_hp": 0, "max_hp": 83}}}))
+        projection.consume(row(2, "expert_decision", {"action": {"action": "continue_game_over"},
+                                                     "reason": "Very long state-bound explanation"}))
+        latest = projection.latest
+        self.assertEqual(latest["label"], "继续胜利结算")
+        self.assertTrue(latest["context"]["is_victory"])
+        self.assertEqual(latest["reason"], "Very long state-bound explanation")
+
     def test_stale_and_uncertain_actions_are_not_reported_as_executed(self):
         projection = Projection()
         projection.new_segment("a/decisions.jsonl")

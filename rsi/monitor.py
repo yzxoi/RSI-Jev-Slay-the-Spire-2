@@ -58,6 +58,7 @@ def _context(raw):
         "hp": run.get("current_hp", player.get("hp")),
         "max_hp": run.get("max_hp", player.get("max_hp")),
         "run_id": state.get("run_id"),
+        "is_victory": (state.get("game_over") or {}).get("is_victory") is True,
     }
 
 
@@ -153,10 +154,15 @@ class Projection:
         elif kind == "expert_decision":
             self.pending["expert"] = data or {}
             action = self.pending["expert"].get("action") or {}
+            candidate = next((candidate for candidate in self.pending.get("candidates") or []
+                              if candidate.get("action") == action), None)
+            action_name = {"continue_game_over": "继续胜利结算", "play_card": "出牌",
+                           "use_potion": "使用药水"}.get(action.get("action"), action.get("action"))
             options, total = self._options()
             self._publish({"seq": row.get("seq"), "time": self.last_time,
                            "context": self.pending.get("context") or {}, "source": "Astra",
-                           "label": _short(self.pending["expert"].get("reason") or action.get("action"), 120),
+                           "label": _label(candidate) if candidate else _short(action_name, 120),
+                           "reason": _short(self.pending["expert"].get("reason"), 180),
                            "confidence": None, "options": options, "option_count": total,
                            "state": "proposed", "plan": self.plan})
             self.status = "astra_decided"
