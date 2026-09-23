@@ -14,9 +14,19 @@ from .scenes import candidates,fingerprint
 from .trace import Trace,version_manifest
 from .live_plan import plan_native
 from .encounters import sandpit_rule
+from .guard import filter_end_turn
 from .settle import settle_turn,turn_key
 from .floor_plan import load_floor_plan,plan_context,plan_complete
 from .room_plan import load_room_plan,RoomPlanSession,room_context,room_complete
+
+
+GUIDED_COMBAT_POLICIES={'planned','triggered','retaliate','floor_guided','room_guided'}
+
+
+def ordinary_candidates(raw, offered, policy, explicit_choice=False):
+    if explicit_choice or policy not in GUIDED_COMBAT_POLICIES or raw.get('screen')!='COMBAT' or raw.get('selection'):
+        return offered,None
+    return filter_end_turn(raw,offered)
 
 
 def main():
@@ -64,6 +74,9 @@ def main():
                     waits+=1
                     if waits>6:raise RuntimeError(f'No supported action: {screen} {raw.get("available_actions")}')
                     mcp.call('wait_until_actionable',{'timeout_seconds':10,'raw_state':True});time.sleep(.15);raw=mcp.call('get_raw_game_state');continue
+                ordinary_cs,end_turn_guard=ordinary_candidates(raw,cs,a.combat_policy,
+                    explicit_choice=bool(expert or (room_session and not room_session.applied)))
+                if end_turn_guard is not None:trace.write('end_turn_guard',end_turn_guard)
                 review_ids=set(a.review_cards.split(','))
                 if not expert and screen=='COMBAT' and any(h.get('card_id') in review_ids and h.get('playable') and any(c['action'].get('action')=='play_card' and c['action'].get('card_index')==h['index'] for c in cs) for h in (raw.get('combat') or {}).get('hand',[])):
                     result['status']='expert_required';trace.write('expert_required',{'reason':'explicit_card_review','state_hash':fingerprint(raw)});break
@@ -85,14 +98,14 @@ def main():
                     if selected is None:raise RuntimeError('Room opener is no longer legal')
                     trace.write('room_opening_proposed',selected);room_opening_this_action=True
                 elif encounter and encounter['selected']:selected=encounter['selected']
-                elif len(cs)==1:selected=cs[0]
+                elif len(ordinary_cs)==1:selected=ordinary_cs[0]
                 elif a.combat_policy in ['planned','triggered','retaliate','floor_guided','room_guided'] and screen=='COMBAT' and not raw.get('selection'):
-                    selected,planning=plan_native(raw,cs,triggers=a.combat_policy in ['triggered','retaliate','floor_guided','room_guided'],retaliation=a.combat_policy in ['retaliate','floor_guided','room_guided']);trace.write('planning',planning)
+                    selected,planning=plan_native(raw,ordinary_cs,triggers=a.combat_policy in ['triggered','retaliate','floor_guided','room_guided'],retaliation=a.combat_policy in ['retaliate','floor_guided','room_guided']);trace.write('planning',planning)
                     if floor_plan or room_plan:
                         selected=jev.choose({'state':raw.get('agent_view',raw),'strategy':STRATEGY,
                                              **plan_context(floor_plan,raw),**room_context(room_plan,raw),
-                                             'computed_proposal':planning},cs,trace)[0]
-                    potions=[c for c in cs if c['action']['action']=='use_potion']
+                                             'computed_proposal':planning},ordinary_cs,trace)[0]
+                    potions=[c for c in ordinary_cs if c['action']['action']=='use_potion']
                     turnkey=((raw.get('run') or {}).get('floor'),raw.get('turn'))
                     if not floor_plan and not room_plan and potions and history.get('potion_check')!=turnkey:
                         reduced=[selected]+potions
@@ -100,7 +113,7 @@ def main():
                         selected=jev.choose({'state':raw.get('agent_view',raw),'strategy':STRATEGY,'question':'Use a potion now to prevent meaningful HP loss or enable a kill, or execute the computed next card. Potions refill; do not hoard at risk of death.','plan':planning},reduced,trace)[0]
                         history['potion_check']=turnkey
                 else:selected=jev.choose({'state':raw.get('agent_view',raw),'strategy':STRATEGY,'previous_decision':history.get('previous'),
-                                          **plan_context(floor_plan,raw),**room_context(room_plan,raw)},cs,trace)[0]
+                                          **plan_context(floor_plan,raw),**room_context(room_plan,raw)},ordinary_cs,trace)[0]
                 trace.write('selected',selected)
                 if mcp.call('health_check').get('play_running'):raise RuntimeError('Competing autoplay became active')
                 fresh=mcp.call('get_raw_game_state')
