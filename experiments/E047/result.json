@@ -4,6 +4,7 @@
   "preregister_sha": "49c0c5c",
   "iteration_1_sha": "4e75f12",
   "iteration_2_tested_sha": "6b2d9baeae76ba125f01bdf237c3095a02dd72cf",
+  "iteration_3_tested_sha": "121671a55940220b1443f5d2b4ae2fd2544a9ac9",
   "evaluation_type": "frozen_native_candidate_filter_and_synthetic_controls",
   "actual_game_actions": 0,
   "jev_calls": 0,
@@ -30,7 +31,7 @@
       "treatment_kept_ids": ["a001"]
     }
   ],
-  "controls": "high HP and no Toxic retain attacks; plausible immediate kill, unknown attack effect and Vulnerable target abstain; raw Jev and explicit choices remain unfiltered",
+  "controls": "high HP and no Toxic retain attacks; plausible immediate kill, unknown attack effect, Vulnerable target and multiple attackers abstain; raw Jev and explicit choices remain unfiltered",
   "tests_command": "python3 -m unittest discover -s tests",
   "tests_result": "65 passed",
   "game_version_expected": "v0.111.0",
