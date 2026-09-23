@@ -73,3 +73,15 @@ The user requested a pause to improve missing-probability presentation in the
 read-only overlay. Read-only MCP state confirms the same run still sits in
 floor-5 active COMBAT with `play_card`/`end_turn` legal; the controller process
 has exited. Do not resume game actions until the user asks to continue.
+
+The user subsequently authorized resuming the **same** run. Read-only state
+confirmed run `F1GR9R0YXCCC`, floor5 turn3 HP82/91 and a ready combat action
+gate; OpenRouter DNS resolved again before restarting. Segment 2 at tested
+SHA `f8f744b0efc7d42930faac672c7da722ec2d4607` used the same campaign
+command as segment 1 with output `artifacts/runs/e051-segment02.json`. It
+accepted 80 actions with no rejection, advanced through the floor8 Rest and
+floor9 combat to a floor10 CHEST, HP85/91. Jev made 23 requests for
+$0.004462332; Astra interventions remained zero. This was an ordinary
+`budget_boundary`, not a failure or terminal outcome. Raw trace SHA-256
+`228c43208ce3d2a85566ecd7723d019a09c696aadd6b3ada82867a74e7c9a20a`;
+compact metrics are in `segment02-result.json`.
