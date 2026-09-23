@@ -125,3 +125,19 @@ index1 before Defend/Beckon management. The next room segment uses
 the current 22-HP turn can proceed; the lethal-end-turn guard remains. This
 is an explicit scoped threshold change from 25, not the earlier policy's
 unchanged result.
+
+Beckon defense room at tested SHA
+`60ed1b97edc7230358e6a1b43dcdb499183e324e` accepted 7 actions,
+zero rejections, five Jev calls/$0.001359918. Speed Potion was Astra
+intervention 2; Jev played Defend, both Beckons, Pommel Strike and Battle
+Trance before ending the turn. HP22→13, boss47→46 under Intangible; the
+≤20 review fired at turn11. Trace SHA-256
+`6cbff3a547f394679c20e18087c9fdd24840b4e23a9f3784c97bbbe388ba3fd9`.
+Soul Fysh now has no Intangible and uses StatusCard2, no attack. The hand
+has Twin Strike and three free Angers at player HP13. Bind a fresh
+`soul-fysh-burst-plan.json` opening Twin Strike as Astra intervention 3,
+then let Jev use the free attacks and react to subsequent native intents.
+This bounded room segment lowers the pause threshold from 20 to 12 so the
+current HP13 turn can execute; the separate lethal-end-turn guard remains.
+Cap at 20 actions, 120 seconds and $0.03 Jev. This is a scoped guided
+variant, not an unchanged-policy autonomous outcome.
