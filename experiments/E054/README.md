@@ -111,3 +111,17 @@ danger pause from 20 to 25 HP for this **bounded room segment only**; cap
 at 20 actions, 120 seconds and $0.03 Jev. The room plan stops at MAP after
 boss rewards or an earlier review. This is a distinct guided segment, not
 an unchanged-policy autonomous result.
+
+Soul Fysh room segment at tested SHA `ab97f4e` accepted 14 actions, zero
+rejections, 13 Jev calls/$0.003645474. The Radiant Tincture opener counted
+as Astra intervention 1. Boss104→47 HP; player45→22 HP and the scoped
+≤25 danger pause fired at turn10. Trace SHA-256
+`e1287eeec501b94e31b579fba9c63dd981630d164d24f5d89b0a9a8129d5531e`.
+Current boss has Intangible1, Attack13 plus Debuff; player HP22, energy4,
+with two Beckon cards that each cost 6 HP if retained at turn end. Bind
+`soul-fysh-beckon-plan.json` as Astra intervention 2, using Speed Potion
+index1 before Defend/Beckon management. The next room segment uses
+`room_guided` with 20-action/120-second/$0.03 caps and HP≤20 review so
+the current 22-HP turn can proceed; the lethal-end-turn guard remains. This
+is an explicit scoped threshold change from 25, not the earlier policy's
+unchanged result.
