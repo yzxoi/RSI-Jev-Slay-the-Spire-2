@@ -1,0 +1,13 @@
+{
+  "game_run_id": "LYU69TR2VY8F",
+  "tested_sha": "803a12f",
+  "status": "mcp_timeout_uncertain_action",
+  "confirmed_actions": 7,
+  "rejections": 0,
+  "model_calls": 8,
+  "cost_usd": 0.003095862,
+  "last_confirmed": "Act3 floor35 turn2 HP91/91 energy5 Block7; Living Shield17 HP, Turret Operator41 HP/25 Block",
+  "uncertain_action": "play_card Strike hand index2 targeting Living Shield index0; act request id59 timed out before confirmation",
+  "trace_sha256": "bd3c74708cc99dfb870f8cc958b2087ca88ea8cef42783a84e267d143e0ac9ae",
+  "diagnostic": "Subsequent get_raw_game_state timed out after45s while health_check still responded; game process PID68762 sampled at >100% CPU. Raw sample under ignored artifacts/runs/e048-floor34-hang-sample.txt. No retry of uncertain action."
+}
