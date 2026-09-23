@@ -18,7 +18,8 @@ VISIBLE_EVENTS = {
     "manifest", "before", "candidates", "planning", "model_request",
     "model_response", "model_failure", "selected", "expert_required",
     "expert_decision", "room_opening_proposed", "floor_plan", "room_plan",
-    "action_result", "explicit_rejection", "after", "failure", "summary",
+    "action_result", "explicit_rejection", "stale_proposal_discarded",
+    "mcp_transport_failure", "after", "failure", "summary",
 }
 
 
@@ -194,6 +195,14 @@ class Projection:
             if self.latest and self.latest["state"] == "proposed":
                 self.latest["state"] = "rejected"
             self.status = "rejected"
+        elif kind == "stale_proposal_discarded":
+            if self.latest and self.latest["state"] == "proposed":
+                self.latest["state"] = "discarded"
+            self.status = "discarded"
+        elif kind == "mcp_transport_failure":
+            if self.latest and self.latest["state"] == "proposed":
+                self.latest["state"] = "delivery_unknown"
+            self.status = "delivery_unknown"
         elif kind == "after":
             self.last_context = _context(data or {})
         elif kind == "failure":
@@ -320,6 +329,9 @@ class TraceFeed:
 def serve(feed, host="127.0.0.1", port=8765):
     class Handler(BaseHTTPRequestHandler):
         def do_GET(self):
+            if self.headers.get("Host") not in {f"127.0.0.1:{self.server.server_port}", f"localhost:{self.server.server_port}"}:
+                self.send_error(403)
+                return
             path = urlsplit(self.path).path
             if path == "/api/state":
                 body = json.dumps(feed.snapshot(), ensure_ascii=False).encode()

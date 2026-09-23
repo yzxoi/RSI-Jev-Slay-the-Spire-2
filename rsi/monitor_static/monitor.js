@@ -18,7 +18,7 @@ function renderDecision(decision, snapshot) {
   const source = decision?.source || "等待决策";
   $("source").textContent = source;
   $("source").className = `source ${source.startsWith("Astra") ? "astra" : source === "Jev" ? "" : "auto"}`;
-  const states = {proposed:"待执行",accepted:"已执行",rejected:"被拒绝",awaiting_astra:"等待 Astra",result_received:"收到结果"};
+  const states = {proposed:"待执行",accepted:"已执行",rejected:"被拒绝",discarded:"状态已过期",delivery_unknown:"交付待确认",awaiting_astra:"等待 Astra",result_received:"收到结果"};
   $("state").textContent = states[decision?.state] || "—";
   $("action").textContent = decision?.label || "等待 trace…";
   $("screen").textContent = decision ? `${context.screen || "未知场景"}${decision.model ? " · " + decision.model : ""}` : "窗口只读取本地记录，不控制游戏。";

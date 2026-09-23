@@ -3,7 +3,6 @@ import json
 from pathlib import Path
 import tempfile
 import threading
-import time
 import unittest
 from urllib.error import HTTPError
 from urllib.request import Request, urlopen
@@ -69,6 +68,18 @@ class MonitorTests(unittest.TestCase):
         self.assertEqual(latest["context"]["hp"], 9)
         self.assertIsNone(latest["confidence"])
 
+    def test_stale_and_uncertain_actions_are_not_reported_as_executed(self):
+        projection = Projection()
+        projection.new_segment("a/decisions.jsonl")
+        projection.consume(row(1, "before", {"state": {"screen": "COMBAT"}}))
+        projection.consume(row(2, "selected", {"id": "a000", "name": "Strike", "action": {"action": "play_card"}}))
+        projection.consume(row(3, "stale_proposal_discarded", {}))
+        self.assertEqual(projection.latest["state"], "discarded")
+        projection.consume(row(4, "before", {"state": {"screen": "COMBAT"}}))
+        projection.consume(row(5, "selected", {"id": "a000", "name": "Defend", "action": {"action": "play_card"}}))
+        projection.consume(row(6, "mcp_transport_failure", {}))
+        self.assertEqual(projection.latest["state"], "delivery_unknown")
+
     def test_latest_native_segment_follows_run_and_keeps_history(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
@@ -118,6 +129,9 @@ class MonitorTests(unittest.TestCase):
                 with self.assertRaises(HTTPError) as failure:
                     urlopen(Request(f"http://127.0.0.1:{server.server_port}/api/state", data=b"x", method="POST"))
                 self.assertEqual(failure.exception.code, 405)
+                with self.assertRaises(HTTPError) as wrong_host:
+                    urlopen(Request(f"http://127.0.0.1:{server.server_port}/api/state", headers={"Host": "attacker.example"}))
+                self.assertEqual(wrong_host.exception.code, 403)
             finally:
                 server.shutdown()
                 server.server_close()
