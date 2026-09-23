@@ -1,0 +1,1922 @@
+{
+  "schema_version": 1,
+  "source_run_id": "EC0JQCUP6QMC",
+  "source_floor": 8,
+  "source_game": "v0.111.0",
+  "source_mod": "0.15.0",
+  "scope": "sanitized offline control-flow replay; not engine transition simulation",
+  "records": [
+    {
+      "source_result": "floor8-heart-of-iron-result.json",
+      "source_code_sha": "5399ff381d3d53c97ab3ac45c06a2968d4aac74f",
+      "source_trace_sha256": "5944a30b31030d9a7a118fa72dd72c823fa53189d60d956f3a3159a2eb1349d1",
+      "source_time": 1790167344.7628531,
+      "before_hash": "59ce09f5b08b595e92d2db0aae7a6d1ac3a2e7ecd249d3a0593c91024afef2fb",
+      "before": {
+        "run_id": "EC0JQCUP6QMC",
+        "screen": "COMBAT",
+        "in_combat": true,
+        "turn": 3,
+        "run": {
+          "floor": 8,
+          "current_hp": 18
+        },
+        "selection": null,
+        "combat": {
+          "action_readiness": {
+            "can_use_combat_actions": true,
+            "reason": "ready",
+            "actions_settled": true,
+            "running_action_type": null,
+            "ready_action_type": null,
+            "modal_open": false,
+            "modal_type": null,
+            "player_actions_disabled": false,
+            "is_paused": false,
+            "local_ready_to_end_turn": false,
+            "all_players_ready_to_end_turn": true,
+            "ending_turn_phase_one": false,
+            "ending_turn_phase_two": false,
+            "end_turn_kick": "",
+            "combat_in_progress": true,
+            "combat_over_or_ending": false,
+            "combat_room_mode": "ActiveCombat",
+            "hand_in_card_play": false,
+            "hand_in_card_selection": false,
+            "hand_mode": "Play",
+            "local_turn_ready": true,
+            "snapshot_stable": true,
+            "player_action_phase": true
+          },
+          "player": {
+            "current_hp": 18,
+            "energy": 3,
+            "block": 0,
+            "cards_played_this_turn": 0
+          },
+          "enemies": [
+            {
+              "index": 0,
+              "is_alive": true,
+              "current_hp": 49,
+              "intents": [
+                {
+                  "index": 0,
+                  "intent_type": "Attack",
+                  "label": "11",
+                  "damage": 11,
+                  "hits": 1,
+                  "total_damage": 11,
+                  "status_card_count": null
+                }
+              ]
+            }
+          ],
+          "hand": [
+            {
+              "index": 0,
+              "card_id": "INFLAME",
+              "dynamic_values": [
+                {
+                  "name": "StrengthPower",
+                  "base_value": 2,
+                  "current_value": 2,
+                  "enchanted_value": 2,
+                  "is_modified": false,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            },
+            {
+              "index": 1,
+              "card_id": "IRON_WAVE",
+              "dynamic_values": [
+                {
+                  "name": "Block",
+                  "base_value": 5,
+                  "current_value": 3,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                },
+                {
+                  "name": "Damage",
+                  "base_value": 5,
+                  "current_value": 8,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            },
+            {
+              "index": 2,
+              "card_id": "DEFEND_IRONCLAD",
+              "dynamic_values": [
+                {
+                  "name": "Block",
+                  "base_value": 5,
+                  "current_value": 3,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            },
+            {
+              "index": 3,
+              "card_id": "POMMEL_STRIKE",
+              "dynamic_values": [
+                {
+                  "name": "Cards",
+                  "base_value": 1,
+                  "current_value": 1,
+                  "enchanted_value": 1,
+                  "is_modified": false,
+                  "was_just_upgraded": false
+                },
+                {
+                  "name": "Damage",
+                  "base_value": 9,
+                  "current_value": 12,
+                  "enchanted_value": 9,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            },
+            {
+              "index": 4,
+              "card_id": "DEFEND_IRONCLAD",
+              "dynamic_values": [
+                {
+                  "name": "Block",
+                  "base_value": 5,
+                  "current_value": 3,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            }
+          ],
+          "end_turn_will_kill_player": false
+        }
+      },
+      "approved_action": {
+        "action": "use_potion",
+        "option_index": 0
+      },
+      "after_hash": "17618f130ed18f3636e8687ba57023a297e2113c25bf8d9db08490c97213b5c2",
+      "after": {
+        "run_id": "EC0JQCUP6QMC",
+        "screen": "COMBAT",
+        "in_combat": true,
+        "turn": 3,
+        "run": {
+          "floor": 8,
+          "current_hp": 18
+        },
+        "selection": null,
+        "combat": {
+          "action_readiness": {
+            "can_use_combat_actions": true,
+            "reason": "ready",
+            "actions_settled": true,
+            "running_action_type": null,
+            "ready_action_type": null,
+            "modal_open": false,
+            "modal_type": null,
+            "player_actions_disabled": false,
+            "is_paused": false,
+            "local_ready_to_end_turn": false,
+            "all_players_ready_to_end_turn": true,
+            "ending_turn_phase_one": false,
+            "ending_turn_phase_two": false,
+            "end_turn_kick": "",
+            "combat_in_progress": true,
+            "combat_over_or_ending": false,
+            "combat_room_mode": "ActiveCombat",
+            "hand_in_card_play": false,
+            "hand_in_card_selection": false,
+            "hand_mode": "Play",
+            "local_turn_ready": true,
+            "snapshot_stable": true,
+            "player_action_phase": true
+          },
+          "player": {
+            "current_hp": 18,
+            "energy": 3,
+            "block": 0,
+            "cards_played_this_turn": 0
+          },
+          "enemies": [
+            {
+              "index": 0,
+              "is_alive": true,
+              "current_hp": 49,
+              "intents": [
+                {
+                  "index": 0,
+                  "intent_type": "Attack",
+                  "label": "11",
+                  "damage": 11,
+                  "hits": 1,
+                  "total_damage": 11,
+                  "status_card_count": null
+                }
+              ]
+            }
+          ],
+          "hand": [
+            {
+              "index": 0,
+              "card_id": "INFLAME",
+              "dynamic_values": [
+                {
+                  "name": "StrengthPower",
+                  "base_value": 2,
+                  "current_value": 2,
+                  "enchanted_value": 2,
+                  "is_modified": false,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            },
+            {
+              "index": 1,
+              "card_id": "IRON_WAVE",
+              "dynamic_values": [
+                {
+                  "name": "Block",
+                  "base_value": 5,
+                  "current_value": 3,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                },
+                {
+                  "name": "Damage",
+                  "base_value": 5,
+                  "current_value": 8,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            },
+            {
+              "index": 2,
+              "card_id": "DEFEND_IRONCLAD",
+              "dynamic_values": [
+                {
+                  "name": "Block",
+                  "base_value": 5,
+                  "current_value": 3,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            },
+            {
+              "index": 3,
+              "card_id": "POMMEL_STRIKE",
+              "dynamic_values": [
+                {
+                  "name": "Cards",
+                  "base_value": 1,
+                  "current_value": 1,
+                  "enchanted_value": 1,
+                  "is_modified": false,
+                  "was_just_upgraded": false
+                },
+                {
+                  "name": "Damage",
+                  "base_value": 9,
+                  "current_value": 12,
+                  "enchanted_value": 9,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            },
+            {
+              "index": 4,
+              "card_id": "DEFEND_IRONCLAD",
+              "dynamic_values": [
+                {
+                  "name": "Block",
+                  "base_value": 5,
+                  "current_value": 3,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            }
+          ],
+          "end_turn_will_kill_player": false
+        }
+      }
+    },
+    {
+      "source_result": "floor8-inflame-result.json",
+      "source_code_sha": "7814eedc1fb4fd522c70c052d8b2d55008485c3f",
+      "source_trace_sha256": "669a6e94d0f3e8993c8f37f0fa69396c8e6b6a85344aaf0cde5b26c72883fc72",
+      "source_time": 1790167396.148822,
+      "before_hash": "17618f130ed18f3636e8687ba57023a297e2113c25bf8d9db08490c97213b5c2",
+      "before": {
+        "run_id": "EC0JQCUP6QMC",
+        "screen": "COMBAT",
+        "in_combat": true,
+        "turn": 3,
+        "run": {
+          "floor": 8,
+          "current_hp": 18
+        },
+        "selection": null,
+        "combat": {
+          "action_readiness": {
+            "can_use_combat_actions": true,
+            "reason": "ready",
+            "actions_settled": true,
+            "running_action_type": null,
+            "ready_action_type": null,
+            "modal_open": false,
+            "modal_type": null,
+            "player_actions_disabled": false,
+            "is_paused": false,
+            "local_ready_to_end_turn": false,
+            "all_players_ready_to_end_turn": true,
+            "ending_turn_phase_one": false,
+            "ending_turn_phase_two": false,
+            "end_turn_kick": "",
+            "combat_in_progress": true,
+            "combat_over_or_ending": false,
+            "combat_room_mode": "ActiveCombat",
+            "hand_in_card_play": false,
+            "hand_in_card_selection": false,
+            "hand_mode": "Play",
+            "local_turn_ready": true,
+            "snapshot_stable": true,
+            "player_action_phase": true
+          },
+          "player": {
+            "current_hp": 18,
+            "energy": 3,
+            "block": 0,
+            "cards_played_this_turn": 0
+          },
+          "enemies": [
+            {
+              "index": 0,
+              "is_alive": true,
+              "current_hp": 49,
+              "intents": [
+                {
+                  "index": 0,
+                  "intent_type": "Attack",
+                  "label": "11",
+                  "damage": 11,
+                  "hits": 1,
+                  "total_damage": 11,
+                  "status_card_count": null
+                }
+              ]
+            }
+          ],
+          "hand": [
+            {
+              "index": 0,
+              "card_id": "INFLAME",
+              "dynamic_values": [
+                {
+                  "name": "StrengthPower",
+                  "base_value": 2,
+                  "current_value": 2,
+                  "enchanted_value": 2,
+                  "is_modified": false,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            },
+            {
+              "index": 1,
+              "card_id": "IRON_WAVE",
+              "dynamic_values": [
+                {
+                  "name": "Block",
+                  "base_value": 5,
+                  "current_value": 3,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                },
+                {
+                  "name": "Damage",
+                  "base_value": 5,
+                  "current_value": 8,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            },
+            {
+              "index": 2,
+              "card_id": "DEFEND_IRONCLAD",
+              "dynamic_values": [
+                {
+                  "name": "Block",
+                  "base_value": 5,
+                  "current_value": 3,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            },
+            {
+              "index": 3,
+              "card_id": "POMMEL_STRIKE",
+              "dynamic_values": [
+                {
+                  "name": "Cards",
+                  "base_value": 1,
+                  "current_value": 1,
+                  "enchanted_value": 1,
+                  "is_modified": false,
+                  "was_just_upgraded": false
+                },
+                {
+                  "name": "Damage",
+                  "base_value": 9,
+                  "current_value": 12,
+                  "enchanted_value": 9,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            },
+            {
+              "index": 4,
+              "card_id": "DEFEND_IRONCLAD",
+              "dynamic_values": [
+                {
+                  "name": "Block",
+                  "base_value": 5,
+                  "current_value": 3,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            }
+          ],
+          "end_turn_will_kill_player": false
+        }
+      },
+      "approved_action": {
+        "action": "play_card",
+        "card_index": 0
+      },
+      "after_hash": "0fc1601319279108d03a8ecbc85d9ad89634c3db8e2b97457bbe4c61875fb58c",
+      "after": {
+        "run_id": "EC0JQCUP6QMC",
+        "screen": "COMBAT",
+        "in_combat": true,
+        "turn": 3,
+        "run": {
+          "floor": 8,
+          "current_hp": 18
+        },
+        "selection": null,
+        "combat": {
+          "action_readiness": {
+            "can_use_combat_actions": true,
+            "reason": "ready",
+            "actions_settled": true,
+            "running_action_type": null,
+            "ready_action_type": null,
+            "modal_open": false,
+            "modal_type": null,
+            "player_actions_disabled": false,
+            "is_paused": false,
+            "local_ready_to_end_turn": false,
+            "all_players_ready_to_end_turn": true,
+            "ending_turn_phase_one": false,
+            "ending_turn_phase_two": false,
+            "end_turn_kick": "",
+            "combat_in_progress": true,
+            "combat_over_or_ending": false,
+            "combat_room_mode": "ActiveCombat",
+            "hand_in_card_play": false,
+            "hand_in_card_selection": false,
+            "hand_mode": "Play",
+            "local_turn_ready": true,
+            "snapshot_stable": true,
+            "player_action_phase": true
+          },
+          "player": {
+            "current_hp": 18,
+            "energy": 2,
+            "block": 0,
+            "cards_played_this_turn": 1
+          },
+          "enemies": [
+            {
+              "index": 0,
+              "is_alive": true,
+              "current_hp": 49,
+              "intents": [
+                {
+                  "index": 0,
+                  "intent_type": "Attack",
+                  "label": "11",
+                  "damage": 11,
+                  "hits": 1,
+                  "total_damage": 11,
+                  "status_card_count": null
+                }
+              ]
+            }
+          ],
+          "hand": [
+            {
+              "index": 0,
+              "card_id": "IRON_WAVE",
+              "dynamic_values": [
+                {
+                  "name": "Block",
+                  "base_value": 5,
+                  "current_value": 3,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                },
+                {
+                  "name": "Damage",
+                  "base_value": 5,
+                  "current_value": 10,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            },
+            {
+              "index": 1,
+              "card_id": "DEFEND_IRONCLAD",
+              "dynamic_values": [
+                {
+                  "name": "Block",
+                  "base_value": 5,
+                  "current_value": 3,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            },
+            {
+              "index": 2,
+              "card_id": "POMMEL_STRIKE",
+              "dynamic_values": [
+                {
+                  "name": "Cards",
+                  "base_value": 1,
+                  "current_value": 1,
+                  "enchanted_value": 1,
+                  "is_modified": false,
+                  "was_just_upgraded": false
+                },
+                {
+                  "name": "Damage",
+                  "base_value": 9,
+                  "current_value": 14,
+                  "enchanted_value": 9,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            },
+            {
+              "index": 3,
+              "card_id": "DEFEND_IRONCLAD",
+              "dynamic_values": [
+                {
+                  "name": "Block",
+                  "base_value": 5,
+                  "current_value": 3,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            }
+          ],
+          "end_turn_will_kill_player": false
+        }
+      }
+    },
+    {
+      "source_result": "floor8-pommel-result.json",
+      "source_code_sha": "8740a85c8b6cac7431b12bc0f2228ce9dc7486a1",
+      "source_trace_sha256": "b478f7125064275f0079e9b3a4d44c0f5ef17a19404fc57f7e083e238fc335af",
+      "source_time": 1790167422.07207,
+      "before_hash": "0fc1601319279108d03a8ecbc85d9ad89634c3db8e2b97457bbe4c61875fb58c",
+      "before": {
+        "run_id": "EC0JQCUP6QMC",
+        "screen": "COMBAT",
+        "in_combat": true,
+        "turn": 3,
+        "run": {
+          "floor": 8,
+          "current_hp": 18
+        },
+        "selection": null,
+        "combat": {
+          "action_readiness": {
+            "can_use_combat_actions": true,
+            "reason": "ready",
+            "actions_settled": true,
+            "running_action_type": null,
+            "ready_action_type": null,
+            "modal_open": false,
+            "modal_type": null,
+            "player_actions_disabled": false,
+            "is_paused": false,
+            "local_ready_to_end_turn": false,
+            "all_players_ready_to_end_turn": true,
+            "ending_turn_phase_one": false,
+            "ending_turn_phase_two": false,
+            "end_turn_kick": "",
+            "combat_in_progress": true,
+            "combat_over_or_ending": false,
+            "combat_room_mode": "ActiveCombat",
+            "hand_in_card_play": false,
+            "hand_in_card_selection": false,
+            "hand_mode": "Play",
+            "local_turn_ready": true,
+            "snapshot_stable": true,
+            "player_action_phase": true
+          },
+          "player": {
+            "current_hp": 18,
+            "energy": 2,
+            "block": 0,
+            "cards_played_this_turn": 1
+          },
+          "enemies": [
+            {
+              "index": 0,
+              "is_alive": true,
+              "current_hp": 49,
+              "intents": [
+                {
+                  "index": 0,
+                  "intent_type": "Attack",
+                  "label": "11",
+                  "damage": 11,
+                  "hits": 1,
+                  "total_damage": 11,
+                  "status_card_count": null
+                }
+              ]
+            }
+          ],
+          "hand": [
+            {
+              "index": 0,
+              "card_id": "IRON_WAVE",
+              "dynamic_values": [
+                {
+                  "name": "Block",
+                  "base_value": 5,
+                  "current_value": 3,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                },
+                {
+                  "name": "Damage",
+                  "base_value": 5,
+                  "current_value": 10,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            },
+            {
+              "index": 1,
+              "card_id": "DEFEND_IRONCLAD",
+              "dynamic_values": [
+                {
+                  "name": "Block",
+                  "base_value": 5,
+                  "current_value": 3,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            },
+            {
+              "index": 2,
+              "card_id": "POMMEL_STRIKE",
+              "dynamic_values": [
+                {
+                  "name": "Cards",
+                  "base_value": 1,
+                  "current_value": 1,
+                  "enchanted_value": 1,
+                  "is_modified": false,
+                  "was_just_upgraded": false
+                },
+                {
+                  "name": "Damage",
+                  "base_value": 9,
+                  "current_value": 14,
+                  "enchanted_value": 9,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            },
+            {
+              "index": 3,
+              "card_id": "DEFEND_IRONCLAD",
+              "dynamic_values": [
+                {
+                  "name": "Block",
+                  "base_value": 5,
+                  "current_value": 3,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            }
+          ],
+          "end_turn_will_kill_player": false
+        }
+      },
+      "approved_action": {
+        "action": "play_card",
+        "card_index": 2,
+        "target_index": 0
+      },
+      "after_hash": "0433ddfa4ea95f4cd914909cc8af87d6ea48969d7772856226c09686470e5b2a",
+      "after": {
+        "run_id": "EC0JQCUP6QMC",
+        "screen": "COMBAT",
+        "in_combat": true,
+        "turn": 3,
+        "run": {
+          "floor": 8,
+          "current_hp": 18
+        },
+        "selection": null,
+        "combat": {
+          "action_readiness": {
+            "can_use_combat_actions": true,
+            "reason": "ready",
+            "actions_settled": true,
+            "running_action_type": null,
+            "ready_action_type": null,
+            "modal_open": false,
+            "modal_type": null,
+            "player_actions_disabled": false,
+            "is_paused": false,
+            "local_ready_to_end_turn": false,
+            "all_players_ready_to_end_turn": true,
+            "ending_turn_phase_one": false,
+            "ending_turn_phase_two": false,
+            "end_turn_kick": "",
+            "combat_in_progress": true,
+            "combat_over_or_ending": false,
+            "combat_room_mode": "ActiveCombat",
+            "hand_in_card_play": false,
+            "hand_in_card_selection": false,
+            "hand_mode": "Play",
+            "local_turn_ready": true,
+            "snapshot_stable": true,
+            "player_action_phase": true
+          },
+          "player": {
+            "current_hp": 18,
+            "energy": 1,
+            "block": 0,
+            "cards_played_this_turn": 2
+          },
+          "enemies": [
+            {
+              "index": 0,
+              "is_alive": true,
+              "current_hp": 35,
+              "intents": [
+                {
+                  "index": 0,
+                  "intent_type": "Attack",
+                  "label": "11",
+                  "damage": 11,
+                  "hits": 1,
+                  "total_damage": 11,
+                  "status_card_count": null
+                }
+              ]
+            }
+          ],
+          "hand": [
+            {
+              "index": 0,
+              "card_id": "IRON_WAVE",
+              "dynamic_values": [
+                {
+                  "name": "Block",
+                  "base_value": 5,
+                  "current_value": 3,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                },
+                {
+                  "name": "Damage",
+                  "base_value": 5,
+                  "current_value": 10,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            },
+            {
+              "index": 1,
+              "card_id": "DEFEND_IRONCLAD",
+              "dynamic_values": [
+                {
+                  "name": "Block",
+                  "base_value": 5,
+                  "current_value": 3,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            },
+            {
+              "index": 2,
+              "card_id": "DEFEND_IRONCLAD",
+              "dynamic_values": [
+                {
+                  "name": "Block",
+                  "base_value": 5,
+                  "current_value": 3,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            },
+            {
+              "index": 3,
+              "card_id": "STRIKE_IRONCLAD",
+              "dynamic_values": [
+                {
+                  "name": "Damage",
+                  "base_value": 6,
+                  "current_value": 11,
+                  "enchanted_value": 6,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            }
+          ],
+          "end_turn_will_kill_player": false
+        }
+      }
+    },
+    {
+      "source_result": "floor8-iron-wave-result.json",
+      "source_code_sha": "ef1d7557b273baba5698eee34b1023e0e87af624",
+      "source_trace_sha256": "4f6410c9b07175c01bf2ad8dbc1e9dc2458ffc39434fd73a1fa81765a07fd191",
+      "source_time": 1790167460.597012,
+      "before_hash": "0433ddfa4ea95f4cd914909cc8af87d6ea48969d7772856226c09686470e5b2a",
+      "before": {
+        "run_id": "EC0JQCUP6QMC",
+        "screen": "COMBAT",
+        "in_combat": true,
+        "turn": 3,
+        "run": {
+          "floor": 8,
+          "current_hp": 18
+        },
+        "selection": null,
+        "combat": {
+          "action_readiness": {
+            "can_use_combat_actions": true,
+            "reason": "ready",
+            "actions_settled": true,
+            "running_action_type": null,
+            "ready_action_type": null,
+            "modal_open": false,
+            "modal_type": null,
+            "player_actions_disabled": false,
+            "is_paused": false,
+            "local_ready_to_end_turn": false,
+            "all_players_ready_to_end_turn": true,
+            "ending_turn_phase_one": false,
+            "ending_turn_phase_two": false,
+            "end_turn_kick": "",
+            "combat_in_progress": true,
+            "combat_over_or_ending": false,
+            "combat_room_mode": "ActiveCombat",
+            "hand_in_card_play": false,
+            "hand_in_card_selection": false,
+            "hand_mode": "Play",
+            "local_turn_ready": true,
+            "snapshot_stable": true,
+            "player_action_phase": true
+          },
+          "player": {
+            "current_hp": 18,
+            "energy": 1,
+            "block": 0,
+            "cards_played_this_turn": 2
+          },
+          "enemies": [
+            {
+              "index": 0,
+              "is_alive": true,
+              "current_hp": 35,
+              "intents": [
+                {
+                  "index": 0,
+                  "intent_type": "Attack",
+                  "label": "11",
+                  "damage": 11,
+                  "hits": 1,
+                  "total_damage": 11,
+                  "status_card_count": null
+                }
+              ]
+            }
+          ],
+          "hand": [
+            {
+              "index": 0,
+              "card_id": "IRON_WAVE",
+              "dynamic_values": [
+                {
+                  "name": "Block",
+                  "base_value": 5,
+                  "current_value": 3,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                },
+                {
+                  "name": "Damage",
+                  "base_value": 5,
+                  "current_value": 10,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            },
+            {
+              "index": 1,
+              "card_id": "DEFEND_IRONCLAD",
+              "dynamic_values": [
+                {
+                  "name": "Block",
+                  "base_value": 5,
+                  "current_value": 3,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            },
+            {
+              "index": 2,
+              "card_id": "DEFEND_IRONCLAD",
+              "dynamic_values": [
+                {
+                  "name": "Block",
+                  "base_value": 5,
+                  "current_value": 3,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            },
+            {
+              "index": 3,
+              "card_id": "STRIKE_IRONCLAD",
+              "dynamic_values": [
+                {
+                  "name": "Damage",
+                  "base_value": 6,
+                  "current_value": 11,
+                  "enchanted_value": 6,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            }
+          ],
+          "end_turn_will_kill_player": false
+        }
+      },
+      "approved_action": {
+        "action": "play_card",
+        "card_index": 0,
+        "target_index": 0
+      },
+      "after_hash": "e310550f85bdb6218ea256ecbb59186ff7e89bbc1806d7b4dfdd66de8601110e",
+      "after": {
+        "run_id": "EC0JQCUP6QMC",
+        "screen": "COMBAT",
+        "in_combat": true,
+        "turn": 3,
+        "run": {
+          "floor": 8,
+          "current_hp": 18
+        },
+        "selection": null,
+        "combat": {
+          "action_readiness": {
+            "can_use_combat_actions": true,
+            "reason": "ready",
+            "actions_settled": true,
+            "running_action_type": null,
+            "ready_action_type": null,
+            "modal_open": false,
+            "modal_type": null,
+            "player_actions_disabled": false,
+            "is_paused": false,
+            "local_ready_to_end_turn": false,
+            "all_players_ready_to_end_turn": true,
+            "ending_turn_phase_one": false,
+            "ending_turn_phase_two": false,
+            "end_turn_kick": "",
+            "combat_in_progress": true,
+            "combat_over_or_ending": false,
+            "combat_room_mode": "ActiveCombat",
+            "hand_in_card_play": false,
+            "hand_in_card_selection": false,
+            "hand_mode": "Play",
+            "local_turn_ready": true,
+            "snapshot_stable": true,
+            "player_action_phase": true
+          },
+          "player": {
+            "current_hp": 18,
+            "energy": 0,
+            "block": 3,
+            "cards_played_this_turn": 3
+          },
+          "enemies": [
+            {
+              "index": 0,
+              "is_alive": true,
+              "current_hp": 25,
+              "intents": [
+                {
+                  "index": 0,
+                  "intent_type": "Attack",
+                  "label": "11",
+                  "damage": 11,
+                  "hits": 1,
+                  "total_damage": 11,
+                  "status_card_count": null
+                }
+              ]
+            }
+          ],
+          "hand": [
+            {
+              "index": 0,
+              "card_id": "DEFEND_IRONCLAD",
+              "dynamic_values": [
+                {
+                  "name": "Block",
+                  "base_value": 5,
+                  "current_value": 3,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": false
+            },
+            {
+              "index": 1,
+              "card_id": "DEFEND_IRONCLAD",
+              "dynamic_values": [
+                {
+                  "name": "Block",
+                  "base_value": 5,
+                  "current_value": 3,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": false
+            },
+            {
+              "index": 2,
+              "card_id": "STRIKE_IRONCLAD",
+              "dynamic_values": [
+                {
+                  "name": "Damage",
+                  "base_value": 6,
+                  "current_value": 11,
+                  "enchanted_value": 6,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": false
+            }
+          ],
+          "end_turn_will_kill_player": false
+        }
+      }
+    },
+    {
+      "source_result": "floor8-kill1-result.json",
+      "source_code_sha": "d377892bbd4fb841d4a24adcda00dd163cf12238",
+      "source_trace_sha256": "ace66abf7f59b18f2cf4d652b6154820a5423646f4b288509e1e99ccf8972b20",
+      "source_time": 1790167558.37601,
+      "before_hash": "75e6cb8773afa58109f2ee41d79227afb36013ce2d8994f24f1157164a9e66f6",
+      "before": {
+        "run_id": "EC0JQCUP6QMC",
+        "screen": "COMBAT",
+        "in_combat": true,
+        "turn": 4,
+        "run": {
+          "floor": 8,
+          "current_hp": 17
+        },
+        "selection": null,
+        "combat": {
+          "action_readiness": {
+            "can_use_combat_actions": true,
+            "reason": "ready",
+            "actions_settled": true,
+            "running_action_type": null,
+            "ready_action_type": null,
+            "modal_open": false,
+            "modal_type": null,
+            "player_actions_disabled": false,
+            "is_paused": false,
+            "local_ready_to_end_turn": false,
+            "all_players_ready_to_end_turn": true,
+            "ending_turn_phase_one": false,
+            "ending_turn_phase_two": false,
+            "end_turn_kick": "",
+            "combat_in_progress": true,
+            "combat_over_or_ending": false,
+            "combat_room_mode": "ActiveCombat",
+            "hand_in_card_play": false,
+            "hand_in_card_selection": false,
+            "hand_mode": "Play",
+            "local_turn_ready": true,
+            "snapshot_stable": true,
+            "player_action_phase": true
+          },
+          "player": {
+            "current_hp": 17,
+            "energy": 3,
+            "block": 0,
+            "cards_played_this_turn": 0
+          },
+          "enemies": [
+            {
+              "index": 0,
+              "is_alive": true,
+              "current_hp": 25,
+              "intents": [
+                {
+                  "index": 0,
+                  "intent_type": "Debuff",
+                  "label": null,
+                  "damage": null,
+                  "hits": null,
+                  "total_damage": null,
+                  "status_card_count": null
+                }
+              ]
+            }
+          ],
+          "hand": [
+            {
+              "index": 0,
+              "card_id": "DEFEND_IRONCLAD",
+              "dynamic_values": [
+                {
+                  "name": "Block",
+                  "base_value": 5,
+                  "current_value": 3,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            },
+            {
+              "index": 1,
+              "card_id": "STRIKE_IRONCLAD",
+              "dynamic_values": [
+                {
+                  "name": "Damage",
+                  "base_value": 6,
+                  "current_value": 11,
+                  "enchanted_value": 6,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            },
+            {
+              "index": 2,
+              "card_id": "IRON_WAVE",
+              "dynamic_values": [
+                {
+                  "name": "Block",
+                  "base_value": 5,
+                  "current_value": 3,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                },
+                {
+                  "name": "Damage",
+                  "base_value": 5,
+                  "current_value": 10,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            },
+            {
+              "index": 3,
+              "card_id": "DEFEND_IRONCLAD",
+              "dynamic_values": [
+                {
+                  "name": "Block",
+                  "base_value": 5,
+                  "current_value": 3,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            },
+            {
+              "index": 4,
+              "card_id": "STRIKE_IRONCLAD",
+              "dynamic_values": [
+                {
+                  "name": "Damage",
+                  "base_value": 6,
+                  "current_value": 11,
+                  "enchanted_value": 6,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            }
+          ],
+          "end_turn_will_kill_player": false
+        }
+      },
+      "approved_action": {
+        "action": "play_card",
+        "card_index": 1,
+        "target_index": 0
+      },
+      "after_hash": "eed89eccb77fcd39ba4df3af4f52e1c00e3355e9205379ea8ceb8e6cd4e2f4f4",
+      "after": {
+        "run_id": "EC0JQCUP6QMC",
+        "screen": "COMBAT",
+        "in_combat": true,
+        "turn": 4,
+        "run": {
+          "floor": 8,
+          "current_hp": 17
+        },
+        "selection": null,
+        "combat": {
+          "action_readiness": {
+            "can_use_combat_actions": true,
+            "reason": "ready",
+            "actions_settled": true,
+            "running_action_type": null,
+            "ready_action_type": null,
+            "modal_open": false,
+            "modal_type": null,
+            "player_actions_disabled": false,
+            "is_paused": false,
+            "local_ready_to_end_turn": false,
+            "all_players_ready_to_end_turn": true,
+            "ending_turn_phase_one": false,
+            "ending_turn_phase_two": false,
+            "end_turn_kick": "",
+            "combat_in_progress": true,
+            "combat_over_or_ending": false,
+            "combat_room_mode": "ActiveCombat",
+            "hand_in_card_play": false,
+            "hand_in_card_selection": false,
+            "hand_mode": "Play",
+            "local_turn_ready": true,
+            "snapshot_stable": true,
+            "player_action_phase": true
+          },
+          "player": {
+            "current_hp": 17,
+            "energy": 2,
+            "block": 0,
+            "cards_played_this_turn": 1
+          },
+          "enemies": [
+            {
+              "index": 0,
+              "is_alive": true,
+              "current_hp": 14,
+              "intents": [
+                {
+                  "index": 0,
+                  "intent_type": "Debuff",
+                  "label": null,
+                  "damage": null,
+                  "hits": null,
+                  "total_damage": null,
+                  "status_card_count": null
+                }
+              ]
+            }
+          ],
+          "hand": [
+            {
+              "index": 0,
+              "card_id": "DEFEND_IRONCLAD",
+              "dynamic_values": [
+                {
+                  "name": "Block",
+                  "base_value": 5,
+                  "current_value": 3,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            },
+            {
+              "index": 1,
+              "card_id": "IRON_WAVE",
+              "dynamic_values": [
+                {
+                  "name": "Block",
+                  "base_value": 5,
+                  "current_value": 3,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                },
+                {
+                  "name": "Damage",
+                  "base_value": 5,
+                  "current_value": 10,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            },
+            {
+              "index": 2,
+              "card_id": "DEFEND_IRONCLAD",
+              "dynamic_values": [
+                {
+                  "name": "Block",
+                  "base_value": 5,
+                  "current_value": 3,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            },
+            {
+              "index": 3,
+              "card_id": "STRIKE_IRONCLAD",
+              "dynamic_values": [
+                {
+                  "name": "Damage",
+                  "base_value": 6,
+                  "current_value": 11,
+                  "enchanted_value": 6,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            }
+          ],
+          "end_turn_will_kill_player": false
+        }
+      }
+    },
+    {
+      "source_result": "floor8-kill2-result.json",
+      "source_code_sha": "7e7925f4e4ca4b7e2a24ac477bf204b92ac00f62",
+      "source_trace_sha256": "415f0f9ae2c8675018fffc7be5f2ed6a87bc2e976ddf7d055817b005d49c4eea",
+      "source_time": 1790167584.340008,
+      "before_hash": "eed89eccb77fcd39ba4df3af4f52e1c00e3355e9205379ea8ceb8e6cd4e2f4f4",
+      "before": {
+        "run_id": "EC0JQCUP6QMC",
+        "screen": "COMBAT",
+        "in_combat": true,
+        "turn": 4,
+        "run": {
+          "floor": 8,
+          "current_hp": 17
+        },
+        "selection": null,
+        "combat": {
+          "action_readiness": {
+            "can_use_combat_actions": true,
+            "reason": "ready",
+            "actions_settled": true,
+            "running_action_type": null,
+            "ready_action_type": null,
+            "modal_open": false,
+            "modal_type": null,
+            "player_actions_disabled": false,
+            "is_paused": false,
+            "local_ready_to_end_turn": false,
+            "all_players_ready_to_end_turn": true,
+            "ending_turn_phase_one": false,
+            "ending_turn_phase_two": false,
+            "end_turn_kick": "",
+            "combat_in_progress": true,
+            "combat_over_or_ending": false,
+            "combat_room_mode": "ActiveCombat",
+            "hand_in_card_play": false,
+            "hand_in_card_selection": false,
+            "hand_mode": "Play",
+            "local_turn_ready": true,
+            "snapshot_stable": true,
+            "player_action_phase": true
+          },
+          "player": {
+            "current_hp": 17,
+            "energy": 2,
+            "block": 0,
+            "cards_played_this_turn": 1
+          },
+          "enemies": [
+            {
+              "index": 0,
+              "is_alive": true,
+              "current_hp": 14,
+              "intents": [
+                {
+                  "index": 0,
+                  "intent_type": "Debuff",
+                  "label": null,
+                  "damage": null,
+                  "hits": null,
+                  "total_damage": null,
+                  "status_card_count": null
+                }
+              ]
+            }
+          ],
+          "hand": [
+            {
+              "index": 0,
+              "card_id": "DEFEND_IRONCLAD",
+              "dynamic_values": [
+                {
+                  "name": "Block",
+                  "base_value": 5,
+                  "current_value": 3,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            },
+            {
+              "index": 1,
+              "card_id": "IRON_WAVE",
+              "dynamic_values": [
+                {
+                  "name": "Block",
+                  "base_value": 5,
+                  "current_value": 3,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                },
+                {
+                  "name": "Damage",
+                  "base_value": 5,
+                  "current_value": 10,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            },
+            {
+              "index": 2,
+              "card_id": "DEFEND_IRONCLAD",
+              "dynamic_values": [
+                {
+                  "name": "Block",
+                  "base_value": 5,
+                  "current_value": 3,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            },
+            {
+              "index": 3,
+              "card_id": "STRIKE_IRONCLAD",
+              "dynamic_values": [
+                {
+                  "name": "Damage",
+                  "base_value": 6,
+                  "current_value": 11,
+                  "enchanted_value": 6,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            }
+          ],
+          "end_turn_will_kill_player": false
+        }
+      },
+      "approved_action": {
+        "action": "play_card",
+        "card_index": 3,
+        "target_index": 0
+      },
+      "after_hash": "78ab310f52a9f97a5719782608160dde7f11249b4be9d7b8c840a33f67371da7",
+      "after": {
+        "run_id": "EC0JQCUP6QMC",
+        "screen": "COMBAT",
+        "in_combat": true,
+        "turn": 4,
+        "run": {
+          "floor": 8,
+          "current_hp": 17
+        },
+        "selection": null,
+        "combat": {
+          "action_readiness": {
+            "can_use_combat_actions": true,
+            "reason": "ready",
+            "actions_settled": true,
+            "running_action_type": null,
+            "ready_action_type": null,
+            "modal_open": false,
+            "modal_type": null,
+            "player_actions_disabled": false,
+            "is_paused": false,
+            "local_ready_to_end_turn": false,
+            "all_players_ready_to_end_turn": true,
+            "ending_turn_phase_one": false,
+            "ending_turn_phase_two": false,
+            "end_turn_kick": "",
+            "combat_in_progress": true,
+            "combat_over_or_ending": false,
+            "combat_room_mode": "ActiveCombat",
+            "hand_in_card_play": false,
+            "hand_in_card_selection": false,
+            "hand_mode": "Play",
+            "local_turn_ready": true,
+            "snapshot_stable": true,
+            "player_action_phase": true
+          },
+          "player": {
+            "current_hp": 17,
+            "energy": 1,
+            "block": 0,
+            "cards_played_this_turn": 2
+          },
+          "enemies": [
+            {
+              "index": 0,
+              "is_alive": true,
+              "current_hp": 3,
+              "intents": [
+                {
+                  "index": 0,
+                  "intent_type": "Debuff",
+                  "label": null,
+                  "damage": null,
+                  "hits": null,
+                  "total_damage": null,
+                  "status_card_count": null
+                }
+              ]
+            }
+          ],
+          "hand": [
+            {
+              "index": 0,
+              "card_id": "DEFEND_IRONCLAD",
+              "dynamic_values": [
+                {
+                  "name": "Block",
+                  "base_value": 5,
+                  "current_value": 3,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            },
+            {
+              "index": 1,
+              "card_id": "IRON_WAVE",
+              "dynamic_values": [
+                {
+                  "name": "Block",
+                  "base_value": 5,
+                  "current_value": 3,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                },
+                {
+                  "name": "Damage",
+                  "base_value": 5,
+                  "current_value": 10,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            },
+            {
+              "index": 2,
+              "card_id": "DEFEND_IRONCLAD",
+              "dynamic_values": [
+                {
+                  "name": "Block",
+                  "base_value": 5,
+                  "current_value": 3,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            }
+          ],
+          "end_turn_will_kill_player": false
+        }
+      }
+    },
+    {
+      "source_result": "floor8-kill3-result.json",
+      "source_code_sha": "961e3792b80c2d0412becdddce8e1722692abd27",
+      "source_trace_sha256": "d2d92221ee0d8fd687ebe9b5b2c9dfde8766bb252504379aa03b8edc4254d608",
+      "source_time": 1790167609.3058822,
+      "before_hash": "78ab310f52a9f97a5719782608160dde7f11249b4be9d7b8c840a33f67371da7",
+      "before": {
+        "run_id": "EC0JQCUP6QMC",
+        "screen": "COMBAT",
+        "in_combat": true,
+        "turn": 4,
+        "run": {
+          "floor": 8,
+          "current_hp": 17
+        },
+        "selection": null,
+        "combat": {
+          "action_readiness": {
+            "can_use_combat_actions": true,
+            "reason": "ready",
+            "actions_settled": true,
+            "running_action_type": null,
+            "ready_action_type": null,
+            "modal_open": false,
+            "modal_type": null,
+            "player_actions_disabled": false,
+            "is_paused": false,
+            "local_ready_to_end_turn": false,
+            "all_players_ready_to_end_turn": true,
+            "ending_turn_phase_one": false,
+            "ending_turn_phase_two": false,
+            "end_turn_kick": "",
+            "combat_in_progress": true,
+            "combat_over_or_ending": false,
+            "combat_room_mode": "ActiveCombat",
+            "hand_in_card_play": false,
+            "hand_in_card_selection": false,
+            "hand_mode": "Play",
+            "local_turn_ready": true,
+            "snapshot_stable": true,
+            "player_action_phase": true
+          },
+          "player": {
+            "current_hp": 17,
+            "energy": 1,
+            "block": 0,
+            "cards_played_this_turn": 2
+          },
+          "enemies": [
+            {
+              "index": 0,
+              "is_alive": true,
+              "current_hp": 3,
+              "intents": [
+                {
+                  "index": 0,
+                  "intent_type": "Debuff",
+                  "label": null,
+                  "damage": null,
+                  "hits": null,
+                  "total_damage": null,
+                  "status_card_count": null
+                }
+              ]
+            }
+          ],
+          "hand": [
+            {
+              "index": 0,
+              "card_id": "DEFEND_IRONCLAD",
+              "dynamic_values": [
+                {
+                  "name": "Block",
+                  "base_value": 5,
+                  "current_value": 3,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            },
+            {
+              "index": 1,
+              "card_id": "IRON_WAVE",
+              "dynamic_values": [
+                {
+                  "name": "Block",
+                  "base_value": 5,
+                  "current_value": 3,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                },
+                {
+                  "name": "Damage",
+                  "base_value": 5,
+                  "current_value": 10,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            },
+            {
+              "index": 2,
+              "card_id": "DEFEND_IRONCLAD",
+              "dynamic_values": [
+                {
+                  "name": "Block",
+                  "base_value": 5,
+                  "current_value": 3,
+                  "enchanted_value": 5,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ],
+              "playable": true
+            }
+          ],
+          "end_turn_will_kill_player": false
+        }
+      },
+      "approved_action": {
+        "action": "play_card",
+        "card_index": 1,
+        "target_index": 0
+      },
+      "after_hash": "ef36cc6284693dbe14426d37287b9d50e6dcdccd25264a312ecc5d2cd63f1a90",
+      "after": {
+        "run_id": "EC0JQCUP6QMC",
+        "screen": "REWARD",
+        "in_combat": false,
+        "turn": 4,
+        "run": {
+          "floor": 8,
+          "current_hp": 23
+        },
+        "selection": null,
+        "combat": {
+          "action_readiness": {
+            "can_use_combat_actions": false,
+            "reason": "combat_screen_unavailable",
+            "actions_settled": true,
+            "running_action_type": null,
+            "ready_action_type": null,
+            "modal_open": false,
+            "modal_type": null,
+            "player_actions_disabled": false,
+            "is_paused": false,
+            "local_ready_to_end_turn": false,
+            "all_players_ready_to_end_turn": true,
+            "ending_turn_phase_one": false,
+            "ending_turn_phase_two": false,
+            "end_turn_kick": "",
+            "combat_in_progress": false,
+            "combat_over_or_ending": true,
+            "combat_room_mode": null,
+            "hand_in_card_play": null,
+            "hand_in_card_selection": null,
+            "hand_mode": null,
+            "local_turn_ready": true,
+            "snapshot_stable": false,
+            "player_action_phase": true
+          },
+          "player": {
+            "current_hp": 23,
+            "energy": 0,
+            "block": 0,
+            "cards_played_this_turn": 3
+          },
+          "enemies": [],
+          "hand": [],
+          "end_turn_will_kill_player": false
+        }
+      }
+    }
+  ]
+}
