@@ -1,0 +1,15 @@
+{
+  "tested_sha": "b80ef87",
+  "command": "python3 -m rsi.campaign --expected-run-id F1GR9R0YXCCC --combat-policy room_guided --room-plan experiments/E051/chomper-room-plan.json --pause-on-danger --danger-hp 4 --auto-combat-selections --max-actions 30 --max-seconds 120 --max-usd 0.03 --output artifacts/runs/e051-chomper-room.json --execute",
+  "status": "expert_required",
+  "reason": "lethal_end_turn",
+  "actions": 15,
+  "rejections": 0,
+  "astra_opening_actions": 1,
+  "model_calls": 12,
+  "cost_usd": 0.003539256,
+  "floor": 27,
+  "player_hp": 5,
+  "enemy_hp": 11,
+  "trace_sha256": "0b916d26cbe29d463aa665d5af5890468d923705b8e818772fcd4c276fa65061"
+}

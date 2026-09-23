@@ -332,3 +332,15 @@ remains active. This is an explicit policy variant, not a retroactive result
 for the earlier threshold. Cap at 30 actions/120 seconds/$0.03 Jev and stop
 at the room's MAP boundary or another review. Count the opener as Astra
 intervention 19; record every later choice as Jev, not Astra.
+
+Chomper room segment at tested SHA `b80ef87` accepted 15 actions with zero
+rejections; the one bound Pommel opener was Astra intervention 19, while 12
+Jev calls cost $0.003539256. Chomper63→11 HP, player remained 5 HP. Raw trace
+SHA-256
+`0b916d26cbe29d463aa665d5af5890468d923705b8e818772fcd4c276fa65061`.
+The controller stopped at `lethal_end_turn`, not defeat: turn8 has HP5,
+Block5, energy0, no potions or playable cards, and Chomper attacks 8×2.
+The only game action besides save-and-quit is end turn. Bind that action as
+intervention 20 to determine and record the genuine native terminal state;
+do not save/reload to avoid this loss. This segment demonstrates a strategic
+failure despite a successful tactical rescue on floor23.
