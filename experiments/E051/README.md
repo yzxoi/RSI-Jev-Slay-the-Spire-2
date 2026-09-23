@@ -251,3 +251,11 @@ Two Strikes remain at hand indexes0 and1, each displaying7 base damage
 before target Vulnerable and Cruelty. Two strengthened hits may remove the
 attacking Beetle before it deals22; bind the first Strike index0 target1 and
 measure its actual damage. This is intervention 11, not yet a guaranteed kill.
+
+First Strike at tested SHA `52d7120e8c2fab8afcb66dcc136da41f2802519b`
+dealt 14 actual damage, Beetle27→13 HP, player HP3, energy1; trace SHA-256
+`ec5de32f553966cf0705193272427eca987dcdf27af3ab5c97c98c03dc038d59`.
+The remaining Strike is now hand index0, target Beetle index1. The observed
+14 damage exceeds its 13 HP, so bind that second Strike as intervention 12
+and verify the Beetle's death. The nonattacking Silk enemy will remain; do
+not conflate killing the attacker with winning the whole battle.
