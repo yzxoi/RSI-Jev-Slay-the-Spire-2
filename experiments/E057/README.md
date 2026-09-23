@@ -1,0 +1,9 @@
+# E057 — cautious low-HP route, actual headless paired runs
+
+Issue: [#106](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/106). Hypothesis: when HP≤45% and only ordinary route options compete, preferring `Unknown` to `Monster` may preserve more HP than the current fixed-macro map ranking. An Unknown node is not guaranteed safe; this must be tested, not assumed from E051/E054.
+
+Baseline: `planfixed` at `origin/main` merge `419a3a984323bb4e6d569dce7cb38c1819e41716`. Treatment: `planfixed_cautious_route`; the same approximate combat planner and all non-map fixed macro choices, but `Unknown` rank 4 instead of 2 under HP≤45% (baseline `Monster` rank 3). Rest, Treasure and a worthwhile Shop retain their higher ranks. Fixed cohort: seeds `e057_route_001`, `e057_route_002`, `e057_route_003`; Ironclad and Silent; A0 and A10; 12 matched pairs/24 episodes. Pinned `sts2-cli` commit `084d1aa3d8e118ca7ce8d8774ad16d6be9c92367`, game expected v0.111.0, dotnet SDK 9.0.318. Each episode is capped at 1,500 actions/180 seconds, maximum three workers. No Jev or Astra calls.
+
+Decision rule: publish every pair's victory/act/floor, errors, and actual route overrides. Promote only if all 12 pairs end normally, at least three treatment map choices differ from the baseline choice on that same treatment state, treatment improves at least two more pairs than it worsens, and A10 improves at least as many pairs as it worsens. Otherwise close the PR with the observed evidence. This is a small exploratory headless simulation, not a native win-rate estimate. Raw traces remain in ignored `artifacts/runs`; compact results and trace hashes are tracked.
+
+Commit implementation before evaluation. Preserve every iteration and record exact tested SHA, commands, versions, outcomes and decision here and in the PR comment.
