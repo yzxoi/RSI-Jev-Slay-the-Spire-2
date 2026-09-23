@@ -1,0 +1,59 @@
+{
+  "experiment": "E050",
+  "issue": 93,
+  "tested_sha": "cee3ff629b648673ed3b8feb7552821d1f731051",
+  "scope": "read-only native trace observability, not gameplay or win-rate evaluation",
+  "environment": {
+    "python": "3.13.5",
+    "macos": "26.6.2",
+    "pyobjc_framework_Cocoa": "12.2.1",
+    "game": "v0.111.0",
+    "sts2_agent_mod": "v0.15.0",
+    "jev_response_model": "typesafe/jev-1.13-20260917"
+  },
+  "validation": {
+    "unit_command": "python3 -m unittest discover -s tests -q",
+    "unit_tests": 73,
+    "unit_result": "pass",
+    "real_trace_checks": {
+      "final_room": {
+        "sha256": "6d0cce78861d89611b0c22c31f81ec66a47afa89cc6fdb5c1cd7ecd43c7759e9",
+        "events": 120,
+        "status": "victory",
+        "jev_action": "Perfected Strike",
+        "jev_confidence": 0.84,
+        "selected_option_probability": 0.86,
+        "astra_room_opener": "Rampage"
+      },
+      "escalation": {
+        "sha256": "da7dd802631a3cc3b18edd1e96275a24ca3af212c9ec940b62e78e408882a055",
+        "events": 525,
+        "status": "expert_required",
+        "reason": "low_hp_before_spending_energy",
+        "invented_confidence": false
+      },
+      "summary": {
+        "sha256": "3113046deb0a07798be2c938df9f58c4cdb6a8d6cce881094d7b24fa17157265",
+        "events": 24,
+        "label": "继续胜利结算",
+        "is_victory": true,
+        "confidence": null
+      }
+    },
+    "derived_replay": {
+      "sha256": "efba26ec4c905f1d853d2b058d60defe6aad295cdd9619a7364fc5e77486145c",
+      "description": "Rows 0-53 of final-room trace, local demo only; not a new game run"
+    },
+    "auto_follow_latest_segment": "b1230cff-92f7-4c47-81ec-a6330950d181",
+    "overlay_visual": "AppKit 410x490 point panel inspected in replay and live-follow modes; Jev 84% confidence, 86% selected candidate, separate Astra plan, no overlap after layout fix; stale trace marked waiting and victory shown explicitly",
+    "native_game_actions": 0,
+    "model_calls": 0
+  },
+  "limitations": [
+    "The game had returned to its main menu before final overlay inspection; a composited capture over the earlier victory screen was unavailable.",
+    "Actual click-through and stacking over an active fullscreen combat window were configured in AppKit but not independently exercised by a game input test.",
+    "The native overlay requires macOS and PyObjC; the localhost browser monitor remains the cross-platform fallback.",
+    "Jev confidence and probabilities are model outputs, not calibrated win probabilities."
+  ],
+  "decision": "Open PR for user placement review; do not merge until fullscreen game overlay position/click-through is visually accepted or exercised."
+}
