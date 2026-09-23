@@ -14,9 +14,11 @@ def observed_state(row):
     value_name = 'CalculatedDamage' if card_id == 'PERFECTED_STRIKE' else 'Damage'
     card = {'index': 0, 'card_id': card_id, 'name': card_id, 'energy_cost': 1,
             'target_type': 'AnyEnemy', 'requires_target': True, 'valid_target_indices': [0],
-            'playable': True, 'dynamic_values': [{'name': value_name, 'current_value': damage}]}
+            'playable': True, 'dynamic_values': [{'name': value_name, 'base_value': damage,
+                                                   'current_value': damage}]}
     if hits > 1:
-        card['dynamic_values'].append({'name': 'Repeat', 'current_value': hits})
+        card['dynamic_values'].append({'name': 'Repeat', 'base_value': hits,
+                                       'current_value': hits})
     return {'run': {'deck': [{'card_id': card_id, 'card_type': 'Attack'}], 'relics': []},
             'combat': {'player': {'energy': 1, 'current_hp': 40, 'block': 0,
                                   'powers': [], 'cards_played_this_turn': 0},
