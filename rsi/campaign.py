@@ -20,6 +20,7 @@ from .settle import settle_turn,turn_key
 from .floor_plan import load_floor_plan,plan_context,plan_complete
 from .room_plan import load_room_plan,RoomPlanSession,room_context,room_complete
 from .event_guard import bound_bridge_reroll
+from .danger import review_projected_loss
 
 
 GUIDED_COMBAT_POLICIES={'planned','triggered','retaliate','floor_guided','room_guided'}
@@ -77,6 +78,11 @@ def main():
                 if a.stop_file and Path(a.stop_file).exists():result['status']='requested_boundary';break
                 if a.pause_on_danger and not expert and screen=='COMBAT' and not raw.get('selection') and (raw.get('combat') or {}).get('player',{}).get('energy',0)>0 and (raw.get('run') or {}).get('current_hp',100)<=a.danger_hp:
                     result['status']='expert_required';trace.write('expert_required',{'reason':'low_hp_before_spending_energy','state_hash':fingerprint(raw)});break
+                if a.pause_on_danger and not expert and screen=='COMBAT':
+                    danger=review_projected_loss(raw,a.danger_hp)
+                    if danger['reason'] != 'outside_turn_start':trace.write('danger_projection',danger)
+                    if danger['review']:
+                        result['status']='expert_required';trace.write('expert_required',{'reason':'projected_large_hp_loss','state_hash':fingerprint(raw),'projection':danger});break
                 if screen in ['PAUSE_MENU','SETTINGS']:raise RuntimeError('User paused game')
                 cs=candidates(raw,history)
                 if not cs:
