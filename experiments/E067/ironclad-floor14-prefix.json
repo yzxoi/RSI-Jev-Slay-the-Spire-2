@@ -1,0 +1,855 @@
+{
+  "schema_version": 1,
+  "source_experiment": "E066",
+  "source_trace_sha256": "3341ea7bd6a251dd3f776dc15e4887d6abae636786831d69e0cfdf4f7ac76d64",
+  "character": "Ironclad",
+  "ascension": 0,
+  "seed": "e066_shop_002",
+  "pre_purchase_state_hash": "6026fd13a777060bd08b6243d556b5a32e9fb8a3ccc71af9594bdb8ce84f2285",
+  "gold_before": 270,
+  "relics": [
+    {
+      "index": 0,
+      "name": "Whetstone",
+      "price": 175
+    },
+    {
+      "index": 1,
+      "name": "Blood Vial",
+      "price": 192
+    },
+    {
+      "index": 2,
+      "name": "Punch Dagger",
+      "price": 190
+    }
+  ],
+  "prefix_actions": [
+    {
+      "cmd": "action",
+      "action": "choose_option",
+      "args": {
+        "option_index": 1
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "select_map_node",
+      "args": {
+        "col": 0,
+        "row": 1
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 1,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 3,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "end_turn",
+      "args": {}
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 4,
+        "target_index": 1
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 0,
+        "target_index": 1
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 1
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "end_turn",
+      "args": {}
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 3,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 0,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "end_turn",
+      "args": {}
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 0,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "select_card_reward",
+      "args": {
+        "card_index": 2
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "select_map_node",
+      "args": {
+        "col": 0,
+        "row": 2
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 0,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 3,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "end_turn",
+      "args": {}
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 3
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 2,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 1,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "end_turn",
+      "args": {}
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 3,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "select_card_reward",
+      "args": {
+        "card_index": 1
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "select_map_node",
+      "args": {
+        "col": 0,
+        "row": 3
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 0,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 1
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "end_turn",
+      "args": {}
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 3,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 0,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 2,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "end_turn",
+      "args": {}
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 1,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "select_card_reward",
+      "args": {
+        "card_index": 2
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "select_map_node",
+      "args": {
+        "col": 1,
+        "row": 4
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "choose_option",
+      "args": {
+        "option_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "choose_option",
+      "args": {
+        "option_index": 1
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "select_map_node",
+      "args": {
+        "col": 2,
+        "row": 5
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 3,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 0,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 1,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "end_turn",
+      "args": {}
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 3,
+        "target_index": 1
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 2,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "end_turn",
+      "args": {}
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 1,
+        "target_index": 1
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 0,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "end_turn",
+      "args": {}
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 0,
+        "target_index": 1
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "select_card_reward",
+      "args": {
+        "card_index": 1
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "select_map_node",
+      "args": {
+        "col": 1,
+        "row": 6
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "choose_option",
+      "args": {
+        "option_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "select_map_node",
+      "args": {
+        "col": 0,
+        "row": 7
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 2,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "end_turn",
+      "args": {}
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 3,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 0,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 1,
+        "target_index": 1
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "end_turn",
+      "args": {}
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 0,
+        "target_index": 1
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 0,
+        "target_index": 1
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "end_turn",
+      "args": {}
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 4,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 0,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 0,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "end_turn",
+      "args": {}
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 1,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "select_card_reward",
+      "args": {
+        "card_index": 1
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "select_map_node",
+      "args": {
+        "col": 1,
+        "row": 8
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 4,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 1,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "end_turn",
+      "args": {}
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 1,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 2
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 1,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "end_turn",
+      "args": {}
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 0,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 0,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "end_turn",
+      "args": {}
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 0,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "select_card_reward",
+      "args": {
+        "card_index": 2
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "select_map_node",
+      "args": {
+        "col": 2,
+        "row": 9
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "select_map_node",
+      "args": {
+        "col": 2,
+        "row": 10
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 4,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 2
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "end_turn",
+      "args": {}
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 0,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 2,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "end_turn",
+      "args": {}
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 0,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 1,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "end_turn",
+      "args": {}
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 3,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 0,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "select_card_reward",
+      "args": {
+        "card_index": 1
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "select_map_node",
+      "args": {
+        "col": 3,
+        "row": 11
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 1,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 3,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 1,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "end_turn",
+      "args": {}
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 1
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 1
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "end_turn",
+      "args": {}
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 2,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 1,
+        "target_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "end_turn",
+      "args": {}
+    },
+    {
+      "cmd": "action",
+      "action": "play_card",
+      "args": {
+        "card_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "select_card_reward",
+      "args": {
+        "card_index": 1
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "select_map_node",
+      "args": {
+        "col": 4,
+        "row": 12
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "choose_option",
+      "args": {
+        "option_index": 0
+      }
+    },
+    {
+      "cmd": "action",
+      "action": "select_map_node",
+      "args": {
+        "col": 4,
+        "row": 13
+      }
+    }
+  ],
+  "purchase_action": {
+    "cmd": "action",
+    "action": "buy_relic",
+    "args": {
+      "relic_index": 0
+    }
+  }
+}
