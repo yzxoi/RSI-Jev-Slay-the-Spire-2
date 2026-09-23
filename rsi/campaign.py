@@ -15,6 +15,7 @@ from .trace import Trace,version_manifest
 from .live_plan import plan_native
 from .encounters import sandpit_rule
 from .guard import filter_end_turn
+from .status_guard import reserve_toxic_energy
 from .settle import settle_turn,turn_key
 from .floor_plan import load_floor_plan,plan_context,plan_complete
 from .room_plan import load_room_plan,RoomPlanSession,room_context,room_complete
@@ -26,7 +27,11 @@ GUIDED_COMBAT_POLICIES={'planned','triggered','retaliate','floor_guided','room_g
 def ordinary_candidates(raw, offered, policy, explicit_choice=False):
     if explicit_choice or policy not in GUIDED_COMBAT_POLICIES or raw.get('screen')!='COMBAT' or raw.get('selection'):
         return offered,None
-    return filter_end_turn(raw,offered)
+    candidates,report=filter_end_turn(raw,offered)
+    candidates,toxic=reserve_toxic_energy(raw,candidates)
+    if toxic['excluded']:
+        report={**report,'excluded':True,'reason':'reserve_energy_for_toxic','toxic_reservation':toxic}
+    return candidates,report
 
 
 def main():

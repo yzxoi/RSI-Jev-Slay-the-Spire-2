@@ -1,0 +1,742 @@
+{
+  "schema_version": 1,
+  "source_run_id": "4BD4R62AQHNK",
+  "source_trace_sha256": "848c53a92a5a4f0e075f74db577824ccccabdf3c8157d5b4861a7d286cece2b0",
+  "cases": [
+    {
+      "name": "turn2_start",
+      "source_state_hash": "0b010e40fed53a2cb2bd3affdcc61dd46c3467ca90055186f9dfa46fc594bfe8",
+      "state": {
+        "screen": "COMBAT",
+        "run": {
+          "relics": [
+            {
+              "index": 4,
+              "relic_id": "CLOAK_CLASP",
+              "name": "斗篷扣",
+              "description": "在你的回合结束时，每有一张[gold]手牌[/gold]，就获得[blue]{Block}[/blue]点[gold]格挡[/gold]",
+              "stack": null,
+              "is_melted": false
+            }
+          ],
+          "deck": [
+            {
+              "card_id": "STRIKE_IRONCLAD",
+              "card_type": "Attack"
+            },
+            {
+              "card_id": "STRIKE_IRONCLAD",
+              "card_type": "Attack"
+            },
+            {
+              "card_id": "STRIKE_IRONCLAD",
+              "card_type": "Attack"
+            },
+            {
+              "card_id": "STRIKE_IRONCLAD",
+              "card_type": "Attack"
+            },
+            {
+              "card_id": "STRIKE_IRONCLAD",
+              "card_type": "Attack"
+            },
+            {
+              "card_id": "MOLTEN_FIST",
+              "card_type": "Attack"
+            },
+            {
+              "card_id": "DISMANTLE",
+              "card_type": "Attack"
+            },
+            {
+              "card_id": "DISMANTLE",
+              "card_type": "Attack"
+            },
+            {
+              "card_id": "MOLTEN_FIST",
+              "card_type": "Attack"
+            }
+          ]
+        },
+        "combat": {
+          "player": {
+            "current_hp": 7,
+            "block": 0,
+            "energy": 3,
+            "powers": [
+              {
+                "index": 0,
+                "power_id": "PLATING_POWER",
+                "name": "覆甲",
+                "amount": 3,
+                "is_debuff": false
+              }
+            ]
+          },
+          "hand": [
+            {
+              "index": 0,
+              "card_id": "TOXIC",
+              "energy_cost": 1,
+              "playable": true,
+              "resolved_rules_text": "在你的回合结束时，如果这张牌在你的手牌中，你受到5点伤害。 消耗。",
+              "dynamic_values": [
+                {
+                  "name": "Damage",
+                  "base_value": 5,
+                  "current_value": 5,
+                  "enchanted_value": 5,
+                  "is_modified": false,
+                  "was_just_upgraded": false
+                }
+              ]
+            },
+            {
+              "index": 1,
+              "card_id": "TOXIC",
+              "energy_cost": 1,
+              "playable": true,
+              "resolved_rules_text": "在你的回合结束时，如果这张牌在你的手牌中，你受到5点伤害。 消耗。",
+              "dynamic_values": [
+                {
+                  "name": "Damage",
+                  "base_value": 5,
+                  "current_value": 5,
+                  "enchanted_value": 5,
+                  "is_modified": false,
+                  "was_just_upgraded": false
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "card_id": "STRIKE_IRONCLAD",
+              "energy_cost": 1,
+              "playable": true,
+              "resolved_rules_text": "造成9点伤害。 重放1。",
+              "dynamic_values": [
+                {
+                  "name": "Damage",
+                  "base_value": 6,
+                  "current_value": 9,
+                  "enchanted_value": 6,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "card_id": "STRIKE_IRONCLAD",
+              "energy_cost": 1,
+              "playable": true,
+              "resolved_rules_text": "造成9点伤害。",
+              "dynamic_values": [
+                {
+                  "name": "Damage",
+                  "base_value": 6,
+                  "current_value": 9,
+                  "enchanted_value": 6,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "card_id": "STRIKE_IRONCLAD",
+              "energy_cost": 1,
+              "playable": true,
+              "resolved_rules_text": "造成9点伤害。",
+              "dynamic_values": [
+                {
+                  "name": "Damage",
+                  "base_value": 6,
+                  "current_value": 9,
+                  "enchanted_value": 6,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "card_id": "MOLTEN_FIST",
+              "energy_cost": 1,
+              "playable": true,
+              "resolved_rules_text": "造成14点伤害。 将该敌人身上的易伤层数翻倍。 消耗。",
+              "dynamic_values": [
+                {
+                  "name": "Damage",
+                  "base_value": 14,
+                  "current_value": 14,
+                  "enchanted_value": 14,
+                  "is_modified": false,
+                  "was_just_upgraded": false
+                }
+              ]
+            },
+            {
+              "index": 6,
+              "card_id": "DISMANTLE",
+              "energy_cost": 1,
+              "playable": true,
+              "resolved_rules_text": "造成8点伤害。 如果该敌人有易伤状态，则攻击两次。",
+              "dynamic_values": [
+                {
+                  "name": "Damage",
+                  "base_value": 8,
+                  "current_value": 8,
+                  "enchanted_value": 8,
+                  "is_modified": false,
+                  "was_just_upgraded": false
+                }
+              ]
+            }
+          ],
+          "enemies": [
+            {
+              "index": 0,
+              "current_hp": 50,
+              "block": 0,
+              "is_alive": true,
+              "powers": [],
+              "intents": [
+                {
+                  "index": 0,
+                  "intent_type": "Attack",
+                  "label": "13",
+                  "damage": 13,
+                  "hits": 1,
+                  "total_damage": 13,
+                  "status_card_count": null
+                }
+              ]
+            },
+            {
+              "index": 1,
+              "current_hp": 55,
+              "block": 0,
+              "is_alive": true,
+              "powers": [
+                {
+                  "index": 0,
+                  "power_id": "STRENGTH_POWER",
+                  "name": "力量",
+                  "amount": 2,
+                  "is_debuff": false
+                }
+              ],
+              "intents": [
+                {
+                  "index": 0,
+                  "intent_type": "StatusCard",
+                  "label": "2",
+                  "damage": null,
+                  "hits": null,
+                  "total_damage": null,
+                  "status_card_count": 2
+                }
+              ]
+            }
+          ],
+          "end_turn_will_kill_player": true
+        }
+      },
+      "candidates": [
+        {
+          "action": {
+            "action": "play_card",
+            "card_index": 0
+          },
+          "name": "毒素",
+          "card_id": "TOXIC",
+          "rules": "在你的回合结束时，如果这张牌在你的手牌中，你受到5点伤害。 消耗。",
+          "target_space": null,
+          "id": "a000"
+        },
+        {
+          "action": {
+            "action": "play_card",
+            "card_index": 1
+          },
+          "name": "毒素",
+          "card_id": "TOXIC",
+          "rules": "在你的回合结束时，如果这张牌在你的手牌中，你受到5点伤害。 消耗。",
+          "target_space": null,
+          "id": "a001"
+        },
+        {
+          "action": {
+            "action": "play_card",
+            "card_index": 2,
+            "target_index": 0
+          },
+          "name": "打击",
+          "card_id": "STRIKE_IRONCLAD",
+          "rules": "造成9点伤害。 重放1。",
+          "target_space": "enemies",
+          "id": "a002"
+        },
+        {
+          "action": {
+            "action": "play_card",
+            "card_index": 2,
+            "target_index": 1
+          },
+          "name": "打击",
+          "card_id": "STRIKE_IRONCLAD",
+          "rules": "造成9点伤害。 重放1。",
+          "target_space": "enemies",
+          "id": "a003"
+        },
+        {
+          "action": {
+            "action": "play_card",
+            "card_index": 3,
+            "target_index": 0
+          },
+          "name": "打击",
+          "card_id": "STRIKE_IRONCLAD",
+          "rules": "造成9点伤害。",
+          "target_space": "enemies",
+          "id": "a004"
+        },
+        {
+          "action": {
+            "action": "play_card",
+            "card_index": 3,
+            "target_index": 1
+          },
+          "name": "打击",
+          "card_id": "STRIKE_IRONCLAD",
+          "rules": "造成9点伤害。",
+          "target_space": "enemies",
+          "id": "a005"
+        },
+        {
+          "action": {
+            "action": "play_card",
+            "card_index": 4,
+            "target_index": 0
+          },
+          "name": "打击",
+          "card_id": "STRIKE_IRONCLAD",
+          "rules": "造成9点伤害。",
+          "target_space": "enemies",
+          "id": "a006"
+        },
+        {
+          "action": {
+            "action": "play_card",
+            "card_index": 4,
+            "target_index": 1
+          },
+          "name": "打击",
+          "card_id": "STRIKE_IRONCLAD",
+          "rules": "造成9点伤害。",
+          "target_space": "enemies",
+          "id": "a007"
+        },
+        {
+          "action": {
+            "action": "play_card",
+            "card_index": 5,
+            "target_index": 0
+          },
+          "name": "熔融之拳+",
+          "card_id": "MOLTEN_FIST",
+          "rules": "造成14点伤害。 将该敌人身上的易伤层数翻倍。 消耗。",
+          "target_space": "enemies",
+          "id": "a008"
+        },
+        {
+          "action": {
+            "action": "play_card",
+            "card_index": 5,
+            "target_index": 1
+          },
+          "name": "熔融之拳+",
+          "card_id": "MOLTEN_FIST",
+          "rules": "造成14点伤害。 将该敌人身上的易伤层数翻倍。 消耗。",
+          "target_space": "enemies",
+          "id": "a009"
+        },
+        {
+          "action": {
+            "action": "play_card",
+            "card_index": 6,
+            "target_index": 0
+          },
+          "name": "拆卸",
+          "card_id": "DISMANTLE",
+          "rules": "造成8点伤害。 如果该敌人有易伤状态，则攻击两次。",
+          "target_space": "enemies",
+          "id": "a010"
+        },
+        {
+          "action": {
+            "action": "play_card",
+            "card_index": 6,
+            "target_index": 1
+          },
+          "name": "拆卸",
+          "card_id": "DISMANTLE",
+          "rules": "造成8点伤害。 如果该敌人有易伤状态，则攻击两次。",
+          "target_space": "enemies",
+          "id": "a011"
+        },
+        {
+          "action": {
+            "action": "end_turn"
+          },
+          "name": "结束回合",
+          "id": "a012"
+        }
+      ]
+    },
+    {
+      "name": "after_molten",
+      "source_state_hash": "a1c7fca73da20276b37a15914fdb7f3a44ee9b5932d61d86539853b897508fa8",
+      "state": {
+        "screen": "COMBAT",
+        "run": {
+          "relics": [
+            {
+              "index": 4,
+              "relic_id": "CLOAK_CLASP",
+              "name": "斗篷扣",
+              "description": "在你的回合结束时，每有一张[gold]手牌[/gold]，就获得[blue]{Block}[/blue]点[gold]格挡[/gold]",
+              "stack": null,
+              "is_melted": false
+            }
+          ],
+          "deck": [
+            {
+              "card_id": "STRIKE_IRONCLAD",
+              "card_type": "Attack"
+            },
+            {
+              "card_id": "STRIKE_IRONCLAD",
+              "card_type": "Attack"
+            },
+            {
+              "card_id": "STRIKE_IRONCLAD",
+              "card_type": "Attack"
+            },
+            {
+              "card_id": "STRIKE_IRONCLAD",
+              "card_type": "Attack"
+            },
+            {
+              "card_id": "STRIKE_IRONCLAD",
+              "card_type": "Attack"
+            },
+            {
+              "card_id": "DISMANTLE",
+              "card_type": "Attack"
+            },
+            {
+              "card_id": "DISMANTLE",
+              "card_type": "Attack"
+            }
+          ]
+        },
+        "combat": {
+          "player": {
+            "current_hp": 7,
+            "block": 0,
+            "energy": 2,
+            "powers": [
+              {
+                "index": 0,
+                "power_id": "PLATING_POWER",
+                "name": "覆甲",
+                "amount": 3,
+                "is_debuff": false
+              }
+            ]
+          },
+          "hand": [
+            {
+              "index": 0,
+              "card_id": "TOXIC",
+              "energy_cost": 1,
+              "playable": true,
+              "resolved_rules_text": "在你的回合结束时，如果这张牌在你的手牌中，你受到5点伤害。 消耗。",
+              "dynamic_values": [
+                {
+                  "name": "Damage",
+                  "base_value": 5,
+                  "current_value": 5,
+                  "enchanted_value": 5,
+                  "is_modified": false,
+                  "was_just_upgraded": false
+                }
+              ]
+            },
+            {
+              "index": 1,
+              "card_id": "TOXIC",
+              "energy_cost": 1,
+              "playable": true,
+              "resolved_rules_text": "在你的回合结束时，如果这张牌在你的手牌中，你受到5点伤害。 消耗。",
+              "dynamic_values": [
+                {
+                  "name": "Damage",
+                  "base_value": 5,
+                  "current_value": 5,
+                  "enchanted_value": 5,
+                  "is_modified": false,
+                  "was_just_upgraded": false
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "card_id": "STRIKE_IRONCLAD",
+              "energy_cost": 1,
+              "playable": true,
+              "resolved_rules_text": "造成9点伤害。 重放1。",
+              "dynamic_values": [
+                {
+                  "name": "Damage",
+                  "base_value": 6,
+                  "current_value": 9,
+                  "enchanted_value": 6,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "card_id": "STRIKE_IRONCLAD",
+              "energy_cost": 1,
+              "playable": true,
+              "resolved_rules_text": "造成9点伤害。",
+              "dynamic_values": [
+                {
+                  "name": "Damage",
+                  "base_value": 6,
+                  "current_value": 9,
+                  "enchanted_value": 6,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "card_id": "STRIKE_IRONCLAD",
+              "energy_cost": 1,
+              "playable": true,
+              "resolved_rules_text": "造成9点伤害。",
+              "dynamic_values": [
+                {
+                  "name": "Damage",
+                  "base_value": 6,
+                  "current_value": 9,
+                  "enchanted_value": 6,
+                  "is_modified": true,
+                  "was_just_upgraded": false
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "card_id": "DISMANTLE",
+              "energy_cost": 1,
+              "playable": true,
+              "resolved_rules_text": "造成8点伤害。 如果该敌人有易伤状态，则攻击两次。",
+              "dynamic_values": [
+                {
+                  "name": "Damage",
+                  "base_value": 8,
+                  "current_value": 8,
+                  "enchanted_value": 8,
+                  "is_modified": false,
+                  "was_just_upgraded": false
+                }
+              ]
+            }
+          ],
+          "enemies": [
+            {
+              "index": 0,
+              "current_hp": 36,
+              "block": 0,
+              "is_alive": true,
+              "powers": [],
+              "intents": [
+                {
+                  "index": 0,
+                  "intent_type": "Attack",
+                  "label": "13",
+                  "damage": 13,
+                  "hits": 1,
+                  "total_damage": 13,
+                  "status_card_count": null
+                }
+              ]
+            },
+            {
+              "index": 1,
+              "current_hp": 55,
+              "block": 0,
+              "is_alive": true,
+              "powers": [
+                {
+                  "index": 0,
+                  "power_id": "STRENGTH_POWER",
+                  "name": "力量",
+                  "amount": 2,
+                  "is_debuff": false
+                }
+              ],
+              "intents": [
+                {
+                  "index": 0,
+                  "intent_type": "StatusCard",
+                  "label": "2",
+                  "damage": null,
+                  "hits": null,
+                  "total_damage": null,
+                  "status_card_count": 2
+                }
+              ]
+            }
+          ],
+          "end_turn_will_kill_player": true
+        }
+      },
+      "candidates": [
+        {
+          "action": {
+            "action": "play_card",
+            "card_index": 0
+          },
+          "name": "毒素",
+          "card_id": "TOXIC",
+          "rules": "在你的回合结束时，如果这张牌在你的手牌中，你受到5点伤害。 消耗。",
+          "target_space": null,
+          "id": "a000"
+        },
+        {
+          "action": {
+            "action": "play_card",
+            "card_index": 1
+          },
+          "name": "毒素",
+          "card_id": "TOXIC",
+          "rules": "在你的回合结束时，如果这张牌在你的手牌中，你受到5点伤害。 消耗。",
+          "target_space": null,
+          "id": "a001"
+        },
+        {
+          "action": {
+            "action": "play_card",
+            "card_index": 2,
+            "target_index": 0
+          },
+          "name": "打击",
+          "card_id": "STRIKE_IRONCLAD",
+          "rules": "造成9点伤害。 重放1。",
+          "target_space": "enemies",
+          "id": "a002"
+        },
+        {
+          "action": {
+            "action": "play_card",
+            "card_index": 2,
+            "target_index": 1
+          },
+          "name": "打击",
+          "card_id": "STRIKE_IRONCLAD",
+          "rules": "造成9点伤害。 重放1。",
+          "target_space": "enemies",
+          "id": "a003"
+        },
+        {
+          "action": {
+            "action": "play_card",
+            "card_index": 3,
+            "target_index": 0
+          },
+          "name": "打击",
+          "card_id": "STRIKE_IRONCLAD",
+          "rules": "造成9点伤害。",
+          "target_space": "enemies",
+          "id": "a004"
+        },
+        {
+          "action": {
+            "action": "play_card",
+            "card_index": 3,
+            "target_index": 1
+          },
+          "name": "打击",
+          "card_id": "STRIKE_IRONCLAD",
+          "rules": "造成9点伤害。",
+          "target_space": "enemies",
+          "id": "a005"
+        },
+        {
+          "action": {
+            "action": "play_card",
+            "card_index": 4,
+            "target_index": 0
+          },
+          "name": "打击",
+          "card_id": "STRIKE_IRONCLAD",
+          "rules": "造成9点伤害。",
+          "target_space": "enemies",
+          "id": "a006"
+        },
+        {
+          "action": {
+            "action": "play_card",
+            "card_index": 4,
+            "target_index": 1
+          },
+          "name": "打击",
+          "card_id": "STRIKE_IRONCLAD",
+          "rules": "造成9点伤害。",
+          "target_space": "enemies",
+          "id": "a007"
+        },
+        {
+          "action": {
+            "action": "play_card",
+            "card_index": 5,
+            "target_index": 0
+          },
+          "name": "拆卸",
+          "card_id": "DISMANTLE",
+          "rules": "造成8点伤害。 如果该敌人有易伤状态，则攻击两次。",
+          "target_space": "enemies",
+          "id": "a008"
+        },
+        {
+          "action": {
+            "action": "play_card",
+            "card_index": 5,
+            "target_index": 1
+          },
+          "name": "拆卸",
+          "card_id": "DISMANTLE",
+          "rules": "造成8点伤害。 如果该敌人有易伤状态，则攻击两次。",
+          "target_space": "enemies",
+          "id": "a009"
+        },
+        {
+          "action": {
+            "action": "end_turn"
+          },
+          "name": "结束回合",
+          "id": "a010"
+        }
+      ]
+    }
+  ]
+}

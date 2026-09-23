@@ -1,0 +1,22 @@
+{
+  "baseline_sha": "e8ccf125cf72e831bbcce63a831b22f7482359bf",
+  "command": "python3 - <<'PY'\nimport json\nfrom rsi.campaign import ordinary_candidates\nf=json.load(open('experiments/E047/frozen-mytes.json'))\nfor c in f['cases']:\n out,guard=ordinary_candidates(c['state'],c['candidates'],'floor_guided')\n print(c['name'],len(c['candidates']),len(out),guard,[x['id'] for x in out])\nPY",
+  "results": [
+    {
+      "case": "turn2_start",
+      "offered": 13,
+      "kept": 13,
+      "kept_ids": ["a000", "a001", "a002", "a003", "a004", "a005", "a006", "a007", "a008", "a009", "a010", "a011", "a012"],
+      "guard_reason": "unknown_or_card_play_downside",
+      "unknown_powers": ["PLATING"]
+    },
+    {
+      "case": "after_molten",
+      "offered": 11,
+      "kept": 11,
+      "kept_ids": ["a000", "a001", "a002", "a003", "a004", "a005", "a006", "a007", "a008", "a009", "a010"],
+      "guard_reason": "unknown_or_card_play_downside",
+      "unknown_powers": ["PLATING"]
+    }
+  ]
+}
