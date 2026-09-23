@@ -8,13 +8,26 @@ from .retaliation import thorns_before_hit, hit_count
 SCOPE='Approximate current-hand search, not an engine clone. Draws, random effects, orbs, minions, triggers and unknown mechanics use heuristic utility; all plans re-evaluated after each real action.'
 
 
-def choose_plan(state, candidates, width=40, depth=8, triggers=False, retaliation=False, force_first=False):
+def letter_opener_config(state):
+    for relic in state.get('player', {}).get('relics', []):
+        if relic.get('relic_id') != 'LETTER_OPENER' and relic.get('name') != 'Letter Opener':
+            continue
+        values = relic.get('vars') or {}
+        return int(values.get('Cards', 3)), int(values.get('Damage', 5))
+    return None
+
+
+def choose_plan(state, candidates, width=40, depth=8, triggers=False, retaliation=False, force_first=False, letter_opener=False):
     cards={c['index']:c for c in state.get('hand',[])}
     enemies={e['index']:e for e in state.get('enemies',[])}
     initial_hp={i:e['hp'] for i,e in enemies.items()}; incoming={i:intent_damage(e) for i,e in enemies.items()}
     hp=state.get('player',{}).get('hp',100)
+    letter_config=letter_opener_config(state) if letter_opener else None
+    starting_skills=state.get('skills_played_this_turn')
+    letter_active=bool(letter_config and isinstance(starting_skills,int) and starting_skills>=0 and letter_config[0]>0)
     start={'self_loss':0,'energy':state.get('energy',0),'block':state.get('player',{}).get('block',0),'hp':dict(initial_hp),'eblock':{i:e.get('block',0) for i,e in enemies.items()},'used':frozenset(),'plan':[],'utility':0.,'strength':0,'vuln':set(),'native_caps':{i:e.get('native_slippery',0) for i,e in enemies.items()},'native_artifacts':{i:e.get('native_artifact',0) for i,e in enemies.items()}}
     if triggers:start['triggers']=trigger_rules.initial(state)
+    if letter_active:start.update(letter_skill_count=starting_skills,letter_procs=0)
     def score(n):
         loss=n['self_loss']+max(0,sum(incoming[i] for i,h in n['hp'].items() if h>0)-n['block']-state.get('player',{}).get('end_turn_block',0))
         kills=sum(h<=0 for h in n['hp'].values());damage=sum(initial_hp[i]-max(0,h) for i,h in n['hp'].items())
@@ -59,6 +72,16 @@ def choose_plan(state, candidates, width=40, depth=8, triggers=False, retaliatio
                         if dealt>0 and m['native_caps'].get(t,0)>0:dealt=min(1,dealt);m['native_caps'][t]-=1
                         m['hp'][t]=max(0,m['hp'][t]-dealt)
                 if triggers:trigger_rules.after_card(m,card,cards)
+                if letter_active and card.get('type')=='Skill':
+                    m['letter_skill_count']+=1
+                    if m['letter_skill_count']%letter_config[0]==0:
+                        m['letter_procs']+=1
+                        for enemy_index in m['hp']:
+                            if m['hp'][enemy_index]<=0:continue
+                            damage=letter_config[1]
+                            dealt=max(0,damage-m['eblock'][enemy_index])
+                            m['eblock'][enemy_index]=max(0,m['eblock'][enemy_index]-damage)
+                            m['hp'][enemy_index]=max(0,m['hp'][enemy_index]-dealt)
                 if stats.get('vulnerablepower',0) and target is not None and m['native_artifacts'].get(target,0)>0:
                     m['native_artifacts'][target]-=1
                 elif stats.get('vulnerablepower',0) and target is not None:
@@ -87,8 +110,9 @@ def choose_plan(state, candidates, width=40, depth=8, triggers=False, retaliatio
         for n in children:
             key=(n['used'],n['energy'],n['block'],n['self_loss'],tuple(n['hp'].items()),tuple(n['eblock'].items()),n['strength'],tuple(sorted(n['vuln'])),tuple(n['native_caps'].items()),tuple(n['native_artifacts'].items()))
             if triggers:key=key+tuple(n['triggers'].items())
+            if letter_active:key=key+(n['letter_skill_count'],n['letter_procs'])
             if key not in unique or score(n)>score(unique[key]):unique[key]=n
         frontier=sorted(unique.values(),key=score,reverse=True)[:width]
     chosen=next((c for c in candidates if best['plan'] and c['id']==best['plan'][0]),None)
     if chosen is None:chosen=next((c for c in candidates if c['action']['action']=='end_turn'),candidates[0])
-    return chosen,{'scope':SCOPE,'plan_ids':best['plan'],'score':round(score(best),3),'predicted_self_loss':best['self_loss'],'predicted_total_hp_loss':best['self_loss']+max(0,sum(incoming[i] for i,h in best['hp'].items() if h>0)-best['block']-state.get('player',{}).get('end_turn_block',0)),'predicted_block':best['block'],'predicted_enemy_hp':best['hp'],'expanded':expanded,'width':width,'depth':depth,'trigger_forecast':best.get('triggers')}
+    return chosen,{'scope':SCOPE,'plan_ids':best['plan'],'score':round(score(best),3),'predicted_self_loss':best['self_loss'],'predicted_total_hp_loss':best['self_loss']+max(0,sum(incoming[i] for i,h in best['hp'].items() if h>0)-best['block']-state.get('player',{}).get('end_turn_block',0)),'predicted_block':best['block'],'predicted_enemy_hp':best['hp'],'expanded':expanded,'width':width,'depth':depth,'trigger_forecast':best.get('triggers'),'letter_opener_forecast':{'starting_skills':starting_skills,'skills_after_plan':best['letter_skill_count'],'procs':best['letter_procs'],'cards_per_proc':letter_config[0],'damage_per_proc':letter_config[1]} if letter_active else None}
