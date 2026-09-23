@@ -1,0 +1,525 @@
+{
+  "schema_version": 1,
+  "experiment": "E068",
+  "native_run_id": "QVF8XALGHY8B",
+  "character": "IRONCLAD",
+  "ascension": 0,
+  "natural_seed": true,
+  "game_version": "v0.111.0",
+  "mod_version": "v0.15.0",
+  "model": "typesafe/jev-1.13-20260917",
+  "outcome": {
+    "is_victory": false,
+    "floor": 33,
+    "save_status": "verified",
+    "save_verified": true
+  },
+  "execution": {
+    "setup_actions": 3,
+    "controller_segments": 17,
+    "controller_actions": 446,
+    "native_single_steps": 37,
+    "total_accepted_actions_including_setup": 486,
+    "jev_calls": 111,
+    "jev_cost_usd": 0.029594334,
+    "rejections": 0,
+    "uncertain_calls": 0,
+    "funded_shop_reviews": 1,
+    "expert_shop_purchase": "Meat on the Bone at floor 20; 494 to 191 gold",
+    "final_save_state_hash": "c8d9c49e749e937b5c9a336bd232b52e0ada0bf6dd649ba6d7faa0ab2e7c507a"
+  },
+  "traces": [
+    {
+      "output": "e068-segment01.json",
+      "tested_sha": "d6a15c526141f75f944d3cd4c281fd4baf605ced",
+      "status": "budget_boundary",
+      "actions": 200,
+      "model_calls": 53,
+      "cost_usd": 0.011096693999999999,
+      "trace_sha256": "8d70e2f6a4611c844e0d809bd5a7ed81e13321393e9fadb38ba947e4e388bb7f"
+    },
+    {
+      "output": "e068-segment02.json",
+      "tested_sha": "4d12be53581bda72ef8c7a71c3e861132e9d9af9",
+      "status": "expert_required",
+      "actions": 66,
+      "model_calls": 16,
+      "cost_usd": 0.004255313999999999,
+      "trace_sha256": "ed962e924b941ae50a2cdc649f0b9c66accb952138a50bb8851cffc51bdedc9c"
+    },
+    {
+      "output": "e068-segment03.json",
+      "tested_sha": "8db87b8eb75ac4365d47a8bc0184d997b4a03dc9",
+      "status": "expert_required",
+      "actions": 15,
+      "model_calls": 3,
+      "cost_usd": 0.0008281979999999999,
+      "trace_sha256": "b961869c4122436db160f527c4e3e348890d5ba25c633fd9d14a5df85fe434f4"
+    },
+    {
+      "output": "e068-segment04.json",
+      "tested_sha": "514da7b4c0b50446e4d28cac55fc6374aa1efa18",
+      "status": "expert_required",
+      "actions": 1,
+      "model_calls": 0,
+      "cost_usd": 0.0,
+      "trace_sha256": "d7677aab10d574fd469b3bf0d1364cd3561185bdca8f81f4ab4bba89664ed7a2"
+    },
+    {
+      "output": "e068-segment05.json",
+      "tested_sha": "7499872c96501132e75becfd8b70cc71f0e932f5",
+      "status": "expert_required",
+      "actions": 10,
+      "model_calls": 2,
+      "cost_usd": 0.000511014,
+      "trace_sha256": "16f4ae4dcab59f489dae74866973358f5208f65d5d8feee751c86fce0499515e"
+    },
+    {
+      "output": "e068-segment06.json",
+      "tested_sha": "0e3d07bc8ffe83722d478164df05fd90164f7d82",
+      "status": "expert_required",
+      "actions": 10,
+      "model_calls": 1,
+      "cost_usd": 0.000196434,
+      "trace_sha256": "32b03c9fe7d489c3716d4b07c75fe753180880665e81d903dc7dc50fc3bfda61"
+    },
+    {
+      "output": "e068-segment07.json",
+      "tested_sha": "d78f9691f86c6b708ce52d8284fe4ac769b7b7d9",
+      "status": "expert_required",
+      "actions": 6,
+      "model_calls": 0,
+      "cost_usd": 0.0,
+      "trace_sha256": "10368edb7358c980601724c51f00a41fe021e4261085eb6f925309fffb4e5b36"
+    },
+    {
+      "output": "e068-segment08.json",
+      "tested_sha": "09001272a20f8b38f5054a677d38ddc5a161d760",
+      "status": "expert_required",
+      "actions": 59,
+      "model_calls": 16,
+      "cost_usd": 0.006201594,
+      "trace_sha256": "d4df0375bdca64e959079d5fefe7196ea3088577881106e485430fc052b9f4dd"
+    },
+    {
+      "output": "e068-segment09.json",
+      "tested_sha": "26cc7f01eb5c96fae458db79f203876bcdff7022",
+      "status": "expert_required",
+      "actions": 7,
+      "model_calls": 2,
+      "cost_usd": 0.000755748,
+      "trace_sha256": "75d7e5745143011e8ba8413dc5fbb9bbd85f555c9c8e3068f29cc6d9b392bc31"
+    },
+    {
+      "output": "e068-segment10.json",
+      "tested_sha": "4f380898a6f79ac7181c3afa9af7f37012135dad",
+      "status": "expert_required",
+      "actions": 4,
+      "model_calls": 1,
+      "cost_usd": 0.000349734,
+      "trace_sha256": "eda1ebbc6d79edc3c1c408560b5ee427638c4725fc2449f6d70c52f92b7ddc99"
+    },
+    {
+      "output": "e068-segment11.json",
+      "tested_sha": "cc93636501483c17f22d0e55be8bcde976dd2904",
+      "status": "expert_required",
+      "actions": 24,
+      "model_calls": 6,
+      "cost_usd": 0.00179403,
+      "trace_sha256": "46fb5c822184a3703efd5f50faa688a43bfc21480799606d16acbd48e549c9ae"
+    },
+    {
+      "output": "e068-segment12.json",
+      "tested_sha": "e5b8dfd5a594088604c30f5cc70a20cfb43f9d38",
+      "status": "expert_required",
+      "actions": 15,
+      "model_calls": 5,
+      "cost_usd": 0.0017569019999999999,
+      "trace_sha256": "67397e8a06ba213ae268c4e3fd91dfd9d3f89658151145b662b42c7d73ba9cb8"
+    },
+    {
+      "output": "e068-segment13.json",
+      "tested_sha": "60918b3544073c6dae76f473e660c44d5ff0f232",
+      "status": "expert_required",
+      "actions": 1,
+      "model_calls": 0,
+      "cost_usd": 0.0,
+      "trace_sha256": "04e65ae94ae8fecc35bbf8e044aeab40309af75bb8e330ea26d9b5ac523c51f1"
+    },
+    {
+      "output": "e068-segment14.json",
+      "tested_sha": "d0806019fdb2f6a7e7deeb30c6bf6d538c05ec8d",
+      "status": "expert_required",
+      "actions": 5,
+      "model_calls": 1,
+      "cost_usd": 0.000351582,
+      "trace_sha256": "04ba871ddac7851037d5a3956b6e177444ecefab8eccfe7c08c30290d60a29c2"
+    },
+    {
+      "output": "e068-segment15.json",
+      "tested_sha": "5ec514b517cd002922ba5e552c4f16f117ad8f1f",
+      "status": "expert_required",
+      "actions": 5,
+      "model_calls": 2,
+      "cost_usd": 0.0007286580000000001,
+      "trace_sha256": "0e2b19dc621ed097ddd39a66a0daf3a9b0b45f96a381166ba086668a6fc02fa5"
+    },
+    {
+      "output": "e068-segment16.json",
+      "tested_sha": "4e746104e089d74bab9ce47d30866b13c8bbda1e",
+      "status": "expert_required",
+      "actions": 16,
+      "model_calls": 3,
+      "cost_usd": 0.0007684319999999999,
+      "trace_sha256": "00c2a8c6f3cf87915b7572bba8b758adebb4302c1cf868535fb3a1d5af67db07"
+    },
+    {
+      "output": "e068-segment17.json",
+      "tested_sha": "51bfe5dcbf82b81d1835c899c543cb328c4c1670",
+      "status": "expert_required",
+      "actions": 2,
+      "model_calls": 0,
+      "cost_usd": 0.0,
+      "trace_sha256": "9e61eaeaeed02a0b66f04b84134de2976006d7efbcff6fb4960eec21821c47d7"
+    },
+    {
+      "output": "e068-continue-game-over-step.json",
+      "tested_sha": "c3c18fb53b40208dd5810a7ed7e4f1eb39e3394a",
+      "status": "accepted",
+      "actions": 1,
+      "model_calls": 0,
+      "cost_usd": 0,
+      "trace_sha256": "8dd119e1dcb297348fd4db78626b539fc2b59c08926e13a64d1a4aff16fed517"
+    },
+    {
+      "output": "e068-floor21-turn3-defend-step.json",
+      "tested_sha": "95bc6a714aa822443b981109dbb9256694c0dc8f",
+      "status": "accepted",
+      "actions": 1,
+      "model_calls": 0,
+      "cost_usd": 0,
+      "trace_sha256": "ab92d495769e39bdc101fe06340584b8476abfcd67392be5e8540f9f1948ccef"
+    },
+    {
+      "output": "e068-floor21-turn3-molten-step.json",
+      "tested_sha": "52d7364dc952479294666c64a1c506eb9ae3b93f",
+      "status": "accepted",
+      "actions": 1,
+      "model_calls": 0,
+      "cost_usd": 0,
+      "trace_sha256": "d84aa2103a72deb97d26329d594ae191b96b4ea8178624a43b9b751ccfe08035"
+    },
+    {
+      "output": "e068-floor21-turn3-thunderclap-step.json",
+      "tested_sha": "9b4aeebe8be95516d9eaf9d7cb80256a239ba149",
+      "status": "accepted",
+      "actions": 1,
+      "model_calls": 0,
+      "cost_usd": 0,
+      "trace_sha256": "fcd03bddf74008d5e935fff5405eb8c9bc9fb907014e69f2e10d18b7df83f325"
+    },
+    {
+      "output": "e068-floor21-turn4-headbutt-step.json",
+      "tested_sha": "8cf4b7fcfc7198857ec9097ff90be1a866fad328",
+      "status": "accepted",
+      "actions": 1,
+      "model_calls": 0,
+      "cost_usd": 0,
+      "trace_sha256": "308ff9cc37cf7e12e4c4487f0a0cb56fb1b46d7bb964a7f23cc6ddcd8018c031"
+    },
+    {
+      "output": "e068-floor21-turn4-strike1-step.json",
+      "tested_sha": "14cce1727acb75970538df327575a253f43d6fc3",
+      "status": "accepted",
+      "actions": 1,
+      "model_calls": 0,
+      "cost_usd": 0,
+      "trace_sha256": "8d5f032abd33175441aafb063ded611bd9f7ed4220f069e341a7e0b269202aa9"
+    },
+    {
+      "output": "e068-floor21-turn4-strike2-step.json",
+      "tested_sha": "76a1bd182c9b3a1f0dd03e40130977b7973d6f9f",
+      "status": "accepted",
+      "actions": 1,
+      "model_calls": 0,
+      "cost_usd": 0,
+      "trace_sha256": "9b0fa30305dbe2352b9eaccb0ebf79166c60110435be579b4d30297d6bb447b6"
+    },
+    {
+      "output": "e068-floor22-turn2-ampoule-step.json",
+      "tested_sha": "4d6c33b97cd538374aa049c2ca5a77cad635aeef",
+      "status": "accepted",
+      "actions": 1,
+      "model_calls": 0,
+      "cost_usd": 0,
+      "trace_sha256": "7046f18aab3c9b02eaebdb28a55e947ca3b0549135efbecd265e75ea426a40e8"
+    },
+    {
+      "output": "e068-floor22-turn2-anger-step.json",
+      "tested_sha": "ff6fff00eab44dd3a9dc18903e59deb06c0b5ee1",
+      "status": "accepted",
+      "actions": 1,
+      "model_calls": 0,
+      "cost_usd": 0,
+      "trace_sha256": "000471583003b3424ac047f67fdbc42bf261a1e8f6685407fa050d0198f60994"
+    },
+    {
+      "output": "e068-floor22-turn2-demon-step.json",
+      "tested_sha": "6be75e4097d06c3673e91bc9deb926d66b9f6933",
+      "status": "accepted",
+      "actions": 1,
+      "model_calls": 0,
+      "cost_usd": 0,
+      "trace_sha256": "37991764cbb16a6d3c36c683f76b2bbfcf29ff9e5944163774037576f4619fcb"
+    },
+    {
+      "output": "e068-floor22-turn2-end-step.json",
+      "tested_sha": "9bb9f55e6505560a12937c8e442149451fd53043",
+      "status": "accepted",
+      "actions": 1,
+      "model_calls": 0,
+      "cost_usd": 0,
+      "trace_sha256": "d6ea3ba5f434c2a989ca8dbe7e8cd8c8041676f13f86eb11526557053080cda0"
+    },
+    {
+      "output": "e068-floor22-turn3-hemo-step.json",
+      "tested_sha": "ab166a9dd633c88538e1d065601eb6d454b1ffa1",
+      "status": "accepted",
+      "actions": 1,
+      "model_calls": 0,
+      "cost_usd": 0,
+      "trace_sha256": "0ffc5162f40b2fbc56fafd02cf55c9dda46f350d4eab57e67fd683c91bdc66ed"
+    },
+    {
+      "output": "e068-floor22-turn3-ironwave-step.json",
+      "tested_sha": "04d1fca739102e901df41675801b15505e243850",
+      "status": "accepted",
+      "actions": 1,
+      "model_calls": 0,
+      "cost_usd": 0,
+      "trace_sha256": "f85df8e3ee9da3c6994a2abbfb5b868081c6a138c504cd2c097d5e32171fac6d"
+    },
+    {
+      "output": "e068-floor22-turn3-unrelenting-step.json",
+      "tested_sha": "ef471506fec4f4e7d313c0af2c9ae0ec95042f32",
+      "status": "accepted",
+      "actions": 1,
+      "model_calls": 0,
+      "cost_usd": 0,
+      "trace_sha256": "a23483d2d9e46a593d946d856beb16aaf064359c49fbf919635ca46739a9196f"
+    },
+    {
+      "output": "e068-floor22-turn3-unrelenting2-step.json",
+      "tested_sha": "fe92e47edb9ebc84a4c854355050f60cdca21405",
+      "status": "accepted",
+      "actions": 1,
+      "model_calls": 0,
+      "cost_usd": 0,
+      "trace_sha256": "fd901aba55a6318cd28debd5fe79b27519d99bf3901c1dbe5d767b31fe7a2ede"
+    },
+    {
+      "output": "e068-floor23-turn2-howl-step.json",
+      "tested_sha": "f56fe3df67ab73aabd687bc71eab8b696208ba50",
+      "status": "accepted",
+      "actions": 1,
+      "model_calls": 0,
+      "cost_usd": 0,
+      "trace_sha256": "b74c31b1aee36ecf2ede2d18236bb8e52735fb6461f61af05b5ecdf5dc25cf8b"
+    },
+    {
+      "output": "e068-floor23-turn4-end-step.json",
+      "tested_sha": "abc609ef90b5830b5722d724c4179a5c1f530e29",
+      "status": "accepted",
+      "actions": 1,
+      "model_calls": 0,
+      "cost_usd": 0,
+      "trace_sha256": "1e23e25f83375bd5331bb71f59fe68a330f772409641ec08f5c43ec2a318cc97"
+    },
+    {
+      "output": "e068-floor23-turn4-pyre-step.json",
+      "tested_sha": "94b02f7aea97594601983432a54272af3cff98f4",
+      "status": "accepted",
+      "actions": 1,
+      "model_calls": 0,
+      "cost_usd": 0,
+      "trace_sha256": "ed2be9edfe5019ab5076b281e1527fac38a9f59f920e70c3e5d262ed21223865"
+    },
+    {
+      "output": "e068-floor23-turn4-strike-step.json",
+      "tested_sha": "3a04186025761f4c71ee48c9f5647699b93d34e3",
+      "status": "accepted",
+      "actions": 1,
+      "model_calls": 0,
+      "cost_usd": 0,
+      "trace_sha256": "f70c8c384376351afde728fe4a6f9effaf169271031c991d6ea1722e9fa549e1"
+    },
+    {
+      "output": "e068-floor31-turn3-speed-step.json",
+      "tested_sha": "d4386318fc50e79787541ebff23707f5ebdf8f72",
+      "status": "accepted",
+      "actions": 1,
+      "model_calls": 0,
+      "cost_usd": 0,
+      "trace_sha256": "a5c2bc6cfd7e2e38647dd786e333cefc82b78709ef916a1900046d861f0d0510"
+    },
+    {
+      "output": "e068-floor33-turn2-end-step.json",
+      "tested_sha": "f9a32b582d52b2e65e2daf0d22df227d33d5463c",
+      "status": "accepted",
+      "actions": 1,
+      "model_calls": 0,
+      "cost_usd": 0,
+      "trace_sha256": "6255862428d6c080fe2c85583b18b206ddbca17b635978457c79dd1c8a81e838"
+    },
+    {
+      "output": "e068-floor33-turn2-free-howl-step.json",
+      "tested_sha": "06d86f5378f822a81e585b80d690ad39f3d6c807",
+      "status": "accepted",
+      "actions": 1,
+      "model_calls": 0,
+      "cost_usd": 0,
+      "trace_sha256": "15611aaaa785c9328274253f8573a7ca2bf5c3622d9c85656dc0becb062ee24d"
+    },
+    {
+      "output": "e068-floor33-turn2-headbutt-rocket-step.json",
+      "tested_sha": "3c452d1ed84730d220f963909d94939d84e53534",
+      "status": "accepted",
+      "actions": 1,
+      "model_calls": 0,
+      "cost_usd": 0,
+      "trace_sha256": "a6c18f080ea0eefbc9858b03483a7adcd811ecc2e4def88100eb5fa59d91741e"
+    },
+    {
+      "output": "e068-floor33-turn2-play-demon-step.json",
+      "tested_sha": "807383125125e81eac39eb491f3023caf03d80d9",
+      "status": "accepted",
+      "actions": 1,
+      "model_calls": 0,
+      "cost_usd": 0,
+      "trace_sha256": "5d60ac34b8187c936874deb8c19f8295a3336a7a1b67db0ae4e1b5122e75f448"
+    },
+    {
+      "output": "e068-floor33-turn2-power-potion-step.json",
+      "tested_sha": "cd4ff8ce80d8b24441773a2b7075fd296d491245",
+      "status": "accepted",
+      "actions": 1,
+      "model_calls": 0,
+      "cost_usd": 0,
+      "trace_sha256": "1ab16aa0083f83d60663350b190082af30f515046212c4564d7cdda55b8997cf"
+    },
+    {
+      "output": "e068-floor33-turn2-retrieve-unrelenting-step.json",
+      "tested_sha": "e1cf7be1c9f84a0c0ccf2fd141f9df9226e2c8ba",
+      "status": "accepted",
+      "actions": 1,
+      "model_calls": 0,
+      "cost_usd": 0,
+      "trace_sha256": "6ad46a5b126bb372a091cd8f3a3d4a69709fec21ba9ad3016c9b55db158c149b"
+    },
+    {
+      "output": "e068-floor33-turn2-select-demon-step.json",
+      "tested_sha": "d52af346633be9ae482c1c8235df7bda5e57690b",
+      "status": "accepted",
+      "actions": 1,
+      "model_calls": 0,
+      "cost_usd": 0,
+      "trace_sha256": "765311feb014c864c6df6663acea5e1b35931e118d6acedb06f150ad1c240b94"
+    },
+    {
+      "output": "e068-floor33-turn2-unrelenting-rocket-step.json",
+      "tested_sha": "905f72e6340bfc53deb8c8bcf7d61ee9bf80270b",
+      "status": "accepted",
+      "actions": 1,
+      "model_calls": 0,
+      "cost_usd": 0,
+      "trace_sha256": "32173d66f7ae4a4bbfe536318817e5e2a3303e4b015c2a8e4c0cdf3a4279b9f9"
+    },
+    {
+      "output": "e068-floor33-turn2-vulnerable-rocket-step.json",
+      "tested_sha": "ed4a61f03945261eed4e8e16895675f82b93bbc7",
+      "status": "accepted",
+      "actions": 1,
+      "model_calls": 0,
+      "cost_usd": 0,
+      "trace_sha256": "66d62db00cf3ad9ddd8ec9a1dd7adde68fa25fdfa0dd70621b60d0e176e34726"
+    },
+    {
+      "output": "e068-floor33-turn3-end-step.json",
+      "tested_sha": "ea8e1fda9d9dcb9eff004df2c1c1144b3d7b38f6",
+      "status": "accepted",
+      "actions": 1,
+      "model_calls": 0,
+      "cost_usd": 0,
+      "trace_sha256": "f912046f2c829084c276d75a74b194c20c1cc32f5530d318f8299b8fd4c1479d"
+    },
+    {
+      "output": "e068-floor33-turn3-free-rampage-rocket-step.json",
+      "tested_sha": "234480f1dd426566412799f0d89392ce34c63e2f",
+      "status": "accepted",
+      "actions": 1,
+      "model_calls": 0,
+      "cost_usd": 0,
+      "trace_sha256": "b9968a3350ef15d2daaa6df97030e7ba992f0c1fc2809f8939efec425595068b"
+    },
+    {
+      "output": "e068-floor33-turn3-strike-crusher-step.json",
+      "tested_sha": "312b01c22f2d84ab62f9d3ae293566f553dbc717",
+      "status": "accepted",
+      "actions": 1,
+      "model_calls": 0,
+      "cost_usd": 0,
+      "trace_sha256": "8d3debd391c066de751ce268a0e5fae51142c9fc23e175dd4e371fdbbb00513e"
+    },
+    {
+      "output": "e068-floor33-turn3-unrelenting-rocket-step.json",
+      "tested_sha": "53e5987df1e15aa06c0df47cd8006e41a5e9ecb4",
+      "status": "accepted",
+      "actions": 1,
+      "model_calls": 0,
+      "cost_usd": 0,
+      "trace_sha256": "94b44c9de1808b4424e89c9a64762b3226a5879028ace7ba1292fbd0ef3378cf"
+    },
+    {
+      "output": "e068-floor33-turn4-armaments-step.json",
+      "tested_sha": "75124001515bdb093703e19262b628b5e283f3e9",
+      "status": "accepted",
+      "actions": 1,
+      "model_calls": 0,
+      "cost_usd": 0,
+      "trace_sha256": "62ab4d10c7e10414e0ecf5147514a1d4542a4239245629937dac44d8585aadea"
+    },
+    {
+      "output": "e068-floor33-turn4-end-step.json",
+      "tested_sha": "0c9d0807dff953d813cdd1fa44cab4efe75fa210",
+      "status": "accepted",
+      "actions": 1,
+      "model_calls": 0,
+      "cost_usd": 0,
+      "trace_sha256": "82f17108e0a23f3f2a6502e3e980f60126823ed0a8e6188fccd11545ceae63fa"
+    },
+    {
+      "output": "e068-floor33-turn4-upgrade-unrelenting-step.json",
+      "tested_sha": "e2e9dc4f5f580fed53a4c5231f053eb4e8502a7e",
+      "status": "accepted",
+      "actions": 1,
+      "model_calls": 0,
+      "cost_usd": 0,
+      "trace_sha256": "56a797e98abc6475d1b8c8f15e39488bd13e0048e58ebbc8a066359146d472e2"
+    },
+    {
+      "output": "e068-shop-floor20-meat-step.json",
+      "tested_sha": "f1d965229b0eae44b437a1a282d67c82b7882fe0",
+      "status": "accepted",
+      "actions": 1,
+      "model_calls": 0,
+      "cost_usd": 0,
+      "trace_sha256": "083e7e67197e16a138fcdb943bc29eeb40be7213ecbd363cdd76fac24db5f369"
+    }
+  ],
+  "final_read_only_trace_sha256": "c13e73b8283da80b24e88f4a177ce87ab9d74761a848b7244819789585273687",
+  "limitations": [
+    "One visible natural run, no paired policy counterfactual or win-rate estimate.",
+    "Astra provided tactical actions and purchased a relic; this is not Jev-only strength.",
+    "Headless simulator comparison for the funded-shop policy has not yet been run."
+  ]
+}
