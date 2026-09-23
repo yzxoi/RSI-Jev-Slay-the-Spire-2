@@ -32,3 +32,20 @@ reason on the PR.
 Environment expected from the last verified run: game v0.111.0,
 STS2-Agent v0.15.0 and model `typesafe/jev-1.13-20260917`. The trace manifests
 will capture actual versions, code SHA and per-segment commands.
+
+Setup at tested SHAs `e47cd53` and `d8f090d`: the precommitted menu action
+opened character selection, where the native state confirmed Ironclad,
+singleplayer, ascension 0, and no seed. The precommitted Embark action was
+accepted once and generated run ID `F1GR9R0YXCCC` at the floor-1 Neow event.
+No rejected actions or restarts. Commands:
+
+```sh
+python3 -m rsi.native_step --choice experiments/E051/menu-open.json --expected-run-id run_unknown --output artifacts/runs/e051-menu-open.json --execute
+python3 -m rsi.native_step --choice experiments/E051/embark.json --expected-run-id run_unknown --output artifacts/runs/e051-embark.json --execute
+```
+
+The exact raw trace hashes and compact setup outcomes are in
+`setup-result.json`. The observed Neow offered starter removal, +11 max HP,
+or Greed plus 333 gold. The first campaign segment will leave this choice to
+Jev to measure the autonomous policy, using `planned`, `--pause-on-danger
+--danger-hp 20`, and the preregistered per-segment caps.
