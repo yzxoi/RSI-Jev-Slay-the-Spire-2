@@ -21,6 +21,7 @@ from .floor_plan import load_floor_plan,plan_context,plan_complete
 from .room_plan import load_room_plan,RoomPlanSession,room_context,room_complete
 from .event_guard import bound_bridge_reroll
 from .danger import review_projected_loss
+from .review_lease import ReviewLease,current_hp_review
 
 
 GUIDED_COMBAT_POLICIES={'planned','triggered','retaliate','floor_guided','room_guided'}
@@ -39,8 +40,19 @@ def ordinary_candidates(raw, offered, policy, explicit_choice=False):
     return candidates,report
 
 
+def hard_endturn_review(state):
+    """Independent lethal guard; a review lease never changes this decision."""
+    beckon=beckon_endturn_projection(state)
+    if beckon and beckon['known'] and beckon['projected_loss']>=beckon['hp']:
+        return 'projected_lethal_beckon_end_turn',beckon
+    if (state.get('combat') or {}).get('end_turn_will_kill_player'):
+        return 'lethal_end_turn',beckon
+    return None,beckon
+
+
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--expected-run-id',required=True);p.add_argument('--max-actions',type=int,default=2000);p.add_argument('--max-seconds',type=int,default=3600);p.add_argument('--max-usd',type=float,default=3);p.add_argument('--output',required=True);p.add_argument('--execute',action='store_true');p.add_argument('--expert-choice');p.add_argument('--pause-on-danger',action='store_true');p.add_argument('--danger-hp',type=int,default=20);p.add_argument('--stop-file');p.add_argument('--review-macro',action='store_true');p.add_argument('--review-cards',default='');p.add_argument('--auto-combat-selections',action='store_true');p.add_argument('--floor-plan');p.add_argument('--room-plan');p.add_argument('--combat-policy',choices=['jev','planned','triggered','retaliate','floor_guided','room_guided'],default='planned');a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--expected-run-id',required=True);p.add_argument('--max-actions',type=int,default=2000);p.add_argument('--max-seconds',type=int,default=3600);p.add_argument('--max-usd',type=float,default=3);p.add_argument('--output',required=True);p.add_argument('--execute',action='store_true');p.add_argument('--expert-choice');p.add_argument('--review-lease',action='store_true');p.add_argument('--pause-on-danger',action='store_true');p.add_argument('--danger-hp',type=int,default=20);p.add_argument('--stop-file');p.add_argument('--review-macro',action='store_true');p.add_argument('--review-cards',default='');p.add_argument('--auto-combat-selections',action='store_true');p.add_argument('--floor-plan');p.add_argument('--room-plan');p.add_argument('--combat-policy',choices=['jev','planned','triggered','retaliate','floor_guided','room_guided'],default='planned');a=p.parse_args()
+    if a.review_lease and (not a.expert_choice or not a.pause_on_danger):p.error('--review-lease requires --expert-choice and --pause-on-danger')
     if (a.combat_policy=='floor_guided') != bool(a.floor_plan):p.error('floor_guided requires --floor-plan, and a floor plan requires floor_guided')
     if (a.combat_policy=='room_guided') != bool(a.room_plan) or (a.room_plan and a.floor_plan):p.error('room_guided requires --room-plan, and plans are mutually exclusive')
     manifest=version_manifest()
@@ -51,7 +63,7 @@ def main():
         fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
         uid=str(uuid.uuid4());trace=Trace(ROOT/'artifacts/runs'/uid,{**manifest,'config':vars(a),'scope':'native_complete_run'})
         budget=Budget(6000,a.max_usd,conservative_failures=True);jev=Jev(budget) if a.execute else None;start=time.monotonic();raw={};history={};scenes=Counter();last_action=None;repeated=0;waits=0
-        result={'run_id':uid,'game_run_id':a.expected_run_id,'status':'error','actions':0,'rejections':0};expert=json.loads(Path(a.expert_choice).read_text()) if a.expert_choice else None
+        result={'run_id':uid,'game_run_id':a.expected_run_id,'status':'error','actions':0,'rejections':0};expert=json.loads(Path(a.expert_choice).read_text()) if a.expert_choice else None;lease=None
         try:
             mcp=MCP('http://127.0.0.1:8080/mcp',trace);health=mcp.call('health_check')
             if health.get('play_running') or health.get('status')!='ready':raise RuntimeError('Not a healthy single-writer game')
@@ -76,8 +88,14 @@ def main():
                     raise RuntimeError('Room plan crossed its target boundary')
                 if result['actions']>=a.max_actions or time.monotonic()-start>a.max_seconds:result['status']='budget_boundary';break
                 if a.stop_file and Path(a.stop_file).exists():result['status']='requested_boundary';break
-                if a.pause_on_danger and not expert and screen=='COMBAT' and not raw.get('selection') and (raw.get('combat') or {}).get('player',{}).get('energy',0)>0 and (raw.get('run') or {}).get('current_hp',100)<=a.danger_hp:
-                    result['status']='expert_required';trace.write('expert_required',{'reason':'low_hp_before_spending_energy','state_hash':fingerprint(raw)});break
+                if lease:
+                    prior=lease.revoked_reason;lease.validate(raw,fingerprint(raw))
+                    if lease.revoked_reason and not prior:trace.write('review_lease',{'status':'revoked','reason':lease.revoked_reason,'state_hash':fingerprint(raw)})
+                if a.pause_on_danger and not expert and current_hp_review(raw,a.danger_hp):
+                    if lease and lease.suppress_current_hp_pause():
+                        trace.write('review_lease',{'status':'current_hp_pause_suppressed','state_hash':fingerprint(raw),'suppressed_count':lease.suppressed_pauses})
+                    else:
+                        result['status']='expert_required';trace.write('expert_required',{'reason':'low_hp_before_spending_energy','state_hash':fingerprint(raw)});break
                 if a.pause_on_danger and not expert and screen=='COMBAT':
                     danger=review_projected_loss(raw,a.danger_hp)
                     if danger['reason'] != 'outside_turn_start':trace.write('danger_projection',danger)
@@ -135,21 +153,22 @@ def main():
                 if mcp.call('health_check').get('play_running'):raise RuntimeError('Competing autoplay became active')
                 fresh=mcp.call('get_raw_game_state')
                 if fingerprint(raw)!=fingerprint(fresh) or selected['action'] not in [c['action'] for c in candidates(fresh,history)]:
-                    trace.write('stale_proposal_discarded',{'before':fingerprint(raw),'after':fingerprint(fresh)});raw=fresh;continue
+                    trace.write('stale_proposal_discarded',{'before':fingerprint(raw),'after':fingerprint(fresh)})
+                    if lease:lease.revoke('stale_proposal')
+                    raw=fresh;continue
                 if not expert_this_action and selected['action']['action']=='end_turn':
-                    beckon_risk=beckon_endturn_projection(fresh)
+                    hard_reason,beckon_risk=hard_endturn_review(fresh)
                     if beckon_risk and beckon_risk['known']:
                         trace.write('beckon_endturn_projection',{k:v for k,v in beckon_risk.items() if k!='loss_after_clearing'})
-                    if beckon_risk and beckon_risk['known'] and beckon_risk['projected_loss']>=beckon_risk['hp']:
-                        result['status']='expert_required';trace.write('expert_required',{'reason':'projected_lethal_beckon_end_turn','state_hash':fingerprint(fresh)});raw=fresh;break
-                    if (fresh.get('combat') or {}).get('end_turn_will_kill_player'):
-                        result['status']='expert_required';trace.write('expert_required',{'reason':'lethal_end_turn','state_hash':fingerprint(fresh)});raw=fresh;break
+                    if hard_reason:
+                        result['status']='expert_required';trace.write('expert_required',{'reason':hard_reason,'state_hash':fingerprint(fresh)});raw=fresh;break
                 signature=(fingerprint(fresh),json.dumps(selected['action'],sort_keys=True));repeated=repeated+1 if signature==last_action else 0
                 if repeated>=2:raise RuntimeError('Repeated action without state progress')
-                last_action=signature;command={**selected['action'],'raw_state':True,'reason':f"程序摘要：整局策略选择 {selected['name']}；{screen}，楼层 {(raw.get('run') or {}).get('floor')}。"}
+                last_action=signature;before_action=raw;command={**selected['action'],'raw_state':True,'reason':f"程序摘要：整局策略选择 {selected['name']}；{screen}，楼层 {(raw.get('run') or {}).get('floor')}。"}
                 try:answer=mcp.call('act',command)
                 except ActionNotAccepted as exc:
                     result['rejections']+=1;trace.write('explicit_rejection',{'error':str(exc),'discarded':selected})
+                    if lease:lease.revoke('action_rejected')
                     if room_opening_this_action:raise RuntimeError('Room opener was rejected before execution') from exc
                     if result['rejections']>20:raise
                     mcp.call('wait_until_actionable',{'timeout_seconds':10,'raw_state':True});raw=mcp.call('get_raw_game_state');continue
@@ -162,10 +181,17 @@ def main():
                 if not raw.get('selection'):history['previous']={'screen':screen,'choice':selected}
                 mcp.call('wait_until_actionable',{'timeout_seconds':10,'raw_state':True})
                 raw=mcp.call('get_raw_game_state');trace.write('after',{'state':raw,'state_hash':fingerprint(raw)})
+                if expert_this_action and a.review_lease:
+                    lease=ReviewLease.accepted_opener(before_action,raw,fingerprint(before_action),fingerprint(raw))
+                    trace.write('review_lease',{'status':'activated' if lease else 'opener_outside_combat_turn',
+                                'opening_hash':fingerprint(before_action),'state_hash':fingerprint(raw)})
+                elif lease:
+                    prior=lease.revoked_reason;lease.accepted_transition(raw,fingerprint(raw))
+                    if lease.revoked_reason and not prior:trace.write('review_lease',{'status':'revoked','reason':lease.revoked_reason,'state_hash':fingerprint(raw)})
                 print(json.dumps({'step':result['actions'],'action':selected['name'],'screen':raw.get('screen'),'floor':(raw.get('run') or {}).get('floor'),'hp':(raw.get('run') or {}).get('current_hp')},ensure_ascii=False),flush=True)
         except Exception as exc:
             result['error']=f'{type(exc).__name__}: {exc}';trace.write('failure',{'error':result['error']})
-        result.update(final_screen=raw.get('screen'),final_run=raw.get('run'),game_over=raw.get('game_over'),scenes=dict(scenes),seconds=round(time.monotonic()-start,3),model_calls=budget.calls,cost_usd=budget.spent,usage_unknown=budget.unknown,estimated_usd=budget.estimated_usd,uncertain_calls=budget.uncertain_calls)
+        result.update(final_screen=raw.get('screen'),final_run=raw.get('run'),game_over=raw.get('game_over'),scenes=dict(scenes),seconds=round(time.monotonic()-start,3),model_calls=budget.calls,cost_usd=budget.spent,usage_unknown=budget.unknown,estimated_usd=budget.estimated_usd,uncertain_calls=budget.uncertain_calls,lease_suppressed_pauses=lease.suppressed_pauses if lease else 0,lease_revoked_reason=lease.revoked_reason if lease else None)
         trace.write('summary',result);result['trace_path']=str(trace.path.relative_to(ROOT));result['trace_sha256']=trace.close();out=Path(a.output);out.parent.mkdir(parents=True,exist_ok=True);out.write_text(json.dumps({'manifest':manifest,'result':result},ensure_ascii=False,indent=2)+'\n')
         print(json.dumps({k:v for k,v in result.items() if k not in ['initial_run','final_run','health']},ensure_ascii=False),flush=True)
         if result['status']=='error':raise SystemExit(1)
