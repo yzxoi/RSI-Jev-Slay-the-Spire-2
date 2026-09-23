@@ -16,11 +16,13 @@ from .live_plan import plan_native
 from .encounters import sandpit_rule
 from .settle import settle_turn,turn_key
 from .floor_plan import load_floor_plan,plan_context,plan_complete
+from .room_plan import load_room_plan,RoomPlanSession,room_context,room_complete
 
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--expected-run-id',required=True);p.add_argument('--max-actions',type=int,default=2000);p.add_argument('--max-seconds',type=int,default=3600);p.add_argument('--max-usd',type=float,default=3);p.add_argument('--output',required=True);p.add_argument('--execute',action='store_true');p.add_argument('--expert-choice');p.add_argument('--pause-on-danger',action='store_true');p.add_argument('--danger-hp',type=int,default=20);p.add_argument('--stop-file');p.add_argument('--review-macro',action='store_true');p.add_argument('--review-cards',default='');p.add_argument('--auto-combat-selections',action='store_true');p.add_argument('--floor-plan');p.add_argument('--combat-policy',choices=['jev','planned','triggered','retaliate','floor_guided'],default='planned');a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--expected-run-id',required=True);p.add_argument('--max-actions',type=int,default=2000);p.add_argument('--max-seconds',type=int,default=3600);p.add_argument('--max-usd',type=float,default=3);p.add_argument('--output',required=True);p.add_argument('--execute',action='store_true');p.add_argument('--expert-choice');p.add_argument('--pause-on-danger',action='store_true');p.add_argument('--danger-hp',type=int,default=20);p.add_argument('--stop-file');p.add_argument('--review-macro',action='store_true');p.add_argument('--review-cards',default='');p.add_argument('--auto-combat-selections',action='store_true');p.add_argument('--floor-plan');p.add_argument('--room-plan');p.add_argument('--combat-policy',choices=['jev','planned','triggered','retaliate','floor_guided','room_guided'],default='planned');a=p.parse_args()
     if (a.combat_policy=='floor_guided') != bool(a.floor_plan):p.error('floor_guided requires --floor-plan, and a floor plan requires floor_guided')
+    if (a.combat_policy=='room_guided') != bool(a.room_plan) or (a.room_plan and a.floor_plan):p.error('room_guided requires --room-plan, and plans are mutually exclusive')
     manifest=version_manifest()
     if manifest['tracked_dirty']:raise RuntimeError('Commit implementation before execution')
     # Cross-worktree lock follows the same local server, not each checkout.
@@ -36,6 +38,9 @@ def main():
             raw=mcp.call('get_raw_game_state');result['initial_run']=raw.get('run');result['health']=health
             floor_plan=load_floor_plan(a.floor_plan,raw) if a.floor_plan else None
             if floor_plan:trace.write('floor_plan',floor_plan)
+            room_plan=load_room_plan(a.room_plan,raw) if a.room_plan else None
+            room_session=RoomPlanSession(room_plan) if room_plan else None
+            if room_plan:trace.write('room_plan',room_plan)
             settled_key=None
             while True:
                 if turn_key(raw) is not None and turn_key(raw)!=settled_key:
@@ -44,8 +49,11 @@ def main():
                 screen=raw.get('screen');scenes[screen]+=1
                 if screen=='GAME_OVER':result['status']='victory' if (raw.get('game_over') or {}).get('is_victory') else 'normal_defeat';break
                 if plan_complete(floor_plan,raw,result['actions']):result['status']='floor_plan_boundary';break
+                if room_complete(room_plan,raw,result['actions']):result['status']='room_plan_boundary';break
                 if floor_plan and (raw.get('run') or {}).get('floor',-1)>floor_plan['target_floor']:
                     raise RuntimeError('Floor plan crossed its target boundary')
+                if room_plan and (raw.get('run') or {}).get('floor',-1)>room_plan['floor']:
+                    raise RuntimeError('Room plan crossed its target boundary')
                 if result['actions']>=a.max_actions or time.monotonic()-start>a.max_seconds:result['status']='budget_boundary';break
                 if a.stop_file and Path(a.stop_file).exists():result['status']='requested_boundary';break
                 if a.pause_on_danger and not expert and screen=='COMBAT' and not raw.get('selection') and (raw.get('combat') or {}).get('player',{}).get('energy',0)>0 and (raw.get('run') or {}).get('current_hp',100)<=a.danger_hp:
@@ -68,26 +76,31 @@ def main():
                         result['status']='expert_required';trace.write('expert_required',{'reason':'sandpit_expiry_before_spending_energy','state_hash':fingerprint(raw)});break
                 waits=0;trace.write('before',{'state':raw,'state_hash':fingerprint(raw)});trace.write('candidates',cs)
                 if not a.execute:result['status']='read_only_ready';break
-                expert_this_action=False
+                expert_this_action=False;room_opening_this_action=False
                 if expert:
                     if expert['state_hash']!=fingerprint(raw):raise RuntimeError('Expert decision does not match current state')
                     selected=next(c for c in cs if c['action']==expert['action']);trace.write('expert_decision',expert);expert_this_action=True;expert=None
+                elif room_session and not room_session.applied:
+                    selected=room_session.opening(raw,cs)
+                    if selected is None:raise RuntimeError('Room opener is no longer legal')
+                    trace.write('room_opening_proposed',selected);room_opening_this_action=True
                 elif encounter and encounter['selected']:selected=encounter['selected']
                 elif len(cs)==1:selected=cs[0]
-                elif a.combat_policy in ['planned','triggered','retaliate','floor_guided'] and screen=='COMBAT' and not raw.get('selection'):
-                    selected,planning=plan_native(raw,cs,triggers=a.combat_policy in ['triggered','retaliate','floor_guided'],retaliation=a.combat_policy in ['retaliate','floor_guided']);trace.write('planning',planning)
-                    if floor_plan:
+                elif a.combat_policy in ['planned','triggered','retaliate','floor_guided','room_guided'] and screen=='COMBAT' and not raw.get('selection'):
+                    selected,planning=plan_native(raw,cs,triggers=a.combat_policy in ['triggered','retaliate','floor_guided','room_guided'],retaliation=a.combat_policy in ['retaliate','floor_guided','room_guided']);trace.write('planning',planning)
+                    if floor_plan or room_plan:
                         selected=jev.choose({'state':raw.get('agent_view',raw),'strategy':STRATEGY,
-                                             **plan_context(floor_plan,raw),'computed_proposal':planning},cs,trace)[0]
+                                             **plan_context(floor_plan,raw),**room_context(room_plan,raw),
+                                             'computed_proposal':planning},cs,trace)[0]
                     potions=[c for c in cs if c['action']['action']=='use_potion']
                     turnkey=((raw.get('run') or {}).get('floor'),raw.get('turn'))
-                    if not floor_plan and potions and history.get('potion_check')!=turnkey:
+                    if not floor_plan and not room_plan and potions and history.get('potion_check')!=turnkey:
                         reduced=[selected]+potions
                         for i,c in enumerate(reduced):c={**c,'id':f'p{i:03}'};reduced[i]=c
                         selected=jev.choose({'state':raw.get('agent_view',raw),'strategy':STRATEGY,'question':'Use a potion now to prevent meaningful HP loss or enable a kill, or execute the computed next card. Potions refill; do not hoard at risk of death.','plan':planning},reduced,trace)[0]
                         history['potion_check']=turnkey
                 else:selected=jev.choose({'state':raw.get('agent_view',raw),'strategy':STRATEGY,'previous_decision':history.get('previous'),
-                                          **plan_context(floor_plan,raw)},cs,trace)[0]
+                                          **plan_context(floor_plan,raw),**room_context(room_plan,raw)},cs,trace)[0]
                 trace.write('selected',selected)
                 if mcp.call('health_check').get('play_running'):raise RuntimeError('Competing autoplay became active')
                 fresh=mcp.call('get_raw_game_state')
@@ -101,9 +114,12 @@ def main():
                 try:answer=mcp.call('act',command)
                 except ActionNotAccepted as exc:
                     result['rejections']+=1;trace.write('explicit_rejection',{'error':str(exc),'discarded':selected})
+                    if room_opening_this_action:raise RuntimeError('Room opener was rejected before execution') from exc
                     if result['rejections']>20:raise
                     mcp.call('wait_until_actionable',{'timeout_seconds':10,'raw_state':True});raw=mcp.call('get_raw_game_state');continue
                 result['actions']+=1;trace.write('action_result',answer)
+                if room_opening_this_action:
+                    room_session.accepted();result['astra_opening_actions']=1
                 if screen=='MAP':history['shop_closed']=False
                 if selected['action']['action']=='skip_reward_cards':history['skipped_card_reward']=(raw.get('run_id'),(raw.get('run') or {}).get('floor'))
                 if selected['action']['action']=='close_shop_inventory':history['shop_closed']=True
