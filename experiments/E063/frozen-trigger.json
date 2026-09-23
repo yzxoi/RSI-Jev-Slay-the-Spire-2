@@ -1,0 +1,46 @@
+{
+  "source": {
+    "trace_sha256": "fd90ef99afd06622c4700f8d074f972c7b45dc9f6b0874029bf9b64a5e359d05",
+    "divergence_state_hash": "119be17f20110dbd0c6ae55481d2727e8b18faf46306cf01b362b302aa249a9f",
+    "seed": "e062_cap_003",
+    "character": "Ironclad",
+    "ascension": 0
+  },
+  "third_skill": "CARD.DEFEND_IRONCLAD",
+  "before": {
+    "round": 3,
+    "enemies": [
+      {
+        "index": 0,
+        "hp": 3,
+        "block": 0
+      },
+      {
+        "index": 1,
+        "hp": 26,
+        "block": 0
+      }
+    ],
+    "player_block": 0
+  },
+  "after": {
+    "round": 3,
+    "decision": "combat_play",
+    "enemies": [
+      {
+        "index": 0,
+        "hp": 21,
+        "block": 0
+      }
+    ],
+    "player_block": 5
+  },
+  "relic": {
+    "name": "Letter Opener",
+    "description": "Every time you play {Cards} {Cards:plural:Skill|Skills} in a single turn, deal {Damage} damage to ALL enemies.",
+    "vars": {
+      "Cards": 3,
+      "Damage": 5
+    }
+  }
+}
