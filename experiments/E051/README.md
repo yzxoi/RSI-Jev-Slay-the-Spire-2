@@ -283,3 +283,9 @@ Silk remains at 16 HP with 8 incoming, player HP3, energy3. Trace SHA-256
 The only available attack is Strike at hand index2. Bind it to Silk index0
 as intervention 15, measure actual damage, then end turn if no other attack
 appears. Current Block already covers the telegraphed attack.
+
+Strike at tested SHA `8d4df88` dealt 5 under Weak; Silk16→11 HP, player
+HP3, Block8, energy2, no attacks in hand. Trace SHA-256
+`205887484120bf02c68eb683cd550504acc3cd358c6955abd4e436d29693aafc`.
+Native state says ending turn is nonlethal against the 4×2 attack. Bind end
+turn as intervention 16; inspect actual HP and next hand before attack.
