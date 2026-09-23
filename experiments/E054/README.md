@@ -55,3 +55,15 @@ Ironclad selected, A0, one player, no specified seed, and Embark legal.
 Trace SHA-256
 `ab9c59c0a5a2973e3160401378a46369290a85ae4e8512c701dceae083b5a083`.
 Bind exactly one `embark` action to create the next normal random run.
+
+Embark at tested SHA `9bb46f9` was accepted once and generated run ID
+`DCEND0WRAPGL`: floor1 NEOW, Ironclad A0, 80 HP. The exact action command
+was `python3 -m rsi.native_step --choice experiments/E054/embark.json
+--expected-run-id run_unknown --output artifacts/runs/e054-embark.json
+--execute`. Trace SHA-256
+`b97a108d8fff371ec44a439b20066f219ee30bb97ec59597a472a243e0ed1cb3`.
+Native game v0.111.0 and STS2-Agent v0.15.0. The Neow offer is one potion
+slot plus two random potions, two extra Act1 boss relics, or two random Neow
+relics with a random curse. Jev will choose; no Astra action has been used in
+the new run. The first segment uses the predeclared `planned` policy and
+HP≤20 danger pause, 80-action/300-second/$0.10 limits.
