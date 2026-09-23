@@ -1,17 +1,18 @@
 {
   "summary": {
     "game_run_id": "EC0JQCUP6QMC",
-    "result_files": 89,
-    "trace_hashes_verified": 89,
-    "actions": 443,
+    "result_files": 90,
+    "trace_hashes_verified": 90,
+    "actions": 444,
     "model_calls": 103,
     "reported_cost_usd": 0.025968432,
     "segments": 17,
     "latest_floor": 33,
     "status": "defeat_floor33_game_over",
     "game_over_victory": false,
-    "save_status": "pending",
-    "final_hp": 0
+    "save_status": "verified",
+    "final_hp": 0,
+    "save_verified": true
   },
   "records": [
     {
@@ -981,6 +982,23 @@
       "floor_after": null,
       "hp_after": null,
       "trace_sha256": "a34982f2ccddc50dc7fd91c8c6bff4a22d253d7310bd21eb3812adce05a3e513",
+      "trace_verified": true
+    },
+    {
+      "file": "floor33-game-over-continue-result.json",
+      "code_sha": "ef3412538d29a5b8c0311d1ccc0867c5dfbfafd2",
+      "status": "accepted",
+      "actions": 1,
+      "rejections": 0,
+      "model_calls": 0,
+      "cost_usd": 0,
+      "before_screen": "GAME_OVER",
+      "after_screen": "GAME_OVER",
+      "floor_before": null,
+      "hp_before": null,
+      "floor_after": null,
+      "hp_after": null,
+      "trace_sha256": "21eb58fd283c3acee84c9e0e3661d6054879c0e30b8113e2edb537a039833a3b",
       "trace_verified": true
     },
     {
