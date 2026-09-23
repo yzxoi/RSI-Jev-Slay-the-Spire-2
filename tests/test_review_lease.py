@@ -1,9 +1,11 @@
 import copy
+import gzip
 import json
 from pathlib import Path
 import unittest
 
 from rsi.campaign import hard_endturn_review
+from rsi.danger import review_projected_loss
 from rsi.review_lease import ReviewLease, current_hp_review
 
 
@@ -72,6 +74,14 @@ class ReviewLeaseTests(unittest.TestCase):
         lease.expected_hash = 'synthetic-lethal-end'
         self.assertTrue(lease.validate(state, lease.expected_hash))
         self.assertEqual(hard_endturn_review(state)[0], 'lethal_end_turn')
+
+    def test_projected_large_loss_review_is_independent_of_lease(self):
+        data = json.loads(gzip.decompress((Path(__file__).parents[1]
+                                          / 'experiments/E056/frozen-turn-starts.json.gz').read_bytes()))
+        state = next(x['state'] for x in data['cases'] if x['state']['run_id'] == 'F1GR9R0YXCCC'
+                     and x['state']['run']['floor'] == 23 and x['state']['turn'] == 6)
+        self.assertFalse(current_hp_review(state, 20))  # Current HP is 21.
+        self.assertTrue(review_projected_loss(state, 20)['review'])
 
     def test_lease_only_after_same_turn_combat_opener(self):
         row = RECORDS[0]
