@@ -1,0 +1,27 @@
+diff --git a/src/Sts2Headless/RunSimulator.cs b/src/Sts2Headless/RunSimulator.cs
+--- a/src/Sts2Headless/RunSimulator.cs
++++ b/src/Sts2Headless/RunSimulator.cs
+@@ -1195,6 +1195,7 @@
+         if (idx < 0 || idx >= entries.Count) return Error($"Invalid relic index {idx}");
+ 
+         var entry = entries[idx];
++        var relicName = entry.Model?.GetType().Name ?? "unknown";
+         if (!entry.IsStocked) return Error("Relic already purchased");
+         if (player.Gold < entry.Cost) return Error("Not enough gold");
+ 
+@@ -1216,12 +1217,13 @@
+             }
+             if (_cardSelector.HasPending || _cardSelector.HasPendingReward || _pendingBundles != null)
+             {
+-                Log($"Buy relic {entry.Model.GetType().Name}: yielded for pending selection");
++                Log($"Buy relic {relicName}: yielded for pending selection");
+                 return DetectDecisionPoint();
+             }
+             if (!task.IsCompleted) task.Wait(2000);
++            if (task.IsCompleted) task.GetAwaiter().GetResult();
+             _syncCtx.Pump();
+-            Log($"Bought relic: {entry.Model.GetType().Name} for {entry.Cost}g");
++            Log($"Bought relic: {relicName} for {entry.Cost}g");
+         }
+         catch (Exception ex) { return Error($"Buy relic failed: {ex.Message}"); }
+ 
