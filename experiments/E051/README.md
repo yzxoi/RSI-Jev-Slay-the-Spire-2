@@ -85,3 +85,21 @@ $0.004462332; Astra interventions remained zero. This was an ordinary
 `budget_boundary`, not a failure or terminal outcome. Raw trace SHA-256
 `228c43208ce3d2a85566ecd7723d019a09c696aadd6b3ada82867a74e7c9a20a`;
 compact metrics are in `segment02-result.json`.
+
+Segment 3 at tested SHA `095863f9fb54a14d203ca7e4143c9f2fee2dc0b0`
+used the same planned campaign command with output
+`artifacts/runs/e051-segment03.json`. It accepted 80 actions, zero rejections,
+and stopped at a normal budget boundary on floor16 REST, HP17/91; 28 Jev calls
+cost $0.00516453, with no Astra action yet. Raw trace SHA-256
+`af5b26f4b86eb86ebfe322c274f65b681e1adca2046fb8abbb2deff7ef3146a3`.
+Trace audit identified a major policy failure at floor14 `SLIPPERY_BRIDGE`:
+Jev selected “reroll the offered card” nine times, paying escalating HP
+3+4+5+6+7+8+9+10+11 = 63, then removed one Strike. The observed event entry
+was HP86; it exited at HP23. This is not evidence of any alternate event
+outcome. Floor15 combat was won, but battle heal left only HP17. The next
+floor16 REST offers Heal27 or Smith. Since HP17/91 is an explicit danger
+boundary, bind one Astra choice to Heal index0, raising HP to at most44 before
+the Act1 boss; count it as intervention 1. The exact observed state hash and
+action are in `rest-heal.json`. Execute once with `rsi.native_step`, inspect
+actual HP and only then resume Jev. The event-reroll policy defect is a
+separate atomic experiment; do not change the current run's policy silently.
