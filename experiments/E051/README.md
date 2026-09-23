@@ -142,3 +142,15 @@ Potion remains. Bind `boss-strength-plan.json` to this exact state as Astra
 intervention 3: use Strength Potion, then ask Jev to cover the shown attack
 before spending spare energy. Evaluate a short 10-action segment with danger
 threshold 30; do not attribute its outcome to unguided play.
+
+Segment 5 at tested SHA `ee85e319dfc6890d69f548ca879777ac25ebeb8c`
+used `room_guided` with `boss-strength-plan.json` for 10 accepted actions,
+zero rejections, 11 Jev calls/$0.002674014; raw trace SHA-256
+`3ff07ed8bedebc1a5f0c3f4e666f84554cd5d8d9032e2710b8e8a222cb8e1be5`.
+The Strength Potion opener executed; Jev covered the shown attack and cut
+boss HP115→32 while player stayed HP44/91. Current turn7 has zero energy,
+Block10 versus displayed Attack21, only unplayable cards in hand and one
+Vulnerable Potion. The next segment returns to the ordinary `planned` policy,
+at most 20 actions/180 seconds/$0.05 with danger threshold30. This tests
+whether Jev can finish the low-HP boss without another Astra action; reassess
+only if a real danger or terminal boundary appears.
