@@ -7,7 +7,7 @@ def normalize(raw):
     combat=raw['combat'];p=combat['player'];deck={c['card_id']:c for c in raw['run']['deck']}
     def power(entity,key):return sum(x.get('amount',0) for x in entity.get('powers',[]) if x.get('power_id')==key)
     strength=power(p,'STRENGTH_POWER');weak=.75 if power(p,'WEAK_POWER') else 1
-    enemies=[{'index':e['index'],'hp':e['current_hp'],'block':e['block'],'intents':[{'total_damage':i.get('total_damage') or 0,'damage':i.get('damage') or 0,'hits':i.get('hits') or 1} for i in e['intents']],'powers':e['powers'],'native_slippery':power(e,'SLIPPERY_POWER'),'native_artifact':power(e,'ARTIFACT_POWER')} for e in combat['enemies'] if e.get('is_alive')]
+    enemies=[{'index':e['index'],'hp':e['current_hp'],'block':e['block'],'intents':[{'total_damage':i.get('total_damage') or 0,'damage':i.get('damage') or 0,'hits':i.get('hits') or 1} for i in e['intents']],'powers':e['powers'],'native_slippery':power(e,'SLIPPERY_POWER'),'native_artifact':power(e,'ARTIFACT_POWER'),'native_hit_cap':power(e,'HARD_TO_KILL_POWER') or None} for e in combat['enemies'] if e.get('is_alive')]
     hand=[]
     for card in combat['hand']:
         stats={v['name'].lower():v.get('current_value',v['base_value']) for v in card.get('dynamic_values',[])}
@@ -33,6 +33,6 @@ def normalize(raw):
 
 def plan_native(raw,cs,triggers=False,retaliation=False):
     plays=[c for c in cs if c['action']['action'] in ['play_card','end_turn']]
-    state=normalize(raw);selected,plan=choose_plan(state,plays,triggers=triggers,retaliation=retaliation)
-    plan['native_preview_limit']='Native current_value already includes owner modifiers; CalculatedDamage supported. Target vulnerability has integer rounding limits. Slow uses prior cards played in this single-player turn; Slippery HP cap is tracked. Other triggers, fractional preview rounding and multi-hit effects remain approximate.'
+    state=normalize(raw);selected,plan=choose_plan(state,plays,triggers=triggers,retaliation=retaliation,hit_cap=True)
+    plan['native_preview_limit']='Native current_value already includes owner modifiers; CalculatedDamage supported. Target vulnerability has integer rounding limits. Slow uses prior cards played in this single-player turn; Slippery and Hard to Kill HP caps are tracked. Block/cap ordering and other triggers remain approximate.'
     return selected,plan

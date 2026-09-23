@@ -8,10 +8,22 @@ from .retaliation import thorns_before_hit, hit_count
 SCOPE='Approximate current-hand search, not an engine clone. Draws, random effects, orbs, minions, triggers and unknown mechanics use heuristic utility; all plans re-evaluated after each real action.'
 
 
-def choose_plan(state, candidates, width=40, depth=8, triggers=False, retaliation=False, force_first=False):
+def hard_to_kill_cap(enemy):
+    """Visible Exoskeleton power limits each hit, rather than the whole card."""
+    explicit=enemy.get('native_hit_cap')
+    if isinstance(explicit,int) and explicit>0:return explicit
+    for power in enemy.get('powers') or []:
+        if trigger_rules.key(power)=='HARD_TO_KILL':
+            amount=power.get('amount')
+            if isinstance(amount,int) and amount>0:return amount
+    return None
+
+
+def choose_plan(state, candidates, width=40, depth=8, triggers=False, retaliation=False, force_first=False, hit_cap=False):
     cards={c['index']:c for c in state.get('hand',[])}
     enemies={e['index']:e for e in state.get('enemies',[])}
     initial_hp={i:e['hp'] for i,e in enemies.items()}; incoming={i:intent_damage(e) for i,e in enemies.items()}
+    hit_caps={i:hard_to_kill_cap(e) for i,e in enemies.items()} if hit_cap else {}
     hp=state.get('player',{}).get('hp',100)
     start={'self_loss':0,'energy':state.get('energy',0),'block':state.get('player',{}).get('block',0),'hp':dict(initial_hp),'eblock':{i:e.get('block',0) for i,e in enemies.items()},'used':frozenset(),'plan':[],'utility':0.,'strength':0,'vuln':set(),'native_caps':{i:e.get('native_slippery',0) for i,e in enemies.items()},'native_artifacts':{i:e.get('native_artifact',0) for i,e in enemies.items()}}
     if triggers:start['triggers']=trigger_rules.initial(state)
@@ -57,6 +69,7 @@ def choose_plan(state, candidates, width=40, depth=8, triggers=False, retaliatio
                             if m['self_loss']>=hp:break
                         dealt=max(0,base-m['eblock'][t]);m['eblock'][t]=max(0,m['eblock'][t]-base)
                         if dealt>0 and m['native_caps'].get(t,0)>0:dealt=min(1,dealt);m['native_caps'][t]-=1
+                        if hit_caps.get(t):dealt=min(dealt,hit_caps[t])
                         m['hp'][t]=max(0,m['hp'][t]-dealt)
                 if triggers:trigger_rules.after_card(m,card,cards)
                 if stats.get('vulnerablepower',0) and target is not None and m['native_artifacts'].get(target,0)>0:
@@ -91,4 +104,4 @@ def choose_plan(state, candidates, width=40, depth=8, triggers=False, retaliatio
         frontier=sorted(unique.values(),key=score,reverse=True)[:width]
     chosen=next((c for c in candidates if best['plan'] and c['id']==best['plan'][0]),None)
     if chosen is None:chosen=next((c for c in candidates if c['action']['action']=='end_turn'),candidates[0])
-    return chosen,{'scope':SCOPE,'plan_ids':best['plan'],'score':round(score(best),3),'predicted_self_loss':best['self_loss'],'predicted_total_hp_loss':best['self_loss']+max(0,sum(incoming[i] for i,h in best['hp'].items() if h>0)-best['block']-state.get('player',{}).get('end_turn_block',0)),'predicted_block':best['block'],'predicted_enemy_hp':best['hp'],'expanded':expanded,'width':width,'depth':depth,'trigger_forecast':best.get('triggers')}
+    return chosen,{'scope':SCOPE,'plan_ids':best['plan'],'score':round(score(best),3),'predicted_self_loss':best['self_loss'],'predicted_total_hp_loss':best['self_loss']+max(0,sum(incoming[i] for i,h in best['hp'].items() if h>0)-best['block']-state.get('player',{}).get('end_turn_block',0)),'predicted_block':best['block'],'predicted_enemy_hp':best['hp'],'expanded':expanded,'width':width,'depth':depth,'trigger_forecast':best.get('triggers'),'visible_hit_caps':hit_caps}

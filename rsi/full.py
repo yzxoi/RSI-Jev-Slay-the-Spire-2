@@ -13,7 +13,7 @@ from .matched import MatchedJev
 from .numerical import computed_candidates, greedy_choice
 from .policy import combat_candidates, model_state
 from .trace import Trace, digest, version_manifest
-from .planner import choose_plan
+from .planner import choose_plan,hard_to_kill_cap
 from .guard import filter_end_turn
 from .potions import with_potions
 
@@ -90,6 +90,8 @@ def episode(config, manifest, jev=None):
             if unchanged>=5: raise RuntimeError('No state progress in six successive decisions')
             trace.write('before',{'state':state,'state_hash':h})
             if d=='combat_play':
+                capped=any(hard_to_kill_cap(e) for e in state.get('enemies',[]))
+                if capped:result['hit_cap_states']=result.get('hit_cap_states',0)+1
                 choices=combat_candidates(state)
                 if config['policy'] in ['guarded','equipped']:
                     if config['policy']=='equipped':choices=with_potions(state,choices)
@@ -98,8 +100,13 @@ def episode(config, manifest, jev=None):
                     selected,call=jev.choose({'state':model_state(state),'strategy':STRATEGY},choices,trace)
                     result['model_calls']+=not call.get('cache_hit',False);result['cache_hits']=result.get('cache_hits',0)+call.get('cache_hit',False);result['cost_usd']+=call['usage'].get('cost',0)
                 elif config['policy']=='first': selected=choices[0]
-                elif config['policy'] in ['planned','planfixed','planfixed_cautious_route','triggered','retaliate']:
-                    selected,planning=choose_plan(state,choices,triggers=config['policy'] in ['triggered','retaliate'],retaliation=config['policy']=='retaliate');trace.write('planning',planning)
+                elif config['policy'] in ['planned','planfixed','planfixed_cautious_route','planfixed_hitcap','triggered','retaliate']:
+                    selected,planning=choose_plan(state,choices,triggers=config['policy'] in ['triggered','retaliate'],retaliation=config['policy']=='retaliate',hit_cap=config['policy']=='planfixed_hitcap');trace.write('planning',planning)
+                    if capped and config['policy']=='planfixed_hitcap':
+                        baseline,_=choose_plan(state,choices)
+                        if selected['action']!=baseline['action']:
+                            result['hit_cap_choice_overrides']=result.get('hit_cap_choice_overrides',0)+1
+                            trace.write('hit_cap_choice_override',{'state_hash':h,'baseline':baseline,'treatment':selected})
                 else:
                     choices=computed_candidates(state,choices); selected=greedy_choice(state,choices)
             else:
@@ -140,7 +147,7 @@ def episode(config, manifest, jev=None):
 def main():
     p=argparse.ArgumentParser();p.add_argument('--characters',default=','.join(CHARACTERS));p.add_argument('--seeds',default='full_dev_001');p.add_argument('--policies',default='first,greedy');p.add_argument('--ascension',type=int,default=10);p.add_argument('--workers',type=int,default=3);p.add_argument('--max-calls',type=int,default=12000);p.add_argument('--max-usd',type=float,default=3);p.add_argument('--output',required=True);p.add_argument('--matched-decisions',action='store_true');a=p.parse_args()
     chars=a.characters.split(','); policies=a.policies.split(',')
-    if set(chars)-set(CHARACTERS) or set(policies)-{'first','greedy','hybrid','planned','planfixed','planfixed_cautious_route','jev','guarded','equipped','triggered','retaliate'}:p.error('Invalid character or policy')
+    if set(chars)-set(CHARACTERS) or set(policies)-{'first','greedy','hybrid','planned','planfixed','planfixed_cautious_route','planfixed_hitcap','jev','guarded','equipped','triggered','retaliate'}:p.error('Invalid character or policy')
     manifest=version_manifest()
     if manifest['tracked_dirty']:raise RuntimeError('Commit implementation before evaluation')
     budget=Budget(a.max_calls,a.max_usd,conservative_failures=True);jev=Jev(budget) if set(policies)&{'hybrid','planned','jev','guarded','equipped','triggered','retaliate'} else None
