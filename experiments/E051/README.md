@@ -232,3 +232,13 @@ placed a 0-energy Thunderclap at current hand index7. Trace SHA-256
 Both enemies still have their pre-attack HP and the Beetle still intends22;
 selection alone dealt no damage. Bind the actual free Thunderclap play at
 index7 as intervention 9 and re-read both enemy HP/status after it resolves.
+
+Thunderclap at tested SHA `a39982b540a2b9ffe7d3ef41fa37a22f3721812b`
+dealt exactly 5 to each enemy and applied Vulnerable1: Silk16 HP,
+Beetle63 HP, player HP3/energy3. Trace SHA-256
+`6c34c56daa81ef9655114565933699071ef822cbe860b37c8e9459041253d1ec`.
+The active attacker still intends22. Dismantle at current hand index5 will
+strike the Vulnerable Beetle twice; this is the best observed chance to
+remove the attacking source within the remaining energy. Bind target index1,
+inspect actual damage, then decide whether two Strikes or another line can
+finish it. This is intervention 10; the kill is not presumed.
