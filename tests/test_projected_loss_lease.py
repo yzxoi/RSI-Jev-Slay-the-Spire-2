@@ -53,6 +53,15 @@ class ProjectedLossLeaseTests(unittest.TestCase):
         self.assertFalse(projected_loss_requires_expert(FIXTURE['baseline_projection'], lease))
         self.assertEqual(hard_endturn_review(state)[0], 'lethal_end_turn')
 
+    def test_unsafe_retained_self_loss_revokes(self):
+        lease, state = self.lease()
+        state['combat']['hand'].append({'index': 99, 'card_id': 'BECKON',
+                                        'dynamic_values': [{'name': 'HpLoss', 'current_value': 40}]})
+        self.assertFalse(lease.validate(state, FIXTURE['after_hash']))
+        self.assertEqual(lease.revoked_reason, 'unsafe_beckon_loss')
+        self.assertTrue(projected_loss_requires_expert(FIXTURE['baseline_projection'], lease))
+        self.assertEqual(hard_endturn_review(state)[0], 'projected_lethal_beckon_end_turn')
+
 
 if __name__ == '__main__':
     unittest.main()
