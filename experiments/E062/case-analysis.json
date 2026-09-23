@@ -1,0 +1,260 @@
+{
+  "schema_version": 1,
+  "state_hash": "119be17f20110dbd0c6ae55481d2727e8b18faf46306cf01b362b302aa249a9f",
+  "seed": "e062_cap_003",
+  "character": "Ironclad",
+  "ascension": 0,
+  "baseline": {
+    "trace_sha256": "fd90ef99afd06622c4700f8d074f972c7b45dc9f6b0874029bf9b64a5e359d05",
+    "hp_at_divergence": 61,
+    "enemy_hp_at_divergence": [
+      12,
+      26
+    ],
+    "actions_to_battle_boundary": 9,
+    "actions": [
+      {
+        "card_id": "CARD.TREMBLE",
+        "action": {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        }
+      },
+      {
+        "card_id": "CARD.PURITY",
+        "action": {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2
+          }
+        }
+      },
+      {
+        "card_id": null,
+        "action": {
+          "cmd": "action",
+          "action": "select_cards",
+          "args": {
+            "indices": "0"
+          }
+        }
+      },
+      {
+        "card_id": "CARD.STRIKE_IRONCLAD",
+        "action": {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        }
+      },
+      {
+        "card_id": "CARD.DEFEND_IRONCLAD",
+        "action": {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        }
+      },
+      {
+        "card_id": null,
+        "action": {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        }
+      },
+      {
+        "card_id": "CARD.SETUP_STRIKE",
+        "action": {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 0
+          }
+        }
+      },
+      {
+        "card_id": "CARD.STRIKE_IRONCLAD",
+        "action": {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        }
+      },
+      {
+        "card_id": "CARD.MOLTEN_FIST",
+        "action": {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        }
+      }
+    ],
+    "battle_boundary": {
+      "decision": "card_reward",
+      "hp_after_burning_blood": 67,
+      "round": null
+    },
+    "full_run_outcome": {
+      "status": "normal_defeat",
+      "act": 2,
+      "floor": 6
+    }
+  },
+  "treatment": {
+    "trace_sha256": "f2ecc066e59d721ec4e86c8479b38ea3145653c722271085c0e933293a122dd6",
+    "hp_at_divergence": 61,
+    "enemy_hp_at_divergence": [
+      12,
+      26
+    ],
+    "actions_to_battle_boundary": 11,
+    "actions": [
+      {
+        "card_id": "CARD.BASH",
+        "action": {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        }
+      },
+      {
+        "card_id": "CARD.STRIKE_IRONCLAD",
+        "action": {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 0
+          }
+        }
+      },
+      {
+        "card_id": "CARD.PURITY",
+        "action": {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2
+          }
+        }
+      },
+      {
+        "card_id": null,
+        "action": {
+          "cmd": "action",
+          "action": "select_cards",
+          "args": {
+            "indices": "0"
+          }
+        }
+      },
+      {
+        "card_id": null,
+        "action": {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        }
+      },
+      {
+        "card_id": "CARD.SETUP_STRIKE",
+        "action": {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 0
+          }
+        }
+      },
+      {
+        "card_id": "CARD.VICIOUS",
+        "action": {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1
+          }
+        }
+      },
+      {
+        "card_id": "CARD.STRIKE_IRONCLAD",
+        "action": {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        }
+      },
+      {
+        "card_id": null,
+        "action": {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        }
+      },
+      {
+        "card_id": "CARD.STRIKE_IRONCLAD",
+        "action": {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        }
+      },
+      {
+        "card_id": "CARD.STRIKE_IRONCLAD",
+        "action": {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        }
+      }
+    ],
+    "battle_boundary": {
+      "decision": "card_reward",
+      "hp_after_burning_blood": 52,
+      "round": null
+    },
+    "full_run_outcome": {
+      "status": "normal_defeat",
+      "act": 2,
+      "floor": 6
+    }
+  },
+  "first_choice": {
+    "baseline": "CARD.TREMBLE",
+    "treatment": "CARD.BASH"
+  },
+  "observed_battle_exit_hp_difference_treatment_minus_baseline": -15,
+  "mechanism_inference": "Baseline played Tremble, Purity and Defend as three Skills; Letter Opener relic deals 5 to all enemies after the third Skill. The treatment spent energy on Bash and then needed an extra enemy turn. The planner does not model Letter Opener. This is inferred from the native rule text and headless transition, not an isolated causal trial."
+}
