@@ -154,3 +154,15 @@ Vulnerable Potion. The next segment returns to the ordinary `planned` policy,
 at most 20 actions/180 seconds/$0.05 with danger threshold30. This tests
 whether Jev can finish the low-HP boss without another Astra action; reassess
 only if a real danger or terminal boundary appears.
+
+Segment 6 at tested SHA `9e53d79a781f7196a24a732eb189f4328abd8f3a`
+used the ordinary planned controller for 20 accepted actions, zero
+rejections, 11 Jev calls/$0.00290766; raw trace SHA-256
+`01e99f5041412d471e0afca498347dd075bbc0b2fc3c074069be77c99e57b87c`.
+The player took the displayed 21 attack through 10 Block (HP44→33), then
+Jev killed Lagavulin Matriarch and reached the native reward screen. Normal
+act transition healed the player, and the controller handled a floor18 event
+and card selection before stopping at floor19 COMBAT, HP90/91, `act_id=1`.
+This is a genuine Act1 boss win, not a complete-run victory. Astra count
+remains 3. Resume with the ordinary planned controller and 80-action/300 s/
+$0.10 caps, danger threshold20 outside a boss.
