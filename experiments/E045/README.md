@@ -51,3 +51,5 @@ The bound ordinary Strike at tested SHA `4eece93` killed the 3-HP Gardener; the 
 The first Defend at tested SHA `de9679f` was accepted without rejection; 13 HP, 5 block, 1 energy and a second Defend remain against 15 incoming. Commit `floor6-rescue-4.json` and execute only that second Defend with output `artifacts/runs/e045-floor6-rescue-4.json`. Re-read before ending turn.
 
 The second Defend at tested SHA `91aa0a4` was accepted without rejection. Native state now says 13 HP, 10 block, 0 energy against 15 incoming and `end_turn_will_kill_player=false`. Commit `floor6-rescue-5.json`, execute exactly one end turn with output `artifacts/runs/e045-floor6-rescue-5.json`, and inspect turn9. This avoids delegating the 8-HP decision to an unreviewed macro.
+
+The bound end turn at tested SHA `0baa68f` was accepted; HP13→8, one Gardener remains at 20 HP, and its turn9 intent is Buff/Enlarge. Hand: Bash, Strike and three Defends; no incoming this turn. Commit `floor6-rescue-6.json` for Bash to apply Vulnerable, execute one action with output `artifacts/runs/e045-floor6-rescue-6.json`, then inspect the enemy's Skittish block before spending the final energy.
