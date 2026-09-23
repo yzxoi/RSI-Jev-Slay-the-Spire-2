@@ -1,0 +1,14 @@
+{
+  "tested_sha": "7beac44b9b4781728eff4f5f7775ec977e472180",
+  "command": "python3 -m rsi.campaign --expected-run-id DCEND0WRAPGL --combat-policy planned --pause-on-danger --danger-hp 20 --auto-combat-selections --max-actions 80 --max-seconds 300 --max-usd 0.10 --output artifacts/runs/e054-segment03.json --execute",
+  "status": "budget_boundary",
+  "actions": 80,
+  "rejections": 0,
+  "model_calls": 20,
+  "cost_usd": 0.004377618,
+  "floor": 17,
+  "player_hp": 45,
+  "screen": "COMBAT",
+  "trace_sha256": "2966da8f067f440aece5c11497090ca30732a243409773f25d66a43d1fbd76c7",
+  "notes": ["Floor14 THIS_OR_THAT event cost 6 HP; floor15 events were THIS_OR_THAT and THE_LEGENDS_WERE_TRUE.", "SLIPPERY_BRIDGE did not appear, so E052 guard had no native intervention in this segment."]
+}

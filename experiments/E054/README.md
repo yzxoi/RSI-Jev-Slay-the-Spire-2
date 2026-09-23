@@ -95,3 +95,19 @@ on floor9 REWARD at HP43/80; this is an action budget boundary, not a run
 outcome. No Astra action was used. Raw trace SHA-256
 `25c10eb48318283cf5637fd747fee11d897dd5059eb9e4b030c6f64498ad943a`.
 Continue unchanged policy in segment3 with the same fixed caps.
+
+Segment 3 at tested SHA `7beac44b9b4781728eff4f5f7775ec977e472180`
+accepted 80 actions, zero rejections, and used 20 Jev calls/$0.004377618.
+It cleared floors11 and13, healed at floor12 and floor16, and reached the
+Act1 Soul Fysh boss on floor17 at HP45/80, turn7. Raw trace SHA-256
+`2966da8f067f440aece5c11497090ca30732a243409773f25d66a43d1fbd76c7`.
+Floor14 was `THIS_OR_THAT`, costing 6 HP; `SLIPPERY_BRIDGE` did not occur,
+so the E052 guard has no native outcome here. The boss has 104 HP and
+displayed Attack24, while player is Vulnerable2 with Radiant Tincture and
+Speed Potion. Bind `soul-fysh-room-plan.json` to the fresh state as Astra
+intervention 1: use Radiant Tincture first, then provide compact defensive
+guidance to Jev. Because this is a boss with imminent damage, raise the
+danger pause from 20 to 25 HP for this **bounded room segment only**; cap
+at 20 actions, 120 seconds and $0.03 Jev. The room plan stops at MAP after
+boss rewards or an earlier review. This is a distinct guided segment, not
+an unchanged-policy autonomous result.
