@@ -276,3 +276,10 @@ Off at index3. Trace SHA-256
 `bbede2bdf7cc1c0a4ef0633530ca962a7d60e2bee27a16302126a8490f41d1a5`.
 Bind Shrug It Off as intervention 14: its 8 Block covers the shown attack,
 and the draw may expose a way to kill Silk this turn. Re-read after draw.
+
+Shrug It Off at tested SHA `3fd8460` granted 8 Block and drew Defend;
+Silk remains at 16 HP with 8 incoming, player HP3, energy3. Trace SHA-256
+`1b3026841cd7f79b105e4b690c40319f852dd275d0d4f8e953da288dfc94b9d6`.
+The only available attack is Strike at hand index2. Bind it to Silk index0
+as intervention 15, measure actual damage, then end turn if no other attack
+appears. Current Block already covers the telegraphed attack.
