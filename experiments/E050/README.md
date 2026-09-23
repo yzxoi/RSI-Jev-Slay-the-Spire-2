@@ -51,3 +51,12 @@ computed and failed Jev states have distinguishable truthful labels, missing
 probabilities never look like zero confidence, the failed request supersedes
 the stale action, and the 75-test suite plus visual inspection pass. No game
 action or model call is needed for this UI evaluation.
+
+At tested SHA `712dfb8`, a read-only screenshot of the exact stopped native
+segment showed the failed Jev request with “控制已停 / 请求失败”, HP82/91 on floor5
+turn3, the unexecuted candidate set and no fake probability. A derived local
+prefix through trace sequence 1491 showed the previous Computed end turn
+without dashes, using a checkmark for the selected action; it is not another
+game action. Visual review found redundant English `Computed` plus Chinese
+“数值规划” and no explicit “not applicable” label. The next presentation-only
+iteration translates the source and uses “Jev 概率 / 不适用” for non-Jev actions.

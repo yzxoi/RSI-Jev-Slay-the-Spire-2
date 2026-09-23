@@ -41,11 +41,11 @@ def confidence_presentation(decision):
             return "Jev 自报信心", f"{round(confidence * 100)}%", "", confidence
         return "Jev 自报信心", "未提供", "模型响应未包含信心值", None
     if source == "Computed":
-        return "决策方式", "数值规划", "本步由本地规划器选择", None
+        return "Jev 概率", "不适用", "本步由本地数值规划器选择", None
     if source == "Automatic":
-        return "决策方式", "自动执行", "本步无需模型判断", None
+        return "Jev 概率", "不适用", "固定流程，无需 Jev 判断", None
     if source and source.startswith("Astra"):
-        return "决策方式", "Astra", "人工审阅不生成概率", None
+        return "Jev 概率", "不适用", "Astra 审阅不生成 Jev 概率", None
     return "决策方式", "准备中", "正在整理当前候选动作", None
 
 
@@ -105,6 +105,9 @@ def run(feed, *, opacity=0.84, width=410, height=490, margin=20, screen_index=No
             decision = snap.get("current") or snap.get("latest") or {}
             context = decision.get("context") or {}
             source = decision.get("source") or "等待 trace"
+            source_name = {"Computed": "数值规划", "Automatic": "自动流程",
+                           "Controller": "控制器", "Astra requested": "等待 Astra",
+                           "Astra room plan": "Astra 方案"}.get(source, source)
             color = gold if source.startswith("Astra") else plum if source == "Jev" else teal
             W, H = self.bounds().size
             box(0, 0, W, H, 16, bg, stroke)
@@ -127,7 +130,7 @@ def run(feed, *, opacity=0.84, width=410, height=490, margin=20, screen_index=No
             label(hp_text, W - 126, H - 104, 105, 18, 12, white, True)
 
             box(13, H - 210, W - 26, 95, 11, surface)
-            label(source, 25, H - 139, W - 50, 18, 12, color, True)
+            label(source_name, 25, H - 139, W - 50, 18, 12, color, True)
             action = REASONS.get(decision.get("label"), decision.get("label") or "等待决策…")
             label(action, 25, H - 172, W - 50, 29, 20, white, True)
             state_text = {"accepted": "已执行", "proposed": "待执行", "pending": "计算中",

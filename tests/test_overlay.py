@@ -19,8 +19,8 @@ class OverlayTests(unittest.TestCase):
     def test_probability_copy_explains_pending_automatic_and_failure(self):
         self.assertEqual(confidence_presentation({"source": "Jev", "state": "pending"})[1], "等待响应")
         self.assertEqual(confidence_presentation({"source": "Jev", "state": "failed"})[1], "请求失败")
-        self.assertEqual(confidence_presentation({"source": "Computed", "state": "accepted"})[1], "数值规划")
-        self.assertEqual(confidence_presentation({"source": "Automatic", "state": "accepted"})[1], "自动执行")
+        self.assertEqual(confidence_presentation({"source": "Computed", "state": "accepted"})[1], "不适用")
+        self.assertEqual(confidence_presentation({"source": "Automatic", "state": "accepted"})[1], "不适用")
         self.assertEqual(confidence_presentation({"source": "Jev", "confidence": .73})[1:], ("73%", "", .73))
 
 
