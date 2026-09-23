@@ -1,7 +1,7 @@
 {
   "experiment": "E050",
   "issue": 93,
-  "tested_sha": "cee3ff629b648673ed3b8feb7552821d1f731051",
+  "tested_sha": "d80cb60c58220caeee04607eafe62c8f77ffa754",
   "scope": "read-only native trace observability, not gameplay or win-rate evaluation",
   "environment": {
     "python": "3.13.5",
@@ -13,7 +13,7 @@
   },
   "validation": {
     "unit_command": "python3 -m unittest discover -s tests -q",
-    "unit_tests": 73,
+    "unit_tests": 75,
     "unit_result": "pass",
     "real_trace_checks": {
       "final_room": {
@@ -45,15 +45,35 @@
       "description": "Rows 0-53 of final-room trace, local demo only; not a new game run"
     },
     "auto_follow_latest_segment": "b1230cff-92f7-4c47-81ec-a6330950d181",
-    "overlay_visual": "AppKit 410x490 point panel inspected in replay and live-follow modes; Jev 84% confidence, 86% selected candidate, separate Astra plan, no overlap after layout fix; stale trace marked waiting and victory shown explicitly",
+    "overlay_visual": "410x490 pt, opacity .78. Inspected live combat, model-free computed action, pending Jev request and failed Jev request. Non-Jev probability is explicitly not applicable; pending says waiting; failure shows stopped controller and unexecuted candidate set.",
     "native_game_actions": 0,
-    "model_calls": 0
+    "model_calls": 0,
+    "interruption_trace": {
+      "sha256": "fd7dd8115ab2c9cc6264d906616bfbf30f75c9de919b56dd37e62995ec214b40",
+      "game_run_id": "F1GR9R0YXCCC",
+      "floor": 5,
+      "turn": 3,
+      "status": "error",
+      "error_type": "URLError",
+      "last_accepted_actions": 63,
+      "overlay_state": "failed Jev request supersedes prior accepted action; no candidate probabilities fabricated"
+    },
+    "derived_ui_prefixes": {
+      "automatic": {
+        "sha256": "3fa7fee84b37b74794dc12d6b50f8e6ee4dbc85b3864c3704c6c0fd3aea70eb7",
+        "description": "Local read-only prefix of interruption trace; no new game/model action"
+      },
+      "pending": {
+        "sha256": "cd8c88a995122c4b55dde66bc6232f6ab70a837a9c1e3cf3ebbbb86bd0595cfc",
+        "description": "Local read-only prefix of interruption trace; no new game/model action"
+      }
+    },
+    "active_live_overlay": "Observed on Built-in Retina Display (AppKit screen 1) during E051 native A0 combat; displayed the exact live game run ID and action flow"
   },
   "limitations": [
-    "The game had returned to its main menu before final overlay inspection; a composited capture over the earlier victory screen was unavailable.",
-    "Actual click-through and stacking over an active fullscreen combat window were configured in AppKit but not independently exercised by a game input test.",
     "The native overlay requires macOS and PyObjC; the localhost browser monitor remains the cross-platform fallback.",
-    "Jev confidence and probabilities are model outputs, not calibrated win probabilities."
+    "Jev confidence and probabilities are model outputs, not calibrated win probabilities.",
+    "The overlay was observed during active native combat on the built-in display, but click-through over fullscreen combat was not independently exercised by a game input test."
   ],
-  "decision": "Open PR for user placement review; do not merge until fullscreen game overlay position/click-through is visually accepted or exercised."
+  "decision": "Keep PR open for user visual acceptance; no gameplay policy change or win-rate claim. Fullscreen click-through acceptance remains unverified."
 }

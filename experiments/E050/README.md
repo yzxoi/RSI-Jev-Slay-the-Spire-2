@@ -60,3 +60,17 @@ without dashes, using a checkmark for the selected action; it is not another
 game action. Visual review found redundant English `Computed` plus Chinese
 “数值规划” and no explicit “not applicable” label. The next presentation-only
 iteration translates the source and uses “Jev 概率 / 不适用” for non-Jev actions.
+
+Final presentation iteration at tested SHA
+`d80cb60c58220caeee04607eafe62c8f77ffa754`: 75 unit tests passed with
+`python3 -m unittest discover -s tests -q`. Visual inspection of read-only
+prefixes of the E051 trace confirmed two distinct states: a Computed accepted
+action is labelled “数值规划 / Jev 概率不适用” with a checkmark instead of `—`; an
+in-flight model request says “Jev 正在评估 / 等待响应” and does not imply 0%
+confidence. The full native trace shows “Jev 请求失败 / 控制已停” and the unexecuted
+candidate set rather than the prior accepted action. The launcher was returned
+to live automatic trace following on Built-in Retina Display, opacity 0.78.
+`result.json` records trace hashes and the source run's separate 63-action
+gameplay outcome. No game or model action was issued to evaluate this UI fix.
+Keep PR #94 open for user review; click-through against an active fullscreen
+game input has not been independently verified.
