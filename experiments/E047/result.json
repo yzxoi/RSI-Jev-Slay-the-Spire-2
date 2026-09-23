@@ -1,0 +1,40 @@
+{
+  "issue": 84,
+  "baseline_sha": "e8ccf125cf72e831bbcce63a831b22f7482359bf",
+  "preregister_sha": "49c0c5c",
+  "iteration_1_sha": "4e75f12",
+  "iteration_2_tested_sha": "6b2d9baeae76ba125f01bdf237c3095a02dd72cf",
+  "evaluation_type": "frozen_native_candidate_filter_and_synthetic_controls",
+  "actual_game_actions": 0,
+  "jev_calls": 0,
+  "tested_cases": [
+    {
+      "name": "turn2_start",
+      "source": "measured E045 native state",
+      "baseline_kept": 13,
+      "treatment_kept": 12,
+      "treatment_excluded_ids": ["a012"],
+      "interpretation": "end turn excluded; attack actions including first Molten Fist still available"
+    },
+    {
+      "name": "after_molten",
+      "source": "measured E045 native state",
+      "baseline_kept": 11,
+      "treatment_kept": 2,
+      "treatment_kept_ids": ["a000", "a001"],
+      "interpretation": "only the two playable Toxic cards remain; the historical Replay Strike a002 is excluded"
+    },
+    {
+      "name": "after_one_toxic",
+      "source": "synthetic control derived from after_molten, not played in E045",
+      "treatment_kept_ids": ["a001"]
+    }
+  ],
+  "controls": "high HP and no Toxic retain attacks; plausible immediate kill, unknown attack effect and Vulnerable target abstain; raw Jev and explicit choices remain unfiltered",
+  "tests_command": "python3 -m unittest discover -s tests",
+  "tests_result": "65 passed",
+  "game_version_expected": "v0.111.0",
+  "mcp_version_in_source_trace": "v0.15.0",
+  "jev_model_in_source_trace": "typesafe/jev-1.13-20260917",
+  "limitation": "Candidate compatibility only. Conservative status-loss forecast does not establish actual Toxic/Plating/Cloak trigger ordering, battle survival, or full-run win rate."
+}
