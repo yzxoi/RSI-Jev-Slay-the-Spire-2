@@ -314,3 +314,21 @@ pressure. Resume the unchanged `planned` controller with the original
 HP≤20 danger pause to collect rewards and navigate until the next dangerous
 combat boundary. Segment 8 retains 80-action, 300-second and $0.10 Jev caps.
 Do not confuse this batch with evidence of run victory.
+
+Segment 8 at tested SHA `95bd6fd` accepted 31 actions with no rejection,
+three Jev calls costing $0.00051849. Jev claimed reward cards, healed at
+floor24 REST (HP9→36), collected two floor25–26 chests, and fought Chomper
+on floor27 until HP5 triggered the original ≤20 danger review. The enemy has
+63 HP, Artifact2, and currently inserts three Dazed; the player has no
+potions. This is combat progress, not a loss or battle win. Raw trace SHA-256
+`741649f1ab8b3da463a206a20ff236843f6fc9b54ba7ed84915f20f4c4708eda`.
+
+Iteration 8b scopes a single Astra room plan to the ongoing Chomper battle.
+Opening Pommel Strike provides damage and a draw on a nonattacking turn;
+Jev receives current HP/status guidance for subsequent choices. To let the
+room plan execute at HP5, reduce the danger pause threshold from 20 to 4
+for this **bounded room segment only**. The separate lethal-end-turn guard
+remains active. This is an explicit policy variant, not a retroactive result
+for the earlier threshold. Cap at 30 actions/120 seconds/$0.03 Jev and stop
+at the room's MAP boundary or another review. Count the opener as Astra
+intervention 19; record every later choice as Jev, not Astra.
