@@ -1,0 +1,68 @@
+{
+  "tested_code_sha": "8fa117878b60941a3d06c99056df592c3f5cae15",
+  "command": "python3 -m rsi.full --characters Ironclad --seeds a0_e038_dev_001,a0_e038_dev_002,a0_e038_dev_003 --policies retaliate --ascension 0 --workers 3 --max-calls 12000 --max-usd 1 --output artifacts/runs/e043-jev-baseline.json",
+  "game_version": "v0.111.0",
+  "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+  "model": "typesafe/jev-1.13",
+  "total_model_calls": 72,
+  "total_cost_usd": 0.011555418000000001,
+  "runs": [
+    {
+      "seed": "a0_e038_dev_001",
+      "character": "Ironclad",
+      "status": "normal_defeat",
+      "error": null,
+      "act": 1,
+      "floor": 13,
+      "steps": 111,
+      "model_calls": 17,
+      "cost_usd": 0.0025419240000000005,
+      "exposure": {
+        "battle_trance_playable_scenes": 0,
+        "pommel_playable_scenes": 9,
+        "both_playable_scenes": 0,
+        "no_draw_scenes": 0,
+        "no_draw_with_playable_draw_card_scenes": 0
+      },
+      "trace_sha256": "ea28e96f0dcb7afa801212c70719bb067cf03b52c46e2d8ffa0ed0fb583fb287"
+    },
+    {
+      "seed": "a0_e038_dev_002",
+      "character": "Ironclad",
+      "status": "normal_defeat",
+      "error": null,
+      "act": 2,
+      "floor": 4,
+      "steps": 311,
+      "model_calls": 44,
+      "cost_usd": 0.007320264000000001,
+      "exposure": {
+        "battle_trance_playable_scenes": 32,
+        "pommel_playable_scenes": 0,
+        "both_playable_scenes": 0,
+        "no_draw_scenes": 49,
+        "no_draw_with_playable_draw_card_scenes": 6
+      },
+      "trace_sha256": "e0701e3c7d5acdfb280a7033f2f04190aad7c5599f6e2fbe3bbec6db8702ef77"
+    },
+    {
+      "seed": "a0_e038_dev_003",
+      "character": "Ironclad",
+      "status": "normal_defeat",
+      "error": null,
+      "act": 1,
+      "floor": 8,
+      "steps": 89,
+      "model_calls": 11,
+      "cost_usd": 0.0016932300000000002,
+      "exposure": {
+        "battle_trance_playable_scenes": 0,
+        "pommel_playable_scenes": 0,
+        "both_playable_scenes": 0,
+        "no_draw_scenes": 0,
+        "no_draw_with_playable_draw_card_scenes": 0
+      },
+      "trace_sha256": "f7ecadfce1009798fb3f42a9551d80e1ab78b70a9d60f0a590767c7f4598c5c4"
+    }
+  ]
+}
