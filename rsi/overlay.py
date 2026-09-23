@@ -51,7 +51,7 @@ def run(feed, *, opacity=0.84, width=410, height=490, margin=20, screen_index=No
     plum = NSColor.colorWithCalibratedRed_green_blue_alpha_(.79, .64, .99, 1)
 
     def box(x, y, w, h, radius, color, border=None):
-        path = NSBezierPath.bezierPathWithRoundedRect_xRadius_yRadius_((x, y, w, h), radius, radius)
+        path = NSBezierPath.bezierPathWithRoundedRect_xRadius_yRadius_(((x, y), (w, h)), radius, radius)
         color.setFill()
         path.fill()
         if border:
@@ -64,7 +64,7 @@ def run(feed, *, opacity=0.84, width=410, height=490, margin=20, screen_index=No
         style.setLineBreakMode_(NSLineBreakByTruncatingTail)
         font = NSFont.boldSystemFontOfSize_(size) if bold else NSFont.systemFontOfSize_(size)
         NSString.stringWithString_(str(value or "")).drawInRect_withAttributes_(
-            (x, y, w, h), {NSFontAttributeName: font, NSForegroundColorAttributeName: color,
+            ((x, y), (w, h)), {NSFontAttributeName: font, NSForegroundColorAttributeName: color,
                             NSParagraphStyleAttributeName: style})
 
     class DecisionView(NSView):
@@ -164,8 +164,8 @@ def run(feed, *, opacity=0.84, width=410, height=490, margin=20, screen_index=No
     if screen is None:
         raise RuntimeError("No display found for overlay")
     rect = screen.frame()
-    frame = (rect.origin.x + rect.size.width - width - margin,
-             rect.origin.y + rect.size.height - height - margin, width, height)
+    frame = ((rect.origin.x + rect.size.width - width - margin,
+              rect.origin.y + rect.size.height - height - margin), (width, height))
     panel = NSPanel.alloc().initWithContentRect_styleMask_backing_defer_(
         frame, NSWindowStyleMaskBorderless | NSWindowStyleMaskNonactivatingPanel,
         NSBackingStoreBuffered, False)
@@ -179,7 +179,7 @@ def run(feed, *, opacity=0.84, width=410, height=490, margin=20, screen_index=No
     panel.setAlphaValue_(opacity)
     panel.setIgnoresMouseEvents_(not interactive)
     panel.setMovableByWindowBackground_(interactive)
-    view = DecisionView.alloc().initWithFrame_((0, 0, width, height))
+    view = DecisionView.alloc().initWithFrame_(((0, 0), (width, height)))
     panel.setContentView_(view)
     controller = Controller.alloc().initWithFeed_view_(feed, view)
     controller.tick_(None)
