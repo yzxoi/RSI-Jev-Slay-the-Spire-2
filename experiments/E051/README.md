@@ -259,3 +259,13 @@ The remaining Strike is now hand index0, target Beetle index1. The observed
 14 damage exceeds its 13 HP, so bind that second Strike as intervention 12
 and verify the Beetle's death. The nonattacking Silk enemy will remain; do
 not conflate killing the attacker with winning the whole battle.
+
+Second Strike at tested SHA `f5650c289d1e5bb83859a65e4b731742b3fd9f7b`
+killed the 13 HP Beetle before its 22 damage attack. Player remains at 3 HP,
+energy0; only Silk16 HP with Debuff intent remains. Native action accepted;
+raw trace SHA-256
+`14981a7bfe3f2217695b6dc92ea6473696e1fe7c105cd3540de57db4caa50e1a`.
+The result demonstrates survival of the immediate lethal attack, not battle
+victory. Bind end turn as intervention 13 because no energy remains, native
+state reports the end turn nonlethal, and the surviving enemy has a Debuff
+intent. Inspect the next hand and intent before further play.
