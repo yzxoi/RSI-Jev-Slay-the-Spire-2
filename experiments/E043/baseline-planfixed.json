@@ -1,0 +1,105 @@
+{
+  "tested_code_sha": "c92c0048c6578efa6a24677caa24fbfcf10c731f",
+  "command": "python3 -m rsi.full --characters Ironclad,Silent --seeds e043_draw_001,e043_draw_002 --policies planfixed --ascension 0 --workers 2 --max-calls 0 --max-usd 0 --output artifacts/runs/e043-baseline.json",
+  "game_version": "v0.111.0",
+  "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+  "model": "none (deterministic planfixed)",
+  "frozen_turn8_baseline_choice": "BATTLE_TRANCE+",
+  "runs": [
+    {
+      "character": "Ironclad",
+      "seed": "e043_draw_001",
+      "status": "normal_defeat",
+      "error": null,
+      "act": 2,
+      "floor": 3,
+      "steps": 245,
+      "scenes": {
+        "event_choice": 2,
+        "map_select": 18,
+        "combat_play": 208,
+        "card_reward": 11,
+        "shop": 1,
+        "card_select": 2,
+        "rest_site": 3,
+        "game_over": 1
+      },
+      "exposure": {
+        "battle_trance_playable_scenes": 0,
+        "pommel_playable_scenes": 0,
+        "both_playable_scenes": 0
+      },
+      "trace_sha256": "ea39199cb122912bb6d6dea45025e789c51a1ca983ccfaf2caa7ef9c49d0666b"
+    },
+    {
+      "character": "Silent",
+      "seed": "e043_draw_001",
+      "status": "error",
+      "error": "RuntimeError: Action 'choose_option' failed: MissingMethodException: Method not found: 'Godot.Vector2I Godot.Vector2I.get_One()'.",
+      "act": 2,
+      "floor": 5,
+      "steps": 397,
+      "scenes": {
+        "event_choice": 3,
+        "map_select": 20,
+        "combat_play": 341,
+        "card_select": 17,
+        "card_reward": 12,
+        "shop": 2,
+        "rest_site": 3
+      },
+      "exposure": {
+        "battle_trance_playable_scenes": 0,
+        "pommel_playable_scenes": 0,
+        "both_playable_scenes": 0
+      },
+      "trace_sha256": "ce62df5ca3f53ab7e5c395f9b185973dead9e566c140db6cc5fd969522704599"
+    },
+    {
+      "character": "Ironclad",
+      "seed": "e043_draw_002",
+      "status": "normal_defeat",
+      "error": null,
+      "act": 1,
+      "floor": 8,
+      "steps": 89,
+      "scenes": {
+        "event_choice": 2,
+        "card_select": 2,
+        "map_select": 7,
+        "combat_play": 73,
+        "card_reward": 5,
+        "game_over": 1
+      },
+      "exposure": {
+        "battle_trance_playable_scenes": 0,
+        "pommel_playable_scenes": 0,
+        "both_playable_scenes": 0
+      },
+      "trace_sha256": "b11fc6242eafc67ecaba856988f35d70ab0605432a9ef374029d83303d01925d"
+    },
+    {
+      "character": "Silent",
+      "seed": "e043_draw_002",
+      "status": "normal_defeat",
+      "error": null,
+      "act": 1,
+      "floor": 8,
+      "steps": 150,
+      "scenes": {
+        "event_choice": 2,
+        "card_select": 8,
+        "map_select": 7,
+        "combat_play": 128,
+        "card_reward": 5,
+        "game_over": 1
+      },
+      "exposure": {
+        "battle_trance_playable_scenes": 0,
+        "pommel_playable_scenes": 0,
+        "both_playable_scenes": 0
+      },
+      "trace_sha256": "8841aa99d3e3b7364e31b4d49b59b39ab57ee5042a60e05aa2c2154ea8acf8fd"
+    }
+  ]
+}
