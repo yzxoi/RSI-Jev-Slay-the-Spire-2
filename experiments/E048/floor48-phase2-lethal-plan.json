@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "run_id": "LYU69TR2VY8F",
+  "floor": 48,
+  "start_state_hash": "41de2f2078a7e65b9c8330e85b618ce940dfaa9f24bfb49cf4dd0616763763f0",
+  "opening_action": {"action": "play_card", "card_index": 6},
+  "guidance": "Test Subject phase2 boss56 HP, Vulnerable3, Attack5x6=30 under Colossus; player HP35, Block29, energy2. Verified opener Rage at hand index6 is free and adds3 Block after each attack this turn. Then play Rampage (currently index1, cost1, displays11) on boss to raise Block to32, and Body Slam (currently index5, cost1) on boss; its damage should rise with the Block gain, and both attacks are amplified by Vulnerable. Expected attack damage at least16+49=65 > boss56, killing the second visible HP bar without spending potions. Recompute indexes after Rage/Rampage and stop at a short boundary; the Adaptable boss may revive again, so do not mark victory until GAME_OVER is_victory."
+}
