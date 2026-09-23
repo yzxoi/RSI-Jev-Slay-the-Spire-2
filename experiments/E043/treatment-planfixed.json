@@ -1,0 +1,87 @@
+{
+  "tested_code_sha": "d02268789441ce0b4fd921f836f7436dc13ad91e",
+  "command": "python3 -m rsi.full --characters Ironclad,Silent --seeds e043_draw_001,e043_draw_002 --policies planfixed --ascension 0 --workers 2 --max-calls 0 --max-usd 0 --output artifacts/runs/e043-treatment.json",
+  "game_version": "v0.111.0",
+  "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+  "model": "none (deterministic planfixed)",
+  "total_model_calls": 0,
+  "total_cost_usd": 0.0,
+  "runs": [
+    {
+      "seed": "e043_draw_001",
+      "character": "Ironclad",
+      "status": "normal_defeat",
+      "error": null,
+      "act": 2,
+      "floor": 3,
+      "steps": 245,
+      "model_calls": 0,
+      "cost_usd": 0.0,
+      "exposure": {
+        "battle_trance_playable_scenes": 0,
+        "pommel_playable_scenes": 0,
+        "both_playable_scenes": 0,
+        "no_draw_scenes": 0,
+        "no_draw_with_playable_draw_card_scenes": 0
+      },
+      "trace_sha256": "441db18626356d24e4c8ab34a463f6dd04f6ba3ca3d432e7cb03bc3662bc3509"
+    },
+    {
+      "seed": "e043_draw_001",
+      "character": "Silent",
+      "status": "error",
+      "error": "RuntimeError: Action 'choose_option' failed: MissingMethodException: Method not found: 'Godot.Vector2I Godot.Vector2I.get_One()'.",
+      "act": 2,
+      "floor": 5,
+      "steps": 397,
+      "model_calls": 0,
+      "cost_usd": 0.0,
+      "exposure": {
+        "battle_trance_playable_scenes": 0,
+        "pommel_playable_scenes": 0,
+        "both_playable_scenes": 0,
+        "no_draw_scenes": 0,
+        "no_draw_with_playable_draw_card_scenes": 0
+      },
+      "trace_sha256": "868ee4f0e6f1632ffc2402e61fb2532c153e97ab55c2c46d93ea4a44b6ca6994"
+    },
+    {
+      "seed": "e043_draw_002",
+      "character": "Ironclad",
+      "status": "normal_defeat",
+      "error": null,
+      "act": 1,
+      "floor": 8,
+      "steps": 89,
+      "model_calls": 0,
+      "cost_usd": 0.0,
+      "exposure": {
+        "battle_trance_playable_scenes": 0,
+        "pommel_playable_scenes": 0,
+        "both_playable_scenes": 0,
+        "no_draw_scenes": 0,
+        "no_draw_with_playable_draw_card_scenes": 0
+      },
+      "trace_sha256": "9bd7cabc26d90d9ad9d30ce9a1931e7b372af9ca3880c5a6b4aba2ef5e36da28"
+    },
+    {
+      "seed": "e043_draw_002",
+      "character": "Silent",
+      "status": "normal_defeat",
+      "error": null,
+      "act": 1,
+      "floor": 8,
+      "steps": 150,
+      "model_calls": 0,
+      "cost_usd": 0.0,
+      "exposure": {
+        "battle_trance_playable_scenes": 0,
+        "pommel_playable_scenes": 0,
+        "both_playable_scenes": 0,
+        "no_draw_scenes": 0,
+        "no_draw_with_playable_draw_card_scenes": 0
+      },
+      "trace_sha256": "1a73cd2979f93cbf6385d60f9faf48d66c9f2c498f855e2d4e6ea090c427ea94"
+    }
+  ]
+}

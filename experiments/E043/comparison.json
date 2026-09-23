@@ -1,0 +1,258 @@
+{
+  "frozen_native_turn8": {
+    "source_state_hash": "418c73bc9b09b87a62d241edb46359cc9b4d3e2de80f777b9abdf6255c3ac7dd",
+    "baseline_first": "BATTLE_TRANCE+",
+    "treatment_first": "POMMEL_STRIKE",
+    "factual_native_trace_sha256": "6966d05218bfb5a4001af412c1e48771775438f70b9dcccf6749b8e5f140fcc0"
+  },
+  "tests": {
+    "command": "python3 -m unittest discover -s tests -p test_*.py",
+    "passed": 58
+  },
+  "paired": [
+    {
+      "character": "Ironclad",
+      "seed": "e043_draw_001",
+      "cohort": "planfixed",
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_act": 2,
+      "baseline_floor": 3,
+      "treatment_act": 2,
+      "treatment_floor": 3,
+      "baseline_exposure": {
+        "battle_trance_playable_scenes": 0,
+        "pommel_playable_scenes": 0,
+        "both_playable_scenes": 0,
+        "no_draw_scenes": 0,
+        "no_draw_with_playable_draw_card_scenes": 0
+      },
+      "treatment_exposure": {
+        "battle_trance_playable_scenes": 0,
+        "pommel_playable_scenes": 0,
+        "both_playable_scenes": 0,
+        "no_draw_scenes": 0,
+        "no_draw_with_playable_draw_card_scenes": 0
+      },
+      "shared_state_decisions": 245,
+      "shared_exposed_state_decisions": 0,
+      "different_actions_on_shared_states": 0,
+      "first_trajectory_divergence": null
+    },
+    {
+      "character": "Silent",
+      "seed": "e043_draw_001",
+      "cohort": "planfixed",
+      "baseline_status": "error",
+      "treatment_status": "error",
+      "baseline_act": 2,
+      "baseline_floor": 5,
+      "treatment_act": 2,
+      "treatment_floor": 5,
+      "baseline_exposure": {
+        "battle_trance_playable_scenes": 0,
+        "pommel_playable_scenes": 0,
+        "both_playable_scenes": 0,
+        "no_draw_scenes": 0,
+        "no_draw_with_playable_draw_card_scenes": 0
+      },
+      "treatment_exposure": {
+        "battle_trance_playable_scenes": 0,
+        "pommel_playable_scenes": 0,
+        "both_playable_scenes": 0,
+        "no_draw_scenes": 0,
+        "no_draw_with_playable_draw_card_scenes": 0
+      },
+      "shared_state_decisions": 398,
+      "shared_exposed_state_decisions": 0,
+      "different_actions_on_shared_states": 0,
+      "first_trajectory_divergence": null
+    },
+    {
+      "character": "Ironclad",
+      "seed": "e043_draw_002",
+      "cohort": "planfixed",
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_act": 1,
+      "baseline_floor": 8,
+      "treatment_act": 1,
+      "treatment_floor": 8,
+      "baseline_exposure": {
+        "battle_trance_playable_scenes": 0,
+        "pommel_playable_scenes": 0,
+        "both_playable_scenes": 0,
+        "no_draw_scenes": 0,
+        "no_draw_with_playable_draw_card_scenes": 0
+      },
+      "treatment_exposure": {
+        "battle_trance_playable_scenes": 0,
+        "pommel_playable_scenes": 0,
+        "both_playable_scenes": 0,
+        "no_draw_scenes": 0,
+        "no_draw_with_playable_draw_card_scenes": 0
+      },
+      "shared_state_decisions": 89,
+      "shared_exposed_state_decisions": 0,
+      "different_actions_on_shared_states": 0,
+      "first_trajectory_divergence": null
+    },
+    {
+      "character": "Silent",
+      "seed": "e043_draw_002",
+      "cohort": "planfixed",
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_act": 1,
+      "baseline_floor": 8,
+      "treatment_act": 1,
+      "treatment_floor": 8,
+      "baseline_exposure": {
+        "battle_trance_playable_scenes": 0,
+        "pommel_playable_scenes": 0,
+        "both_playable_scenes": 0,
+        "no_draw_scenes": 0,
+        "no_draw_with_playable_draw_card_scenes": 0
+      },
+      "treatment_exposure": {
+        "battle_trance_playable_scenes": 0,
+        "pommel_playable_scenes": 0,
+        "both_playable_scenes": 0,
+        "no_draw_scenes": 0,
+        "no_draw_with_playable_draw_card_scenes": 0
+      },
+      "shared_state_decisions": 150,
+      "shared_exposed_state_decisions": 0,
+      "different_actions_on_shared_states": 0,
+      "first_trajectory_divergence": null
+    },
+    {
+      "character": "Ironclad",
+      "seed": "a0_e038_dev_001",
+      "cohort": "jev_macro",
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_act": 1,
+      "baseline_floor": 13,
+      "treatment_act": 1,
+      "treatment_floor": 14,
+      "baseline_exposure": {
+        "battle_trance_playable_scenes": 0,
+        "pommel_playable_scenes": 9,
+        "both_playable_scenes": 0,
+        "no_draw_scenes": 0,
+        "no_draw_with_playable_draw_card_scenes": 0
+      },
+      "treatment_exposure": {
+        "battle_trance_playable_scenes": 0,
+        "pommel_playable_scenes": 10,
+        "both_playable_scenes": 0,
+        "no_draw_scenes": 0,
+        "no_draw_with_playable_draw_card_scenes": 0
+      },
+      "shared_state_decisions": 31,
+      "shared_exposed_state_decisions": 0,
+      "different_actions_on_shared_states": 1,
+      "first_trajectory_divergence": {
+        "index": 30,
+        "same_state": true,
+        "baseline_scene": "card_reward",
+        "treatment_scene": "card_reward",
+        "baseline_action": "select_card_reward",
+        "treatment_action": "select_card_reward",
+        "baseline_args": {
+          "card_index": 0
+        },
+        "treatment_args": {
+          "card_index": 2
+        }
+      }
+    },
+    {
+      "character": "Ironclad",
+      "seed": "a0_e038_dev_002",
+      "cohort": "jev_macro",
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_act": 2,
+      "baseline_floor": 4,
+      "treatment_act": 2,
+      "treatment_floor": 4,
+      "baseline_exposure": {
+        "battle_trance_playable_scenes": 32,
+        "pommel_playable_scenes": 0,
+        "both_playable_scenes": 0,
+        "no_draw_scenes": 49,
+        "no_draw_with_playable_draw_card_scenes": 6
+      },
+      "treatment_exposure": {
+        "battle_trance_playable_scenes": 19,
+        "pommel_playable_scenes": 0,
+        "both_playable_scenes": 0,
+        "no_draw_scenes": 31,
+        "no_draw_with_playable_draw_card_scenes": 0
+      },
+      "shared_state_decisions": 1,
+      "shared_exposed_state_decisions": 0,
+      "different_actions_on_shared_states": 1,
+      "first_trajectory_divergence": {
+        "index": 0,
+        "same_state": true,
+        "baseline_scene": "event_choice",
+        "treatment_scene": "event_choice",
+        "baseline_action": "choose_option",
+        "treatment_action": "choose_option",
+        "baseline_args": {
+          "option_index": 0
+        },
+        "treatment_args": {
+          "option_index": 1
+        }
+      }
+    },
+    {
+      "character": "Ironclad",
+      "seed": "a0_e038_dev_003",
+      "cohort": "jev_macro",
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_act": 1,
+      "baseline_floor": 8,
+      "treatment_act": 1,
+      "treatment_floor": 12,
+      "baseline_exposure": {
+        "battle_trance_playable_scenes": 0,
+        "pommel_playable_scenes": 0,
+        "both_playable_scenes": 0,
+        "no_draw_scenes": 0,
+        "no_draw_with_playable_draw_card_scenes": 0
+      },
+      "treatment_exposure": {
+        "battle_trance_playable_scenes": 0,
+        "pommel_playable_scenes": 0,
+        "both_playable_scenes": 0,
+        "no_draw_scenes": 0,
+        "no_draw_with_playable_draw_card_scenes": 0
+      },
+      "shared_state_decisions": 51,
+      "shared_exposed_state_decisions": 0,
+      "different_actions_on_shared_states": 1,
+      "first_trajectory_divergence": {
+        "index": 50,
+        "same_state": true,
+        "baseline_scene": "map_select",
+        "treatment_scene": "map_select",
+        "baseline_action": "select_map_node",
+        "treatment_action": "select_map_node",
+        "baseline_args": {
+          "col": 3,
+          "row": 6
+        },
+        "treatment_args": {
+          "col": 2,
+          "row": 6
+        }
+      }
+    }
+  ]
+}
