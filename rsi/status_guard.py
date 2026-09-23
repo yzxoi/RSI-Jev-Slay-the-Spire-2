@@ -19,7 +19,9 @@ def _known_nonlethal_attack(card, target, enemies):
     if not attackers:
         return False
     enemy = next((e for e in enemies if e['index'] == target), None)
-    harmless = {'STRENGTH_POWER', 'WEAK_POWER', 'VULNERABLE_POWER'}
+    # Vulnerable changes target damage and can turn a nominally small attack
+    # into lethal; abstain rather than excluding that candidate.
+    harmless = {'STRENGTH_POWER', 'WEAK_POWER'}
     if enemy is None or any(p.get('power_id') not in harmless for p in enemy.get('powers', [])):
         return False
     ident = card.get('card_id')

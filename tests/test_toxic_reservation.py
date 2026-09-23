@@ -60,6 +60,10 @@ class ToxicReservationTests(unittest.TestCase):
         state['combat']['hand'][2]['card_id'] = 'UNKNOWN_ATTACK'
         kept, _ = ordinary_candidates(state, offered, 'floor_guided')
         self.assertIn('a002', [c['id'] for c in kept])
+        state, offered = frozen('after_molten')
+        state['combat']['enemies'][0]['powers'] = [{'power_id': 'VULNERABLE_POWER', 'amount': 2}]
+        kept, _ = ordinary_candidates(state, offered, 'floor_guided')
+        self.assertIn('a002', [c['id'] for c in kept])
 
     def test_raw_jev_and_explicit_choice_remain_unfiltered(self):
         state, offered = frozen('after_molten')
