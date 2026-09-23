@@ -1,6 +1,6 @@
 import unittest
 
-from rsi.overlay import display_options
+from rsi.overlay import confidence_presentation, display_options
 
 
 class OverlayTests(unittest.TestCase):
@@ -15,6 +15,13 @@ class OverlayTests(unittest.TestCase):
         shown, hidden = display_options({"options": [{"label": "Astra", "probability": None, "selected": True}]})
         self.assertIsNone(shown[0]["probability"])
         self.assertEqual(hidden, 0)
+
+    def test_probability_copy_explains_pending_automatic_and_failure(self):
+        self.assertEqual(confidence_presentation({"source": "Jev", "state": "pending"})[1], "等待响应")
+        self.assertEqual(confidence_presentation({"source": "Jev", "state": "failed"})[1], "请求失败")
+        self.assertEqual(confidence_presentation({"source": "Computed", "state": "accepted"})[1], "数值规划")
+        self.assertEqual(confidence_presentation({"source": "Automatic", "state": "accepted"})[1], "自动执行")
+        self.assertEqual(confidence_presentation({"source": "Jev", "confidence": .73})[1:], ("73%", "", .73))
 
 
 if __name__ == "__main__":

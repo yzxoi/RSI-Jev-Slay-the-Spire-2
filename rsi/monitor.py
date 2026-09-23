@@ -138,6 +138,8 @@ class Projection:
             self.pending["model_candidates"] = [{"id": key, **value} for key, value in criteria.items() if isinstance(value, dict)] if isinstance(criteria, dict) else []
             self.pending["answer"] = {}
             self.pending["model_pending"] = True
+            self.pending["model_failed"] = False
+            self.error = None
             self.status = "jev_thinking"
         elif kind == "model_response":
             response = (data or {}).get("response") or {}
@@ -148,6 +150,8 @@ class Projection:
             self.status = "jev_responded"
         elif kind == "model_failure":
             self.error = _short((data or {}).get("error"), 100)
+            self.pending["model_pending"] = False
+            self.pending["model_failed"] = True
             self.status = "model_failure"
         elif kind == "room_opening_proposed":
             self.pending["astra_opening"] = True
@@ -234,6 +238,11 @@ class Projection:
                        "confidence": _number(answer.get("confidence")) if choice_id else None,
                        "options": options, "option_count": total, "state": "proposed" if selected else "pending",
                        "plan": self.plan}
+        elif self.status in {"model_failure", "failure", "error"} and self.pending.get("model_failed"):
+            options, total = self._options(model_only=bool(self.pending.get("model_candidates")))
+            current = {"context": self.pending.get("context") or {}, "source": "Jev",
+                       "label": "Jev 请求失败", "confidence": None, "options": options,
+                       "option_count": total, "state": "failed", "plan": self.plan}
         return {"mode": mode, "status": self.status, "game_run_id": self.game_run_id,
                 "segment": self.segment, "plan": self.plan, "latest": self.latest,
                 "current": current, "history": list(self.history), "last_time": self.last_time,

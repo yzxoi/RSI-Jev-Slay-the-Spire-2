@@ -27,6 +27,28 @@ def display_options(decision, limit=5):
     return shown, max(0, (decision or {}).get("option_count", len(choices)) - len(shown))
 
 
+def confidence_presentation(decision):
+    """Explain why a decision has no model confidence instead of showing a dash."""
+    source = (decision or {}).get("source")
+    state = (decision or {}).get("state")
+    confidence = (decision or {}).get("confidence")
+    if source == "Jev":
+        if state == "failed":
+            return "Jev 自报信心", "请求失败", "控制器已停；候选动作未执行", None
+        if state == "pending":
+            return "Jev 自报信心", "等待响应", "模型正在比较候选动作", None
+        if isinstance(confidence, (int, float)) and not isinstance(confidence, bool):
+            return "Jev 自报信心", f"{round(confidence * 100)}%", "", confidence
+        return "Jev 自报信心", "未提供", "模型响应未包含信心值", None
+    if source == "Computed":
+        return "决策方式", "数值规划", "本步由本地规划器选择", None
+    if source == "Automatic":
+        return "决策方式", "自动执行", "本步无需模型判断", None
+    if source and source.startswith("Astra"):
+        return "决策方式", "Astra", "人工审阅不生成概率", None
+    return "决策方式", "准备中", "正在整理当前候选动作", None
+
+
 def run(feed, *, opacity=0.84, width=410, height=490, margin=20, screen_index=None, interactive=False):
     try:
         import objc
@@ -89,7 +111,8 @@ def run(feed, *, opacity=0.84, width=410, height=490, margin=20, screen_index=No
             box(13, H - 51, W - 26, 38, 9, surface)
             label("✦ STS2 决策", 24, H - 42, W - 155, 22, 15, white, True)
             stale = snap.get("mode") == "live" and snap.get("last_time") and time.time() - snap["last_time"] > 60
-            mode_label = "回放" if snap.get("mode") == "replay" else "等待新决策" if stale else "LIVE · 只读"
+            stopped = snap.get("status") in {"failure", "error", "normal_defeat", "victory"}
+            mode_label = "回放" if snap.get("mode") == "replay" else "控制已停" if stopped else "等待新决策" if stale else "LIVE · 只读"
             label(mode_label, W - 112, H - 39, 90, 16, 11, teal, True)
 
             run_id = snap.get("game_run_id") or context.get("run_id") or "—"
@@ -108,16 +131,18 @@ def run(feed, *, opacity=0.84, width=410, height=490, margin=20, screen_index=No
             action = REASONS.get(decision.get("label"), decision.get("label") or "等待决策…")
             label(action, 25, H - 172, W - 50, 29, 20, white, True)
             state_text = {"accepted": "已执行", "proposed": "待执行", "pending": "计算中",
-                          "awaiting_astra": "等待 Astra", "rejected": "被拒绝",
+                          "failed": "请求失败", "awaiting_astra": "等待 Astra", "rejected": "被拒绝",
                           "discarded": "状态过期", "delivery_unknown": "交付待确认"}.get(decision.get("state"), "—")
             label(f"{context.get('screen') or '—'}  ·  {state_text}", 25, H - 196, W - 50, 18, 11, dim)
 
-            conf = decision.get("confidence")
-            label("Jev confidence", 22, H - 244, W - 120, 18, 11, dim)
-            label(f"{round(conf * 100)}%" if isinstance(conf, (int, float)) else "—", W - 72, H - 244, 48, 18, 12, gold, True)
-            box(22, H - 259, W - 44, 5, 2.5, surface)
-            if isinstance(conf, (int, float)):
+            metric_title, metric_value, metric_detail, conf = confidence_presentation(decision)
+            label(metric_title, 22, H - 244, W - 155, 18, 11, dim)
+            label(metric_value, W - 144, H - 244, 122, 18, 12, gold if conf is not None else teal, True)
+            if conf is not None:
+                box(22, H - 259, W - 44, 5, 2.5, surface)
                 box(22, H - 259, (W - 44) * min(max(conf, 0), 1), 5, 2.5, gold)
+            else:
+                label(metric_detail, 22, H - 262, W - 44, 16, 10, dim)
 
             plan = decision.get("plan") or snap.get("plan")
             options, hidden = display_options(decision, limit=3 if plan and H >= 470 else 4)
@@ -131,7 +156,7 @@ def run(feed, *, opacity=0.84, width=410, height=490, margin=20, screen_index=No
                 box(18, y - 3, W - 36, 29, 7, surface, gold if option.get("selected") else None)
                 label(option.get("label"), 27, y + 2, W - 112, 18, 11, white if option.get("selected") else dim)
                 probability = option.get("probability")
-                label(f"{round(probability * 100)}%" if isinstance(probability, (int, float)) else "—",
+                label(f"{round(probability * 100)}%" if isinstance(probability, (int, float)) else "✓" if option.get("selected") else "",
                       W - 69, y + 2, 44, 18, 11, gold if option.get("selected") else dim, bool(option.get("selected")))
                 y -= 34
 
@@ -140,7 +165,9 @@ def run(feed, *, opacity=0.84, width=410, height=490, margin=20, screen_index=No
                 plan_name = "Astra 房间方案" if plan.get("kind") == "room_plan" else "Astra 楼层方案"
                 label(plan_name, 24, 68, W - 48, 16, 11, gold, True)
                 label(plan.get("guidance") or "—", 24, 47, W - 48, 17, 10, dim)
-            footer = snap.get("status") or "waiting"
+            footer = {"error": "控制已停", "failure": "控制已停", "jev_thinking": "等待 Jev",
+                      "model_failure": "Jev 请求失败", "accepted": "动作已执行",
+                      "victory": "胜利", "normal_defeat": "战败"}.get(snap.get("status"), snap.get("status") or "waiting")
             label(f"{footer} · {snap.get('segment') or '无 trace'}", 20, 13, W - 40, 18, 10, dim)
 
     class Controller(NSObject):

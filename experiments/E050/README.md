@@ -33,3 +33,21 @@ Final tested implementation SHA: `cee3ff629b648673ed3b8feb7552821d1f731051`. `py
 Runtime: Python 3.13.5, macOS 26.6.2, PyObjC Cocoa 12.2.1, game v0.111.0, STS2-Agent mod v0.15.0, recorded Jev response model `typesafe/jev-1.13-20260917`. Machine-readable checks and trace hashes are in [result.json](result.json); raw records remain ignored locally. No new native game action, model request, battle outcome, or win-rate observation was produced.
 
 Decision: publish the PR for placement review and keep it open. During this evaluation the game had moved to the main menu, so a composited capture over the earlier victory screen and an input test of click-through over active combat were not available. AppKit is configured with floating/full-screen auxiliary behavior and click-through, and the panel itself was inspected in both replay and live-follow modes; final positioning over an active fullscreen game needs an on-screen acceptance pass before merge.
+
+User-directed live-play refinement: the overlay was moved to the Built-in
+Retina Display using its observed AppKit screen index 1; the launcher retained
+`--opacity 0.78 --screen 1`. During E051's fresh A0 native run, the overlay
+visibly followed run `F1GR9R0YXCCC`, including the first combat's Automatic
+actions. The user observed that missing confidence and probability values
+appeared as repeated `—` glyphs. This was expected for computed/automatic
+actions, but the UI failed to explain it. When the E051 controller stopped on
+floor 5 after a Jev DNS failure (63 accepted actions; raw trace SHA-256
+`fd7dd8115ab2c9cc6264d906616bfbf30f75c9de919b56dd37e62995ec214b40`),
+the overlay also showed the previous accepted action instead of the failed
+pending request. This is an observability defect, not a new game-policy result.
+The fixed evaluation input for this presentation iteration is that exact
+immutable native segment. Accept if pending Jev, successful Jev, automatic,
+computed and failed Jev states have distinguishable truthful labels, missing
+probabilities never look like zero confidence, the failed request supersedes
+the stale action, and the 75-test suite plus visual inspection pass. No game
+action or model call is needed for this UI evaluation.

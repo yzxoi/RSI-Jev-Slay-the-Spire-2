@@ -68,6 +68,28 @@ class MonitorTests(unittest.TestCase):
         self.assertEqual(latest["context"]["hp"], 9)
         self.assertIsNone(latest["confidence"])
 
+    def test_failed_jev_request_replaces_stale_action_without_fabricating_probabilities(self):
+        projection = Projection()
+        projection.new_segment("a/decisions.jsonl")
+        projection.consume(row(1, "selected", {"id": "a000", "name": "old action", "action": {"action": "end_turn"}}))
+        projection.consume(row(2, "action_result", {"status": "completed"}))
+        projection.consume(row(3, "before", {"state": {"screen": "COMBAT", "turn": 3, "run": {"floor": 5}}}))
+        projection.consume(row(4, "candidates", [{"id": "a001", "name": "Strike", "action": {"action": "play_card"}}]))
+        projection.consume(row(5, "model_request", {"questions": {"action": {"criteria": {
+            "a001": {"name": "Strike", "action": {"action": "play_card"}}}}}}))
+        thinking = projection.snapshot("live")["current"]
+        self.assertEqual(thinking["state"], "pending")
+        self.assertIsNone(thinking["confidence"])
+        projection.consume(row(6, "model_failure", {"error": "URLError"}))
+        projection.consume(row(7, "failure", {"error": "URLError: DNS unavailable"}))
+        projection.consume(row(8, "summary", {"status": "error"}))
+        snapshot = projection.snapshot("live")
+        self.assertEqual(snapshot["latest"]["label"], "old action")
+        self.assertEqual(snapshot["current"]["label"], "Jev 请求失败")
+        self.assertEqual(snapshot["current"]["state"], "failed")
+        self.assertEqual(snapshot["current"]["context"]["floor"], 5)
+        self.assertIsNone(snapshot["current"]["options"][0]["probability"])
+
     def test_expert_action_uses_action_label_and_victory_context(self):
         projection = Projection()
         projection.new_segment("a/decisions.jsonl")
