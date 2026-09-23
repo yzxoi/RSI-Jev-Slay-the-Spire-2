@@ -113,3 +113,19 @@ intervention 1, not an autonomous Jev choice. Raw trace SHA-256
 compact evidence is in `rest-heal-result.json`. The repeated-bridge-reroll
 policy defect has its own preregistered issue #97 / E052 and remains unchanged
 in this native run.
+
+Boss entry at tested SHA `edfbb0cde5ef5271cca1ea4f8568f74758818d30`
+used two controller actions (`REST.proceed`, forced MAP node) with output
+`artifacts/runs/e051-boss-entry.json`: floor17 COMBAT, HP44/91, zero Jev
+calls/rejections. Trace SHA-256
+`b06e372668276429b54ac9390e64f921960ef1ea245e871efea9f0c8d3e47f7c`.
+Observed Lagavulin Matriarch HP222, Plating12, Asleep3, Sleep intent; the hand
+has Hellraiser, and three potions include Regen, Vulnerable and Strength.
+This is a high-impact boss boundary after the severe bridge HP loss. Bind
+`boss-room-plan.json` to the exact native state, using Regen Potion as the
+opener and compact sleeping/setup guidance for Jev. Count this as Astra
+intervention 2. The next controller segment uses `room_guided`, at most 12
+actions/120 seconds/$0.03, and `--pause-on-danger --danger-hp 30` to inspect
+before another potentially lethal boss exchange. This safety threshold is
+intentionally higher than the earlier ordinary-combat threshold 20, and the
+result remains a guided, not purely autonomous, run.
