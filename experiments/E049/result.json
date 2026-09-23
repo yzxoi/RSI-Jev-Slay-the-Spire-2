@@ -1,0 +1,22 @@
+{
+  "issue": 88,
+  "baseline_sha": "8567df3eddba05a918c10a1144713aec816aa2e0",
+  "preregister_sha": "a61f9be",
+  "tested_code_sha": "b9198c042da12eacfbe9f6d1471592a5564d37fa",
+  "positive_command": "python3 -m rsi.native_step --choice experiments/E049/verified-defeat-choice.json --expected-run-id 4BD4R62AQHNK --output artifacts/runs/e049-read-only.json",
+  "positive_status": "read_only_ready",
+  "positive_game_actions": 0,
+  "positive_trace_sha256": "24285b8efd77b70cc91af2859e72bc8964ecd87eaf37a7db00d9e12476babf15",
+  "negative_command": "python3 -m rsi.native_step --choice /tmp/e049-stale-choice.json --expected-run-id 4BD4R62AQHNK --output artifacts/runs/e049-stale-read-only.json",
+  "negative_status": "error",
+  "negative_error": "RuntimeError: Precommitted state fingerprint is stale",
+  "negative_game_actions": 0,
+  "negative_trace_sha256": "0d31594ab5d6ca6bac28d7635c273020a2d22654ddc9f83c1a38f0d558af4db7",
+  "live_state_before_and_after": "2525268fd18a8c307346dd844d838def2eb389e95094c6585bd753a267966b7f",
+  "tests_command": "python3 -m unittest discover -s tests",
+  "tests_result": "65 passed",
+  "game_version_expected": "v0.111.0",
+  "mcp_version": "v0.15.0",
+  "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4",
+  "limitation": "Only read-only positive and stale-hash negative checks in E049. Previously executed E045 actions used the same module, but this test does not perform a new live action or measure combat strength."
+}
