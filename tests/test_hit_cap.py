@@ -23,7 +23,8 @@ def observed_state(row):
             'combat': {'player': {'energy': 1, 'current_hp': 40, 'block': 0,
                                   'powers': [], 'cards_played_this_turn': 0},
                        'enemies': [{'index': 0, 'current_hp': row['enemy_hp_before'],
-                                    'block': 0, 'intents': [], 'powers': [row['enemy_power']] }],
+                                    'block': 0, 'is_alive': True, 'intents': [],
+                                    'powers': [row['enemy_power']] }],
                        'hand': [card]}}
 
 
