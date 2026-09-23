@@ -116,8 +116,11 @@ def run(feed, *, opacity=0.84, width=410, height=490, margin=20, screen_index=No
             if isinstance(conf, (int, float)):
                 box(22, H - 259, (W - 44) * min(max(conf, 0), 1), 5, 2.5, gold)
 
-            label("候选选项 · 模型分布", 22, H - 291, W - 44, 19, 12, dim, True)
-            options, hidden = display_options(decision)
+            plan = decision.get("plan") or snap.get("plan")
+            options, hidden = display_options(decision, limit=3 if plan and H >= 470 else 4)
+            label("候选选项" + (" · Jev 分布" if any(o.get("probability") is not None for o in options) else ""),
+                  22, H - 291, W - 150, 19, 12, dim, True)
+            label(f"显示 {len(options)}/{len(options) + hidden}", W - 105, H - 291, 85, 19, 10, dim)
             y = H - 324
             if not options:
                 label("当前没有候选分布记录", 26, y, W - 52, 18, 11, dim)
@@ -128,10 +131,7 @@ def run(feed, *, opacity=0.84, width=410, height=490, margin=20, screen_index=No
                 label(f"{round(probability * 100)}%" if isinstance(probability, (int, float)) else "—",
                       W - 69, y + 2, 44, 18, 11, gold if option.get("selected") else dim, bool(option.get("selected")))
                 y -= 34
-            if hidden:
-                label(f"另有 {hidden} 个选项", 22, y + 2, W - 44, 18, 10, dim)
 
-            plan = decision.get("plan") or snap.get("plan")
             if plan and H >= 470:
                 box(13, 40, W - 26, 52, 9, surface)
                 plan_name = "Astra 房间方案" if plan.get("kind") == "room_plan" else "Astra 楼层方案"
