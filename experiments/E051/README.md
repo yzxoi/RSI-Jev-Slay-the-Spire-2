@@ -193,3 +193,12 @@ would prevent later Pommel Strike draw, bind Pommel Strike at current hand
 index2 targeting Beetle index1 as the next Astra action; inspect the actual
 draw before any subsequent action. This is intervention 5, not an assertion
 that a survivable line exists. Exact state/action: `rescue-pommel.json`.
+
+Pommel Strike at tested SHA `5ea593548ebb60289bee174ce912592aca3ba918`
+was accepted against the attacker: Beetle78→68 HP, player HP3, energy4→3,
+and the drawn card was Flame Barrier (12 Block for 2 energy). Trace SHA-256
+`5c3ef273ad6d6df64608def9f2f883229c132afb3d07c0460635eaa186e64418`.
+Flame Barrier alone leaves 10 unblocked from Attack22 and is lethal at HP3.
+Battle Trance remains playable at hand index3 for 0 energy and draws three;
+bind it next, then evaluate actual block/kill possibilities. This is
+intervention 6. Do not spend energy on Barricade or blind Strikes first.
