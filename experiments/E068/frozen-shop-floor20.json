@@ -1,0 +1,110 @@
+{
+  "source_experiment": "E065",
+  "source_trace_sha256": "7bd151c41160d4aed9713c46b5c1a6f120921da65791328648978b9296fc2fc2",
+  "source_state_hash": "602b52134bcdb961f02b9b8a772c9e7f4f3793e3e37bd9a126c28bf194a435a3",
+  "state": {
+    "run_id": "VTBCNVZABFJP",
+    "screen": "SHOP",
+    "available_actions": [
+      "save_and_quit",
+      "close_shop_inventory",
+      "buy_card",
+      "buy_relic",
+      "remove_card_at_shop",
+      "discard_potion"
+    ],
+    "run": {
+      "floor": 20,
+      "gold": 305
+    },
+    "shop": {
+      "is_open": true,
+      "cards": [
+        {
+          "index": 0,
+          "price": 48,
+          "is_stocked": true
+        },
+        {
+          "index": 1,
+          "price": 77,
+          "is_stocked": true
+        },
+        {
+          "index": 2,
+          "price": 77,
+          "is_stocked": true
+        },
+        {
+          "index": 3,
+          "price": 49,
+          "is_stocked": true
+        },
+        {
+          "index": 4,
+          "price": 77,
+          "is_stocked": true
+        },
+        {
+          "index": 5,
+          "price": 84,
+          "is_stocked": true
+        },
+        {
+          "index": 6,
+          "price": 166,
+          "is_stocked": true
+        }
+      ],
+      "relics": [
+        {
+          "index": 0,
+          "relic_id": "PARRYING_SHIELD",
+          "price": 249,
+          "is_stocked": true,
+          "enough_gold": true
+        },
+        {
+          "index": 1,
+          "relic_id": "RED_SKULL",
+          "price": 169,
+          "is_stocked": true,
+          "enough_gold": true
+        },
+        {
+          "index": 2,
+          "relic_id": "WING_CHARM",
+          "price": 185,
+          "is_stocked": true,
+          "enough_gold": true
+        }
+      ],
+      "potions": [
+        {
+          "index": 0,
+          "price": 78,
+          "is_stocked": true
+        },
+        {
+          "index": 1,
+          "price": 97,
+          "is_stocked": true
+        },
+        {
+          "index": 2,
+          "price": 75,
+          "is_stocked": true
+        }
+      ],
+      "card_removal": {
+        "price": 75,
+        "available": true,
+        "used": false,
+        "enough_gold": true
+      }
+    }
+  },
+  "jev_proposal": {
+    "action": "close_shop_inventory"
+  }
+}
