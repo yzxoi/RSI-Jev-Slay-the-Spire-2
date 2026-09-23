@@ -1,8 +1,11 @@
 import copy
+import json
+from pathlib import Path
 import unittest
 
 from rsi.planner import choose_plan
 from rsi.full import advance_skill_counter
+from rsi.policy import combat_candidates
 
 
 def fixture(starting_skills=2, relic=True, enemy_block=0):
@@ -60,6 +63,17 @@ class LetterOpenerTests(unittest.TestCase):
         self.assertEqual(advance_skill_counter(2, {'id': 'CARD.DEFEND_IRONCLAD', 'type': 'Skill'}), 3)
         self.assertIsNone(advance_skill_counter(2, {'id': 'CARD.CASCADE', 'type': 'Skill'}))
         self.assertIsNone(advance_skill_counter(None, {'id': 'CARD.DEFEND_IRONCLAD', 'type': 'Skill'}))
+
+    def test_frozen_regression_does_not_plan_through_purity_selection(self):
+        path = Path(__file__).resolve().parents[1] / 'experiments/E063/frozen-divergence.json'
+        state = json.loads(path.read_text())
+        state['skills_played_this_turn'] = 0
+        choices = combat_candidates(state)
+        selected, plan = choose_plan(state, choices, letter_opener=True)
+        self.assertNotEqual(selected.get('card_id'), 'CARD.PURITY')
+        ids = plan['plan_ids']
+        purity_ids = {c['id'] for c in choices if c.get('card_id') == 'CARD.PURITY'}
+        self.assertFalse(any(candidate in purity_ids for candidate in ids[:-1]))
 
 
 if __name__ == '__main__':

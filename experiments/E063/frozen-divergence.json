@@ -1,0 +1,219 @@
+{
+  "decision": "combat_play",
+  "energy": 3,
+  "hand": [
+    {
+      "index": 0,
+      "id": "CARD.TREMBLE",
+      "name": "Tremble",
+      "cost": 1,
+      "type": "Skill",
+      "rarity": "Common",
+      "can_play": true,
+      "target_type": "AnyEnemy",
+      "stats": {
+        "vulnerablepower": 3
+      },
+      "description": "Apply {VulnerablePower:diff()} Vulnerable.",
+      "keywords": [
+        "Exhaust"
+      ]
+    },
+    {
+      "index": 1,
+      "id": "CARD.BASH",
+      "name": "Bash",
+      "cost": 2,
+      "type": "Attack",
+      "rarity": "Basic",
+      "can_play": true,
+      "target_type": "AnyEnemy",
+      "stats": {
+        "damage": 8,
+        "vulnerablepower": 2
+      },
+      "description": "Deal {Damage:diff()} damage.\nApply {VulnerablePower:diff()} Vulnerable.",
+      "damage_by_target": [
+        {
+          "target_index": 0,
+          "name": "Exoskeleton",
+          "damage": 8
+        },
+        {
+          "target_index": 1,
+          "name": "Exoskeleton",
+          "damage": 8
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "id": "CARD.DEFEND_IRONCLAD",
+      "name": "Defend",
+      "cost": 1,
+      "type": "Skill",
+      "rarity": "Basic",
+      "can_play": true,
+      "target_type": "Self",
+      "stats": {
+        "block": 5
+      },
+      "description": "Gain {Block:diff()} Block."
+    },
+    {
+      "index": 3,
+      "id": "CARD.PURITY",
+      "name": "Purity",
+      "cost": 0,
+      "type": "Skill",
+      "rarity": "Uncommon",
+      "can_play": true,
+      "target_type": "Self",
+      "stats": {
+        "cards": 3
+      },
+      "description": "Exhaust up to {Cards:diff()} cards in your Hand.",
+      "keywords": [
+        "Retain",
+        "Exhaust"
+      ]
+    },
+    {
+      "index": 4,
+      "id": "CARD.STRIKE_IRONCLAD",
+      "name": "Strike",
+      "cost": 1,
+      "type": "Attack",
+      "rarity": "Basic",
+      "can_play": true,
+      "target_type": "AnyEnemy",
+      "stats": {
+        "damage": 6
+      },
+      "description": "Deal {Damage:diff()} damage.",
+      "damage_by_target": [
+        {
+          "target_index": 0,
+          "name": "Exoskeleton",
+          "damage": 6
+        },
+        {
+          "target_index": 1,
+          "name": "Exoskeleton",
+          "damage": 6
+        }
+      ]
+    }
+  ],
+  "enemies": [
+    {
+      "index": 0,
+      "name": "Exoskeleton",
+      "hp": 12,
+      "max_hp": 28,
+      "block": 0,
+      "intents": [
+        {
+          "type": "Attack",
+          "damage": 3,
+          "hits": 3,
+          "total_damage": 9
+        }
+      ],
+      "intends_attack": true,
+      "powers": [
+        {
+          "name": "Hard to Kill",
+          "description": "Reduce all damage taken and HP lost by Exoskeleton to 9.",
+          "amount": 9
+        },
+        {
+          "name": "Strength",
+          "description": "Strength adds additional damage to Attacks.",
+          "amount": 2
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "name": "Exoskeleton",
+      "hp": 26,
+      "max_hp": 26,
+      "block": 0,
+      "intents": [
+        {
+          "type": "Buff"
+        }
+      ],
+      "intends_attack": false,
+      "powers": [
+        {
+          "name": "Hard to Kill",
+          "description": "Reduce all damage taken and HP lost by Exoskeleton to 9.",
+          "amount": 9
+        },
+        {
+          "name": "Strength",
+          "description": "Strength adds additional damage to Attacks.",
+          "amount": 2
+        }
+      ]
+    }
+  ],
+  "player": {
+    "hp": 61,
+    "block": 0,
+    "relics": [
+      {
+        "name": "Burning Blood",
+        "description": "At the end of combat, heal {Heal} HP.",
+        "vars": {
+          "Heal": 6
+        }
+      },
+      {
+        "name": "Lead Paperweight",
+        "description": "Upon pickup, choose 1 of 2 Colorless cards to add to your Deck.",
+        "vars": null
+      },
+      {
+        "name": "Akabeko",
+        "description": "At the start of each combat, gain {VigorPower} Vigor.",
+        "vars": {
+          "VigorPower": 8
+        }
+      },
+      {
+        "name": "Juzu Bracelet",
+        "description": "Regular enemy combats are no longer encountered in ? rooms.",
+        "vars": null
+      },
+      {
+        "name": "Sword of Stone",
+        "description": "Transforms into a powerful Relic after defeating {Elites} {Elites:plural:Elite|Elites}.",
+        "vars": {
+          "Elites": 5
+        }
+      },
+      {
+        "name": "Letter Opener",
+        "description": "Every time you play {Cards} {Cards:plural:Skill|Skills} in a single turn, deal {Damage} damage to ALL enemies.",
+        "vars": {
+          "Cards": 3,
+          "Damage": 5
+        }
+      }
+    ]
+  },
+  "round": 3,
+  "context": {
+    "act": 2,
+    "act_name": "Hive",
+    "floor": 3,
+    "room_type": "Monster",
+    "boss": {
+      "id": "KAISER_CRAB_BOSS",
+      "name": "KAISER_CRAB.name"
+    }
+  }
+}

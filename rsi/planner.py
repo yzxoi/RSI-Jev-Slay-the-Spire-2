@@ -27,7 +27,7 @@ def choose_plan(state, candidates, width=40, depth=8, triggers=False, retaliatio
     letter_active=bool(letter_config and isinstance(starting_skills,int) and starting_skills>=0 and letter_config[0]>0)
     start={'self_loss':0,'energy':state.get('energy',0),'block':state.get('player',{}).get('block',0),'hp':dict(initial_hp),'eblock':{i:e.get('block',0) for i,e in enemies.items()},'used':frozenset(),'plan':[],'utility':0.,'strength':0,'vuln':set(),'native_caps':{i:e.get('native_slippery',0) for i,e in enemies.items()},'native_artifacts':{i:e.get('native_artifact',0) for i,e in enemies.items()}}
     if triggers:start['triggers']=trigger_rules.initial(state)
-    if letter_active:start.update(letter_skill_count=starting_skills,letter_procs=0)
+    if letter_active:start.update(letter_skill_count=starting_skills,letter_procs=0,opaque_hand_change=False)
     def score(n):
         loss=n['self_loss']+max(0,sum(incoming[i] for i,h in n['hp'].items() if h>0)-n['block']-state.get('player',{}).get('end_turn_block',0))
         kills=sum(h<=0 for h in n['hp'].values());damage=sum(initial_hp[i]-max(0,h) for i,h in n['hp'].items())
@@ -38,6 +38,7 @@ def choose_plan(state, candidates, width=40, depth=8, triggers=False, retaliatio
         children=[]
         for n in frontier:
             if n['self_loss']>=hp:continue
+            if letter_active and n['opaque_hand_change']:continue
             for c in candidates:
                 cmd=c['action'];args=cmd.get('args',cmd)
                 if cmd['action']!='play_card':continue
@@ -82,6 +83,10 @@ def choose_plan(state, candidates, width=40, depth=8, triggers=False, retaliatio
                             dealt=max(0,damage-m['eblock'][enemy_index])
                             m['eblock'][enemy_index]=max(0,m['eblock'][enemy_index]-damage)
                             m['hp'][enemy_index]=max(0,m['hp'][enemy_index]-dealt)
+                if letter_active and ident in {'PURITY','BURNING_PACT','TRUE_GRIT','SECOND_WIND','CASCADE'}:
+                    # These can remove or automatically play a remaining hand card.
+                    # Replan from the observed state instead of assuming it survives.
+                    m['opaque_hand_change']=True
                 if stats.get('vulnerablepower',0) and target is not None and m['native_artifacts'].get(target,0)>0:
                     m['native_artifacts'][target]-=1
                 elif stats.get('vulnerablepower',0) and target is not None:
@@ -110,7 +115,7 @@ def choose_plan(state, candidates, width=40, depth=8, triggers=False, retaliatio
         for n in children:
             key=(n['used'],n['energy'],n['block'],n['self_loss'],tuple(n['hp'].items()),tuple(n['eblock'].items()),n['strength'],tuple(sorted(n['vuln'])),tuple(n['native_caps'].items()),tuple(n['native_artifacts'].items()))
             if triggers:key=key+tuple(n['triggers'].items())
-            if letter_active:key=key+(n['letter_skill_count'],n['letter_procs'])
+            if letter_active:key=key+(n['letter_skill_count'],n['letter_procs'],n['opaque_hand_change'])
             if key not in unique or score(n)>score(unique[key]):unique[key]=n
         frontier=sorted(unique.values(),key=score,reverse=True)[:width]
     chosen=next((c for c in candidates if best['plan'] and c['id']==best['plan'][0]),None)
