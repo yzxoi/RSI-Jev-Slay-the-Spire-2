@@ -1,0 +1,22 @@
+{
+  "tested_sha": "f1d965229b0eae44b437a1a282d67c82b7882fe0",
+  "command": "python3 -m rsi.native_step --choice experiments/E068/shop-floor20-meat-choice.json --expected-run-id QVF8XALGHY8B --output artifacts/runs/e068-shop-floor20-meat-step.json --execute",
+  "result": {
+    "status": "accepted",
+    "actions": 1,
+    "before_run_id": "QVF8XALGHY8B",
+    "before_screen": "SHOP",
+    "before_state_hash": "ab5004702996516452ce6eec1bf708abff42a8ab97bec34180d6db9ffae9f342",
+    "after_run_id": "QVF8XALGHY8B",
+    "after_screen": "SHOP",
+    "after_state_hash": "53fe9a20efb72795d90522d10c6c09fd47037e048de3464ab343473f81b7afaa",
+    "trace_sha256": "083e7e67197e16a138fcdb943bc29eeb40be7213ecbd363cdd76fac24db5f369"
+  },
+  "verified_after": {
+    "floor": 20,
+    "gold": 191,
+    "meat_on_the_bone_owned": true,
+    "shop_index_0_stocked": false
+  },
+  "trace_hash_verified": true
+}

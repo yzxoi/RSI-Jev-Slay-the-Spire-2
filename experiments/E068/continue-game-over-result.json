@@ -1,0 +1,34 @@
+{
+  "tested_sha": "c3c18fb53b40208dd5810a7ed7e4f1eb39e3394a",
+  "command": "python3 -m rsi.native_step --choice experiments/E068/continue-game-over-choice.json --expected-run-id QVF8XALGHY8B --output artifacts/runs/e068-continue-game-over-step.json --execute",
+  "result": {
+    "status": "accepted",
+    "actions": 1,
+    "before_run_id": "QVF8XALGHY8B",
+    "before_screen": "GAME_OVER",
+    "before_state_hash": "b82ade9c77341fdce1f74a290165c23d06ba7273d14837b2e9df23f0c56b5e1b",
+    "after_run_id": "QVF8XALGHY8B",
+    "after_screen": "GAME_OVER",
+    "after_state_hash": "c8d9c49e749e937b5c9a336bd232b52e0ada0bf6dd649ba6d7faa0ab2e7c507a",
+    "trace_sha256": "8dd119e1dcb297348fd4db78626b539fc2b59c08926e13a64d1a4aff16fed517"
+  },
+  "verified_after": {
+    "run_id": "QVF8XALGHY8B",
+    "screen": "GAME_OVER",
+    "state_hash": "c8d9c49e749e937b5c9a336bd232b52e0ada0bf6dd649ba6d7faa0ab2e7c507a",
+    "game_over": {
+      "is_victory": false,
+      "floor": 33,
+      "character_id": "IRONCLAD",
+      "phase": "summary_ready",
+      "can_continue": false,
+      "can_return_to_main_menu": true,
+      "showing_summary": true,
+      "waiting_for_other_players": false,
+      "save_status": "verified",
+      "save_verified": true,
+      "save_error": null
+    }
+  },
+  "read_only_trace_sha256": "c13e73b8283da80b24e88f4a177ce87ab9d74761a848b7244819789585273687"
+}

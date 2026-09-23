@@ -23,6 +23,7 @@ from .room_plan import load_room_plan,RoomPlanSession,room_context,room_complete
 from .event_guard import bound_bridge_reroll
 from .danger import review_projected_loss
 from .review_lease import ReviewLease,current_hp_review
+from .shop_review import funded_shop_exit_review
 
 
 GUIDED_COMBAT_POLICIES={'planned','triggered','retaliate','floor_guided','room_guided'}
@@ -52,7 +53,7 @@ def hard_endturn_review(state):
 
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--expected-run-id',required=True);p.add_argument('--max-actions',type=int,default=2000);p.add_argument('--max-seconds',type=int,default=3600);p.add_argument('--max-usd',type=float,default=3);p.add_argument('--output',required=True);p.add_argument('--execute',action='store_true');p.add_argument('--expert-choice');p.add_argument('--review-lease',action='store_true');p.add_argument('--pause-on-danger',action='store_true');p.add_argument('--danger-hp',type=int,default=20);p.add_argument('--stop-file');p.add_argument('--review-macro',action='store_true');p.add_argument('--review-cards',default='');p.add_argument('--auto-combat-selections',action='store_true');p.add_argument('--guard-exhaust-selection',action='store_true');p.add_argument('--letter-opener-plan',action='store_true');p.add_argument('--floor-plan');p.add_argument('--room-plan');p.add_argument('--combat-policy',choices=['jev','planned','triggered','retaliate','floor_guided','room_guided'],default='planned');a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--expected-run-id',required=True);p.add_argument('--max-actions',type=int,default=2000);p.add_argument('--max-seconds',type=int,default=3600);p.add_argument('--max-usd',type=float,default=3);p.add_argument('--output',required=True);p.add_argument('--execute',action='store_true');p.add_argument('--expert-choice');p.add_argument('--review-lease',action='store_true');p.add_argument('--pause-on-danger',action='store_true');p.add_argument('--danger-hp',type=int,default=20);p.add_argument('--stop-file');p.add_argument('--review-macro',action='store_true');p.add_argument('--review-cards',default='');p.add_argument('--auto-combat-selections',action='store_true');p.add_argument('--guard-exhaust-selection',action='store_true');p.add_argument('--letter-opener-plan',action='store_true');p.add_argument('--review-funded-shop',action='store_true');p.add_argument('--floor-plan');p.add_argument('--room-plan');p.add_argument('--combat-policy',choices=['jev','planned','triggered','retaliate','floor_guided','room_guided'],default='planned');a=p.parse_args()
     if a.review_lease and (not a.expert_choice or not a.pause_on_danger):p.error('--review-lease requires --expert-choice and --pause-on-danger')
     if (a.combat_policy=='floor_guided') != bool(a.floor_plan):p.error('floor_guided requires --floor-plan, and a floor plan requires floor_guided')
     if (a.combat_policy=='room_guided') != bool(a.room_plan) or (a.room_plan and a.floor_plan):p.error('room_guided requires --room-plan, and plans are mutually exclusive')
@@ -160,6 +161,15 @@ def main():
                     trace.write('stale_proposal_discarded',{'before':fingerprint(raw),'after':fingerprint(fresh)})
                     if lease:lease.revoke('stale_proposal')
                     raw=fresh;continue
+                if a.review_funded_shop and screen=='SHOP':
+                    shop_review=funded_shop_exit_review(fresh,selected['action'],history.get('shop_purchases',0),expert_this_action)
+                    trace.write('shop_exit_review',shop_review)
+                    if shop_review['review']:
+                        result['shop_reviews']=result.get('shop_reviews',0)+1
+                        result['status']='expert_required'
+                        trace.write('expert_required',{'reason':'funded_shop_exit','state_hash':fingerprint(fresh),
+                                                       'proposal':selected,'shop_review':shop_review})
+                        raw=fresh;break
                 if not expert_this_action and selected['action']['action']=='end_turn':
                     hard_reason,beckon_risk=hard_endturn_review(fresh)
                     if beckon_risk and beckon_risk['known']:
@@ -179,9 +189,11 @@ def main():
                 result['actions']+=1;trace.write('action_result',answer)
                 if room_opening_this_action:
                     room_session.accepted();result['astra_opening_actions']=1
-                if screen=='MAP':history['shop_closed']=False
+                if screen=='MAP':history['shop_closed']=False;history['shop_purchases']=0
                 if selected['action']['action']=='skip_reward_cards':history['skipped_card_reward']=(raw.get('run_id'),(raw.get('run') or {}).get('floor'))
                 if selected['action']['action']=='close_shop_inventory':history['shop_closed']=True
+                if screen=='SHOP' and selected['action']['action'] in ('buy_card','buy_relic','buy_potion','remove_card_at_shop'):
+                    history['shop_purchases']=history.get('shop_purchases',0)+1
                 if not raw.get('selection'):history['previous']={'screen':screen,'choice':selected}
                 mcp.call('wait_until_actionable',{'timeout_seconds':10,'raw_state':True})
                 raw=mcp.call('get_raw_game_state');trace.write('after',{'state':raw,'state_hash':fingerprint(raw)})
