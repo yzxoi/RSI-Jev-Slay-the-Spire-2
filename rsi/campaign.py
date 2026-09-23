@@ -19,6 +19,7 @@ from .status_guard import reserve_toxic_energy
 from .settle import settle_turn,turn_key
 from .floor_plan import load_floor_plan,plan_context,plan_complete
 from .room_plan import load_room_plan,RoomPlanSession,room_context,room_complete
+from .event_guard import bound_bridge_reroll
 
 
 GUIDED_COMBAT_POLICIES={'planned','triggered','retaliate','floor_guided','room_guided'}
@@ -79,7 +80,9 @@ def main():
                     waits+=1
                     if waits>6:raise RuntimeError(f'No supported action: {screen} {raw.get("available_actions")}')
                     mcp.call('wait_until_actionable',{'timeout_seconds':10,'raw_state':True});time.sleep(.15);raw=mcp.call('get_raw_game_state');continue
-                ordinary_cs,end_turn_guard=ordinary_candidates(raw,cs,a.combat_policy,
+                event_cs,event_guard=bound_bridge_reroll(raw,cs) if not expert else (cs,None)
+                if event_guard is not None:trace.write('event_guard',event_guard)
+                ordinary_cs,end_turn_guard=ordinary_candidates(raw,event_cs,a.combat_policy,
                     explicit_choice=bool(expert or (room_session and not room_session.applied)))
                 if end_turn_guard is not None:trace.write('end_turn_guard',end_turn_guard)
                 review_ids=set(a.review_cards.split(','))

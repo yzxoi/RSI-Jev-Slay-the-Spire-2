@@ -1,0 +1,80 @@
+{
+  "tested_sha": "cbf8e3da169aec2e36fa364e7e7b9159a9aa4815",
+  "input_trace_sha256": "af5b26f4b86eb86ebfe322c274f65b681e1adca2046fb8abbb2deff7ef3146a3",
+  "states": [
+    {
+      "hp": 86,
+      "reroll_key": "SLIPPERY_BRIDGE.pages.INITIAL.options.HOLD_ON_0",
+      "reroll_allowed": true,
+      "exit_allowed": true,
+      "guard_reason": "first_reroll_or_no_exit"
+    },
+    {
+      "hp": 83,
+      "reroll_key": "SLIPPERY_BRIDGE.pages.HOLD_ON_0.options.HOLD_ON_1",
+      "reroll_allowed": false,
+      "exit_allowed": true,
+      "guard_reason": "one_reroll_hp_cap"
+    },
+    {
+      "hp": 79,
+      "reroll_key": "SLIPPERY_BRIDGE.pages.HOLD_ON_1.options.HOLD_ON_2",
+      "reroll_allowed": false,
+      "exit_allowed": true,
+      "guard_reason": "one_reroll_hp_cap"
+    },
+    {
+      "hp": 74,
+      "reroll_key": "SLIPPERY_BRIDGE.pages.HOLD_ON_2.options.HOLD_ON_3",
+      "reroll_allowed": false,
+      "exit_allowed": true,
+      "guard_reason": "one_reroll_hp_cap"
+    },
+    {
+      "hp": 68,
+      "reroll_key": "SLIPPERY_BRIDGE.pages.HOLD_ON_3.options.HOLD_ON_4",
+      "reroll_allowed": false,
+      "exit_allowed": true,
+      "guard_reason": "one_reroll_hp_cap"
+    },
+    {
+      "hp": 61,
+      "reroll_key": "SLIPPERY_BRIDGE.pages.HOLD_ON_4.options.HOLD_ON_5",
+      "reroll_allowed": false,
+      "exit_allowed": true,
+      "guard_reason": "one_reroll_hp_cap"
+    },
+    {
+      "hp": 53,
+      "reroll_key": "SLIPPERY_BRIDGE.pages.HOLD_ON_5.options.HOLD_ON_6",
+      "reroll_allowed": false,
+      "exit_allowed": true,
+      "guard_reason": "one_reroll_hp_cap"
+    },
+    {
+      "hp": 44,
+      "reroll_key": "SLIPPERY_BRIDGE.pages.HOLD_ON_6.options.HOLD_ON_LOOP",
+      "reroll_allowed": false,
+      "exit_allowed": true,
+      "guard_reason": "one_reroll_hp_cap"
+    },
+    {
+      "hp": 34,
+      "reroll_key": "SLIPPERY_BRIDGE.pages.HOLD_ON_LOOP.options.HOLD_ON_LOOP",
+      "reroll_allowed": false,
+      "exit_allowed": true,
+      "guard_reason": "one_reroll_hp_cap"
+    },
+    {
+      "hp": 23,
+      "reroll_key": "SLIPPERY_BRIDGE.pages.HOLD_ON_LOOP.options.HOLD_ON_LOOP",
+      "reroll_allowed": false,
+      "exit_allowed": true,
+      "guard_reason": "one_reroll_hp_cap"
+    }
+  ],
+  "initial_reroll_preserved": true,
+  "later_rerolls_excluded": 9,
+  "exit_available_all_states": true,
+  "scope": "retrospective_candidate_filter_only"
+}
