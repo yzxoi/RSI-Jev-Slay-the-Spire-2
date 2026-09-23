@@ -46,7 +46,8 @@ def freeze(roots):
                 small = {'run_id': run_id, 'screen': 'COMBAT', 'turn': turn,
                          'run': {'floor': floor, 'current_hp': state['run']['current_hp'],
                                  'relics': state['run'].get('relics', [])},
-                         'combat': {'player': combat['player'], 'hand': combat['hand'],
+                         'combat': {'action_readiness': combat.get('action_readiness'),
+                                    'player': combat['player'], 'hand': combat['hand'],
                                     'enemies': combat['enemies'],
                                     'end_turn_will_kill_player': combat.get('end_turn_will_kill_player')}}
                 earliest[key] = (row['time'], {'segment': segment, 'source_seq': row['seq'], 'state': small})
