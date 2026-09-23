@@ -51,7 +51,7 @@ def hard_endturn_review(state):
 
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--expected-run-id',required=True);p.add_argument('--max-actions',type=int,default=2000);p.add_argument('--max-seconds',type=int,default=3600);p.add_argument('--max-usd',type=float,default=3);p.add_argument('--output',required=True);p.add_argument('--execute',action='store_true');p.add_argument('--expert-choice');p.add_argument('--review-lease',action='store_true');p.add_argument('--pause-on-danger',action='store_true');p.add_argument('--danger-hp',type=int,default=20);p.add_argument('--stop-file');p.add_argument('--review-macro',action='store_true');p.add_argument('--review-cards',default='');p.add_argument('--auto-combat-selections',action='store_true');p.add_argument('--floor-plan');p.add_argument('--room-plan');p.add_argument('--combat-policy',choices=['jev','planned','triggered','retaliate','floor_guided','room_guided'],default='planned');a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--expected-run-id',required=True);p.add_argument('--max-actions',type=int,default=2000);p.add_argument('--max-seconds',type=int,default=3600);p.add_argument('--max-usd',type=float,default=3);p.add_argument('--output',required=True);p.add_argument('--execute',action='store_true');p.add_argument('--expert-choice');p.add_argument('--review-lease',action='store_true');p.add_argument('--pause-on-danger',action='store_true');p.add_argument('--danger-hp',type=int,default=20);p.add_argument('--stop-file');p.add_argument('--review-macro',action='store_true');p.add_argument('--review-cards',default='');p.add_argument('--auto-combat-selections',action='store_true');p.add_argument('--letter-opener-plan',action='store_true');p.add_argument('--floor-plan');p.add_argument('--room-plan');p.add_argument('--combat-policy',choices=['jev','planned','triggered','retaliate','floor_guided','room_guided'],default='planned');a=p.parse_args()
     if a.review_lease and (not a.expert_choice or not a.pause_on_danger):p.error('--review-lease requires --expert-choice and --pause-on-danger')
     if (a.combat_policy=='floor_guided') != bool(a.floor_plan):p.error('floor_guided requires --floor-plan, and a floor plan requires floor_guided')
     if (a.combat_policy=='room_guided') != bool(a.room_plan) or (a.room_plan and a.floor_plan):p.error('room_guided requires --room-plan, and plans are mutually exclusive')
@@ -135,7 +135,7 @@ def main():
                 elif encounter and encounter['selected']:selected=encounter['selected']
                 elif len(ordinary_cs)==1:selected=ordinary_cs[0]
                 elif a.combat_policy in ['planned','triggered','retaliate','floor_guided','room_guided'] and screen=='COMBAT' and not raw.get('selection'):
-                    selected,planning=plan_native(raw,ordinary_cs,triggers=a.combat_policy in ['triggered','retaliate','floor_guided','room_guided'],retaliation=a.combat_policy in ['retaliate','floor_guided','room_guided']);trace.write('planning',planning)
+                    selected,planning=plan_native(raw,ordinary_cs,triggers=a.combat_policy in ['triggered','retaliate','floor_guided','room_guided'],retaliation=a.combat_policy in ['retaliate','floor_guided','room_guided'],letter_opener=a.letter_opener_plan);trace.write('planning',planning)
                     if floor_plan or room_plan:
                         selected=jev.choose({'state':raw.get('agent_view',raw),'strategy':STRATEGY,
                                              **plan_context(floor_plan,raw),**room_context(room_plan,raw),

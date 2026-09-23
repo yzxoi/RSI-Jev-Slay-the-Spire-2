@@ -6,6 +6,7 @@ import unittest
 from rsi.planner import choose_plan
 from rsi.full import advance_skill_counter
 from rsi.policy import combat_candidates
+from rsi.live_plan import plan_native
 
 
 def fixture(starting_skills=2, relic=True, enemy_block=0):
@@ -74,6 +75,25 @@ class LetterOpenerTests(unittest.TestCase):
         ids = plan['plan_ids']
         purity_ids = {c['id'] for c in choices if c.get('card_id') == 'CARD.PURITY'}
         self.assertFalse(any(candidate in purity_ids for candidate in ids[:-1]))
+
+    def test_native_adapter_uses_observed_skill_count(self):
+        raw = {'run': {'deck': [], 'relics': [{'relic_id': 'LETTER_OPENER'}]},
+               'combat': {'player': {'current_hp': 40, 'energy': 1, 'block': 0,
+                                     'skills_played_this_turn': 2, 'powers': []},
+                          'enemies': [{'index': 0, 'current_hp': 3, 'block': 0, 'is_alive': True,
+                                       'powers': [], 'intents': [{'total_damage': 0}]},
+                                      {'index': 1, 'current_hp': 26, 'block': 0, 'is_alive': True,
+                                       'powers': [], 'intents': [{'total_damage': 0}]}],
+                          'hand': [{'index': 0, 'card_id': 'DEFEND_IRONCLAD', 'name': 'Defend',
+                                    'requires_target': False, 'energy_cost': 1, 'playable': True,
+                                    'target_type': None,
+                                    'dynamic_values': [{'name': 'Block', 'base_value': 5,
+                                                        'current_value': 5}]}]}}
+        choices = [{'id': 'a000', 'action': {'action': 'play_card', 'card_index': 0}},
+                   {'id': 'a001', 'action': {'action': 'end_turn'}}]
+        _, plan = plan_native(raw, choices, letter_opener=True)
+        self.assertEqual(plan['predicted_enemy_hp'], {0: 0, 1: 21})
+        self.assertEqual(plan['letter_opener_forecast']['starting_skills'], 2)
 
 
 if __name__ == '__main__':

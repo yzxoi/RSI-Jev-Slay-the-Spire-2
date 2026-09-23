@@ -28,11 +28,12 @@ def normalize(raw):
                 previews.append({'target_index':e['index'],'damage':damage,'total_damage':damage*hits,'native_hits':hits,'native_base_damage':native_base,'native_target_multiplier':vulnerable,'native_slow_count':slow_count,'hp_damage_cap':1 if power(e,'SLIPPERY_POWER') else None})
         # Block preview already includes dexterity/frail; do not apply twice.
         hand.append({'index':card['index'],'id':card['card_id'],'name':card['name'],'cost':card['energy_cost'],'type':kind,'stats':stats,'keywords':card.get('keywords',deck.get(card['card_id'],{}).get('keywords')),'damage_by_target':previews,'can_play':card['playable'],'target_type':card['target_type']})
-    return {'energy':p['energy'],'player':{'hp':p['current_hp'],'block':p['block'],'end_turn_block':power(p,'PLATING_POWER'),'powers':p.get('powers',[]),'relics':raw['run'].get('relics',[])},'hand':hand,'enemies':enemies}
+    return {'energy':p['energy'],'skills_played_this_turn':p.get('skills_played_this_turn'),
+            'player':{'hp':p['current_hp'],'block':p['block'],'end_turn_block':power(p,'PLATING_POWER'),'powers':p.get('powers',[]),'relics':raw['run'].get('relics',[])},'hand':hand,'enemies':enemies}
 
 
-def plan_native(raw,cs,triggers=False,retaliation=False):
+def plan_native(raw,cs,triggers=False,retaliation=False,letter_opener=False):
     plays=[c for c in cs if c['action']['action'] in ['play_card','end_turn']]
-    state=normalize(raw);selected,plan=choose_plan(state,plays,triggers=triggers,retaliation=retaliation)
+    state=normalize(raw);selected,plan=choose_plan(state,plays,triggers=triggers,retaliation=retaliation,letter_opener=letter_opener)
     plan['native_preview_limit']='Native current_value already includes owner modifiers; CalculatedDamage supported. Target vulnerability has integer rounding limits. Slow uses prior cards played in this single-player turn; Slippery HP cap is tracked. Other triggers, fractional preview rounding and multi-hit effects remain approximate.'
     return selected,plan
