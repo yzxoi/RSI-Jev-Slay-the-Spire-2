@@ -1,0 +1,282 @@
+{
+  "source_trace_sha256": "c6490faf990ff6e71e9ba814e05d424374952200c4eb49170e440964b0051928",
+  "source_state_hash": "418c73bc9b09b87a62d241edb46359cc9b4d3e2de80f777b9abdf6255c3ac7dd",
+  "normalized_state": {
+    "energy": 4,
+    "player": {
+      "hp": 12,
+      "block": 0,
+      "end_turn_block": 0,
+      "powers": [
+        {
+          "index": 0,
+          "power_id": "WEAK_POWER",
+          "name": "虚弱",
+          "amount": 1,
+          "is_debuff": true
+        }
+      ],
+      "relics": [
+        {
+          "index": 0,
+          "relic_id": "BURNING_BLOOD",
+          "name": "燃烧之血",
+          "description": "在战斗结束时，回复[green]{Heal}[/green]点生命。",
+          "stack": null,
+          "is_melted": false
+        },
+        {
+          "index": 1,
+          "relic_id": "BOOMING_CONCH",
+          "name": "轰鸣海螺",
+          "description": "在[gold]精英[/gold]战的战斗开始时，额外抽[blue]{Cards}[/blue]张牌并获得{Energy:energyIcons()}。",
+          "stack": null,
+          "is_melted": false
+        },
+        {
+          "index": 2,
+          "relic_id": "HAPPY_FLOWER",
+          "name": "开心小花",
+          "description": "每[blue]{Turns}[/blue]个回合，获得{Energy:energyIcons()}。",
+          "stack": 0,
+          "is_melted": false
+        },
+        {
+          "index": 3,
+          "relic_id": "REPTILE_TRINKET",
+          "name": "爬行动物饰品",
+          "description": "当你使用药水时，在本回合获得[blue]{StrengthPower}[/blue][gold]力量[/gold]。",
+          "stack": null,
+          "is_melted": false
+        }
+      ]
+    },
+    "hand": [
+      {
+        "index": 0,
+        "id": "PERFECTED_STRIKE",
+        "name": "完美打击",
+        "cost": 2,
+        "type": "Attack",
+        "stats": {
+          "calculateddamage": 15,
+          "calculationbase": 6,
+          "extradamage": 2
+        },
+        "keywords": null,
+        "damage_by_target": [
+          {
+            "target_index": 0,
+            "damage": 15,
+            "total_damage": 15,
+            "native_hits": 1,
+            "native_base_damage": 15,
+            "native_target_multiplier": 1,
+            "native_slow_count": null,
+            "hp_damage_cap": null
+          }
+        ],
+        "can_play": true,
+        "target_type": "AnyEnemy"
+      },
+      {
+        "index": 1,
+        "id": "STRIKE_IRONCLAD",
+        "name": "打击",
+        "cost": 1,
+        "type": "Attack",
+        "stats": {
+          "damage": 4
+        },
+        "keywords": null,
+        "damage_by_target": [
+          {
+            "target_index": 0,
+            "damage": 4,
+            "total_damage": 4,
+            "native_hits": 1,
+            "native_base_damage": 4,
+            "native_target_multiplier": 1,
+            "native_slow_count": null,
+            "hp_damage_cap": null
+          }
+        ],
+        "can_play": true,
+        "target_type": "AnyEnemy"
+      },
+      {
+        "index": 2,
+        "id": "BATTLE_TRANCE",
+        "name": "战斗专注+",
+        "cost": 0,
+        "type": "Skill",
+        "stats": {
+          "cards": 4
+        },
+        "keywords": null,
+        "damage_by_target": [],
+        "can_play": true,
+        "target_type": "Self"
+      },
+      {
+        "index": 3,
+        "id": "POMMEL_STRIKE",
+        "name": "剑柄打击",
+        "cost": 1,
+        "type": "Attack",
+        "stats": {
+          "cards": 1,
+          "damage": 6
+        },
+        "keywords": null,
+        "damage_by_target": [
+          {
+            "target_index": 0,
+            "damage": 6,
+            "total_damage": 6,
+            "native_hits": 1,
+            "native_base_damage": 6,
+            "native_target_multiplier": 1,
+            "native_slow_count": null,
+            "hp_damage_cap": null
+          }
+        ],
+        "can_play": true,
+        "target_type": "AnyEnemy"
+      },
+      {
+        "index": 4,
+        "id": "STRIKE_IRONCLAD",
+        "name": "打击",
+        "cost": 1,
+        "type": "Attack",
+        "stats": {
+          "damage": 4
+        },
+        "keywords": null,
+        "damage_by_target": [
+          {
+            "target_index": 0,
+            "damage": 4,
+            "total_damage": 4,
+            "native_hits": 1,
+            "native_base_damage": 4,
+            "native_target_multiplier": 1,
+            "native_slow_count": null,
+            "hp_damage_cap": null
+          }
+        ],
+        "can_play": true,
+        "target_type": "AnyEnemy"
+      }
+    ],
+    "enemies": [
+      {
+        "index": 0,
+        "hp": 89,
+        "block": 0,
+        "intents": [
+          {
+            "total_damage": 10,
+            "damage": 10,
+            "hits": 1
+          },
+          {
+            "total_damage": 0,
+            "damage": 0,
+            "hits": 1
+          }
+        ],
+        "powers": [
+          {
+            "index": 0,
+            "power_id": "STEAM_ERUPTION_POWER",
+            "name": "蒸汽喷发",
+            "amount": 33,
+            "is_debuff": false
+          }
+        ],
+        "native_slippery": 0,
+        "native_artifact": 0
+      }
+    ]
+  },
+  "candidates": [
+    {
+      "action": {
+        "action": "play_card",
+        "card_index": 0,
+        "target_index": 0
+      },
+      "name": "完美打击",
+      "card_id": "PERFECTED_STRIKE",
+      "rules": "造成15点伤害。 你每有一张名字中含有“打击”的牌，伤害+2。",
+      "target_space": "enemies",
+      "id": "a000"
+    },
+    {
+      "action": {
+        "action": "play_card",
+        "card_index": 1,
+        "target_index": 0
+      },
+      "name": "打击",
+      "card_id": "STRIKE_IRONCLAD",
+      "rules": "造成4点伤害。",
+      "target_space": "enemies",
+      "id": "a001"
+    },
+    {
+      "action": {
+        "action": "play_card",
+        "card_index": 2
+      },
+      "name": "战斗专注+",
+      "card_id": "BATTLE_TRANCE",
+      "rules": "抽4张牌。 你在本回合内不能再抽任何牌。",
+      "target_space": null,
+      "id": "a002"
+    },
+    {
+      "action": {
+        "action": "play_card",
+        "card_index": 3,
+        "target_index": 0
+      },
+      "name": "剑柄打击",
+      "card_id": "POMMEL_STRIKE",
+      "rules": "造成6点伤害。 抽1张牌。",
+      "target_space": "enemies",
+      "id": "a003"
+    },
+    {
+      "action": {
+        "action": "play_card",
+        "card_index": 4,
+        "target_index": 0
+      },
+      "name": "打击",
+      "card_id": "STRIKE_IRONCLAD",
+      "rules": "造成4点伤害。",
+      "target_space": "enemies",
+      "id": "a004"
+    },
+    {
+      "action": {
+        "action": "use_potion",
+        "option_index": 0
+      },
+      "name": "复制药水",
+      "potion_id": "DUPLICATOR",
+      "target_space": null,
+      "id": "a005"
+    },
+    {
+      "action": {
+        "action": "end_turn"
+      },
+      "name": "结束回合",
+      "id": "a006"
+    }
+  ]
+}
