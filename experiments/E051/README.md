@@ -182,3 +182,14 @@ unless blocked, mitigated or the beetle is killed. Bind a single Astra
 rescue action, Radiant Tincture at potion index1, to increase available
 energy without spending a card play; inspect its exact effect before choosing
 cards. This is intervention 4, and no counterfactual survival is claimed.
+
+The state-bound Radiant Tincture at tested SHA
+`f14238d704797a5ad506b31a1b0c80cbff969bb7` was accepted once with
+`python3 -m rsi.native_step --choice experiments/E051/rescue-tincture.json --expected-run-id F1GR9R0YXCCC --output artifacts/runs/e051-rescue-tincture.json --execute`.
+Native energy rose 3→4, HP stayed 3; trace SHA-256
+`1ccd6fb832334726e1ee17c2e8d4d0013a37af123e788c8c66763db26bc229a5`.
+The active attacker remains Beetle78 HP with Attack22. Because Battle Trance
+would prevent later Pommel Strike draw, bind Pommel Strike at current hand
+index2 targeting Beetle index1 as the next Astra action; inspect the actual
+draw before any subsequent action. This is intervention 5, not an assertion
+that a survivable line exists. Exact state/action: `rescue-pommel.json`.
