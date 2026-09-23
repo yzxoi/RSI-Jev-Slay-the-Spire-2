@@ -83,3 +83,5 @@ At tested SHA `d8b3c92`, the controller entered Shop and opened stock in two acc
 Omnislice was bought at tested SHA `279400f` for 85 gold, no rejection or Jev call; 147 gold remains and Rampage still costs72. Commit state-bound `floor10-shop-buy-2.json` and execute one Rampage purchase with output `artifacts/runs/e045-floor10-shop-buy-2.json`, then verify remaining gold and Weak Potion stock.
 
 Rampage was bought at tested SHA `d5b5d5c` for72, no rejection or Jev call; 75 gold remains and Weak Potion is still stocked at48. Commit bound `floor10-shop-buy-3.json`, execute one Weak Potion purchase with output `artifacts/runs/e045-floor10-shop-buy-3.json`, then inspect the potion inventory and leave the shop separately.
+
+Weak Potion was bought at tested SHA `1d1b79f` for48, no rejection or Jev call; the held potion list confirms `WEAK_POTION` and gold is27. Total planned spend205 matched. Commit bound `floor10-shop-close.json` and execute one `close_shop_inventory` with output `artifacts/runs/e045-floor10-shop-close.json`; inspect the next legal exit action instead of assuming the inventory close leaves the room.
