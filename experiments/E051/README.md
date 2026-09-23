@@ -303,3 +303,14 @@ Strike remains playable at hand index0 with displayed damage7. Trace SHA-256
 `42fb3c46ea673f93cd3f14cd6b76c480b80a57585d9e88d58c8e368fce29db48`.
 The failed damage estimate is recorded for post-run combat-value calibration.
 Bind Strike target0 as intervention 18, then verify a native battle victory.
+
+Final Strike at tested SHA `bc181df` killed Silk and advanced to the native
+REWARD screen on floor23. Burning Blood healed HP3→9/91. This is a genuine
+ordinary battle win, not run completion. Trace SHA-256
+`877e774d11838ec190b6571f411402830daa988816700727d70c084e92ad918e`.
+The whole rescue required interventions 4–18 (15 bound native choices),
+including three potion decisions; the low Astra-cost hypothesis is under
+pressure. Resume the unchanged `planned` controller with the original
+HP≤20 danger pause to collect rewards and navigate until the next dangerous
+combat boundary. Segment 8 retains 80-action, 300-second and $0.10 Jev caps.
+Do not confuse this batch with evidence of run victory.
