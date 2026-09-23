@@ -20,6 +20,15 @@ from .potions import with_potions
 STRATEGY = """Maximize probability of completing all three acts. Evaluate current deck, next threats and resources. Early decks need efficient damage, then reliable block, draw/energy and scaling for bosses. Prefer cards that solve a concrete gap; skipping mediocre rewards is valid. Do not force a named archetype. Remove curses/weak starters when affordable. Rest when healing is needed to survive upcoming threats; otherwise upgrades have lasting value. Avoid risky elites with low health/weak damage. Buy useful relics/cards rather than spending all gold indiscriminately. For card selection interpret the preceding action and scene: removing, upgrading, discarding and exhausting require different choices. Supplied rules are authoritative; descriptions with placeholders use the supplied stats. Numerical combat previews are limited, not full simulation."""
 
 
+def advance_skill_counter(count, card):
+    """Count explicit Skills; disable forecasts after opaque automatic card play."""
+    if card and card.get('id', '').split('.')[-1] in {'CASCADE', 'HAVOC', 'MAYHEM'}:
+        return None
+    if count is None:
+        return None
+    return count + int(bool(card and card.get('type') == 'Skill'))
+
+
 def macro_candidates(state, history=None):
     d = state.get('decision'); out = []
     def add(name, metadata=None, **args):
@@ -127,11 +136,14 @@ def episode(config, manifest, jev=None):
             if d=='map_select':history['removed_here']=False
             if selected['action']['action']=='remove_card':history['removed_here']=True
             if d!='card_select':history['previous']={'scene':d,'choice':selected}
-            selected_skill=(d=='combat_play' and selected['action']['action']=='play_card'
-                            and any(c['index']==selected['action']['args']['card_index'] and c.get('type')=='Skill'
-                                    for c in state.get('hand',[])))
+            played_card=(next((c for c in state.get('hand',[])
+                               if c['index']==selected['action']['args']['card_index']),None)
+                         if d=='combat_play' and selected['action']['action']=='play_card' else None)
             state=engine.send(selected['action']);trace.write('after',{'state':state,'state_hash':digest(state)})
-            if selected_skill:skill_count+=1
+            if played_card:
+                skill_count=advance_skill_counter(skill_count,played_card)
+                if skill_count is None and config['policy']=='planfixed_letter':
+                    trace.write('letter_skill_counter_unknown',{'card_id':played_card.get('id'),'round_key':skill_key})
             if state.get('decision') not in ('combat_play','card_select'):
                 skill_key=None;skill_count=0
         else: raise TimeoutError('Full-run step budget exhausted')

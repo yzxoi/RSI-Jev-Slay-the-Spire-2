@@ -2,6 +2,7 @@ import copy
 import unittest
 
 from rsi.planner import choose_plan
+from rsi.full import advance_skill_counter
 
 
 def fixture(starting_skills=2, relic=True, enemy_block=0):
@@ -54,6 +55,11 @@ class LetterOpenerTests(unittest.TestCase):
         baseline = choose_plan(copy.deepcopy(state), choices)[0]
         treatment = choose_plan(copy.deepcopy(state), choices, letter_opener=True)[0]
         self.assertEqual(baseline['action'], treatment['action'])
+
+    def test_opaque_auto_play_makes_counter_unknown_until_new_turn(self):
+        self.assertEqual(advance_skill_counter(2, {'id': 'CARD.DEFEND_IRONCLAD', 'type': 'Skill'}), 3)
+        self.assertIsNone(advance_skill_counter(2, {'id': 'CARD.CASCADE', 'type': 'Skill'}))
+        self.assertIsNone(advance_skill_counter(None, {'id': 'CARD.DEFEND_IRONCLAD', 'type': 'Skill'}))
 
 
 if __name__ == '__main__':
