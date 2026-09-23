@@ -23,3 +23,24 @@ later escalating rerolls are excluded with exit available, and targeted plus
 repository tests pass. Otherwise close without promotion. The cap is one
 reroll regardless of HP or localized cost wording; this deliberately favors
 health preservation in the absence of a reliable card-removal value model.
+
+Evaluation at tested SHA `cbf8e3da169aec2e36fa364e7e7b9159a9aa4815`:
+
+```sh
+python3 -m experiments.E052.replay --trace /Users/yzxoi/RSI-Jev-Slay-the-Spire-2/artifacts/runs/1685f06b-8f18-4be7-8c96-cc68da465af6/decisions.jsonl --output experiments/E052/replay-result.json
+python3 -m unittest discover -s tests
+```
+
+The fixed trace hash matched. The first HP86 `HOLD_ON_0` reroll remained
+available, all nine later escalating rerolls were excluded, and the native
+`OVERCOME` exit remained available in all ten states. The five guard unit
+cases and the full 70-test repository suite passed. The baseline had offered
+all ten rerolls; Jev actually selected nine of them, costing 63 HP. Exact
+per-state output is `replay-result.json`. No Jev calls or native actions were
+made in this offline evaluation; model `typesafe/jev-1.13-20260917`, native
+game v0.111.0 and mod v0.15.0 identify the source trace, not a new run.
+
+The predeclared candidate decision rule passed, so merge this small guard
+for the next native run. This does not establish that E051 would have won:
+accepting a different card removal changes the subsequent game and must be
+measured as a separate fresh-run experiment.
