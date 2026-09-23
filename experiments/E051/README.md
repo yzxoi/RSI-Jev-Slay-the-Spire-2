@@ -242,3 +242,12 @@ strike the Vulnerable Beetle twice; this is the best observed chance to
 remove the attacking source within the remaining energy. Bind target index1,
 inspect actual damage, then decide whether two Strikes or another line can
 finish it. This is intervention 10; the kill is not presumed.
+
+Dismantle at tested SHA `a90318c73b6d003cb5972cf0de8109109a618936`
+dealt 36 actual damage (two hits under Vulnerable/Cruelty), Beetle63→27 HP,
+player HP3, energy2; raw trace SHA-256
+`d88ce443e1764359e32e4832039a92d41093c29fdc2f4958e456a825c1385150`.
+Two Strikes remain at hand indexes0 and1, each displaying7 base damage
+before target Vulnerable and Cruelty. Two strengthened hits may remove the
+attacking Beetle before it deals22; bind the first Strike index0 target1 and
+measure its actual damage. This is intervention 11, not yet a guaranteed kill.
