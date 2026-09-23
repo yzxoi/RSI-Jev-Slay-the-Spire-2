@@ -16,7 +16,7 @@ def _hp_loss(card):
     return values[0] if len(values) == 1 and isinstance(values[0], int) and values[0] > 0 else None
 
 
-def _known_nonlethal_attack(card, target, enemies):
+def _known_nonlethal_attack(card, target, enemies, allow_vulnerable=False):
     """Return True only when this one play cannot remove the visible attack."""
     if target is None:
         return False
@@ -29,6 +29,8 @@ def _known_nonlethal_attack(card, target, enemies):
     # Vulnerable changes target damage and can turn a nominally small attack
     # into lethal; abstain rather than excluding that candidate.
     harmless = {'STRENGTH_POWER', 'WEAK_POWER'}
+    if allow_vulnerable:
+        harmless.add('VULNERABLE_POWER')
     if enemy is None or any(p.get('power_id') not in harmless for p in enemy.get('powers', [])):
         return False
     ident = card.get('card_id')
@@ -42,7 +44,10 @@ def _known_nonlethal_attack(card, target, enemies):
         return False
     if enemy['index'] != attackers[0]['index']:
         return True
-    return damage * hits < enemy['current_hp'] + enemy.get('block', 0)
+    # 2x is a conservative upper bound for the standard 1.5x Vulnerable
+    # modifier. Keep the Toxic baseline's older abstention by default.
+    multiplier = 2 if allow_vulnerable and _amount(enemy, 'VULNERABLE_POWER') else 1
+    return damage * hits * multiplier < enemy['current_hp'] + enemy.get('block', 0)
 
 
 def reserve_toxic_energy(state, candidates):
@@ -158,7 +163,7 @@ def reserve_beckon_energy(state, candidates):
         if kind == 'play_card':
             card = byindex.get(action['card_index'])
             if card and card.get('card_id') != 'BECKON' and card.get('energy_cost', 0) > energy - needed:
-                if _known_nonlethal_attack(card, action.get('target_index'), enemies):
+                if _known_nonlethal_attack(card, action.get('target_index'), enemies, allow_vulnerable=True):
                     excluded.append(choice['id']); continue
         kept.append(choice)
     if not kept:
