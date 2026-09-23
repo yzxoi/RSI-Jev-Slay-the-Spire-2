@@ -1,0 +1,128 @@
+"""Decision monitor uses trace evidence without becoming a game writer."""
+import json
+from pathlib import Path
+import tempfile
+import threading
+import time
+import unittest
+from urllib.error import HTTPError
+from urllib.request import Request, urlopen
+
+from rsi.monitor import Projection, TraceFeed, serve
+
+
+def row(seq, kind, data):
+    return {"seq": seq, "time": 1000 + seq, "kind": kind, "data": data}
+
+
+def append(path, *records, complete=True):
+    with path.open("ab") as file:
+        for record in records:
+            file.write(json.dumps(record, ensure_ascii=False).encode())
+            if complete:
+                file.write(b"\n")
+
+
+class MonitorTests(unittest.TestCase):
+    def test_partial_append_jev_mapping_and_no_invented_confidence(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "segment" / "decisions.jsonl"
+            path.parent.mkdir()
+            append(path, row(0, "manifest", {"scope": "native_complete_run", "config": {"expected_run_id": "RUN"}}),
+                   row(1, "before", {"state": {"run_id": "RUN", "screen": "COMBAT", "run": {"floor": 5, "current_hp": 12, "max_hp": 80}}}),
+                   row(2, "candidates", [{"id": "a000", "name": "Strike", "action": {"action": "play_card"}},
+                                         {"id": "a001", "name": "Defend", "action": {"action": "play_card"}}]),
+                   row(3, "model_request", {"questions": {"action": {"criteria": {
+                       "a000": {"name": "Strike", "action": {"action": "play_card"}},
+                       "a001": {"name": "Defend", "action": {"action": "play_card"}}}}}}),
+                   row(4, "model_response", {"response": {"model": "jev", "answers": {"action": {
+                       "choice": "a001", "confidence": .73, "probabilities": {"a000": .13, "a001": .87}}}}}))
+            feed = TraceFeed(trace=path)
+            self.assertEqual(feed.snapshot()["status"], "jev_responded")
+            selected = row(5, "selected", {"id": "a001", "name": "Defend", "action": {"action": "play_card"}})
+            append(path, selected, complete=False)
+            self.assertIsNone(feed.snapshot()["latest"])
+            with path.open("ab") as file:
+                file.write(b"\n")
+            snapshot = feed.snapshot()
+            self.assertEqual(snapshot["latest"]["source"], "Jev")
+            self.assertEqual(snapshot["latest"]["confidence"], .73)
+            self.assertEqual([(o["id"], o["probability"]) for o in snapshot["latest"]["options"]],
+                             [("a001", .87), ("a000", .13)])
+            append(path, row(6, "action_result", {"status": "completed"}))
+            self.assertEqual(feed.snapshot()["latest"]["state"], "accepted")
+            append(path, row(7, "before", {"state": {"screen": "MAP", "run": {"floor": 6}}}),
+                   row(8, "candidates", [{"id": "a000", "name": "唯一道路", "action": {"action": "choose_map_node"}}]),
+                   row(9, "selected", {"id": "a000", "name": "唯一道路", "action": {"action": "choose_map_node"}}))
+            latest = feed.snapshot()["latest"]
+            self.assertEqual(latest["source"], "Automatic")
+            self.assertIsNone(latest["confidence"])
+            self.assertIsNone(latest["options"][0]["probability"])
+
+    def test_astra_escalation_uses_latest_observed_state(self):
+        projection = Projection()
+        projection.new_segment("a/decisions.jsonl")
+        projection.consume(row(0, "after", {"state": {"screen": "COMBAT", "turn": 3, "run": {"floor": 17, "current_hp": 9}}}))
+        projection.consume(row(1, "expert_required", {"reason": "low_hp_before_spending_energy"}))
+        latest = projection.snapshot("live")["latest"]
+        self.assertEqual(latest["source"], "Astra requested")
+        self.assertEqual(latest["context"]["hp"], 9)
+        self.assertIsNone(latest["confidence"])
+
+    def test_latest_native_segment_follows_run_and_keeps_history(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            for segment, run_id, scope in (("a", "RUN", "native_complete_run"),
+                                           ("b", "OTHER", "native_complete_run"),
+                                           ("c", "RUN", "complete_run")):
+                path = root / segment / "decisions.jsonl"
+                path.parent.mkdir()
+                append(path, row(0, "manifest", {"scope": scope, "config": {"expected_run_id": run_id}}))
+            first = root / "a" / "decisions.jsonl"
+            append(first, row(1, "before", {"state": {"screen": "MAP"}}),
+                   row(2, "selected", {"id": "a000", "name": "first", "action": {"action": "choose_map_node"}}))
+            feed = TraceFeed(game_run_id="RUN", root=root)
+            self.assertEqual(feed.snapshot()["latest"]["label"], "first")
+            second = root / "d" / "decisions.jsonl"
+            second.parent.mkdir()
+            append(second, row(0, "manifest", {"scope": "native_complete_run", "config": {"expected_run_id": "RUN"}}),
+                   row(1, "before", {"state": {"screen": "EVENT"}}),
+                   row(2, "selected", {"id": "a000", "name": "second", "action": {"action": "choose_event_option"}}))
+            snapshot = feed.snapshot()
+            self.assertEqual(snapshot["latest"]["label"], "second")
+            self.assertEqual([d["label"] for d in snapshot["history"]], ["second", "first"])
+            self.assertNotEqual(snapshot["history"][0]["key"], snapshot["history"][1]["key"])
+
+    def test_server_exposes_projection_only_and_no_write_endpoint(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "segment" / "decisions.jsonl"
+            path.parent.mkdir()
+            append(path, row(0, "manifest", {"scope": "native_complete_run", "config": {"expected_run_id": "RUN"},
+                                              "secret": "PRIVATE_SENTINEL"}),
+                   row(1, "before", {"state": {"screen": "EVENT", "secret": "PRIVATE_SENTINEL"}}),
+                   row(2, "expert_required", {"reason": "<script>alert(1)</script>"}))
+            server = serve(TraceFeed(trace=path), port=0)
+            self.assertEqual(server.server_address[0], "127.0.0.1")
+            thread = threading.Thread(target=server.serve_forever, daemon=True)
+            thread.start()
+            try:
+                with urlopen(f"http://127.0.0.1:{server.server_port}/api/state") as response:
+                    body = response.read().decode()
+                    self.assertEqual(response.headers["Content-Type"], "application/json; charset=utf-8")
+                self.assertNotIn("PRIVATE_SENTINEL", body)
+                self.assertIn("<script>alert(1)</script>", body)
+                with urlopen(f"http://127.0.0.1:{server.server_port}/monitor.js") as response:
+                    script = response.read().decode()
+                self.assertIn("textContent", script)
+                self.assertNotIn("innerHTML", script)
+                with self.assertRaises(HTTPError) as failure:
+                    urlopen(Request(f"http://127.0.0.1:{server.server_port}/api/state", data=b"x", method="POST"))
+                self.assertEqual(failure.exception.code, 405)
+            finally:
+                server.shutdown()
+                server.server_close()
+                thread.join(timeout=2)
+
+
+if __name__ == "__main__":
+    unittest.main()
