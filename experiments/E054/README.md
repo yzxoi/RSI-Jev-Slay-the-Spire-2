@@ -141,3 +141,31 @@ This bounded room segment lowers the pause threshold from 20 to 12 so the
 current HP13 turn can execute; the separate lethal-end-turn guard remains.
 Cap at 20 actions, 120 seconds and $0.03 Jev. This is a scoped guided
 variant, not an unchanged-policy autonomous outcome.
+
+Soul Fysh burst at tested SHA
+`316f93c1295cb4e0c64727909a16e13e32c85777` accepted 10 actions,
+zero rejections, seven Jev calls/$0.001923264. Twin Strike was Astra
+intervention 3; Jev then played three free Angers. The boss survived at
+18 HP into turn12. Jev played Shrug, Taunt and Strike, leaving 13 HP,
+14 Block, zero energy, one Beckon in hand and enemy Attack24. Native
+`end_turn_will_kill_player=false` despite the card's displayed 6 HP
+end-turn loss. The selected end turn produced native `GAME_OVER`,
+`is_victory=false`, floor17, HP0. Raw trace SHA-256
+`ce6a3e17f58a808ecda925690f0b725a4201d8f139fe2efadf1d1ddcca740a15`.
+The 10 untracked raw trace files, including four setup actions, all passed
+SHA-256 recheck. After the observed terminal the game process and MCP
+endpoint stopped; save was still pending at the last native state, so no
+save verification is claimed. Issue #102/E055 separately preregisters a
+delayed Beckon-loss guard. The alternative of using the last energy on
+Beckon rather than Strike is a counterfactual, not a played result.
+
+The uninterrupted E054 run ended normally after 271 in-run native actions,
+79 Jev calls costing $0.017562216, and three Astra room-opening actions.
+One explicit transient `play_card` rejection occurred in segment1, with no
+uncertain action delivery. Compact totals and exact final code SHA are in
+`terminal-result.json`. The hypothesis of a genuine A0 finish failed.
+Compared with E051, this different-seed run stopped earlier, at floor17;
+the E052 bridge guard was not exercised because the corresponding event
+did not appear. Do not promote a win-rate or E052 native-strength claim
+from this outcome. Close this negative experiment PR after publishing the
+result; retain the branch and raw trace hashes for subsequent diagnosis.

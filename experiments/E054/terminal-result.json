@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "experiment": "E054",
+  "issue": 100,
+  "game_run_id": "DCEND0WRAPGL",
+  "character": "IRONCLAD",
+  "ascension": 0,
+  "native_game_version": "v0.111.0",
+  "native_mod_version": "0.15.0",
+  "jev_model": "typesafe/jev-1.13-20260917",
+  "outcome": "normal_defeat",
+  "game_over_is_victory": false,
+  "terminal_floor": 17,
+  "terminal_hp": 0,
+  "save_status_at_terminal": "pending",
+  "save_verified_at_terminal": false,
+  "last_tested_sha": "316f93c1295cb4e0c64727909a16e13e32c85777",
+  "last_trace_sha256": "ce6a3e17f58a808ecda925690f0b725a4201d8f139fe2efadf1d1ddcca740a15",
+  "totals": {
+    "in_run_native_actions": 271,
+    "post_previous_game_and_new_game_setup_actions": 4,
+    "jev_calls": 79,
+    "jev_reported_cost_usd": 0.017562216,
+    "astra_bound_actions": 3,
+    "explicit_action_rejections": 1,
+    "uncertain_action_deliveries": 0,
+    "raw_trace_files_including_setup": 10,
+    "raw_trace_hashes_verified": 10
+  },
+  "observations": [
+    "The floor-14 event was THIS_OR_THAT, so the E052 Slippery Bridge guard was not exercised natively.",
+    "At Soul Fysh turn 12, retained Beckon self-loss was not reflected in the native end_turn_will_kill_player flag; issue #102 preregisters a narrow guard experiment."
+  ],
+  "limitations": [
+    "One different-seed run is exploratory and cannot estimate win rate or causally compare E052 with E051.",
+    "The native terminal trace observed GAME_OVER before the game process stopped; save remained pending and the MCP endpoint was unavailable at audit, so save verification is unavailable.",
+    "Astra token usage is not measured by the Jev budget; only state-bound Astra action count is reported."
+  ]
+}
