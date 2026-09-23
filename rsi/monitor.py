@@ -8,6 +8,7 @@ from pathlib import Path
 import subprocess
 import threading
 import time
+import uuid
 from urllib.parse import urlsplit
 
 from .engine import ROOT
@@ -251,6 +252,10 @@ class TraceFeed:
         self.replay_index = 0
 
     def _matches(self, path):
+        try:
+            uuid.UUID(path.parent.name)
+        except ValueError:
+            return False
         if path not in self.manifest_cache:
             try:
                 with path.open("rb") as file:

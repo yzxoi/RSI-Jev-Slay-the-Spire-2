@@ -83,18 +83,19 @@ class MonitorTests(unittest.TestCase):
     def test_latest_native_segment_follows_run_and_keeps_history(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
-            for segment, run_id, scope in (("a", "RUN", "native_complete_run"),
-                                           ("b", "OTHER", "native_complete_run"),
-                                           ("c", "RUN", "complete_run")):
+            segments = [f"00000000-0000-0000-0000-{i:012d}" for i in range(1, 5)]
+            for segment, run_id, scope in ((segments[0], "RUN", "native_complete_run"),
+                                           (segments[1], "OTHER", "native_complete_run"),
+                                           (segments[2], "RUN", "complete_run")):
                 path = root / segment / "decisions.jsonl"
                 path.parent.mkdir()
                 append(path, row(0, "manifest", {"scope": scope, "config": {"expected_run_id": run_id}}))
-            first = root / "a" / "decisions.jsonl"
+            first = root / segments[0] / "decisions.jsonl"
             append(first, row(1, "before", {"state": {"screen": "MAP"}}),
                    row(2, "selected", {"id": "a000", "name": "first", "action": {"action": "choose_map_node"}}))
             feed = TraceFeed(game_run_id="RUN", root=root)
             self.assertEqual(feed.snapshot()["latest"]["label"], "first")
-            second = root / "d" / "decisions.jsonl"
+            second = root / segments[3] / "decisions.jsonl"
             second.parent.mkdir()
             append(second, row(0, "manifest", {"scope": "native_complete_run", "config": {"expected_run_id": "RUN"}}),
                    row(1, "before", {"state": {"screen": "EVENT"}}),
@@ -103,6 +104,10 @@ class MonitorTests(unittest.TestCase):
             self.assertEqual(snapshot["latest"]["label"], "second")
             self.assertEqual([d["label"] for d in snapshot["history"]], ["second", "first"])
             self.assertNotEqual(snapshot["history"][0]["key"], snapshot["history"][1]["key"])
+            replay_fixture = root / "e050-replay" / "decisions.jsonl"
+            replay_fixture.parent.mkdir()
+            append(replay_fixture, row(0, "manifest", {"scope": "native_complete_run", "config": {"expected_run_id": "RUN"}}))
+            self.assertEqual(feed.snapshot()["segment"], segments[3])
 
     def test_server_exposes_projection_only_and_no_write_endpoint(self):
         with tempfile.TemporaryDirectory() as directory:
