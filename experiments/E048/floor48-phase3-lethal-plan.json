@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "run_id": "LYU69TR2VY8F",
+  "floor": 48,
+  "start_state_hash": "9a8b490132c26527021eefc115fe2d623b5b8cfe002c9ad17e2a3b61786e42a3",
+  "opening_action": {"action": "play_card", "card_index": 2, "target_index": 0},
+  "guidance": "Final observed Test Subject phase3 has73 HP, zero Block, Vulnerable2, no Intangible, attack36. Player HP35, Block28, energy6. Verified opener Rampage at hand index2 costs1 and displays19 before Vulnerable, expected ~28 actual damage; then play Perfected Strike (currently index4, cost2, displays28 before Vulnerable, ~42 actual), then any Strike (currently index1 or3, cost1, displays10 before Vulnerable, ~15 actual). Total expected damage28+42+15=85 >73 with two energy to spare, ending combat before the36 attack. Recompute indexes from fresh state after each card. Avoid spending energy on Block or setup until the lethal is resolved; use Flex Potion only if actual damage falls short. Stop immediately on GAME_OVER and require is_victory, because prior boss bars revived."
+}
