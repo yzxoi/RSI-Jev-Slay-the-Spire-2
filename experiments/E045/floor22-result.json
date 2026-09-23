@@ -25,6 +25,7 @@
   "end_turn_block_before_cloak_clasp": 0,
   "end_turn_retained_hand_count": 4,
   "incorrect_assumption": "PLATING_POWER:3 was counted as extra block available at this end turn; the two retained Toxic cards' five self-damage each were overlooked",
+  "mechanics_correction": "MCP powers/PLATING_POWER metadata explicitly says it grants block at end of turn. The arithmetic failed because it omitted two Toxic cards' end-turn damage; the observed death alone does not show Plating failed to trigger.",
   "end_turn_trace_sha256": "e7a66ce282e09dce2983b9886208b2c833545056823c0c460fcd76469228e3a0",
   "terminal_state_hash": "00f8fea32ab3cde38ec5cd34b41ef4104116c0096c47339f29d222c038438b70",
   "save_status_at_terminal_read": "pending"
