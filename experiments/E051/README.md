@@ -166,3 +166,19 @@ and card selection before stopping at floor19 COMBAT, HP90/91, `act_id=1`.
 This is a genuine Act1 boss win, not a complete-run victory. Astra count
 remains 3. Resume with the ordinary planned controller and 80-action/300 s/
 $0.10 caps, danger threshold20 outside a boss.
+
+Segment 7 at tested SHA `4581753c83168434b68c74d956e1d8e160f5da4f`
+ran the ordinary planned policy for 72 accepted actions, zero rejections,
+20 Jev calls/$0.00499632. Native floor23 combat reached HP3/91 and stopped
+with `expert_required: low_hp_before_spending_energy` before another action.
+Raw trace SHA-256
+`1dfca1032b44c11f091216923f988965f945f59c7d49f4dfe8efa9480938c9e6`.
+Observed current turn7: Silk Bowlbug21 HP has Debuff intent, Slumbering
+Beetle78 HP attacks22; player has zero Block, 3 energy, two Strikes, Pommel
+Strike, Barricade+ and Battle Trance. Attack Potion can give a free attack;
+Radiant Tincture grants energy. Re-read after the turn-settle transition
+showed `play_card` and `use_potion` legal. At 3 HP, a 22 attack is lethal
+unless blocked, mitigated or the beetle is killed. Bind a single Astra
+rescue action, Radiant Tincture at potion index1, to increase available
+energy without spending a card play; inspect its exact effect before choosing
+cards. This is intervention 4, and no counterfactual survival is claimed.
