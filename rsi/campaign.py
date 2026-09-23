@@ -15,10 +15,12 @@ from .trace import Trace,version_manifest
 from .live_plan import plan_native
 from .encounters import sandpit_rule
 from .settle import settle_turn,turn_key
+from .floor_plan import load_floor_plan,plan_context,plan_complete
 
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--expected-run-id',required=True);p.add_argument('--max-actions',type=int,default=2000);p.add_argument('--max-seconds',type=int,default=3600);p.add_argument('--max-usd',type=float,default=3);p.add_argument('--output',required=True);p.add_argument('--execute',action='store_true');p.add_argument('--expert-choice');p.add_argument('--pause-on-danger',action='store_true');p.add_argument('--danger-hp',type=int,default=20);p.add_argument('--stop-file');p.add_argument('--review-macro',action='store_true');p.add_argument('--review-cards',default='');p.add_argument('--auto-combat-selections',action='store_true');p.add_argument('--combat-policy',choices=['jev','planned','triggered','retaliate'],default='planned');a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--expected-run-id',required=True);p.add_argument('--max-actions',type=int,default=2000);p.add_argument('--max-seconds',type=int,default=3600);p.add_argument('--max-usd',type=float,default=3);p.add_argument('--output',required=True);p.add_argument('--execute',action='store_true');p.add_argument('--expert-choice');p.add_argument('--pause-on-danger',action='store_true');p.add_argument('--danger-hp',type=int,default=20);p.add_argument('--stop-file');p.add_argument('--review-macro',action='store_true');p.add_argument('--review-cards',default='');p.add_argument('--auto-combat-selections',action='store_true');p.add_argument('--floor-plan');p.add_argument('--combat-policy',choices=['jev','planned','triggered','retaliate','floor_guided'],default='planned');a=p.parse_args()
+    if (a.combat_policy=='floor_guided') != bool(a.floor_plan):p.error('floor_guided requires --floor-plan, and a floor plan requires floor_guided')
     manifest=version_manifest()
     if manifest['tracked_dirty']:raise RuntimeError('Commit implementation before execution')
     # Cross-worktree lock follows the same local server, not each checkout.
@@ -32,6 +34,8 @@ def main():
             mcp=MCP('http://127.0.0.1:8080/mcp',trace);health=mcp.call('health_check')
             if health.get('play_running') or health.get('status')!='ready':raise RuntimeError('Not a healthy single-writer game')
             raw=mcp.call('get_raw_game_state');result['initial_run']=raw.get('run');result['health']=health
+            floor_plan=load_floor_plan(a.floor_plan,raw) if a.floor_plan else None
+            if floor_plan:trace.write('floor_plan',floor_plan)
             settled_key=None
             while True:
                 if turn_key(raw) is not None and turn_key(raw)!=settled_key:
@@ -39,6 +43,9 @@ def main():
                 if raw.get('run_id')!=a.expected_run_id:raise RuntimeError('Game run identity changed')
                 screen=raw.get('screen');scenes[screen]+=1
                 if screen=='GAME_OVER':result['status']='victory' if (raw.get('game_over') or {}).get('is_victory') else 'normal_defeat';break
+                if plan_complete(floor_plan,raw,result['actions']):result['status']='floor_plan_boundary';break
+                if floor_plan and (raw.get('run') or {}).get('floor',-1)>floor_plan['target_floor']:
+                    raise RuntimeError('Floor plan crossed its target boundary')
                 if result['actions']>=a.max_actions or time.monotonic()-start>a.max_seconds:result['status']='budget_boundary';break
                 if a.stop_file and Path(a.stop_file).exists():result['status']='requested_boundary';break
                 if a.pause_on_danger and not expert and screen=='COMBAT' and not raw.get('selection') and (raw.get('combat') or {}).get('player',{}).get('energy',0)>0 and (raw.get('run') or {}).get('current_hp',100)<=a.danger_hp:
@@ -67,16 +74,20 @@ def main():
                     selected=next(c for c in cs if c['action']==expert['action']);trace.write('expert_decision',expert);expert_this_action=True;expert=None
                 elif encounter and encounter['selected']:selected=encounter['selected']
                 elif len(cs)==1:selected=cs[0]
-                elif a.combat_policy in ['planned','triggered','retaliate'] and screen=='COMBAT' and not raw.get('selection'):
-                    selected,planning=plan_native(raw,cs,triggers=a.combat_policy in ['triggered','retaliate'],retaliation=a.combat_policy=='retaliate');trace.write('planning',planning)
+                elif a.combat_policy in ['planned','triggered','retaliate','floor_guided'] and screen=='COMBAT' and not raw.get('selection'):
+                    selected,planning=plan_native(raw,cs,triggers=a.combat_policy in ['triggered','retaliate','floor_guided'],retaliation=a.combat_policy in ['retaliate','floor_guided']);trace.write('planning',planning)
+                    if floor_plan:
+                        selected=jev.choose({'state':raw.get('agent_view',raw),'strategy':STRATEGY,
+                                             **plan_context(floor_plan,raw),'computed_proposal':planning},cs,trace)[0]
                     potions=[c for c in cs if c['action']['action']=='use_potion']
                     turnkey=((raw.get('run') or {}).get('floor'),raw.get('turn'))
-                    if potions and history.get('potion_check')!=turnkey:
+                    if not floor_plan and potions and history.get('potion_check')!=turnkey:
                         reduced=[selected]+potions
                         for i,c in enumerate(reduced):c={**c,'id':f'p{i:03}'};reduced[i]=c
                         selected=jev.choose({'state':raw.get('agent_view',raw),'strategy':STRATEGY,'question':'Use a potion now to prevent meaningful HP loss or enable a kill, or execute the computed next card. Potions refill; do not hoard at risk of death.','plan':planning},reduced,trace)[0]
                         history['potion_check']=turnkey
-                else:selected=jev.choose({'state':raw.get('agent_view',raw),'strategy':STRATEGY,'previous_decision':history.get('previous')},cs,trace)[0]
+                else:selected=jev.choose({'state':raw.get('agent_view',raw),'strategy':STRATEGY,'previous_decision':history.get('previous'),
+                                          **plan_context(floor_plan,raw)},cs,trace)[0]
                 trace.write('selected',selected)
                 if mcp.call('health_check').get('play_running'):raise RuntimeError('Competing autoplay became active')
                 fresh=mcp.call('get_raw_game_state')
