@@ -42,3 +42,10 @@ now **verified**. Trace SHA-256
 `9a20e3a19e958e44ae9b76080395d52171ad4af87bfee6bdf006dcba0a6ccd75`.
 This post-terminal UI step does not change E051's floor27 defeat. Bind
 `return_to_main_menu` from the verified summary as the next setup action.
+
+Return-to-menu at tested SHA `3971fd7` was accepted: native screen is
+`MAIN_MENU`, profile1, singleplayer session. Trace SHA-256
+`13c6ad4f2a7dc900891bdb1acec6e40ce1f060b13aab2a3ddd0d1c50fdaca227`.
+Bind `open_character_select` as the next setup action. The menu fingerprint
+matches E051's earlier main menu because no run is active; no saved game is
+being loaded.
