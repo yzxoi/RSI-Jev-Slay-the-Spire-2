@@ -1,0 +1,38 @@
+{
+  "manifest": {
+    "schema_version": 1,
+    "code_commit": "901e9fea03dd7731fe57c46a1aba7874f2ca4b6f",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "675fdcb39662b7e5a9ed0eabcec13096a9cb2eb015ea53f588f5998e05dcaf21",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+  },
+  "result": {
+    "run_id": "f6e497c5-46ff-450f-beb2-ce6a65ce6f05",
+    "status": "accepted",
+    "actions": 1,
+    "before_run_id": "EC0JQCUP6QMC",
+    "before_screen": "COMBAT",
+    "before_state_hash": "bbbffabe4558dca0cac39c0b0cf231102e580fe139146f7f482bafcb1669863b",
+    "after_run_id": "EC0JQCUP6QMC",
+    "after_screen": "COMBAT",
+    "after_state_hash": "2099e769514ea84ec23659f8146b10b35cff465461c335e186d59e8b7b5c837c",
+    "seconds": 1.58,
+    "trace_path": "artifacts/runs/f6e497c5-46ff-450f-beb2-ce6a65ce6f05/decisions.jsonl",
+    "trace_sha256": "30fb550a03eed8ab0cf483d99d6dd882778e11cffddbb3f7f9a40095a049002f"
+  }
+}
