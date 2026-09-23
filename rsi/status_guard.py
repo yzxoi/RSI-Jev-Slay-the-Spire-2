@@ -16,7 +16,9 @@ def _known_nonlethal_attack(card, target, enemies):
     if target is None:
         return False
     attackers = [e for e in enemies if any(i.get('total_damage') for i in e.get('intents', []))]
-    if not attackers:
+    # A single kill among multiple attackers may prevent enough damage to
+    # survive. This narrow guard does not try to prove that counterfactual.
+    if len(attackers) != 1:
         return False
     enemy = next((e for e in enemies if e['index'] == target), None)
     # Vulnerable changes target damage and can turn a nominally small attack
@@ -33,7 +35,7 @@ def _known_nonlethal_attack(card, target, enemies):
         hits = 1
     else:
         return False
-    if enemy['index'] not in {e['index'] for e in attackers} or len(attackers) > 1:
+    if enemy['index'] != attackers[0]['index']:
         return True
     return damage * hits < enemy['current_hp'] + enemy.get('block', 0)
 
