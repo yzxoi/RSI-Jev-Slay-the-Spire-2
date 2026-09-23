@@ -103,3 +103,13 @@ the Act1 boss; count it as intervention 1. The exact observed state hash and
 action are in `rest-heal.json`. Execute once with `rsi.native_step`, inspect
 actual HP and only then resume Jev. The event-reroll policy defect is a
 separate atomic experiment; do not change the current run's policy silently.
+
+The precommitted Heal at tested SHA
+`b97cafaec2a8186049eefdad156a28a5225d3f46` was accepted exactly once:
+`python3 -m rsi.native_step --choice experiments/E051/rest-heal.json --expected-run-id F1GR9R0YXCCC --output artifacts/runs/e051-rest-heal.json --execute`.
+Native HP rose 17→44/91; REST now offers only Proceed. This is Astra
+intervention 1, not an autonomous Jev choice. Raw trace SHA-256
+`b3ca9c47687fbecfadc0e2cfd6b1b1c48178b9d4e3ba231495fe26e1667bfa38`;
+compact evidence is in `rest-heal-result.json`. The repeated-bridge-reroll
+policy defect has its own preregistered issue #97 / E052 and remains unchanged
+in this native run.
