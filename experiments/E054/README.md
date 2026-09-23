@@ -49,3 +49,9 @@ Return-to-menu at tested SHA `3971fd7` was accepted: native screen is
 Bind `open_character_select` as the next setup action. The menu fingerprint
 matches E051's earlier main menu because no run is active; no saved game is
 being loaded.
+
+Character selection at tested SHA `0f74844` confirmed singleplayer,
+Ironclad selected, A0, one player, no specified seed, and Embark legal.
+Trace SHA-256
+`ab9c59c0a5a2973e3160401378a46369290a85ae4e8512c701dceae083b5a083`.
+Bind exactly one `embark` action to create the next normal random run.
