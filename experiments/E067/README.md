@@ -1,0 +1,9 @@
+# E067 — headless relic purchase compatibility
+
+Issue: [#126](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/126). Baseline: merged `main` `c456815c6b0f51c6034f510362fe7a087f29fa9e`, pinned sts2-cli `084d1aa3d8e118ca7ce8d8774ad16d6be9c92367`, game v0.111.0. E066's two exposed treatment episodes attempted advertised, affordable `buy_relic` actions and hit `RuntimeError: Buy relic failed: Object reference not set to an instance of an object.` This is an execution-compatibility defect until a normal purchase is verified, not a strategy loss.
+
+Hypothesis: the headless wrapper dereferences `entry.Model` in a log message after a purchase clears the shop slot. Capture the relic identity before purchase and await the completed task so genuine effect failures are surfaced. Do not change gold, relic effects, rewards, HP, RNG or victory flags. Changes to the ignored dependency checkout must be represented as a tracked patch; source and game DLLs stay ignored.
+
+Frozen inputs: exact selected-action prefixes from the E066 Ironclad A0 and Silent A0 `e066_shop_002` traces through the same floor-14 shop, with their preregistered pre-purchase state hashes and purchase actions. `scripts/replay_relic_e067.py` must first reproduce the baseline error, then run the identical prefixes/actions against a patched headless assembly. Each result records exact code SHA, dependency hashes, actions, before/after gold, relic state, status and ignored raw trace SHA-256. These are deterministic compatibility replays, not full-run battles.
+
+Decision rule: merge only if both purchases complete without engine error, gold falls by each advertised price, the acquired relic appears in the player state, and the project tests pass. Otherwise close with all failures preserved. This fix alone makes no win-rate or native-MCP strength claim.
