@@ -5,7 +5,12 @@ from .numerical import intent_damage
 from . import triggers as trigger_rules
 from .retaliation import thorns_before_hit, hit_count
 
-SCOPE='Approximate current-hand search, not an engine clone. Draws, random effects, orbs, minions, triggers and unknown mechanics use heuristic utility; all plans re-evaluated after each real action.'
+SCOPE='Approximate current-hand search, not an engine clone. Known No Draw/Battle Trance locks later draw utility; drawn cards, random effects, orbs, minions, triggers and unknown mechanics remain unmodeled. Re-evaluate after each real action.'
+
+
+def _no_draw_active(state):
+    powers=(state.get('player',{}).get('powers') or [])+(state.get('player_powers') or [])
+    return any(p.get('power_id')=='NO_DRAW_POWER' or str(p.get('name') or '').lower()=='no draw' for p in powers)
 
 
 def choose_plan(state, candidates, width=40, depth=8, triggers=False, retaliation=False, force_first=False):
@@ -13,7 +18,7 @@ def choose_plan(state, candidates, width=40, depth=8, triggers=False, retaliatio
     enemies={e['index']:e for e in state.get('enemies',[])}
     initial_hp={i:e['hp'] for i,e in enemies.items()}; incoming={i:intent_damage(e) for i,e in enemies.items()}
     hp=state.get('player',{}).get('hp',100)
-    start={'self_loss':0,'energy':state.get('energy',0),'block':state.get('player',{}).get('block',0),'hp':dict(initial_hp),'eblock':{i:e.get('block',0) for i,e in enemies.items()},'used':frozenset(),'plan':[],'utility':0.,'strength':0,'vuln':set(),'native_caps':{i:e.get('native_slippery',0) for i,e in enemies.items()},'native_artifacts':{i:e.get('native_artifact',0) for i,e in enemies.items()}}
+    start={'self_loss':0,'energy':state.get('energy',0),'block':state.get('player',{}).get('block',0),'hp':dict(initial_hp),'eblock':{i:e.get('block',0) for i,e in enemies.items()},'used':frozenset(),'plan':[],'utility':0.,'strength':0,'vuln':set(),'native_caps':{i:e.get('native_slippery',0) for i,e in enemies.items()},'native_artifacts':{i:e.get('native_artifact',0) for i,e in enemies.items()},'draw_locked':_no_draw_active(state)}
     if triggers:start['triggers']=trigger_rules.initial(state)
     def score(n):
         loss=n['self_loss']+max(0,sum(incoming[i] for i,h in n['hp'].items() if h>0)-n['block']-state.get('player',{}).get('end_turn_block',0))
@@ -67,8 +72,11 @@ def choose_plan(state, candidates, width=40, depth=8, triggers=False, retaliatio
                     m['utility']+=stats['vulnerablepower']*1.5
                 if stats.get('strengthpower',0):
                     m['strength']+=stats['strengthpower'];m['utility']+=stats['strengthpower']*7
-                # Utility does not claim the resulting unknown drawn/generated cards.
-                draw=stats.get('cards',0);m['utility']+=draw*3
+                # Drawn cards are unknown; only the known draw lock is modeled.
+                draw=stats.get('cards',0)
+                useful_draw=0 if m['draw_locked'] else draw
+                m['utility']+=useful_draw*3
+                if ident=='BATTLE_TRANCE':m['draw_locked']=True
                 if card.get('type')=='Power':
                     m['utility']+=7 + stats.get('energy',0)*12 + stats.get('dexteritypower',0)*8
                 else:
@@ -76,18 +84,18 @@ def choose_plan(state, candidates, width=40, depth=8, triggers=False, retaliatio
                     if gain>0:m['energy']+=gain;m['utility']+=gain*1.5
                 if stats.get('weakpower',0):m['utility']+=min(8,sum(incoming.values())*.25)
                 # Unknown non-numeric utility is a small tie breaker, not proof.
-                if not previews and not block and not draw:m['utility']+=.4
+                if not previews and not block and not useful_draw and ident!='BATTLE_TRANCE':m['utility']+=.4
                 if ident=='ARMAMENTS':m['utility']+=2
-                if ident=='BATTLE_TRANCE':m['utility']+=3
+                if ident=='BATTLE_TRANCE' and useful_draw:m['utility']+=3
                 children.append(m);expanded+=1
                 if (force_first and not best['plan']) or score(m)>score(best):best=m
         if not children:break
         # Equivalent plans retain only one abstract endpoint, reducing factorial duplication.
         unique={}
         for n in children:
-            key=(n['used'],n['energy'],n['block'],n['self_loss'],tuple(n['hp'].items()),tuple(n['eblock'].items()),n['strength'],tuple(sorted(n['vuln'])),tuple(n['native_caps'].items()),tuple(n['native_artifacts'].items()))
+            key=(n['used'],n['energy'],n['block'],n['self_loss'],tuple(n['hp'].items()),tuple(n['eblock'].items()),n['strength'],tuple(sorted(n['vuln'])),tuple(n['native_caps'].items()),tuple(n['native_artifacts'].items()),n['draw_locked'])
             if triggers:key=key+tuple(n['triggers'].items())
             if key not in unique or score(n)>score(unique[key]):unique[key]=n
         frontier=sorted(unique.values(),key=score,reverse=True)[:width]
     chosen=next((c for c in candidates if best['plan'] and c['id']==best['plan'][0]),next(c for c in candidates if c['action']['action']=='end_turn'))
-    return chosen,{'scope':SCOPE,'plan_ids':best['plan'],'score':round(score(best),3),'predicted_self_loss':best['self_loss'],'predicted_total_hp_loss':best['self_loss']+max(0,sum(incoming[i] for i,h in best['hp'].items() if h>0)-best['block']-state.get('player',{}).get('end_turn_block',0)),'predicted_block':best['block'],'predicted_enemy_hp':best['hp'],'expanded':expanded,'width':width,'depth':depth,'trigger_forecast':best.get('triggers')}
+    return chosen,{'scope':SCOPE,'plan_ids':best['plan'],'score':round(score(best),3),'initial_draw_locked':start['draw_locked'],'predicted_draw_locked':best['draw_locked'],'predicted_self_loss':best['self_loss'],'predicted_total_hp_loss':best['self_loss']+max(0,sum(incoming[i] for i,h in best['hp'].items() if h>0)-best['block']-state.get('player',{}).get('end_turn_block',0)),'predicted_block':best['block'],'predicted_enemy_hp':best['hp'],'expanded':expanded,'width':width,'depth':depth,'trigger_forecast':best.get('triggers')}
