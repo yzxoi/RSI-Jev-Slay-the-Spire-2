@@ -1,0 +1,45 @@
+{
+  "tested_sha": "2b97b6d26b7b49b565070753d5406ce1a7079b69",
+  "source_trace_sha256": "7bd151c41160d4aed9713c46b5c1a6f120921da65791328648978b9296fc2fc2",
+  "source_state_hash": "602b52134bcdb961f02b9b8a772c9e7f4f3793e3e37bd9a126c28bf194a435a3",
+  "before_purchase": {
+    "triggered": true,
+    "gold": 305,
+    "purchases_here": 0,
+    "relics": [
+      {
+        "index": 0,
+        "name": "招架盾",
+        "price": 249
+      },
+      {
+        "index": 1,
+        "name": "红头骨",
+        "price": 169
+      },
+      {
+        "index": 2,
+        "name": "羽翼护符",
+        "price": 185
+      }
+    ],
+    "reason": "funded_relic_purchase"
+  },
+  "eligible_actions": [
+    {
+      "action": "buy_relic",
+      "option_index": 0
+    },
+    {
+      "action": "buy_relic",
+      "option_index": 1
+    },
+    {
+      "action": "buy_relic",
+      "option_index": 2
+    }
+  ],
+  "after_purchase_reason": "already_purchased_here",
+  "compatible": true,
+  "is_battle_counterfactual": false
+}
