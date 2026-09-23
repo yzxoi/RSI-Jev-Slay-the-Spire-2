@@ -55,3 +55,5 @@ The second Defend at tested SHA `91aa0a4` was accepted without rejection. Native
 The bound end turn at tested SHA `0baa68f` was accepted; HP13→8, one Gardener remains at 20 HP, and its turn9 intent is Buff/Enlarge. Hand: Bash, Strike and three Defends; no incoming this turn. Commit `floor6-rescue-6.json` for Bash to apply Vulnerable, execute one action with output `artifacts/runs/e045-floor6-rescue-6.json`, then inspect the enemy's Skittish block before spending the final energy.
 
 At tested SHA `17a7ffa`, Bash was accepted with no rejection and no Jev call. The enemy is now 12 HP/6 block/2 Vulnerable; its intent remains Buff. One energy and a basic Strike remain. Commit `floor6-rescue-7.json`, execute only that Strike with output `artifacts/runs/e045-floor6-rescue-7.json`, and inspect the actual damage before ending the turn.
+
+The bound Strike at tested SHA `075400e` was accepted with no rejection: enemy12 HP/6 block→9 HP/0 block, still 2 Vulnerable. HP8, energy0, Buff intent. Commit `floor6-rescue-8.json` and execute one end turn with output `artifacts/runs/e045-floor6-rescue-8.json`; inspect next hand before any attack.
