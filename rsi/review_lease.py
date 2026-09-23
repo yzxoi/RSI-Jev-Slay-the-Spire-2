@@ -1,8 +1,8 @@
-"""One-turn permission to skip repeated *current HP* review after an accepted expert opener.
+"""One-turn permission to skip repeated HP reviews after an accepted expert opener.
 
-This is not permission to ignore candidate filters, projected-loss alerts or
-end-turn safety checks. Every accepted transition advances the expected native
-state fingerprint; any other change fails closed.
+Projected-loss alerts remain traced. This is not permission to ignore candidate
+filters or end-turn safety checks. Every accepted transition advances the
+expected native state fingerprint; any other change fails closed.
 """
 
 from dataclasses import dataclass
@@ -86,11 +86,22 @@ class ReviewLease:
         self.expected_hash = after_hash
         return self.validate(state, after_hash)
 
-    def suppress_current_hp_pause(self):
+    def suppress_pause(self):
         if self.revoked_reason is not None:
             return False
         self.suppressed_pauses += 1
         return True
+
+    def suppress_current_hp_pause(self):
+        return self.suppress_pause()
+
+    def suppress_projected_loss_pause(self):
+        return self.suppress_pause()
+
+
+def projected_loss_requires_expert(projection, lease):
+    """Only an active, already validated lease can waive this repeated pause."""
+    return bool(projection['review'] and not (lease and lease.suppress_projected_loss_pause()))
 
 
 def current_hp_review(state, danger_hp):

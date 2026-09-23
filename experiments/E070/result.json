@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "experiment": "E070",
+  "tested_sha": "6871d39fe9dba2a5751ef2efea93510ca626ec3e",
+  "source_trace_sha256": "04e65ae94ae8fecc35bbf8e044aeab40309af75bb8e330ea26d9b5ac523c51f1",
+  "source_trace_hash_verified": true,
+  "source_after_full_state_hash": "c0dd4bfb72997d3f5fd6a46db3e83c4d66fddce367325cc158486e43c7d8a941",
+  "replay": {
+    "projection_matches_original": true,
+    "baseline_without_lease_requests_expert": true,
+    "with_valid_lease_requests_expert": false,
+    "suppressed_pauses": 1,
+    "lethal_end_turn_still_requests_expert": true
+  },
+  "tests": {
+    "command": "python3 -m unittest discover -s tests -q",
+    "passed": 112
+  },
+  "native_actions": 0,
+  "limitations": [
+    "Sanitized deterministic routing replay; no new native game action or observed win-rate effect."
+  ]
+}
