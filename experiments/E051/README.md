@@ -269,3 +269,10 @@ The result demonstrates survival of the immediate lethal attack, not battle
 victory. Bind end turn as intervention 13 because no energy remains, native
 state reports the end turn nonlethal, and the surviving enemy has a Debuff
 intent. Inspect the next hand and intent before further play.
+
+End turn at tested SHA `a9d3543` advanced to turn8 without HP loss;
+Silk16 HP now attacks 4×2, player HP3, energy4, and hand includes Shrug It
+Off at index3. Trace SHA-256
+`bbede2bdf7cc1c0a4ef0633530ca962a7d60e2bee27a16302126a8490f41d1a5`.
+Bind Shrug It Off as intervention 14: its 8 Block covers the shown attack,
+and the draw may expose a way to kill Silk this turn. Re-read after draw.
