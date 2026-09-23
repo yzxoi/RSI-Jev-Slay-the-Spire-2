@@ -86,3 +86,12 @@ loss or victory. Raw trace SHA-256
 Read-only native state subsequently confirmed the same floor5 fight ready
 at HP49, one DAMP_CULTIST enemy with 17 HP and Attack26 intent. Continue
 the unchanged `planned` policy in segment2 under the same caps.
+
+Segment 2 at tested SHA `beeb014d89102302157e70e1bc86b1f22277d26e`
+used the same command with output `artifacts/runs/e054-segment02.json`. It
+accepted 80 actions, zero rejections, made 19 Jev calls for $0.003721074,
+and defeated floors5–9. Jev healed at floor8 REST (34→58 HP). Segment ended
+on floor9 REWARD at HP43/80; this is an action budget boundary, not a run
+outcome. No Astra action was used. Raw trace SHA-256
+`25c10eb48318283cf5637fd747fee11d897dd5059eb9e4b030c6f64498ad943a`.
+Continue unchanged policy in segment3 with the same fixed caps.
