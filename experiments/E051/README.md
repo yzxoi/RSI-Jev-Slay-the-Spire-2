@@ -213,3 +213,14 @@ Block on its own. The only remaining flexible resource is Attack Potion index0,
 which offers one of three random free attacks. Bind its use as intervention 7
 to inspect real choices for Weak, extra Block or a kill. Opening an offer is
 not a survival result; do not guess the card before the native selection.
+
+Attack Potion at tested SHA `f527e278b51ba3582a1ae916f5bfa2ada61b4d26`
+opened native selection of Molten Fist, Thunderclap and Conflagration; raw
+trace SHA-256
+`2ddacc0f2e258fddfaf0f65b0686fa462237ff58bba47ae00e99e4c511054d6a`.
+None grants direct Block or Weak. Thunderclap's free all-enemy hit applies
+Vulnerable1, which activates the existing Cruelty+ 50% damage bonus and makes
+Dismantle hit the Beetle twice. This is the only offered path with a plausible
+same-turn kill using three remaining energy, though exact native damage is
+not yet established. Bind `rescue-thunderclap-select.json` to option1 as
+intervention 8, then inspect its actual temporary card/index before playing.
