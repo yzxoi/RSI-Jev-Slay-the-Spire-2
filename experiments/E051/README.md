@@ -49,3 +49,27 @@ The exact raw trace hashes and compact setup outcomes are in
 or Greed plus 333 gold. The first campaign segment will leave this choice to
 Jev to measure the autonomous policy, using `planned`, `--pause-on-danger
 --danger-hp 20`, and the preregistered per-segment caps.
+
+First gameplay segment at tested SHA
+`5f067c606e25485b1da4f53627ccbeb47d1465c4` used:
+
+```sh
+python3 -m rsi.campaign --expected-run-id F1GR9R0YXCCC --combat-policy planned --pause-on-danger --danger-hp 20 --auto-combat-selections --max-actions 80 --max-seconds 300 --max-usd 0.10 --output artifacts/runs/e051-segment01.json --execute
+```
+
+Jev chose the +11 max-HP Neow option; the normal native run advanced through
+rewards and card choices to floor 5, turn 3, HP82/91. The controller accepted
+63 actions with zero action rejections, made 19 Jev requests, and reported
+$0.006872166 spent plus $0.004032 conservatively estimated for three model
+calls with unknown usage. No Astra decisions were used. The segment stopped
+before selecting or sending action 64 because three consecutive Jev requests
+failed with `URLError: nodename nor servname provided, or not known`.
+There was no uncertain MCP action delivery and no native `GAME_OVER`; this is
+a network/controller interruption, not a battle loss or win. Raw trace SHA-256
+`fd7dd8115ab2c9cc6264d906616bfbf30f75c9de919b56dd37e62995ec214b40`;
+compact metrics are in `segment01-result.json`.
+
+The user requested a pause to improve missing-probability presentation in the
+read-only overlay. Read-only MCP state confirms the same run still sits in
+floor-5 active COMBAT with `play_card`/`end_turn` legal; the controller process
+has exited. Do not resume game actions until the user asks to continue.
