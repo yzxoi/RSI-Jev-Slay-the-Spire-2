@@ -1,0 +1,44 @@
+{
+  "experiment": "E064",
+  "baseline_sha": "8249e954ce10eab05631b1fd75e4d8d073aa34aa",
+  "tested_sha": "40142a4cb3e2cd86fb9fbbd2b7967e407456f7fa",
+  "game_version": "v0.111.0",
+  "mod_version": "v0.15.0",
+  "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+  "dotnet_sdk": "9.0.318",
+  "frozen_native_source": {
+    "game_run_id": "EC0JQCUP6QMC",
+    "floor": 33,
+    "turn": 2,
+    "state_hash": "a56b1eea3dc519fb2810313ec2566f50a200d5f225d8c622adc88650713b39ef",
+    "raw_trace_sha256": "57c5e0cb6903b9c70f6c30cb3ff232bdcc3d0dc8381f539330d86e54c216279e",
+    "observed_baseline_exhaust_index": 3,
+    "treatment_excluded_index": 3,
+    "treatment_remaining_indices": [0, 1, 2],
+    "incoming_damage": 31,
+    "player_hp": 36,
+    "evil_eye_immediate_conditional_block": 18
+  },
+  "tests": {
+    "command": "python3 -m unittest discover -s tests -q",
+    "passed": 98,
+    "failed": 0,
+    "controls": ["non_exhaust_selection", "no_attack", "already_safe_block", "unaffordable_card", "invalid_energy_cost", "only_legal_target"]
+  },
+  "headless_export_audit": {
+    "source_experiment": "E062",
+    "source_result": "experiments/E062/result.json on closed PR #117",
+    "episodes": 32,
+    "raw_trace_hashes_verified": 32,
+    "card_select_states": 316,
+    "with_prompt": 0,
+    "with_selection_type": 0,
+    "with_source": 0,
+    "with_combat_intents": 0,
+    "equivalent_paired_cohort_run": false
+  },
+  "native_actions_executed": 0,
+  "model_calls": 0,
+  "strength_result": "unmeasured; frozen replay is candidate filtering, not a counterfactual battle",
+  "decision": "merge only as an opt-in native guard; retain default behavior until visible native exposure"
+}
