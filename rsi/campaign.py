@@ -22,7 +22,7 @@ from .floor_plan import load_floor_plan,plan_context,plan_complete
 from .room_plan import load_room_plan,RoomPlanSession,room_context,room_complete
 from .event_guard import bound_bridge_reroll
 from .danger import review_projected_loss
-from .review_lease import ReviewLease,current_hp_review
+from .review_lease import ReviewLease,current_hp_review,projected_loss_requires_expert
 from .shop_review import funded_shop_exit_review
 
 
@@ -102,7 +102,9 @@ def main():
                     danger=review_projected_loss(raw,a.danger_hp)
                     if danger['reason'] != 'outside_turn_start':trace.write('danger_projection',danger)
                     if danger['review']:
-                        result['status']='expert_required';trace.write('expert_required',{'reason':'projected_large_hp_loss','state_hash':fingerprint(raw),'projection':danger});break
+                        if projected_loss_requires_expert(danger,lease):
+                            result['status']='expert_required';trace.write('expert_required',{'reason':'projected_large_hp_loss','state_hash':fingerprint(raw),'projection':danger});break
+                        trace.write('review_lease',{'status':'projected_loss_pause_suppressed','state_hash':fingerprint(raw),'projection':danger,'suppressed_count':lease.suppressed_pauses})
                 if screen in ['PAUSE_MENU','SETTINGS']:raise RuntimeError('User paused game')
                 cs=candidates(raw,history)
                 if not cs:
