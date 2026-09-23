@@ -1,0 +1,210 @@
+{
+  "source_experiment": "E068",
+  "source_segment": 13,
+  "source_trace_sha256": "04e65ae94ae8fecc35bbf8e044aeab40309af75bb8e330ea26d9b5ac523c51f1",
+  "before_hash": "43c56deb7a849c791dcdd5f3d9724e35b8b980c2a2f188bba0196f4fc89d36dc",
+  "after_hash": "c0dd4bfb72997d3f5fd6a46db3e83c4d66fddce367325cc158486e43c7d8a941",
+  "before": {
+    "run_id": "QVF8XALGHY8B",
+    "screen": "COMBAT",
+    "turn": 2,
+    "selection": null,
+    "run": {
+      "floor": 31
+    }
+  },
+  "after": {
+    "run_id": "QVF8XALGHY8B",
+    "screen": "COMBAT",
+    "turn": 2,
+    "selection": null,
+    "run": {
+      "floor": 31,
+      "current_hp": 37,
+      "relics": [
+        {
+          "relic_id": "BURNING_BLOOD"
+        },
+        {
+          "relic_id": "NEW_LEAF"
+        },
+        {
+          "relic_id": "ORICHALCUM"
+        },
+        {
+          "relic_id": "PAELS_TEARS"
+        },
+        {
+          "relic_id": "MEAT_ON_THE_BONE"
+        },
+        {
+          "relic_id": "JUZU_BRACELET"
+        },
+        {
+          "relic_id": "LASTING_CANDY"
+        }
+      ]
+    },
+    "combat": {
+      "action_readiness": {
+        "can_use_combat_actions": true,
+        "snapshot_stable": true
+      },
+      "player": {
+        "current_hp": 37,
+        "energy": 5,
+        "block": 0,
+        "cards_played_this_turn": 0,
+        "powers": [
+          {
+            "index": 0,
+            "power_id": "STRENGTH_POWER",
+            "name": "力量",
+            "amount": 7,
+            "is_debuff": false
+          },
+          {
+            "index": 1,
+            "power_id": "TENDER_POWER",
+            "name": "柔嫩",
+            "amount": 1,
+            "is_debuff": true
+          },
+          {
+            "index": 2,
+            "power_id": "FLEX_POTION_POWER",
+            "name": "肌肉药水",
+            "amount": 5,
+            "is_debuff": false
+          }
+        ]
+      },
+      "enemies": [
+        {
+          "index": 0,
+          "current_hp": 105,
+          "block": 0,
+          "is_alive": true,
+          "intents": [
+            {
+              "intent_type": "Attack",
+              "total_damage": 21
+            }
+          ]
+        }
+      ],
+      "hand": [
+        {
+          "index": 0,
+          "card_id": "PERFECTED_STRIKE",
+          "playable": true,
+          "valid_target_indices": [
+            0
+          ],
+          "dynamic_values": [
+            {
+              "name": "CalculatedDamage",
+              "current_value": 27,
+              "base_value": 6
+            },
+            {
+              "name": "CalculationBase",
+              "current_value": 6,
+              "base_value": 6
+            },
+            {
+              "name": "ExtraDamage",
+              "current_value": 2,
+              "base_value": 2
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "card_id": "RAMPAGE",
+          "playable": true,
+          "valid_target_indices": [
+            0
+          ],
+          "dynamic_values": [
+            {
+              "name": "Damage",
+              "current_value": 17,
+              "base_value": 10
+            },
+            {
+              "name": "Increase",
+              "current_value": 5,
+              "base_value": 5
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "card_id": "HOWL_FROM_BEYOND",
+          "playable": true,
+          "valid_target_indices": [],
+          "dynamic_values": [
+            {
+              "name": "Damage",
+              "current_value": 25,
+              "base_value": 18
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "card_id": "THUNDERCLAP",
+          "playable": true,
+          "valid_target_indices": [],
+          "dynamic_values": [
+            {
+              "name": "Damage",
+              "current_value": 11,
+              "base_value": 4
+            },
+            {
+              "name": "VulnerablePower",
+              "current_value": 1,
+              "base_value": 1
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "card_id": "STRIKE_IRONCLAD",
+          "playable": true,
+          "valid_target_indices": [
+            0
+          ],
+          "dynamic_values": [
+            {
+              "name": "Damage",
+              "current_value": 13,
+              "base_value": 6
+            }
+          ]
+        }
+      ],
+      "end_turn_will_kill_player": false
+    }
+  },
+  "baseline_projection": {
+    "review": true,
+    "reason": "projected_large_hp_loss",
+    "danger_hp": 20,
+    "min_loss": 14,
+    "scope": "visible_attack_plus_known_beckon_only",
+    "hp": 37,
+    "energy": 5,
+    "incoming": 21,
+    "block": 0,
+    "known_self_loss": 0,
+    "forecast_loss": 21,
+    "projected_hp": 16,
+    "attackers": [
+      0
+    ]
+  },
+  "baseline_duplicate_pause": true
+}
