@@ -61,6 +61,13 @@ class PredictiveDangerTests(unittest.TestCase):
         beckon['dynamic_values'] = []
         self.assertEqual(review_projected_loss(raw)['reason'], 'unknown_beckon_loss')
 
+    def test_small_predicted_loss_does_not_add_review(self):
+        raw = state('F1GR9R0YXCCC', 27, 4)
+        raw['combat']['enemies'][1]['intents'][0]['total_damage'] = 13
+        self.assertFalse(review_projected_loss(raw)['review'])
+        raw['combat']['enemies'][1]['intents'][0]['total_damage'] = 14
+        self.assertTrue(review_projected_loss(raw)['review'])
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -9,7 +9,7 @@ def _value(card, name):
     return values[0] if len(values) == 1 and isinstance(values[0], int) else None
 
 
-def review_projected_loss(state, danger_hp=20, min_loss=12):
+def review_projected_loss(state, danger_hp=20, min_loss=14):
     """Signal a review; never propose, remove or execute an action.
 
     The calculation is an alert about a plausible end-turn outcome, not a
