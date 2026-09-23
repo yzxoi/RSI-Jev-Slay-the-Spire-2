@@ -344,3 +344,29 @@ The only game action besides save-and-quit is end turn. Bind that action as
 intervention 20 to determine and record the genuine native terminal state;
 do not save/reload to avoid this loss. This segment demonstrates a strategic
 failure despite a successful tactical rescue on floor23.
+
+The forced end turn at tested SHA
+`e40abd99165ea9e015255be1e94054075fcff8d2` was accepted once and
+reached native `GAME_OVER`: `is_victory=false`, floor27, Ironclad A0, HP0.
+Raw trace SHA-256
+`3034dbcb255531339215952bc36f1f744b05a3be8397ebe1f50ef7dd435fcb60`.
+The game-over state remained in its intro phase with save status pending; no
+post-terminal continuation was issued because the preregistered stop was
+genuine terminal. This is a normal single-run defeat, not an execution stall.
+
+Across the whole uninterrupted run, 404 native actions were accepted, 140
+Jev calls reported $0.034337268 plus $0.004032 conservatively estimated for
+unknown usage in the first DNS-interrupted segment, and Astra bound 20
+native actions. All 29 raw trace files remain ignored locally; each SHA-256
+was rechecked against its compact result with zero mismatch. The aggregate
+and exact final command are in `terminal-result.json`.
+
+Interpretation: the E051 hypothesis of an autonomous low-Astra A0 finish was
+not met. The floor14 bridge rerolls observed in segment3 cost 63 HP, creating
+severe downstream health pressure. The controller rescued floor23 and Jev
+healed at floor24, but the floor27 Chomper battle reduced HP36→5 before the
+room plan and ended in a no-energy, no-potion lethal state. The floor27
+turn-level trace also shows temporary Block cards played during nonattacking
+status turns; whether changing those decisions would avert defeat is an
+unverified counterfactual. E052/#97 separately preregisters the bridge event
+fix; no untested policy claim is promoted from this single loss.
