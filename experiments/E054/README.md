@@ -67,3 +67,22 @@ slot plus two random potions, two extra Act1 boss relics, or two random Neow
 relics with a random curse. Jev will choose; no Astra action has been used in
 the new run. The first segment uses the predeclared `planned` policy and
 HP≤20 danger pause, 80-action/300-second/$0.10 limits.
+
+Segment 1 at tested SHA `83803529573f89497ef7caf3160aed5cd764d89a`
+used:
+
+```sh
+python3 -m rsi.campaign --expected-run-id DCEND0WRAPGL --combat-policy planned --pause-on-danger --danger-hp 20 --auto-combat-selections --max-actions 80 --max-seconds 300 --max-usd 0.10 --output artifacts/runs/e054-segment01.json --execute
+```
+
+Jev selected the Neow offer for two additional Act1 boss relics. The run
+defeated floors2–4 and reached floor5 COMBAT at HP49/80; 80 accepted actions,
+15 Jev calls costing $0.002534868, zero Astra decisions. One `play_card`
+request was explicitly rejected while the native action gate transiently
+advertised only save-and-quit; the controller refreshed state and did not
+retry an uncertain delivery. The boundary is ordinary action budget, not
+loss or victory. Raw trace SHA-256
+`1ea3bd95604d1c2e186314ebfc220b9d2020481574bc28e65c6aaa830ad075e6`.
+Read-only native state subsequently confirmed the same floor5 fight ready
+at HP49, one DAMP_CULTIST enemy with 17 HP and Attack26 intent. Continue
+the unchanged `planned` policy in segment2 under the same caps.

@@ -1,0 +1,14 @@
+{
+  "tested_sha": "83803529573f89497ef7caf3160aed5cd764d89a",
+  "command": "python3 -m rsi.campaign --expected-run-id DCEND0WRAPGL --combat-policy planned --pause-on-danger --danger-hp 20 --auto-combat-selections --max-actions 80 --max-seconds 300 --max-usd 0.10 --output artifacts/runs/e054-segment01.json --execute",
+  "status": "budget_boundary",
+  "actions": 80,
+  "rejections": 1,
+  "model_calls": 15,
+  "cost_usd": 0.002534868,
+  "floor": 5,
+  "player_hp": 49,
+  "screen": "COMBAT",
+  "trace_sha256": "1ea3bd95604d1c2e186314ebfc220b9d2020481574bc28e65c6aaa830ad075e6",
+  "notes": ["Jev chose Neow option index 1: two additional Act1 boss relics; no Astra in new run.", "One explicit play_card rejection occurred during a transient action gate; the controller re-read native state, with no uncertain delivery."]
+}
