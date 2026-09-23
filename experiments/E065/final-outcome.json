@@ -1,0 +1,495 @@
+{
+  "summary": {
+    "game_run_id": "VTBCNVZABFJP",
+    "character": "IRONCLAD",
+    "ascension": 0,
+    "floor": 33,
+    "is_victory": false,
+    "save_status": "verified",
+    "save_verified": true,
+    "final_state_hash": "41d11922f00344c8199289efd48484a5846f0001e24752e6b5c3526118ef03cd",
+    "game_version": "0.111.0",
+    "mod_version": "0.15.0",
+    "model": "typesafe/jev-1.13-20260917",
+    "named_result_count": 55,
+    "accepted_actions": 508,
+    "controller_actions": 463,
+    "controller_model_calls": 124,
+    "controller_provider_reported_cost_usd": 0.032227062,
+    "controller_uncertain_calls": 1,
+    "controller_rejections": 0,
+    "segment_count": 9,
+    "manual_and_setup_actions": 45
+  },
+  "segments": [
+    {
+      "name": "e065-segment01.json",
+      "status": "budget_boundary",
+      "actions": 200,
+      "model_calls": 50,
+      "cost_usd": 0.010242246000000002,
+      "uncertain_calls": 0,
+      "rejections": 0
+    },
+    {
+      "name": "e065-segment02.json",
+      "status": "budget_boundary",
+      "actions": 200,
+      "model_calls": 61,
+      "cost_usd": 0.018088307999999997,
+      "uncertain_calls": 1,
+      "rejections": 0
+    },
+    {
+      "name": "e065-segment03.json",
+      "status": "expert_required",
+      "actions": 20,
+      "model_calls": 7,
+      "cost_usd": 0.002313612,
+      "uncertain_calls": 0,
+      "rejections": 0
+    },
+    {
+      "name": "e065-segment04.json",
+      "status": "expert_required",
+      "actions": 1,
+      "model_calls": 1,
+      "cost_usd": 0.00029946,
+      "uncertain_calls": 0,
+      "rejections": 0
+    },
+    {
+      "name": "e065-segment05.json",
+      "status": "expert_required",
+      "actions": 1,
+      "model_calls": 1,
+      "cost_usd": 0.000319452,
+      "uncertain_calls": 0,
+      "rejections": 0
+    },
+    {
+      "name": "e065-segment06.json",
+      "status": "expert_required",
+      "actions": 28,
+      "model_calls": 3,
+      "cost_usd": 0.000652806,
+      "uncertain_calls": 0,
+      "rejections": 0
+    },
+    {
+      "name": "e065-segment07.json",
+      "status": "expert_required",
+      "actions": 11,
+      "model_calls": 1,
+      "cost_usd": 0.000311178,
+      "uncertain_calls": 0,
+      "rejections": 0
+    },
+    {
+      "name": "e065-segment08.json",
+      "status": "expert_required",
+      "actions": 1,
+      "model_calls": 0,
+      "cost_usd": 0.0,
+      "uncertain_calls": 0,
+      "rejections": 0
+    },
+    {
+      "name": "e065-segment09.json",
+      "status": "expert_required",
+      "actions": 1,
+      "model_calls": 0,
+      "cost_usd": 0.0,
+      "uncertain_calls": 0,
+      "rejections": 0
+    }
+  ],
+  "named_results": [
+    {
+      "name": "e065-close-timeline.json",
+      "tested_sha": "d41744cd43d6c0606467cabf38de23d0f645311f",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "654e9a43e1ba36af8018a6afab6e377ab9fd6fe3f9aeceacb6d144f45162f2f0"
+    },
+    {
+      "name": "e065-continue-game-over.json",
+      "tested_sha": "bfc643c523c04d654a5689b41f5b83ed565cc32c",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "a83298636247bfd5842e358b6bb44601dcd1b9ea3aa596cb2219728b7f174be0"
+    },
+    {
+      "name": "e065-embark.json",
+      "tested_sha": "950e1e1d22a35adcb4737ab80bd6db9202728737",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "49291cc0107fc5c8c1c31d5a0d27c494176c91af675c9e2704256121f71bd229"
+    },
+    {
+      "name": "e065-floor30-turn5-bash-boss.json",
+      "tested_sha": "fc0bb0a93f4167b8bd96f2f4fafb02fd1eb113af",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "5b12a02cd9d5143ac52ff9747ae6c7829938a9015c92d141e6ace877ff8ad595"
+    },
+    {
+      "name": "e065-floor30-turn5-evil-eye.json",
+      "tested_sha": "13c673a5797ae927e2b68c04b96293df1cd0d9d2",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "00a236fee94bc6b593844465daaf4d24149b09feebb2388751415b45bede09e9"
+    },
+    {
+      "name": "e065-floor30-turn5-perfect-strike-minion.json",
+      "tested_sha": "b04f6481f1ebc7794cb793024889585822164acf",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "0482ffe9ae1e064765f98870b1272f07d627759f39fdb653e9c92edfd0cce9b6"
+    },
+    {
+      "name": "e065-floor30-turn5-rage-rebound.json",
+      "tested_sha": "52df5b5e45fd8d462a86ed9d92ab022f6a453674",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "f0374ecd9df43966cbf1118e50bd9086fc15631f2497d3e18ad904aa56a0d70c"
+    },
+    {
+      "name": "e065-floor30-turn5-rage.json",
+      "tested_sha": "0ff4bc3808327e19004be101fd3704674670ed05",
+      "status": "error",
+      "actions": 0,
+      "trace_sha256": "7001e077c5d943867ae6276d67eea44ca16232414187d681d0aa1c31344d1c23",
+      "error": "RuntimeError: Precommitted state fingerprint is stale"
+    },
+    {
+      "name": "e065-floor30-turn6-anger-minion.json",
+      "tested_sha": "58f1a309162789a7a05c6fcd4ecedb0eed7679be",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "c1ebe271b4648712b8a02f147bd814ca1d5b511da1d23d102db962e75d67d737"
+    },
+    {
+      "name": "e065-floor30-turn6-bash-minion.json",
+      "tested_sha": "47f062f9d727b3199af5b4e064c21f65f1acab6a",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "93361789848dcae1f80321d990eb4b560dcd2f0f1e575b90db59000749121f60"
+    },
+    {
+      "name": "e065-floor30-turn6-evil-eye.json",
+      "tested_sha": "2f1444c8af600c1ebf06fc6b0459304c274fc494",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "4d1d3ef354cac676cda2f28e0651ff58f08d01a7ca007b67fe66a4fef6fbebe1"
+    },
+    {
+      "name": "e065-floor30-turn6-strike-minion.json",
+      "tested_sha": "5765e53994d5046a1158ba97434d173068b908df",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "dc66449a0aa9e8666745469fbde11ffe2f5205a4d5103d5a6be72b4c86963344"
+    },
+    {
+      "name": "e065-floor30-turn7-aggression.json",
+      "tested_sha": "679bd5085a22418416c76cb0f73a7cdbc7cef993",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "8eed038d991b8924627a901b4ee2407fd3955f3d913eb51137f129d567dd08f0"
+    },
+    {
+      "name": "e065-floor30-turn7-anger-minion.json",
+      "tested_sha": "c1099505300e2d157bccc29afb6cb32c5596dc0d",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "2c9ab8b00bcfc4aa2848a87865199ce44df00a3523a4c54aab8e57861f265bd0"
+    },
+    {
+      "name": "e065-floor30-turn7-bash-minion.json",
+      "tested_sha": "bf99e2fe294618d04838a1b653316a67430dcc9d",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "85b2d32046ba29485bf2d9c61c6b25c08169dca079fcf726feca1f265e9e2ccc"
+    },
+    {
+      "name": "e065-floor30-turn7-battle-trance.json",
+      "tested_sha": "b04b89605cbacb6283646335ae03616c5659aeb7",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "988da25e9c5fc0806cacfded9e973c9130ca51fcda67e7d70ee1933189539389"
+    },
+    {
+      "name": "e065-floor30-turn7-headbutt-boss.json",
+      "tested_sha": "5e10087fd519a0827f898b04b9fa177ffff407a2",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "02c1af44d29d14e1879a975ad02a1452f3eb645345aa0e466ca029057d8691f4"
+    },
+    {
+      "name": "e065-floor30-turn7-headbutt-retrieve-bash.json",
+      "tested_sha": "bd7984dff3e6b3b0f79f5d0ab2a15665880b8327",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "650350f59e24199bd45b8c64554b4e60a3543947d995e2055f5227fa6fe42347"
+    },
+    {
+      "name": "e065-floor30-turn7-play-ritual.json",
+      "tested_sha": "651eb8565d2cf0ddb6e492703f0968f3aa963368",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "cfabc5b895213b2bb56904eff47ba3ec8f310176c0db65b335da7ff1e9dbb2db"
+    },
+    {
+      "name": "e065-floor30-turn7-shrug.json",
+      "tested_sha": "13c2bdd2a09b3833c141813de464544ad0986a22",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "4fa14e6ce6bb0a33ea3cc8f1274bb2b7993cbb068a26ce9d22951486c344cb91"
+    },
+    {
+      "name": "e065-floor30-turn7-skill-potion.json",
+      "tested_sha": "98500f8f33ace843e14f398d837db7e50892d1ff",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "03885b305bf32e04390e852ca18a595b1a67ce0022cc5f992834ea2fc21ed4c7"
+    },
+    {
+      "name": "e065-floor30-turn7-skill-select-ritual.json",
+      "tested_sha": "11f798fdeb409e32f486de9bb4a743bb286f09c0",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "e56992b48c7ddfe6dd79bcf848ea13fdecf0dd394783b1ec5b4453308e682c27"
+    },
+    {
+      "name": "e065-floor30-turn7-strike-boss.json",
+      "tested_sha": "d3dd7b05ecd534ad2b2fa9ae28effa4ff456101b",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "8b774438e18b602fc91bc4e2b277be618d108d4168520249279e16aeaa1e02a8"
+    },
+    {
+      "name": "e065-floor30-turn7-strike-minion.json",
+      "tested_sha": "ab301cec8b9b8d4b341b9c5b22cbf6976b0c356b",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "59e1affaa97d56a3f163a845861831f85097a0fff491f641998a9dd930f32a22"
+    },
+    {
+      "name": "e065-floor30-turn7-swift-potion.json",
+      "tested_sha": "a66e6a530cc21eb0d06ce12d610b8d834b3c297d",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "b9df74f42f5f07dc5b3a9f368caa722f79aa6cdb0ccbe90387be56bdf4d08acf"
+    },
+    {
+      "name": "e065-floor30-turn7-taunt-boss.json",
+      "tested_sha": "a5ee1be058fade7445cf79899f7c787f14909841",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "f37751ce17f9c9dd0ceb4d0d04a0a362ff1bcc1b598148578800342430134da5"
+    },
+    {
+      "name": "e065-floor33-turn4-bash-rocket.json",
+      "tested_sha": "a3ef53b057680dbac04dc0a6e536cefb1c15bc08",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "89efbfdf8d63450463a40474d35f8b1d5f93ea74b1e8df2b37348da81b5dfbf4"
+    },
+    {
+      "name": "e065-floor33-turn4-evil-eye.json",
+      "tested_sha": "c9f8bf8eb48b712039c72b418cd5b910456a18f1",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "6758a66934dcfc1511c1ad22bdd05378a9b449215cba63ba022b4764c2dee479"
+    },
+    {
+      "name": "e065-floor33-turn4-rage.json",
+      "tested_sha": "0e102709984ae0f6947302b709fdf8d9ac5c981d",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "3530370eb1a4ccf1ddbba3cc154b79aea516e36a236eba1ab8f3cc05c6db33c8"
+    },
+    {
+      "name": "e065-floor33-turn4-shrug.json",
+      "tested_sha": "7d69c56b9f7f3082c83a421351f1ee0a3a23c38c",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "017515529c131b16c84e7fc81074b5847c872e9977b7c0de94d5619f4dc12eee"
+    },
+    {
+      "name": "e065-floor33-turn4-strike-rocket.json",
+      "tested_sha": "d41f59a6bfc339a7f511ca57dcbbce656fb93c9d",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "2fd8e49cbe2131e1c74168d02f39a6314eefaf82137ecefb5135b17183c040ae"
+    },
+    {
+      "name": "e065-floor33-turn7-anger-rocket.json",
+      "tested_sha": "50e23f0642673232da9da0dd0838b873f4f19aec",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "18f4fd6a9f4727996fe222b49e7f2959497c79e8de854acfc09813ed73946635"
+    },
+    {
+      "name": "e065-floor33-turn7-defend.json",
+      "tested_sha": "b97b68fe63859ef720f9658e0e083a40886da1d2",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "789466d3e10af5123973ab769c5fa471af2a6d697db9737cef677a3a3ef2ba0c"
+    },
+    {
+      "name": "e065-floor33-turn7-evil-eye.json",
+      "tested_sha": "2d6cd074a51b5d77235b447d99f16e7fbc932626",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "13d9d3fd7683160973a869b0d8234a85f64c6e0b04d81fa5b827904ce8c2610a"
+    },
+    {
+      "name": "e065-floor33-turn7-shrug.json",
+      "tested_sha": "fd92369322f59b688e12dee518f122d293d8cd1f",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "86066901bc231d979fcdbad6998b70e3d1c2718d727f6cff36f3210fe170b195"
+    },
+    {
+      "name": "e065-floor33-turn8-anger-crusher.json",
+      "tested_sha": "62e9e7151bebfe1ee243f7869bfc8e1aab2ddfdd",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "83710e49a8161736e8ce02e3f4086af087f4f27f983f62e5d423970318189343"
+    },
+    {
+      "name": "e065-floor33-turn8-defend.json",
+      "tested_sha": "e0e27813b138e76e0081c18d99ea4f72473204e2",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "d85378c2aa7b7e61787205480939708edeef1cb5f8938f4e61d3f9cf3ebe2597"
+    },
+    {
+      "name": "e065-floor33-turn8-evil-eye.json",
+      "tested_sha": "b77a2e685b97eea65a14c6e0ddfafb536212141c",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "4c80a220f702d1e0d475ff436eefb3f0de65932de1afee5e356b30e767897602"
+    },
+    {
+      "name": "e065-floor33-turn8-shrug.json",
+      "tested_sha": "3c5005ca21869083710bdbd5bfa4aff82aba1e67",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "53e7264f0c7e59fc10b52361a589ec5a31e24aa993a91ad5350cfc59b57c1d48"
+    },
+    {
+      "name": "e065-floor33-turn9-anger-rocket.json",
+      "tested_sha": "167d063f6499effd3a84842800a7862fb745ec93",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "3bf716e1d55da47b8faeed29f7e0ff81d693420fc0a4baa261a0022564feb9e7"
+    },
+    {
+      "name": "e065-floor33-turn9-end-turn.json",
+      "tested_sha": "44403071e97a8585e24cd845aeb3431a19de8dbd",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "96be42f100ea38c574fe34abb9fde7f63424efb80c87d94d24b640cc292b9636"
+    },
+    {
+      "name": "e065-floor33-turn9-rage.json",
+      "tested_sha": "259e2a3dc5e423922c7f0f719df3b7125f723b8c",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "e65695af4e6dabe96035f891478b9569d7e70f1077967bdad92439d3d5ac87a5"
+    },
+    {
+      "name": "e065-floor33-turn9-second-anger.json",
+      "tested_sha": "e349d751a1d5299aec4e48928935938c0c7b57f2",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "ce363fa7cb7e465fa9a4378aafdb2555bb209e2ca9f09f928eec47df80b54295"
+    },
+    {
+      "name": "e065-floor33-turn9-strike-rocket.json",
+      "tested_sha": "dd19a08ac501d08ec83a503e3f53b09632f707da",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "59e956ee1056f45f01cecd875446230618300b3bee60add9af83f09801a7564a"
+    },
+    {
+      "name": "e065-open-character-select.json",
+      "tested_sha": "e15218fab5aa0169b44fbb434ed7ef6e4a12ae67",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "0fa8cfc6264c02edcfe9023f71991c9dbc80c34055b4d44b6d9d14d94ab2f8a7"
+    },
+    {
+      "name": "e065-return-menu.json",
+      "tested_sha": "4bd19d4039088b133eb28b23bfbc6867e56821f3",
+      "status": "accepted",
+      "actions": 1,
+      "trace_sha256": "0b24b8a88b41fbcd41618419c523b38ca653ec6448b8f493dea6b106d1c4b45c"
+    },
+    {
+      "name": "e065-segment01.json",
+      "tested_sha": "aa4f9acafb52b2a72fc38ecf738b596900f6093a",
+      "status": "budget_boundary",
+      "actions": 200,
+      "trace_sha256": "ed88fa7328bfa6702945aa32688b24c1270b1db1d4f521981fcd723e1668bfb4"
+    },
+    {
+      "name": "e065-segment02.json",
+      "tested_sha": "2dfc2b56b1e153fecc7fa7d6518d5053933c36d2",
+      "status": "budget_boundary",
+      "actions": 200,
+      "trace_sha256": "7bd151c41160d4aed9713c46b5c1a6f120921da65791328648978b9296fc2fc2"
+    },
+    {
+      "name": "e065-segment03.json",
+      "tested_sha": "aeb04b63f8ae6f7e409a412e02ad601ee31e71b4",
+      "status": "expert_required",
+      "actions": 20,
+      "trace_sha256": "7783b258154cbca92502c17a2923e1da99bb2e5a86de6ce36d637e19172e5364"
+    },
+    {
+      "name": "e065-segment04.json",
+      "tested_sha": "24729e94378837e8a3ff8f434f5f51c8370e0640",
+      "status": "expert_required",
+      "actions": 1,
+      "trace_sha256": "dbf75cb4ef1e12133c68b01c0221f8fdee37a82113896524cc160ab536b0e6e1"
+    },
+    {
+      "name": "e065-segment05.json",
+      "tested_sha": "d552700b765acc6235da0acf0007d99c86dd9bd7",
+      "status": "expert_required",
+      "actions": 1,
+      "trace_sha256": "3647f0b58b6400396c3afa2568d508c7ae94f505ed1705aa0f8bac5e1d556118"
+    },
+    {
+      "name": "e065-segment06.json",
+      "tested_sha": "a6f1aa3d5fd23f16da4c381ac90aeafc819c229d",
+      "status": "expert_required",
+      "actions": 28,
+      "trace_sha256": "a0b182dcfd00f276cd62c2b388e7dbb5e76d2186f08a6a400653f9daac4c22d5"
+    },
+    {
+      "name": "e065-segment07.json",
+      "tested_sha": "d3375087dd6ef68fdeff769514f868265f8ed077",
+      "status": "expert_required",
+      "actions": 11,
+      "trace_sha256": "bdbac630b0e1a841643bc83ae150d73215b239fe74f26a67de8b7edfbde36c63"
+    },
+    {
+      "name": "e065-segment08.json",
+      "tested_sha": "c82d8b2b5a61499f624cf843ade3896dcdb89d2f",
+      "status": "expert_required",
+      "actions": 1,
+      "trace_sha256": "43613e8f224d229258d529b2845ba9a67447f302b59740bc3ed3508360529ec0"
+    },
+    {
+      "name": "e065-segment09.json",
+      "tested_sha": "50672710678500afebc03774c8379c697e38c24f",
+      "status": "expert_required",
+      "actions": 1,
+      "trace_sha256": "773e8503083372e22b3a329177edc9655ff6872aa841ed4ee7c840d438a7c54a"
+    }
+  ]
+}
