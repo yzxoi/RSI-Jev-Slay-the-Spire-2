@@ -15,7 +15,7 @@ from .trace import Trace,version_manifest
 from .live_plan import plan_native
 from .encounters import sandpit_rule
 from .guard import filter_end_turn
-from .status_guard import reserve_toxic_energy
+from .status_guard import reserve_toxic_energy,reserve_beckon_energy,beckon_endturn_projection
 from .settle import settle_turn,turn_key
 from .floor_plan import load_floor_plan,plan_context,plan_complete
 from .room_plan import load_room_plan,RoomPlanSession,room_context,room_complete
@@ -32,6 +32,9 @@ def ordinary_candidates(raw, offered, policy, explicit_choice=False):
     candidates,toxic=reserve_toxic_energy(raw,candidates)
     if toxic['excluded']:
         report={**report,'excluded':True,'reason':'reserve_energy_for_toxic','toxic_reservation':toxic}
+    candidates,beckon=reserve_beckon_energy(raw,candidates)
+    if beckon['excluded']:
+        report={**report,'excluded':True,'reason':'reserve_energy_for_beckon','beckon_reservation':beckon}
     return candidates,report
 
 
@@ -127,8 +130,14 @@ def main():
                 fresh=mcp.call('get_raw_game_state')
                 if fingerprint(raw)!=fingerprint(fresh) or selected['action'] not in [c['action'] for c in candidates(fresh,history)]:
                     trace.write('stale_proposal_discarded',{'before':fingerprint(raw),'after':fingerprint(fresh)});raw=fresh;continue
-                if not expert_this_action and selected['action']['action']=='end_turn' and (fresh.get('combat') or {}).get('end_turn_will_kill_player'):
-                    result['status']='expert_required';trace.write('expert_required',{'reason':'lethal_end_turn','state_hash':fingerprint(fresh)});raw=fresh;break
+                if not expert_this_action and selected['action']['action']=='end_turn':
+                    beckon_risk=beckon_endturn_projection(fresh)
+                    if beckon_risk and beckon_risk['known']:
+                        trace.write('beckon_endturn_projection',{k:v for k,v in beckon_risk.items() if k!='loss_after_clearing'})
+                    if beckon_risk and beckon_risk['known'] and beckon_risk['projected_loss']>=beckon_risk['hp']:
+                        result['status']='expert_required';trace.write('expert_required',{'reason':'projected_lethal_beckon_end_turn','state_hash':fingerprint(fresh)});raw=fresh;break
+                    if (fresh.get('combat') or {}).get('end_turn_will_kill_player'):
+                        result['status']='expert_required';trace.write('expert_required',{'reason':'lethal_end_turn','state_hash':fingerprint(fresh)});raw=fresh;break
                 signature=(fingerprint(fresh),json.dumps(selected['action'],sort_keys=True));repeated=repeated+1 if signature==last_action else 0
                 if repeated>=2:raise RuntimeError('Repeated action without state progress')
                 last_action=signature;command={**selected['action'],'raw_state':True,'reason':f"程序摘要：整局策略选择 {selected['name']}；{screen}，楼层 {(raw.get('run') or {}).get('floor')}。"}
