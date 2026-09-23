@@ -1,0 +1,186 @@
+{
+  "source_experiment": "E065",
+  "source_run_id": "VTBCNVZABFJP",
+  "source_trace_sha256": "7bd151c41160d4aed9713c46b5c1a6f120921da65791328648978b9296fc2fc2",
+  "source_state_hash": "602b52134bcdb961f02b9b8a772c9e7f4f3793e3e37bd9a126c28bf194a435a3",
+  "state": {
+    "screen": "SHOP",
+    "run": {
+      "gold": 305
+    },
+    "shop": {
+      "is_open": true
+    }
+  },
+  "candidates": [
+    {
+      "id": "a000",
+      "action": {
+        "action": "buy_card",
+        "option_index": 0
+      },
+      "name": "buy_card",
+      "details": {
+        "name": "愤怒",
+        "card_id": "ANGER",
+        "price": 48,
+        "is_stocked": true,
+        "enough_gold": true
+      }
+    },
+    {
+      "id": "a001",
+      "action": {
+        "action": "buy_card",
+        "option_index": 1
+      },
+      "name": "buy_card",
+      "details": {
+        "name": "踩踏",
+        "card_id": "STOMP",
+        "price": 77,
+        "is_stocked": true,
+        "enough_gold": true
+      }
+    },
+    {
+      "id": "a002",
+      "action": {
+        "action": "buy_card",
+        "option_index": 2
+      },
+      "name": "buy_card",
+      "details": {
+        "name": "连环拳",
+        "card_id": "ONE_TWO_PUNCH",
+        "price": 77,
+        "is_stocked": true,
+        "enough_gold": true
+      }
+    },
+    {
+      "id": "a003",
+      "action": {
+        "action": "buy_card",
+        "option_index": 3
+      },
+      "name": "buy_card",
+      "details": {
+        "name": "战栗",
+        "card_id": "TREMBLE",
+        "price": 49,
+        "is_stocked": true,
+        "enough_gold": true
+      }
+    },
+    {
+      "id": "a004",
+      "action": {
+        "action": "buy_card",
+        "option_index": 4
+      },
+      "name": "buy_card",
+      "details": {
+        "name": "惊逃",
+        "card_id": "STAMPEDE",
+        "price": 77,
+        "is_stocked": true,
+        "enough_gold": true
+      }
+    },
+    {
+      "id": "a005",
+      "action": {
+        "action": "buy_card",
+        "option_index": 5
+      },
+      "name": "buy_card",
+      "details": {
+        "name": "发现",
+        "card_id": "DISCOVERY",
+        "price": 84,
+        "is_stocked": true,
+        "enough_gold": true
+      }
+    },
+    {
+      "id": "a006",
+      "action": {
+        "action": "buy_card",
+        "option_index": 6
+      },
+      "name": "buy_card",
+      "details": {
+        "name": "大奖",
+        "card_id": "JACKPOT",
+        "price": 166,
+        "is_stocked": true,
+        "enough_gold": true
+      }
+    },
+    {
+      "id": "a007",
+      "action": {
+        "action": "buy_relic",
+        "option_index": 0
+      },
+      "name": "buy_relic",
+      "details": {
+        "name": "招架盾",
+        "relic_id": "PARRYING_SHIELD",
+        "price": 249,
+        "is_stocked": true,
+        "enough_gold": true
+      }
+    },
+    {
+      "id": "a008",
+      "action": {
+        "action": "buy_relic",
+        "option_index": 1
+      },
+      "name": "buy_relic",
+      "details": {
+        "name": "红头骨",
+        "relic_id": "RED_SKULL",
+        "price": 169,
+        "is_stocked": true,
+        "enough_gold": true
+      }
+    },
+    {
+      "id": "a009",
+      "action": {
+        "action": "buy_relic",
+        "option_index": 2
+      },
+      "name": "buy_relic",
+      "details": {
+        "name": "羽翼护符",
+        "relic_id": "WING_CHARM",
+        "price": 185,
+        "is_stocked": true,
+        "enough_gold": true
+      }
+    },
+    {
+      "id": "a010",
+      "action": {
+        "action": "remove_card_at_shop"
+      },
+      "name": "remove_card_at_shop",
+      "details": {
+        "price": 75,
+        "enough_gold": true
+      }
+    },
+    {
+      "id": "a011",
+      "action": {
+        "action": "close_shop_inventory"
+      },
+      "name": "close_shop_inventory",
+      "details": {}
+    }
+  ]
+}
