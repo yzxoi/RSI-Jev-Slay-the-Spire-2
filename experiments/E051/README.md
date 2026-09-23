@@ -289,3 +289,10 @@ HP3, Block8, energy2, no attacks in hand. Trace SHA-256
 `205887484120bf02c68eb683cd550504acc3cd358c6955abd4e436d29693aafc`.
 Native state says ending turn is nonlethal against the 4×2 attack. Bind end
 turn as intervention 16; inspect actual HP and next hand before attack.
+
+Covered end turn at tested SHA `5ed1bd1` preserved HP3 and advanced to
+turn9. Silk11 HP now uses Debuff; hand has Pommel Strike index2 (displayed
+damage10) and energy4. Trace SHA-256
+`9aa1cdbab345058f1e3ab789d5952edc8f6c990750d4ae42aa1ef522919ee1ca`.
+Bind Pommel Strike target0 as intervention 17: with Cruelty+ damage bonus
+it is expected to exceed 11 HP, but only native outcome counts as victory.
