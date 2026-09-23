@@ -1,0 +1,16 @@
+{
+  "tested_code_sha": "65084fa9b75b749f6781008d4f99ac52e96e4aba",
+  "source_run_id": "4BD4R62AQHNK",
+  "source_state_hash": "4fc73707aae030e966b18fc28915f45d373ed8d08590a657287e2b04a36a9016",
+  "source_trace_sha256": "452daebc41eca9f8b387c633788102b3f162a38e2466b6effe8fdf16ae7ba703",
+  "observed_baseline_action": "end_turn",
+  "guard_excluded_end_turn": true,
+  "guard_witnesses": ["a000", "a001", "a002"],
+  "incoming_damage": 14,
+  "current_block": 0,
+  "current_energy": 1,
+  "guarded_planner_first_card_id": "DEFEND_IRONCLAD",
+  "guarded_planner_predicted_hp_loss": 9,
+  "synthetic_controls": ["unknown_enemy_power", "ice_cream", "no_incoming", "no_legal_basic_card", "explicit_expert_bypass", "raw_jev_bypass"],
+  "suite": {"command": "python3 -m unittest discover -s tests -p 'test_*.py'", "passed": 59}
+}

@@ -89,5 +89,6 @@ def choose_plan(state, candidates, width=40, depth=8, triggers=False, retaliatio
             if triggers:key=key+tuple(n['triggers'].items())
             if key not in unique or score(n)>score(unique[key]):unique[key]=n
         frontier=sorted(unique.values(),key=score,reverse=True)[:width]
-    chosen=next((c for c in candidates if best['plan'] and c['id']==best['plan'][0]),next(c for c in candidates if c['action']['action']=='end_turn'))
+    chosen=next((c for c in candidates if best['plan'] and c['id']==best['plan'][0]),None)
+    if chosen is None:chosen=next((c for c in candidates if c['action']['action']=='end_turn'),candidates[0])
     return chosen,{'scope':SCOPE,'plan_ids':best['plan'],'score':round(score(best),3),'predicted_self_loss':best['self_loss'],'predicted_total_hp_loss':best['self_loss']+max(0,sum(incoming[i] for i,h in best['hp'].items() if h>0)-best['block']-state.get('player',{}).get('end_turn_block',0)),'predicted_block':best['block'],'predicted_enemy_hp':best['hp'],'expanded':expanded,'width':width,'depth':depth,'trigger_forecast':best.get('triggers')}
