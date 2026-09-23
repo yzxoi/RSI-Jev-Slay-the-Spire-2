@@ -224,3 +224,11 @@ Dismantle hit the Beetle twice. This is the only offered path with a plausible
 same-turn kill using three remaining energy, though exact native damage is
 not yet established. Bind `rescue-thunderclap-select.json` to option1 as
 intervention 8, then inspect its actual temporary card/index before playing.
+
+Thunderclap selection at tested SHA
+`89661ef9369aceaec9e4ef6b42e219e17372187b` was accepted: the potion
+placed a 0-energy Thunderclap at current hand index7. Trace SHA-256
+`b510fb89a8a1a23a9e68cb23b1f9cb862f57f6b48eab2f42686b72e8ba4f3add`.
+Both enemies still have their pre-attack HP and the Beetle still intends22;
+selection alone dealt no damage. Bind the actual free Thunderclap play at
+index7 as intervention 9 and re-read both enemy HP/status after it resolves.
