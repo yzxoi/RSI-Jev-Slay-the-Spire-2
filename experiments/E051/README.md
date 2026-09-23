@@ -296,3 +296,10 @@ damage10) and energy4. Trace SHA-256
 `9aa1cdbab345058f1e3ab789d5952edc8f6c990750d4ae42aa1ef522919ee1ca`.
 Bind Pommel Strike target0 as intervention 17: with Cruelty+ damage bonus
 it is expected to exceed 11 HP, but only native outcome counts as victory.
+
+Pommel Strike at tested SHA `c5b9492` dealt 10 actual damage, not the
+estimated >11; Silk remains at 1 HP. It drew Bludgeon, and the original
+Strike remains playable at hand index0 with displayed damage7. Trace SHA-256
+`42fb3c46ea673f93cd3f14cd6b76c480b80a57585d9e88d58c8e368fce29db48`.
+The failed damage estimate is recorded for post-run combat-value calibration.
+Bind Strike target0 as intervention 18, then verify a native battle victory.
