@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "source_run_id": "EC0JQCUP6QMC",
+  "source_floor": 31,
+  "source_game_version": "v0.111.0",
+  "source_mod_version": "0.15.0",
+  "scope": "sanitized observed native hit deltas; not a simulator state",
+  "records": [
+    {
+      "source_result": "floor31-turn1-unrelenting-result.json",
+      "source_code_sha": "3ac22d647a6034b068dd2b3d40a731739adedd3d",
+      "source_trace_sha256": "189fc7d0a56e10db8dd448a14652beb6568a8aac43c11aa12aa28bc930c6d0d4",
+      "before_hash": "f362d6905b50f9faf07843ac18ffdb08a02e602273dadab401f60ab8757966e9",
+      "after_hash": "673296f04a6cc92b51910e602dab4e80c69955364238ec2f2dd3293057c6d9fb",
+      "card_id": "UNRELENTING",
+      "card_preview_damage_per_hit": 14,
+      "card_hits": 1,
+      "enemy_power": {
+        "power_id": "HARD_TO_KILL_POWER",
+        "amount": 9
+      },
+      "enemy_hp_before": 25,
+      "enemy_hp_after": 16,
+      "observed_hp_loss": 9
+    },
+    {
+      "source_result": "floor31-turn3-perfect-strike-result.json",
+      "source_code_sha": "31845fee49a656105ec0da0201990e05c47830af",
+      "source_trace_sha256": "21896fee40cd09c66121481ee93311b7088ffa8b8419683ef5fffa7bc958281a",
+      "before_hash": "41a395eeadd0671df395d213ee58bd5b7b9aa7767953ded261e4a97eb490f958",
+      "after_hash": "33465c7b339f7b5964f23040c87df8df6946e1e53ceb4ff8bc7ad358474eca45",
+      "card_id": "PERFECTED_STRIKE",
+      "card_preview_damage_per_hit": 24,
+      "card_hits": 1,
+      "enemy_power": {
+        "power_id": "HARD_TO_KILL_POWER",
+        "amount": 9
+      },
+      "enemy_hp_before": 21,
+      "enemy_hp_after": 12,
+      "observed_hp_loss": 9
+    },
+    {
+      "source_result": "floor31-turn4-fight-me-result.json",
+      "source_code_sha": "cda9277de6faef307d037fda59b0910d0d2c4bf3",
+      "source_trace_sha256": "631e7abb585013ff29f82fb8470afef167f4f1b2066df32c6ba52ee11b802298",
+      "before_hash": "d3fea6e8021559c980d4b703270ff5bfeab09229190f4c9e6a8f9801bbb6af7b",
+      "after_hash": "140e3eacd00656533a077418282c48125b87fe5a8700daeaeb309426b89ec6cc",
+      "card_id": "FIGHT_ME",
+      "card_preview_damage_per_hit": 5,
+      "card_hits": 2,
+      "enemy_power": {
+        "power_id": "HARD_TO_KILL_POWER",
+        "amount": 9
+      },
+      "enemy_hp_before": 16,
+      "enemy_hp_after": 6,
+      "observed_hp_loss": 10
+    }
+  ]
+}
