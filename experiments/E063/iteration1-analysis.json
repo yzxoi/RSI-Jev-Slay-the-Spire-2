@@ -1,0 +1,28 @@
+{
+  "tested_sha": "99b4d308fa4c14ec85478eb65bada3566eae6ded",
+  "episodes": 40,
+  "trace_hashes_verified": 40,
+  "statuses": {
+    "normal_defeat": 40
+  },
+  "paired_act_floor_outcomes": {
+    "tie": 20
+  },
+  "letter_opener_exposure": {
+    "development_ironclad_a0_baseline_states": 92,
+    "development_ironclad_a0_treatment_states": 95,
+    "other_pairs_with_relic": 0,
+    "treatment_plans_forecasting_proc": 4
+  },
+  "same_state_divergence": {
+    "count": 1,
+    "state_hash": "119be17f20110dbd0c6ae55481d2727e8b18faf46306cf01b362b302aa249a9f",
+    "baseline_first_card": "CARD.TREMBLE",
+    "treatment_first_card": "CARD.PURITY",
+    "baseline_battle_exit_hp_after_burning_blood": 67,
+    "treatment_battle_exit_hp_after_burning_blood": 52,
+    "local_hp_delta_treatment_minus_baseline": -15,
+    "cause_inference": "Planner projected later skills still available after Purity, while fixed macro selection exhausted Tremble immediately after Purity."
+  },
+  "decision": "Unsafe divergence violates preregistered promotion rule; revise planner to stop imagined continuation after hand-changing selections and reevaluate fixed cohort."
+}

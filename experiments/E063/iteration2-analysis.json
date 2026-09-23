@@ -1,0 +1,34 @@
+{
+  "tested_sha": "68786e3cde2461c894c0a31050a66c695a8b67f2",
+  "episodes": 40,
+  "trace_hashes_verified": 40,
+  "statuses": {
+    "normal_defeat": 40
+  },
+  "paired_act_floor_outcomes": {
+    "tie": 20
+  },
+  "letter_opener_exposure": {
+    "development_ironclad_a0_baseline_states": 92,
+    "development_ironclad_a0_treatment_states": 96,
+    "other_pairs_with_relic": 0,
+    "treatment_plans_forecasting_proc": 9
+  },
+  "same_state_divergences": [
+    {
+      "state_hash": "6445ac3b8d06979a5976de8a483747e86a7ab0bd1677456b9754d836a19550fe",
+      "baseline": "CARD.PURITY",
+      "treatment": "CARD.STRIKE_IRONCLAD",
+      "baseline_battle_exit_hp": 67,
+      "treatment_battle_exit_hp": 67
+    },
+    {
+      "state_hash": "d61dc51ecc136e576c7a69eccd89bbca3a1e7ad15c02c7066cf3cceb4b089426",
+      "baseline": "CARD.PURITY",
+      "treatment": "CARD.DEFEND_IRONCLAD",
+      "baseline_battle_exit_hp": 38,
+      "treatment_battle_exit_hp": 41
+    }
+  ],
+  "decision": "No obvious local harm in exposed battles; one same-state choice tied battle HP, the other improved it by 3 HP. Held-out seeds had no relic exposure; no win-rate inference."
+}

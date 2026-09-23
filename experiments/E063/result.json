@@ -1,0 +1,46 @@
+{
+  "experiment": "E063",
+  "baseline_sha": "0926445e779c29836ef9ac699babd964c3cb0f0a",
+  "first_cohort_sha": "99b4d308fa4c14ec85478eb65bada3566eae6ded",
+  "corrected_cohort_sha": "68786e3cde2461c894c0a31050a66c695a8b67f2",
+  "native_opt_in_sha": "774bcb55187d63da7890af4c5bc4e45b9e195cb5",
+  "integration_test_sha": "5c0201b138200bd4b6ec0a83b0c57e385106b5c0",
+  "command": "python3 -m scripts.evaluate_letter_e063",
+  "seeds": ["e062_cap_003", "e063_letter_001", "e063_letter_002", "e063_letter_003", "e063_letter_004"],
+  "characters": ["Ironclad", "Silent"],
+  "ascensions": [0, 10],
+  "policies": ["planfixed", "planfixed_letter"],
+  "episodes_per_iteration": 40,
+  "max_steps": 1500,
+  "max_seconds": 180,
+  "workers": 3,
+  "model_calls": 0,
+  "iteration1": {
+    "result": "iteration1-result.json",
+    "trace_hashes_verified": 40,
+    "normal_defeats": 40,
+    "paired_act_floor_ties": 20,
+    "same_state_differences": 1,
+    "exposed_battle_hp_delta": -15,
+    "decision": "failed no-obvious-harm rule"
+  },
+  "iteration2": {
+    "result": "iteration2-result.json",
+    "trace_hashes_verified": 40,
+    "normal_defeats": 40,
+    "paired_act_floor_ties": 20,
+    "pairs_with_letter_opener": 1,
+    "same_state_differences": 2,
+    "exposed_battle_hp_deltas": [0, 3],
+    "held_out_pairs_with_relic": 0,
+    "decision": "no observed local safety regression; coverage-limited"
+  },
+  "tests": {
+    "command": "python3 -m unittest discover -s tests -q",
+    "passed_after_integration_merge": 106,
+    "failed": 0
+  },
+  "native_actions_executed": 0,
+  "formal_win_rate_evidence": false,
+  "promotion": "merge opt-in --letter-opener-plan only; default remains unchanged until native validation"
+}
