@@ -1,0 +1,2911 @@
+{
+  "schema_version": 1,
+  "experiment": "E080",
+  "manifest": {
+    "schema_version": 1,
+    "code_commit": "c7b5a060c4b449ae1d85ebf305cb44fef9fe498b",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "ad5fc0f5958958d5a0473b81525642bbc8ddff33ea07d90fe675b6f3fdfc99ad",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+  },
+  "configs": [
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_001",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_001",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_001",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_001",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_002",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_002",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_002",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_002",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_003",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_003",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_003",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_003",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_004",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_004",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_004",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_004",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_005",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_005",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_005",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_005",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_006",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_006",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_006",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_006",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_007",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_007",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_007",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_007",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_008",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_008",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_008",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_008",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_009",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_009",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_009",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_009",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_010",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_010",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_010",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_010",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_011",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_011",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_011",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_011",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_012",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_012",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_012",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_012",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600
+    }
+  ],
+  "results": [
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_001",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "c0b8a113-979b-42c2-98c4-011a7c51a87f",
+      "status": "normal_defeat",
+      "steps": 142,
+      "model_calls": 13,
+      "cost_usd": 0.00188685,
+      "initial_state_hash": "1762ada5130b65656448f2c6d5eecf59e1552b2545c020ece9f1c1c24f62b104",
+      "cache_hits": 17,
+      "engine_log_sha256": "f2e3fc9b05167d532cf707309d4e7cb7716c51a23769e95d5dba90622ef641c0",
+      "act": 1,
+      "floor": 15,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 58.64,
+      "scenes": {
+        "event_choice": 3,
+        "map_select": 14,
+        "combat_play": 104,
+        "card_reward": 7,
+        "card_select": 10,
+        "rest_site": 2,
+        "shop": 2,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/c0b8a113-979b-42c2-98c4-011a7c51a87f/decisions.jsonl",
+      "trace_sha256": "1197e750f94ef316ed9cf0a7a36cca4fa6f1c6f7aba163566c878faf458a1175",
+      "trace_verified": true
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_001",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "cfadd26e-56b2-4073-a57e-3567766d4b56",
+      "status": "normal_defeat",
+      "steps": 142,
+      "model_calls": 17,
+      "cost_usd": 0.0028070700000000005,
+      "initial_state_hash": "1762ada5130b65656448f2c6d5eecf59e1552b2545c020ece9f1c1c24f62b104",
+      "cache_hits": 13,
+      "engine_log_sha256": "f2e3fc9b05167d532cf707309d4e7cb7716c51a23769e95d5dba90622ef641c0",
+      "act": 1,
+      "floor": 15,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 58.638,
+      "scenes": {
+        "event_choice": 3,
+        "map_select": 14,
+        "combat_play": 104,
+        "card_reward": 7,
+        "card_select": 10,
+        "rest_site": 2,
+        "shop": 2,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/cfadd26e-56b2-4073-a57e-3567766d4b56/decisions.jsonl",
+      "trace_sha256": "754427c75ef3ad48b73ce20398a6a7322467632a70354ca518ca42248257a2d1",
+      "trace_verified": true
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_001",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "5537f63f-63f6-461b-8f01-71dbe67e9505",
+      "status": "normal_defeat",
+      "steps": 176,
+      "model_calls": 11,
+      "cost_usd": 0.0014709239999999998,
+      "initial_state_hash": "124871313ff5a54142cd9f2e22cc47c4aa3bc0b8374941536d7509b918caa40f",
+      "cache_hits": 15,
+      "engine_log_sha256": "d8a5086532f10a3de59f3dc9edce4a04dc6a5e46d69e41e97c9137eb2dd72599",
+      "act": 1,
+      "floor": 9,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 52.643,
+      "scenes": {
+        "event_choice": 3,
+        "map_select": 8,
+        "combat_play": 146,
+        "card_reward": 4,
+        "card_select": 14,
+        "rest_site": 1,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/5537f63f-63f6-461b-8f01-71dbe67e9505/decisions.jsonl",
+      "trace_sha256": "2090bb2e8b2dbbf52ee933b1e7e5b17e8993f0ae97701b3776751f3e1376c8e9",
+      "trace_verified": true
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_001",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "9b98fdde-a23a-4dd6-b335-dfff2679523b",
+      "status": "normal_defeat",
+      "steps": 176,
+      "model_calls": 15,
+      "cost_usd": 0.002186646,
+      "initial_state_hash": "124871313ff5a54142cd9f2e22cc47c4aa3bc0b8374941536d7509b918caa40f",
+      "cache_hits": 11,
+      "engine_log_sha256": "d8a5086532f10a3de59f3dc9edce4a04dc6a5e46d69e41e97c9137eb2dd72599",
+      "act": 1,
+      "floor": 9,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 52.644,
+      "scenes": {
+        "event_choice": 3,
+        "map_select": 8,
+        "combat_play": 146,
+        "card_reward": 4,
+        "card_select": 14,
+        "rest_site": 1,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/9b98fdde-a23a-4dd6-b335-dfff2679523b/decisions.jsonl",
+      "trace_sha256": "86506cbcda4ebf8d13ff3fc6cee2709b48dbe72a1693248f5587b36373567e4f",
+      "trace_verified": true
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_002",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "7e083a05-7cc5-4ec2-9834-029435a16a4d",
+      "status": "normal_defeat",
+      "steps": 93,
+      "model_calls": 4,
+      "cost_usd": 0.000472122,
+      "initial_state_hash": "6092030cc0fc86595d7978707b940bfe1e1d8bae5ccd263d3f60aafae6fde86e",
+      "cache_hits": 5,
+      "engine_log_sha256": "f4ce2124360c6bf7efeaff9bad0f5568ac8f5cab9cb75e3f3df4b29cc3db6d28",
+      "act": 1,
+      "floor": 7,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 16.863,
+      "scenes": {
+        "event_choice": 1,
+        "card_select": 1,
+        "map_select": 6,
+        "combat_play": 80,
+        "card_reward": 5,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/7e083a05-7cc5-4ec2-9834-029435a16a4d/decisions.jsonl",
+      "trace_sha256": "4c0b651138fde70dff66f70e6b06d5832247c1690413a259e4ee30be96646a38",
+      "trace_verified": true
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_002",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "9981e59f-81ba-4646-9c43-4376e18b76d9",
+      "status": "normal_defeat",
+      "steps": 93,
+      "model_calls": 5,
+      "cost_usd": 0.0007129079999999999,
+      "initial_state_hash": "6092030cc0fc86595d7978707b940bfe1e1d8bae5ccd263d3f60aafae6fde86e",
+      "cache_hits": 4,
+      "engine_log_sha256": "f4ce2124360c6bf7efeaff9bad0f5568ac8f5cab9cb75e3f3df4b29cc3db6d28",
+      "act": 1,
+      "floor": 7,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 16.859,
+      "scenes": {
+        "event_choice": 1,
+        "card_select": 1,
+        "map_select": 6,
+        "combat_play": 80,
+        "card_reward": 5,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/9981e59f-81ba-4646-9c43-4376e18b76d9/decisions.jsonl",
+      "trace_sha256": "d8ec63e08a597fa25fb59f9572c2a4bf8bf8033f0541bb837efa5840a94b70d3",
+      "trace_verified": true
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_002",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "5c8c3824-f677-4ca5-9ec9-49dbb12d6f57",
+      "status": "normal_defeat",
+      "steps": 87,
+      "model_calls": 2,
+      "cost_usd": 0.00028883399999999997,
+      "initial_state_hash": "614ce675fd314a9d2b232cc7caa599703aae3091c117b1e8dcb0ab54f2c8785f",
+      "cache_hits": 7,
+      "engine_log_sha256": "1de85e9a3f05adaae79f9334efeac15956ae64d7da6a288a5f06d8fe0719cb1d",
+      "act": 1,
+      "floor": 5,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 16.994,
+      "scenes": {
+        "event_choice": 1,
+        "card_select": 4,
+        "map_select": 4,
+        "combat_play": 75,
+        "card_reward": 3,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/5c8c3824-f677-4ca5-9ec9-49dbb12d6f57/decisions.jsonl",
+      "trace_sha256": "dfbb6a720957261390d202961ca0cbc7b5c099074b31d55c03fbc9a5ee224f01",
+      "trace_verified": true
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_002",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "c55bc357-e569-43d0-b043-9da6a9c81e66",
+      "status": "normal_defeat",
+      "steps": 87,
+      "model_calls": 7,
+      "cost_usd": 0.0010126620000000001,
+      "initial_state_hash": "614ce675fd314a9d2b232cc7caa599703aae3091c117b1e8dcb0ab54f2c8785f",
+      "cache_hits": 2,
+      "engine_log_sha256": "1de85e9a3f05adaae79f9334efeac15956ae64d7da6a288a5f06d8fe0719cb1d",
+      "act": 1,
+      "floor": 5,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 16.99,
+      "scenes": {
+        "event_choice": 1,
+        "card_select": 4,
+        "map_select": 4,
+        "combat_play": 75,
+        "card_reward": 3,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/c55bc357-e569-43d0-b043-9da6a9c81e66/decisions.jsonl",
+      "trace_sha256": "a1605abd547eebbed97ae05b7d4b0855283443df6d39e24bb686bff560b830a1",
+      "trace_verified": true
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_003",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "3b029cc8-fdb4-486d-9b53-608c2237bd35",
+      "status": "normal_defeat",
+      "steps": 186,
+      "model_calls": 14,
+      "cost_usd": 0.0018711840000000001,
+      "initial_state_hash": "12f6e64103385154f4cc68c4c87a306ddf0f3d8e079f5554f93b0c898b3abc06",
+      "cache_hits": 27,
+      "engine_log_sha256": "61449645bd2aba2dba6d983500290d99ff13875079d1ae98a1382a0db2f04f32",
+      "act": 1,
+      "floor": 17,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 75.589,
+      "scenes": {
+        "event_choice": 4,
+        "card_reward": 10,
+        "map_select": 16,
+        "combat_play": 132,
+        "card_select": 17,
+        "shop": 4,
+        "rest_site": 3,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/3b029cc8-fdb4-486d-9b53-608c2237bd35/decisions.jsonl",
+      "trace_sha256": "6a37f8e323ee9fec526ad9763b840ffadd28b9608d5b0ff7f9639c3d6ea61788",
+      "trace_verified": true
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_003",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "678d9e2f-1cd7-4332-ab02-8882cb95eb7c",
+      "status": "normal_defeat",
+      "steps": 186,
+      "model_calls": 27,
+      "cost_usd": 0.004295424,
+      "initial_state_hash": "12f6e64103385154f4cc68c4c87a306ddf0f3d8e079f5554f93b0c898b3abc06",
+      "cache_hits": 14,
+      "engine_log_sha256": "61449645bd2aba2dba6d983500290d99ff13875079d1ae98a1382a0db2f04f32",
+      "act": 1,
+      "floor": 17,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 75.589,
+      "scenes": {
+        "event_choice": 4,
+        "card_reward": 10,
+        "map_select": 16,
+        "combat_play": 132,
+        "card_select": 17,
+        "shop": 4,
+        "rest_site": 3,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/678d9e2f-1cd7-4332-ab02-8882cb95eb7c/decisions.jsonl",
+      "trace_sha256": "6e76d80240b0a65fe415f9545b191dde0e38b3a91303d31de842269ebe2561be",
+      "trace_verified": true
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_003",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "d4d92b03-1aaa-4ccc-a069-1ceb5a6fe67a",
+      "status": "normal_defeat",
+      "steps": 115,
+      "model_calls": 7,
+      "cost_usd": 0.001287804,
+      "initial_state_hash": "abea3989793f50c0420b31018aca0e75bd85a79f7baf522c98c25c20cd219008",
+      "cache_hits": 13,
+      "engine_log_sha256": "f46f8297d20eb376fd6153051a71fb8cd1abce69c9e3a0c11e834f932bea2670",
+      "act": 1,
+      "floor": 6,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 40.901,
+      "scenes": {
+        "event_choice": 1,
+        "card_reward": 5,
+        "map_select": 5,
+        "combat_play": 92,
+        "card_select": 10,
+        "shop": 2,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/d4d92b03-1aaa-4ccc-a069-1ceb5a6fe67a/decisions.jsonl",
+      "trace_sha256": "156233dd6a385367415f4a726d1db3b8cc680d3333c0da5d89f9548fbf5a0f7d",
+      "trace_verified": true
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_003",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "a3e45e99-bad0-4061-98ab-a776ab127537",
+      "status": "normal_defeat",
+      "steps": 115,
+      "model_calls": 13,
+      "cost_usd": 0.00207354,
+      "initial_state_hash": "abea3989793f50c0420b31018aca0e75bd85a79f7baf522c98c25c20cd219008",
+      "cache_hits": 7,
+      "engine_log_sha256": "f46f8297d20eb376fd6153051a71fb8cd1abce69c9e3a0c11e834f932bea2670",
+      "act": 1,
+      "floor": 6,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 40.901,
+      "scenes": {
+        "event_choice": 1,
+        "card_reward": 5,
+        "map_select": 5,
+        "combat_play": 92,
+        "card_select": 10,
+        "shop": 2,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/a3e45e99-bad0-4061-98ab-a776ab127537/decisions.jsonl",
+      "trace_sha256": "631fb89be0bb98068fcd26b9bd0e5f65078a934e5c3a078c8f87ab066be9e26f",
+      "trace_verified": true
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_004",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "6a1c8039-d8a3-4c39-9abf-e4a563cc5e21",
+      "status": "normal_defeat",
+      "steps": 110,
+      "model_calls": 2,
+      "cost_usd": 0.00030366,
+      "initial_state_hash": "233807cdb02273d772c4c17034b3382723441fe80327e4aa5b28662a28f55c3b",
+      "cache_hits": 10,
+      "engine_log_sha256": "9ab7109e638cf88bb96efb245037c5c66b5113035a7187b3901f115787e7ea2f",
+      "act": 1,
+      "floor": 9,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 23.344,
+      "scenes": {
+        "event_choice": 3,
+        "bundle_select": 1,
+        "map_select": 8,
+        "combat_play": 92,
+        "card_reward": 6,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/6a1c8039-d8a3-4c39-9abf-e4a563cc5e21/decisions.jsonl",
+      "trace_sha256": "499847b9b6d7091a61bdbdc4cc3ac571d74b01b8a508993e2cd56dda629d79b2",
+      "trace_verified": true
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_004",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "a603db22-d2cc-4748-9b8d-a9f3645aa1da",
+      "status": "normal_defeat",
+      "steps": 110,
+      "model_calls": 10,
+      "cost_usd": 0.00139146,
+      "initial_state_hash": "233807cdb02273d772c4c17034b3382723441fe80327e4aa5b28662a28f55c3b",
+      "cache_hits": 2,
+      "engine_log_sha256": "9ab7109e638cf88bb96efb245037c5c66b5113035a7187b3901f115787e7ea2f",
+      "act": 1,
+      "floor": 9,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 23.344,
+      "scenes": {
+        "event_choice": 3,
+        "bundle_select": 1,
+        "map_select": 8,
+        "combat_play": 92,
+        "card_reward": 6,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/a603db22-d2cc-4748-9b8d-a9f3645aa1da/decisions.jsonl",
+      "trace_sha256": "d4674194ff4efe3c38f03a4fd72bd4504749a0737b3d9ead83cb99f1be4373d5",
+      "trace_verified": true
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_004",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "d07dbec5-a75d-4c29-b746-de4c786d147a",
+      "status": "normal_defeat",
+      "steps": 100,
+      "model_calls": 5,
+      "cost_usd": 0.0007239120000000001,
+      "initial_state_hash": "a7347b7920e7514771b6a7fc874aa12c5c601b071267510c81442f9886353a80",
+      "cache_hits": 10,
+      "engine_log_sha256": "b981d9080add1cdd7b89b7e12e2995d93891704b35be5a10eba70903aaf38f3c",
+      "act": 1,
+      "floor": 7,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 29.178,
+      "scenes": {
+        "event_choice": 2,
+        "bundle_select": 1,
+        "map_select": 6,
+        "combat_play": 81,
+        "card_select": 6,
+        "card_reward": 4,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/d07dbec5-a75d-4c29-b746-de4c786d147a/decisions.jsonl",
+      "trace_sha256": "9b286b9bdbe9c292b88317f3a4963f811548ba5ba0518b94fcdb3d5bed8b95df",
+      "trace_verified": true
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_004",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "8c4f579b-048d-4a9e-9b99-417167655832",
+      "status": "normal_defeat",
+      "steps": 100,
+      "model_calls": 10,
+      "cost_usd": 0.0014923019999999998,
+      "initial_state_hash": "a7347b7920e7514771b6a7fc874aa12c5c601b071267510c81442f9886353a80",
+      "cache_hits": 5,
+      "engine_log_sha256": "b981d9080add1cdd7b89b7e12e2995d93891704b35be5a10eba70903aaf38f3c",
+      "act": 1,
+      "floor": 7,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 29.18,
+      "scenes": {
+        "event_choice": 2,
+        "bundle_select": 1,
+        "map_select": 6,
+        "combat_play": 81,
+        "card_select": 6,
+        "card_reward": 4,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/8c4f579b-048d-4a9e-9b99-417167655832/decisions.jsonl",
+      "trace_sha256": "69ed4f3a318ff89117932e79b5ba62a61768530e639ec5c556ac9e5aed8bbd0a",
+      "trace_verified": true
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_005",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "a6514553-5fa7-4cc9-959f-3a4701c22f98",
+      "status": "normal_defeat",
+      "steps": 172,
+      "model_calls": 11,
+      "cost_usd": 0.0015957479999999997,
+      "initial_state_hash": "5f268a6ca8b30c46a8f042aec0d01beeb41c42e9ac29707cee9ab316b541ef47",
+      "cache_hits": 13,
+      "engine_log_sha256": "2301dd7a37a9ca35fe61a8b12736fcf5650cd244df2f3bc4f091d1f41452563b",
+      "act": 1,
+      "floor": 17,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 47.277,
+      "scenes": {
+        "event_choice": 4,
+        "map_select": 16,
+        "combat_play": 139,
+        "card_reward": 9,
+        "rest_site": 3,
+        "card_select": 1,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/a6514553-5fa7-4cc9-959f-3a4701c22f98/decisions.jsonl",
+      "trace_sha256": "4fbb14359571b5b2a9ab8c8bed30cb561862de7359d4e41a5ff6da2a7638d16a",
+      "trace_verified": true
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_005",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "c22a8af1-84ca-4ff5-8d02-c8efbb93d581",
+      "status": "normal_defeat",
+      "steps": 172,
+      "model_calls": 13,
+      "cost_usd": 0.001894662,
+      "initial_state_hash": "5f268a6ca8b30c46a8f042aec0d01beeb41c42e9ac29707cee9ab316b541ef47",
+      "cache_hits": 11,
+      "engine_log_sha256": "2301dd7a37a9ca35fe61a8b12736fcf5650cd244df2f3bc4f091d1f41452563b",
+      "act": 1,
+      "floor": 17,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 47.285,
+      "scenes": {
+        "event_choice": 4,
+        "map_select": 16,
+        "combat_play": 139,
+        "card_reward": 9,
+        "rest_site": 3,
+        "card_select": 1,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/c22a8af1-84ca-4ff5-8d02-c8efbb93d581/decisions.jsonl",
+      "trace_sha256": "91f95b4a71781cbfc673125973c6562c51d69f3dfa1c407db69e86fba19b8c58",
+      "trace_verified": true
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_005",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "0a0fd63e-598b-4f6f-a814-8d50ae6ed74b",
+      "status": "normal_defeat",
+      "steps": 207,
+      "model_calls": 25,
+      "cost_usd": 0.00395808,
+      "initial_state_hash": "d9983ba0701be854727ede86ba7975e8987f184a93ae1c7bd5a7c1777c4b43f9",
+      "cache_hits": 22,
+      "engine_log_sha256": "1a8290025cb25ff22a7acefb9f846110cbb4983e1838894b085239d2a38c4251",
+      "act": 1,
+      "floor": 15,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 83.083,
+      "scenes": {
+        "event_choice": 4,
+        "map_select": 14,
+        "combat_play": 153,
+        "card_select": 26,
+        "card_reward": 8,
+        "rest_site": 2,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/0a0fd63e-598b-4f6f-a814-8d50ae6ed74b/decisions.jsonl",
+      "trace_sha256": "2c9d866fd0c20bf834e7f8ff1b37135aaddbdad9a7c66d071896ceb52b9efe5a",
+      "trace_verified": true
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_005",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "e73edb93-3a9e-42e5-8e3b-768ef5e87681",
+      "status": "normal_defeat",
+      "steps": 207,
+      "model_calls": 22,
+      "cost_usd": 0.0034685280000000002,
+      "initial_state_hash": "d9983ba0701be854727ede86ba7975e8987f184a93ae1c7bd5a7c1777c4b43f9",
+      "cache_hits": 25,
+      "engine_log_sha256": "1a8290025cb25ff22a7acefb9f846110cbb4983e1838894b085239d2a38c4251",
+      "act": 1,
+      "floor": 15,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 83.079,
+      "scenes": {
+        "event_choice": 4,
+        "map_select": 14,
+        "combat_play": 153,
+        "card_select": 26,
+        "card_reward": 8,
+        "rest_site": 2,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/e73edb93-3a9e-42e5-8e3b-768ef5e87681/decisions.jsonl",
+      "trace_sha256": "3023c66bd3b6f8b91876b06e9f6093a82fa42acfac0ee7f76aab055b89f18a72",
+      "trace_verified": true
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_006",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "1b249b50-d321-4f00-95df-8732415b009b",
+      "status": "normal_defeat",
+      "steps": 110,
+      "model_calls": 8,
+      "cost_usd": 0.0014660940000000003,
+      "initial_state_hash": "b37be3f3cb300fa9c8303a08b6bb6de71f53ed8e3949d3bf5e754b74e62a3c3d",
+      "cache_hits": 6,
+      "engine_log_sha256": "acc3454aa9bb3b861742820c2a8f8de089165a2d43eb8dba6d64551ef6f5ee65",
+      "act": 1,
+      "floor": 9,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 27.078,
+      "scenes": {
+        "event_choice": 2,
+        "map_select": 8,
+        "combat_play": 91,
+        "card_reward": 5,
+        "shop": 3,
+        "card_select": 1,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/1b249b50-d321-4f00-95df-8732415b009b/decisions.jsonl",
+      "trace_sha256": "20f02774edac3415fb3851a67c3199823e28d5ca52f27c343943c790933f341c",
+      "trace_verified": true
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_006",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "a28e4024-8363-48f7-bbb9-357568523a6a",
+      "status": "normal_defeat",
+      "steps": 110,
+      "model_calls": 6,
+      "cost_usd": 0.000770574,
+      "initial_state_hash": "b37be3f3cb300fa9c8303a08b6bb6de71f53ed8e3949d3bf5e754b74e62a3c3d",
+      "cache_hits": 8,
+      "engine_log_sha256": "acc3454aa9bb3b861742820c2a8f8de089165a2d43eb8dba6d64551ef6f5ee65",
+      "act": 1,
+      "floor": 9,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 27.07,
+      "scenes": {
+        "event_choice": 2,
+        "map_select": 8,
+        "combat_play": 91,
+        "card_reward": 5,
+        "shop": 3,
+        "card_select": 1,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/a28e4024-8363-48f7-bbb9-357568523a6a/decisions.jsonl",
+      "trace_sha256": "6f9d3bc1f080daa8c6b0796b32d87cc1647b85b0135372132b8b21083aaaf0b5",
+      "trace_verified": true
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_006",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "285174c1-6dea-40eb-9842-0a7b3a7e933d",
+      "status": "normal_defeat",
+      "steps": 134,
+      "model_calls": 12,
+      "cost_usd": 0.001908816,
+      "initial_state_hash": "dc326035baa4d2b2b481d044ea00368ea4095020a3e24b76827dcf7ceaf2445f",
+      "cache_hits": 12,
+      "engine_log_sha256": "c5777483b25d0f26512213a97f8c40e86322568cf0c9bb45a5b8b15fe7c66f3f",
+      "act": 1,
+      "floor": 8,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 45.834,
+      "scenes": {
+        "event_choice": 2,
+        "map_select": 7,
+        "combat_play": 105,
+        "card_select": 12,
+        "card_reward": 4,
+        "shop": 4,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/285174c1-6dea-40eb-9842-0a7b3a7e933d/decisions.jsonl",
+      "trace_sha256": "5e4cf193626f0995b5f9b5216fbf81d41e3b013f4ab1b8ac26a891483ba19bd0",
+      "trace_verified": true
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_006",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "6b9aece8-2e90-4a04-ba88-0ed0aa254a28",
+      "status": "normal_defeat",
+      "steps": 134,
+      "model_calls": 12,
+      "cost_usd": 0.001877106,
+      "initial_state_hash": "dc326035baa4d2b2b481d044ea00368ea4095020a3e24b76827dcf7ceaf2445f",
+      "cache_hits": 12,
+      "engine_log_sha256": "c5777483b25d0f26512213a97f8c40e86322568cf0c9bb45a5b8b15fe7c66f3f",
+      "act": 1,
+      "floor": 8,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 45.839,
+      "scenes": {
+        "event_choice": 2,
+        "map_select": 7,
+        "combat_play": 105,
+        "card_select": 12,
+        "card_reward": 4,
+        "shop": 4,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/6b9aece8-2e90-4a04-ba88-0ed0aa254a28/decisions.jsonl",
+      "trace_sha256": "eeb0c7c58c1922e99c77def040de652273cee8c69d6f91e77470839d122429a5",
+      "trace_verified": true
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_007",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "e0ce41f1-ba8c-4462-8375-b50915bae29f",
+      "status": "normal_defeat",
+      "steps": 90,
+      "model_calls": 7,
+      "cost_usd": 0.000956424,
+      "initial_state_hash": "b60244ec221f4620912d6dc2ee1e5477672f22b8f767862f9f77a993e0c48f18",
+      "cache_hits": 2,
+      "engine_log_sha256": "fb9d7511cb64a05741351d61bac84093cf8270c564937561f6654385a78fa403",
+      "act": 1,
+      "floor": 7,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 17.809,
+      "scenes": {
+        "event_choice": 3,
+        "card_select": 2,
+        "map_select": 6,
+        "combat_play": 76,
+        "card_reward": 3,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/e0ce41f1-ba8c-4462-8375-b50915bae29f/decisions.jsonl",
+      "trace_sha256": "5cc1b1938f5aaaa5bda0792440ed0d07411e772ae6e1ddb4f1093ab4ede09b9e",
+      "trace_verified": true
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_007",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "e098bb25-ea28-4877-ae54-efcc0c9f7f32",
+      "status": "normal_defeat",
+      "steps": 90,
+      "model_calls": 2,
+      "cost_usd": 0.00025389,
+      "initial_state_hash": "b60244ec221f4620912d6dc2ee1e5477672f22b8f767862f9f77a993e0c48f18",
+      "cache_hits": 7,
+      "engine_log_sha256": "fb9d7511cb64a05741351d61bac84093cf8270c564937561f6654385a78fa403",
+      "act": 1,
+      "floor": 7,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 17.809,
+      "scenes": {
+        "event_choice": 3,
+        "card_select": 2,
+        "map_select": 6,
+        "combat_play": 76,
+        "card_reward": 3,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/e098bb25-ea28-4877-ae54-efcc0c9f7f32/decisions.jsonl",
+      "trace_sha256": "36c1c99b03463ecc450fa31f412a4962975a3502cfb0469f88f07d034856c16c",
+      "trace_verified": true
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_007",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "e91fbf3f-a7c3-436d-90bb-26b814b993a5",
+      "status": "normal_defeat",
+      "steps": 85,
+      "model_calls": 7,
+      "cost_usd": 0.0008967000000000001,
+      "initial_state_hash": "00c138fc8621eeb2dd76090113a11cea4e7c4c596486e71984d4a2e1f6e97c56",
+      "cache_hits": 7,
+      "engine_log_sha256": "210da05c54d1fa5a0c81f65827c7f09f317bec7d19c29d3b7802026795afb8f9",
+      "act": 1,
+      "floor": 7,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 25.805,
+      "scenes": {
+        "event_choice": 3,
+        "card_select": 7,
+        "map_select": 6,
+        "combat_play": 66,
+        "card_reward": 3,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/e91fbf3f-a7c3-436d-90bb-26b814b993a5/decisions.jsonl",
+      "trace_sha256": "e63ba44b9d3a5a1f8cc14177c1635d34c9e0a3377147893345f03ecb9544862b",
+      "trace_verified": true
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_007",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "3efabebc-19cf-4b39-8e8f-1d8a8ebcd299",
+      "status": "normal_defeat",
+      "steps": 85,
+      "model_calls": 7,
+      "cost_usd": 0.001165626,
+      "initial_state_hash": "00c138fc8621eeb2dd76090113a11cea4e7c4c596486e71984d4a2e1f6e97c56",
+      "cache_hits": 7,
+      "engine_log_sha256": "210da05c54d1fa5a0c81f65827c7f09f317bec7d19c29d3b7802026795afb8f9",
+      "act": 1,
+      "floor": 7,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 25.799,
+      "scenes": {
+        "event_choice": 3,
+        "card_select": 7,
+        "map_select": 6,
+        "combat_play": 66,
+        "card_reward": 3,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/3efabebc-19cf-4b39-8e8f-1d8a8ebcd299/decisions.jsonl",
+      "trace_sha256": "fc61eaa36766661c16c5f37e44d427c50275136a3341010362161c26820e710e",
+      "trace_verified": true
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_008",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "af73066e-cd51-48e2-a7fc-48ea957699bd",
+      "status": "normal_defeat",
+      "steps": 106,
+      "model_calls": 11,
+      "cost_usd": 0.001606752,
+      "initial_state_hash": "2ef6c0af9e8deb1288d6fbabc87e0187916ef373f4e72a964ae590c6868cb8e5",
+      "cache_hits": 13,
+      "engine_log_sha256": "4fc8b1c13ca69ac12537c19be76e71f9cfecabd180d65d51afae8dee7281a521",
+      "act": 1,
+      "floor": 17,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 45.024,
+      "scenes": {
+        "event_choice": 4,
+        "bundle_select": 1,
+        "map_select": 16,
+        "combat_play": 72,
+        "card_reward": 5,
+        "card_select": 3,
+        "rest_site": 5,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/af73066e-cd51-48e2-a7fc-48ea957699bd/decisions.jsonl",
+      "trace_sha256": "8a46264f8d19f36d9d7497225cb5a941436cf858e257dfc842ff41436ce46f46",
+      "trace_verified": true
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_008",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "2dd1ed39-dcec-4882-8548-5bb6edbb776f",
+      "status": "normal_defeat",
+      "steps": 104,
+      "model_calls": 13,
+      "cost_usd": 0.001874166,
+      "initial_state_hash": "2ef6c0af9e8deb1288d6fbabc87e0187916ef373f4e72a964ae590c6868cb8e5",
+      "cache_hits": 11,
+      "boss_buffs_used": 1,
+      "engine_log_sha256": "656d51a1afbf96da16f345dfe1974fb4ebb33150be0edf89027b7c90822af37c",
+      "act": 1,
+      "floor": 17,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 44.971,
+      "scenes": {
+        "event_choice": 4,
+        "bundle_select": 1,
+        "map_select": 16,
+        "combat_play": 70,
+        "card_reward": 5,
+        "card_select": 3,
+        "rest_site": 5,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/2dd1ed39-dcec-4882-8548-5bb6edbb776f/decisions.jsonl",
+      "trace_sha256": "9148d8d2153961cd10b364654ac9cd13e0f64fdbacc68cacb79c7e2db106b2ea",
+      "trace_verified": true
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_008",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "55bc1c0a-24f4-49be-8a71-80a0f36e82af",
+      "status": "normal_defeat",
+      "steps": 134,
+      "model_calls": 17,
+      "cost_usd": 0.0024605699999999996,
+      "initial_state_hash": "73424b77151a1b59ce1ae45d1e258faf52534f43020191fe066aee6d0dbb525c",
+      "cache_hits": 20,
+      "engine_log_sha256": "99d0d91c6f920dff4f75bb56be44aef88ff24a7e3ebb52bcb206d7e43bb82aa7",
+      "act": 1,
+      "floor": 15,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 65.68,
+      "scenes": {
+        "event_choice": 4,
+        "bundle_select": 1,
+        "map_select": 14,
+        "combat_play": 89,
+        "card_select": 18,
+        "card_reward": 4,
+        "rest_site": 4,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/55bc1c0a-24f4-49be-8a71-80a0f36e82af/decisions.jsonl",
+      "trace_sha256": "97dd8f3b44e4f14ce23e621dd0561becdc638e54bf62e25682fae0b7b7bf6857",
+      "trace_verified": true
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_008",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "e85b662c-368e-4979-9f51-45559187367e",
+      "status": "normal_defeat",
+      "steps": 134,
+      "model_calls": 20,
+      "cost_usd": 0.0031231200000000005,
+      "initial_state_hash": "73424b77151a1b59ce1ae45d1e258faf52534f43020191fe066aee6d0dbb525c",
+      "cache_hits": 17,
+      "engine_log_sha256": "99d0d91c6f920dff4f75bb56be44aef88ff24a7e3ebb52bcb206d7e43bb82aa7",
+      "act": 1,
+      "floor": 15,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 65.68,
+      "scenes": {
+        "event_choice": 4,
+        "bundle_select": 1,
+        "map_select": 14,
+        "combat_play": 89,
+        "card_select": 18,
+        "card_reward": 4,
+        "rest_site": 4,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/e85b662c-368e-4979-9f51-45559187367e/decisions.jsonl",
+      "trace_sha256": "9c7194127fee49dbf0aeb3954ff5d37f23ebb02dc7b4ec35285a221aaf7b237a",
+      "trace_verified": true
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_009",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "5f46616d-5c72-4885-be54-3e1abb9f8a12",
+      "status": "normal_defeat",
+      "steps": 156,
+      "model_calls": 13,
+      "cost_usd": 0.001971228,
+      "initial_state_hash": "b461f7fff943e6c6abbb0d58c24d34cf223972595244a59a4c695978d77584a7",
+      "cache_hits": 8,
+      "engine_log_sha256": "68e66814434ac77326559a4d5d729335afc8e25e10928a3e393e5ee62c09fa69",
+      "act": 1,
+      "floor": 17,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 39.827,
+      "scenes": {
+        "event_choice": 2,
+        "bundle_select": 1,
+        "map_select": 16,
+        "combat_play": 121,
+        "card_reward": 9,
+        "shop": 2,
+        "rest_site": 4,
+        "card_select": 1,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/5f46616d-5c72-4885-be54-3e1abb9f8a12/decisions.jsonl",
+      "trace_sha256": "7082bc88e9c103b0695278ae9341125db7bc791d8c8797de40330dd0c7da5810",
+      "trace_verified": true
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_009",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "110c2aee-4c00-4228-9cf9-ea807cc0baca",
+      "status": "normal_defeat",
+      "steps": 156,
+      "model_calls": 8,
+      "cost_usd": 0.001423254,
+      "initial_state_hash": "b461f7fff943e6c6abbb0d58c24d34cf223972595244a59a4c695978d77584a7",
+      "cache_hits": 13,
+      "engine_log_sha256": "68e66814434ac77326559a4d5d729335afc8e25e10928a3e393e5ee62c09fa69",
+      "act": 1,
+      "floor": 17,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 39.775,
+      "scenes": {
+        "event_choice": 2,
+        "bundle_select": 1,
+        "map_select": 16,
+        "combat_play": 121,
+        "card_reward": 9,
+        "shop": 2,
+        "rest_site": 4,
+        "card_select": 1,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/110c2aee-4c00-4228-9cf9-ea807cc0baca/decisions.jsonl",
+      "trace_sha256": "a6be1e90cb7de2607b754846f68f1e7551e641f3df22e505cd3bee45fea1c648",
+      "trace_verified": true
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_009",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "4235d781-5924-4d3c-8fe9-0f2d3b628a31",
+      "status": "normal_defeat",
+      "steps": 128,
+      "model_calls": 12,
+      "cost_usd": 0.0019264559999999998,
+      "initial_state_hash": "796b5f10c06ba99abca252368c38463855eca095fda89cc33bc2b769b50d3843",
+      "cache_hits": 9,
+      "engine_log_sha256": "fecc21a34ae043857ee2e4cdcdb0d41c8859c9c53aaaa499eb7660bfdd46781b",
+      "act": 1,
+      "floor": 8,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 38.033,
+      "scenes": {
+        "event_choice": 1,
+        "bundle_select": 1,
+        "map_select": 7,
+        "combat_play": 100,
+        "card_select": 11,
+        "card_reward": 5,
+        "shop": 3,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/4235d781-5924-4d3c-8fe9-0f2d3b628a31/decisions.jsonl",
+      "trace_sha256": "6e18933f7cbb2176ef914bca6d67d853666c45fa27f07c2aae511195fefeb914",
+      "trace_verified": true
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_009",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "8910fdf0-20e3-43db-a541-e9338de57004",
+      "status": "normal_defeat",
+      "steps": 128,
+      "model_calls": 9,
+      "cost_usd": 0.0016194780000000002,
+      "initial_state_hash": "796b5f10c06ba99abca252368c38463855eca095fda89cc33bc2b769b50d3843",
+      "cache_hits": 12,
+      "engine_log_sha256": "fecc21a34ae043857ee2e4cdcdb0d41c8859c9c53aaaa499eb7660bfdd46781b",
+      "act": 1,
+      "floor": 8,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 38.042,
+      "scenes": {
+        "event_choice": 1,
+        "bundle_select": 1,
+        "map_select": 7,
+        "combat_play": 100,
+        "card_select": 11,
+        "card_reward": 5,
+        "shop": 3,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/8910fdf0-20e3-43db-a541-e9338de57004/decisions.jsonl",
+      "trace_sha256": "a270f4c732d88acf4ec3b650adea8a8ec0c79b421eb06e372c3e1378d8eb73f4",
+      "trace_verified": true
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_010",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "ca08bcb9-fd0c-46a3-870d-a90ad11addcc",
+      "status": "normal_defeat",
+      "steps": 56,
+      "model_calls": 5,
+      "cost_usd": 0.0006491099999999999,
+      "initial_state_hash": "6eb50692d3d6e33106ab379221136b193bbdfbaa16bfc1bd31c7f0455edc727d",
+      "cache_hits": 2,
+      "engine_log_sha256": "b449b1f267bff99e0ec073f2e0bd81685a2d9a42811b3d0c9981e06e5dc50de3",
+      "act": 1,
+      "floor": 6,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 14.031,
+      "scenes": {
+        "event_choice": 1,
+        "card_select": 1,
+        "map_select": 5,
+        "combat_play": 45,
+        "card_reward": 4,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/ca08bcb9-fd0c-46a3-870d-a90ad11addcc/decisions.jsonl",
+      "trace_sha256": "2d245ee04a6c775400f60167319e27eea2838b353cb34cacf6b954128a68644c",
+      "trace_verified": true
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_010",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "8c8971af-b29a-4dc1-9534-0984c33ad5fe",
+      "status": "normal_defeat",
+      "steps": 56,
+      "model_calls": 2,
+      "cost_usd": 0.00029177399999999996,
+      "initial_state_hash": "6eb50692d3d6e33106ab379221136b193bbdfbaa16bfc1bd31c7f0455edc727d",
+      "cache_hits": 5,
+      "engine_log_sha256": "b449b1f267bff99e0ec073f2e0bd81685a2d9a42811b3d0c9981e06e5dc50de3",
+      "act": 1,
+      "floor": 6,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 14.024,
+      "scenes": {
+        "event_choice": 1,
+        "card_select": 1,
+        "map_select": 5,
+        "combat_play": 45,
+        "card_reward": 4,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/8c8971af-b29a-4dc1-9534-0984c33ad5fe/decisions.jsonl",
+      "trace_sha256": "24909765ebbb30c909e300930bf7b1095eef9609e8b3c2ed67fc03d59a8d2a5c",
+      "trace_verified": true
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_010",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "914b19a1-709a-43d1-9e40-40c32b54163d",
+      "status": "normal_defeat",
+      "steps": 338,
+      "model_calls": 20,
+      "cost_usd": 0.002945417999999999,
+      "initial_state_hash": "f96823e613c479586d4844bdc42497c6008b3a509ca5175ad65a85459482c423",
+      "cache_hits": 16,
+      "engine_log_sha256": "828d1b00cf51067ab9aaeb52c8e8c8b3bc29a044adf082f08888c998b09708a7",
+      "act": 1,
+      "floor": 15,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 68.97,
+      "scenes": {
+        "event_choice": 2,
+        "card_select": 18,
+        "map_select": 14,
+        "combat_play": 293,
+        "card_reward": 10,
+        "rest_site": 1,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/914b19a1-709a-43d1-9e40-40c32b54163d/decisions.jsonl",
+      "trace_sha256": "f530c9e25df31b36c0e4b061d02d01cccb2afa857f0fc922bbddd6a07525b245",
+      "trace_verified": true
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_010",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "987979b7-3e4f-4d59-9ddc-0b229c8eb5ab",
+      "status": "normal_defeat",
+      "steps": 338,
+      "model_calls": 16,
+      "cost_usd": 0.0025023179999999995,
+      "initial_state_hash": "f96823e613c479586d4844bdc42497c6008b3a509ca5175ad65a85459482c423",
+      "cache_hits": 20,
+      "engine_log_sha256": "828d1b00cf51067ab9aaeb52c8e8c8b3bc29a044adf082f08888c998b09708a7",
+      "act": 1,
+      "floor": 15,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 68.967,
+      "scenes": {
+        "event_choice": 2,
+        "card_select": 18,
+        "map_select": 14,
+        "combat_play": 293,
+        "card_reward": 10,
+        "rest_site": 1,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/987979b7-3e4f-4d59-9ddc-0b229c8eb5ab/decisions.jsonl",
+      "trace_sha256": "dfda3abca36cb1080a0fafec11e8ab7d6f5bbec98596e2f16796887141ced8d4",
+      "trace_verified": true
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_011",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "ef103595-862a-4047-b0e9-dd7106cfac24",
+      "status": "normal_defeat",
+      "steps": 154,
+      "model_calls": 4,
+      "cost_usd": 0.0005451179999999999,
+      "initial_state_hash": "cd4e5033bb4c2b4b2a6f443366f2aaa2a034050d3e8ca6161c8cf1d8ff64f8ed",
+      "cache_hits": 11,
+      "engine_log_sha256": "ac6af17a0f398d3c5d359384423987a51d8f5da376d85b4280a1adaaa3e8c0fc",
+      "act": 1,
+      "floor": 12,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 29.813,
+      "scenes": {
+        "event_choice": 3,
+        "card_select": 2,
+        "map_select": 11,
+        "combat_play": 131,
+        "card_reward": 6,
+        "rest_site": 1,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/ef103595-862a-4047-b0e9-dd7106cfac24/decisions.jsonl",
+      "trace_sha256": "195f2968425dee69b44e8875d83a6bc63f3fd56a516435013cfcc68ed9458ea8",
+      "trace_verified": true
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_011",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "1e6bfb4f-7874-49dc-89ad-f08376557cbc",
+      "status": "normal_defeat",
+      "steps": 154,
+      "model_calls": 11,
+      "cost_usd": 0.001553412,
+      "initial_state_hash": "cd4e5033bb4c2b4b2a6f443366f2aaa2a034050d3e8ca6161c8cf1d8ff64f8ed",
+      "cache_hits": 4,
+      "engine_log_sha256": "ac6af17a0f398d3c5d359384423987a51d8f5da376d85b4280a1adaaa3e8c0fc",
+      "act": 1,
+      "floor": 12,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 29.804,
+      "scenes": {
+        "event_choice": 3,
+        "card_select": 2,
+        "map_select": 11,
+        "combat_play": 131,
+        "card_reward": 6,
+        "rest_site": 1,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/1e6bfb4f-7874-49dc-89ad-f08376557cbc/decisions.jsonl",
+      "trace_sha256": "1a060488189c63efa7b79e4abc3814460d72c0a5b7612e05124d7844eebe2e8f",
+      "trace_verified": true
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_011",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "ee3a2751-d774-4d7a-8225-2d776cf7fb99",
+      "status": "normal_defeat",
+      "steps": 131,
+      "model_calls": 7,
+      "cost_usd": 0.001046304,
+      "initial_state_hash": "b497555f378ca59d970fdd61eb7ee4cd37427f4a12dc11fcbecc7c090d52a704",
+      "cache_hits": 6,
+      "engine_log_sha256": "d5750c1e167e8e2395d4ae883e00d718c4ecca3ec2b59d71bf1fe964c5153856",
+      "act": 1,
+      "floor": 7,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 24.198,
+      "scenes": {
+        "event_choice": 2,
+        "map_select": 6,
+        "combat_play": 115,
+        "card_select": 4,
+        "card_reward": 4,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/ee3a2751-d774-4d7a-8225-2d776cf7fb99/decisions.jsonl",
+      "trace_sha256": "4efcd881bcd948fcb58eaf399fd6a9933fb42e59738203c98d11107c17e61f4a",
+      "trace_verified": true
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_011",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "8d7cd514-2a6e-4711-93aa-5ec3b6f970b1",
+      "status": "normal_defeat",
+      "steps": 131,
+      "model_calls": 6,
+      "cost_usd": 0.000756378,
+      "initial_state_hash": "b497555f378ca59d970fdd61eb7ee4cd37427f4a12dc11fcbecc7c090d52a704",
+      "cache_hits": 7,
+      "engine_log_sha256": "d5750c1e167e8e2395d4ae883e00d718c4ecca3ec2b59d71bf1fe964c5153856",
+      "act": 1,
+      "floor": 7,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 24.199,
+      "scenes": {
+        "event_choice": 2,
+        "map_select": 6,
+        "combat_play": 115,
+        "card_select": 4,
+        "card_reward": 4,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/8d7cd514-2a6e-4711-93aa-5ec3b6f970b1/decisions.jsonl",
+      "trace_sha256": "8c4eeb939e45db99d73087aff608d10014b9855a39b93f17a6693419c2a626b2",
+      "trace_verified": true
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_012",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "ea9fe991-f45c-4eb6-aca3-bc058db6d4b9",
+      "status": "normal_defeat",
+      "steps": 102,
+      "model_calls": 1,
+      "cost_usd": 0.000135996,
+      "initial_state_hash": "64d93e95ea11dfb803d2cdbed2685c8e4bcbba8dc699872d4cf5645545c27959",
+      "cache_hits": 17,
+      "engine_log_sha256": "3a434b8ec29e36b32f5a3ffb580d0ecaee50f145b210669f7cb6db18671d4f7d",
+      "act": 1,
+      "floor": 8,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 36.358,
+      "scenes": {
+        "event_choice": 1,
+        "map_select": 7,
+        "combat_play": 83,
+        "card_reward": 5,
+        "card_select": 3,
+        "shop": 3,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/ea9fe991-f45c-4eb6-aca3-bc058db6d4b9/decisions.jsonl",
+      "trace_sha256": "402e6e5d861db792162e9ac87b8bd7390bd89059e34c06a4e39eb4a24185378e",
+      "trace_verified": true
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e080_boss_012",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "3fdee73c-c606-418a-8ffd-ac8bed2bde9a",
+      "status": "normal_defeat",
+      "steps": 102,
+      "model_calls": 17,
+      "cost_usd": 0.0025615379999999995,
+      "initial_state_hash": "64d93e95ea11dfb803d2cdbed2685c8e4bcbba8dc699872d4cf5645545c27959",
+      "cache_hits": 1,
+      "engine_log_sha256": "3a434b8ec29e36b32f5a3ffb580d0ecaee50f145b210669f7cb6db18671d4f7d",
+      "act": 1,
+      "floor": 8,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 36.35,
+      "scenes": {
+        "event_choice": 1,
+        "map_select": 7,
+        "combat_play": 83,
+        "card_reward": 5,
+        "card_select": 3,
+        "shop": 3,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/3fdee73c-c606-418a-8ffd-ac8bed2bde9a/decisions.jsonl",
+      "trace_sha256": "eab8599c6859ebe395878151c716291b49550deb823dad9bcce69e1079cd6ced",
+      "trace_verified": true
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_012",
+      "policy": "retaliate",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "b6e47d4a-110f-4728-b4c7-f831a43cb50d",
+      "status": "normal_defeat",
+      "steps": 110,
+      "model_calls": 7,
+      "cost_usd": 0.000969024,
+      "initial_state_hash": "db1c45757b90b3c77f682ac69d7caf0a3057fcdb208f6be65ecedfe0bcd5f794",
+      "cache_hits": 7,
+      "engine_log_sha256": "335811ebf8d31f51af1582c292384e0d228d964349c38a26d073eccf44155b4e",
+      "act": 1,
+      "floor": 5,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 32.74,
+      "scenes": {
+        "event_choice": 1,
+        "map_select": 4,
+        "combat_play": 95,
+        "card_select": 7,
+        "card_reward": 3,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/b6e47d4a-110f-4728-b4c7-f831a43cb50d/decisions.jsonl",
+      "trace_sha256": "76dc414ad70a2df2251aef55acca6e7b5aa7ab581b08971ed659804f5842dd34",
+      "trace_verified": true
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e080_boss_012",
+      "policy": "retaliate_boss_buffs",
+      "max_steps": 4000,
+      "max_seconds": 600,
+      "run_id": "be513b58-b44c-46aa-97ae-bde03876c04c",
+      "status": "normal_defeat",
+      "steps": 110,
+      "model_calls": 7,
+      "cost_usd": 0.000951552,
+      "initial_state_hash": "db1c45757b90b3c77f682ac69d7caf0a3057fcdb208f6be65ecedfe0bcd5f794",
+      "cache_hits": 7,
+      "engine_log_sha256": "335811ebf8d31f51af1582c292384e0d228d964349c38a26d073eccf44155b4e",
+      "act": 1,
+      "floor": 5,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 32.741,
+      "scenes": {
+        "event_choice": 1,
+        "map_select": 4,
+        "combat_play": 95,
+        "card_select": 7,
+        "card_reward": 3,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/be513b58-b44c-46aa-97ae-bde03876c04c/decisions.jsonl",
+      "trace_sha256": "2a74643dbf061db4a71efd3f51c4a589c43c2244c5e8147003323b0e3dd3be4b",
+      "trace_verified": true
+    }
+  ],
+  "paired": {
+    "baseline": "retaliate",
+    "treatment": "retaliate_boss_buffs",
+    "outcomes": {
+      "tie": 24
+    },
+    "pairs": [
+      {
+        "character": "Ironclad",
+        "seed": "e080_boss_001",
+        "baseline": [
+          false,
+          1,
+          15
+        ],
+        "treatment": [
+          false,
+          1,
+          15
+        ],
+        "outcome": "tie"
+      },
+      {
+        "character": "Silent",
+        "seed": "e080_boss_001",
+        "baseline": [
+          false,
+          1,
+          9
+        ],
+        "treatment": [
+          false,
+          1,
+          9
+        ],
+        "outcome": "tie"
+      },
+      {
+        "character": "Ironclad",
+        "seed": "e080_boss_002",
+        "baseline": [
+          false,
+          1,
+          7
+        ],
+        "treatment": [
+          false,
+          1,
+          7
+        ],
+        "outcome": "tie"
+      },
+      {
+        "character": "Silent",
+        "seed": "e080_boss_002",
+        "baseline": [
+          false,
+          1,
+          5
+        ],
+        "treatment": [
+          false,
+          1,
+          5
+        ],
+        "outcome": "tie"
+      },
+      {
+        "character": "Ironclad",
+        "seed": "e080_boss_003",
+        "baseline": [
+          false,
+          1,
+          17
+        ],
+        "treatment": [
+          false,
+          1,
+          17
+        ],
+        "outcome": "tie"
+      },
+      {
+        "character": "Silent",
+        "seed": "e080_boss_003",
+        "baseline": [
+          false,
+          1,
+          6
+        ],
+        "treatment": [
+          false,
+          1,
+          6
+        ],
+        "outcome": "tie"
+      },
+      {
+        "character": "Ironclad",
+        "seed": "e080_boss_004",
+        "baseline": [
+          false,
+          1,
+          9
+        ],
+        "treatment": [
+          false,
+          1,
+          9
+        ],
+        "outcome": "tie"
+      },
+      {
+        "character": "Silent",
+        "seed": "e080_boss_004",
+        "baseline": [
+          false,
+          1,
+          7
+        ],
+        "treatment": [
+          false,
+          1,
+          7
+        ],
+        "outcome": "tie"
+      },
+      {
+        "character": "Ironclad",
+        "seed": "e080_boss_005",
+        "baseline": [
+          false,
+          1,
+          17
+        ],
+        "treatment": [
+          false,
+          1,
+          17
+        ],
+        "outcome": "tie"
+      },
+      {
+        "character": "Silent",
+        "seed": "e080_boss_005",
+        "baseline": [
+          false,
+          1,
+          15
+        ],
+        "treatment": [
+          false,
+          1,
+          15
+        ],
+        "outcome": "tie"
+      },
+      {
+        "character": "Ironclad",
+        "seed": "e080_boss_006",
+        "baseline": [
+          false,
+          1,
+          9
+        ],
+        "treatment": [
+          false,
+          1,
+          9
+        ],
+        "outcome": "tie"
+      },
+      {
+        "character": "Silent",
+        "seed": "e080_boss_006",
+        "baseline": [
+          false,
+          1,
+          8
+        ],
+        "treatment": [
+          false,
+          1,
+          8
+        ],
+        "outcome": "tie"
+      },
+      {
+        "character": "Ironclad",
+        "seed": "e080_boss_007",
+        "baseline": [
+          false,
+          1,
+          7
+        ],
+        "treatment": [
+          false,
+          1,
+          7
+        ],
+        "outcome": "tie"
+      },
+      {
+        "character": "Silent",
+        "seed": "e080_boss_007",
+        "baseline": [
+          false,
+          1,
+          7
+        ],
+        "treatment": [
+          false,
+          1,
+          7
+        ],
+        "outcome": "tie"
+      },
+      {
+        "character": "Ironclad",
+        "seed": "e080_boss_008",
+        "baseline": [
+          false,
+          1,
+          17
+        ],
+        "treatment": [
+          false,
+          1,
+          17
+        ],
+        "outcome": "tie"
+      },
+      {
+        "character": "Silent",
+        "seed": "e080_boss_008",
+        "baseline": [
+          false,
+          1,
+          15
+        ],
+        "treatment": [
+          false,
+          1,
+          15
+        ],
+        "outcome": "tie"
+      },
+      {
+        "character": "Ironclad",
+        "seed": "e080_boss_009",
+        "baseline": [
+          false,
+          1,
+          17
+        ],
+        "treatment": [
+          false,
+          1,
+          17
+        ],
+        "outcome": "tie"
+      },
+      {
+        "character": "Silent",
+        "seed": "e080_boss_009",
+        "baseline": [
+          false,
+          1,
+          8
+        ],
+        "treatment": [
+          false,
+          1,
+          8
+        ],
+        "outcome": "tie"
+      },
+      {
+        "character": "Ironclad",
+        "seed": "e080_boss_010",
+        "baseline": [
+          false,
+          1,
+          6
+        ],
+        "treatment": [
+          false,
+          1,
+          6
+        ],
+        "outcome": "tie"
+      },
+      {
+        "character": "Silent",
+        "seed": "e080_boss_010",
+        "baseline": [
+          false,
+          1,
+          15
+        ],
+        "treatment": [
+          false,
+          1,
+          15
+        ],
+        "outcome": "tie"
+      },
+      {
+        "character": "Ironclad",
+        "seed": "e080_boss_011",
+        "baseline": [
+          false,
+          1,
+          12
+        ],
+        "treatment": [
+          false,
+          1,
+          12
+        ],
+        "outcome": "tie"
+      },
+      {
+        "character": "Silent",
+        "seed": "e080_boss_011",
+        "baseline": [
+          false,
+          1,
+          7
+        ],
+        "treatment": [
+          false,
+          1,
+          7
+        ],
+        "outcome": "tie"
+      },
+      {
+        "character": "Ironclad",
+        "seed": "e080_boss_012",
+        "baseline": [
+          false,
+          1,
+          8
+        ],
+        "treatment": [
+          false,
+          1,
+          8
+        ],
+        "outcome": "tie"
+      },
+      {
+        "character": "Silent",
+        "seed": "e080_boss_012",
+        "baseline": [
+          false,
+          1,
+          5
+        ],
+        "treatment": [
+          false,
+          1,
+          5
+        ],
+        "outcome": "tie"
+      }
+    ]
+  },
+  "pair_audit": [
+    {
+      "seed": "e080_boss_001",
+      "character": "Ironclad",
+      "initial_state_same": true,
+      "first_intervention_index": null,
+      "first_intervention_same_prefix": null,
+      "first_intervention_state_hash": null,
+      "boss_buff_names": [],
+      "all_consumptions_verified": true,
+      "consumptions": [],
+      "no_intervention_identical": true,
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_progress": [
+        1,
+        15
+      ],
+      "treatment_progress": [
+        1,
+        15
+      ]
+    },
+    {
+      "seed": "e080_boss_001",
+      "character": "Silent",
+      "initial_state_same": true,
+      "first_intervention_index": null,
+      "first_intervention_same_prefix": null,
+      "first_intervention_state_hash": null,
+      "boss_buff_names": [],
+      "all_consumptions_verified": true,
+      "consumptions": [],
+      "no_intervention_identical": true,
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_progress": [
+        1,
+        9
+      ],
+      "treatment_progress": [
+        1,
+        9
+      ]
+    },
+    {
+      "seed": "e080_boss_002",
+      "character": "Ironclad",
+      "initial_state_same": true,
+      "first_intervention_index": null,
+      "first_intervention_same_prefix": null,
+      "first_intervention_state_hash": null,
+      "boss_buff_names": [],
+      "all_consumptions_verified": true,
+      "consumptions": [],
+      "no_intervention_identical": true,
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_progress": [
+        1,
+        7
+      ],
+      "treatment_progress": [
+        1,
+        7
+      ]
+    },
+    {
+      "seed": "e080_boss_002",
+      "character": "Silent",
+      "initial_state_same": true,
+      "first_intervention_index": null,
+      "first_intervention_same_prefix": null,
+      "first_intervention_state_hash": null,
+      "boss_buff_names": [],
+      "all_consumptions_verified": true,
+      "consumptions": [],
+      "no_intervention_identical": true,
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_progress": [
+        1,
+        5
+      ],
+      "treatment_progress": [
+        1,
+        5
+      ]
+    },
+    {
+      "seed": "e080_boss_003",
+      "character": "Ironclad",
+      "initial_state_same": true,
+      "first_intervention_index": null,
+      "first_intervention_same_prefix": null,
+      "first_intervention_state_hash": null,
+      "boss_buff_names": [],
+      "all_consumptions_verified": true,
+      "consumptions": [],
+      "no_intervention_identical": true,
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_progress": [
+        1,
+        17
+      ],
+      "treatment_progress": [
+        1,
+        17
+      ]
+    },
+    {
+      "seed": "e080_boss_003",
+      "character": "Silent",
+      "initial_state_same": true,
+      "first_intervention_index": null,
+      "first_intervention_same_prefix": null,
+      "first_intervention_state_hash": null,
+      "boss_buff_names": [],
+      "all_consumptions_verified": true,
+      "consumptions": [],
+      "no_intervention_identical": true,
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_progress": [
+        1,
+        6
+      ],
+      "treatment_progress": [
+        1,
+        6
+      ]
+    },
+    {
+      "seed": "e080_boss_004",
+      "character": "Ironclad",
+      "initial_state_same": true,
+      "first_intervention_index": null,
+      "first_intervention_same_prefix": null,
+      "first_intervention_state_hash": null,
+      "boss_buff_names": [],
+      "all_consumptions_verified": true,
+      "consumptions": [],
+      "no_intervention_identical": true,
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_progress": [
+        1,
+        9
+      ],
+      "treatment_progress": [
+        1,
+        9
+      ]
+    },
+    {
+      "seed": "e080_boss_004",
+      "character": "Silent",
+      "initial_state_same": true,
+      "first_intervention_index": null,
+      "first_intervention_same_prefix": null,
+      "first_intervention_state_hash": null,
+      "boss_buff_names": [],
+      "all_consumptions_verified": true,
+      "consumptions": [],
+      "no_intervention_identical": true,
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_progress": [
+        1,
+        7
+      ],
+      "treatment_progress": [
+        1,
+        7
+      ]
+    },
+    {
+      "seed": "e080_boss_005",
+      "character": "Ironclad",
+      "initial_state_same": true,
+      "first_intervention_index": null,
+      "first_intervention_same_prefix": null,
+      "first_intervention_state_hash": null,
+      "boss_buff_names": [],
+      "all_consumptions_verified": true,
+      "consumptions": [],
+      "no_intervention_identical": true,
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_progress": [
+        1,
+        17
+      ],
+      "treatment_progress": [
+        1,
+        17
+      ]
+    },
+    {
+      "seed": "e080_boss_005",
+      "character": "Silent",
+      "initial_state_same": true,
+      "first_intervention_index": null,
+      "first_intervention_same_prefix": null,
+      "first_intervention_state_hash": null,
+      "boss_buff_names": [],
+      "all_consumptions_verified": true,
+      "consumptions": [],
+      "no_intervention_identical": true,
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_progress": [
+        1,
+        15
+      ],
+      "treatment_progress": [
+        1,
+        15
+      ]
+    },
+    {
+      "seed": "e080_boss_006",
+      "character": "Ironclad",
+      "initial_state_same": true,
+      "first_intervention_index": null,
+      "first_intervention_same_prefix": null,
+      "first_intervention_state_hash": null,
+      "boss_buff_names": [],
+      "all_consumptions_verified": true,
+      "consumptions": [],
+      "no_intervention_identical": true,
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_progress": [
+        1,
+        9
+      ],
+      "treatment_progress": [
+        1,
+        9
+      ]
+    },
+    {
+      "seed": "e080_boss_006",
+      "character": "Silent",
+      "initial_state_same": true,
+      "first_intervention_index": null,
+      "first_intervention_same_prefix": null,
+      "first_intervention_state_hash": null,
+      "boss_buff_names": [],
+      "all_consumptions_verified": true,
+      "consumptions": [],
+      "no_intervention_identical": true,
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_progress": [
+        1,
+        8
+      ],
+      "treatment_progress": [
+        1,
+        8
+      ]
+    },
+    {
+      "seed": "e080_boss_007",
+      "character": "Ironclad",
+      "initial_state_same": true,
+      "first_intervention_index": null,
+      "first_intervention_same_prefix": null,
+      "first_intervention_state_hash": null,
+      "boss_buff_names": [],
+      "all_consumptions_verified": true,
+      "consumptions": [],
+      "no_intervention_identical": true,
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_progress": [
+        1,
+        7
+      ],
+      "treatment_progress": [
+        1,
+        7
+      ]
+    },
+    {
+      "seed": "e080_boss_007",
+      "character": "Silent",
+      "initial_state_same": true,
+      "first_intervention_index": null,
+      "first_intervention_same_prefix": null,
+      "first_intervention_state_hash": null,
+      "boss_buff_names": [],
+      "all_consumptions_verified": true,
+      "consumptions": [],
+      "no_intervention_identical": true,
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_progress": [
+        1,
+        7
+      ],
+      "treatment_progress": [
+        1,
+        7
+      ]
+    },
+    {
+      "seed": "e080_boss_008",
+      "character": "Ironclad",
+      "initial_state_same": true,
+      "first_intervention_index": 82,
+      "first_intervention_same_prefix": true,
+      "first_intervention_state_hash": "adda211f4f738322897a8f73497c9f1c1ba46626aa7e09ab2b4aef6bfbea7b4d",
+      "boss_buff_names": [
+        "Strength Potion"
+      ],
+      "all_consumptions_verified": true,
+      "consumptions": [
+        {
+          "potion": "Strength Potion",
+          "inventory_decreased": true
+        }
+      ],
+      "no_intervention_identical": null,
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_progress": [
+        1,
+        17
+      ],
+      "treatment_progress": [
+        1,
+        17
+      ]
+    },
+    {
+      "seed": "e080_boss_008",
+      "character": "Silent",
+      "initial_state_same": true,
+      "first_intervention_index": null,
+      "first_intervention_same_prefix": null,
+      "first_intervention_state_hash": null,
+      "boss_buff_names": [],
+      "all_consumptions_verified": true,
+      "consumptions": [],
+      "no_intervention_identical": true,
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_progress": [
+        1,
+        15
+      ],
+      "treatment_progress": [
+        1,
+        15
+      ]
+    },
+    {
+      "seed": "e080_boss_009",
+      "character": "Ironclad",
+      "initial_state_same": true,
+      "first_intervention_index": null,
+      "first_intervention_same_prefix": null,
+      "first_intervention_state_hash": null,
+      "boss_buff_names": [],
+      "all_consumptions_verified": true,
+      "consumptions": [],
+      "no_intervention_identical": true,
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_progress": [
+        1,
+        17
+      ],
+      "treatment_progress": [
+        1,
+        17
+      ]
+    },
+    {
+      "seed": "e080_boss_009",
+      "character": "Silent",
+      "initial_state_same": true,
+      "first_intervention_index": null,
+      "first_intervention_same_prefix": null,
+      "first_intervention_state_hash": null,
+      "boss_buff_names": [],
+      "all_consumptions_verified": true,
+      "consumptions": [],
+      "no_intervention_identical": true,
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_progress": [
+        1,
+        8
+      ],
+      "treatment_progress": [
+        1,
+        8
+      ]
+    },
+    {
+      "seed": "e080_boss_010",
+      "character": "Ironclad",
+      "initial_state_same": true,
+      "first_intervention_index": null,
+      "first_intervention_same_prefix": null,
+      "first_intervention_state_hash": null,
+      "boss_buff_names": [],
+      "all_consumptions_verified": true,
+      "consumptions": [],
+      "no_intervention_identical": true,
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_progress": [
+        1,
+        6
+      ],
+      "treatment_progress": [
+        1,
+        6
+      ]
+    },
+    {
+      "seed": "e080_boss_010",
+      "character": "Silent",
+      "initial_state_same": true,
+      "first_intervention_index": null,
+      "first_intervention_same_prefix": null,
+      "first_intervention_state_hash": null,
+      "boss_buff_names": [],
+      "all_consumptions_verified": true,
+      "consumptions": [],
+      "no_intervention_identical": true,
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_progress": [
+        1,
+        15
+      ],
+      "treatment_progress": [
+        1,
+        15
+      ]
+    },
+    {
+      "seed": "e080_boss_011",
+      "character": "Ironclad",
+      "initial_state_same": true,
+      "first_intervention_index": null,
+      "first_intervention_same_prefix": null,
+      "first_intervention_state_hash": null,
+      "boss_buff_names": [],
+      "all_consumptions_verified": true,
+      "consumptions": [],
+      "no_intervention_identical": true,
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_progress": [
+        1,
+        12
+      ],
+      "treatment_progress": [
+        1,
+        12
+      ]
+    },
+    {
+      "seed": "e080_boss_011",
+      "character": "Silent",
+      "initial_state_same": true,
+      "first_intervention_index": null,
+      "first_intervention_same_prefix": null,
+      "first_intervention_state_hash": null,
+      "boss_buff_names": [],
+      "all_consumptions_verified": true,
+      "consumptions": [],
+      "no_intervention_identical": true,
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_progress": [
+        1,
+        7
+      ],
+      "treatment_progress": [
+        1,
+        7
+      ]
+    },
+    {
+      "seed": "e080_boss_012",
+      "character": "Ironclad",
+      "initial_state_same": true,
+      "first_intervention_index": null,
+      "first_intervention_same_prefix": null,
+      "first_intervention_state_hash": null,
+      "boss_buff_names": [],
+      "all_consumptions_verified": true,
+      "consumptions": [],
+      "no_intervention_identical": true,
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_progress": [
+        1,
+        8
+      ],
+      "treatment_progress": [
+        1,
+        8
+      ]
+    },
+    {
+      "seed": "e080_boss_012",
+      "character": "Silent",
+      "initial_state_same": true,
+      "first_intervention_index": null,
+      "first_intervention_same_prefix": null,
+      "first_intervention_state_hash": null,
+      "boss_buff_names": [],
+      "all_consumptions_verified": true,
+      "consumptions": [],
+      "no_intervention_identical": true,
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_progress": [
+        1,
+        5
+      ],
+      "treatment_progress": [
+        1,
+        5
+      ]
+    }
+  ],
+  "trace_hashes_verified": 48,
+  "budget": {
+    "calls": 500,
+    "provider_cost_usd": 0.07540251599999999,
+    "uncertain_calls": 0,
+    "estimated_usd": 0.0
+  }
+}
