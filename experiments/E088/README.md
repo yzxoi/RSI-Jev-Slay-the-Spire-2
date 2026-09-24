@@ -1,0 +1,13 @@
+# E088 — threat-timed one-potion budget for Jev
+
+Issue: [#168](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/168). Baseline: merged `retaliate` at `b22c28ebed9342fa81a0c94109118024fb226d04`.
+
+E087's once-per-combat Jev reserve choice produced six legal potion uses but **0/20** deeper A10 runs. Eleven zero-loss Elite/Boss openers all reserved. E087's baseline fatal fights were 11 Act 1 Elites and nine ordinary Monsters, all entered with potions; median entry HP was 24. This experiment tests whether the controller should authorize one spend at the first **materially threatening** state. The rule is a transparent stand-in for a future Astra floor resource budget, not an actual Astra model call or a validated HP forecast.
+
+Treatment `retaliate_threat_budget` preserves baseline macro Jev and deterministic card planner. In Act 1, visible enemy incoming damage and predicted current-turn HP loss are required. With at least two potions, an Elite/Boss may spend at predicted loss >=8; an ordinary Monster also requires current HP <=50% maximum. With only one potion, any combat may spend only if HP <=35% maximum and predicted loss >=5. At most one spend is authorized per combat. Jev selects the potion and target from legal engine-exported candidates; when only one exists, the controller selects it without a needless model call. Reserve is unavailable after the spend budget authorizes action. The controller verifies exactly one potion is removed, observes fresh state and replans cards. No HP, reward, RNG or victory flag edit.
+
+Frozen cohort: fresh seeds `e088_budget_001`–`_004`, all five characters, Ascension 10, baseline/treatment = 20 matched pairs / 40 complete-run CLI episodes. Four workers; each episode max 2,000 decisions/300 seconds. Shared Jev budget 4,000 calls/$1.00 with exact-request matching. Game v0.111.0, sts2-cli `084d1aa3d8e118ca7ce8d8774ad16d6be9c92367`, Jev `typesafe/jev-1.13-20260917`. Command: `python3 -m scripts.evaluate_threat_budget_e088`. Raw traces stay ignored; compact results and hashes go in `result.json`.
+
+Decision rule: all 40 raw trace hashes verify, 20/20 initial states match, every first differing action is a same-state legal potion use, actual inventory decrements for every use, at most one authorized spend per combat, and all 40 runs end normally. Exposure >=5 treatment uses. Strength: >=5 deeper pairs, <=2 shallower pairs, no baseline victory converted to defeat, and >=1 additional Act 2 entry. Merge only as opt-in if all gates pass; otherwise close. This is exploratory, not a win-rate estimate.
+
+Implementation/evaluation SHA, exact command, versions, all outcomes, limits and decision will be added after testing.
