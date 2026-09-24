@@ -10,4 +10,16 @@ Frozen cohort: fresh seeds `e088_budget_001`–`_004`, all five characters, Asce
 
 Decision rule: all 40 raw trace hashes verify, 20/20 initial states match, every first differing action is a same-state legal potion use, actual inventory decrements for every use, at most one authorized spend per combat, and all 40 runs end normally. Exposure >=5 treatment uses. Strength: >=5 deeper pairs, <=2 shallower pairs, no baseline victory converted to defeat, and >=1 additional Act 2 entry. Merge only as opt-in if all gates pass; otherwise close. This is exploratory, not a win-rate estimate.
 
-Implementation/evaluation SHA, exact command, versions, all outcomes, limits and decision will be added after testing.
+## Frozen evaluation result
+
+The implementation, tests and evaluator were committed as `1f362222f02dbebd2ef340d22879f8f953d4dc37` **before** game execution. `python3 -m unittest discover -s tests -q` passed 116 tests. Exact command: `python3 -m scripts.evaluate_threat_budget_e088 > artifacts/runs/e088-eval-stdout.log 2>&1`. Original game DLL SHA-256 `9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4`; the pinned headless assembly, patches, dependencies, all configs and outcomes, and raw trace hashes are in [result.json](result.json).
+
+All **40/40** episodes ended in normal defeat, with no error, stall or victory. All 40 raw trace hashes verified; all 20 pairs shared an initial-state hash. The treatment authorized **42** one-potion actions, all verified to remove exactly one potion; at most one authorization occurred per combat. All 20 pairs first diverged at a same-state legal potion action, zero elsewhere. Thus the rule was applied as intended, without proving strength.
+
+Terminal act/floor: treatment **8 deeper, 2 shallower, 10 tied**. By character: Ironclad 1 better/1 worse/2 tied; Silent 2/0/2; Defect 1/1/2; Regent 2/0/2; Necrobinder 2/0/2. Act 1 Boss entries increased from six to seven, but **Act 2 entries remained one per arm**; no complete victory. Uses by treatment character: Ironclad 10, Silent nine, Defect eight, Regent seven, Necrobinder eight. Shared `MatchedJev`: 539 attempted calls, $0.086782332 provider-reported/budgeted spend, zero uncertain calls.
+
+Two regressions warrant scrutiny. Defect `_001` first used Weak Potion at the Act 1 Boss, left that fight at 17 HP versus 5 HP baseline, then died Act 2 floor 5 versus floor 6. Ironclad `_002` first used Swift Potion on Act 1 floor 6, left that fight at 25 HP versus 30 HP baseline, then died floor 8 versus baseline floor 17. Later decisions and random outcomes diverged; these comparisons do not identify a single causal failure. They show that a potion may improve local HP yet fail to improve the full run, and a mandatory spend can itself be harmful. The explicit resource-budget idea, not merely Jev's willingness to reserve, caused much broader exposure than E087.
+
+No real game was operated; E081 remains paused/unconfirmed. This test used a deterministic stand-in for a floor budget, **not** an Astra call each floor. The predicted loss is a current-hand estimate, not a full battle simulation.
+
+Decision: **close without merging under the frozen rule**. Fidelity, exposure, 8-better and at-most-2-worse gates passed, but the required additional Act 2 entry did not. The 8/2/10 direction is promising enough for a separate unchanged-policy held-out cohort; it does not justify changing this gate after the fact or claiming improved win rate. The mainline `retaliate` policy remains the strength baseline.
