@@ -29,7 +29,7 @@ patches = sorted((root / "patches").glob("*.patch"))
 # the full patch stack from the pinned source instead of guessing partial state.
 managed = {line[6:] for patch in patches for line in patch.read_text().splitlines() if line.startswith("+++ b/")}
 for relative in managed:
-    if relative not in {"setup.sh", "src/Sts2Headless/RunSimulator.cs"}:
+    if relative not in {"setup.sh", "src/Sts2Headless/RunSimulator.cs", "src/GodotStubs/Math.cs"}:
         raise RuntimeError(f"Unexpected managed dependency path: {relative}")
     source = subprocess.check_output(["git", "show", lock["headless_commit"] + ":" + relative], cwd=engine)
     (engine / relative).write_bytes(source)
