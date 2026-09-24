@@ -1,0 +1,96 @@
+{
+  "game_run_id": "8X3876DS2JL4",
+  "character": "Ironclad",
+  "ascension": 1,
+  "latest_confirmed": {
+    "floor": 11,
+    "turn": 6,
+    "hp": 20,
+    "max_hp": 87,
+    "screen": "COMBAT"
+  },
+  "stop_reason": "user_requested_pause; overlay and controller stopped; game process subsequently observed absent and MCP unavailable; terminal outcome unknown",
+  "overlay_closed": true,
+  "total_controller_and_single_step_actions": 173,
+  "total_jev_calls": 39,
+  "total_jev_cost_usd": 0.00803775,
+  "segments": [
+    {
+      "file": "e081-segment01.json",
+      "code_sha": "7c8a69d37700abb094c8cd6c3d18be05ca63743a",
+      "status": "error",
+      "accepted_actions": 156,
+      "jev_calls": 36,
+      "jev_cost_usd": 0.0073269,
+      "trace_path": "artifacts/runs/af29b292-6afc-4c3e-b21c-4b2685371598/decisions.jsonl",
+      "trace_sha256": "e0fd99e72429c47b2abf1933cc1ef5e11df8fd2436b80ee16fdf6aff89ecd420",
+      "error": "RuntimeError: MCP wait_until_actionable failed: {'error': {'code': 'internal_error', 'message': 'The game thread did not run the posted action in time.', 'retryable': False}}"
+    },
+    {
+      "file": "e081-segment02.json",
+      "code_sha": "1af7d179a1973ca26593ef3dcaa718bbdba8fea9",
+      "status": "error",
+      "accepted_actions": 4,
+      "jev_calls": 1,
+      "jev_cost_usd": 0.00024549,
+      "trace_path": "artifacts/runs/442f3a82-1bb9-498f-9dd0-87ec9b178481/decisions.jsonl",
+      "trace_sha256": "4e725691fba25bd9a9fb8f55c07abbcae0f133b21af0f2e6d8d18abd48ac2fe8",
+      "error": "RuntimeError: MCP wait_until_actionable failed: {'error': {'code': 'internal_error', 'message': 'The game thread did not run the posted action in time.', 'retryable': False}}"
+    },
+    {
+      "file": "e082-segment01.json",
+      "code_sha": "674a8bbb77b012cb13186f0d0ddd33678b856b60",
+      "status": "expert_required",
+      "accepted_actions": 0,
+      "jev_calls": 0,
+      "jev_cost_usd": 0.0,
+      "trace_path": "artifacts/runs/6618e052-2099-48f1-b3cf-e3ed408be7d0/decisions.jsonl",
+      "trace_sha256": "fe97ca38fb7ffbb1ea12ae97cab2f4656b712db6ec65c8254fc4aa973668c321",
+      "error": null
+    },
+    {
+      "file": "e082-segment02.json",
+      "code_sha": "674a8bbb77b012cb13186f0d0ddd33678b856b60",
+      "status": "expert_required",
+      "accepted_actions": 6,
+      "jev_calls": 2,
+      "jev_cost_usd": 0.00046536,
+      "trace_path": "artifacts/runs/1430eaec-b595-4d33-83de-4a60ea71e0d4/decisions.jsonl",
+      "trace_sha256": "675bf50d42a500d39eb59b9ed7236735508ad1b0ce1d34b7784bde8dca43cd92",
+      "error": null
+    },
+    {
+      "file": "e081-floor11-turn5-colorless-step.json",
+      "code_sha": "674a8bbb77b012cb13186f0d0ddd33678b856b60",
+      "status": "accepted",
+      "accepted_actions": 1,
+      "jev_calls": 0,
+      "jev_cost_usd": 0,
+      "trace_path": "artifacts/runs/bf132f71-828b-4860-a1e7-b4547e155df3/decisions.jsonl",
+      "trace_sha256": "7e11bae2e7a2dac7ca11b8a3649340b2cc72fb278703ec44c3c2cad69eeadbc1",
+      "error": null
+    },
+    {
+      "file": "e081-floor11-turn5-shockwave-step.json",
+      "code_sha": "674a8bbb77b012cb13186f0d0ddd33678b856b60",
+      "status": "accepted",
+      "accepted_actions": 1,
+      "jev_calls": 0,
+      "jev_cost_usd": 0,
+      "trace_path": "artifacts/runs/aef29aa4-2f28-44bd-9908-79b4b221a605/decisions.jsonl",
+      "trace_sha256": "48833e04f25d55a8c34e4fc6efcd76866c192447385cffe859aafcd03e9b5dad",
+      "error": null
+    },
+    {
+      "file": "e082-segment03.json",
+      "code_sha": "674a8bbb77b012cb13186f0d0ddd33678b856b60",
+      "status": "expert_required",
+      "accepted_actions": 5,
+      "jev_calls": 0,
+      "jev_cost_usd": 0.0,
+      "trace_path": "artifacts/runs/8e2cda91-9ea3-4526-983e-946f3405a60f/decisions.jsonl",
+      "trace_sha256": "8726c0ad1c33d63b2ef211866b4ef48c31aea24d3976e4c8374e330f670a7f75",
+      "error": null
+    }
+  ]
+}
