@@ -1,0 +1,1027 @@
+{
+  "schema_version": 1,
+  "experiment": "E090",
+  "manifest": {
+    "schema_version": 1,
+    "code_commit": "98c64a909d27d6f8a8aff402438c2c0dc8f69de5",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "ad5fc0f5958958d5a0473b81525642bbc8ddff33ea07d90fe675b6f3fdfc99ad",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+  },
+  "fixture_sha256": "3fa52fcbe026bf33cfce34050dfb3943cc1cbd03cf529e7f308c06066d5f27b0",
+  "plans_sha256": "3b72219101b04938d6332d57c0455a93d5d38d8b0a6012e2c5e0a417b5450df1",
+  "configs": [
+    {
+      "case_id": "e089_holdout_004_ironclad",
+      "arm": "baseline",
+      "character": "Ironclad",
+      "seed": "e089_holdout_004",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "expected_entry_hash": "31a8293063704d7671f874bb7df624d29af299193365fdf4b8933e560c81f280",
+      "stop_after_boss_room": true
+    },
+    {
+      "case_id": "e089_holdout_004_ironclad",
+      "arm": "treatment",
+      "character": "Ironclad",
+      "seed": "e089_holdout_004",
+      "ascension": 10,
+      "policy": "retaliate_boss_plan",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "expected_entry_hash": "31a8293063704d7671f874bb7df624d29af299193365fdf4b8933e560c81f280",
+      "stop_after_boss_room": true
+    },
+    {
+      "case_id": "e089_holdout_005_silent",
+      "arm": "baseline",
+      "character": "Silent",
+      "seed": "e089_holdout_005",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "expected_entry_hash": "85ecfd5745b42f082a9dcefb39dbc2c458121662c860ddf4e36b356906d8cab2",
+      "stop_after_boss_room": true
+    },
+    {
+      "case_id": "e089_holdout_005_silent",
+      "arm": "treatment",
+      "character": "Silent",
+      "seed": "e089_holdout_005",
+      "ascension": 10,
+      "policy": "retaliate_boss_plan",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "expected_entry_hash": "85ecfd5745b42f082a9dcefb39dbc2c458121662c860ddf4e36b356906d8cab2",
+      "stop_after_boss_room": true
+    },
+    {
+      "case_id": "e089_holdout_006_regent",
+      "arm": "baseline",
+      "character": "Regent",
+      "seed": "e089_holdout_006",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "expected_entry_hash": "3679b4817453aa694485577a4c96b4f48418223e45c58badd90a5dea71585227",
+      "stop_after_boss_room": true
+    },
+    {
+      "case_id": "e089_holdout_006_regent",
+      "arm": "treatment",
+      "character": "Regent",
+      "seed": "e089_holdout_006",
+      "ascension": 10,
+      "policy": "retaliate_boss_plan",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "expected_entry_hash": "3679b4817453aa694485577a4c96b4f48418223e45c58badd90a5dea71585227",
+      "stop_after_boss_room": true
+    },
+    {
+      "case_id": "e089_holdout_006_necrobinder",
+      "arm": "baseline",
+      "character": "Necrobinder",
+      "seed": "e089_holdout_006",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "expected_entry_hash": "76481a103e36f5ac1872c50520db88d02d5087de07889abedd07e059b0a66ddb",
+      "stop_after_boss_room": true
+    },
+    {
+      "case_id": "e089_holdout_006_necrobinder",
+      "arm": "treatment",
+      "character": "Necrobinder",
+      "seed": "e089_holdout_006",
+      "ascension": 10,
+      "policy": "retaliate_boss_plan",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "expected_entry_hash": "76481a103e36f5ac1872c50520db88d02d5087de07889abedd07e059b0a66ddb",
+      "stop_after_boss_room": true
+    }
+  ],
+  "results": [
+    {
+      "case_id": "e089_holdout_004_ironclad",
+      "arm": "baseline",
+      "character": "Ironclad",
+      "seed": "e089_holdout_004",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "expected_entry_hash": "31a8293063704d7671f874bb7df624d29af299193365fdf4b8933e560c81f280",
+      "stop_after_boss_room": true,
+      "run_id": "196bb610-111f-4314-949a-20f5ea0e8df2",
+      "status": "normal_defeat",
+      "steps": 45,
+      "model_calls": 0,
+      "cost_usd": 0.0,
+      "initial_state_hash": "31a8293063704d7671f874bb7df624d29af299193365fdf4b8933e560c81f280",
+      "boss_cleared": false,
+      "engine_log_sha256": "18994eaee3057a0b03f192e82f316538178272d35ea2c7639bc1e6b760e0a734",
+      "act": 1,
+      "floor": 17,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 11.557,
+      "scenes": {
+        "combat_play": 46
+      },
+      "trace_path": "artifacts/runs/196bb610-111f-4314-949a-20f5ea0e8df2/decisions.jsonl",
+      "trace_sha256": "3d311756967a040ad9f1a75970dc956b252b3bd3635159f44fa0b2bc081dd9ab",
+      "trace_verified": true,
+      "entry_verified": true,
+      "plan_verified": true,
+      "plan_decisions": [],
+      "plan_exposed": true,
+      "plan_scope_valid": true,
+      "all_selected_legal": true,
+      "potion_transitions_valid": true,
+      "potion_uses": 0,
+      "potion_budget_valid": true,
+      "boundary_verified": true,
+      "boundary": {
+        "status": "normal_defeat",
+        "state_hash": "775ed0374a88e66e1199caaeca578bde219b7125f50a0e17024a1ba4f40b4215",
+        "hp": 0
+      },
+      "max_round": 14,
+      "last_enemy_hp": 63,
+      "prefix_action_count": 191
+    },
+    {
+      "case_id": "e089_holdout_004_ironclad",
+      "arm": "treatment",
+      "character": "Ironclad",
+      "seed": "e089_holdout_004",
+      "ascension": 10,
+      "policy": "retaliate_boss_plan",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "expected_entry_hash": "31a8293063704d7671f874bb7df624d29af299193365fdf4b8933e560c81f280",
+      "stop_after_boss_room": true,
+      "run_id": "9d70521b-0738-4bb9-890f-7cea85a4d381",
+      "status": "boss_room_cleared",
+      "steps": 30,
+      "model_calls": 11,
+      "cost_usd": 0.002240028,
+      "initial_state_hash": "31a8293063704d7671f874bb7df624d29af299193365fdf4b8933e560c81f280",
+      "cache_hits": 0,
+      "boss_potions_used": 2,
+      "boss_cleared": true,
+      "engine_log_sha256": "04541fe27ac6da75dbaf72465ee4686b426d1bfe574cd824be88cb3e4d4e4e86",
+      "act": 1,
+      "floor": 17,
+      "final_decision": "card_reward",
+      "final_hp": 17,
+      "seconds": 22.637,
+      "scenes": {
+        "combat_play": 31
+      },
+      "trace_path": "artifacts/runs/9d70521b-0738-4bb9-890f-7cea85a4d381/decisions.jsonl",
+      "trace_sha256": "ba8e59896c94491822b60dfaed020ce2a51dc5f82aa91b56c533b26072b3e621",
+      "trace_verified": true,
+      "entry_verified": true,
+      "plan_verified": true,
+      "plan_decisions": [
+        {
+          "state_hash": "31a8293063704d7671f874bb7df624d29af299193365fdf4b8933e560c81f280",
+          "round": 1,
+          "in_scope": true,
+          "duplicator_followup": false,
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 1
+            }
+          }
+        },
+        {
+          "state_hash": "96015e8e6f88349e6910dfaa094e69e1291cef10cb02b65b7db5ab068ca1a44e",
+          "round": 2,
+          "in_scope": true,
+          "duplicator_followup": false,
+          "action": {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 4,
+              "target_index": 0
+            }
+          }
+        },
+        {
+          "state_hash": "eeeab512407ad41debb1358e99e900e0234a94e7affb29e863efd8ed36fccfed",
+          "round": 3,
+          "in_scope": true,
+          "duplicator_followup": false,
+          "action": {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 2
+            }
+          }
+        },
+        {
+          "state_hash": "c62c1f292f2013e9f4e7ab72013343ab07518524c3568c4e109ddfaa224b5d1c",
+          "round": 4,
+          "in_scope": true,
+          "duplicator_followup": false,
+          "action": {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 0,
+              "target_index": 0
+            }
+          }
+        },
+        {
+          "state_hash": "5cdeccf1266c7cf68ea758644c96372ba9ecc5fb3af48e064bb98d0645836391",
+          "round": 5,
+          "in_scope": true,
+          "duplicator_followup": false,
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        },
+        {
+          "state_hash": "26a4b3a9c498c2d1f5c863cbe42e50f4d4b86c7b5cab2fcc988dd9dfa9f42656",
+          "round": 5,
+          "in_scope": true,
+          "duplicator_followup": true,
+          "action": {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 0,
+              "target_index": 0
+            }
+          }
+        },
+        {
+          "state_hash": "316ef2930f09e71a932bef16b5909aeaca1ac33976ce79a53224065b2ca43b80",
+          "round": 6,
+          "in_scope": true,
+          "duplicator_followup": false,
+          "action": {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 4,
+              "target_index": 0
+            }
+          }
+        },
+        {
+          "state_hash": "f0d99653c8b5d74b44a3e595477e648129b50b4c258e70c658d083bd9001e9e7",
+          "round": 7,
+          "in_scope": true,
+          "duplicator_followup": false,
+          "action": {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 0,
+              "target_index": 0
+            }
+          }
+        },
+        {
+          "state_hash": "82c14f36e79612d8b8c637af186faa982230dcc33e0de7cb964a3811635b3f00",
+          "round": 8,
+          "in_scope": true,
+          "duplicator_followup": false,
+          "action": {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 4,
+              "target_index": 0
+            }
+          }
+        },
+        {
+          "state_hash": "c2b29223758f0ac65765799afe8df8ab975de7b93e5ce2ecefa97111071c60d6",
+          "round": 9,
+          "in_scope": true,
+          "duplicator_followup": false,
+          "action": {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 2,
+              "target_index": 0
+            }
+          }
+        },
+        {
+          "state_hash": "8e055354c6b19a811598438a4de57bc4c3542e6cc4975797b1ad159bd66b4955",
+          "round": 10,
+          "in_scope": true,
+          "duplicator_followup": false,
+          "action": {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 0,
+              "target_index": 0
+            }
+          }
+        }
+      ],
+      "plan_exposed": true,
+      "plan_scope_valid": true,
+      "all_selected_legal": true,
+      "potion_transitions_valid": true,
+      "potion_uses": 2,
+      "potion_budget_valid": true,
+      "boundary_verified": true,
+      "boundary": {
+        "status": "boss_room_cleared",
+        "state_hash": "44a8bdd9976e93db9cbdcac16fa3f9c2c9a5c477807b09465d475ccc5cb729d1",
+        "hp": 17
+      },
+      "max_round": 10,
+      "last_enemy_hp": 4,
+      "prefix_action_count": 191
+    },
+    {
+      "case_id": "e089_holdout_005_silent",
+      "arm": "baseline",
+      "character": "Silent",
+      "seed": "e089_holdout_005",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "expected_entry_hash": "85ecfd5745b42f082a9dcefb39dbc2c458121662c860ddf4e36b356906d8cab2",
+      "stop_after_boss_room": true,
+      "run_id": "35e8abf1-4133-4944-9c4c-27366170a8bf",
+      "status": "normal_defeat",
+      "steps": 31,
+      "model_calls": 3,
+      "cost_usd": 0.000541506,
+      "initial_state_hash": "85ecfd5745b42f082a9dcefb39dbc2c458121662c860ddf4e36b356906d8cab2",
+      "cache_hits": 0,
+      "boss_cleared": false,
+      "engine_log_sha256": "d519a3cc11445771a94c39cf8ea85ab76247ebebabc3c14c20443b7353abf359",
+      "act": 1,
+      "floor": 17,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 10.542,
+      "scenes": {
+        "combat_play": 29,
+        "card_select": 3
+      },
+      "trace_path": "artifacts/runs/35e8abf1-4133-4944-9c4c-27366170a8bf/decisions.jsonl",
+      "trace_sha256": "ae75d5f8cc5123694ca6430ec78f75cbefd6bc5f34fad6818c2c579d47aca8aa",
+      "trace_verified": true,
+      "entry_verified": true,
+      "plan_verified": true,
+      "plan_decisions": [],
+      "plan_exposed": true,
+      "plan_scope_valid": true,
+      "all_selected_legal": true,
+      "potion_transitions_valid": true,
+      "potion_uses": 0,
+      "potion_budget_valid": true,
+      "boundary_verified": true,
+      "boundary": {
+        "status": "normal_defeat",
+        "state_hash": "b475ade3505dacb6f861fcc5eef8fe37cba028b7321fb367de1b86fb57214f1b",
+        "hp": 0
+      },
+      "max_round": 7,
+      "last_enemy_hp": 117,
+      "prefix_action_count": 161
+    },
+    {
+      "case_id": "e089_holdout_005_silent",
+      "arm": "treatment",
+      "character": "Silent",
+      "seed": "e089_holdout_005",
+      "ascension": 10,
+      "policy": "retaliate_boss_plan",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "expected_entry_hash": "85ecfd5745b42f082a9dcefb39dbc2c458121662c860ddf4e36b356906d8cab2",
+      "stop_after_boss_room": true,
+      "run_id": "d685b3cb-2eda-4e6e-91c2-8dacc21e14ea",
+      "status": "normal_defeat",
+      "steps": 37,
+      "model_calls": 11,
+      "cost_usd": 0.002129358,
+      "initial_state_hash": "85ecfd5745b42f082a9dcefb39dbc2c458121662c860ddf4e36b356906d8cab2",
+      "cache_hits": 0,
+      "boss_cleared": false,
+      "engine_log_sha256": "e953118401b23684e9fe3b3c4fb291ba90c92f45d22e57a3527f7bec9885a5ce",
+      "act": 1,
+      "floor": 17,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 20.439,
+      "scenes": {
+        "combat_play": 34,
+        "card_select": 4
+      },
+      "trace_path": "artifacts/runs/d685b3cb-2eda-4e6e-91c2-8dacc21e14ea/decisions.jsonl",
+      "trace_sha256": "a7cd2a0e86978d0bcc4926214e1ddb4ccf8f382b27f4bdf9cbd62bf176af11c5",
+      "trace_verified": true,
+      "entry_verified": true,
+      "plan_verified": true,
+      "plan_decisions": [
+        {
+          "state_hash": "85ecfd5745b42f082a9dcefb39dbc2c458121662c860ddf4e36b356906d8cab2",
+          "round": 1,
+          "in_scope": true,
+          "duplicator_followup": false,
+          "action": {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 1,
+              "target_index": 0
+            }
+          }
+        },
+        {
+          "state_hash": "171144ce68173804bc993dbdd44f2e10e19755fa8c75e74a9ff1ab71a6b1b0ae",
+          "round": 2,
+          "in_scope": true,
+          "duplicator_followup": false,
+          "action": {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 1,
+              "target_index": 0
+            }
+          }
+        },
+        {
+          "state_hash": "ac4cda9461da4c8567525728293b7cb8ebdd0c4d63ce68f500c14c00eba26230",
+          "round": 3,
+          "in_scope": true,
+          "duplicator_followup": false,
+          "action": {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 3
+            }
+          }
+        },
+        {
+          "state_hash": "ff1f21f37c0df049931b9e18f2bee552816aa9b8295fcb7df844b767a6f1c98d",
+          "round": 4,
+          "in_scope": true,
+          "duplicator_followup": false,
+          "action": {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 0,
+              "target_index": 0
+            }
+          }
+        },
+        {
+          "state_hash": "48de541a873b576370a8519c62d257954f7a002cc1993ee68cbded22ed50b18b",
+          "round": 5,
+          "in_scope": true,
+          "duplicator_followup": false,
+          "action": {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 4,
+              "target_index": 0
+            }
+          }
+        },
+        {
+          "state_hash": "8a1762de6174a674e4bf3e87149ec5feed09dfebea4643a855f4fd785985bf00",
+          "round": 6,
+          "in_scope": true,
+          "duplicator_followup": false,
+          "action": {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 4,
+              "target_index": 0
+            }
+          }
+        },
+        {
+          "state_hash": "fff674b9628975ba27161f4bef6f8d92ce505748f2e283884d0d0070681a41db",
+          "round": 7,
+          "in_scope": true,
+          "duplicator_followup": false,
+          "action": {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 0
+            }
+          }
+        }
+      ],
+      "plan_exposed": true,
+      "plan_scope_valid": true,
+      "all_selected_legal": true,
+      "potion_transitions_valid": true,
+      "potion_uses": 0,
+      "potion_budget_valid": true,
+      "boundary_verified": true,
+      "boundary": {
+        "status": "normal_defeat",
+        "state_hash": "b475ade3505dacb6f861fcc5eef8fe37cba028b7321fb367de1b86fb57214f1b",
+        "hp": 0
+      },
+      "max_round": 7,
+      "last_enemy_hp": 87,
+      "prefix_action_count": 161
+    },
+    {
+      "case_id": "e089_holdout_006_regent",
+      "arm": "baseline",
+      "character": "Regent",
+      "seed": "e089_holdout_006",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "expected_entry_hash": "3679b4817453aa694485577a4c96b4f48418223e45c58badd90a5dea71585227",
+      "stop_after_boss_room": true,
+      "run_id": "75861091-7ec7-482c-9c5a-031fbc6cd97e",
+      "status": "normal_defeat",
+      "steps": 25,
+      "model_calls": 1,
+      "cost_usd": 0.00016506,
+      "initial_state_hash": "3679b4817453aa694485577a4c96b4f48418223e45c58badd90a5dea71585227",
+      "cache_hits": 0,
+      "boss_cleared": false,
+      "engine_log_sha256": "815ef2c91a9833206b2db0a3be146450666e08cbf1bcf612c1eca946e1cf7d08",
+      "act": 1,
+      "floor": 17,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 7.339,
+      "scenes": {
+        "combat_play": 25,
+        "card_select": 1
+      },
+      "trace_path": "artifacts/runs/75861091-7ec7-482c-9c5a-031fbc6cd97e/decisions.jsonl",
+      "trace_sha256": "40a2793833708b9a1df2d0d2f99ce8aea0df552d3f4f61e8d13e0fd4b8f8187b",
+      "trace_verified": true,
+      "entry_verified": true,
+      "plan_verified": true,
+      "plan_decisions": [],
+      "plan_exposed": true,
+      "plan_scope_valid": true,
+      "all_selected_legal": true,
+      "potion_transitions_valid": true,
+      "potion_uses": 0,
+      "potion_budget_valid": true,
+      "boundary_verified": true,
+      "boundary": {
+        "status": "normal_defeat",
+        "state_hash": "0ad134326a25dfc2ff3edbb1448a60e5906a65b8f5b79b11b5872202fa168d79",
+        "hp": 0
+      },
+      "max_round": 6,
+      "last_enemy_hp": 248,
+      "prefix_action_count": 152
+    },
+    {
+      "case_id": "e089_holdout_006_regent",
+      "arm": "treatment",
+      "character": "Regent",
+      "seed": "e089_holdout_006",
+      "ascension": 10,
+      "policy": "retaliate_boss_plan",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "expected_entry_hash": "3679b4817453aa694485577a4c96b4f48418223e45c58badd90a5dea71585227",
+      "stop_after_boss_room": true,
+      "run_id": "1b5d390b-42d9-4c36-be18-9e8717939afe",
+      "status": "normal_defeat",
+      "steps": 26,
+      "model_calls": 7,
+      "cost_usd": 0.00140427,
+      "initial_state_hash": "3679b4817453aa694485577a4c96b4f48418223e45c58badd90a5dea71585227",
+      "cache_hits": 0,
+      "boss_potions_used": 1,
+      "boss_cleared": false,
+      "engine_log_sha256": "861db2a5975618fad2d5cb30db2c66102e32aabe528b9132d3a170f361a713ae",
+      "act": 1,
+      "floor": 17,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 15.765,
+      "scenes": {
+        "combat_play": 26,
+        "card_select": 1
+      },
+      "trace_path": "artifacts/runs/1b5d390b-42d9-4c36-be18-9e8717939afe/decisions.jsonl",
+      "trace_sha256": "135c5d5cb59ca0a3dc341ff7f69f6be92403a5e8bac759a70afbe9f71c365ef1",
+      "trace_verified": true,
+      "entry_verified": true,
+      "plan_verified": true,
+      "plan_decisions": [
+        {
+          "state_hash": "3679b4817453aa694485577a4c96b4f48418223e45c58badd90a5dea71585227",
+          "round": 1,
+          "in_scope": true,
+          "duplicator_followup": false,
+          "action": {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 3
+            }
+          }
+        },
+        {
+          "state_hash": "60eae1cdd2cbd279ae3dfcbd28a55c7fa4702cea2a20f914493910c24bf046fb",
+          "round": 2,
+          "in_scope": true,
+          "duplicator_followup": false,
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 1
+            }
+          }
+        },
+        {
+          "state_hash": "1ab78dec4878d3cd402003bb8ac7acf2945120bc1bb673f8fc4c8552f4309853",
+          "round": 3,
+          "in_scope": true,
+          "duplicator_followup": false,
+          "action": {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 4
+            }
+          }
+        },
+        {
+          "state_hash": "156b51064938d42443b3bd1451b1a9b80700b76478460b3b032fabaec7c0e064",
+          "round": 4,
+          "in_scope": true,
+          "duplicator_followup": false,
+          "action": {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 0,
+              "target_index": 2
+            }
+          }
+        },
+        {
+          "state_hash": "2b82d8f99ff21a3d6186a4e22aeb699fc4559c4edcf8271208b29e858fcc2b13",
+          "round": 5,
+          "in_scope": true,
+          "duplicator_followup": false,
+          "action": {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 2
+            }
+          }
+        },
+        {
+          "state_hash": "cb2980a8e2e6bf77698ebd6eb2da51d6a389b6e00ceb6ffd0351ab6578023b85",
+          "round": 6,
+          "in_scope": true,
+          "duplicator_followup": false,
+          "action": {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 1
+            }
+          }
+        }
+      ],
+      "plan_exposed": true,
+      "plan_scope_valid": true,
+      "all_selected_legal": true,
+      "potion_transitions_valid": true,
+      "potion_uses": 1,
+      "potion_budget_valid": true,
+      "boundary_verified": true,
+      "boundary": {
+        "status": "normal_defeat",
+        "state_hash": "b58bca0c42b95dce7776d26b2a01a2f8ab31c977553bd1e3f1c67abd16476721",
+        "hp": 0
+      },
+      "max_round": 6,
+      "last_enemy_hp": 248,
+      "prefix_action_count": 152
+    },
+    {
+      "case_id": "e089_holdout_006_necrobinder",
+      "arm": "baseline",
+      "character": "Necrobinder",
+      "seed": "e089_holdout_006",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "expected_entry_hash": "76481a103e36f5ac1872c50520db88d02d5087de07889abedd07e059b0a66ddb",
+      "stop_after_boss_room": true,
+      "run_id": "fe7d601d-ae57-4df8-a9eb-86e1e50c2c03",
+      "status": "normal_defeat",
+      "steps": 47,
+      "model_calls": 1,
+      "cost_usd": 0.000418572,
+      "initial_state_hash": "76481a103e36f5ac1872c50520db88d02d5087de07889abedd07e059b0a66ddb",
+      "cache_hits": 0,
+      "boss_cleared": false,
+      "engine_log_sha256": "3b2a35dc7e7f5106685aa86e149641591a94b241775e790488f42ba9bf3477a5",
+      "act": 1,
+      "floor": 17,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 7.887,
+      "scenes": {
+        "combat_play": 47,
+        "card_select": 1
+      },
+      "trace_path": "artifacts/runs/fe7d601d-ae57-4df8-a9eb-86e1e50c2c03/decisions.jsonl",
+      "trace_sha256": "9be05dba80afb448b44b8d326e71a537a0f1dd0d855e2869b74bbfaf12958fdf",
+      "trace_verified": true,
+      "entry_verified": true,
+      "plan_verified": true,
+      "plan_decisions": [],
+      "plan_exposed": true,
+      "plan_scope_valid": true,
+      "all_selected_legal": true,
+      "potion_transitions_valid": true,
+      "potion_uses": 0,
+      "potion_budget_valid": true,
+      "boundary_verified": true,
+      "boundary": {
+        "status": "normal_defeat",
+        "state_hash": "035d31ad245b488467d81d22f53db88e44d62c2cf5be9b68410ffd415a6e07c0",
+        "hp": 0
+      },
+      "max_round": 9,
+      "last_enemy_hp": 142,
+      "prefix_action_count": 146
+    },
+    {
+      "case_id": "e089_holdout_006_necrobinder",
+      "arm": "treatment",
+      "character": "Necrobinder",
+      "seed": "e089_holdout_006",
+      "ascension": 10,
+      "policy": "retaliate_boss_plan",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "expected_entry_hash": "76481a103e36f5ac1872c50520db88d02d5087de07889abedd07e059b0a66ddb",
+      "stop_after_boss_room": true,
+      "run_id": "9ca52320-1a28-4810-ab53-56d7159df58a",
+      "status": "normal_defeat",
+      "steps": 36,
+      "model_calls": 8,
+      "cost_usd": 0.0021122220000000004,
+      "initial_state_hash": "76481a103e36f5ac1872c50520db88d02d5087de07889abedd07e059b0a66ddb",
+      "cache_hits": 0,
+      "boss_cleared": false,
+      "engine_log_sha256": "b7dc7f2071d733afe0608caeb49a857dbcc5b68f17adff818b233a384e3c43e3",
+      "act": 1,
+      "floor": 17,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 13.945,
+      "scenes": {
+        "combat_play": 36,
+        "card_select": 1
+      },
+      "trace_path": "artifacts/runs/9ca52320-1a28-4810-ab53-56d7159df58a/decisions.jsonl",
+      "trace_sha256": "24da767b8fae1392a7bde8ec5a59a61e984c55c34aa317a7784a5aca886b7777",
+      "trace_verified": true,
+      "entry_verified": true,
+      "plan_verified": true,
+      "plan_decisions": [
+        {
+          "state_hash": "76481a103e36f5ac1872c50520db88d02d5087de07889abedd07e059b0a66ddb",
+          "round": 1,
+          "in_scope": true,
+          "duplicator_followup": false,
+          "action": {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 0,
+              "target_index": 2
+            }
+          }
+        },
+        {
+          "state_hash": "383029bc51b5a28d7675a8e94a09fdcab856f40f7285b96e25a9e455bf2694f2",
+          "round": 2,
+          "in_scope": true,
+          "duplicator_followup": false,
+          "action": {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 0
+            }
+          }
+        },
+        {
+          "state_hash": "de985422f0342db1069cca055860050189a85c5abff55b4c23263099bb926b9f",
+          "round": 3,
+          "in_scope": true,
+          "duplicator_followup": false,
+          "action": {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 4
+            }
+          }
+        },
+        {
+          "state_hash": "8c6dfdc8cbf59060ec0a0fd8a367220cb987071ba494c2191c6ee75fdae6807f",
+          "round": 4,
+          "in_scope": true,
+          "duplicator_followup": false,
+          "action": {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 1
+            }
+          }
+        },
+        {
+          "state_hash": "fc63272a87cf7ea5c40a274050219249b076536dbd93045bb9ffd5f5c3f9c14f",
+          "round": 5,
+          "in_scope": true,
+          "duplicator_followup": false,
+          "action": {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 0,
+              "target_index": 2
+            }
+          }
+        },
+        {
+          "state_hash": "f402b6c4306dcad75139591508a0eb3294cdb4e90e090385bd831b40cf3eab22",
+          "round": 6,
+          "in_scope": true,
+          "duplicator_followup": false,
+          "action": {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 4,
+              "target_index": 0
+            }
+          }
+        },
+        {
+          "state_hash": "c7e16c18db621fc25101539fae725bf9822be073ac103eff9b6f1d380fdcf1ce",
+          "round": 7,
+          "in_scope": true,
+          "duplicator_followup": false,
+          "action": {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 3,
+              "target_index": 1
+            }
+          }
+        }
+      ],
+      "plan_exposed": true,
+      "plan_scope_valid": true,
+      "all_selected_legal": true,
+      "potion_transitions_valid": true,
+      "potion_uses": 0,
+      "potion_budget_valid": true,
+      "boundary_verified": true,
+      "boundary": {
+        "status": "normal_defeat",
+        "state_hash": "035d31ad245b488467d81d22f53db88e44d62c2cf5be9b68410ffd415a6e07c0",
+        "hp": 0
+      },
+      "max_round": 7,
+      "last_enemy_hp": 199,
+      "prefix_action_count": 146
+    }
+  ],
+  "pairs": [
+    {
+      "case_id": "e089_holdout_004_ironclad",
+      "character": "Ironclad",
+      "boss": "Ceremonial Beast",
+      "baseline_status": "normal_defeat",
+      "treatment_status": "boss_room_cleared",
+      "baseline_cleared": false,
+      "treatment_cleared": true,
+      "baseline_max_round": 14,
+      "treatment_max_round": 10,
+      "baseline_last_enemy_hp": 63,
+      "treatment_last_enemy_hp": 4,
+      "treatment_potion_uses": 2
+    },
+    {
+      "case_id": "e089_holdout_005_silent",
+      "character": "Silent",
+      "boss": "Vantom",
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_cleared": false,
+      "treatment_cleared": false,
+      "baseline_max_round": 7,
+      "treatment_max_round": 7,
+      "baseline_last_enemy_hp": 117,
+      "treatment_last_enemy_hp": 87,
+      "treatment_potion_uses": 0
+    },
+    {
+      "case_id": "e089_holdout_006_regent",
+      "character": "Regent",
+      "boss": "Kin Priest",
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_cleared": false,
+      "treatment_cleared": false,
+      "baseline_max_round": 6,
+      "treatment_max_round": 6,
+      "baseline_last_enemy_hp": 248,
+      "treatment_last_enemy_hp": 248,
+      "treatment_potion_uses": 1
+    },
+    {
+      "case_id": "e089_holdout_006_necrobinder",
+      "character": "Necrobinder",
+      "boss": "Kin Priest",
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_cleared": false,
+      "treatment_cleared": false,
+      "baseline_max_round": 9,
+      "treatment_max_round": 7,
+      "baseline_last_enemy_hp": 142,
+      "treatment_last_enemy_hp": 199,
+      "treatment_potion_uses": 0
+    }
+  ],
+  "trace_hashes_verified": 8,
+  "budget": {
+    "attempted_calls": 42,
+    "provider_reported_cost_usd": 0.009011016,
+    "budgeted_spend_usd": 0.009011015999999998,
+    "uncertain_calls": 0,
+    "estimated_unknown_usd": 0.0
+  }
+}
