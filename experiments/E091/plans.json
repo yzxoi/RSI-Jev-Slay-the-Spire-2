@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "plans": [
+    {
+      "case_id": "e089_holdout_004_ironclad",
+      "entry_state_hash": "31a8293063704d7671f874bb7df624d29af299193365fdf4b8933e560c81f280",
+      "act": 1,
+      "floor": 17,
+      "boss_id": "CEREMONIAL_BEAST_BOSS",
+      "max_potions": 3,
+      "guidance": "Ceremonial Beast has 262 HP and is buffing on turn 1. This deck has little repeatable damage but carries Strength Potion (+2), Duplicator and Explosive Ampoule. Spend Strength Potion early for the full fight. Use Bash/Vulnerable before high-impact attacks where possible. Reserve Duplicator for a valuable attack such as Perfected Strike or a strong defensive turn; after drinking it, deliberately choose the next card because it will be doubled. Explosive Ampoule is for a kill or meaningful damage before a dangerous attack. On buff turns advance damage; on attack turns compare current HP loss against the longer fight caused by excessive Defends. Do not assume card text placeholders are computed values.",
+      "opening_actions": [
+        {
+          "kind": "potion",
+          "potion_name": "Strength Potion"
+        }
+      ]
+    },
+    {
+      "case_id": "e089_holdout_005_silent",
+      "entry_state_hash": "85ecfd5745b42f082a9dcefb39dbc2c458121662c860ddf4e36b356906d8cab2",
+      "act": 1,
+      "floor": 17,
+      "boss_id": "VANTOM_BOSS",
+      "max_potions": 2,
+      "guidance": "Vantom begins with Slippery 9: each of its next HP-loss events is capped at 1. Strip these charges with cheap/multiple hits, especially Leading Strike and its Shivs, before spending 2 energy on Predator/Pounce or a Vulnerable Potion for burst. Power Potion is free this turn; use it early if it offers persistent output or prevention. Neutralize can reduce an attacking turn. After Slippery is gone, prioritize efficient damage and Predator's next-turn draw while preserving enough HP to survive the next intent. Re-read the current powers and hand each turn; do not assume Slippery remains at its entry value.",
+      "opening_actions": [
+        {
+          "kind": "potion",
+          "potion_name": "Power Potion"
+        }
+      ]
+    },
+    {
+      "case_id": "e089_holdout_006_regent",
+      "entry_state_hash": "3679b4817453aa694485577a4c96b4f48418223e45c58badd90a5dea71585227",
+      "act": 1,
+      "floor": 17,
+      "boss_id": "THE_KIN_BOSS",
+      "max_potions": 2,
+      "guidance": "Kin Priest starts with two Minion followers; they leave when the leader dies. Current hand has 0-cost Astral Pulse hitting all enemies twice, Venerate for Stars, and Manifest Authority for block plus a generated card. Use Astral Pulse early to make progress on every target; do not spend most damage removing followers while the leader remains at 199 HP unless that removes meaningful incoming damage. Budget Stars for repeated useful plays, not generation without a payoff. Duplicator is strongest immediately before a high-value AoE or other decisive card; deliberately choose that next card. Energy Potion can enable a turn that both blocks the visible 14 incoming damage and develops damage/Stars. Recheck actual hand and enemy intents after each action.",
+      "opening_actions": [
+        {
+          "kind": "potion",
+          "potion_name": "Duplicator"
+        },
+        {
+          "kind": "card",
+          "card_id": "CARD.ASTRAL_PULSE"
+        }
+      ]
+    },
+    {
+      "case_id": "e089_holdout_006_necrobinder",
+      "entry_state_hash": "76481a103e36f5ac1872c50520db88d02d5087de07889abedd07e059b0a66ddb",
+      "act": 1,
+      "floor": 17,
+      "boss_id": "THE_KIN_BOSS",
+      "max_potions": 2,
+      "guidance": "Kin Priest has 199 HP plus two followers that leave when he dies. This deck's clearest long-fight damage is Doom from No Escape/Negative Pulse and Osty-linked Unleash; direct Strikes alone are unlikely to finish in time. Apply Doom to the leader early, then preserve enough HP and Osty strength for it to resolve. Duplicator can be valuable immediately before a strong No Escape or high-impact card; deliberately select that next card. Energy Potion is for a turn that adds Doom/draw while covering the visible 14 incoming damage, not an empty-energy turn. Followers may deserve attacks when one kill removes significant incoming damage, but keep the leader's clock in view. Re-evaluate actual Doom, Osty HP and intents every turn.",
+      "opening_actions": [
+        {
+          "kind": "potion",
+          "potion_name": "Duplicator"
+        },
+        {
+          "kind": "card",
+          "card_id": "CARD.NO_ESCAPE",
+          "target_name": "Kin Priest"
+        }
+      ]
+    }
+  ]
+}
