@@ -1,0 +1,9 @@
+# E082 — read-only recovery after completed action's wait timeout
+
+Issue: [#156](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/156). Baseline: merged main `8ea843d434a64fedd3247a2dafd6f6092fab8293` and E081 visible run `8X3876DS2JL4`. Two accepted `end_turn` actions were followed by `wait_until_actionable` `internal_error: The game thread did not run the posted action in time.` Their verified traces are E081 segment 1 SHA-256 `e0fd99e72429c47b2abf1933cc1ef5e11df8fd2436b80ee16fdf6aff89ecd420` and segment 2 SHA-256 `4e725691fba25bd9a9fb8f55c07abbcae0f133b21af0f2e6d8d18abd48ac2fe8`. Fresh read-only states confirmed the same run had moved to the next turn; neither wait error was a rejected game action.
+
+Hypothesis: only after `act` returns completed, a narrow fallback can poll fresh raw states for at most 45 seconds, requiring the same run ID, a changed state fingerprint and a stable action-ready combat state (or changed noncombat scene). It never calls `act`, never retries the completed action and stops on pause, changed run or timeout. Other wait failures remain fatal.
+
+Fixed evaluation: a fake MCP sequence reproduces completed action → failed wait → unstable new turn → ready new turn; changed-run, paused and unchanged-timeout sequences must stop, with no `act` in the recovery call list. Run `python3 -m unittest discover -s tests -q`. Then continue the same E081 native A1 run from its fresh floor-11 turn-4 ready state using the E081 controller flags, 200 actions/900 seconds/$0.10 in one segment. Record exact tested SHA, game/mod/model versions, accepted actions, any wait recoveries, terminal/boundary state and verified trace hash.
+
+Decision rule: merge only if tests pass, the native segment crosses a previously failing end-turn wait without any action redelivery, and the run remains the same. This is an execution compatibility result, not proof of better game strategy.
