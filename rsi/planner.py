@@ -17,7 +17,7 @@ def letter_opener_config(state):
     return None
 
 
-def choose_plan(state, candidates, width=40, depth=8, triggers=False, retaliation=False, force_first=False, letter_opener=False):
+def choose_plan(state, candidates, width=40, depth=8, triggers=False, retaliation=False, force_first=False, letter_opener=False, hp_loss_weight=1.5):
     cards={c['index']:c for c in state.get('hand',[])}
     enemies={e['index']:e for e in state.get('enemies',[])}
     initial_hp={i:e['hp'] for i,e in enemies.items()}; incoming={i:intent_damage(e) for i,e in enemies.items()}
@@ -32,7 +32,7 @@ def choose_plan(state, candidates, width=40, depth=8, triggers=False, retaliatio
         loss=n['self_loss']+max(0,sum(incoming[i] for i,h in n['hp'].items() if h>0)-n['block']-state.get('player',{}).get('end_turn_block',0))
         kills=sum(h<=0 for h in n['hp'].values());damage=sum(initial_hp[i]-max(0,h) for i,h in n['hp'].items())
         return (damage*.85 + kills*9 + (150 if kills==len(enemies) else 0)
-                - loss*1.5 - (10000 if n['self_loss']>=hp else 1000 if loss>=hp else 0) + n['utility'])
+                - loss*hp_loss_weight - (10000 if n['self_loss']>=hp else 1000 if loss>=hp else 0) + n['utility'])
     frontier=[start]; best=start;expanded=0
     for _ in range(min(depth,len(cards))):
         children=[]
@@ -120,4 +120,4 @@ def choose_plan(state, candidates, width=40, depth=8, triggers=False, retaliatio
         frontier=sorted(unique.values(),key=score,reverse=True)[:width]
     chosen=next((c for c in candidates if best['plan'] and c['id']==best['plan'][0]),None)
     if chosen is None:chosen=next((c for c in candidates if c['action']['action']=='end_turn'),candidates[0])
-    return chosen,{'scope':SCOPE,'plan_ids':best['plan'],'score':round(score(best),3),'predicted_self_loss':best['self_loss'],'predicted_total_hp_loss':best['self_loss']+max(0,sum(incoming[i] for i,h in best['hp'].items() if h>0)-best['block']-state.get('player',{}).get('end_turn_block',0)),'predicted_block':best['block'],'predicted_enemy_hp':best['hp'],'expanded':expanded,'width':width,'depth':depth,'trigger_forecast':best.get('triggers'),'letter_opener_forecast':{'starting_skills':starting_skills,'skills_after_plan':best['letter_skill_count'],'procs':best['letter_procs'],'cards_per_proc':letter_config[0],'damage_per_proc':letter_config[1]} if letter_active else None}
+    return chosen,{'scope':SCOPE,'hp_loss_weight':hp_loss_weight,'plan_ids':best['plan'],'score':round(score(best),3),'predicted_self_loss':best['self_loss'],'predicted_total_hp_loss':best['self_loss']+max(0,sum(incoming[i] for i,h in best['hp'].items() if h>0)-best['block']-state.get('player',{}).get('end_turn_block',0)),'predicted_block':best['block'],'predicted_enemy_hp':best['hp'],'expanded':expanded,'width':width,'depth':depth,'trigger_forecast':best.get('triggers'),'letter_opener_forecast':{'starting_skills':starting_skills,'skills_after_plan':best['letter_skill_count'],'procs':best['letter_procs'],'cards_per_proc':letter_config[0],'damage_per_proc':letter_config[1]} if letter_active else None}
