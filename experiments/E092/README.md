@@ -269,3 +269,7 @@ At tested SHA `594dd2fe00d95d8705c459e0a1de70014e2d8e82`, Armaments was accepted
 ## Segment 59: upgrade completed; deploy scaling power
 
 At tested SHA `2c1a121d4d94b0bc3e8102d32be767a601b533ee`, Pommel Strike was upgraded in hand to 7 damage and draw 2. Player remains 7 HP, 15 Block and 1 energy against Crusher's 14 attack, while Rocket recharges. One-action budget boundary, zero Jev calls/rejections/uncertain calls; raw trace SHA-256 `11a5a5791e1a3e0d36dedbfc5b155a5630319224a3b0a69de3a341a500a6a11a` verified in [segment59-summary.json](segment59-summary.json). [floor33-aggression-choice.json](floor33-aggression-choice.json) precommits Aggression at hand index 3 and hash `3a613b07728112146db093265e653f487a275b88d61d3a8007aa72f564bbd454` to improve future attack access in the long Boss fight; the current attack is already fully blocked.
+
+## Segment 60: scaling power active; safe end turn
+
+At tested SHA `00b5db689e55ba39488c33307632ec80214307bd`, Aggression was accepted and is active. Player remains 7 HP, 15 Block and zero energy; only end turn and save/quit are available. Crusher advertises 14 attack, Rocket is recharging. One-action budget boundary, zero Jev calls/rejections/uncertain calls; raw trace SHA-256 `6fabb80d54393a5b1ecd5fe7fbe069ab37fb930bd5f9a40c61076594872a9101` verified in [segment60-summary.json](segment60-summary.json). [floor33-end-turn5-choice.json](floor33-end-turn5-choice.json) precommits the safe end-turn at exact hash `bfe22fd5373ae1087b43a7c0db7c7942479e7e4c81cb14528837777489b863bb`.
