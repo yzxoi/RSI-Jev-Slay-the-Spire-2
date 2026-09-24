@@ -1,0 +1,11 @@
+# E084 — deck-job guidance at A10 card rewards
+
+Issue: [#160](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/160). Research input: [E083](../../docs/research/deck-jobs-v0111.md). Baseline: merged `origin/main` SHA `59ab5f2b7c564bf4ea7f1fb9c350f4b88ea35119`, policy `retaliate`.
+
+Hypothesis: a compact current-state deck summary plus threat-first rubric at card rewards will improve A10 complete-run progress over the generic Jev `STRATEGY` prompt. Treatment `retaliate_deck_jobs` changes only the Jev context at `card_reward`; route, shop, event, rest, combat policy and legal candidates stay the same. The summary contains descriptive counts, not fixed card rankings or adequacy thresholds. Neither policy edits HP, rewards, RNG or victory flags.
+
+Frozen cohort: seeds `e084_jobs_001`–`e084_jobs_004`, all five characters (Ironclad, Silent, Defect, Regent, Necrobinder), Ascension 10, baseline and treatment = 20 matched pairs / 40 CLI complete-run episodes. Four workers. Each episode stops at normal victory/defeat, 2,000 decisions or 300 seconds. Shared Jev budget: 4,000 calls / $1.00; identical requests use `MatchedJev`. Pinned game v0.111.0, sts2-cli `084d1aa3d8e118ca7ce8d8774ad16d6be9c92367`, Jev `typesafe/jev-1.13-20260917`. Command after committing the implementation: `python3 -m scripts.evaluate_deck_jobs_e084`.
+
+Audit and promotion rule: verify all 40 trace hashes and every pair's initial-state parity. The first different selected action, if any, must be a card reward choice from the same state; any other first divergence is a matching/execution failure. All 40 episodes must end normally; at least six pairs must first diverge at a reward; treatment must reach a deeper act/floor in at least five pairs, be shallower in at most two, cause no baseline victory to become a loss, and produce at least one additional Act 2 entry. Only then merge the opt-in policy for broader held-out/native validation. Otherwise close as negative or inconclusive. This small cohort is exploratory, not a win-rate estimate.
+
+Implementation and result SHA, full command/configuration, dependency hashes, per-run outcomes, costs and limitations will be recorded below after evaluation. Raw traces remain ignored under `artifacts/runs/`.
