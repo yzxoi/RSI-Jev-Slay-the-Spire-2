@@ -75,3 +75,9 @@ At tested SHA `60f62c297d8b6860a26e00c2d12e691016cd322a`, Fisticuffs was bought 
 ## Segment 13: Energy Potion purchased
 
 At tested SHA `10d977aaaee724ae995463d0cdca9331f6c9a182`, the Energy Potion purchase was accepted in one action, leaving 12 gold and 87/87 HP. One-action budget boundary; zero Jev calls, rejections or uncertain calls. Raw trace SHA-256 `78afce7d58a809450411f9fc9a7b33c61546ee3d43abf3ee8ab9d6403c252a4e` verified in [segment13-summary.json](segment13-summary.json). The next bounded segment may let the controller leave the shop and proceed toward the Act 1 Boss.
+
+## Segment 14: Act 1 Boss danger review
+
+At tested SHA `c29bea354338745b06c8ce1b96d5e1f26528b393`, the controller left the shop, rested and reached Soul Fysh on floor 17. It accepted 34 actions, made 11 Jev calls at $0.003012324, with zero rejections/uncertain calls. At Boss turn 7, the player had 55/87 HP and Soul Fysh 82/211 HP. The Boss advertised 24 incoming damage; two Beckon status cards in hand add a known 12 HP loss if retained at end turn. The controller stopped as `expert_required`, not defeat. Raw trace SHA-256 `cb132dca860adae7c37d19f1b26e69f507b0db62ce6388b31149c6a2e43096cf` verified in [segment14-summary.json](segment14-summary.json).
+
+The hand has Fisticuffs (damage plus equal Block), Armaments, two Strikes and the two Beckons. Three energy cannot both remove the Beckons and cover the 24 attack. [floor17-boss-energy-choice.json](floor17-boss-energy-choice.json) precommits the purchased Energy Potion at exact state hash `7dfcdaea8b7b61cc8014e0cdd092eb8cb1b5ba2a2819b9998f519740df293cb4` to make the turn's defense and status clearing feasible. The post-potion energy and remaining legal actions will be observed before further commitment.
