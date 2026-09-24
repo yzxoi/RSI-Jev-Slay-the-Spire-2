@@ -40,7 +40,7 @@ For combat, compare plans over the next turns rather than maximizing this turn's
 
 ## Local diagnostic: E081 floor 2–9 rewards
 
-The [E081 checkpoint on PR #155](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/blob/codex/e081-native-upper-bound/experiments/E081/checkpoint.json) records a **natural Ironclad A1** run `8X3876DS2JL4`, game v0.111.0. Its segment-01 raw trace SHA-256 is `e0fd99e72429c47b2abf1933cc1ef5e11df8fd2436b80ee16fdf6aff89ecd420`. The five observed card rewards were:
+The [E081 checkpoint on PR #155](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/blob/701ad9a67a57a3cc46fed7a70e9f654bf93e7f67/experiments/E081/checkpoint.json) records a **natural Ironclad A1** run `8X3876DS2JL4`, game v0.111.0. Its segment-01 raw trace SHA-256 is `e0fd99e72429c47b2abf1933cc1ef5e11df8fd2436b80ee16fdf6aff89ecd420`. The five observed card rewards were:
 
 | Floor | Offers (IDs) | Selected |
 | --- | --- | --- |
@@ -55,7 +55,7 @@ Four picks were mitigation/utility, one was a direct attack with draw. At floor 
 ## Proposed policy and falsification path
 
 1. Add a deterministic feature extractor for the ledger, with `unknown` where game data cannot support a metric. Preserve exact card IDs/text, deck, Boss/map, HP, relics and potions in the trace. This is preferable to making Jev count cards or compute probabilities from long text.
-2. Give Jev a concise floor-level threat summary and ask for typed candidate rankings with brief job labels and confidence. Let Astra intervene for state-bound, high-impact ambiguity, such as imminent elite/Boss readiness or a dangerous reward choice. Keep the baseline prompt as a control.
+2. Give Jev a concise floor-level threat summary and ask for typed candidate rankings with brief job labels and confidence. A future record could contain `threat_id`, `missing_job`, `candidate_id`, `why_now`, `resource_cost`, `confidence` and `needs_astra`. Let Astra intervene for state-bound, high-impact ambiguity, such as imminent elite/Boss readiness or a dangerous reward choice. Keep the baseline prompt as a control.
 3. First run an **offline diagnostic** on frozen E081 rewards and other held-out traces: measure changed choices, feature availability and model cost. Decision disagreement alone is not improvement.
 4. Then preregister matched CLI A10 seeds and characters before implementing the treatment: same starting seeds, game/dependency versions, combat policy and budgets; vary only the reward/route rubric. Report every run, including stalls, Boss entries, Boss clears, complete-run wins, HP and cost. Replays from an exact frozen reward state can isolate specific choices. Small cohorts remain exploratory.
 
