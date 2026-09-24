@@ -46,10 +46,14 @@ def macro_candidates(state, history=None):
         for i, c in enumerate(state.get('bundles', [])): add('select_bundle', c, bundle_index=c.get('index', i))
     elif d == 'card_select':
         cards = state.get('cards', []); lo = state.get('min_select', 1); hi = state.get('max_select', 1)
+        # The Jev choice schema has one criterion per candidate. Bound the full
+        # request, rather than each combination-size batch, and keep skip legal.
+        selection_limit = 128 - int(lo == 0)
         for n in range(max(1, lo), min(len(cards), hi) + 1):
-            for combo in itertools.islice(itertools.combinations(cards, n), 128):
+            remaining = selection_limit - len(out)
+            if remaining <= 0: break
+            for combo in itertools.islice(itertools.combinations(cards, n), remaining):
                 add('select_cards', [{'index':c['index'],'name':c.get('name'),'id':c.get('id')} for c in combo], indices=','.join(str(c['index']) for c in combo))
-            if len(out) >= 128: break
         if lo == 0: add('skip_select')
     elif d == 'shop':
         gold = state['player']['gold']
