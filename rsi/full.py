@@ -92,6 +92,14 @@ def episode(config, manifest, jev=None):
     try:
         engine=Headless(trace.directory)
         state=engine.send({'cmd':'start_run','character':config['character'],'ascension':config['ascension'],'seed':config['seed']})
+        for prefix_action in config.get('replay_prefix_actions',[]):
+            state=engine.send(prefix_action)
+        expected_entry_hash=config.get('expected_entry_hash')
+        if expected_entry_hash and digest(state)!=expected_entry_hash:
+            raise RuntimeError(f'Replay entry state mismatch: expected {expected_entry_hash}, got {digest(state)}')
+        if expected_entry_hash:
+            trace.write('replay_entry',{'state_hash':digest(state),
+                                        'prefix_actions':len(config.get('replay_prefix_actions',[]))})
         result['initial_state_hash']=digest(state)
         for step in range(config.get('max_steps',4000)):
             
@@ -102,7 +110,17 @@ def episode(config, manifest, jev=None):
             h=digest(state); unchanged=unchanged+1 if last==h else 0;last=h
             if unchanged>=5: raise RuntimeError('No state progress in six successive decisions')
             trace.write('before',{'state':state,'state_hash':h})
-            if d=='combat_play':
+            forced_action=config.get('forced_first_action') if step==0 else None
+            if forced_action is not None:
+                if d!='card_reward' or not expected_entry_hash:
+                    raise RuntimeError('Forced first action requires a verified card reward entry')
+                choices=macro_candidates(state,history)
+                selected=next((choice for choice in choices if choice['action']==forced_action),None)
+                if selected is None:
+                    raise RuntimeError(f'Forced reward action is not legal: {forced_action}')
+                trace.write('forced_reward',{'entry_state_hash':h,'action':forced_action,
+                                             'card_id':(selected.get('details') or {}).get('id')})
+            elif d=='combat_play':
                 context=state.get('context') or {}
                 current_skill_key=(context.get('act'),context.get('floor'),state.get('round'))
                 if current_skill_key!=skill_key:
