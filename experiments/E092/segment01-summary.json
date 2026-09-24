@@ -1,0 +1,28 @@
+{
+  "segment": 1,
+  "tested_code_sha": "fccabaa6cc24e4289af083f81c25bb00816423f7",
+  "game_run_id": "8X3876DS2JL4",
+  "status": "error",
+  "error": "RuntimeError: MCP wait_until_actionable failed: {'error': {'code': 'internal_error', 'message': 'The game thread did not run the posted action in time.', 'retryable': False}}",
+  "actions_accepted": 10,
+  "rejections": 0,
+  "start_floor": 11,
+  "start_hp": 45,
+  "end_floor": 11,
+  "end_hp": 45,
+  "model_calls": 4,
+  "cost_usd": 0.0010439099999999999,
+  "uncertain_calls": 0,
+  "trace_path": "artifacts/runs/38245354-7199-4670-8b93-6ff2191d6039/decisions.jsonl",
+  "trace_sha256": "8369a01242e7b443b75a0c10d22ef8d0431ee77fc3c2f32fa66d96ef5ff130c7",
+  "trace_verified": true,
+  "recovery_observation": {
+    "same_run_id": "8X3876DS2JL4",
+    "floor": 11,
+    "turn": 3,
+    "hp": 45,
+    "ready": true,
+    "accepted_last_action": "end_turn",
+    "resent": false
+  }
+}
