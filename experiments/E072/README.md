@@ -1,0 +1,11 @@
+# E072 — stronger immediate HP-loss penalty in combat planning
+
+Issue: [#136](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/136). Baseline: merged `origin/main` `0ab503b2a225d2aac1c031d4d13bff4a4b9d5253`. The E069/E071 baseline headless cohorts had 0/28 wins; 13/14 A10 runs ended in Act 1, with seven A10 normal-monster defeats entering their last fight at median 21% maximum HP. These are exploratory traces, not a win-rate estimate. The current planner scores immediate damage at 0.85 per point and forecast HP loss at 1.5 per point.
+
+Hypothesis: increasing only the forecast HP-loss coefficient from 1.5 to 3.0 will preserve health and yield deeper complete runs, particularly on A10. `retaliate` is the unchanged baseline; opt-in `retaliate_hp3` uses the same Jev macro prompt, legal candidates, search width/depth, trigger and retaliation rules. No game value, RNG, reward or victory edits.
+
+Frozen evaluation before implementation: pinned game v0.111.0, sts2-cli `084d1aa3d8e118ca7ce8d8774ad16d6be9c92367`, Jev `typesafe/jev-1.13-20260917`; seeds `e072_loss_001` through `_004`, Ironclad and Silent, A0 and A10, both policies: 16 pairs / 32 complete-run episodes. Each episode has at most 1500 steps and 180 seconds; four workers share 5000 Jev calls / $1.50. Command: `python3 -m scripts.evaluate_loss_e072`. Save all raw traces under ignored `artifacts/runs/`, publish compact per-run outcomes, exact code/dependency hashes, and verified trace SHA-256 values.
+
+Decision: implementation tests must pass, all 32 episodes must finish without a new execution error, and treatment must produce at least 20 same-state combat choices different from the baseline planner. Promote only if at least four pairs reach a deeper act/floor, at most two regress, at least two A10 pairs improve with at most one A10 regression, and no observed baseline victory becomes a loss. Otherwise close as negative or inconclusive. Even a positive 16-pair result needs replication and native validation. Shadow choices on treatment states measure policy exposure, not counterfactual battle outcomes.
+
+Scope boundary: twin-crab `SURROUNDED_POWER` and `CRAB_RAGE_POWER` mechanics require a separate frozen combat experiment. This experiment changes only generic HP-loss weighting in the headless policy.
