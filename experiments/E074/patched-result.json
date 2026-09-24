@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "experiment": "E074",
+  "phase": "patched",
+  "manifest": {
+    "schema_version": 1,
+    "code_commit": "dcd686fe3d734fc684332fbb5581252f074022bb",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "d04aaad3f0b33cbec0d6d7ba5eeda71ec35ad54f84d9b8eda12e51e3242aa66c",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+      "headless-zzzzz-vector2i-one.patch": "4378385ed26321ce8730a50465724d75435e9fd16701cc82762504cd14f85acf"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+  },
+  "results": [
+    {
+      "name": "e072_baseline",
+      "command_count": 277,
+      "source_wire_sha256": "3965587462a2ba87e89ef15faa88647d1151d7bca2d73cf3c2d504f54d97a6e4",
+      "expected_before_final_state_hash": "b294ee77e3675d610d6e95d766bb79324a4709296296b846fb99cea8e7b65ae3",
+      "before_final_state_hash": "b294ee77e3675d610d6e95d766bb79324a4709296296b846fb99cea8e7b65ae3",
+      "before_final_state_match": true,
+      "error": "RuntimeError: Action 'choose_option' failed: NullReferenceException: Object reference not set to an instance of an object.",
+      "failed_command_index": 276,
+      "status": "unexpected_error",
+      "wire_path": "artifacts/runs/e074-444243f0-8c9e-4241-8772-738ffba77a64/wire.jsonl",
+      "wire_sha256": "74c1d297f22e9df4aff6c92ae15ebdccd8a9b0fcd4c91e88ca58fbd2c4efed1f",
+      "engine_log_sha256": "afc7b466a3977506ebd4e9599bdf3c09536381cbb896bcc2bd973e594edd8a29"
+    },
+    {
+      "name": "e073_treatment",
+      "command_count": 493,
+      "source_wire_sha256": "dbc3af55172df7f20a1406a0c7e74245967b5b5353767e56dec0a32f45551338",
+      "expected_before_final_state_hash": "3b7c32144f60fc8ea91d5e05f885f02bca527b30a89ea7d18359cf8cf97cb0c3",
+      "before_final_state_hash": "3b7c32144f60fc8ea91d5e05f885f02bca527b30a89ea7d18359cf8cf97cb0c3",
+      "before_final_state_match": true,
+      "error": "RuntimeError: Action 'choose_option' failed: NullReferenceException: Object reference not set to an instance of an object.",
+      "failed_command_index": 492,
+      "status": "unexpected_error",
+      "wire_path": "artifacts/runs/e074-3cdf7bb5-56d2-4a36-96b8-94076a89d68a/wire.jsonl",
+      "wire_sha256": "2047392db0ed11bc3701cf5e34c39ce52e079d83f086d6006e64fb518749a87e",
+      "engine_log_sha256": "dbaa85941b1009b8f4484e03e8a2378b5c4f4bac01d7bb791d2eba100629ffd3"
+    }
+  ]
+}
