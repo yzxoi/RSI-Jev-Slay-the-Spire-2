@@ -20,6 +20,7 @@ from .status_guard import reserve_toxic_energy,reserve_beckon_energy,beckon_endt
 from .settle import settle_turn,turn_key
 from .floor_plan import load_floor_plan,plan_context,plan_complete
 from .room_plan import load_room_plan,RoomPlanSession,room_context,room_complete
+from .wait_recovery import read_after_accepted_action
 from .event_guard import bound_bridge_reroll
 from .danger import review_projected_loss
 from .review_lease import ReviewLease,current_hp_review,projected_loss_requires_expert
@@ -197,8 +198,8 @@ def main():
                 if screen=='SHOP' and selected['action']['action'] in ('buy_card','buy_relic','buy_potion','remove_card_at_shop'):
                     history['shop_purchases']=history.get('shop_purchases',0)+1
                 if not raw.get('selection'):history['previous']={'screen':screen,'choice':selected}
-                mcp.call('wait_until_actionable',{'timeout_seconds':10,'raw_state':True})
-                raw=mcp.call('get_raw_game_state');trace.write('after',{'state':raw,'state_hash':fingerprint(raw)})
+                raw=read_after_accepted_action(mcp,raw,a.expected_run_id,trace)
+                trace.write('after',{'state':raw,'state_hash':fingerprint(raw)})
                 if expert_this_action and a.review_lease:
                     lease=ReviewLease.accepted_opener(before_action,raw,fingerprint(before_action),fingerprint(raw))
                     trace.write('review_lease',{'status':'activated' if lease else 'opener_outside_combat_turn',
