@@ -123,7 +123,9 @@ def main():
         'schema_version': 1, 'experiment': 'E084', 'manifest': manifest,
         'configs': CONFIGS, 'results': results, 'paired': paired, 'pair_audit': audit,
         'trace_hashes_verified': sum(result['trace_verified'] for result in results),
-        'budget': {'calls': budget.calls, 'provider_cost_usd': budget.spent,
+        'budget': {'calls': budget.calls,
+                   'provider_reported_cost_usd': sum(r['cost_usd'] for r in results),
+                   'budgeted_spend_usd': budget.spent,
                    'uncertain_calls': budget.uncertain_calls,
                    'estimated_usd': budget.estimated_usd},
     }
