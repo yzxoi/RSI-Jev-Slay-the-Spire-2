@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "experiment": "E079",
+  "manifest": {
+    "schema_version": 1,
+    "code_commit": "4a239ff48af00b50ede5621737c8cda42a68b0bb",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "ad5fc0f5958958d5a0473b81525642bbc8ddff33ea07d90fe675b6f3fdfc99ad",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+  },
+  "fixture_sha256": "2f77a81d1f69a991ec0d830842998b462202608cc298950f160ef825cfee6841",
+  "results": [
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e077_a10_006",
+      "arm": "baseline",
+      "run_id": "ae44a5d2-95c4-4c17-b2fe-9ce396e10766",
+      "status": "boss_defeat",
+      "expected_entry_hash": "53643a6588be8a1427840434e145874b4ed960911b7a35b253c13e2c4cb0f65b",
+      "prefix_command_count": 249,
+      "prefix_commands_replayed": 249,
+      "boss_decisions": 18,
+      "model_calls": 1,
+      "cache_hits": 0,
+      "model_cost_usd": 0.000181314,
+      "planned_potions": [],
+      "consumed_potions": [],
+      "entry_hash": "53643a6588be8a1427840434e145874b4ed960911b7a35b253c13e2c4cb0f65b",
+      "entry_hp": 30,
+      "entry_enemy_hp": {
+        "0": 63,
+        "1": 62,
+        "2": 199
+      },
+      "entry_potions": [
+        "Dexterity Potion",
+        "Flex Potion",
+        "Explosive Ampoule"
+      ],
+      "wire_sha256": "608bc8cf8fc1119b7ca2234ea4ffb35d87224467fcb2130f27404535fde23905",
+      "engine_log_sha256": "c8973abb864c23da55ed4e5c6ef00f7074af2eac239665add2becdbf404b417a",
+      "seconds": 11.691,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "boss_rounds": 4,
+      "enemy_hp_at_last_combat": {
+        "0": 26,
+        "1": 179
+      },
+      "trace_path": "artifacts/runs/ae44a5d2-95c4-4c17-b2fe-9ce396e10766/decisions.jsonl",
+      "trace_sha256": "0a4b51cb7827413f9ae0a66d773d0e1c091f2e4ebb7cb24de04faa009af4f412",
+      "trace_verified": true
+    },
+    {
+      "character": "Silent",
+      "ascension": 10,
+      "seed": "e077_a10_006",
+      "arm": "treatment",
+      "run_id": "dc4693c0-cddf-4eb4-8878-b4755dec8059",
+      "status": "boss_defeat",
+      "expected_entry_hash": "53643a6588be8a1427840434e145874b4ed960911b7a35b253c13e2c4cb0f65b",
+      "prefix_command_count": 249,
+      "prefix_commands_replayed": 249,
+      "boss_decisions": 24,
+      "model_calls": 1,
+      "cache_hits": 0,
+      "model_cost_usd": 0.000176106,
+      "planned_potions": [
+        "Dexterity Potion",
+        "Explosive Ampoule"
+      ],
+      "consumed_potions": [
+        {
+          "name": "Dexterity Potion",
+          "inventory_decreased": true,
+          "round": 1
+        },
+        {
+          "name": "Explosive Ampoule",
+          "inventory_decreased": true,
+          "round": 1
+        }
+      ],
+      "entry_hash": "53643a6588be8a1427840434e145874b4ed960911b7a35b253c13e2c4cb0f65b",
+      "entry_hp": 30,
+      "entry_enemy_hp": {
+        "0": 63,
+        "1": 62,
+        "2": 199
+      },
+      "entry_potions": [
+        "Dexterity Potion",
+        "Flex Potion",
+        "Explosive Ampoule"
+      ],
+      "wire_sha256": "a854d884556f0f72bdb1a93c4a918d60041f381528596128393f0d0ae906dc3d",
+      "engine_log_sha256": "ac1aa54dfa0b7b80381bfe73838e62c793fbcbb7cd38f3bc9f710a925f0b25a7",
+      "seconds": 11.253,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "boss_rounds": 5,
+      "enemy_hp_at_last_combat": {
+        "0": 135
+      },
+      "trace_path": "artifacts/runs/dc4693c0-cddf-4eb4-8878-b4755dec8059/decisions.jsonl",
+      "trace_sha256": "2afa1efb18282e76c308af7af46b07e3b9e4dca2f1dadf649a496a7e6c8d8fff",
+      "trace_verified": true
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e077_a10_007",
+      "arm": "baseline",
+      "run_id": "6544238c-67f2-419c-93ab-a96218dc3f69",
+      "status": "boss_defeat",
+      "expected_entry_hash": "1c8723e65f738297e674fbd768326032bef4addcf32be7d267fb33d13870e491",
+      "prefix_command_count": 200,
+      "prefix_commands_replayed": 200,
+      "boss_decisions": 38,
+      "model_calls": 0,
+      "cache_hits": 0,
+      "model_cost_usd": 0.0,
+      "planned_potions": [],
+      "consumed_potions": [],
+      "entry_hash": "1c8723e65f738297e674fbd768326032bef4addcf32be7d267fb33d13870e491",
+      "entry_hp": 75,
+      "entry_enemy_hp": {
+        "0": 63,
+        "1": 62,
+        "2": 199
+      },
+      "entry_potions": [
+        "Liquid Bronze",
+        "Dexterity Potion"
+      ],
+      "wire_sha256": "4a634c3510010f3744d2ed030c6b0426e04cddcd04bed76ff8610be225514bdf",
+      "engine_log_sha256": "07c4971b1a1137dccff388610870225734903376f6d84cc5f197932732f9021f",
+      "seconds": 9.36,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "boss_rounds": 9,
+      "enemy_hp_at_last_combat": {
+        "0": 109
+      },
+      "trace_path": "artifacts/runs/6544238c-67f2-419c-93ab-a96218dc3f69/decisions.jsonl",
+      "trace_sha256": "3c9b2397e82604179f6ad97fe304732beabe22c5e04bee353d19d3d1fba98d15",
+      "trace_verified": true
+    },
+    {
+      "character": "Ironclad",
+      "ascension": 10,
+      "seed": "e077_a10_007",
+      "arm": "treatment",
+      "run_id": "c8e31f26-7e03-4fb9-aa4e-bf3d23dcdee3",
+      "status": "boss_cleared",
+      "expected_entry_hash": "1c8723e65f738297e674fbd768326032bef4addcf32be7d267fb33d13870e491",
+      "prefix_command_count": 200,
+      "prefix_commands_replayed": 200,
+      "boss_decisions": 54,
+      "model_calls": 1,
+      "cache_hits": 0,
+      "model_cost_usd": 0.000180852,
+      "planned_potions": [
+        "Liquid Bronze",
+        "Dexterity Potion"
+      ],
+      "consumed_potions": [
+        {
+          "name": "Liquid Bronze",
+          "inventory_decreased": true,
+          "round": 1
+        },
+        {
+          "name": "Dexterity Potion",
+          "inventory_decreased": true,
+          "round": 1
+        }
+      ],
+      "entry_hash": "1c8723e65f738297e674fbd768326032bef4addcf32be7d267fb33d13870e491",
+      "entry_hp": 75,
+      "entry_enemy_hp": {
+        "0": 63,
+        "1": 62,
+        "2": 199
+      },
+      "entry_potions": [
+        "Liquid Bronze",
+        "Dexterity Potion"
+      ],
+      "wire_sha256": "72485837cc03474b095e77ef24c1b1b62855f5d915b98cd93bba3a006169c415",
+      "engine_log_sha256": "4c3cf092ae913f28079c07329849bcceca8e11782fe158fff127b471ace0141a",
+      "seconds": 10.967,
+      "final_decision": "card_reward",
+      "final_hp": 7,
+      "boss_rounds": 11,
+      "enemy_hp_at_last_combat": {
+        "0": 5
+      },
+      "trace_path": "artifacts/runs/c8e31f26-7e03-4fb9-aa4e-bf3d23dcdee3/decisions.jsonl",
+      "trace_sha256": "4007b17929b45e6aa83181c38fadc85fb954e05994b02e7256d59341dc2ec936",
+      "trace_verified": true
+    }
+  ],
+  "trace_hashes_verified": 4,
+  "budget": {
+    "calls": 3,
+    "provider_cost_usd": 0.000538272,
+    "uncertain_calls": 0,
+    "estimated_usd": 0.0
+  }
+}
