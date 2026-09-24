@@ -1,7 +1,7 @@
 """Bounded approximate turn planning; only execute the first fresh legal action."""
 import copy
 import math
-from .numerical import intent_damage
+from .numerical import intent_damage, weakened_intent_damage
 from . import triggers as trigger_rules
 from .retaliation import thorns_before_hit, hit_count
 
@@ -17,7 +17,7 @@ def letter_opener_config(state):
     return None
 
 
-def choose_plan(state, candidates, width=40, depth=8, triggers=False, retaliation=False, force_first=False, letter_opener=False):
+def choose_plan(state, candidates, width=40, depth=8, triggers=False, retaliation=False, force_first=False, letter_opener=False, weak_forecast=False):
     cards={c['index']:c for c in state.get('hand',[])}
     enemies={e['index']:e for e in state.get('enemies',[])}
     initial_hp={i:e['hp'] for i,e in enemies.items()}; incoming={i:intent_damage(e) for i,e in enemies.items()}
@@ -26,10 +26,14 @@ def choose_plan(state, candidates, width=40, depth=8, triggers=False, retaliatio
     starting_skills=state.get('skills_played_this_turn')
     letter_active=bool(letter_config and isinstance(starting_skills,int) and starting_skills>=0 and letter_config[0]>0)
     start={'self_loss':0,'energy':state.get('energy',0),'block':state.get('player',{}).get('block',0),'hp':dict(initial_hp),'eblock':{i:e.get('block',0) for i,e in enemies.items()},'used':frozenset(),'plan':[],'utility':0.,'strength':0,'vuln':set(),'native_caps':{i:e.get('native_slippery',0) for i,e in enemies.items()},'native_artifacts':{i:e.get('native_artifact',0) for i,e in enemies.items()}}
+    if weak_forecast:start['new_weak']=set()
     if triggers:start['triggers']=trigger_rules.initial(state)
     if letter_active:start.update(letter_skill_count=starting_skills,letter_procs=0,opaque_hand_change=False)
+    def projected_incoming(n):
+        return sum((weakened_intent_damage(enemies[i]) if weak_forecast and i in n['new_weak'] else incoming[i])
+                   for i,h in n['hp'].items() if h>0)
     def score(n):
-        loss=n['self_loss']+max(0,sum(incoming[i] for i,h in n['hp'].items() if h>0)-n['block']-state.get('player',{}).get('end_turn_block',0))
+        loss=n['self_loss']+max(0,projected_incoming(n)-n['block']-state.get('player',{}).get('end_turn_block',0))
         kills=sum(h<=0 for h in n['hp'].values());damage=sum(initial_hp[i]-max(0,h) for i,h in n['hp'].items())
         return (damage*.85 + kills*9 + (150 if kills==len(enemies) else 0)
                 - loss*1.5 - (10000 if n['self_loss']>=hp else 1000 if loss>=hp else 0) + n['utility'])
@@ -102,7 +106,17 @@ def choose_plan(state, candidates, width=40, depth=8, triggers=False, retaliatio
                 else:
                     gain=stats.get('energy',0)
                     if gain>0:m['energy']+=gain;m['utility']+=gain*1.5
-                if stats.get('weakpower',0):m['utility']+=min(8,sum(incoming.values())*.25)
+                if stats.get('weakpower',0):
+                    if weak_forecast:
+                        weak_targets=([target] if target is not None else
+                                      list(m['hp']) if card.get('target_type')=='AllEnemies' else [])
+                        for weak_target in weak_targets:
+                            if weak_target not in enemies or m['hp'][weak_target]<=0:continue
+                            powers=enemies[weak_target].get('powers') or []
+                            if any(p.get('name') in ('Weak','Artifact') and p.get('amount',0)>0 for p in powers):continue
+                            if m['native_artifacts'].get(weak_target,0)>0:continue
+                            m['new_weak'].add(weak_target)
+                    else:m['utility']+=min(8,sum(incoming.values())*.25)
                 # Unknown non-numeric utility is a small tie breaker, not proof.
                 if not previews and not block and not draw:m['utility']+=.4
                 if ident=='ARMAMENTS':m['utility']+=2
@@ -115,9 +129,10 @@ def choose_plan(state, candidates, width=40, depth=8, triggers=False, retaliatio
         for n in children:
             key=(n['used'],n['energy'],n['block'],n['self_loss'],tuple(n['hp'].items()),tuple(n['eblock'].items()),n['strength'],tuple(sorted(n['vuln'])),tuple(n['native_caps'].items()),tuple(n['native_artifacts'].items()))
             if triggers:key=key+tuple(n['triggers'].items())
+            if weak_forecast:key=key+(tuple(sorted(n['new_weak'])),)
             if letter_active:key=key+(n['letter_skill_count'],n['letter_procs'],n['opaque_hand_change'])
             if key not in unique or score(n)>score(unique[key]):unique[key]=n
         frontier=sorted(unique.values(),key=score,reverse=True)[:width]
     chosen=next((c for c in candidates if best['plan'] and c['id']==best['plan'][0]),None)
     if chosen is None:chosen=next((c for c in candidates if c['action']['action']=='end_turn'),candidates[0])
-    return chosen,{'scope':SCOPE,'plan_ids':best['plan'],'score':round(score(best),3),'predicted_self_loss':best['self_loss'],'predicted_total_hp_loss':best['self_loss']+max(0,sum(incoming[i] for i,h in best['hp'].items() if h>0)-best['block']-state.get('player',{}).get('end_turn_block',0)),'predicted_block':best['block'],'predicted_enemy_hp':best['hp'],'expanded':expanded,'width':width,'depth':depth,'trigger_forecast':best.get('triggers'),'letter_opener_forecast':{'starting_skills':starting_skills,'skills_after_plan':best['letter_skill_count'],'procs':best['letter_procs'],'cards_per_proc':letter_config[0],'damage_per_proc':letter_config[1]} if letter_active else None}
+    return chosen,{'scope':SCOPE,'weak_forecast':weak_forecast,'forecast_new_weak':sorted(best['new_weak']) if weak_forecast else None,'plan_ids':best['plan'],'score':round(score(best),3),'predicted_self_loss':best['self_loss'],'predicted_total_hp_loss':best['self_loss']+max(0,projected_incoming(best)-best['block']-state.get('player',{}).get('end_turn_block',0)),'predicted_block':best['block'],'predicted_enemy_hp':best['hp'],'expanded':expanded,'width':width,'depth':depth,'trigger_forecast':best.get('triggers'),'letter_opener_forecast':{'starting_skills':starting_skills,'skills_after_plan':best['letter_skill_count'],'procs':best['letter_procs'],'cards_per_proc':letter_config[0],'damage_per_proc':letter_config[1]} if letter_active else None}

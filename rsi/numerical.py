@@ -1,9 +1,21 @@
 """E003 numerical baseline, retained as a comparator, with explicit limited previews."""
+import math
 from .policy import combat_candidates
 
 def intent_damage(enemy):
     return sum(i.get("total_damage", i.get("damage", 0) * i.get("hits", 1)) or 0
                for i in enemy.get("intents") or [])
+
+
+def weakened_intent_damage(enemy):
+    """Current displayed damage if a fresh Weak reduces each attacking hit by 25%."""
+    total = 0
+    for intent in enemy.get('intents') or []:
+        if intent.get('type') != 'Attack' or intent.get('damage') is None:
+            total += intent.get('total_damage', intent.get('damage', 0) * intent.get('hits', 1)) or 0
+            continue
+        total += math.floor(intent['damage'] * .75) * (intent.get('hits') or 1)
+    return total
 
 
 def computed_candidates(state, candidates):
