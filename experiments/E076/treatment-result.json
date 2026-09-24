@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "experiment": "E076",
+  "phase": "treatment",
+  "manifest": {
+    "schema_version": 1,
+    "code_commit": "ff08bc7002f37575cb818999d86b1df023b2e0fe",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "ad5fc0f5958958d5a0473b81525642bbc8ddff33ea07d90fe675b6f3fdfc99ad",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+  },
+  "frozen_input_sha256": "d0f588d7b1038ba306dfe77e0df34dd7c812add9d9ac76ab7538b5ab4e60f266",
+  "source_trace_sha256": "336b20373e64fac10fde04cd6bf021be345b455c2a003d9908b853f42ae8fb26",
+  "candidate_count": 128,
+  "has_skip": true,
+  "all_candidates_legal": true,
+  "status": "accepted",
+  "selected_id": "a127",
+  "selected_action": {
+    "cmd": "action",
+    "action": "skip_select",
+    "args": {}
+  },
+  "model": "typesafe/jev-1.13-20260917",
+  "provider_cost_usd": 0.000921438,
+  "budget_calls": 1,
+  "budget_estimated_usd": 0.0,
+  "trace_path": "artifacts/runs/e076-0b8fabca-4d39-4672-b7b6-d56d826fcd21/decisions.jsonl",
+  "trace_sha256": "866257f060591d3b18b65b582bffc317a53bae58d32c4115b6a4d6b2447f4af1",
+  "request_bytes": 45987
+}
