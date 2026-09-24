@@ -179,3 +179,7 @@ At tested SHA `3e24c91791f606384eed150cb6eda33eaa22e970`, selecting Rupture at i
 ## Segment 37: 8 Block observed
 
 At tested SHA `62144bbe14d87845d9f0bd37a96655f225e8a7d4`, Shrug It Off was accepted, granting 8 Block and drawing the returned Rupture as anticipated. Player remains 10 HP with 2 energy against 16 incoming. One-action budget boundary, zero Jev calls/rejections/uncertain calls; raw trace SHA-256 `25103f818cff2c14c819240463b94e154bb0a0fb20d1dca971288d541b57ef2f` verified in [segment37-summary.json](segment37-summary.json). [floor25-defend-first-choice.json](floor25-defend-first-choice.json) precommits the first 5-Block Defend at exact post-action hash `6bc5bdeae8b851dc4a4e071376fbc070700c3414983008b16f5e6ca6e9b4a238`; the second will be selected from the fresh hand after acceptance.
+
+## Segment 38: first Defend added 5 Block
+
+At tested SHA `6a525467aafa460afb7ce4a70e1f127d4b06523f`, the first Defend was accepted, raising Block 8→13. Player remains 10 HP, 1 energy, and the second Defend is freshly indexed at 1. One-action budget boundary, zero Jev calls/rejections/uncertain calls; raw trace SHA-256 `88b0a980e2dc6ce4a6dfc7bbdc79a47e0bf9f107670be9a461bd15f8b70befee` verified in [segment38-summary.json](segment38-summary.json). [floor25-defend-second-choice.json](floor25-defend-second-choice.json) precommits that card at exact post-action hash `f7a42b3c89de705175feb27535a822e76629fe0adaf59cb2763c79c7c3607b8a`, which should raise Block to 18 against 16 incoming.
