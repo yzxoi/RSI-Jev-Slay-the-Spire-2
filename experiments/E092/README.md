@@ -285,3 +285,7 @@ At tested SHA `b6784efd4d28975c75dc9c3e6f0a58159496b806`, Armaments was accepted
 ## Segment 63: secure 21 incoming before attacking
 
 At tested SHA `6a0565c6e4a503ce35513c4a0ae22621d5cc0f27`, Pommel Strike was upgraded in hand to 10 damage and draw 2. Player remains 7 HP, 20 Block, two energy; Crusher and Rocket still advertise 21 combined damage. One-action budget boundary, zero Jev calls/rejections/uncertain calls; raw trace SHA-256 `72d550c499e0a9eb2f2a0ab85c5e95cda92b13ffd93c2697846fe27b043de2d4` verified in [segment63-summary.json](segment63-summary.json). [floor33-turn6-colossus-choice.json](floor33-turn6-colossus-choice.json) precommits Colossus at hand index 4 and exact hash `3b503054acc1e94ba53e869b0e490ca9be27510a0e2be8d1c33584335b62c404`, giving 4 further Block before attacking.
+
+## Segment 64: attack while fully covered
+
+At tested SHA `38fdf1a363df0c25c26b824e4822c1186a95c223`, Colossus was accepted; Block rose to 24 while the two attacks remain 14+7. Player remains 7 HP with one energy. One-action budget boundary, zero Jev calls/rejections/uncertain calls; raw trace SHA-256 `ab09b25c5819fb522095cfb32db94b686761e27684bd4758afd7fda88a46a575` verified in [segment64-summary.json](segment64-summary.json). [floor33-turn6-pommel-rocket-choice.json](floor33-turn6-pommel-rocket-choice.json) precommits upgraded Pommel Strike on unblocked Rocket at hand index 3/enemy index 1 and exact hash `bd5ca831ccf4b3eb2a862ab1e57e2030730fdae4d501bdde1fe6600bf0d8d706`; its two-card draw may reveal a zero-cost option.
