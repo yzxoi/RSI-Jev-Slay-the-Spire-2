@@ -16,6 +16,7 @@ from .trace import Trace, digest, version_manifest
 from .planner import choose_plan
 from .guard import filter_end_turn
 from .potions import with_potions
+from .boss_buffs import choose_boss_buff
 
 STRATEGY = """Maximize probability of completing all three acts. Evaluate current deck, next threats and resources. Early decks need efficient damage, then reliable block, draw/energy and scaling for bosses. Prefer cards that solve a concrete gap; skipping mediocre rewards is valid. Do not force a named archetype. Remove curses/weak starters when affordable. Rest when healing is needed to survive upcoming threats; otherwise upgrades have lasting value. Avoid risky elites with low health/weak damage. Buy useful relics/cards rather than spending all gold indiscriminately. For card selection interpret the preceding action and scene: removing, upgrading, discarding and exhausting require different choices. Supplied rules are authoritative; descriptions with placeholders use the supplied stats. Numerical combat previews are limited, not full simulation."""
 
@@ -115,15 +116,21 @@ def episode(config, manifest, jev=None):
                     selected,call=jev.choose({'state':model_state(state),'strategy':STRATEGY},choices,trace)
                     result['model_calls']+=not call.get('cache_hit',False);result['cache_hits']=result.get('cache_hits',0)+call.get('cache_hit',False);result['cost_usd']+=call['usage'].get('cost',0)
                 elif config['policy']=='first': selected=choices[0]
-                elif config['policy'] in ['planned','planfixed','planfixed_cautious_route','planfixed_letter','triggered','retaliate']:
+                elif config['policy'] in ['planned','planfixed','planfixed_cautious_route','planfixed_letter','triggered','retaliate','retaliate_boss_buffs']:
                     planning_state={**state,'skills_played_this_turn':skill_count} if config['policy']=='planfixed_letter' else state
-                    selected,planning=choose_plan(planning_state,choices,triggers=config['policy'] in ['triggered','retaliate'],retaliation=config['policy']=='retaliate',letter_opener=config['policy']=='planfixed_letter');trace.write('planning',planning)
+                    buff,expanded=choose_boss_buff(state,choices) if config['policy']=='retaliate_boss_buffs' else (None,choices)
+                    if buff:
+                        selected,choices=buff,expanded
+                        trace.write('boss_buff',{'state_hash':h,'potion':buff['name'],'candidate':buff})
+                    else:
+                        uses_retaliation=config['policy'] in ['retaliate','retaliate_boss_buffs']
+                        selected,planning=choose_plan(planning_state,choices,triggers=config['policy'] in ['triggered','retaliate','retaliate_boss_buffs'],retaliation=uses_retaliation,letter_opener=config['policy']=='planfixed_letter');trace.write('planning',planning)
                     if config['policy']=='planfixed_letter':trace.write('letter_skill_counter',{'key':current_skill_key,'before':skill_count})
                 else:
                     choices=computed_candidates(state,choices); selected=greedy_choice(state,choices)
             else:
                 choices=macro_candidates(state,history)
-                if config['policy'] not in ['hybrid','planned','jev','guarded','equipped','triggered','retaliate'] or len(choices)==1:
+                if config['policy'] not in ['hybrid','planned','jev','guarded','equipped','triggered','retaliate','retaliate_boss_buffs'] or len(choices)==1:
                     selected=fixed_macro(state,choices,cautious_route=config['policy']=='planfixed_cautious_route')
                     if d=='map_select' and config['policy']=='planfixed_cautious_route':
                         baseline_choice=fixed_macro(state,choices)
@@ -143,7 +150,16 @@ def episode(config, manifest, jev=None):
             played_card=(next((c for c in state.get('hand',[])
                                if c['index']==selected['action']['args']['card_index']),None)
                          if d=='combat_play' and selected['action']['action']=='play_card' else None)
+            previous_potions=(state.get('player',{}).get('potions')
+                              if config['policy']=='retaliate_boss_buffs' and selected['action']['action']=='use_potion'
+                              else None)
             state=engine.send(selected['action']);trace.write('after',{'state':state,'state_hash':digest(state)})
+            if previous_potions is not None:
+                new_potions=state.get('player',{}).get('potions')
+                consumed=new_potions is not None and len(new_potions)==len(previous_potions)-1
+                trace.write('boss_buff_transition',{'potion':selected['name'],'inventory_decreased':consumed})
+                if not consumed:raise RuntimeError('Boss buff action did not decrease potion inventory')
+                result['boss_buffs_used']=result.get('boss_buffs_used',0)+1
             if played_card:
                 skill_count=advance_skill_counter(skill_count,played_card)
                 if skill_count is None and config['policy']=='planfixed_letter':
@@ -168,10 +184,10 @@ def episode(config, manifest, jev=None):
 def main():
     p=argparse.ArgumentParser();p.add_argument('--characters',default=','.join(CHARACTERS));p.add_argument('--seeds',default='full_dev_001');p.add_argument('--policies',default='first,greedy');p.add_argument('--ascension',type=int,default=10);p.add_argument('--workers',type=int,default=3);p.add_argument('--max-calls',type=int,default=12000);p.add_argument('--max-usd',type=float,default=3);p.add_argument('--output',required=True);p.add_argument('--matched-decisions',action='store_true');a=p.parse_args()
     chars=a.characters.split(','); policies=a.policies.split(',')
-    if set(chars)-set(CHARACTERS) or set(policies)-{'first','greedy','hybrid','planned','planfixed','planfixed_cautious_route','planfixed_letter','jev','guarded','equipped','triggered','retaliate'}:p.error('Invalid character or policy')
+    if set(chars)-set(CHARACTERS) or set(policies)-{'first','greedy','hybrid','planned','planfixed','planfixed_cautious_route','planfixed_letter','jev','guarded','equipped','triggered','retaliate','retaliate_boss_buffs'}:p.error('Invalid character or policy')
     manifest=version_manifest()
     if manifest['tracked_dirty']:raise RuntimeError('Commit implementation before evaluation')
-    budget=Budget(a.max_calls,a.max_usd,conservative_failures=True);jev=Jev(budget) if set(policies)&{'hybrid','planned','jev','guarded','equipped','triggered','retaliate'} else None
+    budget=Budget(a.max_calls,a.max_usd,conservative_failures=True);jev=Jev(budget) if set(policies)&{'hybrid','planned','jev','guarded','equipped','triggered','retaliate','retaliate_boss_buffs'} else None
     if a.matched_decisions and jev:jev=MatchedJev(jev)
     configs=[{'character':c,'seed':s,'ascension':a.ascension,'policy':policy} for s in a.seeds.split(',') for c in chars for policy in policies]
     with ThreadPoolExecutor(max_workers=a.workers) as pool: results=list(pool.map(lambda c:episode(c,manifest,jev),configs))
