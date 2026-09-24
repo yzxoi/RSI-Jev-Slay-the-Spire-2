@@ -1,0 +1,2866 @@
+{
+  "schema_version": 1,
+  "experiment": "E086",
+  "manifest": {
+    "schema_version": 1,
+    "code_commit": "e592668f106b28a16bdd53c6e9a25c333ae9b29b",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "ad5fc0f5958958d5a0473b81525642bbc8ddff33ea07d90fe675b6f3fdfc99ad",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+  },
+  "configs": [
+    {
+      "character": "Ironclad",
+      "seed": "e086_brief_001",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300
+    },
+    {
+      "character": "Ironclad",
+      "seed": "e086_brief_001",
+      "ascension": 10,
+      "policy": "retaliate_combat_brief",
+      "max_steps": 2000,
+      "max_seconds": 300
+    },
+    {
+      "character": "Silent",
+      "seed": "e086_brief_001",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300
+    },
+    {
+      "character": "Silent",
+      "seed": "e086_brief_001",
+      "ascension": 10,
+      "policy": "retaliate_combat_brief",
+      "max_steps": 2000,
+      "max_seconds": 300
+    },
+    {
+      "character": "Defect",
+      "seed": "e086_brief_001",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300
+    },
+    {
+      "character": "Defect",
+      "seed": "e086_brief_001",
+      "ascension": 10,
+      "policy": "retaliate_combat_brief",
+      "max_steps": 2000,
+      "max_seconds": 300
+    },
+    {
+      "character": "Regent",
+      "seed": "e086_brief_001",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300
+    },
+    {
+      "character": "Regent",
+      "seed": "e086_brief_001",
+      "ascension": 10,
+      "policy": "retaliate_combat_brief",
+      "max_steps": 2000,
+      "max_seconds": 300
+    },
+    {
+      "character": "Necrobinder",
+      "seed": "e086_brief_001",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300
+    },
+    {
+      "character": "Necrobinder",
+      "seed": "e086_brief_001",
+      "ascension": 10,
+      "policy": "retaliate_combat_brief",
+      "max_steps": 2000,
+      "max_seconds": 300
+    },
+    {
+      "character": "Ironclad",
+      "seed": "e086_brief_002",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300
+    },
+    {
+      "character": "Ironclad",
+      "seed": "e086_brief_002",
+      "ascension": 10,
+      "policy": "retaliate_combat_brief",
+      "max_steps": 2000,
+      "max_seconds": 300
+    },
+    {
+      "character": "Silent",
+      "seed": "e086_brief_002",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300
+    },
+    {
+      "character": "Silent",
+      "seed": "e086_brief_002",
+      "ascension": 10,
+      "policy": "retaliate_combat_brief",
+      "max_steps": 2000,
+      "max_seconds": 300
+    },
+    {
+      "character": "Defect",
+      "seed": "e086_brief_002",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300
+    },
+    {
+      "character": "Defect",
+      "seed": "e086_brief_002",
+      "ascension": 10,
+      "policy": "retaliate_combat_brief",
+      "max_steps": 2000,
+      "max_seconds": 300
+    },
+    {
+      "character": "Regent",
+      "seed": "e086_brief_002",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300
+    },
+    {
+      "character": "Regent",
+      "seed": "e086_brief_002",
+      "ascension": 10,
+      "policy": "retaliate_combat_brief",
+      "max_steps": 2000,
+      "max_seconds": 300
+    },
+    {
+      "character": "Necrobinder",
+      "seed": "e086_brief_002",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300
+    },
+    {
+      "character": "Necrobinder",
+      "seed": "e086_brief_002",
+      "ascension": 10,
+      "policy": "retaliate_combat_brief",
+      "max_steps": 2000,
+      "max_seconds": 300
+    },
+    {
+      "character": "Ironclad",
+      "seed": "e086_brief_003",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300
+    },
+    {
+      "character": "Ironclad",
+      "seed": "e086_brief_003",
+      "ascension": 10,
+      "policy": "retaliate_combat_brief",
+      "max_steps": 2000,
+      "max_seconds": 300
+    },
+    {
+      "character": "Silent",
+      "seed": "e086_brief_003",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300
+    },
+    {
+      "character": "Silent",
+      "seed": "e086_brief_003",
+      "ascension": 10,
+      "policy": "retaliate_combat_brief",
+      "max_steps": 2000,
+      "max_seconds": 300
+    },
+    {
+      "character": "Defect",
+      "seed": "e086_brief_003",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300
+    },
+    {
+      "character": "Defect",
+      "seed": "e086_brief_003",
+      "ascension": 10,
+      "policy": "retaliate_combat_brief",
+      "max_steps": 2000,
+      "max_seconds": 300
+    },
+    {
+      "character": "Regent",
+      "seed": "e086_brief_003",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300
+    },
+    {
+      "character": "Regent",
+      "seed": "e086_brief_003",
+      "ascension": 10,
+      "policy": "retaliate_combat_brief",
+      "max_steps": 2000,
+      "max_seconds": 300
+    },
+    {
+      "character": "Necrobinder",
+      "seed": "e086_brief_003",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300
+    },
+    {
+      "character": "Necrobinder",
+      "seed": "e086_brief_003",
+      "ascension": 10,
+      "policy": "retaliate_combat_brief",
+      "max_steps": 2000,
+      "max_seconds": 300
+    },
+    {
+      "character": "Ironclad",
+      "seed": "e086_brief_004",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300
+    },
+    {
+      "character": "Ironclad",
+      "seed": "e086_brief_004",
+      "ascension": 10,
+      "policy": "retaliate_combat_brief",
+      "max_steps": 2000,
+      "max_seconds": 300
+    },
+    {
+      "character": "Silent",
+      "seed": "e086_brief_004",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300
+    },
+    {
+      "character": "Silent",
+      "seed": "e086_brief_004",
+      "ascension": 10,
+      "policy": "retaliate_combat_brief",
+      "max_steps": 2000,
+      "max_seconds": 300
+    },
+    {
+      "character": "Defect",
+      "seed": "e086_brief_004",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300
+    },
+    {
+      "character": "Defect",
+      "seed": "e086_brief_004",
+      "ascension": 10,
+      "policy": "retaliate_combat_brief",
+      "max_steps": 2000,
+      "max_seconds": 300
+    },
+    {
+      "character": "Regent",
+      "seed": "e086_brief_004",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300
+    },
+    {
+      "character": "Regent",
+      "seed": "e086_brief_004",
+      "ascension": 10,
+      "policy": "retaliate_combat_brief",
+      "max_steps": 2000,
+      "max_seconds": 300
+    },
+    {
+      "character": "Necrobinder",
+      "seed": "e086_brief_004",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300
+    },
+    {
+      "character": "Necrobinder",
+      "seed": "e086_brief_004",
+      "ascension": 10,
+      "policy": "retaliate_combat_brief",
+      "max_steps": 2000,
+      "max_seconds": 300
+    }
+  ],
+  "results": [
+    {
+      "character": "Ironclad",
+      "seed": "e086_brief_001",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "run_id": "26060836-1ddd-445a-a939-6a22772333ed",
+      "status": "normal_defeat",
+      "steps": 206,
+      "model_calls": 24,
+      "cost_usd": 0.003761897999999999,
+      "initial_state_hash": "6386d6459caaaf7f93ff150715dc83d92dedff43ee1cd37ed49c2fa078433106",
+      "cache_hits": 0,
+      "engine_log_sha256": "dfd508ad03f6e4020887fed8ec08e6b46448db93425cd3fa2f6d3eaaf443c4c4",
+      "act": 2,
+      "floor": 2,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 91.942,
+      "scenes": {
+        "event_choice": 2,
+        "map_select": 17,
+        "combat_play": 171,
+        "card_reward": 10,
+        "card_select": 1,
+        "rest_site": 3,
+        "shop": 2,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/26060836-1ddd-445a-a939-6a22772333ed/decisions.jsonl",
+      "trace_sha256": "d49e9cecb8dbb3fbef925179539784877833a3fe2d1e6598f3713561f85b2324",
+      "trace_verified": true,
+      "model_seconds": 26.698,
+      "act1_boss_entries": 1,
+      "combat_reward_briefs": 0
+    },
+    {
+      "character": "Ironclad",
+      "seed": "e086_brief_001",
+      "ascension": 10,
+      "policy": "retaliate_combat_brief",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "run_id": "ad607278-343d-4480-aac9-8faf1e2600bf",
+      "status": "normal_defeat",
+      "steps": 153,
+      "model_calls": 16,
+      "cost_usd": 0.002925216,
+      "initial_state_hash": "6386d6459caaaf7f93ff150715dc83d92dedff43ee1cd37ed49c2fa078433106",
+      "cache_hits": 6,
+      "engine_log_sha256": "f4650a26e2ef0800312c13deac8ecd9e46c3ad804f58ff8934402fd25c93d862",
+      "act": 1,
+      "floor": 15,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 83.881,
+      "scenes": {
+        "event_choice": 2,
+        "map_select": 14,
+        "combat_play": 122,
+        "card_reward": 8,
+        "card_select": 2,
+        "rest_site": 2,
+        "shop": 3,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/ad607278-343d-4480-aac9-8faf1e2600bf/decisions.jsonl",
+      "trace_sha256": "572d804673b02496c522a6155e465ea7a0d42c4d3618220249bdc2ebb4180820",
+      "trace_verified": true,
+      "model_seconds": 14.849,
+      "act1_boss_entries": 0,
+      "combat_reward_briefs": 8
+    },
+    {
+      "character": "Silent",
+      "seed": "e086_brief_001",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "run_id": "96056496-c6b8-4fd1-a9b5-6e9a6849f8c3",
+      "status": "normal_defeat",
+      "steps": 129,
+      "model_calls": 24,
+      "cost_usd": 0.0034584480000000003,
+      "initial_state_hash": "cacb5a40d314222b04e8e3fa62cef9438515db02c861c8ac948946260e89b75b",
+      "cache_hits": 2,
+      "engine_log_sha256": "dac9437ace5c8199c870aa845d1dd128deff3429a497df9917d65deaf02b5bf4",
+      "act": 1,
+      "floor": 8,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 96.541,
+      "scenes": {
+        "event_choice": 2,
+        "map_select": 7,
+        "combat_play": 99,
+        "card_select": 16,
+        "card_reward": 5,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/96056496-c6b8-4fd1-a9b5-6e9a6849f8c3/decisions.jsonl",
+      "trace_sha256": "18ab7622d02e7f46bda683d071defc320dc9bd8534be08c366644db123260871",
+      "trace_verified": true,
+      "model_seconds": 24.536,
+      "act1_boss_entries": 0,
+      "combat_reward_briefs": 0
+    },
+    {
+      "character": "Silent",
+      "seed": "e086_brief_001",
+      "ascension": 10,
+      "policy": "retaliate_combat_brief",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "run_id": "f296b8fd-af95-4fd1-abab-b045c8705202",
+      "status": "normal_defeat",
+      "steps": 164,
+      "model_calls": 29,
+      "cost_usd": 0.004250148,
+      "initial_state_hash": "cacb5a40d314222b04e8e3fa62cef9438515db02c861c8ac948946260e89b75b",
+      "cache_hits": 3,
+      "engine_log_sha256": "bb1ef68923baa6ee6256416e541a05858194d924ff577fb9cb0c428333777967",
+      "act": 1,
+      "floor": 11,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 113.128,
+      "scenes": {
+        "event_choice": 2,
+        "map_select": 10,
+        "combat_play": 127,
+        "card_select": 17,
+        "card_reward": 5,
+        "shop": 2,
+        "rest_site": 1,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/f296b8fd-af95-4fd1-abab-b045c8705202/decisions.jsonl",
+      "trace_sha256": "3e9e75c333f241483e2d10d7b13140fd28acaafc38e73aa01f9e9534c5d8f5e2",
+      "trace_verified": true,
+      "model_seconds": 32.435,
+      "act1_boss_entries": 0,
+      "combat_reward_briefs": 5
+    },
+    {
+      "character": "Defect",
+      "seed": "e086_brief_001",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "run_id": "965688c5-72c0-4ffa-b2f5-3ec83f515cf2",
+      "status": "normal_defeat",
+      "steps": 121,
+      "model_calls": 16,
+      "cost_usd": 0.002070138,
+      "initial_state_hash": "ee2781516bdc5f62e8668cba77b91ee5d3ff0b8f39758d8b06a8abb2cc4e1f10",
+      "cache_hits": 0,
+      "engine_log_sha256": "2fec0185dcb484929f1d6b661ba97a405acca8f587511e8ebe04c1b129faedfe",
+      "act": 1,
+      "floor": 11,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 48.036,
+      "scenes": {
+        "event_choice": 2,
+        "map_select": 10,
+        "combat_play": 99,
+        "card_reward": 5,
+        "shop": 2,
+        "card_select": 2,
+        "rest_site": 1,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/965688c5-72c0-4ffa-b2f5-3ec83f515cf2/decisions.jsonl",
+      "trace_sha256": "10bb1f64acefbc692559b5939352c80a7b327699cd27b9277ec6e39a5405d75d",
+      "trace_verified": true,
+      "model_seconds": 12.492,
+      "act1_boss_entries": 0,
+      "combat_reward_briefs": 0
+    },
+    {
+      "character": "Defect",
+      "seed": "e086_brief_001",
+      "ascension": 10,
+      "policy": "retaliate_combat_brief",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "run_id": "4bafac51-2a48-4f87-8c74-beb0a0d08068",
+      "status": "normal_defeat",
+      "steps": 120,
+      "model_calls": 10,
+      "cost_usd": 0.001288266,
+      "initial_state_hash": "ee2781516bdc5f62e8668cba77b91ee5d3ff0b8f39758d8b06a8abb2cc4e1f10",
+      "cache_hits": 6,
+      "engine_log_sha256": "897cc95af5c6828aa89a76a04ed570e57520f7576eb830fa49d3d32c18a78c54",
+      "act": 1,
+      "floor": 11,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 43.846,
+      "scenes": {
+        "event_choice": 2,
+        "map_select": 10,
+        "combat_play": 98,
+        "card_reward": 5,
+        "shop": 2,
+        "card_select": 2,
+        "rest_site": 1,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/4bafac51-2a48-4f87-8c74-beb0a0d08068/decisions.jsonl",
+      "trace_sha256": "9d54dafac7a021bfb640c259692dd5ed0335711591306ac1eeab49ed7e94a673",
+      "trace_verified": true,
+      "model_seconds": 7.561,
+      "act1_boss_entries": 0,
+      "combat_reward_briefs": 5
+    },
+    {
+      "character": "Regent",
+      "seed": "e086_brief_001",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "run_id": "8d048dd7-cdb3-4de7-a4ed-ade5f3df8ad6",
+      "status": "normal_defeat",
+      "steps": 106,
+      "model_calls": 15,
+      "cost_usd": 0.0021007979999999996,
+      "initial_state_hash": "18a08fc35c8736a3fd7089ad709eeb355c24271a38ea00b2ec6ca59314602763",
+      "cache_hits": 0,
+      "engine_log_sha256": "c32cde095cdda6b019245648017d80d126ef0b6b01f9aaa12bb76c2271ab300e",
+      "act": 1,
+      "floor": 11,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 41.268,
+      "scenes": {
+        "event_choice": 2,
+        "map_select": 10,
+        "combat_play": 86,
+        "card_reward": 5,
+        "shop": 2,
+        "rest_site": 1,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/8d048dd7-cdb3-4de7-a4ed-ade5f3df8ad6/decisions.jsonl",
+      "trace_sha256": "9e03241726ec431c6660e0a0d3382de6b984e42ff6e2805f68b72ec2b742235b",
+      "trace_verified": true,
+      "model_seconds": 12.906,
+      "act1_boss_entries": 0,
+      "combat_reward_briefs": 0
+    },
+    {
+      "character": "Regent",
+      "seed": "e086_brief_001",
+      "ascension": 10,
+      "policy": "retaliate_combat_brief",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "run_id": "79842262-a408-4d5d-8ff4-d7cb6c471ab9",
+      "status": "normal_defeat",
+      "steps": 118,
+      "model_calls": 10,
+      "cost_usd": 0.0014238000000000002,
+      "initial_state_hash": "18a08fc35c8736a3fd7089ad709eeb355c24271a38ea00b2ec6ca59314602763",
+      "cache_hits": 6,
+      "engine_log_sha256": "42173666692c9c4a35f2da5ae0f2d81a1b548826f6d64d8e04ce3691436483ec",
+      "act": 1,
+      "floor": 11,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 38.696,
+      "scenes": {
+        "event_choice": 2,
+        "map_select": 10,
+        "combat_play": 97,
+        "card_reward": 5,
+        "shop": 2,
+        "card_select": 1,
+        "rest_site": 1,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/79842262-a408-4d5d-8ff4-d7cb6c471ab9/decisions.jsonl",
+      "trace_sha256": "17ea0b8b5760291e20c8039e23f6f0b0d17144473803538895db4e16ba409f1b",
+      "trace_verified": true,
+      "model_seconds": 7.414,
+      "act1_boss_entries": 0,
+      "combat_reward_briefs": 5
+    },
+    {
+      "character": "Necrobinder",
+      "seed": "e086_brief_001",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "run_id": "df55fd65-4506-485e-a67f-2a0d6b91f56d",
+      "status": "normal_defeat",
+      "steps": 86,
+      "model_calls": 12,
+      "cost_usd": 0.00169197,
+      "initial_state_hash": "6dbfa36904ae10cd960c45330d65461bc9535134f5a27876e66e72da828485df",
+      "cache_hits": 0,
+      "engine_log_sha256": "5e906fc7db21dc39ebabb7464960b946ba8e18caf2442ebf6f082543afc7cb78",
+      "act": 1,
+      "floor": 8,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 31.043,
+      "scenes": {
+        "event_choice": 2,
+        "map_select": 7,
+        "combat_play": 71,
+        "card_reward": 4,
+        "shop": 2,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/df55fd65-4506-485e-a67f-2a0d6b91f56d/decisions.jsonl",
+      "trace_sha256": "9e9b4e92457476029339fb1246fa7663edd46b50424de6d7ed75caa8baf4d69b",
+      "trace_verified": true,
+      "model_seconds": 10.163,
+      "act1_boss_entries": 0,
+      "combat_reward_briefs": 0
+    },
+    {
+      "character": "Necrobinder",
+      "seed": "e086_brief_001",
+      "ascension": 10,
+      "policy": "retaliate_combat_brief",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "run_id": "c0e59d41-efb4-445b-9ff9-540635645bf0",
+      "status": "normal_defeat",
+      "steps": 86,
+      "model_calls": 5,
+      "cost_usd": 0.0007594860000000001,
+      "initial_state_hash": "6dbfa36904ae10cd960c45330d65461bc9535134f5a27876e66e72da828485df",
+      "cache_hits": 7,
+      "engine_log_sha256": "62a7da47b9c2bedc0b1e320e2ee06b3ff325d3c918945c300f168cb989ac34a7",
+      "act": 1,
+      "floor": 8,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 27.935,
+      "scenes": {
+        "event_choice": 2,
+        "map_select": 7,
+        "combat_play": 71,
+        "card_reward": 4,
+        "shop": 2,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/c0e59d41-efb4-445b-9ff9-540635645bf0/decisions.jsonl",
+      "trace_sha256": "c61b5cdfe23f72da0b957358105b68b321b1d74c2f57d6693576840c940b409b",
+      "trace_verified": true,
+      "model_seconds": 4.255,
+      "act1_boss_entries": 0,
+      "combat_reward_briefs": 4
+    },
+    {
+      "character": "Ironclad",
+      "seed": "e086_brief_002",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "run_id": "fdd16f3e-7a27-47fa-b20f-3233a59aaacc",
+      "status": "normal_defeat",
+      "steps": 206,
+      "model_calls": 31,
+      "cost_usd": 0.004839324000000001,
+      "initial_state_hash": "0649572943ea8650fb236bce364596760b221de4c510ae43bec2c7a62172958c",
+      "cache_hits": 0,
+      "engine_log_sha256": "3225085f7eb5f2681634039616a45676eab4b94f611f21c0c92c4f3e4ffb1e9f",
+      "act": 1,
+      "floor": 17,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 84.145,
+      "scenes": {
+        "event_choice": 1,
+        "card_reward": 11,
+        "map_select": 16,
+        "combat_play": 164,
+        "card_select": 9,
+        "rest_site": 3,
+        "shop": 2,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/fdd16f3e-7a27-47fa-b20f-3233a59aaacc/decisions.jsonl",
+      "trace_sha256": "c4b7048f14f5315dab5d9aec8b91045d4e7e996c7714cd070462c7fa7bf92109",
+      "trace_verified": true,
+      "model_seconds": 24.271,
+      "act1_boss_entries": 1,
+      "combat_reward_briefs": 0
+    },
+    {
+      "character": "Ironclad",
+      "seed": "e086_brief_002",
+      "ascension": 10,
+      "policy": "retaliate_combat_brief",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "run_id": "bfb914a8-211d-4999-a2f9-003ba2bebb24",
+      "status": "normal_defeat",
+      "steps": 103,
+      "model_calls": 7,
+      "cost_usd": 0.001024968,
+      "initial_state_hash": "0649572943ea8650fb236bce364596760b221de4c510ae43bec2c7a62172958c",
+      "cache_hits": 3,
+      "engine_log_sha256": "fb158464df5f40a5a31b115efdad55f7a7427a1f074199cbf7f4830795b089b4",
+      "act": 1,
+      "floor": 7,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 23.765,
+      "scenes": {
+        "event_choice": 1,
+        "card_reward": 6,
+        "map_select": 6,
+        "combat_play": 90,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/bfb914a8-211d-4999-a2f9-003ba2bebb24/decisions.jsonl",
+      "trace_sha256": "e186f594bdf1b1bcc6d9558314249089543d5b915cdc2e373e9c0e1d0adbeb51",
+      "trace_verified": true,
+      "model_seconds": 6.001,
+      "act1_boss_entries": 0,
+      "combat_reward_briefs": 5
+    },
+    {
+      "character": "Silent",
+      "seed": "e086_brief_002",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "run_id": "92cb7e6d-19cd-49fb-a47d-41d8eb9fed94",
+      "status": "normal_defeat",
+      "steps": 114,
+      "model_calls": 10,
+      "cost_usd": 0.001468992,
+      "initial_state_hash": "13c8f86ac28563c3f8776da466cbdb3bc2290dfcade82800e8908102057c0b73",
+      "cache_hits": 4,
+      "engine_log_sha256": "d606b135205d604cb453edd1d1edb1c33f19660ec0693d4e2bcf3c691bd00c16",
+      "act": 1,
+      "floor": 6,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 40.251,
+      "scenes": {
+        "event_choice": 1,
+        "card_reward": 5,
+        "map_select": 5,
+        "combat_play": 97,
+        "card_select": 6,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/92cb7e6d-19cd-49fb-a47d-41d8eb9fed94/decisions.jsonl",
+      "trace_sha256": "f71463ae060322f94760abe9f99d78d28376d839db9d2ab0098c7690d67eb86c",
+      "trace_verified": true,
+      "model_seconds": 9.08,
+      "act1_boss_entries": 0,
+      "combat_reward_briefs": 0
+    },
+    {
+      "character": "Silent",
+      "seed": "e086_brief_002",
+      "ascension": 10,
+      "policy": "retaliate_combat_brief",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "run_id": "30084c45-874e-40b6-8dca-813aaf46bfa5",
+      "status": "normal_defeat",
+      "steps": 125,
+      "model_calls": 13,
+      "cost_usd": 0.0019123439999999998,
+      "initial_state_hash": "13c8f86ac28563c3f8776da466cbdb3bc2290dfcade82800e8908102057c0b73",
+      "cache_hits": 4,
+      "engine_log_sha256": "ebe7dbc2fe415febf2dcfca42949a9a8009c4ca1627c93ddba03aa07958672a0",
+      "act": 1,
+      "floor": 6,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 46.302,
+      "scenes": {
+        "event_choice": 1,
+        "card_reward": 5,
+        "map_select": 5,
+        "combat_play": 105,
+        "card_select": 9,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/30084c45-874e-40b6-8dca-813aaf46bfa5/decisions.jsonl",
+      "trace_sha256": "d018d7422ff8e91c66ef353114b9066434a5e01b8a579f823a09ff3e50b09557",
+      "trace_verified": true,
+      "model_seconds": 10.5,
+      "act1_boss_entries": 0,
+      "combat_reward_briefs": 4
+    },
+    {
+      "character": "Defect",
+      "seed": "e086_brief_002",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "run_id": "e8ab6310-f2fa-437f-bdc6-ba22e266bf15",
+      "status": "normal_defeat",
+      "steps": 97,
+      "model_calls": 8,
+      "cost_usd": 0.000998508,
+      "initial_state_hash": "c1a48bb85008084266147e1782b6bc6c4464e383598d72293c5d954e28ed31f6",
+      "cache_hits": 0,
+      "engine_log_sha256": "011f1f3088b5b236f89a221fb4124df5fc374406609ef65cfb5e68d9cb0175eb",
+      "act": 1,
+      "floor": 6,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 26.32,
+      "scenes": {
+        "event_choice": 1,
+        "card_reward": 5,
+        "map_select": 5,
+        "combat_play": 86,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/e8ab6310-f2fa-437f-bdc6-ba22e266bf15/decisions.jsonl",
+      "trace_sha256": "e124e2028cb959eb4a52c2b3762b33d8a5d5c63bb3491b08b93803ed8d6ff5de",
+      "trace_verified": true,
+      "model_seconds": 7.518,
+      "act1_boss_entries": 0,
+      "combat_reward_briefs": 0
+    },
+    {
+      "character": "Defect",
+      "seed": "e086_brief_002",
+      "ascension": 10,
+      "policy": "retaliate_combat_brief",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "run_id": "8067e413-035f-4615-8db4-aa1391dde7d9",
+      "status": "normal_defeat",
+      "steps": 134,
+      "model_calls": 6,
+      "cost_usd": 0.0008938859999999999,
+      "initial_state_hash": "c1a48bb85008084266147e1782b6bc6c4464e383598d72293c5d954e28ed31f6",
+      "cache_hits": 4,
+      "engine_log_sha256": "ae5aff99f0ebf1b64a32e816d8256713c122a72e8aad37a90a3b99cc0c91c42c",
+      "act": 1,
+      "floor": 7,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 25.316,
+      "scenes": {
+        "event_choice": 1,
+        "card_reward": 6,
+        "map_select": 6,
+        "combat_play": 121,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/8067e413-035f-4615-8db4-aa1391dde7d9/decisions.jsonl",
+      "trace_sha256": "e52fc2b5146b106f54ee52cdbec0090ed5c3f96cd658ef3e1aaf4e86f209a71d",
+      "trace_verified": true,
+      "model_seconds": 4.399,
+      "act1_boss_entries": 0,
+      "combat_reward_briefs": 5
+    },
+    {
+      "character": "Regent",
+      "seed": "e086_brief_002",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "run_id": "7faf5042-9ec2-4e2a-a50e-b685b50ba5f1",
+      "status": "normal_defeat",
+      "steps": 106,
+      "model_calls": 8,
+      "cost_usd": 0.0010582319999999999,
+      "initial_state_hash": "97fce5e5c8d032994686bdb7a2508bc98727c1c24fd15eb4ecb007214fd2e9f5",
+      "cache_hits": 0,
+      "engine_log_sha256": "8030b8837c8850d679f194c2ccac273c0b6a08d9d0427adc72e10a4888dece30",
+      "act": 1,
+      "floor": 6,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 22.687,
+      "scenes": {
+        "event_choice": 1,
+        "card_reward": 5,
+        "map_select": 5,
+        "combat_play": 95,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/7faf5042-9ec2-4e2a-a50e-b685b50ba5f1/decisions.jsonl",
+      "trace_sha256": "58affb91bdc3a3f045573fa4f5f49dab44740fd6270e54ac08268b90ed51335d",
+      "trace_verified": true,
+      "model_seconds": 7.472,
+      "act1_boss_entries": 0,
+      "combat_reward_briefs": 0
+    },
+    {
+      "character": "Regent",
+      "seed": "e086_brief_002",
+      "ascension": 10,
+      "policy": "retaliate_combat_brief",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "run_id": "5af9bb2f-606d-4c3a-ad8b-5a410594a756",
+      "status": "normal_defeat",
+      "steps": 111,
+      "model_calls": 4,
+      "cost_usd": 0.0006458340000000001,
+      "initial_state_hash": "97fce5e5c8d032994686bdb7a2508bc98727c1c24fd15eb4ecb007214fd2e9f5",
+      "cache_hits": 4,
+      "engine_log_sha256": "7e875c14535fd8ec6b9fb81ac1289ea37e581d855a7a25823a740a44121a86f7",
+      "act": 1,
+      "floor": 6,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 20.75,
+      "scenes": {
+        "event_choice": 1,
+        "card_reward": 5,
+        "map_select": 5,
+        "combat_play": 100,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/5af9bb2f-606d-4c3a-ad8b-5a410594a756/decisions.jsonl",
+      "trace_sha256": "c3e2fc8009452995907f859921860d76bdcd9e89c5204e60c7b229c4eaff93b0",
+      "trace_verified": true,
+      "model_seconds": 3.209,
+      "act1_boss_entries": 0,
+      "combat_reward_briefs": 4
+    },
+    {
+      "character": "Necrobinder",
+      "seed": "e086_brief_002",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "run_id": "63bd3ec4-f677-49bc-83d5-0bb29bf47d76",
+      "status": "normal_defeat",
+      "steps": 97,
+      "model_calls": 8,
+      "cost_usd": 0.001080492,
+      "initial_state_hash": "f168c66687e5b3c1c3fd53210cbbaedadba08c63bd6ee09aa5f870e89b4b60cb",
+      "cache_hits": 0,
+      "engine_log_sha256": "0370fc182e12863c0000aac538fc8f82bce84173f5ccb51a49d7494cdbb6cb6d",
+      "act": 1,
+      "floor": 6,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 17.963,
+      "scenes": {
+        "event_choice": 1,
+        "card_reward": 5,
+        "map_select": 5,
+        "combat_play": 86,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/63bd3ec4-f677-49bc-83d5-0bb29bf47d76/decisions.jsonl",
+      "trace_sha256": "c2b131cefc1b9ea2dabeed230d2af4cf591b08fd64a66cc57d0eb45c683aa993",
+      "trace_verified": true,
+      "model_seconds": 6.003,
+      "act1_boss_entries": 0,
+      "combat_reward_briefs": 0
+    },
+    {
+      "character": "Necrobinder",
+      "seed": "e086_brief_002",
+      "ascension": 10,
+      "policy": "retaliate_combat_brief",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "run_id": "db854ad0-0118-4024-b8e0-d5f79feb54e6",
+      "status": "normal_defeat",
+      "steps": 99,
+      "model_calls": 4,
+      "cost_usd": 0.0006573,
+      "initial_state_hash": "f168c66687e5b3c1c3fd53210cbbaedadba08c63bd6ee09aa5f870e89b4b60cb",
+      "cache_hits": 4,
+      "engine_log_sha256": "ef34cbae57f2cd74c41d8067262249967db589e638e7a5d5b460b6cd58391759",
+      "act": 1,
+      "floor": 6,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 21.915,
+      "scenes": {
+        "event_choice": 1,
+        "card_reward": 5,
+        "map_select": 5,
+        "combat_play": 88,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/db854ad0-0118-4024-b8e0-d5f79feb54e6/decisions.jsonl",
+      "trace_sha256": "50e3add639ce70302693a367dd3d7e6bcd76be837310179d7e4cc7d181e11455",
+      "trace_verified": true,
+      "model_seconds": 2.999,
+      "act1_boss_entries": 0,
+      "combat_reward_briefs": 4
+    },
+    {
+      "character": "Ironclad",
+      "seed": "e086_brief_003",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "run_id": "6bcf0097-ae3a-455b-89e5-00b52ee0ae84",
+      "status": "normal_defeat",
+      "steps": 195,
+      "model_calls": 24,
+      "cost_usd": 0.003666138,
+      "initial_state_hash": "6b0d0f164057fd3af126b8ee57de5f52870ef0996efc1932ada57453db6dada2",
+      "cache_hits": 0,
+      "engine_log_sha256": "7b4759273aacab8d10aff49fc21f279cde624950b068610ae1b06b027c7e3e47",
+      "act": 1,
+      "floor": 14,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 71.134,
+      "scenes": {
+        "event_choice": 2,
+        "card_select": 6,
+        "map_select": 13,
+        "combat_play": 164,
+        "card_reward": 8,
+        "rest_site": 2,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/6bcf0097-ae3a-455b-89e5-00b52ee0ae84/decisions.jsonl",
+      "trace_sha256": "519e1306e9c53e733790d1199385569c8ab673328ddb695ad37c13eb2feaf131",
+      "trace_verified": true,
+      "model_seconds": 22.386,
+      "act1_boss_entries": 0,
+      "combat_reward_briefs": 0
+    },
+    {
+      "character": "Ironclad",
+      "seed": "e086_brief_003",
+      "ascension": 10,
+      "policy": "retaliate_combat_brief",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "run_id": "ed875b35-3144-465b-bc5f-a40ecbdbea2c",
+      "status": "normal_defeat",
+      "steps": 249,
+      "model_calls": 22,
+      "cost_usd": 0.003333708,
+      "initial_state_hash": "6b0d0f164057fd3af126b8ee57de5f52870ef0996efc1932ada57453db6dada2",
+      "cache_hits": 3,
+      "engine_log_sha256": "0dcd193bc50b220d866930170db804d965167a114b3ffae31d6f2b5174263075",
+      "act": 1,
+      "floor": 17,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 71.317,
+      "scenes": {
+        "event_choice": 2,
+        "card_select": 3,
+        "map_select": 16,
+        "combat_play": 215,
+        "card_reward": 10,
+        "rest_site": 3,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/ed875b35-3144-465b-bc5f-a40ecbdbea2c/decisions.jsonl",
+      "trace_sha256": "bf240cd3729a56ecae6a28f2fe3851bffe52d100e68e02d07ba70667ca934113",
+      "trace_verified": true,
+      "model_seconds": 17.973,
+      "act1_boss_entries": 1,
+      "combat_reward_briefs": 10
+    },
+    {
+      "character": "Silent",
+      "seed": "e086_brief_003",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "run_id": "4d79c7de-cae6-4475-9b67-8b1c2881a873",
+      "status": "normal_defeat",
+      "steps": 236,
+      "model_calls": 31,
+      "cost_usd": 0.004655154000000001,
+      "initial_state_hash": "9c3c25d7efd80e58d1f2ed3759cc27c4da4962420370599a4f12415d966c8b63",
+      "cache_hits": 0,
+      "engine_log_sha256": "a27fb0ca1874e877c197b3ada0e3710349d031e54fb3ad1f08261b44c7b9a84f",
+      "act": 1,
+      "floor": 14,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 95.072,
+      "scenes": {
+        "event_choice": 2,
+        "card_select": 13,
+        "map_select": 13,
+        "combat_play": 198,
+        "card_reward": 8,
+        "rest_site": 2,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/4d79c7de-cae6-4475-9b67-8b1c2881a873/decisions.jsonl",
+      "trace_sha256": "20035667d14d10b72bf004694affcc1f025a30be93afe83eb828664c7c9aae73",
+      "trace_verified": true,
+      "model_seconds": 26.11,
+      "act1_boss_entries": 0,
+      "combat_reward_briefs": 0
+    },
+    {
+      "character": "Silent",
+      "seed": "e086_brief_003",
+      "ascension": 10,
+      "policy": "retaliate_combat_brief",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "run_id": "c1e4b59d-a890-433c-bb88-e1b6edd94242",
+      "status": "normal_defeat",
+      "steps": 118,
+      "model_calls": 4,
+      "cost_usd": 0.000630714,
+      "initial_state_hash": "9c3c25d7efd80e58d1f2ed3759cc27c4da4962420370599a4f12415d966c8b63",
+      "cache_hits": 6,
+      "engine_log_sha256": "b6b191a68bb178aa06957745d08228c79c7722f7f5f52e0618775e5460ec4409",
+      "act": 1,
+      "floor": 6,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 27.536,
+      "scenes": {
+        "event_choice": 1,
+        "card_select": 4,
+        "map_select": 5,
+        "combat_play": 104,
+        "card_reward": 4,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/c1e4b59d-a890-433c-bb88-e1b6edd94242/decisions.jsonl",
+      "trace_sha256": "505408f8698ed5e91740e14b986966badd7ff4c7cbf6a95b0f08b8d4979f07ce",
+      "trace_verified": true,
+      "model_seconds": 3.089,
+      "act1_boss_entries": 0,
+      "combat_reward_briefs": 4
+    },
+    {
+      "character": "Defect",
+      "seed": "e086_brief_003",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "run_id": "28f78773-991a-41e8-b6de-990716e967ad",
+      "status": "normal_defeat",
+      "steps": 169,
+      "model_calls": 19,
+      "cost_usd": 0.0025870319999999995,
+      "initial_state_hash": "c40402ce4f63498bb9bf15d574bbf73388bf692e98c8334f7b49b921972b55ef",
+      "cache_hits": 0,
+      "engine_log_sha256": "170cade276a422fec1f42fd0a0e7b22feacdeea3533cb12f8e5392b7afc13ea5",
+      "act": 1,
+      "floor": 14,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 60.746,
+      "scenes": {
+        "event_choice": 2,
+        "card_select": 1,
+        "map_select": 13,
+        "combat_play": 143,
+        "card_reward": 8,
+        "rest_site": 2,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/28f78773-991a-41e8-b6de-990716e967ad/decisions.jsonl",
+      "trace_sha256": "40042fa240ac59103ccae59465f0d203d23d6445c67c3abe48cd1b4eccac1270",
+      "trace_verified": true,
+      "model_seconds": 15.323,
+      "act1_boss_entries": 0,
+      "combat_reward_briefs": 0
+    },
+    {
+      "character": "Defect",
+      "seed": "e086_brief_003",
+      "ascension": 10,
+      "policy": "retaliate_combat_brief",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "run_id": "b75c04fb-61b8-4576-b740-b986b5dc1b48",
+      "status": "normal_defeat",
+      "steps": 189,
+      "model_calls": 18,
+      "cost_usd": 0.002634702000000001,
+      "initial_state_hash": "c40402ce4f63498bb9bf15d574bbf73388bf692e98c8334f7b49b921972b55ef",
+      "cache_hits": 3,
+      "engine_log_sha256": "d72737e6a5c6041700596bdb125d8fb5174b0d05efbaabef98ab866919af054f",
+      "act": 1,
+      "floor": 15,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 61.504,
+      "scenes": {
+        "event_choice": 2,
+        "card_select": 1,
+        "map_select": 14,
+        "combat_play": 161,
+        "card_reward": 9,
+        "rest_site": 2,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/b75c04fb-61b8-4576-b740-b986b5dc1b48/decisions.jsonl",
+      "trace_sha256": "48268beba10ae901ef4192193d2c7167c39090e67ebfc433ea95b48224aa1999",
+      "trace_verified": true,
+      "model_seconds": 16.987,
+      "act1_boss_entries": 0,
+      "combat_reward_briefs": 9
+    },
+    {
+      "character": "Regent",
+      "seed": "e086_brief_003",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "run_id": "24ee797f-fb29-4fae-abf7-34cca12e03b9",
+      "status": "normal_defeat",
+      "steps": 73,
+      "model_calls": 6,
+      "cost_usd": 0.000738318,
+      "initial_state_hash": "d95247088488d5bceac6d1440601341d062c2fe0ccee0fd5078871e0d5333649",
+      "cache_hits": 0,
+      "engine_log_sha256": "d036b4b2567a3d8c2e707037771590d55330b05d53a0bf7132869f5d5439625b",
+      "act": 1,
+      "floor": 5,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 18.722,
+      "scenes": {
+        "event_choice": 1,
+        "card_select": 1,
+        "map_select": 4,
+        "combat_play": 64,
+        "card_reward": 3,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/24ee797f-fb29-4fae-abf7-34cca12e03b9/decisions.jsonl",
+      "trace_sha256": "55ec40a087062335ec5e0f555b3ee6d002f8fec4c8e0f2a58279d45942a991bd",
+      "trace_verified": true,
+      "model_seconds": 4.448,
+      "act1_boss_entries": 0,
+      "combat_reward_briefs": 0
+    },
+    {
+      "character": "Regent",
+      "seed": "e086_brief_003",
+      "ascension": 10,
+      "policy": "retaliate_combat_brief",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "run_id": "b2fc8947-fd27-4a98-876b-689b20d42475",
+      "status": "normal_defeat",
+      "steps": 75,
+      "model_calls": 3,
+      "cost_usd": 0.00046666199999999996,
+      "initial_state_hash": "d95247088488d5bceac6d1440601341d062c2fe0ccee0fd5078871e0d5333649",
+      "cache_hits": 3,
+      "engine_log_sha256": "19a441b20908d4f0986e3f3b7d21769b04c44b9deb632844bdc89b2fb7eb9149",
+      "act": 1,
+      "floor": 5,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 19.701,
+      "scenes": {
+        "event_choice": 1,
+        "card_select": 1,
+        "map_select": 4,
+        "combat_play": 66,
+        "card_reward": 3,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/b2fc8947-fd27-4a98-876b-689b20d42475/decisions.jsonl",
+      "trace_sha256": "8dc12040b68068c96d2054f796df635dcacbaefae583774d1b80ac795495b813",
+      "trace_verified": true,
+      "model_seconds": 3.463,
+      "act1_boss_entries": 0,
+      "combat_reward_briefs": 3
+    },
+    {
+      "character": "Necrobinder",
+      "seed": "e086_brief_003",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "run_id": "8f439c60-a524-4c84-b25b-8a035934f4c3",
+      "status": "normal_defeat",
+      "steps": 102,
+      "model_calls": 6,
+      "cost_usd": 0.0007241640000000001,
+      "initial_state_hash": "e1af61c69d0eb2c0e4c152daa95c92877a1bb4b12264929653a42922a8eff909",
+      "cache_hits": 0,
+      "engine_log_sha256": "43e19ae06fc91ef94598df660edeb1a52e884b4921cc70c2a17bdcfddc28e649",
+      "act": 1,
+      "floor": 5,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 18.004,
+      "scenes": {
+        "event_choice": 1,
+        "card_select": 1,
+        "map_select": 4,
+        "combat_play": 93,
+        "card_reward": 3,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/8f439c60-a524-4c84-b25b-8a035934f4c3/decisions.jsonl",
+      "trace_sha256": "87b9ddc46e15b7496d387e81a7f59933d83f0cb058575e7863b0814bacbd906f",
+      "trace_verified": true,
+      "model_seconds": 5.063,
+      "act1_boss_entries": 0,
+      "combat_reward_briefs": 0
+    },
+    {
+      "character": "Necrobinder",
+      "seed": "e086_brief_003",
+      "ascension": 10,
+      "policy": "retaliate_combat_brief",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "run_id": "21967457-2d79-45ce-bee2-616fc87893ba",
+      "status": "normal_defeat",
+      "steps": 102,
+      "model_calls": 3,
+      "cost_usd": 0.000449106,
+      "initial_state_hash": "e1af61c69d0eb2c0e4c152daa95c92877a1bb4b12264929653a42922a8eff909",
+      "cache_hits": 3,
+      "engine_log_sha256": "43e19ae06fc91ef94598df660edeb1a52e884b4921cc70c2a17bdcfddc28e649",
+      "act": 1,
+      "floor": 5,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 16.07,
+      "scenes": {
+        "event_choice": 1,
+        "card_select": 1,
+        "map_select": 4,
+        "combat_play": 93,
+        "card_reward": 3,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/21967457-2d79-45ce-bee2-616fc87893ba/decisions.jsonl",
+      "trace_sha256": "2bf45ee8dd36e9dc46e10a6d75e914a2191c1c0c3c60cba1d1eaf47da328b5c7",
+      "trace_verified": true,
+      "model_seconds": 2.451,
+      "act1_boss_entries": 0,
+      "combat_reward_briefs": 3
+    },
+    {
+      "character": "Ironclad",
+      "seed": "e086_brief_004",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "run_id": "e3232d85-f7e8-4f95-b3f6-8df262b1b4e1",
+      "status": "normal_defeat",
+      "steps": 53,
+      "model_calls": 4,
+      "cost_usd": 0.000433398,
+      "initial_state_hash": "a9bbdcf5410e64e18a31042a946ec769c8478008b1eb8f9fba875871925bd63c",
+      "cache_hits": 0,
+      "engine_log_sha256": "c1cf018bc7e24af68cbb3c026ddc49d05d17985431f55f4a624ed3b7a362c361",
+      "act": 1,
+      "floor": 3,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 12.905,
+      "scenes": {
+        "event_choice": 3,
+        "map_select": 2,
+        "combat_play": 47,
+        "card_reward": 1,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/e3232d85-f7e8-4f95-b3f6-8df262b1b4e1/decisions.jsonl",
+      "trace_sha256": "59c6f9df01cf444bf1c92644f9e55b16b6d051d1a8b0067cf5afe1340f6bed41",
+      "trace_verified": true,
+      "model_seconds": 3.041,
+      "act1_boss_entries": 0,
+      "combat_reward_briefs": 0
+    },
+    {
+      "character": "Ironclad",
+      "seed": "e086_brief_004",
+      "ascension": 10,
+      "policy": "retaliate_combat_brief",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "run_id": "68a3171d-bfe5-4162-8a23-8872191601cb",
+      "status": "normal_defeat",
+      "steps": 53,
+      "model_calls": 1,
+      "cost_usd": 0.0001449,
+      "initial_state_hash": "a9bbdcf5410e64e18a31042a946ec769c8478008b1eb8f9fba875871925bd63c",
+      "cache_hits": 3,
+      "engine_log_sha256": "c1cf018bc7e24af68cbb3c026ddc49d05d17985431f55f4a624ed3b7a362c361",
+      "act": 1,
+      "floor": 3,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 9.134,
+      "scenes": {
+        "event_choice": 3,
+        "map_select": 2,
+        "combat_play": 47,
+        "card_reward": 1,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/68a3171d-bfe5-4162-8a23-8872191601cb/decisions.jsonl",
+      "trace_sha256": "e88f8bba797b277b933d1939cb927da9761fb15d4b64cf28b6724259f74f8376",
+      "trace_verified": true,
+      "model_seconds": 1.196,
+      "act1_boss_entries": 0,
+      "combat_reward_briefs": 1
+    },
+    {
+      "character": "Silent",
+      "seed": "e086_brief_004",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "run_id": "3f5016a4-708b-4b2d-948c-55c326932fc3",
+      "status": "normal_defeat",
+      "steps": 117,
+      "model_calls": 14,
+      "cost_usd": 0.0020314140000000005,
+      "initial_state_hash": "76ac3f4afffe7f39197d87fc00eb55bfb76c43f6364525b911d177954f3a79d2",
+      "cache_hits": 4,
+      "engine_log_sha256": "f3e93d3fc2c2dce7eae33309c6ff2d2bb4d9fe38d3da375b9a49e871b86a0478",
+      "act": 1,
+      "floor": 6,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 42.57,
+      "scenes": {
+        "event_choice": 1,
+        "card_reward": 6,
+        "map_select": 5,
+        "combat_play": 97,
+        "card_select": 8,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/3f5016a4-708b-4b2d-948c-55c326932fc3/decisions.jsonl",
+      "trace_sha256": "73c8d7fdea63b790a87868bd1722b5beec72cca7b10c8afe8eba3d3db794e403",
+      "trace_verified": true,
+      "model_seconds": 10.61,
+      "act1_boss_entries": 0,
+      "combat_reward_briefs": 0
+    },
+    {
+      "character": "Silent",
+      "seed": "e086_brief_004",
+      "ascension": 10,
+      "policy": "retaliate_combat_brief",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "run_id": "1d3ef108-d5c9-4371-9a8a-7c2f9446ec7e",
+      "status": "normal_defeat",
+      "steps": 121,
+      "model_calls": 14,
+      "cost_usd": 0.002213946,
+      "initial_state_hash": "76ac3f4afffe7f39197d87fc00eb55bfb76c43f6364525b911d177954f3a79d2",
+      "cache_hits": 7,
+      "engine_log_sha256": "bd04aa7a9a0751922e71f6bf0e4e414fc04d8925955c3ab97b220f823f2c7cc5",
+      "act": 1,
+      "floor": 6,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 48.032,
+      "scenes": {
+        "event_choice": 1,
+        "card_reward": 6,
+        "map_select": 5,
+        "combat_play": 98,
+        "card_select": 11,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/1d3ef108-d5c9-4371-9a8a-7c2f9446ec7e/decisions.jsonl",
+      "trace_sha256": "d8cdd7560c212fc233255af38c0d78450b77c6b9c0e0a50f363e5a9b3823130d",
+      "trace_verified": true,
+      "model_seconds": 11.343,
+      "act1_boss_entries": 0,
+      "combat_reward_briefs": 4
+    },
+    {
+      "character": "Defect",
+      "seed": "e086_brief_004",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "run_id": "4064f16e-e776-4495-a39d-f1c6a5220310",
+      "status": "normal_defeat",
+      "steps": 101,
+      "model_calls": 12,
+      "cost_usd": 0.0015823080000000002,
+      "initial_state_hash": "6587041f804612382780092ab535ba9863f870a72d4f572427495859e0aee4b4",
+      "cache_hits": 2,
+      "engine_log_sha256": "e6fd8a7e8428a3ec673c0c49ce9c3bc0d9c7fc0d5fb8461f1bf14946146fafe6",
+      "act": 1,
+      "floor": 9,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 33.252,
+      "scenes": {
+        "event_choice": 5,
+        "card_reward": 7,
+        "map_select": 8,
+        "combat_play": 81,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/4064f16e-e776-4495-a39d-f1c6a5220310/decisions.jsonl",
+      "trace_sha256": "de7c672afee9560f1e1232929eb6ce57ccf9a6f2f5a34ab15d4c7232a649f721",
+      "trace_verified": true,
+      "model_seconds": 10.243,
+      "act1_boss_entries": 0,
+      "combat_reward_briefs": 0
+    },
+    {
+      "character": "Defect",
+      "seed": "e086_brief_004",
+      "ascension": 10,
+      "policy": "retaliate_combat_brief",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "run_id": "7e8969e1-3af2-4319-9bab-96068bf2b9b4",
+      "status": "normal_defeat",
+      "steps": 107,
+      "model_calls": 9,
+      "cost_usd": 0.0012661740000000001,
+      "initial_state_hash": "6587041f804612382780092ab535ba9863f870a72d4f572427495859e0aee4b4",
+      "cache_hits": 5,
+      "engine_log_sha256": "bafe9d896fedbd179d737648c6b1f2b47ef2a7cfc42291195ccf2c1ba1e0f1c5",
+      "act": 1,
+      "floor": 9,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 32.734,
+      "scenes": {
+        "event_choice": 5,
+        "card_reward": 7,
+        "map_select": 8,
+        "combat_play": 87,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/7e8969e1-3af2-4319-9bab-96068bf2b9b4/decisions.jsonl",
+      "trace_sha256": "87127758c31e7347df37db09b677e8196bd17d5d84aa45d398cc0c7d2070b653",
+      "trace_verified": true,
+      "model_seconds": 7.198,
+      "act1_boss_entries": 0,
+      "combat_reward_briefs": 5
+    },
+    {
+      "character": "Regent",
+      "seed": "e086_brief_004",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "run_id": "028d0600-d442-48cb-b703-572e94fb3fe0",
+      "status": "normal_defeat",
+      "steps": 105,
+      "model_calls": 13,
+      "cost_usd": 0.0016993619999999998,
+      "initial_state_hash": "cfde31a1b71c9bd1bc2ad2b4d3c2dbf9d478c73b990224512b6bf91d5f1fc218",
+      "cache_hits": 0,
+      "engine_log_sha256": "9f97b21ef06eaaa8d51f24199df1313d30fe8d78fe8222c40561d37bd8e20934",
+      "act": 1,
+      "floor": 8,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 30.552,
+      "scenes": {
+        "event_choice": 5,
+        "card_reward": 6,
+        "map_select": 7,
+        "combat_play": 87,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/028d0600-d442-48cb-b703-572e94fb3fe0/decisions.jsonl",
+      "trace_sha256": "5b4c5290d6605ecdf250faa3073c782520291cb823f6ce0982f0f3493503ef3c",
+      "trace_verified": true,
+      "model_seconds": 10.872,
+      "act1_boss_entries": 0,
+      "combat_reward_briefs": 0
+    },
+    {
+      "character": "Regent",
+      "seed": "e086_brief_004",
+      "ascension": 10,
+      "policy": "retaliate_combat_brief",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "run_id": "66c90af6-41ff-4c31-acf3-947ed307651d",
+      "status": "normal_defeat",
+      "steps": 129,
+      "model_calls": 10,
+      "cost_usd": 0.00142464,
+      "initial_state_hash": "cfde31a1b71c9bd1bc2ad2b4d3c2dbf9d478c73b990224512b6bf91d5f1fc218",
+      "cache_hits": 4,
+      "engine_log_sha256": "2e519779e976cdb0dc7d7158e6b569b850129c7d50af2d051e461cef3dd3a396",
+      "act": 1,
+      "floor": 9,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 32.061,
+      "scenes": {
+        "event_choice": 5,
+        "card_reward": 7,
+        "map_select": 8,
+        "combat_play": 109,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/66c90af6-41ff-4c31-acf3-947ed307651d/decisions.jsonl",
+      "trace_sha256": "4f5ce7ce16f48122158eb8bc515f8eb8afb1eae78701e25cc215342378d39f85",
+      "trace_verified": true,
+      "model_seconds": 8.34,
+      "act1_boss_entries": 0,
+      "combat_reward_briefs": 5
+    },
+    {
+      "character": "Necrobinder",
+      "seed": "e086_brief_004",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "run_id": "d025edd7-aa8b-403e-86fb-54c49fdb383a",
+      "status": "normal_defeat",
+      "steps": 77,
+      "model_calls": 8,
+      "cost_usd": 0.001008756,
+      "initial_state_hash": "6859a035ac2435ed2c2a221faaefad4379b4ce8d9e765ca44d564e19e6fa8e0e",
+      "cache_hits": 0,
+      "engine_log_sha256": "8488e50c3e5121c656bb3a1c60f19bdeab535db6f0885fe95b230766a8252611",
+      "act": 1,
+      "floor": 5,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 20.394,
+      "scenes": {
+        "event_choice": 4,
+        "card_reward": 4,
+        "map_select": 4,
+        "combat_play": 65,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/d025edd7-aa8b-403e-86fb-54c49fdb383a/decisions.jsonl",
+      "trace_sha256": "32fb9b38ab1405c32b5620439ffb8f17d8f90d01d2319fc317842c80c5b01019",
+      "trace_verified": true,
+      "model_seconds": 6.536,
+      "act1_boss_entries": 0,
+      "combat_reward_briefs": 0
+    },
+    {
+      "character": "Necrobinder",
+      "seed": "e086_brief_004",
+      "ascension": 10,
+      "policy": "retaliate_combat_brief",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "run_id": "309cde1b-d515-46e4-83d1-b79ed564a4ed",
+      "status": "normal_defeat",
+      "steps": 77,
+      "model_calls": 2,
+      "cost_usd": 0.00030659999999999997,
+      "initial_state_hash": "6859a035ac2435ed2c2a221faaefad4379b4ce8d9e765ca44d564e19e6fa8e0e",
+      "cache_hits": 6,
+      "engine_log_sha256": "8488e50c3e5121c656bb3a1c60f19bdeab535db6f0885fe95b230766a8252611",
+      "act": 1,
+      "floor": 5,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 17.084,
+      "scenes": {
+        "event_choice": 4,
+        "card_reward": 4,
+        "map_select": 4,
+        "combat_play": 65,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/309cde1b-d515-46e4-83d1-b79ed564a4ed/decisions.jsonl",
+      "trace_sha256": "e7d66291a12069bdb1db18136d216928aa20964a21412f5502d55b3749ccb8e7",
+      "trace_verified": true,
+      "model_seconds": 1.561,
+      "act1_boss_entries": 0,
+      "combat_reward_briefs": 2
+    }
+  ],
+  "paired": {
+    "baseline": "retaliate",
+    "treatment": "retaliate_combat_brief",
+    "outcomes": {
+      "worse": 3,
+      "better": 5,
+      "tie": 12
+    },
+    "pairs": [
+      {
+        "character": "Ironclad",
+        "seed": "e086_brief_001",
+        "baseline": [
+          false,
+          2,
+          2
+        ],
+        "treatment": [
+          false,
+          1,
+          15
+        ],
+        "outcome": "worse"
+      },
+      {
+        "character": "Silent",
+        "seed": "e086_brief_001",
+        "baseline": [
+          false,
+          1,
+          8
+        ],
+        "treatment": [
+          false,
+          1,
+          11
+        ],
+        "outcome": "better"
+      },
+      {
+        "character": "Defect",
+        "seed": "e086_brief_001",
+        "baseline": [
+          false,
+          1,
+          11
+        ],
+        "treatment": [
+          false,
+          1,
+          11
+        ],
+        "outcome": "tie"
+      },
+      {
+        "character": "Regent",
+        "seed": "e086_brief_001",
+        "baseline": [
+          false,
+          1,
+          11
+        ],
+        "treatment": [
+          false,
+          1,
+          11
+        ],
+        "outcome": "tie"
+      },
+      {
+        "character": "Necrobinder",
+        "seed": "e086_brief_001",
+        "baseline": [
+          false,
+          1,
+          8
+        ],
+        "treatment": [
+          false,
+          1,
+          8
+        ],
+        "outcome": "tie"
+      },
+      {
+        "character": "Ironclad",
+        "seed": "e086_brief_002",
+        "baseline": [
+          false,
+          1,
+          17
+        ],
+        "treatment": [
+          false,
+          1,
+          7
+        ],
+        "outcome": "worse"
+      },
+      {
+        "character": "Silent",
+        "seed": "e086_brief_002",
+        "baseline": [
+          false,
+          1,
+          6
+        ],
+        "treatment": [
+          false,
+          1,
+          6
+        ],
+        "outcome": "tie"
+      },
+      {
+        "character": "Defect",
+        "seed": "e086_brief_002",
+        "baseline": [
+          false,
+          1,
+          6
+        ],
+        "treatment": [
+          false,
+          1,
+          7
+        ],
+        "outcome": "better"
+      },
+      {
+        "character": "Regent",
+        "seed": "e086_brief_002",
+        "baseline": [
+          false,
+          1,
+          6
+        ],
+        "treatment": [
+          false,
+          1,
+          6
+        ],
+        "outcome": "tie"
+      },
+      {
+        "character": "Necrobinder",
+        "seed": "e086_brief_002",
+        "baseline": [
+          false,
+          1,
+          6
+        ],
+        "treatment": [
+          false,
+          1,
+          6
+        ],
+        "outcome": "tie"
+      },
+      {
+        "character": "Ironclad",
+        "seed": "e086_brief_003",
+        "baseline": [
+          false,
+          1,
+          14
+        ],
+        "treatment": [
+          false,
+          1,
+          17
+        ],
+        "outcome": "better"
+      },
+      {
+        "character": "Silent",
+        "seed": "e086_brief_003",
+        "baseline": [
+          false,
+          1,
+          14
+        ],
+        "treatment": [
+          false,
+          1,
+          6
+        ],
+        "outcome": "worse"
+      },
+      {
+        "character": "Defect",
+        "seed": "e086_brief_003",
+        "baseline": [
+          false,
+          1,
+          14
+        ],
+        "treatment": [
+          false,
+          1,
+          15
+        ],
+        "outcome": "better"
+      },
+      {
+        "character": "Regent",
+        "seed": "e086_brief_003",
+        "baseline": [
+          false,
+          1,
+          5
+        ],
+        "treatment": [
+          false,
+          1,
+          5
+        ],
+        "outcome": "tie"
+      },
+      {
+        "character": "Necrobinder",
+        "seed": "e086_brief_003",
+        "baseline": [
+          false,
+          1,
+          5
+        ],
+        "treatment": [
+          false,
+          1,
+          5
+        ],
+        "outcome": "tie"
+      },
+      {
+        "character": "Ironclad",
+        "seed": "e086_brief_004",
+        "baseline": [
+          false,
+          1,
+          3
+        ],
+        "treatment": [
+          false,
+          1,
+          3
+        ],
+        "outcome": "tie"
+      },
+      {
+        "character": "Silent",
+        "seed": "e086_brief_004",
+        "baseline": [
+          false,
+          1,
+          6
+        ],
+        "treatment": [
+          false,
+          1,
+          6
+        ],
+        "outcome": "tie"
+      },
+      {
+        "character": "Defect",
+        "seed": "e086_brief_004",
+        "baseline": [
+          false,
+          1,
+          9
+        ],
+        "treatment": [
+          false,
+          1,
+          9
+        ],
+        "outcome": "tie"
+      },
+      {
+        "character": "Regent",
+        "seed": "e086_brief_004",
+        "baseline": [
+          false,
+          1,
+          8
+        ],
+        "treatment": [
+          false,
+          1,
+          9
+        ],
+        "outcome": "better"
+      },
+      {
+        "character": "Necrobinder",
+        "seed": "e086_brief_004",
+        "baseline": [
+          false,
+          1,
+          5
+        ],
+        "treatment": [
+          false,
+          1,
+          5
+        ],
+        "outcome": "tie"
+      }
+    ]
+  },
+  "pair_audit": [
+    {
+      "seed": "e086_brief_001",
+      "character": "Ironclad",
+      "initial_state_same": true,
+      "first_difference_index": 83,
+      "first_difference_valid_reward": true,
+      "first_difference_state_hash": "48e175fd9bd8fccede2f6143b85a8ce8f588b46a91d6e4ad1374ac7dd759714b",
+      "first_difference_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 8,
+        "room_type": "Monster",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "baseline_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 2
+        }
+      },
+      "treatment_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 1
+        }
+      },
+      "no_difference_identical": null,
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_progress": [
+        2,
+        2
+      ],
+      "treatment_progress": [
+        1,
+        15
+      ]
+    },
+    {
+      "seed": "e086_brief_001",
+      "character": "Silent",
+      "initial_state_same": true,
+      "first_difference_index": 43,
+      "first_difference_valid_reward": true,
+      "first_difference_state_hash": "e91c98a595bb593338c4ad4b564d3a79a95204380c8185b93914a4353d07a4b9",
+      "first_difference_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 3,
+        "room_type": "Monster",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "baseline_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 0
+        }
+      },
+      "treatment_action": {
+        "cmd": "action",
+        "action": "skip_card_reward",
+        "args": {}
+      },
+      "no_difference_identical": null,
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_progress": [
+        1,
+        8
+      ],
+      "treatment_progress": [
+        1,
+        11
+      ]
+    },
+    {
+      "seed": "e086_brief_001",
+      "character": "Defect",
+      "initial_state_same": true,
+      "first_difference_index": 43,
+      "first_difference_valid_reward": true,
+      "first_difference_state_hash": "f8c387a2bf8f72bbcf3fc3c1b07ea90d03907fc6678def6c3346bfad786126db",
+      "first_difference_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 5,
+        "room_type": "Monster",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "baseline_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 1
+        }
+      },
+      "treatment_action": {
+        "cmd": "action",
+        "action": "skip_card_reward",
+        "args": {}
+      },
+      "no_difference_identical": null,
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_progress": [
+        1,
+        11
+      ],
+      "treatment_progress": [
+        1,
+        11
+      ]
+    },
+    {
+      "seed": "e086_brief_001",
+      "character": "Regent",
+      "initial_state_same": true,
+      "first_difference_index": 37,
+      "first_difference_valid_reward": true,
+      "first_difference_state_hash": "e8df3389a2c4ae567f5fd5ef26bbf146748b1a3328e533f753fd548a583de644",
+      "first_difference_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 5,
+        "room_type": "Monster",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "baseline_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 1
+        }
+      },
+      "treatment_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 2
+        }
+      },
+      "no_difference_identical": null,
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_progress": [
+        1,
+        11
+      ],
+      "treatment_progress": [
+        1,
+        11
+      ]
+    },
+    {
+      "seed": "e086_brief_001",
+      "character": "Necrobinder",
+      "initial_state_same": true,
+      "first_difference_index": 73,
+      "first_difference_valid_reward": true,
+      "first_difference_state_hash": "6b603b659cc2ec233838db65ad4c6af93b9c25d169c78e3cd386625cdaa3356b",
+      "first_difference_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 6,
+        "room_type": "Monster",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "baseline_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 2
+        }
+      },
+      "treatment_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 0
+        }
+      },
+      "no_difference_identical": null,
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_progress": [
+        1,
+        8
+      ],
+      "treatment_progress": [
+        1,
+        8
+      ]
+    },
+    {
+      "seed": "e086_brief_002",
+      "character": "Ironclad",
+      "initial_state_same": true,
+      "first_difference_index": 14,
+      "first_difference_valid_reward": true,
+      "first_difference_state_hash": "d3ac16fde1eab5d1c0b63e5e1ae5c958caa8f9721f095ac07914b6a80677d1b5",
+      "first_difference_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 2,
+        "room_type": "Monster",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "baseline_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 2
+        }
+      },
+      "treatment_action": {
+        "cmd": "action",
+        "action": "skip_card_reward",
+        "args": {}
+      },
+      "no_difference_identical": null,
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_progress": [
+        1,
+        17
+      ],
+      "treatment_progress": [
+        1,
+        7
+      ]
+    },
+    {
+      "seed": "e086_brief_002",
+      "character": "Silent",
+      "initial_state_same": true,
+      "first_difference_index": 74,
+      "first_difference_valid_reward": true,
+      "first_difference_state_hash": "cca7f10347727a24d7d77ff2da8821ff53ddf5f9ab36a510e0219665f0b994e4",
+      "first_difference_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 4,
+        "room_type": "Monster",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "baseline_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 0
+        }
+      },
+      "treatment_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 1
+        }
+      },
+      "no_difference_identical": null,
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_progress": [
+        1,
+        6
+      ],
+      "treatment_progress": [
+        1,
+        6
+      ]
+    },
+    {
+      "seed": "e086_brief_002",
+      "character": "Defect",
+      "initial_state_same": true,
+      "first_difference_index": 58,
+      "first_difference_valid_reward": true,
+      "first_difference_state_hash": "4412f0d1cced9261a052d53348f2d1dc63c88c117969b8bdebef45c9c995e834",
+      "first_difference_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 4,
+        "room_type": "Monster",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "baseline_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 1
+        }
+      },
+      "treatment_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 0
+        }
+      },
+      "no_difference_identical": null,
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_progress": [
+        1,
+        6
+      ],
+      "treatment_progress": [
+        1,
+        7
+      ]
+    },
+    {
+      "seed": "e086_brief_002",
+      "character": "Regent",
+      "initial_state_same": true,
+      "first_difference_index": 69,
+      "first_difference_valid_reward": true,
+      "first_difference_state_hash": "a016b675b87df57980ca2bca1608850e111058baf39650633767b3aed274b012",
+      "first_difference_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 4,
+        "room_type": "Monster",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "baseline_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 0
+        }
+      },
+      "treatment_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 2
+        }
+      },
+      "no_difference_identical": null,
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_progress": [
+        1,
+        6
+      ],
+      "treatment_progress": [
+        1,
+        6
+      ]
+    },
+    {
+      "seed": "e086_brief_002",
+      "character": "Necrobinder",
+      "initial_state_same": true,
+      "first_difference_index": 53,
+      "first_difference_valid_reward": true,
+      "first_difference_state_hash": "99287b8d7aa138cd9664246daf4321fec3a8af76ae8928d870d81f30179a28de",
+      "first_difference_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 4,
+        "room_type": "Monster",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "baseline_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 0
+        }
+      },
+      "treatment_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 2
+        }
+      },
+      "no_difference_identical": null,
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_progress": [
+        1,
+        6
+      ],
+      "treatment_progress": [
+        1,
+        6
+      ]
+    },
+    {
+      "seed": "e086_brief_003",
+      "character": "Ironclad",
+      "initial_state_same": true,
+      "first_difference_index": 18,
+      "first_difference_valid_reward": true,
+      "first_difference_state_hash": "b5d2f644e6d464c3a34cb283afe6a7b15ca03e5f5a8f537320348d9d04e2dc1a",
+      "first_difference_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 2,
+        "room_type": "Monster",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "baseline_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 2
+        }
+      },
+      "treatment_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 1
+        }
+      },
+      "no_difference_identical": null,
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_progress": [
+        1,
+        14
+      ],
+      "treatment_progress": [
+        1,
+        17
+      ]
+    },
+    {
+      "seed": "e086_brief_003",
+      "character": "Silent",
+      "initial_state_same": true,
+      "first_difference_index": 101,
+      "first_difference_valid_reward": true,
+      "first_difference_state_hash": "86e519540de13ef145ae6c5042601847d47bffeac28c897cfdfec6dcd3931b19",
+      "first_difference_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 5,
+        "room_type": "Monster",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "baseline_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 0
+        }
+      },
+      "treatment_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 2
+        }
+      },
+      "no_difference_identical": null,
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_progress": [
+        1,
+        14
+      ],
+      "treatment_progress": [
+        1,
+        6
+      ]
+    },
+    {
+      "seed": "e086_brief_003",
+      "character": "Defect",
+      "initial_state_same": true,
+      "first_difference_index": 87,
+      "first_difference_valid_reward": true,
+      "first_difference_state_hash": "de340660dc978623867187da183dbfe89622eba4a1768c4f839edb7f16b30c46",
+      "first_difference_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 6,
+        "room_type": "Monster",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "baseline_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 2
+        }
+      },
+      "treatment_action": {
+        "cmd": "action",
+        "action": "skip_card_reward",
+        "args": {}
+      },
+      "no_difference_identical": null,
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_progress": [
+        1,
+        14
+      ],
+      "treatment_progress": [
+        1,
+        15
+      ]
+    },
+    {
+      "seed": "e086_brief_003",
+      "character": "Regent",
+      "initial_state_same": true,
+      "first_difference_index": 36,
+      "first_difference_valid_reward": true,
+      "first_difference_state_hash": "b97c5aa5520d39303e8cdab7ff0393771a658da6293d436ffd24e3840dd44c64",
+      "first_difference_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 3,
+        "room_type": "Monster",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "baseline_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 0
+        }
+      },
+      "treatment_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 2
+        }
+      },
+      "no_difference_identical": null,
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_progress": [
+        1,
+        5
+      ],
+      "treatment_progress": [
+        1,
+        5
+      ]
+    },
+    {
+      "seed": "e086_brief_003",
+      "character": "Necrobinder",
+      "initial_state_same": true,
+      "first_difference_index": null,
+      "first_difference_valid_reward": null,
+      "first_difference_state_hash": null,
+      "first_difference_context": null,
+      "baseline_action": null,
+      "treatment_action": null,
+      "no_difference_identical": true,
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_progress": [
+        1,
+        5
+      ],
+      "treatment_progress": [
+        1,
+        5
+      ]
+    },
+    {
+      "seed": "e086_brief_004",
+      "character": "Ironclad",
+      "initial_state_same": true,
+      "first_difference_index": null,
+      "first_difference_valid_reward": null,
+      "first_difference_state_hash": null,
+      "first_difference_context": null,
+      "baseline_action": null,
+      "treatment_action": null,
+      "no_difference_identical": true,
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_progress": [
+        1,
+        3
+      ],
+      "treatment_progress": [
+        1,
+        3
+      ]
+    },
+    {
+      "seed": "e086_brief_004",
+      "character": "Silent",
+      "initial_state_same": true,
+      "first_difference_index": 67,
+      "first_difference_valid_reward": true,
+      "first_difference_state_hash": "75a1769493f4b94ce8d34ccfc3202b4a08f87f1caa1ba73685dfc0c94ece3d60",
+      "first_difference_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 3,
+        "room_type": "Monster",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "baseline_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 1
+        }
+      },
+      "treatment_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 0
+        }
+      },
+      "no_difference_identical": null,
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_progress": [
+        1,
+        6
+      ],
+      "treatment_progress": [
+        1,
+        6
+      ]
+    },
+    {
+      "seed": "e086_brief_004",
+      "character": "Defect",
+      "initial_state_same": true,
+      "first_difference_index": 66,
+      "first_difference_valid_reward": true,
+      "first_difference_state_hash": "ebf3367b3a6a71529b7612457291f07906dc9787937884a1a7806990a18b8505",
+      "first_difference_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 6,
+        "room_type": "Monster",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "baseline_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 1
+        }
+      },
+      "treatment_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 2
+        }
+      },
+      "no_difference_identical": null,
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_progress": [
+        1,
+        9
+      ],
+      "treatment_progress": [
+        1,
+        9
+      ]
+    },
+    {
+      "seed": "e086_brief_004",
+      "character": "Regent",
+      "initial_state_same": true,
+      "first_difference_index": 16,
+      "first_difference_valid_reward": true,
+      "first_difference_state_hash": "f561a97f85f29e742569ea0f630277f7fdd197876f7e1c5d27870ebc985a34d6",
+      "first_difference_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 2,
+        "room_type": "Monster",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "baseline_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 2
+        }
+      },
+      "treatment_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 1
+        }
+      },
+      "no_difference_identical": null,
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_progress": [
+        1,
+        8
+      ],
+      "treatment_progress": [
+        1,
+        9
+      ]
+    },
+    {
+      "seed": "e086_brief_004",
+      "character": "Necrobinder",
+      "initial_state_same": true,
+      "first_difference_index": null,
+      "first_difference_valid_reward": null,
+      "first_difference_state_hash": null,
+      "first_difference_context": null,
+      "baseline_action": null,
+      "treatment_action": null,
+      "no_difference_identical": true,
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat",
+      "baseline_progress": [
+        1,
+        5
+      ],
+      "treatment_progress": [
+        1,
+        5
+      ]
+    }
+  ],
+  "trace_hashes_verified": 40,
+  "budget": {
+    "calls": 483,
+    "provider_reported_cost_usd": 0.070307244,
+    "budgeted_spend_usd": 0.07030724400000006,
+    "uncertain_calls": 0,
+    "estimated_usd": 0.0
+  }
+}
