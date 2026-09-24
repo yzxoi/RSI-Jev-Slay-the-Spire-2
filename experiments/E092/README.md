@@ -85,3 +85,7 @@ The hand has Fisticuffs (damage plus equal Block), Armaments, two Strikes and th
 ## Segment 15: extra energy confirmed
 
 At tested SHA `9f5071b7029d14f446001faddfb3e47db43fb7c3`, Energy Potion was accepted in one action and raised current energy 3→5. HP remains 55/87, Boss 82 HP, two Beckons still in hand. One-action budget boundary; no Jev calls/rejections/uncertain calls. Raw trace SHA-256 `1c3f45fbbc53e365dd3068f208178bd335000730468b0d9eb231afbd3e046d24` verified in [segment15-summary.json](segment15-summary.json). [floor17-boss-regen-choice.json](floor17-boss-regen-choice.json) precommits the remaining Regen Potion at exact new state hash `7ffd35f25b68e64868bdf903679e194cccc1bb996e35fe90c83ac86d4d29ed0e` so recovery can start this turn without consuming energy.
+
+## Segment 16: Regen confirmed, damage-plus-block opener
+
+At tested SHA `97ec745927023123f46b4d9af322a3e2b322619c`, Regen Potion was accepted in one action, applying 5 Regen; HP remains 55/87 and energy 5. One-action budget boundary with no Jev call/rejection/uncertain call. Raw trace SHA-256 `e514c1d42fed38a93558198bdf42b623f938096b558ee68acc8b3a05e7944ece` verified in [segment16-summary.json](segment16-summary.json). [floor17-boss-fisticuffs-choice.json](floor17-boss-fisticuffs-choice.json) precommits Fisticuffs on the 82-HP Boss at exact state hash `3606d711adc51a1d544007a365e55d6d1b69e928fbae477c3187f3603c771592`. This deals damage and grants equal Block before the advertised 24 attack; the two retained Beckons remain a known 12-HP risk to audit after the controller continues.
