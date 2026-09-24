@@ -1,0 +1,778 @@
+{
+  "schema_version": 1,
+  "experiment": "E085",
+  "manifest": {
+    "schema_version": 1,
+    "code_commit": "a805093d5624474e3f55c3597f7cdd566d5b3206",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "ad5fc0f5958958d5a0473b81525642bbc8ddff33ea07d90fe675b6f3fdfc99ad",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+  },
+  "fixture_sha256": "f87c27d557ba991e3921c67bc1ca75b180b66d50018a30c36e589148717af74c",
+  "configs": [
+    {
+      "case_id": "e084_jobs_001_ironclad",
+      "arm": "baseline",
+      "character": "Ironclad",
+      "seed": "e084_jobs_001",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "expected_entry_hash": "e9e7175a4a2bbe1cdc7409d978a7f8bad10485a6c4648505ba03369bfd29139b",
+      "forced_first_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 1
+        }
+      }
+    },
+    {
+      "case_id": "e084_jobs_001_ironclad",
+      "arm": "treatment",
+      "character": "Ironclad",
+      "seed": "e084_jobs_001",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "expected_entry_hash": "e9e7175a4a2bbe1cdc7409d978a7f8bad10485a6c4648505ba03369bfd29139b",
+      "forced_first_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 0
+        }
+      }
+    },
+    {
+      "case_id": "e084_jobs_004_regent",
+      "arm": "baseline",
+      "character": "Regent",
+      "seed": "e084_jobs_004",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "expected_entry_hash": "b2d60d7519875e322e0f1dea26fc959d960ffa749e6be52a4ad3b4cb03744cd5",
+      "forced_first_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 2
+        }
+      }
+    },
+    {
+      "case_id": "e084_jobs_004_regent",
+      "arm": "treatment",
+      "character": "Regent",
+      "seed": "e084_jobs_004",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "expected_entry_hash": "b2d60d7519875e322e0f1dea26fc959d960ffa749e6be52a4ad3b4cb03744cd5",
+      "forced_first_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 0
+        }
+      }
+    },
+    {
+      "case_id": "e084_jobs_001_defect",
+      "arm": "baseline",
+      "character": "Defect",
+      "seed": "e084_jobs_001",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "expected_entry_hash": "f10361f34c9cc27cde49b977b2842f85b5a6cbde8b52a4f5a4afb8032de0c37c",
+      "forced_first_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 2
+        }
+      }
+    },
+    {
+      "case_id": "e084_jobs_001_defect",
+      "arm": "treatment",
+      "character": "Defect",
+      "seed": "e084_jobs_001",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "expected_entry_hash": "f10361f34c9cc27cde49b977b2842f85b5a6cbde8b52a4f5a4afb8032de0c37c",
+      "forced_first_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 1
+        }
+      }
+    },
+    {
+      "case_id": "e084_jobs_003_ironclad",
+      "arm": "baseline",
+      "character": "Ironclad",
+      "seed": "e084_jobs_003",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "expected_entry_hash": "c87bbdc9438228fd4050f84a3eab765bc536de334b6bad658777736813e503c7",
+      "forced_first_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 0
+        }
+      }
+    },
+    {
+      "case_id": "e084_jobs_003_ironclad",
+      "arm": "treatment",
+      "character": "Ironclad",
+      "seed": "e084_jobs_003",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "expected_entry_hash": "c87bbdc9438228fd4050f84a3eab765bc536de334b6bad658777736813e503c7",
+      "forced_first_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 1
+        }
+      }
+    },
+    {
+      "case_id": "e084_jobs_001_regent",
+      "arm": "baseline",
+      "character": "Regent",
+      "seed": "e084_jobs_001",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "expected_entry_hash": "262a3bc35f35bb7e517561fd757f70b3a54aeb1be826b6bd41db0c63bf295a1e",
+      "forced_first_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 1
+        }
+      }
+    },
+    {
+      "case_id": "e084_jobs_001_regent",
+      "arm": "treatment",
+      "character": "Regent",
+      "seed": "e084_jobs_001",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "expected_entry_hash": "262a3bc35f35bb7e517561fd757f70b3a54aeb1be826b6bd41db0c63bf295a1e",
+      "forced_first_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 0
+        }
+      }
+    }
+  ],
+  "results": [
+    {
+      "case_id": "e084_jobs_001_ironclad",
+      "arm": "baseline",
+      "character": "Ironclad",
+      "seed": "e084_jobs_001",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "expected_entry_hash": "e9e7175a4a2bbe1cdc7409d978a7f8bad10485a6c4648505ba03369bfd29139b",
+      "forced_first_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 1
+        }
+      },
+      "run_id": "c848c59d-57e9-4f9c-a8a0-9f06b29bb2f3",
+      "status": "normal_defeat",
+      "steps": 193,
+      "model_calls": 14,
+      "cost_usd": 0.0020065079999999997,
+      "initial_state_hash": "e9e7175a4a2bbe1cdc7409d978a7f8bad10485a6c4648505ba03369bfd29139b",
+      "cache_hits": 0,
+      "engine_log_sha256": "8d50bc1b5a1e2fd2a5c4819e1024b76e91456f9637c1e0ecbe2099cf2cd9145c",
+      "act": 1,
+      "floor": 17,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 27.453,
+      "scenes": {
+        "card_reward": 9,
+        "map_select": 14,
+        "combat_play": 166,
+        "rest_site": 4,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/c848c59d-57e9-4f9c-a8a0-9f06b29bb2f3/decisions.jsonl",
+      "trace_sha256": "7e90697cdeb04d4afb6be250534ddb1183fb0f531427a58f0117995f66518a59",
+      "trace_verified": true,
+      "entry_verified": true,
+      "forced_reward_verified": true,
+      "act1_boss_entries": 1,
+      "prefix_action_count": 25
+    },
+    {
+      "case_id": "e084_jobs_001_ironclad",
+      "arm": "treatment",
+      "character": "Ironclad",
+      "seed": "e084_jobs_001",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "expected_entry_hash": "e9e7175a4a2bbe1cdc7409d978a7f8bad10485a6c4648505ba03369bfd29139b",
+      "forced_first_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 0
+        }
+      },
+      "run_id": "55764e34-c717-458d-88e5-cc1ee6af9f41",
+      "status": "normal_defeat",
+      "steps": 163,
+      "model_calls": 14,
+      "cost_usd": 0.0020319599999999998,
+      "initial_state_hash": "e9e7175a4a2bbe1cdc7409d978a7f8bad10485a6c4648505ba03369bfd29139b",
+      "cache_hits": 0,
+      "engine_log_sha256": "8d5fdc2d75bceaf244f06d322e6a369ffcbd73c2be329d65f96dec36122c26e0",
+      "act": 1,
+      "floor": 17,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 25.799,
+      "scenes": {
+        "card_reward": 9,
+        "map_select": 14,
+        "combat_play": 136,
+        "rest_site": 4,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/55764e34-c717-458d-88e5-cc1ee6af9f41/decisions.jsonl",
+      "trace_sha256": "20770f154cf06ba733c1c79d513f89ad863edc0331b4ad4cb175ae4bafdf022e",
+      "trace_verified": true,
+      "entry_verified": true,
+      "forced_reward_verified": true,
+      "act1_boss_entries": 1,
+      "prefix_action_count": 25
+    },
+    {
+      "case_id": "e084_jobs_004_regent",
+      "arm": "baseline",
+      "character": "Regent",
+      "seed": "e084_jobs_004",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "expected_entry_hash": "b2d60d7519875e322e0f1dea26fc959d960ffa749e6be52a4ad3b4cb03744cd5",
+      "forced_first_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 2
+        }
+      },
+      "run_id": "f4b6276b-90a8-4863-8bf0-c51ad26054a3",
+      "status": "normal_defeat",
+      "steps": 158,
+      "model_calls": 19,
+      "cost_usd": 0.003911208,
+      "initial_state_hash": "b2d60d7519875e322e0f1dea26fc959d960ffa749e6be52a4ad3b4cb03744cd5",
+      "cache_hits": 0,
+      "engine_log_sha256": "5a12f93160e7f552ebd4e86f95df23fc84db29bd2cf288586df5d17bc4a526fa",
+      "act": 2,
+      "floor": 7,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 36.415,
+      "scenes": {
+        "card_reward": 5,
+        "map_select": 11,
+        "rest_site": 2,
+        "combat_play": 130,
+        "shop": 7,
+        "card_select": 2,
+        "event_choice": 1,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/f4b6276b-90a8-4863-8bf0-c51ad26054a3/decisions.jsonl",
+      "trace_sha256": "582ae41df52af50e05b58d224c49cff75671761f433ebe05b8601be09a8343c9",
+      "trace_verified": true,
+      "entry_verified": true,
+      "forced_reward_verified": true,
+      "act1_boss_entries": 1,
+      "prefix_action_count": 81
+    },
+    {
+      "case_id": "e084_jobs_004_regent",
+      "arm": "treatment",
+      "character": "Regent",
+      "seed": "e084_jobs_004",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "expected_entry_hash": "b2d60d7519875e322e0f1dea26fc959d960ffa749e6be52a4ad3b4cb03744cd5",
+      "forced_first_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 0
+        }
+      },
+      "run_id": "9f2b3e67-0ed0-45c1-8061-75930194c3f8",
+      "status": "normal_defeat",
+      "steps": 59,
+      "model_calls": 8,
+      "cost_usd": 0.0016161180000000002,
+      "initial_state_hash": "b2d60d7519875e322e0f1dea26fc959d960ffa749e6be52a4ad3b4cb03744cd5",
+      "cache_hits": 0,
+      "engine_log_sha256": "bb9215221402257618d4a1a3890d483cffce47f36d19d1f1854a058323fe33d7",
+      "act": 1,
+      "floor": 17,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 19.052,
+      "scenes": {
+        "card_reward": 2,
+        "map_select": 5,
+        "rest_site": 2,
+        "combat_play": 46,
+        "shop": 3,
+        "card_select": 1,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/9f2b3e67-0ed0-45c1-8061-75930194c3f8/decisions.jsonl",
+      "trace_sha256": "b949e3e860aa076b1136150c0c75639787bd6bc383592c778633a1e6eb54f3f0",
+      "trace_verified": true,
+      "entry_verified": true,
+      "forced_reward_verified": true,
+      "act1_boss_entries": 1,
+      "prefix_action_count": 81
+    },
+    {
+      "case_id": "e084_jobs_001_defect",
+      "arm": "baseline",
+      "character": "Defect",
+      "seed": "e084_jobs_001",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "expected_entry_hash": "f10361f34c9cc27cde49b977b2842f85b5a6cbde8b52a4f5a4afb8032de0c37c",
+      "forced_first_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 2
+        }
+      },
+      "run_id": "7eaa6527-337c-4a05-8adb-99cba2f25ba0",
+      "status": "normal_defeat",
+      "steps": 102,
+      "model_calls": 7,
+      "cost_usd": 0.0009128280000000001,
+      "initial_state_hash": "f10361f34c9cc27cde49b977b2842f85b5a6cbde8b52a4f5a4afb8032de0c37c",
+      "cache_hits": 0,
+      "engine_log_sha256": "67562692230148ff3248d114d4c9db9e85a26c26d978d02b99f5d758d7a3eb27",
+      "act": 1,
+      "floor": 8,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 15.054,
+      "scenes": {
+        "card_reward": 5,
+        "map_select": 6,
+        "event_choice": 1,
+        "combat_play": 89,
+        "rest_site": 1,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/7eaa6527-337c-4a05-8adb-99cba2f25ba0/decisions.jsonl",
+      "trace_sha256": "657b0f7e98d867f3ee7ca5d49192887b09ef8eff8ddd5b11eeadc3789e9f5337",
+      "trace_verified": true,
+      "entry_verified": true,
+      "forced_reward_verified": true,
+      "act1_boss_entries": 0,
+      "prefix_action_count": 16
+    },
+    {
+      "case_id": "e084_jobs_001_defect",
+      "arm": "treatment",
+      "character": "Defect",
+      "seed": "e084_jobs_001",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "expected_entry_hash": "f10361f34c9cc27cde49b977b2842f85b5a6cbde8b52a4f5a4afb8032de0c37c",
+      "forced_first_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 1
+        }
+      },
+      "run_id": "a7a86221-0597-48e8-88b4-c1e260d8758d",
+      "status": "normal_defeat",
+      "steps": 127,
+      "model_calls": 10,
+      "cost_usd": 0.001306158,
+      "initial_state_hash": "f10361f34c9cc27cde49b977b2842f85b5a6cbde8b52a4f5a4afb8032de0c37c",
+      "cache_hits": 0,
+      "engine_log_sha256": "b2f23e90ab9f6fba1d2627c40c615bdae09c97e029e2011e90b0f75cc66da30d",
+      "act": 1,
+      "floor": 11,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 20.204,
+      "scenes": {
+        "card_reward": 6,
+        "map_select": 9,
+        "event_choice": 1,
+        "combat_play": 109,
+        "rest_site": 2,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/a7a86221-0597-48e8-88b4-c1e260d8758d/decisions.jsonl",
+      "trace_sha256": "42e356cf2da1495faf2d3bb152ef1922fa3d38e4dd41d2425e3c14dae6330600",
+      "trace_verified": true,
+      "entry_verified": true,
+      "forced_reward_verified": true,
+      "act1_boss_entries": 0,
+      "prefix_action_count": 16
+    },
+    {
+      "case_id": "e084_jobs_003_ironclad",
+      "arm": "baseline",
+      "character": "Ironclad",
+      "seed": "e084_jobs_003",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "expected_entry_hash": "c87bbdc9438228fd4050f84a3eab765bc536de334b6bad658777736813e503c7",
+      "forced_first_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 0
+        }
+      },
+      "run_id": "a36ab775-dd33-4699-bc06-9a6871641dd5",
+      "status": "normal_defeat",
+      "steps": 99,
+      "model_calls": 16,
+      "cost_usd": 0.002442678,
+      "initial_state_hash": "c87bbdc9438228fd4050f84a3eab765bc536de334b6bad658777736813e503c7",
+      "cache_hits": 0,
+      "engine_log_sha256": "9ef324f45d5a98c0f56b4f4e4e1a594888f9983e8072685616e2d00075af552c",
+      "act": 1,
+      "floor": 11,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 27.652,
+      "scenes": {
+        "card_reward": 4,
+        "map_select": 7,
+        "shop": 2,
+        "combat_play": 76,
+        "rest_site": 1,
+        "card_select": 9,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/a36ab775-dd33-4699-bc06-9a6871641dd5/decisions.jsonl",
+      "trace_sha256": "22b512bd15bddced02272792ea31005321f63343b926b864de2e196ecafce826",
+      "trace_verified": true,
+      "entry_verified": true,
+      "forced_reward_verified": true,
+      "act1_boss_entries": 0,
+      "prefix_action_count": 37
+    },
+    {
+      "case_id": "e084_jobs_003_ironclad",
+      "arm": "treatment",
+      "character": "Ironclad",
+      "seed": "e084_jobs_003",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "expected_entry_hash": "c87bbdc9438228fd4050f84a3eab765bc536de334b6bad658777736813e503c7",
+      "forced_first_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 1
+        }
+      },
+      "run_id": "74d198ef-ad07-4054-94cc-2eb777ddd3c1",
+      "status": "normal_defeat",
+      "steps": 100,
+      "model_calls": 13,
+      "cost_usd": 0.0021028559999999997,
+      "initial_state_hash": "c87bbdc9438228fd4050f84a3eab765bc536de334b6bad658777736813e503c7",
+      "cache_hits": 0,
+      "engine_log_sha256": "f00d5deef5787057f2eb96f317512901611db29c1ec0a2e5df5f9134be067e0c",
+      "act": 1,
+      "floor": 11,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 21.165,
+      "scenes": {
+        "card_reward": 4,
+        "map_select": 7,
+        "shop": 2,
+        "combat_play": 80,
+        "card_select": 6,
+        "rest_site": 1,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/74d198ef-ad07-4054-94cc-2eb777ddd3c1/decisions.jsonl",
+      "trace_sha256": "a190351bed4ef1e01f2aa24a908a84a1b5e1bcd0e77ae0b361ba80f6db1dbf32",
+      "trace_verified": true,
+      "entry_verified": true,
+      "forced_reward_verified": true,
+      "act1_boss_entries": 0,
+      "prefix_action_count": 37
+    },
+    {
+      "case_id": "e084_jobs_001_regent",
+      "arm": "baseline",
+      "character": "Regent",
+      "seed": "e084_jobs_001",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "expected_entry_hash": "262a3bc35f35bb7e517561fd757f70b3a54aeb1be826b6bd41db0c63bf295a1e",
+      "forced_first_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 1
+        }
+      },
+      "run_id": "a2f0dd13-9fae-4a8d-822f-8189dc5a52da",
+      "status": "normal_defeat",
+      "steps": 62,
+      "model_calls": 2,
+      "cost_usd": 0.000282618,
+      "initial_state_hash": "262a3bc35f35bb7e517561fd757f70b3a54aeb1be826b6bd41db0c63bf295a1e",
+      "cache_hits": 0,
+      "engine_log_sha256": "09a79f569400829e4d26c0c6b2b989cc2d6a2178fac195658681b1c4ebba0dda",
+      "act": 1,
+      "floor": 6,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 5.077,
+      "scenes": {
+        "card_reward": 3,
+        "map_select": 3,
+        "combat_play": 56,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/a2f0dd13-9fae-4a8d-822f-8189dc5a52da/decisions.jsonl",
+      "trace_sha256": "b867ea96e7b81361a8a4adfed419d4bd9cadefaa5d47eea5200531891004800a",
+      "trace_verified": true,
+      "entry_verified": true,
+      "forced_reward_verified": true,
+      "act1_boss_entries": 0,
+      "prefix_action_count": 25
+    },
+    {
+      "case_id": "e084_jobs_001_regent",
+      "arm": "treatment",
+      "character": "Regent",
+      "seed": "e084_jobs_001",
+      "ascension": 10,
+      "policy": "retaliate",
+      "max_steps": 2000,
+      "max_seconds": 300,
+      "expected_entry_hash": "262a3bc35f35bb7e517561fd757f70b3a54aeb1be826b6bd41db0c63bf295a1e",
+      "forced_first_action": {
+        "cmd": "action",
+        "action": "select_card_reward",
+        "args": {
+          "card_index": 0
+        }
+      },
+      "run_id": "80d127b6-14ef-4d3e-86da-ed30d0ee4909",
+      "status": "normal_defeat",
+      "steps": 86,
+      "model_calls": 7,
+      "cost_usd": 0.001000692,
+      "initial_state_hash": "262a3bc35f35bb7e517561fd757f70b3a54aeb1be826b6bd41db0c63bf295a1e",
+      "cache_hits": 0,
+      "engine_log_sha256": "43e6ba7b91072ca8da2b6f7c99ecc8314bdfad3153ee83fd7b09d2d62a0d411d",
+      "act": 1,
+      "floor": 8,
+      "final_decision": "game_over",
+      "final_hp": 0,
+      "seconds": 12.123,
+      "scenes": {
+        "card_reward": 4,
+        "map_select": 5,
+        "combat_play": 74,
+        "rest_site": 1,
+        "card_select": 2,
+        "game_over": 1
+      },
+      "trace_path": "artifacts/runs/80d127b6-14ef-4d3e-86da-ed30d0ee4909/decisions.jsonl",
+      "trace_sha256": "6116d96a67385e1a6e887379d1d6e114de6520f0bb715c10c5b06f1f1c59985d",
+      "trace_verified": true,
+      "entry_verified": true,
+      "forced_reward_verified": true,
+      "act1_boss_entries": 0,
+      "prefix_action_count": 25
+    }
+  ],
+  "pairs": [
+    {
+      "case_id": "e084_jobs_001_ironclad",
+      "character": "Ironclad",
+      "seed": "e084_jobs_001",
+      "original_direction": "worse",
+      "replay_direction": "tie",
+      "reproduces_original": false,
+      "reverses_original": false,
+      "baseline_progress": [
+        1,
+        17
+      ],
+      "treatment_progress": [
+        1,
+        17
+      ],
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat"
+    },
+    {
+      "case_id": "e084_jobs_004_regent",
+      "character": "Regent",
+      "seed": "e084_jobs_004",
+      "original_direction": "worse",
+      "replay_direction": "worse",
+      "reproduces_original": true,
+      "reverses_original": false,
+      "baseline_progress": [
+        2,
+        7
+      ],
+      "treatment_progress": [
+        1,
+        17
+      ],
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat"
+    },
+    {
+      "case_id": "e084_jobs_001_defect",
+      "character": "Defect",
+      "seed": "e084_jobs_001",
+      "original_direction": "better",
+      "replay_direction": "better",
+      "reproduces_original": true,
+      "reverses_original": false,
+      "baseline_progress": [
+        1,
+        8
+      ],
+      "treatment_progress": [
+        1,
+        11
+      ],
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat"
+    },
+    {
+      "case_id": "e084_jobs_003_ironclad",
+      "character": "Ironclad",
+      "seed": "e084_jobs_003",
+      "original_direction": "better",
+      "replay_direction": "tie",
+      "reproduces_original": false,
+      "reverses_original": false,
+      "baseline_progress": [
+        1,
+        11
+      ],
+      "treatment_progress": [
+        1,
+        11
+      ],
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat"
+    },
+    {
+      "case_id": "e084_jobs_001_regent",
+      "character": "Regent",
+      "seed": "e084_jobs_001",
+      "original_direction": "better",
+      "replay_direction": "better",
+      "reproduces_original": true,
+      "reverses_original": false,
+      "baseline_progress": [
+        1,
+        6
+      ],
+      "treatment_progress": [
+        1,
+        8
+      ],
+      "baseline_status": "normal_defeat",
+      "treatment_status": "normal_defeat"
+    }
+  ],
+  "trace_hashes_verified": 10,
+  "budget": {
+    "attempted_calls": 110,
+    "provider_reported_cost_usd": 0.017613624,
+    "budgeted_spend_usd": 0.01761362399999999,
+    "uncertain_calls": 0,
+    "estimated_unknown_usd": 0.0
+  }
+}
