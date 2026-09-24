@@ -71,3 +71,7 @@ The next controller process at tested SHA `d25f373` sent **zero** game actions. 
 ## Segment 12: Fisticuffs accepted, Boss potion prepared
 
 At tested SHA `60f62c297d8b6860a26e00c2d12e691016cd322a`, Fisticuffs was bought in one accepted action for 88 gold, leaving 62; HP remains 87/87. One-action budget boundary with no Jev call/rejection/uncertain call. Raw trace SHA-256 `9ab83ce8e7fef79771394dbd91b7a239fafef65cb7b3398556072dd32dd722ab` verified in [segment12-summary.json](segment12-summary.json). Two read-only MCP snapshots 0.7 seconds apart had the same fingerprint `9fd97fe3b0adbffff4a1145b17652c967d0c29a5593ed21e6beaa73df51a1531`; the shop still has an Energy Potion at index 2 for 50 gold and the run has an empty potion slot. [floor15-shop-energy-choice.json](floor15-shop-energy-choice.json) precommits this purchase for a key Boss turn, with 12 gold remaining if accepted.
+
+## Segment 13: Energy Potion purchased
+
+At tested SHA `10d977aaaee724ae995463d0cdca9331f6c9a182`, the Energy Potion purchase was accepted in one action, leaving 12 gold and 87/87 HP. One-action budget boundary; zero Jev calls, rejections or uncertain calls. Raw trace SHA-256 `78afce7d58a809450411f9fc9a7b33c61546ee3d43abf3ee8ab9d6403c252a4e` verified in [segment13-summary.json](segment13-summary.json). The next bounded segment may let the controller leave the shop and proceed toward the Act 1 Boss.
