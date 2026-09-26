@@ -1,0 +1,58 @@
+{
+  "experiment": "E111",
+  "issue": 212,
+  "game_version": "v0.107.1",
+  "adapter": "E106 patched STS2-Agent v0.16.2, E109 installation",
+  "run_id": "32ASTF9N6E",
+  "players": 4,
+  "local_character": "IRONCLAD",
+  "ascension": 0,
+  "seed": null,
+  "segments": [
+    {
+      "name": "segment01",
+      "tested_code_sha": "81b94633a3b823ab7ca85037f117d17d4348929a",
+      "status": "error",
+      "actions": 34,
+      "last_floor": 12,
+      "error": "TimeoutError: Native turn did not settle before deadline; no action sent",
+      "map_acknowledgements": [
+        "local_vote",
+        "local_vote",
+        "local_vote"
+      ],
+      "jev_calls": 9,
+      "jev_usd": 0.0025022760000000003,
+      "explicit_rejections": 0,
+      "uncertain_calls": 0,
+      "trace_sha256": "634f3cc260157319230fe494859d26c6a44ae530855a53786ce565a5aa1cb532"
+    },
+    {
+      "name": "segment02",
+      "tested_code_sha": "81b94633a3b823ab7ca85037f117d17d4348929a",
+      "status": "error",
+      "actions": 13,
+      "last_floor": 13,
+      "error": "TimeoutError: Native turn did not settle before deadline; no action sent",
+      "map_acknowledgements": [
+        "local_vote"
+      ],
+      "jev_calls": 3,
+      "jev_usd": 0.000809046,
+      "explicit_rejections": 0,
+      "uncertain_calls": 0,
+      "trace_sha256": "913d2e3c746a4f1544a343e82b10d46d22bc947e62b8058fdac68564dcff4042"
+    }
+  ],
+  "combined": {
+    "actions": 47,
+    "map_votes_with_local_ack": 4,
+    "jev_calls": 12,
+    "jev_usd": 0.003311322,
+    "victory": false
+  },
+  "limitations": [
+    "Same-run exploratory continuation, no randomized comparison",
+    "Stopped twice on single-player quiet-state timeout during peer actions"
+  ]
+}
