@@ -30,10 +30,11 @@ def outcome_key(result):
     return (0, 0, 0)
 
 
-def battle(case, policy, label, manifest):
+def battle(case, policy, label, manifest, experiment='E096'):
     uid = str(uuid.uuid4())
     trace = Trace(ROOT / 'artifacts/runs' / uid, {
-        **manifest, 'experiment': 'E096', 'scope': 'offline_boss_policy_search',
+        **manifest, 'experiment': experiment,
+        'scope': 'offline_boss_policy_search' if experiment == 'E096' else 'boss_policy_reproduction',
         'case_id': case['id'], 'policy': policy, 'label': label})
     result = {'case_id': case['id'], 'policy': policy, 'label': label,
               'status': 'error', 'run_id': uid, 'steps': 0, 'entry_verified': False}

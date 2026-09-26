@@ -1,0 +1,2269 @@
+{
+  "experiment": "E097",
+  "manifest": {
+    "schema_version": 1,
+    "code_commit": "1756c7188a54c4a73ee5fa11316232c75ba416ce",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "71505f31e29c370667636600a58fe2b3e270f98e99e3c5a384d176a7f0188274",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+      "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+  },
+  "policy_bank_sha256": "02c3b0e7202a427ce80096fe56abaad6f0097e94fc8475195507178ea4b0a30d",
+  "results": [
+    {
+      "case_id": "e077_a10_007_ironclad",
+      "arm": "lookup",
+      "repetition": 0,
+      "status": "boss_clear",
+      "policy": {
+        "mode": "legacy",
+        "loss_price": 1.5,
+        "potions": "early",
+        "round_modes": {},
+        "selection_rank": 0
+      },
+      "exact_teacher_policy": true,
+      "model_cost_usd": 0,
+      "decision_seconds": 0,
+      "model_answer": null,
+      "model_version": null,
+      "final_hp": 7,
+      "battle": {
+        "case_id": "e077_a10_007_ironclad",
+        "policy": {
+          "mode": "legacy",
+          "loss_price": 1.5,
+          "potions": "early",
+          "round_modes": {},
+          "selection_rank": 0
+        },
+        "label": "lookup_0",
+        "status": "boss_clear",
+        "run_id": "5aac8310-3aa1-4460-9ab5-8d8f6c4a8b16",
+        "steps": 56,
+        "entry_verified": true,
+        "entry_hash": "1c8723e65f738297e674fbd768326032bef4addcf32be7d267fb33d13870e491",
+        "prefix_seconds": 7.6228,
+        "seconds": 9.5032,
+        "final_hp": 7,
+        "final_decision": "card_reward",
+        "last_round": 11,
+        "remaining_leader_effective_hp": 3,
+        "remaining_total_effective_hp": 3,
+        "last_enemies": [
+          {
+            "name": "Kin Priest",
+            "hp": 3,
+            "doom": 0
+          }
+        ],
+        "potions": [
+          {
+            "round": 1,
+            "name": "Liquid Bronze"
+          },
+          {
+            "round": 1,
+            "name": "Dexterity Potion"
+          }
+        ],
+        "trajectory_sha256": "33a7be31116587c8acda75f829cc55f9aa82345ab6e04d5b377269ae38cd6780",
+        "wire_sha256": "ac375558558e5502de10af87580871507145ee58bccd3c68b94d111688efd138",
+        "engine_log_sha256": "f3683edafc1584a475d1fa98b5dcda6b4dac43a875c811268568279d138e80e9",
+        "trace_path": "artifacts/runs/5aac8310-3aa1-4460-9ab5-8d8f6c4a8b16/decisions.jsonl",
+        "trace_sha256": "de057a192b9d22c9efadf5ca1cac1637b7a1be7f51a3eed8874faee974b0483c",
+        "trace_verified": true
+      },
+      "teacher_trajectory_match": true,
+      "selection_trace_path": "artifacts/runs/bab8adc7-b289-4e7c-ab0f-d071553948b4/decisions.jsonl",
+      "selection_trace_sha256": "94ed209b91cf414d0f7b5a98e1b174ad929a5a9a7199554b9c08b6ba1c166037",
+      "selection_trace_verified": true
+    },
+    {
+      "case_id": "e077_a10_007_ironclad",
+      "arm": "unguided",
+      "repetition": 0,
+      "status": "boss_defeat",
+      "policy": {
+        "mode": "legacy",
+        "loss_price": 1.5,
+        "potions": "none",
+        "round_modes": {},
+        "selection_rank": 0
+      },
+      "exact_teacher_policy": false,
+      "model_cost_usd": 0.0001932,
+      "decision_seconds": 1.307982083177194,
+      "model_answer": {
+        "type": "choice",
+        "choice": "p04",
+        "probabilities": {
+          "p04": 0.28,
+          "p00": 0.22,
+          "p01": 0.26,
+          "p02": 0.06,
+          "p03": 0.18
+        },
+        "confidence": 0.09
+      },
+      "model_version": "typesafe/jev-1.13-20260917",
+      "final_hp": 0,
+      "battle": {
+        "case_id": "e077_a10_007_ironclad",
+        "policy": {
+          "mode": "legacy",
+          "loss_price": 1.5,
+          "potions": "none",
+          "round_modes": {},
+          "selection_rank": 0
+        },
+        "label": "unguided_0",
+        "status": "boss_defeat",
+        "run_id": "a1fb216e-0799-40c2-9c1a-20753521ecf4",
+        "steps": 38,
+        "entry_verified": true,
+        "entry_hash": "1c8723e65f738297e674fbd768326032bef4addcf32be7d267fb33d13870e491",
+        "prefix_seconds": 7.291,
+        "seconds": 8.5647,
+        "final_hp": 0,
+        "final_decision": "game_over",
+        "last_round": 9,
+        "remaining_leader_effective_hp": 109,
+        "remaining_total_effective_hp": 109,
+        "last_enemies": [
+          {
+            "name": "Kin Priest",
+            "hp": 109,
+            "doom": 0
+          }
+        ],
+        "potions": [],
+        "trajectory_sha256": "1ee87b28d1f55b396e3c958367cd752d1afc822d83131c17aa72fd6167108c8c",
+        "wire_sha256": "e9e475e10d13edf20ad52a7536e02f50ea060f661c66c8df004de1df0d3d18bf",
+        "engine_log_sha256": "4fd3583706235a53930bcac92528743c29f9ceaed39272cab8774ea37e5ef3ac",
+        "trace_path": "artifacts/runs/a1fb216e-0799-40c2-9c1a-20753521ecf4/decisions.jsonl",
+        "trace_sha256": "a6ddb40ded02cf400548d0f5e7eab92ebe3835a17a446b26ea56512830fffb16",
+        "trace_verified": true
+      },
+      "teacher_trajectory_match": false,
+      "selection_trace_path": "artifacts/runs/878da36b-ba50-4c7f-abed-dec1f26bb430/decisions.jsonl",
+      "selection_trace_sha256": "a1257ca0f340171557765dffea6a030d1f56e67b443e0288cfbcb59ef6d1ff00",
+      "selection_trace_verified": true
+    },
+    {
+      "case_id": "e077_a10_007_ironclad",
+      "arm": "unguided",
+      "repetition": 1,
+      "status": "boss_defeat",
+      "policy": {
+        "mode": "scaling",
+        "loss_price": 1.5,
+        "potions": "early",
+        "round_modes": {},
+        "selection_rank": 0
+      },
+      "exact_teacher_policy": false,
+      "model_cost_usd": 0.0001932,
+      "decision_seconds": 1.3763217080850154,
+      "model_answer": {
+        "type": "choice",
+        "choice": "p04",
+        "probabilities": {
+          "p00": 0.07,
+          "p01": 0.1,
+          "p03": 0.24,
+          "p04": 0.3,
+          "p02": 0.29
+        },
+        "confidence": 0.12
+      },
+      "model_version": "typesafe/jev-1.13-20260917",
+      "final_hp": 0,
+      "battle": {
+        "case_id": "e077_a10_007_ironclad",
+        "policy": {
+          "mode": "scaling",
+          "loss_price": 1.5,
+          "potions": "early",
+          "round_modes": {},
+          "selection_rank": 0
+        },
+        "label": "unguided_1",
+        "status": "boss_defeat",
+        "run_id": "1999a530-0268-4fdf-937f-2c355a722514",
+        "steps": 61,
+        "entry_verified": true,
+        "entry_hash": "1c8723e65f738297e674fbd768326032bef4addcf32be7d267fb33d13870e491",
+        "prefix_seconds": 7.3772,
+        "seconds": 9.2639,
+        "final_hp": 0,
+        "final_decision": "game_over",
+        "last_round": 11,
+        "remaining_leader_effective_hp": 74,
+        "remaining_total_effective_hp": 74,
+        "last_enemies": [
+          {
+            "name": "Kin Priest",
+            "hp": 74,
+            "doom": 0
+          }
+        ],
+        "potions": [
+          {
+            "round": 1,
+            "name": "Liquid Bronze"
+          },
+          {
+            "round": 1,
+            "name": "Dexterity Potion"
+          }
+        ],
+        "trajectory_sha256": "e6578b76956f11a143ce63d758280aa9c65fcee43bbb1aa135ff473dc5aab85b",
+        "wire_sha256": "d5d18f4a0779f23115e39908570ec45200bb60d0312ac910e261f9c92fc81fad",
+        "engine_log_sha256": "bb3d1661342b51295299f0147ca887483ffefbc6608a0ef49823972a9770ac5a",
+        "trace_path": "artifacts/runs/1999a530-0268-4fdf-937f-2c355a722514/decisions.jsonl",
+        "trace_sha256": "2919785173401c924a7d89b705bd7750523090b9eab8ad7c1cfaa056846df6bf",
+        "trace_verified": true
+      },
+      "teacher_trajectory_match": false,
+      "selection_trace_path": "artifacts/runs/c4c67624-6faf-44b4-a379-d5084f7f5311/decisions.jsonl",
+      "selection_trace_sha256": "1a9dfce0f64faf4d298f59804b93761ddfe85ab0af6b4de81361c42564a95a83",
+      "selection_trace_verified": true
+    },
+    {
+      "case_id": "e077_a10_007_ironclad",
+      "arm": "unguided",
+      "repetition": 2,
+      "status": "boss_defeat",
+      "policy": {
+        "mode": "legacy",
+        "loss_price": 1.5,
+        "potions": "none",
+        "round_modes": {},
+        "selection_rank": 0
+      },
+      "exact_teacher_policy": false,
+      "model_cost_usd": 0.0001932,
+      "decision_seconds": 1.3841332499869168,
+      "model_answer": {
+        "type": "choice",
+        "choice": "p02",
+        "probabilities": {
+          "p03": 0.08,
+          "p00": 0.12,
+          "p04": 0.26,
+          "p02": 0.28,
+          "p01": 0.26
+        },
+        "confidence": 0.1
+      },
+      "model_version": "typesafe/jev-1.13-20260917",
+      "final_hp": 0,
+      "battle": {
+        "case_id": "e077_a10_007_ironclad",
+        "policy": {
+          "mode": "legacy",
+          "loss_price": 1.5,
+          "potions": "none",
+          "round_modes": {},
+          "selection_rank": 0
+        },
+        "label": "unguided_2",
+        "status": "boss_defeat",
+        "run_id": "6f490681-caf5-4147-9c30-338af29af7db",
+        "steps": 38,
+        "entry_verified": true,
+        "entry_hash": "1c8723e65f738297e674fbd768326032bef4addcf32be7d267fb33d13870e491",
+        "prefix_seconds": 7.516,
+        "seconds": 8.789,
+        "final_hp": 0,
+        "final_decision": "game_over",
+        "last_round": 9,
+        "remaining_leader_effective_hp": 109,
+        "remaining_total_effective_hp": 109,
+        "last_enemies": [
+          {
+            "name": "Kin Priest",
+            "hp": 109,
+            "doom": 0
+          }
+        ],
+        "potions": [],
+        "trajectory_sha256": "1ee87b28d1f55b396e3c958367cd752d1afc822d83131c17aa72fd6167108c8c",
+        "wire_sha256": "c30f3505fa05b379ee242ef746f648151fcb20c85654306e0066f465901579f5",
+        "engine_log_sha256": "4fd3583706235a53930bcac92528743c29f9ceaed39272cab8774ea37e5ef3ac",
+        "trace_path": "artifacts/runs/6f490681-caf5-4147-9c30-338af29af7db/decisions.jsonl",
+        "trace_sha256": "699efffc8cd2040a1303bd7a6727ca1b0565a0235e5253ff8ea6b4940d225186",
+        "trace_verified": true
+      },
+      "teacher_trajectory_match": false,
+      "selection_trace_path": "artifacts/runs/aa03e42f-492e-4446-8aca-678eb3bef92c/decisions.jsonl",
+      "selection_trace_sha256": "87a672b7573988950d11e551c824caf5a1685c75465614dea1de833462bf43a0",
+      "selection_trace_verified": true
+    },
+    {
+      "case_id": "e077_a10_007_ironclad",
+      "arm": "coached",
+      "repetition": 0,
+      "status": "boss_clear",
+      "policy": {
+        "mode": "legacy",
+        "loss_price": 1.5,
+        "potions": "early",
+        "round_modes": {},
+        "selection_rank": 0
+      },
+      "exact_teacher_policy": true,
+      "model_cost_usd": 0.000202398,
+      "decision_seconds": 1.0139188340399414,
+      "model_answer": {
+        "type": "choice",
+        "choice": "p01",
+        "probabilities": {
+          "p04": 0.01,
+          "p00": 0.01,
+          "p02": 0,
+          "p03": 0,
+          "p01": 0.98
+        },
+        "confidence": 0.97
+      },
+      "model_version": "typesafe/jev-1.13-20260917",
+      "final_hp": 7,
+      "battle": {
+        "case_id": "e077_a10_007_ironclad",
+        "policy": {
+          "mode": "legacy",
+          "loss_price": 1.5,
+          "potions": "early",
+          "round_modes": {},
+          "selection_rank": 0
+        },
+        "label": "coached_0",
+        "status": "boss_clear",
+        "run_id": "a6fd4264-ea8b-4833-aae9-11aad5182862",
+        "steps": 56,
+        "entry_verified": true,
+        "entry_hash": "1c8723e65f738297e674fbd768326032bef4addcf32be7d267fb33d13870e491",
+        "prefix_seconds": 7.216,
+        "seconds": 9.0882,
+        "final_hp": 7,
+        "final_decision": "card_reward",
+        "last_round": 11,
+        "remaining_leader_effective_hp": 3,
+        "remaining_total_effective_hp": 3,
+        "last_enemies": [
+          {
+            "name": "Kin Priest",
+            "hp": 3,
+            "doom": 0
+          }
+        ],
+        "potions": [
+          {
+            "round": 1,
+            "name": "Liquid Bronze"
+          },
+          {
+            "round": 1,
+            "name": "Dexterity Potion"
+          }
+        ],
+        "trajectory_sha256": "33a7be31116587c8acda75f829cc55f9aa82345ab6e04d5b377269ae38cd6780",
+        "wire_sha256": "9409a236cb724ee9a3ccba886fb3e91bbf7eac5383358df0ad0c33f633a96d6a",
+        "engine_log_sha256": "f3683edafc1584a475d1fa98b5dcda6b4dac43a875c811268568279d138e80e9",
+        "trace_path": "artifacts/runs/a6fd4264-ea8b-4833-aae9-11aad5182862/decisions.jsonl",
+        "trace_sha256": "d421fc8dbc466e70a4c481059fd28a3b1c761b6fdfc385cbdfd562fada2646bf",
+        "trace_verified": true
+      },
+      "teacher_trajectory_match": true,
+      "selection_trace_path": "artifacts/runs/8a207e43-6176-4fb6-a452-06e2ac9ff18b/decisions.jsonl",
+      "selection_trace_sha256": "7899641e940af0a80c09eef1971dbb8567c73790bf8fcf4030e7ff7722cc2d65",
+      "selection_trace_verified": true
+    },
+    {
+      "case_id": "e077_a10_007_ironclad",
+      "arm": "coached",
+      "repetition": 1,
+      "status": "boss_clear",
+      "policy": {
+        "mode": "legacy",
+        "loss_price": 1.5,
+        "potions": "early",
+        "round_modes": {},
+        "selection_rank": 0
+      },
+      "exact_teacher_policy": true,
+      "model_cost_usd": 0.000202398,
+      "decision_seconds": 0.9861540419515222,
+      "model_answer": {
+        "type": "choice",
+        "choice": "p03",
+        "probabilities": {
+          "p03": 0.98,
+          "p01": 0,
+          "p04": 0.01,
+          "p00": 0,
+          "p02": 0.01
+        },
+        "confidence": 0.96
+      },
+      "model_version": "typesafe/jev-1.13-20260917",
+      "final_hp": 7,
+      "battle": {
+        "case_id": "e077_a10_007_ironclad",
+        "policy": {
+          "mode": "legacy",
+          "loss_price": 1.5,
+          "potions": "early",
+          "round_modes": {},
+          "selection_rank": 0
+        },
+        "label": "coached_1",
+        "status": "boss_clear",
+        "run_id": "272f7291-5571-4110-a720-b5f2176f33e6",
+        "steps": 56,
+        "entry_verified": true,
+        "entry_hash": "1c8723e65f738297e674fbd768326032bef4addcf32be7d267fb33d13870e491",
+        "prefix_seconds": 7.1767,
+        "seconds": 9.0519,
+        "final_hp": 7,
+        "final_decision": "card_reward",
+        "last_round": 11,
+        "remaining_leader_effective_hp": 3,
+        "remaining_total_effective_hp": 3,
+        "last_enemies": [
+          {
+            "name": "Kin Priest",
+            "hp": 3,
+            "doom": 0
+          }
+        ],
+        "potions": [
+          {
+            "round": 1,
+            "name": "Liquid Bronze"
+          },
+          {
+            "round": 1,
+            "name": "Dexterity Potion"
+          }
+        ],
+        "trajectory_sha256": "33a7be31116587c8acda75f829cc55f9aa82345ab6e04d5b377269ae38cd6780",
+        "wire_sha256": "ace0ea9150218a29e910b6c11c118088f05d65c98c0dfc334a1d5d01572888c6",
+        "engine_log_sha256": "f3683edafc1584a475d1fa98b5dcda6b4dac43a875c811268568279d138e80e9",
+        "trace_path": "artifacts/runs/272f7291-5571-4110-a720-b5f2176f33e6/decisions.jsonl",
+        "trace_sha256": "ac573617ee628f0ea2bb8778d18bc1ad98547e27ca6267fca519011a0b3ed7b5",
+        "trace_verified": true
+      },
+      "teacher_trajectory_match": true,
+      "selection_trace_path": "artifacts/runs/2b32d0c3-e263-401a-a7f0-f8ceb68a57dc/decisions.jsonl",
+      "selection_trace_sha256": "5c276fe546e0ffc27be94b36738e908cf07f0f821b000c7ae8d9ec7b2403406b",
+      "selection_trace_verified": true
+    },
+    {
+      "case_id": "e077_a10_007_ironclad",
+      "arm": "coached",
+      "repetition": 2,
+      "status": "boss_clear",
+      "policy": {
+        "mode": "legacy",
+        "loss_price": 1.5,
+        "potions": "early",
+        "round_modes": {},
+        "selection_rank": 0
+      },
+      "exact_teacher_policy": true,
+      "model_cost_usd": 0.000202398,
+      "decision_seconds": 1.0193662911187857,
+      "model_answer": {
+        "type": "choice",
+        "choice": "p01",
+        "probabilities": {
+          "p01": 0.98,
+          "p04": 0.01,
+          "p00": 0,
+          "p03": 0,
+          "p02": 0.01
+        },
+        "confidence": 0.97
+      },
+      "model_version": "typesafe/jev-1.13-20260917",
+      "final_hp": 7,
+      "battle": {
+        "case_id": "e077_a10_007_ironclad",
+        "policy": {
+          "mode": "legacy",
+          "loss_price": 1.5,
+          "potions": "early",
+          "round_modes": {},
+          "selection_rank": 0
+        },
+        "label": "coached_2",
+        "status": "boss_clear",
+        "run_id": "d46c26a6-d5f0-4675-a6fe-534862fd6712",
+        "steps": 56,
+        "entry_verified": true,
+        "entry_hash": "1c8723e65f738297e674fbd768326032bef4addcf32be7d267fb33d13870e491",
+        "prefix_seconds": 7.2109,
+        "seconds": 9.0875,
+        "final_hp": 7,
+        "final_decision": "card_reward",
+        "last_round": 11,
+        "remaining_leader_effective_hp": 3,
+        "remaining_total_effective_hp": 3,
+        "last_enemies": [
+          {
+            "name": "Kin Priest",
+            "hp": 3,
+            "doom": 0
+          }
+        ],
+        "potions": [
+          {
+            "round": 1,
+            "name": "Liquid Bronze"
+          },
+          {
+            "round": 1,
+            "name": "Dexterity Potion"
+          }
+        ],
+        "trajectory_sha256": "33a7be31116587c8acda75f829cc55f9aa82345ab6e04d5b377269ae38cd6780",
+        "wire_sha256": "a0f1c6a7289273a7f6be1600157af82a8240835c1cbabcd9fd909c830f086761",
+        "engine_log_sha256": "f3683edafc1584a475d1fa98b5dcda6b4dac43a875c811268568279d138e80e9",
+        "trace_path": "artifacts/runs/d46c26a6-d5f0-4675-a6fe-534862fd6712/decisions.jsonl",
+        "trace_sha256": "8f7f77fa4633cb422364f9364a22cd22e05280c028fd1628deafdd3ef9b03d2b",
+        "trace_verified": true
+      },
+      "teacher_trajectory_match": true,
+      "selection_trace_path": "artifacts/runs/5379ec36-e231-49d1-b610-40af6b35417e/decisions.jsonl",
+      "selection_trace_sha256": "97f3728f363e3e34f06ca12e69b289b1bd186df6c87aa31be34bd9c57e8b86ff",
+      "selection_trace_verified": true
+    },
+    {
+      "case_id": "e089_holdout_004_ironclad",
+      "arm": "lookup",
+      "repetition": 0,
+      "status": "boss_clear",
+      "policy": {
+        "mode": "scaling",
+        "loss_price": 1.5,
+        "potions": "early",
+        "round_modes": {},
+        "selection_rank": 0
+      },
+      "exact_teacher_policy": true,
+      "model_cost_usd": 0,
+      "decision_seconds": 0,
+      "model_answer": null,
+      "model_version": null,
+      "final_hp": 54,
+      "battle": {
+        "case_id": "e089_holdout_004_ironclad",
+        "policy": {
+          "mode": "scaling",
+          "loss_price": 1.5,
+          "potions": "early",
+          "round_modes": {},
+          "selection_rank": 0
+        },
+        "label": "lookup_0",
+        "status": "boss_clear",
+        "run_id": "8bd5f400-541b-419f-8457-cb8b1bc476d1",
+        "steps": 30,
+        "entry_verified": true,
+        "entry_hash": "31a8293063704d7671f874bb7df624d29af299193365fdf4b8933e560c81f280",
+        "prefix_seconds": 6.9788,
+        "seconds": 7.9261,
+        "final_hp": 54,
+        "final_decision": "card_reward",
+        "last_round": 9,
+        "remaining_leader_effective_hp": 37,
+        "remaining_total_effective_hp": 37,
+        "last_enemies": [
+          {
+            "name": "Ceremonial Beast",
+            "hp": 37,
+            "doom": 0
+          }
+        ],
+        "potions": [
+          {
+            "round": 1,
+            "name": "Strength Potion"
+          },
+          {
+            "round": 1,
+            "name": "Explosive Ampoule"
+          },
+          {
+            "round": 1,
+            "name": "Duplicator"
+          }
+        ],
+        "trajectory_sha256": "a700454cd8fd016a070f3ffbeb95199f990f62109a71981347af1f0cb2937ccc",
+        "wire_sha256": "c05cdbbf386d6ae09d4774e2b4082ff87a1d5f93128491b1001d82e898a09ddd",
+        "engine_log_sha256": "54755696ce3dedefc5e124b50f520376e3c19db5259a5c2c440f24e07b1d1ff3",
+        "trace_path": "artifacts/runs/8bd5f400-541b-419f-8457-cb8b1bc476d1/decisions.jsonl",
+        "trace_sha256": "e75423608435254d04bc9d80e5613c3862897bb5d9910b043922b05d6c746935",
+        "trace_verified": true
+      },
+      "teacher_trajectory_match": true,
+      "selection_trace_path": "artifacts/runs/9e39f747-ce2b-4d79-b43a-699a61e9d343/decisions.jsonl",
+      "selection_trace_sha256": "94e9190a90367c207e2b6c96bc102f4cbcdf7bfcd3482984135c3e4101919bdc",
+      "selection_trace_verified": true
+    },
+    {
+      "case_id": "e089_holdout_004_ironclad",
+      "arm": "unguided",
+      "repetition": 0,
+      "status": "boss_clear",
+      "policy": {
+        "mode": "scaling",
+        "loss_price": 1.5,
+        "potions": "early",
+        "round_modes": {},
+        "selection_rank": 0
+      },
+      "exact_teacher_policy": true,
+      "model_cost_usd": 0.000172872,
+      "decision_seconds": 1.0278769577853382,
+      "model_answer": {
+        "type": "choice",
+        "choice": "p01",
+        "probabilities": {
+          "p00": 0.07,
+          "p04": 0.29,
+          "p03": 0.08,
+          "p01": 0.36,
+          "p02": 0.2
+        },
+        "confidence": 0.19
+      },
+      "model_version": "typesafe/jev-1.13-20260917",
+      "final_hp": 54,
+      "battle": {
+        "case_id": "e089_holdout_004_ironclad",
+        "policy": {
+          "mode": "scaling",
+          "loss_price": 1.5,
+          "potions": "early",
+          "round_modes": {},
+          "selection_rank": 0
+        },
+        "label": "unguided_0",
+        "status": "boss_clear",
+        "run_id": "a7ff5a13-1e83-4e7c-8e51-16446f114838",
+        "steps": 30,
+        "entry_verified": true,
+        "entry_hash": "31a8293063704d7671f874bb7df624d29af299193365fdf4b8933e560c81f280",
+        "prefix_seconds": 6.9383,
+        "seconds": 7.8868,
+        "final_hp": 54,
+        "final_decision": "card_reward",
+        "last_round": 9,
+        "remaining_leader_effective_hp": 37,
+        "remaining_total_effective_hp": 37,
+        "last_enemies": [
+          {
+            "name": "Ceremonial Beast",
+            "hp": 37,
+            "doom": 0
+          }
+        ],
+        "potions": [
+          {
+            "round": 1,
+            "name": "Strength Potion"
+          },
+          {
+            "round": 1,
+            "name": "Explosive Ampoule"
+          },
+          {
+            "round": 1,
+            "name": "Duplicator"
+          }
+        ],
+        "trajectory_sha256": "a700454cd8fd016a070f3ffbeb95199f990f62109a71981347af1f0cb2937ccc",
+        "wire_sha256": "f764e613dd2573073dfa3c9d869d9a3470e609a76c4ef5f80089c58a3369f555",
+        "engine_log_sha256": "54755696ce3dedefc5e124b50f520376e3c19db5259a5c2c440f24e07b1d1ff3",
+        "trace_path": "artifacts/runs/a7ff5a13-1e83-4e7c-8e51-16446f114838/decisions.jsonl",
+        "trace_sha256": "ab75b8738a30cc18eea42c994230c52db19d9b937960f764d0ca4b7c286a45e1",
+        "trace_verified": true
+      },
+      "teacher_trajectory_match": true,
+      "selection_trace_path": "artifacts/runs/3f485c1a-10ea-4838-8bed-f3f074173997/decisions.jsonl",
+      "selection_trace_sha256": "ce41cea83c3d25cfe10554696edd3603d6069f79c8a1c2b17d11a8a3781a061b",
+      "selection_trace_verified": true
+    },
+    {
+      "case_id": "e089_holdout_004_ironclad",
+      "arm": "unguided",
+      "repetition": 1,
+      "status": "boss_clear",
+      "policy": {
+        "mode": "scaling",
+        "loss_price": 1.5,
+        "potions": "early",
+        "round_modes": {},
+        "selection_rank": 0
+      },
+      "exact_teacher_policy": true,
+      "model_cost_usd": 0.000172872,
+      "decision_seconds": 0.9269485000986606,
+      "model_answer": {
+        "type": "choice",
+        "choice": "p03",
+        "probabilities": {
+          "p04": 0.09,
+          "p00": 0.08,
+          "p02": 0.19,
+          "p01": 0.29,
+          "p03": 0.35000000000000003
+        },
+        "confidence": 0.18
+      },
+      "model_version": "typesafe/jev-1.13-20260917",
+      "final_hp": 54,
+      "battle": {
+        "case_id": "e089_holdout_004_ironclad",
+        "policy": {
+          "mode": "scaling",
+          "loss_price": 1.5,
+          "potions": "early",
+          "round_modes": {},
+          "selection_rank": 0
+        },
+        "label": "unguided_1",
+        "status": "boss_clear",
+        "run_id": "bb062cdd-bef6-4d69-ad21-82bb7e5e6762",
+        "steps": 30,
+        "entry_verified": true,
+        "entry_hash": "31a8293063704d7671f874bb7df624d29af299193365fdf4b8933e560c81f280",
+        "prefix_seconds": 6.9391,
+        "seconds": 7.8956,
+        "final_hp": 54,
+        "final_decision": "card_reward",
+        "last_round": 9,
+        "remaining_leader_effective_hp": 37,
+        "remaining_total_effective_hp": 37,
+        "last_enemies": [
+          {
+            "name": "Ceremonial Beast",
+            "hp": 37,
+            "doom": 0
+          }
+        ],
+        "potions": [
+          {
+            "round": 1,
+            "name": "Strength Potion"
+          },
+          {
+            "round": 1,
+            "name": "Explosive Ampoule"
+          },
+          {
+            "round": 1,
+            "name": "Duplicator"
+          }
+        ],
+        "trajectory_sha256": "a700454cd8fd016a070f3ffbeb95199f990f62109a71981347af1f0cb2937ccc",
+        "wire_sha256": "e91f16faaf6dfde41925104cfc684631b30b916290d693f3ce122f0597f1b09f",
+        "engine_log_sha256": "54755696ce3dedefc5e124b50f520376e3c19db5259a5c2c440f24e07b1d1ff3",
+        "trace_path": "artifacts/runs/bb062cdd-bef6-4d69-ad21-82bb7e5e6762/decisions.jsonl",
+        "trace_sha256": "cc0bc0e43b248ee0bd4225f19d9dee47efe3321633a79b7bb2d08e5fe28054de",
+        "trace_verified": true
+      },
+      "teacher_trajectory_match": true,
+      "selection_trace_path": "artifacts/runs/7e4d2d5f-4c21-4361-b577-999dba607f82/decisions.jsonl",
+      "selection_trace_sha256": "a6bd8038ff248530db4d06ff0200bfc07e21df7359f1abecfefbdb351cf5af61",
+      "selection_trace_verified": true
+    },
+    {
+      "case_id": "e089_holdout_004_ironclad",
+      "arm": "unguided",
+      "repetition": 2,
+      "status": "boss_defeat",
+      "policy": {
+        "mode": "legacy",
+        "loss_price": 1.5,
+        "potions": "none",
+        "round_modes": {},
+        "selection_rank": 0
+      },
+      "exact_teacher_policy": false,
+      "model_cost_usd": 0.000172872,
+      "decision_seconds": 1.089025542140007,
+      "model_answer": {
+        "type": "choice",
+        "choice": "p01",
+        "probabilities": {
+          "p02": 0.25,
+          "p03": 0.16,
+          "p00": 0.09,
+          "p01": 0.31,
+          "p04": 0.19
+        },
+        "confidence": 0.13
+      },
+      "model_version": "typesafe/jev-1.13-20260917",
+      "final_hp": 0,
+      "battle": {
+        "case_id": "e089_holdout_004_ironclad",
+        "policy": {
+          "mode": "legacy",
+          "loss_price": 1.5,
+          "potions": "none",
+          "round_modes": {},
+          "selection_rank": 0
+        },
+        "label": "unguided_2",
+        "status": "boss_defeat",
+        "run_id": "1e547fb9-c1dd-4739-bece-84ea46e00db1",
+        "steps": 46,
+        "entry_verified": true,
+        "entry_hash": "31a8293063704d7671f874bb7df624d29af299193365fdf4b8933e560c81f280",
+        "prefix_seconds": 6.8955,
+        "seconds": 8.3695,
+        "final_hp": 0,
+        "final_decision": "game_over",
+        "last_round": 14,
+        "remaining_leader_effective_hp": 63,
+        "remaining_total_effective_hp": 63,
+        "last_enemies": [
+          {
+            "name": "Ceremonial Beast",
+            "hp": 63,
+            "doom": 0
+          }
+        ],
+        "potions": [],
+        "trajectory_sha256": "9c1f3fef27592eb14c962b3193f0cc2926c6d7f31bf6287f4708a62c39ddf6d2",
+        "wire_sha256": "49c235d40c2e0a6cf9305bcfff363c241e8c01c55230bb3e286a049e6709220f",
+        "engine_log_sha256": "10bfcc4e087cb072dc7a8e1466c949bc05ccb2802c89ced8a2ef511734e85c39",
+        "trace_path": "artifacts/runs/1e547fb9-c1dd-4739-bece-84ea46e00db1/decisions.jsonl",
+        "trace_sha256": "24d5604e5aceff4bd89de47c1977ae4488f5451eca92d8a1c619a3151357748f",
+        "trace_verified": true
+      },
+      "teacher_trajectory_match": false,
+      "selection_trace_path": "artifacts/runs/2b3603fa-f8a5-4c60-ae2f-7a03b373cd12/decisions.jsonl",
+      "selection_trace_sha256": "f6eb033bd05370931fc23a8b40e8ac6d06f940fb85ac7cba709a4736b2060bf0",
+      "selection_trace_verified": true
+    },
+    {
+      "case_id": "e089_holdout_004_ironclad",
+      "arm": "coached",
+      "repetition": 0,
+      "status": "boss_clear",
+      "policy": {
+        "mode": "scaling",
+        "loss_price": 1.5,
+        "potions": "early",
+        "round_modes": {},
+        "selection_rank": 0
+      },
+      "exact_teacher_policy": true,
+      "model_cost_usd": 0.00018207,
+      "decision_seconds": 0.9994720839895308,
+      "model_answer": {
+        "type": "choice",
+        "choice": "p01",
+        "probabilities": {
+          "p03": 0,
+          "p02": 0,
+          "p00": 0,
+          "p01": 0.99,
+          "p04": 0.01
+        },
+        "confidence": 0.99
+      },
+      "model_version": "typesafe/jev-1.13-20260917",
+      "final_hp": 54,
+      "battle": {
+        "case_id": "e089_holdout_004_ironclad",
+        "policy": {
+          "mode": "scaling",
+          "loss_price": 1.5,
+          "potions": "early",
+          "round_modes": {},
+          "selection_rank": 0
+        },
+        "label": "coached_0",
+        "status": "boss_clear",
+        "run_id": "eeba2831-5aa7-43b1-9ca1-0ec4a04d8676",
+        "steps": 30,
+        "entry_verified": true,
+        "entry_hash": "31a8293063704d7671f874bb7df624d29af299193365fdf4b8933e560c81f280",
+        "prefix_seconds": 6.9736,
+        "seconds": 7.936,
+        "final_hp": 54,
+        "final_decision": "card_reward",
+        "last_round": 9,
+        "remaining_leader_effective_hp": 37,
+        "remaining_total_effective_hp": 37,
+        "last_enemies": [
+          {
+            "name": "Ceremonial Beast",
+            "hp": 37,
+            "doom": 0
+          }
+        ],
+        "potions": [
+          {
+            "round": 1,
+            "name": "Strength Potion"
+          },
+          {
+            "round": 1,
+            "name": "Explosive Ampoule"
+          },
+          {
+            "round": 1,
+            "name": "Duplicator"
+          }
+        ],
+        "trajectory_sha256": "a700454cd8fd016a070f3ffbeb95199f990f62109a71981347af1f0cb2937ccc",
+        "wire_sha256": "a3ffa9352722f4e41880f3d12cf8dab068f064755259bc868ff798dd1df9c196",
+        "engine_log_sha256": "54755696ce3dedefc5e124b50f520376e3c19db5259a5c2c440f24e07b1d1ff3",
+        "trace_path": "artifacts/runs/eeba2831-5aa7-43b1-9ca1-0ec4a04d8676/decisions.jsonl",
+        "trace_sha256": "dcff75840bb6b5ec9cfc27c0bc65ef03ca632ea167c21c3b6edc45877300f46d",
+        "trace_verified": true
+      },
+      "teacher_trajectory_match": true,
+      "selection_trace_path": "artifacts/runs/0996913f-1ee3-40f1-b3e5-35c92321c51d/decisions.jsonl",
+      "selection_trace_sha256": "37097fe5f8a11e38adf521068db1c5cc3cabc4f9633434757aee20646878111b",
+      "selection_trace_verified": true
+    },
+    {
+      "case_id": "e089_holdout_004_ironclad",
+      "arm": "coached",
+      "repetition": 1,
+      "status": "boss_clear",
+      "policy": {
+        "mode": "scaling",
+        "loss_price": 1.5,
+        "potions": "early",
+        "round_modes": {},
+        "selection_rank": 0
+      },
+      "exact_teacher_policy": true,
+      "model_cost_usd": 0.00018207,
+      "decision_seconds": 1.050910250050947,
+      "model_answer": {
+        "type": "choice",
+        "choice": "p03",
+        "probabilities": {
+          "p02": 0,
+          "p03": 1,
+          "p00": 0,
+          "p01": 0,
+          "p04": 0
+        },
+        "confidence": 0.99
+      },
+      "model_version": "typesafe/jev-1.13-20260917",
+      "final_hp": 54,
+      "battle": {
+        "case_id": "e089_holdout_004_ironclad",
+        "policy": {
+          "mode": "scaling",
+          "loss_price": 1.5,
+          "potions": "early",
+          "round_modes": {},
+          "selection_rank": 0
+        },
+        "label": "coached_1",
+        "status": "boss_clear",
+        "run_id": "8944154b-59d6-4807-bf01-fa70479e276c",
+        "steps": 30,
+        "entry_verified": true,
+        "entry_hash": "31a8293063704d7671f874bb7df624d29af299193365fdf4b8933e560c81f280",
+        "prefix_seconds": 7.1085,
+        "seconds": 8.0611,
+        "final_hp": 54,
+        "final_decision": "card_reward",
+        "last_round": 9,
+        "remaining_leader_effective_hp": 37,
+        "remaining_total_effective_hp": 37,
+        "last_enemies": [
+          {
+            "name": "Ceremonial Beast",
+            "hp": 37,
+            "doom": 0
+          }
+        ],
+        "potions": [
+          {
+            "round": 1,
+            "name": "Strength Potion"
+          },
+          {
+            "round": 1,
+            "name": "Explosive Ampoule"
+          },
+          {
+            "round": 1,
+            "name": "Duplicator"
+          }
+        ],
+        "trajectory_sha256": "a700454cd8fd016a070f3ffbeb95199f990f62109a71981347af1f0cb2937ccc",
+        "wire_sha256": "ba7f2b9823d92d7f2fa29ad95e7624ae07dd8cc3a3f7e0156e7ce797ece7124f",
+        "engine_log_sha256": "54755696ce3dedefc5e124b50f520376e3c19db5259a5c2c440f24e07b1d1ff3",
+        "trace_path": "artifacts/runs/8944154b-59d6-4807-bf01-fa70479e276c/decisions.jsonl",
+        "trace_sha256": "e7e357c3c042c04c6fb8915fa9c986f0dc023dc09c93364835dd333fe3074eba",
+        "trace_verified": true
+      },
+      "teacher_trajectory_match": true,
+      "selection_trace_path": "artifacts/runs/d82c6b6f-282c-4e28-acaa-511b92b483da/decisions.jsonl",
+      "selection_trace_sha256": "c75ea23fe5f2417be0dbc8fb6d26d91ce9679168c9796d34dbb885f74c69c2b8",
+      "selection_trace_verified": true
+    },
+    {
+      "case_id": "e089_holdout_004_ironclad",
+      "arm": "coached",
+      "repetition": 2,
+      "status": "boss_clear",
+      "policy": {
+        "mode": "scaling",
+        "loss_price": 1.5,
+        "potions": "early",
+        "round_modes": {},
+        "selection_rank": 0
+      },
+      "exact_teacher_policy": true,
+      "model_cost_usd": 0.00018207,
+      "decision_seconds": 1.02181312488392,
+      "model_answer": {
+        "type": "choice",
+        "choice": "p03",
+        "probabilities": {
+          "p00": 0,
+          "p03": 0.99,
+          "p01": 0,
+          "p04": 0,
+          "p02": 0.01
+        },
+        "confidence": 0.99
+      },
+      "model_version": "typesafe/jev-1.13-20260917",
+      "final_hp": 54,
+      "battle": {
+        "case_id": "e089_holdout_004_ironclad",
+        "policy": {
+          "mode": "scaling",
+          "loss_price": 1.5,
+          "potions": "early",
+          "round_modes": {},
+          "selection_rank": 0
+        },
+        "label": "coached_2",
+        "status": "boss_clear",
+        "run_id": "8f1026c3-5ae5-4c78-85e7-7afe758305f3",
+        "steps": 30,
+        "entry_verified": true,
+        "entry_hash": "31a8293063704d7671f874bb7df624d29af299193365fdf4b8933e560c81f280",
+        "prefix_seconds": 6.8815,
+        "seconds": 7.8308,
+        "final_hp": 54,
+        "final_decision": "card_reward",
+        "last_round": 9,
+        "remaining_leader_effective_hp": 37,
+        "remaining_total_effective_hp": 37,
+        "last_enemies": [
+          {
+            "name": "Ceremonial Beast",
+            "hp": 37,
+            "doom": 0
+          }
+        ],
+        "potions": [
+          {
+            "round": 1,
+            "name": "Strength Potion"
+          },
+          {
+            "round": 1,
+            "name": "Explosive Ampoule"
+          },
+          {
+            "round": 1,
+            "name": "Duplicator"
+          }
+        ],
+        "trajectory_sha256": "a700454cd8fd016a070f3ffbeb95199f990f62109a71981347af1f0cb2937ccc",
+        "wire_sha256": "be19b53066cf1afae0e407de7290cbb3adeae93299ef7409aa71d0ef626036f0",
+        "engine_log_sha256": "54755696ce3dedefc5e124b50f520376e3c19db5259a5c2c440f24e07b1d1ff3",
+        "trace_path": "artifacts/runs/8f1026c3-5ae5-4c78-85e7-7afe758305f3/decisions.jsonl",
+        "trace_sha256": "bc4dd2a076b23df6ac13e41567745d9632e94684f1926572695bce0ddf08c7a1",
+        "trace_verified": true
+      },
+      "teacher_trajectory_match": true,
+      "selection_trace_path": "artifacts/runs/c4e53bcc-67ef-4591-af49-5af1bf7a2e84/decisions.jsonl",
+      "selection_trace_sha256": "c7ec9c00be1b2fba7470565e04a5512846b8aa326eea082ed89daa7a877c4b37",
+      "selection_trace_verified": true
+    },
+    {
+      "case_id": "e089_holdout_006_regent",
+      "arm": "lookup",
+      "repetition": 0,
+      "status": "boss_clear",
+      "policy": {
+        "mode": "draw",
+        "loss_price": 1.5,
+        "potions": "early",
+        "round_modes": {},
+        "selection_rank": 0
+      },
+      "exact_teacher_policy": true,
+      "model_cost_usd": 0,
+      "decision_seconds": 0,
+      "model_answer": null,
+      "model_version": null,
+      "final_hp": 2,
+      "battle": {
+        "case_id": "e089_holdout_006_regent",
+        "policy": {
+          "mode": "draw",
+          "loss_price": 1.5,
+          "potions": "early",
+          "round_modes": {},
+          "selection_rank": 0
+        },
+        "label": "lookup_0",
+        "status": "boss_clear",
+        "run_id": "3effc0af-9b78-475f-b831-ba2b2ec56cd9",
+        "steps": 65,
+        "entry_verified": true,
+        "entry_hash": "3679b4817453aa694485577a4c96b4f48418223e45c58badd90a5dea71585227",
+        "prefix_seconds": 5.4964,
+        "seconds": 7.4681,
+        "final_hp": 2,
+        "final_decision": "card_reward",
+        "last_round": 13,
+        "remaining_leader_effective_hp": 9,
+        "remaining_total_effective_hp": 9,
+        "last_enemies": [
+          {
+            "name": "Kin Priest",
+            "hp": 9,
+            "doom": 0
+          }
+        ],
+        "potions": [
+          {
+            "round": 1,
+            "name": "Duplicator"
+          },
+          {
+            "round": 1,
+            "name": "Energy Potion"
+          }
+        ],
+        "trajectory_sha256": "0d6b0bca88a4c359f52f05e24955aa4f88bab91134aa13c29796a46db24fdecc",
+        "wire_sha256": "b532815e6f3cc779a90a25885f6f42f76c1fb1f27e70371b1b40c8229fc41375",
+        "engine_log_sha256": "14a67851576ab68b23ae626a8a1827b336b164248ffbfca9408cbd116672e6bf",
+        "trace_path": "artifacts/runs/3effc0af-9b78-475f-b831-ba2b2ec56cd9/decisions.jsonl",
+        "trace_sha256": "5ac4fb671e49d3392ccf9c6949d9d9219644daa570c7d3af738c2c68f09ffa59",
+        "trace_verified": true
+      },
+      "teacher_trajectory_match": true,
+      "selection_trace_path": "artifacts/runs/e2711629-b88a-4a63-aef6-f7b50d7835e4/decisions.jsonl",
+      "selection_trace_sha256": "03f33a27f5ae254365b516c4fc59989a1055e1350ea0f966903b95c0b9ef2134",
+      "selection_trace_verified": true
+    },
+    {
+      "case_id": "e089_holdout_006_regent",
+      "arm": "unguided",
+      "repetition": 0,
+      "status": "boss_defeat",
+      "policy": {
+        "mode": "scaling",
+        "loss_price": 1.5,
+        "potions": "early",
+        "round_modes": {},
+        "selection_rank": 0
+      },
+      "exact_teacher_policy": false,
+      "model_cost_usd": 0.000170184,
+      "decision_seconds": 1.180158207891509,
+      "model_answer": {
+        "type": "choice",
+        "choice": "p01",
+        "probabilities": {
+          "p03": 0.08,
+          "p00": 0.24,
+          "p04": 0.14,
+          "p01": 0.28,
+          "p02": 0.26
+        },
+        "confidence": 0.11
+      },
+      "model_version": "typesafe/jev-1.13-20260917",
+      "final_hp": 0,
+      "battle": {
+        "case_id": "e089_holdout_006_regent",
+        "policy": {
+          "mode": "scaling",
+          "loss_price": 1.5,
+          "potions": "early",
+          "round_modes": {},
+          "selection_rank": 0
+        },
+        "label": "unguided_0",
+        "status": "boss_defeat",
+        "run_id": "edbe7794-0b02-4b24-b7b1-c97f32d4e739",
+        "steps": 58,
+        "entry_verified": true,
+        "entry_hash": "3679b4817453aa694485577a4c96b4f48418223e45c58badd90a5dea71585227",
+        "prefix_seconds": 5.6341,
+        "seconds": 7.4184,
+        "final_hp": 0,
+        "final_decision": "game_over",
+        "last_round": 11,
+        "remaining_leader_effective_hp": 66,
+        "remaining_total_effective_hp": 66,
+        "last_enemies": [
+          {
+            "name": "Kin Priest",
+            "hp": 66,
+            "doom": 0
+          }
+        ],
+        "potions": [
+          {
+            "round": 1,
+            "name": "Duplicator"
+          },
+          {
+            "round": 1,
+            "name": "Energy Potion"
+          }
+        ],
+        "trajectory_sha256": "b626208e4207e3f407c5df97c6eb1581ee36756f4bef00053bd721360450d512",
+        "wire_sha256": "8ea9cd6552f2a82ea21ef22b95262e5436238609188d38926a3b21edd4ec5950",
+        "engine_log_sha256": "48dd831675235f1e29441a2035b646fdf8d3ba4cca3ec3031cc7f287ad5395a3",
+        "trace_path": "artifacts/runs/edbe7794-0b02-4b24-b7b1-c97f32d4e739/decisions.jsonl",
+        "trace_sha256": "9e0938e30ff836a5e015ab107e481b89c05d52369660276cf9a2fe5fa0db3e95",
+        "trace_verified": true
+      },
+      "teacher_trajectory_match": false,
+      "selection_trace_path": "artifacts/runs/0c0bc289-b534-4551-9619-2dc102725f33/decisions.jsonl",
+      "selection_trace_sha256": "723848f7297401b416949c18162f931a49fad0f7d4ee065ae1c9ed0c799895c4",
+      "selection_trace_verified": true
+    },
+    {
+      "case_id": "e089_holdout_006_regent",
+      "arm": "unguided",
+      "repetition": 1,
+      "status": "boss_defeat",
+      "policy": {
+        "mode": "scaling",
+        "loss_price": 1.5,
+        "potions": "early",
+        "round_modes": {},
+        "selection_rank": 0
+      },
+      "exact_teacher_policy": false,
+      "model_cost_usd": 0.000170184,
+      "decision_seconds": 0.9503669580444694,
+      "model_answer": {
+        "type": "choice",
+        "choice": "p00",
+        "probabilities": {
+          "p03": 0.17,
+          "p02": 0.27,
+          "p01": 0.12,
+          "p04": 0.09,
+          "p00": 0.35
+        },
+        "confidence": 0.19
+      },
+      "model_version": "typesafe/jev-1.13-20260917",
+      "final_hp": 0,
+      "battle": {
+        "case_id": "e089_holdout_006_regent",
+        "policy": {
+          "mode": "scaling",
+          "loss_price": 1.5,
+          "potions": "early",
+          "round_modes": {},
+          "selection_rank": 0
+        },
+        "label": "unguided_1",
+        "status": "boss_defeat",
+        "run_id": "9412a081-884c-4737-bb7b-842b3ea28cdb",
+        "steps": 58,
+        "entry_verified": true,
+        "entry_hash": "3679b4817453aa694485577a4c96b4f48418223e45c58badd90a5dea71585227",
+        "prefix_seconds": 5.5413,
+        "seconds": 7.3092,
+        "final_hp": 0,
+        "final_decision": "game_over",
+        "last_round": 11,
+        "remaining_leader_effective_hp": 66,
+        "remaining_total_effective_hp": 66,
+        "last_enemies": [
+          {
+            "name": "Kin Priest",
+            "hp": 66,
+            "doom": 0
+          }
+        ],
+        "potions": [
+          {
+            "round": 1,
+            "name": "Duplicator"
+          },
+          {
+            "round": 1,
+            "name": "Energy Potion"
+          }
+        ],
+        "trajectory_sha256": "b626208e4207e3f407c5df97c6eb1581ee36756f4bef00053bd721360450d512",
+        "wire_sha256": "c9ee18fa088e7798f117f93e5ab8f27f3a13d66034c3314696313e81e408020f",
+        "engine_log_sha256": "48dd831675235f1e29441a2035b646fdf8d3ba4cca3ec3031cc7f287ad5395a3",
+        "trace_path": "artifacts/runs/9412a081-884c-4737-bb7b-842b3ea28cdb/decisions.jsonl",
+        "trace_sha256": "9d70b5f3bc6c4a639360ccf9071eda06200133b7745349c34d875accf399c236",
+        "trace_verified": true
+      },
+      "teacher_trajectory_match": false,
+      "selection_trace_path": "artifacts/runs/e5611ba8-3bc0-4141-beb3-99bb1e570ac5/decisions.jsonl",
+      "selection_trace_sha256": "8a438a17345ead58b6e2c334a15ba9e8ea30d7122fff972b30b2e1558e1be354",
+      "selection_trace_verified": true
+    },
+    {
+      "case_id": "e089_holdout_006_regent",
+      "arm": "unguided",
+      "repetition": 2,
+      "status": "boss_defeat",
+      "policy": {
+        "mode": "legacy",
+        "loss_price": 1.5,
+        "potions": "none",
+        "round_modes": {},
+        "selection_rank": 0
+      },
+      "exact_teacher_policy": false,
+      "model_cost_usd": 0.000170184,
+      "decision_seconds": 1.1099789158906788,
+      "model_answer": {
+        "type": "choice",
+        "choice": "p01",
+        "probabilities": {
+          "p02": 0.16,
+          "p03": 0.04,
+          "p00": 0.2,
+          "p01": 0.32,
+          "p04": 0.28
+        },
+        "confidence": 0.14
+      },
+      "model_version": "typesafe/jev-1.13-20260917",
+      "final_hp": 0,
+      "battle": {
+        "case_id": "e089_holdout_006_regent",
+        "policy": {
+          "mode": "legacy",
+          "loss_price": 1.5,
+          "potions": "none",
+          "round_modes": {},
+          "selection_rank": 0
+        },
+        "label": "unguided_2",
+        "status": "boss_defeat",
+        "run_id": "b78619ef-50f6-4a68-ad75-c0d77ac18f75",
+        "steps": 26,
+        "entry_verified": true,
+        "entry_hash": "3679b4817453aa694485577a4c96b4f48418223e45c58badd90a5dea71585227",
+        "prefix_seconds": 5.479,
+        "seconds": 6.3165,
+        "final_hp": 0,
+        "final_decision": "game_over",
+        "last_round": 6,
+        "remaining_leader_effective_hp": 187,
+        "remaining_total_effective_hp": 248,
+        "last_enemies": [
+          {
+            "name": "Kin Follower",
+            "hp": 10,
+            "doom": 0
+          },
+          {
+            "name": "Kin Follower",
+            "hp": 51,
+            "doom": 0
+          },
+          {
+            "name": "Kin Priest",
+            "hp": 187,
+            "doom": 0
+          }
+        ],
+        "potions": [],
+        "trajectory_sha256": "1afea0c2ab390a9325952cb8feab73f38790aaca60630925e53cf5a6c71ac9fc",
+        "wire_sha256": "7807efa6bc565133a3a832620889cc86d43c0805fd67506422ac4f6dd5960c03",
+        "engine_log_sha256": "ae9a53788c8e4990b71f2b21862f5e83646335f19359cd4a3c5698d34897672d",
+        "trace_path": "artifacts/runs/b78619ef-50f6-4a68-ad75-c0d77ac18f75/decisions.jsonl",
+        "trace_sha256": "231a56e939f86ce108720c26a42cac52d1b1aa9e2c42ebd7000a3155ca6d6a74",
+        "trace_verified": true
+      },
+      "teacher_trajectory_match": false,
+      "selection_trace_path": "artifacts/runs/6841103f-e9d8-4ecb-9fcf-8f2161916163/decisions.jsonl",
+      "selection_trace_sha256": "4464b82dc769faa04922cc8f9a4379d53532ebb6e247b497b2982a04123ff03d",
+      "selection_trace_verified": true
+    },
+    {
+      "case_id": "e089_holdout_006_regent",
+      "arm": "coached",
+      "repetition": 0,
+      "status": "boss_clear",
+      "policy": {
+        "mode": "draw",
+        "loss_price": 1.5,
+        "potions": "early",
+        "round_modes": {},
+        "selection_rank": 0
+      },
+      "exact_teacher_policy": true,
+      "model_cost_usd": 0.000179382,
+      "decision_seconds": 1.015657041920349,
+      "model_answer": {
+        "type": "choice",
+        "choice": "p03",
+        "probabilities": {
+          "p00": 0,
+          "p03": 0.98,
+          "p01": 0,
+          "p04": 0,
+          "p02": 0.02
+        },
+        "confidence": 0.97
+      },
+      "model_version": "typesafe/jev-1.13-20260917",
+      "final_hp": 2,
+      "battle": {
+        "case_id": "e089_holdout_006_regent",
+        "policy": {
+          "mode": "draw",
+          "loss_price": 1.5,
+          "potions": "early",
+          "round_modes": {},
+          "selection_rank": 0
+        },
+        "label": "coached_0",
+        "status": "boss_clear",
+        "run_id": "8cb4dfe7-d3a6-4082-8bef-61dc590ab2e6",
+        "steps": 65,
+        "entry_verified": true,
+        "entry_hash": "3679b4817453aa694485577a4c96b4f48418223e45c58badd90a5dea71585227",
+        "prefix_seconds": 5.5086,
+        "seconds": 7.5061,
+        "final_hp": 2,
+        "final_decision": "card_reward",
+        "last_round": 13,
+        "remaining_leader_effective_hp": 9,
+        "remaining_total_effective_hp": 9,
+        "last_enemies": [
+          {
+            "name": "Kin Priest",
+            "hp": 9,
+            "doom": 0
+          }
+        ],
+        "potions": [
+          {
+            "round": 1,
+            "name": "Duplicator"
+          },
+          {
+            "round": 1,
+            "name": "Energy Potion"
+          }
+        ],
+        "trajectory_sha256": "0d6b0bca88a4c359f52f05e24955aa4f88bab91134aa13c29796a46db24fdecc",
+        "wire_sha256": "96916c69d9af1cc5c88c3926aafe20a835bd41f48ed36859fb820a73f758f24d",
+        "engine_log_sha256": "14a67851576ab68b23ae626a8a1827b336b164248ffbfca9408cbd116672e6bf",
+        "trace_path": "artifacts/runs/8cb4dfe7-d3a6-4082-8bef-61dc590ab2e6/decisions.jsonl",
+        "trace_sha256": "46d2fee8b157087510119214d92ee5425bb23bfb03eae6d75e16439295c5c854",
+        "trace_verified": true
+      },
+      "teacher_trajectory_match": true,
+      "selection_trace_path": "artifacts/runs/4c89e6d5-1f62-4a48-b8fd-0ce807e3cd25/decisions.jsonl",
+      "selection_trace_sha256": "db0752c7661b356fd87221f5905fdfd68dfe6f91fedbee1cba71bd03ed086da2",
+      "selection_trace_verified": true
+    },
+    {
+      "case_id": "e089_holdout_006_regent",
+      "arm": "coached",
+      "repetition": 1,
+      "status": "boss_clear",
+      "policy": {
+        "mode": "draw",
+        "loss_price": 1.5,
+        "potions": "early",
+        "round_modes": {},
+        "selection_rank": 0
+      },
+      "exact_teacher_policy": true,
+      "model_cost_usd": 0.000179382,
+      "decision_seconds": 1.000510125188157,
+      "model_answer": {
+        "type": "choice",
+        "choice": "p04",
+        "probabilities": {
+          "p03": 0,
+          "p00": 0,
+          "p02": 0.02,
+          "p01": 0,
+          "p04": 0.98
+        },
+        "confidence": 0.97
+      },
+      "model_version": "typesafe/jev-1.13-20260917",
+      "final_hp": 2,
+      "battle": {
+        "case_id": "e089_holdout_006_regent",
+        "policy": {
+          "mode": "draw",
+          "loss_price": 1.5,
+          "potions": "early",
+          "round_modes": {},
+          "selection_rank": 0
+        },
+        "label": "coached_1",
+        "status": "boss_clear",
+        "run_id": "f79086e2-e580-4500-a3dd-2e3ec5d8baaf",
+        "steps": 65,
+        "entry_verified": true,
+        "entry_hash": "3679b4817453aa694485577a4c96b4f48418223e45c58badd90a5dea71585227",
+        "prefix_seconds": 5.4787,
+        "seconds": 7.4655,
+        "final_hp": 2,
+        "final_decision": "card_reward",
+        "last_round": 13,
+        "remaining_leader_effective_hp": 9,
+        "remaining_total_effective_hp": 9,
+        "last_enemies": [
+          {
+            "name": "Kin Priest",
+            "hp": 9,
+            "doom": 0
+          }
+        ],
+        "potions": [
+          {
+            "round": 1,
+            "name": "Duplicator"
+          },
+          {
+            "round": 1,
+            "name": "Energy Potion"
+          }
+        ],
+        "trajectory_sha256": "0d6b0bca88a4c359f52f05e24955aa4f88bab91134aa13c29796a46db24fdecc",
+        "wire_sha256": "f6c06e72e0f8bf23eed1da4820a012f192a6a57591287401aba44fb1ceb07698",
+        "engine_log_sha256": "14a67851576ab68b23ae626a8a1827b336b164248ffbfca9408cbd116672e6bf",
+        "trace_path": "artifacts/runs/f79086e2-e580-4500-a3dd-2e3ec5d8baaf/decisions.jsonl",
+        "trace_sha256": "b1d6b84040ed4f3bc34e3c9854f177058f314b528992ebac5e7650f737f7302b",
+        "trace_verified": true
+      },
+      "teacher_trajectory_match": true,
+      "selection_trace_path": "artifacts/runs/ae2b4fa1-c46c-4f8a-b24b-9d29d979ece0/decisions.jsonl",
+      "selection_trace_sha256": "50a98936697607b15092e3f15cf2e564c3b1263765b48439c04f0197d2cac986",
+      "selection_trace_verified": true
+    },
+    {
+      "case_id": "e089_holdout_006_regent",
+      "arm": "coached",
+      "repetition": 2,
+      "status": "boss_clear",
+      "policy": {
+        "mode": "draw",
+        "loss_price": 1.5,
+        "potions": "early",
+        "round_modes": {},
+        "selection_rank": 0
+      },
+      "exact_teacher_policy": true,
+      "model_cost_usd": 0.000179382,
+      "decision_seconds": 1.0366862500086427,
+      "model_answer": {
+        "type": "choice",
+        "choice": "p03",
+        "probabilities": {
+          "p04": 0.01,
+          "p00": 0,
+          "p02": 0,
+          "p03": 0.99,
+          "p01": 0
+        },
+        "confidence": 0.97
+      },
+      "model_version": "typesafe/jev-1.13-20260917",
+      "final_hp": 2,
+      "battle": {
+        "case_id": "e089_holdout_006_regent",
+        "policy": {
+          "mode": "draw",
+          "loss_price": 1.5,
+          "potions": "early",
+          "round_modes": {},
+          "selection_rank": 0
+        },
+        "label": "coached_2",
+        "status": "boss_clear",
+        "run_id": "cc2d334d-a63c-423f-825d-6ec9e851e75a",
+        "steps": 65,
+        "entry_verified": true,
+        "entry_hash": "3679b4817453aa694485577a4c96b4f48418223e45c58badd90a5dea71585227",
+        "prefix_seconds": 5.449,
+        "seconds": 7.4213,
+        "final_hp": 2,
+        "final_decision": "card_reward",
+        "last_round": 13,
+        "remaining_leader_effective_hp": 9,
+        "remaining_total_effective_hp": 9,
+        "last_enemies": [
+          {
+            "name": "Kin Priest",
+            "hp": 9,
+            "doom": 0
+          }
+        ],
+        "potions": [
+          {
+            "round": 1,
+            "name": "Duplicator"
+          },
+          {
+            "round": 1,
+            "name": "Energy Potion"
+          }
+        ],
+        "trajectory_sha256": "0d6b0bca88a4c359f52f05e24955aa4f88bab91134aa13c29796a46db24fdecc",
+        "wire_sha256": "0651564277c899b002c313da7cf1a44e8ccbe58cbfccf3349be68d44aebfc657",
+        "engine_log_sha256": "14a67851576ab68b23ae626a8a1827b336b164248ffbfca9408cbd116672e6bf",
+        "trace_path": "artifacts/runs/cc2d334d-a63c-423f-825d-6ec9e851e75a/decisions.jsonl",
+        "trace_sha256": "2691828b0be759778dbaea6c23bc79260fdbda467678e43fc4212b6f2607bf2f",
+        "trace_verified": true
+      },
+      "teacher_trajectory_match": true,
+      "selection_trace_path": "artifacts/runs/32c8b8c7-bc9c-40b0-a3e9-3d52c40b8785/decisions.jsonl",
+      "selection_trace_sha256": "0f56825dff638ac82561ab4ce3e8b2e5eff1fcd8d514e899edf30e3bd212f1a6",
+      "selection_trace_verified": true
+    },
+    {
+      "case_id": "e089_holdout_006_necrobinder",
+      "arm": "lookup",
+      "repetition": 0,
+      "status": "boss_clear",
+      "policy": {
+        "mode": "scaling",
+        "loss_price": 3.0,
+        "potions": "turn5",
+        "round_modes": {},
+        "selection_rank": 0
+      },
+      "exact_teacher_policy": true,
+      "model_cost_usd": 0,
+      "decision_seconds": 0,
+      "model_answer": null,
+      "model_version": null,
+      "final_hp": 7,
+      "battle": {
+        "case_id": "e089_holdout_006_necrobinder",
+        "policy": {
+          "mode": "scaling",
+          "loss_price": 3.0,
+          "potions": "turn5",
+          "round_modes": {},
+          "selection_rank": 0
+        },
+        "label": "lookup_0",
+        "status": "boss_clear",
+        "run_id": "0ddbdeb6-c420-4a6e-9e5e-00caac37be34",
+        "steps": 70,
+        "entry_verified": true,
+        "entry_hash": "76481a103e36f5ac1872c50520db88d02d5087de07889abedd07e059b0a66ddb",
+        "prefix_seconds": 5.378,
+        "seconds": 7.6485,
+        "final_hp": 7,
+        "final_decision": "card_reward",
+        "last_round": 13,
+        "remaining_leader_effective_hp": 0,
+        "remaining_total_effective_hp": 0,
+        "last_enemies": [
+          {
+            "name": "Kin Priest",
+            "hp": 65,
+            "doom": 83
+          }
+        ],
+        "potions": [
+          {
+            "round": 5,
+            "name": "Duplicator"
+          },
+          {
+            "round": 5,
+            "name": "Energy Potion"
+          }
+        ],
+        "trajectory_sha256": "7a690676a302d043413b882b2468b754ddd7b8ac867285491bcbf3aa800126f9",
+        "wire_sha256": "8df8a781d794186b1dfd52ccdf7ccd49d8b40defbbee88165aeead0a09f38181",
+        "engine_log_sha256": "118a13ba32857569b0f6f093b4b3c79991981a2bfe424eb372dd1b93c0438e16",
+        "trace_path": "artifacts/runs/0ddbdeb6-c420-4a6e-9e5e-00caac37be34/decisions.jsonl",
+        "trace_sha256": "724e70acb11c2def4d6b4e5eb7648380648ae4621f702dda571d167d65bba61a",
+        "trace_verified": true
+      },
+      "teacher_trajectory_match": true,
+      "selection_trace_path": "artifacts/runs/000a2efb-3d2f-4111-974c-165b4b29f4e9/decisions.jsonl",
+      "selection_trace_sha256": "11eebd284381bec9c622fa5ede2c1fcba94b01632d215feaae95d43327df97f1",
+      "selection_trace_verified": true
+    },
+    {
+      "case_id": "e089_holdout_006_necrobinder",
+      "arm": "unguided",
+      "repetition": 0,
+      "status": "boss_defeat",
+      "policy": {
+        "mode": "scaling",
+        "loss_price": 1.5,
+        "potions": "early",
+        "round_modes": {},
+        "selection_rank": 0
+      },
+      "exact_teacher_policy": false,
+      "model_cost_usd": 0.000196014,
+      "decision_seconds": 0.9704471670556813,
+      "model_answer": {
+        "type": "choice",
+        "choice": "p04",
+        "probabilities": {
+          "p04": 0.5,
+          "p00": 0.12,
+          "p03": 0.14,
+          "p02": 0.17,
+          "p01": 0.07
+        },
+        "confidence": 0.37
+      },
+      "model_version": "typesafe/jev-1.13-20260917",
+      "final_hp": 0,
+      "battle": {
+        "case_id": "e089_holdout_006_necrobinder",
+        "policy": {
+          "mode": "scaling",
+          "loss_price": 1.5,
+          "potions": "early",
+          "round_modes": {},
+          "selection_rank": 0
+        },
+        "label": "unguided_0",
+        "status": "boss_defeat",
+        "run_id": "f5bcf83e-0bff-4383-b8e5-15918ea00694",
+        "steps": 59,
+        "entry_verified": true,
+        "entry_hash": "76481a103e36f5ac1872c50520db88d02d5087de07889abedd07e059b0a66ddb",
+        "prefix_seconds": 5.3152,
+        "seconds": 7.2261,
+        "final_hp": 0,
+        "final_decision": "game_over",
+        "last_round": 11,
+        "remaining_leader_effective_hp": 39,
+        "remaining_total_effective_hp": 39,
+        "last_enemies": [
+          {
+            "name": "Kin Priest",
+            "hp": 100,
+            "doom": 61
+          }
+        ],
+        "potions": [
+          {
+            "round": 1,
+            "name": "Duplicator"
+          },
+          {
+            "round": 1,
+            "name": "Energy Potion"
+          }
+        ],
+        "trajectory_sha256": "e1939dcd19dd8a7ab3a5c2d7d236b5c765a0f13d992adbd4b21710547af444b8",
+        "wire_sha256": "46cfa54bec9a55b7d70fbd49f6b355e0587d7d293dc44bddd95d1441f01f904b",
+        "engine_log_sha256": "8fd3320faa425dbbd20aa2a0757f1942f8b599911c82b45d233d86d221bc7581",
+        "trace_path": "artifacts/runs/f5bcf83e-0bff-4383-b8e5-15918ea00694/decisions.jsonl",
+        "trace_sha256": "1f90fbc5005f2f01cced0f2e51fdf7ad61c5a1e13b334a6c1d86e2b34a1b7bfc",
+        "trace_verified": true
+      },
+      "teacher_trajectory_match": false,
+      "selection_trace_path": "artifacts/runs/ca48715c-cac7-4919-b714-1098000f14cb/decisions.jsonl",
+      "selection_trace_sha256": "8dd410cf7585fc40c39bcc05a65e994b2d555e66d7eea68e35141bb5aad1463f",
+      "selection_trace_verified": true
+    },
+    {
+      "case_id": "e089_holdout_006_necrobinder",
+      "arm": "unguided",
+      "repetition": 1,
+      "status": "boss_defeat",
+      "policy": {
+        "mode": "scaling",
+        "loss_price": 1.5,
+        "potions": "early",
+        "round_modes": {},
+        "selection_rank": 0
+      },
+      "exact_teacher_policy": false,
+      "model_cost_usd": 0.000196014,
+      "decision_seconds": 1.0600601250771433,
+      "model_answer": {
+        "type": "choice",
+        "choice": "p03",
+        "probabilities": {
+          "p02": 0.13,
+          "p01": 0.05,
+          "p04": 0.08,
+          "p00": 0.06,
+          "p03": 0.68
+        },
+        "confidence": 0.6
+      },
+      "model_version": "typesafe/jev-1.13-20260917",
+      "final_hp": 0,
+      "battle": {
+        "case_id": "e089_holdout_006_necrobinder",
+        "policy": {
+          "mode": "scaling",
+          "loss_price": 1.5,
+          "potions": "early",
+          "round_modes": {},
+          "selection_rank": 0
+        },
+        "label": "unguided_1",
+        "status": "boss_defeat",
+        "run_id": "8a5d0b26-51a1-483d-a3a4-4edae39f42e1",
+        "steps": 59,
+        "entry_verified": true,
+        "entry_hash": "76481a103e36f5ac1872c50520db88d02d5087de07889abedd07e059b0a66ddb",
+        "prefix_seconds": 5.361,
+        "seconds": 7.2661,
+        "final_hp": 0,
+        "final_decision": "game_over",
+        "last_round": 11,
+        "remaining_leader_effective_hp": 39,
+        "remaining_total_effective_hp": 39,
+        "last_enemies": [
+          {
+            "name": "Kin Priest",
+            "hp": 100,
+            "doom": 61
+          }
+        ],
+        "potions": [
+          {
+            "round": 1,
+            "name": "Duplicator"
+          },
+          {
+            "round": 1,
+            "name": "Energy Potion"
+          }
+        ],
+        "trajectory_sha256": "e1939dcd19dd8a7ab3a5c2d7d236b5c765a0f13d992adbd4b21710547af444b8",
+        "wire_sha256": "b73b7253c3616fb0ddf5f6f75b2103c279a99801c483f5effe587490d402ee74",
+        "engine_log_sha256": "8fd3320faa425dbbd20aa2a0757f1942f8b599911c82b45d233d86d221bc7581",
+        "trace_path": "artifacts/runs/8a5d0b26-51a1-483d-a3a4-4edae39f42e1/decisions.jsonl",
+        "trace_sha256": "2ff230df8d4a053ebc49d5bc87b6346b17997f8484ffa3cfa0314b6756fdd8ff",
+        "trace_verified": true
+      },
+      "teacher_trajectory_match": false,
+      "selection_trace_path": "artifacts/runs/6a8b015d-4f0d-4305-8bbf-41e50f3b7cb8/decisions.jsonl",
+      "selection_trace_sha256": "cb6e5bc4be961749f91de68edfd4b51777386e8375f57f80bf9515bd04507b8f",
+      "selection_trace_verified": true
+    },
+    {
+      "case_id": "e089_holdout_006_necrobinder",
+      "arm": "unguided",
+      "repetition": 2,
+      "status": "boss_defeat",
+      "policy": {
+        "mode": "scaling",
+        "loss_price": 1.5,
+        "potions": "early",
+        "round_modes": {},
+        "selection_rank": 0
+      },
+      "exact_teacher_policy": false,
+      "model_cost_usd": 0.000196014,
+      "decision_seconds": 1.1770006660372019,
+      "model_answer": {
+        "type": "choice",
+        "choice": "p04",
+        "probabilities": {
+          "p01": 0.08,
+          "p00": 0.09,
+          "p03": 0.13,
+          "p04": 0.58,
+          "p02": 0.12
+        },
+        "confidence": 0.48
+      },
+      "model_version": "typesafe/jev-1.13-20260917",
+      "final_hp": 0,
+      "battle": {
+        "case_id": "e089_holdout_006_necrobinder",
+        "policy": {
+          "mode": "scaling",
+          "loss_price": 1.5,
+          "potions": "early",
+          "round_modes": {},
+          "selection_rank": 0
+        },
+        "label": "unguided_2",
+        "status": "boss_defeat",
+        "run_id": "8229c3c6-f156-4fa8-8515-9557bb4ca45a",
+        "steps": 59,
+        "entry_verified": true,
+        "entry_hash": "76481a103e36f5ac1872c50520db88d02d5087de07889abedd07e059b0a66ddb",
+        "prefix_seconds": 5.4335,
+        "seconds": 7.3502,
+        "final_hp": 0,
+        "final_decision": "game_over",
+        "last_round": 11,
+        "remaining_leader_effective_hp": 39,
+        "remaining_total_effective_hp": 39,
+        "last_enemies": [
+          {
+            "name": "Kin Priest",
+            "hp": 100,
+            "doom": 61
+          }
+        ],
+        "potions": [
+          {
+            "round": 1,
+            "name": "Duplicator"
+          },
+          {
+            "round": 1,
+            "name": "Energy Potion"
+          }
+        ],
+        "trajectory_sha256": "e1939dcd19dd8a7ab3a5c2d7d236b5c765a0f13d992adbd4b21710547af444b8",
+        "wire_sha256": "42fb951b74aed57b212e492dfa23b9ad33d35dbb5651db50d0c339e830464e68",
+        "engine_log_sha256": "8fd3320faa425dbbd20aa2a0757f1942f8b599911c82b45d233d86d221bc7581",
+        "trace_path": "artifacts/runs/8229c3c6-f156-4fa8-8515-9557bb4ca45a/decisions.jsonl",
+        "trace_sha256": "75105043674dfe822e153722da66dcd5aff3ce25faab1733d6044b12fdf96fc4",
+        "trace_verified": true
+      },
+      "teacher_trajectory_match": false,
+      "selection_trace_path": "artifacts/runs/7a09ad38-742b-486f-9851-2742bf432f2b/decisions.jsonl",
+      "selection_trace_sha256": "64bf16ba2a80ac024470c10206317e86fb1ee5b9fea31390064f5e5f0a681e1c",
+      "selection_trace_verified": true
+    },
+    {
+      "case_id": "e089_holdout_006_necrobinder",
+      "arm": "coached",
+      "repetition": 0,
+      "status": "boss_clear",
+      "policy": {
+        "mode": "scaling",
+        "loss_price": 3.0,
+        "potions": "turn5",
+        "round_modes": {},
+        "selection_rank": 0
+      },
+      "exact_teacher_policy": true,
+      "model_cost_usd": 0.000205212,
+      "decision_seconds": 1.0448347909841686,
+      "model_answer": {
+        "type": "choice",
+        "choice": "p03",
+        "probabilities": {
+          "p04": 0,
+          "p01": 0,
+          "p03": 0.99,
+          "p00": 0,
+          "p02": 0.01
+        },
+        "confidence": 0.99
+      },
+      "model_version": "typesafe/jev-1.13-20260917",
+      "final_hp": 7,
+      "battle": {
+        "case_id": "e089_holdout_006_necrobinder",
+        "policy": {
+          "mode": "scaling",
+          "loss_price": 3.0,
+          "potions": "turn5",
+          "round_modes": {},
+          "selection_rank": 0
+        },
+        "label": "coached_0",
+        "status": "boss_clear",
+        "run_id": "7debbe61-754e-4895-8f20-be024e9ed827",
+        "steps": 70,
+        "entry_verified": true,
+        "entry_hash": "76481a103e36f5ac1872c50520db88d02d5087de07889abedd07e059b0a66ddb",
+        "prefix_seconds": 5.334,
+        "seconds": 7.5658,
+        "final_hp": 7,
+        "final_decision": "card_reward",
+        "last_round": 13,
+        "remaining_leader_effective_hp": 0,
+        "remaining_total_effective_hp": 0,
+        "last_enemies": [
+          {
+            "name": "Kin Priest",
+            "hp": 65,
+            "doom": 83
+          }
+        ],
+        "potions": [
+          {
+            "round": 5,
+            "name": "Duplicator"
+          },
+          {
+            "round": 5,
+            "name": "Energy Potion"
+          }
+        ],
+        "trajectory_sha256": "7a690676a302d043413b882b2468b754ddd7b8ac867285491bcbf3aa800126f9",
+        "wire_sha256": "feeb3ca2612dd5ba64ec69d4fd13685a37f7a87f7cbfe5b42ae007600dffe2f4",
+        "engine_log_sha256": "118a13ba32857569b0f6f093b4b3c79991981a2bfe424eb372dd1b93c0438e16",
+        "trace_path": "artifacts/runs/7debbe61-754e-4895-8f20-be024e9ed827/decisions.jsonl",
+        "trace_sha256": "ab5c37e2a1face84d589a7eb4611ded9b6cc00b661fde010c2d8613f49c1e440",
+        "trace_verified": true
+      },
+      "teacher_trajectory_match": true,
+      "selection_trace_path": "artifacts/runs/9c4a7b34-a82f-4483-ad33-0d65f9df53ec/decisions.jsonl",
+      "selection_trace_sha256": "3ed66041dca23f885074fe8afcbf09b1cef41c781d027222df3c187bebf6b80b",
+      "selection_trace_verified": true
+    },
+    {
+      "case_id": "e089_holdout_006_necrobinder",
+      "arm": "coached",
+      "repetition": 1,
+      "status": "boss_clear",
+      "policy": {
+        "mode": "scaling",
+        "loss_price": 3.0,
+        "potions": "turn5",
+        "round_modes": {},
+        "selection_rank": 0
+      },
+      "exact_teacher_policy": true,
+      "model_cost_usd": 0.000205212,
+      "decision_seconds": 1.0608316250145435,
+      "model_answer": {
+        "type": "choice",
+        "choice": "p01",
+        "probabilities": {
+          "p03": 0.01,
+          "p00": 0,
+          "p01": 0.98,
+          "p02": 0.01,
+          "p04": 0
+        },
+        "confidence": 0.98
+      },
+      "model_version": "typesafe/jev-1.13-20260917",
+      "final_hp": 7,
+      "battle": {
+        "case_id": "e089_holdout_006_necrobinder",
+        "policy": {
+          "mode": "scaling",
+          "loss_price": 3.0,
+          "potions": "turn5",
+          "round_modes": {},
+          "selection_rank": 0
+        },
+        "label": "coached_1",
+        "status": "boss_clear",
+        "run_id": "23f3338d-c5a0-477a-8b10-3b62577e413c",
+        "steps": 70,
+        "entry_verified": true,
+        "entry_hash": "76481a103e36f5ac1872c50520db88d02d5087de07889abedd07e059b0a66ddb",
+        "prefix_seconds": 5.3283,
+        "seconds": 7.5484,
+        "final_hp": 7,
+        "final_decision": "card_reward",
+        "last_round": 13,
+        "remaining_leader_effective_hp": 0,
+        "remaining_total_effective_hp": 0,
+        "last_enemies": [
+          {
+            "name": "Kin Priest",
+            "hp": 65,
+            "doom": 83
+          }
+        ],
+        "potions": [
+          {
+            "round": 5,
+            "name": "Duplicator"
+          },
+          {
+            "round": 5,
+            "name": "Energy Potion"
+          }
+        ],
+        "trajectory_sha256": "7a690676a302d043413b882b2468b754ddd7b8ac867285491bcbf3aa800126f9",
+        "wire_sha256": "147ea3a271a757156fe59f01a231db8f63a774a826f53fb973c996639d6bbded",
+        "engine_log_sha256": "118a13ba32857569b0f6f093b4b3c79991981a2bfe424eb372dd1b93c0438e16",
+        "trace_path": "artifacts/runs/23f3338d-c5a0-477a-8b10-3b62577e413c/decisions.jsonl",
+        "trace_sha256": "7e1ac8b9b1cca9518a7b1ef9549bb0e9cc62356e5f7ffc830a16444468a17d45",
+        "trace_verified": true
+      },
+      "teacher_trajectory_match": true,
+      "selection_trace_path": "artifacts/runs/e1a504f3-b2c8-4aef-ab40-98f8773d9d49/decisions.jsonl",
+      "selection_trace_sha256": "e23fe9978bcdbf793d4a01f7f3dc160c7046fe4c33f25f7db22e6594da94e243",
+      "selection_trace_verified": true
+    },
+    {
+      "case_id": "e089_holdout_006_necrobinder",
+      "arm": "coached",
+      "repetition": 2,
+      "status": "boss_clear",
+      "policy": {
+        "mode": "scaling",
+        "loss_price": 3.0,
+        "potions": "turn5",
+        "round_modes": {},
+        "selection_rank": 0
+      },
+      "exact_teacher_policy": true,
+      "model_cost_usd": 0.000205212,
+      "decision_seconds": 0.9936286250595003,
+      "model_answer": {
+        "type": "choice",
+        "choice": "p00",
+        "probabilities": {
+          "p02": 0,
+          "p04": 0,
+          "p01": 0,
+          "p00": 0.99,
+          "p03": 0.01
+        },
+        "confidence": 0.98
+      },
+      "model_version": "typesafe/jev-1.13-20260917",
+      "final_hp": 7,
+      "battle": {
+        "case_id": "e089_holdout_006_necrobinder",
+        "policy": {
+          "mode": "scaling",
+          "loss_price": 3.0,
+          "potions": "turn5",
+          "round_modes": {},
+          "selection_rank": 0
+        },
+        "label": "coached_2",
+        "status": "boss_clear",
+        "run_id": "ccba6bf4-6def-4e4d-bb27-9febce1a199e",
+        "steps": 70,
+        "entry_verified": true,
+        "entry_hash": "76481a103e36f5ac1872c50520db88d02d5087de07889abedd07e059b0a66ddb",
+        "prefix_seconds": 5.313,
+        "seconds": 7.5452,
+        "final_hp": 7,
+        "final_decision": "card_reward",
+        "last_round": 13,
+        "remaining_leader_effective_hp": 0,
+        "remaining_total_effective_hp": 0,
+        "last_enemies": [
+          {
+            "name": "Kin Priest",
+            "hp": 65,
+            "doom": 83
+          }
+        ],
+        "potions": [
+          {
+            "round": 5,
+            "name": "Duplicator"
+          },
+          {
+            "round": 5,
+            "name": "Energy Potion"
+          }
+        ],
+        "trajectory_sha256": "7a690676a302d043413b882b2468b754ddd7b8ac867285491bcbf3aa800126f9",
+        "wire_sha256": "bb2b39412b985c5b6b96996f5f2e0fbf9688126e07b1d0017e4cf5186efc3258",
+        "engine_log_sha256": "118a13ba32857569b0f6f093b4b3c79991981a2bfe424eb372dd1b93c0438e16",
+        "trace_path": "artifacts/runs/ccba6bf4-6def-4e4d-bb27-9febce1a199e/decisions.jsonl",
+        "trace_sha256": "d7ba063f0f42209ff443bf36e6a54b89036f25e308b7eaab703b4f7b0161119e",
+        "trace_verified": true
+      },
+      "teacher_trajectory_match": true,
+      "selection_trace_path": "artifacts/runs/dd9d0b60-cae0-4532-9013-eb597981a48f/decisions.jsonl",
+      "selection_trace_sha256": "36e7163bd5d10bdb9edb047a39e8a20da4e93244b8dc3ae50f057bee06ffb161",
+      "selection_trace_verified": true
+    }
+  ],
+  "arms": {
+    "lookup": {
+      "runs": 4,
+      "clears": 4,
+      "exact_teacher_policies": 4,
+      "exact_teacher_trajectories": 4,
+      "reported_model_usd": 0,
+      "decision_seconds": 0,
+      "statuses": {
+        "boss_clear": 4
+      }
+    },
+    "unguided": {
+      "runs": 12,
+      "clears": 2,
+      "exact_teacher_policies": 2,
+      "exact_teacher_trajectories": 2,
+      "reported_model_usd": 0.00219681,
+      "decision_seconds": 13.560300081269816,
+      "statuses": {
+        "boss_defeat": 10,
+        "boss_clear": 2
+      }
+    },
+    "coached": {
+      "runs": 12,
+      "clears": 12,
+      "exact_teacher_policies": 12,
+      "exact_teacher_trajectories": 12,
+      "reported_model_usd": 0.002307186,
+      "decision_seconds": 12.243783084210008,
+      "statuses": {
+        "boss_clear": 12
+      }
+    }
+  },
+  "all_entry_trace_checks_passed": true,
+  "gate_passed": true,
+  "total_seconds": 63.332,
+  "budget": {
+    "calls": 24,
+    "spent_usd": 0.004503996,
+    "uncertain_calls": 0,
+    "estimated_usd": 0.0
+  }
+}
