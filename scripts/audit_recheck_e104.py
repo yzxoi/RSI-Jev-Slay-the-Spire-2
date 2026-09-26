@@ -57,6 +57,7 @@ def audit_run(result):
     events = []
     end_turns = []
     acquisitions = []
+    exposure = []
     last_resource = None
     for row in rows:
         kind, data = row['kind'], row['data']
@@ -113,6 +114,8 @@ def audit_run(result):
             checks['recheck'] &= (data['state_hash'] == digest(before) and proposal == answers['initial']
                                   and gate == recheck_gate(before, proposal, allowed))
             triggers += int(gate['eligible'])
+            if gate['reason'] == 'limited_defense_preview':
+                exposure.append({'step': len(transitions), 'state_hash': digest(before), 'preview': gate['preview']})
         elif kind == 'recheck_result':
             rechecks += 1
             changes += int(data['final'] != data['initial'])
@@ -185,7 +188,10 @@ def audit_run(result):
             'end_turn_analysis': {'count': len(end_turns),
                                  'hp_loss_at_zero_energy': sum(max(0, e['net_hp_loss']) for e in end_turns if e['energy'] == 0),
                                  'hp_loss_with_energy_remaining': sum(max(0, e['net_hp_loss']) for e in end_turns if e['energy'] > 0),
-                                 'turns': end_turns}, 'resource_and_reward_choices': acquisitions}
+                                 'turns': end_turns}, 'resource_and_reward_choices': acquisitions,
+            'gate_exposure': {'positive_energy_end_proposals': len(exposure),
+                              'supported_defense_available': sum(bool(e['preview']['cards']) for e in exposure),
+                              'proposals': exposure}}
 
 
 def first_divergence(pair):
