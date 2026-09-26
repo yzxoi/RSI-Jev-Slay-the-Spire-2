@@ -18,3 +18,9 @@ Record exact source/API mismatches and multiplayer handshake requirements. If ch
 Baseline experiment commit `ed66ecc`, upstream `829ba23`, SDK 9.0.318: direct Release build against the installed ARM64 game assemblies fails with CS0246 `StartRunLobbyPlayer`. The stable lobby exposes `MegaCrit.Sts2.Core.Entities.Multiplayer.LobbyPlayer`; replace this parameter type in an isolated upstream checkout, preserving the MCP payload. This first correction is only intended to reveal subsequent compilation diagnostics. Patch is derived from upstream AGPL-3.0 code and retains that license; no game implementation is published.
 
 Local engine inspection confirms that v0.107.1 already has mod initialization, `affects_gameplay`, version checking and separate gameplay/non-gameplay mod lists. Its join flow rejects game version and gameplay-mod mismatches but allows non-gameplay mod differences with a warning. This is static inspection, not a Steam co-op test.
+
+## Iteration 2: map documented stable semantics
+
+Iteration 1 (`2f19839`) exposed two more compile errors. Stable `RunLobby.ConnectedPlayerIds` is the connected-player collection; stable `NPotionPopup` disables **both** use and discard when `Player.CanRemovePotions` is false. Map those APIs without weakening the potion gate. Additionally, stable `StartRunLobby` has public `MaxPlayers` with a private setter instead of `_maxPlayers`; use the property through the existing reflection registry so both reading and the upstream local-companion cap adjustment resolve consistently. Lower both manifests to 0.107.1 only alongside these source changes. This patch is specific to the fixed stable assembly, not a universal stable/beta binary.
+
+Add an offline probe of the upstream reflection registry against the actual game assembly. It resolves metadata only and does not initialize a game, invoke game methods, or claim runtime MCP success.
