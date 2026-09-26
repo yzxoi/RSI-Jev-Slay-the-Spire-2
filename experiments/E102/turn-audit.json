@@ -1,0 +1,83 @@
+{
+  "canonical_audit_passed": true,
+  "turn_audits": [
+    {
+      "run_id": "5520573a-3a7a-4db1-a2f0-5bf78c5d406c",
+      "case": "ironclad",
+      "arm": "baseline",
+      "rounds": [],
+      "checks": {
+        "state_bound": true,
+        "turn_bound": true,
+        "committed": true,
+        "one_per_turn": true,
+        "advisory_only": true,
+        "applied": true
+      },
+      "passed": true
+    },
+    {
+      "run_id": "1bc95d2f-db73-4c52-a2ce-ff7df11c4684",
+      "case": "ironclad",
+      "arm": "dynamic",
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "checks": {
+        "state_bound": true,
+        "turn_bound": true,
+        "committed": true,
+        "one_per_turn": true,
+        "advisory_only": true,
+        "applied": true
+      },
+      "passed": true
+    },
+    {
+      "run_id": "8f14bcd0-24e4-4831-b0e9-e80dbd8abcc6",
+      "case": "silent",
+      "arm": "baseline",
+      "rounds": [],
+      "checks": {
+        "state_bound": true,
+        "turn_bound": true,
+        "committed": true,
+        "one_per_turn": true,
+        "advisory_only": true,
+        "applied": true
+      },
+      "passed": true
+    },
+    {
+      "run_id": "9e051b29-ad90-4758-a2d5-21071ded7c50",
+      "case": "silent",
+      "arm": "dynamic",
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "checks": {
+        "state_bound": true,
+        "turn_bound": true,
+        "committed": true,
+        "one_per_turn": true,
+        "advisory_only": true,
+        "applied": true
+      },
+      "passed": true
+    }
+  ],
+  "all_passed": true
+}
