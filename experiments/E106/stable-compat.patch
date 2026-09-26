@@ -1,0 +1,13 @@
+diff --git a/STS2AIAgent/Game/GameStateService.Menus.cs b/STS2AIAgent/Game/GameStateService.Menus.cs
+index 19b966d..89d0723 100644
+--- a/STS2AIAgent/Game/GameStateService.Menus.cs
++++ b/STS2AIAgent/Game/GameStateService.Menus.cs
+@@ -305,7 +305,7 @@ internal static partial class GameStateService
+         }
+     }
+ 
+-    private static CharacterSelectPlayerPayload BuildCharacterSelectPlayerPayload(StartRunLobbyPlayer player, ulong localPlayerId)
++    private static CharacterSelectPlayerPayload BuildCharacterSelectPlayerPayload(LobbyPlayer player, ulong localPlayerId)
+     {
+         return new CharacterSelectPlayerPayload
+         {

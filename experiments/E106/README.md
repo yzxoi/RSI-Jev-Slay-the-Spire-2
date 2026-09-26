@@ -12,3 +12,9 @@ Upstream STS2-Agent v0.16.2 (829ba230e79839ea26dcb9749bf93f268adff697) targets g
 
 ## Decision rule
 Record exact source/API mismatches and multiplayer handshake requirements. If changes are bounded and semantic mappings are supported by the stable engine, produce a reversible adapter and recompile. Otherwise retain a precise implementation proposal and failure evidence. Compilation alone does not establish gameplay or Steam co-op support. Keep any decompiled proprietary code/binaries private and ignored; publish only findings, original adapter code and hashes.
+
+## Iteration 1: reveal stable API differences
+
+Baseline experiment commit `ed66ecc`, upstream `829ba23`, SDK 9.0.318: direct Release build against the installed ARM64 game assemblies fails with CS0246 `StartRunLobbyPlayer`. The stable lobby exposes `MegaCrit.Sts2.Core.Entities.Multiplayer.LobbyPlayer`; replace this parameter type in an isolated upstream checkout, preserving the MCP payload. This first correction is only intended to reveal subsequent compilation diagnostics. Patch is derived from upstream AGPL-3.0 code and retains that license; no game implementation is published.
+
+Local engine inspection confirms that v0.107.1 already has mod initialization, `affects_gameplay`, version checking and separate gameplay/non-gameplay mod lists. Its join flow rejects game version and gameplay-mod mismatches but allows non-gameplay mod differences with a warning. This is static inspection, not a Steam co-op test.
