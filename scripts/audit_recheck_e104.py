@@ -1,5 +1,6 @@
 """Reconcile every E104 run, resource choice and same-state reconsideration."""
 from collections import Counter
+import argparse
 import hashlib
 import json
 
@@ -173,9 +174,12 @@ def audit_run(result):
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--iteration', choices=['i01', 'i02'], default='i01')
+    args = parser.parse_args()
     directory = ROOT / 'experiments/E104'
     inputs = json.loads((directory / 'inputs.json').read_text())
-    report = json.loads((ROOT / 'artifacts/runs/e104-results.json').read_text())
+    report = json.loads((ROOT / f'artifacts/runs/e104-{args.iteration}-results.json').read_text())
     audits = [audit_run(r) for r in report['results']]
     selection = (file_hash(directory / 'inputs.json') == report['inputs_sha256']
                  and [{k: r[k] for k in c} for c, r in zip(inputs['configs'], report['results'], strict=True)] == inputs['configs'])
@@ -188,8 +192,16 @@ def main():
                           'baseline_status': pair['baseline']['status'], 'recheck_status': pair['recheck']['status']})
     usage = all(abs(sum(r[key] for r in report['results']) - report['session'][key]) < 1e-9
                 for key in ('model_calls', 'model_cost_usd', 'unknown_model_calls', 'budgeted_usd'))
-    out = {'experiment': 'E104', 'input_selection': selection, 'session_usage': usage, 'pairs': pairs, 'runs': audits,
-           'all_passed': selection and usage and all(a['passed'] for a in audits) and all(p['same_start'] for p in pairs)}
+    prior = report.get('prior_cohort')
+    prior_calls = prior['session']['model_calls'] if prior else 0
+    prior_usd = prior['session']['budgeted_usd'] if prior else 0
+    budget_valid = (prior_calls + report['session']['model_calls'] <= inputs['session_max_attempts']
+                    and prior_usd + report['session']['budgeted_usd'] <= inputs['session_max_usd'])
+    if args.iteration == 'i02':
+        budget_valid &= bool(prior) and file_hash(ROOT / prior['path']) == prior['sha256']
+    out = {'experiment': 'E104', 'iteration': args.iteration, 'input_selection': selection, 'session_usage': usage,
+           'combined_budget_valid': budget_valid, 'pairs': pairs, 'runs': audits,
+           'all_passed': selection and usage and budget_valid and all(a['passed'] for a in audits) and all(p['same_start'] for p in pairs)}
     report['summary'] = {arm: {'act1_clears': sum(r['status'] == 'act1_clear' for r in report['results'] if r['arm'] == arm),
                               'runs': sum(r['arm'] == arm for r in report['results']),
                               **{key: sum(r[key] for r in report['results'] if r['arm'] == arm)
@@ -197,6 +209,10 @@ def main():
                          for arm in ('baseline', 'recheck')}
     (directory / 'result.json').write_text(json.dumps(report, indent=2) + '\n')
     (directory / 'audit.json').write_text(json.dumps(out, indent=2) + '\n')
+    cohort_directory = directory / ('iteration-02' if args.iteration == 'i02' else 'iteration-01')
+    cohort_directory.mkdir(exist_ok=True)
+    (cohort_directory / 'result.json').write_text(json.dumps(report, indent=2) + '\n')
+    (cohort_directory / 'audit.json').write_text(json.dumps(out, indent=2) + '\n')
     print(json.dumps({'all_passed': out['all_passed'], 'summary': report['summary'],
                       'failed_checks': [{'run_id': a['run_id'], 'checks': [k for k, v in a['checks'].items() if not v]}
                                         for a in audits if not a['passed']]}, indent=2))

@@ -43,6 +43,15 @@ class RecheckTest(unittest.TestCase):
         self.assertFalse(act1_clear({'decision': 'card_select', 'player': {'hp': 10}}, True))
         self.assertFalse(act1_clear({**reward, 'player': {'hp': 0}}, True))
 
+    def test_nullable_power_list_matches_empty_power_list(self):
+        state = copy.deepcopy(self.cases['silent-dynamic-r07'])
+        choices = combat_candidates(state)
+        empty = recheck_gate({**state, 'player_powers': []}, choices[-1], choices)
+        nullable = recheck_gate({**state, 'player_powers': None}, choices[-1], choices)
+        self.assertEqual(nullable, empty)
+        self.assertTrue(nullable['eligible'])
+        self.assertEqual(nullable['preview']['plating_block'], 0)
+
 
 if __name__ == '__main__':
     unittest.main()

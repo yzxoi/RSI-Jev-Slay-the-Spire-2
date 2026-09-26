@@ -41,7 +41,7 @@ def arithmetic(state, plating=False):
     started = time.perf_counter()
     incoming = sum(intent_damage(e) for e in state['enemies'])
     block = state['player']['block']
-    end_block = sum(max(0, p['amount']) for p in state.get('player_powers', [])
+    end_block = sum(max(0, p['amount']) for p in (state.get('player_powers') or [])
                     if p.get('name') == 'Plating') if plating else 0
     loss = min(state['player']['hp'], max(0, incoming - block - end_block))
     useful = []
