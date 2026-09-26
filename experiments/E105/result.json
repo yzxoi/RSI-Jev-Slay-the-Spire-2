@@ -1,0 +1,22 @@
+{
+  "scope": "Recorded-input unit regression only; no new model calls or gameplay",
+  "input_sha256": "620542217f840e261e5fced71eac2a53640d8abc7566f7cd4e4abcf34b505f6b",
+  "recorded_failed_runs": 4,
+  "unique_state_hashes": 3,
+  "before": {
+    "code_commit": "082bb723e804cb6696e2e6cb717c3387d41b0931",
+    "command": "python3 -m unittest discover -s tests -p test_null_powers_e105.py -v",
+    "exit_code": 1,
+    "test_methods": 1,
+    "subtest_errors": 4,
+    "log_sha256": "f9ee4c284269ba2a1240407617aa84f18d688aa5a6ae645099c95649117b7626"
+  },
+  "after": {
+    "code_commit": "dfc593a457c41de9013795c472c295b69edb02a3",
+    "command": "python3 -m unittest discover -s tests -q",
+    "exit_code": 0,
+    "tests": 149,
+    "log_sha256": "0ade9b851148cdf997a88d2d1ff02fdef10ab094dfae554ab9cc27e92d169209"
+  },
+  "decision": "Merge the one-line input compatibility fix and regression evidence, independent of E104 behavioral outcomes."
+}
