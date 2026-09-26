@@ -31,3 +31,22 @@ Require provenance, start/seed, complete accepted wire/state chains, fresh actio
 ## Execution
 
 Commit implementation before unit checks and gameplay. Commands: `python3 -m unittest discover -s tests -q`; `python3 -m scripts.evaluate_recheck_e104 > artifacts/runs/e104.log 2>&1`; `python3 -m scripts.audit_recheck_e104`. Store raw model input/output and accepted engine transitions locally under ignored artifacts/runs; publish compact evidence and hashes with PR results.
+
+## Iteration 1 — retained compatibility failure
+
+Gameplay SHA **8c63315d10341b88c882b993fb6729b7a3892952**, initial protocol `61c281b`, read-only auditor `60dc73c`. 151 tests passed before launch. All eight fixed starts ran once; [complete first-cohort results](iteration-01/result.json), [audit](iteration-01/audit.json). The data/accounting audit passes; **execution compatibility does not**.
+
+| Character / seed suffix | Baseline | Recheck arm |
+| --- | --- | --- |
+| Ironclad / 001 | TypeError at floor 2, HP 68 | Same error at floor 2, HP 68 |
+| Silent / 001 | Act-1 clear, HP 2 | TypeError at floor 3, HP 66 |
+| Ironclad / 002 | Defeat, floor 7 | Defeat, floor 8 |
+| Silent / 002 | Defeat, floor 7 | TypeError at floor 3, HP 61 |
+
+Four fresh states expose `player_powers: null`. E103 arithmetic attempted to iterate it when considering an end-turn. These are execution errors, not strategy defeats; 1/4 versus 0/4 is not a valid strength comparison. No semantic rechecks occurred. One first-pass Act-1 clear is retained, not a complete-game victory. Total 674 Jev attempts / **$0.098998956**, no unknown usage. No state changes or gameplay reruns were used to diagnose the TypeError: the recorded failing inputs reproduce the exception directly.
+
+## Iteration 2 amendment — committed before repair evaluation
+
+After preserving the entire first cohort, repair only the nullable power-list input and add regression coverage. Keep the same eight configurations, launch order, policies, prompts, resources and decision rule. Run the entire cohort again rather than selectively replacing the four errors. These are now **seen-seed compatibility-repaired repeats**, not a new holdout. Keep outcomes under `iteration-02/` and never pool versions to estimate win rate.
+
+The **combined E104 budget remains $2.80 / 6,400 attempts**: deduct iteration 1's reported/reserved use before creating the next session budget ($2.701001044 / 5,726 attempts remain). Per-run caps stay unchanged. Label raw outputs separately, require a new output label rather than overwriting an earlier cohort, and retain every second-cohort failure too. No added Astra, changed strategy or partial run continuation. This amendment and first-cohort results precede the code repair and second launch.
