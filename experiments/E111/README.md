@@ -1,0 +1,8 @@
+## Hypothesis
+A co-op map action should be offered to the local AI only after at least one peer vote is visible and no local vote is recorded. After submitting exactly one vote, the controller should require an observed local vote or real room transition before considering the action complete. This will prevent the E110 duplicated map call and still let the team set its route.
+
+## Baseline and fixed inputs
+E110/#210 tested SHA 1b64546 on real four-player Steam run 32ASTF9N6E: two `choose_map_node` calls returned completed while local_vote stayed null, vote_count 0 and map row unchanged. The repeat guard stopped before a third. Continue only that legitimate run if present, starting around floor 6; same v0.107.1 E106/E109 adapter, four players, local Ironclad A0. Use the same Jev controller and pinned E050 overlay. This is exploratory stateful continuation, not an A/B win-rate comparison. No raw player identifiers or proprietary binaries in Git.
+
+## Decision rule
+The controller must never repeat an unacknowledged map vote. It must wait when peer votes are absent or local vote is already recorded, and stop with trace on an unacknowledged submission after a bounded read-only wait. Require unchanged local ownership, fresh indices and single local writer throughout. Stop at victory/defeat, user stop, ownership ambiguity, uncertain action delivery, unsupported shared state or the overall E110 resource cap; report all outcomes. All code changes are committed before execution and every segment's trace hash/result is published in the PR. The adapter itself is unchanged in this experiment.
