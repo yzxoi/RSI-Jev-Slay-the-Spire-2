@@ -1,0 +1,57 @@
+{
+  "profiles": [
+    {
+      "name": "Original turn planner; conserve potions",
+      "policy": {
+        "mode": "legacy",
+        "loss_price": 1.5,
+        "potions": "none",
+        "round_modes": {},
+        "selection_rank": 0
+      }
+    },
+    {
+      "name": "Original turn planner with early potions",
+      "policy": {
+        "mode": "legacy",
+        "loss_price": 1.5,
+        "potions": "early",
+        "round_modes": {},
+        "selection_rank": 0
+      }
+    },
+    {
+      "name": "Scaling priority, medium HP price, early potions",
+      "policy": {
+        "mode": "scaling",
+        "loss_price": 1.5,
+        "potions": "early",
+        "round_modes": {},
+        "selection_rank": 0
+      }
+    },
+    {
+      "name": "Draw priority, medium HP price, early potions",
+      "policy": {
+        "mode": "draw",
+        "loss_price": 1.5,
+        "potions": "early",
+        "round_modes": {},
+        "selection_rank": 0
+      }
+    },
+    {
+      "name": "Scaling priority, high HP price, delayed potions",
+      "policy": {
+        "mode": "scaling",
+        "loss_price": 3.0,
+        "potions": "turn5",
+        "round_modes": {},
+        "selection_rank": 0
+      }
+    }
+  ],
+  "lesson_bank": "Use these empirically established room-level recipes on familiar deck/boss patterns. They are whole-policy choices; do not average them into a new policy. For an Ironclad fighting Kin Priest with a block/counterattack plan, retain the original turn planner and use potions early. For an Ironclad against Ceremonial Beast with Feel No Pain, Armaments and Flame Barrier, prioritize scaling with medium HP-loss price (1.5) and early potions. For a Regent against Kin with Glow/Photon Cut, star generation and Astral Pulse, prioritize draw with medium HP-loss price (1.5) and early potions. For a Necrobinder against Kin with No Escape, summon support and Duplicator/Energy potions, prioritize scaling with high HP-loss price (3.0) and delay potions to turn 5. These recipes were tested together as complete battle policies; individual-card causality and new-seed generalization are unproven.",
+  "scope": "E096 familiar-state recipe transfer; not held-out strategy generalization",
+  "source_result_sha256": "44f355441edff25e3e0d4aeb43b593843431a6a44c860621a347d8b295ca4bd5"
+}
