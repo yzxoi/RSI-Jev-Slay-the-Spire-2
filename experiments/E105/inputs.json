@@ -1,0 +1,370 @@
+{
+  "cases": [
+    {
+      "source_run_id": "1f032fb7-581b-436c-8177-76081558d69a",
+      "character": "Ironclad",
+      "seed": "e104_unknown_001",
+      "arm": "baseline",
+      "source_trace_sha256": "d7eb4bfbde5dd14769e1f690cf6753fbd37d7db05c73b807508595a6a35c17c1",
+      "full_state_hash": "7abf6e42c9401378b6b0532f6dac7902855c2073d8ffc5aa899d19a5c164b194",
+      "scope": "Recorded arithmetic-input projection; no game state injected or edited",
+      "state": {
+        "decision": "combat_play",
+        "energy": 2,
+        "enemies": [
+          {
+            "index": 0,
+            "name": "Leaf Slime (S)",
+            "hp": 3,
+            "max_hp": 15,
+            "block": 0,
+            "intents": [
+              {
+                "type": "Attack",
+                "damage": 3
+              }
+            ],
+            "intends_attack": true,
+            "powers": null
+          }
+        ],
+        "hand": [
+          {
+            "index": 0,
+            "id": "CARD.SLIMED",
+            "name": "Slimed",
+            "cost": 1,
+            "type": "Status",
+            "rarity": "Status",
+            "can_play": true,
+            "target_type": "None",
+            "stats": {
+              "cards": 1
+            },
+            "description": "Draw 1 card.",
+            "keywords": [
+              "Exhaust"
+            ]
+          },
+          {
+            "index": 1,
+            "id": "CARD.DEFEND_IRONCLAD",
+            "name": "Defend",
+            "cost": 1,
+            "type": "Skill",
+            "rarity": "Basic",
+            "can_play": true,
+            "target_type": "Self",
+            "stats": {
+              "block": 5
+            },
+            "description": "Gain {Block:diff()} Block."
+          },
+          {
+            "index": 2,
+            "id": "CARD.DEFEND_IRONCLAD",
+            "name": "Defend",
+            "cost": 1,
+            "type": "Skill",
+            "rarity": "Basic",
+            "can_play": true,
+            "target_type": "Self",
+            "stats": {
+              "block": 5
+            },
+            "description": "Gain {Block:diff()} Block."
+          },
+          {
+            "index": 3,
+            "id": "CARD.SLIMED",
+            "name": "Slimed",
+            "cost": 1,
+            "type": "Status",
+            "rarity": "Status",
+            "can_play": true,
+            "target_type": "None",
+            "stats": {
+              "cards": 1
+            },
+            "description": "Draw 1 card.",
+            "keywords": [
+              "Exhaust"
+            ]
+          }
+        ],
+        "player_powers": null,
+        "player": {
+          "hp": 68,
+          "block": 5
+        }
+      }
+    },
+    {
+      "source_run_id": "f147f251-b884-4b7c-a2ad-9021605142a9",
+      "character": "Ironclad",
+      "seed": "e104_unknown_001",
+      "arm": "recheck",
+      "source_trace_sha256": "ebd0f5c08fd37cd2cc74231e156373b20cd22c045ce088bd616a5430685e0ca5",
+      "full_state_hash": "7abf6e42c9401378b6b0532f6dac7902855c2073d8ffc5aa899d19a5c164b194",
+      "scope": "Recorded arithmetic-input projection; no game state injected or edited",
+      "state": {
+        "decision": "combat_play",
+        "energy": 2,
+        "enemies": [
+          {
+            "index": 0,
+            "name": "Leaf Slime (S)",
+            "hp": 3,
+            "max_hp": 15,
+            "block": 0,
+            "intents": [
+              {
+                "type": "Attack",
+                "damage": 3
+              }
+            ],
+            "intends_attack": true,
+            "powers": null
+          }
+        ],
+        "hand": [
+          {
+            "index": 0,
+            "id": "CARD.SLIMED",
+            "name": "Slimed",
+            "cost": 1,
+            "type": "Status",
+            "rarity": "Status",
+            "can_play": true,
+            "target_type": "None",
+            "stats": {
+              "cards": 1
+            },
+            "description": "Draw 1 card.",
+            "keywords": [
+              "Exhaust"
+            ]
+          },
+          {
+            "index": 1,
+            "id": "CARD.DEFEND_IRONCLAD",
+            "name": "Defend",
+            "cost": 1,
+            "type": "Skill",
+            "rarity": "Basic",
+            "can_play": true,
+            "target_type": "Self",
+            "stats": {
+              "block": 5
+            },
+            "description": "Gain {Block:diff()} Block."
+          },
+          {
+            "index": 2,
+            "id": "CARD.DEFEND_IRONCLAD",
+            "name": "Defend",
+            "cost": 1,
+            "type": "Skill",
+            "rarity": "Basic",
+            "can_play": true,
+            "target_type": "Self",
+            "stats": {
+              "block": 5
+            },
+            "description": "Gain {Block:diff()} Block."
+          },
+          {
+            "index": 3,
+            "id": "CARD.SLIMED",
+            "name": "Slimed",
+            "cost": 1,
+            "type": "Status",
+            "rarity": "Status",
+            "can_play": true,
+            "target_type": "None",
+            "stats": {
+              "cards": 1
+            },
+            "description": "Draw 1 card.",
+            "keywords": [
+              "Exhaust"
+            ]
+          }
+        ],
+        "player_powers": null,
+        "player": {
+          "hp": 68,
+          "block": 5
+        }
+      }
+    },
+    {
+      "source_run_id": "8fe4100d-0f32-4198-91f7-299f59e42b98",
+      "character": "Silent",
+      "seed": "e104_unknown_001",
+      "arm": "recheck",
+      "source_trace_sha256": "5f8f33dff4c227ef8a51228f71b4c4bcfa2780a700a722fed3f06b2129c8e547",
+      "full_state_hash": "e99c146086982e71bef6531c076d714be7549c06b48763ea92254fb5dd792ada",
+      "scope": "Recorded arithmetic-input projection; no game state injected or edited",
+      "state": {
+        "decision": "combat_play",
+        "energy": 1,
+        "enemies": [
+          {
+            "index": 0,
+            "name": "Nibbit",
+            "hp": 23,
+            "max_hp": 45,
+            "block": 0,
+            "intents": [
+              {
+                "type": "Buff"
+              }
+            ],
+            "intends_attack": false,
+            "powers": [
+              {
+                "name": "Weak",
+                "description": "Weakened creatures deal 25% less damage with Attacks.",
+                "amount": 1
+              }
+            ]
+          }
+        ],
+        "hand": [
+          {
+            "index": 0,
+            "id": "CARD.DEFEND_SILENT",
+            "name": "Defend",
+            "cost": 1,
+            "type": "Skill",
+            "rarity": "Basic",
+            "can_play": true,
+            "target_type": "Self",
+            "stats": {
+              "block": 5
+            },
+            "description": "Gain {Block:diff()} Block."
+          },
+          {
+            "index": 1,
+            "id": "CARD.DEFEND_SILENT",
+            "name": "Defend",
+            "cost": 1,
+            "type": "Skill",
+            "rarity": "Basic",
+            "can_play": true,
+            "target_type": "Self",
+            "stats": {
+              "block": 5
+            },
+            "description": "Gain {Block:diff()} Block."
+          },
+          {
+            "index": 2,
+            "id": "CARD.DEFEND_SILENT",
+            "name": "Defend",
+            "cost": 1,
+            "type": "Skill",
+            "rarity": "Basic",
+            "can_play": true,
+            "target_type": "Self",
+            "stats": {
+              "block": 5
+            },
+            "description": "Gain {Block:diff()} Block."
+          }
+        ],
+        "player_powers": null,
+        "player": {
+          "hp": 66,
+          "block": 8
+        }
+      }
+    },
+    {
+      "source_run_id": "77b5be41-596e-4cc9-90f7-b92eb6451ef4",
+      "character": "Silent",
+      "seed": "e104_unknown_002",
+      "arm": "recheck",
+      "source_trace_sha256": "00824f3dfc82016f0f51774d536433013016f6b4341047317f82facc30ba10cd",
+      "full_state_hash": "0d7967978e953209227e7451c214897eed9e3670c2ad6878bb0c131aefb18222",
+      "scope": "Recorded arithmetic-input projection; no game state injected or edited",
+      "state": {
+        "decision": "combat_play",
+        "energy": 1,
+        "enemies": [
+          {
+            "index": 0,
+            "name": "Nibbit",
+            "hp": 5,
+            "max_hp": 46,
+            "block": 0,
+            "intents": [
+              {
+                "type": "Buff"
+              }
+            ],
+            "intends_attack": false,
+            "powers": [
+              {
+                "name": "Strength",
+                "description": "Strength adds additional damage to Attacks.",
+                "amount": 2
+              }
+            ]
+          }
+        ],
+        "hand": [
+          {
+            "index": 0,
+            "id": "CARD.DEFEND_SILENT",
+            "name": "Defend",
+            "cost": 1,
+            "type": "Skill",
+            "rarity": "Basic",
+            "can_play": true,
+            "target_type": "Self",
+            "stats": {
+              "block": 5
+            },
+            "description": "Gain {Block:diff()} Block."
+          },
+          {
+            "index": 1,
+            "id": "CARD.DEFEND_SILENT",
+            "name": "Defend",
+            "cost": 1,
+            "type": "Skill",
+            "rarity": "Basic",
+            "can_play": true,
+            "target_type": "Self",
+            "stats": {
+              "block": 5
+            },
+            "description": "Gain {Block:diff()} Block."
+          },
+          {
+            "index": 2,
+            "id": "CARD.DEFEND_SILENT",
+            "name": "Defend",
+            "cost": 1,
+            "type": "Skill",
+            "rarity": "Basic",
+            "can_play": true,
+            "target_type": "Self",
+            "stats": {
+              "block": 5
+            },
+            "description": "Gain {Block:diff()} Block."
+          }
+        ],
+        "player_powers": null,
+        "player": {
+          "hp": 61,
+          "block": 0
+        }
+      }
+    }
+  ]
+}
