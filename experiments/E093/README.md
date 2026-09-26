@@ -14,7 +14,7 @@ Merge rule for opt-in capability only: fixed legal use/discard/purchase/claim ac
 
 ## Iteration 1: dependency drift before gameplay
 
-Implementation `1cade8a` passed 123 Python tests. The default `python3 scripts/setup_headless.py` read an updated Steam game DLL (`e7ceb806…`), not the frozen `9cb4f1ad…` input, and failed to build at an upstream Hook CardPlay/CardModel signature. No game evaluation ran. The isolated copy alone was affected; historical engine copies and native saves are intact. `build-01.json` preserves hashes and failure.
+Implementation `1cade8a` passed 123 Python tests. The default `python3 scripts/setup_headless.py` read an updated Steam game DLL (`e7ceb806…`), not the frozen `9cb4f1ad…` input, and failed to build at an upstream CreatureCmd.Damage CardPlay/CardModel signature. No game evaluation ran. The isolated copy alone was affected; historical engine copies and native saves are intact. `build-01.json` preserves hashes and failure.
 
 Continue against the original DLL kept in the main ignored dependency tree: create `artifacts/private/pinned-game/` from that lib directory, replace its `sts2.dll` with its `sts2.dll.original`, retain the historical localization tables, and run `STS2_GAME_DIR="$PWD/artifacts/private/pinned-game" python3 scripts/setup_headless.py`. This corrects dependency selection, not game behavior. Adapting the new Steam build is a separate issue.
 
