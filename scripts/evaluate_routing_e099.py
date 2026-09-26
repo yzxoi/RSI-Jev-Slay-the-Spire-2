@@ -33,6 +33,20 @@ def state_input(state, recent, plan=None):
     return payload
 
 
+def committed_response(path, root=ROOT):
+    """An appearing untracked/staged packet is not ready; bind immutable commit bytes."""
+    if not path.exists():
+        return None
+    if subprocess.check_output(['git', 'status', '--porcelain', '--untracked-files=no'], cwd=root).strip():
+        return None
+    commit = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=root, text=True).strip()
+    result = subprocess.run(['git', 'show', f'{commit}:{path.relative_to(root)}'], cwd=root,
+                            stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
+    if result.returncode or result.stdout != path.read_bytes():
+        return None
+    return json.loads(result.stdout), commit
+
+
 def battle(case, mode, label):
     manifest = version_manifest()
     if manifest['tracked_dirty']:
@@ -79,28 +93,26 @@ def battle(case, mode, label):
                     if seq > 80: raise RuntimeError('Expert 80 packet budget exhausted')
                     request = {'case': case['id'], 'seq': seq, 'state_hash': digest(state), 'payload': payload,
                                'candidates': choices, 'owner': 'astra', 'exit': 'boss defeat or reward boundary'}
-                    (trace.directory / 'request.json').write_text(json.dumps(request, indent=2) + '\n')
+                    pending = trace.directory / 'request.tmp'
+                    pending.write_text(json.dumps(request, indent=2) + '\n')
+                    pending.replace(trace.directory / 'request.json')
                     trace.write('expert_request', request)
                     print(json.dumps({'waiting': case['id'], 'seq': seq, 'run_id': uid,
                                       'round': state.get('round'), 'hp': state.get('player', {}).get('hp')}), flush=True)
                     path = D / 'teacher' / case['id'] / f'{seq:03}.json'
                     until = time.monotonic() + 1800
-                    while not path.exists():
-                        if time.monotonic() > until: raise TimeoutError('Expert response timeout')
-                        time.sleep(.25)
-                    # The file must be committed, and the tracked tree clean.
-                    while subprocess.check_output(['git', 'status', '--porcelain', '--untracked-files=no'], cwd=ROOT).strip():
-                        if time.monotonic() > until: raise TimeoutError('Uncommitted expert response')
-                        time.sleep(.25)
-                    committed = subprocess.check_output(['git', 'show', f'HEAD:{path.relative_to(ROOT)}'], cwd=ROOT)
-                    if committed != path.read_bytes(): raise RuntimeError('Expert response not committed')
-                    packet = json.loads(committed)
+                    committed = None
+                    while committed is None:
+                        if time.monotonic() > until: raise TimeoutError('Committed expert response timeout')
+                        committed = committed_response(path)
+                        if committed is None: time.sleep(.25)
+                    packet, response_commit = committed
                     if packet.get('seq') != seq: raise RuntimeError('Expert sequence mismatch')
                     owner.accept(packet, state)
                     out['expert_packets'] += 1
                     out['expert_input_chars'] += len(json.dumps(request, ensure_ascii=False))
                     out['expert_output_chars'] += len(json.dumps(packet, ensure_ascii=False))
-                    trace.write('expert_response', {'packet': packet, 'commit': subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()})
+                    trace.write('expert_response', {'packet': packet, 'commit': response_commit})
                     chosen = owner.next(state, choices)
                     if chosen is None: raise ValueError('Teacher first action illegal')
                 provenance = 'astra'
