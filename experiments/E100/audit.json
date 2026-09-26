@@ -1,0 +1,346 @@
+{
+  "experiment": "E100",
+  "canonical_runs": [
+    {
+      "run_id": "6f789a35-5cf0-4540-ad11-b8c526f66bb5",
+      "case": "ironclad",
+      "arm": "baseline",
+      "repeat": 0,
+      "checks": {
+        "trace_hash": true,
+        "wire_hash": true,
+        "entry": true,
+        "prefix": true,
+        "no_debug": true,
+        "state_chain": true,
+        "legal": true,
+        "contracts": true,
+        "certificates": true,
+        "terminal_scope": true,
+        "trajectory": true,
+        "counts": true,
+        "program_counts": true,
+        "usage": true,
+        "clean_tested_tree": true
+      },
+      "sources": {
+        "jev": 21
+      },
+      "passed": true
+    },
+    {
+      "run_id": "77d1400d-3bba-4461-ac04-d2dc026ab866",
+      "case": "ironclad",
+      "arm": "contract",
+      "repeat": 0,
+      "checks": {
+        "trace_hash": true,
+        "wire_hash": true,
+        "entry": true,
+        "prefix": true,
+        "no_debug": true,
+        "state_chain": true,
+        "legal": true,
+        "contracts": true,
+        "certificates": true,
+        "terminal_scope": true,
+        "trajectory": true,
+        "counts": true,
+        "program_counts": true,
+        "usage": true,
+        "clean_tested_tree": true
+      },
+      "sources": {
+        "potion_contract": 2,
+        "jev": 16,
+        "only_legal_choice": 6
+      },
+      "passed": true
+    },
+    {
+      "run_id": "bbbed534-6327-463c-956b-47890b8f7340",
+      "case": "silent",
+      "arm": "baseline",
+      "repeat": 0,
+      "checks": {
+        "trace_hash": true,
+        "wire_hash": true,
+        "entry": true,
+        "prefix": true,
+        "no_debug": true,
+        "state_chain": true,
+        "legal": true,
+        "contracts": true,
+        "certificates": true,
+        "terminal_scope": true,
+        "trajectory": true,
+        "counts": true,
+        "program_counts": true,
+        "usage": true,
+        "clean_tested_tree": true
+      },
+      "sources": {
+        "jev": 28,
+        "only_legal_choice": 1
+      },
+      "passed": true
+    },
+    {
+      "run_id": "ea1a10a6-a056-447a-b1bb-d10ef3253ba3",
+      "case": "silent",
+      "arm": "contract",
+      "repeat": 0,
+      "checks": {
+        "trace_hash": true,
+        "wire_hash": true,
+        "entry": true,
+        "prefix": true,
+        "no_debug": true,
+        "state_chain": true,
+        "legal": true,
+        "contracts": true,
+        "certificates": true,
+        "terminal_scope": true,
+        "trajectory": true,
+        "counts": true,
+        "program_counts": true,
+        "usage": true,
+        "clean_tested_tree": true
+      },
+      "sources": {
+        "potion_contract": 2,
+        "jev": 30,
+        "only_legal_choice": 6
+      },
+      "passed": true
+    },
+    {
+      "run_id": "b879fe7c-9f5f-48ed-831e-c0901adb9b52",
+      "case": "ironclad",
+      "arm": "contract",
+      "repeat": 1,
+      "checks": {
+        "trace_hash": true,
+        "wire_hash": true,
+        "entry": true,
+        "prefix": true,
+        "no_debug": true,
+        "state_chain": true,
+        "legal": true,
+        "contracts": true,
+        "certificates": true,
+        "terminal_scope": true,
+        "trajectory": true,
+        "counts": true,
+        "program_counts": true,
+        "usage": true,
+        "clean_tested_tree": true
+      },
+      "sources": {
+        "potion_contract": 2,
+        "jev": 16,
+        "only_legal_choice": 6
+      },
+      "passed": true
+    },
+    {
+      "run_id": "dfdcdf0d-4d88-43f3-88d3-252b91cfd1e8",
+      "case": "ironclad",
+      "arm": "baseline",
+      "repeat": 1,
+      "checks": {
+        "trace_hash": true,
+        "wire_hash": true,
+        "entry": true,
+        "prefix": true,
+        "no_debug": true,
+        "state_chain": true,
+        "legal": true,
+        "contracts": true,
+        "certificates": true,
+        "terminal_scope": true,
+        "trajectory": true,
+        "counts": true,
+        "program_counts": true,
+        "usage": true,
+        "clean_tested_tree": true
+      },
+      "sources": {
+        "jev": 21
+      },
+      "passed": true
+    },
+    {
+      "run_id": "bc7290a4-bff4-494f-8819-beae9ecd9ec9",
+      "case": "silent",
+      "arm": "contract",
+      "repeat": 1,
+      "checks": {
+        "trace_hash": true,
+        "wire_hash": true,
+        "entry": true,
+        "prefix": true,
+        "no_debug": true,
+        "state_chain": true,
+        "legal": true,
+        "contracts": true,
+        "certificates": true,
+        "terminal_scope": true,
+        "trajectory": true,
+        "counts": true,
+        "program_counts": true,
+        "usage": true,
+        "clean_tested_tree": true
+      },
+      "sources": {
+        "potion_contract": 2,
+        "jev": 26,
+        "only_legal_choice": 5
+      },
+      "passed": true
+    },
+    {
+      "run_id": "dd54e2e1-b6c2-4f5c-bd98-ec1053e714ba",
+      "case": "silent",
+      "arm": "baseline",
+      "repeat": 1,
+      "checks": {
+        "trace_hash": true,
+        "wire_hash": true,
+        "entry": true,
+        "prefix": true,
+        "no_debug": true,
+        "state_chain": true,
+        "legal": true,
+        "contracts": true,
+        "certificates": true,
+        "terminal_scope": true,
+        "trajectory": true,
+        "counts": true,
+        "program_counts": true,
+        "usage": true,
+        "clean_tested_tree": true
+      },
+      "sources": {
+        "jev": 28,
+        "only_legal_choice": 2
+      },
+      "passed": true
+    },
+    {
+      "run_id": "67cc7358-964e-4716-b850-e1d8ff2d7cd9",
+      "case": "ironclad",
+      "arm": "baseline",
+      "repeat": 2,
+      "checks": {
+        "trace_hash": true,
+        "wire_hash": true,
+        "entry": true,
+        "prefix": true,
+        "no_debug": true,
+        "state_chain": true,
+        "legal": true,
+        "contracts": true,
+        "certificates": true,
+        "terminal_scope": true,
+        "trajectory": true,
+        "counts": true,
+        "program_counts": true,
+        "usage": true,
+        "clean_tested_tree": true
+      },
+      "sources": {
+        "jev": 20
+      },
+      "passed": true
+    },
+    {
+      "run_id": "94c452f5-1cd9-4087-a2da-cdf9351c2556",
+      "case": "ironclad",
+      "arm": "contract",
+      "repeat": 2,
+      "checks": {
+        "trace_hash": true,
+        "wire_hash": true,
+        "entry": true,
+        "prefix": true,
+        "no_debug": true,
+        "state_chain": true,
+        "legal": true,
+        "contracts": true,
+        "certificates": true,
+        "terminal_scope": true,
+        "trajectory": true,
+        "counts": true,
+        "program_counts": true,
+        "usage": true,
+        "clean_tested_tree": true
+      },
+      "sources": {
+        "potion_contract": 2,
+        "jev": 15,
+        "only_legal_choice": 5
+      },
+      "passed": true
+    },
+    {
+      "run_id": "9b88b1fa-6bf7-47b6-84fc-edf8944d348c",
+      "case": "silent",
+      "arm": "baseline",
+      "repeat": 2,
+      "checks": {
+        "trace_hash": true,
+        "wire_hash": true,
+        "entry": true,
+        "prefix": true,
+        "no_debug": true,
+        "state_chain": true,
+        "legal": true,
+        "contracts": true,
+        "certificates": true,
+        "terminal_scope": true,
+        "trajectory": true,
+        "counts": true,
+        "program_counts": true,
+        "usage": true,
+        "clean_tested_tree": true
+      },
+      "sources": {
+        "jev": 28,
+        "only_legal_choice": 1
+      },
+      "passed": true
+    },
+    {
+      "run_id": "155ce8ca-2b0c-4eec-8bb0-cd9290c5aa70",
+      "case": "silent",
+      "arm": "contract",
+      "repeat": 2,
+      "checks": {
+        "trace_hash": true,
+        "wire_hash": true,
+        "entry": true,
+        "prefix": true,
+        "no_debug": true,
+        "state_chain": true,
+        "legal": true,
+        "contracts": true,
+        "certificates": true,
+        "terminal_scope": true,
+        "trajectory": true,
+        "counts": true,
+        "program_counts": true,
+        "usage": true,
+        "clean_tested_tree": true
+      },
+      "sources": {
+        "potion_contract": 2,
+        "jev": 28,
+        "only_legal_choice": 7
+      },
+      "passed": true
+    }
+  ],
+  "mechanic_branches": [],
+  "all_passed": true
+}
