@@ -1,0 +1,42 @@
+{
+  "experiment": "E110",
+  "issue": 210,
+  "segment": 1,
+  "tested_code_sha": "1b64546fe2289ceecc7f91597a62b5ba4efedba7",
+  "game_version": "v0.107.1",
+  "adapter": "E106 patched STS2-Agent v0.16.2, E109 installation",
+  "overlay_source_sha": "d800be43c2510a95912d7b29a573044a125226a6",
+  "run": {
+    "id": "32ASTF9N6E",
+    "multiplayer": true,
+    "players": 4,
+    "local_character": "IRONCLAD",
+    "ascension": 0,
+    "seed": null,
+    "entry_floor": 2,
+    "entry_screen": "REWARD"
+  },
+  "outcome": {
+    "status": "stopped_on_repeated_map_action",
+    "last_confirmed_floor": 3,
+    "last_confirmed_screen": "MAP",
+    "accepted_actions": 5,
+    "event_actions": 2,
+    "card_selection_actions": 1,
+    "map_action_responses_completed_without_observed_vote_or_transition": 2,
+    "explicit_rejections": 0,
+    "uncertain_deliveries": 0,
+    "jev_calls": 2,
+    "jev_usd": 0.000357714,
+    "seconds": 3.153,
+    "victory": false,
+    "later_observed_screen": "MAIN_MENU",
+    "lobby_exit_cause": "unknown"
+  },
+  "trace_sha256": "4566b5fd934e764fd7a004dfd4028dfc672ae4193415ba578eab4698bf626ebb",
+  "limitations": [
+    "Exploratory single run without comparison arm",
+    "First battle and initial route were already completed by humans before AI control",
+    "No proof that map calls caused lobby exit"
+  ]
+}
