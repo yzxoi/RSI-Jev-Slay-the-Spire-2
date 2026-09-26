@@ -11,3 +11,18 @@ Budgets: <=240 actions, <=240 attempted model requests, <=$0.20 and 900s per con
 Decision: require verified exact entries, legal actions, complete trace/wire chain, valid once-only contract execution, no false action delivery. At least two additional clears in the six paired comparisons and no lost baseline wins is a development signal for disjoint validation. Otherwise report execution success separately from strength. Either result may merge as opt-in evidence; no production strategy promotion from these related inputs. Lethal override, changed card policy and dynamic teacher plans are excluded.
 
 Commands: `python3 -m unittest discover -s tests`; `python3 -m scripts.evaluate_potion_contract_e100`. Raw traces/results stay in ignored `artifacts/runs/`; publish compact audited outcomes afterward.
+
+## Results
+
+Tested implementation **56020a5**. All 12 first-pass continuations completed; [results](result.json), [audit](audit.json). No errors, unknown-usage calls or exclusions. 139 tests passed before execution.
+
+| Arm | Ironclad (3 repeats) | Silent (3 repeats) | Total clears | Jev calls / USD |
+| --- | --- | --- | --- | --- |
+| Static plan baseline | 0/3 | 0/3 | 0/6 | 146 / $0.033780810 |
+| Executable potion contract | 3/3, HP 21/21/16 | 2/3, HP 3/0/3 | 5/6 | 131 / $0.030153144 |
+
+All 12 contracted potion uses were executed exactly once with fresh indices, correct target/predicate, and confirmed removal. All canonical entry/prefix, action legality, resource contract, raw-wire/state chain, terminal, usage and hash checks pass. The two contract obligations were fulfilled even in the one Silent defeat: compliant execution is not a guaranteed win. Six paired comparisons produced five additional clears and no lost baseline wins, exceeding the preregistered development gate. Aggregate Jev **277 calls / $0.063933954**, no Astra calls during continuation; inherited plan/contract authoring is unmetered. Returned model `typesafe/jev-1.13-20260917` and exact game/dependency hashes are in each manifest. Baseline elapsed times 25.118–43.731 s, treatment 21.215–45.338 s; this is total continuation time including prefix replay, not API latency.
+
+Decision: merge opt-in executable contracts and evidence; allow E102 to use the validated execution primitive. Do not promote a general potion strategy or claim 83% unseen win rate: these are three model repeats on each of only two related historical Boss states. Unchanged guidance plus enforceable execution is enough to recover much of this development sample's deficit. A disjoint-input/full-run evaluation is still necessary.
+
+Iteration ledger: `56020a5` committed implementation and preregistration before all 12 battles; `1c26e50` added read-only independent audit afterward. No strategy/implementation changes or reruns during evaluation. Reproduce evidence audit with `python3 -m scripts.audit_boss_trials --experiment E100`; raw source is the E100 worktree's ignored artifacts/runs. Full traces remain local and hashed. The generic audit also supports later branch proofs but E100 made **zero** lethal probes/actions.
