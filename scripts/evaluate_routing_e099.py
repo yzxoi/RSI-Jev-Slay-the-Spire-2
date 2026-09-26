@@ -10,7 +10,7 @@ import uuid
 from rsi.engine import ROOT, Headless
 from rsi.full import STRATEGY, macro_candidates
 from rsi.jev import Budget, Jev
-from rsi.numerical import incoming
+from rsi.numerical import intent_damage
 from rsi.policy import combat_candidates, model_state
 from rsi.potions import with_potions
 from rsi.room_owner import RoomOwner, route_entry
@@ -26,7 +26,7 @@ def choices_for(state):
 
 def state_input(state, recent, plan=None):
     payload = {'state': model_state(state), 'strategy': STRATEGY, 'recent_actions': recent[-6:],
-               'computed': {'current_visible_incoming_before_new_plays': incoming(state),
+               'computed': {'current_visible_incoming_before_new_plays': sum(intent_damage(e) for e in state.get('enemies', [])),
                             'limitation': 'Not a simulation; killing, weakness, block, retaliation and other powers can change damage.'}}
     if plan:
         payload['astra_room_plan'] = plan
