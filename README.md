@@ -38,6 +38,8 @@
 
 当前 CLI 补丁针对历史 **v0.111.0**。本机 Steam DLL 已更新，直接自动读取新版会出现接口编译错误；当前版本适配由 [E094 / #182](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/182)跟踪。复现历史实验时先将 `STS2_GAME_DIR` 指向已核对哈希的旧版原始 DLL 本地目录，再运行构建；具体哈希见[版本说明](docs/cli-resources.md#版本限制)。
 
+原生 MCP 的正式版适配已有可行性证据：[E106](experiments/E106/README.md) 将 STS2-Agent v0.16.2 适配到本机 Steam public v0.107.1，在隔离游戏副本中通过编译、27 项反射检查及主菜单 MCP 读取（16 个工具）。尚未验证出牌、奖励与 Steam 好友联机，也未安装到真实游戏；这与上述 CLI 版本适配是两个独立问题。
+
 ```bash
 python3 scripts/setup_headless.py
 python3 -m unittest discover -s tests -q

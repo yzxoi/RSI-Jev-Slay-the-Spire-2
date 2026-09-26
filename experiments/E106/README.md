@@ -49,7 +49,7 @@ After SIGTERM, the mod stopped its HTTP/event services, then the engine logged u
 
 **Multiplayer conclusion:** static inspection of this installed stable assembly's `JoinFlow` verifies that game version and gameplay-mod lists must match, while non-gameplay mod differences are allowed with a warning. Upstream declares `affects_gameplay: false`, which the adapter preserves. This gives a plausible path for a local MCP player joining friends without requiring them to install the agent. Actual Steam matchmaking, model-ID hash equality, synchronization, control scope, disconnection/rejoin and asymmetric mod installation have **not** been tested. The upstream local dual-instance AI teammate is also not proof of Steam-friend compatibility. Do not bypass version/mod handshakes.
 
-**Decision:** merge this feasibility experiment, original probe and source adapter into the research repository. Do not automatically install it or enable autoplay. Follow-up gates before relying on it: stable single-player actions through the first reward; asymmetric-mod local multiplayer synchronization; then a consented Steam-friend session.
+**Decision:** merge this feasibility experiment, original probe and source adapter into the research repository. Do not automatically install it or enable autoplay. Follow-up gates before relying on it: [stable single-player actions through the first reward (#206)](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/206); [asymmetric-mod local multiplayer synchronization and then a consented Steam-friend session (#207)](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/207).
 
 ## Reproduction
 
