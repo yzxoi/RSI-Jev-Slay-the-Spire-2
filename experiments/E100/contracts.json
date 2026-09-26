@@ -1,0 +1,62 @@
+{
+  "ironclad": {
+    "entry_hash": "3e1f2d86cd5b7d039eff1cb75c0ba76c0ded6bec8c4526e8ea28a559d90a74c8",
+    "rules": [
+      {
+        "id": "dexterity_potion",
+        "potion": {
+          "name": "Dexterity Potion",
+          "target_type": "AnyPlayer",
+          "vars": {
+            "DexterityPower": 2
+          }
+        },
+        "when": "opening",
+        "target": null
+      },
+      {
+        "id": "blood_potion",
+        "potion": {
+          "name": "Blood Potion",
+          "target_type": "AnyPlayer",
+          "vars": {
+            "HealPercent": 20
+          }
+        },
+        "when": "full_heal_deficit",
+        "target": null
+      }
+    ],
+    "expiry": "boss_boundary"
+  },
+  "silent": {
+    "entry_hash": "40bf809c959d3afa16b43c0d03e97a9863df55617f130bbcb37b5a50a2df36c5",
+    "rules": [
+      {
+        "id": "dexterity_potion",
+        "potion": {
+          "name": "Dexterity Potion",
+          "target_type": "AnyPlayer",
+          "vars": {
+            "DexterityPower": 2
+          }
+        },
+        "when": "opening",
+        "target": null
+      },
+      {
+        "id": "poison_potion",
+        "potion": {
+          "name": "Poison Potion",
+          "target_type": "AnyEnemy",
+          "vars": {
+            "PoisonPower": 6
+          }
+        },
+        "when": "opening",
+        "target": "Kin Priest"
+      }
+    ],
+    "expiry": "boss_boundary"
+  }
+}
