@@ -134,6 +134,23 @@ def main():
     out = {'experiment': 'E103', 'complete_source_selection': source_valid,
            'branches': branch_audits, 'cases': case_audits,
            'all_passed': source_valid and all(c['passed'] for c in case_audits)}
+    branches = [b for c in report['cases'] for b in c['branches']]
+    summary = {'cases': len(report['cases']), 'branches': len(branches),
+               'errors': sum(b['status'] == 'error' for b in branches),
+               'truncated': sum(c['truncated'] for c in report['cases']),
+               'branch_seconds': sum(b['seconds'] for b in branches),
+               'prefix_seconds': sum(b.get('replay_seconds', 0) for b in branches),
+               'comparators': {}}
+    complete = [c for c in report['cases'] if c['complete']]
+    summary['complete_cases'] = len(complete)
+    for name in ('visible_arithmetic', 'plating_arithmetic'):
+        summary['comparators'][name] = {
+            'false_positives': sum(c[name]['flags_missed_defense'] and not c['flags_missed_defense'] for c in complete),
+            'false_negatives': sum(c['flags_missed_defense'] and not c[name]['flags_missed_defense'] for c in complete),
+            'exact_best_gain_matches': sum(c[name]['best_predicted_hp_gain'] == c['best_hp_gain'] for c in complete),
+            'seconds': sum(c[name]['seconds'] for c in report['cases'])}
+    summary['legacy_guard_abstentions'] = sum(not c['legacy_guard']['excluded'] for c in report['cases'])
+    report['summary'] = summary
     (directory / 'result.json').write_text(json.dumps(report, indent=2) + '\n')
     (directory / 'audit.json').write_text(json.dumps(out, indent=2) + '\n')
     print(json.dumps({'all_passed': out['all_passed'], 'complete_source_selection': source_valid,
