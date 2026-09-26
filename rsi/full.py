@@ -16,6 +16,7 @@ from .trace import Trace, digest, version_manifest
 from .planner import choose_plan
 from .guard import filter_end_turn
 from .potions import with_potions
+from .resources import potion_decision, inventory, require_resource_interface
 
 STRATEGY = """Maximize probability of completing all three acts. Evaluate current deck, next threats and resources. Early decks need efficient damage, then reliable block, draw/energy and scaling for bosses. Prefer cards that solve a concrete gap; skipping mediocre rewards is valid. Do not force a named archetype. Remove curses/weak starters when affordable. Rest when healing is needed to survive upcoming threats; otherwise upgrades have lasting value. Avoid risky elites with low health/weak damage. Buy useful relics/cards rather than spending all gold indiscriminately. For card selection interpret the preceding action and scene: removing, upgrading, discarding and exhausting require different choices. Supplied rules are authoritative; descriptions with placeholders use the supplied stats. Numerical combat previews are limited, not full simulation."""
 
@@ -29,7 +30,7 @@ def advance_skill_counter(count, card):
     return count + int(bool(card and card.get('type') == 'Skill'))
 
 
-def macro_candidates(state, history=None):
+def macro_candidates(state, history=None, *, resource_decisions=False):
     d = state.get('decision'); out = []
     def add(name, metadata=None, **args):
         out.append({'action': action(name, **args), 'name': name, 'details': metadata})
@@ -42,6 +43,13 @@ def macro_candidates(state, history=None):
     elif d == 'card_reward':
         for c in state.get('cards', []): add('select_card_reward', c, card_index=c['index'])
         if state.get('can_skip', True): add('skip_card_reward')
+    elif d == 'potion_reward' and resource_decisions:
+        if state.get('can_claim'): add('claim_potion_reward', state['potion'])
+        if state.get('can_skip'): add('skip_potion_reward')
+        if not state.get('player', {}).get('has_open_potion_slots', True):
+            for potion in state['player'].get('potions', []):
+                if potion.get('can_discard'):
+                    add('discard_potion', potion, potion_index=potion['index'])
     elif d == 'bundle_select':
         for i, c in enumerate(state.get('bundles', [])): add('select_bundle', c, bundle_index=c.get('index', i))
     elif d == 'card_select':
@@ -58,15 +66,22 @@ def macro_candidates(state, history=None):
     elif d == 'shop':
         gold = state['player']['gold']
         for key, cmd, arg in [('cards','buy_card','card_index'),('relics','buy_relic','relic_index'),('potions','buy_potion','potion_index')]:
-            # Potion capacity is not exported by this pinned headless serializer.
-            if key == 'potions': continue
+            if key == 'potions' and not resource_decisions: continue
             for c in state.get(key, []):
-                if c.get('is_stocked') and c['cost'] <= gold: add(cmd, c, **{arg:c['index']})
+                if c.get('is_stocked') and c['cost'] <= gold and (key != 'potions' or c.get('can_buy')):
+                    add(cmd, c, **{arg:c['index']})
+        if resource_decisions and not state['player'].get('has_open_potion_slots', True):
+            if any(c.get('is_stocked') and c['cost'] <= gold for c in state.get('potions', [])):
+                for potion in state['player'].get('potions', []):
+                    if potion.get('can_discard'):
+                        add('discard_potion', potion, potion_index=potion['index'])
         price = state.get('card_removal_cost')
         if price is not None and price <= gold and not (history or {}).get('removed_here'): add('remove_card', {'price':price})
         add('leave_room')
     elif d == 'unknown': add('proceed')
     else: raise RuntimeError(f'Unsupported macro decision: {d}')
+    if resource_decisions and d in ('potion_reward','map_select','shop','rest_site','card_reward'):
+        out=with_potions(state,out)
     for i, c in enumerate(out): c['id'] = f'a{i:03}'
     if not out: raise RuntimeError(f'No candidates for {d}')
     return out
@@ -90,8 +105,10 @@ def episode(config, manifest, jev=None):
     uid=str(uuid.uuid4()); trace=Trace(ROOT/'artifacts/runs'/uid,{**manifest,**config,'run_id':uid,'scope':'complete_run'})
     result={**config,'run_id':uid,'status':'error','steps':0,'model_calls':0,'cost_usd':0.0}; scenes=Counter(); engine=None; state={}; start=time.monotonic(); history={}; unchanged=0; last=None;skill_key=None;skill_count=0
     try:
-        engine=Headless(trace.directory)
+        resources=config['policy']=='retaliate_resources'
+        engine=Headless(trace.directory,resource_decisions=resources)
         state=engine.send({'cmd':'start_run','character':config['character'],'ascension':config['ascension'],'seed':config['seed']})
+        if resources:require_resource_interface(state)
         for prefix_action in config.get('replay_prefix_actions',[]):
             state=engine.send(prefix_action)
         expected_entry_hash=config.get('expected_entry_hash')
@@ -133,15 +150,27 @@ def episode(config, manifest, jev=None):
                     selected,call=jev.choose({'state':model_state(state),'strategy':STRATEGY},choices,trace)
                     result['model_calls']+=not call.get('cache_hit',False);result['cache_hits']=result.get('cache_hits',0)+call.get('cache_hit',False);result['cost_usd']+=call['usage'].get('cost',0)
                 elif config['policy']=='first': selected=choices[0]
-                elif config['policy'] in ['planned','planfixed','planfixed_cautious_route','planfixed_letter','triggered','retaliate']:
+                elif config['policy'] in ['planned','planfixed','planfixed_cautious_route','planfixed_letter','triggered','retaliate','retaliate_resources']:
                     planning_state={**state,'skills_played_this_turn':skill_count} if config['policy']=='planfixed_letter' else state
-                    selected,planning=choose_plan(planning_state,choices,triggers=config['policy'] in ['triggered','retaliate'],retaliation=config['policy']=='retaliate',letter_opener=config['policy']=='planfixed_letter');trace.write('planning',planning)
+                    selected,planning=choose_plan(planning_state,choices,triggers=config['policy'] in ['triggered','retaliate','retaliate_resources'],retaliation=config['policy'] in ['retaliate','retaliate_resources'],letter_opener=config['policy']=='planfixed_letter');trace.write('planning',planning)
+                    potions=with_potions(state,[]) if resources else []
+                    if potions and history.get('potion_check')!=current_skill_key:
+                        context,reduced=potion_decision(model_state(state),STRATEGY,planning,selected,potions)
+                        selected,call=jev.choose(context,reduced,trace)
+                        result['model_calls']+=not call.get('cache_hit',False)
+                        result['cache_hits']=result.get('cache_hits',0)+call.get('cache_hit',False)
+                        result['cost_usd']+=call['usage'].get('cost',0)
+                        history['potion_check']=current_skill_key
+                        trace.write('resource_check',{'turn_key':current_skill_key,'candidates':reduced,'selected':selected})
+                        choices=reduced
                     if config['policy']=='planfixed_letter':trace.write('letter_skill_counter',{'key':current_skill_key,'before':skill_count})
                 else:
                     choices=computed_candidates(state,choices); selected=greedy_choice(state,choices)
             else:
-                choices=macro_candidates(state,history)
-                if config['policy'] not in ['hybrid','planned','jev','guarded','equipped','triggered','retaliate'] or len(choices)==1:
+                choices=macro_candidates(state,history,resource_decisions=resources)
+                if resources and d=='potion_reward' and state.get('can_claim'):
+                    selected=next(c for c in choices if c['action']['action']=='claim_potion_reward')
+                elif config['policy'] not in ['hybrid','planned','jev','guarded','equipped','triggered','retaliate','retaliate_resources'] or len(choices)==1:
                     selected=fixed_macro(state,choices,cautious_route=config['policy']=='planfixed_cautious_route')
                     if d=='map_select' and config['policy']=='planfixed_cautious_route':
                         baseline_choice=fixed_macro(state,choices)
@@ -161,7 +190,12 @@ def episode(config, manifest, jev=None):
             played_card=(next((c for c in state.get('hand',[])
                                if c['index']==selected['action']['args']['card_index']),None)
                          if d=='combat_play' and selected['action']['action']=='play_card' else None)
+            resource_action=selected['action']['action'] in {'use_potion','discard_potion','buy_potion','claim_potion_reward','skip_potion_reward'}
+            before_resource={'inventory':inventory(state),'gold':state.get('player',{}).get('gold'),'decision':d} if resource_action else None
             state=engine.send(selected['action']);trace.write('after',{'state':state,'state_hash':digest(state)})
+            if resource_action:
+                trace.write('resource_transition',{'action':selected['action'],'before':before_resource,
+                            'after':{'inventory':inventory(state),'gold':state.get('player',{}).get('gold'),'decision':state.get('decision')}})
             if played_card:
                 skill_count=advance_skill_counter(skill_count,played_card)
                 if skill_count is None and config['policy']=='planfixed_letter':
@@ -186,10 +220,10 @@ def episode(config, manifest, jev=None):
 def main():
     p=argparse.ArgumentParser();p.add_argument('--characters',default=','.join(CHARACTERS));p.add_argument('--seeds',default='full_dev_001');p.add_argument('--policies',default='first,greedy');p.add_argument('--ascension',type=int,default=10);p.add_argument('--workers',type=int,default=3);p.add_argument('--max-calls',type=int,default=12000);p.add_argument('--max-usd',type=float,default=3);p.add_argument('--output',required=True);p.add_argument('--matched-decisions',action='store_true');a=p.parse_args()
     chars=a.characters.split(','); policies=a.policies.split(',')
-    if set(chars)-set(CHARACTERS) or set(policies)-{'first','greedy','hybrid','planned','planfixed','planfixed_cautious_route','planfixed_letter','jev','guarded','equipped','triggered','retaliate'}:p.error('Invalid character or policy')
+    if set(chars)-set(CHARACTERS) or set(policies)-{'first','greedy','hybrid','planned','planfixed','planfixed_cautious_route','planfixed_letter','jev','guarded','equipped','triggered','retaliate','retaliate_resources'}:p.error('Invalid character or policy')
     manifest=version_manifest()
     if manifest['tracked_dirty']:raise RuntimeError('Commit implementation before evaluation')
-    budget=Budget(a.max_calls,a.max_usd,conservative_failures=True);jev=Jev(budget) if set(policies)&{'hybrid','planned','jev','guarded','equipped','triggered','retaliate'} else None
+    budget=Budget(a.max_calls,a.max_usd,conservative_failures=True);jev=Jev(budget) if set(policies)&{'hybrid','planned','jev','guarded','equipped','triggered','retaliate','retaliate_resources'} else None
     if a.matched_decisions and jev:jev=MatchedJev(jev)
     configs=[{'character':c,'seed':s,'ascension':a.ascension,'policy':policy} for s in a.seeds.split(',') for c in chars for policy in policies]
     with ThreadPoolExecutor(max_workers=a.workers) as pool: results=list(pool.map(lambda c:episode(c,manifest,jev),configs))

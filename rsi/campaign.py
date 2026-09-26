@@ -25,6 +25,7 @@ from .event_guard import bound_bridge_reroll
 from .danger import review_projected_loss
 from .review_lease import ReviewLease,current_hp_review,projected_loss_requires_expert
 from .shop_review import funded_shop_exit_review
+from .resources import potion_decision
 
 
 GUIDED_COMBAT_POLICIES={'planned','triggered','retaliate','floor_guided','room_guided'}
@@ -151,9 +152,8 @@ def main():
                     potions=[c for c in ordinary_cs if c['action']['action']=='use_potion']
                     turnkey=((raw.get('run') or {}).get('floor'),raw.get('turn'))
                     if not floor_plan and not room_plan and potions and history.get('potion_check')!=turnkey:
-                        reduced=[selected]+potions
-                        for i,c in enumerate(reduced):c={**c,'id':f'p{i:03}'};reduced[i]=c
-                        selected=jev.choose({'state':raw.get('agent_view',raw),'strategy':STRATEGY,'question':'Use a potion now to prevent meaningful HP loss or enable a kill, or execute the computed next card. Potions refill; do not hoard at risk of death.','plan':planning},reduced,trace)[0]
+                        context,reduced=potion_decision(raw.get('agent_view',raw),STRATEGY,planning,selected,potions)
+                        selected=jev.choose(context,reduced,trace)[0]
                         history['potion_check']=turnkey
                 else:selected=jev.choose({'state':raw.get('agent_view',raw),'strategy':STRATEGY,'previous_decision':history.get('previous'),
                                           **plan_context(floor_plan,raw),**room_context(room_plan,raw)},ordinary_cs,trace)[0]

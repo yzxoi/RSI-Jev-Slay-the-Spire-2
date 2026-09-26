@@ -1,0 +1,206 @@
+--- a/src/Sts2Headless/RunSimulator.cs
++++ b/src/Sts2Headless/RunSimulator.cs
+@@ -220,6 +220,8 @@
+     private int _lastEventOptionCount;
+ 
+     // Pending rewards for card selection (populated after combat, before proceeding)
++    private readonly bool _resourceDecisions = Environment.GetEnvironmentVariable("RSI_RESOURCE_DECISIONS") == "1";
++    private readonly Queue<PotionReward> _pendingPotionRewards = new();
+     private List<Reward>? _pendingRewards;
+     private CardReward? _pendingCardReward;
+     private bool _rewardsProcessed;
+@@ -901,6 +903,10 @@
+                     return DoBuyCard(player, args);
+                 case "buy_relic":
+                     return DoBuyRelic(player, args);
++                case "claim_potion_reward":
++                    return DoPotionReward(player, false);
++                case "skip_potion_reward":
++                    return DoPotionReward(player, true);
+                 case "buy_potion":
+                     return DoBuyPotion(player, args);
+                 case "remove_card":
+@@ -937,6 +943,7 @@
+             return Error("select_map_node requires 'col' and 'row'");
+ 
+         // Reset tracking for new room
++        _pendingPotionRewards.Clear();
+         _rewardsProcessed = false;
+         _pendingCardReward = null;
+         _eventOptionChosen = false;
+@@ -1243,16 +1250,22 @@
+         if (!entry.IsStocked) return Error("Potion already purchased");
+         if (player.Gold < entry.Cost) return Error("Not enough gold");
+ 
++        var purchasedPotion = entry.Model;
++        if (!player.HasOpenPotionSlots) return Error("No open potion slot");
++        if (purchasedPotion == null || !CanProcurePotion(player, purchasedPotion))
++            return Error("Potion procurement is forbidden");
++        var price = entry.Cost;
+         try
+         {
+             entry.OnTryPurchaseWrapper(merchantRoom.GetLocalInventory()).GetAwaiter().GetResult();
+             _syncCtx.Pump();
+-            Log($"Bought potion: {entry.Model.GetType().Name} for {entry.Cost}g");
++            if (!player.Potions.Contains(purchasedPotion))
++                return Error("Potion purchase did not procure the advertised potion");
++            Log($"Bought potion: {purchasedPotion.Id.Entry} for {price}g");
+         }
+         catch (Exception ex)
+         {
+-            // Potion purchase sometimes NullRefs in headless (missing potion slot UI)
+-            Log($"Buy potion failed: {ex.Message}");
++            return ErrorWithTrace("Buy potion failed; inspect state before retrying", ex);
+         }
+ 
+         return DetectDecisionPoint();
+@@ -1381,6 +1394,9 @@
+         var potion = potionsList[idx];
+         if (potion == null) return Error($"No potion at index {idx}");
+ 
++        if (_resourceDecisions && !CanManuallyUsePotion(player, potion))
++            return Error("Potion cannot be used manually in the current state");
++
+         // Determine target based on potion's TargetType first, then fall back to target_index
+         Creature? target = null;
+         var potionTargetType = potion.TargetType;
+@@ -1459,6 +1475,8 @@
+         var potion = potionsList[idx];
+         if (potion == null) return Error($"No potion at index {idx}");
+ 
++        if (_resourceDecisions && (!player.CanUseOrRemovePotions || potion.IsQueued || player.Creature.IsDead))
++            return Error("Potion cannot be discarded in the current state");
+         MegaCrit.Sts2.Core.Commands.PotionCmd.Discard(potion).GetAwaiter().GetResult();
+         _syncCtx.Pump();
+         return DetectDecisionPoint();
+@@ -1793,6 +1811,9 @@
+                 ["player"] = PlayerSummary(player),
+             };
+         }
++
++        if (_resourceDecisions && _pendingPotionRewards.Count > 0)
++            return PotionRewardState(player);
+ 
+         // Check if there's a pending card reward
+         if (_pendingCardReward != null)
+@@ -2310,7 +2331,11 @@
+                 var cardRewards = new List<CardReward>();
+                 foreach (var reward in rewards)
+                 {
+-                    if (reward is GoldReward || reward is MegaCrit.Sts2.Core.Rewards.RelicReward
++                    if (_resourceDecisions && reward is PotionReward pendingPotion)
++                    {
++                        _pendingPotionRewards.Enqueue(pendingPotion);
++                    }
++                    else if (reward is GoldReward || reward is MegaCrit.Sts2.Core.Rewards.RelicReward
+                         || reward is MegaCrit.Sts2.Core.Rewards.PotionReward)
+                     {
+                         try { reward.SelectUnsynchronized().GetAwaiter().GetResult(); _syncCtx.Pump(); }
+@@ -2322,6 +2347,12 @@
+                     }
+                 }
+ 
++                if (_resourceDecisions && _pendingPotionRewards.Count > 0)
++                {
++                    _pendingCardReward = cardRewards.FirstOrDefault();
++                    _pendingRewards = rewards;
++                    return PotionRewardState(player);
++                }
+                 if (cardRewards.Count > 0)
+                 {
+                     _pendingCardReward = cardRewards[0];
+@@ -2694,6 +2725,16 @@
+             ["is_stocked"] = e.IsStocked,
+         }).ToList();
+ 
++        if (_resourceDecisions)
++        {
++            for (int i = 0; i < potions.Count; i++)
++            {
++                var potion = inv.PotionEntries[i].Model;
++                potions[i]["id"] = potion?.Id.Entry;
++                potions[i]["can_buy"] = potion != null && player.HasOpenPotionSlots
++                    && player.Gold >= inv.PotionEntries[i].Cost && CanProcurePotion(player, potion);
++            }
++        }
+         var removal = merchantRoom.GetLocalInventory().CardRemovalEntry;
+ 
+         return new Dictionary<string, object?>
+@@ -2904,7 +2945,77 @@
+         catch { return null; }
+     }
+ 
++    private static bool CanProcurePotion(Player player, PotionModel potion) =>
++        MegaCrit.Sts2.Core.Hooks.Hook.ShouldProcurePotion(player.RunState, player.Creature.CombatState, potion, player);
++
++    private bool CanManuallyUsePotion(Player player, PotionModel potion)
++    {
++        if (potion.IsQueued || player.Creature.IsDead || !player.CanUseOrRemovePotions
++            || !potion.PassesCustomUsabilityCheck || _cardSelector.HasPending || _cardSelector.HasPendingReward)
++            return false;
++        return potion.Usage.ToString() == "AnyTime"
++            || (potion.Usage.ToString() == "CombatOnly" && CombatManager.Instance.IsInProgress
++                && CombatManager.Instance.DebugOnlyGetState()?.CurrentSide == CombatSide.Player);
++    }
++
++    private Dictionary<string, object?> PotionRewardState(Player player)
++    {
++        var reward = _pendingPotionRewards.Peek();
++        var potion = reward.Potion!;
++        return new Dictionary<string, object?>
++        {
++            ["type"] = "decision", ["decision"] = "potion_reward", ["context"] = RunContext(),
++            ["potion"] = new Dictionary<string, object?> {
++                ["id"] = potion.Id.Entry, ["name"] = _loc.Potion(potion.Id.Entry),
++                ["description"] = _loc.Bilingual("potions", potion.Id.Entry + ".description"),
++                ["target_type"] = potion.TargetType.ToString(), ["usage"] = potion.Usage.ToString(),
++                ["vars"] = potion.DynamicVars.Values.ToDictionary(v => v.Name, v => (int)v.BaseValue)
++            },
++            ["can_claim"] = player.HasOpenPotionSlots && CanProcurePotion(player, potion),
++            ["can_skip"] = true, ["player"] = PlayerSummary(player)
++        };
++    }
++
++    private Dictionary<string, object?> DoPotionReward(Player player, bool skip)
++    {
++        if (!_resourceDecisions || _pendingPotionRewards.Count == 0) return Error("No pending potion reward");
++        var reward = _pendingPotionRewards.Peek();
++        if (skip) reward.OnSkipped();
++        else
++        {
++            if (!player.HasOpenPotionSlots || !CanProcurePotion(player, reward.Potion!))
++                return Error("Potion reward cannot be procured");
++            reward.SelectUnsynchronized().GetAwaiter().GetResult();
++            _syncCtx.Pump();
++            if (reward.ClaimedPotion == null || !player.Potions.Contains(reward.ClaimedPotion))
++                return Error("Potion reward was not procured; inspect state before retrying");
++        }
++        _pendingPotionRewards.Dequeue();
++        return DetectDecisionPoint();
++    }
++
+     private Dictionary<string, object?> PlayerSummary(Player player)
++    {
++        var summary = LegacyPlayerSummary(player);
++        if (!_resourceDecisions) return summary;
++        summary["potion_capacity"] = player.MaxPotionCount;
++        summary["has_open_potion_slots"] = player.HasOpenPotionSlots;
++        summary["can_use_or_remove_potions"] = player.CanUseOrRemovePotions;
++        var potions = player.Potions.ToList();
++        var exported = (List<Dictionary<string, object?>?>)summary["potions"]!;
++        for (int i = 0; i < potions.Count; i++)
++        {
++            var potion = potions[i]; var item = exported[i]!;
++            item["id"] = potion.Id.Entry;
++            item["slot_index"] = player.PotionSlots.ToList().IndexOf(potion);
++            item["usage"] = potion.Usage.ToString();
++            item["can_use"] = CanManuallyUsePotion(player, potion);
++            item["can_discard"] = player.CanUseOrRemovePotions && !potion.IsQueued && !player.Creature.IsDead;
++        }
++        return summary;
++    }
++
++    private Dictionary<string, object?> LegacyPlayerSummary(Player player)
+     {
+         return new Dictionary<string, object?>
+         {

@@ -2,7 +2,7 @@
 
 这是一个公开的、以证据驱动的《杀戮尖塔 2》智能体实验仓库。目标是用确定性计算处理规则与风险，让廉价的 Jev 做大量选择，只在关键且不确定的局面调用 Astra，最终提高多角色、高进阶的整局胜率。
 
-**截至 2026-09-25：系统能控制真实游戏并完成过一局 A0，但还不是稳定通关的低 Astra 成本策略。** 请按下面的证据边界理解结果。
+**截至 2026-09-26：系统能控制真实游戏并完成过一局 A0，但还不是稳定通关的低 Astra 成本策略。** 请按下面的证据边界理解结果。
 
 | 验证范围 | 已观察到的结果 | 不能据此声称 |
 | --- | --- | --- |
@@ -14,9 +14,13 @@
 
 已经实现的能力包括：真实 MCP 的战斗与局外流程控制、五角色 headless 整局评估、固定状态重放与候选分支工具、药水/奖励/商店的审核边界，以及按代码 SHA 和原始 trace 哈希追溯每次实验。[E005](experiments/E005/README.md)验证了限定输入下的真实状态重放；[E085](experiments/E085/README.md)验证了奖励选择后的精确续局。它们是实验工具，尚未证明通用策略的胜率提升。
 
+[E093](experiments/E093/README.md)提供可选的 `retaliate_resources` CLI 策略：战斗用药、商店买药、战后药水领取/跳过，以及满槽时丢弃腾位。药水选择复用原生控制器的每回合询问，仍需独立检验强度。接口、运行方式和覆盖边界见[CLI 资源决策](docs/cli-resources.md)。
+
 ## 运行与验证
 
 需要本地合法安装的游戏，以及 `dependencies.json` 固定的 headless 依赖和 .NET SDK。原生实战另需已运行的 [STS2-Agent MCP](https://github.com/CharTyr/STS2-Agent)。脚本会从本地游戏安装读取专有文件；仓库不包含游戏二进制。Jev 调用使用环境变量 `OPENROUTER_RSI_JEV_KEY`，也可放在被 Git 忽略的 `.env` 中；不要提交或打印密钥。
+
+当前 CLI 补丁针对历史 **v0.111.0**。本机 Steam DLL 已更新，直接自动读取新版会出现接口编译错误；当前版本适配由 [E094 / #182](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/182)跟踪。复现历史实验时先将 `STS2_GAME_DIR` 指向已核对哈希的旧版原始 DLL 本地目录，再运行构建；具体哈希见[版本说明](docs/cli-resources.md#版本限制)。
 
 ```bash
 python3 scripts/setup_headless.py

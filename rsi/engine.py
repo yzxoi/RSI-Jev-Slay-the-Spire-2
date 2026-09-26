@@ -12,7 +12,7 @@ CHARACTERS = ["Ironclad", "Silent", "Defect", "Regent", "Necrobinder"]
 
 
 class Headless:
-    def __init__(self, directory: Path, timeout=30):
+    def __init__(self, directory: Path, timeout=30, *, resource_decisions=False):
         directory.mkdir(parents=True, exist_ok=True)
         self.timeout = timeout
         self.stderr = (directory / "engine.stderr.log").open("w")
@@ -20,7 +20,8 @@ class Headless:
         sdk = ROOT / ".tools/dotnet"
         engine = ROOT / "vendor/sts2-cli"
         env = dict(os.environ, DOTNET_ROOT=str(sdk), STS2_GAME_DIR=str(engine / "lib"),
-                   DOTNET_CLI_TELEMETRY_OPTOUT="1")
+                   DOTNET_CLI_TELEMETRY_OPTOUT="1",
+                   RSI_RESOURCE_DECISIONS="1" if resource_decisions else "0")
         assembly = engine / "src/Sts2Headless/bin/Debug/net9.0/Sts2Headless.dll"
         self.proc = subprocess.Popen([str(sdk / "dotnet"), str(assembly)],
                                      cwd=engine, env=env, stdin=subprocess.PIPE,

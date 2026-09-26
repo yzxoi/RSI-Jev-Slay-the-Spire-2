@@ -1,0 +1,657 @@
+{
+  "manifest": {
+    "schema_version": 1,
+    "code_commit": "45bec9b9b74a31d5563070b9fb0d354437fd717c",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "e1871a9098174400415def47f94cbfe160600577fbe58adc7721ed0d25349295",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+      "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+  },
+  "fixture_sha256": "3abc8d5cf4c1674f162528e0564f413f9cb9558ff7b03f33bc79e9c8b6cbb8d5",
+  "results": [
+    {
+      "kind": "reward_space",
+      "character": "Ironclad",
+      "mode": "legacy",
+      "synthetic": false,
+      "status": "compatible",
+      "checks": {
+        "legacy_entry_parity": true
+      },
+      "seed": "e089_holdout_001",
+      "entry_hash": "cbf9557cb6bd5c5768254f607a6a4e943b6c3b8584c2cf7a38e02284b3b595fb",
+      "seconds": 2.254,
+      "trace_path": "artifacts/runs/c9817e7a-2e9d-4690-93b5-b4794a055aa1/decisions.jsonl",
+      "trace_sha256": "4b6085749fcebda75db57130bdfaaba14653ea9ad9f936ba6a570ed5dd8d871c",
+      "trace_verified": true
+    },
+    {
+      "kind": "reward_space",
+      "character": "Ironclad",
+      "mode": "resources",
+      "synthetic": false,
+      "status": "compatible",
+      "checks": {
+        "legacy_entry_parity": true,
+        "explicit_potion_reward": true,
+        "reward_potion_received": true,
+        "reward_continues": true,
+        "legacy_after_claim_parity": true
+      },
+      "seed": "e089_holdout_001",
+      "entry_hash": "cbf9557cb6bd5c5768254f607a6a4e943b6c3b8584c2cf7a38e02284b3b595fb",
+      "boundary": "potion_reward",
+      "reward": {
+        "id": "POWDERED_DEMISE",
+        "name": "Powdered Demise",
+        "description": "Enemy loses {Demise} HP at the end of each of its turns.",
+        "target_type": "AnyEnemy",
+        "usage": "CombatOnly",
+        "vars": {
+          "Demise": 9
+        }
+      },
+      "seconds": 2.102,
+      "trace_path": "artifacts/runs/fd366f66-98b6-4721-ab08-7f289acc6098/decisions.jsonl",
+      "trace_sha256": "0c8658bf3f964997cc27519ee356f95f6ad537f377fbc5a16500d56d52934b52",
+      "trace_verified": true
+    },
+    {
+      "kind": "combat",
+      "character": "Ironclad",
+      "mode": "legacy",
+      "synthetic": false,
+      "status": "compatible",
+      "checks": {
+        "legacy_entry_parity": true
+      },
+      "seed": "e089_holdout_001",
+      "entry_hash": "68ff2730e047f91a30b1dbc48aad1f768c4c72f7c1f5e0d29e61d31ef74078c5",
+      "seconds": 2.156,
+      "trace_path": "artifacts/runs/15c56efd-5d8c-49a8-ada8-40651f20a0aa/decisions.jsonl",
+      "trace_sha256": "6c34015a35f8fa4cf69742a542c15eb7aedea269f6173c43792491a14a269c7e",
+      "trace_verified": true
+    },
+    {
+      "kind": "combat",
+      "character": "Ironclad",
+      "mode": "resources",
+      "synthetic": false,
+      "status": "compatible",
+      "checks": {
+        "legacy_entry_parity": true,
+        "capacity_exported": true,
+        "legal_manual_potion_available": true,
+        "potion_consumed": true
+      },
+      "seed": "e089_holdout_001",
+      "entry_hash": "68ff2730e047f91a30b1dbc48aad1f768c4c72f7c1f5e0d29e61d31ef74078c5",
+      "selected": {
+        "id": "p000",
+        "action": {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 0,
+            "target_index": 0
+          }
+        },
+        "name": "Powdered Demise",
+        "details": {
+          "index": 0,
+          "name": "Powdered Demise",
+          "description": "Enemy loses {Demise} HP at the end of each of its turns.",
+          "vars": {
+            "Demise": 9
+          },
+          "target_type": "AnyEnemy",
+          "id": "POWDERED_DEMISE",
+          "slot_index": 0,
+          "usage": "CombatOnly",
+          "can_use": true,
+          "can_discard": true
+        }
+      },
+      "before_potions": [
+        "POWDERED_DEMISE"
+      ],
+      "selection_boundaries": [],
+      "after_potions": [],
+      "seconds": 2.086,
+      "trace_path": "artifacts/runs/a1e116ce-cfa4-4eac-bddb-ecd1614bb390/decisions.jsonl",
+      "trace_sha256": "475a0892d9939b1f3ced497b30a5f570cb8d1589a485698a339d35217125d3b1",
+      "trace_verified": true
+    },
+    {
+      "kind": "reward_full",
+      "character": "Ironclad",
+      "mode": "legacy",
+      "synthetic": false,
+      "status": "compatible",
+      "checks": {
+        "legacy_entry_parity": true
+      },
+      "seed": "e089_holdout_001",
+      "entry_hash": "788a21ab76c202beb9289381451b9061d939e426c4d89ffb688e21b601d09fe2",
+      "seconds": 3.462,
+      "trace_path": "artifacts/runs/76afdd91-7d4e-4b80-8af3-8be76e52b10c/decisions.jsonl",
+      "trace_sha256": "83a4d14ccc491390d87ca24915fc9d1fef9d3f4088541b17cf75b7546254ce0c",
+      "trace_verified": true
+    },
+    {
+      "kind": "reward_full",
+      "character": "Ironclad",
+      "mode": "resources",
+      "synthetic": false,
+      "status": "no_potion_drop",
+      "checks": {
+        "legacy_entry_parity": true
+      },
+      "seed": "e089_holdout_001",
+      "entry_hash": "788a21ab76c202beb9289381451b9061d939e426c4d89ffb688e21b601d09fe2",
+      "boundary": "card_reward",
+      "seconds": 3.484,
+      "trace_path": "artifacts/runs/3ed3b7f4-4865-49dd-b39c-78968e902976/decisions.jsonl",
+      "trace_sha256": "01707f539f65639d959c17b6cc863daa482b98e9c554035d9c4c94d8a80bfdf0",
+      "trace_verified": true
+    },
+    {
+      "kind": "combat",
+      "character": "Silent",
+      "mode": "legacy",
+      "synthetic": false,
+      "status": "compatible",
+      "checks": {
+        "legacy_entry_parity": true
+      },
+      "seed": "e089_holdout_001",
+      "entry_hash": "53a5c81e080e387bb760d61994cc0495bb4ad47586dbaa0964a59b59bb2cd3f8",
+      "seconds": 2.441,
+      "trace_path": "artifacts/runs/3f9d9ab3-ec53-4ecd-942b-682b13e69ae2/decisions.jsonl",
+      "trace_sha256": "45ce33e2271b35734a80fe2acd78813e5523a45c80ef65f5c09f6944d82e9906",
+      "trace_verified": true
+    },
+    {
+      "kind": "combat",
+      "character": "Silent",
+      "mode": "resources",
+      "synthetic": false,
+      "status": "compatible",
+      "checks": {
+        "legacy_entry_parity": true,
+        "capacity_exported": true,
+        "legal_manual_potion_available": true,
+        "potion_consumed": true
+      },
+      "seed": "e089_holdout_001",
+      "entry_hash": "53a5c81e080e387bb760d61994cc0495bb4ad47586dbaa0964a59b59bb2cd3f8",
+      "selected": {
+        "id": "p000",
+        "action": {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 0,
+            "target_index": 0
+          }
+        },
+        "name": "Powdered Demise",
+        "details": {
+          "index": 0,
+          "name": "Powdered Demise",
+          "description": "Enemy loses {Demise} HP at the end of each of its turns.",
+          "vars": {
+            "Demise": 9
+          },
+          "target_type": "AnyEnemy",
+          "id": "POWDERED_DEMISE",
+          "slot_index": 0,
+          "usage": "CombatOnly",
+          "can_use": true,
+          "can_discard": true
+        }
+      },
+      "before_potions": [
+        "POWDERED_DEMISE"
+      ],
+      "selection_boundaries": [],
+      "after_potions": [],
+      "seconds": 2.556,
+      "trace_path": "artifacts/runs/7d5db472-5a47-43d9-9e90-1ed3390ac518/decisions.jsonl",
+      "trace_sha256": "085e1588e8106aa830182001f852c7812998d46c0e36af55b5301dcc9759beb5",
+      "trace_verified": true
+    },
+    {
+      "kind": "combat",
+      "character": "Defect",
+      "mode": "legacy",
+      "synthetic": false,
+      "status": "compatible",
+      "checks": {
+        "legacy_entry_parity": true
+      },
+      "seed": "e089_holdout_001",
+      "entry_hash": "5d04432e01d57c3ec5d7667da23bc5d185664b00bfee71cd719b050a488f4bb9",
+      "seconds": 2.185,
+      "trace_path": "artifacts/runs/a6c5ead2-1963-41b5-9d9c-a40eab95a872/decisions.jsonl",
+      "trace_sha256": "a263761b609be1b098921ffcae675f9b5cb850f8214ca3799454e3daa4ac7d75",
+      "trace_verified": true
+    },
+    {
+      "kind": "combat",
+      "character": "Defect",
+      "mode": "resources",
+      "synthetic": false,
+      "status": "compatible",
+      "checks": {
+        "legacy_entry_parity": true,
+        "capacity_exported": true,
+        "legal_manual_potion_available": true,
+        "potion_consumed": true
+      },
+      "seed": "e089_holdout_001",
+      "entry_hash": "5d04432e01d57c3ec5d7667da23bc5d185664b00bfee71cd719b050a488f4bb9",
+      "selected": {
+        "id": "p000",
+        "action": {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 0,
+            "target_index": 0
+          }
+        },
+        "name": "Powdered Demise",
+        "details": {
+          "index": 0,
+          "name": "Powdered Demise",
+          "description": "Enemy loses {Demise} HP at the end of each of its turns.",
+          "vars": {
+            "Demise": 9
+          },
+          "target_type": "AnyEnemy",
+          "id": "POWDERED_DEMISE",
+          "slot_index": 0,
+          "usage": "CombatOnly",
+          "can_use": true,
+          "can_discard": true
+        }
+      },
+      "before_potions": [
+        "POWDERED_DEMISE"
+      ],
+      "selection_boundaries": [],
+      "after_potions": [],
+      "seconds": 2.142,
+      "trace_path": "artifacts/runs/beb45c31-4107-4dfc-9a91-0b788ec44a07/decisions.jsonl",
+      "trace_sha256": "5bf2706024c44db4758cd0199d5e10aa8d43a307dc26d4d1a52f6758eac64ea1",
+      "trace_verified": true
+    },
+    {
+      "kind": "combat",
+      "character": "Regent",
+      "mode": "legacy",
+      "synthetic": false,
+      "status": "compatible",
+      "checks": {
+        "legacy_entry_parity": true
+      },
+      "seed": "e089_holdout_001",
+      "entry_hash": "c6fa30e74d8fd508ff915ed2096e3d78f0dbb09e9848db3777156dc4089bba9d",
+      "seconds": 2.122,
+      "trace_path": "artifacts/runs/a432e237-f97d-41c0-b764-906e49927704/decisions.jsonl",
+      "trace_sha256": "adef2c9bb506f64c8cb557046810f8a0f1e9d66b9622243ff23c959b933de565",
+      "trace_verified": true
+    },
+    {
+      "kind": "combat",
+      "character": "Regent",
+      "mode": "resources",
+      "synthetic": false,
+      "status": "compatible",
+      "checks": {
+        "legacy_entry_parity": true,
+        "capacity_exported": true,
+        "legal_manual_potion_available": true,
+        "potion_consumed": true
+      },
+      "seed": "e089_holdout_001",
+      "entry_hash": "c6fa30e74d8fd508ff915ed2096e3d78f0dbb09e9848db3777156dc4089bba9d",
+      "selected": {
+        "id": "p000",
+        "action": {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 0,
+            "target_index": 0
+          }
+        },
+        "name": "Powdered Demise",
+        "details": {
+          "index": 0,
+          "name": "Powdered Demise",
+          "description": "Enemy loses {Demise} HP at the end of each of its turns.",
+          "vars": {
+            "Demise": 9
+          },
+          "target_type": "AnyEnemy",
+          "id": "POWDERED_DEMISE",
+          "slot_index": 0,
+          "usage": "CombatOnly",
+          "can_use": true,
+          "can_discard": true
+        }
+      },
+      "before_potions": [
+        "POWDERED_DEMISE"
+      ],
+      "selection_boundaries": [],
+      "after_potions": [],
+      "seconds": 2.177,
+      "trace_path": "artifacts/runs/0337e797-b0ad-45c3-b272-cd80523c02e1/decisions.jsonl",
+      "trace_sha256": "4d3baceaeb25757435e26880356fe82eaf9a5c05fd83e0c5d077c5c631e01729",
+      "trace_verified": true
+    },
+    {
+      "kind": "combat",
+      "character": "Necrobinder",
+      "mode": "legacy",
+      "synthetic": false,
+      "status": "compatible",
+      "checks": {
+        "legacy_entry_parity": true
+      },
+      "seed": "e089_holdout_001",
+      "entry_hash": "2c51ae9c809ee992d02cb8c982a30bf4c8089b922c8824660e4b04335724b2cd",
+      "seconds": 2.312,
+      "trace_path": "artifacts/runs/ac61ba5d-107d-4783-8eb5-bfdaec9f3ffd/decisions.jsonl",
+      "trace_sha256": "1e914898dc9b5e590bef16a68355529594be9cd61a89e342caacf8965a203880",
+      "trace_verified": true
+    },
+    {
+      "kind": "combat",
+      "character": "Necrobinder",
+      "mode": "resources",
+      "synthetic": false,
+      "status": "compatible",
+      "checks": {
+        "legacy_entry_parity": true,
+        "capacity_exported": true,
+        "legal_manual_potion_available": true,
+        "potion_consumed": true
+      },
+      "seed": "e089_holdout_001",
+      "entry_hash": "2c51ae9c809ee992d02cb8c982a30bf4c8089b922c8824660e4b04335724b2cd",
+      "selected": {
+        "id": "p000",
+        "action": {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 0,
+            "target_index": 0
+          }
+        },
+        "name": "Powdered Demise",
+        "details": {
+          "index": 0,
+          "name": "Powdered Demise",
+          "description": "Enemy loses {Demise} HP at the end of each of its turns.",
+          "vars": {
+            "Demise": 9
+          },
+          "target_type": "AnyEnemy",
+          "id": "POWDERED_DEMISE",
+          "slot_index": 0,
+          "usage": "CombatOnly",
+          "can_use": true,
+          "can_discard": true
+        }
+      },
+      "before_potions": [
+        "POWDERED_DEMISE"
+      ],
+      "selection_boundaries": [],
+      "after_potions": [],
+      "seconds": 2.35,
+      "trace_path": "artifacts/runs/42db47c1-f51f-4aa6-9895-eaeaba1fe19a/decisions.jsonl",
+      "trace_sha256": "658c680b90f85517fd388aa4c287ad3b0c901cf0e92d2aa531411d1be196cab4",
+      "trace_verified": true
+    },
+    {
+      "kind": "shop",
+      "character": "Ironclad",
+      "mode": "legacy",
+      "synthetic": false,
+      "status": "compatible",
+      "checks": {
+        "legacy_entry_parity": true
+      },
+      "seed": "e066_shop_002",
+      "entry_hash": "6026fd13a777060bd08b6243d556b5a32e9fb8a3ccc71af9594bdb8ce84f2285",
+      "seconds": 4.571,
+      "trace_path": "artifacts/runs/99e2eea1-4798-4542-85b2-d5d14a6f46ab/decisions.jsonl",
+      "trace_sha256": "74831b52827e70b08608e5236d8e35bda12335a9614b6e04ca0bddcc425b8c09",
+      "trace_verified": true
+    },
+    {
+      "kind": "shop",
+      "character": "Ironclad",
+      "mode": "resources",
+      "synthetic": false,
+      "status": "compatible",
+      "checks": {
+        "legacy_entry_parity": true,
+        "discard_frees_slot": true,
+        "advertised_price_paid": true,
+        "advertised_potion_acquired": true
+      },
+      "seed": "e066_shop_002",
+      "entry_hash": "6026fd13a777060bd08b6243d556b5a32e9fb8a3ccc71af9594bdb8ce84f2285",
+      "purchase": {
+        "action": {
+          "cmd": "action",
+          "action": "buy_potion",
+          "args": {
+            "potion_index": 0
+          }
+        },
+        "name": "buy_potion",
+        "details": {
+          "index": 0,
+          "name": "Weak Potion",
+          "description": "Apply {WeakPower} Weak.",
+          "cost": 50,
+          "is_stocked": true,
+          "id": "WEAK_POTION",
+          "can_buy": true
+        },
+        "id": "a010"
+      },
+      "before_potions": [
+        "WEAK_POTION",
+        "LIQUID_BRONZE"
+      ],
+      "after_potions": [
+        "WEAK_POTION",
+        "WEAK_POTION",
+        "LIQUID_BRONZE"
+      ],
+      "gold_before": 270,
+      "gold_after": 220,
+      "seconds": 4.744,
+      "trace_path": "artifacts/runs/c7caf993-0903-429d-aabf-408163996eff/decisions.jsonl",
+      "trace_sha256": "9cf446cab9370562d17f128d23bf0bd42e7314bb4dd8787ad7aa59cd1a0fa1ff",
+      "trace_verified": true
+    },
+    {
+      "kind": "shop",
+      "character": "Silent",
+      "mode": "legacy",
+      "synthetic": false,
+      "status": "compatible",
+      "checks": {
+        "legacy_entry_parity": true
+      },
+      "seed": "e066_shop_002",
+      "entry_hash": "5054693aa1b66923b7b6e9bb647e15e1210815869526cc1958ecb14c3c719449",
+      "seconds": 7.454,
+      "trace_path": "artifacts/runs/a52a5e75-1502-4bf0-b363-41f7fa833f0a/decisions.jsonl",
+      "trace_sha256": "fe2d33b91695dbbbb9829a866bd845271a689cc0253c01214d94a2b240f45d80",
+      "trace_verified": true
+    },
+    {
+      "kind": "shop",
+      "character": "Silent",
+      "mode": "resources",
+      "synthetic": false,
+      "status": "compatible",
+      "checks": {
+        "legacy_entry_parity": true,
+        "discard_frees_slot": true,
+        "advertised_price_paid": true,
+        "advertised_potion_acquired": true
+      },
+      "seed": "e066_shop_002",
+      "entry_hash": "5054693aa1b66923b7b6e9bb647e15e1210815869526cc1958ecb14c3c719449",
+      "purchase": {
+        "action": {
+          "cmd": "action",
+          "action": "buy_potion",
+          "args": {
+            "potion_index": 0
+          }
+        },
+        "name": "buy_potion",
+        "details": {
+          "index": 0,
+          "name": "Weak Potion",
+          "description": "Apply {WeakPower} Weak.",
+          "cost": 50,
+          "is_stocked": true,
+          "id": "WEAK_POTION",
+          "can_buy": true
+        },
+        "id": "a010"
+      },
+      "before_potions": [
+        "WEAK_POTION",
+        "LIQUID_BRONZE"
+      ],
+      "after_potions": [
+        "WEAK_POTION",
+        "WEAK_POTION",
+        "LIQUID_BRONZE"
+      ],
+      "gold_before": 270,
+      "gold_after": 220,
+      "seconds": 7.419,
+      "trace_path": "artifacts/runs/fc96dcd3-05a4-45ba-beae-30e0338de6ca/decisions.jsonl",
+      "trace_sha256": "2ad4ba2d1c6556c469c378deac801ca9b47d249d28cdbe363a634ee03137aae0",
+      "trace_verified": true
+    },
+    {
+      "kind": "combat",
+      "character": "Ironclad",
+      "mode": "synthetic_selection",
+      "synthetic": true,
+      "status": "compatible",
+      "checks": {
+        "legacy_entry_parity": true,
+        "capacity_exported": true,
+        "automatic_excluded": true,
+        "potion_consumed": true,
+        "selection_exercised": true
+      },
+      "seed": "e089_holdout_001",
+      "entry_hash": "68ff2730e047f91a30b1dbc48aad1f768c4c72f7c1f5e0d29e61d31ef74078c5",
+      "selected": {
+        "id": "p000",
+        "action": {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 0
+          }
+        },
+        "name": "Gambler's Brew",
+        "details": {
+          "index": 0,
+          "name": "Gambler's Brew",
+          "description": "Discard any number of cards, then draw that many.",
+          "vars": null,
+          "target_type": "AnyPlayer",
+          "id": "GAMBLERS_BREW",
+          "slot_index": 0,
+          "usage": "CombatOnly",
+          "can_use": true,
+          "can_discard": true
+        }
+      },
+      "before_potions": [
+        "GAMBLERS_BREW",
+        "FAIRY_IN_A_BOTTLE"
+      ],
+      "selection_boundaries": [
+        "card_select"
+      ],
+      "after_potions": [
+        "FAIRY_IN_A_BOTTLE"
+      ],
+      "seconds": 2.123,
+      "trace_path": "artifacts/runs/40438005-21c0-44f6-970f-779c31286347/decisions.jsonl",
+      "trace_sha256": "b60032ee56f9b8a9b34a778a8a110d43647985aa520054fa1cc690ddcb53e81f",
+      "trace_verified": true
+    },
+    {
+      "kind": "reward_space",
+      "character": "Ironclad",
+      "mode": "synthetic_full_reward",
+      "synthetic": true,
+      "status": "compatible",
+      "checks": {
+        "legacy_entry_parity": true,
+        "explicit_potion_reward": true,
+        "no_claim_when_full": true,
+        "reward_survives_discard": true,
+        "discard_removed_one": true,
+        "reward_potion_received": true,
+        "reward_continues": true
+      },
+      "seed": "e089_holdout_001",
+      "entry_hash": "cbf9557cb6bd5c5768254f607a6a4e943b6c3b8584c2cf7a38e02284b3b595fb",
+      "boundary": "potion_reward",
+      "reward": {
+        "id": "POWDERED_DEMISE",
+        "name": "Powdered Demise",
+        "description": "Enemy loses {Demise} HP at the end of each of its turns.",
+        "target_type": "AnyEnemy",
+        "usage": "CombatOnly",
+        "vars": {
+          "Demise": 9
+        }
+      },
+      "seconds": 2.017,
+      "trace_path": "artifacts/runs/5f590af7-54bf-42af-af4c-2db1dcbd1e04/decisions.jsonl",
+      "trace_sha256": "62215525c11f9d41b43b02db8a912eb06dc8ae754b337405cd4fbc6d5f1e3079",
+      "trace_verified": true
+    }
+  ]
+}

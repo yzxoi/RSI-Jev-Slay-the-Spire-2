@@ -4,6 +4,8 @@ from .engine import action
 def with_potions(state,choices):
     out=list(choices)
     for potion in state.get('player',{}).get('potions',[]):
+        if potion.get('can_use') is False or potion.get('usage') in ('Automatic', 'None'):
+            continue
         kind=potion.get('target_type')
         if kind=='AnyEnemy':targets=[e['index'] for e in state.get('enemies',[])]
         elif kind in ['Self','AnyPlayer','AllEnemies','RandomEnemy','None','TargetedNoCreature']:targets=[None]
