@@ -26,6 +26,7 @@ from .danger import review_projected_loss
 from .review_lease import ReviewLease,current_hp_review,projected_loss_requires_expert
 from .shop_review import funded_shop_exit_review
 from .resources import potion_decision
+from .multiplayer_guard import require_local_multiplayer
 
 
 GUIDED_COMBAT_POLICIES={'planned','triggered','retaliate','floor_guided','room_guided'}
@@ -55,7 +56,7 @@ def hard_endturn_review(state):
 
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--expected-run-id',required=True);p.add_argument('--max-actions',type=int,default=2000);p.add_argument('--max-seconds',type=int,default=3600);p.add_argument('--max-usd',type=float,default=3);p.add_argument('--output',required=True);p.add_argument('--execute',action='store_true');p.add_argument('--expert-choice');p.add_argument('--review-lease',action='store_true');p.add_argument('--pause-on-danger',action='store_true');p.add_argument('--danger-hp',type=int,default=20);p.add_argument('--stop-file');p.add_argument('--review-macro',action='store_true');p.add_argument('--review-cards',default='');p.add_argument('--auto-combat-selections',action='store_true');p.add_argument('--guard-exhaust-selection',action='store_true');p.add_argument('--letter-opener-plan',action='store_true');p.add_argument('--review-funded-shop',action='store_true');p.add_argument('--floor-plan');p.add_argument('--room-plan');p.add_argument('--combat-policy',choices=['jev','planned','triggered','retaliate','floor_guided','room_guided'],default='planned');a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--expected-run-id',required=True);p.add_argument('--require-local-multiplayer',action='store_true');p.add_argument('--expected-player-count',type=int,default=4);p.add_argument('--max-actions',type=int,default=2000);p.add_argument('--max-seconds',type=int,default=3600);p.add_argument('--max-usd',type=float,default=3);p.add_argument('--output',required=True);p.add_argument('--execute',action='store_true');p.add_argument('--expert-choice');p.add_argument('--review-lease',action='store_true');p.add_argument('--pause-on-danger',action='store_true');p.add_argument('--danger-hp',type=int,default=20);p.add_argument('--stop-file');p.add_argument('--review-macro',action='store_true');p.add_argument('--review-cards',default='');p.add_argument('--auto-combat-selections',action='store_true');p.add_argument('--guard-exhaust-selection',action='store_true');p.add_argument('--letter-opener-plan',action='store_true');p.add_argument('--review-funded-shop',action='store_true');p.add_argument('--floor-plan');p.add_argument('--room-plan');p.add_argument('--combat-policy',choices=['jev','planned','triggered','retaliate','floor_guided','room_guided'],default='planned');a=p.parse_args()
     if a.review_lease and (not a.expert_choice or not a.pause_on_danger):p.error('--review-lease requires --expert-choice and --pause-on-danger')
     if (a.combat_policy=='floor_guided') != bool(a.floor_plan):p.error('floor_guided requires --floor-plan, and a floor plan requires floor_guided')
     if (a.combat_policy=='room_guided') != bool(a.room_plan) or (a.room_plan and a.floor_plan):p.error('room_guided requires --room-plan, and plans are mutually exclusive')
@@ -72,6 +73,7 @@ def main():
             mcp=MCP('http://127.0.0.1:8080/mcp',trace);health=mcp.call('health_check')
             if health.get('play_running') or health.get('status')!='ready':raise RuntimeError('Not a healthy single-writer game')
             raw=mcp.call('get_raw_game_state');result['initial_run']=raw.get('run');result['health']=health
+            local_player_id = require_local_multiplayer(raw,expected_player_count=a.expected_player_count) if a.require_local_multiplayer else None
             floor_plan=load_floor_plan(a.floor_plan,raw) if a.floor_plan else None
             if floor_plan:trace.write('floor_plan',floor_plan)
             room_plan=load_room_plan(a.room_plan,raw) if a.room_plan else None
@@ -82,6 +84,8 @@ def main():
                 if turn_key(raw) is not None and turn_key(raw)!=settled_key:
                     raw=settle_turn(mcp,raw,trace);settled_key=turn_key(raw)
                 if raw.get('run_id')!=a.expected_run_id:raise RuntimeError('Game run identity changed')
+                if a.require_local_multiplayer:
+                    require_local_multiplayer(raw,expected_player_count=a.expected_player_count,expected_local_id=local_player_id)
                 screen=raw.get('screen');scenes[screen]+=1
                 if screen=='GAME_OVER':result['status']='victory' if (raw.get('game_over') or {}).get('is_victory') else 'normal_defeat';break
                 if plan_complete(floor_plan,raw,result['actions']):result['status']='floor_plan_boundary';break
@@ -110,7 +114,9 @@ def main():
                 if screen in ['PAUSE_MENU','SETTINGS']:raise RuntimeError('User paused game')
                 cs=candidates(raw,history)
                 if not cs:
-                    waits+=1
+                    waiting_for_peers=(a.require_local_multiplayer and screen=='COMBAT' and
+                        bool(((raw.get('combat') or {}).get('action_readiness') or {}).get('local_ready_to_end_turn')))
+                    waits=0 if waiting_for_peers else waits+1
                     if waits>6:raise RuntimeError(f'No supported action: {screen} {raw.get("available_actions")}')
                     mcp.call('wait_until_actionable',{'timeout_seconds':10,'raw_state':True});time.sleep(.15);raw=mcp.call('get_raw_game_state');continue
                 event_cs,event_guard=bound_bridge_reroll(raw,cs) if not expert else (cs,None)
@@ -160,6 +166,8 @@ def main():
                 trace.write('selected',selected)
                 if mcp.call('health_check').get('play_running'):raise RuntimeError('Competing autoplay became active')
                 fresh=mcp.call('get_raw_game_state')
+                if a.require_local_multiplayer:
+                    require_local_multiplayer(fresh,expected_player_count=a.expected_player_count,expected_local_id=local_player_id)
                 if fingerprint(raw)!=fingerprint(fresh) or selected['action'] not in [c['action'] for c in candidates(fresh,history)]:
                     trace.write('stale_proposal_discarded',{'before':fingerprint(raw),'after':fingerprint(fresh)})
                     if lease:lease.revoke('stale_proposal')
