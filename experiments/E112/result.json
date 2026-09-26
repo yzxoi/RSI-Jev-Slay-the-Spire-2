@@ -1,0 +1,38 @@
+{
+  "experiment": "E112",
+  "issue": 214,
+  "tested_sha": "55125c69b4ac82a9b042e36bfcd3d3c603dc46e9",
+  "date": "2026-09-26",
+  "scope": "offline_controller_mechanics",
+  "baseline": {
+    "experiment": "E111",
+    "game_run_id": "32ASTF9N6E",
+    "accepted_local_actions": 47,
+    "turn_wait_timeouts": 2,
+    "trace_sha256": [
+      "634f3cc260157319230fe494859d26c6a44ae530855a53786ce565a5aa1cb532",
+      "913d2e3c746a4f1544a343e82b10d46d22bc947e62b8058fdac68564dcff4042"
+    ],
+    "ultimate_session_end": "host_abandoned_at_floor_13_not_gameplay_defeat"
+  },
+  "environment": {
+    "python": "3.13.5",
+    "game": "v0.107.1",
+    "adapter_mod": "0.16.2",
+    "model_calls": 0
+  },
+  "checks": {
+    "command": "python3 -m unittest discover -s tests -q",
+    "tests_passed": 160,
+    "new_coop_turn_tests": 6,
+    "git_diff_check": "passed"
+  },
+  "real_game_evaluation": {
+    "status": "unavailable_no_lobby",
+    "last_observed_screen": "MAIN_MENU",
+    "actions": 0,
+    "trace_sha256": null,
+    "victory": null
+  },
+  "decision": "hold_pr_for_real_coop_validation"
+}
