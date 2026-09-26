@@ -1,0 +1,116 @@
+{
+  "experiment": "E101",
+  "scope": "Offline counterfactual one-action mechanics, not new battles",
+  "manifest": {
+    "schema_version": 1,
+    "code_commit": "f967713bace2584d463f82235e918272d267027f",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "71505f31e29c370667636600a58fe2b3e270f98e99e3c5a384d176a7f0188274",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+      "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+  },
+  "states": 149,
+  "abstained_states": 146,
+  "results": [
+    {
+      "probe_id": "4ef2f931-8b41-4c6b-9aa7-4b7f5c140779",
+      "entry_hash": "5d88f1ad36aec0c5a98003bdcf00ecb467d7463661818211827ca406c35251be",
+      "action": {
+        "cmd": "action",
+        "action": "play_card",
+        "args": {
+          "card_index": 0,
+          "target_index": 2
+        }
+      },
+      "certified": true,
+      "status": "boss_clear",
+      "entry_verified": true,
+      "after_hash": "5beccf5a429188f049f5d4e20e2c5e63d4d678ed1d757b87a874eeb1b113b3c3",
+      "final_hp": 22,
+      "seconds": 5.3227,
+      "wire_sha256": "a0508db3f2f71ea4be2a088a4f8466907908439455bfaa8e9e6724b6518e57bb",
+      "trace_path": "artifacts/runs/4ef2f931-8b41-4c6b-9aa7-4b7f5c140779/decisions.jsonl",
+      "trace_sha256": "974eb4aa55fe88cf5cc038b82f190116fb8153329322671aea86412611bc3f64"
+    },
+    {
+      "probe_id": "45cbf128-6952-4f8d-bf8e-f41700aea962",
+      "entry_hash": "5d88f1ad36aec0c5a98003bdcf00ecb467d7463661818211827ca406c35251be",
+      "action": {
+        "cmd": "action",
+        "action": "play_card",
+        "args": {
+          "card_index": 1,
+          "target_index": 2
+        }
+      },
+      "certified": true,
+      "status": "boss_clear",
+      "entry_verified": true,
+      "after_hash": "5beccf5a429188f049f5d4e20e2c5e63d4d678ed1d757b87a874eeb1b113b3c3",
+      "final_hp": 22,
+      "seconds": 5.288,
+      "wire_sha256": "8faee813b21a659042748cea8e5e29f6b8960dc4c1f41cf3f11dedec93babf33",
+      "trace_path": "artifacts/runs/45cbf128-6952-4f8d-bf8e-f41700aea962/decisions.jsonl",
+      "trace_sha256": "f6a9dfa124ba0209a13fd0a3959dcfe3787b69a317e6a477c61ba50417222d49"
+    },
+    {
+      "probe_id": "26e179a2-9d72-4c00-9dd8-779ae56f7e23",
+      "entry_hash": "e7ed0603d969c94edd9a04625bb03791b6f91cc1e383cfbc9e01abf7ce30a9b1",
+      "action": {
+        "cmd": "action",
+        "action": "play_card",
+        "args": {
+          "card_index": 0,
+          "target_index": 2
+        }
+      },
+      "certified": true,
+      "status": "boss_clear",
+      "entry_verified": true,
+      "after_hash": "16de3038ac7c0caca3a03bfb193e914cceb00e6d6ce29ed42244e7e635d30dd9",
+      "final_hp": 48,
+      "seconds": 5.2603,
+      "wire_sha256": "f632c55b5d9aeb85470df83149f5c47eecaaa1f9495f9b655dac75cf9bac10d7",
+      "trace_path": "artifacts/runs/26e179a2-9d72-4c00-9dd8-779ae56f7e23/decisions.jsonl",
+      "trace_sha256": "601f4af679be4617fac40f0c307d2fb9d7a891cf77b95febe6bd740689dfb858"
+    },
+    {
+      "probe_id": "07570b48-4872-4a45-84f5-3462c6fcd509",
+      "entry_hash": "3c692f3c4ae9e28d29938b1ea61446aad4a58c775a7a4f4356d6a677709db751",
+      "action": {
+        "cmd": "action",
+        "action": "play_card",
+        "args": {
+          "card_index": 1,
+          "target_index": 2
+        }
+      },
+      "certified": true,
+      "status": "boss_clear",
+      "entry_verified": true,
+      "after_hash": "a199c35168972dde80869e82736e0f613d2caec26ec95999de84bc56f328ea02",
+      "final_hp": 27,
+      "seconds": 8.5169,
+      "wire_sha256": "55b7c8fbc1689582fd23ae2b8af36de1e25f537b60ade422cf2d52486d664b4b",
+      "trace_path": "artifacts/runs/07570b48-4872-4a45-84f5-3462c6fcd509/decisions.jsonl",
+      "trace_sha256": "842a1115d612cb800987d530dd9b7a57bca19135de50cc93a04a0fdb11e2beb3"
+    }
+  ]
+}

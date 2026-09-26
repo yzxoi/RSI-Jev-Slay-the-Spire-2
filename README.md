@@ -22,6 +22,10 @@
 
 [E099](experiments/E099/README.md)比较实际逐步出牌：两个不同于 E096/E097 的 A10 Boss 入口，Jev 自主执行 0/2、一次 Astra 计划后交给 Jev 0/2、Astra 从入口持续接管 2/2。预设的简单路由组合只保留 1/2 胜利，未获推广。静态建议的执行出现明确缺口：开场用药指令被忽略，并错过可用的领袖斩杀。接管共需 22 份专家决策包，Astra token/费用尚不可计量；Jev 88 次请求共 $0.020586762。这里只是两个历史局面的机制实验，尚未验证自动路由或整局胜率。下一步分别测试[可执行用药约束](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/192)与[单步斩杀验证](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/193)。
 
+[E100](experiments/E100/README.md)将上述计划里的用药要求变成程序约束：两个旧版 A10 Boss 入口各做三次对照，静态计划 0/6，程序执行用药 5/6；12 次规定用药全部正确落实。没有增加局中 Astra 调用，Jev 请求数从 146 降到 131。该结果仍只是两个开发局面的重复试验，尚未证明新种子或整局胜率。
+
+[E101](experiments/E101/README.md)增加“伤害预览提名 → 真实引擎精确续演确认 → 正式执行”的单步领袖斩杀保障。独立于用药约束的对照从 1/6 提升到 3/6，三次程序斩杀均与验证分支完全一致；每次验证耗时约 5–7 秒。范围仅限支持的基础攻击，尚不是通用战斗求解器。
+
 ## 运行与验证
 
 需要本地合法安装的游戏，以及 `dependencies.json` 固定的 headless 依赖和 .NET SDK。原生实战另需已运行的 [STS2-Agent MCP](https://github.com/CharTyr/STS2-Agent)。脚本会从本地游戏安装读取专有文件；仓库不包含游戏二进制。Jev 调用使用环境变量 `OPENROUTER_RSI_JEV_KEY`，也可放在被 Git 忽略的 `.env` 中；不要提交或打印密钥。

@@ -1,0 +1,392 @@
+{
+  "experiment": "E101",
+  "canonical_runs": [
+    {
+      "run_id": "5d3e794a-68b9-4a91-9435-4a99ae3d6fda",
+      "case": "ironclad",
+      "arm": "baseline",
+      "repeat": 0,
+      "checks": {
+        "trace_hash": true,
+        "wire_hash": true,
+        "entry": true,
+        "prefix": true,
+        "no_debug": true,
+        "state_chain": true,
+        "legal": true,
+        "contracts": true,
+        "certificates": true,
+        "terminal_scope": true,
+        "trajectory": true,
+        "counts": true,
+        "program_counts": true,
+        "usage": true,
+        "clean_tested_tree": true
+      },
+      "sources": {
+        "jev": 22
+      },
+      "passed": true
+    },
+    {
+      "run_id": "6c198fd9-3d28-474c-a043-59097ea80f93",
+      "case": "ironclad",
+      "arm": "lethal",
+      "repeat": 0,
+      "checks": {
+        "trace_hash": true,
+        "wire_hash": true,
+        "entry": true,
+        "prefix": true,
+        "no_debug": true,
+        "state_chain": true,
+        "legal": true,
+        "contracts": true,
+        "certificates": true,
+        "terminal_scope": true,
+        "trajectory": true,
+        "counts": true,
+        "program_counts": true,
+        "usage": true,
+        "clean_tested_tree": true
+      },
+      "sources": {
+        "jev": 19,
+        "certified_lethal": 1
+      },
+      "passed": true
+    },
+    {
+      "run_id": "a278092d-e527-437d-a41e-1fa576cc3f1b",
+      "case": "silent",
+      "arm": "baseline",
+      "repeat": 0,
+      "checks": {
+        "trace_hash": true,
+        "wire_hash": true,
+        "entry": true,
+        "prefix": true,
+        "no_debug": true,
+        "state_chain": true,
+        "legal": true,
+        "contracts": true,
+        "certificates": true,
+        "terminal_scope": true,
+        "trajectory": true,
+        "counts": true,
+        "program_counts": true,
+        "usage": true,
+        "clean_tested_tree": true
+      },
+      "sources": {
+        "jev": 30,
+        "only_legal_choice": 5
+      },
+      "passed": true
+    },
+    {
+      "run_id": "b63212f7-c77f-4d4d-ac20-f1fc3058f890",
+      "case": "silent",
+      "arm": "lethal",
+      "repeat": 0,
+      "checks": {
+        "trace_hash": true,
+        "wire_hash": true,
+        "entry": true,
+        "prefix": true,
+        "no_debug": true,
+        "state_chain": true,
+        "legal": true,
+        "contracts": true,
+        "certificates": true,
+        "terminal_scope": true,
+        "trajectory": true,
+        "counts": true,
+        "program_counts": true,
+        "usage": true,
+        "clean_tested_tree": true
+      },
+      "sources": {
+        "jev": 28
+      },
+      "passed": true
+    },
+    {
+      "run_id": "66475cad-244a-4650-ab69-c04c00210abc",
+      "case": "ironclad",
+      "arm": "lethal",
+      "repeat": 1,
+      "checks": {
+        "trace_hash": true,
+        "wire_hash": true,
+        "entry": true,
+        "prefix": true,
+        "no_debug": true,
+        "state_chain": true,
+        "legal": true,
+        "contracts": true,
+        "certificates": true,
+        "terminal_scope": true,
+        "trajectory": true,
+        "counts": true,
+        "program_counts": true,
+        "usage": true,
+        "clean_tested_tree": true
+      },
+      "sources": {
+        "jev": 20,
+        "certified_lethal": 1
+      },
+      "passed": true
+    },
+    {
+      "run_id": "deeca617-fc4e-4e99-a6c6-c8920d41f754",
+      "case": "ironclad",
+      "arm": "baseline",
+      "repeat": 1,
+      "checks": {
+        "trace_hash": true,
+        "wire_hash": true,
+        "entry": true,
+        "prefix": true,
+        "no_debug": true,
+        "state_chain": true,
+        "legal": true,
+        "contracts": true,
+        "certificates": true,
+        "terminal_scope": true,
+        "trajectory": true,
+        "counts": true,
+        "program_counts": true,
+        "usage": true,
+        "clean_tested_tree": true
+      },
+      "sources": {
+        "jev": 21
+      },
+      "passed": true
+    },
+    {
+      "run_id": "f061e442-bf35-4720-ade1-e285d3d1a0b3",
+      "case": "silent",
+      "arm": "lethal",
+      "repeat": 1,
+      "checks": {
+        "trace_hash": true,
+        "wire_hash": true,
+        "entry": true,
+        "prefix": true,
+        "no_debug": true,
+        "state_chain": true,
+        "legal": true,
+        "contracts": true,
+        "certificates": true,
+        "terminal_scope": true,
+        "trajectory": true,
+        "counts": true,
+        "program_counts": true,
+        "usage": true,
+        "clean_tested_tree": true
+      },
+      "sources": {
+        "jev": 30,
+        "only_legal_choice": 3
+      },
+      "passed": true
+    },
+    {
+      "run_id": "85ef303f-19a6-4bdf-90ad-46654014a8e6",
+      "case": "silent",
+      "arm": "baseline",
+      "repeat": 1,
+      "checks": {
+        "trace_hash": true,
+        "wire_hash": true,
+        "entry": true,
+        "prefix": true,
+        "no_debug": true,
+        "state_chain": true,
+        "legal": true,
+        "contracts": true,
+        "certificates": true,
+        "terminal_scope": true,
+        "trajectory": true,
+        "counts": true,
+        "program_counts": true,
+        "usage": true,
+        "clean_tested_tree": true
+      },
+      "sources": {
+        "jev": 30,
+        "only_legal_choice": 5
+      },
+      "passed": true
+    },
+    {
+      "run_id": "c9e6f3bc-5aaf-4666-a465-af564ea6c86a",
+      "case": "ironclad",
+      "arm": "baseline",
+      "repeat": 2,
+      "checks": {
+        "trace_hash": true,
+        "wire_hash": true,
+        "entry": true,
+        "prefix": true,
+        "no_debug": true,
+        "state_chain": true,
+        "legal": true,
+        "contracts": true,
+        "certificates": true,
+        "terminal_scope": true,
+        "trajectory": true,
+        "counts": true,
+        "program_counts": true,
+        "usage": true,
+        "clean_tested_tree": true
+      },
+      "sources": {
+        "jev": 21
+      },
+      "passed": true
+    },
+    {
+      "run_id": "2c330221-388f-4eae-82c1-22b219283d51",
+      "case": "ironclad",
+      "arm": "lethal",
+      "repeat": 2,
+      "checks": {
+        "trace_hash": true,
+        "wire_hash": true,
+        "entry": true,
+        "prefix": true,
+        "no_debug": true,
+        "state_chain": true,
+        "legal": true,
+        "contracts": true,
+        "certificates": true,
+        "terminal_scope": true,
+        "trajectory": true,
+        "counts": true,
+        "program_counts": true,
+        "usage": true,
+        "clean_tested_tree": true
+      },
+      "sources": {
+        "jev": 19,
+        "certified_lethal": 1
+      },
+      "passed": true
+    },
+    {
+      "run_id": "ccc2ea9e-b100-4ea3-9b16-432771763e86",
+      "case": "silent",
+      "arm": "baseline",
+      "repeat": 2,
+      "checks": {
+        "trace_hash": true,
+        "wire_hash": true,
+        "entry": true,
+        "prefix": true,
+        "no_debug": true,
+        "state_chain": true,
+        "legal": true,
+        "contracts": true,
+        "certificates": true,
+        "terminal_scope": true,
+        "trajectory": true,
+        "counts": true,
+        "program_counts": true,
+        "usage": true,
+        "clean_tested_tree": true
+      },
+      "sources": {
+        "jev": 30,
+        "only_legal_choice": 3
+      },
+      "passed": true
+    },
+    {
+      "run_id": "039e99b9-af06-44ab-adbe-f6992305035d",
+      "case": "silent",
+      "arm": "lethal",
+      "repeat": 2,
+      "checks": {
+        "trace_hash": true,
+        "wire_hash": true,
+        "entry": true,
+        "prefix": true,
+        "no_debug": true,
+        "state_chain": true,
+        "legal": true,
+        "contracts": true,
+        "certificates": true,
+        "terminal_scope": true,
+        "trajectory": true,
+        "counts": true,
+        "program_counts": true,
+        "usage": true,
+        "clean_tested_tree": true
+      },
+      "sources": {
+        "jev": 30,
+        "only_legal_choice": 1
+      },
+      "passed": true
+    }
+  ],
+  "mechanic_branches": [
+    {
+      "probe_id": "4ef2f931-8b41-4c6b-9aa7-4b7f5c140779",
+      "checks": {
+        "hash": true,
+        "entry": true,
+        "action": true,
+        "after": true,
+        "real_boundary": true,
+        "no_debug": true,
+        "prefix": true
+      },
+      "passed": true
+    },
+    {
+      "probe_id": "45cbf128-6952-4f8d-bf8e-f41700aea962",
+      "checks": {
+        "hash": true,
+        "entry": true,
+        "action": true,
+        "after": true,
+        "real_boundary": true,
+        "no_debug": true,
+        "prefix": true
+      },
+      "passed": true
+    },
+    {
+      "probe_id": "26e179a2-9d72-4c00-9dd8-779ae56f7e23",
+      "checks": {
+        "hash": true,
+        "entry": true,
+        "action": true,
+        "after": true,
+        "real_boundary": true,
+        "no_debug": true,
+        "prefix": true
+      },
+      "passed": true
+    },
+    {
+      "probe_id": "07570b48-4872-4a45-84f5-3462c6fcd509",
+      "checks": {
+        "hash": true,
+        "entry": true,
+        "action": true,
+        "after": true,
+        "real_boundary": true,
+        "no_debug": true,
+        "prefix": true
+      },
+      "passed": true
+    }
+  ],
+  "all_passed": true
+}
