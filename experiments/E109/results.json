@@ -1,0 +1,85 @@
+{
+  "tested_repository_sha": "bebf0a89b52dca1ff8849e3979a9ad16a0b90aa7",
+  "adapter_source": "E106; same pinned DLL/PCK/manifest",
+  "game_version": "v0.107.1",
+  "steam_branch": "public",
+  "installation": "normal Steam app, visible window, native multiplayer create/standard buttons",
+  "health": {
+    "status": "ready",
+    "mcp_enabled": true,
+    "play_running": false,
+    "session_requests": 0,
+    "compatibility": {
+      "reflected_members_checked": 27,
+      "reflected_members_missing": 0,
+      "missing_members": []
+    }
+  },
+  "lobby": {
+    "is_multiplayer": true,
+    "net_game_type": "Host",
+    "local_ready": false,
+    "player_count": 1,
+    "max_players": 4,
+    "selected_character_id": "IRONCLAD"
+  },
+  "steam_host_initialization_logged": true,
+  "mcp_state": {
+    "screen": "CHARACTER_SELECT",
+    "session": {
+      "mode": "multiplayer",
+      "phase": "character_select",
+      "control_scope": "local_player"
+    }
+  },
+  "profile_integrity": {
+    "baseline_files_checked": 37,
+    "existing_files_changed": 0,
+    "existing_saved_run_files_changed": 0
+  },
+  "limitations": [
+    "One local player only; no peer handshake or synchronized gameplay tested.",
+    "No run begun; no gameplay actions, rewards or victory evidence.",
+    "Native log contains controller InputMap action-name errors; keyboard/mouse menu navigation succeeded. Controller behavior is untested."
+  ],
+  "status": "passed_bounded_steam_lobby_smoke",
+  "game_left_running": true,
+  "raw_evidence": [
+    {
+      "path": "artifacts/runs/E109/health-lobby.json",
+      "sha256": "38793b02ceed91c5a683d0a677496e5c64741f2ab7be0afab7532e60e84b50ef"
+    },
+    {
+      "path": "artifacts/runs/E109/health-startup.json",
+      "sha256": "f7cdece81a3715c6d46c718314df5de3a23ae08cc3b588daa457c3f71ecddff7"
+    },
+    {
+      "path": "artifacts/runs/E109/initialize.json",
+      "sha256": "ed7a4ef5fd9e24369795a5dc65cb4f769c573ade4739f2e438a03da8c3c609e2"
+    },
+    {
+      "path": "artifacts/runs/E109/native-game-log.private.txt",
+      "sha256": "8966baacc6fea34886f4af63fe8f6a745254a510ad1d1b4241973e411da1c52d"
+    },
+    {
+      "path": "artifacts/runs/E109/notifications-initialized.json",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "artifacts/runs/E109/profile-comparison.private.json",
+      "sha256": "34445207ffeb6fef73a18f0f1af11adb9ed3b1b4ac32eeafbd55b57bd372b149"
+    },
+    {
+      "path": "artifacts/runs/E109/state-lobby.json",
+      "sha256": "c52c7fa0975e916571b5a1deccbc346a5d6fa5ade4eacd33817e5a85bfea3b7a"
+    },
+    {
+      "path": "artifacts/runs/E109/state-startup.json",
+      "sha256": "4c33aa17c70fc746c8e6a353c49b49b333c8315affa11a3370409a352db53eb3"
+    },
+    {
+      "path": "artifacts/runs/E109/tools-call.json",
+      "sha256": "a4063727e011788abd9628165cc62b1fc8a2fec28e19a816d97c9e76c91f06b7"
+    }
+  ]
+}
