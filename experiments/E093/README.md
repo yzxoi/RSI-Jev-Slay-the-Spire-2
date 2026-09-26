@@ -31,3 +31,9 @@ Reporting correction: commit c843866 initially described all 20 as compatible; t
 ## Final interface guard
 
 A resource policy could otherwise run against an old prebuilt CLI assembly which silently ignores the new environment flag. Add a required capacity-field check immediately after start_run, before any policy action. This is a capability precondition, not a strategy change; the frozen 20-run smoke cohort continues on its already-loaded SHA c843866. Final Python tests separately cover rejection of the old interface and acceptance of the observed schema.
+
+## Frozen smoke iteration 1 — timeout retained
+
+`python3 -m scripts.evaluate_resources_e093` ran all 20 preregistered episodes on SHA `c843866`: 19 normal defeats, zero wins and one time-budget error (Defect, e093_resources_002, treatment; Act 2 floor 12, 351 decisions, 300.789 seconds). The timeout is neither a normal defeat nor a completed improved pair. Nine complete pairs yielded six ties and three shallower treatment outcomes; the tenth is an error. All 20 trace hashes and all 10 projected initial-state pairs verified. Resources: 13 potion claims, 4 uses, 9 skips; zero shop purchases/discards in this small full-run cohort (covered by fixed shop probes instead). 617 paid requests, $0.100584162 reported cost, zero unknown usage, total batch wall time 558.875 seconds.
+
+The timed-out episode spent 86.25 seconds in its own 103 requests. Inspection found `MatchedJev` holds a global lock throughout an HTTP call, serializing unrelated runs. [E095 / #183](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/183) separately tests per-request single-flight concurrency. Do not promote a strength claim or discard this failed cohort. The added resource schema also changes macro context, so this smoke comparison does not isolate potion timing; its purpose is execution coverage.
