@@ -1,0 +1,3656 @@
+{
+  "experiment": "E103",
+  "scope": "Offline mechanism comparisons, not new battle wins",
+  "manifest": {
+    "schema_version": 1,
+    "code_commit": "ecb9a08bc2b30d62fd56165a6e7e4a265c0d18b9",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "71505f31e29c370667636600a58fe2b3e270f98e99e3c5a384d176a7f0188274",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+      "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+  },
+  "inputs_sha256": "5f42ea870c26cd45426cf3558fe47cdd62733fc2509c24a436e30b56fd25a9a0",
+  "model_calls": 0,
+  "api_usd": 0,
+  "cases": [
+    {
+      "id": "silent-baseline-r03",
+      "entry_hash": "b70b8cc1d330619cfd1721bc32c064d1166c7a7ab23f9d03c3b3aa041f1b50d8",
+      "visible_arithmetic": {
+        "incoming": 19,
+        "current_block": 8,
+        "plating_block": 0,
+        "predicted_loss": 11,
+        "best_predicted_hp_gain": 11,
+        "flags_missed_defense": true,
+        "cards": [
+          {
+            "card_index": 1,
+            "predicted_hp_gain": 8
+          },
+          {
+            "card_index": 2,
+            "predicted_hp_gain": 11
+          }
+        ],
+        "seconds": 2.4999957531690598e-05,
+        "scope": "Preview only; does not simulate discard, triggers or future turns."
+      },
+      "plating_arithmetic": {
+        "incoming": 19,
+        "current_block": 8,
+        "plating_block": 2,
+        "predicted_loss": 9,
+        "best_predicted_hp_gain": 9,
+        "flags_missed_defense": true,
+        "cards": [
+          {
+            "card_index": 1,
+            "predicted_hp_gain": 8
+          },
+          {
+            "card_index": 2,
+            "predicted_hp_gain": 9
+          }
+        ],
+        "seconds": 5.292007699608803e-06,
+        "scope": "Preview only; does not simulate discard, triggers or future turns."
+      },
+      "legacy_guard": {
+        "excluded": false,
+        "reason": "unknown_or_card_play_downside",
+        "unknown_powers": [
+          "PLATING",
+          "MINION",
+          "MINION"
+        ]
+      },
+      "alternative_count": 3,
+      "truncated": 0,
+      "branches": [
+        {
+          "probe_id": "a983e7ff-eaf6-4cf4-a68e-ff8472fdddb2",
+          "case": "silent-baseline-r03",
+          "plan": {
+            "id": "actual_end",
+            "first_action": {
+              "cmd": "action",
+              "action": "end_turn",
+              "args": {}
+            },
+            "discard_ordinal": null,
+            "expected_discard_count": 0
+          },
+          "entry_hash": "b70b8cc1d330619cfd1721bc32c064d1166c7a7ab23f9d03c3b3aa041f1b50d8",
+          "status": "next_player_turn",
+          "actions": [
+            {
+              "cmd": "action",
+              "action": "end_turn",
+              "args": {}
+            }
+          ],
+          "entry_verified": true,
+          "after_hash": "21d90e192354469c0b4f4f349341fe9e32107bfed7a63d4e5e16431b87581ce6",
+          "outcome": {
+            "hp": 48,
+            "block": 0,
+            "energy": 3,
+            "gold": 306,
+            "potions": [],
+            "round": 4,
+            "powers": [
+              {
+                "name": "Plating",
+                "description": "At the end of your turn, gain Block. Plating is reduced by 1 at the start of your turn.",
+                "amount": 1
+              },
+              {
+                "name": "Dexterity",
+                "description": "Dexterity improves Block gained from cards.",
+                "amount": 3
+              },
+              {
+                "name": "Strength",
+                "description": "Strength adds additional damage to Attacks.",
+                "amount": 1
+              }
+            ],
+            "enemies": [
+              {
+                "index": 0,
+                "name": "Kin Follower",
+                "hp": 62,
+                "max_hp": 62,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Buff"
+                  }
+                ],
+                "intends_attack": false,
+                "powers": [
+                  {
+                    "name": "Minion",
+                    "description": "Minions abandon combat without their leader.",
+                    "amount": 1
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 3
+                  }
+                ]
+              },
+              {
+                "index": 1,
+                "name": "Kin Follower",
+                "hp": 63,
+                "max_hp": 63,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Attack",
+                    "damage": 8
+                  }
+                ],
+                "intends_attack": true,
+                "powers": [
+                  {
+                    "name": "Minion",
+                    "description": "Minions abandon combat without their leader.",
+                    "amount": 1
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 3
+                  }
+                ]
+              },
+              {
+                "index": 2,
+                "name": "Kin Priest",
+                "hp": 116,
+                "max_hp": 199,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Buff"
+                  }
+                ],
+                "intends_attack": false,
+                "powers": [
+                  {
+                    "name": "Poison",
+                    "description": "Poisoned creatures lose HP at the start of their turn. Each turn, Poison is reduced by 1.",
+                    "amount": 7
+                  }
+                ]
+              }
+            ],
+            "hand": [
+              {
+                "id": "CARD.CLOAK_AND_DAGGER",
+                "name": "Cloak and Dagger",
+                "cost": 1,
+                "stats": {
+                  "block": 9,
+                  "cards": 1
+                },
+                "index": 0
+              },
+              {
+                "id": "CARD.DODGE_AND_ROLL",
+                "name": "Dodge and Roll",
+                "cost": 1,
+                "stats": {
+                  "block": 7
+                },
+                "index": 1
+              },
+              {
+                "id": "CARD.STRIKE_SILENT",
+                "name": "Strike",
+                "cost": 1,
+                "stats": {
+                  "damage": 7
+                },
+                "index": 2
+              },
+              {
+                "id": "CARD.DEFEND_SILENT",
+                "name": "Defend",
+                "cost": 1,
+                "stats": {
+                  "block": 8
+                },
+                "index": 3
+              },
+              {
+                "id": "CARD.DEFEND_SILENT",
+                "name": "Defend",
+                "cost": 1,
+                "stats": {
+                  "block": 8
+                },
+                "index": 4
+              }
+            ],
+            "draw_pile_count": 13,
+            "discard_pile_count": 0
+          },
+          "replay_seconds": 8.495366,
+          "original_after_matches": true,
+          "seconds": 8.539283,
+          "wire_sha256": "de12ab298154310bea4da99985cbbb2d48ee4645302ce0bc39b7dc004808ebc9",
+          "trace_path": "artifacts/runs/a983e7ff-eaf6-4cf4-a68e-ff8472fdddb2/decisions.jsonl",
+          "trace_sha256": "c18c34b077a1ab0426392de6d37f33955db58b052c930628b17d4092ea93339b"
+        },
+        {
+          "probe_id": "a1f5b113-08fb-4723-a288-5a9618108f9c",
+          "case": "silent-baseline-r03",
+          "plan": {
+            "id": "a003",
+            "first_action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 1
+              }
+            },
+            "card_id": "CARD.DEFEND_SILENT",
+            "discard_ordinal": null,
+            "expected_discard_count": 0
+          },
+          "entry_hash": "b70b8cc1d330619cfd1721bc32c064d1166c7a7ab23f9d03c3b3aa041f1b50d8",
+          "status": "next_player_turn",
+          "actions": [
+            {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 1
+              }
+            },
+            {
+              "cmd": "action",
+              "action": "end_turn",
+              "args": {}
+            }
+          ],
+          "entry_verified": true,
+          "after_hash": "1866a2a149b5169c9f2c0abab1302f15c76b60771240128916ce98875c5eedcf",
+          "outcome": {
+            "hp": 56,
+            "block": 0,
+            "energy": 3,
+            "gold": 306,
+            "potions": [],
+            "round": 4,
+            "powers": [
+              {
+                "name": "Plating",
+                "description": "At the end of your turn, gain Block. Plating is reduced by 1 at the start of your turn.",
+                "amount": 1
+              },
+              {
+                "name": "Dexterity",
+                "description": "Dexterity improves Block gained from cards.",
+                "amount": 3
+              },
+              {
+                "name": "Strength",
+                "description": "Strength adds additional damage to Attacks.",
+                "amount": 1
+              }
+            ],
+            "enemies": [
+              {
+                "index": 0,
+                "name": "Kin Follower",
+                "hp": 62,
+                "max_hp": 62,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Buff"
+                  }
+                ],
+                "intends_attack": false,
+                "powers": [
+                  {
+                    "name": "Minion",
+                    "description": "Minions abandon combat without their leader.",
+                    "amount": 1
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 3
+                  }
+                ]
+              },
+              {
+                "index": 1,
+                "name": "Kin Follower",
+                "hp": 63,
+                "max_hp": 63,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Attack",
+                    "damage": 8
+                  }
+                ],
+                "intends_attack": true,
+                "powers": [
+                  {
+                    "name": "Minion",
+                    "description": "Minions abandon combat without their leader.",
+                    "amount": 1
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 3
+                  }
+                ]
+              },
+              {
+                "index": 2,
+                "name": "Kin Priest",
+                "hp": 116,
+                "max_hp": 199,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Buff"
+                  }
+                ],
+                "intends_attack": false,
+                "powers": [
+                  {
+                    "name": "Poison",
+                    "description": "Poisoned creatures lose HP at the start of their turn. Each turn, Poison is reduced by 1.",
+                    "amount": 7
+                  }
+                ]
+              }
+            ],
+            "hand": [
+              {
+                "id": "CARD.CLOAK_AND_DAGGER",
+                "name": "Cloak and Dagger",
+                "cost": 1,
+                "stats": {
+                  "block": 9,
+                  "cards": 1
+                },
+                "index": 0
+              },
+              {
+                "id": "CARD.DODGE_AND_ROLL",
+                "name": "Dodge and Roll",
+                "cost": 1,
+                "stats": {
+                  "block": 7
+                },
+                "index": 1
+              },
+              {
+                "id": "CARD.STRIKE_SILENT",
+                "name": "Strike",
+                "cost": 1,
+                "stats": {
+                  "damage": 7
+                },
+                "index": 2
+              },
+              {
+                "id": "CARD.DEFEND_SILENT",
+                "name": "Defend",
+                "cost": 1,
+                "stats": {
+                  "block": 8
+                },
+                "index": 3
+              },
+              {
+                "id": "CARD.DEFEND_SILENT",
+                "name": "Defend",
+                "cost": 1,
+                "stats": {
+                  "block": 8
+                },
+                "index": 4
+              }
+            ],
+            "draw_pile_count": 13,
+            "discard_pile_count": 0
+          },
+          "replay_seconds": 8.362447,
+          "seconds": 8.437486,
+          "wire_sha256": "574b8cb08827eaca8a12b73ad1e307eac23fb509a0350b1d1b02424aace5b005",
+          "trace_path": "artifacts/runs/a1f5b113-08fb-4723-a288-5a9618108f9c/decisions.jsonl",
+          "trace_sha256": "74d5782450a76e4a1b05b67e82f6755aab60dfe5d1e0234ca49b21fcf999a4b4"
+        },
+        {
+          "probe_id": "68dfd0e7-8467-44a1-a806-adb2c3b25c0c",
+          "case": "silent-baseline-r03",
+          "plan": {
+            "id": "a004-discard-0",
+            "first_action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 2
+              }
+            },
+            "card_id": "CARD.SURVIVOR",
+            "discard_ordinal": 0,
+            "expected_discard_count": 2
+          },
+          "entry_hash": "b70b8cc1d330619cfd1721bc32c064d1166c7a7ab23f9d03c3b3aa041f1b50d8",
+          "status": "next_player_turn",
+          "actions": [
+            {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 2
+              }
+            },
+            {
+              "cmd": "action",
+              "action": "select_cards",
+              "args": {
+                "indices": "0"
+              }
+            },
+            {
+              "cmd": "action",
+              "action": "end_turn",
+              "args": {}
+            }
+          ],
+          "entry_verified": true,
+          "after_hash": "5365d529db296f07c865dc6ccb10e3f13b3ea4be84a7b4b81ba84f59ca2de3ab",
+          "outcome": {
+            "hp": 57,
+            "block": 0,
+            "energy": 3,
+            "gold": 306,
+            "potions": [],
+            "round": 4,
+            "powers": [
+              {
+                "name": "Plating",
+                "description": "At the end of your turn, gain Block. Plating is reduced by 1 at the start of your turn.",
+                "amount": 1
+              },
+              {
+                "name": "Dexterity",
+                "description": "Dexterity improves Block gained from cards.",
+                "amount": 3
+              },
+              {
+                "name": "Strength",
+                "description": "Strength adds additional damage to Attacks.",
+                "amount": 1
+              }
+            ],
+            "enemies": [
+              {
+                "index": 0,
+                "name": "Kin Follower",
+                "hp": 62,
+                "max_hp": 62,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Buff"
+                  }
+                ],
+                "intends_attack": false,
+                "powers": [
+                  {
+                    "name": "Minion",
+                    "description": "Minions abandon combat without their leader.",
+                    "amount": 1
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 3
+                  }
+                ]
+              },
+              {
+                "index": 1,
+                "name": "Kin Follower",
+                "hp": 63,
+                "max_hp": 63,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Attack",
+                    "damage": 8
+                  }
+                ],
+                "intends_attack": true,
+                "powers": [
+                  {
+                    "name": "Minion",
+                    "description": "Minions abandon combat without their leader.",
+                    "amount": 1
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 3
+                  }
+                ]
+              },
+              {
+                "index": 2,
+                "name": "Kin Priest",
+                "hp": 116,
+                "max_hp": 199,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Buff"
+                  }
+                ],
+                "intends_attack": false,
+                "powers": [
+                  {
+                    "name": "Poison",
+                    "description": "Poisoned creatures lose HP at the start of their turn. Each turn, Poison is reduced by 1.",
+                    "amount": 7
+                  }
+                ]
+              }
+            ],
+            "hand": [
+              {
+                "id": "CARD.CLOAK_AND_DAGGER",
+                "name": "Cloak and Dagger",
+                "cost": 1,
+                "stats": {
+                  "block": 9,
+                  "cards": 1
+                },
+                "index": 0
+              },
+              {
+                "id": "CARD.DODGE_AND_ROLL",
+                "name": "Dodge and Roll",
+                "cost": 1,
+                "stats": {
+                  "block": 7
+                },
+                "index": 1
+              },
+              {
+                "id": "CARD.STRIKE_SILENT",
+                "name": "Strike",
+                "cost": 1,
+                "stats": {
+                  "damage": 7
+                },
+                "index": 2
+              },
+              {
+                "id": "CARD.DEFEND_SILENT",
+                "name": "Defend",
+                "cost": 1,
+                "stats": {
+                  "block": 8
+                },
+                "index": 3
+              },
+              {
+                "id": "CARD.DEFEND_SILENT",
+                "name": "Defend",
+                "cost": 1,
+                "stats": {
+                  "block": 8
+                },
+                "index": 4
+              }
+            ],
+            "draw_pile_count": 13,
+            "discard_pile_count": 0
+          },
+          "replay_seconds": 8.750986,
+          "seconds": 8.825849,
+          "wire_sha256": "fdba05b8f354202190de9426f9cf3442b7079e2d9759be2f8bd04181c00555d5",
+          "trace_path": "artifacts/runs/68dfd0e7-8467-44a1-a806-adb2c3b25c0c/decisions.jsonl",
+          "trace_sha256": "a8b4d9828a8b5fa26ce4ada71640362929756a7d1363cd26d99c37e4224e7daa"
+        },
+        {
+          "probe_id": "2d4131bc-3aff-45c3-8b34-38273e075fc0",
+          "case": "silent-baseline-r03",
+          "plan": {
+            "id": "a004-discard-1",
+            "first_action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 2
+              }
+            },
+            "card_id": "CARD.SURVIVOR",
+            "discard_ordinal": 1,
+            "expected_discard_count": 2
+          },
+          "entry_hash": "b70b8cc1d330619cfd1721bc32c064d1166c7a7ab23f9d03c3b3aa041f1b50d8",
+          "status": "next_player_turn",
+          "actions": [
+            {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 2
+              }
+            },
+            {
+              "cmd": "action",
+              "action": "select_cards",
+              "args": {
+                "indices": "1"
+              }
+            },
+            {
+              "cmd": "action",
+              "action": "end_turn",
+              "args": {}
+            }
+          ],
+          "entry_verified": true,
+          "after_hash": "5365d529db296f07c865dc6ccb10e3f13b3ea4be84a7b4b81ba84f59ca2de3ab",
+          "outcome": {
+            "hp": 57,
+            "block": 0,
+            "energy": 3,
+            "gold": 306,
+            "potions": [],
+            "round": 4,
+            "powers": [
+              {
+                "name": "Plating",
+                "description": "At the end of your turn, gain Block. Plating is reduced by 1 at the start of your turn.",
+                "amount": 1
+              },
+              {
+                "name": "Dexterity",
+                "description": "Dexterity improves Block gained from cards.",
+                "amount": 3
+              },
+              {
+                "name": "Strength",
+                "description": "Strength adds additional damage to Attacks.",
+                "amount": 1
+              }
+            ],
+            "enemies": [
+              {
+                "index": 0,
+                "name": "Kin Follower",
+                "hp": 62,
+                "max_hp": 62,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Buff"
+                  }
+                ],
+                "intends_attack": false,
+                "powers": [
+                  {
+                    "name": "Minion",
+                    "description": "Minions abandon combat without their leader.",
+                    "amount": 1
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 3
+                  }
+                ]
+              },
+              {
+                "index": 1,
+                "name": "Kin Follower",
+                "hp": 63,
+                "max_hp": 63,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Attack",
+                    "damage": 8
+                  }
+                ],
+                "intends_attack": true,
+                "powers": [
+                  {
+                    "name": "Minion",
+                    "description": "Minions abandon combat without their leader.",
+                    "amount": 1
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 3
+                  }
+                ]
+              },
+              {
+                "index": 2,
+                "name": "Kin Priest",
+                "hp": 116,
+                "max_hp": 199,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Buff"
+                  }
+                ],
+                "intends_attack": false,
+                "powers": [
+                  {
+                    "name": "Poison",
+                    "description": "Poisoned creatures lose HP at the start of their turn. Each turn, Poison is reduced by 1.",
+                    "amount": 7
+                  }
+                ]
+              }
+            ],
+            "hand": [
+              {
+                "id": "CARD.CLOAK_AND_DAGGER",
+                "name": "Cloak and Dagger",
+                "cost": 1,
+                "stats": {
+                  "block": 9,
+                  "cards": 1
+                },
+                "index": 0
+              },
+              {
+                "id": "CARD.DODGE_AND_ROLL",
+                "name": "Dodge and Roll",
+                "cost": 1,
+                "stats": {
+                  "block": 7
+                },
+                "index": 1
+              },
+              {
+                "id": "CARD.STRIKE_SILENT",
+                "name": "Strike",
+                "cost": 1,
+                "stats": {
+                  "damage": 7
+                },
+                "index": 2
+              },
+              {
+                "id": "CARD.DEFEND_SILENT",
+                "name": "Defend",
+                "cost": 1,
+                "stats": {
+                  "block": 8
+                },
+                "index": 3
+              },
+              {
+                "id": "CARD.DEFEND_SILENT",
+                "name": "Defend",
+                "cost": 1,
+                "stats": {
+                  "block": 8
+                },
+                "index": 4
+              }
+            ],
+            "draw_pile_count": 13,
+            "discard_pile_count": 0
+          },
+          "replay_seconds": 8.915133,
+          "seconds": 8.992114,
+          "wire_sha256": "f1839dc320fe9a7d29551947e0b35ea5d2800bab997607de23f57bde9b0b62c2",
+          "trace_path": "artifacts/runs/2d4131bc-3aff-45c3-8b34-38273e075fc0/decisions.jsonl",
+          "trace_sha256": "1b13a6fda0c4d5257661cb2d740be76086da5d505f572b2bb38c3b1761e6476b"
+        }
+      ],
+      "complete": true,
+      "best_hp_gain": 9,
+      "flags_missed_defense": true
+    },
+    {
+      "id": "silent-baseline-r04",
+      "entry_hash": "6fc413b7512f10fb39cfa370827dd35064f24a9fc080804bd72a389e2bdc003c",
+      "visible_arithmetic": {
+        "incoming": 8,
+        "current_block": 9,
+        "plating_block": 0,
+        "predicted_loss": 0,
+        "best_predicted_hp_gain": 0,
+        "flags_missed_defense": false,
+        "cards": [
+          {
+            "card_index": 1,
+            "predicted_hp_gain": 0
+          },
+          {
+            "card_index": 2,
+            "predicted_hp_gain": 0
+          }
+        ],
+        "seconds": 6.5409112721681595e-06,
+        "scope": "Preview only; does not simulate discard, triggers or future turns."
+      },
+      "plating_arithmetic": {
+        "incoming": 8,
+        "current_block": 9,
+        "plating_block": 1,
+        "predicted_loss": 0,
+        "best_predicted_hp_gain": 0,
+        "flags_missed_defense": false,
+        "cards": [
+          {
+            "card_index": 1,
+            "predicted_hp_gain": 0
+          },
+          {
+            "card_index": 2,
+            "predicted_hp_gain": 0
+          }
+        ],
+        "seconds": 3.958120942115784e-06,
+        "scope": "Preview only; does not simulate discard, triggers or future turns."
+      },
+      "legacy_guard": {
+        "excluded": false,
+        "reason": "unknown_or_card_play_downside",
+        "unknown_powers": [
+          "PLATING",
+          "MINION",
+          "MINION"
+        ]
+      },
+      "alternative_count": 2,
+      "truncated": 0,
+      "branches": [
+        {
+          "probe_id": "706af027-5d65-4a68-a120-a0703e75decf",
+          "case": "silent-baseline-r04",
+          "plan": {
+            "id": "actual_end",
+            "first_action": {
+              "cmd": "action",
+              "action": "end_turn",
+              "args": {}
+            },
+            "discard_ordinal": null,
+            "expected_discard_count": 0
+          },
+          "entry_hash": "6fc413b7512f10fb39cfa370827dd35064f24a9fc080804bd72a389e2bdc003c",
+          "status": "next_player_turn",
+          "actions": [
+            {
+              "cmd": "action",
+              "action": "end_turn",
+              "args": {}
+            }
+          ],
+          "entry_verified": true,
+          "after_hash": "0833b0662c4a9a91fbc81140d3f11a3e2255d209cfea52f4695210f24bdb7769",
+          "outcome": {
+            "hp": 48,
+            "block": 0,
+            "energy": 3,
+            "gold": 306,
+            "potions": [],
+            "round": 5,
+            "powers": [
+              {
+                "name": "Dexterity",
+                "description": "Dexterity improves Block gained from cards.",
+                "amount": 3
+              },
+              {
+                "name": "Strength",
+                "description": "Strength adds additional damage to Attacks.",
+                "amount": 1
+              }
+            ],
+            "enemies": [
+              {
+                "index": 0,
+                "name": "Kin Follower",
+                "hp": 62,
+                "max_hp": 62,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Attack",
+                    "damage": 11
+                  }
+                ],
+                "intends_attack": true,
+                "powers": [
+                  {
+                    "name": "Minion",
+                    "description": "Minions abandon combat without their leader.",
+                    "amount": 1
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 6
+                  }
+                ]
+              },
+              {
+                "index": 1,
+                "name": "Kin Follower",
+                "hp": 63,
+                "max_hp": 63,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Attack",
+                    "damage": 5,
+                    "hits": 2,
+                    "total_damage": 10
+                  }
+                ],
+                "intends_attack": true,
+                "powers": [
+                  {
+                    "name": "Minion",
+                    "description": "Minions abandon combat without their leader.",
+                    "amount": 1
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 3
+                  }
+                ]
+              },
+              {
+                "index": 2,
+                "name": "Kin Priest",
+                "hp": 97,
+                "max_hp": 199,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Attack",
+                    "damage": 12
+                  },
+                  {
+                    "type": "Debuff"
+                  }
+                ],
+                "intends_attack": true,
+                "powers": [
+                  {
+                    "name": "Poison",
+                    "description": "Poisoned creatures lose HP at the start of their turn. Each turn, Poison is reduced by 1.",
+                    "amount": 6
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 3
+                  }
+                ]
+              }
+            ],
+            "hand": [
+              {
+                "id": "CARD.FLECHETTES",
+                "name": "Flechettes",
+                "cost": 1,
+                "stats": {
+                  "damage": 6,
+                  "calculationbase": 0,
+                  "calculationextra": 1,
+                  "calculatedhits": 2
+                },
+                "index": 0
+              },
+              {
+                "id": "CARD.DEFEND_SILENT",
+                "name": "Defend",
+                "cost": 1,
+                "stats": {
+                  "block": 8
+                },
+                "index": 1
+              },
+              {
+                "id": "CARD.STRIKE_SILENT",
+                "name": "Strike",
+                "cost": 1,
+                "stats": {
+                  "damage": 7
+                },
+                "index": 2
+              },
+              {
+                "id": "CARD.SURVIVOR",
+                "name": "Survivor",
+                "cost": 1,
+                "stats": {
+                  "block": 11
+                },
+                "index": 3
+              },
+              {
+                "id": "CARD.STRIKE_SILENT",
+                "name": "Strike",
+                "cost": 1,
+                "stats": {
+                  "damage": 10
+                },
+                "index": 4
+              }
+            ],
+            "draw_pile_count": 8,
+            "discard_pile_count": 5
+          },
+          "replay_seconds": 7.857485,
+          "original_after_matches": true,
+          "seconds": 7.90094,
+          "wire_sha256": "973cdf0784814cdf21ca1af407e9be94990f3be4818000d2f76691e967ffdb89",
+          "trace_path": "artifacts/runs/706af027-5d65-4a68-a120-a0703e75decf/decisions.jsonl",
+          "trace_sha256": "bfbc5915420d224f33ebe3e37ee0aa9a33fff7c90337dd6420a37530863c1f5b"
+        },
+        {
+          "probe_id": "f5408a67-46c6-492d-9f49-cdd3ee13233e",
+          "case": "silent-baseline-r04",
+          "plan": {
+            "id": "a001",
+            "first_action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 1
+              }
+            },
+            "card_id": "CARD.DEFEND_SILENT",
+            "discard_ordinal": null,
+            "expected_discard_count": 0
+          },
+          "entry_hash": "6fc413b7512f10fb39cfa370827dd35064f24a9fc080804bd72a389e2bdc003c",
+          "status": "next_player_turn",
+          "actions": [
+            {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 1
+              }
+            },
+            {
+              "cmd": "action",
+              "action": "end_turn",
+              "args": {}
+            }
+          ],
+          "entry_verified": true,
+          "after_hash": "0833b0662c4a9a91fbc81140d3f11a3e2255d209cfea52f4695210f24bdb7769",
+          "outcome": {
+            "hp": 48,
+            "block": 0,
+            "energy": 3,
+            "gold": 306,
+            "potions": [],
+            "round": 5,
+            "powers": [
+              {
+                "name": "Dexterity",
+                "description": "Dexterity improves Block gained from cards.",
+                "amount": 3
+              },
+              {
+                "name": "Strength",
+                "description": "Strength adds additional damage to Attacks.",
+                "amount": 1
+              }
+            ],
+            "enemies": [
+              {
+                "index": 0,
+                "name": "Kin Follower",
+                "hp": 62,
+                "max_hp": 62,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Attack",
+                    "damage": 11
+                  }
+                ],
+                "intends_attack": true,
+                "powers": [
+                  {
+                    "name": "Minion",
+                    "description": "Minions abandon combat without their leader.",
+                    "amount": 1
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 6
+                  }
+                ]
+              },
+              {
+                "index": 1,
+                "name": "Kin Follower",
+                "hp": 63,
+                "max_hp": 63,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Attack",
+                    "damage": 5,
+                    "hits": 2,
+                    "total_damage": 10
+                  }
+                ],
+                "intends_attack": true,
+                "powers": [
+                  {
+                    "name": "Minion",
+                    "description": "Minions abandon combat without their leader.",
+                    "amount": 1
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 3
+                  }
+                ]
+              },
+              {
+                "index": 2,
+                "name": "Kin Priest",
+                "hp": 97,
+                "max_hp": 199,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Attack",
+                    "damage": 12
+                  },
+                  {
+                    "type": "Debuff"
+                  }
+                ],
+                "intends_attack": true,
+                "powers": [
+                  {
+                    "name": "Poison",
+                    "description": "Poisoned creatures lose HP at the start of their turn. Each turn, Poison is reduced by 1.",
+                    "amount": 6
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 3
+                  }
+                ]
+              }
+            ],
+            "hand": [
+              {
+                "id": "CARD.FLECHETTES",
+                "name": "Flechettes",
+                "cost": 1,
+                "stats": {
+                  "damage": 6,
+                  "calculationbase": 0,
+                  "calculationextra": 1,
+                  "calculatedhits": 2
+                },
+                "index": 0
+              },
+              {
+                "id": "CARD.DEFEND_SILENT",
+                "name": "Defend",
+                "cost": 1,
+                "stats": {
+                  "block": 8
+                },
+                "index": 1
+              },
+              {
+                "id": "CARD.STRIKE_SILENT",
+                "name": "Strike",
+                "cost": 1,
+                "stats": {
+                  "damage": 7
+                },
+                "index": 2
+              },
+              {
+                "id": "CARD.SURVIVOR",
+                "name": "Survivor",
+                "cost": 1,
+                "stats": {
+                  "block": 11
+                },
+                "index": 3
+              },
+              {
+                "id": "CARD.STRIKE_SILENT",
+                "name": "Strike",
+                "cost": 1,
+                "stats": {
+                  "damage": 10
+                },
+                "index": 4
+              }
+            ],
+            "draw_pile_count": 8,
+            "discard_pile_count": 5
+          },
+          "replay_seconds": 7.916314,
+          "seconds": 7.989797,
+          "wire_sha256": "f08afd655713f6376d4dce598ad1b227b14f4ef2d2bff7836a644330a8a8e936",
+          "trace_path": "artifacts/runs/f5408a67-46c6-492d-9f49-cdd3ee13233e/decisions.jsonl",
+          "trace_sha256": "38d72337b9361084ef59964a52c4f9805937993f9d982cc828a66bb4a35859ab"
+        },
+        {
+          "probe_id": "7aea2a7a-5064-4cf9-bed3-33ed6d690b6a",
+          "case": "silent-baseline-r04",
+          "plan": {
+            "id": "a002",
+            "first_action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 2
+              }
+            },
+            "card_id": "CARD.DEFEND_SILENT",
+            "discard_ordinal": null,
+            "expected_discard_count": 0
+          },
+          "entry_hash": "6fc413b7512f10fb39cfa370827dd35064f24a9fc080804bd72a389e2bdc003c",
+          "status": "next_player_turn",
+          "actions": [
+            {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 2
+              }
+            },
+            {
+              "cmd": "action",
+              "action": "end_turn",
+              "args": {}
+            }
+          ],
+          "entry_verified": true,
+          "after_hash": "0833b0662c4a9a91fbc81140d3f11a3e2255d209cfea52f4695210f24bdb7769",
+          "outcome": {
+            "hp": 48,
+            "block": 0,
+            "energy": 3,
+            "gold": 306,
+            "potions": [],
+            "round": 5,
+            "powers": [
+              {
+                "name": "Dexterity",
+                "description": "Dexterity improves Block gained from cards.",
+                "amount": 3
+              },
+              {
+                "name": "Strength",
+                "description": "Strength adds additional damage to Attacks.",
+                "amount": 1
+              }
+            ],
+            "enemies": [
+              {
+                "index": 0,
+                "name": "Kin Follower",
+                "hp": 62,
+                "max_hp": 62,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Attack",
+                    "damage": 11
+                  }
+                ],
+                "intends_attack": true,
+                "powers": [
+                  {
+                    "name": "Minion",
+                    "description": "Minions abandon combat without their leader.",
+                    "amount": 1
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 6
+                  }
+                ]
+              },
+              {
+                "index": 1,
+                "name": "Kin Follower",
+                "hp": 63,
+                "max_hp": 63,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Attack",
+                    "damage": 5,
+                    "hits": 2,
+                    "total_damage": 10
+                  }
+                ],
+                "intends_attack": true,
+                "powers": [
+                  {
+                    "name": "Minion",
+                    "description": "Minions abandon combat without their leader.",
+                    "amount": 1
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 3
+                  }
+                ]
+              },
+              {
+                "index": 2,
+                "name": "Kin Priest",
+                "hp": 97,
+                "max_hp": 199,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Attack",
+                    "damage": 12
+                  },
+                  {
+                    "type": "Debuff"
+                  }
+                ],
+                "intends_attack": true,
+                "powers": [
+                  {
+                    "name": "Poison",
+                    "description": "Poisoned creatures lose HP at the start of their turn. Each turn, Poison is reduced by 1.",
+                    "amount": 6
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 3
+                  }
+                ]
+              }
+            ],
+            "hand": [
+              {
+                "id": "CARD.FLECHETTES",
+                "name": "Flechettes",
+                "cost": 1,
+                "stats": {
+                  "damage": 6,
+                  "calculationbase": 0,
+                  "calculationextra": 1,
+                  "calculatedhits": 2
+                },
+                "index": 0
+              },
+              {
+                "id": "CARD.DEFEND_SILENT",
+                "name": "Defend",
+                "cost": 1,
+                "stats": {
+                  "block": 8
+                },
+                "index": 1
+              },
+              {
+                "id": "CARD.STRIKE_SILENT",
+                "name": "Strike",
+                "cost": 1,
+                "stats": {
+                  "damage": 7
+                },
+                "index": 2
+              },
+              {
+                "id": "CARD.SURVIVOR",
+                "name": "Survivor",
+                "cost": 1,
+                "stats": {
+                  "block": 11
+                },
+                "index": 3
+              },
+              {
+                "id": "CARD.STRIKE_SILENT",
+                "name": "Strike",
+                "cost": 1,
+                "stats": {
+                  "damage": 10
+                },
+                "index": 4
+              }
+            ],
+            "draw_pile_count": 8,
+            "discard_pile_count": 5
+          },
+          "replay_seconds": 7.852949,
+          "seconds": 7.925339,
+          "wire_sha256": "2d5b760b67f901b0f0f2a9a61601149bb7bbc4fb5a53684ab45dfdfa74b82876",
+          "trace_path": "artifacts/runs/7aea2a7a-5064-4cf9-bed3-33ed6d690b6a/decisions.jsonl",
+          "trace_sha256": "e76489b10170c4f56cf030ed74332b6a2b77aa99fde12af359ec8cd72f5e5f5c"
+        }
+      ],
+      "complete": true,
+      "best_hp_gain": 0,
+      "flags_missed_defense": false
+    },
+    {
+      "id": "silent-dynamic-r04",
+      "entry_hash": "70b57f14b0cbdb19d54f9ae186addf2a10ff50047888368c9b308ec6ede68060",
+      "visible_arithmetic": {
+        "incoming": 8,
+        "current_block": 7,
+        "plating_block": 0,
+        "predicted_loss": 1,
+        "best_predicted_hp_gain": 1,
+        "flags_missed_defense": true,
+        "cards": [
+          {
+            "card_index": 0,
+            "predicted_hp_gain": 1
+          },
+          {
+            "card_index": 1,
+            "predicted_hp_gain": 1
+          },
+          {
+            "card_index": 2,
+            "predicted_hp_gain": 1
+          }
+        ],
+        "seconds": 6.166053935885429e-06,
+        "scope": "Preview only; does not simulate discard, triggers or future turns."
+      },
+      "plating_arithmetic": {
+        "incoming": 8,
+        "current_block": 7,
+        "plating_block": 1,
+        "predicted_loss": 0,
+        "best_predicted_hp_gain": 0,
+        "flags_missed_defense": false,
+        "cards": [
+          {
+            "card_index": 0,
+            "predicted_hp_gain": 0
+          },
+          {
+            "card_index": 1,
+            "predicted_hp_gain": 0
+          },
+          {
+            "card_index": 2,
+            "predicted_hp_gain": 0
+          }
+        ],
+        "seconds": 3.7080608308315277e-06,
+        "scope": "Preview only; does not simulate discard, triggers or future turns."
+      },
+      "legacy_guard": {
+        "excluded": false,
+        "reason": "unknown_or_card_play_downside",
+        "unknown_powers": [
+          "PLATING",
+          "MINION",
+          "MINION"
+        ]
+      },
+      "alternative_count": 3,
+      "truncated": 0,
+      "branches": [
+        {
+          "probe_id": "8389d49a-6e6c-4fbe-b8bd-86848466aa61",
+          "case": "silent-dynamic-r04",
+          "plan": {
+            "id": "actual_end",
+            "first_action": {
+              "cmd": "action",
+              "action": "end_turn",
+              "args": {}
+            },
+            "discard_ordinal": null,
+            "expected_discard_count": 0
+          },
+          "entry_hash": "70b57f14b0cbdb19d54f9ae186addf2a10ff50047888368c9b308ec6ede68060",
+          "status": "next_player_turn",
+          "actions": [
+            {
+              "cmd": "action",
+              "action": "end_turn",
+              "args": {}
+            }
+          ],
+          "entry_verified": true,
+          "after_hash": "f43309af4a186431ab390c499d45397a7ae36f674df3f007f83cac98db623a95",
+          "outcome": {
+            "hp": 59,
+            "block": 0,
+            "energy": 3,
+            "gold": 306,
+            "potions": [],
+            "round": 5,
+            "powers": [
+              {
+                "name": "Dexterity",
+                "description": "Dexterity improves Block gained from cards.",
+                "amount": 3
+              },
+              {
+                "name": "Strength",
+                "description": "Strength adds additional damage to Attacks.",
+                "amount": 1
+              }
+            ],
+            "enemies": [
+              {
+                "index": 0,
+                "name": "Kin Follower",
+                "hp": 62,
+                "max_hp": 62,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Attack",
+                    "damage": 11
+                  }
+                ],
+                "intends_attack": true,
+                "powers": [
+                  {
+                    "name": "Minion",
+                    "description": "Minions abandon combat without their leader.",
+                    "amount": 1
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 6
+                  }
+                ]
+              },
+              {
+                "index": 1,
+                "name": "Kin Follower",
+                "hp": 63,
+                "max_hp": 63,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Attack",
+                    "damage": 5,
+                    "hits": 2,
+                    "total_damage": 10
+                  }
+                ],
+                "intends_attack": true,
+                "powers": [
+                  {
+                    "name": "Minion",
+                    "description": "Minions abandon combat without their leader.",
+                    "amount": 1
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 3
+                  }
+                ]
+              },
+              {
+                "index": 2,
+                "name": "Kin Priest",
+                "hp": 100,
+                "max_hp": 199,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Attack",
+                    "damage": 12
+                  },
+                  {
+                    "type": "Debuff"
+                  }
+                ],
+                "intends_attack": true,
+                "powers": [
+                  {
+                    "name": "Poison",
+                    "description": "Poisoned creatures lose HP at the start of their turn. Each turn, Poison is reduced by 1.",
+                    "amount": 6
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 3
+                  }
+                ]
+              }
+            ],
+            "hand": [
+              {
+                "id": "CARD.STRIKE_SILENT",
+                "name": "Strike",
+                "cost": 1,
+                "stats": {
+                  "damage": 7
+                },
+                "index": 0
+              },
+              {
+                "id": "CARD.CLOAK_AND_DAGGER",
+                "name": "Cloak and Dagger",
+                "cost": 1,
+                "stats": {
+                  "block": 9,
+                  "cards": 1
+                },
+                "index": 1
+              },
+              {
+                "id": "CARD.DODGE_AND_ROLL",
+                "name": "Dodge and Roll",
+                "cost": 1,
+                "stats": {
+                  "block": 7
+                },
+                "index": 2
+              },
+              {
+                "id": "CARD.SURVIVOR",
+                "name": "Survivor",
+                "cost": 1,
+                "stats": {
+                  "block": 11
+                },
+                "index": 3
+              },
+              {
+                "id": "CARD.STRIKE_SILENT",
+                "name": "Strike",
+                "cost": 1,
+                "stats": {
+                  "damage": 10
+                },
+                "index": 4
+              }
+            ],
+            "draw_pile_count": 8,
+            "discard_pile_count": 5
+          },
+          "replay_seconds": 7.921168,
+          "original_after_matches": true,
+          "seconds": 7.964508,
+          "wire_sha256": "1d02a58f24f0bb3b194608cf7434bbbc8b90ce7c8b8e405967942a45a217a6ee",
+          "trace_path": "artifacts/runs/8389d49a-6e6c-4fbe-b8bd-86848466aa61/decisions.jsonl",
+          "trace_sha256": "370b5d5351f1cd9976c22e4b677314f49bfa05e0bb70069d852dcea1d5312eb9"
+        },
+        {
+          "probe_id": "26f6405f-64bd-4363-9da5-f01ba48d2ed7",
+          "case": "silent-dynamic-r04",
+          "plan": {
+            "id": "a000",
+            "first_action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 0
+              }
+            },
+            "card_id": "CARD.DEFEND_SILENT",
+            "discard_ordinal": null,
+            "expected_discard_count": 0
+          },
+          "entry_hash": "70b57f14b0cbdb19d54f9ae186addf2a10ff50047888368c9b308ec6ede68060",
+          "status": "next_player_turn",
+          "actions": [
+            {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 0
+              }
+            },
+            {
+              "cmd": "action",
+              "action": "end_turn",
+              "args": {}
+            }
+          ],
+          "entry_verified": true,
+          "after_hash": "f43309af4a186431ab390c499d45397a7ae36f674df3f007f83cac98db623a95",
+          "outcome": {
+            "hp": 59,
+            "block": 0,
+            "energy": 3,
+            "gold": 306,
+            "potions": [],
+            "round": 5,
+            "powers": [
+              {
+                "name": "Dexterity",
+                "description": "Dexterity improves Block gained from cards.",
+                "amount": 3
+              },
+              {
+                "name": "Strength",
+                "description": "Strength adds additional damage to Attacks.",
+                "amount": 1
+              }
+            ],
+            "enemies": [
+              {
+                "index": 0,
+                "name": "Kin Follower",
+                "hp": 62,
+                "max_hp": 62,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Attack",
+                    "damage": 11
+                  }
+                ],
+                "intends_attack": true,
+                "powers": [
+                  {
+                    "name": "Minion",
+                    "description": "Minions abandon combat without their leader.",
+                    "amount": 1
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 6
+                  }
+                ]
+              },
+              {
+                "index": 1,
+                "name": "Kin Follower",
+                "hp": 63,
+                "max_hp": 63,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Attack",
+                    "damage": 5,
+                    "hits": 2,
+                    "total_damage": 10
+                  }
+                ],
+                "intends_attack": true,
+                "powers": [
+                  {
+                    "name": "Minion",
+                    "description": "Minions abandon combat without their leader.",
+                    "amount": 1
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 3
+                  }
+                ]
+              },
+              {
+                "index": 2,
+                "name": "Kin Priest",
+                "hp": 100,
+                "max_hp": 199,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Attack",
+                    "damage": 12
+                  },
+                  {
+                    "type": "Debuff"
+                  }
+                ],
+                "intends_attack": true,
+                "powers": [
+                  {
+                    "name": "Poison",
+                    "description": "Poisoned creatures lose HP at the start of their turn. Each turn, Poison is reduced by 1.",
+                    "amount": 6
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 3
+                  }
+                ]
+              }
+            ],
+            "hand": [
+              {
+                "id": "CARD.STRIKE_SILENT",
+                "name": "Strike",
+                "cost": 1,
+                "stats": {
+                  "damage": 7
+                },
+                "index": 0
+              },
+              {
+                "id": "CARD.CLOAK_AND_DAGGER",
+                "name": "Cloak and Dagger",
+                "cost": 1,
+                "stats": {
+                  "block": 9,
+                  "cards": 1
+                },
+                "index": 1
+              },
+              {
+                "id": "CARD.DODGE_AND_ROLL",
+                "name": "Dodge and Roll",
+                "cost": 1,
+                "stats": {
+                  "block": 7
+                },
+                "index": 2
+              },
+              {
+                "id": "CARD.SURVIVOR",
+                "name": "Survivor",
+                "cost": 1,
+                "stats": {
+                  "block": 11
+                },
+                "index": 3
+              },
+              {
+                "id": "CARD.STRIKE_SILENT",
+                "name": "Strike",
+                "cost": 1,
+                "stats": {
+                  "damage": 10
+                },
+                "index": 4
+              }
+            ],
+            "draw_pile_count": 8,
+            "discard_pile_count": 5
+          },
+          "replay_seconds": 7.820773,
+          "seconds": 7.898387,
+          "wire_sha256": "9cc7b5e9ed0f93075c772d10b823c71e9f74c0eb1f09b5ef8aa64ff3bc08184b",
+          "trace_path": "artifacts/runs/26f6405f-64bd-4363-9da5-f01ba48d2ed7/decisions.jsonl",
+          "trace_sha256": "0fc526fffb83882901468c6629c4c635b43f18d11d948e922c36a868619c0244"
+        },
+        {
+          "probe_id": "156e65f9-599f-47fb-a098-fae2eeed98d8",
+          "case": "silent-dynamic-r04",
+          "plan": {
+            "id": "a001",
+            "first_action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 1
+              }
+            },
+            "card_id": "CARD.DEFEND_SILENT",
+            "discard_ordinal": null,
+            "expected_discard_count": 0
+          },
+          "entry_hash": "70b57f14b0cbdb19d54f9ae186addf2a10ff50047888368c9b308ec6ede68060",
+          "status": "next_player_turn",
+          "actions": [
+            {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 1
+              }
+            },
+            {
+              "cmd": "action",
+              "action": "end_turn",
+              "args": {}
+            }
+          ],
+          "entry_verified": true,
+          "after_hash": "f43309af4a186431ab390c499d45397a7ae36f674df3f007f83cac98db623a95",
+          "outcome": {
+            "hp": 59,
+            "block": 0,
+            "energy": 3,
+            "gold": 306,
+            "potions": [],
+            "round": 5,
+            "powers": [
+              {
+                "name": "Dexterity",
+                "description": "Dexterity improves Block gained from cards.",
+                "amount": 3
+              },
+              {
+                "name": "Strength",
+                "description": "Strength adds additional damage to Attacks.",
+                "amount": 1
+              }
+            ],
+            "enemies": [
+              {
+                "index": 0,
+                "name": "Kin Follower",
+                "hp": 62,
+                "max_hp": 62,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Attack",
+                    "damage": 11
+                  }
+                ],
+                "intends_attack": true,
+                "powers": [
+                  {
+                    "name": "Minion",
+                    "description": "Minions abandon combat without their leader.",
+                    "amount": 1
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 6
+                  }
+                ]
+              },
+              {
+                "index": 1,
+                "name": "Kin Follower",
+                "hp": 63,
+                "max_hp": 63,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Attack",
+                    "damage": 5,
+                    "hits": 2,
+                    "total_damage": 10
+                  }
+                ],
+                "intends_attack": true,
+                "powers": [
+                  {
+                    "name": "Minion",
+                    "description": "Minions abandon combat without their leader.",
+                    "amount": 1
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 3
+                  }
+                ]
+              },
+              {
+                "index": 2,
+                "name": "Kin Priest",
+                "hp": 100,
+                "max_hp": 199,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Attack",
+                    "damage": 12
+                  },
+                  {
+                    "type": "Debuff"
+                  }
+                ],
+                "intends_attack": true,
+                "powers": [
+                  {
+                    "name": "Poison",
+                    "description": "Poisoned creatures lose HP at the start of their turn. Each turn, Poison is reduced by 1.",
+                    "amount": 6
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 3
+                  }
+                ]
+              }
+            ],
+            "hand": [
+              {
+                "id": "CARD.STRIKE_SILENT",
+                "name": "Strike",
+                "cost": 1,
+                "stats": {
+                  "damage": 7
+                },
+                "index": 0
+              },
+              {
+                "id": "CARD.CLOAK_AND_DAGGER",
+                "name": "Cloak and Dagger",
+                "cost": 1,
+                "stats": {
+                  "block": 9,
+                  "cards": 1
+                },
+                "index": 1
+              },
+              {
+                "id": "CARD.DODGE_AND_ROLL",
+                "name": "Dodge and Roll",
+                "cost": 1,
+                "stats": {
+                  "block": 7
+                },
+                "index": 2
+              },
+              {
+                "id": "CARD.SURVIVOR",
+                "name": "Survivor",
+                "cost": 1,
+                "stats": {
+                  "block": 11
+                },
+                "index": 3
+              },
+              {
+                "id": "CARD.STRIKE_SILENT",
+                "name": "Strike",
+                "cost": 1,
+                "stats": {
+                  "damage": 10
+                },
+                "index": 4
+              }
+            ],
+            "draw_pile_count": 8,
+            "discard_pile_count": 5
+          },
+          "replay_seconds": 7.793222,
+          "seconds": 7.868636,
+          "wire_sha256": "7caebdfee6288bc72e77cebef1d127f5a63a10abd132abde486d3d0aa6aa90b5",
+          "trace_path": "artifacts/runs/156e65f9-599f-47fb-a098-fae2eeed98d8/decisions.jsonl",
+          "trace_sha256": "c0e8c4272b65e72c3558ec3f76de3b9ed13eeff3d4446b8e9ad386bdd9e75b67"
+        },
+        {
+          "probe_id": "12ad0d05-7de6-4a1c-80d2-9014cfce58d0",
+          "case": "silent-dynamic-r04",
+          "plan": {
+            "id": "a002",
+            "first_action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 2
+              }
+            },
+            "card_id": "CARD.DEFEND_SILENT",
+            "discard_ordinal": null,
+            "expected_discard_count": 0
+          },
+          "entry_hash": "70b57f14b0cbdb19d54f9ae186addf2a10ff50047888368c9b308ec6ede68060",
+          "status": "next_player_turn",
+          "actions": [
+            {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 2
+              }
+            },
+            {
+              "cmd": "action",
+              "action": "end_turn",
+              "args": {}
+            }
+          ],
+          "entry_verified": true,
+          "after_hash": "f43309af4a186431ab390c499d45397a7ae36f674df3f007f83cac98db623a95",
+          "outcome": {
+            "hp": 59,
+            "block": 0,
+            "energy": 3,
+            "gold": 306,
+            "potions": [],
+            "round": 5,
+            "powers": [
+              {
+                "name": "Dexterity",
+                "description": "Dexterity improves Block gained from cards.",
+                "amount": 3
+              },
+              {
+                "name": "Strength",
+                "description": "Strength adds additional damage to Attacks.",
+                "amount": 1
+              }
+            ],
+            "enemies": [
+              {
+                "index": 0,
+                "name": "Kin Follower",
+                "hp": 62,
+                "max_hp": 62,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Attack",
+                    "damage": 11
+                  }
+                ],
+                "intends_attack": true,
+                "powers": [
+                  {
+                    "name": "Minion",
+                    "description": "Minions abandon combat without their leader.",
+                    "amount": 1
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 6
+                  }
+                ]
+              },
+              {
+                "index": 1,
+                "name": "Kin Follower",
+                "hp": 63,
+                "max_hp": 63,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Attack",
+                    "damage": 5,
+                    "hits": 2,
+                    "total_damage": 10
+                  }
+                ],
+                "intends_attack": true,
+                "powers": [
+                  {
+                    "name": "Minion",
+                    "description": "Minions abandon combat without their leader.",
+                    "amount": 1
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 3
+                  }
+                ]
+              },
+              {
+                "index": 2,
+                "name": "Kin Priest",
+                "hp": 100,
+                "max_hp": 199,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Attack",
+                    "damage": 12
+                  },
+                  {
+                    "type": "Debuff"
+                  }
+                ],
+                "intends_attack": true,
+                "powers": [
+                  {
+                    "name": "Poison",
+                    "description": "Poisoned creatures lose HP at the start of their turn. Each turn, Poison is reduced by 1.",
+                    "amount": 6
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 3
+                  }
+                ]
+              }
+            ],
+            "hand": [
+              {
+                "id": "CARD.STRIKE_SILENT",
+                "name": "Strike",
+                "cost": 1,
+                "stats": {
+                  "damage": 7
+                },
+                "index": 0
+              },
+              {
+                "id": "CARD.CLOAK_AND_DAGGER",
+                "name": "Cloak and Dagger",
+                "cost": 1,
+                "stats": {
+                  "block": 9,
+                  "cards": 1
+                },
+                "index": 1
+              },
+              {
+                "id": "CARD.DODGE_AND_ROLL",
+                "name": "Dodge and Roll",
+                "cost": 1,
+                "stats": {
+                  "block": 7
+                },
+                "index": 2
+              },
+              {
+                "id": "CARD.SURVIVOR",
+                "name": "Survivor",
+                "cost": 1,
+                "stats": {
+                  "block": 11
+                },
+                "index": 3
+              },
+              {
+                "id": "CARD.STRIKE_SILENT",
+                "name": "Strike",
+                "cost": 1,
+                "stats": {
+                  "damage": 10
+                },
+                "index": 4
+              }
+            ],
+            "draw_pile_count": 8,
+            "discard_pile_count": 5
+          },
+          "replay_seconds": 7.823715,
+          "seconds": 7.897836,
+          "wire_sha256": "35174e8e08f9bd81e5415e383e44e382ecaee5731be6922236fb3105849e411a",
+          "trace_path": "artifacts/runs/12ad0d05-7de6-4a1c-80d2-9014cfce58d0/decisions.jsonl",
+          "trace_sha256": "8ef811712c607228d339ba1de820588d74d094ec1d1ebac2063f1f35aeea7b2a"
+        }
+      ],
+      "complete": true,
+      "best_hp_gain": 0,
+      "flags_missed_defense": false
+    },
+    {
+      "id": "silent-dynamic-r05",
+      "entry_hash": "40a14250434296e58535da39148797fdd30f41d79f246f3249ba15b4f2bcc0e4",
+      "visible_arithmetic": {
+        "incoming": 33,
+        "current_block": 16,
+        "plating_block": 0,
+        "predicted_loss": 17,
+        "best_predicted_hp_gain": 11,
+        "flags_missed_defense": true,
+        "cards": [
+          {
+            "card_index": 1,
+            "predicted_hp_gain": 11
+          }
+        ],
+        "seconds": 6.3749030232429504e-06,
+        "scope": "Preview only; does not simulate discard, triggers or future turns."
+      },
+      "plating_arithmetic": {
+        "incoming": 33,
+        "current_block": 16,
+        "plating_block": 0,
+        "predicted_loss": 17,
+        "best_predicted_hp_gain": 11,
+        "flags_missed_defense": true,
+        "cards": [
+          {
+            "card_index": 1,
+            "predicted_hp_gain": 11
+          }
+        ],
+        "seconds": 2.9581133276224136e-06,
+        "scope": "Preview only; does not simulate discard, triggers or future turns."
+      },
+      "legacy_guard": {
+        "excluded": false,
+        "reason": "unknown_or_card_play_downside",
+        "unknown_powers": [
+          "BLOCK_NEXT_TURN",
+          "MINION",
+          "MINION"
+        ]
+      },
+      "alternative_count": 3,
+      "truncated": 0,
+      "branches": [
+        {
+          "probe_id": "db9c9876-84f4-448b-988a-752af84afbcd",
+          "case": "silent-dynamic-r05",
+          "plan": {
+            "id": "actual_end",
+            "first_action": {
+              "cmd": "action",
+              "action": "end_turn",
+              "args": {}
+            },
+            "discard_ordinal": null,
+            "expected_discard_count": 0
+          },
+          "entry_hash": "40a14250434296e58535da39148797fdd30f41d79f246f3249ba15b4f2bcc0e4",
+          "status": "next_player_turn",
+          "actions": [
+            {
+              "cmd": "action",
+              "action": "end_turn",
+              "args": {}
+            }
+          ],
+          "entry_verified": true,
+          "after_hash": "e2259a848e876d775bb939ea0dc497c89c711c3254d259ed85777da03288abc6",
+          "outcome": {
+            "hp": 42,
+            "block": 7,
+            "energy": 3,
+            "gold": 306,
+            "potions": [],
+            "round": 6,
+            "powers": [
+              {
+                "name": "Dexterity",
+                "description": "Dexterity improves Block gained from cards.",
+                "amount": 3
+              },
+              {
+                "name": "Strength",
+                "description": "Strength adds additional damage to Attacks.",
+                "amount": 1
+              },
+              {
+                "name": "Frail",
+                "description": "While Frail, gain 25% less Block from cards.",
+                "amount": 1
+              }
+            ],
+            "enemies": [
+              {
+                "index": 0,
+                "name": "Kin Follower",
+                "hp": 62,
+                "max_hp": 62,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Attack",
+                    "damage": 8,
+                    "hits": 2,
+                    "total_damage": 16
+                  }
+                ],
+                "intends_attack": true,
+                "powers": [
+                  {
+                    "name": "Minion",
+                    "description": "Minions abandon combat without their leader.",
+                    "amount": 1
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 6
+                  }
+                ]
+              },
+              {
+                "index": 1,
+                "name": "Kin Follower",
+                "hp": 63,
+                "max_hp": 63,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Buff"
+                  }
+                ],
+                "intends_attack": false,
+                "powers": [
+                  {
+                    "name": "Minion",
+                    "description": "Minions abandon combat without their leader.",
+                    "amount": 1
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 3
+                  }
+                ]
+              },
+              {
+                "index": 2,
+                "name": "Kin Priest",
+                "hp": 94,
+                "max_hp": 199,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Attack",
+                    "damage": 12
+                  },
+                  {
+                    "type": "Debuff"
+                  }
+                ],
+                "intends_attack": true,
+                "powers": [
+                  {
+                    "name": "Poison",
+                    "description": "Poisoned creatures lose HP at the start of their turn. Each turn, Poison is reduced by 1.",
+                    "amount": 5
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 3
+                  }
+                ]
+              }
+            ],
+            "hand": [
+              {
+                "id": "CARD.STRIKE_SILENT",
+                "name": "Strike",
+                "cost": 1,
+                "stats": {
+                  "damage": 7
+                },
+                "index": 0
+              },
+              {
+                "id": "CARD.BACKFLIP",
+                "name": "Backflip",
+                "cost": 1,
+                "stats": {
+                  "block": 8,
+                  "cards": 2
+                },
+                "index": 1
+              },
+              {
+                "id": "CARD.SHADOW_STEP",
+                "name": "Shadow Step",
+                "cost": 1,
+                "stats": {
+                  "cards": 3
+                },
+                "index": 2
+              },
+              {
+                "id": "CARD.FLECHETTES",
+                "name": "Flechettes",
+                "cost": 1,
+                "stats": {
+                  "damage": 6,
+                  "calculationbase": 0,
+                  "calculationextra": 1,
+                  "calculatedhits": 3
+                },
+                "index": 3
+              },
+              {
+                "id": "CARD.DEFEND_SILENT",
+                "name": "Defend",
+                "cost": 1,
+                "stats": {
+                  "block": 6
+                },
+                "index": 4
+              }
+            ],
+            "draw_pile_count": 3,
+            "discard_pile_count": 11
+          },
+          "replay_seconds": 7.875416,
+          "original_after_matches": true,
+          "seconds": 7.920584,
+          "wire_sha256": "361ad3de7b92a75fb76b6d6f96f501be36f46ec2bb1c7588c1890cc7b2e124cd",
+          "trace_path": "artifacts/runs/db9c9876-84f4-448b-988a-752af84afbcd/decisions.jsonl",
+          "trace_sha256": "a3bbbc64179ed9995c0fd699f6bf76a92046151adbfeb6048ebf6802f09809b7"
+        },
+        {
+          "probe_id": "c46300ed-6da7-4a1c-a87d-58092433a957",
+          "case": "silent-dynamic-r05",
+          "plan": {
+            "id": "a003-discard-0",
+            "first_action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 1
+              }
+            },
+            "card_id": "CARD.SURVIVOR",
+            "discard_ordinal": 0,
+            "expected_discard_count": 3
+          },
+          "entry_hash": "40a14250434296e58535da39148797fdd30f41d79f246f3249ba15b4f2bcc0e4",
+          "status": "next_player_turn",
+          "actions": [
+            {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 1
+              }
+            },
+            {
+              "cmd": "action",
+              "action": "select_cards",
+              "args": {
+                "indices": "0"
+              }
+            },
+            {
+              "cmd": "action",
+              "action": "end_turn",
+              "args": {}
+            }
+          ],
+          "entry_verified": true,
+          "after_hash": "db7983fc27a2babec692ae203f9068bf3a843563ef88e4ade0ea72a0321ac6c9",
+          "outcome": {
+            "hp": 53,
+            "block": 7,
+            "energy": 3,
+            "gold": 306,
+            "potions": [],
+            "round": 6,
+            "powers": [
+              {
+                "name": "Dexterity",
+                "description": "Dexterity improves Block gained from cards.",
+                "amount": 3
+              },
+              {
+                "name": "Strength",
+                "description": "Strength adds additional damage to Attacks.",
+                "amount": 1
+              },
+              {
+                "name": "Frail",
+                "description": "While Frail, gain 25% less Block from cards.",
+                "amount": 1
+              }
+            ],
+            "enemies": [
+              {
+                "index": 0,
+                "name": "Kin Follower",
+                "hp": 62,
+                "max_hp": 62,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Attack",
+                    "damage": 8,
+                    "hits": 2,
+                    "total_damage": 16
+                  }
+                ],
+                "intends_attack": true,
+                "powers": [
+                  {
+                    "name": "Minion",
+                    "description": "Minions abandon combat without their leader.",
+                    "amount": 1
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 6
+                  }
+                ]
+              },
+              {
+                "index": 1,
+                "name": "Kin Follower",
+                "hp": 63,
+                "max_hp": 63,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Buff"
+                  }
+                ],
+                "intends_attack": false,
+                "powers": [
+                  {
+                    "name": "Minion",
+                    "description": "Minions abandon combat without their leader.",
+                    "amount": 1
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 3
+                  }
+                ]
+              },
+              {
+                "index": 2,
+                "name": "Kin Priest",
+                "hp": 94,
+                "max_hp": 199,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Attack",
+                    "damage": 12
+                  },
+                  {
+                    "type": "Debuff"
+                  }
+                ],
+                "intends_attack": true,
+                "powers": [
+                  {
+                    "name": "Poison",
+                    "description": "Poisoned creatures lose HP at the start of their turn. Each turn, Poison is reduced by 1.",
+                    "amount": 5
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 3
+                  }
+                ]
+              }
+            ],
+            "hand": [
+              {
+                "id": "CARD.STRIKE_SILENT",
+                "name": "Strike",
+                "cost": 1,
+                "stats": {
+                  "damage": 7
+                },
+                "index": 0
+              },
+              {
+                "id": "CARD.BACKFLIP",
+                "name": "Backflip",
+                "cost": 1,
+                "stats": {
+                  "block": 8,
+                  "cards": 2
+                },
+                "index": 1
+              },
+              {
+                "id": "CARD.SHADOW_STEP",
+                "name": "Shadow Step",
+                "cost": 1,
+                "stats": {
+                  "cards": 3
+                },
+                "index": 2
+              },
+              {
+                "id": "CARD.FLECHETTES",
+                "name": "Flechettes",
+                "cost": 1,
+                "stats": {
+                  "damage": 6,
+                  "calculationbase": 0,
+                  "calculationextra": 1,
+                  "calculatedhits": 3
+                },
+                "index": 3
+              },
+              {
+                "id": "CARD.DEFEND_SILENT",
+                "name": "Defend",
+                "cost": 1,
+                "stats": {
+                  "block": 6
+                },
+                "index": 4
+              }
+            ],
+            "draw_pile_count": 3,
+            "discard_pile_count": 11
+          },
+          "replay_seconds": 7.893488,
+          "seconds": 7.968456,
+          "wire_sha256": "8e8d0114bdb5c7e8819b12e975b399239fd3c627e4b6784caeccaa0ce5db3a9a",
+          "trace_path": "artifacts/runs/c46300ed-6da7-4a1c-a87d-58092433a957/decisions.jsonl",
+          "trace_sha256": "728ad5918416b71cf3476b1f058347370f647ae27216b92e224a52fb5d1836fa"
+        },
+        {
+          "probe_id": "493f68f8-aac0-4371-8807-cb54174aebaf",
+          "case": "silent-dynamic-r05",
+          "plan": {
+            "id": "a003-discard-1",
+            "first_action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 1
+              }
+            },
+            "card_id": "CARD.SURVIVOR",
+            "discard_ordinal": 1,
+            "expected_discard_count": 3
+          },
+          "entry_hash": "40a14250434296e58535da39148797fdd30f41d79f246f3249ba15b4f2bcc0e4",
+          "status": "next_player_turn",
+          "actions": [
+            {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 1
+              }
+            },
+            {
+              "cmd": "action",
+              "action": "select_cards",
+              "args": {
+                "indices": "1"
+              }
+            },
+            {
+              "cmd": "action",
+              "action": "end_turn",
+              "args": {}
+            }
+          ],
+          "entry_verified": true,
+          "after_hash": "db7983fc27a2babec692ae203f9068bf3a843563ef88e4ade0ea72a0321ac6c9",
+          "outcome": {
+            "hp": 53,
+            "block": 7,
+            "energy": 3,
+            "gold": 306,
+            "potions": [],
+            "round": 6,
+            "powers": [
+              {
+                "name": "Dexterity",
+                "description": "Dexterity improves Block gained from cards.",
+                "amount": 3
+              },
+              {
+                "name": "Strength",
+                "description": "Strength adds additional damage to Attacks.",
+                "amount": 1
+              },
+              {
+                "name": "Frail",
+                "description": "While Frail, gain 25% less Block from cards.",
+                "amount": 1
+              }
+            ],
+            "enemies": [
+              {
+                "index": 0,
+                "name": "Kin Follower",
+                "hp": 62,
+                "max_hp": 62,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Attack",
+                    "damage": 8,
+                    "hits": 2,
+                    "total_damage": 16
+                  }
+                ],
+                "intends_attack": true,
+                "powers": [
+                  {
+                    "name": "Minion",
+                    "description": "Minions abandon combat without their leader.",
+                    "amount": 1
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 6
+                  }
+                ]
+              },
+              {
+                "index": 1,
+                "name": "Kin Follower",
+                "hp": 63,
+                "max_hp": 63,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Buff"
+                  }
+                ],
+                "intends_attack": false,
+                "powers": [
+                  {
+                    "name": "Minion",
+                    "description": "Minions abandon combat without their leader.",
+                    "amount": 1
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 3
+                  }
+                ]
+              },
+              {
+                "index": 2,
+                "name": "Kin Priest",
+                "hp": 94,
+                "max_hp": 199,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Attack",
+                    "damage": 12
+                  },
+                  {
+                    "type": "Debuff"
+                  }
+                ],
+                "intends_attack": true,
+                "powers": [
+                  {
+                    "name": "Poison",
+                    "description": "Poisoned creatures lose HP at the start of their turn. Each turn, Poison is reduced by 1.",
+                    "amount": 5
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 3
+                  }
+                ]
+              }
+            ],
+            "hand": [
+              {
+                "id": "CARD.STRIKE_SILENT",
+                "name": "Strike",
+                "cost": 1,
+                "stats": {
+                  "damage": 7
+                },
+                "index": 0
+              },
+              {
+                "id": "CARD.BACKFLIP",
+                "name": "Backflip",
+                "cost": 1,
+                "stats": {
+                  "block": 8,
+                  "cards": 2
+                },
+                "index": 1
+              },
+              {
+                "id": "CARD.SHADOW_STEP",
+                "name": "Shadow Step",
+                "cost": 1,
+                "stats": {
+                  "cards": 3
+                },
+                "index": 2
+              },
+              {
+                "id": "CARD.FLECHETTES",
+                "name": "Flechettes",
+                "cost": 1,
+                "stats": {
+                  "damage": 6,
+                  "calculationbase": 0,
+                  "calculationextra": 1,
+                  "calculatedhits": 3
+                },
+                "index": 3
+              },
+              {
+                "id": "CARD.DEFEND_SILENT",
+                "name": "Defend",
+                "cost": 1,
+                "stats": {
+                  "block": 6
+                },
+                "index": 4
+              }
+            ],
+            "draw_pile_count": 3,
+            "discard_pile_count": 11
+          },
+          "replay_seconds": 7.924391,
+          "seconds": 7.998775,
+          "wire_sha256": "b78d08bfbe1570b0054a441e6f1a0830d49f32ce6423b714773a1531b6d0c158",
+          "trace_path": "artifacts/runs/493f68f8-aac0-4371-8807-cb54174aebaf/decisions.jsonl",
+          "trace_sha256": "ba2ef7e6ca1aef9f446fcebbf7276a0c451ff2dfda072bd69636e2835f076e86"
+        },
+        {
+          "probe_id": "4d25b1e1-953c-4420-9686-8205f6c7888a",
+          "case": "silent-dynamic-r05",
+          "plan": {
+            "id": "a003-discard-2",
+            "first_action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 1
+              }
+            },
+            "card_id": "CARD.SURVIVOR",
+            "discard_ordinal": 2,
+            "expected_discard_count": 3
+          },
+          "entry_hash": "40a14250434296e58535da39148797fdd30f41d79f246f3249ba15b4f2bcc0e4",
+          "status": "next_player_turn",
+          "actions": [
+            {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 1
+              }
+            },
+            {
+              "cmd": "action",
+              "action": "select_cards",
+              "args": {
+                "indices": "2"
+              }
+            },
+            {
+              "cmd": "action",
+              "action": "end_turn",
+              "args": {}
+            }
+          ],
+          "entry_verified": true,
+          "after_hash": "db7983fc27a2babec692ae203f9068bf3a843563ef88e4ade0ea72a0321ac6c9",
+          "outcome": {
+            "hp": 53,
+            "block": 7,
+            "energy": 3,
+            "gold": 306,
+            "potions": [],
+            "round": 6,
+            "powers": [
+              {
+                "name": "Dexterity",
+                "description": "Dexterity improves Block gained from cards.",
+                "amount": 3
+              },
+              {
+                "name": "Strength",
+                "description": "Strength adds additional damage to Attacks.",
+                "amount": 1
+              },
+              {
+                "name": "Frail",
+                "description": "While Frail, gain 25% less Block from cards.",
+                "amount": 1
+              }
+            ],
+            "enemies": [
+              {
+                "index": 0,
+                "name": "Kin Follower",
+                "hp": 62,
+                "max_hp": 62,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Attack",
+                    "damage": 8,
+                    "hits": 2,
+                    "total_damage": 16
+                  }
+                ],
+                "intends_attack": true,
+                "powers": [
+                  {
+                    "name": "Minion",
+                    "description": "Minions abandon combat without their leader.",
+                    "amount": 1
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 6
+                  }
+                ]
+              },
+              {
+                "index": 1,
+                "name": "Kin Follower",
+                "hp": 63,
+                "max_hp": 63,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Buff"
+                  }
+                ],
+                "intends_attack": false,
+                "powers": [
+                  {
+                    "name": "Minion",
+                    "description": "Minions abandon combat without their leader.",
+                    "amount": 1
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 3
+                  }
+                ]
+              },
+              {
+                "index": 2,
+                "name": "Kin Priest",
+                "hp": 94,
+                "max_hp": 199,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Attack",
+                    "damage": 12
+                  },
+                  {
+                    "type": "Debuff"
+                  }
+                ],
+                "intends_attack": true,
+                "powers": [
+                  {
+                    "name": "Poison",
+                    "description": "Poisoned creatures lose HP at the start of their turn. Each turn, Poison is reduced by 1.",
+                    "amount": 5
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 3
+                  }
+                ]
+              }
+            ],
+            "hand": [
+              {
+                "id": "CARD.STRIKE_SILENT",
+                "name": "Strike",
+                "cost": 1,
+                "stats": {
+                  "damage": 7
+                },
+                "index": 0
+              },
+              {
+                "id": "CARD.BACKFLIP",
+                "name": "Backflip",
+                "cost": 1,
+                "stats": {
+                  "block": 8,
+                  "cards": 2
+                },
+                "index": 1
+              },
+              {
+                "id": "CARD.SHADOW_STEP",
+                "name": "Shadow Step",
+                "cost": 1,
+                "stats": {
+                  "cards": 3
+                },
+                "index": 2
+              },
+              {
+                "id": "CARD.FLECHETTES",
+                "name": "Flechettes",
+                "cost": 1,
+                "stats": {
+                  "damage": 6,
+                  "calculationbase": 0,
+                  "calculationextra": 1,
+                  "calculatedhits": 3
+                },
+                "index": 3
+              },
+              {
+                "id": "CARD.DEFEND_SILENT",
+                "name": "Defend",
+                "cost": 1,
+                "stats": {
+                  "block": 6
+                },
+                "index": 4
+              }
+            ],
+            "draw_pile_count": 3,
+            "discard_pile_count": 11
+          },
+          "replay_seconds": 8.141253,
+          "seconds": 8.215483,
+          "wire_sha256": "26760823cbbd73fc46f691d71d07e467a813c2507e7549fe3b43dfe498c5291f",
+          "trace_path": "artifacts/runs/4d25b1e1-953c-4420-9686-8205f6c7888a/decisions.jsonl",
+          "trace_sha256": "3136ed00995ed7a10d1413a58f3d9e276bab654b2a4a533e2ca283011cf44842"
+        }
+      ],
+      "complete": true,
+      "best_hp_gain": 11,
+      "flags_missed_defense": true
+    },
+    {
+      "id": "silent-dynamic-r07",
+      "entry_hash": "769414ad0d08eee6d7f12916fcac6d543658d7b0a2056df90705fe449f352268",
+      "visible_arithmetic": {
+        "incoming": 29,
+        "current_block": 8,
+        "plating_block": 0,
+        "predicted_loss": 21,
+        "best_predicted_hp_gain": 8,
+        "flags_missed_defense": true,
+        "cards": [
+          {
+            "card_index": 1,
+            "predicted_hp_gain": 8
+          }
+        ],
+        "seconds": 2.624932676553726e-06,
+        "scope": "Preview only; does not simulate discard, triggers or future turns."
+      },
+      "plating_arithmetic": {
+        "incoming": 29,
+        "current_block": 8,
+        "plating_block": 0,
+        "predicted_loss": 21,
+        "best_predicted_hp_gain": 8,
+        "flags_missed_defense": true,
+        "cards": [
+          {
+            "card_index": 1,
+            "predicted_hp_gain": 8
+          }
+        ],
+        "seconds": 2.208864316344261e-06,
+        "scope": "Preview only; does not simulate discard, triggers or future turns."
+      },
+      "legacy_guard": {
+        "excluded": false,
+        "reason": "unknown_or_card_play_downside",
+        "unknown_powers": [
+          "MINION",
+          "MINION"
+        ]
+      },
+      "alternative_count": 1,
+      "truncated": 0,
+      "branches": [
+        {
+          "probe_id": "9ab3c13f-df30-4259-af05-e0fb1e793ded",
+          "case": "silent-dynamic-r07",
+          "plan": {
+            "id": "actual_end",
+            "first_action": {
+              "cmd": "action",
+              "action": "end_turn",
+              "args": {}
+            },
+            "discard_ordinal": null,
+            "expected_discard_count": 0
+          },
+          "entry_hash": "769414ad0d08eee6d7f12916fcac6d543658d7b0a2056df90705fe449f352268",
+          "status": "next_player_turn",
+          "actions": [
+            {
+              "cmd": "action",
+              "action": "end_turn",
+              "args": {}
+            }
+          ],
+          "entry_verified": true,
+          "after_hash": "c5f33ce50e18cc39192096da4138403925ff7738bf261c313575d215363f9ae9",
+          "outcome": {
+            "hp": 8,
+            "block": 0,
+            "energy": 3,
+            "gold": 306,
+            "potions": [],
+            "round": 8,
+            "powers": [
+              {
+                "name": "Dexterity",
+                "description": "Dexterity improves Block gained from cards.",
+                "amount": 3
+              },
+              {
+                "name": "Strength",
+                "description": "Strength adds additional damage to Attacks.",
+                "amount": 1
+              }
+            ],
+            "enemies": [
+              {
+                "index": 0,
+                "name": "Kin Follower",
+                "hp": 62,
+                "max_hp": 62,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Attack",
+                    "damage": 14
+                  }
+                ],
+                "intends_attack": true,
+                "powers": [
+                  {
+                    "name": "Minion",
+                    "description": "Minions abandon combat without their leader.",
+                    "amount": 1
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 9
+                  }
+                ]
+              },
+              {
+                "index": 1,
+                "name": "Kin Follower",
+                "hp": 63,
+                "max_hp": 63,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Attack",
+                    "damage": 8,
+                    "hits": 2,
+                    "total_damage": 16
+                  }
+                ],
+                "intends_attack": true,
+                "powers": [
+                  {
+                    "name": "Minion",
+                    "description": "Minions abandon combat without their leader.",
+                    "amount": 1
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 6
+                  }
+                ]
+              },
+              {
+                "index": 2,
+                "name": "Kin Priest",
+                "hp": 38,
+                "max_hp": 199,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Buff"
+                  }
+                ],
+                "intends_attack": false,
+                "powers": [
+                  {
+                    "name": "Poison",
+                    "description": "Poisoned creatures lose HP at the start of their turn. Each turn, Poison is reduced by 1.",
+                    "amount": 7
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 3
+                  }
+                ]
+              }
+            ],
+            "hand": [
+              {
+                "id": "CARD.POISONED_STAB",
+                "name": "Poisoned Stab",
+                "cost": 1,
+                "stats": {
+                  "damage": 9,
+                  "poisonpower": 4
+                },
+                "index": 0
+              },
+              {
+                "id": "CARD.SURVIVOR",
+                "name": "Survivor",
+                "cost": 1,
+                "stats": {
+                  "block": 11
+                },
+                "index": 1
+              },
+              {
+                "id": "CARD.BACKFLIP",
+                "name": "Backflip",
+                "cost": 1,
+                "stats": {
+                  "block": 11,
+                  "cards": 2
+                },
+                "index": 2
+              },
+              {
+                "id": "CARD.DEFEND_SILENT",
+                "name": "Defend",
+                "cost": 1,
+                "stats": {
+                  "block": 8
+                },
+                "index": 3
+              },
+              {
+                "id": "CARD.NEUTRALIZE",
+                "name": "Neutralize",
+                "cost": 0,
+                "stats": {
+                  "damage": 4,
+                  "weakpower": 1
+                },
+                "index": 4
+              }
+            ],
+            "draw_pile_count": 9,
+            "discard_pile_count": 5
+          },
+          "replay_seconds": 8.24442,
+          "original_after_matches": true,
+          "seconds": 8.286783,
+          "wire_sha256": "6dc415f624d89680d832227751431fe17a7dc15efe211a54d234a21e26c88afc",
+          "trace_path": "artifacts/runs/9ab3c13f-df30-4259-af05-e0fb1e793ded/decisions.jsonl",
+          "trace_sha256": "57cdeb73856ae75fdeb359ca74203238a4250f0f185404b2b5d7257c975ba368"
+        },
+        {
+          "probe_id": "9de285e1-1245-49cb-884d-729f5d6c8c88",
+          "case": "silent-dynamic-r07",
+          "plan": {
+            "id": "a001",
+            "first_action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 1
+              }
+            },
+            "card_id": "CARD.DEFEND_SILENT",
+            "discard_ordinal": null,
+            "expected_discard_count": 0
+          },
+          "entry_hash": "769414ad0d08eee6d7f12916fcac6d543658d7b0a2056df90705fe449f352268",
+          "status": "next_player_turn",
+          "actions": [
+            {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 1
+              }
+            },
+            {
+              "cmd": "action",
+              "action": "end_turn",
+              "args": {}
+            }
+          ],
+          "entry_verified": true,
+          "after_hash": "f64947d64fcc8efb04ddbeaa248541f6d85b8ac7f09e62e56a773b031d329ecf",
+          "outcome": {
+            "hp": 16,
+            "block": 0,
+            "energy": 3,
+            "gold": 306,
+            "potions": [],
+            "round": 8,
+            "powers": [
+              {
+                "name": "Dexterity",
+                "description": "Dexterity improves Block gained from cards.",
+                "amount": 3
+              },
+              {
+                "name": "Strength",
+                "description": "Strength adds additional damage to Attacks.",
+                "amount": 1
+              }
+            ],
+            "enemies": [
+              {
+                "index": 0,
+                "name": "Kin Follower",
+                "hp": 62,
+                "max_hp": 62,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Attack",
+                    "damage": 14
+                  }
+                ],
+                "intends_attack": true,
+                "powers": [
+                  {
+                    "name": "Minion",
+                    "description": "Minions abandon combat without their leader.",
+                    "amount": 1
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 9
+                  }
+                ]
+              },
+              {
+                "index": 1,
+                "name": "Kin Follower",
+                "hp": 63,
+                "max_hp": 63,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Attack",
+                    "damage": 8,
+                    "hits": 2,
+                    "total_damage": 16
+                  }
+                ],
+                "intends_attack": true,
+                "powers": [
+                  {
+                    "name": "Minion",
+                    "description": "Minions abandon combat without their leader.",
+                    "amount": 1
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 6
+                  }
+                ]
+              },
+              {
+                "index": 2,
+                "name": "Kin Priest",
+                "hp": 38,
+                "max_hp": 199,
+                "block": 0,
+                "intents": [
+                  {
+                    "type": "Buff"
+                  }
+                ],
+                "intends_attack": false,
+                "powers": [
+                  {
+                    "name": "Poison",
+                    "description": "Poisoned creatures lose HP at the start of their turn. Each turn, Poison is reduced by 1.",
+                    "amount": 7
+                  },
+                  {
+                    "name": "Strength",
+                    "description": "Strength adds additional damage to Attacks.",
+                    "amount": 3
+                  }
+                ]
+              }
+            ],
+            "hand": [
+              {
+                "id": "CARD.POISONED_STAB",
+                "name": "Poisoned Stab",
+                "cost": 1,
+                "stats": {
+                  "damage": 9,
+                  "poisonpower": 4
+                },
+                "index": 0
+              },
+              {
+                "id": "CARD.SURVIVOR",
+                "name": "Survivor",
+                "cost": 1,
+                "stats": {
+                  "block": 11
+                },
+                "index": 1
+              },
+              {
+                "id": "CARD.BACKFLIP",
+                "name": "Backflip",
+                "cost": 1,
+                "stats": {
+                  "block": 11,
+                  "cards": 2
+                },
+                "index": 2
+              },
+              {
+                "id": "CARD.DEFEND_SILENT",
+                "name": "Defend",
+                "cost": 1,
+                "stats": {
+                  "block": 8
+                },
+                "index": 3
+              },
+              {
+                "id": "CARD.NEUTRALIZE",
+                "name": "Neutralize",
+                "cost": 0,
+                "stats": {
+                  "damage": 4,
+                  "weakpower": 1
+                },
+                "index": 4
+              }
+            ],
+            "draw_pile_count": 9,
+            "discard_pile_count": 5
+          },
+          "replay_seconds": 8.096303,
+          "seconds": 8.169498,
+          "wire_sha256": "7f353823500a5f4946014c9c4c92456db20b8d7c85ec6b8efc2002d5c4045631",
+          "trace_path": "artifacts/runs/9de285e1-1245-49cb-884d-729f5d6c8c88/decisions.jsonl",
+          "trace_sha256": "34c109d04639e92b512167c4592a96d5cc7634356d7747a33598522665549b90"
+        }
+      ],
+      "complete": true,
+      "best_hp_gain": 8,
+      "flags_missed_defense": true
+    }
+  ],
+  "wall_seconds": 40.42369,
+  "summary": {
+    "cases": 5,
+    "branches": 17,
+    "errors": 0,
+    "truncated": 0,
+    "branch_seconds": 138.799754,
+    "prefix_seconds": 137.684829,
+    "comparators": {
+      "visible_arithmetic": {
+        "false_positives": 1,
+        "false_negatives": 0,
+        "exact_best_gain_matches": 3,
+        "seconds": 4.670675843954086e-05
+      },
+      "plating_arithmetic": {
+        "false_positives": 0,
+        "false_negatives": 0,
+        "exact_best_gain_matches": 5,
+        "seconds": 1.812516711652279e-05
+      }
+    },
+    "complete_cases": 5,
+    "legacy_guard_abstentions": 5
+  }
+}
