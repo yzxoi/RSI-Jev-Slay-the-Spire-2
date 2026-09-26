@@ -1,0 +1,112 @@
+diff --git a/STS2AIAgent/Game/GameStateService.Menus.cs b/STS2AIAgent/Game/GameStateService.Menus.cs
+index 19b966d..3dcf83b 100644
+--- a/STS2AIAgent/Game/GameStateService.Menus.cs
++++ b/STS2AIAgent/Game/GameStateService.Menus.cs
+@@ -305,7 +305,7 @@ internal static partial class GameStateService
+         }
+     }
+ 
+-    private static CharacterSelectPlayerPayload BuildCharacterSelectPlayerPayload(StartRunLobbyPlayer player, ulong localPlayerId)
++    private static CharacterSelectPlayerPayload BuildCharacterSelectPlayerPayload(LobbyPlayer player, ulong localPlayerId)
+     {
+         return new CharacterSelectPlayerPayload
+         {
+@@ -415,19 +415,19 @@ internal static partial class GameStateService
+ 
+     private static int GetStartRunLobbyMaxPlayers(StartRunLobby lobby)
+     {
+-        return StartRunLobbyMaxPlayersField?.GetValue(lobby) is int parsed ? parsed : 0;
++        return StartRunLobbyMaxPlayersProperty?.GetValue(lobby) is int parsed ? parsed : 0;
+     }
+ 
+     public static void EnsureFourPlayerLobby()
+     {
+         var scene = GetMultiplayerTestScene();
+         var lobby = scene != null ? GetMultiplayerTestLobby(scene) : GetCharacterSelectScreen(ActiveScreenContext.Instance.GetCurrentScreen())?.Lobby;
+-        if (lobby == null || StartRunLobbyMaxPlayersField == null)
++        if (lobby == null || StartRunLobbyMaxPlayersProperty == null)
+         {
+             return;
+         }
+ 
+-        StartRunLobbyMaxPlayersField.SetValue(lobby, CoopLaunchPolicy.MaxLobbyPlayers);
++        StartRunLobbyMaxPlayersProperty.SetValue(lobby, CoopLaunchPolicy.MaxLobbyPlayers);
+     }
+ 
+     public static NMultiplayerTestCharacterPaginator? GetMultiplayerTestCharacterPaginator(NMultiplayerTest scene)
+diff --git a/STS2AIAgent/Game/GameStateService.Potions.cs b/STS2AIAgent/Game/GameStateService.Potions.cs
+index 7463e37..a8455ea 100644
+--- a/STS2AIAgent/Game/GameStateService.Potions.cs
++++ b/STS2AIAgent/Game/GameStateService.Potions.cs
+@@ -109,7 +109,7 @@ internal static partial class GameStateService
+         return potion != null &&
+             !potion.IsQueued &&
+             !potion.Owner.Creature.IsDead &&
+-            player.CanUseOrRemovePotions;
++            player.CanRemovePotions;
+     }
+ 
+     public static bool PotionRequiresTarget(CombatState? combatState, PotionModel potion)
+diff --git a/STS2AIAgent/Game/GameStateService.cs b/STS2AIAgent/Game/GameStateService.cs
+index 839b3c3..7609440 100644
+--- a/STS2AIAgent/Game/GameStateService.cs
++++ b/STS2AIAgent/Game/GameStateService.cs
+@@ -88,8 +88,8 @@ internal static partial class GameStateService
+ 
+     private static bool _crystalSphereButtonLookupWarningLogged;
+ 
+-    private static FieldInfo? StartRunLobbyMaxPlayersField =>
+-        ReflectedGameMembers.Field(typeof(StartRunLobby), "_maxPlayers");
++    private static PropertyInfo? StartRunLobbyMaxPlayersProperty =>
++        ReflectedGameMembers.Property(typeof(StartRunLobby), "MaxPlayers");
+ 
+     public static GameStatePayload BuildStatePayload()
+     {
+@@ -1375,7 +1375,7 @@ internal static partial class GameStateService
+             return Array.Empty<ulong>();
+         }
+ 
+-        var connectedPlayerIds = RunManager.Instance.RunLobby?.PlayerIds?.ToArray();
++        var connectedPlayerIds = RunManager.Instance.RunLobby?.ConnectedPlayerIds?.ToArray();
+         if (connectedPlayerIds != null && connectedPlayerIds.Length > 0)
+         {
+             return connectedPlayerIds;
+diff --git a/STS2AIAgent/Game/ReflectedGameMembers.cs b/STS2AIAgent/Game/ReflectedGameMembers.cs
+index 3c68a31..52874a8 100644
+--- a/STS2AIAgent/Game/ReflectedGameMembers.cs
++++ b/STS2AIAgent/Game/ReflectedGameMembers.cs
+@@ -75,7 +75,7 @@ internal static class ReflectedGameMembers
+         new(typeof(NEndTurnLongPressBar), "_longPressDuration", MemberKind.Field, true, "end_turn long-press detection"),
+         new(typeof(NDevConsole), "_devConsole", MemberKind.Field, false, "run_console_command"),
+         new(typeof(NMultiplayerSubmenu), "StartLoad", MemberKind.Method, false, "continue_ai_teammate"),
+-        new(typeof(StartRunLobby), "_maxPlayers", MemberKind.Field, false, "multiplayer_lobby.max_players"),
++        new(typeof(StartRunLobby), "MaxPlayers", MemberKind.Property, false, "multiplayer_lobby.max_players"),
+         new(typeof(NCrystalSphereScreen), "_entity", MemberKind.Field, false, "crystal sphere actions"),
+         new(typeof(NPlayerHand), "_prefs", MemberKind.Field, false, "combat hand selection metadata"),
+         new(typeof(NPlayerHand), "_selectedCards", MemberKind.Field, false, "combat hand selection metadata"),
+diff --git a/STS2AIAgent/mod_id.json b/STS2AIAgent/mod_id.json
+index 6831c05..864bccd 100644
+--- a/STS2AIAgent/mod_id.json
++++ b/STS2AIAgent/mod_id.json
+@@ -4,7 +4,7 @@
+   "author": "CharTyr",
+   "description": "带一个 AI 一起爬塔。你打自己的角色，同一台电脑上 AI 可以打另一个。还在开发中，欢迎反馈。",
+   "version": "0.16.2",
+-  "min_game_version": "0.111.0",
++  "min_game_version": "0.107.1",
+   "has_pck": true,
+   "has_dll": true,
+   "dependencies": [],
+diff --git a/STS2AIAgent/mod_manifest.json b/STS2AIAgent/mod_manifest.json
+index 2f04f51..0a36d1d 100644
+--- a/STS2AIAgent/mod_manifest.json
++++ b/STS2AIAgent/mod_manifest.json
+@@ -5,7 +5,7 @@
+   "author": "CharTyr",
+   "description": "带一个 AI 一起爬塔。你打自己的角色，同一台电脑上 AI 可以打另一个。还在开发中，欢迎反馈。",
+   "version": "0.16.2",
+-  "min_game_version": "0.111.0",
++  "min_game_version": "0.107.1",
+   "has_pck": true,
+   "has_dll": true,
+   "dependencies": [],

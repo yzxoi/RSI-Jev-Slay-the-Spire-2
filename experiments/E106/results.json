@@ -1,0 +1,132 @@
+{
+  "upstream": "829ba230e79839ea26dcb9749bf93f268adff697",
+  "baseline_experiment_sha": "ed66ecc",
+  "game": "v0.107.1",
+  "steam_branch": "public",
+  "steam_build": "23811903",
+  "baseline": {
+    "status": "compile_failed",
+    "errors": [
+      "CS0246 StartRunLobbyPlayer not found"
+    ],
+    "raw_log_sha256": "54ed137e03f11ae36bf1d5d3ac182ed27b08279fda79eba514865cedf1fefdf2"
+  },
+  "runtime_tested": false,
+  "steam_coop_tested": false,
+  "iteration_1": {
+    "experiment_sha": "2f19839",
+    "status": "compile_failed",
+    "errors": [
+      "CS1061 RunLobby.PlayerIds missing",
+      "CS1061 Player.CanUseOrRemovePotions missing"
+    ],
+    "raw_log_sha256": "6f3f23e8c28d24544334a0ca98ec669cfaace929b700bfd787f04c52f3fdceb5"
+  },
+  "adapter": {
+    "experiment_sha": "62b00e9a1303a632856d1ba31db884091171a82d",
+    "source_patch_sha256": "984ed861be1e9c3e77e55a1dadf145af2c2705e8d27006a321af463c089e9099",
+    "compile": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "offline_reflection": {
+      "checked": 27,
+      "missing": 0
+    },
+    "unmodified_upstream_reflection": {
+      "checked": 27,
+      "missing": [
+        "StartRunLobby._maxPlayers"
+      ]
+    },
+    "files": [
+      {
+        "name": "STS2AIAgent.dll",
+        "sha256": "fdd770c34c1444682546059e1755c516a6212cdd7fc81b334a199987def1d0d8"
+      },
+      {
+        "name": "STS2AIAgent.pck",
+        "sha256": "eca9934b123a6fdfd55a211acdb58c15d2979d7f717b45e032d45fef7fb79669"
+      },
+      {
+        "name": "mod_id.json",
+        "sha256": "99e79618b4ed73b31220dc6db566a026e3373fbea66ec3cdc268d8ec214a4be5"
+      }
+    ]
+  },
+  "native": {
+    "gameplay_tested": false,
+    "steam_coop_tested": false,
+    "model_requests": 0,
+    "status": "passed",
+    "mcp_tool_count": 16,
+    "existing_profiles_unchanged": true,
+    "installed_application_unchanged": true,
+    "experiment_sha": "1091832d29a1fc7a20f8adfa1c9588cfbde8af0c",
+    "game_version": "v0.107.1",
+    "mod_version": "0.16.2",
+    "health_status": "ready",
+    "play_running": false,
+    "session_requests": 0,
+    "runtime_reflected_members_checked": 27,
+    "runtime_reflected_members_missing": 0,
+    "http_screen": "MAIN_MENU",
+    "mcp_screen": "MAIN_MENU",
+    "termination_note": "After smoke reads, SIGTERM stopped the mod HTTP/event services. Engine shutdown then logged unreferenced static strings and libc++abi terminating. Clean graceful shutdown is not established."
+  },
+  "raw_evidence": [
+    {
+      "path": "artifacts/runs/E106/upstream-stable-build.log",
+      "sha256": "54ed137e03f11ae36bf1d5d3ac182ed27b08279fda79eba514865cedf1fefdf2"
+    },
+    {
+      "path": "artifacts/runs/E106/lobby-adapter-build.log",
+      "sha256": "6f3f23e8c28d24544334a0ca98ec669cfaace929b700bfd787f04c52f3fdceb5"
+    },
+    {
+      "path": "artifacts/runs/E106/stable-adapter-build.log",
+      "sha256": "0e9797cdea322e266f49faee2b5e7e5e10ddcab4ce6a286f08a2c7e04db82b52"
+    },
+    {
+      "path": "artifacts/runs/E106/reflection-probe.json",
+      "sha256": "785c770472b3c8efe4dc1c7b7f59fb9c521b6b604535359d1b34b0a42f0d25e1"
+    },
+    {
+      "path": "artifacts/runs/E106/upstream-reflection-probe.json",
+      "sha256": "a72b15dc5097982ad0c7827a4ea66c47224a3cfa88bfe746b99beae9cbfcd482"
+    },
+    {
+      "path": "artifacts/runs/E106/package.log",
+      "sha256": "91d1dfc6b7206d7fbab866c3dd33d0f5a41c95aff478f74e6c64d415980ef256"
+    },
+    {
+      "path": "artifacts/private/E106-native-smoke/process.log",
+      "sha256": "26bb5b852d0ef47ac172c8cbb210e4588ba70a4ae924fe0870a1d6877f76825d"
+    },
+    {
+      "path": "artifacts/private/E106-native-smoke/health.json",
+      "sha256": "7c79043ecaeaecb891ed43ebd5eaa5a8d783dd8c2e0e6bc0631f084d270ffcf3"
+    },
+    {
+      "path": "artifacts/private/E106-native-smoke/state.json",
+      "sha256": "af7f2ba97ce424a6125b9878b45ac74a09ca79539e48e121552d7f2b2f600951"
+    },
+    {
+      "path": "artifacts/private/E106-native-smoke/mcp-initialize.json",
+      "sha256": "35079fe2a6ed4b7d0131b48d35f98a5450443d54fbd06fd07c9b8343a164bdc5"
+    },
+    {
+      "path": "artifacts/private/E106-native-smoke/mcp-tools.json",
+      "sha256": "2fb9678f0f4d458fd29b755f97ab69efafe08f4513e6425f9660ee5d9ebbe555"
+    },
+    {
+      "path": "artifacts/private/E106-native-smoke/mcp-state.json",
+      "sha256": "1e06874b8afdccdb54187ee7d6f5edd351dfb44db39aa03c33bd1ecc20b416cd"
+    },
+    {
+      "path": "artifacts/private/E106-native-smoke/result.json",
+      "sha256": "2eeafe60b7ef5501aefe4bed40ad09fede35ffce228e2550689ead1a89dc8971"
+    }
+  ],
+  "decision": "Merge reproducible compatibility experiment and evidence; do not promote the adapter as gameplay/Steam-coop validated or install into the real game."
+}
