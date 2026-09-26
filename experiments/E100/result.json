@@ -1,0 +1,881 @@
+{
+  "experiment": "E100",
+  "manifest": {
+    "schema_version": 1,
+    "code_commit": "56020a5a05600280ec76265ed1914e6ad34078e7",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "71505f31e29c370667636600a58fe2b3e270f98e99e3c5a384d176a7f0188274",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+      "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+  },
+  "results": [
+    {
+      "experiment": "E100",
+      "case": "ironclad",
+      "arm": "baseline",
+      "repeat": 0,
+      "run_id": "6f789a35-5cf0-4540-ad11-b8c526f66bb5",
+      "contract": null,
+      "manifest": {
+        "schema_version": 1,
+        "code_commit": "56020a5a05600280ec76265ed1914e6ad34078e7",
+        "tracked_dirty": false,
+        "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+        "headless_assembly_sha256": "71505f31e29c370667636600a58fe2b3e270f98e99e3c5a384d176a7f0188274",
+        "patches": {
+          "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+          "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+          "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+          "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+          "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+          "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+          "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+          "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772"
+        },
+        "dependencies": {
+          "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+          "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+          "dotnet_sdk": "9.0.318",
+          "game_version_expected": "v0.111.0"
+        },
+        "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+      },
+      "status": "boss_defeat",
+      "steps": 21,
+      "program_actions": 0,
+      "entry_verified": true,
+      "final_hp": 0,
+      "last_round": 6,
+      "seconds": 25.118,
+      "model_calls": 21,
+      "model_cost_usd": 0.004785227999999999,
+      "unknown_model_calls": 0,
+      "budgeted_usd": 0.004785227999999999,
+      "model_seconds": 19.424535830505192,
+      "models": [
+        "typesafe/jev-1.13-20260917"
+      ],
+      "fulfilled": [],
+      "trajectory_sha256": "42380214e2d54ccfb42588ae76fd3b32cb66be248a6abf649bb1b78bb11a2929",
+      "final_state_hash": "88a459ee3f59e31ecc8a1c0df8efa2fe5c579b3a0f7b12e8d10eef208ae41d59",
+      "wire_sha256": "9c550bea7c012880be04e05ac052a55d90e2ea1a3febda3c2c7ab6af89cb92ef",
+      "trace_path": "artifacts/runs/6f789a35-5cf0-4540-ad11-b8c526f66bb5/decisions.jsonl",
+      "trace_sha256": "384f364e07d392f05a4e7963eee452a8555ef1d745f60629e2eac789f6f4533f"
+    },
+    {
+      "experiment": "E100",
+      "case": "ironclad",
+      "arm": "contract",
+      "repeat": 0,
+      "run_id": "77d1400d-3bba-4461-ac04-d2dc026ab866",
+      "contract": {
+        "entry_hash": "3e1f2d86cd5b7d039eff1cb75c0ba76c0ded6bec8c4526e8ea28a559d90a74c8",
+        "rules": [
+          {
+            "id": "dexterity_potion",
+            "potion": {
+              "name": "Dexterity Potion",
+              "target_type": "AnyPlayer",
+              "vars": {
+                "DexterityPower": 2
+              }
+            },
+            "when": "opening",
+            "target": null
+          },
+          {
+            "id": "blood_potion",
+            "potion": {
+              "name": "Blood Potion",
+              "target_type": "AnyPlayer",
+              "vars": {
+                "HealPercent": 20
+              }
+            },
+            "when": "full_heal_deficit",
+            "target": null
+          }
+        ],
+        "expiry": "boss_boundary"
+      },
+      "manifest": {
+        "schema_version": 1,
+        "code_commit": "56020a5a05600280ec76265ed1914e6ad34078e7",
+        "tracked_dirty": false,
+        "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+        "headless_assembly_sha256": "71505f31e29c370667636600a58fe2b3e270f98e99e3c5a384d176a7f0188274",
+        "patches": {
+          "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+          "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+          "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+          "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+          "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+          "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+          "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+          "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772"
+        },
+        "dependencies": {
+          "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+          "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+          "dotnet_sdk": "9.0.318",
+          "game_version_expected": "v0.111.0"
+        },
+        "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+      },
+      "status": "boss_clear",
+      "steps": 24,
+      "program_actions": 2,
+      "entry_verified": true,
+      "final_hp": 21,
+      "last_round": 7,
+      "seconds": 21.72,
+      "model_calls": 16,
+      "model_cost_usd": 0.003728676,
+      "unknown_model_calls": 0,
+      "budgeted_usd": 0.003728676,
+      "model_seconds": 16.26135200052522,
+      "models": [
+        "typesafe/jev-1.13-20260917"
+      ],
+      "fulfilled": [
+        "blood_potion",
+        "dexterity_potion"
+      ],
+      "trajectory_sha256": "1c32b3fa276eb1cd7351c2f07fdada7794164fea6173619474b303f71f9eb007",
+      "final_state_hash": "1a5000bfd476c3c4d58e4d0fce08979f5399261829d8ef969f9aebaae781f721",
+      "wire_sha256": "4cce998b36eb2881201993c3329ed6e152d187c44d3e1c60a8b0af520e7f3048",
+      "trace_path": "artifacts/runs/77d1400d-3bba-4461-ac04-d2dc026ab866/decisions.jsonl",
+      "trace_sha256": "d857d1e1b0c17723b4a4fff3a70a4c848dcb1dcdf9c3f44beeef2a6b9907eade"
+    },
+    {
+      "experiment": "E100",
+      "case": "silent",
+      "arm": "baseline",
+      "repeat": 0,
+      "run_id": "bbbed534-6327-463c-956b-47890b8f7340",
+      "contract": null,
+      "manifest": {
+        "schema_version": 1,
+        "code_commit": "56020a5a05600280ec76265ed1914e6ad34078e7",
+        "tracked_dirty": false,
+        "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+        "headless_assembly_sha256": "71505f31e29c370667636600a58fe2b3e270f98e99e3c5a384d176a7f0188274",
+        "patches": {
+          "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+          "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+          "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+          "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+          "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+          "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+          "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+          "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772"
+        },
+        "dependencies": {
+          "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+          "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+          "dotnet_sdk": "9.0.318",
+          "game_version_expected": "v0.111.0"
+        },
+        "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+      },
+      "status": "boss_defeat",
+      "steps": 29,
+      "program_actions": 0,
+      "entry_verified": true,
+      "final_hp": 0,
+      "last_round": 6,
+      "seconds": 43.731,
+      "model_calls": 28,
+      "model_cost_usd": 0.006495048,
+      "unknown_model_calls": 0,
+      "budgeted_usd": 0.006495048,
+      "model_seconds": 35.45013800566085,
+      "models": [
+        "typesafe/jev-1.13-20260917"
+      ],
+      "fulfilled": [],
+      "trajectory_sha256": "a8d07c46fa0193df0abc8cb8a7772dc42da197cacc1b7d7090ae9595143212c3",
+      "final_state_hash": "127f27f7eb2e3fcf50611714beb30f78fcdd14e998c67f3b342652fde2bc310a",
+      "wire_sha256": "f47922230727ccfbadf440027475c4a08eee51747f18b22e2bc9fbb1e29f9eb7",
+      "trace_path": "artifacts/runs/bbbed534-6327-463c-956b-47890b8f7340/decisions.jsonl",
+      "trace_sha256": "8327924a48941133254dc0e69d509e68f9c4e139965dc90035553782a59c1427"
+    },
+    {
+      "experiment": "E100",
+      "case": "silent",
+      "arm": "contract",
+      "repeat": 0,
+      "run_id": "ea1a10a6-a056-447a-b1bb-d10ef3253ba3",
+      "contract": {
+        "entry_hash": "40bf809c959d3afa16b43c0d03e97a9863df55617f130bbcb37b5a50a2df36c5",
+        "rules": [
+          {
+            "id": "dexterity_potion",
+            "potion": {
+              "name": "Dexterity Potion",
+              "target_type": "AnyPlayer",
+              "vars": {
+                "DexterityPower": 2
+              }
+            },
+            "when": "opening",
+            "target": null
+          },
+          {
+            "id": "poison_potion",
+            "potion": {
+              "name": "Poison Potion",
+              "target_type": "AnyEnemy",
+              "vars": {
+                "PoisonPower": 6
+              }
+            },
+            "when": "opening",
+            "target": "Kin Priest"
+          }
+        ],
+        "expiry": "boss_boundary"
+      },
+      "manifest": {
+        "schema_version": 1,
+        "code_commit": "56020a5a05600280ec76265ed1914e6ad34078e7",
+        "tracked_dirty": false,
+        "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+        "headless_assembly_sha256": "71505f31e29c370667636600a58fe2b3e270f98e99e3c5a384d176a7f0188274",
+        "patches": {
+          "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+          "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+          "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+          "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+          "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+          "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+          "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+          "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772"
+        },
+        "dependencies": {
+          "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+          "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+          "dotnet_sdk": "9.0.318",
+          "game_version_expected": "v0.111.0"
+        },
+        "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+      },
+      "status": "boss_clear",
+      "steps": 38,
+      "program_actions": 2,
+      "entry_verified": true,
+      "final_hp": 3,
+      "last_round": 8,
+      "seconds": 45.338,
+      "model_calls": 30,
+      "model_cost_usd": 0.006847470000000002,
+      "unknown_model_calls": 0,
+      "budgeted_usd": 0.006847470000000002,
+      "model_seconds": 36.900357499718666,
+      "models": [
+        "typesafe/jev-1.13-20260917"
+      ],
+      "fulfilled": [
+        "dexterity_potion",
+        "poison_potion"
+      ],
+      "trajectory_sha256": "6d48e352be51076ea0296538526c5582c2f24befb7dd6c01015469b3b0e5d203",
+      "final_state_hash": "3b79583632083986d98b979a3a9db0f4c2b6fa791cc49e91a9ed6298b3e569e1",
+      "wire_sha256": "f37914161382d8237cfd96bedff04a79a36ac45c5112a45825c07a5df004915d",
+      "trace_path": "artifacts/runs/ea1a10a6-a056-447a-b1bb-d10ef3253ba3/decisions.jsonl",
+      "trace_sha256": "8b8cfbe2204af21e6143662a686f71bf47e245ef3e4e18302b8cba034cbc55b9"
+    },
+    {
+      "experiment": "E100",
+      "case": "ironclad",
+      "arm": "contract",
+      "repeat": 1,
+      "run_id": "b879fe7c-9f5f-48ed-831e-c0901adb9b52",
+      "contract": {
+        "entry_hash": "3e1f2d86cd5b7d039eff1cb75c0ba76c0ded6bec8c4526e8ea28a559d90a74c8",
+        "rules": [
+          {
+            "id": "dexterity_potion",
+            "potion": {
+              "name": "Dexterity Potion",
+              "target_type": "AnyPlayer",
+              "vars": {
+                "DexterityPower": 2
+              }
+            },
+            "when": "opening",
+            "target": null
+          },
+          {
+            "id": "blood_potion",
+            "potion": {
+              "name": "Blood Potion",
+              "target_type": "AnyPlayer",
+              "vars": {
+                "HealPercent": 20
+              }
+            },
+            "when": "full_heal_deficit",
+            "target": null
+          }
+        ],
+        "expiry": "boss_boundary"
+      },
+      "manifest": {
+        "schema_version": 1,
+        "code_commit": "56020a5a05600280ec76265ed1914e6ad34078e7",
+        "tracked_dirty": false,
+        "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+        "headless_assembly_sha256": "71505f31e29c370667636600a58fe2b3e270f98e99e3c5a384d176a7f0188274",
+        "patches": {
+          "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+          "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+          "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+          "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+          "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+          "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+          "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+          "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772"
+        },
+        "dependencies": {
+          "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+          "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+          "dotnet_sdk": "9.0.318",
+          "game_version_expected": "v0.111.0"
+        },
+        "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+      },
+      "status": "boss_clear",
+      "steps": 24,
+      "program_actions": 2,
+      "entry_verified": true,
+      "final_hp": 21,
+      "last_round": 7,
+      "seconds": 23.974,
+      "model_calls": 16,
+      "model_cost_usd": 0.003728676,
+      "unknown_model_calls": 0,
+      "budgeted_usd": 0.003728676,
+      "model_seconds": 18.54359887400642,
+      "models": [
+        "typesafe/jev-1.13-20260917"
+      ],
+      "fulfilled": [
+        "blood_potion",
+        "dexterity_potion"
+      ],
+      "trajectory_sha256": "1c32b3fa276eb1cd7351c2f07fdada7794164fea6173619474b303f71f9eb007",
+      "final_state_hash": "1a5000bfd476c3c4d58e4d0fce08979f5399261829d8ef969f9aebaae781f721",
+      "wire_sha256": "d950913ccdce66421e8050a5670bc48ed0fb8a470713e73debfa4bc8e44763ef",
+      "trace_path": "artifacts/runs/b879fe7c-9f5f-48ed-831e-c0901adb9b52/decisions.jsonl",
+      "trace_sha256": "dd36823976ea2c80d60f05e81edc7a80606d5f5d14d13fe94ee4a7fed181e280"
+    },
+    {
+      "experiment": "E100",
+      "case": "ironclad",
+      "arm": "baseline",
+      "repeat": 1,
+      "run_id": "dfdcdf0d-4d88-43f3-88d3-252b91cfd1e8",
+      "contract": null,
+      "manifest": {
+        "schema_version": 1,
+        "code_commit": "56020a5a05600280ec76265ed1914e6ad34078e7",
+        "tracked_dirty": false,
+        "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+        "headless_assembly_sha256": "71505f31e29c370667636600a58fe2b3e270f98e99e3c5a384d176a7f0188274",
+        "patches": {
+          "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+          "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+          "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+          "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+          "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+          "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+          "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+          "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772"
+        },
+        "dependencies": {
+          "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+          "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+          "dotnet_sdk": "9.0.318",
+          "game_version_expected": "v0.111.0"
+        },
+        "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+      },
+      "status": "boss_defeat",
+      "steps": 21,
+      "program_actions": 0,
+      "entry_verified": true,
+      "final_hp": 0,
+      "last_round": 6,
+      "seconds": 30.488,
+      "model_calls": 21,
+      "model_cost_usd": 0.00488817,
+      "unknown_model_calls": 0,
+      "budgeted_usd": 0.00488817,
+      "model_seconds": 25.14501008600928,
+      "models": [
+        "typesafe/jev-1.13-20260917"
+      ],
+      "fulfilled": [],
+      "trajectory_sha256": "818942453c038529bf00c3e89fc55fe78436254285b5d46b628f2bbc17768920",
+      "final_state_hash": "6d0c7fde432a0beb3db6b3a3facde028e6ced01088eff13e4394b821301cd9de",
+      "wire_sha256": "18e64eb51d04b7afb136952de5b2728c43184add164821ae059557f14fe48fa7",
+      "trace_path": "artifacts/runs/dfdcdf0d-4d88-43f3-88d3-252b91cfd1e8/decisions.jsonl",
+      "trace_sha256": "83351c1c5bf4b44a70a674983515470f0a1b21816d9ff68334061ef495e33e26"
+    },
+    {
+      "experiment": "E100",
+      "case": "silent",
+      "arm": "contract",
+      "repeat": 1,
+      "run_id": "bc7290a4-bff4-494f-8819-beae9ecd9ec9",
+      "contract": {
+        "entry_hash": "40bf809c959d3afa16b43c0d03e97a9863df55617f130bbcb37b5a50a2df36c5",
+        "rules": [
+          {
+            "id": "dexterity_potion",
+            "potion": {
+              "name": "Dexterity Potion",
+              "target_type": "AnyPlayer",
+              "vars": {
+                "DexterityPower": 2
+              }
+            },
+            "when": "opening",
+            "target": null
+          },
+          {
+            "id": "poison_potion",
+            "potion": {
+              "name": "Poison Potion",
+              "target_type": "AnyEnemy",
+              "vars": {
+                "PoisonPower": 6
+              }
+            },
+            "when": "opening",
+            "target": "Kin Priest"
+          }
+        ],
+        "expiry": "boss_boundary"
+      },
+      "manifest": {
+        "schema_version": 1,
+        "code_commit": "56020a5a05600280ec76265ed1914e6ad34078e7",
+        "tracked_dirty": false,
+        "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+        "headless_assembly_sha256": "71505f31e29c370667636600a58fe2b3e270f98e99e3c5a384d176a7f0188274",
+        "patches": {
+          "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+          "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+          "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+          "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+          "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+          "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+          "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+          "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772"
+        },
+        "dependencies": {
+          "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+          "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+          "dotnet_sdk": "9.0.318",
+          "game_version_expected": "v0.111.0"
+        },
+        "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+      },
+      "status": "boss_defeat",
+      "steps": 33,
+      "program_actions": 2,
+      "entry_verified": true,
+      "final_hp": 0,
+      "last_round": 7,
+      "seconds": 40.776,
+      "model_calls": 26,
+      "model_cost_usd": 0.0059031,
+      "unknown_model_calls": 0,
+      "budgeted_usd": 0.0059031,
+      "model_seconds": 32.597040040651336,
+      "models": [
+        "typesafe/jev-1.13-20260917"
+      ],
+      "fulfilled": [
+        "dexterity_potion",
+        "poison_potion"
+      ],
+      "trajectory_sha256": "81a14b4b989343eb855aaf52c6da8dbcaa37b84fb49542ee2b7f2336aa50d2d7",
+      "final_state_hash": "127f27f7eb2e3fcf50611714beb30f78fcdd14e998c67f3b342652fde2bc310a",
+      "wire_sha256": "cfbacfacfa0501654799bc19bd1fff28cf174ad50da0d1e955924d78a43263ea",
+      "trace_path": "artifacts/runs/bc7290a4-bff4-494f-8819-beae9ecd9ec9/decisions.jsonl",
+      "trace_sha256": "950f77dd37ec6ecf07ab798b3be58a23d4b0cf118bce7d4595880aae47564e56"
+    },
+    {
+      "experiment": "E100",
+      "case": "silent",
+      "arm": "baseline",
+      "repeat": 1,
+      "run_id": "dd54e2e1-b6c2-4f5c-bd98-ec1053e714ba",
+      "contract": null,
+      "manifest": {
+        "schema_version": 1,
+        "code_commit": "56020a5a05600280ec76265ed1914e6ad34078e7",
+        "tracked_dirty": false,
+        "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+        "headless_assembly_sha256": "71505f31e29c370667636600a58fe2b3e270f98e99e3c5a384d176a7f0188274",
+        "patches": {
+          "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+          "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+          "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+          "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+          "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+          "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+          "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+          "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772"
+        },
+        "dependencies": {
+          "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+          "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+          "dotnet_sdk": "9.0.318",
+          "game_version_expected": "v0.111.0"
+        },
+        "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+      },
+      "status": "boss_defeat",
+      "steps": 30,
+      "program_actions": 0,
+      "entry_verified": true,
+      "final_hp": 0,
+      "last_round": 6,
+      "seconds": 40.695,
+      "model_calls": 28,
+      "model_cost_usd": 0.006426839999999999,
+      "unknown_model_calls": 0,
+      "budgeted_usd": 0.006426839999999999,
+      "model_seconds": 32.038620543899015,
+      "models": [
+        "typesafe/jev-1.13-20260917"
+      ],
+      "fulfilled": [],
+      "trajectory_sha256": "476dc413c01860e14487a665b79252f4f9221f7f3195f7d16d41806bd0bc3951",
+      "final_state_hash": "127f27f7eb2e3fcf50611714beb30f78fcdd14e998c67f3b342652fde2bc310a",
+      "wire_sha256": "6c940cccb72cbcbe64220664ae391aa39a9d870d3dae267222696b61f1aa6e83",
+      "trace_path": "artifacts/runs/dd54e2e1-b6c2-4f5c-bd98-ec1053e714ba/decisions.jsonl",
+      "trace_sha256": "243ae0c3a997acff353fb4c41ee96f518867a98e51a0deeb2cc0b49bdc4552bf"
+    },
+    {
+      "experiment": "E100",
+      "case": "ironclad",
+      "arm": "baseline",
+      "repeat": 2,
+      "run_id": "67cc7358-964e-4716-b850-e1d8ff2d7cd9",
+      "contract": null,
+      "manifest": {
+        "schema_version": 1,
+        "code_commit": "56020a5a05600280ec76265ed1914e6ad34078e7",
+        "tracked_dirty": false,
+        "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+        "headless_assembly_sha256": "71505f31e29c370667636600a58fe2b3e270f98e99e3c5a384d176a7f0188274",
+        "patches": {
+          "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+          "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+          "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+          "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+          "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+          "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+          "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+          "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772"
+        },
+        "dependencies": {
+          "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+          "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+          "dotnet_sdk": "9.0.318",
+          "game_version_expected": "v0.111.0"
+        },
+        "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+      },
+      "status": "boss_defeat",
+      "steps": 20,
+      "program_actions": 0,
+      "entry_verified": true,
+      "final_hp": 0,
+      "last_round": 6,
+      "seconds": 32.252,
+      "model_calls": 20,
+      "model_cost_usd": 0.004690476,
+      "unknown_model_calls": 0,
+      "budgeted_usd": 0.004690476,
+      "model_seconds": 26.95892866817303,
+      "models": [
+        "typesafe/jev-1.13-20260917"
+      ],
+      "fulfilled": [],
+      "trajectory_sha256": "8a69a60942d6d93ad85ad64b10be737f64d807168a995509a68aa0a4f9ffb1be",
+      "final_state_hash": "6d0c7fde432a0beb3db6b3a3facde028e6ced01088eff13e4394b821301cd9de",
+      "wire_sha256": "b1e4b297694bc46e839b63359f5f6246e7f0a4b7a47e51f2cbd29c8442f256f1",
+      "trace_path": "artifacts/runs/67cc7358-964e-4716-b850-e1d8ff2d7cd9/decisions.jsonl",
+      "trace_sha256": "33697409f8e63e6cf55a8e8fbb3053b5daecd91e58161337e4b9ae5347d3782d"
+    },
+    {
+      "experiment": "E100",
+      "case": "ironclad",
+      "arm": "contract",
+      "repeat": 2,
+      "run_id": "94c452f5-1cd9-4087-a2da-cdf9351c2556",
+      "contract": {
+        "entry_hash": "3e1f2d86cd5b7d039eff1cb75c0ba76c0ded6bec8c4526e8ea28a559d90a74c8",
+        "rules": [
+          {
+            "id": "dexterity_potion",
+            "potion": {
+              "name": "Dexterity Potion",
+              "target_type": "AnyPlayer",
+              "vars": {
+                "DexterityPower": 2
+              }
+            },
+            "when": "opening",
+            "target": null
+          },
+          {
+            "id": "blood_potion",
+            "potion": {
+              "name": "Blood Potion",
+              "target_type": "AnyPlayer",
+              "vars": {
+                "HealPercent": 20
+              }
+            },
+            "when": "full_heal_deficit",
+            "target": null
+          }
+        ],
+        "expiry": "boss_boundary"
+      },
+      "manifest": {
+        "schema_version": 1,
+        "code_commit": "56020a5a05600280ec76265ed1914e6ad34078e7",
+        "tracked_dirty": false,
+        "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+        "headless_assembly_sha256": "71505f31e29c370667636600a58fe2b3e270f98e99e3c5a384d176a7f0188274",
+        "patches": {
+          "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+          "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+          "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+          "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+          "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+          "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+          "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+          "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772"
+        },
+        "dependencies": {
+          "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+          "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+          "dotnet_sdk": "9.0.318",
+          "game_version_expected": "v0.111.0"
+        },
+        "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+      },
+      "status": "boss_clear",
+      "steps": 22,
+      "program_actions": 2,
+      "entry_verified": true,
+      "final_hp": 16,
+      "last_round": 7,
+      "seconds": 21.215,
+      "model_calls": 15,
+      "model_cost_usd": 0.003531738,
+      "unknown_model_calls": 0,
+      "budgeted_usd": 0.003531738,
+      "model_seconds": 15.821845333324745,
+      "models": [
+        "typesafe/jev-1.13-20260917"
+      ],
+      "fulfilled": [
+        "blood_potion",
+        "dexterity_potion"
+      ],
+      "trajectory_sha256": "fc2316d07abcdfe0c1f9ceabdf4e82a10cb4992ed218e65783ae695cd9fcdd49",
+      "final_state_hash": "e5cacfceb3354234ba7be0abed7e06f802df7564415127b4bbabb4681b48ed80",
+      "wire_sha256": "3021d0a8d3485de391ac4097c047af7686aa082b62944bd0c255a5b28c13d657",
+      "trace_path": "artifacts/runs/94c452f5-1cd9-4087-a2da-cdf9351c2556/decisions.jsonl",
+      "trace_sha256": "e0326a2d661a3cc8bcfd86bfe44d6f52ddce0d246e9f70a521fb7887ac7b8037"
+    },
+    {
+      "experiment": "E100",
+      "case": "silent",
+      "arm": "baseline",
+      "repeat": 2,
+      "run_id": "9b88b1fa-6bf7-47b6-84fc-edf8944d348c",
+      "contract": null,
+      "manifest": {
+        "schema_version": 1,
+        "code_commit": "56020a5a05600280ec76265ed1914e6ad34078e7",
+        "tracked_dirty": false,
+        "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+        "headless_assembly_sha256": "71505f31e29c370667636600a58fe2b3e270f98e99e3c5a384d176a7f0188274",
+        "patches": {
+          "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+          "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+          "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+          "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+          "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+          "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+          "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+          "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772"
+        },
+        "dependencies": {
+          "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+          "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+          "dotnet_sdk": "9.0.318",
+          "game_version_expected": "v0.111.0"
+        },
+        "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+      },
+      "status": "boss_defeat",
+      "steps": 29,
+      "program_actions": 0,
+      "entry_verified": true,
+      "final_hp": 0,
+      "last_round": 6,
+      "seconds": 43.688,
+      "model_calls": 28,
+      "model_cost_usd": 0.006495048,
+      "unknown_model_calls": 0,
+      "budgeted_usd": 0.006495048,
+      "model_seconds": 35.419460501056165,
+      "models": [
+        "typesafe/jev-1.13-20260917"
+      ],
+      "fulfilled": [],
+      "trajectory_sha256": "a8d07c46fa0193df0abc8cb8a7772dc42da197cacc1b7d7090ae9595143212c3",
+      "final_state_hash": "127f27f7eb2e3fcf50611714beb30f78fcdd14e998c67f3b342652fde2bc310a",
+      "wire_sha256": "bf762b43a6b69f384e79bd7d5e2c7557acf15143ff6b78422b1e4aaafcbc9ff6",
+      "trace_path": "artifacts/runs/9b88b1fa-6bf7-47b6-84fc-edf8944d348c/decisions.jsonl",
+      "trace_sha256": "b624b3b0a2b9eb9ce71d8482d15001967bb78d25d8136fd4c0b9d3061c753aa6"
+    },
+    {
+      "experiment": "E100",
+      "case": "silent",
+      "arm": "contract",
+      "repeat": 2,
+      "run_id": "155ce8ca-2b0c-4eec-8bb0-cd9290c5aa70",
+      "contract": {
+        "entry_hash": "40bf809c959d3afa16b43c0d03e97a9863df55617f130bbcb37b5a50a2df36c5",
+        "rules": [
+          {
+            "id": "dexterity_potion",
+            "potion": {
+              "name": "Dexterity Potion",
+              "target_type": "AnyPlayer",
+              "vars": {
+                "DexterityPower": 2
+              }
+            },
+            "when": "opening",
+            "target": null
+          },
+          {
+            "id": "poison_potion",
+            "potion": {
+              "name": "Poison Potion",
+              "target_type": "AnyEnemy",
+              "vars": {
+                "PoisonPower": 6
+              }
+            },
+            "when": "opening",
+            "target": "Kin Priest"
+          }
+        ],
+        "expiry": "boss_boundary"
+      },
+      "manifest": {
+        "schema_version": 1,
+        "code_commit": "56020a5a05600280ec76265ed1914e6ad34078e7",
+        "tracked_dirty": false,
+        "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+        "headless_assembly_sha256": "71505f31e29c370667636600a58fe2b3e270f98e99e3c5a384d176a7f0188274",
+        "patches": {
+          "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+          "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+          "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+          "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+          "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+          "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+          "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+          "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772"
+        },
+        "dependencies": {
+          "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+          "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+          "dotnet_sdk": "9.0.318",
+          "game_version_expected": "v0.111.0"
+        },
+        "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+      },
+      "status": "boss_clear",
+      "steps": 37,
+      "program_actions": 2,
+      "entry_verified": true,
+      "final_hp": 3,
+      "last_round": 8,
+      "seconds": 44.916,
+      "model_calls": 28,
+      "model_cost_usd": 0.0064134840000000005,
+      "unknown_model_calls": 0,
+      "budgeted_usd": 0.0064134840000000005,
+      "model_seconds": 32.278854412958026,
+      "models": [
+        "typesafe/jev-1.13-20260917"
+      ],
+      "fulfilled": [
+        "dexterity_potion",
+        "poison_potion"
+      ],
+      "trajectory_sha256": "a3cb758e4387477a83f57f2fea95d7b755b4b569fa5720f917f92ee840f51182",
+      "final_state_hash": "3b79583632083986d98b979a3a9db0f4c2b6fa791cc49e91a9ed6298b3e569e1",
+      "wire_sha256": "c2ebd2d3b6cd48bc0aaeb424abf53b88854c21c73597e0f2dbaf6772215907e6",
+      "trace_path": "artifacts/runs/155ce8ca-2b0c-4eec-8bb0-cd9290c5aa70/decisions.jsonl",
+      "trace_sha256": "e8b261470921941179145fb4c5c65f36aaefaa5919d12dc645d0abe1fb7db525"
+    }
+  ],
+  "session": {
+    "calls": 277,
+    "reported_usd": 0.06393395400000003,
+    "unknown_calls": 0,
+    "budgeted_usd": 0.06393395400000003
+  },
+  "summary": {
+    "baseline": {
+      "battles": 6,
+      "clears": 0,
+      "model_calls": 146,
+      "model_usd": 0.033780809999999994,
+      "program_actions": 0,
+      "lethal_actions": 0
+    },
+    "contract": {
+      "battles": 6,
+      "clears": 5,
+      "model_calls": 131,
+      "model_usd": 0.030153144000000003,
+      "program_actions": 12,
+      "lethal_actions": 0
+    }
+  }
+}
