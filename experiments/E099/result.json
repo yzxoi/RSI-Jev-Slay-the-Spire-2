@@ -1,0 +1,1518 @@
+{
+  "experiment": "E099",
+  "scope": "Two development Boss entries, six first-pass continuations; not full runs or independent holdout.",
+  "fixture_sha256": "aa698e266a13cbf0aa4ceea41975cbd7b89e73038dcb1becff53b606164f2cfb",
+  "plans_sha256": "2a809e7d7f9c1e81f15de181aa25553f71056b576e73ee465f3d25bfd30a1468",
+  "results": [
+    {
+      "run_id": "907c7995-922b-4804-8d2f-4d2cac7f7434",
+      "case": "ironclad",
+      "mode": "jev",
+      "label": "pilot-01",
+      "manifest": {
+        "schema_version": 1,
+        "code_commit": "4d3a5f06b52790f047694318303c87afd37d9774",
+        "tracked_dirty": false,
+        "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+        "headless_assembly_sha256": "71505f31e29c370667636600a58fe2b3e270f98e99e3c5a384d176a7f0188274",
+        "patches": {
+          "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+          "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+          "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+          "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+          "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+          "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+          "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+          "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772"
+        },
+        "dependencies": {
+          "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+          "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+          "dotnet_sdk": "9.0.318",
+          "game_version_expected": "v0.111.0"
+        },
+        "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+      },
+      "status": "boss_defeat",
+      "steps": 19,
+      "expert_packets": 0,
+      "expert_input_chars": 0,
+      "expert_output_chars": 0,
+      "expert_api_tokens": null,
+      "expert_cost_usd": null,
+      "offline_plan_calls": 0,
+      "offline_plan_chars": 0,
+      "entry_verified": true,
+      "seconds": 21.504,
+      "final_hp": 0,
+      "final_round": null,
+      "final_state_hash": "f709b8af366e7d8dc92c4e5cece0b07d526bd28f1e057da87936c7a160ad067a",
+      "remaining_enemies": [],
+      "model_calls": 19,
+      "model_cost_usd": 0.004289796,
+      "unknown_model_calls": 0,
+      "model_budgeted_usd": 0.004289796,
+      "model_seconds": 15.866446916945279,
+      "models": [
+        "typesafe/jev-1.13-20260917"
+      ],
+      "trajectory_sha256": "8987563e6f2df5dcfa36fb1b12f42bb43273d29c9fb948dfe52e8e41079c13d2",
+      "wire_sha256": "cb99e1bb8ee82ab0ead0af8e40ecbebd7bcc1a362f535ff81f74d25b2e67697a",
+      "trace_path": "artifacts/runs/907c7995-922b-4804-8d2f-4d2cac7f7434/decisions.jsonl",
+      "trace_sha256": "913c494a7aa0981bd8b7ce4739eda1525ddd9936d6fb0eba4349ed35ab54d900",
+      "last_combat_round": 8,
+      "last_combat_enemies": [
+        {
+          "name": "Kin Follower",
+          "hp": 51
+        },
+        {
+          "name": "Kin Follower",
+          "hp": 50
+        },
+        {
+          "name": "Kin Priest",
+          "hp": 129
+        }
+      ]
+    },
+    {
+      "run_id": "e3366f66-e255-40bf-a41d-cc39b7af1cdd",
+      "case": "ironclad",
+      "mode": "plan",
+      "label": "pilot-01",
+      "manifest": {
+        "schema_version": 1,
+        "code_commit": "4d3a5f06b52790f047694318303c87afd37d9774",
+        "tracked_dirty": false,
+        "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+        "headless_assembly_sha256": "71505f31e29c370667636600a58fe2b3e270f98e99e3c5a384d176a7f0188274",
+        "patches": {
+          "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+          "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+          "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+          "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+          "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+          "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+          "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+          "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772"
+        },
+        "dependencies": {
+          "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+          "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+          "dotnet_sdk": "9.0.318",
+          "game_version_expected": "v0.111.0"
+        },
+        "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+      },
+      "status": "boss_defeat",
+      "steps": 21,
+      "expert_packets": 0,
+      "expert_input_chars": 0,
+      "expert_output_chars": 0,
+      "expert_api_tokens": null,
+      "expert_cost_usd": null,
+      "offline_plan_calls": 1,
+      "offline_plan_chars": 1810,
+      "entry_verified": true,
+      "seconds": 22.792,
+      "final_hp": 0,
+      "final_round": null,
+      "final_state_hash": "6d0c7fde432a0beb3db6b3a3facde028e6ced01088eff13e4394b821301cd9de",
+      "remaining_enemies": [],
+      "model_calls": 21,
+      "model_cost_usd": 0.00488817,
+      "unknown_model_calls": 0,
+      "model_budgeted_usd": 0.00488817,
+      "model_seconds": 16.84110316587612,
+      "models": [
+        "typesafe/jev-1.13-20260917"
+      ],
+      "trajectory_sha256": "818942453c038529bf00c3e89fc55fe78436254285b5d46b628f2bbc17768920",
+      "wire_sha256": "1a0485ba20463fbc9d1b4ced734f3946c14a065de534408492ae483f701368c5",
+      "trace_path": "artifacts/runs/e3366f66-e255-40bf-a41d-cc39b7af1cdd/decisions.jsonl",
+      "trace_sha256": "23e6e0a593cae3000426748cbb214eb135ef9f1ce271c0a779b0d3b5731efad3",
+      "last_combat_round": 6,
+      "last_combat_enemies": [
+        {
+          "name": "Kin Follower",
+          "hp": 55
+        },
+        {
+          "name": "Kin Follower",
+          "hp": 62
+        },
+        {
+          "name": "Kin Priest",
+          "hp": 12
+        }
+      ]
+    },
+    {
+      "run_id": "56b0bac2-8bde-4b46-95bc-04cf850d4b90",
+      "case": "silent",
+      "mode": "jev",
+      "label": "pilot-01",
+      "manifest": {
+        "schema_version": 1,
+        "code_commit": "4d3a5f06b52790f047694318303c87afd37d9774",
+        "tracked_dirty": false,
+        "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+        "headless_assembly_sha256": "71505f31e29c370667636600a58fe2b3e270f98e99e3c5a384d176a7f0188274",
+        "patches": {
+          "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+          "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+          "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+          "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+          "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+          "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+          "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+          "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772"
+        },
+        "dependencies": {
+          "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+          "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+          "dotnet_sdk": "9.0.318",
+          "game_version_expected": "v0.111.0"
+        },
+        "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+      },
+      "status": "boss_defeat",
+      "steps": 21,
+      "expert_packets": 0,
+      "expert_input_chars": 0,
+      "expert_output_chars": 0,
+      "expert_api_tokens": null,
+      "expert_cost_usd": null,
+      "offline_plan_calls": 0,
+      "offline_plan_chars": 0,
+      "entry_verified": true,
+      "seconds": 25.092,
+      "final_hp": 0,
+      "final_round": null,
+      "final_state_hash": "c784944c8f6552421637a7ee6fc5b479b2bf68faf5afef29ef95a33655701a84",
+      "remaining_enemies": [],
+      "model_calls": 21,
+      "model_cost_usd": 0.005109552,
+      "unknown_model_calls": 0,
+      "model_budgeted_usd": 0.005109552,
+      "model_seconds": 16.551835207967088,
+      "models": [
+        "typesafe/jev-1.13-20260917"
+      ],
+      "trajectory_sha256": "29b377deed25a6c23ab482c114d63ab721b4b4a7236dec7439f6ecf3ed3b0464",
+      "wire_sha256": "909d6e69ed8af6db5b171735b5eab0898c37666681924413644c2475a1aaa627",
+      "trace_path": "artifacts/runs/56b0bac2-8bde-4b46-95bc-04cf850d4b90/decisions.jsonl",
+      "trace_sha256": "c7e575763ef51968a7ce6542fe736696639d8776145e43b27b77767c90e730ab",
+      "last_combat_round": 7,
+      "last_combat_enemies": [
+        {
+          "name": "Kin Follower",
+          "hp": 62
+        },
+        {
+          "name": "Kin Follower",
+          "hp": 63
+        },
+        {
+          "name": "Kin Priest",
+          "hp": 188
+        }
+      ]
+    },
+    {
+      "run_id": "9408510d-e317-4764-a7b0-2e891464fe19",
+      "case": "silent",
+      "mode": "plan",
+      "label": "pilot-01",
+      "manifest": {
+        "schema_version": 1,
+        "code_commit": "4d3a5f06b52790f047694318303c87afd37d9774",
+        "tracked_dirty": false,
+        "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+        "headless_assembly_sha256": "71505f31e29c370667636600a58fe2b3e270f98e99e3c5a384d176a7f0188274",
+        "patches": {
+          "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+          "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+          "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+          "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+          "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+          "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+          "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+          "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772"
+        },
+        "dependencies": {
+          "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+          "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+          "dotnet_sdk": "9.0.318",
+          "game_version_expected": "v0.111.0"
+        },
+        "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+      },
+      "status": "boss_defeat",
+      "steps": 27,
+      "expert_packets": 0,
+      "expert_input_chars": 0,
+      "expert_output_chars": 0,
+      "expert_api_tokens": null,
+      "expert_cost_usd": null,
+      "offline_plan_calls": 1,
+      "offline_plan_chars": 1578,
+      "entry_verified": true,
+      "seconds": 30.316,
+      "final_hp": 0,
+      "final_round": null,
+      "final_state_hash": "4e88afdcaebbc5689b68d39948aeac18210b690ccabb9a3115d0e0da9c92d0d2",
+      "remaining_enemies": [],
+      "model_calls": 27,
+      "model_cost_usd": 0.006299244000000001,
+      "unknown_model_calls": 0,
+      "model_budgeted_usd": 0.006299244000000001,
+      "model_seconds": 21.798930247547105,
+      "models": [
+        "typesafe/jev-1.13-20260917"
+      ],
+      "trajectory_sha256": "cff29c6e21c7d6814107587314e879710e21256e2da2d93221d9e17c9bdb8ea9",
+      "wire_sha256": "9f6097bf4e9918682da404810422f175c10327c2de4fdaf324fb854c3f158659",
+      "trace_path": "artifacts/runs/9408510d-e317-4764-a7b0-2e891464fe19/decisions.jsonl",
+      "trace_sha256": "c7028371882a37aa0cc1996c1257259e03d80b352fe8213e12f3f90f30c7a214",
+      "last_combat_round": 6,
+      "last_combat_enemies": [
+        {
+          "name": "Kin Follower",
+          "hp": 62
+        },
+        {
+          "name": "Kin Follower",
+          "hp": 63
+        },
+        {
+          "name": "Kin Priest",
+          "hp": 56
+        }
+      ]
+    },
+    {
+      "run_id": "f3c62878-62c0-4801-be3f-84a4211f15e2",
+      "case": "ironclad",
+      "mode": "astra",
+      "label": "pilot-01",
+      "manifest": {
+        "schema_version": 1,
+        "code_commit": "4d3a5f06b52790f047694318303c87afd37d9774",
+        "tracked_dirty": false,
+        "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+        "headless_assembly_sha256": "71505f31e29c370667636600a58fe2b3e270f98e99e3c5a384d176a7f0188274",
+        "patches": {
+          "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+          "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+          "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+          "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+          "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+          "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+          "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+          "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772"
+        },
+        "dependencies": {
+          "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+          "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+          "dotnet_sdk": "9.0.318",
+          "game_version_expected": "v0.111.0"
+        },
+        "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+      },
+      "status": "boss_clear",
+      "steps": 19,
+      "expert_packets": 6,
+      "expert_input_chars": 73382,
+      "expert_output_chars": 2460,
+      "expert_api_tokens": null,
+      "expert_cost_usd": null,
+      "offline_plan_calls": 0,
+      "offline_plan_chars": 0,
+      "entry_verified": true,
+      "seconds": 158.387,
+      "final_hp": 48,
+      "final_round": null,
+      "final_state_hash": "16de3038ac7c0caca3a03bfb193e914cceb00e6d6ce29ed42244e7e635d30dd9",
+      "remaining_enemies": [],
+      "model_calls": 0,
+      "model_cost_usd": 0.0,
+      "unknown_model_calls": 0,
+      "model_budgeted_usd": 0.0,
+      "model_seconds": 0,
+      "models": [],
+      "trajectory_sha256": "a808138c33533c76552b56b997c82510d2ca36fead6dbbc6ff2ca59fd39fdfe6",
+      "wire_sha256": "15533a3e22f4dfac9021b97465d88ea07fcdd1598bdac34395997d2185492063",
+      "trace_path": "artifacts/runs/f3c62878-62c0-4801-be3f-84a4211f15e2/decisions.jsonl",
+      "trace_sha256": "1ec5953002c4a5dc0341e89a872e4d88dc63e3570422a6410ac9aabf64eb606a",
+      "last_combat_round": 6,
+      "last_combat_enemies": [
+        {
+          "name": "Kin Follower",
+          "hp": 55
+        },
+        {
+          "name": "Kin Follower",
+          "hp": 62
+        },
+        {
+          "name": "Kin Priest",
+          "hp": 9
+        }
+      ]
+    },
+    {
+      "run_id": "6cbe03e3-d5ca-4641-a6bd-e8c6cc9f9c5c",
+      "case": "silent",
+      "mode": "astra",
+      "label": "pilot-01",
+      "manifest": {
+        "schema_version": 1,
+        "code_commit": "4d3a5f06b52790f047694318303c87afd37d9774",
+        "tracked_dirty": false,
+        "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+        "headless_assembly_sha256": "71505f31e29c370667636600a58fe2b3e270f98e99e3c5a384d176a7f0188274",
+        "patches": {
+          "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+          "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+          "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+          "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+          "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+          "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+          "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+          "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772"
+        },
+        "dependencies": {
+          "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+          "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+          "dotnet_sdk": "9.0.318",
+          "game_version_expected": "v0.111.0"
+        },
+        "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+      },
+      "status": "boss_clear",
+      "steps": 42,
+      "expert_packets": 16,
+      "expert_input_chars": 192060,
+      "expert_output_chars": 5879,
+      "expert_api_tokens": null,
+      "expert_cost_usd": null,
+      "offline_plan_calls": 0,
+      "offline_plan_chars": 0,
+      "entry_verified": true,
+      "seconds": 346.661,
+      "final_hp": 27,
+      "final_round": null,
+      "final_state_hash": "a199c35168972dde80869e82736e0f613d2caec26ec95999de84bc56f328ea02",
+      "remaining_enemies": [],
+      "model_calls": 0,
+      "model_cost_usd": 0.0,
+      "unknown_model_calls": 0,
+      "model_budgeted_usd": 0.0,
+      "model_seconds": 0,
+      "models": [],
+      "trajectory_sha256": "52b3d6b75408ee988b657e04a6666f53c8d202f74b6eb69f07cdeb82883013d1",
+      "wire_sha256": "975a494fd5cc35f94f596d3dcc5b3babe80b714d153597db8545ee12ec606b7d",
+      "trace_path": "artifacts/runs/6cbe03e3-d5ca-4641-a6bd-e8c6cc9f9c5c/decisions.jsonl",
+      "trace_sha256": "02790a970433702894a5e87da527a0f4043ecf52e3d553c061f3a4e217a5c5e4",
+      "last_combat_round": 9,
+      "last_combat_enemies": [
+        {
+          "name": "Kin Follower",
+          "hp": 62
+        },
+        {
+          "name": "Kin Follower",
+          "hp": 59
+        },
+        {
+          "name": "Kin Priest",
+          "hp": 5
+        }
+      ]
+    }
+  ],
+  "summary_by_mode": {
+    "jev": {
+      "clears": 0,
+      "battles": 2,
+      "model_calls": 40,
+      "model_cost_usd": 0.009399348,
+      "expert_packets": 0
+    },
+    "plan": {
+      "clears": 0,
+      "battles": 2,
+      "model_calls": 48,
+      "model_cost_usd": 0.011187414,
+      "expert_packets": 0
+    },
+    "astra": {
+      "clears": 2,
+      "battles": 2,
+      "model_calls": 0,
+      "model_cost_usd": 0.0,
+      "expert_packets": 22
+    }
+  },
+  "shadow_composition": {
+    "scope": "Frozen paired-row composition, not additional trials or online routing",
+    "run_ids": [
+      "f3c62878-62c0-4801-be3f-84a4211f15e2",
+      "9408510d-e317-4764-a7b0-2e891464fe19"
+    ],
+    "clears": 1,
+    "gate": {
+      "ironclad": {
+        "mode": "astra",
+        "features": {
+          "minion_boss": true,
+          "repeatable_poison": false
+        },
+        "reason": "minion target allocation without repeatable poison"
+      },
+      "silent": {
+        "mode": "plan",
+        "features": {
+          "minion_boss": true,
+          "repeatable_poison": true
+        },
+        "reason": "test bounded plan with repeated damage support"
+      }
+    }
+  },
+  "expert_total_cost_known": false,
+  "diagnostics": [
+    {
+      "case": "ironclad",
+      "mode": "jev",
+      "end_turns": [
+        {
+          "round": 1,
+          "energy": 0,
+          "hp": 79,
+          "playable_cards": [],
+          "potions": [
+            "Blood Potion",
+            "Dexterity Potion"
+          ],
+          "existing_guard": {
+            "excluded": false,
+            "reason": "unknown_or_card_play_downside",
+            "unknown_powers": [
+              "PLATING",
+              "MINION",
+              "MINION"
+            ]
+          }
+        },
+        {
+          "round": 2,
+          "energy": 2,
+          "hp": 69,
+          "playable_cards": [
+            "Strike",
+            "Defend",
+            "Strike"
+          ],
+          "potions": [
+            "Blood Potion",
+            "Dexterity Potion"
+          ],
+          "existing_guard": {
+            "excluded": false,
+            "reason": "unknown_or_card_play_downside",
+            "unknown_powers": [
+              "PLATING",
+              "MINION",
+              "MINION"
+            ]
+          }
+        },
+        {
+          "round": 3,
+          "energy": 1,
+          "hp": 54,
+          "playable_cards": [
+            "Strike",
+            "Setup Strike",
+            "Defend",
+            "Strike"
+          ],
+          "potions": [
+            "Blood Potion",
+            "Dexterity Potion"
+          ],
+          "existing_guard": {
+            "excluded": false,
+            "reason": "unknown_or_card_play_downside",
+            "unknown_powers": [
+              "PLATING",
+              "FLAME_BARRIER",
+              "MINION",
+              "MINION"
+            ]
+          }
+        },
+        {
+          "round": 4,
+          "energy": 2,
+          "hp": 50,
+          "playable_cards": [
+            "Iron Wave",
+            "Bash",
+            "Armaments"
+          ],
+          "potions": [
+            "Blood Potion",
+            "Dexterity Potion"
+          ],
+          "existing_guard": {
+            "excluded": false,
+            "reason": "unknown_or_card_play_downside",
+            "unknown_powers": [
+              "PLATING",
+              "MINION",
+              "MINION"
+            ]
+          }
+        },
+        {
+          "round": 5,
+          "energy": 1,
+          "hp": 49,
+          "playable_cards": [
+            "Defend",
+            "Defend",
+            "Strike"
+          ],
+          "potions": [
+            "Blood Potion",
+            "Dexterity Potion"
+          ],
+          "existing_guard": {
+            "excluded": false,
+            "reason": "unknown_or_card_play_downside",
+            "unknown_powers": [
+              "FLAME_BARRIER",
+              "MINION",
+              "MINION"
+            ]
+          }
+        },
+        {
+          "round": 6,
+          "energy": 2,
+          "hp": 29,
+          "playable_cards": [
+            "Setup Strike",
+            "Strike",
+            "Headbutt",
+            "Strike"
+          ],
+          "potions": [
+            "Blood Potion",
+            "Dexterity Potion"
+          ],
+          "existing_guard": {
+            "excluded": false,
+            "reason": "unknown_or_card_play_downside",
+            "unknown_powers": [
+              "MINION",
+              "MINION"
+            ]
+          }
+        },
+        {
+          "round": 7,
+          "energy": 1,
+          "hp": 21,
+          "playable_cards": [
+            "Strike",
+            "Strike",
+            "Defend",
+            "Strike"
+          ],
+          "potions": [
+            "Dexterity Potion"
+          ],
+          "existing_guard": {
+            "excluded": false,
+            "reason": "unknown_or_card_play_downside",
+            "unknown_powers": [
+              "FLAME_BARRIER",
+              "MINION",
+              "MINION"
+            ]
+          }
+        },
+        {
+          "round": 8,
+          "energy": 2,
+          "hp": 5,
+          "playable_cards": [
+            "Headbutt",
+            "Armaments",
+            "Defend",
+            "Bash"
+          ],
+          "potions": [
+            "Dexterity Potion"
+          ],
+          "existing_guard": {
+            "excluded": false,
+            "reason": "unknown_or_card_play_downside",
+            "unknown_powers": [
+              "MINION",
+              "MINION"
+            ]
+          }
+        }
+      ],
+      "potions_used": [
+        {
+          "name": "Blood Potion",
+          "round": 7
+        }
+      ],
+      "end_turns_with_energy_and_playable_cards": 7,
+      "end_turns_existing_guard_would_block": 0,
+      "unspent_potions_last_combat": [
+        "Dexterity Potion"
+      ],
+      "pacts_end_observations": [
+        {
+          "round": 2,
+          "before_enemy_hp": [
+            [
+              "Kin Follower",
+              63
+            ],
+            [
+              "Kin Follower",
+              62
+            ],
+            [
+              "Kin Priest",
+              157
+            ]
+          ],
+          "after_enemy_hp": [
+            [
+              "Kin Follower",
+              63
+            ],
+            [
+              "Kin Follower",
+              62
+            ],
+            [
+              "Kin Priest",
+              157
+            ]
+          ]
+        },
+        {
+          "round": 4,
+          "before_enemy_hp": [
+            [
+              "Kin Follower",
+              55
+            ],
+            [
+              "Kin Follower",
+              62
+            ],
+            [
+              "Kin Priest",
+              145
+            ]
+          ],
+          "after_enemy_hp": [
+            [
+              "Kin Follower",
+              55
+            ],
+            [
+              "Kin Follower",
+              62
+            ],
+            [
+              "Kin Priest",
+              145
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "case": "ironclad",
+      "mode": "plan",
+      "end_turns": [
+        {
+          "round": 1,
+          "energy": 0,
+          "hp": 79,
+          "playable_cards": [],
+          "potions": [
+            "Blood Potion",
+            "Dexterity Potion"
+          ],
+          "existing_guard": {
+            "excluded": false,
+            "reason": "unknown_or_card_play_downside",
+            "unknown_powers": [
+              "PLATING",
+              "MINION",
+              "MINION"
+            ]
+          }
+        },
+        {
+          "round": 2,
+          "energy": 0,
+          "hp": 69,
+          "playable_cards": [],
+          "potions": [
+            "Blood Potion",
+            "Dexterity Potion"
+          ],
+          "existing_guard": {
+            "excluded": false,
+            "reason": "unknown_or_card_play_downside",
+            "unknown_powers": [
+              "PLATING",
+              "MINION",
+              "MINION"
+            ]
+          }
+        },
+        {
+          "round": 3,
+          "energy": 0,
+          "hp": 54,
+          "playable_cards": [],
+          "potions": [
+            "Blood Potion",
+            "Dexterity Potion"
+          ],
+          "existing_guard": {
+            "excluded": false,
+            "reason": "unknown_or_card_play_downside",
+            "unknown_powers": [
+              "PLATING",
+              "FLAME_BARRIER",
+              "TITLE",
+              "MINION",
+              "MINION"
+            ]
+          }
+        },
+        {
+          "round": 4,
+          "energy": 0,
+          "hp": 50,
+          "playable_cards": [],
+          "potions": [
+            "Blood Potion",
+            "Dexterity Potion"
+          ],
+          "existing_guard": {
+            "excluded": false,
+            "reason": "unknown_or_card_play_downside",
+            "unknown_powers": [
+              "PLATING",
+              "MINION",
+              "MINION"
+            ]
+          }
+        },
+        {
+          "round": 5,
+          "energy": 0,
+          "hp": 49,
+          "playable_cards": [],
+          "potions": [
+            "Blood Potion",
+            "Dexterity Potion"
+          ],
+          "existing_guard": {
+            "excluded": false,
+            "reason": "unknown_or_card_play_downside",
+            "unknown_powers": [
+              "MINION",
+              "MINION"
+            ]
+          }
+        },
+        {
+          "round": 6,
+          "energy": 0,
+          "hp": 16,
+          "playable_cards": [],
+          "potions": [
+            "Blood Potion",
+            "Dexterity Potion"
+          ],
+          "existing_guard": {
+            "excluded": false,
+            "reason": "unknown_or_card_play_downside",
+            "unknown_powers": [
+              "TITLE",
+              "MINION",
+              "MINION"
+            ]
+          }
+        }
+      ],
+      "potions_used": [],
+      "end_turns_with_energy_and_playable_cards": 0,
+      "end_turns_existing_guard_would_block": 0,
+      "unspent_potions_last_combat": [
+        "Blood Potion",
+        "Dexterity Potion"
+      ],
+      "pacts_end_observations": [
+        {
+          "round": 2,
+          "before_enemy_hp": [
+            [
+              "Kin Follower",
+              63
+            ],
+            [
+              "Kin Follower",
+              62
+            ],
+            [
+              "Kin Priest",
+              157
+            ]
+          ],
+          "after_enemy_hp": [
+            [
+              "Kin Follower",
+              63
+            ],
+            [
+              "Kin Follower",
+              62
+            ],
+            [
+              "Kin Priest",
+              157
+            ]
+          ]
+        },
+        {
+          "round": 4,
+          "before_enemy_hp": [
+            [
+              "Kin Follower",
+              55
+            ],
+            [
+              "Kin Follower",
+              62
+            ],
+            [
+              "Kin Priest",
+              123
+            ]
+          ],
+          "after_enemy_hp": [
+            [
+              "Kin Follower",
+              55
+            ],
+            [
+              "Kin Follower",
+              62
+            ],
+            [
+              "Kin Priest",
+              123
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "case": "silent",
+      "mode": "jev",
+      "end_turns": [
+        {
+          "round": 1,
+          "energy": 2,
+          "hp": 70,
+          "playable_cards": [
+            "Strike",
+            "Strike",
+            "Neutralize",
+            "Defend"
+          ],
+          "potions": [
+            "Poison Potion",
+            "Dexterity Potion"
+          ],
+          "existing_guard": {
+            "excluded": false,
+            "reason": "unknown_or_card_play_downside",
+            "unknown_powers": [
+              "PLATING",
+              "MINION",
+              "MINION"
+            ]
+          }
+        },
+        {
+          "round": 2,
+          "energy": 1,
+          "hp": 65,
+          "playable_cards": [
+            "Shadow Step",
+            "Flechettes",
+            "Poisoned Stab",
+            "Strike",
+            "Strike"
+          ],
+          "potions": [
+            "Poison Potion",
+            "Dexterity Potion"
+          ],
+          "existing_guard": {
+            "excluded": false,
+            "reason": "unknown_or_card_play_downside",
+            "unknown_powers": [
+              "PLATING",
+              "MINION",
+              "MINION"
+            ]
+          }
+        },
+        {
+          "round": 3,
+          "energy": 1,
+          "hp": 56,
+          "playable_cards": [
+            "Defend",
+            "Dodge and Roll"
+          ],
+          "potions": [
+            "Poison Potion",
+            "Dexterity Potion"
+          ],
+          "existing_guard": {
+            "excluded": false,
+            "reason": "unknown_or_card_play_downside",
+            "unknown_powers": [
+              "PLATING",
+              "MINION",
+              "MINION"
+            ]
+          }
+        },
+        {
+          "round": 4,
+          "energy": 2,
+          "hp": 54,
+          "playable_cards": [
+            "Strike",
+            "Defend",
+            "Defend",
+            "Neutralize"
+          ],
+          "potions": [
+            "Poison Potion",
+            "Dexterity Potion"
+          ],
+          "existing_guard": {
+            "excluded": false,
+            "reason": "unknown_or_card_play_downside",
+            "unknown_powers": [
+              "PLATING",
+              "MINION",
+              "MINION"
+            ]
+          }
+        },
+        {
+          "round": 5,
+          "energy": 1,
+          "hp": 53,
+          "playable_cards": [
+            "Strike",
+            "Strike",
+            "Shiv"
+          ],
+          "potions": [
+            "Poison Potion",
+            "Dexterity Potion"
+          ],
+          "existing_guard": {
+            "excluded": false,
+            "reason": "unknown_or_card_play_downside",
+            "unknown_powers": [
+              "MINION",
+              "MINION"
+            ]
+          }
+        },
+        {
+          "round": 6,
+          "energy": 1,
+          "hp": 36,
+          "playable_cards": [
+            "Strike",
+            "Shadow Step",
+            "Flechettes",
+            "Strike",
+            "Poisoned Stab"
+          ],
+          "potions": [
+            "Poison Potion",
+            "Dexterity Potion"
+          ],
+          "existing_guard": {
+            "excluded": false,
+            "reason": "unknown_or_card_play_downside",
+            "unknown_powers": [
+              "MINION",
+              "MINION"
+            ]
+          }
+        },
+        {
+          "round": 7,
+          "energy": 2,
+          "hp": 18,
+          "playable_cards": [
+            "Shadow Step",
+            "Flechettes",
+            "Defend",
+            "Strike"
+          ],
+          "potions": [
+            "Poison Potion",
+            "Dexterity Potion"
+          ],
+          "existing_guard": {
+            "excluded": false,
+            "reason": "unknown_or_card_play_downside",
+            "unknown_powers": [
+              "MINION",
+              "MINION"
+            ]
+          }
+        }
+      ],
+      "potions_used": [],
+      "end_turns_with_energy_and_playable_cards": 7,
+      "end_turns_existing_guard_would_block": 0,
+      "unspent_potions_last_combat": [
+        "Poison Potion",
+        "Dexterity Potion"
+      ],
+      "pacts_end_observations": []
+    },
+    {
+      "case": "silent",
+      "mode": "plan",
+      "end_turns": [
+        {
+          "round": 1,
+          "energy": 0,
+          "hp": 70,
+          "playable_cards": [],
+          "potions": [
+            "Dexterity Potion"
+          ],
+          "existing_guard": {
+            "excluded": false,
+            "reason": "unknown_or_card_play_downside",
+            "unknown_powers": [
+              "PLATING",
+              "MINION",
+              "MINION"
+            ]
+          }
+        },
+        {
+          "round": 2,
+          "energy": 0,
+          "hp": 68,
+          "playable_cards": [],
+          "potions": [
+            "Dexterity Potion"
+          ],
+          "existing_guard": {
+            "excluded": false,
+            "reason": "unknown_or_card_play_downside",
+            "unknown_powers": [
+              "PLATING",
+              "MINION",
+              "MINION"
+            ]
+          }
+        },
+        {
+          "round": 3,
+          "energy": 1,
+          "hp": 53,
+          "playable_cards": [
+            "Strike",
+            "Defend",
+            "Survivor"
+          ],
+          "potions": [
+            "Dexterity Potion"
+          ],
+          "existing_guard": {
+            "excluded": false,
+            "reason": "unknown_or_card_play_downside",
+            "unknown_powers": [
+              "PLATING",
+              "MINION",
+              "MINION"
+            ]
+          }
+        },
+        {
+          "round": 4,
+          "energy": 1,
+          "hp": 42,
+          "playable_cards": [
+            "Dodge and Roll",
+            "Defend",
+            "Defend"
+          ],
+          "potions": [
+            "Dexterity Potion"
+          ],
+          "existing_guard": {
+            "excluded": false,
+            "reason": "unknown_or_card_play_downside",
+            "unknown_powers": [
+              "PLATING",
+              "MINION",
+              "MINION"
+            ]
+          }
+        },
+        {
+          "round": 5,
+          "energy": 0,
+          "hp": 42,
+          "playable_cards": [],
+          "potions": [
+            "Dexterity Potion"
+          ],
+          "existing_guard": {
+            "excluded": false,
+            "reason": "unknown_or_card_play_downside",
+            "unknown_powers": [
+              "MINION",
+              "MINION"
+            ]
+          }
+        },
+        {
+          "round": 6,
+          "energy": 0,
+          "hp": 15,
+          "playable_cards": [],
+          "potions": [
+            "Dexterity Potion"
+          ],
+          "existing_guard": {
+            "excluded": false,
+            "reason": "unknown_or_card_play_downside",
+            "unknown_powers": [
+              "MINION",
+              "MINION"
+            ]
+          }
+        }
+      ],
+      "potions_used": [
+        {
+          "name": "Poison Potion",
+          "round": 1
+        }
+      ],
+      "end_turns_with_energy_and_playable_cards": 2,
+      "end_turns_existing_guard_would_block": 0,
+      "unspent_potions_last_combat": [
+        "Dexterity Potion"
+      ],
+      "pacts_end_observations": []
+    },
+    {
+      "case": "ironclad",
+      "mode": "astra",
+      "end_turns": [
+        {
+          "round": 1,
+          "energy": 0,
+          "hp": 79,
+          "playable_cards": [],
+          "potions": [
+            "Blood Potion"
+          ],
+          "existing_guard": {
+            "excluded": false,
+            "reason": "unknown_or_card_play_downside",
+            "unknown_powers": [
+              "PLATING",
+              "MINION",
+              "MINION"
+            ]
+          }
+        },
+        {
+          "round": 2,
+          "energy": 0,
+          "hp": 69,
+          "playable_cards": [
+            "Pact's End"
+          ],
+          "potions": [
+            "Blood Potion"
+          ],
+          "existing_guard": {
+            "excluded": false,
+            "reason": "unknown_or_card_play_downside",
+            "unknown_powers": [
+              "PLATING",
+              "MINION",
+              "MINION"
+            ]
+          }
+        },
+        {
+          "round": 3,
+          "energy": 0,
+          "hp": 77,
+          "playable_cards": [],
+          "potions": [],
+          "existing_guard": {
+            "excluded": false,
+            "reason": "unknown_or_card_play_downside",
+            "unknown_powers": [
+              "PLATING",
+              "TITLE",
+              "FLAME_BARRIER",
+              "MINION",
+              "MINION"
+            ]
+          }
+        },
+        {
+          "round": 4,
+          "energy": 0,
+          "hp": 75,
+          "playable_cards": [
+            "Pact's End"
+          ],
+          "potions": [],
+          "existing_guard": {
+            "excluded": false,
+            "reason": "unknown_or_card_play_downside",
+            "unknown_powers": [
+              "PLATING",
+              "MINION",
+              "MINION"
+            ]
+          }
+        },
+        {
+          "round": 5,
+          "energy": 0,
+          "hp": 75,
+          "playable_cards": [],
+          "potions": [],
+          "existing_guard": {
+            "excluded": false,
+            "reason": "unknown_or_card_play_downside",
+            "unknown_powers": [
+              "MINION",
+              "MINION"
+            ]
+          }
+        }
+      ],
+      "potions_used": [
+        {
+          "name": "Dexterity Potion",
+          "round": 1
+        },
+        {
+          "name": "Blood Potion",
+          "round": 3
+        }
+      ],
+      "end_turns_with_energy_and_playable_cards": 0,
+      "end_turns_existing_guard_would_block": 0,
+      "unspent_potions_last_combat": [],
+      "pacts_end_observations": []
+    },
+    {
+      "case": "silent",
+      "mode": "astra",
+      "end_turns": [
+        {
+          "round": 1,
+          "energy": 0,
+          "hp": 70,
+          "playable_cards": [],
+          "potions": [],
+          "existing_guard": {
+            "excluded": false,
+            "reason": "unknown_or_card_play_downside",
+            "unknown_powers": [
+              "PLATING",
+              "MINION",
+              "MINION"
+            ]
+          }
+        },
+        {
+          "round": 2,
+          "energy": 0,
+          "hp": 70,
+          "playable_cards": [],
+          "potions": [],
+          "existing_guard": {
+            "excluded": false,
+            "reason": "unknown_or_card_play_downside",
+            "unknown_powers": [
+              "PLATING",
+              "MINION",
+              "MINION"
+            ]
+          }
+        },
+        {
+          "round": 3,
+          "energy": 0,
+          "hp": 59,
+          "playable_cards": [],
+          "potions": [],
+          "existing_guard": {
+            "excluded": false,
+            "reason": "unknown_or_card_play_downside",
+            "unknown_powers": [
+              "PLATING",
+              "BLOCK_NEXT_TURN",
+              "MINION",
+              "MINION"
+            ]
+          }
+        },
+        {
+          "round": 4,
+          "energy": 2,
+          "hp": 59,
+          "playable_cards": [
+            "Defend",
+            "Defend",
+            "Defend"
+          ],
+          "potions": [],
+          "existing_guard": {
+            "excluded": false,
+            "reason": "unknown_or_card_play_downside",
+            "unknown_powers": [
+              "PLATING",
+              "MINION",
+              "MINION"
+            ]
+          }
+        },
+        {
+          "round": 5,
+          "energy": 0,
+          "hp": 59,
+          "playable_cards": [],
+          "potions": [],
+          "existing_guard": {
+            "excluded": false,
+            "reason": "unknown_or_card_play_downside",
+            "unknown_powers": [
+              "BLOCK_NEXT_TURN",
+              "MINION",
+              "MINION"
+            ]
+          }
+        },
+        {
+          "round": 6,
+          "energy": 0,
+          "hp": 53,
+          "playable_cards": [],
+          "potions": [],
+          "existing_guard": {
+            "excluded": false,
+            "reason": "unknown_or_card_play_downside",
+            "unknown_powers": [
+              "MINION",
+              "MINION"
+            ]
+          }
+        },
+        {
+          "round": 7,
+          "energy": 0,
+          "hp": 40,
+          "playable_cards": [],
+          "potions": [],
+          "existing_guard": {
+            "excluded": false,
+            "reason": "unknown_or_card_play_downside",
+            "unknown_powers": [
+              "BLOCK_NEXT_TURN",
+              "MINION",
+              "MINION"
+            ]
+          }
+        },
+        {
+          "round": 8,
+          "energy": 0,
+          "hp": 35,
+          "playable_cards": [],
+          "potions": [],
+          "existing_guard": {
+            "excluded": false,
+            "reason": "unknown_or_card_play_downside",
+            "unknown_powers": [
+              "MINION",
+              "MINION"
+            ]
+          }
+        }
+      ],
+      "potions_used": [
+        {
+          "name": "Dexterity Potion",
+          "round": 1
+        },
+        {
+          "name": "Poison Potion",
+          "round": 1
+        }
+      ],
+      "end_turns_with_energy_and_playable_cards": 1,
+      "end_turns_existing_guard_would_block": 0,
+      "unspent_potions_last_combat": [],
+      "pacts_end_observations": []
+    }
+  ],
+  "limitations": [
+    "Existing production planner not rerun as a baseline.",
+    "Raw Jev candidates are unfiltered; existing end-turn guard was applied only diagnostically and abstains on Minion/Plating.",
+    "Entry plans contain advice, not executable constraints; failure cannot separate model inability from interface failure.",
+    "One sample per arm, shared Boss/seed, historical development entries, no generalization or total-cost advantage."
+  ]
+}
