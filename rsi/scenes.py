@@ -1,6 +1,7 @@
 """Native scene candidates from freshly advertised indices only."""
 from .mcp import live_candidates
 from .trace import digest
+from .coop_route import route_candidates
 
 
 def fingerprint(raw):
@@ -34,7 +35,7 @@ def candidates(raw, history=None):
             if not claimable:add('collect_rewards_and_proceed');add('proceed')
             # Receiving gold and opening a card offer do not choose the card.
             if out:out=out[:1]
-    elif screen=='MAP':indexed('choose_map_node',(raw.get('map') or {}).get('available_nodes'))
+    elif screen=='MAP':indexed('choose_map_node',route_candidates(raw))
     elif screen=='EVENT':
         indexed('choose_event_option',(raw.get('event') or {}).get('options'),lambda c:not c.get('is_locked') and not c.get('will_kill_player'))
         if not out:add('proceed')

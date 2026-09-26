@@ -27,6 +27,7 @@ from .review_lease import ReviewLease,current_hp_review,projected_loss_requires_
 from .shop_review import funded_shop_exit_review
 from .resources import potion_decision
 from .multiplayer_guard import require_local_multiplayer
+from .coop_route import waiting_for_peer_route,wait_for_map_vote_ack
 
 
 GUIDED_COMBAT_POLICIES={'planned','triggered','retaliate','floor_guided','room_guided'}
@@ -114,8 +115,9 @@ def main():
                 if screen in ['PAUSE_MENU','SETTINGS']:raise RuntimeError('User paused game')
                 cs=candidates(raw,history)
                 if not cs:
-                    waiting_for_peers=(a.require_local_multiplayer and screen=='COMBAT' and
-                        bool(((raw.get('combat') or {}).get('action_readiness') or {}).get('local_ready_to_end_turn')))
+                    waiting_for_peers=(a.require_local_multiplayer and (
+                        waiting_for_peer_route(raw) or (screen=='COMBAT' and
+                        bool(((raw.get('combat') or {}).get('action_readiness') or {}).get('local_ready_to_end_turn')))))
                     waits=0 if waiting_for_peers else waits+1
                     if waits>6:raise RuntimeError(f'No supported action: {screen} {raw.get("available_actions")}')
                     mcp.call('wait_until_actionable',{'timeout_seconds':10,'raw_state':True});time.sleep(.15);raw=mcp.call('get_raw_game_state');continue
@@ -206,7 +208,10 @@ def main():
                 if screen=='SHOP' and selected['action']['action'] in ('buy_card','buy_relic','buy_potion','remove_card_at_shop'):
                     history['shop_purchases']=history.get('shop_purchases',0)+1
                 if not raw.get('selection'):history['previous']={'screen':screen,'choice':selected}
-                raw=read_after_accepted_action(mcp,raw,a.expected_run_id,trace)
+                if a.require_local_multiplayer and selected['action']['action']=='choose_map_node':
+                    raw=wait_for_map_vote_ack(mcp,before_action,selected['action'],trace)
+                else:
+                    raw=read_after_accepted_action(mcp,raw,a.expected_run_id,trace)
                 trace.write('after',{'state':raw,'state_hash':fingerprint(raw)})
                 if expert_this_action and a.review_lease:
                     lease=ReviewLease.accepted_opener(before_action,raw,fingerprint(before_action),fingerprint(raw))
