@@ -55,6 +55,8 @@ def audit_run(result):
     request_count = 0
     boss = False
     events = []
+    end_turns = []
+    acquisitions = []
     last_resource = None
     for row in rows:
         kind, data = row['kind'], row['data']
@@ -144,6 +146,15 @@ def audit_run(result):
             last_resource = {'action': selected['action'], 'before': inventory(before), 'after': inventory(current),
                              'gold_before': before['player'].get('gold'), 'gold_after': current['player'].get('gold')}
             advance_history(history, before, selected)
+            if selected['action']['action'] == 'end_turn':
+                end_turns.append({'step': len(transitions) - 1, 'floor': before.get('context', {}).get('floor'),
+                                  'round': before.get('round'), 'energy': before.get('energy'),
+                                  'hp_before': before['player']['hp'], 'hp_after': current['player']['hp'],
+                                  'net_hp_loss': before['player']['hp'] - current['player']['hp']})
+            if selected['action']['action'] in ('select_card_reward', 'skip_card_reward', 'buy_card', 'buy_relic', 'buy_potion',
+                                                'claim_potion_reward', 'skip_potion_reward', 'discard_potion', 'use_potion'):
+                acquisitions.append({'step': len(transitions) - 1, 'floor': before.get('context', {}).get('floor'),
+                                     'decision': before['decision'], 'choice': selected})
         elif kind == 'resource_transition':
             checks['resources'] &= data == last_resource
     checks['counts'] = (len(transitions) == result['steps'] and len(commands) == len(states) == len(transitions) + 1
@@ -170,7 +181,38 @@ def audit_run(result):
     return {'run_id': result['run_id'], 'checks': checks, 'passed': all(checks.values()),
             'returned_models': sorted(versions), 'phase_responses': dict(response_counts),
             'phase_failures': dict(failure_counts), 'phase_cost_usd': dict(phase_costs),
-            'phase_seconds': dict(phase_seconds), 'recheck_events': events}
+            'phase_seconds': dict(phase_seconds), 'recheck_events': events,
+            'end_turn_analysis': {'count': len(end_turns),
+                                 'hp_loss_at_zero_energy': sum(max(0, e['net_hp_loss']) for e in end_turns if e['energy'] == 0),
+                                 'hp_loss_with_energy_remaining': sum(max(0, e['net_hp_loss']) for e in end_turns if e['energy'] > 0),
+                                 'turns': end_turns}, 'resource_and_reward_choices': acquisitions}
+
+
+def first_divergence(pair):
+    paths = {}
+    first_changed_review = None
+    for arm, result in pair.items():
+        rows = [json.loads(line) for line in (ROOT / result['trace_path']).read_text().splitlines()]
+        transitions = []
+        before = selected = None
+        for row in rows:
+            if row['kind'] == 'before':
+                before = row['data']['state_hash']
+            elif row['kind'] == 'selected':
+                selected = row['data']['choice']['action']
+            elif row['kind'] == 'after':
+                transitions.append([before, selected, row['data']['state_hash']])
+            elif arm == 'recheck' and row['kind'] == 'recheck_result' and first_changed_review is None:
+                if row['data']['initial'] != row['data']['final']:
+                    first_changed_review = len(transitions)
+        paths[arm] = transitions
+    a, b = paths['baseline'], paths['recheck']
+    index = next((i for i, (x, y) in enumerate(zip(a, b)) if x != y), None)
+    if index is None and len(a) != len(b):
+        index = min(len(a), len(b))
+    return {'first_divergent_step': index, 'first_changed_recheck_step': first_changed_review,
+            'diverged_before_changed_recheck': index is not None and (first_changed_review is None or index < first_changed_review),
+            'note': 'Descriptive unmatched-sampling diagnostic; does not estimate a causal effect.'}
 
 
 def main():
@@ -189,7 +231,8 @@ def main():
             pair = {r['arm']: r for r in report['results'] if r['seed'] == seed and r['character'] == character}
             same_start = pair['baseline']['initial_state_hash'] == pair['recheck']['initial_state_hash']
             pairs.append({'seed': seed, 'character': character, 'same_start': same_start,
-                          'baseline_status': pair['baseline']['status'], 'recheck_status': pair['recheck']['status']})
+                          'baseline_status': pair['baseline']['status'], 'recheck_status': pair['recheck']['status'],
+                          **first_divergence(pair)})
     usage = all(abs(sum(r[key] for r in report['results']) - report['session'][key]) < 1e-9
                 for key in ('model_calls', 'model_cost_usd', 'unknown_model_calls', 'budgeted_usd'))
     prior = report.get('prior_cohort')
