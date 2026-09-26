@@ -1,10 +1,15 @@
 import unittest
 from rsi.full import macro_candidates
 from rsi.potions import with_potions
-from rsi.resources import legacy_projection, potion_decision
+from rsi.resources import legacy_projection, potion_decision, require_resource_interface
 
 
 class ResourcesTests(unittest.TestCase):
+    def test_old_assembly_fails_before_resource_policy_actions(self):
+        with self.assertRaisesRegex(RuntimeError,'rebuild'):
+            require_resource_interface({'player':{'potions':[]}})
+        require_resource_interface({'player':{'potion_capacity':2}})
+
     def test_automatic_and_currently_unusable_potions_are_excluded(self):
         state={'player':{'potions':[
             {'index':0,'name':'Fairy','usage':'Automatic','target_type':'Self'},

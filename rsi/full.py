@@ -16,7 +16,7 @@ from .trace import Trace, digest, version_manifest
 from .planner import choose_plan
 from .guard import filter_end_turn
 from .potions import with_potions
-from .resources import potion_decision, inventory
+from .resources import potion_decision, inventory, require_resource_interface
 
 STRATEGY = """Maximize probability of completing all three acts. Evaluate current deck, next threats and resources. Early decks need efficient damage, then reliable block, draw/energy and scaling for bosses. Prefer cards that solve a concrete gap; skipping mediocre rewards is valid. Do not force a named archetype. Remove curses/weak starters when affordable. Rest when healing is needed to survive upcoming threats; otherwise upgrades have lasting value. Avoid risky elites with low health/weak damage. Buy useful relics/cards rather than spending all gold indiscriminately. For card selection interpret the preceding action and scene: removing, upgrading, discarding and exhausting require different choices. Supplied rules are authoritative; descriptions with placeholders use the supplied stats. Numerical combat previews are limited, not full simulation."""
 
@@ -108,6 +108,7 @@ def episode(config, manifest, jev=None):
         resources=config['policy']=='retaliate_resources'
         engine=Headless(trace.directory,resource_decisions=resources)
         state=engine.send({'cmd':'start_run','character':config['character'],'ascension':config['ascension'],'seed':config['seed']})
+        if resources:require_resource_interface(state)
         for prefix_action in config.get('replay_prefix_actions',[]):
             state=engine.send(prefix_action)
         expected_entry_hash=config.get('expected_entry_hash')

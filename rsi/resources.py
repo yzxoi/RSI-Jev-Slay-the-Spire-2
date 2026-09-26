@@ -5,6 +5,11 @@ POTION_QUESTION = ('Use a potion now to prevent meaningful HP loss or enable a k
                    'or execute the computed next card. Potions refill; do not hoard at risk of death.')
 
 
+def require_resource_interface(state):
+    if not isinstance(state.get('player', {}).get('potion_capacity'), int):
+        raise RuntimeError('Resource interface missing: rebuild the pinned CLI with the E093 patch')
+
+
 def potion_decision(state, strategy, planning, selected, potions):
     choices = [dict(c, id=f'p{i:03}') for i, c in enumerate([selected] + potions)]
     return {'state': state, 'strategy': strategy, 'question': POTION_QUESTION, 'plan': planning}, choices

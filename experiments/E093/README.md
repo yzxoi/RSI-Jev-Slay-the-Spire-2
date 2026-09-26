@@ -27,3 +27,7 @@ Pinned rebuild and `python3 -m scripts.probe_resources_e093 --output experiments
 Next preregistered command: `python3 -m scripts.evaluate_resources_e093 > artifacts/private/e093-smoke-01.log 2>&1`. Keep the pinned original game DLL and every failed outcome; no current-Steam or native-strength inference.
 
 Reporting correction: commit c843866 initially described all 20 as compatible; the machine-readable result always recorded 19 compatible plus one no-potion-drop non-exposure. Corrected without changing or rerunning evidence.
+
+## Final interface guard
+
+A resource policy could otherwise run against an old prebuilt CLI assembly which silently ignores the new environment flag. Add a required capacity-field check immediately after start_run, before any policy action. This is a capability precondition, not a strategy change; the frozen 20-run smoke cohort continues on its already-loaded SHA c843866. Final Python tests separately cover rejection of the old interface and acceptance of the observed schema.
