@@ -6,6 +6,7 @@ import uuid
 from .engine import ROOT, Headless
 from .jev import Budget, Jev
 from .potion_contract import PotionContract
+from .lethal_certificate import certify
 from .teacher import terminal
 from .trace import Trace, digest, version_manifest
 from scripts.evaluate_routing_e099 import choices_for, state_input
@@ -24,15 +25,15 @@ class PairedBudget:
         self.local.settle(usage);self.session.settle(usage)
 
 
-def battle(case, arm, repeat, experiment, session, *, contract=None):
+def battle(case, arm, repeat, experiment, session, *, contract=None, lethal=False):
     manifest=version_manifest()
     if manifest['tracked_dirty']:raise RuntimeError('Commit changes before evaluation')
     if manifest['game_dll_sha256']!='9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4':raise ValueError('Wrong game build')
-    uid=str(uuid.uuid4());config={'experiment':experiment,'case':case['id'],'arm':arm,'repeat':repeat,'run_id':uid,'contract':contract}
+    uid=str(uuid.uuid4());config={'experiment':experiment,'case':case['id'],'arm':arm,'repeat':repeat,'run_id':uid,'contract':contract,'lethal':lethal}
     trace=Trace(ROOT/'artifacts/runs'/uid,{**manifest,**config})
-    out={**config,'manifest':manifest,'status':'error','steps':0,'program_actions':0}
+    out={**config,'manifest':manifest,'status':'error','steps':0,'program_actions':0,'lethal_actions':0,'lethal_probes':[]}
     plan=json.loads((ROOT/'experiments/E099/plans.json').read_text())[case['id']]
-    engine=None;state={};budget=PairedBudget(session);recent=[];trans=[];calls=[];start=time.monotonic();last_round=0;pc=None
+    engine=None;state={};budget=PairedBudget(session);recent=[];trans=[];calls=[];start=time.monotonic();last_round=0;pc=None;prefix=list(case['commands'])
     try:
         engine=Headless(trace.directory)
         for cmd in case['commands']:state=engine.send(cmd)
@@ -45,9 +46,13 @@ def battle(case, arm, repeat, experiment, session, *, contract=None):
             if status:out['status']=status;break
             if step==240 or time.monotonic()-start>900:out['status']='budget_exhausted';break
             last_round=state.get('round',last_round)
-            choices=choices_for(state);allowed=choices;chosen=None;evidence={};source='jev'
+            choices=choices_for(state);allowed=choices;chosen=None;evidence={};source='jev';proof=None
             trace.write('before',{'state':state,'state_hash':digest(state)});trace.write('candidates',choices)
-            if pc:
+            if lethal:
+                chosen,proof,probes=certify(state,choices,prefix,manifest,uid)
+                out['lethal_probes'].extend(probes);trace.write('lethal_check',probes)
+                if chosen:source='certified_lethal'
+            if pc and chosen is None:
                 chosen,allowed,evidence=pc.prepare(state,choices)
                 trace.write('resource_contract',evidence)
                 if chosen:source='potion_contract'
@@ -58,7 +63,10 @@ def battle(case, arm, repeat, experiment, session, *, contract=None):
                     chosen,meta=jev.choose(state_input(state,recent,plan),allowed,trace);calls.append(meta)
             if chosen not in choices:raise ValueError('Action not legal')
             trace.write('selected',{'choice':chosen,'source':source})
-            before=state;state=engine.send(chosen['action'])
+            before=state;state=engine.send(chosen['action']);prefix.append(chosen['action'])
+            if source=='certified_lethal':
+                if digest(state)!=proof['after_hash'] or terminal(state)!='boss_clear':raise ValueError('Canonical lethal differs from certificate')
+                out['lethal_actions']+=1
             if source=='potion_contract':pc.accepted(evidence['rule_id'],before,state);out['program_actions']+=1
             trace.write('after',{'state':state,'state_hash':digest(state)})
             recent.append({'round':before.get('round'),'choice':chosen})
