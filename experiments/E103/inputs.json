@@ -1,0 +1,3994 @@
+{
+  "experiment": "E103",
+  "selection": "All E102 selected end_turn states with positive energy; no outcome-based selection",
+  "source_results_sha256": "4827975a87de4fb8f02607c5630d18e6e29b8dec4cc1bbf7cc7abdf1311caabe",
+  "cases": [
+    {
+      "id": "silent-baseline-r03",
+      "case": "silent",
+      "arm": "baseline",
+      "round": 3,
+      "source_run_id": "8f14bcd0-24e4-4831-b0e9-e80dbd8abcc6",
+      "source_trace_path": "artifacts/runs/8f14bcd0-24e4-4831-b0e9-e80dbd8abcc6/decisions.jsonl",
+      "source_trace_sha256": "85ac118cf83f5b69953421f2be0fc70831ea66e7a7e85e9f2acdc4a806c1975a",
+      "entry_hash": "b70b8cc1d330619cfd1721bc32c064d1166c7a7ab23f9d03c3b3aa041f1b50d8",
+      "state": {
+        "type": "decision",
+        "decision": "combat_play",
+        "context": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 17,
+          "room_type": "Boss",
+          "boss": {
+            "id": "THE_KIN_BOSS",
+            "name": "Kin Priest"
+          }
+        },
+        "round": 3,
+        "energy": 1,
+        "max_energy": 3,
+        "hand": [
+          {
+            "index": 0,
+            "id": "CARD.STRIKE_SILENT",
+            "name": "Strike",
+            "cost": 1,
+            "type": "Attack",
+            "rarity": "Basic",
+            "can_play": true,
+            "target_type": "AnyEnemy",
+            "stats": {
+              "damage": 5
+            },
+            "description": "Deal {Damage:diff()} damage.",
+            "damage_by_target": [
+              {
+                "target_index": 0,
+                "name": "Kin Follower",
+                "damage": 5
+              },
+              {
+                "target_index": 1,
+                "name": "Kin Follower",
+                "damage": 5
+              },
+              {
+                "target_index": 2,
+                "name": "Kin Priest",
+                "damage": 5
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "id": "CARD.DEFEND_SILENT",
+            "name": "Defend",
+            "cost": 1,
+            "type": "Skill",
+            "rarity": "Basic",
+            "can_play": true,
+            "target_type": "Self",
+            "stats": {
+              "block": 8
+            },
+            "description": "Gain {Block:diff()} Block."
+          },
+          {
+            "index": 2,
+            "id": "CARD.SURVIVOR",
+            "name": "Survivor",
+            "cost": 1,
+            "type": "Skill",
+            "rarity": "Basic",
+            "can_play": true,
+            "target_type": "Self",
+            "stats": {
+              "block": 11
+            },
+            "description": "Gain {Block:diff()} Block.\nDiscard 1 card."
+          }
+        ],
+        "enemies": [
+          {
+            "index": 0,
+            "name": "Kin Follower",
+            "hp": 62,
+            "max_hp": 62,
+            "block": 0,
+            "intents": [
+              {
+                "type": "Attack",
+                "damage": 5,
+                "hits": 2,
+                "total_damage": 10
+              }
+            ],
+            "intends_attack": true,
+            "powers": [
+              {
+                "name": "Minion",
+                "description": "Minions abandon combat without their leader.",
+                "amount": 1
+              },
+              {
+                "name": "Strength",
+                "description": "Strength adds additional damage to Attacks.",
+                "amount": 3
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "name": "Kin Follower",
+            "hp": 63,
+            "max_hp": 63,
+            "block": 0,
+            "intents": [
+              {
+                "type": "Buff"
+              }
+            ],
+            "intends_attack": false,
+            "powers": [
+              {
+                "name": "Minion",
+                "description": "Minions abandon combat without their leader.",
+                "amount": 1
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "name": "Kin Priest",
+            "hp": 124,
+            "max_hp": 199,
+            "block": 0,
+            "intents": [
+              {
+                "type": "Attack",
+                "damage": 3,
+                "hits": 3,
+                "total_damage": 9
+              }
+            ],
+            "intends_attack": true,
+            "powers": [
+              {
+                "name": "Poison",
+                "description": "Poisoned creatures lose HP at the start of their turn. Each turn, Poison is reduced by 1.",
+                "amount": 8
+              }
+            ]
+          }
+        ],
+        "player": {
+          "name": "The Silent",
+          "hp": 57,
+          "max_hp": 70,
+          "block": 8,
+          "gold": 306,
+          "relics": [
+            {
+              "name": "Ring of the Snake",
+              "description": "At the start of each combat, draw {Cards} additional {Cards:plural:card|cards}.",
+              "vars": {
+                "Cards": 2
+              }
+            },
+            {
+              "name": "Booming Conch",
+              "description": "At the start of Elite combats, draw {Cards} additional {Cards:plural:card|cards} and gain {Energy:energyIcons()}.",
+              "vars": {
+                "Cards": 2,
+                "Energy": 1
+              }
+            },
+            {
+              "name": "Sparkling Rouge",
+              "description": "At the start of your 3rd turn, gain {StrengthPower} Strength and {DexterityPower} Dexterity.",
+              "vars": {
+                "StrengthPower": 1,
+                "DexterityPower": 1
+              }
+            },
+            {
+              "name": "Gorget",
+              "description": "At the start of each combat, gain {PlatingPower} Plating.",
+              "vars": {
+                "PlatingPower": 4
+              }
+            },
+            {
+              "name": "Regal Pillow",
+              "description": "Whenever you Rest, heal an additional {Heal} HP.",
+              "vars": {
+                "Heal": 15
+              }
+            },
+            {
+              "name": "Whetstone",
+              "description": "Upon pickup, Upgrade {Cards} random {Cards:plural:Attack|Attacks}.",
+              "vars": {
+                "Cards": 2
+              }
+            }
+          ],
+          "potions": [],
+          "deck_size": 20,
+          "deck": [
+            {
+              "id": "CARD.STRIKE_SILENT",
+              "name": "Strike",
+              "cost": 1,
+              "type": "Attack",
+              "upgraded": false,
+              "description": "Deal {Damage:diff()} damage.",
+              "stats": {
+                "damage": 6
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "damage": 9
+                },
+                "description": "Deal {Damage:diff()} damage.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.STRIKE_SILENT",
+              "name": "Strike",
+              "cost": 1,
+              "type": "Attack",
+              "upgraded": true,
+              "description": "Deal {Damage:diff()} damage.",
+              "stats": {
+                "damage": 9
+              },
+              "keywords": null,
+              "after_upgrade": null
+            },
+            {
+              "id": "CARD.STRIKE_SILENT",
+              "name": "Strike",
+              "cost": 1,
+              "type": "Attack",
+              "upgraded": false,
+              "description": "Deal {Damage:diff()} damage.",
+              "stats": {
+                "damage": 6
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "damage": 9
+                },
+                "description": "Deal {Damage:diff()} damage.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.STRIKE_SILENT",
+              "name": "Strike",
+              "cost": 1,
+              "type": "Attack",
+              "upgraded": true,
+              "description": "Deal {Damage:diff()} damage.",
+              "stats": {
+                "damage": 9
+              },
+              "keywords": null,
+              "after_upgrade": null
+            },
+            {
+              "id": "CARD.STRIKE_SILENT",
+              "name": "Strike",
+              "cost": 1,
+              "type": "Attack",
+              "upgraded": false,
+              "description": "Deal {Damage:diff()} damage.",
+              "stats": {
+                "damage": 6
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "damage": 9
+                },
+                "description": "Deal {Damage:diff()} damage.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.DEFEND_SILENT",
+              "name": "Defend",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Gain {Block:diff()} Block.",
+              "stats": {
+                "block": 5
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 8
+                },
+                "description": "Gain {Block:diff()} Block.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.DEFEND_SILENT",
+              "name": "Defend",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Gain {Block:diff()} Block.",
+              "stats": {
+                "block": 5
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 8
+                },
+                "description": "Gain {Block:diff()} Block.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.DEFEND_SILENT",
+              "name": "Defend",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Gain {Block:diff()} Block.",
+              "stats": {
+                "block": 5
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 8
+                },
+                "description": "Gain {Block:diff()} Block.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.DEFEND_SILENT",
+              "name": "Defend",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Gain {Block:diff()} Block.",
+              "stats": {
+                "block": 5
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 8
+                },
+                "description": "Gain {Block:diff()} Block.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.DEFEND_SILENT",
+              "name": "Defend",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Gain {Block:diff()} Block.",
+              "stats": {
+                "block": 5
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 8
+                },
+                "description": "Gain {Block:diff()} Block.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.NEUTRALIZE",
+              "name": "Neutralize",
+              "cost": 0,
+              "type": "Attack",
+              "upgraded": false,
+              "description": "Deal {Damage:diff()} damage.\nApply {WeakPower:diff()} Weak.",
+              "stats": {
+                "damage": 3,
+                "weakpower": 1
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 0,
+                "stats": {
+                  "damage": 4,
+                  "weakpower": 2
+                },
+                "description": "Deal {Damage:diff()} damage.\nApply {WeakPower:diff()} Weak.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.SURVIVOR",
+              "name": "Survivor",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Gain {Block:diff()} Block.\nDiscard 1 card.",
+              "stats": {
+                "block": 8
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 11
+                },
+                "description": "Gain {Block:diff()} Block.\nDiscard 1 card.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.ASCENDERS_BANE",
+              "name": "Ascender's Bane",
+              "cost": 0,
+              "type": "Curse",
+              "upgraded": false,
+              "description": "",
+              "stats": null,
+              "keywords": [
+                "Eternal",
+                "Unplayable",
+                "Ethereal"
+              ],
+              "after_upgrade": null
+            },
+            {
+              "id": "CARD.POISONED_STAB",
+              "name": "Poisoned Stab",
+              "cost": 1,
+              "type": "Attack",
+              "upgraded": true,
+              "description": "Deal {Damage:diff()} damage.\nApply {PoisonPower:diff()} Poison.",
+              "stats": {
+                "damage": 8,
+                "poisonpower": 4
+              },
+              "keywords": null,
+              "after_upgrade": null
+            },
+            {
+              "id": "CARD.CLOAK_AND_DAGGER",
+              "name": "Cloak and Dagger",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Gain {Block:diff()} Block.\nAdd {Cards:diff()} {Cards:plural:Shiv|Shivs} into your Hand.",
+              "stats": {
+                "block": 6,
+                "cards": 1
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 6,
+                  "cards": 2
+                },
+                "description": "Gain {Block:diff()} Block.\nAdd {Cards:diff()} {Cards:plural:Shiv|Shivs} into your Hand.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.BACKFLIP",
+              "name": "Backflip",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": true,
+              "description": "Gain {Block:diff()} Block.\nDraw 2 cards.",
+              "stats": {
+                "block": 8,
+                "cards": 2
+              },
+              "keywords": null,
+              "after_upgrade": null
+            },
+            {
+              "id": "CARD.FLECHETTES",
+              "name": "Flechettes",
+              "cost": 1,
+              "type": "Attack",
+              "upgraded": false,
+              "description": "Deal {Damage:diff()} damage for each Skill in your Hand.{InCombat:\n(Hits {CalculatedHits:diff()} {CalculatedHits:plural:time|times})|}",
+              "stats": {
+                "damage": 5,
+                "calculationbase": 0,
+                "calculationextra": 1,
+                "calculatedhits": 0
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "damage": 7,
+                  "calculationbase": 0,
+                  "calculationextra": 1,
+                  "calculatedhits": 0
+                },
+                "description": "Deal {Damage:diff()} damage for each Skill in your Hand.{InCombat:\n(Hits {CalculatedHits:diff()} {CalculatedHits:plural:time|times})|}",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.BACKSTAB",
+              "name": "Backstab",
+              "cost": 0,
+              "type": "Attack",
+              "upgraded": false,
+              "description": "Deal {Damage:diff()} damage.",
+              "stats": {
+                "damage": 11
+              },
+              "keywords": [
+                "Exhaust",
+                "Innate"
+              ],
+              "after_upgrade": {
+                "cost": 0,
+                "stats": {
+                  "damage": 15
+                },
+                "description": "Deal {Damage:diff()} damage.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.DODGE_AND_ROLL",
+              "name": "Dodge and Roll",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Gain {Block:diff()} Block.\nNext turn, gain {Block:diff()} Block.",
+              "stats": {
+                "block": 4
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 6
+                },
+                "description": "Gain {Block:diff()} Block.\nNext turn, gain {Block:diff()} Block.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.SHADOW_STEP",
+              "name": "Shadow Step",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Discard your Hand.\nNext turn, Attacks deal double damage.",
+              "stats": {
+                "cards": 3
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 0,
+                "stats": {
+                  "cards": 3
+                },
+                "description": "Discard your Hand.\nNext turn, Attacks deal double damage.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            }
+          ]
+        },
+        "player_powers": [
+          {
+            "name": "Plating",
+            "description": "At the end of your turn, gain Block. Plating is reduced by 1 at the start of your turn.",
+            "amount": 2
+          },
+          {
+            "name": "Dexterity",
+            "description": "Dexterity improves Block gained from cards.",
+            "amount": 3
+          },
+          {
+            "name": "Weak",
+            "description": "Weakened creatures deal 25% less damage with Attacks.",
+            "amount": 1
+          },
+          {
+            "name": "Strength",
+            "description": "Strength adds additional damage to Attacks.",
+            "amount": 1
+          }
+        ],
+        "draw_pile_count": 3,
+        "discard_pile_count": 12
+      },
+      "actual_end_action": {
+        "cmd": "action",
+        "action": "end_turn",
+        "args": {}
+      },
+      "actual_after_hash": "21d90e192354469c0b4f4f349341fe9e32107bfed7a63d4e5e16431b87581ce6",
+      "continuation_prefix": [
+        {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 0,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "silent-baseline-r04",
+      "case": "silent",
+      "arm": "baseline",
+      "round": 4,
+      "source_run_id": "8f14bcd0-24e4-4831-b0e9-e80dbd8abcc6",
+      "source_trace_path": "artifacts/runs/8f14bcd0-24e4-4831-b0e9-e80dbd8abcc6/decisions.jsonl",
+      "source_trace_sha256": "85ac118cf83f5b69953421f2be0fc70831ea66e7a7e85e9f2acdc4a806c1975a",
+      "entry_hash": "6fc413b7512f10fb39cfa370827dd35064f24a9fc080804bd72a389e2bdc003c",
+      "state": {
+        "type": "decision",
+        "decision": "combat_play",
+        "context": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 17,
+          "room_type": "Boss",
+          "boss": {
+            "id": "THE_KIN_BOSS",
+            "name": "Kin Priest"
+          }
+        },
+        "round": 4,
+        "energy": 1,
+        "max_energy": 3,
+        "hand": [
+          {
+            "index": 0,
+            "id": "CARD.DODGE_AND_ROLL",
+            "name": "Dodge and Roll",
+            "cost": 1,
+            "type": "Skill",
+            "rarity": "Common",
+            "can_play": true,
+            "target_type": "Self",
+            "stats": {
+              "block": 7
+            },
+            "description": "Gain {Block:diff()} Block.\nNext turn, gain {Block:diff()} Block."
+          },
+          {
+            "index": 1,
+            "id": "CARD.DEFEND_SILENT",
+            "name": "Defend",
+            "cost": 1,
+            "type": "Skill",
+            "rarity": "Basic",
+            "can_play": true,
+            "target_type": "Self",
+            "stats": {
+              "block": 8
+            },
+            "description": "Gain {Block:diff()} Block."
+          },
+          {
+            "index": 2,
+            "id": "CARD.DEFEND_SILENT",
+            "name": "Defend",
+            "cost": 1,
+            "type": "Skill",
+            "rarity": "Basic",
+            "can_play": true,
+            "target_type": "Self",
+            "stats": {
+              "block": 8
+            },
+            "description": "Gain {Block:diff()} Block."
+          }
+        ],
+        "enemies": [
+          {
+            "index": 0,
+            "name": "Kin Follower",
+            "hp": 62,
+            "max_hp": 62,
+            "block": 0,
+            "intents": [
+              {
+                "type": "Buff"
+              }
+            ],
+            "intends_attack": false,
+            "powers": [
+              {
+                "name": "Minion",
+                "description": "Minions abandon combat without their leader.",
+                "amount": 1
+              },
+              {
+                "name": "Strength",
+                "description": "Strength adds additional damage to Attacks.",
+                "amount": 3
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "name": "Kin Follower",
+            "hp": 63,
+            "max_hp": 63,
+            "block": 0,
+            "intents": [
+              {
+                "type": "Attack",
+                "damage": 8
+              }
+            ],
+            "intends_attack": true,
+            "powers": [
+              {
+                "name": "Minion",
+                "description": "Minions abandon combat without their leader.",
+                "amount": 1
+              },
+              {
+                "name": "Strength",
+                "description": "Strength adds additional damage to Attacks.",
+                "amount": 3
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "name": "Kin Priest",
+            "hp": 104,
+            "max_hp": 199,
+            "block": 0,
+            "intents": [
+              {
+                "type": "Buff"
+              }
+            ],
+            "intends_attack": false,
+            "powers": [
+              {
+                "name": "Poison",
+                "description": "Poisoned creatures lose HP at the start of their turn. Each turn, Poison is reduced by 1.",
+                "amount": 7
+              }
+            ]
+          }
+        ],
+        "player": {
+          "name": "The Silent",
+          "hp": 48,
+          "max_hp": 70,
+          "block": 9,
+          "gold": 306,
+          "relics": [
+            {
+              "name": "Ring of the Snake",
+              "description": "At the start of each combat, draw {Cards} additional {Cards:plural:card|cards}.",
+              "vars": {
+                "Cards": 2
+              }
+            },
+            {
+              "name": "Booming Conch",
+              "description": "At the start of Elite combats, draw {Cards} additional {Cards:plural:card|cards} and gain {Energy:energyIcons()}.",
+              "vars": {
+                "Cards": 2,
+                "Energy": 1
+              }
+            },
+            {
+              "name": "Sparkling Rouge",
+              "description": "At the start of your 3rd turn, gain {StrengthPower} Strength and {DexterityPower} Dexterity.",
+              "vars": {
+                "StrengthPower": 1,
+                "DexterityPower": 1
+              }
+            },
+            {
+              "name": "Gorget",
+              "description": "At the start of each combat, gain {PlatingPower} Plating.",
+              "vars": {
+                "PlatingPower": 4
+              }
+            },
+            {
+              "name": "Regal Pillow",
+              "description": "Whenever you Rest, heal an additional {Heal} HP.",
+              "vars": {
+                "Heal": 15
+              }
+            },
+            {
+              "name": "Whetstone",
+              "description": "Upon pickup, Upgrade {Cards} random {Cards:plural:Attack|Attacks}.",
+              "vars": {
+                "Cards": 2
+              }
+            }
+          ],
+          "potions": [],
+          "deck_size": 20,
+          "deck": [
+            {
+              "id": "CARD.STRIKE_SILENT",
+              "name": "Strike",
+              "cost": 1,
+              "type": "Attack",
+              "upgraded": false,
+              "description": "Deal {Damage:diff()} damage.",
+              "stats": {
+                "damage": 6
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "damage": 9
+                },
+                "description": "Deal {Damage:diff()} damage.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.STRIKE_SILENT",
+              "name": "Strike",
+              "cost": 1,
+              "type": "Attack",
+              "upgraded": true,
+              "description": "Deal {Damage:diff()} damage.",
+              "stats": {
+                "damage": 9
+              },
+              "keywords": null,
+              "after_upgrade": null
+            },
+            {
+              "id": "CARD.STRIKE_SILENT",
+              "name": "Strike",
+              "cost": 1,
+              "type": "Attack",
+              "upgraded": false,
+              "description": "Deal {Damage:diff()} damage.",
+              "stats": {
+                "damage": 6
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "damage": 9
+                },
+                "description": "Deal {Damage:diff()} damage.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.STRIKE_SILENT",
+              "name": "Strike",
+              "cost": 1,
+              "type": "Attack",
+              "upgraded": true,
+              "description": "Deal {Damage:diff()} damage.",
+              "stats": {
+                "damage": 9
+              },
+              "keywords": null,
+              "after_upgrade": null
+            },
+            {
+              "id": "CARD.STRIKE_SILENT",
+              "name": "Strike",
+              "cost": 1,
+              "type": "Attack",
+              "upgraded": false,
+              "description": "Deal {Damage:diff()} damage.",
+              "stats": {
+                "damage": 6
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "damage": 9
+                },
+                "description": "Deal {Damage:diff()} damage.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.DEFEND_SILENT",
+              "name": "Defend",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Gain {Block:diff()} Block.",
+              "stats": {
+                "block": 5
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 8
+                },
+                "description": "Gain {Block:diff()} Block.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.DEFEND_SILENT",
+              "name": "Defend",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Gain {Block:diff()} Block.",
+              "stats": {
+                "block": 5
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 8
+                },
+                "description": "Gain {Block:diff()} Block.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.DEFEND_SILENT",
+              "name": "Defend",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Gain {Block:diff()} Block.",
+              "stats": {
+                "block": 5
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 8
+                },
+                "description": "Gain {Block:diff()} Block.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.DEFEND_SILENT",
+              "name": "Defend",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Gain {Block:diff()} Block.",
+              "stats": {
+                "block": 5
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 8
+                },
+                "description": "Gain {Block:diff()} Block.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.DEFEND_SILENT",
+              "name": "Defend",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Gain {Block:diff()} Block.",
+              "stats": {
+                "block": 5
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 8
+                },
+                "description": "Gain {Block:diff()} Block.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.NEUTRALIZE",
+              "name": "Neutralize",
+              "cost": 0,
+              "type": "Attack",
+              "upgraded": false,
+              "description": "Deal {Damage:diff()} damage.\nApply {WeakPower:diff()} Weak.",
+              "stats": {
+                "damage": 3,
+                "weakpower": 1
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 0,
+                "stats": {
+                  "damage": 4,
+                  "weakpower": 2
+                },
+                "description": "Deal {Damage:diff()} damage.\nApply {WeakPower:diff()} Weak.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.SURVIVOR",
+              "name": "Survivor",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Gain {Block:diff()} Block.\nDiscard 1 card.",
+              "stats": {
+                "block": 8
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 11
+                },
+                "description": "Gain {Block:diff()} Block.\nDiscard 1 card.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.ASCENDERS_BANE",
+              "name": "Ascender's Bane",
+              "cost": 0,
+              "type": "Curse",
+              "upgraded": false,
+              "description": "",
+              "stats": null,
+              "keywords": [
+                "Eternal",
+                "Unplayable",
+                "Ethereal"
+              ],
+              "after_upgrade": null
+            },
+            {
+              "id": "CARD.POISONED_STAB",
+              "name": "Poisoned Stab",
+              "cost": 1,
+              "type": "Attack",
+              "upgraded": true,
+              "description": "Deal {Damage:diff()} damage.\nApply {PoisonPower:diff()} Poison.",
+              "stats": {
+                "damage": 8,
+                "poisonpower": 4
+              },
+              "keywords": null,
+              "after_upgrade": null
+            },
+            {
+              "id": "CARD.CLOAK_AND_DAGGER",
+              "name": "Cloak and Dagger",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Gain {Block:diff()} Block.\nAdd {Cards:diff()} {Cards:plural:Shiv|Shivs} into your Hand.",
+              "stats": {
+                "block": 6,
+                "cards": 1
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 6,
+                  "cards": 2
+                },
+                "description": "Gain {Block:diff()} Block.\nAdd {Cards:diff()} {Cards:plural:Shiv|Shivs} into your Hand.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.BACKFLIP",
+              "name": "Backflip",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": true,
+              "description": "Gain {Block:diff()} Block.\nDraw 2 cards.",
+              "stats": {
+                "block": 8,
+                "cards": 2
+              },
+              "keywords": null,
+              "after_upgrade": null
+            },
+            {
+              "id": "CARD.FLECHETTES",
+              "name": "Flechettes",
+              "cost": 1,
+              "type": "Attack",
+              "upgraded": false,
+              "description": "Deal {Damage:diff()} damage for each Skill in your Hand.{InCombat:\n(Hits {CalculatedHits:diff()} {CalculatedHits:plural:time|times})|}",
+              "stats": {
+                "damage": 5,
+                "calculationbase": 0,
+                "calculationextra": 1,
+                "calculatedhits": 0
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "damage": 7,
+                  "calculationbase": 0,
+                  "calculationextra": 1,
+                  "calculatedhits": 0
+                },
+                "description": "Deal {Damage:diff()} damage for each Skill in your Hand.{InCombat:\n(Hits {CalculatedHits:diff()} {CalculatedHits:plural:time|times})|}",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.BACKSTAB",
+              "name": "Backstab",
+              "cost": 0,
+              "type": "Attack",
+              "upgraded": false,
+              "description": "Deal {Damage:diff()} damage.",
+              "stats": {
+                "damage": 11
+              },
+              "keywords": [
+                "Exhaust",
+                "Innate"
+              ],
+              "after_upgrade": {
+                "cost": 0,
+                "stats": {
+                  "damage": 15
+                },
+                "description": "Deal {Damage:diff()} damage.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.DODGE_AND_ROLL",
+              "name": "Dodge and Roll",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Gain {Block:diff()} Block.\nNext turn, gain {Block:diff()} Block.",
+              "stats": {
+                "block": 4
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 6
+                },
+                "description": "Gain {Block:diff()} Block.\nNext turn, gain {Block:diff()} Block.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.SHADOW_STEP",
+              "name": "Shadow Step",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Discard your Hand.\nNext turn, Attacks deal double damage.",
+              "stats": {
+                "cards": 3
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 0,
+                "stats": {
+                  "cards": 3
+                },
+                "description": "Discard your Hand.\nNext turn, Attacks deal double damage.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            }
+          ]
+        },
+        "player_powers": [
+          {
+            "name": "Plating",
+            "description": "At the end of your turn, gain Block. Plating is reduced by 1 at the start of your turn.",
+            "amount": 1
+          },
+          {
+            "name": "Dexterity",
+            "description": "Dexterity improves Block gained from cards.",
+            "amount": 3
+          },
+          {
+            "name": "Strength",
+            "description": "Strength adds additional damage to Attacks.",
+            "amount": 1
+          }
+        ],
+        "draw_pile_count": 13,
+        "discard_pile_count": 2
+      },
+      "actual_end_action": {
+        "cmd": "action",
+        "action": "end_turn",
+        "args": {}
+      },
+      "actual_after_hash": "0833b0662c4a9a91fbc81140d3f11a3e2255d209cfea52f4695210f24bdb7769",
+      "continuation_prefix": [
+        {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 0,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "silent-dynamic-r04",
+      "case": "silent",
+      "arm": "dynamic",
+      "round": 4,
+      "source_run_id": "9e051b29-ad90-4758-a2d5-21071ded7c50",
+      "source_trace_path": "artifacts/runs/9e051b29-ad90-4758-a2d5-21071ded7c50/decisions.jsonl",
+      "source_trace_sha256": "b66e1d385c2e7400fdf653bd3702739e0e03017ef2ce73e3b943fac49e4c7473",
+      "entry_hash": "70b57f14b0cbdb19d54f9ae186addf2a10ff50047888368c9b308ec6ede68060",
+      "state": {
+        "type": "decision",
+        "decision": "combat_play",
+        "context": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 17,
+          "room_type": "Boss",
+          "boss": {
+            "id": "THE_KIN_BOSS",
+            "name": "Kin Priest"
+          }
+        },
+        "round": 4,
+        "energy": 2,
+        "max_energy": 3,
+        "hand": [
+          {
+            "index": 0,
+            "id": "CARD.DEFEND_SILENT",
+            "name": "Defend",
+            "cost": 1,
+            "type": "Skill",
+            "rarity": "Basic",
+            "can_play": true,
+            "target_type": "Self",
+            "stats": {
+              "block": 8
+            },
+            "description": "Gain {Block:diff()} Block."
+          },
+          {
+            "index": 1,
+            "id": "CARD.DEFEND_SILENT",
+            "name": "Defend",
+            "cost": 1,
+            "type": "Skill",
+            "rarity": "Basic",
+            "can_play": true,
+            "target_type": "Self",
+            "stats": {
+              "block": 8
+            },
+            "description": "Gain {Block:diff()} Block."
+          },
+          {
+            "index": 2,
+            "id": "CARD.DEFEND_SILENT",
+            "name": "Defend",
+            "cost": 1,
+            "type": "Skill",
+            "rarity": "Basic",
+            "can_play": true,
+            "target_type": "Self",
+            "stats": {
+              "block": 8
+            },
+            "description": "Gain {Block:diff()} Block."
+          }
+        ],
+        "enemies": [
+          {
+            "index": 0,
+            "name": "Kin Follower",
+            "hp": 62,
+            "max_hp": 62,
+            "block": 0,
+            "intents": [
+              {
+                "type": "Buff"
+              }
+            ],
+            "intends_attack": false,
+            "powers": [
+              {
+                "name": "Minion",
+                "description": "Minions abandon combat without their leader.",
+                "amount": 1
+              },
+              {
+                "name": "Strength",
+                "description": "Strength adds additional damage to Attacks.",
+                "amount": 3
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "name": "Kin Follower",
+            "hp": 63,
+            "max_hp": 63,
+            "block": 0,
+            "intents": [
+              {
+                "type": "Attack",
+                "damage": 8
+              }
+            ],
+            "intends_attack": true,
+            "powers": [
+              {
+                "name": "Minion",
+                "description": "Minions abandon combat without their leader.",
+                "amount": 1
+              },
+              {
+                "name": "Strength",
+                "description": "Strength adds additional damage to Attacks.",
+                "amount": 3
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "name": "Kin Priest",
+            "hp": 107,
+            "max_hp": 199,
+            "block": 0,
+            "intents": [
+              {
+                "type": "Buff"
+              }
+            ],
+            "intends_attack": false,
+            "powers": [
+              {
+                "name": "Poison",
+                "description": "Poisoned creatures lose HP at the start of their turn. Each turn, Poison is reduced by 1.",
+                "amount": 7
+              },
+              {
+                "name": "Weak",
+                "description": "Weakened creatures deal 25% less damage with Attacks.",
+                "amount": 1
+              }
+            ]
+          }
+        ],
+        "player": {
+          "name": "The Silent",
+          "hp": 59,
+          "max_hp": 70,
+          "block": 7,
+          "gold": 306,
+          "relics": [
+            {
+              "name": "Ring of the Snake",
+              "description": "At the start of each combat, draw {Cards} additional {Cards:plural:card|cards}.",
+              "vars": {
+                "Cards": 2
+              }
+            },
+            {
+              "name": "Booming Conch",
+              "description": "At the start of Elite combats, draw {Cards} additional {Cards:plural:card|cards} and gain {Energy:energyIcons()}.",
+              "vars": {
+                "Cards": 2,
+                "Energy": 1
+              }
+            },
+            {
+              "name": "Sparkling Rouge",
+              "description": "At the start of your 3rd turn, gain {StrengthPower} Strength and {DexterityPower} Dexterity.",
+              "vars": {
+                "StrengthPower": 1,
+                "DexterityPower": 1
+              }
+            },
+            {
+              "name": "Gorget",
+              "description": "At the start of each combat, gain {PlatingPower} Plating.",
+              "vars": {
+                "PlatingPower": 4
+              }
+            },
+            {
+              "name": "Regal Pillow",
+              "description": "Whenever you Rest, heal an additional {Heal} HP.",
+              "vars": {
+                "Heal": 15
+              }
+            },
+            {
+              "name": "Whetstone",
+              "description": "Upon pickup, Upgrade {Cards} random {Cards:plural:Attack|Attacks}.",
+              "vars": {
+                "Cards": 2
+              }
+            }
+          ],
+          "potions": [],
+          "deck_size": 20,
+          "deck": [
+            {
+              "id": "CARD.STRIKE_SILENT",
+              "name": "Strike",
+              "cost": 1,
+              "type": "Attack",
+              "upgraded": false,
+              "description": "Deal {Damage:diff()} damage.",
+              "stats": {
+                "damage": 6
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "damage": 9
+                },
+                "description": "Deal {Damage:diff()} damage.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.STRIKE_SILENT",
+              "name": "Strike",
+              "cost": 1,
+              "type": "Attack",
+              "upgraded": true,
+              "description": "Deal {Damage:diff()} damage.",
+              "stats": {
+                "damage": 9
+              },
+              "keywords": null,
+              "after_upgrade": null
+            },
+            {
+              "id": "CARD.STRIKE_SILENT",
+              "name": "Strike",
+              "cost": 1,
+              "type": "Attack",
+              "upgraded": false,
+              "description": "Deal {Damage:diff()} damage.",
+              "stats": {
+                "damage": 6
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "damage": 9
+                },
+                "description": "Deal {Damage:diff()} damage.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.STRIKE_SILENT",
+              "name": "Strike",
+              "cost": 1,
+              "type": "Attack",
+              "upgraded": true,
+              "description": "Deal {Damage:diff()} damage.",
+              "stats": {
+                "damage": 9
+              },
+              "keywords": null,
+              "after_upgrade": null
+            },
+            {
+              "id": "CARD.STRIKE_SILENT",
+              "name": "Strike",
+              "cost": 1,
+              "type": "Attack",
+              "upgraded": false,
+              "description": "Deal {Damage:diff()} damage.",
+              "stats": {
+                "damage": 6
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "damage": 9
+                },
+                "description": "Deal {Damage:diff()} damage.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.DEFEND_SILENT",
+              "name": "Defend",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Gain {Block:diff()} Block.",
+              "stats": {
+                "block": 5
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 8
+                },
+                "description": "Gain {Block:diff()} Block.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.DEFEND_SILENT",
+              "name": "Defend",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Gain {Block:diff()} Block.",
+              "stats": {
+                "block": 5
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 8
+                },
+                "description": "Gain {Block:diff()} Block.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.DEFEND_SILENT",
+              "name": "Defend",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Gain {Block:diff()} Block.",
+              "stats": {
+                "block": 5
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 8
+                },
+                "description": "Gain {Block:diff()} Block.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.DEFEND_SILENT",
+              "name": "Defend",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Gain {Block:diff()} Block.",
+              "stats": {
+                "block": 5
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 8
+                },
+                "description": "Gain {Block:diff()} Block.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.DEFEND_SILENT",
+              "name": "Defend",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Gain {Block:diff()} Block.",
+              "stats": {
+                "block": 5
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 8
+                },
+                "description": "Gain {Block:diff()} Block.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.NEUTRALIZE",
+              "name": "Neutralize",
+              "cost": 0,
+              "type": "Attack",
+              "upgraded": false,
+              "description": "Deal {Damage:diff()} damage.\nApply {WeakPower:diff()} Weak.",
+              "stats": {
+                "damage": 3,
+                "weakpower": 1
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 0,
+                "stats": {
+                  "damage": 4,
+                  "weakpower": 2
+                },
+                "description": "Deal {Damage:diff()} damage.\nApply {WeakPower:diff()} Weak.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.SURVIVOR",
+              "name": "Survivor",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Gain {Block:diff()} Block.\nDiscard 1 card.",
+              "stats": {
+                "block": 8
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 11
+                },
+                "description": "Gain {Block:diff()} Block.\nDiscard 1 card.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.ASCENDERS_BANE",
+              "name": "Ascender's Bane",
+              "cost": 0,
+              "type": "Curse",
+              "upgraded": false,
+              "description": "",
+              "stats": null,
+              "keywords": [
+                "Eternal",
+                "Unplayable",
+                "Ethereal"
+              ],
+              "after_upgrade": null
+            },
+            {
+              "id": "CARD.POISONED_STAB",
+              "name": "Poisoned Stab",
+              "cost": 1,
+              "type": "Attack",
+              "upgraded": true,
+              "description": "Deal {Damage:diff()} damage.\nApply {PoisonPower:diff()} Poison.",
+              "stats": {
+                "damage": 8,
+                "poisonpower": 4
+              },
+              "keywords": null,
+              "after_upgrade": null
+            },
+            {
+              "id": "CARD.CLOAK_AND_DAGGER",
+              "name": "Cloak and Dagger",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Gain {Block:diff()} Block.\nAdd {Cards:diff()} {Cards:plural:Shiv|Shivs} into your Hand.",
+              "stats": {
+                "block": 6,
+                "cards": 1
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 6,
+                  "cards": 2
+                },
+                "description": "Gain {Block:diff()} Block.\nAdd {Cards:diff()} {Cards:plural:Shiv|Shivs} into your Hand.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.BACKFLIP",
+              "name": "Backflip",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": true,
+              "description": "Gain {Block:diff()} Block.\nDraw 2 cards.",
+              "stats": {
+                "block": 8,
+                "cards": 2
+              },
+              "keywords": null,
+              "after_upgrade": null
+            },
+            {
+              "id": "CARD.FLECHETTES",
+              "name": "Flechettes",
+              "cost": 1,
+              "type": "Attack",
+              "upgraded": false,
+              "description": "Deal {Damage:diff()} damage for each Skill in your Hand.{InCombat:\n(Hits {CalculatedHits:diff()} {CalculatedHits:plural:time|times})|}",
+              "stats": {
+                "damage": 5,
+                "calculationbase": 0,
+                "calculationextra": 1,
+                "calculatedhits": 0
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "damage": 7,
+                  "calculationbase": 0,
+                  "calculationextra": 1,
+                  "calculatedhits": 0
+                },
+                "description": "Deal {Damage:diff()} damage for each Skill in your Hand.{InCombat:\n(Hits {CalculatedHits:diff()} {CalculatedHits:plural:time|times})|}",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.BACKSTAB",
+              "name": "Backstab",
+              "cost": 0,
+              "type": "Attack",
+              "upgraded": false,
+              "description": "Deal {Damage:diff()} damage.",
+              "stats": {
+                "damage": 11
+              },
+              "keywords": [
+                "Exhaust",
+                "Innate"
+              ],
+              "after_upgrade": {
+                "cost": 0,
+                "stats": {
+                  "damage": 15
+                },
+                "description": "Deal {Damage:diff()} damage.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.DODGE_AND_ROLL",
+              "name": "Dodge and Roll",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Gain {Block:diff()} Block.\nNext turn, gain {Block:diff()} Block.",
+              "stats": {
+                "block": 4
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 6
+                },
+                "description": "Gain {Block:diff()} Block.\nNext turn, gain {Block:diff()} Block.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.SHADOW_STEP",
+              "name": "Shadow Step",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Discard your Hand.\nNext turn, Attacks deal double damage.",
+              "stats": {
+                "cards": 3
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 0,
+                "stats": {
+                  "cards": 3
+                },
+                "description": "Discard your Hand.\nNext turn, Attacks deal double damage.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            }
+          ]
+        },
+        "player_powers": [
+          {
+            "name": "Plating",
+            "description": "At the end of your turn, gain Block. Plating is reduced by 1 at the start of your turn.",
+            "amount": 1
+          },
+          {
+            "name": "Dexterity",
+            "description": "Dexterity improves Block gained from cards.",
+            "amount": 3
+          },
+          {
+            "name": "Strength",
+            "description": "Strength adds additional damage to Attacks.",
+            "amount": 1
+          }
+        ],
+        "draw_pile_count": 13,
+        "discard_pile_count": 2
+      },
+      "actual_end_action": {
+        "cmd": "action",
+        "action": "end_turn",
+        "args": {}
+      },
+      "actual_after_hash": "f43309af4a186431ab390c499d45397a7ae36f674df3f007f83cac98db623a95",
+      "continuation_prefix": [
+        {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 0,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 4,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 4
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "silent-dynamic-r05",
+      "case": "silent",
+      "arm": "dynamic",
+      "round": 5,
+      "source_run_id": "9e051b29-ad90-4758-a2d5-21071ded7c50",
+      "source_trace_path": "artifacts/runs/9e051b29-ad90-4758-a2d5-21071ded7c50/decisions.jsonl",
+      "source_trace_sha256": "b66e1d385c2e7400fdf653bd3702739e0e03017ef2ce73e3b943fac49e4c7473",
+      "entry_hash": "40a14250434296e58535da39148797fdd30f41d79f246f3249ba15b4f2bcc0e4",
+      "state": {
+        "type": "decision",
+        "decision": "combat_play",
+        "context": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 17,
+          "room_type": "Boss",
+          "boss": {
+            "id": "THE_KIN_BOSS",
+            "name": "Kin Priest"
+          }
+        },
+        "round": 5,
+        "energy": 1,
+        "max_energy": 3,
+        "hand": [
+          {
+            "index": 0,
+            "id": "CARD.STRIKE_SILENT",
+            "name": "Strike",
+            "cost": 1,
+            "type": "Attack",
+            "rarity": "Basic",
+            "can_play": true,
+            "target_type": "AnyEnemy",
+            "stats": {
+              "damage": 7
+            },
+            "description": "Deal {Damage:diff()} damage.",
+            "damage_by_target": [
+              {
+                "target_index": 0,
+                "name": "Kin Follower",
+                "damage": 7
+              },
+              {
+                "target_index": 1,
+                "name": "Kin Follower",
+                "damage": 7
+              },
+              {
+                "target_index": 2,
+                "name": "Kin Priest",
+                "damage": 7
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "id": "CARD.SURVIVOR",
+            "name": "Survivor",
+            "cost": 1,
+            "type": "Skill",
+            "rarity": "Basic",
+            "can_play": true,
+            "target_type": "Self",
+            "stats": {
+              "block": 11
+            },
+            "description": "Gain {Block:diff()} Block.\nDiscard 1 card."
+          },
+          {
+            "index": 2,
+            "id": "CARD.STRIKE_SILENT",
+            "name": "Strike",
+            "cost": 1,
+            "type": "Attack",
+            "rarity": "Basic",
+            "can_play": true,
+            "target_type": "AnyEnemy",
+            "stats": {
+              "damage": 10
+            },
+            "description": "Deal {Damage:diff()} damage.",
+            "damage_by_target": [
+              {
+                "target_index": 0,
+                "name": "Kin Follower",
+                "damage": 10
+              },
+              {
+                "target_index": 1,
+                "name": "Kin Follower",
+                "damage": 10
+              },
+              {
+                "target_index": 2,
+                "name": "Kin Priest",
+                "damage": 10
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "id": "CARD.SHIV",
+            "name": "Shiv",
+            "cost": 0,
+            "type": "Attack",
+            "rarity": "Token",
+            "can_play": true,
+            "target_type": "AnyEnemy",
+            "stats": {
+              "damage": 5
+            },
+            "description": "Deal {Damage:diff()} damage{TargetType:choose(AllEnemies): to ALL enemies|}.",
+            "keywords": [
+              "Exhaust"
+            ],
+            "damage_by_target": [
+              {
+                "target_index": 0,
+                "name": "Kin Follower",
+                "damage": 5
+              },
+              {
+                "target_index": 1,
+                "name": "Kin Follower",
+                "damage": 5
+              },
+              {
+                "target_index": 2,
+                "name": "Kin Priest",
+                "damage": 5
+              }
+            ]
+          }
+        ],
+        "enemies": [
+          {
+            "index": 0,
+            "name": "Kin Follower",
+            "hp": 62,
+            "max_hp": 62,
+            "block": 0,
+            "intents": [
+              {
+                "type": "Attack",
+                "damage": 11
+              }
+            ],
+            "intends_attack": true,
+            "powers": [
+              {
+                "name": "Minion",
+                "description": "Minions abandon combat without their leader.",
+                "amount": 1
+              },
+              {
+                "name": "Strength",
+                "description": "Strength adds additional damage to Attacks.",
+                "amount": 6
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "name": "Kin Follower",
+            "hp": 63,
+            "max_hp": 63,
+            "block": 0,
+            "intents": [
+              {
+                "type": "Attack",
+                "damage": 5,
+                "hits": 2,
+                "total_damage": 10
+              }
+            ],
+            "intends_attack": true,
+            "powers": [
+              {
+                "name": "Minion",
+                "description": "Minions abandon combat without their leader.",
+                "amount": 1
+              },
+              {
+                "name": "Strength",
+                "description": "Strength adds additional damage to Attacks.",
+                "amount": 3
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "name": "Kin Priest",
+            "hp": 100,
+            "max_hp": 199,
+            "block": 0,
+            "intents": [
+              {
+                "type": "Attack",
+                "damage": 12
+              },
+              {
+                "type": "Debuff"
+              }
+            ],
+            "intends_attack": true,
+            "powers": [
+              {
+                "name": "Poison",
+                "description": "Poisoned creatures lose HP at the start of their turn. Each turn, Poison is reduced by 1.",
+                "amount": 6
+              },
+              {
+                "name": "Strength",
+                "description": "Strength adds additional damage to Attacks.",
+                "amount": 3
+              }
+            ]
+          }
+        ],
+        "player": {
+          "name": "The Silent",
+          "hp": 59,
+          "max_hp": 70,
+          "block": 16,
+          "gold": 306,
+          "relics": [
+            {
+              "name": "Ring of the Snake",
+              "description": "At the start of each combat, draw {Cards} additional {Cards:plural:card|cards}.",
+              "vars": {
+                "Cards": 2
+              }
+            },
+            {
+              "name": "Booming Conch",
+              "description": "At the start of Elite combats, draw {Cards} additional {Cards:plural:card|cards} and gain {Energy:energyIcons()}.",
+              "vars": {
+                "Cards": 2,
+                "Energy": 1
+              }
+            },
+            {
+              "name": "Sparkling Rouge",
+              "description": "At the start of your 3rd turn, gain {StrengthPower} Strength and {DexterityPower} Dexterity.",
+              "vars": {
+                "StrengthPower": 1,
+                "DexterityPower": 1
+              }
+            },
+            {
+              "name": "Gorget",
+              "description": "At the start of each combat, gain {PlatingPower} Plating.",
+              "vars": {
+                "PlatingPower": 4
+              }
+            },
+            {
+              "name": "Regal Pillow",
+              "description": "Whenever you Rest, heal an additional {Heal} HP.",
+              "vars": {
+                "Heal": 15
+              }
+            },
+            {
+              "name": "Whetstone",
+              "description": "Upon pickup, Upgrade {Cards} random {Cards:plural:Attack|Attacks}.",
+              "vars": {
+                "Cards": 2
+              }
+            }
+          ],
+          "potions": [],
+          "deck_size": 20,
+          "deck": [
+            {
+              "id": "CARD.STRIKE_SILENT",
+              "name": "Strike",
+              "cost": 1,
+              "type": "Attack",
+              "upgraded": false,
+              "description": "Deal {Damage:diff()} damage.",
+              "stats": {
+                "damage": 6
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "damage": 9
+                },
+                "description": "Deal {Damage:diff()} damage.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.STRIKE_SILENT",
+              "name": "Strike",
+              "cost": 1,
+              "type": "Attack",
+              "upgraded": true,
+              "description": "Deal {Damage:diff()} damage.",
+              "stats": {
+                "damage": 9
+              },
+              "keywords": null,
+              "after_upgrade": null
+            },
+            {
+              "id": "CARD.STRIKE_SILENT",
+              "name": "Strike",
+              "cost": 1,
+              "type": "Attack",
+              "upgraded": false,
+              "description": "Deal {Damage:diff()} damage.",
+              "stats": {
+                "damage": 6
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "damage": 9
+                },
+                "description": "Deal {Damage:diff()} damage.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.STRIKE_SILENT",
+              "name": "Strike",
+              "cost": 1,
+              "type": "Attack",
+              "upgraded": true,
+              "description": "Deal {Damage:diff()} damage.",
+              "stats": {
+                "damage": 9
+              },
+              "keywords": null,
+              "after_upgrade": null
+            },
+            {
+              "id": "CARD.STRIKE_SILENT",
+              "name": "Strike",
+              "cost": 1,
+              "type": "Attack",
+              "upgraded": false,
+              "description": "Deal {Damage:diff()} damage.",
+              "stats": {
+                "damage": 6
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "damage": 9
+                },
+                "description": "Deal {Damage:diff()} damage.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.DEFEND_SILENT",
+              "name": "Defend",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Gain {Block:diff()} Block.",
+              "stats": {
+                "block": 5
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 8
+                },
+                "description": "Gain {Block:diff()} Block.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.DEFEND_SILENT",
+              "name": "Defend",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Gain {Block:diff()} Block.",
+              "stats": {
+                "block": 5
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 8
+                },
+                "description": "Gain {Block:diff()} Block.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.DEFEND_SILENT",
+              "name": "Defend",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Gain {Block:diff()} Block.",
+              "stats": {
+                "block": 5
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 8
+                },
+                "description": "Gain {Block:diff()} Block.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.DEFEND_SILENT",
+              "name": "Defend",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Gain {Block:diff()} Block.",
+              "stats": {
+                "block": 5
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 8
+                },
+                "description": "Gain {Block:diff()} Block.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.DEFEND_SILENT",
+              "name": "Defend",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Gain {Block:diff()} Block.",
+              "stats": {
+                "block": 5
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 8
+                },
+                "description": "Gain {Block:diff()} Block.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.NEUTRALIZE",
+              "name": "Neutralize",
+              "cost": 0,
+              "type": "Attack",
+              "upgraded": false,
+              "description": "Deal {Damage:diff()} damage.\nApply {WeakPower:diff()} Weak.",
+              "stats": {
+                "damage": 3,
+                "weakpower": 1
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 0,
+                "stats": {
+                  "damage": 4,
+                  "weakpower": 2
+                },
+                "description": "Deal {Damage:diff()} damage.\nApply {WeakPower:diff()} Weak.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.SURVIVOR",
+              "name": "Survivor",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Gain {Block:diff()} Block.\nDiscard 1 card.",
+              "stats": {
+                "block": 8
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 11
+                },
+                "description": "Gain {Block:diff()} Block.\nDiscard 1 card.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.ASCENDERS_BANE",
+              "name": "Ascender's Bane",
+              "cost": 0,
+              "type": "Curse",
+              "upgraded": false,
+              "description": "",
+              "stats": null,
+              "keywords": [
+                "Eternal",
+                "Unplayable",
+                "Ethereal"
+              ],
+              "after_upgrade": null
+            },
+            {
+              "id": "CARD.POISONED_STAB",
+              "name": "Poisoned Stab",
+              "cost": 1,
+              "type": "Attack",
+              "upgraded": true,
+              "description": "Deal {Damage:diff()} damage.\nApply {PoisonPower:diff()} Poison.",
+              "stats": {
+                "damage": 8,
+                "poisonpower": 4
+              },
+              "keywords": null,
+              "after_upgrade": null
+            },
+            {
+              "id": "CARD.CLOAK_AND_DAGGER",
+              "name": "Cloak and Dagger",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Gain {Block:diff()} Block.\nAdd {Cards:diff()} {Cards:plural:Shiv|Shivs} into your Hand.",
+              "stats": {
+                "block": 6,
+                "cards": 1
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 6,
+                  "cards": 2
+                },
+                "description": "Gain {Block:diff()} Block.\nAdd {Cards:diff()} {Cards:plural:Shiv|Shivs} into your Hand.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.BACKFLIP",
+              "name": "Backflip",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": true,
+              "description": "Gain {Block:diff()} Block.\nDraw 2 cards.",
+              "stats": {
+                "block": 8,
+                "cards": 2
+              },
+              "keywords": null,
+              "after_upgrade": null
+            },
+            {
+              "id": "CARD.FLECHETTES",
+              "name": "Flechettes",
+              "cost": 1,
+              "type": "Attack",
+              "upgraded": false,
+              "description": "Deal {Damage:diff()} damage for each Skill in your Hand.{InCombat:\n(Hits {CalculatedHits:diff()} {CalculatedHits:plural:time|times})|}",
+              "stats": {
+                "damage": 5,
+                "calculationbase": 0,
+                "calculationextra": 1,
+                "calculatedhits": 0
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "damage": 7,
+                  "calculationbase": 0,
+                  "calculationextra": 1,
+                  "calculatedhits": 0
+                },
+                "description": "Deal {Damage:diff()} damage for each Skill in your Hand.{InCombat:\n(Hits {CalculatedHits:diff()} {CalculatedHits:plural:time|times})|}",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.BACKSTAB",
+              "name": "Backstab",
+              "cost": 0,
+              "type": "Attack",
+              "upgraded": false,
+              "description": "Deal {Damage:diff()} damage.",
+              "stats": {
+                "damage": 11
+              },
+              "keywords": [
+                "Exhaust",
+                "Innate"
+              ],
+              "after_upgrade": {
+                "cost": 0,
+                "stats": {
+                  "damage": 15
+                },
+                "description": "Deal {Damage:diff()} damage.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.DODGE_AND_ROLL",
+              "name": "Dodge and Roll",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Gain {Block:diff()} Block.\nNext turn, gain {Block:diff()} Block.",
+              "stats": {
+                "block": 4
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 6
+                },
+                "description": "Gain {Block:diff()} Block.\nNext turn, gain {Block:diff()} Block.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.SHADOW_STEP",
+              "name": "Shadow Step",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Discard your Hand.\nNext turn, Attacks deal double damage.",
+              "stats": {
+                "cards": 3
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 0,
+                "stats": {
+                  "cards": 3
+                },
+                "description": "Discard your Hand.\nNext turn, Attacks deal double damage.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            }
+          ]
+        },
+        "player_powers": [
+          {
+            "name": "Dexterity",
+            "description": "Dexterity improves Block gained from cards.",
+            "amount": 3
+          },
+          {
+            "name": "Strength",
+            "description": "Strength adds additional damage to Attacks.",
+            "amount": 1
+          },
+          {
+            "name": "Block Next Turn",
+            "description": "At the start of your next turn, gain 4 Block.",
+            "amount": 7
+          }
+        ],
+        "draw_pile_count": 8,
+        "discard_pile_count": 7
+      },
+      "actual_end_action": {
+        "cmd": "action",
+        "action": "end_turn",
+        "args": {}
+      },
+      "actual_after_hash": "e2259a848e876d775bb939ea0dc497c89c711c3254d259ed85777da03288abc6",
+      "continuation_prefix": [
+        {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 0,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 4,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 4
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "silent-dynamic-r07",
+      "case": "silent",
+      "arm": "dynamic",
+      "round": 7,
+      "source_run_id": "9e051b29-ad90-4758-a2d5-21071ded7c50",
+      "source_trace_path": "artifacts/runs/9e051b29-ad90-4758-a2d5-21071ded7c50/decisions.jsonl",
+      "source_trace_sha256": "b66e1d385c2e7400fdf653bd3702739e0e03017ef2ce73e3b943fac49e4c7473",
+      "entry_hash": "769414ad0d08eee6d7f12916fcac6d543658d7b0a2056df90705fe449f352268",
+      "state": {
+        "type": "decision",
+        "decision": "combat_play",
+        "context": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 17,
+          "room_type": "Boss",
+          "boss": {
+            "id": "THE_KIN_BOSS",
+            "name": "Kin Priest"
+          }
+        },
+        "round": 7,
+        "energy": 1,
+        "max_energy": 3,
+        "hand": [
+          {
+            "index": 0,
+            "id": "CARD.SHADOW_STEP",
+            "name": "Shadow Step",
+            "cost": 1,
+            "type": "Skill",
+            "rarity": "Rare",
+            "can_play": true,
+            "target_type": "Self",
+            "stats": {
+              "cards": 3
+            },
+            "description": "Discard your Hand.\nNext turn, Attacks deal double damage."
+          },
+          {
+            "index": 1,
+            "id": "CARD.DEFEND_SILENT",
+            "name": "Defend",
+            "cost": 1,
+            "type": "Skill",
+            "rarity": "Basic",
+            "can_play": true,
+            "target_type": "Self",
+            "stats": {
+              "block": 8
+            },
+            "description": "Gain {Block:diff()} Block."
+          },
+          {
+            "index": 2,
+            "id": "CARD.STRIKE_SILENT",
+            "name": "Strike",
+            "cost": 1,
+            "type": "Attack",
+            "rarity": "Basic",
+            "can_play": true,
+            "target_type": "AnyEnemy",
+            "stats": {
+              "damage": 7
+            },
+            "description": "Deal {Damage:diff()} damage.",
+            "damage_by_target": [
+              {
+                "target_index": 0,
+                "name": "Kin Follower",
+                "damage": 7
+              },
+              {
+                "target_index": 1,
+                "name": "Kin Follower",
+                "damage": 7
+              },
+              {
+                "target_index": 2,
+                "name": "Kin Priest",
+                "damage": 7
+              }
+            ]
+          }
+        ],
+        "enemies": [
+          {
+            "index": 0,
+            "name": "Kin Follower",
+            "hp": 62,
+            "max_hp": 62,
+            "block": 0,
+            "intents": [
+              {
+                "type": "Buff"
+              }
+            ],
+            "intends_attack": false,
+            "powers": [
+              {
+                "name": "Minion",
+                "description": "Minions abandon combat without their leader.",
+                "amount": 1
+              },
+              {
+                "name": "Strength",
+                "description": "Strength adds additional damage to Attacks.",
+                "amount": 6
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "name": "Kin Follower",
+            "hp": 63,
+            "max_hp": 63,
+            "block": 0,
+            "intents": [
+              {
+                "type": "Attack",
+                "damage": 11
+              }
+            ],
+            "intends_attack": true,
+            "powers": [
+              {
+                "name": "Minion",
+                "description": "Minions abandon combat without their leader.",
+                "amount": 1
+              },
+              {
+                "name": "Strength",
+                "description": "Strength adds additional damage to Attacks.",
+                "amount": 6
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "name": "Kin Priest",
+            "hp": 46,
+            "max_hp": 199,
+            "block": 0,
+            "intents": [
+              {
+                "type": "Attack",
+                "damage": 6,
+                "hits": 3,
+                "total_damage": 18
+              }
+            ],
+            "intends_attack": true,
+            "powers": [
+              {
+                "name": "Poison",
+                "description": "Poisoned creatures lose HP at the start of their turn. Each turn, Poison is reduced by 1.",
+                "amount": 8
+              },
+              {
+                "name": "Strength",
+                "description": "Strength adds additional damage to Attacks.",
+                "amount": 3
+              }
+            ]
+          }
+        ],
+        "player": {
+          "name": "The Silent",
+          "hp": 29,
+          "max_hp": 70,
+          "block": 8,
+          "gold": 306,
+          "relics": [
+            {
+              "name": "Ring of the Snake",
+              "description": "At the start of each combat, draw {Cards} additional {Cards:plural:card|cards}.",
+              "vars": {
+                "Cards": 2
+              }
+            },
+            {
+              "name": "Booming Conch",
+              "description": "At the start of Elite combats, draw {Cards} additional {Cards:plural:card|cards} and gain {Energy:energyIcons()}.",
+              "vars": {
+                "Cards": 2,
+                "Energy": 1
+              }
+            },
+            {
+              "name": "Sparkling Rouge",
+              "description": "At the start of your 3rd turn, gain {StrengthPower} Strength and {DexterityPower} Dexterity.",
+              "vars": {
+                "StrengthPower": 1,
+                "DexterityPower": 1
+              }
+            },
+            {
+              "name": "Gorget",
+              "description": "At the start of each combat, gain {PlatingPower} Plating.",
+              "vars": {
+                "PlatingPower": 4
+              }
+            },
+            {
+              "name": "Regal Pillow",
+              "description": "Whenever you Rest, heal an additional {Heal} HP.",
+              "vars": {
+                "Heal": 15
+              }
+            },
+            {
+              "name": "Whetstone",
+              "description": "Upon pickup, Upgrade {Cards} random {Cards:plural:Attack|Attacks}.",
+              "vars": {
+                "Cards": 2
+              }
+            }
+          ],
+          "potions": [],
+          "deck_size": 20,
+          "deck": [
+            {
+              "id": "CARD.STRIKE_SILENT",
+              "name": "Strike",
+              "cost": 1,
+              "type": "Attack",
+              "upgraded": false,
+              "description": "Deal {Damage:diff()} damage.",
+              "stats": {
+                "damage": 6
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "damage": 9
+                },
+                "description": "Deal {Damage:diff()} damage.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.STRIKE_SILENT",
+              "name": "Strike",
+              "cost": 1,
+              "type": "Attack",
+              "upgraded": true,
+              "description": "Deal {Damage:diff()} damage.",
+              "stats": {
+                "damage": 9
+              },
+              "keywords": null,
+              "after_upgrade": null
+            },
+            {
+              "id": "CARD.STRIKE_SILENT",
+              "name": "Strike",
+              "cost": 1,
+              "type": "Attack",
+              "upgraded": false,
+              "description": "Deal {Damage:diff()} damage.",
+              "stats": {
+                "damage": 6
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "damage": 9
+                },
+                "description": "Deal {Damage:diff()} damage.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.STRIKE_SILENT",
+              "name": "Strike",
+              "cost": 1,
+              "type": "Attack",
+              "upgraded": true,
+              "description": "Deal {Damage:diff()} damage.",
+              "stats": {
+                "damage": 9
+              },
+              "keywords": null,
+              "after_upgrade": null
+            },
+            {
+              "id": "CARD.STRIKE_SILENT",
+              "name": "Strike",
+              "cost": 1,
+              "type": "Attack",
+              "upgraded": false,
+              "description": "Deal {Damage:diff()} damage.",
+              "stats": {
+                "damage": 6
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "damage": 9
+                },
+                "description": "Deal {Damage:diff()} damage.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.DEFEND_SILENT",
+              "name": "Defend",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Gain {Block:diff()} Block.",
+              "stats": {
+                "block": 5
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 8
+                },
+                "description": "Gain {Block:diff()} Block.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.DEFEND_SILENT",
+              "name": "Defend",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Gain {Block:diff()} Block.",
+              "stats": {
+                "block": 5
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 8
+                },
+                "description": "Gain {Block:diff()} Block.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.DEFEND_SILENT",
+              "name": "Defend",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Gain {Block:diff()} Block.",
+              "stats": {
+                "block": 5
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 8
+                },
+                "description": "Gain {Block:diff()} Block.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.DEFEND_SILENT",
+              "name": "Defend",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Gain {Block:diff()} Block.",
+              "stats": {
+                "block": 5
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 8
+                },
+                "description": "Gain {Block:diff()} Block.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.DEFEND_SILENT",
+              "name": "Defend",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Gain {Block:diff()} Block.",
+              "stats": {
+                "block": 5
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 8
+                },
+                "description": "Gain {Block:diff()} Block.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.NEUTRALIZE",
+              "name": "Neutralize",
+              "cost": 0,
+              "type": "Attack",
+              "upgraded": false,
+              "description": "Deal {Damage:diff()} damage.\nApply {WeakPower:diff()} Weak.",
+              "stats": {
+                "damage": 3,
+                "weakpower": 1
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 0,
+                "stats": {
+                  "damage": 4,
+                  "weakpower": 2
+                },
+                "description": "Deal {Damage:diff()} damage.\nApply {WeakPower:diff()} Weak.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.SURVIVOR",
+              "name": "Survivor",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Gain {Block:diff()} Block.\nDiscard 1 card.",
+              "stats": {
+                "block": 8
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 11
+                },
+                "description": "Gain {Block:diff()} Block.\nDiscard 1 card.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.ASCENDERS_BANE",
+              "name": "Ascender's Bane",
+              "cost": 0,
+              "type": "Curse",
+              "upgraded": false,
+              "description": "",
+              "stats": null,
+              "keywords": [
+                "Eternal",
+                "Unplayable",
+                "Ethereal"
+              ],
+              "after_upgrade": null
+            },
+            {
+              "id": "CARD.POISONED_STAB",
+              "name": "Poisoned Stab",
+              "cost": 1,
+              "type": "Attack",
+              "upgraded": true,
+              "description": "Deal {Damage:diff()} damage.\nApply {PoisonPower:diff()} Poison.",
+              "stats": {
+                "damage": 8,
+                "poisonpower": 4
+              },
+              "keywords": null,
+              "after_upgrade": null
+            },
+            {
+              "id": "CARD.CLOAK_AND_DAGGER",
+              "name": "Cloak and Dagger",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Gain {Block:diff()} Block.\nAdd {Cards:diff()} {Cards:plural:Shiv|Shivs} into your Hand.",
+              "stats": {
+                "block": 6,
+                "cards": 1
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 6,
+                  "cards": 2
+                },
+                "description": "Gain {Block:diff()} Block.\nAdd {Cards:diff()} {Cards:plural:Shiv|Shivs} into your Hand.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.BACKFLIP",
+              "name": "Backflip",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": true,
+              "description": "Gain {Block:diff()} Block.\nDraw 2 cards.",
+              "stats": {
+                "block": 8,
+                "cards": 2
+              },
+              "keywords": null,
+              "after_upgrade": null
+            },
+            {
+              "id": "CARD.FLECHETTES",
+              "name": "Flechettes",
+              "cost": 1,
+              "type": "Attack",
+              "upgraded": false,
+              "description": "Deal {Damage:diff()} damage for each Skill in your Hand.{InCombat:\n(Hits {CalculatedHits:diff()} {CalculatedHits:plural:time|times})|}",
+              "stats": {
+                "damage": 5,
+                "calculationbase": 0,
+                "calculationextra": 1,
+                "calculatedhits": 0
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "damage": 7,
+                  "calculationbase": 0,
+                  "calculationextra": 1,
+                  "calculatedhits": 0
+                },
+                "description": "Deal {Damage:diff()} damage for each Skill in your Hand.{InCombat:\n(Hits {CalculatedHits:diff()} {CalculatedHits:plural:time|times})|}",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.BACKSTAB",
+              "name": "Backstab",
+              "cost": 0,
+              "type": "Attack",
+              "upgraded": false,
+              "description": "Deal {Damage:diff()} damage.",
+              "stats": {
+                "damage": 11
+              },
+              "keywords": [
+                "Exhaust",
+                "Innate"
+              ],
+              "after_upgrade": {
+                "cost": 0,
+                "stats": {
+                  "damage": 15
+                },
+                "description": "Deal {Damage:diff()} damage.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.DODGE_AND_ROLL",
+              "name": "Dodge and Roll",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Gain {Block:diff()} Block.\nNext turn, gain {Block:diff()} Block.",
+              "stats": {
+                "block": 4
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 6
+                },
+                "description": "Gain {Block:diff()} Block.\nNext turn, gain {Block:diff()} Block.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            {
+              "id": "CARD.SHADOW_STEP",
+              "name": "Shadow Step",
+              "cost": 1,
+              "type": "Skill",
+              "upgraded": false,
+              "description": "Discard your Hand.\nNext turn, Attacks deal double damage.",
+              "stats": {
+                "cards": 3
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 0,
+                "stats": {
+                  "cards": 3
+                },
+                "description": "Discard your Hand.\nNext turn, Attacks deal double damage.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            }
+          ]
+        },
+        "player_powers": [
+          {
+            "name": "Dexterity",
+            "description": "Dexterity improves Block gained from cards.",
+            "amount": 3
+          },
+          {
+            "name": "Strength",
+            "description": "Strength adds additional damage to Attacks.",
+            "amount": 1
+          },
+          {
+            "name": "Weak",
+            "description": "Weakened creatures deal 25% less damage with Attacks.",
+            "amount": 1
+          }
+        ],
+        "draw_pile_count": 14,
+        "discard_pile_count": 2
+      },
+      "actual_end_action": {
+        "cmd": "action",
+        "action": "end_turn",
+        "args": {}
+      },
+      "actual_after_hash": "c5f33ce50e18cc39192096da4138403925ff7738bf261c313575d215363f9ae9",
+      "continuation_prefix": [
+        {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 0,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 4,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 4
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 4,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        }
+      ]
+    }
+  ],
+  "initial_fixtures_sha256": "aa698e266a13cbf0aa4ceea41975cbd7b89e73038dcb1becff53b606164f2cfb"
+}
