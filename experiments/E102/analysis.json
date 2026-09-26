@@ -1,0 +1,1188 @@
+{
+  "scope": "Post-hoc descriptive trace analysis, not an intervention or counterfactual test.",
+  "payload_counts_reconciled": true,
+  "all_omitted_text_unchanged": true,
+  "runs": [
+    {
+      "run_id": "5520573a-3a7a-4db1-a2f0-5bf78c5d406c",
+      "case": "ironclad",
+      "arm": "baseline",
+      "omitted_deck_relic_text_unchanged": true,
+      "teacher_ledger": [],
+      "round_openings_before_program_potions": [
+        {
+          "round": 1,
+          "hp": 79,
+          "leader_hp": 199
+        },
+        {
+          "round": 2,
+          "hp": 69,
+          "leader_hp": 157
+        },
+        {
+          "round": 3,
+          "hp": 56,
+          "leader_hp": 142
+        },
+        {
+          "round": 4,
+          "hp": 70,
+          "leader_hp": 123
+        },
+        {
+          "round": 5,
+          "hp": 70,
+          "leader_hp": 112
+        },
+        {
+          "round": 6,
+          "hp": 37,
+          "leader_hp": 48
+        }
+      ],
+      "all_end_turns_with_unspent_energy": []
+    },
+    {
+      "run_id": "1bc95d2f-db73-4c52-a2ce-ff7df11c4684",
+      "case": "ironclad",
+      "arm": "dynamic",
+      "omitted_deck_relic_text_unchanged": true,
+      "teacher_ledger": [
+        {
+          "round": 1,
+          "commit": "a30d3c566b2286c91d8384d60ccd23df5559f532",
+          "state_hash": "64efee5d640a7d6a4860fe2db078cbf515d578a7797025e5585a6c76cf5ec0b7",
+          "guidance_chars": 537
+        },
+        {
+          "round": 2,
+          "commit": "b7375a082e039434f55aa482e808ce05236468d9",
+          "state_hash": "0687f3aa1e7bd972ffcd11d06d46b5940c9a44d683537c014d435e0f503f6ec9",
+          "guidance_chars": 544
+        },
+        {
+          "round": 3,
+          "commit": "0c9647adacaa35b7258d35ebb9367ddf86a5c012",
+          "state_hash": "bb4e0f4a9f9227bf355a08d6b97a88f9f26837f09e62db485a4c9622d6618d9f",
+          "guidance_chars": 574
+        },
+        {
+          "round": 4,
+          "commit": "4ecf984decd063f309c2f7b5237022a36905bb94",
+          "state_hash": "9982e58986b0ac06ab0ce9fe1c14cac52c194701148ad11d72d8bea2697e6455",
+          "guidance_chars": 523
+        },
+        {
+          "round": 5,
+          "commit": "549e147865590029586276828c327c4b10434cf6",
+          "state_hash": "77df0d7ea1d1c01b146a3bdb54108276a184777335fd89568d8a5e6adfeeb028",
+          "guidance_chars": 584
+        },
+        {
+          "round": 6,
+          "commit": "edf2248831fe915ca011fd3976f4261b89c1055e",
+          "state_hash": "a5b7d8bd41e9d0eb3458fcb3621e9393a4310e168e57bec2e9a7c2a1bdfb629a",
+          "guidance_chars": 562
+        }
+      ],
+      "round_openings_before_program_potions": [
+        {
+          "round": 1,
+          "hp": 79,
+          "leader_hp": 199
+        },
+        {
+          "round": 2,
+          "hp": 69,
+          "leader_hp": 157
+        },
+        {
+          "round": 3,
+          "hp": 56,
+          "leader_hp": 142
+        },
+        {
+          "round": 4,
+          "hp": 70,
+          "leader_hp": 123
+        },
+        {
+          "round": 5,
+          "hp": 70,
+          "leader_hp": 103
+        },
+        {
+          "round": 6,
+          "hp": 37,
+          "leader_hp": 39
+        }
+      ],
+      "all_end_turns_with_unspent_energy": []
+    },
+    {
+      "run_id": "8f14bcd0-24e4-4831-b0e9-e80dbd8abcc6",
+      "case": "silent",
+      "arm": "baseline",
+      "omitted_deck_relic_text_unchanged": true,
+      "teacher_ledger": [],
+      "round_openings_before_program_potions": [
+        {
+          "round": 1,
+          "hp": 70,
+          "leader_hp": 199
+        },
+        {
+          "round": 2,
+          "hp": 70,
+          "leader_hp": 161
+        },
+        {
+          "round": 3,
+          "hp": 57,
+          "leader_hp": 129
+        },
+        {
+          "round": 4,
+          "hp": 48,
+          "leader_hp": 116
+        },
+        {
+          "round": 5,
+          "hp": 48,
+          "leader_hp": 97
+        },
+        {
+          "round": 6,
+          "hp": 23,
+          "leader_hp": 69
+        },
+        {
+          "round": 7,
+          "hp": 6,
+          "leader_hp": 37
+        }
+      ],
+      "all_end_turns_with_unspent_energy": [
+        {
+          "round": 3,
+          "state_hash": "b70b8cc1d330619cfd1721bc32c064d1166c7a7ab23f9d03c3b3aa041f1b50d8",
+          "hp": 57,
+          "block": 8,
+          "energy": 1,
+          "player_powers": [
+            {
+              "name": "Plating",
+              "description": "At the end of your turn, gain Block. Plating is reduced by 1 at the start of your turn.",
+              "amount": 2
+            },
+            {
+              "name": "Dexterity",
+              "description": "Dexterity improves Block gained from cards.",
+              "amount": 3
+            },
+            {
+              "name": "Weak",
+              "description": "Weakened creatures deal 25% less damage with Attacks.",
+              "amount": 1
+            },
+            {
+              "name": "Strength",
+              "description": "Strength adds additional damage to Attacks.",
+              "amount": 1
+            }
+          ],
+          "enemies": [
+            {
+              "index": 0,
+              "name": "Kin Follower",
+              "hp": 62,
+              "intents": [
+                {
+                  "type": "Attack",
+                  "damage": 5,
+                  "hits": 2,
+                  "total_damage": 10
+                }
+              ]
+            },
+            {
+              "index": 1,
+              "name": "Kin Follower",
+              "hp": 63,
+              "intents": [
+                {
+                  "type": "Buff"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "name": "Kin Priest",
+              "hp": 124,
+              "intents": [
+                {
+                  "type": "Attack",
+                  "damage": 3,
+                  "hits": 3,
+                  "total_damage": 9
+                }
+              ]
+            }
+          ],
+          "hand": [
+            {
+              "index": 0,
+              "name": "Strike",
+              "cost": 1,
+              "stats": {
+                "damage": 5
+              },
+              "can_play": true
+            },
+            {
+              "index": 1,
+              "name": "Defend",
+              "cost": 1,
+              "stats": {
+                "block": 8
+              },
+              "can_play": true
+            },
+            {
+              "index": 2,
+              "name": "Survivor",
+              "cost": 1,
+              "stats": {
+                "block": 11
+              },
+              "can_play": true
+            }
+          ],
+          "candidates": [
+            {
+              "action": {
+                "cmd": "action",
+                "action": "play_card",
+                "args": {
+                  "card_index": 0,
+                  "target_index": 0
+                }
+              },
+              "card_id": "CARD.STRIKE_SILENT",
+              "name": "Strike",
+              "id": "a000"
+            },
+            {
+              "action": {
+                "cmd": "action",
+                "action": "play_card",
+                "args": {
+                  "card_index": 0,
+                  "target_index": 1
+                }
+              },
+              "card_id": "CARD.STRIKE_SILENT",
+              "name": "Strike",
+              "id": "a001"
+            },
+            {
+              "action": {
+                "cmd": "action",
+                "action": "play_card",
+                "args": {
+                  "card_index": 0,
+                  "target_index": 2
+                }
+              },
+              "card_id": "CARD.STRIKE_SILENT",
+              "name": "Strike",
+              "id": "a002"
+            },
+            {
+              "action": {
+                "cmd": "action",
+                "action": "play_card",
+                "args": {
+                  "card_index": 1
+                }
+              },
+              "card_id": "CARD.DEFEND_SILENT",
+              "name": "Defend",
+              "id": "a003"
+            },
+            {
+              "action": {
+                "cmd": "action",
+                "action": "play_card",
+                "args": {
+                  "card_index": 2
+                }
+              },
+              "card_id": "CARD.SURVIVOR",
+              "name": "Survivor",
+              "id": "a004"
+            },
+            {
+              "action": {
+                "cmd": "action",
+                "action": "end_turn",
+                "args": {}
+              },
+              "name": "End turn",
+              "id": "a005"
+            }
+          ],
+          "answer": {
+            "type": "choice",
+            "choice": "a005",
+            "probabilities": {
+              "a005": 0.36,
+              "a000": 0.1,
+              "a001": 0.02,
+              "a002": 0.36,
+              "a003": 0.09,
+              "a004": 0.07
+            },
+            "confidence": 0.24
+          }
+        },
+        {
+          "round": 4,
+          "state_hash": "6fc413b7512f10fb39cfa370827dd35064f24a9fc080804bd72a389e2bdc003c",
+          "hp": 48,
+          "block": 9,
+          "energy": 1,
+          "player_powers": [
+            {
+              "name": "Plating",
+              "description": "At the end of your turn, gain Block. Plating is reduced by 1 at the start of your turn.",
+              "amount": 1
+            },
+            {
+              "name": "Dexterity",
+              "description": "Dexterity improves Block gained from cards.",
+              "amount": 3
+            },
+            {
+              "name": "Strength",
+              "description": "Strength adds additional damage to Attacks.",
+              "amount": 1
+            }
+          ],
+          "enemies": [
+            {
+              "index": 0,
+              "name": "Kin Follower",
+              "hp": 62,
+              "intents": [
+                {
+                  "type": "Buff"
+                }
+              ]
+            },
+            {
+              "index": 1,
+              "name": "Kin Follower",
+              "hp": 63,
+              "intents": [
+                {
+                  "type": "Attack",
+                  "damage": 8
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "name": "Kin Priest",
+              "hp": 104,
+              "intents": [
+                {
+                  "type": "Buff"
+                }
+              ]
+            }
+          ],
+          "hand": [
+            {
+              "index": 0,
+              "name": "Dodge and Roll",
+              "cost": 1,
+              "stats": {
+                "block": 7
+              },
+              "can_play": true
+            },
+            {
+              "index": 1,
+              "name": "Defend",
+              "cost": 1,
+              "stats": {
+                "block": 8
+              },
+              "can_play": true
+            },
+            {
+              "index": 2,
+              "name": "Defend",
+              "cost": 1,
+              "stats": {
+                "block": 8
+              },
+              "can_play": true
+            }
+          ],
+          "candidates": [
+            {
+              "action": {
+                "cmd": "action",
+                "action": "play_card",
+                "args": {
+                  "card_index": 0
+                }
+              },
+              "card_id": "CARD.DODGE_AND_ROLL",
+              "name": "Dodge and Roll",
+              "id": "a000"
+            },
+            {
+              "action": {
+                "cmd": "action",
+                "action": "play_card",
+                "args": {
+                  "card_index": 1
+                }
+              },
+              "card_id": "CARD.DEFEND_SILENT",
+              "name": "Defend",
+              "id": "a001"
+            },
+            {
+              "action": {
+                "cmd": "action",
+                "action": "play_card",
+                "args": {
+                  "card_index": 2
+                }
+              },
+              "card_id": "CARD.DEFEND_SILENT",
+              "name": "Defend",
+              "id": "a002"
+            },
+            {
+              "action": {
+                "cmd": "action",
+                "action": "end_turn",
+                "args": {}
+              },
+              "name": "End turn",
+              "id": "a003"
+            }
+          ],
+          "answer": {
+            "type": "choice",
+            "choice": "a003",
+            "probabilities": {
+              "a000": 0.27,
+              "a002": 0.09,
+              "a001": 0.23,
+              "a003": 0.41000000000000003
+            },
+            "confidence": 0.21
+          }
+        }
+      ]
+    },
+    {
+      "run_id": "9e051b29-ad90-4758-a2d5-21071ded7c50",
+      "case": "silent",
+      "arm": "dynamic",
+      "omitted_deck_relic_text_unchanged": true,
+      "teacher_ledger": [
+        {
+          "round": 1,
+          "commit": "a30d3c566b2286c91d8384d60ccd23df5559f532",
+          "state_hash": "86544ecde3642507aa689c92588b9028e90dd9d66f7d1ab60ae8cc4ff8ffc77a",
+          "guidance_chars": 544
+        },
+        {
+          "round": 2,
+          "commit": "b7375a082e039434f55aa482e808ce05236468d9",
+          "state_hash": "b3936837c329862d4496ec82eead284b8ddb83a63e08d8772341ce325c388a04",
+          "guidance_chars": 544
+        },
+        {
+          "round": 3,
+          "commit": "0c9647adacaa35b7258d35ebb9367ddf86a5c012",
+          "state_hash": "564e581d781c643eab618ab00ad025704c9150db8666ffd9b550cd5a40e03217",
+          "guidance_chars": 558
+        },
+        {
+          "round": 4,
+          "commit": "4ecf984decd063f309c2f7b5237022a36905bb94",
+          "state_hash": "94f31275e2fe5eb8406f25dbd5a4f7f136fa955b0ae149ddc74d526c47995da6",
+          "guidance_chars": 572
+        },
+        {
+          "round": 5,
+          "commit": "549e147865590029586276828c327c4b10434cf6",
+          "state_hash": "f43309af4a186431ab390c499d45397a7ae36f674df3f007f83cac98db623a95",
+          "guidance_chars": 580
+        },
+        {
+          "round": 6,
+          "commit": "edf2248831fe915ca011fd3976f4261b89c1055e",
+          "state_hash": "e2259a848e876d775bb939ea0dc497c89c711c3254d259ed85777da03288abc6",
+          "guidance_chars": 624
+        },
+        {
+          "round": 7,
+          "commit": "a4ae3c365aa0a15ac0aad5a8bc5443c31c02cd0d",
+          "state_hash": "fe21b6cd96645faf4ccd49eecfc1ece3dbf38b19e164a629ede4263c7db79ece",
+          "guidance_chars": 613
+        },
+        {
+          "round": 8,
+          "commit": "78f9649889a43f238a7f7e0cf26c7bd23d407e8e",
+          "state_hash": "c5f33ce50e18cc39192096da4138403925ff7738bf261c313575d215363f9ae9",
+          "guidance_chars": 742
+        },
+        {
+          "round": 9,
+          "commit": "8e3e572e13001d531653c76a1bf23ae61066a7c9",
+          "state_hash": "bde462d8b676d6c97bd9858a4e4c6b144dd145ea9d58c6b12045ffea4b3f2e85",
+          "guidance_chars": 495
+        }
+      ],
+      "round_openings_before_program_potions": [
+        {
+          "round": 1,
+          "hp": 70,
+          "leader_hp": 199
+        },
+        {
+          "round": 2,
+          "hp": 70,
+          "leader_hp": 161
+        },
+        {
+          "round": 3,
+          "hp": 59,
+          "leader_hp": 129
+        },
+        {
+          "round": 4,
+          "hp": 59,
+          "leader_hp": 118
+        },
+        {
+          "round": 5,
+          "hp": 59,
+          "leader_hp": 100
+        },
+        {
+          "round": 6,
+          "hp": 42,
+          "leader_hp": 94
+        },
+        {
+          "round": 7,
+          "hp": 29,
+          "leader_hp": 58
+        },
+        {
+          "round": 8,
+          "hp": 8,
+          "leader_hp": 38
+        },
+        {
+          "round": 9,
+          "hp": 8,
+          "leader_hp": 26
+        }
+      ],
+      "all_end_turns_with_unspent_energy": [
+        {
+          "round": 4,
+          "state_hash": "70b57f14b0cbdb19d54f9ae186addf2a10ff50047888368c9b308ec6ede68060",
+          "hp": 59,
+          "block": 7,
+          "energy": 2,
+          "player_powers": [
+            {
+              "name": "Plating",
+              "description": "At the end of your turn, gain Block. Plating is reduced by 1 at the start of your turn.",
+              "amount": 1
+            },
+            {
+              "name": "Dexterity",
+              "description": "Dexterity improves Block gained from cards.",
+              "amount": 3
+            },
+            {
+              "name": "Strength",
+              "description": "Strength adds additional damage to Attacks.",
+              "amount": 1
+            }
+          ],
+          "enemies": [
+            {
+              "index": 0,
+              "name": "Kin Follower",
+              "hp": 62,
+              "intents": [
+                {
+                  "type": "Buff"
+                }
+              ]
+            },
+            {
+              "index": 1,
+              "name": "Kin Follower",
+              "hp": 63,
+              "intents": [
+                {
+                  "type": "Attack",
+                  "damage": 8
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "name": "Kin Priest",
+              "hp": 107,
+              "intents": [
+                {
+                  "type": "Buff"
+                }
+              ]
+            }
+          ],
+          "hand": [
+            {
+              "index": 0,
+              "name": "Defend",
+              "cost": 1,
+              "stats": {
+                "block": 8
+              },
+              "can_play": true
+            },
+            {
+              "index": 1,
+              "name": "Defend",
+              "cost": 1,
+              "stats": {
+                "block": 8
+              },
+              "can_play": true
+            },
+            {
+              "index": 2,
+              "name": "Defend",
+              "cost": 1,
+              "stats": {
+                "block": 8
+              },
+              "can_play": true
+            }
+          ],
+          "candidates": [
+            {
+              "action": {
+                "cmd": "action",
+                "action": "play_card",
+                "args": {
+                  "card_index": 0
+                }
+              },
+              "card_id": "CARD.DEFEND_SILENT",
+              "name": "Defend",
+              "id": "a000"
+            },
+            {
+              "action": {
+                "cmd": "action",
+                "action": "play_card",
+                "args": {
+                  "card_index": 1
+                }
+              },
+              "card_id": "CARD.DEFEND_SILENT",
+              "name": "Defend",
+              "id": "a001"
+            },
+            {
+              "action": {
+                "cmd": "action",
+                "action": "play_card",
+                "args": {
+                  "card_index": 2
+                }
+              },
+              "card_id": "CARD.DEFEND_SILENT",
+              "name": "Defend",
+              "id": "a002"
+            },
+            {
+              "action": {
+                "cmd": "action",
+                "action": "end_turn",
+                "args": {}
+              },
+              "name": "End turn",
+              "id": "a003"
+            }
+          ],
+          "answer": {
+            "type": "choice",
+            "choice": "a003",
+            "probabilities": {
+              "a001": 0.01,
+              "a002": 0.01,
+              "a000": 0.02,
+              "a003": 0.96
+            },
+            "confidence": 0.95
+          }
+        },
+        {
+          "round": 5,
+          "state_hash": "40a14250434296e58535da39148797fdd30f41d79f246f3249ba15b4f2bcc0e4",
+          "hp": 59,
+          "block": 16,
+          "energy": 1,
+          "player_powers": [
+            {
+              "name": "Dexterity",
+              "description": "Dexterity improves Block gained from cards.",
+              "amount": 3
+            },
+            {
+              "name": "Strength",
+              "description": "Strength adds additional damage to Attacks.",
+              "amount": 1
+            },
+            {
+              "name": "Block Next Turn",
+              "description": "At the start of your next turn, gain 4 Block.",
+              "amount": 7
+            }
+          ],
+          "enemies": [
+            {
+              "index": 0,
+              "name": "Kin Follower",
+              "hp": 62,
+              "intents": [
+                {
+                  "type": "Attack",
+                  "damage": 11
+                }
+              ]
+            },
+            {
+              "index": 1,
+              "name": "Kin Follower",
+              "hp": 63,
+              "intents": [
+                {
+                  "type": "Attack",
+                  "damage": 5,
+                  "hits": 2,
+                  "total_damage": 10
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "name": "Kin Priest",
+              "hp": 100,
+              "intents": [
+                {
+                  "type": "Attack",
+                  "damage": 12
+                },
+                {
+                  "type": "Debuff"
+                }
+              ]
+            }
+          ],
+          "hand": [
+            {
+              "index": 0,
+              "name": "Strike",
+              "cost": 1,
+              "stats": {
+                "damage": 7
+              },
+              "can_play": true
+            },
+            {
+              "index": 1,
+              "name": "Survivor",
+              "cost": 1,
+              "stats": {
+                "block": 11
+              },
+              "can_play": true
+            },
+            {
+              "index": 2,
+              "name": "Strike",
+              "cost": 1,
+              "stats": {
+                "damage": 10
+              },
+              "can_play": true
+            },
+            {
+              "index": 3,
+              "name": "Shiv",
+              "cost": 0,
+              "stats": {
+                "damage": 5
+              },
+              "can_play": true
+            }
+          ],
+          "candidates": [
+            {
+              "action": {
+                "cmd": "action",
+                "action": "play_card",
+                "args": {
+                  "card_index": 0,
+                  "target_index": 0
+                }
+              },
+              "card_id": "CARD.STRIKE_SILENT",
+              "name": "Strike",
+              "id": "a000"
+            },
+            {
+              "action": {
+                "cmd": "action",
+                "action": "play_card",
+                "args": {
+                  "card_index": 0,
+                  "target_index": 1
+                }
+              },
+              "card_id": "CARD.STRIKE_SILENT",
+              "name": "Strike",
+              "id": "a001"
+            },
+            {
+              "action": {
+                "cmd": "action",
+                "action": "play_card",
+                "args": {
+                  "card_index": 0,
+                  "target_index": 2
+                }
+              },
+              "card_id": "CARD.STRIKE_SILENT",
+              "name": "Strike",
+              "id": "a002"
+            },
+            {
+              "action": {
+                "cmd": "action",
+                "action": "play_card",
+                "args": {
+                  "card_index": 1
+                }
+              },
+              "card_id": "CARD.SURVIVOR",
+              "name": "Survivor",
+              "id": "a003"
+            },
+            {
+              "action": {
+                "cmd": "action",
+                "action": "play_card",
+                "args": {
+                  "card_index": 2,
+                  "target_index": 0
+                }
+              },
+              "card_id": "CARD.STRIKE_SILENT",
+              "name": "Strike",
+              "id": "a004"
+            },
+            {
+              "action": {
+                "cmd": "action",
+                "action": "play_card",
+                "args": {
+                  "card_index": 2,
+                  "target_index": 1
+                }
+              },
+              "card_id": "CARD.STRIKE_SILENT",
+              "name": "Strike",
+              "id": "a005"
+            },
+            {
+              "action": {
+                "cmd": "action",
+                "action": "play_card",
+                "args": {
+                  "card_index": 2,
+                  "target_index": 2
+                }
+              },
+              "card_id": "CARD.STRIKE_SILENT",
+              "name": "Strike",
+              "id": "a006"
+            },
+            {
+              "action": {
+                "cmd": "action",
+                "action": "play_card",
+                "args": {
+                  "card_index": 3,
+                  "target_index": 0
+                }
+              },
+              "card_id": "CARD.SHIV",
+              "name": "Shiv",
+              "id": "a007"
+            },
+            {
+              "action": {
+                "cmd": "action",
+                "action": "play_card",
+                "args": {
+                  "card_index": 3,
+                  "target_index": 1
+                }
+              },
+              "card_id": "CARD.SHIV",
+              "name": "Shiv",
+              "id": "a008"
+            },
+            {
+              "action": {
+                "cmd": "action",
+                "action": "play_card",
+                "args": {
+                  "card_index": 3,
+                  "target_index": 2
+                }
+              },
+              "card_id": "CARD.SHIV",
+              "name": "Shiv",
+              "id": "a009"
+            },
+            {
+              "action": {
+                "cmd": "action",
+                "action": "end_turn",
+                "args": {}
+              },
+              "name": "End turn",
+              "id": "a010"
+            }
+          ],
+          "answer": {
+            "type": "choice",
+            "choice": "a010",
+            "probabilities": {
+              "a007": 0.02,
+              "a001": 0,
+              "a010": 0.33,
+              "a000": 0.03,
+              "a004": 0,
+              "a002": 0.02,
+              "a005": 0,
+              "a003": 0.26,
+              "a009": 0.29,
+              "a006": 0.04,
+              "a008": 0.01
+            },
+            "confidence": 0.26
+          }
+        },
+        {
+          "round": 7,
+          "state_hash": "769414ad0d08eee6d7f12916fcac6d543658d7b0a2056df90705fe449f352268",
+          "hp": 29,
+          "block": 8,
+          "energy": 1,
+          "player_powers": [
+            {
+              "name": "Dexterity",
+              "description": "Dexterity improves Block gained from cards.",
+              "amount": 3
+            },
+            {
+              "name": "Strength",
+              "description": "Strength adds additional damage to Attacks.",
+              "amount": 1
+            },
+            {
+              "name": "Weak",
+              "description": "Weakened creatures deal 25% less damage with Attacks.",
+              "amount": 1
+            }
+          ],
+          "enemies": [
+            {
+              "index": 0,
+              "name": "Kin Follower",
+              "hp": 62,
+              "intents": [
+                {
+                  "type": "Buff"
+                }
+              ]
+            },
+            {
+              "index": 1,
+              "name": "Kin Follower",
+              "hp": 63,
+              "intents": [
+                {
+                  "type": "Attack",
+                  "damage": 11
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "name": "Kin Priest",
+              "hp": 46,
+              "intents": [
+                {
+                  "type": "Attack",
+                  "damage": 6,
+                  "hits": 3,
+                  "total_damage": 18
+                }
+              ]
+            }
+          ],
+          "hand": [
+            {
+              "index": 0,
+              "name": "Shadow Step",
+              "cost": 1,
+              "stats": {
+                "cards": 3
+              },
+              "can_play": true
+            },
+            {
+              "index": 1,
+              "name": "Defend",
+              "cost": 1,
+              "stats": {
+                "block": 8
+              },
+              "can_play": true
+            },
+            {
+              "index": 2,
+              "name": "Strike",
+              "cost": 1,
+              "stats": {
+                "damage": 7
+              },
+              "can_play": true
+            }
+          ],
+          "candidates": [
+            {
+              "action": {
+                "cmd": "action",
+                "action": "play_card",
+                "args": {
+                  "card_index": 0
+                }
+              },
+              "card_id": "CARD.SHADOW_STEP",
+              "name": "Shadow Step",
+              "id": "a000"
+            },
+            {
+              "action": {
+                "cmd": "action",
+                "action": "play_card",
+                "args": {
+                  "card_index": 1
+                }
+              },
+              "card_id": "CARD.DEFEND_SILENT",
+              "name": "Defend",
+              "id": "a001"
+            },
+            {
+              "action": {
+                "cmd": "action",
+                "action": "play_card",
+                "args": {
+                  "card_index": 2,
+                  "target_index": 0
+                }
+              },
+              "card_id": "CARD.STRIKE_SILENT",
+              "name": "Strike",
+              "id": "a002"
+            },
+            {
+              "action": {
+                "cmd": "action",
+                "action": "play_card",
+                "args": {
+                  "card_index": 2,
+                  "target_index": 1
+                }
+              },
+              "card_id": "CARD.STRIKE_SILENT",
+              "name": "Strike",
+              "id": "a003"
+            },
+            {
+              "action": {
+                "cmd": "action",
+                "action": "play_card",
+                "args": {
+                  "card_index": 2,
+                  "target_index": 2
+                }
+              },
+              "card_id": "CARD.STRIKE_SILENT",
+              "name": "Strike",
+              "id": "a004"
+            },
+            {
+              "action": {
+                "cmd": "action",
+                "action": "end_turn",
+                "args": {}
+              },
+              "name": "End turn",
+              "id": "a005"
+            }
+          ],
+          "answer": {
+            "type": "choice",
+            "choice": "a005",
+            "probabilities": {
+              "a003": 0.04,
+              "a004": 0.28,
+              "a000": 0.02,
+              "a002": 0.02,
+              "a005": 0.33,
+              "a001": 0.31
+            },
+            "confidence": 0.19
+          }
+        }
+      ]
+    }
+  ]
+}

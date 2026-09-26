@@ -7,6 +7,7 @@ from .engine import ROOT, Headless
 from .jev import Budget, Jev
 from .potion_contract import PotionContract
 from .lethal_certificate import certify
+from .turn_advisor import TurnAdvisor
 from .teacher import terminal
 from .trace import Trace, digest, version_manifest
 from scripts.evaluate_routing_e099 import choices_for, state_input
@@ -25,26 +26,27 @@ class PairedBudget:
         self.local.settle(usage);self.session.settle(usage)
 
 
-def battle(case, arm, repeat, experiment, session, *, contract=None, lethal=False):
+def battle(case, arm, repeat, experiment, session, *, contract=None, lethal=False, turn_advice=False):
     manifest=version_manifest()
     if manifest['tracked_dirty']:raise RuntimeError('Commit changes before evaluation')
     if manifest['game_dll_sha256']!='9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4':raise ValueError('Wrong game build')
-    uid=str(uuid.uuid4());config={'experiment':experiment,'case':case['id'],'arm':arm,'repeat':repeat,'run_id':uid,'contract':contract,'lethal':lethal}
+    uid=str(uuid.uuid4());config={'experiment':experiment,'case':case['id'],'arm':arm,'repeat':repeat,'run_id':uid,'contract':contract,'lethal':lethal,'turn_advice':turn_advice}
     trace=Trace(ROOT/'artifacts/runs'/uid,{**manifest,**config})
     out={**config,'manifest':manifest,'status':'error','steps':0,'program_actions':0,'lethal_actions':0,'lethal_probes':[]}
     plan=json.loads((ROOT/'experiments/E099/plans.json').read_text())[case['id']]
-    engine=None;state={};budget=PairedBudget(session);recent=[];trans=[];calls=[];start=time.monotonic();last_round=0;pc=None;prefix=list(case['commands'])
+    engine=None;state={};budget=PairedBudget(session);recent=[];trans=[];calls=[];start=time.monotonic();last_round=0;pc=None;advisor=None;prefix=list(case['commands'])
     try:
         engine=Headless(trace.directory)
         for cmd in case['commands']:state=engine.send(cmd)
         if digest(state)!=case['entry_hash']:raise ValueError('Entry mismatch')
         out['entry_verified']=True;trace.write('entry',{'state':state,'state_hash':digest(state)})
         pc=PotionContract(state,contract) if contract else None
+        advisor=TurnAdvisor(case['id'],trace,experiment,state['context']) if turn_advice else None
         jev=Jev(budget)
         for step in range(241):
             status=terminal(state)
             if status:out['status']=status;break
-            if step==240 or time.monotonic()-start>900:out['status']='budget_exhausted';break
+            if step==240 or time.monotonic()-start>(7200 if turn_advice else 900):out['status']='budget_exhausted';break
             last_round=state.get('round',last_round)
             choices=choices_for(state);allowed=choices;chosen=None;evidence={};source='jev';proof=None
             trace.write('before',{'state':state,'state_hash':digest(state)});trace.write('candidates',choices)
@@ -60,7 +62,11 @@ def battle(case, arm, repeat, experiment, session, *, contract=None, lethal=Fals
             if chosen is None:
                 if len(allowed)==1:chosen=allowed[0];source='only_legal_choice'
                 else:
-                    chosen,meta=jev.choose(state_input(state,recent,plan),allowed,trace);calls.append(meta)
+                    payload=state_input(state,recent,plan)
+                    if advisor:
+                        payload['astra_turn_plan']=advisor.update(state,recent,plan)
+                        trace.write('turn_plan_applied',{'round':advisor.round,'commit':advisor.commit,'state_hash':digest(state)})
+                    chosen,meta=jev.choose(payload,allowed,trace);calls.append(meta)
             if chosen not in choices:raise ValueError('Action not legal')
             trace.write('selected',{'choice':chosen,'source':source})
             before=state;state=engine.send(chosen['action']);prefix.append(chosen['action'])
@@ -76,6 +82,9 @@ def battle(case, arm, repeat, experiment, session, *, contract=None, lethal=Fals
     finally:
         if engine:engine.close()
     b=budget.local
+    out.update(expert_packets=advisor.requests if advisor else 0,expert_input_chars=advisor.input_chars if advisor else 0,
+               expert_output_chars=advisor.output_chars if advisor else 0,expert_wait_seconds=advisor.seconds if advisor else 0,
+               expert_tokens=None,expert_cost_usd=None)
     out.update(final_hp=state.get('player',{}).get('hp'),last_round=last_round,seconds=round(time.monotonic()-start,3),
                model_calls=b.calls,model_cost_usd=b.spent-b.estimated_usd,unknown_model_calls=b.uncertain_calls,
                budgeted_usd=b.spent,model_seconds=sum(c['seconds'] for c in calls),models=sorted({c['model'] for c in calls if c.get('model')}),
