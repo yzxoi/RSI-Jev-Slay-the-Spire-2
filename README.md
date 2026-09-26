@@ -16,6 +16,8 @@
 
 [E093](experiments/E093/README.md)提供可选的 `retaliate_resources` CLI 策略：战斗用药、商店买药、战后药水领取/跳过，以及满槽时丢弃腾位。药水选择复用原生控制器的每回合询问，仍需独立检验强度。接口、运行方式和覆盖边界见[CLI 资源决策](docs/cli-resources.md)。
 
+[E096](experiments/E096/README.md)先验证老师再做成本压缩：六个固定 A10 Boss 失败入口中，原规划器 0 个可胜，提前用药基线 2 个，真实引擎搜索找到 4 个可胜；四份策略各重放三次，12/12 胜利且轨迹完全一致。两个 Silent 局面仍失败。这是旧版、已见局面的 Boss 实验，不是整局胜率或泛化证明。
+
 ## 运行与验证
 
 需要本地合法安装的游戏，以及 `dependencies.json` 固定的 headless 依赖和 .NET SDK。原生实战另需已运行的 [STS2-Agent MCP](https://github.com/CharTyr/STS2-Agent)。脚本会从本地游戏安装读取专有文件；仓库不包含游戏二进制。Jev 调用使用环境变量 `OPENROUTER_RSI_JEV_KEY`，也可放在被 Git 忽略的 `.env` 中；不要提交或打印密钥。
