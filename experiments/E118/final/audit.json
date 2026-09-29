@@ -1,0 +1,66 @@
+{
+  "passed": true,
+  "base_phase": {
+    "passed": true,
+    "request_response_pairs": {
+      "jev": 104,
+      "sol_none": 1,
+      "sol_low": 1,
+      "sonnet_low": 1,
+      "gemini_low": 1,
+      "deepseek_low": 43,
+      "qwen_low": 12,
+      "kimi_low": 84
+    },
+    "fixtures_regenerated": true,
+    "total_cost": 0.577391396,
+    "unknown_reservation": 0.5182620800000001
+  },
+  "continuation_3": {
+    "deepseek_low": {
+      "passed": true,
+      "total_pairs": 48,
+      "new_pairs": 5,
+      "preserved_failed_cells": true,
+      "cost": 0.013413960000000003,
+      "unknown_reserved": 0.00848428
+    },
+    "qwen_low": {
+      "passed": true,
+      "total_pairs": 22,
+      "new_pairs": 10,
+      "preserved_failed_cells": true,
+      "cost": 0.051865999999999995,
+      "unknown_reserved": 0.131064
+    }
+  },
+  "continuation_4": {
+    "deepseek_low": {
+      "passed": true,
+      "total_pairs": 70,
+      "new_pairs": 22,
+      "preserved_failed_cells": true,
+      "cost": 0.018759580000000005,
+      "unknown_reserved": 0.01285438
+    },
+    "qwen_low": {
+      "passed": true,
+      "total_pairs": 91,
+      "new_pairs": 69,
+      "preserved_failed_cells": true,
+      "cost": 0.341324,
+      "unknown_reserved": 0.19659600000000002
+    },
+    "kimi_low": {
+      "passed": true,
+      "total_pairs": 94,
+      "new_pairs": 10,
+      "preserved_failed_cells": true,
+      "cost": 0.6218009999999998,
+      "unknown_reserved": 0.28531799999999996
+    }
+  },
+  "unique_physical_requests": 363,
+  "failed_cells_retried": 0,
+  "all_fixture_hashes_match": true
+}

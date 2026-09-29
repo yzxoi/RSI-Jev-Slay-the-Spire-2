@@ -1,6 +1,6 @@
 ## Objective
 
-Issue: [#227](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/227). Status: implementation/protocol committed before validation; no paid results yet.
+Issue: [#227](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/227). Status: completed exploratory calibration with partial delivery on all replacement configurations; audited measurement code and evidence selected for merge, without a game-policy promotion or internal-depth claim.
 
 E118: extend E116 below its observed floor and compare several current model configurations on the same fresh synthetic worlds. The user explicitly authorized short-horizon probes and a small OpenRouter multi-model comparison.
 
@@ -25,10 +25,10 @@ Exploratory usable range: require >=95% protocol validity, >=7/8 readout control
 
 ## Checklist
 
-- [ ] Commit the protocol, oracle, adapters and meaningful tests before validation.
-- [ ] Freeze and commit independently verified fixtures and provider metadata before paid calls.
-- [ ] Run the fixed batch; retain all failures, costs and raw local traces.
-- [ ] Publish sanitized results/audit and PR comment, then decide merge/close.
+- [x] Commit the protocol, oracle, adapters and meaningful tests before validation.
+- [x] Freeze and commit independently verified fixtures and provider metadata before paid calls.
+- [x] Run the fixed batch; retain all failures, costs and raw local traces.
+- [x] Publish sanitized results/audit and PR comment, then decide merge/close.
 
 ## Scope and limitations
 
@@ -119,3 +119,64 @@ python3 scripts/resume_shallow_e118.py audit --source artifacts/runs/e118-pilot-
 python3 scripts/resume_shallow_e118.py run --execute --env-file /Users/yzxoi/RSI-Jev-Slay-the-Spire-2/.env
 python3 scripts/resume_shallow_e118.py audit
 ```
+
+## Final result and decision
+
+All paid execution has stopped at the frozen exits. Final reports: [capability/coverage summary](final/capability-summary.json), [full metrics](final/summary.json), [sanitized rows](final/rows.json), [phase provenance](final/manifest.json), [audit](final/audit.json). Every configuration has 104 scheduled cells (96 main + 8 readout controls). All four answering configurations got their 8 readout controls correct.
+
+| Configuration | Main correct / valid answers | Jev correct on those exact valid main cells | Valid / 104 scheduled | Attempted | Exit |
+|---|---:|---:|---:|---:|---|
+| Jev | 68/96 | 68/96 | 104/104 | 104 | Completed |
+| DeepSeek V4.1 Flash, low | 58/59 | 42/59 | 67/104 | 70 | Third transport failure |
+| Qwen 3.8 Max 0902, low | 45/80 | 57/80 | 88/104 | 91 | Third transport failure |
+| Kimi K3, low | 83/84 | 60/84 | 92/104 | 94 | HTTP 429 after an earlier timeout |
+
+These returned-answer fractions describe different, selected subsets; they are NOT complete-bank accuracy or a model ranking. Missing and failed cells remain in the 104-cell operational denominators. In particular, latency-dependent censoring may select easier responses. All originally selected Sol/Sonnet/Gemini configurations remain unavailable: four initial HTTP 403 refusals, zero substantive answers, no retries.
+
+One descriptive contrast is robust to every missing main answer: Kimi has already answered 83 of the fixed 96 main cells correctly, versus Jev's complete-bank 68. Even assigning every missing Kimi answer zero leaves 86.5% versus 70.8%. Conversely, Qwen has 45 known correct and 16 unavailable main answers; even if all 16 were correct it would reach 61/96, below Jev's 68/96. These are deterministic missing-answer bounds on this fixed bank, not confidence intervals or population/model-family claims. DeepSeek's bounds are too wide for this full-bank conclusion.
+
+### Jev's shallow transition
+
+| Horizon | Root choice correct / 8 | Both prediction mappings correct / 8 |
+|---|---:|---:|
+| 1 | 8 | 8 |
+| 2 | 7 | 5 |
+| 4 | 4 | 4 |
+| 8 | 3 | 5 |
+
+Jev passes the preregistered exploratory gate only at H=1. This is the contiguous passing prefix on these eight seed clusters, NOT an estimate that the model has exactly one internal planning step. At H=2 the root comparison remains fairly good while route prediction has already weakened. H=8 worlds contain only 3 consequential choices on the optimal witness in 7/8 cases (one has 5), so horizon is not equal to decision complexity.
+
+Jev's route judgments show a semantic yes bias: 32/32 true predicates correct, but only 14/32 false predicates correct, with 50/64 yes answers. Inverting A/B did not remove this pattern. Generic state rules say later actions may be optimized, while the prediction-specific question explicitly requires the prescribed route; instruction interference remains an untested alternative to a state-tracking limit. Stronger returned responses show these tasks are solvable, but do not resolve that construct-validity question.
+
+### Prespecified conclusions and limitations
+
+- H1 has exploratory support: Jev solves H=1 and degrades as tasks lengthen. Eight clusters and one sample per cell cannot establish a stable population threshold.
+- The preregistered full-range model-contrast gate is **not established**: no replacement configuration reaches 95% validity across its scheduled bank. Report their capability-range estimates as unavailable, not zero. The observed Kimi and DeepSeek contrasts are useful partial evidence, explicitly distinguished from that gate.
+- No usable Sol none/low comparison was obtained. Jev provides no reasoning counter, which is not evidence of zero reasoning. DeepSeek/Qwen/Kimi explicitly use low reasoning and reported 30,016 / 33,777 / 25,091 reasoning tokens respectively on completed responses. Interfaces, providers, actual computation and task coverage differ.
+- Prompt length grows with H; graph topology allows shortcuts; prediction and optimization require different operations. This is a controlled task-calibration prototype, not a pure intelligence score or an established long-horizon autonomy benchmark.
+- The completion policy was amended after observed infrastructure failures. Original strict-stop results, both continuation attempts, untouched failed cells, and all unknown charges are retained. No failed question was queried again and no outcome-based prompt tuning occurred.
+
+### Cost, timing and audit
+
+363 unique physical requests, 351 valid responses, 12 failures: four provider refusals, seven transport failures, and one HTTP 429. Of 416 scheduled cells across the four answering configurations, 57 were never sent. There are another 412 unstarted cells from the four refused configurations. Copied traces and reused Jev answers are not counted as new inference.
+
+Known reported charges: **$0.987717876**. Unknown-charge reservations retained: **$0.800580880**. Their sum is **$1.788298756**, below the original $3 budget; the actual total bill for missing responses is not established. Per-configuration known charges: Jev $0.005833296; DeepSeek $0.018759580; Qwen $0.341324000; Kimi $0.621801000. Median observed response latency: 0.82 / 4.92 / 7.68 / 6.81 seconds respectively; failed requests are included in latency measurements where attempted.
+
+- Original Jev/refusal SHA: `1da4d7063e5be8d2a6f724d7a12d60925e2fa74d`.
+- Replacement batch SHA: `3e6ac695e9352fa244a3dc4674512745942a9ff6`.
+- First continuation SHA: `1aedb9d901a7b444b6afe841193650705267f17a`.
+- Final transport-policy SHA: `4c9f1e1836fa3ce7cb26b3be5d4af62fe0bd0ae4`.
+- 14 focused tests passed at the final transport-policy SHA. These include exhaustive label verification, budget/exit behavior, and a mocked end-to-end continuation proving that attempted cells are never repeated.
+- Aggregation script SHA `04d4a35`: every phase audit passed and all five public final artifacts were independently recomputed with exact parsed-JSON equality. Exact Python version and platform are in phase manifests; the dependency set is the standard library.
+
+Raw requests/responses remain local under `artifacts/runs/e118-pilot-v1`, `e118-pilot-v2`, `e118-supplement-v3`, and `e118-supplement-v4`. Intermediate `e118-combined-v3` and final derivative directories copy audited prefixes; hashes and provenance distinguish physical calls from those copies. Compact public artifacts omit raw provider error bodies/account identifiers.
+
+To audit and reproduce the aggregate from retained local traces, choose fresh output directories:
+
+```bash
+python3 scripts/summarize_shallow_e118.py \
+  --output artifacts/runs/e118-final-reproduction \
+  --public-output artifacts/runs/e118-export-reproduction/final
+```
+
+**Merge decision:** retain the independently checked fixtures, bounded runner/continuations, and all positive and negative evidence as an experimental measurement tool. Do not promote a game controller, a model-family leaderboard, or an internal planning-depth interpretation. Follow-up proposal [E119 / #229](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/229) isolates reasoning availability within one model/provider on fresh seeds; no E119 paid experiment has been run.
