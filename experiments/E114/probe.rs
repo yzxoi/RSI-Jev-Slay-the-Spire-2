@@ -36,6 +36,10 @@ fn synthetic() {
 
 fn main() {
     if std::env::args().any(|x| x == "--synthetic") { synthetic(); return; }
+    if std::env::args().any(|x| x == "--catalog") {
+        for (i, c) in content::CARDS.iter().enumerate() { println!("{}\t{}", i, c.name); }
+        return;
+    }
     for line in io::stdin().lock().lines() {
         let line = line.unwrap();
         let (kind, value) = line.split_once('\t').unwrap();

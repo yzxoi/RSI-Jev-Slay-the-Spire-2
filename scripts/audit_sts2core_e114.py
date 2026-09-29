@@ -64,6 +64,12 @@ def shape(s):
 def main():
     assert subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=UP, text=True).strip() == UP_SHA
     cards = json.loads((UP / "traces/cards_catalog.json").read_text())["cards"]
+    # The discovered-card snapshot can lag implemented cards. Bridge exact constant
+    # names to the actual compiled table; do not guess cross-character aliases.
+    catalog_lines = subprocess.check_output([str(ROOT / "artifacts/private/e114-probe"), "--catalog"], text=True)
+    compiled_names = {int(i): name for i, name in (line.split("\t") for line in catalog_lines.splitlines())}
+    content_source = (UP / "src/content.rs").read_text().split("pub mod card {", 1)[1].split("\n}", 1)[0]
+    constant_names = {key: compiled_names[int(i)] for key, i in re.findall(r"pub const (\w+): u16 = (\d+);", content_source) if int(i) in compiled_names}
     enemy_table = json.loads((UP / "data/enemy_ids.json").read_text())["monsters"]
     enemy_names = {v["key"]: v.get("kernel_enemy") for v in enemy_table.values()}
     evidence, samples, action_potions = [], [], []
@@ -105,7 +111,7 @@ def main():
                     choice = d.get("choice", d)
                     a = choice.get("action", {})
                     if a.get("action") == "use_potion":
-                        idx = (a.get("args") or {}).get("potion_index", a.get("potion_index", a.get("slot_index")))
+                        idx = (a.get("args") or {}).get("potion_index", a.get("potion_index", a.get("option_index", a.get("slot_index"))))
                         candidates = current["potions"]
                         selected = next((p for p in candidates if p.get("index") == idx), {})
                         action_potions.append({"cohort": exp, "label": label, "seq": r["seq"], "floor": current["floor"], "turn": current["turn"], "hp": current["hp"], "index": idx, "potion_id": clean_id(selected, ["potion_id", "id"]), "name": selected.get("name"), "source": d.get("source", "native_controller")})
@@ -127,7 +133,7 @@ def main():
     def identity(kind, obj):
         if kind == "card":
             key = clean_id(obj, ["card_id", "id"])
-            name = cards.get(key, {}).get("name") or obj.get("name", "")
+            name = cards.get(key, {}).get("name") or constant_names.get(key) or obj.get("name", "")
         elif kind == "enemy":
             key = clean_id(obj, ["enemy_id", "id"])
             name = enemy_names.get(key) or obj.get("name", "")
@@ -176,7 +182,7 @@ def main():
     result = {
         "experiment": "E114", "audit_code_sha": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip(),
         "metadata_sha": META, "upstream_sha": UP_SHA, "scope": "identity and schema inspection only; no counterfactual battle or full state replay",
-        "normalization": "Cards: exact upstream catalog ID->Chinese name, otherwise observed name; no cross-character basic-card aliases. Enemies: upstream ID mapping then observed name. CLI items without IDs use uppercase underscore name; this is identity normalization, not rule verification.",
+        "normalization": "Cards: exact upstream catalog ID->Chinese name, then exact Rust card constant->compiled name, otherwise observed name; no cross-character basic-card aliases. Enemies: upstream ID mapping then observed name. CLI items without IDs use uppercase underscore name; this is identity normalization, not rule verification.",
         "evidence": evidence, "cohorts": groups, "e113_cases": per_case, "actual_potion_actions": action_potions,
         "limitations": ["Not a representative win-rate sample", "Input observations may omit pile contents and persistent private counters", "Known ID/status is not proof of implemented mechanics", "CLI v0.111.0 and older native traces differ from upstream v0.107.1", "No draw order inferred from a deck list", "E110 first segment has no AI combat; co-op is a structural scope check"]}
     out = ROOT / "experiments/E114/results.json"
