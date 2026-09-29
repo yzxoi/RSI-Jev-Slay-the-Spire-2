@@ -87,3 +87,20 @@ python3 scripts/benchmark_shallow_e118.py run --execute \
   --output artifacts/runs/e118-pilot-v2
 python3 scripts/benchmark_shallow_e118.py audit --output artifacts/runs/e118-pilot-v2
 ```
+
+### Iteration 3 — complete unstarted cells after isolated transport timeouts
+
+Iteration-2 source SHA `3e6ac695e9352fa244a3dc4674512745942a9ff6`: DeepSeek stopped on request 43 (42 valid), Qwen on request 12 (11 valid), both `total_http_deadline_60s`. Source rows/manifests are preserved in `iteration-2-stopped/`. DeepSeek known cost $0.012154100, unknown reservation $0.004360580; Qwen known cost $0.022500000, unknown reservation $0.065532000. Kimi continues independently under its original protocol and code; the original runner/module files are unchanged.
+
+The single-unknown-bill exit is unnecessarily restrictive for a transport timeout whose maximum charge is still fully reserved. This infrastructure amendment keeps the exact same prompts, 60-second request limit, 8192-token output cap, configurations, seeds and 104-cell denominators. Only send previously unstarted cells: DeepSeek indexes 43–103 (61 requests), Qwen indexes 12–103 (92 requests), at most 153 new calls. Keep both timed-out cells as failed observations; no retry or answer replacement. Freeze this amendment before continuation.
+
+Retain original per-configuration caps and all known/unknown spend, so the combined ceiling stays $2.911645796. A third timeout stops its configuration; original three-consecutive-invalid and >10% invalid after 20 attempts exits remain. Only `total_http_deadline_60s` may continue: HTTP 403, unknown billing from another cause and parameter/provider errors never receive this exception. Maintain the 1500-second cumulative active execution budget, including the original run time. Prior raw trace bytes and scored attempted rows must remain identical. A dedicated audit reconstructs both ledger phases and all request/response pairs.
+
+This amendment follows observed transport failures, not correctness results. It changes completion policy, so both the strict-stop result and the supplemented result will be published. Remaining incomplete configurations are unavailable for a full-range ability comparison.
+
+```bash
+python3 -m unittest discover -s tests -p 'test_shallow*.py' -v
+python3 scripts/resume_shallow_e118.py run --execute \
+  --env-file /Users/yzxoi/RSI-Jev-Slay-the-Spire-2/.env
+python3 scripts/resume_shallow_e118.py audit
+```
