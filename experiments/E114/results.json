@@ -1,0 +1,3518 @@
+{
+  "experiment": "E114",
+  "audit_code_sha": "4b46b9ee6354dddfbea0f94546ca811839cbf5fd",
+  "metadata_sha": "b7de162",
+  "upstream_sha": "3b2d969d025b9e64bc96b9a15928bd2a0d824bf2",
+  "scope": "identity and schema inspection only; no counterfactual battle or full state replay",
+  "normalization": "Cards: exact upstream catalog ID->Chinese name, otherwise observed name; no cross-character basic-card aliases. Enemies: upstream ID mapping then observed name. CLI items without IDs use uppercase underscore name; this is identity normalization, not rule verification.",
+  "evidence": [
+    {
+      "cohort": "E113",
+      "label": "001-ironclad",
+      "trace_path": "artifacts/runs/e113-3058ea05-5e04-4311-822d-5ea81783ebc7/decisions.jsonl",
+      "expected_sha256": "4a0e4ec75bf51aa641ae1ba1229efc15a3aeb3b96d97edf2c58ea4b6faed18f8",
+      "available": true,
+      "sha256": "4a0e4ec75bf51aa641ae1ba1229efc15a3aeb3b96d97edf2c58ea4b6faed18f8",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E113",
+      "label": "001-silent",
+      "trace_path": "artifacts/runs/e113-74a925e5-3ea6-4b31-bf43-63148a55d7d3/decisions.jsonl",
+      "expected_sha256": "416724bf8f69a0308657d542f5814d5cdd43b85da04b7b37aee65aea001f5acf",
+      "available": true,
+      "sha256": "416724bf8f69a0308657d542f5814d5cdd43b85da04b7b37aee65aea001f5acf",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E113",
+      "label": "001-defect",
+      "trace_path": "artifacts/runs/e113-afaaa167-9c8f-449a-89ca-08b9891b8874/decisions.jsonl",
+      "expected_sha256": "ac57be53e092a774b1465ef58ae5af7bfe0627143feab77bfa80de1565a836b0",
+      "available": true,
+      "sha256": "ac57be53e092a774b1465ef58ae5af7bfe0627143feab77bfa80de1565a836b0",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E113",
+      "label": "001-regent",
+      "trace_path": "artifacts/runs/e113-7274b689-cc2f-49d9-880d-fbc40a6051d4/decisions.jsonl",
+      "expected_sha256": "23d4fd2a874757ef2bfb760faf2656c51e97a65881b2dc00d10b42fbe0e5188e",
+      "available": true,
+      "sha256": "23d4fd2a874757ef2bfb760faf2656c51e97a65881b2dc00d10b42fbe0e5188e",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E113",
+      "label": "001-necrobinder",
+      "trace_path": "artifacts/runs/e113-8f622283-fc9e-4d46-913e-4754ad58328f/decisions.jsonl",
+      "expected_sha256": "fa3501d0776574e4a1b9d440a228663eee1d1e392cd7184b40ab744dae81d2fd",
+      "available": true,
+      "sha256": "fa3501d0776574e4a1b9d440a228663eee1d1e392cd7184b40ab744dae81d2fd",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E113",
+      "label": "002-ironclad",
+      "trace_path": "artifacts/runs/e113-8d42cbe3-da90-4cf5-96a1-fbe7ff84d716/decisions.jsonl",
+      "expected_sha256": "8f8037bdf7e4d77bf8eeff91a9da2816da60456512018f59eef3a503e24a4ec8",
+      "available": true,
+      "sha256": "8f8037bdf7e4d77bf8eeff91a9da2816da60456512018f59eef3a503e24a4ec8",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E113",
+      "label": "002-silent",
+      "trace_path": "artifacts/runs/e113-acac1692-a016-4754-a851-11d8b94af91d/decisions.jsonl",
+      "expected_sha256": "b9124dd8743383be4a68cfaad85fc1894c945a06e14ef86f07c9200fe6fa14b0",
+      "available": true,
+      "sha256": "b9124dd8743383be4a68cfaad85fc1894c945a06e14ef86f07c9200fe6fa14b0",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E113",
+      "label": "002-defect",
+      "trace_path": "artifacts/runs/e113-78431729-e012-45c5-8c0e-64f1ab032e88/decisions.jsonl",
+      "expected_sha256": "dc03ccadb06592a9e0d24cfb0d52e7ff19d4dd80806b0b2058c53a5bded2125e",
+      "available": true,
+      "sha256": "dc03ccadb06592a9e0d24cfb0d52e7ff19d4dd80806b0b2058c53a5bded2125e",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E113",
+      "label": "002-regent",
+      "trace_path": "artifacts/runs/e113-99aa65b0-0154-4baa-a9e6-992c95531c30/decisions.jsonl",
+      "expected_sha256": "735ebe85f5d71f322b61c21161bf0a4af9ca9b70cf31f4d63e1a43973dbc25a9",
+      "available": true,
+      "sha256": "735ebe85f5d71f322b61c21161bf0a4af9ca9b70cf31f4d63e1a43973dbc25a9",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E113",
+      "label": "002-necrobinder",
+      "trace_path": "artifacts/runs/e113-6cc76aad-27bb-457b-a1fb-aabeb8b67a4b/decisions.jsonl",
+      "expected_sha256": "511ba1ce4e618f950b06deee954c4def1571b114226d787e1484e1d0f1dc07e8",
+      "available": true,
+      "sha256": "511ba1ce4e618f950b06deee954c4def1571b114226d787e1484e1d0f1dc07e8",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E113",
+      "label": "003-ironclad",
+      "trace_path": "artifacts/runs/e113-dc3ad322-91a5-4429-b57c-8066612d7842/decisions.jsonl",
+      "expected_sha256": "2a4f84e48bb650ba6be15a52a477ebd14cd07846948333a8ef6dce199893ecf9",
+      "available": true,
+      "sha256": "2a4f84e48bb650ba6be15a52a477ebd14cd07846948333a8ef6dce199893ecf9",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E113",
+      "label": "003-silent",
+      "trace_path": "artifacts/runs/e113-b78aa8e2-6283-4768-9099-40fe3b98f43b/decisions.jsonl",
+      "expected_sha256": "a86e1fb3e26a3ef70e0389c6c8ca3026b550821afd45b0952ba097a2fcc5fe0a",
+      "available": true,
+      "sha256": "a86e1fb3e26a3ef70e0389c6c8ca3026b550821afd45b0952ba097a2fcc5fe0a",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E113",
+      "label": "003-defect",
+      "trace_path": "artifacts/runs/e113-55ae6860-5d0c-4037-bd87-64d04ed3af41/decisions.jsonl",
+      "expected_sha256": "a5da23cc9d32828f189dc5427717fea46a596c148822b1b4b98022f7aa684638",
+      "available": true,
+      "sha256": "a5da23cc9d32828f189dc5427717fea46a596c148822b1b4b98022f7aa684638",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E113",
+      "label": "003-regent",
+      "trace_path": "artifacts/runs/e113-6db8942a-f817-4c9a-a765-8111dddae1be/decisions.jsonl",
+      "expected_sha256": "8ade565a86c249193370f28b596a3cf2336ea8646e12c567b29fe66251dd613c",
+      "available": true,
+      "sha256": "8ade565a86c249193370f28b596a3cf2336ea8646e12c567b29fe66251dd613c",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E113",
+      "label": "003-necrobinder",
+      "trace_path": "artifacts/runs/e113-53dc4016-a8b2-470e-93cc-6e5f4b18af28/decisions.jsonl",
+      "expected_sha256": "378263eb2a994c9c8d7479ca7956c53748195a4820e48eb4186b5f6beb5d39ef",
+      "available": true,
+      "sha256": "378263eb2a994c9c8d7479ca7956c53748195a4820e48eb4186b5f6beb5d39ef",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E113",
+      "label": "004-ironclad",
+      "trace_path": "artifacts/runs/e113-02d8abc9-35ab-4b91-be0e-e3ceaada7a8b/decisions.jsonl",
+      "expected_sha256": "856ac86cca20988a46a16f185cd048931e20ebc667f8ce47e4d75f8423cfeaca",
+      "available": true,
+      "sha256": "856ac86cca20988a46a16f185cd048931e20ebc667f8ce47e4d75f8423cfeaca",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E113",
+      "label": "004-silent",
+      "trace_path": "artifacts/runs/e113-cd5e0ae6-0757-4151-8471-8aecf7839e99/decisions.jsonl",
+      "expected_sha256": "b8af7b970674832ded104c18a420de1b69a99303346b37f1a690437bc7341a8e",
+      "available": true,
+      "sha256": "b8af7b970674832ded104c18a420de1b69a99303346b37f1a690437bc7341a8e",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E113",
+      "label": "004-defect",
+      "trace_path": "artifacts/runs/e113-0c79dcf4-a015-4df4-9cbc-ff87ad2c0912/decisions.jsonl",
+      "expected_sha256": "5748037dfab6b8ce3b3ede91bfc0b1d10228396b18df214433f21640b4434750",
+      "available": true,
+      "sha256": "5748037dfab6b8ce3b3ede91bfc0b1d10228396b18df214433f21640b4434750",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E113",
+      "label": "004-regent",
+      "trace_path": "artifacts/runs/e113-74b8aca7-9908-460b-9779-747e04805814/decisions.jsonl",
+      "expected_sha256": "a3c7e23618c543861fd33607155f544cf0ae69a8551368cc5a2a6046d9ecaeb6",
+      "available": true,
+      "sha256": "a3c7e23618c543861fd33607155f544cf0ae69a8551368cc5a2a6046d9ecaeb6",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E113",
+      "label": "004-necrobinder",
+      "trace_path": "artifacts/runs/e113-7f1157f8-a0cf-40bb-a86d-9fa7ee336321/decisions.jsonl",
+      "expected_sha256": "39b6e72f95553fe9e36a0b5b1aca25c7d79ae03ab4470f571d0d1df6e7e6c5cf",
+      "available": true,
+      "sha256": "39b6e72f95553fe9e36a0b5b1aca25c7d79ae03ab4470f571d0d1df6e7e6c5cf",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E113",
+      "label": "005-ironclad",
+      "trace_path": "artifacts/runs/e113-86bb59ca-a44e-48bc-bacf-aec1717c03d2/decisions.jsonl",
+      "expected_sha256": "ee4a1152739381f8632d33af4f84547bfc7f259af65b99ee9c044daeeed51d42",
+      "available": true,
+      "sha256": "ee4a1152739381f8632d33af4f84547bfc7f259af65b99ee9c044daeeed51d42",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E113",
+      "label": "005-silent",
+      "trace_path": "artifacts/runs/e113-68d3a9a0-f856-4bc6-ba43-33ddbb22258c/decisions.jsonl",
+      "expected_sha256": "4b66538782cfd5dfdf88197b029ef1f3cdb17c99158c6207ee5048fbbf236b6c",
+      "available": true,
+      "sha256": "4b66538782cfd5dfdf88197b029ef1f3cdb17c99158c6207ee5048fbbf236b6c",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E113",
+      "label": "005-defect",
+      "trace_path": "artifacts/runs/e113-c37600b4-9612-4a28-bdc8-ec84ee2c0687/decisions.jsonl",
+      "expected_sha256": "3eb4443d91f4c1c09cf238b97ffd2044d2a1e27af5df9981368c23756dba8a37",
+      "available": true,
+      "sha256": "3eb4443d91f4c1c09cf238b97ffd2044d2a1e27af5df9981368c23756dba8a37",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E113",
+      "label": "005-regent",
+      "trace_path": "artifacts/runs/e113-0b712c16-d31c-43fc-8534-146e405eca8a/decisions.jsonl",
+      "expected_sha256": "922b07872282b51b9ed6fbad6ec9d9ac7bc616000288c49dee28b376106bfdc4",
+      "available": true,
+      "sha256": "922b07872282b51b9ed6fbad6ec9d9ac7bc616000288c49dee28b376106bfdc4",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E113",
+      "label": "005-necrobinder",
+      "trace_path": "artifacts/runs/e113-35978928-b634-4403-80a0-529b519cf6f0/decisions.jsonl",
+      "expected_sha256": "8b5189bd322270787e9323c990fd6cb14d5080bb582833f62e68ef3f04b5de0b",
+      "available": true,
+      "sha256": "8b5189bd322270787e9323c990fd6cb14d5080bb582833f62e68ef3f04b5de0b",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E113",
+      "label": "006-ironclad",
+      "trace_path": "artifacts/runs/e113-a5b8bb2d-d997-4f33-a867-c929bc86b229/decisions.jsonl",
+      "expected_sha256": "8678388311d517b6fed70f6e2ea1316321d5ae1e6586d711d1f9d0e177961df7",
+      "available": true,
+      "sha256": "8678388311d517b6fed70f6e2ea1316321d5ae1e6586d711d1f9d0e177961df7",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E113",
+      "label": "006-silent",
+      "trace_path": "artifacts/runs/e113-17c48e2d-c0d7-4306-b2de-1eb3a7b8e49c/decisions.jsonl",
+      "expected_sha256": "a4e082907b9f4d53ad8ccc8ba10dfe7db35132e27e9197292f2e68524233e055",
+      "available": true,
+      "sha256": "a4e082907b9f4d53ad8ccc8ba10dfe7db35132e27e9197292f2e68524233e055",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E113",
+      "label": "006-defect",
+      "trace_path": "artifacts/runs/e113-85c1f493-a3ae-4d82-910b-2ebb4957a3ce/decisions.jsonl",
+      "expected_sha256": "daa2ae3781c8195b8905d523e75fc429488c843df8017abc8c7750aa2dde9b06",
+      "available": true,
+      "sha256": "daa2ae3781c8195b8905d523e75fc429488c843df8017abc8c7750aa2dde9b06",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E113",
+      "label": "006-regent",
+      "trace_path": "artifacts/runs/e113-aef60ead-72b4-427e-8931-3d2e8c4f9970/decisions.jsonl",
+      "expected_sha256": "ae4e1d71e32502a47ed5f82b952e133938fa118fb6965dd7353aa0dca47a3ea1",
+      "available": true,
+      "sha256": "ae4e1d71e32502a47ed5f82b952e133938fa118fb6965dd7353aa0dca47a3ea1",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E113",
+      "label": "006-necrobinder",
+      "trace_path": "artifacts/runs/e113-db23a925-f710-4d06-a71f-83e81561cbb0/decisions.jsonl",
+      "expected_sha256": "3553c8481f2e709a4f19e15344bc9b01b4f2694ec83cf720e1526f3e2ad84d6b",
+      "available": true,
+      "sha256": "3553c8481f2e709a4f19e15344bc9b01b4f2694ec83cf720e1526f3e2ad84d6b",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "1",
+      "trace_path": "artifacts/runs/38245354-7199-4670-8b93-6ff2191d6039/decisions.jsonl",
+      "expected_sha256": "8369a01242e7b443b75a0c10d22ef8d0431ee77fc3c2f32fa66d96ef5ff130c7",
+      "available": true,
+      "sha256": "8369a01242e7b443b75a0c10d22ef8d0431ee77fc3c2f32fa66d96ef5ff130c7",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "2",
+      "trace_path": "artifacts/runs/d34bcfc1-9de9-4050-9e04-33cb1a19a885/decisions.jsonl",
+      "expected_sha256": "db6f1fa7d91f5bd70c21049fafe8a76efcdcf3cb8969a06c6db5c3cb02353103",
+      "available": true,
+      "sha256": "db6f1fa7d91f5bd70c21049fafe8a76efcdcf3cb8969a06c6db5c3cb02353103",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "3",
+      "trace_path": "artifacts/runs/0690a261-7b59-445e-b329-eca042b60510/decisions.jsonl",
+      "expected_sha256": "3d9aec3f869f0367aef782f340ace663670b7a357c97b1b6403236c68847850b",
+      "available": true,
+      "sha256": "3d9aec3f869f0367aef782f340ace663670b7a357c97b1b6403236c68847850b",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "4",
+      "trace_path": "artifacts/runs/92bed9db-efc7-4a1a-9af4-b79f01f5db0f/decisions.jsonl",
+      "expected_sha256": "d4996948ff75b147261fa96157336b9777d6643895eacbbcb80878add56c96c4",
+      "available": true,
+      "sha256": "d4996948ff75b147261fa96157336b9777d6643895eacbbcb80878add56c96c4",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "5",
+      "trace_path": "artifacts/runs/c87db1df-57a6-4e35-8777-f744df433b61/decisions.jsonl",
+      "expected_sha256": "cca8e796bd70101d44e52e0a1b8157d4c38cb35ff437112bcee18998060eea8f",
+      "available": true,
+      "sha256": "cca8e796bd70101d44e52e0a1b8157d4c38cb35ff437112bcee18998060eea8f",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "6",
+      "trace_path": "artifacts/runs/70c4c8b9-a802-4c42-bc19-7aa77d60feaa/decisions.jsonl",
+      "expected_sha256": "6c75933eb4a0ced2d11cf36ed755fe733423c8940654675884337d58db820991",
+      "available": true,
+      "sha256": "6c75933eb4a0ced2d11cf36ed755fe733423c8940654675884337d58db820991",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "7",
+      "trace_path": "artifacts/runs/d50a6768-18ea-4d4a-89d4-b2b0308f26bd/decisions.jsonl",
+      "expected_sha256": "356b8e0217bee22f5f8002c2be94b79c4b039751854c15aa0d817edab66749d4",
+      "available": true,
+      "sha256": "356b8e0217bee22f5f8002c2be94b79c4b039751854c15aa0d817edab66749d4",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "8",
+      "trace_path": "artifacts/runs/0e339a3f-de33-4957-b578-47cbe0ad4f5c/decisions.jsonl",
+      "expected_sha256": "6ef8d983ca1f92a93b9ee9940a8d5a08d79f3d63d2e71c34e9bec7d30c03f0ce",
+      "available": true,
+      "sha256": "6ef8d983ca1f92a93b9ee9940a8d5a08d79f3d63d2e71c34e9bec7d30c03f0ce",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "9",
+      "trace_path": "artifacts/runs/17344944-76f4-46b7-b6a6-2988b2b4dcf8/decisions.jsonl",
+      "expected_sha256": "593eaf7a77c44112b6b53fab4b0c4a6fd16f3d9aeb5f24a623a3816e76862ff8",
+      "available": true,
+      "sha256": "593eaf7a77c44112b6b53fab4b0c4a6fd16f3d9aeb5f24a623a3816e76862ff8",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "10",
+      "trace_path": "artifacts/runs/0835afdd-9bd0-4d1b-83df-6066ae4e2c92/decisions.jsonl",
+      "expected_sha256": "84435ca3b2fc7d119063e57086db22d6dd7f688a1156e41e0254b13283304951",
+      "available": true,
+      "sha256": "84435ca3b2fc7d119063e57086db22d6dd7f688a1156e41e0254b13283304951",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "11",
+      "trace_path": "artifacts/runs/c9e0bc41-3c64-4c3b-88ee-381d389dcdbe/decisions.jsonl",
+      "expected_sha256": "65c6cff08db7227dbc2f885b83825ea9f9833524f7ee8ab5cd2d48bdc495c2a4",
+      "available": true,
+      "sha256": "65c6cff08db7227dbc2f885b83825ea9f9833524f7ee8ab5cd2d48bdc495c2a4",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "12",
+      "trace_path": "artifacts/runs/9080cecf-a1f1-4fb8-bd28-89bd6ade1d27/decisions.jsonl",
+      "expected_sha256": "9ab83ce8e7fef79771394dbd91b7a239fafef65cb7b3398556072dd32dd722ab",
+      "available": true,
+      "sha256": "9ab83ce8e7fef79771394dbd91b7a239fafef65cb7b3398556072dd32dd722ab",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "13",
+      "trace_path": "artifacts/runs/c2d62632-b256-4844-b9e1-18595ccda324/decisions.jsonl",
+      "expected_sha256": "78afce7d58a809450411f9fc9a7b33c61546ee3d43abf3ee8ab9d6403c252a4e",
+      "available": true,
+      "sha256": "78afce7d58a809450411f9fc9a7b33c61546ee3d43abf3ee8ab9d6403c252a4e",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "14",
+      "trace_path": "artifacts/runs/6b9a4d12-28c5-42e6-b49e-ad1b2b169803/decisions.jsonl",
+      "expected_sha256": "cb132dca860adae7c37d19f1b26e69f507b0db62ce6388b31149c6a2e43096cf",
+      "available": true,
+      "sha256": "cb132dca860adae7c37d19f1b26e69f507b0db62ce6388b31149c6a2e43096cf",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "15",
+      "trace_path": "artifacts/runs/1a4d3439-1da9-44b1-afb4-a9a518be34d5/decisions.jsonl",
+      "expected_sha256": "1c3f45fbbc53e365dd3068f208178bd335000730468b0d9eb231afbd3e046d24",
+      "available": true,
+      "sha256": "1c3f45fbbc53e365dd3068f208178bd335000730468b0d9eb231afbd3e046d24",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "16",
+      "trace_path": "artifacts/runs/4f81d621-eea3-4bd7-9d7a-4aedf1511f8a/decisions.jsonl",
+      "expected_sha256": "e514c1d42fed38a93558198bdf42b623f938096b558ee68acc8b3a05e7944ece",
+      "available": true,
+      "sha256": "e514c1d42fed38a93558198bdf42b623f938096b558ee68acc8b3a05e7944ece",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "17",
+      "trace_path": "artifacts/runs/d44a6cee-813a-40b2-9924-2889ca1961de/decisions.jsonl",
+      "expected_sha256": "b8edc4296572af0dd032ca88325bfa8e1c00e16202862b77759cae6fa9cbc34b",
+      "available": true,
+      "sha256": "b8edc4296572af0dd032ca88325bfa8e1c00e16202862b77759cae6fa9cbc34b",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "18",
+      "trace_path": "artifacts/runs/397f4471-459b-4e8a-bf53-9ae4341b1dd6/decisions.jsonl",
+      "expected_sha256": "0ca41dfb47a67c75d66324e58e24c8b9d9a5a522b3ddc740038c7171b18ef4c9",
+      "available": true,
+      "sha256": "0ca41dfb47a67c75d66324e58e24c8b9d9a5a522b3ddc740038c7171b18ef4c9",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "19",
+      "trace_path": "artifacts/runs/ab7e09aa-47ef-4ae7-ba0d-caab697a544a/decisions.jsonl",
+      "expected_sha256": "9b27217b5139c685e50ffa8f6a586260677c14444dfde85b0e9a4e8fecd0a8ee",
+      "available": true,
+      "sha256": "9b27217b5139c685e50ffa8f6a586260677c14444dfde85b0e9a4e8fecd0a8ee",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "20",
+      "trace_path": "artifacts/runs/e4e0a22c-1ce6-41e7-81e1-7614f5d1fe1e/decisions.jsonl",
+      "expected_sha256": "5c26a75dc6b761899212b9a27c2ccf2ca8b1ce3cd4f04537ee57ae406370359b",
+      "available": true,
+      "sha256": "5c26a75dc6b761899212b9a27c2ccf2ca8b1ce3cd4f04537ee57ae406370359b",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "21",
+      "trace_path": "artifacts/runs/334e8284-6358-4b5f-a1e7-7dfae9cb65e5/decisions.jsonl",
+      "expected_sha256": "c83f68ba7175eedda70afcad4b11ee2e378e63dff2c8e51cf5e513da534151df",
+      "available": true,
+      "sha256": "c83f68ba7175eedda70afcad4b11ee2e378e63dff2c8e51cf5e513da534151df",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "22",
+      "trace_path": "artifacts/runs/a08e023b-c462-49f9-91ca-f4903926fba4/decisions.jsonl",
+      "expected_sha256": "af6cf2cdd77a407c0594507b123fa698ceed9936d7ceff1d5402aa839d14f95c",
+      "available": true,
+      "sha256": "af6cf2cdd77a407c0594507b123fa698ceed9936d7ceff1d5402aa839d14f95c",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "23",
+      "trace_path": "artifacts/runs/d0bf806a-178d-487b-8c72-df02d63eafaa/decisions.jsonl",
+      "expected_sha256": "a07d8332f94ce317ef499d1250af83dbe64aba0b403d22f21216892699842172",
+      "available": true,
+      "sha256": "a07d8332f94ce317ef499d1250af83dbe64aba0b403d22f21216892699842172",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "24",
+      "trace_path": "artifacts/runs/6b4eb976-4fef-4598-9811-967bb62d7114/decisions.jsonl",
+      "expected_sha256": "ff2fe07f66bd1502426f301ade4b6fe973c971e64599ec900a54bf2c9231055c",
+      "available": true,
+      "sha256": "ff2fe07f66bd1502426f301ade4b6fe973c971e64599ec900a54bf2c9231055c",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "25",
+      "trace_path": "artifacts/runs/9f911b8d-206e-4c2f-a751-37e2417be840/decisions.jsonl",
+      "expected_sha256": "7bf8f37ac992a5ca942b399cdfa2c99457413c2cb3b69d94328f5a904f355bae",
+      "available": true,
+      "sha256": "7bf8f37ac992a5ca942b399cdfa2c99457413c2cb3b69d94328f5a904f355bae",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "26",
+      "trace_path": "artifacts/runs/d55d6c5d-058b-44f8-85ee-e6a5c263e153/decisions.jsonl",
+      "expected_sha256": "cef2390d7b64a84a35ddff87f4c498f53574f25a170d8e0f450b652285a36d48",
+      "available": true,
+      "sha256": "cef2390d7b64a84a35ddff87f4c498f53574f25a170d8e0f450b652285a36d48",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "27",
+      "trace_path": "artifacts/runs/2ad405a9-7a58-42c8-afde-02a8a16c6fb0/decisions.jsonl",
+      "expected_sha256": "59115132abd843c65366a16206e9ed7c69d2b07295dd023c314e14e058f0a02b",
+      "available": true,
+      "sha256": "59115132abd843c65366a16206e9ed7c69d2b07295dd023c314e14e058f0a02b",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "28",
+      "trace_path": "artifacts/runs/aa6e4986-88fc-4d82-909f-3ee866720cac/decisions.jsonl",
+      "expected_sha256": "ee9720c5cadbfcc3135dc3b1a71eccabd8358d04b56802b4ef9e875ce5fef6de",
+      "available": true,
+      "sha256": "ee9720c5cadbfcc3135dc3b1a71eccabd8358d04b56802b4ef9e875ce5fef6de",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "29",
+      "trace_path": "artifacts/runs/d855d694-c8ec-4962-a54d-77d34225daa5/decisions.jsonl",
+      "expected_sha256": "e863367776a463453723df237b3999baab2b481f1500fd006de44358419e2a3b",
+      "available": true,
+      "sha256": "e863367776a463453723df237b3999baab2b481f1500fd006de44358419e2a3b",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "30",
+      "trace_path": "artifacts/runs/0c24c1eb-ad5b-4465-b9d6-a4848b8f26e8/decisions.jsonl",
+      "expected_sha256": "6198796dff6f5f80a03e53f340462de3123f0e11dfe1fb440effd5b7e0cca6d2",
+      "available": true,
+      "sha256": "6198796dff6f5f80a03e53f340462de3123f0e11dfe1fb440effd5b7e0cca6d2",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "31",
+      "trace_path": "artifacts/runs/29477bb7-7e9f-439a-8b63-f2c293953252/decisions.jsonl",
+      "expected_sha256": "609da5c309eab77ab2b8126f86e2ac2a119137aea6477e32b97ccafeb02361bf",
+      "available": true,
+      "sha256": "609da5c309eab77ab2b8126f86e2ac2a119137aea6477e32b97ccafeb02361bf",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "32",
+      "trace_path": "artifacts/runs/6bf7c439-d43c-4ea7-83b1-dd33ba1803cc/decisions.jsonl",
+      "expected_sha256": "5ab322756a540bcd34f64f9bdf4cac65d779e6d6d0b20554c74ab743b5f738ff",
+      "available": true,
+      "sha256": "5ab322756a540bcd34f64f9bdf4cac65d779e6d6d0b20554c74ab743b5f738ff",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "33",
+      "trace_path": "artifacts/runs/a5b34365-60eb-4b26-9644-790e662106a2/decisions.jsonl",
+      "expected_sha256": "6eefd0848c815852f49203eaefdd1a9ccb4420b43e53ed619f5b9f24243b9870",
+      "available": true,
+      "sha256": "6eefd0848c815852f49203eaefdd1a9ccb4420b43e53ed619f5b9f24243b9870",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "34",
+      "trace_path": "artifacts/runs/10891f17-ca23-4eae-851f-45c91415db78/decisions.jsonl",
+      "expected_sha256": "71fbd339f66be606e712ed244d236fca1b4d30af407a3a6874d9da2a3a9c21a2",
+      "available": true,
+      "sha256": "71fbd339f66be606e712ed244d236fca1b4d30af407a3a6874d9da2a3a9c21a2",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "35",
+      "trace_path": "artifacts/runs/e52bedd5-aca4-41dc-8706-4850fb1c4e61/decisions.jsonl",
+      "expected_sha256": "8e3250db86264b835dddedb26b8cab2c7321f1a2b048df91af3bf4fc4926017f",
+      "available": true,
+      "sha256": "8e3250db86264b835dddedb26b8cab2c7321f1a2b048df91af3bf4fc4926017f",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "36",
+      "trace_path": "artifacts/runs/7e28ca97-1bce-4c47-bd6f-c31a52348438/decisions.jsonl",
+      "expected_sha256": "19091b9679ffc2b86c5c53eaca38a6036131f93133a9d713191e02f343e7a13f",
+      "available": true,
+      "sha256": "19091b9679ffc2b86c5c53eaca38a6036131f93133a9d713191e02f343e7a13f",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "37",
+      "trace_path": "artifacts/runs/bfe032ff-1cf7-4890-9168-ac5a09331e29/decisions.jsonl",
+      "expected_sha256": "25103f818cff2c14c819240463b94e154bb0a0fb20d1dca971288d541b57ef2f",
+      "available": true,
+      "sha256": "25103f818cff2c14c819240463b94e154bb0a0fb20d1dca971288d541b57ef2f",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "38",
+      "trace_path": "artifacts/runs/9d1a205b-43be-499c-a9a6-8af0fb2a9954/decisions.jsonl",
+      "expected_sha256": "88b0a980e2dc6ce4a6dfc7bbdc79a47e0bf9f107670be9a461bd15f8b70befee",
+      "available": true,
+      "sha256": "88b0a980e2dc6ce4a6dfc7bbdc79a47e0bf9f107670be9a461bd15f8b70befee",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "39",
+      "trace_path": "artifacts/runs/72a45813-8573-4fb8-bf61-6fefc98fa410/decisions.jsonl",
+      "expected_sha256": "3ed9c92e78940450c0a83a5c4772e3f8c923dc1cc1b7ebe26d1a238d1d5cb020",
+      "available": true,
+      "sha256": "3ed9c92e78940450c0a83a5c4772e3f8c923dc1cc1b7ebe26d1a238d1d5cb020",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "40",
+      "trace_path": "artifacts/runs/6eb8dc3a-eec2-4f7f-9a1f-49ee2cf159bd/decisions.jsonl",
+      "expected_sha256": "c95e6f638012c6477dcced9df168f6b05fa80afe29391a00fc0a872afad3b49c",
+      "available": true,
+      "sha256": "c95e6f638012c6477dcced9df168f6b05fa80afe29391a00fc0a872afad3b49c",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "41",
+      "trace_path": "artifacts/runs/1309631a-6e7d-4187-861e-0694ea60575e/decisions.jsonl",
+      "expected_sha256": "e6f7c5ff7b7a7ad02f9ef7ee13bcaa9052e23edd844f1ac0b286021e7d8eaeb1",
+      "available": true,
+      "sha256": "e6f7c5ff7b7a7ad02f9ef7ee13bcaa9052e23edd844f1ac0b286021e7d8eaeb1",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "42",
+      "trace_path": "artifacts/runs/bf2fed5f-5eab-496c-b132-b84a7da6c131/decisions.jsonl",
+      "expected_sha256": "37ea8015f099d42837eeb5232c883899880c134bba0b6c1872f73b26f9563d88",
+      "available": true,
+      "sha256": "37ea8015f099d42837eeb5232c883899880c134bba0b6c1872f73b26f9563d88",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "43",
+      "trace_path": "artifacts/runs/1fe3450a-ae16-424b-a552-554476aafc2d/decisions.jsonl",
+      "expected_sha256": "3d54debbda5cc3f8143688019d04d07e864ecffd355a44d69f8fa7caa2336a8e",
+      "available": true,
+      "sha256": "3d54debbda5cc3f8143688019d04d07e864ecffd355a44d69f8fa7caa2336a8e",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "44",
+      "trace_path": "artifacts/runs/a538e05d-50c8-49b8-b2c4-fbfa22fa95e2/decisions.jsonl",
+      "expected_sha256": "760289f9dcb888dc97b424014ce44853198b0275d5f4ecf2bc55b80ec2f9a1e5",
+      "available": true,
+      "sha256": "760289f9dcb888dc97b424014ce44853198b0275d5f4ecf2bc55b80ec2f9a1e5",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "45",
+      "trace_path": "artifacts/runs/a25fa474-26b6-4ae7-9cad-c4fbbdedbdb4/decisions.jsonl",
+      "expected_sha256": "86aac62eb3c86316c50589d50b816390e673b7fbc6a17479f87b13c60bec6303",
+      "available": true,
+      "sha256": "86aac62eb3c86316c50589d50b816390e673b7fbc6a17479f87b13c60bec6303",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "46",
+      "trace_path": "artifacts/runs/50ac2470-737b-4e70-9669-e34fb0cc2930/decisions.jsonl",
+      "expected_sha256": "3d0833acf6b076cd51baf9bdc7762b7b91fa03da27a8529d9b6891f012e0ae3a",
+      "available": true,
+      "sha256": "3d0833acf6b076cd51baf9bdc7762b7b91fa03da27a8529d9b6891f012e0ae3a",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "47",
+      "trace_path": "artifacts/runs/9044124c-c5f3-4876-bd8b-8fe0f73f205e/decisions.jsonl",
+      "expected_sha256": "d96e509c85faf46c0ee710d973b9600b8892886921e7205c88ca00d59b2c8466",
+      "available": true,
+      "sha256": "d96e509c85faf46c0ee710d973b9600b8892886921e7205c88ca00d59b2c8466",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "48",
+      "trace_path": "artifacts/runs/7b0d288b-f322-4766-93b3-fc620b043bd7/decisions.jsonl",
+      "expected_sha256": "980ed0b312966b5b4ce977e81e89a6c33a81c793141d6ed999175f7854ec183c",
+      "available": true,
+      "sha256": "980ed0b312966b5b4ce977e81e89a6c33a81c793141d6ed999175f7854ec183c",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "49",
+      "trace_path": "artifacts/runs/3ef82146-a1ab-491c-92f7-bb362e9db1ee/decisions.jsonl",
+      "expected_sha256": "d64f237c2f3a8cb66be2e27a22d7ea11ad3a69fb52266e1732aaf95d000e9974",
+      "available": true,
+      "sha256": "d64f237c2f3a8cb66be2e27a22d7ea11ad3a69fb52266e1732aaf95d000e9974",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "50",
+      "trace_path": "artifacts/runs/cebd5c88-b42e-4fdd-87cc-257f58f27bd9/decisions.jsonl",
+      "expected_sha256": "f1b59b27969df073758e851b382472a2010b17ae00e4de51c9a668da3ccd2769",
+      "available": true,
+      "sha256": "f1b59b27969df073758e851b382472a2010b17ae00e4de51c9a668da3ccd2769",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "51",
+      "trace_path": "artifacts/runs/ab6dd910-192a-4537-8ce5-aac810acbfc5/decisions.jsonl",
+      "expected_sha256": "2c813d4e41a41d7fb0d9be034a821766877a592cc1f64cb8cd70bebb037597c3",
+      "available": true,
+      "sha256": "2c813d4e41a41d7fb0d9be034a821766877a592cc1f64cb8cd70bebb037597c3",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "52",
+      "trace_path": "artifacts/runs/e1a9d614-732d-4b9f-96e4-90837252f9eb/decisions.jsonl",
+      "expected_sha256": "bf0ece52df3862aa5aa4465510f63bcd51258e6456cc9d7e06671a1ceceff436",
+      "available": true,
+      "sha256": "bf0ece52df3862aa5aa4465510f63bcd51258e6456cc9d7e06671a1ceceff436",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "53",
+      "trace_path": "artifacts/runs/e2ebdf69-dd17-4898-8396-1ef6f8ef22fc/decisions.jsonl",
+      "expected_sha256": "970e8e429e8e051da2691f782dd888e99fef75eaa5fcaeab9aa72dcf926d9b5e",
+      "available": true,
+      "sha256": "970e8e429e8e051da2691f782dd888e99fef75eaa5fcaeab9aa72dcf926d9b5e",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "54",
+      "trace_path": "artifacts/runs/3800d9b4-55f5-490b-a5bb-fea5b9dcd9b7/decisions.jsonl",
+      "expected_sha256": "51b1206e93ad4f0169af528293bd123229e3b7747d3c28a3b80affa8582113c6",
+      "available": true,
+      "sha256": "51b1206e93ad4f0169af528293bd123229e3b7747d3c28a3b80affa8582113c6",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "55",
+      "trace_path": "artifacts/runs/0e25b4b8-5ad0-4fd4-b771-5e1230199cf7/decisions.jsonl",
+      "expected_sha256": "242196e6e556af5557f8a30d788d47263487723e4b1a172de1fcfb8a8a156a0e",
+      "available": true,
+      "sha256": "242196e6e556af5557f8a30d788d47263487723e4b1a172de1fcfb8a8a156a0e",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "56",
+      "trace_path": "artifacts/runs/be85b442-5948-4be4-913f-2da4085f591e/decisions.jsonl",
+      "expected_sha256": "e959c613f88a202b11373642ff65352202f5af4816c261f8d573655dbdca5ab5",
+      "available": true,
+      "sha256": "e959c613f88a202b11373642ff65352202f5af4816c261f8d573655dbdca5ab5",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "57",
+      "trace_path": "artifacts/runs/37cb0033-a886-40e7-a2b4-ac57985a94c2/decisions.jsonl",
+      "expected_sha256": "7bff1d478828e495d505ce695a0500af20fbda6cc198e026fee1c4172ce8058f",
+      "available": true,
+      "sha256": "7bff1d478828e495d505ce695a0500af20fbda6cc198e026fee1c4172ce8058f",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "58",
+      "trace_path": "artifacts/runs/a3451a18-1db9-4c7e-bec1-ae16c672cb39/decisions.jsonl",
+      "expected_sha256": "8f5ea61f314342ba88a46315c480aa9be1366cd14f299e2b253f8b86a07beb12",
+      "available": true,
+      "sha256": "8f5ea61f314342ba88a46315c480aa9be1366cd14f299e2b253f8b86a07beb12",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "59",
+      "trace_path": "artifacts/runs/e5ea3f49-c163-46ab-bda2-1ff462e0cf12/decisions.jsonl",
+      "expected_sha256": "11a5a5791e1a3e0d36dedbfc5b155a5630319224a3b0a69de3a341a500a6a11a",
+      "available": true,
+      "sha256": "11a5a5791e1a3e0d36dedbfc5b155a5630319224a3b0a69de3a341a500a6a11a",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "60",
+      "trace_path": "artifacts/runs/b960a3da-2a11-4459-a710-7e6a7f07350c/decisions.jsonl",
+      "expected_sha256": "6fabb80d54393a5b1ecd5fe7fbe069ab37fb930bd5f9a40c61076594872a9101",
+      "available": true,
+      "sha256": "6fabb80d54393a5b1ecd5fe7fbe069ab37fb930bd5f9a40c61076594872a9101",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "61",
+      "trace_path": "artifacts/runs/dfe5d390-623c-41e6-87f3-9f078caee3d4/decisions.jsonl",
+      "expected_sha256": "55f5a0be6c60cedeebbc6388fdb79a319d165c213f087dd8c4cb30f9daf04b7f",
+      "available": true,
+      "sha256": "55f5a0be6c60cedeebbc6388fdb79a319d165c213f087dd8c4cb30f9daf04b7f",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "62",
+      "trace_path": "artifacts/runs/3bca53ed-026c-4134-846c-c89e58f35025/decisions.jsonl",
+      "expected_sha256": "567dac6da67969a983d35c16029cae9e1b71807b1fbbeabc90098d36021e8121",
+      "available": true,
+      "sha256": "567dac6da67969a983d35c16029cae9e1b71807b1fbbeabc90098d36021e8121",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "63",
+      "trace_path": "artifacts/runs/e1cbe19b-f55b-4180-ac20-2046a8ee61c6/decisions.jsonl",
+      "expected_sha256": "72d550c499e0a9eb2f2a0ab85c5e95cda92b13ffd93c2697846fe27b043de2d4",
+      "available": true,
+      "sha256": "72d550c499e0a9eb2f2a0ab85c5e95cda92b13ffd93c2697846fe27b043de2d4",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "64",
+      "trace_path": "artifacts/runs/5a28f6a2-7525-4c52-866c-58157cbb6b36/decisions.jsonl",
+      "expected_sha256": "ab09b25c5819fb522095cfb32db94b686761e27684bd4758afd7fda88a46a575",
+      "available": true,
+      "sha256": "ab09b25c5819fb522095cfb32db94b686761e27684bd4758afd7fda88a46a575",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "65",
+      "trace_path": "artifacts/runs/c66f585a-4027-4aa3-97d8-d6910667ada9/decisions.jsonl",
+      "expected_sha256": "20953ed248ce1ca08f06b1b983358de4af9038227c774dab2249a0108303a2ac",
+      "available": true,
+      "sha256": "20953ed248ce1ca08f06b1b983358de4af9038227c774dab2249a0108303a2ac",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "66",
+      "trace_path": "artifacts/runs/2ffa2afe-4ede-4c91-b71e-4b30df487dfa/decisions.jsonl",
+      "expected_sha256": "46975f21c332b91c201ca452495835071f6db21faeb2e77f39c43fc4174b7216",
+      "available": true,
+      "sha256": "46975f21c332b91c201ca452495835071f6db21faeb2e77f39c43fc4174b7216",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "67",
+      "trace_path": "artifacts/runs/9a07680c-c440-479a-af73-ad4e1611b632/decisions.jsonl",
+      "expected_sha256": "f35419a97779fa93da5a04cf3694f4bf2e806f51ce2ee1ec84e2c1d1abc4e2d8",
+      "available": true,
+      "sha256": "f35419a97779fa93da5a04cf3694f4bf2e806f51ce2ee1ec84e2c1d1abc4e2d8",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "68",
+      "trace_path": "artifacts/runs/a8ead20a-6d6b-4f9f-b330-d91b07876458/decisions.jsonl",
+      "expected_sha256": "9a386fbbc8b1e818db1ef27faaf04bf0e5ec01ac3bd529431abe648803c7c89d",
+      "available": true,
+      "sha256": "9a386fbbc8b1e818db1ef27faaf04bf0e5ec01ac3bd529431abe648803c7c89d",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "69",
+      "trace_path": "artifacts/runs/1b10101c-3eba-4a7d-a75f-7d4068dabfd1/decisions.jsonl",
+      "expected_sha256": "1295635954925b88f8c01968a797a67cf5032d9f67a5479a7a26be57960fff38",
+      "available": true,
+      "sha256": "1295635954925b88f8c01968a797a67cf5032d9f67a5479a7a26be57960fff38",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "70",
+      "trace_path": "artifacts/runs/cee61e74-4355-47c2-8e94-8f53b1ea2b34/decisions.jsonl",
+      "expected_sha256": "232c4cc7179b8f8ddf8e7680b9c8b887f532563829285ecfb448ab116cd11e1f",
+      "available": true,
+      "sha256": "232c4cc7179b8f8ddf8e7680b9c8b887f532563829285ecfb448ab116cd11e1f",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E092",
+      "label": "71",
+      "trace_path": "artifacts/runs/3ebd192d-a8ac-415d-acd4-c2d1b1d99b49/decisions.jsonl",
+      "expected_sha256": "37a3bc51841d8130c492e3307c6beea2e04948c639725ceb92ea9f8071b5c5a5",
+      "available": true,
+      "sha256": "37a3bc51841d8130c492e3307c6beea2e04948c639725ceb92ea9f8071b5c5a5",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E102",
+      "label": "ironclad-baseline",
+      "trace_path": "artifacts/runs/5520573a-3a7a-4db1-a2f0-5bf78c5d406c/decisions.jsonl",
+      "expected_sha256": "f115edee08891371de18cc4745fb9f237ed9fe628ea9bd2372d8ebdaaad2c4f1",
+      "available": true,
+      "sha256": "f115edee08891371de18cc4745fb9f237ed9fe628ea9bd2372d8ebdaaad2c4f1",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E102",
+      "label": "ironclad-dynamic",
+      "trace_path": "artifacts/runs/1bc95d2f-db73-4c52-a2ce-ff7df11c4684/decisions.jsonl",
+      "expected_sha256": "c4823f83aba3ef1eb9ac92b3ac939ecaa5bfc4132c8b57e1a118420c81f164e4",
+      "available": true,
+      "sha256": "c4823f83aba3ef1eb9ac92b3ac939ecaa5bfc4132c8b57e1a118420c81f164e4",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E102",
+      "label": "silent-baseline",
+      "trace_path": "artifacts/runs/8f14bcd0-24e4-4831-b0e9-e80dbd8abcc6/decisions.jsonl",
+      "expected_sha256": "85ac118cf83f5b69953421f2be0fc70831ea66e7a7e85e9f2acdc4a806c1975a",
+      "available": true,
+      "sha256": "85ac118cf83f5b69953421f2be0fc70831ea66e7a7e85e9f2acdc4a806c1975a",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E102",
+      "label": "silent-dynamic",
+      "trace_path": "artifacts/runs/9e051b29-ad90-4758-a2d5-21071ded7c50/decisions.jsonl",
+      "expected_sha256": "b66e1d385c2e7400fdf653bd3702739e0e03017ef2ce73e3b943fac49e4c7473",
+      "available": true,
+      "sha256": "b66e1d385c2e7400fdf653bd3702739e0e03017ef2ce73e3b943fac49e4c7473",
+      "hash_matches": true
+    },
+    {
+      "cohort": "E110",
+      "label": "segment01",
+      "trace_path": "artifacts/runs/e65d5365-ac22-4b4a-9081-f86dd26ecf60/decisions.jsonl",
+      "expected_sha256": "4566b5fd934e764fd7a004dfd4028dfc672ae4193415ba578eab4698bf626ebb",
+      "available": true,
+      "sha256": "4566b5fd934e764fd7a004dfd4028dfc672ae4193415ba578eab4698bf626ebb",
+      "hash_matches": true
+    }
+  ],
+  "cohorts": {
+    "E113": {
+      "counts": {
+        "observations": 30,
+        "combat_observations": 30,
+        "pending": 0,
+        "has_draw_contents": 0,
+        "has_discard_contents": 0,
+        "has_exhaust_contents": 0,
+        "orbs": 0,
+        "pets": 0,
+        "stars": 0,
+        "coop": 0,
+        "hand_affliction": 0,
+        "combat_all_hand_names_known": 3
+      },
+      "objects": {
+        "card": {
+          "STRIKE_IRONCLAD": {
+            "query": "打击",
+            "status": "known",
+            "label": "打击"
+          },
+          "DEFEND_IRONCLAD": {
+            "query": "防御",
+            "status": "known",
+            "label": "防御"
+          },
+          "BASH": {
+            "query": "痛击",
+            "status": "known",
+            "label": "痛击"
+          },
+          "ASCENDERS_BANE": {
+            "query": "Ascender's Bane",
+            "status": "unknown",
+            "label": ""
+          },
+          "DRUM_OF_BATTLE": {
+            "query": "Drum of Battle",
+            "status": "unknown",
+            "label": ""
+          },
+          "IRON_WAVE": {
+            "query": "铁斩波",
+            "status": "known",
+            "label": "铁斩波"
+          },
+          "WHIRLWIND": {
+            "query": "旋风斩",
+            "status": "known",
+            "label": "旋风斩"
+          },
+          "STRIKE_SILENT": {
+            "query": "Strike",
+            "status": "unknown",
+            "label": ""
+          },
+          "DEFEND_SILENT": {
+            "query": "Defend",
+            "status": "unknown",
+            "label": ""
+          },
+          "NEUTRALIZE": {
+            "query": "Neutralize",
+            "status": "unknown",
+            "label": ""
+          },
+          "SURVIVOR": {
+            "query": "Survivor",
+            "status": "unknown",
+            "label": ""
+          },
+          "ECHOING_SLASH": {
+            "query": "Echoing Slash",
+            "status": "unknown",
+            "label": ""
+          },
+          "DODGE_AND_ROLL": {
+            "query": "Dodge and Roll",
+            "status": "unknown",
+            "label": ""
+          },
+          "UP_MY_SLEEVE": {
+            "query": "Up My Sleeve",
+            "status": "unknown",
+            "label": ""
+          },
+          "HIDDEN_DAGGERS": {
+            "query": "Hidden Daggers",
+            "status": "unknown",
+            "label": ""
+          },
+          "STRIKE_DEFECT": {
+            "query": "Strike",
+            "status": "unknown",
+            "label": ""
+          },
+          "DEFEND_DEFECT": {
+            "query": "Defend",
+            "status": "unknown",
+            "label": ""
+          },
+          "ZAP": {
+            "query": "Zap",
+            "status": "unknown",
+            "label": ""
+          },
+          "DUALCAST": {
+            "query": "Dualcast",
+            "status": "unknown",
+            "label": ""
+          },
+          "FIGHT_THROUGH": {
+            "query": "Fight Through",
+            "status": "unknown",
+            "label": ""
+          },
+          "COOLHEADED": {
+            "query": "Coolheaded",
+            "status": "unknown",
+            "label": ""
+          },
+          "WHITE_NOISE": {
+            "query": "White Noise",
+            "status": "unknown",
+            "label": ""
+          },
+          "REFRACT": {
+            "query": "Refract",
+            "status": "unknown",
+            "label": ""
+          },
+          "STRIKE_REGENT": {
+            "query": "Strike",
+            "status": "unknown",
+            "label": ""
+          },
+          "DEFEND_REGENT": {
+            "query": "Defend",
+            "status": "unknown",
+            "label": ""
+          },
+          "FALLING_STAR": {
+            "query": "Falling Star",
+            "status": "unknown",
+            "label": ""
+          },
+          "VENERATE": {
+            "query": "Venerate",
+            "status": "unknown",
+            "label": ""
+          },
+          "GAMMA_BLAST": {
+            "query": "Gamma Blast",
+            "status": "unknown",
+            "label": ""
+          },
+          "GATHER_LIGHT": {
+            "query": "Gather Light",
+            "status": "unknown",
+            "label": ""
+          },
+          "TERRAFORMING": {
+            "query": "Terraforming",
+            "status": "unknown",
+            "label": ""
+          },
+          "PALE_BLUE_DOT": {
+            "query": "Pale Blue Dot",
+            "status": "unknown",
+            "label": ""
+          },
+          "STRIKE_NECROBINDER": {
+            "query": "Strike",
+            "status": "unknown",
+            "label": ""
+          },
+          "DEFEND_NECROBINDER": {
+            "query": "Defend",
+            "status": "unknown",
+            "label": ""
+          },
+          "BODYGUARD": {
+            "query": "Bodyguard",
+            "status": "unknown",
+            "label": ""
+          },
+          "UNLEASH": {
+            "query": "Unleash",
+            "status": "unknown",
+            "label": ""
+          },
+          "DEATHBRINGER": {
+            "query": "Deathbringer",
+            "status": "unknown",
+            "label": ""
+          },
+          "GRAVEBLAST": {
+            "query": "Graveblast",
+            "status": "unknown",
+            "label": ""
+          },
+          "VEILPIERCER": {
+            "query": "Veilpiercer",
+            "status": "unknown",
+            "label": ""
+          },
+          "HIGH_FIVE": {
+            "query": "High Five",
+            "status": "unknown",
+            "label": ""
+          },
+          "SETUP_STRIKE": {
+            "query": "预备打击",
+            "status": "known",
+            "label": "预备打击"
+          },
+          "TRUE_GRIT": {
+            "query": "坚毅",
+            "status": "known",
+            "label": "坚毅"
+          },
+          "BODY_SLAM": {
+            "query": "全身撞击",
+            "status": "known",
+            "label": "全身撞击"
+          },
+          "FORGOTTEN_RITUAL": {
+            "query": "被遗忘的仪式",
+            "status": "known",
+            "label": "被遗忘的仪式"
+          },
+          "ARMAMENTS": {
+            "query": "武装",
+            "status": "known",
+            "label": "武装"
+          },
+          "POISONED_STAB": {
+            "query": "Poisoned Stab",
+            "status": "unknown",
+            "label": ""
+          },
+          "SUCKER_PUNCH": {
+            "query": "Sucker Punch",
+            "status": "unknown",
+            "label": ""
+          },
+          "CLOAK_AND_DAGGER": {
+            "query": "Cloak and Dagger",
+            "status": "unknown",
+            "label": ""
+          },
+          "SIDESTEP": {
+            "query": "Sidestep",
+            "status": "unknown",
+            "label": ""
+          },
+          "BACKFLIP": {
+            "query": "Backflip",
+            "status": "unknown",
+            "label": ""
+          },
+          "PREDATOR": {
+            "query": "Predator",
+            "status": "unknown",
+            "label": ""
+          },
+          "HOLOGRAM": {
+            "query": "Hologram",
+            "status": "unknown",
+            "label": ""
+          },
+          "TURBO": {
+            "query": "TURBO",
+            "status": "unknown",
+            "label": ""
+          },
+          "BOOST_AWAY": {
+            "query": "Boost Away",
+            "status": "unknown",
+            "label": ""
+          },
+          "ITERATION": {
+            "query": "Iteration",
+            "status": "unknown",
+            "label": ""
+          },
+          "BARRAGE": {
+            "query": "Barrage",
+            "status": "unknown",
+            "label": ""
+          },
+          "HIDDEN_CACHE": {
+            "query": "Hidden Cache",
+            "status": "unknown",
+            "label": ""
+          },
+          "SPOILS_OF_BATTLE": {
+            "query": "Spoils of Battle",
+            "status": "unknown",
+            "label": ""
+          },
+          "CLOAK_OF_STARS": {
+            "query": "Cloak of Stars",
+            "status": "unknown",
+            "label": ""
+          },
+          "LUNAR_BLAST": {
+            "query": "Lunar Blast",
+            "status": "unknown",
+            "label": ""
+          },
+          "BEGONE": {
+            "query": "BEGONE!",
+            "status": "unknown",
+            "label": ""
+          },
+          "PULL_AGGRO": {
+            "query": "Pull Aggro",
+            "status": "unknown",
+            "label": ""
+          },
+          "SOW": {
+            "query": "Sow",
+            "status": "unknown",
+            "label": ""
+          },
+          "DEFY": {
+            "query": "Defy",
+            "status": "unknown",
+            "label": ""
+          },
+          "ENFEEBLING_TOUCH": {
+            "query": "Enfeebling Touch",
+            "status": "unknown",
+            "label": ""
+          },
+          "BLIGHT_STRIKE": {
+            "query": "Blight Strike",
+            "status": "unknown",
+            "label": ""
+          },
+          "CINDER": {
+            "query": "余烬",
+            "status": "known",
+            "label": "余烬"
+          },
+          "COLOSSUS": {
+            "query": "巨像",
+            "status": "known",
+            "label": "巨像"
+          },
+          "DAGGER_THROW": {
+            "query": "Dagger Throw",
+            "status": "unknown",
+            "label": ""
+          },
+          "BUBBLE_BUBBLE": {
+            "query": "Bubble Bubble",
+            "status": "unknown",
+            "label": ""
+          },
+          "EXPERTISE": {
+            "query": "Expertise",
+            "status": "unknown",
+            "label": ""
+          },
+          "CLAW": {
+            "query": "Claw",
+            "status": "unknown",
+            "label": ""
+          },
+          "DARKNESS": {
+            "query": "Darkness",
+            "status": "unknown",
+            "label": ""
+          },
+          "COSMIC_INDIFFERENCE": {
+            "query": "Cosmic Indifference",
+            "status": "unknown",
+            "label": ""
+          },
+          "CONVERGENCE": {
+            "query": "Convergence",
+            "status": "unknown",
+            "label": ""
+          },
+          "FEAR": {
+            "query": "Fear",
+            "status": "unknown",
+            "label": ""
+          },
+          "COUNTDOWN": {
+            "query": "Countdown",
+            "status": "unknown",
+            "label": ""
+          },
+          "HEADBUTT": {
+            "query": "头槌",
+            "status": "known",
+            "label": "头槌"
+          },
+          "SHRUG_IT_OFF": {
+            "query": "耸肩无视",
+            "status": "known",
+            "label": "耸肩无视"
+          },
+          "TREMBLE": {
+            "query": "战栗",
+            "status": "known",
+            "label": "战栗"
+          },
+          "BREAKTHROUGH": {
+            "query": "突破",
+            "status": "known",
+            "label": "突破"
+          },
+          "DEFLECT": {
+            "query": "Deflect",
+            "status": "unknown",
+            "label": ""
+          },
+          "SNAKEBITE": {
+            "query": "Snakebite",
+            "status": "unknown",
+            "label": ""
+          },
+          "DAGGER_SPRAY": {
+            "query": "Dagger Spray",
+            "status": "unknown",
+            "label": ""
+          },
+          "COMPILE_DRIVER": {
+            "query": "Compile Driver",
+            "status": "unknown",
+            "label": ""
+          },
+          "HOTFIX": {
+            "query": "Hotfix",
+            "status": "unknown",
+            "label": ""
+          },
+          "SWEEPING_BEAM": {
+            "query": "Sweeping Beam",
+            "status": "unknown",
+            "label": ""
+          },
+          "CRUSH_UNDER": {
+            "query": "Crush Under",
+            "status": "unknown",
+            "label": ""
+          },
+          "KNOW_THY_PLACE": {
+            "query": "Know Thy Place",
+            "status": "unknown",
+            "label": ""
+          },
+          "SOLAR_STRIKE": {
+            "query": "Solar Strike",
+            "status": "unknown",
+            "label": ""
+          },
+          "COLLISION_COURSE": {
+            "query": "Collision Course",
+            "status": "unknown",
+            "label": ""
+          },
+          "GRAVE_WARDEN": {
+            "query": "Grave Warden",
+            "status": "unknown",
+            "label": ""
+          },
+          "REAP": {
+            "query": "Reap",
+            "status": "unknown",
+            "label": ""
+          },
+          "SNAP": {
+            "query": "Snap",
+            "status": "unknown",
+            "label": ""
+          },
+          "DRAIN_POWER": {
+            "query": "Drain Power",
+            "status": "unknown",
+            "label": ""
+          },
+          "MOLTEN_FIST": {
+            "query": "熔融之拳",
+            "status": "known",
+            "label": "熔融之拳"
+          },
+          "FLAME_BARRIER": {
+            "query": "火焰屏障",
+            "status": "known",
+            "label": "火焰屏障"
+          },
+          "INFLAME": {
+            "query": "燃烧",
+            "status": "known",
+            "label": "燃烧"
+          },
+          "FLICK_FLACK": {
+            "query": "Flick-Flack",
+            "status": "unknown",
+            "label": ""
+          },
+          "FLECHETTES": {
+            "query": "Flechettes",
+            "status": "unknown",
+            "label": ""
+          },
+          "INFINITE_BLADES": {
+            "query": "Infinite Blades",
+            "status": "unknown",
+            "label": ""
+          },
+          "FOCUSED_STRIKE": {
+            "query": "Focused Strike",
+            "status": "unknown",
+            "label": ""
+          },
+          "HAILSTORM": {
+            "query": "Hailstorm",
+            "status": "unknown",
+            "label": ""
+          },
+          "ROCKET_PUNCH": {
+            "query": "Rocket Punch",
+            "status": "unknown",
+            "label": ""
+          },
+          "GLITTERSTREAM": {
+            "query": "Glitterstream",
+            "status": "unknown",
+            "label": ""
+          },
+          "KNOCKOUT_BLOW": {
+            "query": "Knockout Blow",
+            "status": "unknown",
+            "label": ""
+          },
+          "PARRY": {
+            "query": "Parry",
+            "status": "unknown",
+            "label": ""
+          },
+          "INVOKE": {
+            "query": "Invoke",
+            "status": "unknown",
+            "label": ""
+          },
+          "DREDGE": {
+            "query": "Dredge",
+            "status": "unknown",
+            "label": ""
+          },
+          "LETHALITY": {
+            "query": "Lethality",
+            "status": "unknown",
+            "label": ""
+          },
+          "PREP_TIME": {
+            "query": "Prep Time",
+            "status": "unknown",
+            "label": ""
+          },
+          "SECOND_WIND": {
+            "query": "重振精神",
+            "status": "known",
+            "label": "重振精神"
+          },
+          "PINPOINT": {
+            "query": "Pinpoint",
+            "status": "unknown",
+            "label": ""
+          },
+          "STORM": {
+            "query": "Storm",
+            "status": "unknown",
+            "label": ""
+          },
+          "REFLECT": {
+            "query": "Reflect",
+            "status": "unknown",
+            "label": ""
+          },
+          "PUTREFY": {
+            "query": "Putrefy",
+            "status": "unknown",
+            "label": ""
+          }
+        },
+        "enemy": {
+          "VINE_SHAMBLER": {
+            "query": "藤蔓蹒跚者",
+            "status": "known",
+            "label": "藤蔓蹒跚者"
+          },
+          "TWIG_SLIME_S": {
+            "query": "树枝史莱姆（小）",
+            "status": "known",
+            "label": "树枝史莱姆（小）"
+          },
+          "SLITHERING_STRANGLER": {
+            "query": "蛇行扼杀者",
+            "status": "known",
+            "label": "蛇行扼杀者"
+          },
+          "BYGONE_EFFIGY": {
+            "query": "旧日雕像",
+            "status": "known",
+            "label": "旧日雕像"
+          },
+          "FOGMOG": {
+            "query": "雾菇",
+            "status": "known",
+            "label": "雾菇"
+          },
+          "NIBBIT": {
+            "query": "小啃兽",
+            "status": "known",
+            "label": "小啃兽"
+          },
+          "BYRDONIS": {
+            "query": "多尼斯异鸟",
+            "status": "known",
+            "label": "多尼斯异鸟"
+          },
+          "CUBEX_CONSTRUCT": {
+            "query": "立柱构造体",
+            "status": "known",
+            "label": "立柱构造体"
+          },
+          "TWIG_SLIME_M": {
+            "query": "树枝史莱姆（中）",
+            "status": "known",
+            "label": "树枝史莱姆（中）"
+          },
+          "FLYCONID": {
+            "query": "飞蝇菌子",
+            "status": "known",
+            "label": "飞蝇菌子"
+          }
+        },
+        "potion": {
+          "SWIFT_POTION": {
+            "query": "SWIFT_POTION",
+            "status": "known",
+            "label": "迅捷药水"
+          },
+          "FLEX_POTION": {
+            "query": "FLEX_POTION",
+            "status": "known",
+            "label": "屈伸药剂"
+          },
+          "TOUCH_OF_INSANITY": {
+            "query": "TOUCH_OF_INSANITY",
+            "status": "unknown",
+            "label": ""
+          },
+          "COLORLESS_POTION": {
+            "query": "COLORLESS_POTION",
+            "status": "unknown",
+            "label": ""
+          },
+          "DEXTERITY_POTION": {
+            "query": "DEXTERITY_POTION",
+            "status": "known",
+            "label": "敏捷药水"
+          },
+          "SKILL_POTION": {
+            "query": "SKILL_POTION",
+            "status": "known",
+            "label": "技能药水"
+          },
+          "LIQUID_MEMORIES": {
+            "query": "LIQUID_MEMORIES",
+            "status": "unknown",
+            "label": ""
+          }
+        },
+        "relic": {
+          "BURNING_BLOOD": {
+            "query": "BURNING_BLOOD",
+            "status": "modelled",
+            "label": "燃烧之血"
+          },
+          "BOOMING_CONCH": {
+            "query": "BOOMING_CONCH",
+            "status": "unknown",
+            "label": ""
+          },
+          "RING_OF_THE_SNAKE": {
+            "query": "RING_OF_THE_SNAKE",
+            "status": "unknown",
+            "label": ""
+          },
+          "CRACKED_CORE": {
+            "query": "CRACKED_CORE",
+            "status": "unknown",
+            "label": ""
+          },
+          "DIVINE_RIGHT": {
+            "query": "DIVINE_RIGHT",
+            "status": "unknown",
+            "label": ""
+          },
+          "BOUND_PHYLACTERY": {
+            "query": "BOUND_PHYLACTERY",
+            "status": "unknown",
+            "label": ""
+          },
+          "PHIAL_HOLSTER": {
+            "query": "PHIAL_HOLSTER",
+            "status": "modelled",
+            "label": "药瓶皮套"
+          },
+          "PETRIFIED_TOAD": {
+            "query": "PETRIFIED_TOAD",
+            "status": "modelled",
+            "label": "石化蟾蜍"
+          },
+          "FISHING_ROD": {
+            "query": "FISHING_ROD",
+            "status": "unknown",
+            "label": ""
+          },
+          "NUTRITIOUS_OYSTER": {
+            "query": "NUTRITIOUS_OYSTER",
+            "status": "unknown",
+            "label": ""
+          },
+          "SWORD_OF_STONE": {
+            "query": "SWORD_OF_STONE",
+            "status": "modelled",
+            "label": "石之剑"
+          },
+          "LEAD_PAPERWEIGHT": {
+            "query": "LEAD_PAPERWEIGHT",
+            "status": "unknown",
+            "label": ""
+          }
+        },
+        "status": {
+          "SLOW_POWER": {
+            "query": "SLOW_POWER",
+            "status": "mapped",
+            "label": "Slow"
+          },
+          "TERRITORIAL_POWER": {
+            "query": "TERRITORIAL_POWER",
+            "status": "mapped",
+            "label": "Territorial"
+          },
+          "ARTIFACT_POWER": {
+            "query": "ARTIFACT_POWER",
+            "status": "mapped",
+            "label": "Artifact"
+          }
+        }
+      },
+      "distinct_status_counts": {
+        "card": {
+          "known": 20,
+          "unknown": 95
+        },
+        "enemy": {
+          "known": 10
+        },
+        "potion": {
+          "known": 4,
+          "unknown": 3
+        },
+        "relic": {
+          "modelled": 4,
+          "unknown": 8
+        },
+        "status": {
+          "mapped": 3
+        }
+      }
+    },
+    "E092": {
+      "counts": {
+        "observations": 439,
+        "combat_observations": 330,
+        "pending": 42,
+        "has_draw_contents": 0,
+        "has_discard_contents": 0,
+        "has_exhaust_contents": 0,
+        "orbs": 0,
+        "pets": 223,
+        "stars": 0,
+        "coop": 0,
+        "hand_affliction": 0,
+        "combat_all_hand_names_known": 309
+      },
+      "objects": {
+        "card": {
+          "STRIKE_IRONCLAD": {
+            "query": "打击",
+            "status": "known",
+            "label": "打击"
+          },
+          "DEFEND_IRONCLAD": {
+            "query": "防御",
+            "status": "known",
+            "label": "防御"
+          },
+          "BASH": {
+            "query": "痛击",
+            "status": "known",
+            "label": "痛击"
+          },
+          "ARMAMENTS": {
+            "query": "武装",
+            "status": "known",
+            "label": "武装"
+          },
+          "COLOSSUS": {
+            "query": "巨像",
+            "status": "known",
+            "label": "巨像"
+          },
+          "DISMANTLE": {
+            "query": "拆卸",
+            "status": "known",
+            "label": "拆卸"
+          },
+          "POMMEL_STRIKE": {
+            "query": "剑柄打击",
+            "status": "known",
+            "label": "剑柄打击"
+          },
+          "PERFECTED_STRIKE": {
+            "query": "完美打击",
+            "status": "known",
+            "label": "完美打击"
+          },
+          "HEADBUTT": {
+            "query": "头槌",
+            "status": "known",
+            "label": "头槌"
+          },
+          "AGGRESSION": {
+            "query": "好勇斗狠",
+            "status": "known",
+            "label": "好勇斗狠"
+          },
+          "FISTICUFFS": {
+            "query": "拳斗",
+            "status": "known",
+            "label": "拳斗"
+          },
+          "SHRUG_IT_OFF": {
+            "query": "耸肩无视",
+            "status": "known",
+            "label": "耸肩无视"
+          },
+          "RUPTURE": {
+            "query": "撕裂",
+            "status": "known",
+            "label": "撕裂"
+          },
+          "SETUP_STRIKE": {
+            "query": "预备打击",
+            "status": "known",
+            "label": "预备打击"
+          },
+          "THINKING_AHEAD": {
+            "query": "深谋远虑",
+            "status": "unknown",
+            "label": ""
+          },
+          "UNMOVABLE": {
+            "query": "坚定不移",
+            "status": "known",
+            "label": "坚定不移"
+          },
+          "STOMP": {
+            "query": "踩踏",
+            "status": "known",
+            "label": "踩踏"
+          },
+          "EXTERMINATE": {
+            "query": "杀灭",
+            "status": "unknown",
+            "label": ""
+          }
+        },
+        "enemy": {
+          "PHANTASMAL_GARDENER": {
+            "query": "花园幽灵鳗",
+            "status": "known",
+            "label": "花园幽灵鳗"
+          },
+          "GREMLIN_MERC": {
+            "query": "地精佣兵",
+            "status": "known",
+            "label": "地精佣兵"
+          },
+          "SNEAKY_GREMLIN": {
+            "query": "卑鄙地精",
+            "status": "known",
+            "label": "卑鄙地精"
+          },
+          "FAT_GREMLIN": {
+            "query": "胖地精",
+            "status": "known",
+            "label": "胖地精"
+          },
+          "SOUL_FYSH": {
+            "query": "灵魂异鱼",
+            "status": "known",
+            "label": "灵魂异鱼"
+          },
+          "TUNNELER": {
+            "query": "地道虫",
+            "status": "known",
+            "label": "地道虫"
+          },
+          "BOWLBUG_ROCK": {
+            "query": "盛碗虫（石）",
+            "status": "known",
+            "label": "盛碗虫（石）"
+          },
+          "BOWLBUG_EGG": {
+            "query": "盛碗虫（卵）",
+            "status": "known",
+            "label": "盛碗虫（卵）"
+          },
+          "SPINY_TOAD": {
+            "query": "棘蟾",
+            "status": "known",
+            "label": "棘蟾"
+          },
+          "ENTOMANCER": {
+            "query": "蜂群术士",
+            "status": "known",
+            "label": "蜂群术士"
+          },
+          "CHOMPER": {
+            "query": "啃咬机",
+            "status": "known",
+            "label": "啃咬机"
+          },
+          "EXOSKELETON": {
+            "query": "外骨骼虫",
+            "status": "known",
+            "label": "外骨骼虫"
+          },
+          "BOWLBUG_SILK": {
+            "query": "盛碗虫（丝）",
+            "status": "known",
+            "label": "盛碗虫（丝）"
+          },
+          "CRUSHER": {
+            "query": "碾碎爪",
+            "status": "known",
+            "label": "碾碎爪"
+          },
+          "ROCKET": {
+            "query": "火箭",
+            "status": "known",
+            "label": "火箭"
+          }
+        },
+        "potion": {
+          "FIRE_POTION": {
+            "query": "FIRE_POTION",
+            "status": "known",
+            "label": "火焰药水"
+          },
+          "COLORLESS_POTION": {
+            "query": "COLORLESS_POTION",
+            "status": "unknown",
+            "label": ""
+          },
+          "REGEN_POTION": {
+            "query": "REGEN_POTION",
+            "status": "known",
+            "label": "再生药水"
+          },
+          "ENERGY_POTION": {
+            "query": "ENERGY_POTION",
+            "status": "known",
+            "label": "能量药水"
+          },
+          "FORTIFIER": {
+            "query": "FORTIFIER",
+            "status": "unknown",
+            "label": ""
+          },
+          "VULNERABLE_POTION": {
+            "query": "VULNERABLE_POTION",
+            "status": "known",
+            "label": "易伤药水"
+          },
+          "BEETLE_JUICE": {
+            "query": "BEETLE_JUICE",
+            "status": "unknown",
+            "label": ""
+          }
+        },
+        "relic": {
+          "BURNING_BLOOD": {
+            "query": "BURNING_BLOOD",
+            "status": "modelled",
+            "label": "燃烧之血"
+          },
+          "LAVA_ROCK": {
+            "query": "LAVA_ROCK",
+            "status": "unknown",
+            "label": ""
+          },
+          "STRAWBERRY": {
+            "query": "STRAWBERRY",
+            "status": "modelled",
+            "label": "草莓"
+          },
+          "NUNCHAKU": {
+            "query": "NUNCHAKU",
+            "status": "modelled",
+            "label": "双截棍"
+          },
+          "BOOK_OF_FIVE_RINGS": {
+            "query": "BOOK_OF_FIVE_RINGS",
+            "status": "unknown",
+            "label": ""
+          },
+          "REGAL_PILLOW": {
+            "query": "REGAL_PILLOW",
+            "status": "modelled",
+            "label": "皇家枕头"
+          },
+          "GREMLIN_HORN": {
+            "query": "GREMLIN_HORN",
+            "status": "modelled",
+            "label": "地精之角"
+          },
+          "BAG_OF_MARBLES": {
+            "query": "BAG_OF_MARBLES",
+            "status": "modelled",
+            "label": "弹珠袋"
+          },
+          "PAELS_LEGION": {
+            "query": "PAELS_LEGION",
+            "status": "unknown",
+            "label": ""
+          },
+          "BONE_TEA": {
+            "query": "BONE_TEA",
+            "status": "modelled",
+            "label": "骨茶"
+          },
+          "PARRYING_SHIELD": {
+            "query": "PARRYING_SHIELD",
+            "status": "modelled",
+            "label": "招架盾"
+          },
+          "GORGET": {
+            "query": "GORGET",
+            "status": "modelled",
+            "label": "护喉甲"
+          },
+          "MR_STRUGGLES": {
+            "query": "MR_STRUGGLES",
+            "status": "modelled",
+            "label": "抱抱先生"
+          }
+        },
+        "status": {
+          "SKITTISH_POWER": {
+            "query": "SKITTISH_POWER",
+            "status": "mapped",
+            "label": "Skittish"
+          },
+          "STRENGTH_POWER": {
+            "query": "STRENGTH_POWER",
+            "status": "mapped",
+            "label": "Strength"
+          },
+          "COLOSSUS_POWER": {
+            "query": "COLOSSUS_POWER",
+            "status": "mapped",
+            "label": "Colossus"
+          },
+          "WEAK_POWER": {
+            "query": "WEAK_POWER",
+            "status": "mapped",
+            "label": "Weak"
+          },
+          "VULNERABLE_POWER": {
+            "query": "VULNERABLE_POWER",
+            "status": "mapped",
+            "label": "Vulnerable"
+          },
+          "SURPRISE_POWER": {
+            "query": "SURPRISE_POWER",
+            "status": "mapped",
+            "label": "Surprise"
+          },
+          "THIEVERY_POWER": {
+            "query": "THIEVERY_POWER",
+            "status": "mapped",
+            "label": "Thievery"
+          },
+          "HEIST_POWER": {
+            "query": "HEIST_POWER",
+            "status": "mapped",
+            "label": "Heist"
+          },
+          "AGGRESSION_POWER": {
+            "query": "AGGRESSION_POWER",
+            "status": "mapped",
+            "label": "Aggression"
+          },
+          "INTANGIBLE_POWER": {
+            "query": "INTANGIBLE_POWER",
+            "status": "mapped",
+            "label": "Intangible"
+          },
+          "REGEN_POWER": {
+            "query": "REGEN_POWER",
+            "status": "mapped",
+            "label": "Regen"
+          },
+          "BURROWED_POWER": {
+            "query": "BURROWED_POWER",
+            "status": "mapped",
+            "label": "Burrowed"
+          },
+          "IMBALANCED_POWER": {
+            "query": "IMBALANCED_POWER",
+            "status": "mapped",
+            "label": "Imbalanced"
+          },
+          "THORNS_POWER": {
+            "query": "THORNS_POWER",
+            "status": "mapped",
+            "label": "Thorns"
+          },
+          "PERSONAL_HIVE_POWER": {
+            "query": "PERSONAL_HIVE_POWER",
+            "status": "mapped",
+            "label": "PersonalHive"
+          },
+          "RUPTURE_POWER": {
+            "query": "RUPTURE_POWER",
+            "status": "mapped",
+            "label": "Rupture"
+          },
+          "SHRINK_POWER": {
+            "query": "SHRINK_POWER",
+            "status": "mapped",
+            "label": "Shrink"
+          },
+          "SETUP_STRIKE_POWER": {
+            "query": "SETUP_STRIKE_POWER",
+            "status": "mapped",
+            "label": "TempStrength"
+          },
+          "ARTIFACT_POWER": {
+            "query": "ARTIFACT_POWER",
+            "status": "mapped",
+            "label": "Artifact"
+          },
+          "PLATING_POWER": {
+            "query": "PLATING_POWER",
+            "status": "mapped",
+            "label": "PlatedArmor"
+          },
+          "HARD_TO_KILL_POWER": {
+            "query": "HARD_TO_KILL_POWER",
+            "status": "mapped",
+            "label": "DamageCap"
+          },
+          "MAYHEM_POWER": {
+            "query": "MAYHEM_POWER",
+            "status": "unmapped",
+            "label": ""
+          },
+          "SURROUNDED_POWER": {
+            "query": "SURROUNDED_POWER",
+            "status": "mapped",
+            "label": "Surrounded"
+          },
+          "BACK_ATTACK_LEFT_POWER": {
+            "query": "BACK_ATTACK_LEFT_POWER",
+            "status": "mapped",
+            "label": "BackAttackLeft"
+          },
+          "CRAB_RAGE_POWER": {
+            "query": "CRAB_RAGE_POWER",
+            "status": "mapped",
+            "label": "CrabRage"
+          },
+          "BACK_ATTACK_RIGHT_POWER": {
+            "query": "BACK_ATTACK_RIGHT_POWER",
+            "status": "mapped",
+            "label": "BackAttackRight"
+          },
+          "FRAIL_POWER": {
+            "query": "FRAIL_POWER",
+            "status": "mapped",
+            "label": "Frail"
+          },
+          "UNMOVABLE_POWER": {
+            "query": "UNMOVABLE_POWER",
+            "status": "mapped",
+            "label": "Unmovable"
+          }
+        }
+      },
+      "distinct_status_counts": {
+        "card": {
+          "known": 16,
+          "unknown": 2
+        },
+        "enemy": {
+          "known": 15
+        },
+        "potion": {
+          "known": 4,
+          "unknown": 3
+        },
+        "relic": {
+          "modelled": 10,
+          "unknown": 3
+        },
+        "status": {
+          "mapped": 27,
+          "unmapped": 1
+        }
+      }
+    },
+    "E102": {
+      "counts": {
+        "observations": 116,
+        "combat_observations": 113,
+        "pending": 3,
+        "has_draw_contents": 0,
+        "has_discard_contents": 0,
+        "has_exhaust_contents": 0,
+        "orbs": 0,
+        "pets": 0,
+        "stars": 0,
+        "coop": 0,
+        "hand_affliction": 0,
+        "combat_all_hand_names_known": 25
+      },
+      "objects": {
+        "card": {
+          "STRIKE_IRONCLAD": {
+            "query": "打击",
+            "status": "known",
+            "label": "打击"
+          },
+          "DEFEND_IRONCLAD": {
+            "query": "防御",
+            "status": "known",
+            "label": "防御"
+          },
+          "BASH": {
+            "query": "痛击",
+            "status": "known",
+            "label": "痛击"
+          },
+          "ASCENDERS_BANE": {
+            "query": "Ascender's Bane",
+            "status": "unknown",
+            "label": ""
+          },
+          "SETUP_STRIKE": {
+            "query": "预备打击",
+            "status": "known",
+            "label": "预备打击"
+          },
+          "HEADBUTT": {
+            "query": "头槌",
+            "status": "known",
+            "label": "头槌"
+          },
+          "ARMAMENTS": {
+            "query": "武装",
+            "status": "known",
+            "label": "武装"
+          },
+          "FLAME_BARRIER": {
+            "query": "火焰屏障",
+            "status": "known",
+            "label": "火焰屏障"
+          },
+          "BLUDGEON": {
+            "query": "重锤",
+            "status": "known",
+            "label": "重锤"
+          },
+          "IRON_WAVE": {
+            "query": "铁斩波",
+            "status": "known",
+            "label": "铁斩波"
+          },
+          "PACTS_END": {
+            "query": "Pact's End",
+            "status": "unknown",
+            "label": ""
+          },
+          "STRIKE_SILENT": {
+            "query": "Strike",
+            "status": "unknown",
+            "label": ""
+          },
+          "DEFEND_SILENT": {
+            "query": "Defend",
+            "status": "unknown",
+            "label": ""
+          },
+          "NEUTRALIZE": {
+            "query": "Neutralize",
+            "status": "unknown",
+            "label": ""
+          },
+          "SURVIVOR": {
+            "query": "Survivor",
+            "status": "unknown",
+            "label": ""
+          },
+          "POISONED_STAB": {
+            "query": "Poisoned Stab",
+            "status": "unknown",
+            "label": ""
+          },
+          "CLOAK_AND_DAGGER": {
+            "query": "Cloak and Dagger",
+            "status": "unknown",
+            "label": ""
+          },
+          "BACKFLIP": {
+            "query": "Backflip",
+            "status": "unknown",
+            "label": ""
+          },
+          "FLECHETTES": {
+            "query": "Flechettes",
+            "status": "unknown",
+            "label": ""
+          },
+          "BACKSTAB": {
+            "query": "Backstab",
+            "status": "unknown",
+            "label": ""
+          },
+          "DODGE_AND_ROLL": {
+            "query": "Dodge and Roll",
+            "status": "unknown",
+            "label": ""
+          },
+          "SHADOW_STEP": {
+            "query": "Shadow Step",
+            "status": "unknown",
+            "label": ""
+          }
+        },
+        "enemy": {
+          "KIN_FOLLOWER": {
+            "query": "同族信徒",
+            "status": "known",
+            "label": "同族信徒"
+          },
+          "KIN_PRIEST": {
+            "query": "同族神官",
+            "status": "known",
+            "label": "同族神官"
+          }
+        },
+        "potion": {
+          "BLOOD_POTION": {
+            "query": "BLOOD_POTION",
+            "status": "unknown",
+            "label": ""
+          },
+          "DEXTERITY_POTION": {
+            "query": "DEXTERITY_POTION",
+            "status": "known",
+            "label": "敏捷药水"
+          },
+          "POISON_POTION": {
+            "query": "POISON_POTION",
+            "status": "unknown",
+            "label": ""
+          }
+        },
+        "relic": {
+          "BURNING_BLOOD": {
+            "query": "BURNING_BLOOD",
+            "status": "modelled",
+            "label": "燃烧之血"
+          },
+          "BOOMING_CONCH": {
+            "query": "BOOMING_CONCH",
+            "status": "unknown",
+            "label": ""
+          },
+          "SPARKLING_ROUGE": {
+            "query": "SPARKLING_ROUGE",
+            "status": "unknown",
+            "label": ""
+          },
+          "GORGET": {
+            "query": "GORGET",
+            "status": "modelled",
+            "label": "护喉甲"
+          },
+          "REGAL_PILLOW": {
+            "query": "REGAL_PILLOW",
+            "status": "modelled",
+            "label": "皇家枕头"
+          },
+          "WHETSTONE": {
+            "query": "WHETSTONE",
+            "status": "modelled",
+            "label": "磨刀石"
+          },
+          "RING_OF_THE_SNAKE": {
+            "query": "RING_OF_THE_SNAKE",
+            "status": "unknown",
+            "label": ""
+          }
+        },
+        "status": {
+          "PLATING_POWER": {
+            "query": "PLATING_POWER",
+            "status": "mapped",
+            "label": "PlatedArmor"
+          },
+          "MINION_POWER": {
+            "query": "MINION_POWER",
+            "status": "mapped",
+            "label": "Minion"
+          },
+          "DEXTERITY_POWER": {
+            "query": "DEXTERITY_POWER",
+            "status": "mapped",
+            "label": "Dexterity"
+          },
+          "FRAIL_POWER": {
+            "query": "FRAIL_POWER",
+            "status": "mapped",
+            "label": "Frail"
+          },
+          "STRENGTH_POWER": {
+            "query": "STRENGTH_POWER",
+            "status": "mapped",
+            "label": "Strength"
+          },
+          "WEAK_POWER": {
+            "query": "WEAK_POWER",
+            "status": "mapped",
+            "label": "Weak"
+          },
+          "FLAME_BARRIER_POWER": {
+            "query": "FLAME_BARRIER_POWER",
+            "status": "mapped",
+            "label": "FlameBarrier"
+          },
+          "SETUP_STRIKE_POWER_TITLE_POWER": {
+            "query": "SETUP_STRIKE_POWER_TITLE_POWER",
+            "status": "unmapped",
+            "label": ""
+          },
+          "VULNERABLE_POWER": {
+            "query": "VULNERABLE_POWER",
+            "status": "mapped",
+            "label": "Vulnerable"
+          },
+          "POISON_POWER": {
+            "query": "POISON_POWER",
+            "status": "unmapped",
+            "label": ""
+          },
+          "BLOCK_NEXT_TURN_POWER": {
+            "query": "BLOCK_NEXT_TURN_POWER",
+            "status": "unmapped",
+            "label": ""
+          }
+        }
+      },
+      "distinct_status_counts": {
+        "card": {
+          "known": 9,
+          "unknown": 13
+        },
+        "enemy": {
+          "known": 2
+        },
+        "potion": {
+          "unknown": 2,
+          "known": 1
+        },
+        "relic": {
+          "modelled": 4,
+          "unknown": 3
+        },
+        "status": {
+          "mapped": 8,
+          "unmapped": 3
+        }
+      }
+    },
+    "E110": {
+      "counts": {
+        "observations": 6,
+        "combat_observations": 0,
+        "pending": 1,
+        "has_draw_contents": 0,
+        "has_discard_contents": 0,
+        "has_exhaust_contents": 0,
+        "orbs": 0,
+        "pets": 0,
+        "stars": 0,
+        "coop": 6,
+        "hand_affliction": 0,
+        "combat_all_hand_names_known": 0
+      },
+      "objects": {
+        "card": {
+          "STRIKE_IRONCLAD": {
+            "query": "打击",
+            "status": "known",
+            "label": "打击"
+          },
+          "DEFEND_IRONCLAD": {
+            "query": "防御",
+            "status": "known",
+            "label": "防御"
+          },
+          "BASH": {
+            "query": "痛击",
+            "status": "known",
+            "label": "痛击"
+          },
+          "SHAME": {
+            "query": "羞耻",
+            "status": "known",
+            "label": "羞耻"
+          },
+          "WHIRLWIND": {
+            "query": "旋风斩",
+            "status": "known",
+            "label": "旋风斩"
+          }
+        },
+        "enemy": {},
+        "potion": {
+          "BLOCK_POTION": {
+            "query": "BLOCK_POTION",
+            "status": "known",
+            "label": "格挡药水"
+          },
+          "VULNERABLE_POTION": {
+            "query": "VULNERABLE_POTION",
+            "status": "known",
+            "label": "易伤药水"
+          },
+          "ATTACK_POTION": {
+            "query": "ATTACK_POTION",
+            "status": "known",
+            "label": "攻击药水"
+          }
+        },
+        "relic": {
+          "BURNING_BLOOD": {
+            "query": "BURNING_BLOOD",
+            "status": "modelled",
+            "label": "燃烧之血"
+          },
+          "NEOWS_BONES": {
+            "query": "NEOWS_BONES",
+            "status": "modelled",
+            "label": "涅奥骨骰"
+          },
+          "NEOWS_TALISMAN": {
+            "query": "NEOWS_TALISMAN",
+            "status": "unknown",
+            "label": ""
+          },
+          "PHIAL_HOLSTER": {
+            "query": "PHIAL_HOLSTER",
+            "status": "modelled",
+            "label": "药瓶皮套"
+          }
+        },
+        "status": {}
+      },
+      "distinct_status_counts": {
+        "card": {
+          "known": 5
+        },
+        "enemy": {},
+        "potion": {
+          "known": 3
+        },
+        "relic": {
+          "modelled": 3,
+          "unknown": 1
+        },
+        "status": {}
+      }
+    }
+  },
+  "e113_cases": [
+    {
+      "case": "001-ironclad",
+      "floor": 6,
+      "missing_hand": [],
+      "missing_deck": [
+        "ASCENDERS_BANE",
+        "DRUM_OF_BATTLE"
+      ],
+      "held_potions": [
+        "FLEX_POTION",
+        "SWIFT_POTION"
+      ]
+    },
+    {
+      "case": "001-silent",
+      "floor": 8,
+      "missing_hand": [
+        "ASCENDERS_BANE",
+        "DEFEND_SILENT",
+        "DODGE_AND_ROLL",
+        "STRIKE_SILENT",
+        "UP_MY_SLEEVE"
+      ],
+      "missing_deck": [
+        "ASCENDERS_BANE",
+        "DEFEND_SILENT",
+        "DODGE_AND_ROLL",
+        "ECHOING_SLASH",
+        "HIDDEN_DAGGERS",
+        "NEUTRALIZE",
+        "STRIKE_SILENT",
+        "SURVIVOR",
+        "UP_MY_SLEEVE"
+      ],
+      "held_potions": [
+        "FLEX_POTION",
+        "SWIFT_POTION"
+      ]
+    },
+    {
+      "case": "001-defect",
+      "floor": 8,
+      "missing_hand": [
+        "ASCENDERS_BANE",
+        "DEFEND_DEFECT",
+        "REFRACT",
+        "STRIKE_DEFECT"
+      ],
+      "missing_deck": [
+        "ASCENDERS_BANE",
+        "COOLHEADED",
+        "DEFEND_DEFECT",
+        "DUALCAST",
+        "FIGHT_THROUGH",
+        "REFRACT",
+        "STRIKE_DEFECT",
+        "WHITE_NOISE",
+        "ZAP"
+      ],
+      "held_potions": [
+        "FLEX_POTION",
+        "SWIFT_POTION"
+      ]
+    },
+    {
+      "case": "001-regent",
+      "floor": 8,
+      "missing_hand": [
+        "DEFEND_REGENT",
+        "STRIKE_REGENT"
+      ],
+      "missing_deck": [
+        "ASCENDERS_BANE",
+        "DEFEND_REGENT",
+        "FALLING_STAR",
+        "GAMMA_BLAST",
+        "GATHER_LIGHT",
+        "PALE_BLUE_DOT",
+        "STRIKE_REGENT",
+        "TERRAFORMING",
+        "VENERATE"
+      ],
+      "held_potions": [
+        "FLEX_POTION",
+        "SWIFT_POTION"
+      ]
+    },
+    {
+      "case": "001-necrobinder",
+      "floor": 8,
+      "missing_hand": [
+        "ASCENDERS_BANE",
+        "DEATHBRINGER",
+        "DEFEND_NECROBINDER",
+        "UNLEASH"
+      ],
+      "missing_deck": [
+        "ASCENDERS_BANE",
+        "BODYGUARD",
+        "DEATHBRINGER",
+        "DEFEND_NECROBINDER",
+        "GRAVEBLAST",
+        "HIGH_FIVE",
+        "STRIKE_NECROBINDER",
+        "UNLEASH",
+        "VEILPIERCER"
+      ],
+      "held_potions": [
+        "FLEX_POTION",
+        "SWIFT_POTION"
+      ]
+    },
+    {
+      "case": "002-ironclad",
+      "floor": 8,
+      "missing_hand": [],
+      "missing_deck": [
+        "ASCENDERS_BANE"
+      ],
+      "held_potions": [
+        "COLORLESS_POTION",
+        "SWIFT_POTION",
+        "TOUCH_OF_INSANITY"
+      ]
+    },
+    {
+      "case": "002-silent",
+      "floor": 9,
+      "missing_hand": [
+        "ASCENDERS_BANE",
+        "DEFEND_SILENT",
+        "PREDATOR",
+        "SIDESTEP",
+        "STRIKE_SILENT",
+        "SUCKER_PUNCH"
+      ],
+      "missing_deck": [
+        "ASCENDERS_BANE",
+        "BACKFLIP",
+        "CLOAK_AND_DAGGER",
+        "DEFEND_SILENT",
+        "NEUTRALIZE",
+        "POISONED_STAB",
+        "PREDATOR",
+        "SIDESTEP",
+        "STRIKE_SILENT",
+        "SUCKER_PUNCH",
+        "SURVIVOR"
+      ],
+      "held_potions": [
+        "COLORLESS_POTION",
+        "SWIFT_POTION",
+        "TOUCH_OF_INSANITY"
+      ]
+    },
+    {
+      "case": "002-defect",
+      "floor": 8,
+      "missing_hand": [
+        "BOOST_AWAY",
+        "DEFEND_DEFECT",
+        "STRIKE_DEFECT"
+      ],
+      "missing_deck": [
+        "ASCENDERS_BANE",
+        "BARRAGE",
+        "BOOST_AWAY",
+        "DEFEND_DEFECT",
+        "DUALCAST",
+        "HOLOGRAM",
+        "ITERATION",
+        "STRIKE_DEFECT",
+        "TURBO",
+        "ZAP"
+      ],
+      "held_potions": [
+        "COLORLESS_POTION",
+        "SWIFT_POTION",
+        "TOUCH_OF_INSANITY"
+      ]
+    },
+    {
+      "case": "002-regent",
+      "floor": 8,
+      "missing_hand": [
+        "BEGONE",
+        "HIDDEN_CACHE",
+        "STRIKE_REGENT"
+      ],
+      "missing_deck": [
+        "ASCENDERS_BANE",
+        "BEGONE",
+        "CLOAK_OF_STARS",
+        "DEFEND_REGENT",
+        "FALLING_STAR",
+        "HIDDEN_CACHE",
+        "LUNAR_BLAST",
+        "SPOILS_OF_BATTLE",
+        "STRIKE_REGENT",
+        "VENERATE"
+      ],
+      "held_potions": [
+        "COLORLESS_POTION",
+        "SWIFT_POTION",
+        "TOUCH_OF_INSANITY"
+      ]
+    },
+    {
+      "case": "002-necrobinder",
+      "floor": 8,
+      "missing_hand": [
+        "ASCENDERS_BANE",
+        "DEFEND_NECROBINDER",
+        "SOW",
+        "STRIKE_NECROBINDER"
+      ],
+      "missing_deck": [
+        "ASCENDERS_BANE",
+        "BLIGHT_STRIKE",
+        "BODYGUARD",
+        "DEFEND_NECROBINDER",
+        "DEFY",
+        "ENFEEBLING_TOUCH",
+        "PULL_AGGRO",
+        "SOW",
+        "STRIKE_NECROBINDER",
+        "UNLEASH"
+      ],
+      "held_potions": [
+        "COLORLESS_POTION",
+        "SWIFT_POTION",
+        "TOUCH_OF_INSANITY"
+      ]
+    },
+    {
+      "case": "003-ironclad",
+      "floor": 6,
+      "missing_hand": [
+        "ASCENDERS_BANE"
+      ],
+      "missing_deck": [
+        "ASCENDERS_BANE"
+      ],
+      "held_potions": [
+        "DEXTERITY_POTION"
+      ]
+    },
+    {
+      "case": "003-silent",
+      "floor": 7,
+      "missing_hand": [
+        "ASCENDERS_BANE",
+        "DEFEND_SILENT",
+        "EXPERTISE",
+        "STRIKE_SILENT",
+        "SURVIVOR"
+      ],
+      "missing_deck": [
+        "ASCENDERS_BANE",
+        "BUBBLE_BUBBLE",
+        "DAGGER_THROW",
+        "DEFEND_SILENT",
+        "EXPERTISE",
+        "NEUTRALIZE",
+        "STRIKE_SILENT",
+        "SURVIVOR"
+      ],
+      "held_potions": [
+        "DEXTERITY_POTION"
+      ]
+    },
+    {
+      "case": "003-defect",
+      "floor": 6,
+      "missing_hand": [
+        "DARKNESS",
+        "DUALCAST",
+        "STRIKE_DEFECT",
+        "ZAP"
+      ],
+      "missing_deck": [
+        "ASCENDERS_BANE",
+        "CLAW",
+        "DARKNESS",
+        "DEFEND_DEFECT",
+        "DUALCAST",
+        "STRIKE_DEFECT",
+        "ZAP"
+      ],
+      "held_potions": [
+        "DEXTERITY_POTION"
+      ]
+    },
+    {
+      "case": "003-regent",
+      "floor": 6,
+      "missing_hand": [
+        "CONVERGENCE",
+        "COSMIC_INDIFFERENCE",
+        "DEFEND_REGENT",
+        "STRIKE_REGENT"
+      ],
+      "missing_deck": [
+        "ASCENDERS_BANE",
+        "CONVERGENCE",
+        "COSMIC_INDIFFERENCE",
+        "DEFEND_REGENT",
+        "FALLING_STAR",
+        "STRIKE_REGENT",
+        "VENERATE"
+      ],
+      "held_potions": [
+        "DEXTERITY_POTION"
+      ]
+    },
+    {
+      "case": "003-necrobinder",
+      "floor": 6,
+      "missing_hand": [
+        "ASCENDERS_BANE",
+        "COUNTDOWN",
+        "FEAR",
+        "STRIKE_NECROBINDER"
+      ],
+      "missing_deck": [
+        "ASCENDERS_BANE",
+        "BODYGUARD",
+        "COUNTDOWN",
+        "DEFEND_NECROBINDER",
+        "FEAR",
+        "STRIKE_NECROBINDER",
+        "UNLEASH"
+      ],
+      "held_potions": [
+        "DEXTERITY_POTION"
+      ]
+    },
+    {
+      "case": "004-ironclad",
+      "floor": 9,
+      "missing_hand": [],
+      "missing_deck": [
+        "ASCENDERS_BANE"
+      ],
+      "held_potions": [
+        "DEXTERITY_POTION",
+        "SKILL_POTION"
+      ]
+    },
+    {
+      "case": "004-silent",
+      "floor": 9,
+      "missing_hand": [
+        "DEFEND_SILENT",
+        "NEUTRALIZE",
+        "PREDATOR",
+        "STRIKE_SILENT"
+      ],
+      "missing_deck": [
+        "ASCENDERS_BANE",
+        "DAGGER_SPRAY",
+        "DEFEND_SILENT",
+        "DEFLECT",
+        "NEUTRALIZE",
+        "POISONED_STAB",
+        "PREDATOR",
+        "SNAKEBITE",
+        "STRIKE_SILENT",
+        "SURVIVOR"
+      ],
+      "held_potions": [
+        "DEXTERITY_POTION",
+        "SKILL_POTION"
+      ]
+    },
+    {
+      "case": "004-defect",
+      "floor": 7,
+      "missing_hand": [
+        "DEFEND_DEFECT",
+        "STRIKE_DEFECT"
+      ],
+      "missing_deck": [
+        "ASCENDERS_BANE",
+        "COMPILE_DRIVER",
+        "DEFEND_DEFECT",
+        "DUALCAST",
+        "HOLOGRAM",
+        "HOTFIX",
+        "STRIKE_DEFECT",
+        "SWEEPING_BEAM",
+        "ZAP"
+      ],
+      "held_potions": [
+        "DEXTERITY_POTION"
+      ]
+    },
+    {
+      "case": "004-regent",
+      "floor": 9,
+      "missing_hand": [
+        "ASCENDERS_BANE",
+        "DEFEND_REGENT",
+        "FALLING_STAR",
+        "SOLAR_STRIKE"
+      ],
+      "missing_deck": [
+        "ASCENDERS_BANE",
+        "COLLISION_COURSE",
+        "CRUSH_UNDER",
+        "DEFEND_REGENT",
+        "FALLING_STAR",
+        "HIDDEN_CACHE",
+        "KNOW_THY_PLACE",
+        "SOLAR_STRIKE",
+        "STRIKE_REGENT",
+        "VENERATE"
+      ],
+      "held_potions": [
+        "DEXTERITY_POTION",
+        "SKILL_POTION"
+      ]
+    },
+    {
+      "case": "004-necrobinder",
+      "floor": 9,
+      "missing_hand": [
+        "DRAIN_POWER",
+        "GRAVE_WARDEN",
+        "SNAP",
+        "STRIKE_NECROBINDER",
+        "UNLEASH"
+      ],
+      "missing_deck": [
+        "ASCENDERS_BANE",
+        "BODYGUARD",
+        "DEFEND_NECROBINDER",
+        "DRAIN_POWER",
+        "GRAVE_WARDEN",
+        "PULL_AGGRO",
+        "REAP",
+        "SNAP",
+        "STRIKE_NECROBINDER",
+        "UNLEASH"
+      ],
+      "held_potions": [
+        "DEXTERITY_POTION",
+        "SKILL_POTION"
+      ]
+    },
+    {
+      "case": "005-ironclad",
+      "floor": 7,
+      "missing_hand": [
+        "ASCENDERS_BANE"
+      ],
+      "missing_deck": [
+        "ASCENDERS_BANE"
+      ],
+      "held_potions": [
+        "COLORLESS_POTION",
+        "DEXTERITY_POTION"
+      ]
+    },
+    {
+      "case": "005-silent",
+      "floor": 6,
+      "missing_hand": [
+        "DEFEND_SILENT",
+        "FLICK_FLACK",
+        "INFINITE_BLADES",
+        "STRIKE_SILENT"
+      ],
+      "missing_deck": [
+        "ASCENDERS_BANE",
+        "DEFEND_SILENT",
+        "FLECHETTES",
+        "FLICK_FLACK",
+        "INFINITE_BLADES",
+        "NEUTRALIZE",
+        "POISONED_STAB",
+        "STRIKE_SILENT",
+        "SURVIVOR"
+      ],
+      "held_potions": [
+        "COLORLESS_POTION",
+        "DEXTERITY_POTION"
+      ]
+    },
+    {
+      "case": "005-defect",
+      "floor": 6,
+      "missing_hand": [
+        "ASCENDERS_BANE",
+        "DEFEND_DEFECT",
+        "ROCKET_PUNCH",
+        "STRIKE_DEFECT"
+      ],
+      "missing_deck": [
+        "ASCENDERS_BANE",
+        "DEFEND_DEFECT",
+        "DUALCAST",
+        "FOCUSED_STRIKE",
+        "HAILSTORM",
+        "HOLOGRAM",
+        "ROCKET_PUNCH",
+        "STRIKE_DEFECT",
+        "ZAP"
+      ],
+      "held_potions": [
+        "COLORLESS_POTION",
+        "DEXTERITY_POTION"
+      ]
+    },
+    {
+      "case": "005-regent",
+      "floor": 7,
+      "missing_hand": [
+        "KNOCKOUT_BLOW",
+        "PARRY",
+        "STRIKE_REGENT",
+        "VENERATE"
+      ],
+      "missing_deck": [
+        "ASCENDERS_BANE",
+        "BEGONE",
+        "DEFEND_REGENT",
+        "FALLING_STAR",
+        "GLITTERSTREAM",
+        "HIDDEN_CACHE",
+        "KNOCKOUT_BLOW",
+        "PARRY",
+        "STRIKE_REGENT",
+        "VENERATE"
+      ],
+      "held_potions": [
+        "COLORLESS_POTION",
+        "DEXTERITY_POTION"
+      ]
+    },
+    {
+      "case": "005-necrobinder",
+      "floor": 7,
+      "missing_hand": [
+        "DEFEND_NECROBINDER",
+        "LETHALITY",
+        "STRIKE_NECROBINDER"
+      ],
+      "missing_deck": [
+        "ASCENDERS_BANE",
+        "BLIGHT_STRIKE",
+        "BODYGUARD",
+        "DEFEND_NECROBINDER",
+        "DREDGE",
+        "INVOKE",
+        "LETHALITY",
+        "PULL_AGGRO",
+        "STRIKE_NECROBINDER",
+        "UNLEASH"
+      ],
+      "held_potions": [
+        "COLORLESS_POTION",
+        "DEXTERITY_POTION"
+      ]
+    },
+    {
+      "case": "006-ironclad",
+      "floor": 5,
+      "missing_hand": [
+        "PREP_TIME"
+      ],
+      "missing_deck": [
+        "ASCENDERS_BANE",
+        "PREP_TIME"
+      ],
+      "held_potions": [
+        "LIQUID_MEMORIES"
+      ]
+    },
+    {
+      "case": "006-silent",
+      "floor": 5,
+      "missing_hand": [
+        "DEFEND_SILENT",
+        "NEUTRALIZE",
+        "STRIKE_SILENT"
+      ],
+      "missing_deck": [
+        "ASCENDERS_BANE",
+        "CLOAK_AND_DAGGER",
+        "DEFEND_SILENT",
+        "NEUTRALIZE",
+        "PINPOINT",
+        "POISONED_STAB",
+        "PREP_TIME",
+        "STRIKE_SILENT",
+        "SURVIVOR"
+      ],
+      "held_potions": [
+        "LIQUID_MEMORIES"
+      ]
+    },
+    {
+      "case": "006-defect",
+      "floor": 7,
+      "missing_hand": [
+        "BOOST_AWAY",
+        "DEFEND_DEFECT",
+        "STRIKE_DEFECT"
+      ],
+      "missing_deck": [
+        "ASCENDERS_BANE",
+        "BOOST_AWAY",
+        "DEFEND_DEFECT",
+        "DUALCAST",
+        "HOLOGRAM",
+        "PREP_TIME",
+        "STORM",
+        "STRIKE_DEFECT",
+        "WHITE_NOISE",
+        "ZAP"
+      ],
+      "held_potions": [
+        "LIQUID_MEMORIES"
+      ]
+    },
+    {
+      "case": "006-regent",
+      "floor": 5,
+      "missing_hand": [
+        "HIDDEN_CACHE",
+        "STRIKE_REGENT",
+        "VENERATE"
+      ],
+      "missing_deck": [
+        "ASCENDERS_BANE",
+        "CLOAK_OF_STARS",
+        "DEFEND_REGENT",
+        "FALLING_STAR",
+        "HIDDEN_CACHE",
+        "PREP_TIME",
+        "REFLECT",
+        "STRIKE_REGENT",
+        "VENERATE"
+      ],
+      "held_potions": [
+        "LIQUID_MEMORIES"
+      ]
+    },
+    {
+      "case": "006-necrobinder",
+      "floor": 5,
+      "missing_hand": [
+        "BODYGUARD",
+        "DEFY",
+        "STRIKE_NECROBINDER",
+        "UNLEASH"
+      ],
+      "missing_deck": [
+        "ASCENDERS_BANE",
+        "BODYGUARD",
+        "DEFEND_NECROBINDER",
+        "DEFY",
+        "PREP_TIME",
+        "PULL_AGGRO",
+        "PUTREFY",
+        "STRIKE_NECROBINDER",
+        "UNLEASH"
+      ],
+      "held_potions": [
+        "LIQUID_MEMORIES"
+      ]
+    }
+  ],
+  "actual_potion_actions": [
+    {
+      "cohort": "E092",
+      "label": "3",
+      "seq": 26,
+      "floor": 11,
+      "turn": 4,
+      "hp": 31,
+      "index": null,
+      "potion_id": "",
+      "name": null,
+      "source": "native_controller",
+      "upstream": {
+        "status": "unknown",
+        "label": ""
+      }
+    },
+    {
+      "cohort": "E092",
+      "label": "4",
+      "seq": 26,
+      "floor": 11,
+      "turn": 5,
+      "hp": 31,
+      "index": null,
+      "potion_id": "",
+      "name": null,
+      "source": "native_controller",
+      "upstream": {
+        "status": "unknown",
+        "label": ""
+      }
+    },
+    {
+      "cohort": "E092",
+      "label": "15",
+      "seq": 26,
+      "floor": 17,
+      "turn": 7,
+      "hp": 55,
+      "index": null,
+      "potion_id": "",
+      "name": null,
+      "source": "native_controller",
+      "upstream": {
+        "status": "unknown",
+        "label": ""
+      }
+    },
+    {
+      "cohort": "E092",
+      "label": "16",
+      "seq": 26,
+      "floor": 17,
+      "turn": 7,
+      "hp": 55,
+      "index": null,
+      "potion_id": "",
+      "name": null,
+      "source": "native_controller",
+      "upstream": {
+        "status": "unknown",
+        "label": ""
+      }
+    },
+    {
+      "cohort": "E092",
+      "label": "22",
+      "seq": 26,
+      "floor": 21,
+      "turn": 5,
+      "hp": 35,
+      "index": null,
+      "potion_id": "",
+      "name": null,
+      "source": "native_controller",
+      "upstream": {
+        "status": "unknown",
+        "label": ""
+      }
+    },
+    {
+      "cohort": "E092",
+      "label": "23",
+      "seq": 505,
+      "floor": 24,
+      "turn": 3,
+      "hp": 40,
+      "index": null,
+      "potion_id": "",
+      "name": null,
+      "source": "native_controller",
+      "upstream": {
+        "status": "unknown",
+        "label": ""
+      }
+    },
+    {
+      "cohort": "E092",
+      "label": "24",
+      "seq": 26,
+      "floor": 24,
+      "turn": 4,
+      "hp": 40,
+      "index": null,
+      "potion_id": "",
+      "name": null,
+      "source": "native_controller",
+      "upstream": {
+        "status": "unknown",
+        "label": ""
+      }
+    },
+    {
+      "cohort": "E092",
+      "label": "50",
+      "seq": 1091,
+      "floor": 30,
+      "turn": 2,
+      "hp": 47,
+      "index": null,
+      "potion_id": "",
+      "name": null,
+      "source": "native_controller",
+      "upstream": {
+        "status": "unknown",
+        "label": ""
+      }
+    },
+    {
+      "cohort": "E102",
+      "label": "ironclad-baseline",
+      "seq": 7,
+      "floor": 17,
+      "turn": 1,
+      "hp": 79,
+      "index": 1,
+      "potion_id": "DEXTERITY_POTION",
+      "name": "Dexterity Potion",
+      "source": "potion_contract",
+      "upstream": {
+        "status": "known",
+        "label": "敏捷药水"
+      }
+    },
+    {
+      "cohort": "E102",
+      "label": "ironclad-baseline",
+      "seq": 73,
+      "floor": 17,
+      "turn": 3,
+      "hp": 56,
+      "index": 0,
+      "potion_id": "BLOOD_POTION",
+      "name": "Blood Potion",
+      "source": "potion_contract",
+      "upstream": {
+        "status": "unknown",
+        "label": ""
+      }
+    },
+    {
+      "cohort": "E102",
+      "label": "ironclad-dynamic",
+      "seq": 7,
+      "floor": 17,
+      "turn": 1,
+      "hp": 79,
+      "index": 1,
+      "potion_id": "DEXTERITY_POTION",
+      "name": "Dexterity Potion",
+      "source": "potion_contract",
+      "upstream": {
+        "status": "known",
+        "label": "敏捷药水"
+      }
+    },
+    {
+      "cohort": "E102",
+      "label": "ironclad-dynamic",
+      "seq": 75,
+      "floor": 17,
+      "turn": 3,
+      "hp": 56,
+      "index": 0,
+      "potion_id": "BLOOD_POTION",
+      "name": "Blood Potion",
+      "source": "potion_contract",
+      "upstream": {
+        "status": "unknown",
+        "label": ""
+      }
+    },
+    {
+      "cohort": "E102",
+      "label": "silent-baseline",
+      "seq": 7,
+      "floor": 17,
+      "turn": 1,
+      "hp": 70,
+      "index": 1,
+      "potion_id": "DEXTERITY_POTION",
+      "name": "Dexterity Potion",
+      "source": "potion_contract",
+      "upstream": {
+        "status": "known",
+        "label": "敏捷药水"
+      }
+    },
+    {
+      "cohort": "E102",
+      "label": "silent-baseline",
+      "seq": 14,
+      "floor": 17,
+      "turn": 1,
+      "hp": 70,
+      "index": 0,
+      "potion_id": "POISON_POTION",
+      "name": "Poison Potion",
+      "source": "potion_contract",
+      "upstream": {
+        "status": "unknown",
+        "label": ""
+      }
+    },
+    {
+      "cohort": "E102",
+      "label": "silent-dynamic",
+      "seq": 7,
+      "floor": 17,
+      "turn": 1,
+      "hp": 70,
+      "index": 1,
+      "potion_id": "DEXTERITY_POTION",
+      "name": "Dexterity Potion",
+      "source": "potion_contract",
+      "upstream": {
+        "status": "known",
+        "label": "敏捷药水"
+      }
+    },
+    {
+      "cohort": "E102",
+      "label": "silent-dynamic",
+      "seq": 14,
+      "floor": 17,
+      "turn": 1,
+      "hp": 70,
+      "index": 0,
+      "potion_id": "POISON_POTION",
+      "name": "Poison Potion",
+      "source": "potion_contract",
+      "upstream": {
+        "status": "unknown",
+        "label": ""
+      }
+    }
+  ],
+  "limitations": [
+    "Not a representative win-rate sample",
+    "Input observations may omit pile contents and persistent private counters",
+    "Known ID/status is not proof of implemented mechanics",
+    "CLI v0.111.0 and older native traces differ from upstream v0.107.1",
+    "No draw order inferred from a deck list",
+    "E110 first segment has no AI combat; co-op is a structural scope check"
+  ]
+}
