@@ -20,7 +20,7 @@ Keep the pinned upstream checkout at ignored `vendor/sts2core-audit` and retain 
 
 ```sh
 cargo build --offline --release --lib --manifest-path vendor/sts2core-audit/Cargo.toml
-rustc --edition=2021 -C panic=abort experiments/E114/probe.rs --extern sts2core=vendor/sts2core-audit/target/release/libsts2core.rlib -L dependency=vendor/sts2core-audit/target/release/deps -o artifacts/private/e114-probe
+rustc --edition=2021 -C panic=abort -C lto experiments/E114/probe.rs --extern sts2core=vendor/sts2core-audit/target/release/libsts2core.rlib -L dependency=vendor/sts2core-audit/target/release/deps -o artifacts/private/e114-probe
 python3 scripts/audit_sts2core_e114.py
 artifacts/private/e114-probe --synthetic
 cargo test --offline --lib --manifest-path vendor/sts2core-audit/Cargo.toml
@@ -30,4 +30,5 @@ The Python audit reads historical committed manifests via `git show b7de162:...`
 
 ## Iteration log
 
-- `7509f1c`: upstream release library built offline in 5.70 seconds. The audit probe did not compile: upstream uses `panic=abort`, while standalone rustc defaults to unwind. The attempted Python audit therefore had no probe to invoke and produced no capability result. Correct the documented probe build to use the same panic strategy; preserve this failed harness attempt. No game or model execution occurred.
+- `7509f1c`: upstream release library built offline in 5.70 seconds. The audit probe did not compile: upstream uses `panic=abort`, while standalone rustc defaults to unwind. The concurrent Python attempt stopped earlier on E110's wrapped result schema (`KeyError: run_id`), before invoking any probe. Neither attempt produced a capability result. No game or model execution occurred.
+- `98c46dd`: matching panic strategy exposed an Apple linker/Rust LLVM bitcode mismatch (Rust LLVM 22, Apple LLVM 21). Add rustc `-C lto` so Rust performs LTO itself, and unwrap the E110 result before locating its trace. These are harness fixes, with the fixed cohort and upstream SHA unchanged.

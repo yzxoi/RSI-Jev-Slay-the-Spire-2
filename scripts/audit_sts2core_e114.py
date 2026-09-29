@@ -114,7 +114,8 @@ def main():
     co_summary = ROOT / "artifacts/runs/E110/segment01.json"
     if co_summary.is_file():
         cm = json.loads(co_summary.read_text())
-        path = cm.get("trace_path", f"artifacts/runs/{cm['run_id']}/decisions.jsonl")
+        cm = cm.get("result", cm)
+        path = cm.get("trace_path") or f"artifacts/runs/{cm['run_id']}/decisions.jsonl"
         rows = load("E110", "segment01", path, co["trace_sha256"])
         for r in rows:
             if r.get("kind") == "before":
