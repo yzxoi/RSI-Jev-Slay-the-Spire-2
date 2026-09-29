@@ -1,0 +1,2485 @@
+{
+  "experiment": "E113",
+  "tested_sha": "fc286e0dd699f0f2fe769cdd4dddb9329bc6e4cc",
+  "results_sha256": "b4bd63c4cd7f7196f07c5ed5f0f451ddcf2bf42571f9a565defa27172849fda1",
+  "cells": 180,
+  "source_traces_checked": 30,
+  "verified_trace_count": 136,
+  "verified_replay_count": 136,
+  "integrity_failures": [],
+  "metrics": {
+    "program": {
+      "requests": 0,
+      "response_count": 0,
+      "invalid_responses": 0,
+      "cost_usd": 0,
+      "billing_known": true,
+      "p50_seconds": null,
+      "p95_seconds": null,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "reported_reasoning_tokens": 0,
+      "models": []
+    },
+    "jev": {
+      "requests": 416,
+      "response_count": 416,
+      "invalid_responses": 0,
+      "cost_usd": 0.076063134,
+      "billing_known": true,
+      "p50_seconds": 0.7040117289870977,
+      "p95_seconds": 1.0043143338989466,
+      "prompt_tokens": 1811027,
+      "completion_tokens": 37440,
+      "reported_reasoning_tokens": 0,
+      "models": [
+        "typesafe/jev-1.13-20260917"
+      ]
+    },
+    "deepseek": {
+      "requests": 21,
+      "response_count": 21,
+      "invalid_responses": 8,
+      "cost_usd": 0.044993645,
+      "billing_known": true,
+      "p50_seconds": 34.625119040952995,
+      "p95_seconds": 73.3854713330511,
+      "prompt_tokens": 75661,
+      "completion_tokens": 57493,
+      "reported_reasoning_tokens": 53007,
+      "models": [
+        "deepseek/deepseek-v4.1-flash"
+      ]
+    }
+  },
+  "gates": {
+    "jev": {
+      "valid_locked_combat_pairs": 20,
+      "combat_quality_pass": false,
+      "speed_pass": true,
+      "cost_pass": true,
+      "reward_quality_pass": false,
+      "replace_jev_quality_pass": null,
+      "decision": "do_not_promote",
+      "reason": "quality gate failed"
+    },
+    "deepseek": {
+      "valid_locked_combat_pairs": 0,
+      "combat_quality_pass": false,
+      "speed_pass": false,
+      "cost_pass": false,
+      "reward_quality_pass": false,
+      "replace_jev_quality_pass": false,
+      "decision": "do_not_promote",
+      "reason": "pilot reliability exit; strength unmeasured"
+    }
+  },
+  "providers": {
+    "AtlasCloud": {
+      "stop": 4,
+      "length": 7
+    },
+    "Together": {
+      "stop": 5,
+      "length": 1
+    },
+    "InferenceNet": {
+      "stop": 1
+    },
+    "DeepInfra": {
+      "stop": 2
+    },
+    "DekaLLM": {
+      "stop": 1
+    }
+  },
+  "protocol_deadline_violations": [
+    {
+      "case": "001-defect",
+      "task": "reward",
+      "seconds": 87.98207020899281,
+      "trace_sha256": "958ca0eeca6023f6b9b617c8ecb726843aad3a963c1a5e015a0638e1db514bea"
+    },
+    {
+      "case": "001-silent",
+      "task": "combat",
+      "seconds": 59.94126637489535,
+      "trace_sha256": "9b83ac2d6d60e85b014aa6ba4d563e9ab4dfb09eadf0515e530266e37a538c02"
+    },
+    {
+      "case": "002-silent",
+      "task": "combat",
+      "seconds": 73.3854713330511,
+      "trace_sha256": "c6ee1e3edb807274c7cd8bd498f14c4809aa86303edff287c7b0afac8fe89a88"
+    }
+  ],
+  "end_turn_observations": {
+    "program": {
+      "end_turns": 153,
+      "end_turn_with_energy_and_playable_card": 13
+    },
+    "jev": {
+      "end_turns": 142,
+      "end_turn_with_energy_and_playable_card": 118
+    },
+    "deepseek": {
+      "end_turns": 1
+    }
+  },
+  "end_turn_caveat": "These are screening observations, not proofs that every such end-turn is harmful.",
+  "jev_end_turn_examples": [
+    {
+      "case": "001-ironclad",
+      "round": 2,
+      "energy": 1,
+      "cards": [
+        "Defend",
+        "Strike"
+      ],
+      "state_sha256": "18390e85558d3e03a93bbc8f484fbda8ca284574eaf15628e64786cd4203e33a",
+      "trace_sha256": "0082a7850bab6aa96e6f2c9b99a2962f63081629d7a3baab445a72bef02ec2f0"
+    },
+    {
+      "case": "001-ironclad",
+      "round": 3,
+      "energy": 2,
+      "cards": [
+        "Strike",
+        "Defend",
+        "Strike",
+        "Drum of Battle"
+      ],
+      "state_sha256": "34aaa8c0e4285427c07970124d2764a7aae8a343a88117b80c08d3300cc18869",
+      "trace_sha256": "0082a7850bab6aa96e6f2c9b99a2962f63081629d7a3baab445a72bef02ec2f0"
+    },
+    {
+      "case": "001-ironclad",
+      "round": 5,
+      "energy": 2,
+      "cards": [
+        "Strike",
+        "Whirlwind",
+        "Strike",
+        "Drum of Battle"
+      ],
+      "state_sha256": "fc5a854a3ad95dd91a11603070362a38fa6379893040466eeb2b187c83a037b4",
+      "trace_sha256": "0082a7850bab6aa96e6f2c9b99a2962f63081629d7a3baab445a72bef02ec2f0"
+    },
+    {
+      "case": "001-silent",
+      "round": 1,
+      "energy": 2,
+      "cards": [
+        "Strike",
+        "Dodge and Roll",
+        "Strike",
+        "Up My Sleeve",
+        "Defend"
+      ],
+      "state_sha256": "08b160fe68224d3b1cc2bab4f45e7072f4ab750a18deda34a4dff659a11df1bb",
+      "trace_sha256": "a502ca850f366e55e35ad85f2ae48cd196adf768bb99b4193a4d06da88e50486"
+    },
+    {
+      "case": "001-silent",
+      "round": 2,
+      "energy": 1,
+      "cards": [
+        "Defend",
+        "Strike",
+        "Hidden Daggers"
+      ],
+      "state_sha256": "5e69dc849dd44d35b56a824cde196367d4ac69728ae80cddf3b9a74c9869d7bb",
+      "trace_sha256": "a502ca850f366e55e35ad85f2ae48cd196adf768bb99b4193a4d06da88e50486"
+    },
+    {
+      "case": "001-silent",
+      "round": 3,
+      "energy": 2,
+      "cards": [
+        "Neutralize",
+        "Survivor",
+        "Defend",
+        "Strike"
+      ],
+      "state_sha256": "6aa4b605df25b0065904dfbc81197890679723e2e761d7f4a8c0c088d6cc774a",
+      "trace_sha256": "a502ca850f366e55e35ad85f2ae48cd196adf768bb99b4193a4d06da88e50486"
+    },
+    {
+      "case": "001-silent",
+      "round": 4,
+      "energy": 2,
+      "cards": [
+        "Strike",
+        "Strike",
+        "Strike",
+        "Up My Sleeve"
+      ],
+      "state_sha256": "b9aa1c293fb8751bb05df49b60d663ce4e4bdb5b7bb88b96fea466f00e8cfa07",
+      "trace_sha256": "a502ca850f366e55e35ad85f2ae48cd196adf768bb99b4193a4d06da88e50486"
+    },
+    {
+      "case": "001-silent",
+      "round": 5,
+      "energy": 2,
+      "cards": [
+        "Survivor",
+        "Defend",
+        "Hidden Daggers",
+        "Defend"
+      ],
+      "state_sha256": "b57a901bf38b22d37857950daf554f5396b488a909b4d3e22c0bc38c41985f3d",
+      "trace_sha256": "a502ca850f366e55e35ad85f2ae48cd196adf768bb99b4193a4d06da88e50486"
+    },
+    {
+      "case": "001-silent",
+      "round": 6,
+      "energy": 2,
+      "cards": [
+        "Defend",
+        "Strike",
+        "Strike",
+        "Neutralize"
+      ],
+      "state_sha256": "371823889f801c6a590a5fbe434598052bcdd55bd100b72aae1d93148c1273dc",
+      "trace_sha256": "a502ca850f366e55e35ad85f2ae48cd196adf768bb99b4193a4d06da88e50486"
+    },
+    {
+      "case": "001-defect",
+      "round": 1,
+      "energy": 2,
+      "cards": [
+        "Strike",
+        "Strike"
+      ],
+      "state_sha256": "5d846b88744dd826890b9f78e7bc65a3b623f266deab3690f3ec7655e9e6e39f",
+      "trace_sha256": "048cb225c60c50de64f95bce17c585c9f839a2349fa3121c0416cf4c1e3f8061"
+    },
+    {
+      "case": "001-defect",
+      "round": 2,
+      "energy": 2,
+      "cards": [
+        "Zap",
+        "Coolheaded",
+        "Defend",
+        "Dualcast"
+      ],
+      "state_sha256": "3be19c1dcfdab5225a1f269f118db5f41f54f11eba3d1f30283add9586bf4ae2",
+      "trace_sha256": "048cb225c60c50de64f95bce17c585c9f839a2349fa3121c0416cf4c1e3f8061"
+    },
+    {
+      "case": "001-defect",
+      "round": 3,
+      "energy": 2,
+      "cards": [
+        "Strike",
+        "Strike",
+        "White Noise",
+        "Defend"
+      ],
+      "state_sha256": "92f530ec9e6dcd317d5481db120aeb705a039e75bac9e14495344c6d2d6ede60",
+      "trace_sha256": "048cb225c60c50de64f95bce17c585c9f839a2349fa3121c0416cf4c1e3f8061"
+    },
+    {
+      "case": "001-defect",
+      "round": 4,
+      "energy": 3,
+      "cards": [
+        "Defend",
+        "Defend",
+        "Defend",
+        "Zap"
+      ],
+      "state_sha256": "29692a76bb6f67a334d7b047d4ab28f4c5b0409fdac2cd361dabbb3694e87415",
+      "trace_sha256": "048cb225c60c50de64f95bce17c585c9f839a2349fa3121c0416cf4c1e3f8061"
+    },
+    {
+      "case": "001-regent",
+      "round": 1,
+      "energy": 2,
+      "cards": [
+        "Defend",
+        "Strike",
+        "Defend",
+        "Strike"
+      ],
+      "state_sha256": "ebe9aad6cc7ed81b109adc4070cf8b17cadb537ecde1344a52c23a5d6b0ab804",
+      "trace_sha256": "50883f529b7662a6ff376c9f4fd02e309a89162f7ed20aa6194f758c80b6dc91"
+    },
+    {
+      "case": "001-regent",
+      "round": 2,
+      "energy": 2,
+      "cards": [
+        "Pale Blue Dot",
+        "Gamma Blast",
+        "Defend",
+        "Falling Star"
+      ],
+      "state_sha256": "1619c62929e8e3f81057838580bd68c6b036e3047e85df8662f160fabc69fc9f",
+      "trace_sha256": "50883f529b7662a6ff376c9f4fd02e309a89162f7ed20aa6194f758c80b6dc91"
+    },
+    {
+      "case": "001-regent",
+      "round": 3,
+      "energy": 1,
+      "cards": [
+        "Venerate",
+        "Strike"
+      ],
+      "state_sha256": "90048e56ffe9c4d4c538a3fd2c13ddafd08fbdbed2e95e8ec3266e12d2a7b2fb",
+      "trace_sha256": "50883f529b7662a6ff376c9f4fd02e309a89162f7ed20aa6194f758c80b6dc91"
+    },
+    {
+      "case": "001-regent",
+      "round": 4,
+      "energy": 2,
+      "cards": [
+        "Strike",
+        "Defend",
+        "Strike"
+      ],
+      "state_sha256": "2b4d4f0f2e43edeaf11fafbf5c9528ce8d048dc1157c60bd3b64f858ddd65466",
+      "trace_sha256": "50883f529b7662a6ff376c9f4fd02e309a89162f7ed20aa6194f758c80b6dc91"
+    },
+    {
+      "case": "001-regent",
+      "round": 5,
+      "energy": 2,
+      "cards": [
+        "Strike",
+        "Pale Blue Dot",
+        "Defend"
+      ],
+      "state_sha256": "d69c58131f34c0babd1f9578e03cdd50d2e469df948622e8bf7230064045658a",
+      "trace_sha256": "50883f529b7662a6ff376c9f4fd02e309a89162f7ed20aa6194f758c80b6dc91"
+    },
+    {
+      "case": "001-necrobinder",
+      "round": 3,
+      "energy": 1,
+      "cards": [
+        "Defend",
+        "Graveblast",
+        "Defend"
+      ],
+      "state_sha256": "f0caea3b61c01d7b1e529d9e9782b41972e6a78d240f82ff9caa0867fe99a92c",
+      "trace_sha256": "c01db608fbf53e63bb181e3ad051dda9118c559f06aeecacbd1c91eb16b92333"
+    },
+    {
+      "case": "002-ironclad",
+      "round": 1,
+      "energy": 4,
+      "cards": [
+        "Defend",
+        "Armaments",
+        "Defend"
+      ],
+      "state_sha256": "e99fe76da3658728507e20f3f88532958578a0fb829898c33d75c1536d8474e3",
+      "trace_sha256": "b36eb3d92ff924178b8e40f42a75d4c776971b275b8ed17e5b98553e69b8135e"
+    },
+    {
+      "case": "002-ironclad",
+      "round": 2,
+      "energy": 1,
+      "cards": [
+        "Strike",
+        "Defend",
+        "Strike"
+      ],
+      "state_sha256": "a376162f52e406d988ed48de857db29fb8fece848828e3987329f61dc847b3b7",
+      "trace_sha256": "b36eb3d92ff924178b8e40f42a75d4c776971b275b8ed17e5b98553e69b8135e"
+    },
+    {
+      "case": "002-ironclad",
+      "round": 4,
+      "energy": 1,
+      "cards": [
+        "Strike",
+        "Strike"
+      ],
+      "state_sha256": "960cdd91b10e3422f60ed8a96a1e0c4c0c82a75b262628008e3dbc788bc1bce4",
+      "trace_sha256": "b36eb3d92ff924178b8e40f42a75d4c776971b275b8ed17e5b98553e69b8135e"
+    },
+    {
+      "case": "002-ironclad",
+      "round": 8,
+      "energy": 1,
+      "cards": [
+        "Strike",
+        "Armaments",
+        "Defend"
+      ],
+      "state_sha256": "1d8827ec7998716d403998f30bf8a36250ded6618fc1a0960e423316ccf45c4b",
+      "trace_sha256": "b36eb3d92ff924178b8e40f42a75d4c776971b275b8ed17e5b98553e69b8135e"
+    },
+    {
+      "case": "002-silent",
+      "round": 1,
+      "energy": 1,
+      "cards": [
+        "Sidestep",
+        "Sucker Punch",
+        "Defend",
+        "Defend",
+        "Strike"
+      ],
+      "state_sha256": "cf03ab1e8b3ae952d2f763b664b3b4daf6bd39298768ba43e63b304cd0283bdb",
+      "trace_sha256": "c0d3523f00cb899d21dba850626d7076ebb681496bb7a2a314202040c51eee69"
+    },
+    {
+      "case": "002-silent",
+      "round": 2,
+      "energy": 1,
+      "cards": [
+        "Strike",
+        "Cloak and Dagger",
+        "Strike",
+        "Poisoned Stab"
+      ],
+      "state_sha256": "1155eea17ef1f2a985a78b451594d448b4405139b9bb0d18b0d085b6c9dbe6d0",
+      "trace_sha256": "c0d3523f00cb899d21dba850626d7076ebb681496bb7a2a314202040c51eee69"
+    },
+    {
+      "case": "002-silent",
+      "round": 3,
+      "energy": 2,
+      "cards": [
+        "Strike",
+        "Defend",
+        "Strike",
+        "Neutralize"
+      ],
+      "state_sha256": "ca88f8ab0d164e7a2d549360d20db1fa428137bdada76578aeefb26747d875e6",
+      "trace_sha256": "c0d3523f00cb899d21dba850626d7076ebb681496bb7a2a314202040c51eee69"
+    },
+    {
+      "case": "002-defect",
+      "round": 1,
+      "energy": 1,
+      "cards": [
+        "Boost Away",
+        "Defend",
+        "Defend"
+      ],
+      "state_sha256": "71d9fa41fccbed4d92c44be587c107ea17f55a01d3e98cf17312ef2090574899",
+      "trace_sha256": "9f8dd3cefde71540a488a8b7928f249eb4a2d020e3174821fc2667271cad0b79"
+    },
+    {
+      "case": "002-defect",
+      "round": 2,
+      "energy": 4,
+      "cards": [
+        "Hologram",
+        "Zap",
+        "Defend"
+      ],
+      "state_sha256": "51ba27a80d5986f9f54033392228f88cb19e179d404c933d3106c2f6c886863d",
+      "trace_sha256": "9f8dd3cefde71540a488a8b7928f249eb4a2d020e3174821fc2667271cad0b79"
+    },
+    {
+      "case": "002-defect",
+      "round": 3,
+      "energy": 2,
+      "cards": [
+        "Barrage",
+        "Dualcast",
+        "Strike"
+      ],
+      "state_sha256": "7922caaebbacab30e28c6f422435daaab073bddb49ce340007cbefda554c6503",
+      "trace_sha256": "9f8dd3cefde71540a488a8b7928f249eb4a2d020e3174821fc2667271cad0b79"
+    },
+    {
+      "case": "002-defect",
+      "round": 4,
+      "energy": 2,
+      "cards": [
+        "Iteration"
+      ],
+      "state_sha256": "b4ee6d631a839e326ec81ba031f5730eb166a31d901ce9cf6d4505301568771a",
+      "trace_sha256": "9f8dd3cefde71540a488a8b7928f249eb4a2d020e3174821fc2667271cad0b79"
+    },
+    {
+      "case": "002-defect",
+      "round": 5,
+      "energy": 2,
+      "cards": [
+        "Strike",
+        "Dualcast",
+        "Strike",
+        "Barrage"
+      ],
+      "state_sha256": "f5c9aa56898d0efc48c81bf404cb1b3eeaf6a8f27121be877bf6641905a443f4",
+      "trace_sha256": "9f8dd3cefde71540a488a8b7928f249eb4a2d020e3174821fc2667271cad0b79"
+    },
+    {
+      "case": "002-regent",
+      "round": 1,
+      "energy": 1,
+      "cards": [
+        "Hidden Cache",
+        "BEGONE!",
+        "Strike"
+      ],
+      "state_sha256": "cd89f50a0e55ec4989627f570a7f34a52ac16ea11a4399657fee8da1af1ac89b",
+      "trace_sha256": "2f94e60b0ef8d016cb53b399d01f5a16c786facc0ff9727df906d52d50994826"
+    },
+    {
+      "case": "002-regent",
+      "round": 2,
+      "energy": 3,
+      "cards": [
+        "Venerate",
+        "Defend"
+      ],
+      "state_sha256": "79027e1ee8b76234833db2f81a949127a2a1ff7311f794a9ff7f3748a3739a82",
+      "trace_sha256": "2f94e60b0ef8d016cb53b399d01f5a16c786facc0ff9727df906d52d50994826"
+    },
+    {
+      "case": "002-regent",
+      "round": 3,
+      "energy": 2,
+      "cards": [
+        "Strike",
+        "Spoils of Battle",
+        "Defend"
+      ],
+      "state_sha256": "b604f075c16ef989eee3f0bb6b4bccf9647006be07d4ca2385d464781c295e85",
+      "trace_sha256": "2f94e60b0ef8d016cb53b399d01f5a16c786facc0ff9727df906d52d50994826"
+    },
+    {
+      "case": "002-regent",
+      "round": 4,
+      "energy": 2,
+      "cards": [
+        "Defend",
+        "Strike",
+        "Venerate",
+        "Strike"
+      ],
+      "state_sha256": "f61366019a579775531f3aa86c1bac1094eee6fe7216b68f8b22134b378c28a4",
+      "trace_sha256": "2f94e60b0ef8d016cb53b399d01f5a16c786facc0ff9727df906d52d50994826"
+    },
+    {
+      "case": "002-regent",
+      "round": 5,
+      "energy": 2,
+      "cards": [
+        "Strike",
+        "Strike",
+        "Lunar Blast"
+      ],
+      "state_sha256": "bd99801f7f70c45d0d63129b25a1f385404b3cea4870c3170d56813f75c47c58",
+      "trace_sha256": "2f94e60b0ef8d016cb53b399d01f5a16c786facc0ff9727df906d52d50994826"
+    },
+    {
+      "case": "002-regent",
+      "round": 6,
+      "energy": 2,
+      "cards": [
+        "Spoils of Battle",
+        "BEGONE!",
+        "Hidden Cache"
+      ],
+      "state_sha256": "ffa035502ffd3a8c9ca8aae8d919c2e6b99f85870c60d480067e940202b5b185",
+      "trace_sha256": "2f94e60b0ef8d016cb53b399d01f5a16c786facc0ff9727df906d52d50994826"
+    },
+    {
+      "case": "002-necrobinder",
+      "round": 1,
+      "energy": 1,
+      "cards": [
+        "Defend",
+        "Strike"
+      ],
+      "state_sha256": "acc939148d22ad8e87c6204cd450abef0a950b141d4ede6852703550bf8201bd",
+      "trace_sha256": "6d1a1cbb9516be3db6a7847e33107780f4bf3b297e71d0a273febcde4074fbff"
+    },
+    {
+      "case": "002-necrobinder",
+      "round": 2,
+      "energy": 1,
+      "cards": [
+        "Strike",
+        "Enfeebling Touch",
+        "Defend",
+        "Defend"
+      ],
+      "state_sha256": "ddf84732038e66802525f0a5bae2b53c5ded2b22872d300baffd6ef60e38fda5",
+      "trace_sha256": "6d1a1cbb9516be3db6a7847e33107780f4bf3b297e71d0a273febcde4074fbff"
+    },
+    {
+      "case": "002-necrobinder",
+      "round": 3,
+      "energy": 1,
+      "cards": [
+        "Bodyguard",
+        "Strike",
+        "Blight Strike"
+      ],
+      "state_sha256": "055862c6baeca0617523fc10b64004030b5db60848cd12309e218f45d4bdf3da",
+      "trace_sha256": "6d1a1cbb9516be3db6a7847e33107780f4bf3b297e71d0a273febcde4074fbff"
+    },
+    {
+      "case": "002-necrobinder",
+      "round": 5,
+      "energy": 2,
+      "cards": [
+        "Unleash",
+        "Strike",
+        "Sow",
+        "Defend"
+      ],
+      "state_sha256": "3f4726f7a00b12857b3ee8bcd55072df93103a221efd92a2550cfc50caf1142d",
+      "trace_sha256": "6d1a1cbb9516be3db6a7847e33107780f4bf3b297e71d0a273febcde4074fbff"
+    },
+    {
+      "case": "002-necrobinder",
+      "round": 6,
+      "energy": 2,
+      "cards": [
+        "Sow",
+        "Bodyguard",
+        "Strike",
+        "Blight Strike",
+        "Strike"
+      ],
+      "state_sha256": "c4cc9b1de7f0f02866ab22d6f2bb1f2499df219fd3e059d94bd2c38f719a418e",
+      "trace_sha256": "6d1a1cbb9516be3db6a7847e33107780f4bf3b297e71d0a273febcde4074fbff"
+    },
+    {
+      "case": "002-necrobinder",
+      "round": 7,
+      "energy": 1,
+      "cards": [
+        "Sow",
+        "Unleash",
+        "Strike",
+        "Strike"
+      ],
+      "state_sha256": "ab7ac8483c5e2db3be9cfe8ddcf0fa92ac8d9852f765f9352bb7eacb23f2487d",
+      "trace_sha256": "6d1a1cbb9516be3db6a7847e33107780f4bf3b297e71d0a273febcde4074fbff"
+    },
+    {
+      "case": "002-necrobinder",
+      "round": 9,
+      "energy": 2,
+      "cards": [
+        "Sow",
+        "Strike",
+        "Unleash",
+        "Bodyguard",
+        "Defend"
+      ],
+      "state_sha256": "161d00c9b80bcb24f55e17526578ec4e2ee8ee2ca92c1e8604f7dc6c5c90b7cb",
+      "trace_sha256": "6d1a1cbb9516be3db6a7847e33107780f4bf3b297e71d0a273febcde4074fbff"
+    },
+    {
+      "case": "003-silent",
+      "round": 1,
+      "energy": 1,
+      "cards": [
+        "Strike",
+        "Defend",
+        "Defend"
+      ],
+      "state_sha256": "8183e47e48217580f9543847bb2c8fc3c22fe76f896356d0344cfca73aae8a12",
+      "trace_sha256": "2ae86d4e20593ee729c4d3ed0fc0508fd02db386a28db3f5fc483d6680943323"
+    },
+    {
+      "case": "003-silent",
+      "round": 2,
+      "energy": 2,
+      "cards": [
+        "Strike",
+        "Strike",
+        "Dagger Throw",
+        "Strike"
+      ],
+      "state_sha256": "f02447b7988d3e53ffee858d060c73590423bc3123c96502917c7caea10cb84c",
+      "trace_sha256": "2ae86d4e20593ee729c4d3ed0fc0508fd02db386a28db3f5fc483d6680943323"
+    },
+    {
+      "case": "003-silent",
+      "round": 3,
+      "energy": 2,
+      "cards": [
+        "Dagger Throw",
+        "Bubble Bubble",
+        "Strike",
+        "Neutralize"
+      ],
+      "state_sha256": "f72608f4be1f13b09ad5aa001c862f1d75bda0db76225ee70c41aa0894b84591",
+      "trace_sha256": "2ae86d4e20593ee729c4d3ed0fc0508fd02db386a28db3f5fc483d6680943323"
+    },
+    {
+      "case": "003-ironclad",
+      "round": 1,
+      "energy": 2,
+      "cards": [
+        "Strike",
+        "Strike",
+        "Strike"
+      ],
+      "state_sha256": "029e57f3b4a2001bfbae6b38dc9d911a71b64fe710f048703fc75245e7d93c74",
+      "trace_sha256": "6140e21e4d4b0acca6795fba411e6941890bff0fb9aee51e37a6a23093ea03e5"
+    },
+    {
+      "case": "003-ironclad",
+      "round": 3,
+      "energy": 1,
+      "cards": [
+        "Defend",
+        "Strike"
+      ],
+      "state_sha256": "676698363ffd816b52ef3924a9f26c2e3aafd8526c0244a5b7b1d90190f0ade3",
+      "trace_sha256": "6140e21e4d4b0acca6795fba411e6941890bff0fb9aee51e37a6a23093ea03e5"
+    },
+    {
+      "case": "003-ironclad",
+      "round": 4,
+      "energy": 2,
+      "cards": [
+        "Cinder",
+        "Cinder",
+        "Strike",
+        "Strike"
+      ],
+      "state_sha256": "8e095f75aa334de542a4f34be1d752307569420fe690b8ce738a3a5a882416e3",
+      "trace_sha256": "6140e21e4d4b0acca6795fba411e6941890bff0fb9aee51e37a6a23093ea03e5"
+    },
+    {
+      "case": "003-defect",
+      "round": 1,
+      "energy": 1,
+      "cards": [
+        "Zap",
+        "Strike",
+        "Darkness"
+      ],
+      "state_sha256": "c10c6bb4ba088d7fb97053022017f2d4ffa408e1c36be9f4b429100af5d1008e",
+      "trace_sha256": "8513f377c06e38d4a0c99087a14a7a52bcace6361606306af7a42224e13bf0de"
+    },
+    {
+      "case": "003-defect",
+      "round": 2,
+      "energy": 1,
+      "cards": [
+        "Claw",
+        "Strike",
+        "Defend"
+      ],
+      "state_sha256": "33907c0db69123bb0e80b367ee08a203e845c277886434de256e124076d7fa5b",
+      "trace_sha256": "8513f377c06e38d4a0c99087a14a7a52bcace6361606306af7a42224e13bf0de"
+    },
+    {
+      "case": "003-defect",
+      "round": 3,
+      "energy": 2,
+      "cards": [
+        "Strike",
+        "Claw",
+        "Zap"
+      ],
+      "state_sha256": "bdf081a5595f0afd453f9323b30e78320b0cbb52ea592050525d2a75d442783f",
+      "trace_sha256": "8513f377c06e38d4a0c99087a14a7a52bcace6361606306af7a42224e13bf0de"
+    },
+    {
+      "case": "003-defect",
+      "round": 4,
+      "energy": 2,
+      "cards": [
+        "Claw",
+        "Darkness",
+        "Strike",
+        "Strike"
+      ],
+      "state_sha256": "37e966784a9556bf8dddf7040fcf83dfe8542683da0c1c7c7aed9db0c20db6f7",
+      "trace_sha256": "8513f377c06e38d4a0c99087a14a7a52bcace6361606306af7a42224e13bf0de"
+    },
+    {
+      "case": "003-necrobinder",
+      "round": 1,
+      "energy": 1,
+      "cards": [
+        "Countdown",
+        "Strike"
+      ],
+      "state_sha256": "6b39737e79e422c12699570dae32e32461f214d47afd10510fec26a6658d7658",
+      "trace_sha256": "43778740df2db22c539cf075c43fc1c6c7d109eea55cf8d1f87f8190c72b8a65"
+    },
+    {
+      "case": "003-necrobinder",
+      "round": 2,
+      "energy": 1,
+      "cards": [
+        "Bodyguard",
+        "Defend",
+        "Defend"
+      ],
+      "state_sha256": "a14d51fc1bb80c08e5798cd90583d5c5a3948ffd847155236ca438cc937f1e79",
+      "trace_sha256": "43778740df2db22c539cf075c43fc1c6c7d109eea55cf8d1f87f8190c72b8a65"
+    },
+    {
+      "case": "003-regent",
+      "round": 1,
+      "energy": 1,
+      "cards": [
+        "Strike",
+        "Convergence",
+        "Strike"
+      ],
+      "state_sha256": "ed51572a49bb163570365671b056003b82d920602616d00ccd17b1c8409a2b97",
+      "trace_sha256": "9ac926637438eaab70727e216103f7b18e5ba455c8d37c4ab2c4690c0d9a8496"
+    },
+    {
+      "case": "003-regent",
+      "round": 2,
+      "energy": 1,
+      "cards": [
+        "Defend",
+        "Venerate"
+      ],
+      "state_sha256": "c0f61683e82da530c30308de525f6d2a74b02d184bccfb6dfec9ec9e40d13c01",
+      "trace_sha256": "9ac926637438eaab70727e216103f7b18e5ba455c8d37c4ab2c4690c0d9a8496"
+    },
+    {
+      "case": "003-regent",
+      "round": 3,
+      "energy": 2,
+      "cards": [
+        "Convergence",
+        "Falling Star",
+        "Defend",
+        "Strike"
+      ],
+      "state_sha256": "ae0ff94142147f5d3c227ff3b7dd457a6a6330250513b9c4d02d5ab014a7fde4",
+      "trace_sha256": "9ac926637438eaab70727e216103f7b18e5ba455c8d37c4ab2c4690c0d9a8496"
+    },
+    {
+      "case": "003-regent",
+      "round": 4,
+      "energy": 2,
+      "cards": [
+        "Strike",
+        "Defend",
+        "Strike"
+      ],
+      "state_sha256": "b60f548ab57c07f6095b7df8415e14fa37e179ffed9c6fbda6daf74d282cb0dd",
+      "trace_sha256": "9ac926637438eaab70727e216103f7b18e5ba455c8d37c4ab2c4690c0d9a8496"
+    },
+    {
+      "case": "003-regent",
+      "round": 5,
+      "energy": 1,
+      "cards": [
+        "Strike",
+        "Convergence",
+        "Venerate"
+      ],
+      "state_sha256": "8e50f6d4908cfe976ec0a76de859442b28e4bd3d028a6fd9d49a2fa564fcad56",
+      "trace_sha256": "9ac926637438eaab70727e216103f7b18e5ba455c8d37c4ab2c4690c0d9a8496"
+    },
+    {
+      "case": "003-regent",
+      "round": 6,
+      "energy": 1,
+      "cards": [
+        "Strike",
+        "Venerate",
+        "Strike"
+      ],
+      "state_sha256": "2fcfbf2541d2845a8516600bd195a32a118bd5dfb223b0130793877bba36e1d7",
+      "trace_sha256": "9ac926637438eaab70727e216103f7b18e5ba455c8d37c4ab2c4690c0d9a8496"
+    },
+    {
+      "case": "004-ironclad",
+      "round": 1,
+      "energy": 2,
+      "cards": [
+        "Strike",
+        "Defend",
+        "Defend",
+        "Strike"
+      ],
+      "state_sha256": "25a1fa7209397d182a3e3867e8e6856d9f2f593faff6e917e44fd8120b0ff973",
+      "trace_sha256": "f6c8188a0f6e87c34f29a2e18874a00226c46a729fe177b66b7d7c63c806db98"
+    },
+    {
+      "case": "004-ironclad",
+      "round": 2,
+      "energy": 3,
+      "cards": [
+        "Setup Strike",
+        "Breakthrough",
+        "Strike",
+        "Bash",
+        "Strike"
+      ],
+      "state_sha256": "a4fd95b191a2c95059f29f2bc1c5ecceaee9ec8f49327547fee1608b36eff3eb",
+      "trace_sha256": "f6c8188a0f6e87c34f29a2e18874a00226c46a729fe177b66b7d7c63c806db98"
+    },
+    {
+      "case": "004-ironclad",
+      "round": 3,
+      "energy": 1,
+      "cards": [
+        "Defend",
+        "Strike",
+        "Tremble"
+      ],
+      "state_sha256": "b293fcb97c6f77f3467412556562a0c0f074653db103f1a0c47aa224b54391d7",
+      "trace_sha256": "f6c8188a0f6e87c34f29a2e18874a00226c46a729fe177b66b7d7c63c806db98"
+    },
+    {
+      "case": "004-ironclad",
+      "round": 4,
+      "energy": 1,
+      "cards": [
+        "Strike",
+        "Breakthrough",
+        "Strike",
+        "Strike"
+      ],
+      "state_sha256": "15f6dc5d8a77002964469717a5cc07daaf67d1c0b6e48c42961d7e23a17d3027",
+      "trace_sha256": "f6c8188a0f6e87c34f29a2e18874a00226c46a729fe177b66b7d7c63c806db98"
+    },
+    {
+      "case": "004-ironclad",
+      "round": 5,
+      "energy": 2,
+      "cards": [
+        "Bash",
+        "Strike",
+        "Strike",
+        "Tremble"
+      ],
+      "state_sha256": "1adf49ead210659f723f9457336a4d0b27470a6c94f1107abb2f417811eb5311",
+      "trace_sha256": "f6c8188a0f6e87c34f29a2e18874a00226c46a729fe177b66b7d7c63c806db98"
+    },
+    {
+      "case": "004-ironclad",
+      "round": 6,
+      "energy": 2,
+      "cards": [
+        "Defend",
+        "Headbutt",
+        "Setup Strike",
+        "Strike"
+      ],
+      "state_sha256": "21b925eb59425dcb9882a3d8638396b40a1fc0227872662febd7c61b701eb7a0",
+      "trace_sha256": "f6c8188a0f6e87c34f29a2e18874a00226c46a729fe177b66b7d7c63c806db98"
+    },
+    {
+      "case": "004-ironclad",
+      "round": 7,
+      "energy": 1,
+      "cards": [
+        "Strike",
+        "Strike",
+        "Defend",
+        "Breakthrough"
+      ],
+      "state_sha256": "3c5bf96295f3157007f8fbc1e8cacbb07ea269f0761d2188bec9a1ec201b96f7",
+      "trace_sha256": "f6c8188a0f6e87c34f29a2e18874a00226c46a729fe177b66b7d7c63c806db98"
+    },
+    {
+      "case": "004-ironclad",
+      "round": 8,
+      "energy": 2,
+      "cards": [
+        "Strike",
+        "Strike",
+        "Tremble",
+        "Bash"
+      ],
+      "state_sha256": "cc8e16d94a6e439f9773e298aff26b693c6310a12e9695d4a016f42539bfb65b",
+      "trace_sha256": "f6c8188a0f6e87c34f29a2e18874a00226c46a729fe177b66b7d7c63c806db98"
+    },
+    {
+      "case": "004-silent",
+      "round": 1,
+      "energy": 1,
+      "cards": [
+        "Strike",
+        "Defend",
+        "Strike",
+        "Defend",
+        "Neutralize",
+        "Strike"
+      ],
+      "state_sha256": "7a21420145d7dda26b5d21e0072ad9cec3e5bf563f1e827eaec094f7b0384cb8",
+      "trace_sha256": "4e22a1e83af26ec408b4542db891dad1d8da240651280c688c0f744d6fc0bd61"
+    },
+    {
+      "case": "004-silent",
+      "round": 2,
+      "energy": 1,
+      "cards": [
+        "Defend",
+        "Strike",
+        "Defend"
+      ],
+      "state_sha256": "ece06e09766f3e50625a8a7eaa6f672e532e7b9bd7823218b620df9b09aaa02e",
+      "trace_sha256": "4e22a1e83af26ec408b4542db891dad1d8da240651280c688c0f744d6fc0bd61"
+    },
+    {
+      "case": "004-silent",
+      "round": 3,
+      "energy": 1,
+      "cards": [
+        "Poisoned Stab",
+        "Dagger Spray",
+        "Strike"
+      ],
+      "state_sha256": "1c38e4b21e64328dbe4f0b3e77469a66aa36dd68f5f105583f923c8af05322d8",
+      "trace_sha256": "4e22a1e83af26ec408b4542db891dad1d8da240651280c688c0f744d6fc0bd61"
+    },
+    {
+      "case": "004-silent",
+      "round": 4,
+      "energy": 2,
+      "cards": [
+        "Snakebite",
+        "Strike",
+        "Strike",
+        "Strike",
+        "Defend",
+        "Strike"
+      ],
+      "state_sha256": "a43896503767fdb4f61bb6c763f0363c0fd58be444abcb106fe34a7a18317152",
+      "trace_sha256": "4e22a1e83af26ec408b4542db891dad1d8da240651280c688c0f744d6fc0bd61"
+    },
+    {
+      "case": "004-silent",
+      "round": 5,
+      "energy": 1,
+      "cards": [
+        "Defend",
+        "Neutralize",
+        "Defend"
+      ],
+      "state_sha256": "edd7a48a557b45b69c49e87523972d6d758cd2159e6f46c1570a76c87748b2bb",
+      "trace_sha256": "4e22a1e83af26ec408b4542db891dad1d8da240651280c688c0f744d6fc0bd61"
+    },
+    {
+      "case": "004-silent",
+      "round": 6,
+      "energy": 2,
+      "cards": [
+        "Strike",
+        "Poisoned Stab",
+        "Defend",
+        "Strike"
+      ],
+      "state_sha256": "734bef2b101b2b76dc92d58627cc0bb91af6e0318cc48704dc976c292cf4d0fa",
+      "trace_sha256": "4e22a1e83af26ec408b4542db891dad1d8da240651280c688c0f744d6fc0bd61"
+    },
+    {
+      "case": "004-defect",
+      "round": 1,
+      "energy": 2,
+      "cards": [
+        "Strike",
+        "Defend",
+        "Strike",
+        "Strike"
+      ],
+      "state_sha256": "0ad45903a934d433c580a8a354bd896ad686c736403837282e1068515f035dab",
+      "trace_sha256": "8bf5fa8419c4992f5201b84691c1a011bc03abf67c7ed47c8ce6308260d2d093"
+    },
+    {
+      "case": "004-defect",
+      "round": 3,
+      "energy": 2,
+      "cards": [
+        "Strike",
+        "Dualcast",
+        "Zap",
+        "Sweeping Beam"
+      ],
+      "state_sha256": "d063735fb1df4464e7939fe4c5dcb43876be0dea1d55b276140302e6f21c6603",
+      "trace_sha256": "8bf5fa8419c4992f5201b84691c1a011bc03abf67c7ed47c8ce6308260d2d093"
+    },
+    {
+      "case": "004-regent",
+      "round": 1,
+      "energy": 2,
+      "cards": [
+        "Defend",
+        "Defend",
+        "Falling Star"
+      ],
+      "state_sha256": "62e93b7656b470a705a41060159c383314ddd6d26a19673651c76dc21337e4ab",
+      "trace_sha256": "cdc5f778b77ddc85ac0ddefb332806b043cbf723d209544843ced5239d8080a6"
+    },
+    {
+      "case": "004-regent",
+      "round": 2,
+      "energy": 2,
+      "cards": [
+        "Strike",
+        "Hidden Cache",
+        "Strike",
+        "Defend"
+      ],
+      "state_sha256": "9639b707235a512b34742583e000384da85e016ba5dcfeed5cc2f24a3a4c8c04",
+      "trace_sha256": "cdc5f778b77ddc85ac0ddefb332806b043cbf723d209544843ced5239d8080a6"
+    },
+    {
+      "case": "004-regent",
+      "round": 3,
+      "energy": 2,
+      "cards": [
+        "Venerate",
+        "Strike",
+        "Know Thy Place",
+        "Debris"
+      ],
+      "state_sha256": "c9af8426c346768df05c93232dfa9f9b653e3c8cca4eaaa7e63dd114c33423cd",
+      "trace_sha256": "cdc5f778b77ddc85ac0ddefb332806b043cbf723d209544843ced5239d8080a6"
+    },
+    {
+      "case": "004-regent",
+      "round": 4,
+      "energy": 1,
+      "cards": [
+        "Strike",
+        "Strike",
+        "Know Thy Place"
+      ],
+      "state_sha256": "cfdcb2d113f9ba7367fa555a42fe50f125954d554cb18b55aa3579c3bf8f8ddf",
+      "trace_sha256": "cdc5f778b77ddc85ac0ddefb332806b043cbf723d209544843ced5239d8080a6"
+    },
+    {
+      "case": "004-regent",
+      "round": 5,
+      "energy": 1,
+      "cards": [
+        "Venerate",
+        "Falling Star",
+        "Debris"
+      ],
+      "state_sha256": "b7371ba0dbb70cf60c3db08cce33c75d7b7207f991151a557359b98c67c5f341",
+      "trace_sha256": "cdc5f778b77ddc85ac0ddefb332806b043cbf723d209544843ced5239d8080a6"
+    },
+    {
+      "case": "004-necrobinder",
+      "round": 1,
+      "energy": 2,
+      "cards": [
+        "Snap",
+        "Unleash",
+        "Grave Warden",
+        "Strike"
+      ],
+      "state_sha256": "3652f11fbfc6d7ae5dff8473d98a6284b088fb8388876d498dcad23e727ca12d",
+      "trace_sha256": "2788304cf311127895eed9343b01f508b327b53f4e7b0de02859dc2f053a13f5"
+    },
+    {
+      "case": "004-necrobinder",
+      "round": 3,
+      "energy": 2,
+      "cards": [
+        "Bodyguard",
+        "Strike",
+        "Defend",
+        "Defend"
+      ],
+      "state_sha256": "ce45ad6de2876ff08ee51663352e155d474b0705179fbc77846eb05c9dfd4602",
+      "trace_sha256": "2788304cf311127895eed9343b01f508b327b53f4e7b0de02859dc2f053a13f5"
+    },
+    {
+      "case": "005-ironclad",
+      "round": 2,
+      "energy": 2,
+      "cards": [
+        "Strike",
+        "Inflame",
+        "Strike",
+        "Strike"
+      ],
+      "state_sha256": "ea486afdf3ec63580d48d5eff7835e9611902eb4f95bb646e1388b7f3913e3df",
+      "trace_sha256": "eb13aa6cc7667b55ae764f84e67c4337448381b83d6f7cdf7084dac94eb38e8d"
+    },
+    {
+      "case": "005-ironclad",
+      "round": 3,
+      "energy": 1,
+      "cards": [
+        "Defend",
+        "Defend",
+        "Strike",
+        "Strike"
+      ],
+      "state_sha256": "1da02e24610f93dd81c4914a1b933b9da43d41ed3c6633ea41a927c966865c0f",
+      "trace_sha256": "eb13aa6cc7667b55ae764f84e67c4337448381b83d6f7cdf7084dac94eb38e8d"
+    },
+    {
+      "case": "005-ironclad",
+      "round": 4,
+      "energy": 1,
+      "cards": [
+        "Strike",
+        "Strike"
+      ],
+      "state_sha256": "0130886d265764b363549c77ac9444ff078be81ed680b190d665b0f4d4d31485",
+      "trace_sha256": "eb13aa6cc7667b55ae764f84e67c4337448381b83d6f7cdf7084dac94eb38e8d"
+    },
+    {
+      "case": "005-silent",
+      "round": 1,
+      "energy": 1,
+      "cards": [
+        "Strike",
+        "Strike",
+        "Defend",
+        "Defend",
+        "Defend"
+      ],
+      "state_sha256": "bdd8a404e68e27cbd62c29c7ed4aa80e592a6baec9b246dfd98838f22bb010eb",
+      "trace_sha256": "1bc24c51c346d91f50c49e5cc66f442a10add64aac6019d6d60bff9a4a6a5875"
+    },
+    {
+      "case": "005-silent",
+      "round": 2,
+      "energy": 2,
+      "cards": [
+        "Shiv",
+        "Strike",
+        "Flechettes",
+        "Survivor"
+      ],
+      "state_sha256": "da19a32ea65ed935d64e4fb24f6c2c54dbc5e86aeee614e14aa127ff895cced1",
+      "trace_sha256": "1bc24c51c346d91f50c49e5cc66f442a10add64aac6019d6d60bff9a4a6a5875"
+    },
+    {
+      "case": "005-silent",
+      "round": 3,
+      "energy": 2,
+      "cards": [
+        "Shiv",
+        "Neutralize",
+        "Strike",
+        "Strike",
+        "Poisoned Stab"
+      ],
+      "state_sha256": "40561d695549c3ee854d91bfc5375429ff2b368b744c5cb171cc5afaa295b65b",
+      "trace_sha256": "1bc24c51c346d91f50c49e5cc66f442a10add64aac6019d6d60bff9a4a6a5875"
+    },
+    {
+      "case": "005-defect",
+      "round": 1,
+      "energy": 1,
+      "cards": [
+        "Defend",
+        "Strike",
+        "Strike",
+        "Strike"
+      ],
+      "state_sha256": "fdd6477a3cbcecef1ead939252363703589249bc9aaeb5c55414c960620e3fdd",
+      "trace_sha256": "2b052ee1a826c52bc77b5eaa0c0c973d001e9bb89b71fb6cb9353073fe209bdc"
+    },
+    {
+      "case": "005-defect",
+      "round": 2,
+      "energy": 2,
+      "cards": [
+        "Strike",
+        "Dualcast",
+        "Zap",
+        "Defend"
+      ],
+      "state_sha256": "9c16c7bbc7033aeb6407f990e62ad49867994659a4d73d8c4b786db9e10aff31",
+      "trace_sha256": "2b052ee1a826c52bc77b5eaa0c0c973d001e9bb89b71fb6cb9353073fe209bdc"
+    },
+    {
+      "case": "005-defect",
+      "round": 3,
+      "energy": 2,
+      "cards": [
+        "Hologram",
+        "Focused Strike",
+        "Hailstorm",
+        "Strike"
+      ],
+      "state_sha256": "c49686dfe0f292ea56dc7cc3d323c4fbdc709b2cd27035f0a1290821299ffe93",
+      "trace_sha256": "2b052ee1a826c52bc77b5eaa0c0c973d001e9bb89b71fb6cb9353073fe209bdc"
+    },
+    {
+      "case": "005-regent",
+      "round": 2,
+      "energy": 2,
+      "cards": [
+        "Defend",
+        "Hidden Cache",
+        "BEGONE!"
+      ],
+      "state_sha256": "768b161e2ed6826f503698277849eae5f8ec0888618b7d7ae07336e2ed246874",
+      "trace_sha256": "2f999aca8daf037f47af61d0042ca66bad9b28480743ee3d6fb0c9dc9f7e53c8"
+    },
+    {
+      "case": "005-necrobinder",
+      "round": 2,
+      "energy": 1,
+      "cards": [
+        "Dredge",
+        "Invoke"
+      ],
+      "state_sha256": "9cea6d01c598229f016deaa809f626a9cd99ea2fb01efdbb6863ddbbd49cf2f7",
+      "trace_sha256": "b1b765c1210ae853f9e4f61efbead35f9659611f3c842dd9bfcb25d5b8c50edb"
+    },
+    {
+      "case": "005-necrobinder",
+      "round": 3,
+      "energy": 2,
+      "cards": [
+        "Strike",
+        "Strike",
+        "Strike"
+      ],
+      "state_sha256": "fd92dc307cce55c524dcf19b4d1cb79f5c4e55ee29dd26324adc684797c4d1fd",
+      "trace_sha256": "b1b765c1210ae853f9e4f61efbead35f9659611f3c842dd9bfcb25d5b8c50edb"
+    },
+    {
+      "case": "006-ironclad",
+      "round": 1,
+      "energy": 1,
+      "cards": [
+        "Body Slam",
+        "Strike",
+        "Defend"
+      ],
+      "state_sha256": "29763eb1bca977fbbf27bd4011d9564f59d30d9d47b4fabc0885b6a81dbf2300",
+      "trace_sha256": "c3b3e7ad3f98763551041ff9662e6acea10464c6f716f7e5420e24665306bc5b"
+    },
+    {
+      "case": "006-ironclad",
+      "round": 3,
+      "energy": 2,
+      "cards": [
+        "Strike",
+        "Second Wind",
+        "Setup Strike"
+      ],
+      "state_sha256": "d3fcfe316bda6d957f0cedc096a76fbd5dd407d60b8459838b998516d8806218",
+      "trace_sha256": "c3b3e7ad3f98763551041ff9662e6acea10464c6f716f7e5420e24665306bc5b"
+    },
+    {
+      "case": "006-ironclad",
+      "round": 5,
+      "energy": 1,
+      "cards": [
+        "Strike",
+        "Strike",
+        "Strike"
+      ],
+      "state_sha256": "1b7fd67c360aca0195b2ed0b35f393edc9f3a743526ee52891f38d163a804e39",
+      "trace_sha256": "c3b3e7ad3f98763551041ff9662e6acea10464c6f716f7e5420e24665306bc5b"
+    },
+    {
+      "case": "006-ironclad",
+      "round": 6,
+      "energy": 2,
+      "cards": [
+        "Defend",
+        "Strike",
+        "Strike"
+      ],
+      "state_sha256": "8915ae6039ab0acd80612f08b60273e4a805f82b9eb8875265c4b393d876be22",
+      "trace_sha256": "c3b3e7ad3f98763551041ff9662e6acea10464c6f716f7e5420e24665306bc5b"
+    },
+    {
+      "case": "006-defect",
+      "round": 1,
+      "energy": 3,
+      "cards": [
+        "Strike",
+        "Strike",
+        "Defend",
+        "Defend"
+      ],
+      "state_sha256": "0e8b2c9c7e29f80815220f8c5bece9edaef24a25bcfce05d7ef2cac43b4cf067",
+      "trace_sha256": "dff71bf7d22a6a2bd852a6cea2b7021b0e9a30fb804250a56c8478e5592ba32a"
+    },
+    {
+      "case": "006-silent",
+      "round": 1,
+      "energy": 2,
+      "cards": [
+        "Strike",
+        "Defend",
+        "Defend",
+        "Defend",
+        "Strike"
+      ],
+      "state_sha256": "22cc6083d0b61ccdbf20ce57d6a702cdb086d4cb00ae5941d82445b89f5cd03e",
+      "trace_sha256": "1db208155e906f8f6f498bacf4f322fd2cd0fdfe9af05fc2313e256224116c3e"
+    },
+    {
+      "case": "006-silent",
+      "round": 2,
+      "energy": 2,
+      "cards": [
+        "Strike",
+        "Pinpoint",
+        "Cloak and Dagger",
+        "Strike"
+      ],
+      "state_sha256": "8d97c6324647b2459d3525fae60ad442c604e3f53b351a4e5abb221456a3b9e0",
+      "trace_sha256": "1db208155e906f8f6f498bacf4f322fd2cd0fdfe9af05fc2313e256224116c3e"
+    },
+    {
+      "case": "006-silent",
+      "round": 3,
+      "energy": 1,
+      "cards": [
+        "Prep Time"
+      ],
+      "state_sha256": "5568b007a33230270ec5c85ddca71d7699ea492750b7beba1728fe9e828f7a4f",
+      "trace_sha256": "1db208155e906f8f6f498bacf4f322fd2cd0fdfe9af05fc2313e256224116c3e"
+    },
+    {
+      "case": "006-silent",
+      "round": 4,
+      "energy": 1,
+      "cards": [
+        "Defend",
+        "Prep Time",
+        "Strike"
+      ],
+      "state_sha256": "c336526cfc0ee610e77d484b555c1dd31fbf7a643baf1d754b2d1fecd538d95c",
+      "trace_sha256": "1db208155e906f8f6f498bacf4f322fd2cd0fdfe9af05fc2313e256224116c3e"
+    },
+    {
+      "case": "006-silent",
+      "round": 5,
+      "energy": 2,
+      "cards": [
+        "Neutralize"
+      ],
+      "state_sha256": "36b5d6e34e1d61a7ee576bb8c61b0554af56ab80bc9a121dac0f7769c25afc06",
+      "trace_sha256": "1db208155e906f8f6f498bacf4f322fd2cd0fdfe9af05fc2313e256224116c3e"
+    },
+    {
+      "case": "006-regent",
+      "round": 1,
+      "energy": 1,
+      "cards": [
+        "Hidden Cache",
+        "Strike",
+        "Venerate"
+      ],
+      "state_sha256": "22065479188a73faed2471dea7f4b22e08612fd9d9721fe89614cb008ed06cbb",
+      "trace_sha256": "099f92cb0e9e331ad6310c18d0244e8edd83c6073d6682ad91fb1fd9351f465b"
+    },
+    {
+      "case": "006-regent",
+      "round": 2,
+      "energy": 2,
+      "cards": [
+        "Prep Time",
+        "Strike"
+      ],
+      "state_sha256": "44816abc81d1ea8c92c2a13444ac00db0fac220684c2af5e18e6a72492c840b9",
+      "trace_sha256": "099f92cb0e9e331ad6310c18d0244e8edd83c6073d6682ad91fb1fd9351f465b"
+    },
+    {
+      "case": "006-regent",
+      "round": 3,
+      "energy": 1,
+      "cards": [
+        "Falling Star",
+        "Defend"
+      ],
+      "state_sha256": "b09d6d49f88f2771b9d2a50d4c69269410c29e9ddd1b53ab661948e298259d31",
+      "trace_sha256": "099f92cb0e9e331ad6310c18d0244e8edd83c6073d6682ad91fb1fd9351f465b"
+    },
+    {
+      "case": "006-regent",
+      "round": 4,
+      "energy": 2,
+      "cards": [
+        "Strike",
+        "Strike"
+      ],
+      "state_sha256": "25cefeaf98e94f2cc02d7544f105c7caf1b7b1356acb8f95ab538789dce06f4d",
+      "trace_sha256": "099f92cb0e9e331ad6310c18d0244e8edd83c6073d6682ad91fb1fd9351f465b"
+    },
+    {
+      "case": "006-necrobinder",
+      "round": 2,
+      "energy": 1,
+      "cards": [
+        "Prep Time",
+        "Strike"
+      ],
+      "state_sha256": "7fd5bd9d01a36f388b813bef5aa369b7eab81eb99116b16c4117f4583b7f8e6e",
+      "trace_sha256": "66432d4f19201f95b8169f7a272bae6e9379213a7ebd47f0ca422b4933239e3c"
+    },
+    {
+      "case": "006-necrobinder",
+      "round": 3,
+      "energy": 1,
+      "cards": [
+        "Defend",
+        "Putrefy",
+        "Defend",
+        "Defend"
+      ],
+      "state_sha256": "0bfe95bf782ec213e86b01bf43d3fa1b5c9c275d23308889ee30acd1a1d5a77f",
+      "trace_sha256": "66432d4f19201f95b8169f7a272bae6e9379213a7ebd47f0ca422b4933239e3c"
+    },
+    {
+      "case": "006-necrobinder",
+      "round": 4,
+      "energy": 2,
+      "cards": [
+        "Defend",
+        "Pull Aggro",
+        "Defend",
+        "Strike"
+      ],
+      "state_sha256": "11eaa327a6cec26052ce9911bee0a88bc6da6c654e6c4324c00f50f600b36dcc",
+      "trace_sha256": "66432d4f19201f95b8169f7a272bae6e9379213a7ebd47f0ca422b4933239e3c"
+    },
+    {
+      "case": "006-necrobinder",
+      "round": 5,
+      "energy": 2,
+      "cards": [
+        "Unleash",
+        "Strike"
+      ],
+      "state_sha256": "1d8bfc032cc913ca792563e75ab4647e8a34a2e68a0c19d473a209fab22f5a58",
+      "trace_sha256": "66432d4f19201f95b8169f7a272bae6e9379213a7ebd47f0ca422b4933239e3c"
+    },
+    {
+      "case": "006-necrobinder",
+      "round": 6,
+      "energy": 1,
+      "cards": [
+        "Strike",
+        "Putrefy"
+      ],
+      "state_sha256": "bb313240149f4c16eead99d3a38ff5ac0135a929d1eaf35910c4038dec86ecd2",
+      "trace_sha256": "66432d4f19201f95b8169f7a272bae6e9379213a7ebd47f0ca422b4933239e3c"
+    },
+    {
+      "case": "006-necrobinder",
+      "round": 7,
+      "energy": 2,
+      "cards": [
+        "Strike",
+        "Prep Time",
+        "Defend"
+      ],
+      "state_sha256": "9c1db6f6e838d833e6abdf9590d1f51fb85b08483715a5ab36d34abb6a9c833c",
+      "trace_sha256": "66432d4f19201f95b8169f7a272bae6e9379213a7ebd47f0ca422b4933239e3c"
+    },
+    {
+      "case": "006-necrobinder",
+      "round": 8,
+      "energy": 1,
+      "cards": [
+        "Prep Time"
+      ],
+      "state_sha256": "69cab2d4fc187467104e5eb3cc18ba6c2ed84418b2ee9ccf0f7d2de9bc50f645",
+      "trace_sha256": "66432d4f19201f95b8169f7a272bae6e9379213a7ebd47f0ca422b4933239e3c"
+    }
+  ],
+  "by_character_all_six_seeds": {
+    "Defect": {
+      "program": {
+        "n": 6,
+        "wins": 1
+      },
+      "jev": {
+        "n": 6,
+        "wins": 0
+      }
+    },
+    "Ironclad": {
+      "program": {
+        "n": 6,
+        "wins": 1
+      },
+      "jev": {
+        "n": 6,
+        "wins": 0
+      }
+    },
+    "Necrobinder": {
+      "program": {
+        "n": 6,
+        "wins": 1
+      },
+      "jev": {
+        "n": 6,
+        "wins": 2
+      }
+    },
+    "Regent": {
+      "program": {
+        "n": 6,
+        "wins": 2
+      },
+      "jev": {
+        "n": 6,
+        "wins": 0
+      }
+    },
+    "Silent": {
+      "program": {
+        "n": 6,
+        "wins": 2
+      },
+      "jev": {
+        "n": 6,
+        "wins": 0
+      }
+    }
+  },
+  "pairs": [
+    {
+      "case": "001-ironclad",
+      "cohort": "pilot",
+      "task": "combat",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "001-ironclad",
+      "cohort": "pilot",
+      "task": "reward",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "001-silent",
+      "cohort": "pilot",
+      "task": "combat",
+      "program": [
+        "win",
+        36
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "worse"
+    },
+    {
+      "case": "001-silent",
+      "cohort": "pilot",
+      "task": "reward",
+      "program": [
+        "survived",
+        57
+      ],
+      "jev": [
+        "survived",
+        57
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "001-defect",
+      "cohort": "pilot",
+      "task": "combat",
+      "program": [
+        "win",
+        42
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "worse"
+    },
+    {
+      "case": "001-defect",
+      "cohort": "pilot",
+      "task": "reward",
+      "program": [
+        "survived",
+        64
+      ],
+      "jev": [
+        "survived",
+        55
+      ],
+      "jev_vs_program": "worse"
+    },
+    {
+      "case": "001-regent",
+      "cohort": "pilot",
+      "task": "combat",
+      "program": [
+        "win",
+        38
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "worse"
+    },
+    {
+      "case": "001-regent",
+      "cohort": "pilot",
+      "task": "reward",
+      "program": [
+        "survived",
+        60
+      ],
+      "jev": [
+        "survived",
+        60
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "001-necrobinder",
+      "cohort": "pilot",
+      "task": "combat",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "win",
+        10
+      ],
+      "jev_vs_program": "better"
+    },
+    {
+      "case": "001-necrobinder",
+      "cohort": "pilot",
+      "task": "reward",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "002-ironclad",
+      "cohort": "pilot",
+      "task": "combat",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "002-ironclad",
+      "cohort": "pilot",
+      "task": "reward",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "better"
+    },
+    {
+      "case": "002-silent",
+      "cohort": "pilot",
+      "task": "combat",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "002-silent",
+      "cohort": "pilot",
+      "task": "reward",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "002-defect",
+      "cohort": "pilot",
+      "task": "combat",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "002-defect",
+      "cohort": "pilot",
+      "task": "reward",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "002-regent",
+      "cohort": "pilot",
+      "task": "combat",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "002-regent",
+      "cohort": "pilot",
+      "task": "reward",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "002-necrobinder",
+      "cohort": "pilot",
+      "task": "combat",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "002-necrobinder",
+      "cohort": "pilot",
+      "task": "reward",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "003-ironclad",
+      "cohort": "confirm",
+      "task": "combat",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "003-ironclad",
+      "cohort": "confirm",
+      "task": "reward",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "003-silent",
+      "cohort": "confirm",
+      "task": "combat",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "003-silent",
+      "cohort": "confirm",
+      "task": "reward",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "003-defect",
+      "cohort": "confirm",
+      "task": "combat",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "003-defect",
+      "cohort": "confirm",
+      "task": "reward",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "003-regent",
+      "cohort": "confirm",
+      "task": "combat",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "003-regent",
+      "cohort": "confirm",
+      "task": "reward",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "better"
+    },
+    {
+      "case": "003-necrobinder",
+      "cohort": "confirm",
+      "task": "combat",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "003-necrobinder",
+      "cohort": "confirm",
+      "task": "reward",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "004-ironclad",
+      "cohort": "confirm",
+      "task": "combat",
+      "program": [
+        "win",
+        55
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "worse"
+    },
+    {
+      "case": "004-ironclad",
+      "cohort": "confirm",
+      "task": "reward",
+      "program": [
+        "survived",
+        55
+      ],
+      "jev": [
+        "survived",
+        51
+      ],
+      "jev_vs_program": "worse"
+    },
+    {
+      "case": "004-silent",
+      "cohort": "confirm",
+      "task": "combat",
+      "program": [
+        "win",
+        22
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "worse"
+    },
+    {
+      "case": "004-silent",
+      "cohort": "confirm",
+      "task": "reward",
+      "program": [
+        "survived",
+        22
+      ],
+      "jev": [
+        "survived",
+        22
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "004-defect",
+      "cohort": "confirm",
+      "task": "combat",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "004-defect",
+      "cohort": "confirm",
+      "task": "reward",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "004-regent",
+      "cohort": "confirm",
+      "task": "combat",
+      "program": [
+        "win",
+        34
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "worse"
+    },
+    {
+      "case": "004-regent",
+      "cohort": "confirm",
+      "task": "reward",
+      "program": [
+        "survived",
+        34
+      ],
+      "jev": [
+        "survived",
+        20
+      ],
+      "jev_vs_program": "worse"
+    },
+    {
+      "case": "004-necrobinder",
+      "cohort": "confirm",
+      "task": "combat",
+      "program": [
+        "win",
+        17
+      ],
+      "jev": [
+        "win",
+        12
+      ],
+      "jev_vs_program": "worse"
+    },
+    {
+      "case": "004-necrobinder",
+      "cohort": "confirm",
+      "task": "reward",
+      "program": [
+        "survived",
+        17
+      ],
+      "jev": [
+        "survived",
+        21
+      ],
+      "jev_vs_program": "better"
+    },
+    {
+      "case": "005-ironclad",
+      "cohort": "confirm",
+      "task": "combat",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "005-ironclad",
+      "cohort": "confirm",
+      "task": "reward",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "005-silent",
+      "cohort": "confirm",
+      "task": "combat",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "005-silent",
+      "cohort": "confirm",
+      "task": "reward",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "005-defect",
+      "cohort": "confirm",
+      "task": "combat",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "005-defect",
+      "cohort": "confirm",
+      "task": "reward",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "005-regent",
+      "cohort": "confirm",
+      "task": "combat",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "005-regent",
+      "cohort": "confirm",
+      "task": "reward",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "005-necrobinder",
+      "cohort": "confirm",
+      "task": "combat",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "005-necrobinder",
+      "cohort": "confirm",
+      "task": "reward",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "006-ironclad",
+      "cohort": "confirm",
+      "task": "combat",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "006-ironclad",
+      "cohort": "confirm",
+      "task": "reward",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "006-silent",
+      "cohort": "confirm",
+      "task": "combat",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "006-silent",
+      "cohort": "confirm",
+      "task": "reward",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "006-defect",
+      "cohort": "confirm",
+      "task": "combat",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "006-defect",
+      "cohort": "confirm",
+      "task": "reward",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "006-regent",
+      "cohort": "confirm",
+      "task": "combat",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "006-regent",
+      "cohort": "confirm",
+      "task": "reward",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "006-necrobinder",
+      "cohort": "confirm",
+      "task": "combat",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "tie"
+    },
+    {
+      "case": "006-necrobinder",
+      "cohort": "confirm",
+      "task": "reward",
+      "program": [
+        "defeat",
+        0
+      ],
+      "jev": [
+        "defeat",
+        0
+      ],
+      "jev_vs_program": "tie"
+    }
+  ]
+}
