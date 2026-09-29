@@ -49,6 +49,7 @@ Raw request/response events live under ignored `artifacts/runs/e116-pilot-v1/`. 
 - Freeze: 36 accepted worlds in 51 attempts; 7,308 independent forward-value checks passed; all 216 labels balanced by horizon/condition. Fixture file SHA-256: `6e096ca0932004a080fc80563895982fb84ecdedf8c53443d34b02f95c47d069`.
 - Inspection confirmed an important limitation before model testing: on longer graphs, most consequential later decisions lie near the end. For H=16 they lie in layers 12–15; intervening branch choices often tie. We retain these fixtures and will not interpret H as number of consequential decisions.
 - Before the paid run, harden missing-model failure handling and JSON-stable missing-provider summaries; add mocked billing, failure-stop and total-deadline checks. No paid calls or outcome-driven changes have occurred.
+- SHA `c9bf135`: 8/11 tests passed; three runner mock tests errored because the global subprocess mock also intercepted Python's platform probe. Isolate the platform probe in those tests; no generator or paid protocol change. The failed attempt remains in history.
 
 ## Interpretation boundaries and related work
 

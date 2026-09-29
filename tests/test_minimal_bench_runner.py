@@ -28,6 +28,7 @@ class RunnerTests(unittest.TestCase):
                  patch.object(runner, 'post', return_value=reply) as post, \
                  patch.object(runner.subprocess, 'check_output', side_effect=git), \
                  patch.object(runner.subprocess, 'check_call'), \
+                 patch.object(runner.platform, 'platform', return_value='synthetic-test-platform'), \
                  patch.object(runner, 'summarize', return_value={}), \
                  contextlib.redirect_stdout(io.StringIO()):
                 runner.run(args)
