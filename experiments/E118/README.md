@@ -1,0 +1,53 @@
+## Objective
+
+Issue: [#227](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/227). Status: implementation/protocol committed before validation; no paid results yet.
+
+E118: extend E116 below its observed floor and compare several current model configurations on the same fresh synthetic worlds. The user explicitly authorized short-horizon probes and a small OpenRouter multi-model comparison.
+
+## Fixed protocol before evaluation
+
+- Eight fresh seeds `e118_20260929_001` through `e118_20260929_008`; horizons 1, 2, 4, 8; width 8 with the same disjoint four-state root components and opaque state labels as E116. Minimum consequential later decisions is min(2, H-1), so short tasks are possible without silently treating them as deep planning.
+- Per world: optimal root choice, prescribed-route prediction with A=yes/B=no, and the identical semantic prediction with A=no/B=yes. Each mapping has balanced answers; truth and root optimum are independently balanced. Eight direct-value readout controls (one per seed) are queried first. 32 worlds, 104 independent-context requests per configuration, 520 maximum total.
+- Models/configurations: Jev `typesafe/jev-1.13` typed choice; GPT-6 Sol `openai/gpt-6-sol` at reasoning none and low; Claude Sonnet 5.5 `anthropic/claude-sonnet-5.5` at low; Gemini 3.8 Flash `google/gemini-3.8-flash` at low. Public model metadata and canonical slugs are saved before calls. Chat models get the same state/question content and a strict binary JSON output schema. No few-shot demonstrations, prompt tuning, or model fallback.
+- Pin official providers: TypeSafe, OpenAI, Anthropic, Google AI Studio. Disable fallback; exclude flex/priority endpoint variants where applicable. Record returned model, provider, complete usage including reasoning/cache tokens and exact request/response hashes. Different interfaces and inference budgets mean these are model-configuration comparisons, not a compute-matched leaderboard.
+- Chat completion cap 8192 tokens including reasoning; 60-second total response deadline. No reasoning suppression/exclusion is used to pretend that compute is disabled. Sol-none is verified operationally only where an explicit zero reasoning counter is returned; Jev lacking counters remains unverified. Other configurations explicitly use reasoning.
+- Fixed per-configuration spending caps sum to $3: Jev $0.20, Sol-none $0.50, Sol-low $0.80, Sonnet-low $1.00, Gemini-low $0.50. Reserve conservative per-call bounds from input bytes plus overhead and full output cap using frozen provider prices. Stop a configuration on unknown billing (retain reservation), over-reservation cost, three consecutive invalid responses, >10% invalid after at least 20 attempts, or a 25-minute deadline. Do not silently omit unstarted cells. Up to five independent workers, one sequential worker per configuration.
+
+## Hypotheses, baselines and decision rule
+
+H1: Jev has measurable competence on 1/2-step state tracking even though E116 H>=4 was near chance. H2: at least one mainstream configuration solves the exact same graph tasks reliably, indicating the E116 floor is not universal across the tested configurations. H3: pairing inverted answer IDs distinguishes semantic correctness from raw A/B preference.
+
+Exact backward values, independent forward reachability and exhaustive routes verify the labels. Baselines are exact execution, constant-A/B and constant-yes/no. Paired mapping correctness requires BOTH responses correct; constant semantic-yes achieves 50% on balanced worlds, whereas constant raw-A achieves 0%. Independent random answers achieve 25%, which is not a universal null.
+
+Report per-horizon root accuracy, prediction accuracy by mapping, both-mappings-correct rate, semantic consistency, yes/label bias, protocol coverage, inference token usage, cost and latency. Bootstrap complete seed clusters; results remain exploratory with only 8 independent seeds. No paired mapping is counted as two independent worlds.
+
+Exploratory usable range: require >=95% protocol validity, >=7/8 readout controls correct, and >=7/8 correct root choices AND >=7/8 both-mappings-correct worlds at a horizon. Report measured counts and only a contiguous passing prefix from H=1; if all tested horizons pass, mark the range right-censored at >=8, not an exact internal planning depth. Model contrast is promising only if a non-Jev configuration passes at H>=4 while Jev does not, and has >=20 pp paired root-accuracy advantage over Jev across H=4/8. Do not tune or expand the paid bank based on outcomes in this iteration.
+
+## Checklist
+
+- [ ] Commit the protocol, oracle, adapters and meaningful tests before validation.
+- [ ] Freeze and commit independently verified fixtures and provider metadata before paid calls.
+- [ ] Run the fixed batch; retain all failures, costs and raw local traces.
+- [ ] Publish sanitized results/audit and PR comment, then decide merge/close.
+
+## Scope and limitations
+
+No game/overlay/controller changes. No equivalent-text representation arm, no new model training and no hidden-architecture inference. Graph length changes prompt length; many long-graph decisions may tie. One sample per model/configuration/item; no pure intelligence score. The measurement code may merge if correct even when hypotheses fail.
+
+Related: E116 #222 / #225. This issue replaces proposal #227 with an executable protocol; the original proposal is preserved in issue history.
+
+## Reproduction and iteration log
+
+```bash
+python3 -m unittest discover -s tests -p 'test_shallow_bench.py' -v
+python3 scripts/benchmark_shallow_e118.py freeze
+# Commit the frozen bank before the following paid command.
+python3 scripts/benchmark_shallow_e118.py run \
+  --env-file /Users/yzxoi/RSI-Jev-Slay-the-Spire-2/.env \
+  --output artifacts/runs/e118-pilot-v1 --execute
+python3 scripts/benchmark_shallow_e118.py audit --output artifacts/runs/e118-pilot-v1
+```
+
+The existing E116 worktree is reused on a new E118 branch; E116 source/history and raw traces are preserved. The E116 generator/scorer are not modified. Model catalog and provider endpoints were read without paid inference on 2026-09-29; their snapshots are in `model-metadata.json`. OpenRouter documentation confirms that low effort is not equivalent to disabled reasoning and hidden reasoning shares the completion allowance; official OpenAI documentation confirms Sol supports none. All model/provider/request details will be included in the run manifest and raw traces.
+
+The generator additionally requires both true and false terminal predicates to be reachable in each world, then samples a prescribed route conditional on the prebalanced truth label. This removes impossible negative examples at short horizons. Selection is oracle-only, prior to model calls. Short-horizon graphs naturally have fewer consequential later decisions than E116's H>=4 bank.

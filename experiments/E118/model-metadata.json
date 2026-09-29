@@ -1,0 +1,1636 @@
+{
+  "retrieved_date": "2026-09-29",
+  "models": {
+    "anthropic/claude-sonnet-5.5": {
+      "id": "anthropic/claude-sonnet-5.5",
+      "canonical_slug": "anthropic/claude-sonnet-5.5-20260928",
+      "hugging_face_id": null,
+      "name": "Anthropic: Claude Sonnet 5.5",
+      "created": 1790618686,
+      "description": "Claude Sonnet 5.5 is Anthropic's Sonnet-class model for well-scoped everyday work, succeeding Claude Sonnet 5 as a direct upgrade. It is especially strong at building features, fixing bugs, and producing...",
+      "context_length": 1000000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Claude",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.000002",
+        "completion": "0.00001",
+        "web_search": "0.01",
+        "input_cache_read": "0.0000002",
+        "input_cache_write": "0.0000025",
+        "input_cache_write_1h": "0.000004"
+      },
+      "top_provider": {
+        "context_length": 1000000,
+        "max_completion_tokens": 128000,
+        "is_moderated": true
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_completion_tokens",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "verbosity"
+      ],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/anthropic/claude-sonnet-5.5-20260928/endpoints"
+      },
+      "benchmarks": {
+        "design_arena": [],
+        "artificial_analysis": {
+          "intelligence_index": 56,
+          "coding_index": null,
+          "agentic_index": null
+        }
+      },
+      "reasoning": {
+        "mandatory": true,
+        "supported_efforts": [
+          "max",
+          "xhigh",
+          "high",
+          "medium",
+          "low"
+        ],
+        "default_effort": "high"
+      }
+    },
+    "openai/gpt-6-sol": {
+      "id": "openai/gpt-6-sol",
+      "canonical_slug": "openai/gpt-6-sol-20260922",
+      "hugging_face_id": null,
+      "name": "OpenAI: GPT-6 Sol",
+      "created": 1790100775,
+      "description": "GPT-6 Sol is the cost-efficient high-end model in OpenAI's GPT-6 series, positioned below the flagship GPT-6 Astra and above the fast GPT-6 Luna tier. It is suited for demanding professional...",
+      "context_length": 1050000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "GPT",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.000002",
+        "completion": "0.00001",
+        "web_search": "0.01",
+        "input_cache_read": "0.0000002",
+        "input_cache_write": "0.0000025",
+        "overrides": [
+          {
+            "min_prompt_tokens": 272000,
+            "prompt": "0.000004",
+            "completion": "0.000015",
+            "input_cache_read": "0.0000004",
+            "input_cache_write": "0.000005"
+          }
+        ]
+      },
+      "top_provider": {
+        "context_length": 1050000,
+        "max_completion_tokens": 128000,
+        "is_moderated": true
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_completion_tokens",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "seed",
+        "structured_outputs",
+        "tool_choice",
+        "tools"
+      ],
+      "default_parameters": {
+        "temperature": null,
+        "top_p": null,
+        "top_k": null,
+        "frequency_penalty": null,
+        "presence_penalty": null,
+        "repetition_penalty": null
+      },
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/openai/gpt-6-sol-20260922/endpoints"
+      },
+      "benchmarks": {
+        "design_arena": [],
+        "artificial_analysis": {
+          "intelligence_index": 47.5,
+          "coding_index": null,
+          "agentic_index": null
+        }
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": true,
+        "supported_efforts": [
+          "max",
+          "xhigh",
+          "high",
+          "medium",
+          "low",
+          "none"
+        ],
+        "default_effort": "medium"
+      }
+    },
+    "google/gemini-3.8-flash": {
+      "id": "google/gemini-3.8-flash",
+      "canonical_slug": "google/gemini-3.8-flash-20260902",
+      "hugging_face_id": null,
+      "name": "Google: Gemini 3.8 Flash",
+      "created": 1788362056,
+      "description": "Gemini 3.8 Flash is Google's most intelligent Flash model with significant gains from 3.7 Flash across software engineering, agentic tasks, and multi-step reasoning.",
+      "context_length": 1048576,
+      "architecture": {
+        "modality": "text+image+file+audio+video->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "video",
+          "file",
+          "audio"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Gemini",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00000075",
+        "completion": "0.00000375",
+        "image": "0.00000075",
+        "audio": "0.00000075",
+        "input_audio_cache": "0.000000075",
+        "web_search": "0.014",
+        "internal_reasoning": "0.00000375",
+        "input_cache_read": "0.000000075",
+        "input_cache_write": "0.0000000416666666666667"
+      },
+      "top_provider": {
+        "context_length": 1048576,
+        "max_completion_tokens": 65536,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_p"
+      ],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/google/gemini-3.8-flash-20260902/endpoints"
+      },
+      "benchmarks": {
+        "design_arena": [
+          {
+            "arena": "agents",
+            "category": "androidnative",
+            "elo": 1075,
+            "win_rate": 33.1,
+            "rank": 32
+          },
+          {
+            "arena": "agents",
+            "category": "fullstack",
+            "elo": 1251,
+            "win_rate": 48.2,
+            "rank": 11
+          },
+          {
+            "arena": "agents",
+            "category": "godotgamedev",
+            "elo": 1286,
+            "win_rate": 53.5,
+            "rank": 5
+          },
+          {
+            "arena": "agents",
+            "category": "mobileapps",
+            "elo": 1234,
+            "win_rate": 54.5,
+            "rank": 7
+          },
+          {
+            "arena": "agents",
+            "category": "python-pptxslides",
+            "elo": 1175,
+            "win_rate": 39.3,
+            "rank": 19
+          },
+          {
+            "arena": "agents",
+            "category": "webapps",
+            "elo": 1246,
+            "win_rate": 46.6,
+            "rank": 11
+          },
+          {
+            "arena": "models",
+            "category": "3d",
+            "elo": 1317,
+            "win_rate": 51.1,
+            "rank": 14
+          },
+          {
+            "arena": "models",
+            "category": "asciiart",
+            "elo": 1287,
+            "win_rate": 54,
+            "rank": 8
+          },
+          {
+            "arena": "models",
+            "category": "codecategories",
+            "elo": 1314,
+            "win_rate": 52,
+            "rank": 10
+          },
+          {
+            "arena": "models",
+            "category": "dataviz",
+            "elo": 1270,
+            "win_rate": 50.2,
+            "rank": 24
+          },
+          {
+            "arena": "models",
+            "category": "gamedev",
+            "elo": 1323,
+            "win_rate": 52.8,
+            "rank": 10
+          },
+          {
+            "arena": "models",
+            "category": "uicomponent",
+            "elo": 1329,
+            "win_rate": 54,
+            "rank": 8
+          },
+          {
+            "arena": "models",
+            "category": "website",
+            "elo": 1308,
+            "win_rate": 51.8,
+            "rank": 10
+          }
+        ],
+        "artificial_analysis": {
+          "intelligence_index": 40.9,
+          "coding_index": 76.3,
+          "agentic_index": 40.2
+        }
+      },
+      "reasoning": {
+        "mandatory": true,
+        "default_enabled": true,
+        "supported_efforts": [
+          "high",
+          "medium",
+          "low"
+        ],
+        "default_effort": "medium"
+      }
+    }
+  },
+  "endpoints": {
+    "openai/gpt-6-sol": {
+      "data": {
+        "id": "openai/gpt-6-sol",
+        "name": "OpenAI: GPT-6 Sol",
+        "created": 1790100775,
+        "description": "GPT-6 Sol is the cost-efficient high-end model in OpenAI's GPT-6 series, positioned below the flagship GPT-6 Astra and above the fast GPT-6 Luna tier. It is suited for demanding professional...",
+        "architecture": {
+          "tokenizer": "GPT",
+          "instruct_type": null,
+          "modality": "text+image+file->text",
+          "input_modalities": [
+            "file",
+            "image",
+            "text"
+          ],
+          "output_modalities": [
+            "text"
+          ]
+        },
+        "endpoints": [
+          {
+            "name": "OpenAI | openai/gpt-6-sol-20260922",
+            "model_id": "openai/gpt-6-sol",
+            "model_name": "OpenAI: GPT-6 Sol",
+            "context_length": 1050000,
+            "pricing": {
+              "prompt": "0.000001",
+              "completion": "0.000005",
+              "web_search": "0.01",
+              "input_cache_read": "0.0000001",
+              "input_cache_write": "0.00000125",
+              "discount": 0,
+              "overrides": [
+                {
+                  "min_prompt_tokens": 272000,
+                  "prompt": "0.000002",
+                  "completion": "0.0000075",
+                  "input_cache_read": "0.0000002",
+                  "input_cache_write": "0.0000025"
+                }
+              ]
+            },
+            "provider_name": "OpenAI",
+            "tag": "openai/flex",
+            "quantization": "unknown",
+            "max_completion_tokens": 128000,
+            "max_prompt_tokens": 922000,
+            "supported_parameters": [
+              "reasoning",
+              "include_reasoning",
+              "seed",
+              "max_tokens",
+              "response_format",
+              "structured_outputs",
+              "tools",
+              "tool_choice",
+              "reasoning_effort"
+            ],
+            "supports_tool_choice": {
+              "none": true,
+              "auto": true,
+              "required": true,
+              "function": true
+            },
+            "status": 0,
+            "uptime_last_30m": 99.95979091274629,
+            "uptime_last_5m": 100,
+            "uptime_last_1d": 99.97393838402186,
+            "supports_implicit_caching": false,
+            "native_tools": {
+              "openrouter:web_search": {
+                "type": "web_search"
+              },
+              "openrouter:apply_patch": {
+                "type": "apply_patch"
+              }
+            },
+            "supports_voice_cloning": false,
+            "supports_multiple_audio_references": false,
+            "supports_image_reference": false,
+            "latency_last_30m": null,
+            "throughput_last_30m": null
+          },
+          {
+            "name": "OpenAI | openai/gpt-6-sol-20260922",
+            "model_id": "openai/gpt-6-sol",
+            "model_name": "OpenAI: GPT-6 Sol",
+            "context_length": 1050000,
+            "pricing": {
+              "prompt": "0.000002",
+              "completion": "0.00001",
+              "web_search": "0.01",
+              "input_cache_read": "0.0000002",
+              "input_cache_write": "0.0000025",
+              "discount": 0,
+              "overrides": [
+                {
+                  "min_prompt_tokens": 272000,
+                  "prompt": "0.000004",
+                  "completion": "0.000015",
+                  "input_cache_read": "0.0000004",
+                  "input_cache_write": "0.000005"
+                }
+              ]
+            },
+            "provider_name": "OpenAI",
+            "tag": "openai",
+            "quantization": "unknown",
+            "max_completion_tokens": 128000,
+            "max_prompt_tokens": 922000,
+            "supported_parameters": [
+              "reasoning",
+              "include_reasoning",
+              "seed",
+              "max_tokens",
+              "response_format",
+              "structured_outputs",
+              "tools",
+              "tool_choice",
+              "reasoning_effort"
+            ],
+            "supports_tool_choice": {
+              "none": true,
+              "auto": true,
+              "required": true,
+              "function": true
+            },
+            "status": 0,
+            "uptime_last_30m": 99.96365948941582,
+            "uptime_last_5m": 100,
+            "uptime_last_1d": 99.94591991844474,
+            "supports_implicit_caching": false,
+            "native_tools": {
+              "openrouter:web_search": {
+                "type": "web_search"
+              },
+              "openrouter:apply_patch": {
+                "type": "apply_patch"
+              }
+            },
+            "supports_voice_cloning": false,
+            "supports_multiple_audio_references": false,
+            "supports_image_reference": false,
+            "latency_last_30m": null,
+            "throughput_last_30m": null
+          },
+          {
+            "name": "Azure | openai/gpt-6-sol-20260922",
+            "model_id": "openai/gpt-6-sol",
+            "model_name": "OpenAI: GPT-6 Sol",
+            "context_length": 1050000,
+            "pricing": {
+              "prompt": "0.000002",
+              "completion": "0.00001",
+              "web_search": "0.01",
+              "input_cache_read": "0.0000002",
+              "input_cache_write": "0.0000025",
+              "discount": 0,
+              "overrides": [
+                {
+                  "min_prompt_tokens": 272000,
+                  "prompt": "0.000004",
+                  "completion": "0.000015",
+                  "input_cache_read": "0.0000004",
+                  "input_cache_write": "0.000005"
+                }
+              ]
+            },
+            "provider_name": "Azure",
+            "tag": "azure",
+            "quantization": "unknown",
+            "max_completion_tokens": 128000,
+            "max_prompt_tokens": 922000,
+            "supported_parameters": [
+              "max_completion_tokens",
+              "reasoning",
+              "include_reasoning",
+              "seed",
+              "response_format",
+              "structured_outputs",
+              "tools",
+              "tool_choice",
+              "reasoning_effort"
+            ],
+            "supports_tool_choice": {
+              "none": true,
+              "auto": true,
+              "required": true,
+              "function": true
+            },
+            "status": 0,
+            "uptime_last_30m": 100,
+            "uptime_last_5m": 100,
+            "uptime_last_1d": 99.9933904829249,
+            "supports_implicit_caching": false,
+            "native_tools": {
+              "openrouter:web_search": {
+                "type": "web_search"
+              },
+              "openrouter:apply_patch": {
+                "type": "apply_patch"
+              }
+            },
+            "supports_voice_cloning": false,
+            "supports_multiple_audio_references": false,
+            "supports_image_reference": false,
+            "latency_last_30m": null,
+            "throughput_last_30m": null
+          },
+          {
+            "name": "Azure | openai/gpt-6-sol-20260922",
+            "model_id": "openai/gpt-6-sol",
+            "model_name": "OpenAI: GPT-6 Sol",
+            "context_length": 1050000,
+            "pricing": {
+              "prompt": "0.0000022",
+              "completion": "0.000011",
+              "web_search": "0.01",
+              "input_cache_read": "0.00000022",
+              "input_cache_write": "0.00000275",
+              "discount": 0,
+              "overrides": [
+                {
+                  "min_prompt_tokens": 272000,
+                  "prompt": "0.0000044",
+                  "completion": "0.0000165",
+                  "input_cache_read": "0.00000044",
+                  "input_cache_write": "0.0000055"
+                }
+              ]
+            },
+            "provider_name": "Azure",
+            "tag": "azure/us",
+            "quantization": "unknown",
+            "max_completion_tokens": 128000,
+            "max_prompt_tokens": null,
+            "supported_parameters": [
+              "max_completion_tokens",
+              "reasoning",
+              "include_reasoning",
+              "seed",
+              "response_format",
+              "structured_outputs",
+              "tools",
+              "tool_choice",
+              "reasoning_effort"
+            ],
+            "supports_tool_choice": {
+              "none": true,
+              "auto": true,
+              "required": true,
+              "function": true
+            },
+            "status": 0,
+            "uptime_last_30m": 100,
+            "uptime_last_5m": null,
+            "uptime_last_1d": 99.99084332936545,
+            "supports_implicit_caching": false,
+            "native_tools": {
+              "openrouter:web_search": {
+                "type": "web_search"
+              },
+              "openrouter:apply_patch": {
+                "type": "apply_patch"
+              }
+            },
+            "supports_voice_cloning": false,
+            "supports_multiple_audio_references": false,
+            "supports_image_reference": false,
+            "latency_last_30m": null,
+            "throughput_last_30m": null
+          },
+          {
+            "name": "Azure | openai/gpt-6-sol-20260922",
+            "model_id": "openai/gpt-6-sol",
+            "model_name": "OpenAI: GPT-6 Sol",
+            "context_length": 1050000,
+            "pricing": {
+              "prompt": "0.0000022",
+              "completion": "0.000011",
+              "web_search": "0.01",
+              "input_cache_read": "0.00000022",
+              "input_cache_write": "0.00000275",
+              "discount": 0,
+              "overrides": [
+                {
+                  "min_prompt_tokens": 272000,
+                  "prompt": "0.0000044",
+                  "completion": "0.0000165",
+                  "input_cache_read": "0.00000044",
+                  "input_cache_write": "0.0000055"
+                }
+              ]
+            },
+            "provider_name": "Azure",
+            "tag": "azure/eu",
+            "quantization": "unknown",
+            "max_completion_tokens": 128000,
+            "max_prompt_tokens": null,
+            "supported_parameters": [
+              "max_completion_tokens",
+              "reasoning",
+              "include_reasoning",
+              "seed",
+              "response_format",
+              "structured_outputs",
+              "tools",
+              "tool_choice",
+              "reasoning_effort"
+            ],
+            "supports_tool_choice": {
+              "none": true,
+              "auto": true,
+              "required": true,
+              "function": true
+            },
+            "status": 0,
+            "uptime_last_30m": 99.64912280701755,
+            "uptime_last_5m": 100,
+            "uptime_last_1d": 99.97124508770248,
+            "supports_implicit_caching": false,
+            "native_tools": {
+              "openrouter:web_search": {
+                "type": "web_search"
+              },
+              "openrouter:apply_patch": {
+                "type": "apply_patch"
+              }
+            },
+            "supports_voice_cloning": false,
+            "supports_multiple_audio_references": false,
+            "supports_image_reference": false,
+            "latency_last_30m": null,
+            "throughput_last_30m": null
+          },
+          {
+            "name": "Amazon Bedrock | openai/gpt-6-sol-20260922",
+            "model_id": "openai/gpt-6-sol",
+            "model_name": "OpenAI: GPT-6 Sol",
+            "context_length": 1050000,
+            "pricing": {
+              "prompt": "0.0000022",
+              "completion": "0.000011",
+              "web_search": "0.01",
+              "input_cache_read": "0.00000022",
+              "input_cache_write": "0.00000275",
+              "discount": 0,
+              "overrides": [
+                {
+                  "min_prompt_tokens": 272000,
+                  "prompt": "0.0000044",
+                  "completion": "0.0000165",
+                  "input_cache_read": "0.00000044",
+                  "input_cache_write": "0.0000055"
+                }
+              ]
+            },
+            "provider_name": "Amazon Bedrock",
+            "tag": "amazon-bedrock/us-east-1",
+            "quantization": "unknown",
+            "max_completion_tokens": 128000,
+            "max_prompt_tokens": 922000,
+            "supported_parameters": [
+              "reasoning",
+              "include_reasoning",
+              "max_tokens",
+              "tools",
+              "tool_choice",
+              "reasoning_effort"
+            ],
+            "supports_tool_choice": {
+              "none": true,
+              "auto": true,
+              "required": true,
+              "function": true
+            },
+            "status": 0,
+            "uptime_last_30m": null,
+            "uptime_last_5m": null,
+            "uptime_last_1d": 99.97091896083752,
+            "supports_implicit_caching": true,
+            "native_tools": {},
+            "supports_voice_cloning": false,
+            "supports_multiple_audio_references": false,
+            "supports_image_reference": false,
+            "latency_last_30m": null,
+            "throughput_last_30m": null
+          },
+          {
+            "name": "OpenAI | openai/gpt-6-sol-20260922",
+            "model_id": "openai/gpt-6-sol",
+            "model_name": "OpenAI: GPT-6 Sol",
+            "context_length": 1050000,
+            "pricing": {
+              "prompt": "0.000004",
+              "completion": "0.00002",
+              "web_search": "0.01",
+              "input_cache_read": "0.0000004",
+              "input_cache_write": "0.000005",
+              "discount": 0,
+              "overrides": [
+                {
+                  "min_prompt_tokens": 272000,
+                  "prompt": "0.000008",
+                  "completion": "0.00003",
+                  "input_cache_read": "0.0000008",
+                  "input_cache_write": "0.00001"
+                }
+              ]
+            },
+            "provider_name": "OpenAI",
+            "tag": "openai/fast",
+            "quantization": "unknown",
+            "max_completion_tokens": 128000,
+            "max_prompt_tokens": 922000,
+            "supported_parameters": [
+              "reasoning",
+              "include_reasoning",
+              "seed",
+              "max_tokens",
+              "response_format",
+              "structured_outputs",
+              "tools",
+              "tool_choice",
+              "reasoning_effort"
+            ],
+            "supports_tool_choice": {
+              "none": true,
+              "auto": true,
+              "required": true,
+              "function": true
+            },
+            "status": 0,
+            "uptime_last_30m": 99.89071038251366,
+            "uptime_last_5m": 100,
+            "uptime_last_1d": 99.89815404201146,
+            "supports_implicit_caching": false,
+            "native_tools": {
+              "openrouter:web_search": {
+                "type": "web_search"
+              },
+              "openrouter:apply_patch": {
+                "type": "apply_patch"
+              }
+            },
+            "supports_voice_cloning": false,
+            "supports_multiple_audio_references": false,
+            "supports_image_reference": false,
+            "latency_last_30m": null,
+            "throughput_last_30m": null
+          }
+        ]
+      }
+    },
+    "anthropic/claude-sonnet-5.5": {
+      "data": {
+        "id": "anthropic/claude-sonnet-5.5",
+        "name": "Anthropic: Claude Sonnet 5.5",
+        "created": 1790618686,
+        "description": "Claude Sonnet 5.5 is Anthropic's Sonnet-class model for well-scoped everyday work, succeeding Claude Sonnet 5 as a direct upgrade. It is especially strong at building features, fixing bugs, and producing...",
+        "architecture": {
+          "tokenizer": "Claude",
+          "instruct_type": null,
+          "modality": "text+image+file->text",
+          "input_modalities": [
+            "text",
+            "image",
+            "file"
+          ],
+          "output_modalities": [
+            "text"
+          ]
+        },
+        "endpoints": [
+          {
+            "name": "Google | anthropic/claude-sonnet-5.5-20260928",
+            "model_id": "anthropic/claude-sonnet-5.5",
+            "model_name": "Anthropic: Claude Sonnet 5.5",
+            "context_length": 1000000,
+            "pricing": {
+              "prompt": "0.000002",
+              "completion": "0.00001",
+              "web_search": "0.01",
+              "input_cache_read": "0.0000002",
+              "input_cache_write": "0.0000025",
+              "input_cache_write_1h": "0.000004",
+              "discount": 0
+            },
+            "provider_name": "Google",
+            "tag": "google-vertex/global",
+            "quantization": "unknown",
+            "max_completion_tokens": 128000,
+            "max_prompt_tokens": null,
+            "supported_parameters": [
+              "max_tokens",
+              "stop",
+              "reasoning",
+              "include_reasoning",
+              "tool_choice",
+              "tools",
+              "response_format",
+              "verbosity",
+              "structured_outputs",
+              "reasoning_effort"
+            ],
+            "supports_tool_choice": {
+              "none": true,
+              "auto": true,
+              "required": false,
+              "function": false
+            },
+            "status": 0,
+            "uptime_last_30m": 99.98570611778159,
+            "uptime_last_5m": 100,
+            "uptime_last_1d": 99.98311489440987,
+            "supports_implicit_caching": false,
+            "native_tools": {
+              "openrouter:bash": {
+                "type": "bash_20250124"
+              }
+            },
+            "supports_voice_cloning": false,
+            "supports_multiple_audio_references": false,
+            "supports_image_reference": false,
+            "latency_last_30m": null,
+            "throughput_last_30m": null
+          },
+          {
+            "name": "Amazon Bedrock | anthropic/claude-sonnet-5.5-20260928",
+            "model_id": "anthropic/claude-sonnet-5.5",
+            "model_name": "Anthropic: Claude Sonnet 5.5",
+            "context_length": 1000000,
+            "pricing": {
+              "prompt": "0.000002",
+              "completion": "0.00001",
+              "web_search": "0.01",
+              "input_cache_read": "0.0000002",
+              "input_cache_write": "0.0000025",
+              "input_cache_write_1h": "0.000004",
+              "discount": 0
+            },
+            "provider_name": "Amazon Bedrock",
+            "tag": "amazon-bedrock",
+            "quantization": "unknown",
+            "max_completion_tokens": 128000,
+            "max_prompt_tokens": null,
+            "supported_parameters": [
+              "reasoning",
+              "include_reasoning",
+              "max_tokens",
+              "stop",
+              "tool_choice",
+              "tools",
+              "response_format",
+              "verbosity",
+              "reasoning_effort"
+            ],
+            "supports_tool_choice": {
+              "none": true,
+              "auto": true,
+              "required": false,
+              "function": false
+            },
+            "status": 0,
+            "uptime_last_30m": 100,
+            "uptime_last_5m": 100,
+            "uptime_last_1d": 99.94949130528899,
+            "supports_implicit_caching": false,
+            "native_tools": {
+              "openrouter:bash": {
+                "type": "bash_20250124"
+              }
+            },
+            "supports_voice_cloning": false,
+            "supports_multiple_audio_references": false,
+            "supports_image_reference": false,
+            "latency_last_30m": null,
+            "throughput_last_30m": null
+          },
+          {
+            "name": "Azure | anthropic/claude-sonnet-5.5-20260928",
+            "model_id": "anthropic/claude-sonnet-5.5",
+            "model_name": "Anthropic: Claude Sonnet 5.5",
+            "context_length": 1000000,
+            "pricing": {
+              "prompt": "0.000002",
+              "completion": "0.00001",
+              "web_search": "0.01",
+              "input_cache_read": "0.0000002",
+              "input_cache_write": "0.0000025",
+              "input_cache_write_1h": "0.000004",
+              "discount": 0
+            },
+            "provider_name": "Azure",
+            "tag": "azure/global",
+            "quantization": "unknown",
+            "max_completion_tokens": 128000,
+            "max_prompt_tokens": null,
+            "supported_parameters": [
+              "reasoning",
+              "include_reasoning",
+              "structured_outputs",
+              "max_tokens",
+              "temperature",
+              "max_completion_tokens",
+              "tools",
+              "tool_choice",
+              "response_format",
+              "verbosity",
+              "stop",
+              "reasoning_effort"
+            ],
+            "supports_tool_choice": {
+              "none": true,
+              "auto": true,
+              "required": false,
+              "function": false
+            },
+            "status": 0,
+            "uptime_last_30m": 99.63778211200892,
+            "uptime_last_5m": 100,
+            "uptime_last_1d": 99.82558798650051,
+            "supports_implicit_caching": false,
+            "native_tools": {
+              "openrouter:bash": {
+                "type": "bash_20250124"
+              }
+            },
+            "supports_voice_cloning": false,
+            "supports_multiple_audio_references": false,
+            "supports_image_reference": false,
+            "latency_last_30m": null,
+            "throughput_last_30m": null
+          },
+          {
+            "name": "Claude Platform on AWS | anthropic/claude-sonnet-5.5-20260928",
+            "model_id": "anthropic/claude-sonnet-5.5",
+            "model_name": "Anthropic: Claude Sonnet 5.5",
+            "context_length": 1000000,
+            "pricing": {
+              "prompt": "0.000002",
+              "completion": "0.00001",
+              "web_search": "0.01",
+              "input_cache_read": "0.0000002",
+              "input_cache_write": "0.0000025",
+              "input_cache_write_1h": "0.000004",
+              "discount": 0
+            },
+            "provider_name": "Claude Platform on AWS",
+            "tag": "claude-on-aws",
+            "quantization": "unknown",
+            "max_completion_tokens": 128000,
+            "max_prompt_tokens": null,
+            "supported_parameters": [
+              "max_tokens",
+              "stop",
+              "reasoning",
+              "include_reasoning",
+              "tool_choice",
+              "tools",
+              "response_format",
+              "verbosity",
+              "reasoning_effort"
+            ],
+            "supports_tool_choice": {
+              "none": true,
+              "auto": true,
+              "required": false,
+              "function": false
+            },
+            "status": 0,
+            "uptime_last_30m": 99.96261856922574,
+            "uptime_last_5m": 100,
+            "uptime_last_1d": 99.96930131716536,
+            "supports_implicit_caching": false,
+            "native_tools": {
+              "openrouter:web_search": {
+                "type": "web_search_20260209"
+              },
+              "openrouter:web_fetch": {
+                "type": "web_fetch_20260209"
+              },
+              "openrouter:bash": {
+                "type": "bash_20250124"
+              },
+              "openrouter:advisor": {
+                "type": "advisor_20260301"
+              }
+            },
+            "supports_voice_cloning": false,
+            "supports_multiple_audio_references": false,
+            "supports_image_reference": false,
+            "latency_last_30m": null,
+            "throughput_last_30m": null
+          },
+          {
+            "name": "Anthropic | anthropic/claude-sonnet-5.5-20260928",
+            "model_id": "anthropic/claude-sonnet-5.5",
+            "model_name": "Anthropic: Claude Sonnet 5.5",
+            "context_length": 1000000,
+            "pricing": {
+              "prompt": "0.000002",
+              "completion": "0.00001",
+              "web_search": "0.01",
+              "input_cache_read": "0.0000002",
+              "input_cache_write": "0.0000025",
+              "input_cache_write_1h": "0.000004",
+              "discount": 0
+            },
+            "provider_name": "Anthropic",
+            "tag": "anthropic",
+            "quantization": "unknown",
+            "max_completion_tokens": 128000,
+            "max_prompt_tokens": null,
+            "supported_parameters": [
+              "max_tokens",
+              "stop",
+              "reasoning",
+              "include_reasoning",
+              "tools",
+              "tool_choice",
+              "structured_outputs",
+              "response_format",
+              "verbosity",
+              "reasoning_effort"
+            ],
+            "supports_tool_choice": {
+              "none": true,
+              "auto": true,
+              "required": false,
+              "function": false
+            },
+            "status": 0,
+            "uptime_last_30m": 99.55817378497791,
+            "uptime_last_5m": 100,
+            "uptime_last_1d": 99.97600692010936,
+            "supports_implicit_caching": false,
+            "native_tools": {
+              "openrouter:web_search": {
+                "type": "web_search_20260209"
+              },
+              "openrouter:web_fetch": {
+                "type": "web_fetch_20260209"
+              },
+              "openrouter:bash": {
+                "type": "bash_20250124"
+              },
+              "openrouter:advisor": {
+                "type": "advisor_20260301"
+              }
+            },
+            "supports_voice_cloning": false,
+            "supports_multiple_audio_references": false,
+            "supports_image_reference": false,
+            "latency_last_30m": null,
+            "throughput_last_30m": null
+          },
+          {
+            "name": "Google | anthropic/claude-sonnet-5.5-20260928",
+            "model_id": "anthropic/claude-sonnet-5.5",
+            "model_name": "Anthropic: Claude Sonnet 5.5",
+            "context_length": 1000000,
+            "pricing": {
+              "prompt": "0.0000022",
+              "completion": "0.000011",
+              "web_search": "0.01",
+              "input_cache_read": "0.00000022",
+              "input_cache_write": "0.00000275",
+              "input_cache_write_1h": "0.0000044",
+              "discount": 0
+            },
+            "provider_name": "Google",
+            "tag": "google-vertex/us",
+            "quantization": "unknown",
+            "max_completion_tokens": 128000,
+            "max_prompt_tokens": null,
+            "supported_parameters": [
+              "max_tokens",
+              "stop",
+              "reasoning",
+              "include_reasoning",
+              "tool_choice",
+              "tools",
+              "response_format",
+              "verbosity",
+              "structured_outputs",
+              "reasoning_effort"
+            ],
+            "supports_tool_choice": {
+              "none": true,
+              "auto": true,
+              "required": false,
+              "function": false
+            },
+            "status": 0,
+            "uptime_last_30m": null,
+            "uptime_last_5m": null,
+            "uptime_last_1d": 99.94327850255247,
+            "supports_implicit_caching": false,
+            "native_tools": {
+              "openrouter:bash": {
+                "type": "bash_20250124"
+              }
+            },
+            "supports_voice_cloning": false,
+            "supports_multiple_audio_references": false,
+            "supports_image_reference": false,
+            "latency_last_30m": null,
+            "throughput_last_30m": null
+          },
+          {
+            "name": "Azure | anthropic/claude-sonnet-5.5-20260928",
+            "model_id": "anthropic/claude-sonnet-5.5",
+            "model_name": "Anthropic: Claude Sonnet 5.5",
+            "context_length": 1000000,
+            "pricing": {
+              "prompt": "0.0000022",
+              "completion": "0.000011",
+              "web_search": "0.01",
+              "input_cache_read": "0.00000022",
+              "input_cache_write": "0.00000275",
+              "input_cache_write_1h": "0.0000044",
+              "discount": 0
+            },
+            "provider_name": "Azure",
+            "tag": "azure/us",
+            "quantization": "unknown",
+            "max_completion_tokens": 128000,
+            "max_prompt_tokens": null,
+            "supported_parameters": [
+              "reasoning",
+              "include_reasoning",
+              "structured_outputs",
+              "max_tokens",
+              "temperature",
+              "max_completion_tokens",
+              "tools",
+              "tool_choice",
+              "response_format",
+              "verbosity",
+              "stop",
+              "reasoning_effort"
+            ],
+            "supports_tool_choice": {
+              "none": true,
+              "auto": true,
+              "required": false,
+              "function": false
+            },
+            "status": 0,
+            "uptime_last_30m": null,
+            "uptime_last_5m": null,
+            "uptime_last_1d": 100,
+            "supports_implicit_caching": false,
+            "native_tools": {
+              "openrouter:bash": {
+                "type": "bash_20250124"
+              }
+            },
+            "supports_voice_cloning": false,
+            "supports_multiple_audio_references": false,
+            "supports_image_reference": false,
+            "latency_last_30m": null,
+            "throughput_last_30m": null
+          },
+          {
+            "name": "Google | anthropic/claude-sonnet-5.5-20260928",
+            "model_id": "anthropic/claude-sonnet-5.5",
+            "model_name": "Anthropic: Claude Sonnet 5.5",
+            "context_length": 1000000,
+            "pricing": {
+              "prompt": "0.0000022",
+              "completion": "0.000011",
+              "web_search": "0.01",
+              "input_cache_read": "0.00000022",
+              "input_cache_write": "0.00000275",
+              "input_cache_write_1h": "0.0000044",
+              "discount": 0
+            },
+            "provider_name": "Google",
+            "tag": "google-vertex/europe",
+            "quantization": "unknown",
+            "max_completion_tokens": 128000,
+            "max_prompt_tokens": null,
+            "supported_parameters": [
+              "max_tokens",
+              "stop",
+              "reasoning",
+              "include_reasoning",
+              "tool_choice",
+              "tools",
+              "response_format",
+              "verbosity",
+              "structured_outputs",
+              "reasoning_effort"
+            ],
+            "supports_tool_choice": {
+              "none": true,
+              "auto": true,
+              "required": false,
+              "function": false
+            },
+            "status": 0,
+            "uptime_last_30m": 100,
+            "uptime_last_5m": null,
+            "uptime_last_1d": 99.99504656231424,
+            "supports_implicit_caching": false,
+            "native_tools": {
+              "openrouter:bash": {
+                "type": "bash_20250124"
+              }
+            },
+            "supports_voice_cloning": false,
+            "supports_multiple_audio_references": false,
+            "supports_image_reference": false,
+            "latency_last_30m": null,
+            "throughput_last_30m": null
+          }
+        ]
+      }
+    },
+    "google/gemini-3.8-flash": {
+      "data": {
+        "id": "google/gemini-3.8-flash",
+        "name": "Google: Gemini 3.8 Flash",
+        "created": 1788362056,
+        "description": "Gemini 3.8 Flash is Google's most intelligent Flash model with significant gains from 3.7 Flash across software engineering, agentic tasks, and multi-step reasoning.",
+        "architecture": {
+          "tokenizer": "Gemini",
+          "instruct_type": null,
+          "modality": "text+image+file+audio+video->text",
+          "input_modalities": [
+            "text",
+            "image",
+            "video",
+            "file",
+            "audio"
+          ],
+          "output_modalities": [
+            "text"
+          ]
+        },
+        "endpoints": [
+          {
+            "name": "Google AI Studio | google/gemini-3.8-flash-20260902",
+            "model_id": "google/gemini-3.8-flash",
+            "model_name": "Google: Gemini 3.8 Flash",
+            "context_length": 1048576,
+            "pricing": {
+              "prompt": "0.000000375",
+              "completion": "0.000001875",
+              "image": "0.000000375",
+              "audio": "0.000000375",
+              "input_audio_cache": "0.0000000375",
+              "web_search": "0.014",
+              "internal_reasoning": "0.000001875",
+              "input_cache_read": "0.0000000375",
+              "input_cache_write": "0.0000000208333333333333",
+              "discount": 0.5
+            },
+            "provider_name": "Google AI Studio",
+            "tag": "google-ai-studio/flex",
+            "quantization": "unknown",
+            "max_completion_tokens": 65536,
+            "max_prompt_tokens": null,
+            "supported_parameters": [
+              "reasoning",
+              "include_reasoning",
+              "max_tokens",
+              "temperature",
+              "top_p",
+              "seed",
+              "response_format",
+              "structured_outputs",
+              "tool_choice",
+              "tools",
+              "reasoning_effort"
+            ],
+            "supports_tool_choice": {
+              "none": true,
+              "auto": true,
+              "required": true,
+              "function": true
+            },
+            "status": 0,
+            "uptime_last_30m": 99.98284734133792,
+            "uptime_last_5m": 99.93016759776536,
+            "uptime_last_1d": 99.41043129590264,
+            "supports_implicit_caching": true,
+            "native_tools": {
+              "openrouter:web_search": {
+                "type": "google_search"
+              }
+            },
+            "supports_voice_cloning": false,
+            "supports_multiple_audio_references": false,
+            "supports_image_reference": false,
+            "latency_last_30m": null,
+            "throughput_last_30m": null
+          },
+          {
+            "name": "Google | google/gemini-3.8-flash-20260902",
+            "model_id": "google/gemini-3.8-flash",
+            "model_name": "Google: Gemini 3.8 Flash",
+            "context_length": 1048576,
+            "pricing": {
+              "prompt": "0.000000375",
+              "completion": "0.000001875",
+              "image": "0.000000375",
+              "audio": "0.000000375",
+              "input_audio_cache": "0.0000000375",
+              "web_search": "0.014",
+              "internal_reasoning": "0.000001875",
+              "input_cache_read": "0.0000000375",
+              "input_cache_write": "0.0000000208333333333333",
+              "discount": 0.5
+            },
+            "provider_name": "Google",
+            "tag": "google-vertex/global/flex",
+            "quantization": "unknown",
+            "max_completion_tokens": 65536,
+            "max_prompt_tokens": null,
+            "supported_parameters": [
+              "reasoning",
+              "include_reasoning",
+              "max_tokens",
+              "seed",
+              "response_format",
+              "stop",
+              "structured_outputs",
+              "tools",
+              "tool_choice",
+              "reasoning_effort"
+            ],
+            "supports_tool_choice": {
+              "none": true,
+              "auto": true,
+              "required": true,
+              "function": true
+            },
+            "status": 0,
+            "uptime_last_30m": 98.24175824175823,
+            "uptime_last_5m": 97.31543624161074,
+            "uptime_last_1d": 98.21670939526467,
+            "supports_implicit_caching": true,
+            "native_tools": {
+              "openrouter:web_search": {
+                "type": "google_search"
+              }
+            },
+            "supports_voice_cloning": false,
+            "supports_multiple_audio_references": false,
+            "supports_image_reference": false,
+            "latency_last_30m": null,
+            "throughput_last_30m": null
+          },
+          {
+            "name": "Google AI Studio | google/gemini-3.8-flash-20260902",
+            "model_id": "google/gemini-3.8-flash",
+            "model_name": "Google: Gemini 3.8 Flash",
+            "context_length": 1048576,
+            "pricing": {
+              "prompt": "0.00000075",
+              "completion": "0.00000375",
+              "image": "0.00000075",
+              "audio": "0.00000075",
+              "input_audio_cache": "0.000000075",
+              "web_search": "0.014",
+              "internal_reasoning": "0.00000375",
+              "input_cache_read": "0.000000075",
+              "input_cache_write": "0.0000000416666666666667",
+              "discount": 0.5
+            },
+            "provider_name": "Google AI Studio",
+            "tag": "google-ai-studio",
+            "quantization": "unknown",
+            "max_completion_tokens": 65536,
+            "max_prompt_tokens": null,
+            "supported_parameters": [
+              "reasoning",
+              "include_reasoning",
+              "max_tokens",
+              "temperature",
+              "top_p",
+              "seed",
+              "response_format",
+              "structured_outputs",
+              "tool_choice",
+              "tools",
+              "reasoning_effort"
+            ],
+            "supports_tool_choice": {
+              "none": true,
+              "auto": true,
+              "required": true,
+              "function": true
+            },
+            "status": 0,
+            "uptime_last_30m": 99.82217067749106,
+            "uptime_last_5m": 99.84749123074576,
+            "uptime_last_1d": 99.7334715097438,
+            "supports_implicit_caching": true,
+            "native_tools": {
+              "openrouter:web_search": {
+                "type": "google_search"
+              }
+            },
+            "supports_voice_cloning": false,
+            "supports_multiple_audio_references": false,
+            "supports_image_reference": false,
+            "latency_last_30m": null,
+            "throughput_last_30m": null
+          },
+          {
+            "name": "Google | google/gemini-3.8-flash-20260902",
+            "model_id": "google/gemini-3.8-flash",
+            "model_name": "Google: Gemini 3.8 Flash",
+            "context_length": 1048576,
+            "pricing": {
+              "prompt": "0.00000075",
+              "completion": "0.00000375",
+              "image": "0.00000075",
+              "audio": "0.00000075",
+              "input_audio_cache": "0.000000075",
+              "web_search": "0.014",
+              "internal_reasoning": "0.00000375",
+              "input_cache_read": "0.000000075",
+              "input_cache_write": "0.0000000416666666666667",
+              "discount": 0.5
+            },
+            "provider_name": "Google",
+            "tag": "google-vertex/global",
+            "quantization": "unknown",
+            "max_completion_tokens": 65536,
+            "max_prompt_tokens": null,
+            "supported_parameters": [
+              "reasoning",
+              "include_reasoning",
+              "max_tokens",
+              "seed",
+              "response_format",
+              "stop",
+              "structured_outputs",
+              "tools",
+              "tool_choice",
+              "reasoning_effort"
+            ],
+            "supports_tool_choice": {
+              "none": true,
+              "auto": true,
+              "required": true,
+              "function": true
+            },
+            "status": -2,
+            "uptime_last_30m": 94.77095301222566,
+            "uptime_last_5m": 97.72425564194955,
+            "uptime_last_1d": 96.71325352836642,
+            "supports_implicit_caching": true,
+            "native_tools": {
+              "openrouter:web_search": {
+                "type": "google_search"
+              }
+            },
+            "supports_voice_cloning": false,
+            "supports_multiple_audio_references": false,
+            "supports_image_reference": false,
+            "latency_last_30m": null,
+            "throughput_last_30m": null
+          },
+          {
+            "name": "Google AI Studio | google/gemini-3.8-flash-20260902",
+            "model_id": "google/gemini-3.8-flash",
+            "model_name": "Google: Gemini 3.8 Flash",
+            "context_length": 1048576,
+            "pricing": {
+              "prompt": "0.00000135",
+              "completion": "0.00000675",
+              "image": "0.00000135",
+              "audio": "0.00000135",
+              "input_audio_cache": "0.000000135",
+              "web_search": "0.014",
+              "internal_reasoning": "0.00000675",
+              "input_cache_read": "0.000000135",
+              "input_cache_write": "0.000000075",
+              "discount": 0.5
+            },
+            "provider_name": "Google AI Studio",
+            "tag": "google-ai-studio/priority",
+            "quantization": "unknown",
+            "max_completion_tokens": 65536,
+            "max_prompt_tokens": null,
+            "supported_parameters": [
+              "reasoning",
+              "include_reasoning",
+              "max_tokens",
+              "temperature",
+              "top_p",
+              "seed",
+              "response_format",
+              "structured_outputs",
+              "tool_choice",
+              "tools",
+              "reasoning_effort"
+            ],
+            "supports_tool_choice": {
+              "none": true,
+              "auto": true,
+              "required": true,
+              "function": true
+            },
+            "status": 0,
+            "uptime_last_30m": 99.92418498862776,
+            "uptime_last_5m": 100,
+            "uptime_last_1d": 99.8877451603338,
+            "supports_implicit_caching": true,
+            "native_tools": {
+              "openrouter:web_search": {
+                "type": "google_search"
+              }
+            },
+            "supports_voice_cloning": false,
+            "supports_multiple_audio_references": false,
+            "supports_image_reference": false,
+            "latency_last_30m": null,
+            "throughput_last_30m": null
+          },
+          {
+            "name": "Google | google/gemini-3.8-flash-20260902",
+            "model_id": "google/gemini-3.8-flash",
+            "model_name": "Google: Gemini 3.8 Flash",
+            "context_length": 1048576,
+            "pricing": {
+              "prompt": "0.00000135",
+              "completion": "0.00000675",
+              "image": "0.00000135",
+              "audio": "0.00000135",
+              "input_audio_cache": "0.000000135",
+              "web_search": "0.014",
+              "internal_reasoning": "0.00000675",
+              "input_cache_read": "0.000000135",
+              "input_cache_write": "0.000000075",
+              "discount": 0.5
+            },
+            "provider_name": "Google",
+            "tag": "google-vertex/global/priority",
+            "quantization": "unknown",
+            "max_completion_tokens": 65536,
+            "max_prompt_tokens": null,
+            "supported_parameters": [
+              "reasoning",
+              "include_reasoning",
+              "max_tokens",
+              "seed",
+              "response_format",
+              "stop",
+              "structured_outputs",
+              "tools",
+              "tool_choice",
+              "reasoning_effort"
+            ],
+            "supports_tool_choice": {
+              "none": true,
+              "auto": true,
+              "required": true,
+              "function": true
+            },
+            "status": 0,
+            "uptime_last_30m": 100,
+            "uptime_last_5m": null,
+            "uptime_last_1d": 98.85814216644378,
+            "supports_implicit_caching": true,
+            "native_tools": {
+              "openrouter:web_search": {
+                "type": "google_search"
+              }
+            },
+            "supports_voice_cloning": false,
+            "supports_multiple_audio_references": false,
+            "supports_image_reference": false,
+            "latency_last_30m": null,
+            "throughput_last_30m": null
+          }
+        ]
+      }
+    }
+  },
+  "documentation": [
+    "https://openrouter.ai/docs/guides/best-practices/reasoning-tokens",
+    "https://openrouter.ai/docs/guides/routing/provider-selection",
+    "https://developers.openai.com/api/docs/guides/latest-model"
+  ]
+}
