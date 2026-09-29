@@ -71,7 +71,7 @@ def post(body, key):
 
 def validate_response(result):
     model = result.get('model', '')
-    if not (model == MODEL or model.startswith(MODEL + '-')):
+    if not isinstance(model, str) or not (model == MODEL or model.startswith(MODEL + '-')):
         return 'unexpected_model'
     if result.get('provider') != 'TypeSafe':
         return 'unexpected_provider'
@@ -246,8 +246,8 @@ def summarize(rows, bank, manifest):
         'latency_seconds': {'p50': statistics.median(latency) if latency else None,
             'p95': latency[math.ceil(.95*len(latency))-1] if latency else None},
         'usage_totals': {k: sum(r['usage'].get(k, 0) or 0 for r in rows) for k in ('input_tokens', 'output_tokens', 'cost')},
-        'models': dict(collections.Counter(r.get('resolved_model') for r in rows if r.get('attempted'))),
-        'providers': dict(collections.Counter(r.get('provider') for r in rows if r.get('attempted'))),
+        'models': dict(collections.Counter(r.get('resolved_model') or '[missing]' for r in rows if r.get('attempted'))),
+        'providers': dict(collections.Counter(r.get('provider') or '[missing]' for r in rows if r.get('attempted'))),
         'reasoning_counter_present_calls': sum('reasoning_tokens' in r['usage'] or
             'reasoning_tokens' in r['usage'].get('completion_tokens_details', {}) for r in rows),
         'decision': {'reliable': reliable, 'readout_calibration_passed': calibrated,

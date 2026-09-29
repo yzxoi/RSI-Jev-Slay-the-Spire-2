@@ -1,7 +1,7 @@
 # E116 — Minimal multi-seed decision benchmark on Jev
 
 Issue: [#222](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/222).
-Status: preregistered exploratory pilot; results pending. No native game actions.
+Status: preregistered exploratory pilot; fixture validation passed, model results pending. No native game actions.
 
 ## Objective and hypothesis
 
@@ -35,13 +35,20 @@ Call assistance an **exploratory promising signal** only if API validity >=95%, 
 ## Reproduction and iteration log
 
 1. Commit generator, bounded runner, tests and protocol before evaluation.
-2. `python3 -m unittest discover -s tests -p 'test_minimal_decision.py' -v`
+2. `python3 -m unittest discover -s tests -p 'test_minimal*.py' -v`
 3. `python3 scripts/benchmark_minimal_e116.py freeze`
 4. Commit `fixtures.json`; the subsequent manifest records the exact tested SHA and fixture hash.
 5. `python3 scripts/benchmark_minimal_e116.py run --env-file /absolute/path/to/ignored/.env --output artifacts/runs/e116-pilot-v1 --execute`
 6. `python3 scripts/benchmark_minimal_e116.py audit --output artifacts/runs/e116-pilot-v1`
 
 Raw request/response events live under ignored `artifacts/runs/e116-pilot-v1/`. Publish compact rows, summary, manifest and hash audit after checking them; never publish credentials. The fixture bank contains only generated synthetic data and may be public. Bootstrap seed and randomized request order are fixed. No retry/resume can silently overwrite an existing output directory.
+
+### Preflight iteration
+
+- Implementation SHA `9af05ad`: all six world/solver tests passed (including exhaustive routes on horizons 4/8).
+- Freeze: 36 accepted worlds in 51 attempts; 7,308 independent forward-value checks passed; all 216 labels balanced by horizon/condition. Fixture file SHA-256: `6e096ca0932004a080fc80563895982fb84ecdedf8c53443d34b02f95c47d069`.
+- Inspection confirmed an important limitation before model testing: on longer graphs, most consequential later decisions lie near the end. For H=16 they lie in layers 12–15; intervening branch choices often tie. We retain these fixtures and will not interpret H as number of consequential decisions.
+- Before the paid run, harden missing-model failure handling and JSON-stable missing-provider summaries; add mocked billing, failure-stop and total-deadline checks. No paid calls or outcome-driven changes have occurred.
 
 ## Interpretation boundaries and related work
 
