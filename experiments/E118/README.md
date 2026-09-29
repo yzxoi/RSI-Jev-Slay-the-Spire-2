@@ -104,3 +104,18 @@ python3 scripts/resume_shallow_e118.py run --execute \
   --env-file /Users/yzxoi/RSI-Jev-Slay-the-Spire-2/.env
 python3 scripts/resume_shallow_e118.py audit
 ```
+
+### Iteration 4 — final bounded transport-error classification repair
+
+Iteration 2 completed and audited: 247 physical attempts including reused Jev, 240 valid, known cost $0.577391396, unknown reservations $0.518262080. Kimi stopped at 84/104 after one 60-second timeout. Iteration 3 tested SHA `1aedb9d901a7b444b6afe841193650705267f17a`: all 13 tests passed, then only 15 new calls were made. DeepSeek stopped at 48/104 on `IncompleteRead`; Qwen at 22/104 on `RemoteDisconnected`. The narrow timeout-only classifier correctly did not clear those different errors. Both continuation audits passed; failed cells and original trace bytes were preserved. No correctness-based selection or retries occurred.
+
+Final infrastructure repair: recognize only parent-process timeout, TimeoutError, IncompleteRead and RemoteDisconnected as transport failures. Preserve every failed cell, every full unknown-billing reservation, all original caps and the 1500-second cumulative active deadline. The THIRD total recognized transport failure stops its configuration; no further relaxation in this experiment. Provider refusals remain terminal. All other invalid-response and spending exits remain. Only unstarted cells are eligible: DeepSeek 56, Qwen 82, Kimi 20 (maximum 158 additional requests). Kimi receives the same policy; it was still running when iteration 3 was frozen.
+
+Audited sources compose `e118-combined-v3` from original `e118-pilot-v2` plus the two stopped `e118-supplement-v3` prefixes. The source prefixes retain original bytes and results. Continuation implementation captures its SHA at start, and the top manifest remains the authoritative executed-code provenance for each phase. The original runner and request/scoring code are unchanged. Both strict-stop and amended outcomes will be published; this is an explicitly amended exploratory protocol, not an untouched confirmatory run.
+
+```bash
+python3 -m unittest discover -s tests -p 'test_shallow*.py' -v
+python3 scripts/resume_shallow_e118.py audit --source artifacts/runs/e118-pilot-v2 --output artifacts/runs/e118-supplement-v3
+python3 scripts/resume_shallow_e118.py run --execute --env-file /Users/yzxoi/RSI-Jev-Slay-the-Spire-2/.env
+python3 scripts/resume_shallow_e118.py audit
+```

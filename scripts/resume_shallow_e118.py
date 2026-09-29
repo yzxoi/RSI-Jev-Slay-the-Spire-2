@@ -17,6 +17,21 @@ from rsi.shallow_bench import CONFIGS, digest, canonical, request_body, reservat
 TIMEOUT = 'total_http_deadline_60s'
 
 
+def transport_error(error):
+    return error == TIMEOUT or (isinstance(error,str) and error.startswith(
+        ('IncompleteRead:', 'RemoteDisconnected:', 'TimeoutError:')))
+
+
+def settle_transport(ledger, reserve, row, failures):
+    ledger.settle(reserve,row['usage'].get('cost'),row['valid'])
+    failures += transport_error(row.get('error'))
+    if (ledger.stop == 'unknown_billing' and transport_error(row.get('error')) and failures < 3
+            and ledger.consecutive_invalid < 3
+            and (ledger.calls < 20 or ledger.invalid/ledger.calls <= .1)):
+        ledger.stop = None
+    return failures
+
+
 def settle_timeout(ledger, reserve, row, timeouts):
     ledger.settle(reserve, row['usage'].get('cost'), row['valid'])
     timeouts += row.get('error') == TIMEOUT
@@ -39,7 +54,7 @@ def read_source(source, config, bank):
     assert top['configurations'][config] == CONFIGS[config]
     assert manifest['trace_sha256'] == base.sha_file(folder/'trace.jsonl')
     assert manifest['ledger']['stop'] == 'unknown_billing'
-    assert events[-1]['reply'].get('error') == TIMEOUT, 'Only a transport timeout can be resumed'
+    assert transport_error(events[-1]['reply'].get('error')), 'Only a recognized transport failure can be resumed'
     ledger = base.Ledger(CONFIGS[config]['cap'])
     items = {i['id']:i for i in bank['items']}
     for n in range(0,len(events),2):
@@ -51,10 +66,17 @@ def read_source(source, config, bank):
         assert rows[idx]['response_sha256']==digest(res['reply'])
         assert all(rows[idx][k]==v for k,v in base.score(config,items[cell['item_id']],cell['task'],res['reply']).items())
         reserve = reservation(config,body)
+        if ledger.stop:
+            # Previously audited continuation boundaries; never replay a failed request.
+            assert transport_error(rows[idx-1].get('error'))
+            assert sum(transport_error(r.get('error')) for r in rows[:idx]) < 3
+            assert ledger.consecutive_invalid < 3 and (ledger.calls < 20 or ledger.invalid/ledger.calls <= .1)
+            ledger.stop=None
         assert reserve==req['reservation'] and ledger.acquire(reserve)
         ledger.settle(reserve,rows[idx]['usage'].get('cost'),rows[idx]['valid'])
     assert ledger.as_dict()==manifest['ledger']
     assert len(rows)==104 and all(not r.get('attempted') for r in rows[ledger.calls:])
+    assert sum(transport_error(r.get('error')) for r in rows[:ledger.calls]) < 3
     return manifest, rows, raw, ledger
 
 
@@ -62,7 +84,8 @@ def continue_config(config, bank, source, out, key):
     old, rows, raw, ledger = read_source(source, config, bank)
     initial_calls = ledger.calls
     ledger.stop = None
-    timeouts = 1
+    failures = sum(transport_error(r.get('error')) for r in rows[:initial_calls])
+    tested_sha = subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
     folder = out/config; folder.mkdir()
     items = {i['id']:i for i in bank['items']}
     started = time.monotonic()
@@ -84,14 +107,15 @@ def continue_config(config, bank, source, out, key):
             row = base.score(config,item,task,reply)
             row.update(attempted=True,seconds=seconds,request_sha256=digest(body),response_sha256=digest(reply))
             rows[idx] = row
-            timeouts = settle_timeout(ledger,reserve,row,timeouts)
+            failures = settle_transport(ledger,reserve,row,failures)
             if ledger.calls%8==0 or ledger.stop:
                 print(canonical(dict(config=config,completed=ledger.calls,new_calls=ledger.calls-initial_calls,
                     cost=ledger.cost,unknown_reserved=ledger.unknown_reserved,invalid=ledger.invalid,stop=ledger.stop)),flush=True)
     manifest = dict(config=config,ledger=ledger.as_dict(),elapsed_seconds=old['elapsed_seconds']+time.monotonic()-started,
         continuation_elapsed_seconds=time.monotonic()-started,trace_sha256=base.sha_file(folder/'trace.jsonl'),
         initial_calls=initial_calls,source_manifest=old,source_manifest_sha256=base.sha_file(source/config/'manifest.json'),
-        tested_sha=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),timeouts=timeouts)
+        tested_sha=tested_sha,policy_version=2,transport_errors=failures,
+        timeouts=sum(r.get('error')==TIMEOUT for r in rows if r.get('attempted')))
     base.write_json(folder/'rows.json',rows); base.write_json(folder/'manifest.json',manifest)
     return manifest
 
@@ -105,7 +129,9 @@ def audit_config(config, bank, source, out):
     assert trace.startswith(raw) and final['trace_sha256']==base.sha_file(folder/'trace.jsonl')
     assert rows[:ledger.calls]==original[:ledger.calls], 'Previously attempted cells must remain untouched'
     events=[json.loads(x) for x in trace[len(raw):].splitlines()]
-    items={i['id']:i for i in bank['items']}; timeouts=1; ledger.stop=None
+    items={i['id']:i for i in bank['items']}; ledger.stop=None
+    policy=final.get('policy_version',1)
+    counter=sum((transport_error(r.get('error')) if policy==2 else r.get('error')==TIMEOUT) for r in original[:ledger.calls])
     for n in range(0,len(events),2):
         req,res=events[n:n+2]; idx=final['initial_calls']+n//2; cell=bank['schedule'][idx]
         assert req['kind']=='request' and res['kind']=='response'
@@ -115,9 +141,9 @@ def audit_config(config, bank, source, out):
         assert rows[idx]['response_sha256']==digest(res['reply'])
         assert all(rows[idx][k]==v for k,v in base.score(config,items[cell['item_id']],cell['task'],res['reply']).items())
         assert reserve==req['reservation'] and ledger.acquire(reserve)
-        timeouts=settle_timeout(ledger,reserve,rows[idx],timeouts)
+        counter=(settle_transport if policy==2 else settle_timeout)(ledger,reserve,rows[idx],counter)
     assert len(rows)==104 and sum(r.get('attempted',False) for r in rows)==ledger.calls
-    assert timeouts==final['timeouts']
+    assert counter==final['transport_errors' if policy==2 else 'timeouts']
     for k in ('cost','unknown_reserved','invalid','consecutive_invalid','calls','cap'):
         assert ledger.as_dict()[k]==final['ledger'][k]
     assert ledger.cost+ledger.unknown_reserved <= CONFIGS[config]['cap']
@@ -129,9 +155,9 @@ def audit_config(config, bank, source, out):
 def main():
     p=argparse.ArgumentParser(__doc__)
     p.add_argument('command',choices=('run','audit'))
-    p.add_argument('--source',type=Path,default=ROOT/'artifacts/runs/e118-pilot-v2')
-    p.add_argument('--output',type=Path,default=ROOT/'artifacts/runs/e118-supplement-v3')
-    p.add_argument('--configs',nargs='+',default=['deepseek_low','qwen_low'])
+    p.add_argument('--source',type=Path,default=ROOT/'artifacts/runs/e118-combined-v3')
+    p.add_argument('--output',type=Path,default=ROOT/'artifacts/runs/e118-supplement-v4')
+    p.add_argument('--configs',nargs='+',default=['deepseek_low','qwen_low','kimi_low'])
     p.add_argument('--env-file',default=str(ROOT/'.env'))
     p.add_argument('--execute',action='store_true')
     a=p.parse_args(); bank=json.loads((ROOT/'experiments/E118/fixtures.json').read_text());base.verify_bank(bank)
@@ -141,19 +167,19 @@ def main():
         report={c:audit_config(c,bank,a.source,a.output) for c in top['configs']}
         base.write_json(a.output/'audit.json',report);print(json.dumps(report,indent=2));return
     if not a.execute: raise SystemExit('--execute required')
-    if set(a.configs)-{'deepseek_low','qwen_low'} or len(set(a.configs))!=len(a.configs):
-        raise SystemExit('Only the preregistered two stopped configurations may resume')
+    if set(a.configs)-{'deepseek_low','qwen_low','kimi_low'} or not a.configs or len(set(a.configs))!=len(a.configs):
+        raise SystemExit('Only the preregistered stopped configurations may resume')
     if subprocess.check_output(['git','status','--porcelain','--untracked-files=no'],cwd=ROOT,text=True).strip():
         raise SystemExit('Commit tracked changes before evaluation')
     top=json.loads((a.source/'manifest.json').read_text())
     assert top['combined_conservative_ceiling']<=3
     for c in a.configs: read_source(a.source,c,bank)
     a.output.mkdir(parents=True,exist_ok=False)
-    manifest=dict(experiment='E118',iteration=3,tested_sha=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
+    manifest=dict(experiment='E118',iteration=4,policy_version=2,tested_sha=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
         bank_digest=digest(bank),fixture_sha256=base.sha_file(ROOT/'experiments/E118/fixtures.json'),configs=a.configs,
         source=str(a.source),source_config_tested_shas={c:top['config_tested_shas'][c] for c in a.configs},
         combined_conservative_ceiling=top['combined_conservative_ceiling'],failed_cell_retries=0,
-        max_tolerated_timeouts_per_configuration=2,cumulative_active_deadline_seconds=1500,python=sys.version)
+        max_tolerated_transport_failures_per_configuration=2,cumulative_active_deadline_seconds=1500,python=sys.version)
     base.write_json(a.output/'manifest.json',manifest);key=base.read_key(a.env_file)
     with concurrent.futures.ThreadPoolExecutor(max_workers=len(a.configs)) as pool:
         fs=[pool.submit(continue_config,c,bank,a.source,a.output,key) for c in a.configs]
