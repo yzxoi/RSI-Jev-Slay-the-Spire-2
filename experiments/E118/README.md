@@ -62,3 +62,28 @@ Tested SHA `1da4d7063e5be8d2a6f724d7a12d60925e2fa74d`. The command above finishe
 Jev root accuracy at H=1/2/4/8: 8/8, 7/8, 4/8, 3/8. Both prediction mappings correct: 8/8, 5/8, 4/8, 5/8. Readout 8/8. The preregistered passing prefix is H=1. No reasoning counters were supplied; this does not establish zero reasoning. Known reported cost $0.005833296; unresolved reservations from rejected requests $0.305812500. Audit passed all 108 request/response pairs and regenerated the frozen bank. Full sanitized rows, manifests, summary and audit are in `iteration-1/`; raw responses with account identifiers remain local.
 
 The user confirmed this account cannot use those providers and explicitly requested a different set. Next iteration will retain the same frozen bank, reuse all iteration-1 traces without new Jev calls, and test DeepSeek/Qwen/Kimi configurations within the original combined $3 ceiling. Model selection is based on provider access and public capabilities, not paid outcome-based prompt tuning. The Sol none-versus-low contrast is unavailable.
+
+### Iteration 2 protocol — authorized vendor replacement
+
+After the iteration-1 access failures, the user explicitly requested other model families. Keep all old configurations and evidence; do not retry rejected providers. No prompt, seed, scoring rule, request schedule, token cap or deadline changes. Three new configurations, at most 312 new requests, all reasoning effort `low`:
+
+| Configuration | Model / canonical snapshot | Pinned endpoint | Spending cap |
+|---|---|---|---:|
+| deepseek_low | deepseek/deepseek-v4.1-flash / 20260910 | deepinfra/fp8 | $0.25 |
+| qwen_low | qwen/qwen3.8-max-0902 / qwen3.8-max-20260902 | alibaba | $0.95 |
+| kimi_low | moonshotai/kimi-k3 / 20260715 | moonshotai/mxfp4 | $1.40 |
+
+Endpoints advertise structured outputs and reasoning effort; frozen public metadata is in `replacement-model-metadata.json`. DeepInfra is selected for DeepSeek because the first-party endpoint does not advertise structured outputs. Qwen input reservation uses $2.50/M including its higher cache-write price; Kimi uses $3/$15 per million prompt/completion tokens. No automatic fallback. Access is unconfirmed until each first control request.
+
+Audited iteration-1 outputs are copied unchanged into the continuation, with original tested SHA per configuration; Jev is not called again. Spend is counted once. New caps sum to $2.60; previous known cost plus retained unknown reservations is $0.311645796, giving a combined conservative ceiling $2.911645796, below the original $3. The runner rejects repeated configurations and any continuation exceeding that ceiling. The original audit remains reproducible using the original configuration snapshots. Compatibility failures remain unavailable measurements.
+
+```bash
+python3 -m unittest discover -s tests -p 'test_shallow_bench.py' -v
+python3 scripts/benchmark_shallow_e118.py audit --output artifacts/runs/e118-pilot-v1
+python3 scripts/benchmark_shallow_e118.py run --execute \
+  --configs deepseek_low qwen_low kimi_low \
+  --continue-from artifacts/runs/e118-pilot-v1 \
+  --env-file /Users/yzxoi/RSI-Jev-Slay-the-Spire-2/.env \
+  --output artifacts/runs/e118-pilot-v2
+python3 scripts/benchmark_shallow_e118.py audit --output artifacts/runs/e118-pilot-v2
+```

@@ -8,6 +8,7 @@ import math
 import os
 from pathlib import Path
 import platform
+import shutil
 import statistics
 import subprocess
 import sys
@@ -19,7 +20,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT/'scripts'))
 from benchmark_minimal_e116 import write_json, sha_file, read_key, cluster_ci
-from rsi.shallow_bench import (CONFIGS, HORIZONS, make_bank, verify_bank, canonical,
+from rsi.shallow_bench import (CONFIGS, INITIAL_CONFIGS, HORIZONS, make_bank, verify_bank, canonical,
     digest, request_body, reservation, parse_choice, truth)
 
 
@@ -169,9 +170,10 @@ def accuracy(rows):
 
 
 def summarize(bank, out):
+    configs = json.loads((out/'manifest.json').read_text())['configurations']
     results = {}
     all_rows = {}
-    for config in CONFIGS:
+    for config in configs:
         rows = json.loads((out/config/'rows.json').read_text()); all_rows[config] = rows
         lookup = {(r['item_id'], r['task']): r for r in rows}
         pairs = []
@@ -223,7 +225,7 @@ def summarize(bank, out):
             manifest=json.loads((out/config/'manifest.json').read_text()))
     base = {(r['item_id'],r['task']):r for r in all_rows['jev']}
     contrasts = {}
-    for config in CONFIGS:
+    for config in configs:
         if config == 'jev': continue
         diffs = [dict(seed=r['seed'],delta=int(r['correct'])-int(base[r['item_id'],r['task']]['correct']))
                  for r in all_rows[config] if r['task']=='choice' and r['horizon'] in (4,8)]
@@ -236,7 +238,7 @@ def summarize(bank, out):
     return dict(configurations=results, contrasts_vs_jev=contrasts,
         verification=verify_bank(bank), total_reported_cost_usd=sum(x['usage_totals']['cost'] for x in results.values()),
         total_unknown_reservation_usd=sum(x['manifest']['ledger']['unknown_reserved'] for x in results.values()),
-        planned_calls=520, attempted_calls=sum(r.get('attempted',False) for rs in all_rows.values() for r in rs),
+        planned_calls=104*len(configs), attempted_calls=sum(r.get('attempted',False) for rs in all_rows.values() for r in rs),
         valid_calls=sum(r['valid'] for rs in all_rows.values() for r in rs),
         limitations=['Exploratory eight seed clusters; paired mappings are not independent worlds.',
             'Model configurations differ in interface, reasoning and actual compute; not a compute-matched ranking.',
@@ -252,7 +254,8 @@ def audit(bank, out):
     verify_bank(bank)
     lookup = {i['id']:i for i in bank['items']}
     counts = {}
-    for config in CONFIGS:
+    for config, snapshot in top['configurations'].items():
+        assert snapshot == CONFIGS[config], 'Configuration changed since the run'
         folder = out/config
         rows = json.loads((folder/'rows.json').read_text())
         manifest = json.loads((folder/'manifest.json').read_text())
@@ -287,6 +290,28 @@ def audit(bank, out):
     return result
 
 
+def continuation_plan(source, bank, selected):
+    """Check previous spend and prohibit repeated inference before reading a key."""
+    if len(set(selected)) != len(selected) or not selected or any(c not in CONFIGS for c in selected):
+        raise ValueError('Unknown, duplicate or empty configuration selection')
+    prior = json.loads((source/'manifest.json').read_text()) if source else None
+    reused = prior['configurations'] if prior else {}
+    if set(selected) & set(reused):
+        raise ValueError('A continuation must not repeat any previous configuration')
+    if 'jev' not in set(selected) | set(reused):
+        raise ValueError('A measured Jev baseline is required')
+    spent = 0.
+    if prior:
+        assert prior['bank_digest'] == digest(bank)
+        audit(bank, source)
+        summary = json.loads((source/'summary.json').read_text())
+        spent = summary['total_reported_cost_usd'] + summary['total_unknown_reservation_usd']
+    ceiling = spent + sum(CONFIGS[c]['cap'] for c in selected)
+    if ceiling > 3 + 1e-9:
+        raise ValueError('Combined conservative budget exceeds $3')
+    return prior, dict(reused), spent, ceiling
+
+
 def main():
     p=argparse.ArgumentParser(__doc__)
     p.add_argument('command',choices=('freeze','run','audit','_worker'))
@@ -294,6 +319,8 @@ def main():
     p.add_argument('--output',default='artifacts/runs/e118-pilot-v1')
     p.add_argument('--env-file',default=str(ROOT/'.env'))
     p.add_argument('--execute',action='store_true')
+    p.add_argument('--configs', nargs='+', choices=tuple(CONFIGS), default=list(INITIAL_CONFIGS))
+    p.add_argument('--continue-from', type=Path)
     args=p.parse_args()
     if args.command=='_worker': return http_worker()
     if args.command=='freeze':
@@ -310,17 +337,29 @@ def main():
     if subprocess.check_output(['git','status','--porcelain','--untracked-files=no'],cwd=ROOT,text=True).strip():
         raise SystemExit('Tracked work must be committed before paid evaluation')
     subprocess.check_call(['git','ls-files','--error-unmatch',str(Path(args.bank).resolve().relative_to(ROOT))],cwd=ROOT,stdout=subprocess.DEVNULL)
+    prior, reused, spent, ceiling = continuation_plan(args.continue_from, bank, args.configs)
+    configs = {**reused, **{c:CONFIGS[c] for c in args.configs}}
     key=read_key(args.env_file)
     out.mkdir(parents=True,exist_ok=False)
+    for c in reused:
+        shutil.copytree(args.continue_from/c, out/c)
     manifest=dict(experiment='E118',tested_sha=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
         python=sys.version,platform=platform.platform(),bank_digest=digest(bank),fixture_sha256=sha_file(args.bank),
-        metadata_sha256=sha_file(ROOT/'experiments/E118/model-metadata.json'),configurations=CONFIGS,
-        total_budget_usd=3,planned_calls=520,workers=5,http_deadline_seconds=60,configuration_deadline_seconds=1500,
+        metadata_sha256=sha_file(ROOT/'experiments/E118/model-metadata.json'),configurations=configs,
+        total_budget_usd=3,planned_calls=104*len(configs),workers=len(args.configs),http_deadline_seconds=60,configuration_deadline_seconds=1500,
         start_utc=time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),automatic_retries=0)
+    manifest.update(active_configurations=args.configs, new_planned_calls=104*len(args.configs),
+        reused_configurations=list(reused), previous_cost_plus_reservations=spent, combined_conservative_ceiling=ceiling,
+        config_tested_shas={c:(prior.get('config_tested_shas',{}).get(c,prior['tested_sha']) if c in reused else manifest['tested_sha']) for c in configs})
+    if prior:
+        manifest['continuation_source'] = dict(path=str(args.continue_from),
+            manifest_sha256=sha_file(args.continue_from/'manifest.json'),
+            summary_sha256=sha_file(args.continue_from/'summary.json'))
+        manifest['replacement_metadata_sha256'] = sha_file(ROOT/'experiments/E118/replacement-model-metadata.json')
     write_json(out/'manifest.json',manifest)
     started=time.monotonic()
-    with concurrent.futures.ThreadPoolExecutor(max_workers=5) as pool:
-        futures=[pool.submit(run_config,c,bank,key,out) for c in CONFIGS]
+    with concurrent.futures.ThreadPoolExecutor(max_workers=len(args.configs)) as pool:
+        futures=[pool.submit(run_config,c,bank,key,out) for c in args.configs]
         for f in concurrent.futures.as_completed(futures):
             print(canonical({'configuration_done':f.result()}),flush=True)
     manifest.update(elapsed_seconds=time.monotonic()-started,

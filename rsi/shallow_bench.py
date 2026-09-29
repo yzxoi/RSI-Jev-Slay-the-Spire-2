@@ -20,7 +20,18 @@ CONFIGS = {
     'gemini_low': dict(model='google/gemini-3.8-flash', canonical='google/gemini-3.8-flash-20260902',
         provider='Google AI Studio', slug='google-ai-studio', ignore=['google-ai-studio/flex', 'google-ai-studio/priority'],
         cap=.50, effort='low', input_price=.00000075, output_price=.00000375, prompt_max=.75, completion_max=3.75),
+    'deepseek_low': dict(model='deepseek/deepseek-v4.1-flash', canonical='deepseek/deepseek-v4.1-flash-20260910',
+        provider='DeepInfra', slug='deepinfra/fp8', ignore=[],
+        cap=.25, effort='low', input_price=.00000014, output_price=.00000042, prompt_max=.14, completion_max=.42),
+    'qwen_low': dict(model='qwen/qwen3.8-max-0902', canonical='qwen/qwen3.8-max-20260902',
+        provider='Alibaba', slug='alibaba', ignore=[],
+        cap=.95, effort='low', input_price=.0000025, output_price=.000006, prompt_max=2, completion_max=6),
+    'kimi_low': dict(model='moonshotai/kimi-k3', canonical='moonshotai/kimi-k3-20260715',
+        provider='Moonshot AI', slug='moonshotai/mxfp4', ignore=[],
+        cap=1.40, effort='low', input_price=.000003, output_price=.000015, prompt_max=3, completion_max=15),
 }
+INITIAL_CONFIGS = ('jev', 'sol_none', 'sol_low', 'sonnet_low', 'gemini_low')
+REPLACEMENT_CONFIGS = ('deepseek_low', 'qwen_low', 'kimi_low')
 
 
 def generate(seed, h, root_label, route_truth):

@@ -3,10 +3,11 @@ import itertools
 import json
 from pathlib import Path
 import subprocess
+import tempfile
 import unittest
 from unittest.mock import patch
 
-from rsi.shallow_bench import (CONFIGS, make_bank, verify_bank, truth, question,
+from rsi.shallow_bench import (CONFIGS, INITIAL_CONFIGS, REPLACEMENT_CONFIGS, digest, make_bank, verify_bank, truth, question,
     request_body, parse_choice, reservation, canonical, solve, rollout)
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -60,7 +61,27 @@ class ShallowBenchTests(unittest.TestCase):
         self.assertTrue(a.acquire(.1)); a.settle(.1,None,False)
         self.assertEqual(a.unknown_reserved,.1)
         self.assertFalse(a.acquire(.1)); self.assertTrue(b.acquire(.1))
-        self.assertAlmostEqual(sum(c['cap'] for c in CONFIGS.values()),3.)
+        self.assertAlmostEqual(sum(CONFIGS[c]['cap'] for c in INITIAL_CONFIGS),3.)
+
+    def test_continuation_deduplicates_calls_and_accounts_unknown_spend(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            p=Path(tmp)
+            (p/'manifest.json').write_text(json.dumps({'configurations':{'jev':CONFIGS['jev']},'bank_digest':digest(self.bank)}))
+            (p/'summary.json').write_text(json.dumps({'total_reported_cost_usd':.006,'total_unknown_reservation_usd':.306}))
+            with patch.object(runner,'audit') as audit:
+                _,reused,spent,ceiling=runner.continuation_plan(p,self.bank,REPLACEMENT_CONFIGS)
+                audit.assert_called_once()
+                self.assertEqual(set(reused),{'jev'})
+                self.assertAlmostEqual(spent,.312)
+                self.assertAlmostEqual(ceiling,2.912)
+                with self.assertRaisesRegex(ValueError,'repeat'):
+                    runner.continuation_plan(p,self.bank,['jev'])
+                with self.assertRaisesRegex(ValueError,'budget'):
+                    runner.continuation_plan(p,self.bank,[*REPLACEMENT_CONFIGS,'sol_low'])
+        with self.assertRaisesRegex(ValueError,'baseline'):
+            runner.continuation_plan(None,self.bank,REPLACEMENT_CONFIGS)
+        with self.assertRaisesRegex(ValueError,'duplicate'):
+            runner.continuation_plan(None,self.bank,['jev','jev'])
 
     def test_ledger_deadline_budget_and_failure_exits(self):
         l=runner.Ledger(.1)
