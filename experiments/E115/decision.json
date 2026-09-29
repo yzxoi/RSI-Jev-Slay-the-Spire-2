@@ -1,0 +1,239 @@
+{
+  "experiment": "E115",
+  "tested_code_sha": "ad78b3cdb61d3b6227e78c5904765f0834c5ae67",
+  "audit_code_sha": "de69bfd",
+  "source_report_sha256": "6e2adadadba09be00a53ab4bfe5333eb5661e57bf6a8b1da9dd4138ef1c9c858",
+  "decision": "close_without_merge",
+  "promotion": false,
+  "reason": "Compatibility gate failed: one canonical selector error and two speculative replay errors; no Act 1 clears observed. Cohort b not started under the preregistered gate.",
+  "valid_pairs": 4,
+  "invalid_pairs": 1,
+  "paired_summary": {
+    "pairs": [
+      {
+        "character": "Ironclad",
+        "seed": "e115_act1_20260929_a",
+        "control": "defeat",
+        "search": "defeat",
+        "initial_parity": true,
+        "outcome": "tie"
+      },
+      {
+        "character": "Silent",
+        "seed": "e115_act1_20260929_a",
+        "control": "defeat",
+        "search": "defeat",
+        "initial_parity": true,
+        "outcome": "tie"
+      },
+      {
+        "character": "Defect",
+        "seed": "e115_act1_20260929_a",
+        "control": "defeat",
+        "search": "error",
+        "initial_parity": true,
+        "outcome": "invalid"
+      },
+      {
+        "character": "Regent",
+        "seed": "e115_act1_20260929_a",
+        "control": "defeat",
+        "search": "defeat",
+        "initial_parity": true,
+        "outcome": "tie"
+      },
+      {
+        "character": "Necrobinder",
+        "seed": "e115_act1_20260929_a",
+        "control": "defeat",
+        "search": "defeat",
+        "initial_parity": true,
+        "outcome": "tie"
+      }
+    ],
+    "paired_outcomes": {
+      "tie": 4,
+      "invalid": 1
+    },
+    "correctness_pass": false,
+    "branch_errors": 2,
+    "prediction_mismatches": 0,
+    "arms": {
+      "control": {
+        "statuses": {
+          "defeat": 5
+        },
+        "seconds": 57.91106454189867
+      },
+      "search": {
+        "statuses": {
+          "defeat": 4,
+          "error": 1
+        },
+        "seconds": 1756.713630666025
+      }
+    }
+  },
+  "probe_statuses": {
+    "clear": 686,
+    "timeout": 23,
+    "defeat": 24,
+    "error": 2
+  },
+  "probe_count": 735,
+  "verified_entries": 712,
+  "prefix_fraction_of_summed_probe_seconds": 0.9131458822742556,
+  "episode_time_ratio_search_to_control": 30.334680333756296,
+  "wall_seconds": 1036.1169383751694,
+  "canonical_predictions_verified": 485,
+  "prediction_mismatches": 0,
+  "search_coverage": [
+    {
+      "character": "Ironclad",
+      "first_budget_fallback": {
+        "floor": 8,
+        "round": 5,
+        "hp": 46
+      },
+      "comparison_rooms": {
+        "Monster": 32
+      }
+    },
+    {
+      "character": "Silent",
+      "first_budget_fallback": {
+        "floor": 11,
+        "round": 1,
+        "hp": 68
+      },
+      "comparison_rooms": {
+        "Monster": 30
+      }
+    },
+    {
+      "character": "Defect",
+      "first_budget_fallback": {
+        "floor": 11,
+        "round": 3,
+        "hp": 71
+      },
+      "comparison_rooms": {
+        "Monster": 36
+      }
+    },
+    {
+      "character": "Regent",
+      "first_budget_fallback": {
+        "floor": 13,
+        "round": 3,
+        "hp": 22
+      },
+      "comparison_rooms": {
+        "Monster": 31,
+        "Elite": 4
+      }
+    },
+    {
+      "character": "Necrobinder",
+      "first_budget_fallback": null,
+      "comparison_rooms": {
+        "Monster": 30,
+        "Elite": 5
+      }
+    }
+  ],
+  "not_started": [
+    {
+      "seed": "e115_act1_20260929_b",
+      "character": "Ironclad",
+      "ascension": 0,
+      "arm": "control",
+      "status": "not_started",
+      "reason": "cohort_a_compatibility_gate_failed"
+    },
+    {
+      "seed": "e115_act1_20260929_b",
+      "character": "Ironclad",
+      "ascension": 0,
+      "arm": "search",
+      "status": "not_started",
+      "reason": "cohort_a_compatibility_gate_failed"
+    },
+    {
+      "seed": "e115_act1_20260929_b",
+      "character": "Silent",
+      "ascension": 0,
+      "arm": "control",
+      "status": "not_started",
+      "reason": "cohort_a_compatibility_gate_failed"
+    },
+    {
+      "seed": "e115_act1_20260929_b",
+      "character": "Silent",
+      "ascension": 0,
+      "arm": "search",
+      "status": "not_started",
+      "reason": "cohort_a_compatibility_gate_failed"
+    },
+    {
+      "seed": "e115_act1_20260929_b",
+      "character": "Defect",
+      "ascension": 0,
+      "arm": "control",
+      "status": "not_started",
+      "reason": "cohort_a_compatibility_gate_failed"
+    },
+    {
+      "seed": "e115_act1_20260929_b",
+      "character": "Defect",
+      "ascension": 0,
+      "arm": "search",
+      "status": "not_started",
+      "reason": "cohort_a_compatibility_gate_failed"
+    },
+    {
+      "seed": "e115_act1_20260929_b",
+      "character": "Regent",
+      "ascension": 0,
+      "arm": "control",
+      "status": "not_started",
+      "reason": "cohort_a_compatibility_gate_failed"
+    },
+    {
+      "seed": "e115_act1_20260929_b",
+      "character": "Regent",
+      "ascension": 0,
+      "arm": "search",
+      "status": "not_started",
+      "reason": "cohort_a_compatibility_gate_failed"
+    },
+    {
+      "seed": "e115_act1_20260929_b",
+      "character": "Necrobinder",
+      "ascension": 0,
+      "arm": "control",
+      "status": "not_started",
+      "reason": "cohort_a_compatibility_gate_failed"
+    },
+    {
+      "seed": "e115_act1_20260929_b",
+      "character": "Necrobinder",
+      "ascension": 0,
+      "arm": "search",
+      "status": "not_started",
+      "reason": "cohort_a_compatibility_gate_failed"
+    }
+  ],
+  "follow_up_issues": {
+    "selection_reentrancy": 223,
+    "budget_allocation": 224,
+    "prefix_reliability": 226
+  },
+  "limitations": [
+    "One tested seed shared across five characters; not a multi-seed strength estimate.",
+    "Historical v0.111.0 CLI; not native-game validation.",
+    "Whole-battle branches use replayed internal randomness; not a hidden-information benchmark.",
+    "Fixed simplistic rewards/routes/shops; only combat search differs.",
+    "Speculative battle clears never count as canonical victories."
+  ]
+}
