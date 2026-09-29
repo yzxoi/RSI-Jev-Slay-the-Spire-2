@@ -1,0 +1,21 @@
+{
+  "tested_sha": "4b46b9e",
+  "upstream_sha": "3b2d969d025b9e64bc96b9a15928bd2a0d824bf2",
+  "rustc": "rustc 1.95.0 (59807616e 2026-04-14)",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "unit_tests": {
+    "returncode": 0,
+    "seconds": 6.879,
+    "summary": [
+      "test result: ok. 504 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.31s"
+    ]
+  },
+  "unit_test_log_sha256": "79ce387437c0d3757dbd207068dae0fa5d1fcb9769934978f66ddec34aebcf78",
+  "synthetic_probes": [
+    "synthetic\tblock_12_incoming\tDrink\thp_saved=12; consumed_slot=true",
+    "synthetic\tdexterity\tCrossTurn\trules_apply_dexterity=2",
+    "synthetic\trollout_policy\tno_potion\theld_block_potion=true",
+    "synthetic\tblood_potion\tunknown\tno_kernel_rule"
+  ],
+  "interpretation": "Upstream internal consistency and synthetic mechanics only; no game replay or strength evidence."
+}
