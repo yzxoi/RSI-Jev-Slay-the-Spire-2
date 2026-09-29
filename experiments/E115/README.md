@@ -44,3 +44,5 @@ The run manifest records the exact tested code SHA, original/patched game and he
 ### Iteration 1 — implementation `ad78b3c`
 
 Synthetic checks: 8/8 new tests, plus 4 teacher, 6 resource and 2 planner regression tests passed. Cohort a launched with the command above. While it runs, a separate saved-trace auditor is added: it verifies trace/wire/stderr hashes, tested SHA, candidate membership, actual canonical prefix provenance, and every accepted prediction against its source speculative trace. This does not alter the already-running controller or its configuration.
+
+Auditor iteration: `e7b7073` failed an interim integrity check with `IndexError` on a branch whose remaining budget expired before the engine greeting, leaving zero commands. This is an incomplete branch, not a win or a controller failure. The auditor now accepts empty-command traces only for timeout/error with zero replay/actions/entry, and a synthetic regression rejects labelling the same trace as a clear. Controller code and the ongoing evaluation are unchanged.

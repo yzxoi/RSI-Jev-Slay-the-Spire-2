@@ -24,6 +24,14 @@ def check_trace(result, expected_sha):
     manifest = rows[0]['data']
     assert manifest['code_commit'] == expected_sha and not manifest['tracked_dirty']
     commands = [r['data'] for r in wire if r['kind'] == 'command']
+    if not commands:
+        # A queued branch may exhaust its budget during the engine greeting,
+        # before it can send start_run. Preserve this as incomplete evidence.
+        assert result['status'] in ('timeout', 'error')
+        assert not result.get('entry_verified') and not result.get('steps', 0)
+        assert not result.get('replay_commands', 0)
+        assert not any(r['kind'] in ('before', 'entry', 'after') for r in rows)
+        return manifest, [], []
     assert commands[0]['cmd'] == 'start_run'
     assert all(c['cmd'] == 'action' for c in commands[1:])
     replay_count = result.get('replay_commands', 1)

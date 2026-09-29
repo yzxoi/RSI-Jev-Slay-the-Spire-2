@@ -1,5 +1,6 @@
 """Synthetic boundary/certificate checks; these are not game wins."""
 import tempfile
+import json
 import time
 import unittest
 from pathlib import Path
@@ -9,6 +10,7 @@ from rsi.engine import action
 from rsi.engine_search import (EngineSearch, LIMITS, POLICIES, combat_boundary, fresh_choices,
                               macro_choice, needs_refresh, outcome_rank, prefix_digest, probe)
 from rsi.trace import digest
+from scripts.audit_engine_search_e115 import check_trace, sha
 
 
 class Sink:
@@ -26,6 +28,23 @@ def state():
 
 
 class EngineSearchTests(unittest.TestCase):
+    def test_audit_preserves_timeout_before_engine_greeting(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / 'decisions.jsonl'
+            path.write_text(json.dumps({'kind': 'manifest', 'data': {
+                'code_commit': 'synthetic', 'tracked_dirty': False}}) + '\n')
+            wire = Path(tmp) / 'wire.jsonl'
+            stderr = Path(tmp) / 'engine.stderr.log'
+            wire.write_text('')
+            stderr.write_text('')
+            result = dict(status='timeout', steps=0, replay_commands=0, entry_verified=False,
+                          trace_path=str(path), trace_sha256=sha(path),
+                          wire_sha256=sha(wire), stderr_sha256=sha(stderr))
+            _, commands, steps = check_trace(result, 'synthetic')
+            self.assertEqual((commands, steps), ([], []))
+            with self.assertRaises(AssertionError):
+                check_trace({**result, 'status': 'clear'}, 'synthetic')
+
     def test_reward_boundaries(self):
         self.assertIsNone(combat_boundary(dict(decision='card_reward', from_event=True)))
         self.assertEqual(combat_boundary(dict(decision='potion_reward', player={'hp': 5})), 'clear')
