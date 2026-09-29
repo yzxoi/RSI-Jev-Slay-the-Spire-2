@@ -47,3 +47,26 @@ Issue: [#216](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/216); PR:
 Generator code SHA `efcc033`. Command: `python3 -m scripts.evaluate_deciders_e113 freeze` (stdout `artifacts/runs/e113-freeze.log`). Six adapter/budget/boundary unit tests passed using `python3 -m unittest discover -s tests -p test_decider_backend.py -v`; the initial dotted-module invocation was incompatible with this repository's non-package tests directory and was corrected before evaluation.
 
 All 30 source configurations completed without engine errors or time limits: 7 reached the floor-10 boundary and 23 died earlier. All have a replayable combat entry and preceding card reward. Entry HP ranges 1–76. This is deliberately a stress-oriented distribution: the last reachable combat often exposes the source policy's failure. It must not be interpreted as random-battle or full-run win rate. Exact source results and hashes are in `freeze-result.json`; common commands/states are in `fixtures.json`. No LLM saw these fixtures during generation. Interface metadata is frozen in `model-metadata.json`.
+
+## Iteration 1: model evaluation result
+
+Tested code/fixture SHA **`fc286e0`**, command `python3 -m scripts.evaluate_deciders_e113 evaluate` (stdout `artifacts/runs/e113-evaluate.log`). Elapsed 413.853 seconds. All 180 preregistered cells have records, including censored cells; **180 records does not mean 180 completed continuations**. Program and Jev completed all 120 of their combat/reward continuations. DeepSeek completed six reward continuations, eight cells failed to return complete model output, one started battle was censored after the backend gate, and 45 cells never started after the stop.
+
+| Locked confirmation cohort (seeds 003–006, 20 cells per task) | Program | Jev | DeepSeek |
+| --- | --- | --- | --- |
+| Combat wins | 4/20 | 1/20 | Not evaluated after pilot stop |
+| Combat better / worse / tied versus program | — | 0 / 4 / 16 | Unavailable |
+| Reward downstream survival at fixed boundary | 4/20 | 4/20 | Not evaluated after pilot stop |
+| Reward better / worse / tied versus program | — | 2 / 2 / 16 | Unavailable |
+
+Across pilot + confirmation, program won 7/30 battles and Jev 2/30. Jev's confirmation combat p50/p95 request latency was 0.7085/1.014 seconds, and cost was $0.042975072 for 20 battles. It meets the speed/cost gates but fails the combat and reward quality gates. All 416 Jev API requests were legal/complete; API schema reliability did not translate into good play.
+
+DeepSeek stopped at 20 completed requests, eight of which had `finish_reason=length`; one already-in-flight request subsequently completed, for **21 total / 8 failures**, $0.044993645. It completed no combat episode, so **no DeepSeek battle-win-rate comparison is available**. Its output and token budgets were not increased after failures. Seven length failures were on AtlasCloud with all 4096 completion tokens reported as reasoning; one was on Together with non-JSON analysis in content and zero separately reported reasoning tokens. Provider assignments were not randomized matched comparisons; this does not prove a different provider fixes the model. Requests used low reasoning, not reasoning disabled.
+
+Total reported provider cost: **$0.121056779** (Jev $0.076063134; DeepSeek $0.044993645). All billing was known; no retry, fallback model or manual Astra gameplay intervention was used. This excludes Astra's development/review cost, which is not metered by this runner.
+
+### Protocol deviation: network timeout was not a hard deadline
+
+The 45-second `urlopen` timeout bounded socket inactivity, not total response duration. Three DeepSeek requests exceeded 45 seconds (59.941, 73.385, 87.982 seconds). Actual durations remain in the trace and results. All 21 responses have known cost; the reliability exit still fired and no new calls began after it. This flaw invalidates any claim that the request deadline was enforced, and is an additional reason not to promote the backend. It does not alter the program/Jev paired outcomes. A hard-deadline transport correction will be committed and tested locally; the paid model experiment will **not** be rerun or silently relabeled with that later code SHA.
+
+Decision: reject Jev's unrestricted direct-action role under this representation; do not promote its reward role. Reject the tested DeepSeek/OpenRouter configuration operationally, with strategy strength **inconclusive**. Keep live defaults unchanged. Stop prompt polishing or repeated sampling within E113. A future experiment must change a named factor (such as verified turn-plan selection instead of raw actions, or a separately validated reasoning/provider budget) and use new confirmation seeds.
