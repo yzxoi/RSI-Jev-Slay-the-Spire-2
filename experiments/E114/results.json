@@ -1,10 +1,10 @@
 {
   "experiment": "E114",
-  "audit_code_sha": "4b46b9ee6354dddfbea0f94546ca811839cbf5fd",
+  "audit_code_sha": "826580af135937924e6e481ad088c751105a0d17",
   "metadata_sha": "b7de162",
   "upstream_sha": "3b2d969d025b9e64bc96b9a15928bd2a0d824bf2",
   "scope": "identity and schema inspection only; no counterfactual battle or full state replay",
-  "normalization": "Cards: exact upstream catalog ID->Chinese name, otherwise observed name; no cross-character basic-card aliases. Enemies: upstream ID mapping then observed name. CLI items without IDs use uppercase underscore name; this is identity normalization, not rule verification.",
+  "normalization": "Cards: exact upstream catalog ID->Chinese name, then exact Rust card constant->compiled name, otherwise observed name; no cross-character basic-card aliases. Enemies: upstream ID mapping then observed name. CLI items without IDs use uppercase underscore name; this is identity normalization, not rule verification.",
   "evidence": [
     {
       "cohort": "E113",
@@ -1000,9 +1000,9 @@
             "label": ""
           },
           "DRUM_OF_BATTLE": {
-            "query": "Drum of Battle",
-            "status": "unknown",
-            "label": ""
+            "query": "战鼓",
+            "status": "known",
+            "label": "战鼓"
           },
           "IRON_WAVE": {
             "query": "铁斩波",
@@ -1726,8 +1726,8 @@
       },
       "distinct_status_counts": {
         "card": {
-          "known": 20,
-          "unknown": 95
+          "known": 21,
+          "unknown": 94
         },
         "enemy": {
           "known": 10
@@ -2580,8 +2580,7 @@
       "floor": 6,
       "missing_hand": [],
       "missing_deck": [
-        "ASCENDERS_BANE",
-        "DRUM_OF_BATTLE"
+        "ASCENDERS_BANE"
       ],
       "held_potions": [
         "FLEX_POTION",
@@ -3257,13 +3256,13 @@
       "floor": 11,
       "turn": 4,
       "hp": 31,
-      "index": null,
-      "potion_id": "",
-      "name": null,
+      "index": 0,
+      "potion_id": "FIRE_POTION",
+      "name": "火焰药水",
       "source": "native_controller",
       "upstream": {
-        "status": "unknown",
-        "label": ""
+        "status": "known",
+        "label": "火焰药水"
       }
     },
     {
@@ -3273,9 +3272,9 @@
       "floor": 11,
       "turn": 5,
       "hp": 31,
-      "index": null,
-      "potion_id": "",
-      "name": null,
+      "index": 1,
+      "potion_id": "COLORLESS_POTION",
+      "name": "无色药水",
       "source": "native_controller",
       "upstream": {
         "status": "unknown",
@@ -3289,13 +3288,13 @@
       "floor": 17,
       "turn": 7,
       "hp": 55,
-      "index": null,
-      "potion_id": "",
-      "name": null,
+      "index": 1,
+      "potion_id": "ENERGY_POTION",
+      "name": "能量药水",
       "source": "native_controller",
       "upstream": {
-        "status": "unknown",
-        "label": ""
+        "status": "known",
+        "label": "能量药水"
       }
     },
     {
@@ -3305,13 +3304,13 @@
       "floor": 17,
       "turn": 7,
       "hp": 55,
-      "index": null,
-      "potion_id": "",
-      "name": null,
+      "index": 0,
+      "potion_id": "REGEN_POTION",
+      "name": "再生药水",
       "source": "native_controller",
       "upstream": {
-        "status": "unknown",
-        "label": ""
+        "status": "known",
+        "label": "再生药水"
       }
     },
     {
@@ -3321,13 +3320,13 @@
       "floor": 21,
       "turn": 5,
       "hp": 35,
-      "index": null,
-      "potion_id": "",
-      "name": null,
+      "index": 1,
+      "potion_id": "VULNERABLE_POTION",
+      "name": "易伤药水",
       "source": "native_controller",
       "upstream": {
-        "status": "unknown",
-        "label": ""
+        "status": "known",
+        "label": "易伤药水"
       }
     },
     {
@@ -3337,9 +3336,9 @@
       "floor": 24,
       "turn": 3,
       "hp": 40,
-      "index": null,
-      "potion_id": "",
-      "name": null,
+      "index": 0,
+      "potion_id": "FORTIFIER",
+      "name": "固化药水",
       "source": "native_controller",
       "upstream": {
         "status": "unknown",
@@ -3353,9 +3352,9 @@
       "floor": 24,
       "turn": 4,
       "hp": 40,
-      "index": null,
-      "potion_id": "",
-      "name": null,
+      "index": 1,
+      "potion_id": "BEETLE_JUICE",
+      "name": "甲虫汁",
       "source": "native_controller",
       "upstream": {
         "status": "unknown",
@@ -3369,9 +3368,9 @@
       "floor": 30,
       "turn": 2,
       "hp": 47,
-      "index": null,
-      "potion_id": "",
-      "name": null,
+      "index": 0,
+      "potion_id": "COLORLESS_POTION",
+      "name": "无色药水",
       "source": "native_controller",
       "upstream": {
         "status": "unknown",
