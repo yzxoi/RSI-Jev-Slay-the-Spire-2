@@ -12,6 +12,21 @@ m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
 
 
 class ResumeTests(unittest.TestCase):
+    def test_mixed_transport_errors_share_one_cumulative_exit(self):
+        ledger=m.base.Ledger(1);count=0
+        for n,error in enumerate([m.TIMEOUT,'IncompleteRead: body ended','RemoteDisconnected: peer closed']):
+            self.assertTrue(ledger.acquire(.1))
+            count=m.settle_transport(ledger,.1,{'usage':{},'valid':False,'error':error},count)
+            if n<2:
+                self.assertIsNone(ledger.stop)
+                self.assertTrue(ledger.acquire(.1))
+                count=m.settle_transport(ledger,.1,{'usage':{'cost':.001},'valid':True,'error':None},count)
+        self.assertEqual(count,3)
+        self.assertIsNotNone(ledger.stop)
+        self.assertAlmostEqual(ledger.unknown_reserved,.3)
+        self.assertFalse(m.transport_error('http_403'))
+        self.assertFalse(m.transport_error('invalid_json'))
+
     def test_continuation_preserves_failed_prefix_and_never_reissues_it(self):
         bank=m.base.make_bank();config='deepseek_low'
         c=m.CONFIGS[config]
