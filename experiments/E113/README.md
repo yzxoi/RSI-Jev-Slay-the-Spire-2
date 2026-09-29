@@ -39,3 +39,11 @@ Reward: each arm chooses **one** card reward (including skip), then the same det
 Implementation SHA, commands, fixture/source attrition, exact dependency/model/provider IDs, per-cell results, paired decisions, trace hashes and limitations will be appended after each committed iteration. Raw requests/responses/state transitions stay under ignored `artifacts/runs/`. Public files contain compact results and hashes, no credentials or game binaries.
 
 Official interface references checked 2026-09-29: [model](https://openrouter.ai/deepseek/deepseek-v4.1-flash), [reasoning](https://openrouter.ai/docs/guides/best-practices/reasoning-tokens), [structured output](https://openrouter.ai/docs/guides/features/structured-outputs). The public model-list API currently advertises $0.30/M input and $1.20/M output; UI headline rates differ, so actual response `usage.cost` is authoritative.
+
+## Iteration 1: fixture generation
+
+Issue: [#216](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/216); PR: [#217](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/pull/217).
+
+Generator code SHA `efcc033`. Command: `python3 -m scripts.evaluate_deciders_e113 freeze` (stdout `artifacts/runs/e113-freeze.log`). Six adapter/budget/boundary unit tests passed using `python3 -m unittest discover -s tests -p test_decider_backend.py -v`; the initial dotted-module invocation was incompatible with this repository's non-package tests directory and was corrected before evaluation.
+
+All 30 source configurations completed without engine errors or time limits: 7 reached the floor-10 boundary and 23 died earlier. All have a replayable combat entry and preceding card reward. Entry HP ranges 1–76. This is deliberately a stress-oriented distribution: the last reachable combat often exposes the source policy's failure. It must not be interpreted as random-battle or full-run win rate. Exact source results and hashes are in `freeze-result.json`; common commands/states are in `fixtures.json`. No LLM saw these fixtures during generation. Interface metadata is frozen in `model-metadata.json`.
