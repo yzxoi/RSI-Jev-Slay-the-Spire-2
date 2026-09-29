@@ -24,6 +24,11 @@ def main():
     if len(actual)!=len(set(actual)) or set(actual)!=expected: failures.append('missing or duplicate cells')
     if hashlib.sha256((D/'fixtures.json').read_bytes()).hexdigest()!=report['fixtures_sha256']:failures.append('fixture hash')
     if summarize(results)!=report['summary']:failures.append('summary reproduction')
+    for case in fixtures['cases']:
+        source=case['source'];path=ROOT/source['trace_path']
+        if hashlib.sha256(path.read_bytes()).hexdigest()!=source['trace_sha256']:failures.append('source trace hash '+case['id'])
+        for task in ['combat','reward']:
+            if case[task] and digest(case[task]['entry'])!=case[task]['entry_hash']:failures.append('fixture entry hash '+case['id'])
     trace_count=0;parity=0;observations=defaultdict(Counter);examples=[];by_character={}
     for arm in ARMS:
         selected=[r for r in results if r['arm']==arm];responses=[];requests=0;bad=0
@@ -95,7 +100,8 @@ def main():
                     'reward_quality_pass':reward_quality,'replace_jev_quality_pass':replace,
                     'decision':'do_not_promote','reason':'quality gate failed' if arm=='jev' else 'pilot reliability exit; strength unmeasured'}
     out={'experiment':'E113','tested_sha':report['manifest']['code_commit'],'results_sha256':hashlib.sha256((D/'results.json').read_bytes()).hexdigest(),
-         'cells':len(results),'verified_trace_count':trace_count,'verified_replay_count':parity,'integrity_failures':failures,
+         'cells':len(results),'source_traces_checked':len(fixtures['cases']),
+         'verified_trace_count':trace_count,'verified_replay_count':parity,'integrity_failures':failures,
          'metrics':metrics,'gates':gates,'providers':dict(providers),'protocol_deadline_violations':over_deadline,
          'end_turn_observations':dict(observations),'end_turn_caveat':'These are screening observations, not proofs that every such end-turn is harmful.',
          'jev_end_turn_examples':examples,'by_character_all_six_seeds':by_character,'pairs':pairs}

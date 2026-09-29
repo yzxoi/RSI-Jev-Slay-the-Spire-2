@@ -1,6 +1,6 @@
 # E113 — Bounded multi-seed decision-maker selection
 
-Status: preregistered, before fixture generation or model calls. Date: 2026-09-29.
+Status: completed; no decision-maker promoted. The protocol below was preregistered before fixture generation or model calls. Date: 2026-09-29.
 
 ## Question and hypothesis
 
@@ -50,7 +50,7 @@ All 30 source configurations completed without engine errors or time limits: 7 r
 
 ## Iteration 1: model evaluation result
 
-Tested code/fixture SHA **`fc286e0`**, command `python3 -m scripts.evaluate_deciders_e113 evaluate` (stdout `artifacts/runs/e113-evaluate.log`). Elapsed 413.853 seconds. All 180 preregistered cells have records, including censored cells; **180 records does not mean 180 completed continuations**. Program and Jev completed all 120 of their combat/reward continuations. DeepSeek completed six reward continuations, eight cells failed to return complete model output, one started battle was censored after the backend gate, and 45 cells never started after the stop.
+Tested code/fixture SHA **`fc286e0`**, command `python3 -m scripts.evaluate_deciders_e113 evaluate` (stdout `artifacts/runs/e113-evaluate.log`). Elapsed 413.853 seconds. All 180 preregistered cells have records, including censored cells; **180 records does not mean 180 completed continuations**. Program and Jev completed all 120 of their combat/reward continuations. DeepSeek completed six reward continuations, eight cells failed to return complete model output, two started cells were censored after the backend gate (one battle and one reward before its API request), and 44 cells never started after the stop. The final trace audit corrected an initial provisional count of one started / 45 unstarted censored cells.
 
 | Locked confirmation cohort (seeds 003–006, 20 cells per task) | Program | Jev | DeepSeek |
 | --- | --- | --- | --- |
@@ -76,3 +76,25 @@ Decision: reject Jev's unrestricted direct-action role under this representation
 Reason: the measured keepalive behavior defeats a socket-inactivity timeout. The new transport isolates each HTTP request in a killable subprocess and bounds total elapsed time; credentials use stdin pipes, never command arguments/logs. A total timeout leaves billing unknown and stops that backend. The regression test uses a local server continuously sending whitespace, plus a successful JSON response test. This is transport validation, not a new gameplay trial. Iteration 1 results remain bound to `fc286e0`; no earlier failed attempts are removed.
 
 The audit checks complete cell coverage, raw trace/wire/stderr hashes, tested SHA, exact entry replay, ledger reconciliation and frozen selection gates. End-turn observations are diagnostic flags, not assumed regret labels.
+
+Validation at `d3d0dec`: six decision/budget/boundary tests and two HTTP tests passed. The latter demonstrates that continuous keepalive bytes cannot extend a total timeout. No additional provider calls were made. Commands:
+
+```sh
+python3 -m unittest discover -s tests -p test_decider_backend.py -v
+python3 -m unittest discover -s tests -p test_http_deadline.py -v
+python3 -m scripts.audit_deciders_e113
+```
+
+The audit reconciled 416 Jev requests ($0.076063134) and 21 DeepSeek requests ($0.044993645), with known billing and no missing responses. It verified 136 executed continuation traces and 136 matching replay entries; the other 44 preregistered cells were unstarted after the backend exit. Overall DeepSeek request p50/p95 was 34.625/73.385 seconds. The 30 source traces are also checked by the final audit.
+
+Jev ended turns with positive energy and at least one playable card in **118/142** observed end turns; program did so in **13/153**. These flags are not all automatically mistakes (saving a card or avoiding retaliation can be correct). A concrete trace example, `001-defect`, round 1: after Defend, two 1-cost Strikes remained with 2 energy; two 5-damage-attacking Slimes had 10 and 8 HP and no powers/block. Two Strikes could kill one, but Jev ended the turn. The corresponding program battle won at 42 HP; Jev died. That whole-battle difference cannot be attributed solely to this one action without an additional counterfactual.
+
+All-six-seed battle results by character (program / Jev wins out of six): Ironclad 1/0, Silent 2/0, Defect 1/0, Regent 2/0, Necrobinder 1/2. The Necrobinder exception cautions against declaring Jev universally useless; the locked cohort still contains no paired improvement for Jev.
+
+### Scope of the decision
+
+This rejects **unrestricted raw-action Jev with this observation/candidate representation**, not every possible Jev subtask or the existing guarded hybrid controller. It rejects **DeepSeek low reasoning + 4096 completion tokens + current automatic provider routing** as a deployable fast direct-action backend; it does not establish DeepSeek's strategic ceiling. Raise-output-budget or provider-specific experiments would be different configurations and need new preregistration. Rewards used the same imperfect downstream program and a short horizon, so global deck-building ability remains unresolved.
+
+The next useful architectural test is to make the program own legal execution and numerical evaluation, expose several computed turn plans, and ask a model for a low-frequency plan/goal decision. This changes the model's job rather than adding more prose to the same failing raw-action prompt. Before DeepSeek gameplay retesting, demonstrate bounded reliable structured output under a fixed provider/budget configuration. Use new confirmation seeds; E113's observed seeds are now development data.
+
+PR disposition: **close without merging**. Neither backend passed its frozen promotion conditions. Keep all code, fixture/result commits, raw local traces and public hashes on this branch; no live default changed. The hard-deadline correction is tested experimental tooling, not a claim of a successful new model evaluation.
