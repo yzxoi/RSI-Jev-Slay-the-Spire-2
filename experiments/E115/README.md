@@ -40,3 +40,7 @@ python3 -m scripts.evaluate_engine_search_e115 --cohort b --output experiments/E
 ```
 
 The run manifest records the exact tested code SHA, original/patched game and headless assembly hashes, patch hashes, dependency revision, policies and budgets. Raw traces live under ignored `artifacts/runs/`; compact result files include their SHA-256 hashes. All outcomes here are offline CLI Act 1 results, never native game/full-run victories. Runtime targets the retained v0.111.0 CLI, not the currently installed public game.
+
+### Iteration 1 — implementation `ad78b3c`
+
+Synthetic checks: 8/8 new tests, plus 4 teacher, 6 resource and 2 planner regression tests passed. Cohort a launched with the command above. While it runs, a separate saved-trace auditor is added: it verifies trace/wire/stderr hashes, tested SHA, candidate membership, actual canonical prefix provenance, and every accepted prediction against its source speculative trace. This does not alter the already-running controller or its configuration.
