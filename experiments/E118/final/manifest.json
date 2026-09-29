@@ -1,0 +1,182 @@
+{
+  "experiment": "E118",
+  "tested_sha": "3e6ac695e9352fa244a3dc4674512745942a9ff6",
+  "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "bank_digest": "c80b7d75a1010c25fd8d4f9e96564de74d5bc493f45510c21e849e1b9206c42a",
+  "fixture_sha256": "f8292e315d92a2013d9cbfdd5a2e5657ae3e5517a59b95bc61dbd88b86c90ada",
+  "metadata_sha256": "faac1d55693a48c8c48f4d7dcac9b1d4dc3779c8d964d039300c575ab059fc75",
+  "configurations": {
+    "jev": {
+      "model": "typesafe/jev-1.13",
+      "canonical": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "cap": 0.2,
+      "effort": null
+    },
+    "sol_none": {
+      "model": "openai/gpt-6-sol",
+      "canonical": "openai/gpt-6-sol-20260922",
+      "provider": "OpenAI",
+      "slug": "openai",
+      "ignore": [
+        "openai/flex",
+        "openai/fast"
+      ],
+      "cap": 0.5,
+      "effort": "none",
+      "input_price": 2.5e-06,
+      "output_price": 1e-05,
+      "prompt_max": 2,
+      "completion_max": 10
+    },
+    "sol_low": {
+      "model": "openai/gpt-6-sol",
+      "canonical": "openai/gpt-6-sol-20260922",
+      "provider": "OpenAI",
+      "slug": "openai",
+      "ignore": [
+        "openai/flex",
+        "openai/fast"
+      ],
+      "cap": 0.8,
+      "effort": "low",
+      "input_price": 2.5e-06,
+      "output_price": 1e-05,
+      "prompt_max": 2,
+      "completion_max": 10
+    },
+    "sonnet_low": {
+      "model": "anthropic/claude-sonnet-5.5",
+      "canonical": "anthropic/claude-sonnet-5.5-20260928",
+      "provider": "Anthropic",
+      "slug": "anthropic",
+      "ignore": [],
+      "cap": 1.0,
+      "effort": "low",
+      "input_price": 4e-06,
+      "output_price": 1e-05,
+      "prompt_max": 2,
+      "completion_max": 10
+    },
+    "gemini_low": {
+      "model": "google/gemini-3.8-flash",
+      "canonical": "google/gemini-3.8-flash-20260902",
+      "provider": "Google AI Studio",
+      "slug": "google-ai-studio",
+      "ignore": [
+        "google-ai-studio/flex",
+        "google-ai-studio/priority"
+      ],
+      "cap": 0.5,
+      "effort": "low",
+      "input_price": 7.5e-07,
+      "output_price": 3.75e-06,
+      "prompt_max": 0.75,
+      "completion_max": 3.75
+    },
+    "deepseek_low": {
+      "model": "deepseek/deepseek-v4.1-flash",
+      "canonical": "deepseek/deepseek-v4.1-flash-20260910",
+      "provider": "DeepInfra",
+      "slug": "deepinfra/fp8",
+      "ignore": [],
+      "cap": 0.25,
+      "effort": "low",
+      "input_price": 1.4e-07,
+      "output_price": 4.2e-07,
+      "prompt_max": 0.14,
+      "completion_max": 0.42
+    },
+    "qwen_low": {
+      "model": "qwen/qwen3.8-max-0902",
+      "canonical": "qwen/qwen3.8-max-20260902",
+      "provider": "Alibaba",
+      "slug": "alibaba",
+      "ignore": [],
+      "cap": 0.95,
+      "effort": "low",
+      "input_price": 2.5e-06,
+      "output_price": 6e-06,
+      "prompt_max": 2,
+      "completion_max": 6
+    },
+    "kimi_low": {
+      "model": "moonshotai/kimi-k3",
+      "canonical": "moonshotai/kimi-k3-20260715",
+      "provider": "Moonshot AI",
+      "slug": "moonshotai/mxfp4",
+      "ignore": [],
+      "cap": 1.4,
+      "effort": "low",
+      "input_price": 3e-06,
+      "output_price": 1.5e-05,
+      "prompt_max": 3,
+      "completion_max": 15
+    }
+  },
+  "total_budget_usd": 3,
+  "planned_calls": 832,
+  "workers": 3,
+  "http_deadline_seconds": 60,
+  "configuration_deadline_seconds": 1500,
+  "start_utc": "2026-09-29T11:27:42Z",
+  "automatic_retries": 0,
+  "active_configurations": [
+    "deepseek_low",
+    "qwen_low",
+    "kimi_low"
+  ],
+  "new_planned_calls": 312,
+  "reused_configurations": [
+    "jev",
+    "sol_none",
+    "sol_low",
+    "sonnet_low",
+    "gemini_low"
+  ],
+  "previous_cost_plus_reservations": 0.31164579600000003,
+  "combined_conservative_ceiling": 2.9116457959999997,
+  "config_tested_shas": {
+    "jev": "1da4d7063e5be8d2a6f724d7a12d60925e2fa74d",
+    "sol_none": "1da4d7063e5be8d2a6f724d7a12d60925e2fa74d",
+    "sol_low": "1da4d7063e5be8d2a6f724d7a12d60925e2fa74d",
+    "sonnet_low": "1da4d7063e5be8d2a6f724d7a12d60925e2fa74d",
+    "gemini_low": "1da4d7063e5be8d2a6f724d7a12d60925e2fa74d",
+    "deepseek_low": [
+      "3e6ac695e9352fa244a3dc4674512745942a9ff6",
+      "1aedb9d901a7b444b6afe841193650705267f17a",
+      "4c9f1e1836fa3ce7cb26b3be5d4af62fe0bd0ae4"
+    ],
+    "qwen_low": [
+      "3e6ac695e9352fa244a3dc4674512745942a9ff6",
+      "1aedb9d901a7b444b6afe841193650705267f17a",
+      "4c9f1e1836fa3ce7cb26b3be5d4af62fe0bd0ae4"
+    ],
+    "kimi_low": [
+      "3e6ac695e9352fa244a3dc4674512745942a9ff6",
+      "4c9f1e1836fa3ce7cb26b3be5d4af62fe0bd0ae4"
+    ]
+  },
+  "continuation_source": {
+    "path": "artifacts/runs/e118-pilot-v1",
+    "manifest_sha256": "a04c9815861ae7555ce7ab9fd37a54367494ffbad5d8984dc3210f48aa0906ec",
+    "summary_sha256": "734fe4155adc20616fd7c769e5f27d10aff43a34919d1a4ce6394bba31c00599"
+  },
+  "replacement_metadata_sha256": "a93c81d896da474b8d95ffb5458b51233d2a2374e97c283790edbfc44df25ba8",
+  "elapsed_seconds": 904.7244033331517,
+  "completed_utc": "2026-09-29T11:42:46Z",
+  "aggregation_only": true,
+  "source_phases": [
+    "e118-pilot-v1",
+    "e118-pilot-v2",
+    "e118-supplement-v3",
+    "e118-supplement-v4"
+  ],
+  "phase_tested_shas": {
+    "e118-pilot-v1": "1da4d7063e5be8d2a6f724d7a12d60925e2fa74d",
+    "e118-pilot-v2": "3e6ac695e9352fa244a3dc4674512745942a9ff6",
+    "e118-supplement-v3": "1aedb9d901a7b444b6afe841193650705267f17a",
+    "e118-supplement-v4": "4c9f1e1836fa3ce7cb26b3be5d4af62fe0bd0ae4"
+  }
+}

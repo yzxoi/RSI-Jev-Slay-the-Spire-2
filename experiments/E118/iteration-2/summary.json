@@ -1,0 +1,2217 @@
+{
+  "configurations": {
+    "jev": {
+      "configuration": {
+        "model": "typesafe/jev-1.13",
+        "canonical": "typesafe/jev-1.13-20260917",
+        "provider": "TypeSafe",
+        "cap": 0.2,
+        "effort": null
+      },
+      "readout": {
+        "n": 8,
+        "attempted": 8,
+        "valid": 8,
+        "correct": 8,
+        "accuracy": 1,
+        "bootstrap_seed_95": [
+          1,
+          1
+        ]
+      },
+      "by_horizon": {
+        "1": {
+          "choice": {
+            "n": 8,
+            "attempted": 8,
+            "valid": 8,
+            "correct": 8,
+            "accuracy": 1,
+            "bootstrap_seed_95": [
+              1,
+              1
+            ]
+          },
+          "predict_yes_a": {
+            "n": 8,
+            "attempted": 8,
+            "valid": 8,
+            "correct": 8,
+            "accuracy": 1,
+            "bootstrap_seed_95": [
+              1,
+              1
+            ]
+          },
+          "predict_yes_b": {
+            "n": 8,
+            "attempted": 8,
+            "valid": 8,
+            "correct": 8,
+            "accuracy": 1,
+            "bootstrap_seed_95": [
+              1,
+              1
+            ]
+          },
+          "prediction_both_mappings_correct": 8,
+          "prediction_pairs": 8,
+          "semantic_consistent": 8,
+          "exploratory_gate_passed": true
+        },
+        "2": {
+          "choice": {
+            "n": 8,
+            "attempted": 8,
+            "valid": 8,
+            "correct": 7,
+            "accuracy": 0.875,
+            "bootstrap_seed_95": [
+              0.625,
+              1
+            ]
+          },
+          "predict_yes_a": {
+            "n": 8,
+            "attempted": 8,
+            "valid": 8,
+            "correct": 6,
+            "accuracy": 0.75,
+            "bootstrap_seed_95": [
+              0.375,
+              1
+            ]
+          },
+          "predict_yes_b": {
+            "n": 8,
+            "attempted": 8,
+            "valid": 8,
+            "correct": 5,
+            "accuracy": 0.625,
+            "bootstrap_seed_95": [
+              0.25,
+              1
+            ]
+          },
+          "prediction_both_mappings_correct": 5,
+          "prediction_pairs": 8,
+          "semantic_consistent": 7,
+          "exploratory_gate_passed": false
+        },
+        "4": {
+          "choice": {
+            "n": 8,
+            "attempted": 8,
+            "valid": 8,
+            "correct": 4,
+            "accuracy": 0.5,
+            "bootstrap_seed_95": [
+              0.125,
+              0.875
+            ]
+          },
+          "predict_yes_a": {
+            "n": 8,
+            "attempted": 8,
+            "valid": 8,
+            "correct": 5,
+            "accuracy": 0.625,
+            "bootstrap_seed_95": [
+              0.25,
+              1
+            ]
+          },
+          "predict_yes_b": {
+            "n": 8,
+            "attempted": 8,
+            "valid": 8,
+            "correct": 4,
+            "accuracy": 0.5,
+            "bootstrap_seed_95": [
+              0.125,
+              0.875
+            ]
+          },
+          "prediction_both_mappings_correct": 4,
+          "prediction_pairs": 8,
+          "semantic_consistent": 7,
+          "exploratory_gate_passed": false
+        },
+        "8": {
+          "choice": {
+            "n": 8,
+            "attempted": 8,
+            "valid": 8,
+            "correct": 3,
+            "accuracy": 0.375,
+            "bootstrap_seed_95": [
+              0,
+              0.75
+            ]
+          },
+          "predict_yes_a": {
+            "n": 8,
+            "attempted": 8,
+            "valid": 8,
+            "correct": 5,
+            "accuracy": 0.625,
+            "bootstrap_seed_95": [
+              0.25,
+              0.875
+            ]
+          },
+          "predict_yes_b": {
+            "n": 8,
+            "attempted": 8,
+            "valid": 8,
+            "correct": 5,
+            "accuracy": 0.625,
+            "bootstrap_seed_95": [
+              0.25,
+              0.875
+            ]
+          },
+          "prediction_both_mappings_correct": 5,
+          "prediction_pairs": 8,
+          "semantic_consistent": 8,
+          "exploratory_gate_passed": false
+        }
+      },
+      "overall": {
+        "choice": {
+          "n": 32,
+          "attempted": 32,
+          "valid": 32,
+          "correct": 22,
+          "accuracy": 0.6875,
+          "bootstrap_seed_95": [
+            0.625,
+            0.75
+          ]
+        },
+        "predict_yes_a": {
+          "n": 32,
+          "attempted": 32,
+          "valid": 32,
+          "correct": 24,
+          "accuracy": 0.75,
+          "bootstrap_seed_95": [
+            0.625,
+            0.875
+          ]
+        },
+        "predict_yes_b": {
+          "n": 32,
+          "attempted": 32,
+          "valid": 32,
+          "correct": 22,
+          "accuracy": 0.6875,
+          "bootstrap_seed_95": [
+            0.5625,
+            0.8125
+          ]
+        }
+      },
+      "prediction_both_correct": 22,
+      "prediction_worlds": 32,
+      "semantic_consistent": 30,
+      "yes_answers": {
+        "predict_yes_a": 24,
+        "predict_yes_b": 26
+      },
+      "label_A_answers": {
+        "predict_yes_a": 24,
+        "predict_yes_b": 6
+      },
+      "reliable": true,
+      "empirical_contiguous_passing_prefix": 1,
+      "range_right_censored": false,
+      "reasoning_counter_present": 0,
+      "reasoning_tokens_reported": 0,
+      "all_reported_reasoning_counters_zero": false,
+      "usage_totals": {
+        "input_tokens": 138888,
+        "output_tokens": 3224,
+        "cost": 0.005833296
+      },
+      "models": {
+        "typesafe/jev-1.13-20260917": 104
+      },
+      "providers": {
+        "TypeSafe": 104
+      },
+      "latency": {
+        "p50": 0.8209316044813022,
+        "p95": 1.1467150419484824
+      },
+      "manifest": {
+        "config": "jev",
+        "ledger": {
+          "cap": 0.2,
+          "cost": 0.005833295999999999,
+          "unknown_reserved": 0.0,
+          "calls": 104,
+          "invalid": 0,
+          "consecutive_invalid": 0,
+          "stop": null
+        },
+        "elapsed_seconds": 89.38532766699791,
+        "trace_sha256": "cdf94bd790de2aa4fa126270fd2af830866161c2a2aada68fadaf1a37b57ca63"
+      }
+    },
+    "sol_none": {
+      "configuration": {
+        "model": "openai/gpt-6-sol",
+        "canonical": "openai/gpt-6-sol-20260922",
+        "provider": "OpenAI",
+        "slug": "openai",
+        "ignore": [
+          "openai/flex",
+          "openai/fast"
+        ],
+        "cap": 0.5,
+        "effort": "none",
+        "input_price": 2.5e-06,
+        "output_price": 1e-05,
+        "prompt_max": 2,
+        "completion_max": 10
+      },
+      "readout": {
+        "n": 8,
+        "attempted": 1,
+        "valid": 0,
+        "correct": 0,
+        "accuracy": 0,
+        "bootstrap_seed_95": [
+          0,
+          0
+        ]
+      },
+      "by_horizon": {
+        "1": {
+          "choice": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "predict_yes_a": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "predict_yes_b": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "prediction_both_mappings_correct": 0,
+          "prediction_pairs": 8,
+          "semantic_consistent": 0,
+          "exploratory_gate_passed": false
+        },
+        "2": {
+          "choice": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "predict_yes_a": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "predict_yes_b": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "prediction_both_mappings_correct": 0,
+          "prediction_pairs": 8,
+          "semantic_consistent": 0,
+          "exploratory_gate_passed": false
+        },
+        "4": {
+          "choice": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "predict_yes_a": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "predict_yes_b": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "prediction_both_mappings_correct": 0,
+          "prediction_pairs": 8,
+          "semantic_consistent": 0,
+          "exploratory_gate_passed": false
+        },
+        "8": {
+          "choice": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "predict_yes_a": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "predict_yes_b": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "prediction_both_mappings_correct": 0,
+          "prediction_pairs": 8,
+          "semantic_consistent": 0,
+          "exploratory_gate_passed": false
+        }
+      },
+      "overall": {
+        "choice": {
+          "n": 32,
+          "attempted": 0,
+          "valid": 0,
+          "correct": 0,
+          "accuracy": 0,
+          "bootstrap_seed_95": [
+            0,
+            0
+          ]
+        },
+        "predict_yes_a": {
+          "n": 32,
+          "attempted": 0,
+          "valid": 0,
+          "correct": 0,
+          "accuracy": 0,
+          "bootstrap_seed_95": [
+            0,
+            0
+          ]
+        },
+        "predict_yes_b": {
+          "n": 32,
+          "attempted": 0,
+          "valid": 0,
+          "correct": 0,
+          "accuracy": 0,
+          "bootstrap_seed_95": [
+            0,
+            0
+          ]
+        }
+      },
+      "prediction_both_correct": 0,
+      "prediction_worlds": 32,
+      "semantic_consistent": 0,
+      "yes_answers": {
+        "predict_yes_a": 0,
+        "predict_yes_b": 0
+      },
+      "label_A_answers": {
+        "predict_yes_a": 0,
+        "predict_yes_b": 0
+      },
+      "reliable": false,
+      "empirical_contiguous_passing_prefix": 0,
+      "range_right_censored": false,
+      "reasoning_counter_present": 0,
+      "reasoning_tokens_reported": 0,
+      "all_reported_reasoning_counters_zero": false,
+      "usage_totals": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost": 0
+      },
+      "models": {
+        "[missing]": 1
+      },
+      "providers": {
+        "[missing]": 1
+      },
+      "latency": {
+        "p50": 0.7472376248333603,
+        "p95": 0.7472376248333603
+      },
+      "manifest": {
+        "config": "sol_none",
+        "ledger": {
+          "cap": 0.5,
+          "cost": 0.0,
+          "unknown_reserved": 0.08944750000000001,
+          "calls": 1,
+          "invalid": 1,
+          "consecutive_invalid": 1,
+          "stop": "unknown_billing"
+        },
+        "elapsed_seconds": 0.7516098748892546,
+        "trace_sha256": "0e5be09aa542434b198bc77940833c18ddbce873d22911276a1a66e0a8befe99"
+      }
+    },
+    "sol_low": {
+      "configuration": {
+        "model": "openai/gpt-6-sol",
+        "canonical": "openai/gpt-6-sol-20260922",
+        "provider": "OpenAI",
+        "slug": "openai",
+        "ignore": [
+          "openai/flex",
+          "openai/fast"
+        ],
+        "cap": 0.8,
+        "effort": "low",
+        "input_price": 2.5e-06,
+        "output_price": 1e-05,
+        "prompt_max": 2,
+        "completion_max": 10
+      },
+      "readout": {
+        "n": 8,
+        "attempted": 1,
+        "valid": 0,
+        "correct": 0,
+        "accuracy": 0,
+        "bootstrap_seed_95": [
+          0,
+          0
+        ]
+      },
+      "by_horizon": {
+        "1": {
+          "choice": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "predict_yes_a": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "predict_yes_b": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "prediction_both_mappings_correct": 0,
+          "prediction_pairs": 8,
+          "semantic_consistent": 0,
+          "exploratory_gate_passed": false
+        },
+        "2": {
+          "choice": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "predict_yes_a": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "predict_yes_b": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "prediction_both_mappings_correct": 0,
+          "prediction_pairs": 8,
+          "semantic_consistent": 0,
+          "exploratory_gate_passed": false
+        },
+        "4": {
+          "choice": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "predict_yes_a": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "predict_yes_b": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "prediction_both_mappings_correct": 0,
+          "prediction_pairs": 8,
+          "semantic_consistent": 0,
+          "exploratory_gate_passed": false
+        },
+        "8": {
+          "choice": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "predict_yes_a": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "predict_yes_b": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "prediction_both_mappings_correct": 0,
+          "prediction_pairs": 8,
+          "semantic_consistent": 0,
+          "exploratory_gate_passed": false
+        }
+      },
+      "overall": {
+        "choice": {
+          "n": 32,
+          "attempted": 0,
+          "valid": 0,
+          "correct": 0,
+          "accuracy": 0,
+          "bootstrap_seed_95": [
+            0,
+            0
+          ]
+        },
+        "predict_yes_a": {
+          "n": 32,
+          "attempted": 0,
+          "valid": 0,
+          "correct": 0,
+          "accuracy": 0,
+          "bootstrap_seed_95": [
+            0,
+            0
+          ]
+        },
+        "predict_yes_b": {
+          "n": 32,
+          "attempted": 0,
+          "valid": 0,
+          "correct": 0,
+          "accuracy": 0,
+          "bootstrap_seed_95": [
+            0,
+            0
+          ]
+        }
+      },
+      "prediction_both_correct": 0,
+      "prediction_worlds": 32,
+      "semantic_consistent": 0,
+      "yes_answers": {
+        "predict_yes_a": 0,
+        "predict_yes_b": 0
+      },
+      "label_A_answers": {
+        "predict_yes_a": 0,
+        "predict_yes_b": 0
+      },
+      "reliable": false,
+      "empirical_contiguous_passing_prefix": 0,
+      "range_right_censored": false,
+      "reasoning_counter_present": 0,
+      "reasoning_tokens_reported": 0,
+      "all_reported_reasoning_counters_zero": false,
+      "usage_totals": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost": 0
+      },
+      "models": {
+        "[missing]": 1
+      },
+      "providers": {
+        "[missing]": 1
+      },
+      "latency": {
+        "p50": 0.7721111250575632,
+        "p95": 0.7721111250575632
+      },
+      "manifest": {
+        "config": "sol_low",
+        "ledger": {
+          "cap": 0.8,
+          "cost": 0.0,
+          "unknown_reserved": 0.08944500000000001,
+          "calls": 1,
+          "invalid": 1,
+          "consecutive_invalid": 1,
+          "stop": "unknown_billing"
+        },
+        "elapsed_seconds": 0.7768240829464048,
+        "trace_sha256": "082edb42a4bcf5c5d54f5de21f9ff4605f1abfd55a79b7d7198fe0607315ced9"
+      }
+    },
+    "sonnet_low": {
+      "configuration": {
+        "model": "anthropic/claude-sonnet-5.5",
+        "canonical": "anthropic/claude-sonnet-5.5-20260928",
+        "provider": "Anthropic",
+        "slug": "anthropic",
+        "ignore": [],
+        "cap": 1.0,
+        "effort": "low",
+        "input_price": 4e-06,
+        "output_price": 1e-05,
+        "prompt_max": 2,
+        "completion_max": 10
+      },
+      "readout": {
+        "n": 8,
+        "attempted": 1,
+        "valid": 0,
+        "correct": 0,
+        "accuracy": 0,
+        "bootstrap_seed_95": [
+          0,
+          0
+        ]
+      },
+      "by_horizon": {
+        "1": {
+          "choice": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "predict_yes_a": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "predict_yes_b": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "prediction_both_mappings_correct": 0,
+          "prediction_pairs": 8,
+          "semantic_consistent": 0,
+          "exploratory_gate_passed": false
+        },
+        "2": {
+          "choice": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "predict_yes_a": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "predict_yes_b": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "prediction_both_mappings_correct": 0,
+          "prediction_pairs": 8,
+          "semantic_consistent": 0,
+          "exploratory_gate_passed": false
+        },
+        "4": {
+          "choice": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "predict_yes_a": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "predict_yes_b": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "prediction_both_mappings_correct": 0,
+          "prediction_pairs": 8,
+          "semantic_consistent": 0,
+          "exploratory_gate_passed": false
+        },
+        "8": {
+          "choice": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "predict_yes_a": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "predict_yes_b": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "prediction_both_mappings_correct": 0,
+          "prediction_pairs": 8,
+          "semantic_consistent": 0,
+          "exploratory_gate_passed": false
+        }
+      },
+      "overall": {
+        "choice": {
+          "n": 32,
+          "attempted": 0,
+          "valid": 0,
+          "correct": 0,
+          "accuracy": 0,
+          "bootstrap_seed_95": [
+            0,
+            0
+          ]
+        },
+        "predict_yes_a": {
+          "n": 32,
+          "attempted": 0,
+          "valid": 0,
+          "correct": 0,
+          "accuracy": 0,
+          "bootstrap_seed_95": [
+            0,
+            0
+          ]
+        },
+        "predict_yes_b": {
+          "n": 32,
+          "attempted": 0,
+          "valid": 0,
+          "correct": 0,
+          "accuracy": 0,
+          "bootstrap_seed_95": [
+            0,
+            0
+          ]
+        }
+      },
+      "prediction_both_correct": 0,
+      "prediction_worlds": 32,
+      "semantic_consistent": 0,
+      "yes_answers": {
+        "predict_yes_a": 0,
+        "predict_yes_b": 0
+      },
+      "label_A_answers": {
+        "predict_yes_a": 0,
+        "predict_yes_b": 0
+      },
+      "reliable": false,
+      "empirical_contiguous_passing_prefix": 0,
+      "range_right_censored": false,
+      "reasoning_counter_present": 0,
+      "reasoning_tokens_reported": 0,
+      "all_reported_reasoning_counters_zero": false,
+      "usage_totals": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost": 0
+      },
+      "models": {
+        "[missing]": 1
+      },
+      "providers": {
+        "[missing]": 1
+      },
+      "latency": {
+        "p50": 0.8531884159892797,
+        "p95": 0.8531884159892797
+      },
+      "manifest": {
+        "config": "sonnet_low",
+        "ledger": {
+          "cap": 1.0,
+          "cost": 0.0,
+          "unknown_reserved": 0.093908,
+          "calls": 1,
+          "invalid": 1,
+          "consecutive_invalid": 1,
+          "stop": "unknown_billing"
+        },
+        "elapsed_seconds": 0.8570166251156479,
+        "trace_sha256": "2effe000ed7728c797966e272c7d6fb579fd9073b8722d1669344b6d60ed6793"
+      }
+    },
+    "gemini_low": {
+      "configuration": {
+        "model": "google/gemini-3.8-flash",
+        "canonical": "google/gemini-3.8-flash-20260902",
+        "provider": "Google AI Studio",
+        "slug": "google-ai-studio",
+        "ignore": [
+          "google-ai-studio/flex",
+          "google-ai-studio/priority"
+        ],
+        "cap": 0.5,
+        "effort": "low",
+        "input_price": 7.5e-07,
+        "output_price": 3.75e-06,
+        "prompt_max": 0.75,
+        "completion_max": 3.75
+      },
+      "readout": {
+        "n": 8,
+        "attempted": 1,
+        "valid": 0,
+        "correct": 0,
+        "accuracy": 0,
+        "bootstrap_seed_95": [
+          0,
+          0
+        ]
+      },
+      "by_horizon": {
+        "1": {
+          "choice": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "predict_yes_a": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "predict_yes_b": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "prediction_both_mappings_correct": 0,
+          "prediction_pairs": 8,
+          "semantic_consistent": 0,
+          "exploratory_gate_passed": false
+        },
+        "2": {
+          "choice": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "predict_yes_a": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "predict_yes_b": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "prediction_both_mappings_correct": 0,
+          "prediction_pairs": 8,
+          "semantic_consistent": 0,
+          "exploratory_gate_passed": false
+        },
+        "4": {
+          "choice": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "predict_yes_a": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "predict_yes_b": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "prediction_both_mappings_correct": 0,
+          "prediction_pairs": 8,
+          "semantic_consistent": 0,
+          "exploratory_gate_passed": false
+        },
+        "8": {
+          "choice": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "predict_yes_a": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "predict_yes_b": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "prediction_both_mappings_correct": 0,
+          "prediction_pairs": 8,
+          "semantic_consistent": 0,
+          "exploratory_gate_passed": false
+        }
+      },
+      "overall": {
+        "choice": {
+          "n": 32,
+          "attempted": 0,
+          "valid": 0,
+          "correct": 0,
+          "accuracy": 0,
+          "bootstrap_seed_95": [
+            0,
+            0
+          ]
+        },
+        "predict_yes_a": {
+          "n": 32,
+          "attempted": 0,
+          "valid": 0,
+          "correct": 0,
+          "accuracy": 0,
+          "bootstrap_seed_95": [
+            0,
+            0
+          ]
+        },
+        "predict_yes_b": {
+          "n": 32,
+          "attempted": 0,
+          "valid": 0,
+          "correct": 0,
+          "accuracy": 0,
+          "bootstrap_seed_95": [
+            0,
+            0
+          ]
+        }
+      },
+      "prediction_both_correct": 0,
+      "prediction_worlds": 32,
+      "semantic_consistent": 0,
+      "yes_answers": {
+        "predict_yes_a": 0,
+        "predict_yes_b": 0
+      },
+      "label_A_answers": {
+        "predict_yes_a": 0,
+        "predict_yes_b": 0
+      },
+      "reliable": false,
+      "empirical_contiguous_passing_prefix": 0,
+      "range_right_censored": false,
+      "reasoning_counter_present": 0,
+      "reasoning_tokens_reported": 0,
+      "all_reported_reasoning_counters_zero": false,
+      "usage_totals": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost": 0
+      },
+      "models": {
+        "[missing]": 1
+      },
+      "providers": {
+        "[missing]": 1
+      },
+      "latency": {
+        "p50": 0.840784874977544,
+        "p95": 0.840784874977544
+      },
+      "manifest": {
+        "config": "gemini_low",
+        "ledger": {
+          "cap": 0.5,
+          "cost": 0.0,
+          "unknown_reserved": 0.033012,
+          "calls": 1,
+          "invalid": 1,
+          "consecutive_invalid": 1,
+          "stop": "unknown_billing"
+        },
+        "elapsed_seconds": 0.846675458131358,
+        "trace_sha256": "2e64d23e232a1924fe641088a724c97af37e5e674dca305173550d4eb7452048"
+      }
+    },
+    "deepseek_low": {
+      "configuration": {
+        "model": "deepseek/deepseek-v4.1-flash",
+        "canonical": "deepseek/deepseek-v4.1-flash-20260910",
+        "provider": "DeepInfra",
+        "slug": "deepinfra/fp8",
+        "ignore": [],
+        "cap": 0.25,
+        "effort": "low",
+        "input_price": 1.4e-07,
+        "output_price": 4.2e-07,
+        "prompt_max": 0.14,
+        "completion_max": 0.42
+      },
+      "readout": {
+        "n": 8,
+        "attempted": 8,
+        "valid": 8,
+        "correct": 8,
+        "accuracy": 1,
+        "bootstrap_seed_95": [
+          1,
+          1
+        ]
+      },
+      "by_horizon": {
+        "1": {
+          "choice": {
+            "n": 8,
+            "attempted": 1,
+            "valid": 1,
+            "correct": 1,
+            "accuracy": 0.125,
+            "bootstrap_seed_95": [
+              0,
+              0.375
+            ]
+          },
+          "predict_yes_a": {
+            "n": 8,
+            "attempted": 4,
+            "valid": 4,
+            "correct": 4,
+            "accuracy": 0.5,
+            "bootstrap_seed_95": [
+              0.125,
+              0.875
+            ]
+          },
+          "predict_yes_b": {
+            "n": 8,
+            "attempted": 2,
+            "valid": 2,
+            "correct": 2,
+            "accuracy": 0.25,
+            "bootstrap_seed_95": [
+              0,
+              0.5
+            ]
+          },
+          "prediction_both_mappings_correct": 1,
+          "prediction_pairs": 8,
+          "semantic_consistent": 1,
+          "exploratory_gate_passed": false
+        },
+        "2": {
+          "choice": {
+            "n": 8,
+            "attempted": 5,
+            "valid": 5,
+            "correct": 5,
+            "accuracy": 0.625,
+            "bootstrap_seed_95": [
+              0.25,
+              0.875
+            ]
+          },
+          "predict_yes_a": {
+            "n": 8,
+            "attempted": 2,
+            "valid": 2,
+            "correct": 2,
+            "accuracy": 0.25,
+            "bootstrap_seed_95": [
+              0,
+              0.5
+            ]
+          },
+          "predict_yes_b": {
+            "n": 8,
+            "attempted": 1,
+            "valid": 1,
+            "correct": 1,
+            "accuracy": 0.125,
+            "bootstrap_seed_95": [
+              0,
+              0.375
+            ]
+          },
+          "prediction_both_mappings_correct": 0,
+          "prediction_pairs": 8,
+          "semantic_consistent": 0,
+          "exploratory_gate_passed": false
+        },
+        "4": {
+          "choice": {
+            "n": 8,
+            "attempted": 3,
+            "valid": 3,
+            "correct": 3,
+            "accuracy": 0.375,
+            "bootstrap_seed_95": [
+              0,
+              0.75
+            ]
+          },
+          "predict_yes_a": {
+            "n": 8,
+            "attempted": 1,
+            "valid": 1,
+            "correct": 1,
+            "accuracy": 0.125,
+            "bootstrap_seed_95": [
+              0,
+              0.375
+            ]
+          },
+          "predict_yes_b": {
+            "n": 8,
+            "attempted": 5,
+            "valid": 5,
+            "correct": 5,
+            "accuracy": 0.625,
+            "bootstrap_seed_95": [
+              0.25,
+              0.875
+            ]
+          },
+          "prediction_both_mappings_correct": 1,
+          "prediction_pairs": 8,
+          "semantic_consistent": 1,
+          "exploratory_gate_passed": false
+        },
+        "8": {
+          "choice": {
+            "n": 8,
+            "attempted": 5,
+            "valid": 4,
+            "correct": 4,
+            "accuracy": 0.5,
+            "bootstrap_seed_95": [
+              0.125,
+              0.875
+            ]
+          },
+          "predict_yes_a": {
+            "n": 8,
+            "attempted": 2,
+            "valid": 2,
+            "correct": 2,
+            "accuracy": 0.25,
+            "bootstrap_seed_95": [
+              0,
+              0.5
+            ]
+          },
+          "predict_yes_b": {
+            "n": 8,
+            "attempted": 4,
+            "valid": 4,
+            "correct": 4,
+            "accuracy": 0.5,
+            "bootstrap_seed_95": [
+              0.125,
+              0.875
+            ]
+          },
+          "prediction_both_mappings_correct": 2,
+          "prediction_pairs": 8,
+          "semantic_consistent": 2,
+          "exploratory_gate_passed": false
+        }
+      },
+      "overall": {
+        "choice": {
+          "n": 32,
+          "attempted": 14,
+          "valid": 13,
+          "correct": 13,
+          "accuracy": 0.40625,
+          "bootstrap_seed_95": [
+            0.1875,
+            0.625
+          ]
+        },
+        "predict_yes_a": {
+          "n": 32,
+          "attempted": 9,
+          "valid": 9,
+          "correct": 9,
+          "accuracy": 0.28125,
+          "bootstrap_seed_95": [
+            0.1875,
+            0.375
+          ]
+        },
+        "predict_yes_b": {
+          "n": 32,
+          "attempted": 12,
+          "valid": 12,
+          "correct": 12,
+          "accuracy": 0.375,
+          "bootstrap_seed_95": [
+            0.28125,
+            0.5
+          ]
+        }
+      },
+      "prediction_both_correct": 4,
+      "prediction_worlds": 32,
+      "semantic_consistent": 4,
+      "yes_answers": {
+        "predict_yes_a": 4,
+        "predict_yes_b": 7
+      },
+      "label_A_answers": {
+        "predict_yes_a": 4,
+        "predict_yes_b": 5
+      },
+      "reliable": false,
+      "empirical_contiguous_passing_prefix": 0,
+      "range_right_censored": false,
+      "reasoning_counter_present": 42,
+      "reasoning_tokens_reported": 19789,
+      "all_reported_reasoning_counters_zero": false,
+      "usage_totals": {
+        "input_tokens": 26566,
+        "output_tokens": 20083,
+        "cost": 0.0121541
+      },
+      "models": {
+        "deepseek/deepseek-v4.1-flash": 42,
+        "[missing]": 1
+      },
+      "providers": {
+        "DeepInfra": 42,
+        "[missing]": 1
+      },
+      "latency": {
+        "p50": 4.986137249972671,
+        "p95": 38.55399966589175
+      },
+      "manifest": {
+        "config": "deepseek_low",
+        "ledger": {
+          "cap": 0.25,
+          "cost": 0.012154100000000003,
+          "unknown_reserved": 0.00436058,
+          "calls": 43,
+          "invalid": 1,
+          "consecutive_invalid": 1,
+          "stop": "unknown_billing"
+        },
+        "elapsed_seconds": 476.7114790419582,
+        "trace_sha256": "034def5b1780c34625c887e6a5bd45f4a8cbd051b0787e879df86a83d2e5a7f9"
+      }
+    },
+    "qwen_low": {
+      "configuration": {
+        "model": "qwen/qwen3.8-max-0902",
+        "canonical": "qwen/qwen3.8-max-20260902",
+        "provider": "Alibaba",
+        "slug": "alibaba",
+        "ignore": [],
+        "cap": 0.95,
+        "effort": "low",
+        "input_price": 2.5e-06,
+        "output_price": 6e-06,
+        "prompt_max": 2,
+        "completion_max": 6
+      },
+      "readout": {
+        "n": 8,
+        "attempted": 8,
+        "valid": 8,
+        "correct": 8,
+        "accuracy": 1,
+        "bootstrap_seed_95": [
+          1,
+          1
+        ]
+      },
+      "by_horizon": {
+        "1": {
+          "choice": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "predict_yes_a": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "predict_yes_b": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "prediction_both_mappings_correct": 0,
+          "prediction_pairs": 8,
+          "semantic_consistent": 0,
+          "exploratory_gate_passed": false
+        },
+        "2": {
+          "choice": {
+            "n": 8,
+            "attempted": 1,
+            "valid": 1,
+            "correct": 1,
+            "accuracy": 0.125,
+            "bootstrap_seed_95": [
+              0,
+              0.375
+            ]
+          },
+          "predict_yes_a": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "predict_yes_b": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "prediction_both_mappings_correct": 0,
+          "prediction_pairs": 8,
+          "semantic_consistent": 0,
+          "exploratory_gate_passed": false
+        },
+        "4": {
+          "choice": {
+            "n": 8,
+            "attempted": 1,
+            "valid": 1,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "predict_yes_a": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "predict_yes_b": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "prediction_both_mappings_correct": 0,
+          "prediction_pairs": 8,
+          "semantic_consistent": 0,
+          "exploratory_gate_passed": false
+        },
+        "8": {
+          "choice": {
+            "n": 8,
+            "attempted": 1,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "predict_yes_a": {
+            "n": 8,
+            "attempted": 0,
+            "valid": 0,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "predict_yes_b": {
+            "n": 8,
+            "attempted": 1,
+            "valid": 1,
+            "correct": 0,
+            "accuracy": 0,
+            "bootstrap_seed_95": [
+              0,
+              0
+            ]
+          },
+          "prediction_both_mappings_correct": 0,
+          "prediction_pairs": 8,
+          "semantic_consistent": 0,
+          "exploratory_gate_passed": false
+        }
+      },
+      "overall": {
+        "choice": {
+          "n": 32,
+          "attempted": 3,
+          "valid": 2,
+          "correct": 1,
+          "accuracy": 0.03125,
+          "bootstrap_seed_95": [
+            0,
+            0.09375
+          ]
+        },
+        "predict_yes_a": {
+          "n": 32,
+          "attempted": 0,
+          "valid": 0,
+          "correct": 0,
+          "accuracy": 0,
+          "bootstrap_seed_95": [
+            0,
+            0
+          ]
+        },
+        "predict_yes_b": {
+          "n": 32,
+          "attempted": 1,
+          "valid": 1,
+          "correct": 0,
+          "accuracy": 0,
+          "bootstrap_seed_95": [
+            0,
+            0
+          ]
+        }
+      },
+      "prediction_both_correct": 0,
+      "prediction_worlds": 32,
+      "semantic_consistent": 0,
+      "yes_answers": {
+        "predict_yes_a": 0,
+        "predict_yes_b": 0
+      },
+      "label_A_answers": {
+        "predict_yes_a": 0,
+        "predict_yes_b": 1
+      },
+      "reliable": false,
+      "empirical_contiguous_passing_prefix": 0,
+      "range_right_censored": false,
+      "reasoning_counter_present": 11,
+      "reasoning_tokens_reported": 2311,
+      "all_reported_reasoning_counters_zero": false,
+      "usage_totals": {
+        "input_tokens": 4050,
+        "output_tokens": 2400,
+        "cost": 0.0225
+      },
+      "models": {
+        "qwen/qwen3.8-max-0902": 11,
+        "[missing]": 1
+      },
+      "providers": {
+        "Alibaba": 11,
+        "[missing]": 1
+      },
+      "latency": {
+        "p50": 4.723291729111224,
+        "p95": 60.0059145828709
+      },
+      "manifest": {
+        "config": "qwen_low",
+        "ledger": {
+          "cap": 0.95,
+          "cost": 0.0225,
+          "unknown_reserved": 0.065532,
+          "calls": 12,
+          "invalid": 1,
+          "consecutive_invalid": 1,
+          "stop": "unknown_billing"
+        },
+        "elapsed_seconds": 139.97268104110844,
+        "trace_sha256": "9e7c5cfe61ffbaeace0fcdacd4b15cdcf3458c4a2a1847d7954792d64270942f"
+      }
+    },
+    "kimi_low": {
+      "configuration": {
+        "model": "moonshotai/kimi-k3",
+        "canonical": "moonshotai/kimi-k3-20260715",
+        "provider": "Moonshot AI",
+        "slug": "moonshotai/mxfp4",
+        "ignore": [],
+        "cap": 1.4,
+        "effort": "low",
+        "input_price": 3e-06,
+        "output_price": 1.5e-05,
+        "prompt_max": 3,
+        "completion_max": 15
+      },
+      "readout": {
+        "n": 8,
+        "attempted": 8,
+        "valid": 8,
+        "correct": 8,
+        "accuracy": 1,
+        "bootstrap_seed_95": [
+          1,
+          1
+        ]
+      },
+      "by_horizon": {
+        "1": {
+          "choice": {
+            "n": 8,
+            "attempted": 5,
+            "valid": 5,
+            "correct": 5,
+            "accuracy": 0.625,
+            "bootstrap_seed_95": [
+              0.25,
+              0.875
+            ]
+          },
+          "predict_yes_a": {
+            "n": 8,
+            "attempted": 8,
+            "valid": 8,
+            "correct": 8,
+            "accuracy": 1,
+            "bootstrap_seed_95": [
+              1,
+              1
+            ]
+          },
+          "predict_yes_b": {
+            "n": 8,
+            "attempted": 6,
+            "valid": 6,
+            "correct": 6,
+            "accuracy": 0.75,
+            "bootstrap_seed_95": [
+              0.375,
+              1
+            ]
+          },
+          "prediction_both_mappings_correct": 6,
+          "prediction_pairs": 8,
+          "semantic_consistent": 6,
+          "exploratory_gate_passed": false
+        },
+        "2": {
+          "choice": {
+            "n": 8,
+            "attempted": 8,
+            "valid": 8,
+            "correct": 8,
+            "accuracy": 1,
+            "bootstrap_seed_95": [
+              1,
+              1
+            ]
+          },
+          "predict_yes_a": {
+            "n": 8,
+            "attempted": 7,
+            "valid": 7,
+            "correct": 7,
+            "accuracy": 0.875,
+            "bootstrap_seed_95": [
+              0.625,
+              1
+            ]
+          },
+          "predict_yes_b": {
+            "n": 8,
+            "attempted": 5,
+            "valid": 5,
+            "correct": 5,
+            "accuracy": 0.625,
+            "bootstrap_seed_95": [
+              0.25,
+              0.875
+            ]
+          },
+          "prediction_both_mappings_correct": 4,
+          "prediction_pairs": 8,
+          "semantic_consistent": 4,
+          "exploratory_gate_passed": false
+        },
+        "4": {
+          "choice": {
+            "n": 8,
+            "attempted": 5,
+            "valid": 5,
+            "correct": 5,
+            "accuracy": 0.625,
+            "bootstrap_seed_95": [
+              0.25,
+              0.875
+            ]
+          },
+          "predict_yes_a": {
+            "n": 8,
+            "attempted": 5,
+            "valid": 5,
+            "correct": 5,
+            "accuracy": 0.625,
+            "bootstrap_seed_95": [
+              0.25,
+              0.875
+            ]
+          },
+          "predict_yes_b": {
+            "n": 8,
+            "attempted": 7,
+            "valid": 7,
+            "correct": 6,
+            "accuracy": 0.75,
+            "bootstrap_seed_95": [
+              0.375,
+              1
+            ]
+          },
+          "prediction_both_mappings_correct": 4,
+          "prediction_pairs": 8,
+          "semantic_consistent": 4,
+          "exploratory_gate_passed": false
+        },
+        "8": {
+          "choice": {
+            "n": 8,
+            "attempted": 7,
+            "valid": 6,
+            "correct": 6,
+            "accuracy": 0.75,
+            "bootstrap_seed_95": [
+              0.375,
+              1
+            ]
+          },
+          "predict_yes_a": {
+            "n": 8,
+            "attempted": 6,
+            "valid": 6,
+            "correct": 6,
+            "accuracy": 0.75,
+            "bootstrap_seed_95": [
+              0.375,
+              1
+            ]
+          },
+          "predict_yes_b": {
+            "n": 8,
+            "attempted": 7,
+            "valid": 7,
+            "correct": 7,
+            "accuracy": 0.875,
+            "bootstrap_seed_95": [
+              0.625,
+              1
+            ]
+          },
+          "prediction_both_mappings_correct": 5,
+          "prediction_pairs": 8,
+          "semantic_consistent": 5,
+          "exploratory_gate_passed": false
+        }
+      },
+      "overall": {
+        "choice": {
+          "n": 32,
+          "attempted": 25,
+          "valid": 24,
+          "correct": 24,
+          "accuracy": 0.75,
+          "bootstrap_seed_95": [
+            0.625,
+            0.875
+          ]
+        },
+        "predict_yes_a": {
+          "n": 32,
+          "attempted": 26,
+          "valid": 26,
+          "correct": 26,
+          "accuracy": 0.8125,
+          "bootstrap_seed_95": [
+            0.6875,
+            0.9375
+          ]
+        },
+        "predict_yes_b": {
+          "n": 32,
+          "attempted": 25,
+          "valid": 25,
+          "correct": 24,
+          "accuracy": 0.75,
+          "bootstrap_seed_95": [
+            0.65625,
+            0.84375
+          ]
+        }
+      },
+      "prediction_both_correct": 19,
+      "prediction_worlds": 32,
+      "semantic_consistent": 19,
+      "yes_answers": {
+        "predict_yes_a": 12,
+        "predict_yes_b": 11
+      },
+      "label_A_answers": {
+        "predict_yes_a": 12,
+        "predict_yes_b": 14
+      },
+      "reliable": false,
+      "empirical_contiguous_passing_prefix": 0,
+      "range_right_censored": false,
+      "reasoning_counter_present": 83,
+      "reasoning_tokens_reported": 21287,
+      "all_reported_reasoning_counters_zero": false,
+      "usage_totals": {
+        "input_tokens": 64233,
+        "output_tokens": 22947,
+        "cost": 0.536904
+      },
+      "models": {
+        "moonshotai/kimi-k3": 83,
+        "[missing]": 1
+      },
+      "providers": {
+        "Moonshot AI": 83,
+        "[missing]": 1
+      },
+      "latency": {
+        "p50": 6.805299582891166,
+        "p95": 38.59465350001119
+      },
+      "manifest": {
+        "config": "kimi_low",
+        "ledger": {
+          "cap": 1.4,
+          "cost": 0.5369039999999998,
+          "unknown_reserved": 0.142557,
+          "calls": 84,
+          "invalid": 1,
+          "consecutive_invalid": 1,
+          "stop": "unknown_billing"
+        },
+        "elapsed_seconds": 904.7147924578749,
+        "trace_sha256": "929bc1fccc9c07d03ad425eab7b919f8bd5896f25059d9bc82c86a746165c6ad"
+      }
+    }
+  },
+  "contrasts_vs_jev": {
+    "sol_none": {
+      "n": 16,
+      "root_accuracy_gain_h4_h8": -0.4375,
+      "bootstrap_seed_95": [
+        -0.625,
+        -0.25
+      ],
+      "promising_configuration_contrast": false
+    },
+    "sol_low": {
+      "n": 16,
+      "root_accuracy_gain_h4_h8": -0.4375,
+      "bootstrap_seed_95": [
+        -0.625,
+        -0.25
+      ],
+      "promising_configuration_contrast": false
+    },
+    "sonnet_low": {
+      "n": 16,
+      "root_accuracy_gain_h4_h8": -0.4375,
+      "bootstrap_seed_95": [
+        -0.625,
+        -0.25
+      ],
+      "promising_configuration_contrast": false
+    },
+    "gemini_low": {
+      "n": 16,
+      "root_accuracy_gain_h4_h8": -0.4375,
+      "bootstrap_seed_95": [
+        -0.625,
+        -0.25
+      ],
+      "promising_configuration_contrast": false
+    },
+    "deepseek_low": {
+      "n": 16,
+      "root_accuracy_gain_h4_h8": 0,
+      "bootstrap_seed_95": [
+        -0.3125,
+        0.3125
+      ],
+      "promising_configuration_contrast": false
+    },
+    "qwen_low": {
+      "n": 16,
+      "root_accuracy_gain_h4_h8": -0.4375,
+      "bootstrap_seed_95": [
+        -0.625,
+        -0.25
+      ],
+      "promising_configuration_contrast": false
+    },
+    "kimi_low": {
+      "n": 16,
+      "root_accuracy_gain_h4_h8": 0.25,
+      "bootstrap_seed_95": [
+        -0.125,
+        0.625
+      ],
+      "promising_configuration_contrast": false
+    }
+  },
+  "verification": {
+    "passed": true,
+    "items": 32,
+    "calls_per_configuration": 104,
+    "forward_value_checks": 736,
+    "generation_attempts": 48
+  },
+  "total_reported_cost_usd": 0.577391396,
+  "total_unknown_reservation_usd": 0.5182620800000001,
+  "planned_calls": 832,
+  "attempted_calls": 247,
+  "valid_calls": 240,
+  "limitations": [
+    "Exploratory eight seed clusters; paired mappings are not independent worlds.",
+    "Model configurations differ in interface, reasoning and actual compute; not a compute-matched ranking.",
+    "Prompt length covaries with horizon; disjoint root components allow connectivity shortcuts.",
+    "A passing prefix is an empirical task result, not an internal architectural depth.",
+    "Bootstrap intervals collapse at perfect/zero observed performance; no guarantee on unseen tasks."
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "experiment": "E118",
+  "tested_sha": "1da4d7063e5be8d2a6f724d7a12d60925e2fa74d",
+  "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "bank_digest": "c80b7d75a1010c25fd8d4f9e96564de74d5bc493f45510c21e849e1b9206c42a",
+  "fixture_sha256": "f8292e315d92a2013d9cbfdd5a2e5657ae3e5517a59b95bc61dbd88b86c90ada",
+  "metadata_sha256": "faac1d55693a48c8c48f4d7dcac9b1d4dc3779c8d964d039300c575ab059fc75",
+  "configurations": {
+    "jev": {
+      "model": "typesafe/jev-1.13",
+      "canonical": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "cap": 0.2,
+      "effort": null
+    },
+    "sol_none": {
+      "model": "openai/gpt-6-sol",
+      "canonical": "openai/gpt-6-sol-20260922",
+      "provider": "OpenAI",
+      "slug": "openai",
+      "ignore": [
+        "openai/flex",
+        "openai/fast"
+      ],
+      "cap": 0.5,
+      "effort": "none",
+      "input_price": 2.5e-06,
+      "output_price": 1e-05,
+      "prompt_max": 2,
+      "completion_max": 10
+    },
+    "sol_low": {
+      "model": "openai/gpt-6-sol",
+      "canonical": "openai/gpt-6-sol-20260922",
+      "provider": "OpenAI",
+      "slug": "openai",
+      "ignore": [
+        "openai/flex",
+        "openai/fast"
+      ],
+      "cap": 0.8,
+      "effort": "low",
+      "input_price": 2.5e-06,
+      "output_price": 1e-05,
+      "prompt_max": 2,
+      "completion_max": 10
+    },
+    "sonnet_low": {
+      "model": "anthropic/claude-sonnet-5.5",
+      "canonical": "anthropic/claude-sonnet-5.5-20260928",
+      "provider": "Anthropic",
+      "slug": "anthropic",
+      "ignore": [],
+      "cap": 1.0,
+      "effort": "low",
+      "input_price": 4e-06,
+      "output_price": 1e-05,
+      "prompt_max": 2,
+      "completion_max": 10
+    },
+    "gemini_low": {
+      "model": "google/gemini-3.8-flash",
+      "canonical": "google/gemini-3.8-flash-20260902",
+      "provider": "Google AI Studio",
+      "slug": "google-ai-studio",
+      "ignore": [
+        "google-ai-studio/flex",
+        "google-ai-studio/priority"
+      ],
+      "cap": 0.5,
+      "effort": "low",
+      "input_price": 7.5e-07,
+      "output_price": 3.75e-06,
+      "prompt_max": 0.75,
+      "completion_max": 3.75
+    }
+  },
+  "total_budget_usd": 3,
+  "planned_calls": 520,
+  "workers": 5,
+  "http_deadline_seconds": 60,
+  "configuration_deadline_seconds": 1500,
+  "start_utc": "2026-09-29T11:19:35Z",
+  "automatic_retries": 0,
+  "elapsed_seconds": 89.39548225002363,
+  "completed_utc": "2026-09-29T11:21:05Z"
+}
