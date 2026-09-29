@@ -54,3 +54,11 @@ The generator additionally requires both true and false terminal predicates to b
 
 - Implementation SHA `25805eb`: all 8 E118 tests passed, including exhaustive routes through H=8 and cross-interface payload equivalence.
 - Frozen 32 worlds in 48 attempts; 736 independent forward-value checks passed. Each configuration has 104 planned calls. Fixture SHA-256: `f8292e315d92a2013d9cbfdd5a2e5657ae3e5517a59b95bc61dbd88b86c90ada`.
+
+### Iteration 1 — provider access failure, Jev completed
+
+Tested SHA `1da4d7063e5be8d2a6f724d7a12d60925e2fa74d`. The command above finished with 108 attempted requests: Jev 104/104 valid; each of the other four configurations stopped after its first HTTP 403 provider-terms refusal, with 103 cells explicitly unstarted. These are unavailable measurements, not 0% model accuracy. Do not retry denied configurations.
+
+Jev root accuracy at H=1/2/4/8: 8/8, 7/8, 4/8, 3/8. Both prediction mappings correct: 8/8, 5/8, 4/8, 5/8. Readout 8/8. The preregistered passing prefix is H=1. No reasoning counters were supplied; this does not establish zero reasoning. Known reported cost $0.005833296; unresolved reservations from rejected requests $0.305812500. Audit passed all 108 request/response pairs and regenerated the frozen bank. Full sanitized rows, manifests, summary and audit are in `iteration-1/`; raw responses with account identifiers remain local.
+
+The user confirmed this account cannot use those providers and explicitly requested a different set. Next iteration will retain the same frozen bank, reuse all iteration-1 traces without new Jev calls, and test DeepSeek/Qwen/Kimi configurations within the original combined $3 ceiling. Model selection is based on provider access and public capabilities, not paid outcome-based prompt tuning. The Sol none-versus-low contrast is unavailable.
