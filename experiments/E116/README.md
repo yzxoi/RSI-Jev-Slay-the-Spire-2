@@ -1,7 +1,47 @@
 # E116 — Minimal multi-seed decision benchmark on Jev
 
 Issue: [#222](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/222).
-Status: preregistered exploratory pilot; fixture validation passed, model results pending. No native game actions.
+PR: [#225](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/pull/225).
+Status: completed exploratory pilot; no promising assistance signal under the preregistered rule. No native game actions.
+
+## Observed result
+
+All 216 requests completed with valid choices; no retries, fallback, stalls or exclusions. Resolved model `typesafe/jev-1.13-20260917`, provider `TypeSafe`. Paid tested SHA: `3381f173fdfa263fa43420b5ee8f2ec18be6568f`. Python 3.14.7 on macOS 26.6.2 arm64; no game/simulator dependency.
+
+| Condition | H=4 | H=8 | H=16 | Total |
+| --- | --- | --- | --- | --- |
+| Autonomous first choice | 5/12 | 6/12 | 4/12 | **15/36 (41.7%)** |
+| Prescribed-route prediction | 6/12 | 7/12 | 6/12 | **19/36 (52.8%)** |
+| Exact midpoint assistance | 7/12 | 5/12 | 7/12 | **19/36 (52.8%)** |
+| Remote optimum-flipping edit | 6/12 | 5/12 | 5/12 | 16/36 (44.4%) |
+| Optimum-preserving sham edit | 6/12 | 8/12 | 7/12 | 21/36 (58.3%) |
+| Direct root-value readout | 12/12 | 12/12 | 12/12 | **36/36 (100%)** |
+
+All binary answer labels are balanced, so always-A, always-B and uniform-random expectation are 50%; the exact solver is 100%. Small-sample below-50% observations do not establish systematically worse-than-random behavior.
+
+Midpoint assistance fixes 5 base mistakes and breaks 1 correct choice: net +4/36, **+11.1 percentage points**, seed-cluster bootstrap interval [0.0, 22.2] pp. Gains by horizon are +16.7, -8.3, +25.0 pp. Reliability and readout gates pass, as does improvement at two horizons, but the prespecified >=15 pp aggregate gain gate fails. No extra tuning or model rerun was performed.
+
+Only **4/36** original/flip pairs are both correct; the same 4 also answer the sham correctly. The model changes its selected action in 13/36 flip pairs and 8/36 sham pairs. Raw switching is not the primary score: switching in the wrong direction is still a failure. The 25% both-correct chance reference applies only to independent fair random answers; these paired model answers are correlated, so it is not a universal null model.
+
+The prescribed-route task also fails to show reliable calculation: it answers **A / yes on 31/36 cases**, although true yes/no labels are 18/18 (16 true positives, 15 false positives, 3 true negatives, 2 false negatives). This is a descriptive posthoc observation, not proof of the model's internal heuristic. We do **not** observe the motivating 'can calculate the supplied route, but cannot choose' dissociation.
+
+The clearest measured separation is direct numeric readout versus graph reasoning under this representation. Readout success does not validate arbitrary rule comprehension or isolate search from state tracking. The pilot has a likely floor problem for Jev even at H=4; horizon-response curves here cannot identify an effective planning horizon.
+
+## Cost, trace and audit
+
+- Reported cost **$0.024303888**; 578,664 input and 6,696 output tokens.
+- Request loop duration **165.56 s**; per-request latency p50 **0.745 s**, p95 **0.883 s** (includes isolated worker overhead).
+- 216/216 request-response pairs reconstruct exactly from fixtures; all scored choices, costs and hashes reconcile. Deterministic fixture regeneration matches. [Audit](audit.json), [manifest](manifest.json), [summary](summary.json), [per-cell results](results.jsonl).
+- Raw trace: ignored `artifacts/runs/e116-pilot-v1/trace.jsonl`; SHA-256 `57e7783753e9387062aed7de449742a47dd4b19611a1696c35dbef2fea69abb0`.
+- All calls omit explicit hidden-reasoning counters. This is a short typed-answer protocol, **not verified zero internal reasoning**.
+- Probability Brier scores (lower is better): choice .2584, prediction .2465, assisted .2586; constant 0.5 probability has .25. The provider's separate `confidence` field is retained verbatim, not interpreted as probability of correctness.
+- Bootstrap intervals resample the observed 12 seed clusters. The readout interval degenerates to [1,1] because every observed answer is correct; this is **not** a confidence guarantee of perfect unseen accuracy. Per-horizon samples are only 12 and outcomes across conditions share worlds.
+
+## Decision and next useful test
+
+Preserve the negative result and merge the isolated, audited benchmark as measurement infrastructure; do not promote a Jev strategy or claim that midpoint help has been established as effective. This repository decision is independent of the failed research-signal gate.
+
+Before scaling the benchmark, a separate experiment should add 1/2-step state-tracking items, counterbalanced yes/no option mappings, and equivalent compact-text versus structured-table representations on fresh seeds. That would test whether the current floor reflects task representation/basic tracking, rather than spend on longer graphs that the current configuration already cannot reliably solve. A further model/budget comparison would require its own fixed protocol. No such calls were run here.
 
 ## Objective and hypothesis
 
@@ -50,6 +90,19 @@ Raw request/response events live under ignored `artifacts/runs/e116-pilot-v1/`. 
 - Inspection confirmed an important limitation before model testing: on longer graphs, most consequential later decisions lie near the end. For H=16 they lie in layers 12–15; intervening branch choices often tie. We retain these fixtures and will not interpret H as number of consequential decisions.
 - Before the paid run, harden missing-model failure handling and JSON-stable missing-provider summaries; add mocked billing, failure-stop and total-deadline checks. No paid calls or outcome-driven changes have occurred.
 - SHA `c9bf135`: 8/11 tests passed; three runner mock tests errored because the global subprocess mock also intercepted Python's platform probe. Isolate the platform probe in those tests; no generator or paid protocol change. The failed attempt remains in history.
+- SHA `3381f17`: all 11 focused tests passed; used for the one paid batch and independent trace audit. The fixture hash and paid prompts were never changed after freezing.
+
+Actual paid command (credential content was never passed on the command line):
+
+```bash
+python3 scripts/benchmark_minimal_e116.py run \
+  --env-file /Users/yzxoi/RSI-Jev-Slay-the-Spire-2/.env \
+  --output artifacts/runs/e116-pilot-v1 --execute
+python3 scripts/benchmark_minimal_e116.py audit \
+  --output artifacts/runs/e116-pilot-v1
+```
+
+[Descriptive trace inspection](descriptive-analysis.json) tabulates the prediction confusion matrix and action switches directly from `results.jsonl`; its illustrations use the fixed first seed at all three horizons rather than selected model failures.
 
 ## Interpretation boundaries and related work
 

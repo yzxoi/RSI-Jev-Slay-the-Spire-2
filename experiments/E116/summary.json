@@ -1,0 +1,441 @@
+{
+  "manifest": {
+    "experiment": "E116",
+    "tested_sha": "3381f173fdfa263fa43420b5ee8f2ec18be6568f",
+    "fixture_sha256": "6e096ca0932004a080fc80563895982fb84ecdedf8c53443d34b02f95c47d069",
+    "bank_digest": "7f45e22e2ae93182b41f3279067a045208af39794fd769142a1d28616dee4ead",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "scripts/benchmark_minimal_e116.py",
+      "run",
+      "--bank",
+      "experiments/E116/fixtures.json",
+      "--output",
+      "artifacts/runs/e116-pilot-v1",
+      "--env-file",
+      "<local ignored .env>",
+      "--execute"
+    ],
+    "model_requested": "typesafe/jev-1.13",
+    "endpoint": "https://openrouter.ai/api/v1/systemone",
+    "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "start_utc": "2026-09-29T09:31:51Z",
+    "planned_requests": 216,
+    "max_cost_usd": 0.2,
+    "per_call_reservation_usd": 0.005,
+    "max_batch_seconds": 1200,
+    "http_total_deadline_seconds": 25,
+    "provider_fallback": false,
+    "automatic_retries": 0,
+    "hidden_reasoning_status": "unverified unless explicit counters are returned",
+    "prompt_design": "typed choice; no visible rationale requested; independent contexts",
+    "stop_reason": null,
+    "billed_cost_usd": 0.024303888,
+    "elapsed_seconds": 165.5558313750662,
+    "trace_sha256": "57e7783753e9387062aed7de449742a47dd4b19611a1696c35dbef2fea69abb0",
+    "completed_utc": "2026-09-29T09:34:37Z"
+  },
+  "verification": {
+    "passed": true,
+    "forward_value_checks": 7308,
+    "items": 36,
+    "cells": 216,
+    "generation_attempts": 51
+  },
+  "by_arm": {
+    "choice": {
+      "n": 36,
+      "valid": 36,
+      "correct": 15,
+      "accuracy": 0.4166666666666667,
+      "accuracy_seed_bootstrap_95": [
+        0.2777777777777778,
+        0.5833333333333333
+      ],
+      "mean_root_regret_valid_only": 0.9722222222222222,
+      "binary_brier_valid_only": 0.2584194444444445
+    },
+    "prediction": {
+      "n": 36,
+      "valid": 36,
+      "correct": 19,
+      "accuracy": 0.5277777777777778,
+      "accuracy_seed_bootstrap_95": [
+        0.38888888888888884,
+        0.6666666666666666
+      ],
+      "mean_root_regret_valid_only": null,
+      "binary_brier_valid_only": 0.24649722222222223
+    },
+    "assisted": {
+      "n": 36,
+      "valid": 36,
+      "correct": 19,
+      "accuracy": 0.5277777777777778,
+      "accuracy_seed_bootstrap_95": [
+        0.4444444444444444,
+        0.611111111111111
+      ],
+      "mean_root_regret_valid_only": 0.7777777777777778,
+      "binary_brier_valid_only": 0.2586305555555556
+    },
+    "flip": {
+      "n": 36,
+      "valid": 36,
+      "correct": 16,
+      "accuracy": 0.4444444444444444,
+      "accuracy_seed_bootstrap_95": [
+        0.3055555555555555,
+        0.5833333333333333
+      ],
+      "mean_root_regret_valid_only": 0.6111111111111112,
+      "binary_brier_valid_only": 0.2760666666666667
+    },
+    "sham": {
+      "n": 36,
+      "valid": 36,
+      "correct": 21,
+      "accuracy": 0.5833333333333334,
+      "accuracy_seed_bootstrap_95": [
+        0.4444444444444444,
+        0.75
+      ],
+      "mean_root_regret_valid_only": 0.6944444444444444,
+      "binary_brier_valid_only": 0.24873611111111113
+    },
+    "readout": {
+      "n": 36,
+      "valid": 36,
+      "correct": 36,
+      "accuracy": 1,
+      "accuracy_seed_bootstrap_95": [
+        1,
+        1
+      ],
+      "mean_root_regret_valid_only": 0,
+      "binary_brier_valid_only": 0
+    }
+  },
+  "by_horizon": {
+    "4": {
+      "choice": {
+        "n": 12,
+        "valid": 12,
+        "correct": 5,
+        "accuracy": 0.4166666666666667,
+        "accuracy_seed_bootstrap_95": [
+          0.16666666666666666,
+          0.6666666666666666
+        ],
+        "mean_root_regret_valid_only": 1.3333333333333333,
+        "binary_brier_valid_only": 0.2598416666666667
+      },
+      "prediction": {
+        "n": 12,
+        "valid": 12,
+        "correct": 6,
+        "accuracy": 0.5,
+        "accuracy_seed_bootstrap_95": [
+          0.25,
+          0.75
+        ],
+        "mean_root_regret_valid_only": null,
+        "binary_brier_valid_only": 0.257875
+      },
+      "assisted": {
+        "n": 12,
+        "valid": 12,
+        "correct": 7,
+        "accuracy": 0.5833333333333334,
+        "accuracy_seed_bootstrap_95": [
+          0.3333333333333333,
+          0.8333333333333334
+        ],
+        "mean_root_regret_valid_only": 0.9166666666666666,
+        "binary_brier_valid_only": 0.23305
+      },
+      "flip": {
+        "n": 12,
+        "valid": 12,
+        "correct": 6,
+        "accuracy": 0.5,
+        "accuracy_seed_bootstrap_95": [
+          0.25,
+          0.75
+        ],
+        "mean_root_regret_valid_only": 0.5833333333333334,
+        "binary_brier_valid_only": 0.2516083333333333
+      },
+      "sham": {
+        "n": 12,
+        "valid": 12,
+        "correct": 6,
+        "accuracy": 0.5,
+        "accuracy_seed_bootstrap_95": [
+          0.25,
+          0.75
+        ],
+        "mean_root_regret_valid_only": 0.8333333333333334,
+        "binary_brier_valid_only": 0.251275
+      },
+      "readout": {
+        "n": 12,
+        "valid": 12,
+        "correct": 12,
+        "accuracy": 1,
+        "accuracy_seed_bootstrap_95": [
+          1,
+          1
+        ],
+        "mean_root_regret_valid_only": 0,
+        "binary_brier_valid_only": 0
+      }
+    },
+    "8": {
+      "choice": {
+        "n": 12,
+        "valid": 12,
+        "correct": 6,
+        "accuracy": 0.5,
+        "accuracy_seed_bootstrap_95": [
+          0.25,
+          0.75
+        ],
+        "mean_root_regret_valid_only": 0.5,
+        "binary_brier_valid_only": 0.22834166666666667
+      },
+      "prediction": {
+        "n": 12,
+        "valid": 12,
+        "correct": 7,
+        "accuracy": 0.5833333333333334,
+        "accuracy_seed_bootstrap_95": [
+          0.3333333333333333,
+          0.8333333333333334
+        ],
+        "mean_root_regret_valid_only": null,
+        "binary_brier_valid_only": 0.24865
+      },
+      "assisted": {
+        "n": 12,
+        "valid": 12,
+        "correct": 5,
+        "accuracy": 0.4166666666666667,
+        "accuracy_seed_bootstrap_95": [
+          0.16666666666666666,
+          0.6666666666666666
+        ],
+        "mean_root_regret_valid_only": 0.6666666666666666,
+        "binary_brier_valid_only": 0.263425
+      },
+      "flip": {
+        "n": 12,
+        "valid": 12,
+        "correct": 5,
+        "accuracy": 0.4166666666666667,
+        "accuracy_seed_bootstrap_95": [
+          0.16666666666666666,
+          0.6666666666666666
+        ],
+        "mean_root_regret_valid_only": 0.5833333333333334,
+        "binary_brier_valid_only": 0.2839
+      },
+      "sham": {
+        "n": 12,
+        "valid": 12,
+        "correct": 8,
+        "accuracy": 0.6666666666666666,
+        "accuracy_seed_bootstrap_95": [
+          0.4166666666666667,
+          0.9166666666666666
+        ],
+        "mean_root_regret_valid_only": 0.6666666666666666,
+        "binary_brier_valid_only": 0.22695
+      },
+      "readout": {
+        "n": 12,
+        "valid": 12,
+        "correct": 12,
+        "accuracy": 1,
+        "accuracy_seed_bootstrap_95": [
+          1,
+          1
+        ],
+        "mean_root_regret_valid_only": 0,
+        "binary_brier_valid_only": 0
+      }
+    },
+    "16": {
+      "choice": {
+        "n": 12,
+        "valid": 12,
+        "correct": 4,
+        "accuracy": 0.3333333333333333,
+        "accuracy_seed_bootstrap_95": [
+          0.08333333333333333,
+          0.5833333333333334
+        ],
+        "mean_root_regret_valid_only": 1.0833333333333333,
+        "binary_brier_valid_only": 0.287075
+      },
+      "prediction": {
+        "n": 12,
+        "valid": 12,
+        "correct": 6,
+        "accuracy": 0.5,
+        "accuracy_seed_bootstrap_95": [
+          0.25,
+          0.75
+        ],
+        "mean_root_regret_valid_only": null,
+        "binary_brier_valid_only": 0.23296666666666668
+      },
+      "assisted": {
+        "n": 12,
+        "valid": 12,
+        "correct": 7,
+        "accuracy": 0.5833333333333334,
+        "accuracy_seed_bootstrap_95": [
+          0.3333333333333333,
+          0.8333333333333334
+        ],
+        "mean_root_regret_valid_only": 0.75,
+        "binary_brier_valid_only": 0.27941666666666665
+      },
+      "flip": {
+        "n": 12,
+        "valid": 12,
+        "correct": 5,
+        "accuracy": 0.4166666666666667,
+        "accuracy_seed_bootstrap_95": [
+          0.16666666666666666,
+          0.6666666666666666
+        ],
+        "mean_root_regret_valid_only": 0.6666666666666666,
+        "binary_brier_valid_only": 0.2926916666666667
+      },
+      "sham": {
+        "n": 12,
+        "valid": 12,
+        "correct": 7,
+        "accuracy": 0.5833333333333334,
+        "accuracy_seed_bootstrap_95": [
+          0.3333333333333333,
+          0.8333333333333334
+        ],
+        "mean_root_regret_valid_only": 0.5833333333333334,
+        "binary_brier_valid_only": 0.26798333333333335
+      },
+      "readout": {
+        "n": 12,
+        "valid": 12,
+        "correct": 12,
+        "accuracy": 1,
+        "accuracy_seed_bootstrap_95": [
+          1,
+          1
+        ],
+        "mean_root_regret_valid_only": 0,
+        "binary_brier_valid_only": 0
+      }
+    }
+  },
+  "paired_overall": {
+    "n": 36,
+    "assisted_gain": 0.1111111111111111,
+    "assisted_gain_seed_bootstrap_95": [
+      0.0,
+      0.2222222222222222
+    ],
+    "improved": 5,
+    "worsened": 1,
+    "both_flip_correct": 4,
+    "triple_correct": 4,
+    "base_correct_sham_wrong": 1
+  },
+  "paired_by_horizon": {
+    "4": {
+      "n": 12,
+      "assisted_gain": 0.16666666666666666,
+      "assisted_gain_seed_bootstrap_95": [
+        0,
+        0.4166666666666667
+      ],
+      "improved": 2,
+      "worsened": 0,
+      "both_flip_correct": 2,
+      "triple_correct": 2,
+      "base_correct_sham_wrong": 0
+    },
+    "8": {
+      "n": 12,
+      "assisted_gain": -0.08333333333333333,
+      "assisted_gain_seed_bootstrap_95": [
+        -0.25,
+        0
+      ],
+      "improved": 0,
+      "worsened": 1,
+      "both_flip_correct": 0,
+      "triple_correct": 0,
+      "base_correct_sham_wrong": 1
+    },
+    "16": {
+      "n": 12,
+      "assisted_gain": 0.25,
+      "assisted_gain_seed_bootstrap_95": [
+        0,
+        0.5
+      ],
+      "improved": 3,
+      "worsened": 0,
+      "both_flip_correct": 2,
+      "triple_correct": 2,
+      "base_correct_sham_wrong": 0
+    }
+  },
+  "baselines": {
+    "constant_A_accuracy": 0.5,
+    "constant_B_accuracy": 0.5,
+    "uniform_random_expected_accuracy": 0.5,
+    "exact_oracle_accuracy": 1.0,
+    "depth2_zero_leaf_search_root_accuracy": 0.5,
+    "independent_random_base_flip_both_correct_expectation": 0.25,
+    "independent_random_triple_correct_expectation": 0.125
+  },
+  "latency_seconds": {
+    "p50": 0.7452328328508884,
+    "p95": 0.8834764999337494
+  },
+  "usage_totals": {
+    "input_tokens": 578664,
+    "output_tokens": 6696,
+    "cost": 0.024303888
+  },
+  "models": {
+    "typesafe/jev-1.13-20260917": 216
+  },
+  "providers": {
+    "TypeSafe": 216
+  },
+  "reasoning_counter_present_calls": 0,
+  "decision": {
+    "reliable": true,
+    "readout_calibration_passed": true,
+    "gain_at_least_15pp": false,
+    "positive_horizons": 2,
+    "exploratory_promising_assistance_signal": false,
+    "confirmatory": false
+  },
+  "limitations": [
+    "12 independent seed clusters; exploratory only",
+    "two disjoint root components; connectivity shortcuts possible",
+    "length, input tokens and meaningful transition distance are not independently controlled",
+    "no matched irrelevant midpoint annotation control in this pilot",
+    "flip/sham edits match changed-entry count but not payoff magnitude or relevance",
+    "assistance externally computes future values; question types differ in intrinsic difficulty",
+    "missing hidden reasoning counters does not establish zero internal reasoning",
+    "no full-plan, online interaction, no-op insertion, or game performance measured"
+  ]
+}
