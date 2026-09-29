@@ -3,8 +3,8 @@ import json
 import math
 import threading
 import time
-import urllib.request
 from .jev import read_key
+from .http_deadline import post_json
 
 DEEPSEEK = 'deepseek/deepseek-v4.1-flash'
 JEV = 'typesafe/jev-1.13'
@@ -103,10 +103,7 @@ class Backend:
         started = time.monotonic(); result = {}; valid = False
         try:
             endpoint = 'https://openrouter.ai/api/v1/' + ('systemone' if self.model == JEV else 'chat/completions')
-            request = urllib.request.Request(endpoint, data=data, headers={
-                'Authorization':'Bearer ' + self.key, 'Content-Type':'application/json'})
-            with urllib.request.urlopen(request, timeout=25 if self.model == JEV else 45) as response:
-                result = json.load(response)
+            result = post_json(endpoint, body, self.key, 25 if self.model == JEV else 45)
             trace.write('model_response', {'response':result,'seconds':time.monotonic()-started})
             chosen = parse_choice(self.model, result, candidates)
             valid = True
