@@ -172,19 +172,20 @@ class TreePolicy:
             self.pending = None
 
 
-def probe(frozen, manifest, label, policy=None, expected_plan=None, seconds=None):
+def probe(frozen, manifest, label, policy=None, expected_plan=None, seconds=None, checkpoint=None):
     """Fresh process; checked history; exactly one bounded battle continuation."""
     uid = str(uuid.uuid4())
     budget = LIMITS['probe_seconds'] if seconds is None else seconds
     started = time.monotonic()
     deadline = started + budget
     trace = Trace(ROOT / 'artifacts/runs' / uid,
-                  {**manifest, 'scope': 'E120_probe', 'label': label, 'case': frozen['case'],
+                  {**manifest, 'scope': manifest.get('experiment', 'E120') + '_probe', 'label': label, 'case': frozen['case'],
                    'entry_hash': frozen['entry_hash'], 'prefix_hash': frozen['prefix_hash'],
-                   'budget_seconds': budget, 'limits': LIMITS})
+                   'budget_seconds': budget, 'limits': manifest.get('search_limits', LIMITS), 'checkpoint': checkpoint})
     result = {'label': label, 'run_id': uid, 'status': 'error', 'steps': 0,
               'entry_verified': False, 'replay_seconds': 0., 'replay_commands': 0,
-              'sources': {}, 'selection_truncations': 0, 'last_combat_round': None, 'plan': []}
+              'sources': {}, 'selection_truncations': 0, 'last_combat_round': None, 'plan': [],
+              'restore_mode': 'research_checkpoint' if checkpoint else 'full_prefix'}
     engine, state = None, {}
     previous = frozen['previous']
     sources = Counter()
@@ -202,9 +203,14 @@ def probe(frozen, manifest, label, policy=None, expected_plan=None, seconds=None
                 any(c['cmd'] != 'action' for c in prefix[1:]) or digest(prefix) != frozen['prefix_hash']):
             raise ValueError('Invalid canonical prefix')
         engine = Headless(trace.directory, timeout=max(.01, min(15, budget)), resource_decisions=True)
-        for command in prefix:
-            state = send(command)
-            result['replay_commands'] += 1
+        if checkpoint:
+            from .research_restore import restore_entry
+            state = restore_entry(send, frozen, checkpoint, manifest)
+            result['replay_commands'] = 2
+        else:
+            for command in prefix:
+                state = send(command)
+                result['replay_commands'] += 1
         result['replay_seconds'] = time.monotonic() - started
         if digest(state) != frozen['entry_hash']:
             raise ValueError(f"Entry mismatch: expected {frozen['entry_hash']}, got {digest(state)}")
@@ -258,7 +264,8 @@ def probe(frozen, manifest, label, policy=None, expected_plan=None, seconds=None
         result.update(status='error', error=f'{type(exc).__name__}: {exc}')
     if not result['entry_verified']:
         result['replay_seconds'] = time.monotonic() - started
-    result.update(sources=dict(sources), path_hash=digest([p['action'] for p in result['plan']]))
+    result.update(sources=dict(sources), path_hash=digest([p['action'] for p in result['plan']]),
+                  transition_hash=digest(result['plan']))
     finish(trace, result, engine, started)
     return result
 
@@ -267,25 +274,38 @@ def compact(result):
     return {k: v for k, v in result.items() if k != 'plan'}
 
 
-def search(frozen, manifest, arm, control):
+def search(frozen, manifest, arm, control, *, search_limits=None, checkpoint=None, reference=None):
+    limits = {**LIMITS, **(search_limits or {})}
     started = time.monotonic()
-    deadline = started + max(0, LIMITS['search_seconds'] - control['seconds'])
+    deadline = started + max(0, limits['search_seconds'] - control['seconds'])
     seed = digest([frozen['case'], arm])
     tree = (Flat if arm == 'flat' else UCT)(random.Random(seed))
     best = control
     records, curves = [compact(control)], []
     paths = {control['path_hash']}
     status = 'complete'
-    for index in range(1, LIMITS['simulations']):
+    compatibility = []
+    if reference is not None:
+        compatibility.append({'simulation': 0, 'match': same_trajectory(control, reference[0])})
+        if not compatibility[-1]['match']:
+            status = 'invalid'
+    for index in range(1, limits['simulations']):
+        if status == 'invalid':
+            break
         remaining = deadline - time.monotonic()
         if remaining <= 0:
             status = 'time_cap'
             break
         policy = TreePolicy(tree, random.Random(digest([seed, index])))
         result = probe(frozen, manifest, f'{arm}:{index}', policy=policy,
-                       seconds=min(LIMITS['probe_seconds'], remaining))
+                       seconds=min(limits['probe_seconds'], remaining), checkpoint=checkpoint)
         records.append(compact(result))
         paths.add(result['path_hash'])
+        if reference is not None and index < len(reference):
+            compatibility.append({'simulation': index, 'match': same_trajectory(result, reference[index])})
+            if not compatibility[-1]['match']:
+                status = 'invalid'
+                break
         if result['status'] == 'error':
             status = 'invalid'
             break
@@ -293,10 +313,11 @@ def search(frozen, manifest, arm, control):
             tree.backup(policy.path, utility(result, frozen))
             if rank(result) > rank(best):
                 best = result
-        if len(records) in (8, 24):
+        if len(records) in (8, 24, 64):
             curves.append({'simulations': len(records),
                            'charged_seconds': control['seconds'] + time.monotonic() - started,
                            'incumbent': compact(best)})
+            print(f"{frozen['case']} {arm}: {len(records)} probes; best={best['status']} hp={best.get('hp')}", flush=True)
     # Keep the best certified continuation when a budget expires (E115 gap).
     searched_seconds = time.monotonic() - started
     verification = None
@@ -313,4 +334,12 @@ def search(frozen, manifest, arm, control):
             'replay_seconds': sum(r['replay_seconds'] for r in records),
             'unique_action_paths': len(paths), 'simulations': len(records),
             'probe_statuses': dict(Counter(r['status'] for r in records)),
-            'curve': curves, 'tree': tree.summary(), 'probes': records}
+            'curve': curves, 'tree': tree.summary(), 'probes': records,
+            'limits': limits, 'compatibility': compatibility,
+            'compatibility_pass': (len(compatibility) == len(reference) and all(c['match'] for c in compatibility)) if reference else None}
+
+
+def same_trajectory(result, reference):
+    """Exact action AND intermediate-state identity, not merely same final HP."""
+    return all(result.get(key) == reference.get(key) for key in
+               ('status', 'path_hash', 'transition_hash', 'final_hash', 'steps'))
