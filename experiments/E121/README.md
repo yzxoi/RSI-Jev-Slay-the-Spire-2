@@ -1,6 +1,6 @@
 # E121: faithful and faster pre-room restoration
 
-Issue: [#232](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/232). Status: protocol frozen before testing. Baseline: E120's canonical start_run + legal-action prefix, historical game v0.111.0 and the same ten first-elite entries.
+Issue: [#232](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/232). PR: [#235](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/pull/235). Status: fidelity passed; **both performance promotion gates failed**. Preserve validation tools, snapshots and all timing evidence; no automatic accelerator enabled. Baseline: E120's canonical start_run + legal-action prefix, historical game v0.111.0 and the same ten first-elite entries. The original protocol and explicit later timing amendment follow.
 
 ## Hypothesis and boundaries
 
@@ -31,6 +31,24 @@ Only after this gate passes, use a separate experiment issue/branch/PR to compar
 The original timing denominator was measured in an earlier reference-capture batch, while the gate used the slowest later C sample. This cannot establish a guaranteed per-load speedup on a shared desktop. **Before new measurements**, replace that performance claim with a robust paired experiment: the same ten cases, five fresh A/C pairs per case, order alternating by `(case_index + repetition) % 2`, two case workers, no repetitions selected or removed. All 100 entry states must still match exactly; the complete 120-path fidelity gate remains mandatory and unchanged.
 
 Report each of the 50 paired ratios, per-case median ratios, pooled median ratio, and A/C median, nearest-rank p95 and maximum elapsed restore time. The amended performance gate requires **every case's median ratio >=2**, pooled paired median >=2, and checkpoint p95 no worse than full-prefix p95. Retain all outliers. This amendment is post-hoc to v1 and tests a practical typical/tail-cost criterion, not the original guarantee for every load. If the fresh paired batch fails, do not automatically repeat or enable acceleration. Command: `python3 scripts/validate_checkpoints_e121.py timing --output artifacts/runs/e121-timing-v2.json`.
+
+## Final evidence and decision
+
+Timing replication tested SHA **`76ad2fa`**; original fidelity validation tested SHA **`367916e`**. The fresh paired batch completed once in 117.64 seconds. All 50 pairs / 100 map and combat-entry comparisons matched exactly. No samples were discarded and no engine source/binary was changed.
+
+| Timing measure | Full prefix A | Map snapshot C |
+| --- | ---: | ---: |
+| Median restore seconds | 3.234 | 1.117 |
+| Nearest-rank p95 seconds | 3.749 | 3.471 |
+| Maximum seconds | 5.037 | 4.238 |
+
+Median paired speedup: **2.737×**. Nine per-case median ratios exceeded 2×, but Defect-a was **1.495×**, so the amended promotion gate also **failed**. The three slow Defect-a loads were 3.447, 2.244 and 3.813 seconds; its other two were 1.078 and 1.125. We do not identify the cause or relabel this as a pass. The first batch's minimum individual ratio failure also remains visible in `verification-v1.json`.
+
+The complete evidence includes 30 preflight paths, 30 reference continuations, 120 continuation checks and 100 paired timing paths: **280 raw trace/wire/stderr triples**. All exported-state fidelity checks passed, including rewards and subsequent draws on 26 surviving reference paths; four reference paths ended in legitimate death. These repeated paths are compatibility evidence, not independent game wins or proof that every future branch restores faithfully. Snapshots remain unedited and local/ignored.
+
+**Decision:** merge the opt-in validators and evidence; do not enable checkpoint restoration in the default controller or claim a stable >=2× guarantee. `verified-checkpoints.json` binds the ten snapshots to their prefix/map/entry hashes, engine hashes and evidence hashes, and explicitly marks `performance_promotion_pass: false`. It certifies the tested fidelity scope, not speed promotion.
+
+A separate, amended-before-testing **E124 / [#236](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/236)** may deliberately consume these *unpromoted research snapshots* to test end-to-end useful search under a fixed 120-second budget. This withdraws E124's initial proposed speed-promotion prerequisite explicitly; it does not satisfy or change E121's failed gates. It must retain the failures/slow loads, reproduce every first-24 trajectory against E120, and verify final plans by full-prefix replay. That bounded research comparison, not another timing retry, addresses the actual decision of whether more search quality is obtained within the deadline.
 
 ```bash
 python3 -m unittest discover -s tests -p 'test_checkpoints.py' -v
