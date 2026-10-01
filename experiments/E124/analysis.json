@@ -1,0 +1,588 @@
+{
+  "rows": [
+    {
+      "case": "Ironclad-a",
+      "arm": "flat",
+      "attempts": 62,
+      "completed_terminal_rollouts": 61,
+      "probe_statuses": {
+        "clear": 55,
+        "defeat": 6,
+        "timeout": 1
+      },
+      "old_24_seconds": 83.41637691599317,
+      "checkpoint_24_seconds": 48.45739733311348,
+      "same_24_speedup": 1.721437417337113,
+      "final_search_seconds": 120.18892045808025,
+      "final_verification_seconds": 3.678124708123505,
+      "snapshot_full_build_seconds": 2.935566000174731,
+      "snapshot_save_command_seconds": 0.10130974999628961,
+      "build_seconds_per_completed_rollout_single_arm": 0.048124032789749686,
+      "save_seconds_per_completed_rollout_single_arm": 0.0016608155737096657,
+      "replay_fraction": 0.6042169008595016,
+      "best_probe": "flat:49",
+      "hp_at_24": 31,
+      "hp_at_final": 36
+    },
+    {
+      "case": "Ironclad-a",
+      "arm": "uct",
+      "attempts": 63,
+      "completed_terminal_rollouts": 62,
+      "probe_statuses": {
+        "clear": 54,
+        "defeat": 8,
+        "timeout": 1
+      },
+      "old_24_seconds": 82.57234574994072,
+      "checkpoint_24_seconds": 46.130291500128806,
+      "same_24_speedup": 1.7899810095435915,
+      "final_search_seconds": 120.01473812502809,
+      "final_verification_seconds": 3.4778585419990122,
+      "snapshot_full_build_seconds": 2.935566000174731,
+      "snapshot_save_command_seconds": 0.10130974999628961,
+      "build_seconds_per_completed_rollout_single_arm": 0.04734783871249566,
+      "save_seconds_per_completed_rollout_single_arm": 0.0016340282257466066,
+      "replay_fraction": 0.5995158002653179,
+      "best_probe": "uct:33",
+      "hp_at_24": 31,
+      "hp_at_final": 36
+    },
+    {
+      "case": "Silent-a",
+      "arm": "flat",
+      "attempts": 51,
+      "completed_terminal_rollouts": 50,
+      "probe_statuses": {
+        "clear": 47,
+        "defeat": 3,
+        "timeout": 1
+      },
+      "old_24_seconds": 113.14528274978511,
+      "checkpoint_24_seconds": 56.69862441695295,
+      "same_24_speedup": 1.9955560459056665,
+      "final_search_seconds": 120.01094816694967,
+      "final_verification_seconds": 4.579402541043237,
+      "snapshot_full_build_seconds": 3.578337207902223,
+      "snapshot_save_command_seconds": 0.08280745800584555,
+      "build_seconds_per_completed_rollout_single_arm": 0.07156674415804445,
+      "save_seconds_per_completed_rollout_single_arm": 0.001656149160116911,
+      "replay_fraction": 0.49424003479902834,
+      "best_probe": "control",
+      "hp_at_24": 44,
+      "hp_at_final": 44
+    },
+    {
+      "case": "Silent-a",
+      "arm": "uct",
+      "attempts": 51,
+      "completed_terminal_rollouts": 50,
+      "probe_statuses": {
+        "clear": 46,
+        "defeat": 4,
+        "timeout": 1
+      },
+      "old_24_seconds": 112.55275241704658,
+      "checkpoint_24_seconds": 57.70348658412695,
+      "same_24_speedup": 1.9505364247436574,
+      "final_search_seconds": 120.01314795901999,
+      "final_verification_seconds": 4.4137725830078125,
+      "snapshot_full_build_seconds": 3.578337207902223,
+      "snapshot_save_command_seconds": 0.08280745800584555,
+      "build_seconds_per_completed_rollout_single_arm": 0.07156674415804445,
+      "save_seconds_per_completed_rollout_single_arm": 0.001656149160116911,
+      "replay_fraction": 0.4951697215496573,
+      "best_probe": "uct:29",
+      "hp_at_24": 44,
+      "hp_at_final": 49
+    },
+    {
+      "case": "Defect-a",
+      "arm": "flat",
+      "attempts": 64,
+      "completed_terminal_rollouts": 64,
+      "probe_statuses": {
+        "clear": 62,
+        "defeat": 2
+      },
+      "old_24_seconds": 90.44843762484379,
+      "checkpoint_24_seconds": 43.5011770830024,
+      "same_24_speedup": 2.079218165804196,
+      "final_search_seconds": 115.4746319160331,
+      "final_verification_seconds": 3.751861374825239,
+      "snapshot_full_build_seconds": 3.200962374918163,
+      "snapshot_save_command_seconds": 0.09051050012931228,
+      "build_seconds_per_completed_rollout_single_arm": 0.050015037108096294,
+      "save_seconds_per_completed_rollout_single_arm": 0.0014142265645205043,
+      "replay_fraction": 0.6224407584750443,
+      "best_probe": "flat:5",
+      "hp_at_24": 52,
+      "hp_at_final": 52
+    },
+    {
+      "case": "Defect-a",
+      "arm": "uct",
+      "attempts": 64,
+      "completed_terminal_rollouts": 64,
+      "probe_statuses": {
+        "clear": 62,
+        "defeat": 2
+      },
+      "old_24_seconds": 89.6123954989016,
+      "checkpoint_24_seconds": 45.912964458111674,
+      "same_24_speedup": 1.9517884884270271,
+      "final_search_seconds": 118.50476466724649,
+      "final_verification_seconds": 3.627413042122498,
+      "snapshot_full_build_seconds": 3.200962374918163,
+      "snapshot_save_command_seconds": 0.09051050012931228,
+      "build_seconds_per_completed_rollout_single_arm": 0.050015037108096294,
+      "save_seconds_per_completed_rollout_single_arm": 0.0014142265645205043,
+      "replay_fraction": 0.6294410204473837,
+      "best_probe": "uct:13",
+      "hp_at_24": 52,
+      "hp_at_final": 52
+    },
+    {
+      "case": "Regent-a",
+      "arm": "flat",
+      "attempts": 64,
+      "completed_terminal_rollouts": 64,
+      "probe_statuses": {
+        "clear": 47,
+        "defeat": 17
+      },
+      "old_24_seconds": 94.21576945809647,
+      "checkpoint_24_seconds": 45.29583420883864,
+      "same_24_speedup": 2.0800095881601406,
+      "final_search_seconds": 119.49849270889536,
+      "final_verification_seconds": 3.7747917079832405,
+      "snapshot_full_build_seconds": 3.3648451671469957,
+      "snapshot_save_command_seconds": 0.11188087495975196,
+      "build_seconds_per_completed_rollout_single_arm": 0.05257570573667181,
+      "save_seconds_per_completed_rollout_single_arm": 0.0017481386712461244,
+      "replay_fraction": 0.6101479932552365,
+      "best_probe": "flat:57",
+      "hp_at_24": 45,
+      "hp_at_final": 45
+    },
+    {
+      "case": "Regent-a",
+      "arm": "uct",
+      "attempts": 64,
+      "completed_terminal_rollouts": 64,
+      "probe_statuses": {
+        "clear": 52,
+        "defeat": 12
+      },
+      "old_24_seconds": 93.88897591689602,
+      "checkpoint_24_seconds": 44.557147041894495,
+      "same_24_speedup": 2.1071586075432,
+      "final_search_seconds": 119.38581820903346,
+      "final_verification_seconds": 3.941866749897599,
+      "snapshot_full_build_seconds": 3.3648451671469957,
+      "snapshot_save_command_seconds": 0.11188087495975196,
+      "build_seconds_per_completed_rollout_single_arm": 0.05257570573667181,
+      "save_seconds_per_completed_rollout_single_arm": 0.0017481386712461244,
+      "replay_fraction": 0.6028641990053266,
+      "best_probe": "uct:19",
+      "hp_at_24": 45,
+      "hp_at_final": 45
+    },
+    {
+      "case": "Necrobinder-a",
+      "arm": "flat",
+      "attempts": 59,
+      "completed_terminal_rollouts": 58,
+      "probe_statuses": {
+        "clear": 15,
+        "defeat": 43,
+        "timeout": 1
+      },
+      "old_24_seconds": 94.01585979107767,
+      "checkpoint_24_seconds": 49.18535308307037,
+      "same_24_speedup": 1.9114605039490506,
+      "final_search_seconds": 120.01500487397425,
+      "final_verification_seconds": 3.772659916197881,
+      "snapshot_full_build_seconds": 3.32034745789133,
+      "snapshot_save_command_seconds": 0.08506700000725687,
+      "build_seconds_per_completed_rollout_single_arm": 0.05724736996364362,
+      "save_seconds_per_completed_rollout_single_arm": 0.0014666724139182218,
+      "replay_fraction": 0.5594118839810215,
+      "best_probe": "flat:43",
+      "hp_at_24": 9,
+      "hp_at_final": 26
+    },
+    {
+      "case": "Necrobinder-a",
+      "arm": "uct",
+      "attempts": 60,
+      "completed_terminal_rollouts": 59,
+      "probe_statuses": {
+        "clear": 18,
+        "defeat": 41,
+        "timeout": 1
+      },
+      "old_24_seconds": 93.73541383305565,
+      "checkpoint_24_seconds": 49.10111470799893,
+      "same_24_speedup": 1.9090282245218653,
+      "final_search_seconds": 120.01279299915768,
+      "final_verification_seconds": 3.754354750039056,
+      "snapshot_full_build_seconds": 3.32034745789133,
+      "snapshot_save_command_seconds": 0.08506700000725687,
+      "build_seconds_per_completed_rollout_single_arm": 0.05627707555748017,
+      "save_seconds_per_completed_rollout_single_arm": 0.0014418135594450317,
+      "replay_fraction": 0.5711181917038995,
+      "best_probe": "uct:30",
+      "hp_at_24": 26,
+      "hp_at_final": 26
+    },
+    {
+      "case": "Ironclad-b",
+      "arm": "flat",
+      "attempts": 61,
+      "completed_terminal_rollouts": 60,
+      "probe_statuses": {
+        "defeat": 60,
+        "timeout": 1
+      },
+      "old_24_seconds": 93.07667679199949,
+      "checkpoint_24_seconds": 48.47311208420433,
+      "same_24_speedup": 1.9201712617566777,
+      "final_search_seconds": 120.01144904224202,
+      "final_verification_seconds": 3.8763743329327554,
+      "snapshot_full_build_seconds": 3.0603863331489265,
+      "snapshot_save_command_seconds": 0.08809862495400012,
+      "build_seconds_per_completed_rollout_single_arm": 0.05100643888581544,
+      "save_seconds_per_completed_rollout_single_arm": 0.001468310415900002,
+      "replay_fraction": 0.5629900326581402,
+      "best_probe": "control",
+      "hp_at_24": 0,
+      "hp_at_final": 0
+    },
+    {
+      "case": "Ironclad-b",
+      "arm": "uct",
+      "attempts": 61,
+      "completed_terminal_rollouts": 60,
+      "probe_statuses": {
+        "defeat": 60,
+        "timeout": 1
+      },
+      "old_24_seconds": 92.64751195907593,
+      "checkpoint_24_seconds": 48.35181224998087,
+      "same_24_speedup": 1.9161125022591596,
+      "final_search_seconds": 120.01460016705096,
+      "final_verification_seconds": 3.9732766249217093,
+      "snapshot_full_build_seconds": 3.0603863331489265,
+      "snapshot_save_command_seconds": 0.08809862495400012,
+      "build_seconds_per_completed_rollout_single_arm": 0.05100643888581544,
+      "save_seconds_per_completed_rollout_single_arm": 0.001468310415900002,
+      "replay_fraction": 0.5738210998121053,
+      "best_probe": "control",
+      "hp_at_24": 0,
+      "hp_at_final": 0
+    },
+    {
+      "case": "Silent-b",
+      "arm": "flat",
+      "attempts": 64,
+      "completed_terminal_rollouts": 63,
+      "probe_statuses": {
+        "clear": 48,
+        "defeat": 15,
+        "timeout": 1
+      },
+      "old_24_seconds": 97.41091449884698,
+      "checkpoint_24_seconds": 46.354973417008296,
+      "same_24_speedup": 2.1014123689067965,
+      "final_search_seconds": 120.07290554209612,
+      "final_verification_seconds": 3.888671124819666,
+      "snapshot_full_build_seconds": 3.382503416854888,
+      "snapshot_save_command_seconds": 0.08025716710835695,
+      "build_seconds_per_completed_rollout_single_arm": 0.05369053042626807,
+      "save_seconds_per_completed_rollout_single_arm": 0.0012739232874342374,
+      "replay_fraction": 0.5934110774670995,
+      "best_probe": "flat:13",
+      "hp_at_24": 40,
+      "hp_at_final": 40
+    },
+    {
+      "case": "Silent-b",
+      "arm": "uct",
+      "attempts": 63,
+      "completed_terminal_rollouts": 62,
+      "probe_statuses": {
+        "clear": 43,
+        "defeat": 19,
+        "timeout": 1
+      },
+      "old_24_seconds": 97.77090762392618,
+      "checkpoint_24_seconds": 46.021470749983564,
+      "same_24_speedup": 2.1244629089556226,
+      "final_search_seconds": 120.02142324997112,
+      "final_verification_seconds": 3.9125848750118166,
+      "snapshot_full_build_seconds": 3.382503416854888,
+      "snapshot_save_command_seconds": 0.08025716710835695,
+      "build_seconds_per_completed_rollout_single_arm": 0.05455650672346594,
+      "save_seconds_per_completed_rollout_single_arm": 0.0012944704372315637,
+      "replay_fraction": 0.5936332035925582,
+      "best_probe": "uct:47",
+      "hp_at_24": 40,
+      "hp_at_final": 40
+    },
+    {
+      "case": "Defect-b",
+      "arm": "flat",
+      "attempts": 64,
+      "completed_terminal_rollouts": 64,
+      "probe_statuses": {
+        "clear": 20,
+        "defeat": 44
+      },
+      "old_24_seconds": 95.35490887495689,
+      "checkpoint_24_seconds": 43.44243312510662,
+      "same_24_speedup": 2.194971644436936,
+      "final_search_seconds": 117.2757753750775,
+      "final_verification_seconds": 3.9992015408352017,
+      "snapshot_full_build_seconds": 3.4051335831172764,
+      "snapshot_save_command_seconds": 0.0858170420397073,
+      "build_seconds_per_completed_rollout_single_arm": 0.053205212236207444,
+      "save_seconds_per_completed_rollout_single_arm": 0.0013408912818704266,
+      "replay_fraction": 0.6176499576295441,
+      "best_probe": "flat:8",
+      "hp_at_24": 6,
+      "hp_at_final": 6
+    },
+    {
+      "case": "Defect-b",
+      "arm": "uct",
+      "attempts": 64,
+      "completed_terminal_rollouts": 64,
+      "probe_statuses": {
+        "clear": 17,
+        "defeat": 47
+      },
+      "old_24_seconds": 95.79813304170966,
+      "checkpoint_24_seconds": 43.83771683392115,
+      "same_24_speedup": 2.18529020123562,
+      "final_search_seconds": 117.1713020419702,
+      "final_verification_seconds": 4.002285999944434,
+      "snapshot_full_build_seconds": 3.4051335831172764,
+      "snapshot_save_command_seconds": 0.0858170420397073,
+      "build_seconds_per_completed_rollout_single_arm": 0.053205212236207444,
+      "save_seconds_per_completed_rollout_single_arm": 0.0013408912818704266,
+      "replay_fraction": 0.6180074545307863,
+      "best_probe": "uct:3",
+      "hp_at_24": 6,
+      "hp_at_final": 6
+    },
+    {
+      "case": "Regent-b",
+      "arm": "flat",
+      "attempts": 64,
+      "completed_terminal_rollouts": 64,
+      "probe_statuses": {
+        "defeat": 61,
+        "clear": 3
+      },
+      "old_24_seconds": 81.66860287380405,
+      "checkpoint_24_seconds": 44.440370542230085,
+      "same_24_speedup": 1.8377120144891077,
+      "final_search_seconds": 116.57284800009802,
+      "final_verification_seconds": 3.3073458750732243,
+      "snapshot_full_build_seconds": 2.8338311668485403,
+      "snapshot_save_command_seconds": 0.08680662512779236,
+      "build_seconds_per_completed_rollout_single_arm": 0.04427861198200844,
+      "save_seconds_per_completed_rollout_single_arm": 0.0013563535176217556,
+      "replay_fraction": 0.644492094914254,
+      "best_probe": "flat:52",
+      "hp_at_24": 5,
+      "hp_at_final": 23
+    },
+    {
+      "case": "Regent-b",
+      "arm": "uct",
+      "attempts": 64,
+      "completed_terminal_rollouts": 64,
+      "probe_statuses": {
+        "defeat": 60,
+        "clear": 4
+      },
+      "old_24_seconds": 82.22019512508996,
+      "checkpoint_24_seconds": 43.91328112501651,
+      "same_24_speedup": 1.8723309445044127,
+      "final_search_seconds": 115.36635337513871,
+      "final_verification_seconds": 3.3702245419844985,
+      "snapshot_full_build_seconds": 2.8338311668485403,
+      "snapshot_save_command_seconds": 0.08680662512779236,
+      "build_seconds_per_completed_rollout_single_arm": 0.04427861198200844,
+      "save_seconds_per_completed_rollout_single_arm": 0.0013563535176217556,
+      "replay_fraction": 0.6295555447754967,
+      "best_probe": "uct:17",
+      "hp_at_24": 6,
+      "hp_at_final": 6
+    },
+    {
+      "case": "Necrobinder-b",
+      "arm": "flat",
+      "attempts": 63,
+      "completed_terminal_rollouts": 62,
+      "probe_statuses": {
+        "clear": 31,
+        "defeat": 31,
+        "timeout": 1
+      },
+      "old_24_seconds": 86.7448503752239,
+      "checkpoint_24_seconds": 46.19285466731526,
+      "same_24_speedup": 1.8778845992517124,
+      "final_search_seconds": 120.13331354223192,
+      "final_verification_seconds": 3.6833537078928202,
+      "snapshot_full_build_seconds": 2.8861968340352178,
+      "snapshot_save_command_seconds": 0.0867121668998152,
+      "build_seconds_per_completed_rollout_single_arm": 0.04655156183927771,
+      "save_seconds_per_completed_rollout_single_arm": 0.0013985833370937935,
+      "replay_fraction": 0.5917291750233928,
+      "best_probe": "flat:9",
+      "hp_at_24": 8,
+      "hp_at_final": 8
+    },
+    {
+      "case": "Necrobinder-b",
+      "arm": "uct",
+      "attempts": 62,
+      "completed_terminal_rollouts": 61,
+      "probe_statuses": {
+        "clear": 32,
+        "defeat": 29,
+        "timeout": 1
+      },
+      "old_24_seconds": 84.7783391661942,
+      "checkpoint_24_seconds": 47.18067804235034,
+      "same_24_speedup": 1.7968868334214154,
+      "final_search_seconds": 120.01460454217158,
+      "final_verification_seconds": 3.440242333104834,
+      "snapshot_full_build_seconds": 2.8861968340352178,
+      "snapshot_save_command_seconds": 0.0867121668998152,
+      "build_seconds_per_completed_rollout_single_arm": 0.04731470219729865,
+      "save_seconds_per_completed_rollout_single_arm": 0.0014215109327838558,
+      "replay_fraction": 0.591651519096925,
+      "best_probe": "uct:59",
+      "hp_at_24": 8,
+      "hp_at_final": 20
+    }
+  ],
+  "arms": {
+    "flat": {
+      "charged_attempts": 616,
+      "charged_terminal_rollouts": 610,
+      "median_same_24_speedup": 1.957863653831172,
+      "median_checkpoint_24_seconds": 46.27391404216178,
+      "median_old_24_seconds": 93.54626829153858,
+      "median_terminal_rollouts": 62.5,
+      "median_build_amortization_seconds": 0.05179107231124362
+    },
+    "uct": {
+      "charged_attempts": 616,
+      "charged_terminal_rollouts": 610,
+      "median_same_24_speedup": 1.9333244635014086,
+      "median_checkpoint_24_seconds": 46.075881125056185,
+      "median_old_24_seconds": 93.19146289606579,
+      "median_terminal_rollouts": 62.0,
+      "median_build_amortization_seconds": 0.05179107231124362
+    }
+  },
+  "paired": [
+    {
+      "case": "Ironclad-a",
+      "uct_minus_flat": 0,
+      "equal_completed_rollouts": false
+    },
+    {
+      "case": "Silent-a",
+      "uct_minus_flat": 5,
+      "equal_completed_rollouts": true
+    },
+    {
+      "case": "Defect-a",
+      "uct_minus_flat": 0,
+      "equal_completed_rollouts": true
+    },
+    {
+      "case": "Regent-a",
+      "uct_minus_flat": 0,
+      "equal_completed_rollouts": true
+    },
+    {
+      "case": "Necrobinder-a",
+      "uct_minus_flat": 0,
+      "equal_completed_rollouts": false
+    },
+    {
+      "case": "Ironclad-b",
+      "uct_minus_flat": 0,
+      "equal_completed_rollouts": true
+    },
+    {
+      "case": "Silent-b",
+      "uct_minus_flat": 0,
+      "equal_completed_rollouts": false
+    },
+    {
+      "case": "Defect-b",
+      "uct_minus_flat": 0,
+      "equal_completed_rollouts": true
+    },
+    {
+      "case": "Regent-b",
+      "uct_minus_flat": -17,
+      "equal_completed_rollouts": true
+    },
+    {
+      "case": "Necrobinder-b",
+      "uct_minus_flat": 12,
+      "equal_completed_rollouts": false
+    }
+  ],
+  "compatibility_charged": 480,
+  "compatibility_unique": 470,
+  "unique_search_attempts": 1222,
+  "unique_probe_statuses": {
+    "clear": 648,
+    "defeat": 562,
+    "timeout": 12
+  },
+  "full_prefix_final_verifications": 20,
+  "verification_seconds_total": 76.22566687176004,
+  "uct_minus_flat": {
+    "gains": 2,
+    "ties": 7,
+    "regressions": 1,
+    "median": 0.0,
+    "mean": 0
+  },
+  "equal_completed_budgets": false,
+  "prefer_uct_gate": false,
+  "accounting_notes": [
+    "Shared control charged to both arms, deduplicated in unique_search_attempts.",
+    "Timeouts are censored incomplete probes, not losses or transition errors.",
+    "Old E120 arms stopped at 24 probes before the same 120-second ceiling: final-quality comparison changes actual work and elapsed time.",
+    "Independent final verification is excluded from search time and reported separately.",
+    "Historical E121 snapshot creation is excluded from E124 execution; full build includes prefix replay, entry and teardown. Save-command time is the incremental cost at an existing map.",
+    "Amortization conservatively charges the entire snapshot build to each single arm; the experiment actually shares one existing snapshot across both arms.",
+    "No clear regressions is partly guaranteed by retaining the control incumbent, not independent proof of strategy safety."
+  ],
+  "sources": {
+    "e124": {
+      "path": "artifacts/runs/e124-v1.json",
+      "sha256": "3a518a56ce490ef2046dd30d9220e222a178bc1b7e8abec5fb57b2bfd61dc0b4"
+    },
+    "e120": {
+      "path": "/Users/yzxoi/RSI-Jev-Slay-the-Spire-2/experiments/E120/results.json",
+      "sha256": "2ab8e7d9d5b0fc533e745d1ad883ed3ff74f72b9ad9f9fa9f45b26e90ab3ebd0"
+    },
+    "e121_preflight": {
+      "path": "/Users/yzxoi/RSI-Jev-Slay-the-Spire-2/experiments/E121/preflight-v1.json",
+      "sha256": "b1f139829a39023a3944d537b18400a4d899509890f2e3483c5c838bcc132d97"
+    }
+  }
+}
