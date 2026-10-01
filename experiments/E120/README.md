@@ -96,4 +96,6 @@ Compact data: [`results.json`](results.json) and [`fixtures.json`](fixtures.json
 
 The main demonstrated engineering bottleneck is prefix restoration, consuming about four-fifths of probe time. A separately tested faithful checkpoint near room entry should precede much larger search budgets. After reducing that cost, replicate rollout RNG seeds and compare budgets before crediting UCB for an allocation advantage. Failure-value shaping and better generated-card rollouts are separate hypotheses; neither has been validated here. All ten cases involve one elite type at A0 in historical v0.111.0. Broader encounters, higher ascension, rewards/deck construction and full-run evaluation remain necessary.
 
+Atomic follow-up proposals, not executed: [E121 / #232: faithful map checkpoints](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/232), [E122 / #233: allocation versus rollout sampling](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/233), [E123 / #234: informative defeat utility](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/234).
+
 3. Results iteration: record the exact tested SHA, all ten cells, all caps/errors (none), matched budgets, timing, source hashes and decision above. This iteration changes evidence/documentation only; the tested search implementation is unchanged.
