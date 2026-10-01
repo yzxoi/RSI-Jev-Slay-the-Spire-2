@@ -18,7 +18,7 @@ from scripts.evaluate_battle_search_e120 import audit, frozen_bank, manifest, wr
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('mode', choices=('preflight', 'freeze', 'verify'))
+    parser.add_argument('mode', choices=('preflight', 'freeze', 'verify', 'timing'))
     parser.add_argument('--preflight', default='experiments/E121/preflight-v1.json')
     parser.add_argument('--bank', default='experiments/E121/continuations.json')
     parser.add_argument('--output', required=True)
@@ -42,7 +42,29 @@ def main():
         snapshots = {r['case']: next(p['checkpoint'] for p in r['paths'] if p['mode'] == 'B')
                      for r in preflight['results']}
         fixture_by_case = {f['case']: f for f in bank['fixtures']}
-        if args.mode == 'freeze':
+        if args.mode == 'timing':
+            from rsi.checkpoints import preflight_path
+            import statistics
+            fidelity = json.loads((ROOT / 'experiments/E121/verification-v1.json').read_text())
+            if not fidelity['correctness_pass'] or not fidelity['audit']['pass']:
+                raise ValueError('Complete continuation fidelity is required')
+            for k in ('headless_assembly_sha256', 'headless_game_sha256', 'game_dll_sha256'):
+                if fidelity['manifest'][k] != version[k]:
+                    raise ValueError('Engine changed after fidelity validation')
+            def timing_case(f):
+                records = []
+                for repeat in range(5):
+                    modes = ('A', 'C') if (f['index'] + repeat) % 2 == 0 else ('C', 'A')
+                    pair = {mode: preflight_path(f, version, mode, source_map(f), snapshots[f['case']])
+                            for mode in modes}
+                    records.append({'case': f['case'], 'repeat': repeat, 'order': modes,
+                                    'paths': pair, 'status': 'match' if all(p['status'] == 'match' for p in pair.values()) else 'fail',
+                                    'speedup': pair['A']['restore_seconds'] / pair['C']['restore_seconds']
+                                    if all(p.get('restore_seconds') for p in pair.values()) else None})
+                return records
+            with ThreadPoolExecutor(max_workers=2) as pool:
+                results = [r for group in pool.map(timing_case, bank['fixtures']) for r in group]
+        elif args.mode == 'freeze':
             source = json.loads((ROOT / 'experiments/E120/results.json').read_text())
             jobs = [(fixture_by_case[r['case']], arm, r['control'] if arm == 'control'
                      else r['arms'][arm]['incumbent']) for r in source['results']
@@ -81,7 +103,7 @@ def main():
               'seconds': time.monotonic() - started,
               'summary': dict(Counter(r['status'] for r in results))}
     report['audit'] = audit(report)
-    if args.mode in ('freeze', 'verify'):
+    if args.mode in ('freeze', 'verify', 'timing'):
         report['checkpoint_manifest'] = snapshots
         report['preflight_file_sha256'] = file_hash(args.preflight)
     if args.mode == 'verify':
@@ -101,6 +123,23 @@ def main():
         report['promotion_pass'] = (len(comparisons) == 120 and report['correctness_pass'] and
                                     len(ratios) == 90 and min(ratios) >= 2 and report['audit']['pass'])
         report['source_bank_file_sha256'] = file_hash(args.bank)
+    if args.mode == 'timing':
+        import math
+        good = all(r['status'] == 'match' for r in results)
+        per_case = {f['case']: statistics.median(r['speedup'] for r in results if r['case'] == f['case'])
+                    for f in bank['fixtures']} if good else {}
+        full = sorted(r['paths']['A']['restore_seconds'] for r in results if r['paths']['A'].get('restore_seconds'))
+        fast = sorted(r['paths']['C']['restore_seconds'] for r in results if r['paths']['C'].get('restore_seconds'))
+        def stats(values):
+            return {'n': len(values), 'median': statistics.median(values),
+                    'p95_nearest_rank': values[math.ceil(.95 * len(values)) - 1], 'max': max(values)} if values else {}
+        report['timing'] = {'per_case_median_speedup': per_case, 'full': stats(full), 'checkpoint': stats(fast),
+                            'median_paired_speedup': statistics.median(r['speedup'] for r in results) if good else None}
+        report['promotion_pass'] = bool(good and len(results) == 50 and min(per_case.values()) >= 2
+                                         and report['timing']['median_paired_speedup'] >= 2
+                                         and report['timing']['checkpoint']['p95_nearest_rank'] <= report['timing']['full']['p95_nearest_rank']
+                                         and report['audit']['pass'])
+        report['fidelity_file_sha256'] = file_hash(ROOT / 'experiments/E121/verification-v1.json')
     write(output, report)
     print(json.dumps(report['summary']), flush=True)
 
