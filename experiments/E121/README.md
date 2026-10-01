@@ -23,6 +23,7 @@ Only after this gate passes, use a separate experiment issue/branch/PR to compar
 
 1. Initial preflight harness and protocol, before engine changes. Ten source map boundaries were inspected read-only: all are genuine Map rooms (floors 8 or 6). Save/restore parity has not yet been assumed.
 2. Preflight SHA `a96fd8b`: all ten A/B/C entry checks matched exactly; 30 trace triples audited, three synthetic helper tests passed. Existing loader, **no engine edits or normalization**. Full-prefix restoration took 2.76–4.01 s; fresh-process checkpoint restoration took 1.06–1.16 s. Evidence: `preflight-v1.json`; command `python3 scripts/validate_checkpoints_e121.py preflight --output artifacts/runs/e121-preflight-v1.json`. This passes only the entry gate, not future-state fidelity. Add the continuation capture/replay harness, commit it, then capture all 30 references. C reuses each case's unchanged preflight snapshot across all three path families; B independently tests the save-call side effect along each frozen path.
+3. Reference-capture SHA `15e108e`: four helper tests passed; all 30 source continuations matched their E120 battle paths and completed their fixed extension. Commit the full `continuations.json` bank before replay. No engine patch was needed. The source bank includes defeats (which correctly have no post-death extension), not just surviving runs.
 
 ```bash
 python3 -m unittest discover -s tests -p 'test_checkpoints.py' -v
