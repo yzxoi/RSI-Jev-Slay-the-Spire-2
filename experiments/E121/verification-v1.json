@@ -1,0 +1,4923 @@
+{
+  "manifest": {
+    "schema_version": 1,
+    "code_commit": "367916ec2ba1d30247c416ae31e3a98d2a28772c",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "71505f31e29c370667636600a58fe2b3e270f98e99e3c5a384d176a7f0188274",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+      "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4",
+    "experiment": "E121",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.5",
+    "model_calls": 0,
+    "model_cost_usd": 0
+  },
+  "source_bank_hash": "13f711fca347ef23f3c24fb9702eff0a0d9fb0a097450155fb961db3f991ee93",
+  "results": [
+    {
+      "case": "Ironclad-a",
+      "label": "control",
+      "mode": "B",
+      "run_id": "da9290d7-62e8-4894-b902-618130b01209",
+      "status": "match",
+      "steps_checked": 32,
+      "extension_steps": 0,
+      "restore_seconds": 3.0928768750745803,
+      "map_match": true,
+      "entry_match": true,
+      "save_seconds": 0.087375917006284,
+      "created_checkpoint": {
+        "path": "artifacts/runs/da9290d7-62e8-4894-b902-618130b01209/map-checkpoint.json",
+        "sha256": "de678f3a1f0a398d24d9fabb8ef778787b9abd3067243dfe48b67fd042a786f1"
+      },
+      "final_hash": "05ee9335d7605a3beb3c8804b95d8650fde600f272a748b5615d0ff1606f99e6",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "3bb1f373f788ce80fd09c67beff85319568667a4982d293a8133d20006be6d81",
+      "seconds": 4.188230000203475,
+      "wire.jsonl_sha256": "365d4b77b92f9b8bef7c33ae6148c7327ac0185aaf4a34e04b2ea343fb83dc24",
+      "engine.stderr.log_sha256": "af47803c7e7df4223f63db75809a7557fd19d1c04ad47e08f41a5b18f3f06244",
+      "trace_path": "artifacts/runs/da9290d7-62e8-4894-b902-618130b01209/decisions.jsonl",
+      "trace_sha256": "7829db13527462ada518ab52293859dcabb88da047faa2fe60cc95e0cc6fc04a"
+    },
+    {
+      "case": "Ironclad-a",
+      "label": "control",
+      "mode": "C1",
+      "run_id": "09986593-4c03-4d0e-9a5c-21bf8f14ff1f",
+      "status": "match",
+      "steps_checked": 32,
+      "extension_steps": 0,
+      "restore_seconds": 1.126628999831155,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "05ee9335d7605a3beb3c8804b95d8650fde600f272a748b5615d0ff1606f99e6",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "3bb1f373f788ce80fd09c67beff85319568667a4982d293a8133d20006be6d81",
+      "seconds": 2.312649291008711,
+      "wire.jsonl_sha256": "0b0ff3f4aa0b369034a1b818f2df34739a3d2706c8c4b38b243602da74d0b3b1",
+      "engine.stderr.log_sha256": "f6be0510ae8b9be181ed913a0e3cc10f0d72608cd9e5d5986e1d86776770621b",
+      "trace_path": "artifacts/runs/09986593-4c03-4d0e-9a5c-21bf8f14ff1f/decisions.jsonl",
+      "trace_sha256": "2be5dc581428dbf407fe0890684022e49cf3cba289570fe8dc4cb376ee2efe19"
+    },
+    {
+      "case": "Ironclad-a",
+      "label": "control",
+      "mode": "C2",
+      "run_id": "975b1149-1bd3-4496-a724-2b25fa3acf1f",
+      "status": "match",
+      "steps_checked": 32,
+      "extension_steps": 0,
+      "restore_seconds": 1.1706020829733461,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "05ee9335d7605a3beb3c8804b95d8650fde600f272a748b5615d0ff1606f99e6",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "3bb1f373f788ce80fd09c67beff85319568667a4982d293a8133d20006be6d81",
+      "seconds": 2.354003791930154,
+      "wire.jsonl_sha256": "eaf9f36c73dddafdd6245f7e14b9bcf7309de0d1f3957926e7f8023094d67d12",
+      "engine.stderr.log_sha256": "f6be0510ae8b9be181ed913a0e3cc10f0d72608cd9e5d5986e1d86776770621b",
+      "trace_path": "artifacts/runs/975b1149-1bd3-4496-a724-2b25fa3acf1f/decisions.jsonl",
+      "trace_sha256": "c45638ef6d0d363a4029c4cb7bf865ebb45ce1957349cf353aceaa1e817425e7"
+    },
+    {
+      "case": "Ironclad-a",
+      "label": "control",
+      "mode": "C3",
+      "run_id": "5f7c86aa-cba4-4977-b709-8ea42269d37d",
+      "status": "match",
+      "steps_checked": 32,
+      "extension_steps": 0,
+      "restore_seconds": 1.1189345421735197,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "05ee9335d7605a3beb3c8804b95d8650fde600f272a748b5615d0ff1606f99e6",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "3bb1f373f788ce80fd09c67beff85319568667a4982d293a8133d20006be6d81",
+      "seconds": 2.2988160841632634,
+      "wire.jsonl_sha256": "732510bc552816b89d45e88b56290b0023ecaee0d40a21b69be01bfa923e99ac",
+      "engine.stderr.log_sha256": "f6be0510ae8b9be181ed913a0e3cc10f0d72608cd9e5d5986e1d86776770621b",
+      "trace_path": "artifacts/runs/5f7c86aa-cba4-4977-b709-8ea42269d37d/decisions.jsonl",
+      "trace_sha256": "60838d46b8efcfe266bdfc325ea27b8a4f76b5522106b29763b8532df1bdc740"
+    },
+    {
+      "case": "Ironclad-a",
+      "label": "flat",
+      "mode": "B",
+      "run_id": "230ce5ff-6958-45b0-bcbe-93250eee60bf",
+      "status": "match",
+      "steps_checked": 32,
+      "extension_steps": 0,
+      "restore_seconds": 2.8433383340016007,
+      "map_match": true,
+      "entry_match": true,
+      "save_seconds": 0.0830879588611424,
+      "created_checkpoint": {
+        "path": "artifacts/runs/230ce5ff-6958-45b0-bcbe-93250eee60bf/map-checkpoint.json",
+        "sha256": "e22a6669d2a69ff5a586e8c7256adf307f741c5fd5c76747e5d629c6db643116"
+      },
+      "final_hash": "05ee9335d7605a3beb3c8804b95d8650fde600f272a748b5615d0ff1606f99e6",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "3bb1f373f788ce80fd09c67beff85319568667a4982d293a8133d20006be6d81",
+      "seconds": 3.9710905000101775,
+      "wire.jsonl_sha256": "4b5b47358b2b2763ca3194986d403f7a914e995b86ffe234bdf98fdf6d3a5dde",
+      "engine.stderr.log_sha256": "ceaee6d75c010c0fe85c43e1b9cd6caffa56493399ebf12e1e4ea6ddbe7cc907",
+      "trace_path": "artifacts/runs/230ce5ff-6958-45b0-bcbe-93250eee60bf/decisions.jsonl",
+      "trace_sha256": "e8473e5012776d143d488c6a65e3475efeb05d52ea3e8066a0989f916f1ea336"
+    },
+    {
+      "case": "Ironclad-a",
+      "label": "flat",
+      "mode": "C1",
+      "run_id": "a6e4d44f-b1af-4879-93f0-a5ea4df549c4",
+      "status": "match",
+      "steps_checked": 32,
+      "extension_steps": 0,
+      "restore_seconds": 1.1641897920053452,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "05ee9335d7605a3beb3c8804b95d8650fde600f272a748b5615d0ff1606f99e6",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "3bb1f373f788ce80fd09c67beff85319568667a4982d293a8133d20006be6d81",
+      "seconds": 2.3719952921383083,
+      "wire.jsonl_sha256": "c60b8cc5f8089afec0797a4583eaabf6fc7c97b2a3309f7af8b6ee4fa7d692e0",
+      "engine.stderr.log_sha256": "f6be0510ae8b9be181ed913a0e3cc10f0d72608cd9e5d5986e1d86776770621b",
+      "trace_path": "artifacts/runs/a6e4d44f-b1af-4879-93f0-a5ea4df549c4/decisions.jsonl",
+      "trace_sha256": "ec3c309ab2f198d120a415de055150165f44621db172da291781d9876fffbbff"
+    },
+    {
+      "case": "Ironclad-a",
+      "label": "flat",
+      "mode": "C2",
+      "run_id": "e4f78eee-3672-45b9-aafd-61f83174061f",
+      "status": "match",
+      "steps_checked": 32,
+      "extension_steps": 0,
+      "restore_seconds": 1.1702953751664609,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "05ee9335d7605a3beb3c8804b95d8650fde600f272a748b5615d0ff1606f99e6",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "3bb1f373f788ce80fd09c67beff85319568667a4982d293a8133d20006be6d81",
+      "seconds": 2.3543590831104666,
+      "wire.jsonl_sha256": "5120af9e4dcb2edce9ea1cf290da04f584eaa1dd35350bd6b043390d35e00bf9",
+      "engine.stderr.log_sha256": "f6be0510ae8b9be181ed913a0e3cc10f0d72608cd9e5d5986e1d86776770621b",
+      "trace_path": "artifacts/runs/e4f78eee-3672-45b9-aafd-61f83174061f/decisions.jsonl",
+      "trace_sha256": "794d3d5aa360c50e35ea1b84fae992f450e8b668fad8c7210413fc8d9886d072"
+    },
+    {
+      "case": "Ironclad-a",
+      "label": "flat",
+      "mode": "C3",
+      "run_id": "067b240a-25c5-4eee-9086-1d9b87ff52ba",
+      "status": "match",
+      "steps_checked": 32,
+      "extension_steps": 0,
+      "restore_seconds": 1.123014457989484,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "05ee9335d7605a3beb3c8804b95d8650fde600f272a748b5615d0ff1606f99e6",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "3bb1f373f788ce80fd09c67beff85319568667a4982d293a8133d20006be6d81",
+      "seconds": 2.3041053330525756,
+      "wire.jsonl_sha256": "174703ecf4f049bb66da0d77fd9db66f736f4aae612276e276e15de77fe7207b",
+      "engine.stderr.log_sha256": "f6be0510ae8b9be181ed913a0e3cc10f0d72608cd9e5d5986e1d86776770621b",
+      "trace_path": "artifacts/runs/067b240a-25c5-4eee-9086-1d9b87ff52ba/decisions.jsonl",
+      "trace_sha256": "37abda28007cb83f9b2f481216f12bf9f36f5f216e4e95eb8480d290851007cf"
+    },
+    {
+      "case": "Ironclad-a",
+      "label": "uct",
+      "mode": "B",
+      "run_id": "55afb2fe-c0a2-418e-85a0-c8ae28b2be0c",
+      "status": "match",
+      "steps_checked": 31,
+      "extension_steps": 0,
+      "restore_seconds": 2.8186769580934197,
+      "map_match": true,
+      "entry_match": true,
+      "save_seconds": 0.08878195798024535,
+      "created_checkpoint": {
+        "path": "artifacts/runs/55afb2fe-c0a2-418e-85a0-c8ae28b2be0c/map-checkpoint.json",
+        "sha256": "6aa67d62185cd50e3edf1b3b376a55754ca5e6b915b0ae90d96c6501c4a9669e"
+      },
+      "final_hash": "05ee9335d7605a3beb3c8804b95d8650fde600f272a748b5615d0ff1606f99e6",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "b142cf9f090db93be364d39128f619067c90511b2d876265f3e6c0e48c4f3816",
+      "seconds": 3.8796996660530567,
+      "wire.jsonl_sha256": "f4326f2bb18f91b03177e16e3a4781f6b63d71626ca5fc4cb45fb7fe495c2cec",
+      "engine.stderr.log_sha256": "96f72cf0bfae66db8c1518cdab1de8c3634464382fa2260a31c386a649de919b",
+      "trace_path": "artifacts/runs/55afb2fe-c0a2-418e-85a0-c8ae28b2be0c/decisions.jsonl",
+      "trace_sha256": "3e52c79641e8c75d9b5e83f40857e03c69ab8822a7dce0414ad228420062be22"
+    },
+    {
+      "case": "Ironclad-a",
+      "label": "uct",
+      "mode": "C1",
+      "run_id": "ad75b0e3-6db8-4ca0-8b14-46b1d1266344",
+      "status": "match",
+      "steps_checked": 31,
+      "extension_steps": 0,
+      "restore_seconds": 1.1751542498823255,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "05ee9335d7605a3beb3c8804b95d8650fde600f272a748b5615d0ff1606f99e6",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "b142cf9f090db93be364d39128f619067c90511b2d876265f3e6c0e48c4f3816",
+      "seconds": 2.333076666807756,
+      "wire.jsonl_sha256": "2aad837c3e5233e16f963be721905d2aa29367c7256a6ad781701e07c9660dec",
+      "engine.stderr.log_sha256": "2d9757fc8c807d4c0caeb69a7021f35805792ac2cede3b024be59494776be3bf",
+      "trace_path": "artifacts/runs/ad75b0e3-6db8-4ca0-8b14-46b1d1266344/decisions.jsonl",
+      "trace_sha256": "2c236b16f5bd6cf19b86222622175f99510e2c9a4582101e3c646b6f8041a219"
+    },
+    {
+      "case": "Ironclad-a",
+      "label": "uct",
+      "mode": "C2",
+      "run_id": "1a777c5c-e7f7-4819-8d67-fab4b4aeee0e",
+      "status": "match",
+      "steps_checked": 31,
+      "extension_steps": 0,
+      "restore_seconds": 1.0961479169782251,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "05ee9335d7605a3beb3c8804b95d8650fde600f272a748b5615d0ff1606f99e6",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "b142cf9f090db93be364d39128f619067c90511b2d876265f3e6c0e48c4f3816",
+      "seconds": 2.256887999828905,
+      "wire.jsonl_sha256": "db11144db98b33d7780b80cd454daac97f4e2dac67d0279070420d33e51e9edb",
+      "engine.stderr.log_sha256": "2d9757fc8c807d4c0caeb69a7021f35805792ac2cede3b024be59494776be3bf",
+      "trace_path": "artifacts/runs/1a777c5c-e7f7-4819-8d67-fab4b4aeee0e/decisions.jsonl",
+      "trace_sha256": "6ec44b7db986dbd4a02aedb5d08a7cf44304ce860bd21253f6f6320f6a601081"
+    },
+    {
+      "case": "Ironclad-a",
+      "label": "uct",
+      "mode": "C3",
+      "run_id": "78a57718-64cb-4274-bbec-db94682a4950",
+      "status": "match",
+      "steps_checked": 31,
+      "extension_steps": 0,
+      "restore_seconds": 1.4193295410368592,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "05ee9335d7605a3beb3c8804b95d8650fde600f272a748b5615d0ff1606f99e6",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "b142cf9f090db93be364d39128f619067c90511b2d876265f3e6c0e48c4f3816",
+      "seconds": 2.5711057079024613,
+      "wire.jsonl_sha256": "a74b6c5ea3e98b261745168bb24a333573b529a2c7ef69770c8fe76df2b3eee8",
+      "engine.stderr.log_sha256": "2d9757fc8c807d4c0caeb69a7021f35805792ac2cede3b024be59494776be3bf",
+      "trace_path": "artifacts/runs/78a57718-64cb-4274-bbec-db94682a4950/decisions.jsonl",
+      "trace_sha256": "31cf2ef042d32b9197c288dc27fcea43c1a6e838c4fa6dd452c2f0ba1f306fe7"
+    },
+    {
+      "case": "Silent-a",
+      "label": "control",
+      "mode": "B",
+      "run_id": "c18ca874-b8a0-48be-a2a4-a6c1dc2b8ac2",
+      "status": "match",
+      "steps_checked": 42,
+      "extension_steps": 0,
+      "restore_seconds": 3.6179334588814527,
+      "map_match": true,
+      "entry_match": true,
+      "save_seconds": 0.08937654201872647,
+      "created_checkpoint": {
+        "path": "artifacts/runs/c18ca874-b8a0-48be-a2a4-a6c1dc2b8ac2/map-checkpoint.json",
+        "sha256": "1a7246bac5a090392d8e01a0478bc20b313c21ccad3aad072dcf82bdac25c41d"
+      },
+      "final_hash": "fd4e7e7398683d11f77ec3065e92dbabffffe37cfb660f1afd5adc5698647e84",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "b0080065f93a7abea846169c5ebfb2e049e50d04822aa98fec013e587edfdcc0",
+      "seconds": 5.015110292006284,
+      "wire.jsonl_sha256": "877b0987ef6f63ee01e5324f8f0d00cd0191b639ab2f765b3f34c5d756b94bed",
+      "engine.stderr.log_sha256": "6ce1cfd70f0e97fb8a51f794eeb0301aee968fb81aa61bc6028024ca778196ef",
+      "trace_path": "artifacts/runs/c18ca874-b8a0-48be-a2a4-a6c1dc2b8ac2/decisions.jsonl",
+      "trace_sha256": "63dc5c87908436afdfa292df05df9c049f0678a3225d2dae6505c4e1ab319f5d"
+    },
+    {
+      "case": "Silent-a",
+      "label": "control",
+      "mode": "C1",
+      "run_id": "fd76525c-c31e-4d83-a968-7d362de1a766",
+      "status": "match",
+      "steps_checked": 42,
+      "extension_steps": 0,
+      "restore_seconds": 1.4729907910805196,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "fd4e7e7398683d11f77ec3065e92dbabffffe37cfb660f1afd5adc5698647e84",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "b0080065f93a7abea846169c5ebfb2e049e50d04822aa98fec013e587edfdcc0",
+      "seconds": 2.9722689581103623,
+      "wire.jsonl_sha256": "4815f6c36336de1314924c8bf7f757840a7cd6fe55155b4a897d499522a0e955",
+      "engine.stderr.log_sha256": "73493bc4e188320edbdfce9318e2cbdb8d22cf46727e21dd80e786bb69bb71c2",
+      "trace_path": "artifacts/runs/fd76525c-c31e-4d83-a968-7d362de1a766/decisions.jsonl",
+      "trace_sha256": "72476c361ec1b00ded93c3b5c3220bbcae70bc96ade39c4fef72923fb44a7df0"
+    },
+    {
+      "case": "Silent-a",
+      "label": "control",
+      "mode": "C2",
+      "run_id": "6089fe39-c7a5-4b64-a318-b0055bb8cb30",
+      "status": "match",
+      "steps_checked": 42,
+      "extension_steps": 0,
+      "restore_seconds": 1.0870557089801878,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "fd4e7e7398683d11f77ec3065e92dbabffffe37cfb660f1afd5adc5698647e84",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "b0080065f93a7abea846169c5ebfb2e049e50d04822aa98fec013e587edfdcc0",
+      "seconds": 2.5739796250127256,
+      "wire.jsonl_sha256": "90c2fd5612c6e73ea0fa3997bb3be2d48419829a5871c40b06b53e4b07b4a4d1",
+      "engine.stderr.log_sha256": "73493bc4e188320edbdfce9318e2cbdb8d22cf46727e21dd80e786bb69bb71c2",
+      "trace_path": "artifacts/runs/6089fe39-c7a5-4b64-a318-b0055bb8cb30/decisions.jsonl",
+      "trace_sha256": "8c4b75a01292d9bc0596b70e73f1346555ccf256d53f26f68a3a97e6ec6713a0"
+    },
+    {
+      "case": "Silent-a",
+      "label": "control",
+      "mode": "C3",
+      "run_id": "43a2eacd-b8d2-48e7-a28c-a4790c55a560",
+      "status": "match",
+      "steps_checked": 42,
+      "extension_steps": 0,
+      "restore_seconds": 1.0830788749735802,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "fd4e7e7398683d11f77ec3065e92dbabffffe37cfb660f1afd5adc5698647e84",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "b0080065f93a7abea846169c5ebfb2e049e50d04822aa98fec013e587edfdcc0",
+      "seconds": 2.578453834168613,
+      "wire.jsonl_sha256": "fb58f04c794de26afb1b61966e64047d835bd3a88c7d6d6a62a61d5f776a9a24",
+      "engine.stderr.log_sha256": "73493bc4e188320edbdfce9318e2cbdb8d22cf46727e21dd80e786bb69bb71c2",
+      "trace_path": "artifacts/runs/43a2eacd-b8d2-48e7-a28c-a4790c55a560/decisions.jsonl",
+      "trace_sha256": "b7b267c9220c5d7feb266ce070e020565bd7e6949835fe8e3833d894ba403697"
+    },
+    {
+      "case": "Silent-a",
+      "label": "flat",
+      "mode": "B",
+      "run_id": "a1315f43-414a-44bc-80c8-0a260393048c",
+      "status": "match",
+      "steps_checked": 42,
+      "extension_steps": 0,
+      "restore_seconds": 3.63569891708903,
+      "map_match": true,
+      "entry_match": true,
+      "save_seconds": 0.08496137498877943,
+      "created_checkpoint": {
+        "path": "artifacts/runs/a1315f43-414a-44bc-80c8-0a260393048c/map-checkpoint.json",
+        "sha256": "bd45eef15c6d2720d14d8c733b3ff7f77017d35dc7387441f5a8c448e83d2bfe"
+      },
+      "final_hash": "fd4e7e7398683d11f77ec3065e92dbabffffe37cfb660f1afd5adc5698647e84",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "b0080065f93a7abea846169c5ebfb2e049e50d04822aa98fec013e587edfdcc0",
+      "seconds": 5.036594707984477,
+      "wire.jsonl_sha256": "b73aebb8f0787371822a13590a25ffd912f4f3ee0d98bc284ecb926f340c78af",
+      "engine.stderr.log_sha256": "882fd00d6a0a3c2ec2882ae2d2efef917c2f4a2e768fdc26901d7d8a7004f942",
+      "trace_path": "artifacts/runs/a1315f43-414a-44bc-80c8-0a260393048c/decisions.jsonl",
+      "trace_sha256": "7199d9b2973b8bae9f349f5ebec22b7f5e5ea8dcc8eb933dd89884786c305544"
+    },
+    {
+      "case": "Silent-a",
+      "label": "flat",
+      "mode": "C1",
+      "run_id": "f4ceb8d0-8b49-477f-94b5-61d61ffab161",
+      "status": "match",
+      "steps_checked": 42,
+      "extension_steps": 0,
+      "restore_seconds": 1.096490333089605,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "fd4e7e7398683d11f77ec3065e92dbabffffe37cfb660f1afd5adc5698647e84",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "b0080065f93a7abea846169c5ebfb2e049e50d04822aa98fec013e587edfdcc0",
+      "seconds": 2.5929457501042634,
+      "wire.jsonl_sha256": "50066e1df0b33fecf926a94b7a8a24d8c35554bf7e8b987c8341d3e789b1bb85",
+      "engine.stderr.log_sha256": "73493bc4e188320edbdfce9318e2cbdb8d22cf46727e21dd80e786bb69bb71c2",
+      "trace_path": "artifacts/runs/f4ceb8d0-8b49-477f-94b5-61d61ffab161/decisions.jsonl",
+      "trace_sha256": "b3891c9f2390943502056219c2974e3dfe3f7fe844b820e9cf83feaccb23f76a"
+    },
+    {
+      "case": "Silent-a",
+      "label": "flat",
+      "mode": "C2",
+      "run_id": "a196994e-5b53-47f4-b5b1-3e174bd09c1c",
+      "status": "match",
+      "steps_checked": 42,
+      "extension_steps": 0,
+      "restore_seconds": 1.1301838329527527,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "fd4e7e7398683d11f77ec3065e92dbabffffe37cfb660f1afd5adc5698647e84",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "b0080065f93a7abea846169c5ebfb2e049e50d04822aa98fec013e587edfdcc0",
+      "seconds": 2.6214712080545723,
+      "wire.jsonl_sha256": "278800f2e222affd9842c4dd821589e87867ac7eb24b2d4ce9fdcf100ed04f3e",
+      "engine.stderr.log_sha256": "73493bc4e188320edbdfce9318e2cbdb8d22cf46727e21dd80e786bb69bb71c2",
+      "trace_path": "artifacts/runs/a196994e-5b53-47f4-b5b1-3e174bd09c1c/decisions.jsonl",
+      "trace_sha256": "c4df3679301baace61ceaa84ff52898e80840f5162e9e9f2c8e9336b71d4ad71"
+    },
+    {
+      "case": "Silent-a",
+      "label": "flat",
+      "mode": "C3",
+      "run_id": "d3e0c6a5-6d13-49e8-9c58-2dd9f8a980a1",
+      "status": "match",
+      "steps_checked": 42,
+      "extension_steps": 0,
+      "restore_seconds": 1.1384224579669535,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "fd4e7e7398683d11f77ec3065e92dbabffffe37cfb660f1afd5adc5698647e84",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "b0080065f93a7abea846169c5ebfb2e049e50d04822aa98fec013e587edfdcc0",
+      "seconds": 2.639458167133853,
+      "wire.jsonl_sha256": "f1dda5343f316ed848dfcb5179f924deed1e8482682a0e49378082314c90dcef",
+      "engine.stderr.log_sha256": "73493bc4e188320edbdfce9318e2cbdb8d22cf46727e21dd80e786bb69bb71c2",
+      "trace_path": "artifacts/runs/d3e0c6a5-6d13-49e8-9c58-2dd9f8a980a1/decisions.jsonl",
+      "trace_sha256": "e0fcd5f76ffb4cb53936e8a5f3f875d148a524bda54d7087021703f99ed13ea1"
+    },
+    {
+      "case": "Silent-a",
+      "label": "uct",
+      "mode": "B",
+      "run_id": "4f2716b8-3b22-446e-9f91-8c569bd262f1",
+      "status": "match",
+      "steps_checked": 41,
+      "extension_steps": 0,
+      "restore_seconds": 3.6667433329857886,
+      "map_match": true,
+      "entry_match": true,
+      "save_seconds": 0.08982650004327297,
+      "created_checkpoint": {
+        "path": "artifacts/runs/4f2716b8-3b22-446e-9f91-8c569bd262f1/map-checkpoint.json",
+        "sha256": "450ce6c0de807e53b3480a4fad338680d9d88dfcfa6ca916a40ecb5ad17cd30c"
+      },
+      "final_hash": "fd4e7e7398683d11f77ec3065e92dbabffffe37cfb660f1afd5adc5698647e84",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "6f6301623adf7ae0537ce5f2e87e9c04dac4145ea5e3faf6677ccb6ec8b35e9e",
+      "seconds": 5.031322208000347,
+      "wire.jsonl_sha256": "8e247aa9ceac1a3b9c6873a634b5dd74d06bb6ab7551050ec29d7040c7541b49",
+      "engine.stderr.log_sha256": "89ca83ccf76eab263249a13475384c990c903c9b0b6543d44e9c23d1aa1305e8",
+      "trace_path": "artifacts/runs/4f2716b8-3b22-446e-9f91-8c569bd262f1/decisions.jsonl",
+      "trace_sha256": "a844fdfbb2000e3faa4528216fdd149777b3557a994e4a1dd390d3d29c6c7272"
+    },
+    {
+      "case": "Silent-a",
+      "label": "uct",
+      "mode": "C1",
+      "run_id": "aa2efe18-8c0b-4211-b4b8-68e9d928c89b",
+      "status": "match",
+      "steps_checked": 41,
+      "extension_steps": 0,
+      "restore_seconds": 1.1392439170740545,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "fd4e7e7398683d11f77ec3065e92dbabffffe37cfb660f1afd5adc5698647e84",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "6f6301623adf7ae0537ce5f2e87e9c04dac4145ea5e3faf6677ccb6ec8b35e9e",
+      "seconds": 2.6010174171533436,
+      "wire.jsonl_sha256": "5e17c28acf356541aff2620127a8075887a52ce6321ee8f6c0503810f5ac789a",
+      "engine.stderr.log_sha256": "a289afb0d29ef2eb0bd442b080b046e0645ea75fc5734b107720cef1374bd14e",
+      "trace_path": "artifacts/runs/aa2efe18-8c0b-4211-b4b8-68e9d928c89b/decisions.jsonl",
+      "trace_sha256": "c3838375e07eab5db7faf158724a6f263092c51b586c74d0abca7cec3029000b"
+    },
+    {
+      "case": "Silent-a",
+      "label": "uct",
+      "mode": "C2",
+      "run_id": "e2ae9690-1c5f-4892-af63-d41e8b3aecb4",
+      "status": "match",
+      "steps_checked": 41,
+      "extension_steps": 0,
+      "restore_seconds": 1.3823998749721795,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "fd4e7e7398683d11f77ec3065e92dbabffffe37cfb660f1afd5adc5698647e84",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "6f6301623adf7ae0537ce5f2e87e9c04dac4145ea5e3faf6677ccb6ec8b35e9e",
+      "seconds": 2.8470871658064425,
+      "wire.jsonl_sha256": "4e0bfd4aa7b74ee765432ed5a1d466278822e5bc1dde138e9eb40c39ae2294ff",
+      "engine.stderr.log_sha256": "a289afb0d29ef2eb0bd442b080b046e0645ea75fc5734b107720cef1374bd14e",
+      "trace_path": "artifacts/runs/e2ae9690-1c5f-4892-af63-d41e8b3aecb4/decisions.jsonl",
+      "trace_sha256": "b16b0cdfbe611898966135e80fd81e07bcac7be9289e0ad7085535669f06574d"
+    },
+    {
+      "case": "Silent-a",
+      "label": "uct",
+      "mode": "C3",
+      "run_id": "7c769827-cbde-461b-8044-0d08432f0923",
+      "status": "match",
+      "steps_checked": 41,
+      "extension_steps": 0,
+      "restore_seconds": 1.2617320001590997,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "fd4e7e7398683d11f77ec3065e92dbabffffe37cfb660f1afd5adc5698647e84",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "6f6301623adf7ae0537ce5f2e87e9c04dac4145ea5e3faf6677ccb6ec8b35e9e",
+      "seconds": 2.723848666995764,
+      "wire.jsonl_sha256": "a772bbbf5ef74b9940004cfb251f60bb86ab4332a1a2e067876c5c1eb2b68648",
+      "engine.stderr.log_sha256": "a289afb0d29ef2eb0bd442b080b046e0645ea75fc5734b107720cef1374bd14e",
+      "trace_path": "artifacts/runs/7c769827-cbde-461b-8044-0d08432f0923/decisions.jsonl",
+      "trace_sha256": "77a1be587607a48fb2180bcdaaed012a228527247e346dcab698e70225b976d3"
+    },
+    {
+      "case": "Defect-a",
+      "label": "control",
+      "mode": "B",
+      "run_id": "a3925796-4c03-4f82-a4b0-c645fe9f5560",
+      "status": "match",
+      "steps_checked": 30,
+      "extension_steps": 0,
+      "restore_seconds": 3.1809577918611467,
+      "map_match": true,
+      "entry_match": true,
+      "save_seconds": 0.08568966598249972,
+      "created_checkpoint": {
+        "path": "artifacts/runs/a3925796-4c03-4f82-a4b0-c645fe9f5560/map-checkpoint.json",
+        "sha256": "e1a10b2d34149e8d24da561de6eb023a32e9632e26819f82f0219b07e8de5a12"
+      },
+      "final_hash": "de37a51b053303098eb1eeffd0594413c79788d2dd217d6d7836e9f35ba0132b",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "2214d1ee1a54b10a95234cc5483e5e1db62a99baf6a7a9aea9f381905e2ffed1",
+      "seconds": 4.216709834057838,
+      "wire.jsonl_sha256": "ec748ca8c7af0e71498e46a89d1fea16af29a9a3ffe3014fcef47d6cb40d753a",
+      "engine.stderr.log_sha256": "f53298a6f770f5fbd69249a83679a3f2975ec556135e560fda3f46e090595b8d",
+      "trace_path": "artifacts/runs/a3925796-4c03-4f82-a4b0-c645fe9f5560/decisions.jsonl",
+      "trace_sha256": "657275fec4771effcd3ba74e98c8d93274c5769ea416782f2a145ae49028469a"
+    },
+    {
+      "case": "Defect-a",
+      "label": "control",
+      "mode": "C1",
+      "run_id": "3169dc28-dd24-4863-9baa-8cc0bb07c92b",
+      "status": "match",
+      "steps_checked": 30,
+      "extension_steps": 0,
+      "restore_seconds": 1.1507753329351544,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "de37a51b053303098eb1eeffd0594413c79788d2dd217d6d7836e9f35ba0132b",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "2214d1ee1a54b10a95234cc5483e5e1db62a99baf6a7a9aea9f381905e2ffed1",
+      "seconds": 2.28004620783031,
+      "wire.jsonl_sha256": "8c0ac4cbb41a329e4c3d6d0ca5ab3d838a069fce0173b36839839ac6f9cd029d",
+      "engine.stderr.log_sha256": "eea7a9e25cd6616708cb018472ee18d6d3eb9c8d1b627c3d590297b6c07e5875",
+      "trace_path": "artifacts/runs/3169dc28-dd24-4863-9baa-8cc0bb07c92b/decisions.jsonl",
+      "trace_sha256": "98d6bbb47df445d542e3fdcb56faa2963565e02d9828e8b394929a64d0b696cf"
+    },
+    {
+      "case": "Defect-a",
+      "label": "control",
+      "mode": "C2",
+      "run_id": "aacffc95-dec4-4103-b0df-4bb680c0b454",
+      "status": "match",
+      "steps_checked": 30,
+      "extension_steps": 0,
+      "restore_seconds": 1.1046783328056335,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "de37a51b053303098eb1eeffd0594413c79788d2dd217d6d7836e9f35ba0132b",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "2214d1ee1a54b10a95234cc5483e5e1db62a99baf6a7a9aea9f381905e2ffed1",
+      "seconds": 2.224144540959969,
+      "wire.jsonl_sha256": "511cee7a5f2e8270f2fa407cc2679fa639446430b268f2a751cd9af699b52702",
+      "engine.stderr.log_sha256": "eea7a9e25cd6616708cb018472ee18d6d3eb9c8d1b627c3d590297b6c07e5875",
+      "trace_path": "artifacts/runs/aacffc95-dec4-4103-b0df-4bb680c0b454/decisions.jsonl",
+      "trace_sha256": "2e8dfe1d1c4e7cf7e8f593c85dfbda771b274b4d819acfc934f0364139b93777"
+    },
+    {
+      "case": "Defect-a",
+      "label": "control",
+      "mode": "C3",
+      "run_id": "3ec6ca1e-17be-4ec2-8241-a7ffbb60a23c",
+      "status": "match",
+      "steps_checked": 30,
+      "extension_steps": 0,
+      "restore_seconds": 1.107129666954279,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "de37a51b053303098eb1eeffd0594413c79788d2dd217d6d7836e9f35ba0132b",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "2214d1ee1a54b10a95234cc5483e5e1db62a99baf6a7a9aea9f381905e2ffed1",
+      "seconds": 2.2282509999349713,
+      "wire.jsonl_sha256": "e352a463838d85f07fa203b663a0764fe794ceee8b8dfa1d0b55597c3d30e2f7",
+      "engine.stderr.log_sha256": "eea7a9e25cd6616708cb018472ee18d6d3eb9c8d1b627c3d590297b6c07e5875",
+      "trace_path": "artifacts/runs/3ec6ca1e-17be-4ec2-8241-a7ffbb60a23c/decisions.jsonl",
+      "trace_sha256": "bec029d64452ffbb132e2116d4f67806440dd8e9dfb952495dd4c106a112b482"
+    },
+    {
+      "case": "Defect-a",
+      "label": "flat",
+      "mode": "B",
+      "run_id": "9712b45f-5b3e-4844-9168-ccc1d310da86",
+      "status": "match",
+      "steps_checked": 28,
+      "extension_steps": 0,
+      "restore_seconds": 3.198744290973991,
+      "map_match": true,
+      "entry_match": true,
+      "save_seconds": 0.08643154194578528,
+      "created_checkpoint": {
+        "path": "artifacts/runs/9712b45f-5b3e-4844-9168-ccc1d310da86/map-checkpoint.json",
+        "sha256": "eeab097438846e8241878590cfdeb40c0d27c27a81ca63b02def66ce30fb87d2"
+      },
+      "final_hash": "08eaf61d91a36e0620c0d28e55c7dd5c86008a2e25225339041a3d37ddea206e",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "fad5cdffc25992cf6d3f64e050abc42311010e4ecb855884259ff415b1dd9c3f",
+      "seconds": 4.1374536249786615,
+      "wire.jsonl_sha256": "508fddffae485e236222367620fabbb46d65abb45b3557be08e04c54d2665aa8",
+      "engine.stderr.log_sha256": "0f9ffd7d2f336c946eb84d1d1f48b8f82bcaa8ba80d16d2f47a697f831bc3226",
+      "trace_path": "artifacts/runs/9712b45f-5b3e-4844-9168-ccc1d310da86/decisions.jsonl",
+      "trace_sha256": "bf9ccaa07229ac8eca8b2e4cde47a0891eccca7fd3f699081887f68dfd1acf57"
+    },
+    {
+      "case": "Defect-a",
+      "label": "flat",
+      "mode": "C1",
+      "run_id": "ee886403-28b4-4fc7-8c1f-18d8603be255",
+      "status": "match",
+      "steps_checked": 28,
+      "extension_steps": 0,
+      "restore_seconds": 1.1085497909225523,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "08eaf61d91a36e0620c0d28e55c7dd5c86008a2e25225339041a3d37ddea206e",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "fad5cdffc25992cf6d3f64e050abc42311010e4ecb855884259ff415b1dd9c3f",
+      "seconds": 2.149203124921769,
+      "wire.jsonl_sha256": "5221f6da0f9c7aed936979c092c33a8c21de2a60373e63bff44bfb26236003e8",
+      "engine.stderr.log_sha256": "7235948ce6186442ec8d08ea791b821f72d2b6ecb6a395a52c73fb8926c8ccca",
+      "trace_path": "artifacts/runs/ee886403-28b4-4fc7-8c1f-18d8603be255/decisions.jsonl",
+      "trace_sha256": "fa74d2a585d4c9fb04cafda00cff212ba555ace9f082140971e21716c826a903"
+    },
+    {
+      "case": "Defect-a",
+      "label": "flat",
+      "mode": "C2",
+      "run_id": "e27f53c5-e9ca-450a-9f35-cf621f466a18",
+      "status": "match",
+      "steps_checked": 28,
+      "extension_steps": 0,
+      "restore_seconds": 1.128909416962415,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "08eaf61d91a36e0620c0d28e55c7dd5c86008a2e25225339041a3d37ddea206e",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "fad5cdffc25992cf6d3f64e050abc42311010e4ecb855884259ff415b1dd9c3f",
+      "seconds": 2.1560369168873876,
+      "wire.jsonl_sha256": "b88ceb4a31a4b55762631f0245703967781260d719de04e0109bdeeb9b15a1f9",
+      "engine.stderr.log_sha256": "7235948ce6186442ec8d08ea791b821f72d2b6ecb6a395a52c73fb8926c8ccca",
+      "trace_path": "artifacts/runs/e27f53c5-e9ca-450a-9f35-cf621f466a18/decisions.jsonl",
+      "trace_sha256": "efcc7139ced76687f6ddfcd4285acd9b387da1967b523bb7195932c4811aaa9f"
+    },
+    {
+      "case": "Defect-a",
+      "label": "flat",
+      "mode": "C3",
+      "run_id": "b18db307-e275-46ca-88f3-07bb5a7ea918",
+      "status": "match",
+      "steps_checked": 28,
+      "extension_steps": 0,
+      "restore_seconds": 1.0785252919886261,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "08eaf61d91a36e0620c0d28e55c7dd5c86008a2e25225339041a3d37ddea206e",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "fad5cdffc25992cf6d3f64e050abc42311010e4ecb855884259ff415b1dd9c3f",
+      "seconds": 2.115141374990344,
+      "wire.jsonl_sha256": "44542c7b1754ec66fa74d384d3209cefd758d73a9d925b87fc9590dc0f768649",
+      "engine.stderr.log_sha256": "7235948ce6186442ec8d08ea791b821f72d2b6ecb6a395a52c73fb8926c8ccca",
+      "trace_path": "artifacts/runs/b18db307-e275-46ca-88f3-07bb5a7ea918/decisions.jsonl",
+      "trace_sha256": "115a499f424dbbdab7ddda185a8d62ecf100fca8f9a790174ce02ebf90577e2e"
+    },
+    {
+      "case": "Defect-a",
+      "label": "uct",
+      "mode": "B",
+      "run_id": "a18f553f-cafc-4508-b97c-7cf8993c214a",
+      "status": "match",
+      "steps_checked": 28,
+      "extension_steps": 0,
+      "restore_seconds": 3.2388205830939114,
+      "map_match": true,
+      "entry_match": true,
+      "save_seconds": 0.08398204180411994,
+      "created_checkpoint": {
+        "path": "artifacts/runs/a18f553f-cafc-4508-b97c-7cf8993c214a/map-checkpoint.json",
+        "sha256": "22d074fce4a173122eb1a920e40549a9781e9d40834713b92aaee6c54a082711"
+      },
+      "final_hash": "08eaf61d91a36e0620c0d28e55c7dd5c86008a2e25225339041a3d37ddea206e",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "efcf61eea99f4a4e05cf91fda9d4f89f18d31b3c238a75b79964106b67c86dba",
+      "seconds": 4.18005616706796,
+      "wire.jsonl_sha256": "821a7c53152d3b8859a4969612af6332045e3e2c608d1445fa0f7b49edf859f1",
+      "engine.stderr.log_sha256": "84ac7f3915c164a729831451b7c2762fb18b348fa8e2071e71c165f1f1a8d815",
+      "trace_path": "artifacts/runs/a18f553f-cafc-4508-b97c-7cf8993c214a/decisions.jsonl",
+      "trace_sha256": "5158057116dd242dc672fa982c5bf3349fe875a61ee9c725564dadd4fcdc37f6"
+    },
+    {
+      "case": "Defect-a",
+      "label": "uct",
+      "mode": "C1",
+      "run_id": "fbe2b1ce-8539-49de-bdf3-123b66c71734",
+      "status": "match",
+      "steps_checked": 28,
+      "extension_steps": 0,
+      "restore_seconds": 1.119551207870245,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "08eaf61d91a36e0620c0d28e55c7dd5c86008a2e25225339041a3d37ddea206e",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "efcf61eea99f4a4e05cf91fda9d4f89f18d31b3c238a75b79964106b67c86dba",
+      "seconds": 2.140805541072041,
+      "wire.jsonl_sha256": "c198ce5f6c9abb551b750fb1f7a4a86457949a0a840175100ddcbc1fd1379222",
+      "engine.stderr.log_sha256": "730d30c9590848d07cb694db54056f8ac93f9ce13683fec8f9cb46e0bc2ed00d",
+      "trace_path": "artifacts/runs/fbe2b1ce-8539-49de-bdf3-123b66c71734/decisions.jsonl",
+      "trace_sha256": "589e78ebd5f0e0822c5d7e2a507d5ec9651e4c59bd8bb1ce4ffa24e6dca97ae9"
+    },
+    {
+      "case": "Defect-a",
+      "label": "uct",
+      "mode": "C2",
+      "run_id": "48a7f3e6-70d5-4844-8d71-bd3297a62b80",
+      "status": "match",
+      "steps_checked": 28,
+      "extension_steps": 0,
+      "restore_seconds": 1.0762332500889897,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "08eaf61d91a36e0620c0d28e55c7dd5c86008a2e25225339041a3d37ddea206e",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "efcf61eea99f4a4e05cf91fda9d4f89f18d31b3c238a75b79964106b67c86dba",
+      "seconds": 2.1434520001057535,
+      "wire.jsonl_sha256": "f83ca894a80e1aa22ece46615cd77a1a6650c3d70a3fa6fe355f12c65c078dad",
+      "engine.stderr.log_sha256": "730d30c9590848d07cb694db54056f8ac93f9ce13683fec8f9cb46e0bc2ed00d",
+      "trace_path": "artifacts/runs/48a7f3e6-70d5-4844-8d71-bd3297a62b80/decisions.jsonl",
+      "trace_sha256": "2e92b893327bdf9535660aa6c7b15c904a69f96c9d05c226926efc48dba65dc9"
+    },
+    {
+      "case": "Defect-a",
+      "label": "uct",
+      "mode": "C3",
+      "run_id": "ff4b7ee5-0294-4c84-ac1f-15f0d9ce2279",
+      "status": "match",
+      "steps_checked": 28,
+      "extension_steps": 0,
+      "restore_seconds": 1.1780332091730088,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "08eaf61d91a36e0620c0d28e55c7dd5c86008a2e25225339041a3d37ddea206e",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "efcf61eea99f4a4e05cf91fda9d4f89f18d31b3c238a75b79964106b67c86dba",
+      "seconds": 2.204033125191927,
+      "wire.jsonl_sha256": "14fed78d6cede691c64d072faeb607b271601a8e3ef9bcdab55665303e59270d",
+      "engine.stderr.log_sha256": "730d30c9590848d07cb694db54056f8ac93f9ce13683fec8f9cb46e0bc2ed00d",
+      "trace_path": "artifacts/runs/ff4b7ee5-0294-4c84-ac1f-15f0d9ce2279/decisions.jsonl",
+      "trace_sha256": "7314c4bb9dbf1e50e3735d282305ce3c7bf89c6edbf9818ea4a25ff983f7127c"
+    },
+    {
+      "case": "Regent-a",
+      "label": "control",
+      "mode": "B",
+      "run_id": "e60ba9ed-4a06-46ac-9396-06381fb0f0cd",
+      "status": "match",
+      "steps_checked": 28,
+      "extension_steps": 0,
+      "restore_seconds": 3.2963153750170022,
+      "map_match": true,
+      "entry_match": true,
+      "save_seconds": 0.08216595812700689,
+      "created_checkpoint": {
+        "path": "artifacts/runs/e60ba9ed-4a06-46ac-9396-06381fb0f0cd/map-checkpoint.json",
+        "sha256": "3d729785859feae9fea36e710b65ff3be213253f78f46a03e12c9768e9e27504"
+      },
+      "final_hash": "deac581d78d5a2c01589a1c48e8cd919654f0d01d1a7b66cbd2c9d51ee8b8370",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "c7a06b9b552565fe1e12bca850ad359a5d628757e659ec219c1520cfa0b4623b",
+      "seconds": 4.263906124979258,
+      "wire.jsonl_sha256": "2e1910b7fc5b26b2d1184e690f4cbe52931eb3290d58770de8ffb75b233210b9",
+      "engine.stderr.log_sha256": "f6fb1559b78cab456f2e02fe6ae828e7fd8ac3a623a1917c763265d1a3f6490b",
+      "trace_path": "artifacts/runs/e60ba9ed-4a06-46ac-9396-06381fb0f0cd/decisions.jsonl",
+      "trace_sha256": "e47b4fd1174010e59139527ceac5dc5f8196fe02be9c3403b5c811c52b7fad37"
+    },
+    {
+      "case": "Regent-a",
+      "label": "control",
+      "mode": "C1",
+      "run_id": "3921a4de-e345-4850-8802-7ebcb58130f1",
+      "status": "match",
+      "steps_checked": 28,
+      "extension_steps": 0,
+      "restore_seconds": 1.1328633751254529,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "deac581d78d5a2c01589a1c48e8cd919654f0d01d1a7b66cbd2c9d51ee8b8370",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "c7a06b9b552565fe1e12bca850ad359a5d628757e659ec219c1520cfa0b4623b",
+      "seconds": 2.201103791128844,
+      "wire.jsonl_sha256": "2486cc87dc142adc7aa3b42bc0a507a57cbc6b75d7e9d193fb59ecea31e5fb38",
+      "engine.stderr.log_sha256": "12bc7706178dabfa535c56057bb4c3a092956381f98e876f835a858e15623fc6",
+      "trace_path": "artifacts/runs/3921a4de-e345-4850-8802-7ebcb58130f1/decisions.jsonl",
+      "trace_sha256": "dbd5b64ef2922fbf1b838d26ea2bf86fff1e83b40897a6f38357882a0073fce1"
+    },
+    {
+      "case": "Regent-a",
+      "label": "control",
+      "mode": "C2",
+      "run_id": "408d75c8-cab3-497f-823d-d96e5dfe8302",
+      "status": "match",
+      "steps_checked": 28,
+      "extension_steps": 0,
+      "restore_seconds": 1.0826361670624465,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "deac581d78d5a2c01589a1c48e8cd919654f0d01d1a7b66cbd2c9d51ee8b8370",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "c7a06b9b552565fe1e12bca850ad359a5d628757e659ec219c1520cfa0b4623b",
+      "seconds": 2.13894004188478,
+      "wire.jsonl_sha256": "f9a4b9d05cb4f3d0cd8a9ce51a0190f8f05a11b2c4bc4a741457d47e4a1f7fa1",
+      "engine.stderr.log_sha256": "12bc7706178dabfa535c56057bb4c3a092956381f98e876f835a858e15623fc6",
+      "trace_path": "artifacts/runs/408d75c8-cab3-497f-823d-d96e5dfe8302/decisions.jsonl",
+      "trace_sha256": "80f38746bbd3efe751fb39e7c43d3203088d7da6047d1ada31677bd8f274949a"
+    },
+    {
+      "case": "Regent-a",
+      "label": "control",
+      "mode": "C3",
+      "run_id": "4a9a96aa-476c-4d8c-9e16-9e3025230615",
+      "status": "match",
+      "steps_checked": 28,
+      "extension_steps": 0,
+      "restore_seconds": 1.0978561660740525,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "deac581d78d5a2c01589a1c48e8cd919654f0d01d1a7b66cbd2c9d51ee8b8370",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "c7a06b9b552565fe1e12bca850ad359a5d628757e659ec219c1520cfa0b4623b",
+      "seconds": 2.1582362910266966,
+      "wire.jsonl_sha256": "a00bf36f48cb93edb5a6ea811c3466abf33f8454c56b4ab3eeff7411a7ea79c8",
+      "engine.stderr.log_sha256": "12bc7706178dabfa535c56057bb4c3a092956381f98e876f835a858e15623fc6",
+      "trace_path": "artifacts/runs/4a9a96aa-476c-4d8c-9e16-9e3025230615/decisions.jsonl",
+      "trace_sha256": "4dcfd546985912cfa9ca0f7e5dd541a3bc632f9829d109d16132e21eb55d0e1f"
+    },
+    {
+      "case": "Regent-a",
+      "label": "flat",
+      "mode": "B",
+      "run_id": "949fe113-b6cf-40df-8a81-b13ab8268a4e",
+      "status": "match",
+      "steps_checked": 28,
+      "extension_steps": 0,
+      "restore_seconds": 3.309661290841177,
+      "map_match": true,
+      "entry_match": true,
+      "save_seconds": 0.08395987492986023,
+      "created_checkpoint": {
+        "path": "artifacts/runs/949fe113-b6cf-40df-8a81-b13ab8268a4e/map-checkpoint.json",
+        "sha256": "0eee29e66f3a4a390bfc29819a18a001d8cfc3df252c9e7499a75e5c25977152"
+      },
+      "final_hash": "deac581d78d5a2c01589a1c48e8cd919654f0d01d1a7b66cbd2c9d51ee8b8370",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "c7a06b9b552565fe1e12bca850ad359a5d628757e659ec219c1520cfa0b4623b",
+      "seconds": 4.289517999859527,
+      "wire.jsonl_sha256": "d439b6528725a636bbf9c5e0ff1d462aebeda94729a2fb08198e20ff8c3cfe69",
+      "engine.stderr.log_sha256": "1a9229841137b1d487993b846e79a8d473bcb7f8b60d433e6e4ac7daca1bb2b5",
+      "trace_path": "artifacts/runs/949fe113-b6cf-40df-8a81-b13ab8268a4e/decisions.jsonl",
+      "trace_sha256": "574cff73607ced5921324a1e7a1f5c7bad2914ce72c0d25df770787438df29a5"
+    },
+    {
+      "case": "Regent-a",
+      "label": "flat",
+      "mode": "C1",
+      "run_id": "532a82ac-dd21-4df3-9a36-68fd12ecb266",
+      "status": "match",
+      "steps_checked": 28,
+      "extension_steps": 0,
+      "restore_seconds": 1.1583418338559568,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "deac581d78d5a2c01589a1c48e8cd919654f0d01d1a7b66cbd2c9d51ee8b8370",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "c7a06b9b552565fe1e12bca850ad359a5d628757e659ec219c1520cfa0b4623b",
+      "seconds": 2.2214282089844346,
+      "wire.jsonl_sha256": "38b9efa1d7477c1cce49b115d9a37fe0ea44ca60cfc9bc1fccd1fb076f02818d",
+      "engine.stderr.log_sha256": "12bc7706178dabfa535c56057bb4c3a092956381f98e876f835a858e15623fc6",
+      "trace_path": "artifacts/runs/532a82ac-dd21-4df3-9a36-68fd12ecb266/decisions.jsonl",
+      "trace_sha256": "e6bca99f4bab29d6c0131e865a4a707ed899af9f876f278040dce5193d9adf8e"
+    },
+    {
+      "case": "Regent-a",
+      "label": "flat",
+      "mode": "C2",
+      "run_id": "bfa00f63-493e-40d0-bd97-a713f3b5cbf9",
+      "status": "match",
+      "steps_checked": 28,
+      "extension_steps": 0,
+      "restore_seconds": 1.1048682921100408,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "deac581d78d5a2c01589a1c48e8cd919654f0d01d1a7b66cbd2c9d51ee8b8370",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "c7a06b9b552565fe1e12bca850ad359a5d628757e659ec219c1520cfa0b4623b",
+      "seconds": 2.1689135839696974,
+      "wire.jsonl_sha256": "43d94787995cede3f28892309de3b69837163d7574de29b070ffbe5908f24c9f",
+      "engine.stderr.log_sha256": "12bc7706178dabfa535c56057bb4c3a092956381f98e876f835a858e15623fc6",
+      "trace_path": "artifacts/runs/bfa00f63-493e-40d0-bd97-a713f3b5cbf9/decisions.jsonl",
+      "trace_sha256": "69f4a4374430fd800585ae4c93a3de78193612b338efef6cda177e57d8a6502d"
+    },
+    {
+      "case": "Regent-a",
+      "label": "flat",
+      "mode": "C3",
+      "run_id": "fcf5cb4a-dc97-46f1-bd1e-44e2ac5936d7",
+      "status": "match",
+      "steps_checked": 28,
+      "extension_steps": 0,
+      "restore_seconds": 1.092858208110556,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "deac581d78d5a2c01589a1c48e8cd919654f0d01d1a7b66cbd2c9d51ee8b8370",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "c7a06b9b552565fe1e12bca850ad359a5d628757e659ec219c1520cfa0b4623b",
+      "seconds": 2.180730832973495,
+      "wire.jsonl_sha256": "66aa0265a7971af7823f5a0e2a4d59f05885d2b84cdb9670231c0b17f7ac4595",
+      "engine.stderr.log_sha256": "12bc7706178dabfa535c56057bb4c3a092956381f98e876f835a858e15623fc6",
+      "trace_path": "artifacts/runs/fcf5cb4a-dc97-46f1-bd1e-44e2ac5936d7/decisions.jsonl",
+      "trace_sha256": "6c4d9899bf6ff575d71ee4b00f57f56104791d7bc1747e6a4d3ff14ad5841f48"
+    },
+    {
+      "case": "Regent-a",
+      "label": "uct",
+      "mode": "B",
+      "run_id": "64874ec7-7543-4b20-a9c1-c7bbd252be25",
+      "status": "match",
+      "steps_checked": 27,
+      "extension_steps": 0,
+      "restore_seconds": 3.3137394580990076,
+      "map_match": true,
+      "entry_match": true,
+      "save_seconds": 0.08534849993884563,
+      "created_checkpoint": {
+        "path": "artifacts/runs/64874ec7-7543-4b20-a9c1-c7bbd252be25/map-checkpoint.json",
+        "sha256": "2a621e6d943a866241356545d1a71ab8877ce9a9554678021e5bb714de06b838"
+      },
+      "final_hash": "f7999e4d2f3d201bd572c2f4c37a15546448aee3c2d1538912fcc397c58f4882",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "69c751e88e45c3d3152e9b9ae12082d1dfd15844be2dbc58fd0412cde972708b",
+      "seconds": 4.255691583035514,
+      "wire.jsonl_sha256": "4042592e4fc8e5aa3e02f79294d99aae0a69f45c7d7b3a74dc11ebf58b8c9e8f",
+      "engine.stderr.log_sha256": "33b913481e115a8f88b46d8792ced514d75aa02741f8d08542aac9a9636312ca",
+      "trace_path": "artifacts/runs/64874ec7-7543-4b20-a9c1-c7bbd252be25/decisions.jsonl",
+      "trace_sha256": "483ac365b7963ff6c407c9ad6351e1e8d70c0c4596b5f958b98a8761a3a32bc8"
+    },
+    {
+      "case": "Regent-a",
+      "label": "uct",
+      "mode": "C1",
+      "run_id": "9d50e46f-d1d5-418c-bcdb-1da646386f3f",
+      "status": "match",
+      "steps_checked": 27,
+      "extension_steps": 0,
+      "restore_seconds": 1.142003082903102,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "f7999e4d2f3d201bd572c2f4c37a15546448aee3c2d1538912fcc397c58f4882",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "69c751e88e45c3d3152e9b9ae12082d1dfd15844be2dbc58fd0412cde972708b",
+      "seconds": 2.16144279204309,
+      "wire.jsonl_sha256": "82cdab77a74d4f30ccd8ccd1e87ef9e67668e19be81e7df16ac5771125a9c3b9",
+      "engine.stderr.log_sha256": "873b1b5770288f90ae4984d39e2908b5ca15db4e7f30b0e00949d11f0d8f0a2e",
+      "trace_path": "artifacts/runs/9d50e46f-d1d5-418c-bcdb-1da646386f3f/decisions.jsonl",
+      "trace_sha256": "361641f62b8fe1334f01a6ff0df3a0cce67143500f7870e4417ce1b7af01b575"
+    },
+    {
+      "case": "Regent-a",
+      "label": "uct",
+      "mode": "C2",
+      "run_id": "306539d9-de50-46aa-b8c7-6b0dea068e97",
+      "status": "match",
+      "steps_checked": 27,
+      "extension_steps": 0,
+      "restore_seconds": 1.21216387511231,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "f7999e4d2f3d201bd572c2f4c37a15546448aee3c2d1538912fcc397c58f4882",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "69c751e88e45c3d3152e9b9ae12082d1dfd15844be2dbc58fd0412cde972708b",
+      "seconds": 2.240058375056833,
+      "wire.jsonl_sha256": "5da1131014e6e0b25fcbedb88b346c9d6672692ba468b72058a5f119a642f807",
+      "engine.stderr.log_sha256": "873b1b5770288f90ae4984d39e2908b5ca15db4e7f30b0e00949d11f0d8f0a2e",
+      "trace_path": "artifacts/runs/306539d9-de50-46aa-b8c7-6b0dea068e97/decisions.jsonl",
+      "trace_sha256": "007bcca892e8601c979fd1ae0bb563913bf3c46d069332c38edbe062cecdf16f"
+    },
+    {
+      "case": "Regent-a",
+      "label": "uct",
+      "mode": "C3",
+      "run_id": "4a7d9619-b2dc-4f50-803a-7a7b92b6a17e",
+      "status": "match",
+      "steps_checked": 27,
+      "extension_steps": 0,
+      "restore_seconds": 1.1817782919388264,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "f7999e4d2f3d201bd572c2f4c37a15546448aee3c2d1538912fcc397c58f4882",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "69c751e88e45c3d3152e9b9ae12082d1dfd15844be2dbc58fd0412cde972708b",
+      "seconds": 2.2072262500878423,
+      "wire.jsonl_sha256": "598edafd8983cc1263fbd5eaf75431e17b947120730f04406750bf94d464e153",
+      "engine.stderr.log_sha256": "873b1b5770288f90ae4984d39e2908b5ca15db4e7f30b0e00949d11f0d8f0a2e",
+      "trace_path": "artifacts/runs/4a7d9619-b2dc-4f50-803a-7a7b92b6a17e/decisions.jsonl",
+      "trace_sha256": "84aaa58437457539dc31fd2ff25ed6f2ed81a602e0ac30f57657a85eeeac2f64"
+    },
+    {
+      "case": "Necrobinder-a",
+      "label": "control",
+      "mode": "B",
+      "run_id": "277add15-efa2-4f90-8101-21885dc2955a",
+      "status": "match",
+      "steps_checked": 35,
+      "extension_steps": 0,
+      "restore_seconds": 3.1520186660345644,
+      "map_match": true,
+      "entry_match": true,
+      "save_seconds": 0.0878932080231607,
+      "created_checkpoint": {
+        "path": "artifacts/runs/277add15-efa2-4f90-8101-21885dc2955a/map-checkpoint.json",
+        "sha256": "39280484bbf24c1dd8d66c5f7188bd75cea0a1cef2712ea4cfa8c3ea04484412"
+      },
+      "final_hash": "40792c0a46ec4522c85c85e859d0a608511eb5c6b1b5c24c27c59acc16ffc1dc",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "238377e15455609b8facb65fe6c7b282bfdb8b430843aba5a82b6f785b80f319",
+      "seconds": 4.35831758286804,
+      "wire.jsonl_sha256": "3cefb089cd9ed11758ac2e9f2fcce5d2b0d8a959c6e6ed191b05c47a7d932bd0",
+      "engine.stderr.log_sha256": "4eec0c9aa799b706e318c3d755e65c644cde72ad784d416c80cfeb7032758b72",
+      "trace_path": "artifacts/runs/277add15-efa2-4f90-8101-21885dc2955a/decisions.jsonl",
+      "trace_sha256": "d497b6a94f8411de0bfa18e0a3106aa5169d358c22262045a533f14de7a21825"
+    },
+    {
+      "case": "Necrobinder-a",
+      "label": "control",
+      "mode": "C1",
+      "run_id": "fe61b70d-0966-4b4d-921a-fc8a62a86b23",
+      "status": "match",
+      "steps_checked": 35,
+      "extension_steps": 0,
+      "restore_seconds": 1.130803917068988,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "40792c0a46ec4522c85c85e859d0a608511eb5c6b1b5c24c27c59acc16ffc1dc",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "238377e15455609b8facb65fe6c7b282bfdb8b430843aba5a82b6f785b80f319",
+      "seconds": 2.4208787500392646,
+      "wire.jsonl_sha256": "367e91db68a1242f30e66a2a8049fde73283b5ed5e7cdfb2fbb4c239e861830c",
+      "engine.stderr.log_sha256": "fec0a77c821d0f1cc519860553d77e2939b570ee520a255524127923847c4f84",
+      "trace_path": "artifacts/runs/fe61b70d-0966-4b4d-921a-fc8a62a86b23/decisions.jsonl",
+      "trace_sha256": "b3663eb0bfae873eae353ff6f57a770050697179f842b2aec200b31e6f45ddd5"
+    },
+    {
+      "case": "Necrobinder-a",
+      "label": "control",
+      "mode": "C2",
+      "run_id": "e9a14a5f-a774-4f59-9ed3-16eec8012a5a",
+      "status": "match",
+      "steps_checked": 35,
+      "extension_steps": 0,
+      "restore_seconds": 1.1168606670107692,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "40792c0a46ec4522c85c85e859d0a608511eb5c6b1b5c24c27c59acc16ffc1dc",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "238377e15455609b8facb65fe6c7b282bfdb8b430843aba5a82b6f785b80f319",
+      "seconds": 2.401633583009243,
+      "wire.jsonl_sha256": "5cec1567cb2a7bb198fea5f047030687414d3dc7f81457f85ad2b69846551213",
+      "engine.stderr.log_sha256": "fec0a77c821d0f1cc519860553d77e2939b570ee520a255524127923847c4f84",
+      "trace_path": "artifacts/runs/e9a14a5f-a774-4f59-9ed3-16eec8012a5a/decisions.jsonl",
+      "trace_sha256": "de73b6a54444e4da00c5afa6946ade531dfd902850ef876d10ce15ada3b3484b"
+    },
+    {
+      "case": "Necrobinder-a",
+      "label": "control",
+      "mode": "C3",
+      "run_id": "8ba0e47d-bca6-4274-a53f-be12ff807a11",
+      "status": "match",
+      "steps_checked": 35,
+      "extension_steps": 0,
+      "restore_seconds": 1.114953791955486,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "40792c0a46ec4522c85c85e859d0a608511eb5c6b1b5c24c27c59acc16ffc1dc",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "238377e15455609b8facb65fe6c7b282bfdb8b430843aba5a82b6f785b80f319",
+      "seconds": 2.395227042026818,
+      "wire.jsonl_sha256": "7ee179c3799f204e37d5603f7832cfe5c1edf8aa2f0bd047ca0d2329d1cd5d72",
+      "engine.stderr.log_sha256": "fec0a77c821d0f1cc519860553d77e2939b570ee520a255524127923847c4f84",
+      "trace_path": "artifacts/runs/8ba0e47d-bca6-4274-a53f-be12ff807a11/decisions.jsonl",
+      "trace_sha256": "88338ff0d5ba0226af073ff70e9fe9f03da6af9484a8e1c7ab322cf8184a4a69"
+    },
+    {
+      "case": "Necrobinder-a",
+      "label": "flat",
+      "mode": "B",
+      "run_id": "ec066a57-f68f-46d5-af68-e7f61dffdd17",
+      "status": "match",
+      "steps_checked": 34,
+      "extension_steps": 0,
+      "restore_seconds": 3.117996708024293,
+      "map_match": true,
+      "entry_match": true,
+      "save_seconds": 0.09390500001609325,
+      "created_checkpoint": {
+        "path": "artifacts/runs/ec066a57-f68f-46d5-af68-e7f61dffdd17/map-checkpoint.json",
+        "sha256": "dfd9bf2d1cb881553f0f944460ac5f4033c21ff9642d67701b6a02561efa4e28"
+      },
+      "final_hash": "40792c0a46ec4522c85c85e859d0a608511eb5c6b1b5c24c27c59acc16ffc1dc",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "00908c8ab4f0a0a2691cd64ab550fe6bb2ec3759acf018c55bb94dd56ec872e4",
+      "seconds": 4.282706415979192,
+      "wire.jsonl_sha256": "ddcff5258f160dfec607aefefdd07e3a76c6bbb847e057ae2a3fe17a52a2402b",
+      "engine.stderr.log_sha256": "f942080e3790edc1bfafcac99c2c78a18a2cc2d1373d315bbf10ef6aaee03c3d",
+      "trace_path": "artifacts/runs/ec066a57-f68f-46d5-af68-e7f61dffdd17/decisions.jsonl",
+      "trace_sha256": "32d88db95539809268b6ca88d1046e6ea80bfde150b54c6a195a2900ba58bf82"
+    },
+    {
+      "case": "Necrobinder-a",
+      "label": "flat",
+      "mode": "C1",
+      "run_id": "1c36f737-3815-4c9a-bb39-841e5f27dfb5",
+      "status": "match",
+      "steps_checked": 34,
+      "extension_steps": 0,
+      "restore_seconds": 1.0806177081540227,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "40792c0a46ec4522c85c85e859d0a608511eb5c6b1b5c24c27c59acc16ffc1dc",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "00908c8ab4f0a0a2691cd64ab550fe6bb2ec3759acf018c55bb94dd56ec872e4",
+      "seconds": 2.3335531670600176,
+      "wire.jsonl_sha256": "d90c93e487c735e63f4004227faa09de3527e49c739659b83aeeea5925ecbc0d",
+      "engine.stderr.log_sha256": "c641fc7fb7cce8ef79e6c45852559209577e362ff99109c9b3d28701f59e79d6",
+      "trace_path": "artifacts/runs/1c36f737-3815-4c9a-bb39-841e5f27dfb5/decisions.jsonl",
+      "trace_sha256": "0a398173c605675f4bc8e18e096578444c4dade7d7e9f95d3299e68ff7ea44fe"
+    },
+    {
+      "case": "Necrobinder-a",
+      "label": "flat",
+      "mode": "C2",
+      "run_id": "2d04006b-14f6-41da-9559-03ff70db2730",
+      "status": "match",
+      "steps_checked": 34,
+      "extension_steps": 0,
+      "restore_seconds": 1.0914153750054538,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "40792c0a46ec4522c85c85e859d0a608511eb5c6b1b5c24c27c59acc16ffc1dc",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "00908c8ab4f0a0a2691cd64ab550fe6bb2ec3759acf018c55bb94dd56ec872e4",
+      "seconds": 2.3399252500385046,
+      "wire.jsonl_sha256": "a23636b0ba4911b2c70b20dd8f4895e093a2c21938a2e79332d3b26a9d10a2ce",
+      "engine.stderr.log_sha256": "c641fc7fb7cce8ef79e6c45852559209577e362ff99109c9b3d28701f59e79d6",
+      "trace_path": "artifacts/runs/2d04006b-14f6-41da-9559-03ff70db2730/decisions.jsonl",
+      "trace_sha256": "d08113757c34589e99971c7e472a321dee922cc97cdccf8e06c30b13711ec682"
+    },
+    {
+      "case": "Necrobinder-a",
+      "label": "flat",
+      "mode": "C3",
+      "run_id": "43965173-b803-4f30-bc70-7cbcbcc33ece",
+      "status": "match",
+      "steps_checked": 34,
+      "extension_steps": 0,
+      "restore_seconds": 1.1409395828377455,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "40792c0a46ec4522c85c85e859d0a608511eb5c6b1b5c24c27c59acc16ffc1dc",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "00908c8ab4f0a0a2691cd64ab550fe6bb2ec3759acf018c55bb94dd56ec872e4",
+      "seconds": 2.3974272499326617,
+      "wire.jsonl_sha256": "65023e89103f4b87ddb219efd8bc8cb47bf3f7dfeda9b98d69fec55731038fb3",
+      "engine.stderr.log_sha256": "c641fc7fb7cce8ef79e6c45852559209577e362ff99109c9b3d28701f59e79d6",
+      "trace_path": "artifacts/runs/43965173-b803-4f30-bc70-7cbcbcc33ece/decisions.jsonl",
+      "trace_sha256": "845b320c78ac712f1bc97462e6cafe24f21a860792df95d954f5762bc222acff"
+    },
+    {
+      "case": "Necrobinder-a",
+      "label": "uct",
+      "mode": "B",
+      "run_id": "ba26f9f4-a33d-487d-bf4b-dd81d52129ad",
+      "status": "match",
+      "steps_checked": 34,
+      "extension_steps": 0,
+      "restore_seconds": 3.404283291194588,
+      "map_match": true,
+      "entry_match": true,
+      "save_seconds": 0.08775849989615381,
+      "created_checkpoint": {
+        "path": "artifacts/runs/ba26f9f4-a33d-487d-bf4b-dd81d52129ad/map-checkpoint.json",
+        "sha256": "11128fa88e7a2cfbe9d485f6af30a47078ba2fd16cc4b3f3f7640b4a2f5c461d"
+      },
+      "final_hash": "dd91403ac5800073929a28993a950d75b4c11c22dc6a1f7fdf84a05532b1bd33",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "9dc9ad16a018944cdc1991e398142e7850dcb4c466075c3d7eb07f552905699a",
+      "seconds": 4.57205987512134,
+      "wire.jsonl_sha256": "a7751eb861af157bea4f6308880b82f9626e8d6590d001415a06a9fc8a0e0120",
+      "engine.stderr.log_sha256": "8c234cc274e755bc6e518da5754a6b192577fcaa6c7c3d45b4974bc87a19ec97",
+      "trace_path": "artifacts/runs/ba26f9f4-a33d-487d-bf4b-dd81d52129ad/decisions.jsonl",
+      "trace_sha256": "3e84278c7dfeb518af7916944a0cebcc2b26d0feaff503fdbc71602bee2e144d"
+    },
+    {
+      "case": "Necrobinder-a",
+      "label": "uct",
+      "mode": "C1",
+      "run_id": "00136092-21e2-4aaa-a057-0976412f02bb",
+      "status": "match",
+      "steps_checked": 34,
+      "extension_steps": 0,
+      "restore_seconds": 1.558853124966845,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "dd91403ac5800073929a28993a950d75b4c11c22dc6a1f7fdf84a05532b1bd33",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "9dc9ad16a018944cdc1991e398142e7850dcb4c466075c3d7eb07f552905699a",
+      "seconds": 2.8142046658322215,
+      "wire.jsonl_sha256": "5e8df8b8a056cd2e043d5e500ac8b6f79d0309646ba354cd66be36739b23c378",
+      "engine.stderr.log_sha256": "11a2aae8047c32578fae379f7c980bef97617f27a4bd341ecd87dd7db8ce624c",
+      "trace_path": "artifacts/runs/00136092-21e2-4aaa-a057-0976412f02bb/decisions.jsonl",
+      "trace_sha256": "6aaa9c832558757788e73f4aee8904e0e54ee1627b2869433f5145a6ba39f81d"
+    },
+    {
+      "case": "Necrobinder-a",
+      "label": "uct",
+      "mode": "C2",
+      "run_id": "12a4a5c4-a49f-49b2-850b-cd24c77675dc",
+      "status": "match",
+      "steps_checked": 34,
+      "extension_steps": 0,
+      "restore_seconds": 1.208441708004102,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "dd91403ac5800073929a28993a950d75b4c11c22dc6a1f7fdf84a05532b1bd33",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "9dc9ad16a018944cdc1991e398142e7850dcb4c466075c3d7eb07f552905699a",
+      "seconds": 2.4762171250768006,
+      "wire.jsonl_sha256": "dd4264eafc2245c159f399803ac6cf55fb2d42ecd250e8d5428285a4c51e6021",
+      "engine.stderr.log_sha256": "11a2aae8047c32578fae379f7c980bef97617f27a4bd341ecd87dd7db8ce624c",
+      "trace_path": "artifacts/runs/12a4a5c4-a49f-49b2-850b-cd24c77675dc/decisions.jsonl",
+      "trace_sha256": "cc567c594c2d66a6f4a47d64350fcd9116126455711444cd06fb2a5f3e5fb588"
+    },
+    {
+      "case": "Necrobinder-a",
+      "label": "uct",
+      "mode": "C3",
+      "run_id": "2de91a2f-225d-4946-9444-768ca2db5f05",
+      "status": "match",
+      "steps_checked": 34,
+      "extension_steps": 0,
+      "restore_seconds": 1.2027307918760926,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "dd91403ac5800073929a28993a950d75b4c11c22dc6a1f7fdf84a05532b1bd33",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "9dc9ad16a018944cdc1991e398142e7850dcb4c466075c3d7eb07f552905699a",
+      "seconds": 2.4472708329558372,
+      "wire.jsonl_sha256": "d940dc197ecce7bc0feb3a15a3dad9a36eba9b36637165f653b619f2270aff39",
+      "engine.stderr.log_sha256": "11a2aae8047c32578fae379f7c980bef97617f27a4bd341ecd87dd7db8ce624c",
+      "trace_path": "artifacts/runs/2de91a2f-225d-4946-9444-768ca2db5f05/decisions.jsonl",
+      "trace_sha256": "5867f0ae29f427b80e894f53d0c6563970e6278c664e761ab7f0aef294596732"
+    },
+    {
+      "case": "Ironclad-b",
+      "label": "control",
+      "mode": "B",
+      "run_id": "223e9877-3b77-4d00-8d9d-a87c8b1a281b",
+      "status": "match",
+      "steps_checked": 31,
+      "extension_steps": 0,
+      "restore_seconds": 3.13460012502037,
+      "map_match": true,
+      "entry_match": true,
+      "save_seconds": 0.08637616597115993,
+      "created_checkpoint": {
+        "path": "artifacts/runs/223e9877-3b77-4d00-8d9d-a87c8b1a281b/map-checkpoint.json",
+        "sha256": "9044088bcc5135ae5529f003c835905ceef1017024af2e5123dff60500d6fbe1"
+      },
+      "final_hash": "5dce37d8cb43c430604408411a5fb03d0631f0d3867961091954b986439f6dfd",
+      "final_decision": "game_over",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 7,
+        "room_type": "Elite",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "ee876f8856d0ae83f44a6e85e8e5afbb2da2782dba1e572ab94b1fd77b35a8f9",
+      "seconds": 4.025223125005141,
+      "wire.jsonl_sha256": "0e4b2cc570c5ca152c7b9815e2eee8d63d7c78fe7bef1b839dbd07e0adde47ec",
+      "engine.stderr.log_sha256": "489fe6f1d2956c948601ac5bcb0c988ba02a714f71378410ae206b78845413fc",
+      "trace_path": "artifacts/runs/223e9877-3b77-4d00-8d9d-a87c8b1a281b/decisions.jsonl",
+      "trace_sha256": "11963ccca8f522086c7c58efab7b9a7cd948efdb815bef5ae6bd54c48f30888d"
+    },
+    {
+      "case": "Ironclad-b",
+      "label": "control",
+      "mode": "C1",
+      "run_id": "7c6cdfaa-39a8-4a3d-aa24-b3fb363dacaf",
+      "status": "match",
+      "steps_checked": 31,
+      "extension_steps": 0,
+      "restore_seconds": 1.1124639168847352,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "5dce37d8cb43c430604408411a5fb03d0631f0d3867961091954b986439f6dfd",
+      "final_decision": "game_over",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 7,
+        "room_type": "Elite",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "ee876f8856d0ae83f44a6e85e8e5afbb2da2782dba1e572ab94b1fd77b35a8f9",
+      "seconds": 2.0491137499921024,
+      "wire.jsonl_sha256": "7df6c4a414347fcfefa63daf0fbc04234ded371a29b3c1f9c793aa16515cf129",
+      "engine.stderr.log_sha256": "13e14dac81e7d20ec411fe7d45557c114a480cbf48d01979f3dd55c28731b608",
+      "trace_path": "artifacts/runs/7c6cdfaa-39a8-4a3d-aa24-b3fb363dacaf/decisions.jsonl",
+      "trace_sha256": "c5955111f97f80d28868e91152ea825e42d4545a6e64c2ecb87d3c8fb8cc8159"
+    },
+    {
+      "case": "Ironclad-b",
+      "label": "control",
+      "mode": "C2",
+      "run_id": "d07d9469-e528-4430-aba1-08435e233503",
+      "status": "match",
+      "steps_checked": 31,
+      "extension_steps": 0,
+      "restore_seconds": 1.1109966670628637,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "5dce37d8cb43c430604408411a5fb03d0631f0d3867961091954b986439f6dfd",
+      "final_decision": "game_over",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 7,
+        "room_type": "Elite",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "ee876f8856d0ae83f44a6e85e8e5afbb2da2782dba1e572ab94b1fd77b35a8f9",
+      "seconds": 2.0551077499985695,
+      "wire.jsonl_sha256": "c1a301b88f8a28cd3856c5cef690b95a43c008664bd3738a717f8e872723809e",
+      "engine.stderr.log_sha256": "13e14dac81e7d20ec411fe7d45557c114a480cbf48d01979f3dd55c28731b608",
+      "trace_path": "artifacts/runs/d07d9469-e528-4430-aba1-08435e233503/decisions.jsonl",
+      "trace_sha256": "a7d834b3210fedc2617ac80e0fda496f90aee2799c0b624b41f7613a4d61ebef"
+    },
+    {
+      "case": "Ironclad-b",
+      "label": "control",
+      "mode": "C3",
+      "run_id": "b143d044-1915-440c-a853-8edc4526dd51",
+      "status": "match",
+      "steps_checked": 31,
+      "extension_steps": 0,
+      "restore_seconds": 1.0831692500505596,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "5dce37d8cb43c430604408411a5fb03d0631f0d3867961091954b986439f6dfd",
+      "final_decision": "game_over",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 7,
+        "room_type": "Elite",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "ee876f8856d0ae83f44a6e85e8e5afbb2da2782dba1e572ab94b1fd77b35a8f9",
+      "seconds": 2.0269015829544514,
+      "wire.jsonl_sha256": "fdc64da7a7a0275891f42f7de8d3b06d0f4a77f699956106e4acaef4fe4cf7b2",
+      "engine.stderr.log_sha256": "13e14dac81e7d20ec411fe7d45557c114a480cbf48d01979f3dd55c28731b608",
+      "trace_path": "artifacts/runs/b143d044-1915-440c-a853-8edc4526dd51/decisions.jsonl",
+      "trace_sha256": "e004d0cab28c10d03bef0634e273547685b7e8f502e37660c71442502a24aa34"
+    },
+    {
+      "case": "Ironclad-b",
+      "label": "flat",
+      "mode": "B",
+      "run_id": "663dd1ca-bb55-46ad-a148-d5083a697f17",
+      "status": "match",
+      "steps_checked": 31,
+      "extension_steps": 0,
+      "restore_seconds": 3.0942909999284893,
+      "map_match": true,
+      "entry_match": true,
+      "save_seconds": 0.0841689168009907,
+      "created_checkpoint": {
+        "path": "artifacts/runs/663dd1ca-bb55-46ad-a148-d5083a697f17/map-checkpoint.json",
+        "sha256": "cb604a2a0936ae6334e8eefef11723078d18ba0aaa2e11aacb45047de60db914"
+      },
+      "final_hash": "5dce37d8cb43c430604408411a5fb03d0631f0d3867961091954b986439f6dfd",
+      "final_decision": "game_over",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 7,
+        "room_type": "Elite",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "ee876f8856d0ae83f44a6e85e8e5afbb2da2782dba1e572ab94b1fd77b35a8f9",
+      "seconds": 3.978805457940325,
+      "wire.jsonl_sha256": "067e73f7ec2fc1c54a2c7cb801521e6fe40d7300a4853cfa4ace60396dd7848b",
+      "engine.stderr.log_sha256": "d59e2d812581f75f228c626e04510e1b1e39afd765ffc092c3188f6209515e3b",
+      "trace_path": "artifacts/runs/663dd1ca-bb55-46ad-a148-d5083a697f17/decisions.jsonl",
+      "trace_sha256": "915e28af2cbbe25240665b2034aa4f175dff71a79a2751cf34a68264b020af4f"
+    },
+    {
+      "case": "Ironclad-b",
+      "label": "flat",
+      "mode": "C1",
+      "run_id": "52be2c2b-865c-490e-9498-c92918da679c",
+      "status": "match",
+      "steps_checked": 31,
+      "extension_steps": 0,
+      "restore_seconds": 1.0819302920717746,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "5dce37d8cb43c430604408411a5fb03d0631f0d3867961091954b986439f6dfd",
+      "final_decision": "game_over",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 7,
+        "room_type": "Elite",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "ee876f8856d0ae83f44a6e85e8e5afbb2da2782dba1e572ab94b1fd77b35a8f9",
+      "seconds": 2.029716042103246,
+      "wire.jsonl_sha256": "359cf9725b2ee08ff62df9f2bc7ab1106edbff4a9c0fe1c56a6e6a98790bfcf8",
+      "engine.stderr.log_sha256": "13e14dac81e7d20ec411fe7d45557c114a480cbf48d01979f3dd55c28731b608",
+      "trace_path": "artifacts/runs/52be2c2b-865c-490e-9498-c92918da679c/decisions.jsonl",
+      "trace_sha256": "25ac1ef4256391b831e765a34c56f205169117a6398a51512c4bc78b41af2fc8"
+    },
+    {
+      "case": "Ironclad-b",
+      "label": "flat",
+      "mode": "C2",
+      "run_id": "b5e83aca-c8c6-4d1b-8ef4-f410067c3d2f",
+      "status": "match",
+      "steps_checked": 31,
+      "extension_steps": 0,
+      "restore_seconds": 1.0625387919135392,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "5dce37d8cb43c430604408411a5fb03d0631f0d3867961091954b986439f6dfd",
+      "final_decision": "game_over",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 7,
+        "room_type": "Elite",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "ee876f8856d0ae83f44a6e85e8e5afbb2da2782dba1e572ab94b1fd77b35a8f9",
+      "seconds": 2.000322167063132,
+      "wire.jsonl_sha256": "1eb3a766a5f36d5201f3f5aaa1638bb48b362f0a7c6e0240ab95fe868b79c84a",
+      "engine.stderr.log_sha256": "13e14dac81e7d20ec411fe7d45557c114a480cbf48d01979f3dd55c28731b608",
+      "trace_path": "artifacts/runs/b5e83aca-c8c6-4d1b-8ef4-f410067c3d2f/decisions.jsonl",
+      "trace_sha256": "cfae58ad42d6ef19b2e355bc67219a3c303b4569f57a45443a0a5f6786c547c1"
+    },
+    {
+      "case": "Ironclad-b",
+      "label": "flat",
+      "mode": "C3",
+      "run_id": "4478f817-fa9b-40b0-b483-b894a64548a5",
+      "status": "match",
+      "steps_checked": 31,
+      "extension_steps": 0,
+      "restore_seconds": 1.1655492500867695,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "5dce37d8cb43c430604408411a5fb03d0631f0d3867961091954b986439f6dfd",
+      "final_decision": "game_over",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 7,
+        "room_type": "Elite",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "ee876f8856d0ae83f44a6e85e8e5afbb2da2782dba1e572ab94b1fd77b35a8f9",
+      "seconds": 2.1033702921122313,
+      "wire.jsonl_sha256": "9050b57d6b3e4af85518136badd697b65a7fa4893ac24db3ce91f29d10592a8a",
+      "engine.stderr.log_sha256": "13e14dac81e7d20ec411fe7d45557c114a480cbf48d01979f3dd55c28731b608",
+      "trace_path": "artifacts/runs/4478f817-fa9b-40b0-b483-b894a64548a5/decisions.jsonl",
+      "trace_sha256": "0d9be6a0331c258016c598cc8990f23b1f31962f62dfabc7ae1ca896dcc87d1a"
+    },
+    {
+      "case": "Ironclad-b",
+      "label": "uct",
+      "mode": "B",
+      "run_id": "09dc59ce-eb16-44a7-b5d7-2f6bebd8eccc",
+      "status": "match",
+      "steps_checked": 31,
+      "extension_steps": 0,
+      "restore_seconds": 3.1367357498966157,
+      "map_match": true,
+      "entry_match": true,
+      "save_seconds": 0.09354570903815329,
+      "created_checkpoint": {
+        "path": "artifacts/runs/09dc59ce-eb16-44a7-b5d7-2f6bebd8eccc/map-checkpoint.json",
+        "sha256": "a8032345661b2ff2606108c1fcbb1877d073565de2e036adead0949a63179a09"
+      },
+      "final_hash": "5dce37d8cb43c430604408411a5fb03d0631f0d3867961091954b986439f6dfd",
+      "final_decision": "game_over",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 7,
+        "room_type": "Elite",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "ee876f8856d0ae83f44a6e85e8e5afbb2da2782dba1e572ab94b1fd77b35a8f9",
+      "seconds": 4.124398875050247,
+      "wire.jsonl_sha256": "a0dcf2b016cb8c992ef4484eb620313b8be182e2dde7a8f42230f5107c1810b4",
+      "engine.stderr.log_sha256": "75ed2e596c3924b5609c78841c34481b5228a3c0b241cf15160ba8e1dc87ee9c",
+      "trace_path": "artifacts/runs/09dc59ce-eb16-44a7-b5d7-2f6bebd8eccc/decisions.jsonl",
+      "trace_sha256": "f9a9dc803ab118c3e75fed28c412979031436505f4c12bc0449a499dab9f07c5"
+    },
+    {
+      "case": "Ironclad-b",
+      "label": "uct",
+      "mode": "C1",
+      "run_id": "efa71d86-5d14-46f0-993b-02980b2ede42",
+      "status": "match",
+      "steps_checked": 31,
+      "extension_steps": 0,
+      "restore_seconds": 1.2443160000257194,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "5dce37d8cb43c430604408411a5fb03d0631f0d3867961091954b986439f6dfd",
+      "final_decision": "game_over",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 7,
+        "room_type": "Elite",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "ee876f8856d0ae83f44a6e85e8e5afbb2da2782dba1e572ab94b1fd77b35a8f9",
+      "seconds": 2.245506332954392,
+      "wire.jsonl_sha256": "fba7f5eb64c1782ce0e35acfb6549821dec46528e7d42aedea859f87e07b1e4f",
+      "engine.stderr.log_sha256": "13e14dac81e7d20ec411fe7d45557c114a480cbf48d01979f3dd55c28731b608",
+      "trace_path": "artifacts/runs/efa71d86-5d14-46f0-993b-02980b2ede42/decisions.jsonl",
+      "trace_sha256": "5810b17d7c11d280623929860e305d54dbc52f7722ebdfbd4fdaebca1c31e5cd"
+    },
+    {
+      "case": "Ironclad-b",
+      "label": "uct",
+      "mode": "C2",
+      "run_id": "3579d9c8-71ad-4261-b271-f4a342b3408a",
+      "status": "match",
+      "steps_checked": 31,
+      "extension_steps": 0,
+      "restore_seconds": 1.2617023750208318,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "5dce37d8cb43c430604408411a5fb03d0631f0d3867961091954b986439f6dfd",
+      "final_decision": "game_over",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 7,
+        "room_type": "Elite",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "ee876f8856d0ae83f44a6e85e8e5afbb2da2782dba1e572ab94b1fd77b35a8f9",
+      "seconds": 2.2435948750935495,
+      "wire.jsonl_sha256": "cf1dad9bf9f980d6de063b04b693bfc7c9bdf912704d85e3a67a50f0f8b8bece",
+      "engine.stderr.log_sha256": "13e14dac81e7d20ec411fe7d45557c114a480cbf48d01979f3dd55c28731b608",
+      "trace_path": "artifacts/runs/3579d9c8-71ad-4261-b271-f4a342b3408a/decisions.jsonl",
+      "trace_sha256": "fe18e4cc75b2f27a48f235824a628678844626c27a39acb0dd08399398d56d2a"
+    },
+    {
+      "case": "Ironclad-b",
+      "label": "uct",
+      "mode": "C3",
+      "run_id": "fb3d6abd-1caf-4064-8a53-ba6b577d9073",
+      "status": "match",
+      "steps_checked": 31,
+      "extension_steps": 0,
+      "restore_seconds": 1.195330458926037,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "5dce37d8cb43c430604408411a5fb03d0631f0d3867961091954b986439f6dfd",
+      "final_decision": "game_over",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 7,
+        "room_type": "Elite",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "ee876f8856d0ae83f44a6e85e8e5afbb2da2782dba1e572ab94b1fd77b35a8f9",
+      "seconds": 2.210531083866954,
+      "wire.jsonl_sha256": "004d959acdebbc25eded6246fb5fb5389691af405d32a855fb077dd64568deac",
+      "engine.stderr.log_sha256": "13e14dac81e7d20ec411fe7d45557c114a480cbf48d01979f3dd55c28731b608",
+      "trace_path": "artifacts/runs/fb3d6abd-1caf-4064-8a53-ba6b577d9073/decisions.jsonl",
+      "trace_sha256": "b50032cd5c6307aa3d25c533a5cfe3b96336d3519fe4ec974ae52f12e78257d1"
+    },
+    {
+      "case": "Silent-b",
+      "label": "control",
+      "mode": "B",
+      "run_id": "55d23802-dded-4b96-b298-426fc9e8540c",
+      "status": "match",
+      "steps_checked": 29,
+      "extension_steps": 0,
+      "restore_seconds": 3.8044799170456827,
+      "map_match": true,
+      "entry_match": true,
+      "save_seconds": 0.11039641709066927,
+      "created_checkpoint": {
+        "path": "artifacts/runs/55d23802-dded-4b96-b298-426fc9e8540c/map-checkpoint.json",
+        "sha256": "0bc59a388d98ef1d269edda687ff462b0a2abd0537db7cfb1ca293d561d71554"
+      },
+      "final_hash": "868f0a357c8c03f176870ba636b735dc2fd0af2f89c03906f6fac1e6c6816247",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "91ba8bd379d11a8ca4d902e03b51f52adcfbfebcc5d6c92404df695488707103",
+      "seconds": 4.864467584062368,
+      "wire.jsonl_sha256": "ee8d8bf1fe060ee7f2dbbdfa4f1eaae48c5da39e4676fe00d3e6d103b2a9ebef",
+      "engine.stderr.log_sha256": "3ce582dcbeb8ad709393cf5bbb3ac21b2b2f3973355f3845054edd533342c620",
+      "trace_path": "artifacts/runs/55d23802-dded-4b96-b298-426fc9e8540c/decisions.jsonl",
+      "trace_sha256": "30836d48258d08dcb286c5176fe5fc95103a987d30d75fbf805405d77bd88811"
+    },
+    {
+      "case": "Silent-b",
+      "label": "control",
+      "mode": "C1",
+      "run_id": "64a76df8-a31d-4aac-a5d7-e4ff83a55b1d",
+      "status": "match",
+      "steps_checked": 29,
+      "extension_steps": 0,
+      "restore_seconds": 1.4194691660813987,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "868f0a357c8c03f176870ba636b735dc2fd0af2f89c03906f6fac1e6c6816247",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "91ba8bd379d11a8ca4d902e03b51f52adcfbfebcc5d6c92404df695488707103",
+      "seconds": 2.6065099160186946,
+      "wire.jsonl_sha256": "821f72afab6671ce8263e75dea87179439a40d4e254039dc1923e4c491bb1248",
+      "engine.stderr.log_sha256": "775b3bc59681c1457ba03136ea6c8d7a77fa1a8bdcb7605611d9e987ff74ddb0",
+      "trace_path": "artifacts/runs/64a76df8-a31d-4aac-a5d7-e4ff83a55b1d/decisions.jsonl",
+      "trace_sha256": "0ae3621785b30e0f4377fcee9ddef3a668eb93cea32dacc517cd374e0be5e528"
+    },
+    {
+      "case": "Silent-b",
+      "label": "control",
+      "mode": "C2",
+      "run_id": "74610348-e9df-479b-8a2c-cb8174fd7bd4",
+      "status": "match",
+      "steps_checked": 29,
+      "extension_steps": 0,
+      "restore_seconds": 1.3197417089249939,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "868f0a357c8c03f176870ba636b735dc2fd0af2f89c03906f6fac1e6c6816247",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "91ba8bd379d11a8ca4d902e03b51f52adcfbfebcc5d6c92404df695488707103",
+      "seconds": 2.46899108402431,
+      "wire.jsonl_sha256": "e8a346918f9de322a8bdb859a9a14dbf44681ac9250470dee41b351092694a23",
+      "engine.stderr.log_sha256": "775b3bc59681c1457ba03136ea6c8d7a77fa1a8bdcb7605611d9e987ff74ddb0",
+      "trace_path": "artifacts/runs/74610348-e9df-479b-8a2c-cb8174fd7bd4/decisions.jsonl",
+      "trace_sha256": "064249cc09c5d27165e3d141ea1a116178dfe99841242aace9e9717741478406"
+    },
+    {
+      "case": "Silent-b",
+      "label": "control",
+      "mode": "C3",
+      "run_id": "1d97e5d8-b95b-43ca-8c38-9daeaf68b68f",
+      "status": "match",
+      "steps_checked": 29,
+      "extension_steps": 0,
+      "restore_seconds": 1.2011498750653118,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "868f0a357c8c03f176870ba636b735dc2fd0af2f89c03906f6fac1e6c6816247",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "91ba8bd379d11a8ca4d902e03b51f52adcfbfebcc5d6c92404df695488707103",
+      "seconds": 2.327544332947582,
+      "wire.jsonl_sha256": "5c66ce761a6eefdf735422fd880a42c761322053c993502199e65e5c470eb352",
+      "engine.stderr.log_sha256": "775b3bc59681c1457ba03136ea6c8d7a77fa1a8bdcb7605611d9e987ff74ddb0",
+      "trace_path": "artifacts/runs/1d97e5d8-b95b-43ca-8c38-9daeaf68b68f/decisions.jsonl",
+      "trace_sha256": "6ded12cfcfd979789f8fe72203be1359bcc2e51a5b3a626e3226a6d75a6c285b"
+    },
+    {
+      "case": "Silent-b",
+      "label": "flat",
+      "mode": "B",
+      "run_id": "073b992d-ae5f-4e48-bf28-593f96092db3",
+      "status": "match",
+      "steps_checked": 28,
+      "extension_steps": 0,
+      "restore_seconds": 3.385186875006184,
+      "map_match": true,
+      "entry_match": true,
+      "save_seconds": 0.0935405408963561,
+      "created_checkpoint": {
+        "path": "artifacts/runs/073b992d-ae5f-4e48-bf28-593f96092db3/map-checkpoint.json",
+        "sha256": "f166d550874291dfd34c712f42ec7da5b1da669531e5e15025544981cf7b0522"
+      },
+      "final_hash": "868f0a357c8c03f176870ba636b735dc2fd0af2f89c03906f6fac1e6c6816247",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "6287b8144130275a2e3c678826d437ad6a2f40532ee2267bfb8c7aa1d3ad9cf1",
+      "seconds": 4.405898166820407,
+      "wire.jsonl_sha256": "cb667af15bf7c188ffbf0be75fa6a85e1b2c7d125a4bf56c448f882e67b9b82a",
+      "engine.stderr.log_sha256": "aad82bf5f7a14ea32532d8f0badf1fb5daa222b9699bb84c3cce9e03001169b8",
+      "trace_path": "artifacts/runs/073b992d-ae5f-4e48-bf28-593f96092db3/decisions.jsonl",
+      "trace_sha256": "4265117db4bba8c405bee6a6503c671aca9e4cb5167144226bd956a0988bfce6"
+    },
+    {
+      "case": "Silent-b",
+      "label": "flat",
+      "mode": "C1",
+      "run_id": "3c20aab2-56b1-4f08-ae18-148d372efb04",
+      "status": "match",
+      "steps_checked": 28,
+      "extension_steps": 0,
+      "restore_seconds": 1.0942423329688609,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "868f0a357c8c03f176870ba636b735dc2fd0af2f89c03906f6fac1e6c6816247",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "6287b8144130275a2e3c678826d437ad6a2f40532ee2267bfb8c7aa1d3ad9cf1",
+      "seconds": 2.188234082888812,
+      "wire.jsonl_sha256": "d7520dcce3080d61bcef1a816a18163127574a770efe353f073e6329a8a85c7d",
+      "engine.stderr.log_sha256": "5088325ae263da09697ceb77b757f7dcf347f60f8fcfbebd976800618388b3d8",
+      "trace_path": "artifacts/runs/3c20aab2-56b1-4f08-ae18-148d372efb04/decisions.jsonl",
+      "trace_sha256": "9b4cb25e6b685e3ad69f59a09a46decf9272d17ab33bd53f4f2319855e97e0bd"
+    },
+    {
+      "case": "Silent-b",
+      "label": "flat",
+      "mode": "C2",
+      "run_id": "70d9603f-da33-4249-bcaf-daf6f6f2f001",
+      "status": "match",
+      "steps_checked": 28,
+      "extension_steps": 0,
+      "restore_seconds": 1.0995933329686522,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "868f0a357c8c03f176870ba636b735dc2fd0af2f89c03906f6fac1e6c6816247",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "6287b8144130275a2e3c678826d437ad6a2f40532ee2267bfb8c7aa1d3ad9cf1",
+      "seconds": 2.215816125040874,
+      "wire.jsonl_sha256": "319d6f259bbefab12afbf37469254a0bc3b90b36bbf36350eacd7eab865a208d",
+      "engine.stderr.log_sha256": "5088325ae263da09697ceb77b757f7dcf347f60f8fcfbebd976800618388b3d8",
+      "trace_path": "artifacts/runs/70d9603f-da33-4249-bcaf-daf6f6f2f001/decisions.jsonl",
+      "trace_sha256": "a036eb736550b17ffb4bd4f88b8ba2de4c081490ac74ae39905c4a01e93d1be6"
+    },
+    {
+      "case": "Silent-b",
+      "label": "flat",
+      "mode": "C3",
+      "run_id": "cbc11084-e38b-40d8-b784-9c00379c63bb",
+      "status": "match",
+      "steps_checked": 28,
+      "extension_steps": 0,
+      "restore_seconds": 1.0867844158783555,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "868f0a357c8c03f176870ba636b735dc2fd0af2f89c03906f6fac1e6c6816247",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "6287b8144130275a2e3c678826d437ad6a2f40532ee2267bfb8c7aa1d3ad9cf1",
+      "seconds": 2.2160863750614226,
+      "wire.jsonl_sha256": "dd23d60cb62959e618c329c9ae77389c555ee70f66fd521c76b5a6c07aaed113",
+      "engine.stderr.log_sha256": "5088325ae263da09697ceb77b757f7dcf347f60f8fcfbebd976800618388b3d8",
+      "trace_path": "artifacts/runs/cbc11084-e38b-40d8-b784-9c00379c63bb/decisions.jsonl",
+      "trace_sha256": "615ebcda3dd20a911a4063c25d290a5dee6d9e0f6a122f8ba539316aea33ee2b"
+    },
+    {
+      "case": "Silent-b",
+      "label": "uct",
+      "mode": "B",
+      "run_id": "2e3148f8-210c-48d3-9a2f-a7207b7b650f",
+      "status": "match",
+      "steps_checked": 28,
+      "extension_steps": 0,
+      "restore_seconds": 3.3989169581327587,
+      "map_match": true,
+      "entry_match": true,
+      "save_seconds": 0.08715345803648233,
+      "created_checkpoint": {
+        "path": "artifacts/runs/2e3148f8-210c-48d3-9a2f-a7207b7b650f/map-checkpoint.json",
+        "sha256": "2f6807ebf1658fd0020a51e76d5a24455eb28ef4300b2fcf75e054560e01183f"
+      },
+      "final_hash": "868f0a357c8c03f176870ba636b735dc2fd0af2f89c03906f6fac1e6c6816247",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "f15f223be3750e6a4a6865adae4e7c8d605b19e997be7b21b8fce4ec4a97df30",
+      "seconds": 4.419901499990374,
+      "wire.jsonl_sha256": "61bf579256af9fb9f5736445dc25a19a740fa39bae9f5c63b945ede265a42fc5",
+      "engine.stderr.log_sha256": "1f7ea47fc350912155b7c60eb887b3a093c3b9832e6229bda77593ceb69b5d4e",
+      "trace_path": "artifacts/runs/2e3148f8-210c-48d3-9a2f-a7207b7b650f/decisions.jsonl",
+      "trace_sha256": "af5da172ee85fcd29f3f7a308b95d499aedf36cb9796e156fe7aa789c7425826"
+    },
+    {
+      "case": "Silent-b",
+      "label": "uct",
+      "mode": "C1",
+      "run_id": "40645775-4104-4641-99e8-0a8f766fe6c9",
+      "status": "match",
+      "steps_checked": 28,
+      "extension_steps": 0,
+      "restore_seconds": 1.0951375828590244,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "868f0a357c8c03f176870ba636b735dc2fd0af2f89c03906f6fac1e6c6816247",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "f15f223be3750e6a4a6865adae4e7c8d605b19e997be7b21b8fce4ec4a97df30",
+      "seconds": 2.193800666835159,
+      "wire.jsonl_sha256": "e3f178af73f6787049026c4ca7c627e36b7cac3633f2e6c7c5d057122df8ecf7",
+      "engine.stderr.log_sha256": "c0604126ef777bee690b498e5f23c58303cb8901295c77725a31d444d68adcaa",
+      "trace_path": "artifacts/runs/40645775-4104-4641-99e8-0a8f766fe6c9/decisions.jsonl",
+      "trace_sha256": "888c3a355c3a86706ccfcf40c895367e7cfd159c767b69552fd3c472213d626c"
+    },
+    {
+      "case": "Silent-b",
+      "label": "uct",
+      "mode": "C2",
+      "run_id": "e7d0a6a3-851b-4f13-a188-f35549469c03",
+      "status": "match",
+      "steps_checked": 28,
+      "extension_steps": 0,
+      "restore_seconds": 1.096895958064124,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "868f0a357c8c03f176870ba636b735dc2fd0af2f89c03906f6fac1e6c6816247",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "f15f223be3750e6a4a6865adae4e7c8d605b19e997be7b21b8fce4ec4a97df30",
+      "seconds": 2.1957477079704404,
+      "wire.jsonl_sha256": "9b30f7ef2cc48c260d17be3f31577c4597f453fe5bbc4e7c4c177ca8e0563a8e",
+      "engine.stderr.log_sha256": "c0604126ef777bee690b498e5f23c58303cb8901295c77725a31d444d68adcaa",
+      "trace_path": "artifacts/runs/e7d0a6a3-851b-4f13-a188-f35549469c03/decisions.jsonl",
+      "trace_sha256": "2c605cb92ca04cec71f47d7e0bac16822457343b7f8af14c6de1477de157683f"
+    },
+    {
+      "case": "Silent-b",
+      "label": "uct",
+      "mode": "C3",
+      "run_id": "7f956f37-4a94-413c-83dd-21d733a35ec7",
+      "status": "match",
+      "steps_checked": 28,
+      "extension_steps": 0,
+      "restore_seconds": 1.11598225007765,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "868f0a357c8c03f176870ba636b735dc2fd0af2f89c03906f6fac1e6c6816247",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "f15f223be3750e6a4a6865adae4e7c8d605b19e997be7b21b8fce4ec4a97df30",
+      "seconds": 2.210110208019614,
+      "wire.jsonl_sha256": "ba643d86952d10c95d17ded1b741fb7b762aa23d04b8ef5cc2ce779fc9416a65",
+      "engine.stderr.log_sha256": "c0604126ef777bee690b498e5f23c58303cb8901295c77725a31d444d68adcaa",
+      "trace_path": "artifacts/runs/7f956f37-4a94-413c-83dd-21d733a35ec7/decisions.jsonl",
+      "trace_sha256": "a4def1571284d5474d712368ceecd961c93d7701aa89f21ea136c0afe70a2557"
+    },
+    {
+      "case": "Defect-b",
+      "label": "control",
+      "mode": "B",
+      "run_id": "8f148b91-ac78-46a4-bce5-49babfec304e",
+      "status": "match",
+      "steps_checked": 31,
+      "extension_steps": 0,
+      "restore_seconds": 3.452183000044897,
+      "map_match": true,
+      "entry_match": true,
+      "save_seconds": 0.09515783400274813,
+      "created_checkpoint": {
+        "path": "artifacts/runs/8f148b91-ac78-46a4-bce5-49babfec304e/map-checkpoint.json",
+        "sha256": "2171f42ec0ad237fd7b6e7fbe5559b76e26ee26f1a67197f8ae24704a2e4122d"
+      },
+      "final_hash": "3d4382b2f8cb10de3270ac38b0f4f557a38f7448ce6cdcd2b9c24023376d7a40",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "010f8f7fda3f4b767965d410be4fa307b0f8578087093e110929bb136a35dcbd",
+      "seconds": 4.577570250025019,
+      "wire.jsonl_sha256": "133a6e376e83412f7474a00e8b50ca431218f4d6647feed8a0d6413e0d22a373",
+      "engine.stderr.log_sha256": "267465e81472ef5fc32fa2d4857143b542e0b3419965931eb21d3e9218a31884",
+      "trace_path": "artifacts/runs/8f148b91-ac78-46a4-bce5-49babfec304e/decisions.jsonl",
+      "trace_sha256": "fd132096d1e571df61f4e99319f2488c683f27b20977d2fe252b8bd64bac8a46"
+    },
+    {
+      "case": "Defect-b",
+      "label": "control",
+      "mode": "C1",
+      "run_id": "6e39d969-57e7-4409-a03a-b8625903dd39",
+      "status": "match",
+      "steps_checked": 31,
+      "extension_steps": 0,
+      "restore_seconds": 1.1201653750613332,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "3d4382b2f8cb10de3270ac38b0f4f557a38f7448ce6cdcd2b9c24023376d7a40",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "010f8f7fda3f4b767965d410be4fa307b0f8578087093e110929bb136a35dcbd",
+      "seconds": 2.3207877080421895,
+      "wire.jsonl_sha256": "261425301f81681d61fb5291fd6bfedfc0f9194e20452437317e2b8d3cd2c9e3",
+      "engine.stderr.log_sha256": "7581a35fc68d2669e856cd6445e6f104901497e1378391631a98c44ca6fad3a8",
+      "trace_path": "artifacts/runs/6e39d969-57e7-4409-a03a-b8625903dd39/decisions.jsonl",
+      "trace_sha256": "60d3431fa4dc893e4e88cb0f0eb29287c6122b8ce38cb975e4d1c4ce705906aa"
+    },
+    {
+      "case": "Defect-b",
+      "label": "control",
+      "mode": "C2",
+      "run_id": "6d24a14e-b10c-4529-9d6b-dfb7854d3e4d",
+      "status": "match",
+      "steps_checked": 31,
+      "extension_steps": 0,
+      "restore_seconds": 1.1914804170373827,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "3d4382b2f8cb10de3270ac38b0f4f557a38f7448ce6cdcd2b9c24023376d7a40",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "010f8f7fda3f4b767965d410be4fa307b0f8578087093e110929bb136a35dcbd",
+      "seconds": 2.4116196250543,
+      "wire.jsonl_sha256": "0f529cc60cdff91709692795ef09292a2b20d900241b30c311ec560da6547563",
+      "engine.stderr.log_sha256": "7581a35fc68d2669e856cd6445e6f104901497e1378391631a98c44ca6fad3a8",
+      "trace_path": "artifacts/runs/6d24a14e-b10c-4529-9d6b-dfb7854d3e4d/decisions.jsonl",
+      "trace_sha256": "18b2ef86a3966c6167e5d80df629970d1d61a137c8620d5ad6e76b539a7b8b29"
+    },
+    {
+      "case": "Defect-b",
+      "label": "control",
+      "mode": "C3",
+      "run_id": "7a52ff78-981e-4e70-9bbb-da18ffd9f083",
+      "status": "match",
+      "steps_checked": 31,
+      "extension_steps": 0,
+      "restore_seconds": 1.1434524999931455,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "3d4382b2f8cb10de3270ac38b0f4f557a38f7448ce6cdcd2b9c24023376d7a40",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "010f8f7fda3f4b767965d410be4fa307b0f8578087093e110929bb136a35dcbd",
+      "seconds": 2.3407225830014795,
+      "wire.jsonl_sha256": "5eda196124dc43b212b9353e58c6945e7645474e95604a334c6365f8d995ef23",
+      "engine.stderr.log_sha256": "7581a35fc68d2669e856cd6445e6f104901497e1378391631a98c44ca6fad3a8",
+      "trace_path": "artifacts/runs/7a52ff78-981e-4e70-9bbb-da18ffd9f083/decisions.jsonl",
+      "trace_sha256": "7df755c98095a4251f2ee05fd2b80c6b42c48dc6bae19c6e3bada83e31bce584"
+    },
+    {
+      "case": "Defect-b",
+      "label": "flat",
+      "mode": "B",
+      "run_id": "97ee0fa5-c6c5-4f03-9c16-09936e80d6f8",
+      "status": "match",
+      "steps_checked": 30,
+      "extension_steps": 0,
+      "restore_seconds": 3.3901839999016374,
+      "map_match": true,
+      "entry_match": true,
+      "save_seconds": 0.08998383302241564,
+      "created_checkpoint": {
+        "path": "artifacts/runs/97ee0fa5-c6c5-4f03-9c16-09936e80d6f8/map-checkpoint.json",
+        "sha256": "226d5104986e5d72ee162cf54a44d2d026e26751c0e3062fefa5a731cd425055"
+      },
+      "final_hash": "3d4382b2f8cb10de3270ac38b0f4f557a38f7448ce6cdcd2b9c24023376d7a40",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "cf4078acfc0df68e9ffd78a66d9c6c200b42c870065789f518d828f19b3be46b",
+      "seconds": 4.475526208989322,
+      "wire.jsonl_sha256": "00e366752d591c019895edeee98a231a7a8cd81dce45f1872488cb3622f1dec0",
+      "engine.stderr.log_sha256": "9bede7caf1b9b59b69b01527ff5959eb9136ca6f9c2b6b9f3735e8090a846da6",
+      "trace_path": "artifacts/runs/97ee0fa5-c6c5-4f03-9c16-09936e80d6f8/decisions.jsonl",
+      "trace_sha256": "bd5c9e92c1926a6149dd088a9b2815818b6bfa62172f3d6667b527b17586cb22"
+    },
+    {
+      "case": "Defect-b",
+      "label": "flat",
+      "mode": "C1",
+      "run_id": "70bbb599-dbac-43ef-9343-2ec792ef6c77",
+      "status": "match",
+      "steps_checked": 30,
+      "extension_steps": 0,
+      "restore_seconds": 1.121789291035384,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "3d4382b2f8cb10de3270ac38b0f4f557a38f7448ce6cdcd2b9c24023376d7a40",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "cf4078acfc0df68e9ffd78a66d9c6c200b42c870065789f518d828f19b3be46b",
+      "seconds": 2.292926416033879,
+      "wire.jsonl_sha256": "0dff7b94ef3fcc01b92de078e020f615a2861e841427f424303c8dd6a99c2f34",
+      "engine.stderr.log_sha256": "17e6fb80535955ea7fed1990848e34ec60731b5ccb4607a367c6faf872eb6bb8",
+      "trace_path": "artifacts/runs/70bbb599-dbac-43ef-9343-2ec792ef6c77/decisions.jsonl",
+      "trace_sha256": "90cbc86817295c0c23121779657576f1c00904fc38a24a7163b1fe9ceff875e9"
+    },
+    {
+      "case": "Defect-b",
+      "label": "flat",
+      "mode": "C2",
+      "run_id": "16bd25cd-47bb-492c-8c3f-9f50e25a26fe",
+      "status": "match",
+      "steps_checked": 30,
+      "extension_steps": 0,
+      "restore_seconds": 1.1061136671341956,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "3d4382b2f8cb10de3270ac38b0f4f557a38f7448ce6cdcd2b9c24023376d7a40",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "cf4078acfc0df68e9ffd78a66d9c6c200b42c870065789f518d828f19b3be46b",
+      "seconds": 2.277417999925092,
+      "wire.jsonl_sha256": "7efd6bcf6e2df6a960d4c47691385b3430f93aa6f02f6f8ba553402854fd79c2",
+      "engine.stderr.log_sha256": "17e6fb80535955ea7fed1990848e34ec60731b5ccb4607a367c6faf872eb6bb8",
+      "trace_path": "artifacts/runs/16bd25cd-47bb-492c-8c3f-9f50e25a26fe/decisions.jsonl",
+      "trace_sha256": "20c0f230e8989b014e69c8338396cb6a30429a709052668879cf1e8a15078e5a"
+    },
+    {
+      "case": "Defect-b",
+      "label": "flat",
+      "mode": "C3",
+      "run_id": "d5a40b24-642b-4e40-8fda-3d32bd9afd33",
+      "status": "match",
+      "steps_checked": 30,
+      "extension_steps": 0,
+      "restore_seconds": 1.1654713340103626,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "3d4382b2f8cb10de3270ac38b0f4f557a38f7448ce6cdcd2b9c24023376d7a40",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "cf4078acfc0df68e9ffd78a66d9c6c200b42c870065789f518d828f19b3be46b",
+      "seconds": 2.3464512499049306,
+      "wire.jsonl_sha256": "675e335758fd123afafac93677fe625030d79e314d78fbc31a2ed51fbb573973",
+      "engine.stderr.log_sha256": "17e6fb80535955ea7fed1990848e34ec60731b5ccb4607a367c6faf872eb6bb8",
+      "trace_path": "artifacts/runs/d5a40b24-642b-4e40-8fda-3d32bd9afd33/decisions.jsonl",
+      "trace_sha256": "1d2b6ad80126f006e518640219fa7fcc7047e2c480aa365d3cb5b391c90bfd39"
+    },
+    {
+      "case": "Defect-b",
+      "label": "uct",
+      "mode": "B",
+      "run_id": "fda4b02c-b6a5-4ad3-9757-96cb19c353e1",
+      "status": "match",
+      "steps_checked": 30,
+      "extension_steps": 0,
+      "restore_seconds": 3.5091798750218004,
+      "map_match": true,
+      "entry_match": true,
+      "save_seconds": 0.09333808301016688,
+      "created_checkpoint": {
+        "path": "artifacts/runs/fda4b02c-b6a5-4ad3-9757-96cb19c353e1/map-checkpoint.json",
+        "sha256": "0d2e5e8e9082aecf93dccc5b140ba3de057b96d5078c759bc2132ca90a167dd4"
+      },
+      "final_hash": "3d4382b2f8cb10de3270ac38b0f4f557a38f7448ce6cdcd2b9c24023376d7a40",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "cf4078acfc0df68e9ffd78a66d9c6c200b42c870065789f518d828f19b3be46b",
+      "seconds": 4.59476941707544,
+      "wire.jsonl_sha256": "a1c524f58dd2a5fcfe3457bdcbd2530c45472dd3402d0fa33f8071ac490dee62",
+      "engine.stderr.log_sha256": "7514f96a657c5199a0f3b651cffd467389f4b76d2c78fde3f68b26c23eb41178",
+      "trace_path": "artifacts/runs/fda4b02c-b6a5-4ad3-9757-96cb19c353e1/decisions.jsonl",
+      "trace_sha256": "9da7d73dcbed801ff9e16bece6cc66fc79aa4d24043ee51b294948d5d68183c5"
+    },
+    {
+      "case": "Defect-b",
+      "label": "uct",
+      "mode": "C1",
+      "run_id": "d37795b2-d400-4f74-bc1b-b11151e1eeb9",
+      "status": "match",
+      "steps_checked": 30,
+      "extension_steps": 0,
+      "restore_seconds": 1.1279960409738123,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "3d4382b2f8cb10de3270ac38b0f4f557a38f7448ce6cdcd2b9c24023376d7a40",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "cf4078acfc0df68e9ffd78a66d9c6c200b42c870065789f518d828f19b3be46b",
+      "seconds": 2.3023583330214024,
+      "wire.jsonl_sha256": "94493f904f2a7e2235da01e08e7a8f8eb73d1784adcd0e4027ec640e834f52c0",
+      "engine.stderr.log_sha256": "17e6fb80535955ea7fed1990848e34ec60731b5ccb4607a367c6faf872eb6bb8",
+      "trace_path": "artifacts/runs/d37795b2-d400-4f74-bc1b-b11151e1eeb9/decisions.jsonl",
+      "trace_sha256": "1486c20ea429cb6355ebe80e1d8e70e9c9158ce128736387c51eb987bd2b3954"
+    },
+    {
+      "case": "Defect-b",
+      "label": "uct",
+      "mode": "C2",
+      "run_id": "010d7465-663e-44f9-af14-24ea43b22a88",
+      "status": "match",
+      "steps_checked": 30,
+      "extension_steps": 0,
+      "restore_seconds": 1.349982792045921,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "3d4382b2f8cb10de3270ac38b0f4f557a38f7448ce6cdcd2b9c24023376d7a40",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "cf4078acfc0df68e9ffd78a66d9c6c200b42c870065789f518d828f19b3be46b",
+      "seconds": 2.519641333958134,
+      "wire.jsonl_sha256": "042c50862f09d0b180f6ac7efb9b1a6faa1e89ed6fe4a7a9ea895e53a9d95415",
+      "engine.stderr.log_sha256": "17e6fb80535955ea7fed1990848e34ec60731b5ccb4607a367c6faf872eb6bb8",
+      "trace_path": "artifacts/runs/010d7465-663e-44f9-af14-24ea43b22a88/decisions.jsonl",
+      "trace_sha256": "dbdd410f0808ad203409fda571d2bf5a8aabcd3fd05e65c03c5bd8dda3d5d041"
+    },
+    {
+      "case": "Defect-b",
+      "label": "uct",
+      "mode": "C3",
+      "run_id": "2da4e90b-f3a3-47c1-b5cc-9b2dfeddef4f",
+      "status": "match",
+      "steps_checked": 30,
+      "extension_steps": 0,
+      "restore_seconds": 1.1732179170940071,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "3d4382b2f8cb10de3270ac38b0f4f557a38f7448ce6cdcd2b9c24023376d7a40",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "cf4078acfc0df68e9ffd78a66d9c6c200b42c870065789f518d828f19b3be46b",
+      "seconds": 2.348942833021283,
+      "wire.jsonl_sha256": "50b5c8299d76db74e7e62469223638fc84d7803aa84154d15b772a3622f6653b",
+      "engine.stderr.log_sha256": "17e6fb80535955ea7fed1990848e34ec60731b5ccb4607a367c6faf872eb6bb8",
+      "trace_path": "artifacts/runs/2da4e90b-f3a3-47c1-b5cc-9b2dfeddef4f/decisions.jsonl",
+      "trace_sha256": "b743ef66541fc1f33c7d1adb19c6ca5e3ddb751dc83fdd857a69dfff5e1b8bb3"
+    },
+    {
+      "case": "Regent-b",
+      "label": "control",
+      "mode": "B",
+      "run_id": "2989d5ae-299f-45c8-b3c0-8b86e8fe5f66",
+      "status": "match",
+      "steps_checked": 19,
+      "extension_steps": 0,
+      "restore_seconds": 2.860374666051939,
+      "map_match": true,
+      "entry_match": true,
+      "save_seconds": 0.08593675005249679,
+      "created_checkpoint": {
+        "path": "artifacts/runs/2989d5ae-299f-45c8-b3c0-8b86e8fe5f66/map-checkpoint.json",
+        "sha256": "b8416b7bf3433ba52ebe9de393cad663b1874cddad2ec9cf0fda783ab22c8c88"
+      },
+      "final_hash": "aa9ae15020f191e51be58fd773ff0b19471d7cf486a49d40355f3fe6dda1355b",
+      "final_decision": "game_over",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 7,
+        "room_type": "Elite",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "458161f234caf6977df04be3690557b3fcb6dfc870a6d2c7d4a4ff6479dd952f",
+      "seconds": 3.459059749962762,
+      "wire.jsonl_sha256": "b0119943c2a83f7b92f3aff8c9f839f5bd6e09d142f178066ced8a1f3427a012",
+      "engine.stderr.log_sha256": "b701dcfac0d3711979e60a43cd447808f8b708435e8fdbd762ab2b2aab9837ad",
+      "trace_path": "artifacts/runs/2989d5ae-299f-45c8-b3c0-8b86e8fe5f66/decisions.jsonl",
+      "trace_sha256": "5a0f131de89ec5dfa98a9b17986d638dcdf6401b4f4da6c15b42f522313110d2"
+    },
+    {
+      "case": "Regent-b",
+      "label": "control",
+      "mode": "C1",
+      "run_id": "5b22a8ff-b187-4ae7-86aa-84acb3d0e6ed",
+      "status": "match",
+      "steps_checked": 19,
+      "extension_steps": 0,
+      "restore_seconds": 1.1057184170931578,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "aa9ae15020f191e51be58fd773ff0b19471d7cf486a49d40355f3fe6dda1355b",
+      "final_decision": "game_over",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 7,
+        "room_type": "Elite",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "458161f234caf6977df04be3690557b3fcb6dfc870a6d2c7d4a4ff6479dd952f",
+      "seconds": 1.7760065000038594,
+      "wire.jsonl_sha256": "d65aec77d662e61356ba737234db80aa0308e854f5f62d29197cef985c6e654f",
+      "engine.stderr.log_sha256": "1f80788637be2363374b82d71abe5a08374ede8a535b97b5ebb881e3ce7efb1d",
+      "trace_path": "artifacts/runs/5b22a8ff-b187-4ae7-86aa-84acb3d0e6ed/decisions.jsonl",
+      "trace_sha256": "3ba9a3a72f920b990d99aaaf281b0034da06b900738739a918323df7b5435238"
+    },
+    {
+      "case": "Regent-b",
+      "label": "control",
+      "mode": "C2",
+      "run_id": "df12acb0-7def-4aec-9d90-9815c804b8b8",
+      "status": "match",
+      "steps_checked": 19,
+      "extension_steps": 0,
+      "restore_seconds": 1.0980893750675023,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "aa9ae15020f191e51be58fd773ff0b19471d7cf486a49d40355f3fe6dda1355b",
+      "final_decision": "game_over",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 7,
+        "room_type": "Elite",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "458161f234caf6977df04be3690557b3fcb6dfc870a6d2c7d4a4ff6479dd952f",
+      "seconds": 1.7548152080271393,
+      "wire.jsonl_sha256": "829b38cc1cd23cea323e04ba3f85a9e47b19a6c8e8053a3f0759f132d7736d6b",
+      "engine.stderr.log_sha256": "1f80788637be2363374b82d71abe5a08374ede8a535b97b5ebb881e3ce7efb1d",
+      "trace_path": "artifacts/runs/df12acb0-7def-4aec-9d90-9815c804b8b8/decisions.jsonl",
+      "trace_sha256": "c07efad6b7b74d5a8929b3e56277fd338d317df4655c2b0e8240fe9d87aad3c8"
+    },
+    {
+      "case": "Regent-b",
+      "label": "control",
+      "mode": "C3",
+      "run_id": "e55f5f23-1fdb-4e05-9597-286341ef3b0d",
+      "status": "match",
+      "steps_checked": 19,
+      "extension_steps": 0,
+      "restore_seconds": 1.1097896669525653,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "aa9ae15020f191e51be58fd773ff0b19471d7cf486a49d40355f3fe6dda1355b",
+      "final_decision": "game_over",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 7,
+        "room_type": "Elite",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "458161f234caf6977df04be3690557b3fcb6dfc870a6d2c7d4a4ff6479dd952f",
+      "seconds": 1.7672501248307526,
+      "wire.jsonl_sha256": "c09681b11a504b3f48d4ecc31a220f8dbb9943ea420c75f5c97642f672015e8e",
+      "engine.stderr.log_sha256": "1f80788637be2363374b82d71abe5a08374ede8a535b97b5ebb881e3ce7efb1d",
+      "trace_path": "artifacts/runs/e55f5f23-1fdb-4e05-9597-286341ef3b0d/decisions.jsonl",
+      "trace_sha256": "b78f715b0dd8c7cbb365241c402482b1258daf88fba14a5e638f03761467e831"
+    },
+    {
+      "case": "Regent-b",
+      "label": "flat",
+      "mode": "B",
+      "run_id": "6fc5b2fb-928c-4e6e-a6b6-1a8ca2a2012d",
+      "status": "match",
+      "steps_checked": 29,
+      "extension_steps": 0,
+      "restore_seconds": 2.8411212919745594,
+      "map_match": true,
+      "entry_match": true,
+      "save_seconds": 0.08467958285473287,
+      "created_checkpoint": {
+        "path": "artifacts/runs/6fc5b2fb-928c-4e6e-a6b6-1a8ca2a2012d/map-checkpoint.json",
+        "sha256": "c3d9b6ef6a3656b2d74ea5f96b2dc741a2eaf437e171a48836e4da2e0492072c"
+      },
+      "final_hash": "5fc3f1deee4984943aa938137520e7b62c7da6938745627e49e55ce6b2da6268",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "7c2b1948ca3394327d4612d66de5eae9614b79860b7198de94f423db31471c48",
+      "seconds": 3.8692116250749677,
+      "wire.jsonl_sha256": "b01f2f736db583322720442f15c52dd6af74616467577569643e925ef34f562d",
+      "engine.stderr.log_sha256": "870309b8c225daf64e8ad49f4be5e7543113280fa066aed5b363a8dc11dff631",
+      "trace_path": "artifacts/runs/6fc5b2fb-928c-4e6e-a6b6-1a8ca2a2012d/decisions.jsonl",
+      "trace_sha256": "bc23cc0f866013b104df15062409094bf6086d2507960d7aae6ef828b8da962b"
+    },
+    {
+      "case": "Regent-b",
+      "label": "flat",
+      "mode": "C1",
+      "run_id": "fba2b245-4e7c-4fbc-bc64-ac1b63bec5d9",
+      "status": "match",
+      "steps_checked": 29,
+      "extension_steps": 0,
+      "restore_seconds": 1.0840719579719007,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "5fc3f1deee4984943aa938137520e7b62c7da6938745627e49e55ce6b2da6268",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "7c2b1948ca3394327d4612d66de5eae9614b79860b7198de94f423db31471c48",
+      "seconds": 2.2010022080503404,
+      "wire.jsonl_sha256": "93f67f6c1f0034c2ea98259acd55938d6caf3deb02a16d03aae880cf74cae1b2",
+      "engine.stderr.log_sha256": "108eee812f9c6842422590e0bb888040a016ce53c31692edea7c18f0e5bcfc04",
+      "trace_path": "artifacts/runs/fba2b245-4e7c-4fbc-bc64-ac1b63bec5d9/decisions.jsonl",
+      "trace_sha256": "d0f1fb8a9a3c097f24dd048a876c4ee0d08c12da69d573d671e752a767b88f81"
+    },
+    {
+      "case": "Regent-b",
+      "label": "flat",
+      "mode": "C2",
+      "run_id": "3de48147-2287-4a34-b05e-819557bf3024",
+      "status": "match",
+      "steps_checked": 29,
+      "extension_steps": 0,
+      "restore_seconds": 1.155272041913122,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "5fc3f1deee4984943aa938137520e7b62c7da6938745627e49e55ce6b2da6268",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "7c2b1948ca3394327d4612d66de5eae9614b79860b7198de94f423db31471c48",
+      "seconds": 2.2677000840194523,
+      "wire.jsonl_sha256": "ed4207a186e2ec809b434f02cc12406fcfa7fa2b6f78ca131d961d09899d7cda",
+      "engine.stderr.log_sha256": "108eee812f9c6842422590e0bb888040a016ce53c31692edea7c18f0e5bcfc04",
+      "trace_path": "artifacts/runs/3de48147-2287-4a34-b05e-819557bf3024/decisions.jsonl",
+      "trace_sha256": "203e51bc2739f1a0e6f3bbf66b4c878cc6facb7c7ef0238214378a9ffb9a0424"
+    },
+    {
+      "case": "Regent-b",
+      "label": "flat",
+      "mode": "C3",
+      "run_id": "d6e2db3e-1cd0-468f-a2f8-a1ae71f4b699",
+      "status": "match",
+      "steps_checked": 29,
+      "extension_steps": 0,
+      "restore_seconds": 1.1582388749811798,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "5fc3f1deee4984943aa938137520e7b62c7da6938745627e49e55ce6b2da6268",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "7c2b1948ca3394327d4612d66de5eae9614b79860b7198de94f423db31471c48",
+      "seconds": 2.272134291008115,
+      "wire.jsonl_sha256": "f36e3b22da94bc372111cc76e713020a13020b118831b9882d08a5281f7b2c24",
+      "engine.stderr.log_sha256": "108eee812f9c6842422590e0bb888040a016ce53c31692edea7c18f0e5bcfc04",
+      "trace_path": "artifacts/runs/d6e2db3e-1cd0-468f-a2f8-a1ae71f4b699/decisions.jsonl",
+      "trace_sha256": "09f7a1951cf9b07c73f6d48fc5605457438b3ef4bac4971027c5b97eb9e2afe0"
+    },
+    {
+      "case": "Regent-b",
+      "label": "uct",
+      "mode": "B",
+      "run_id": "05ff5400-680d-4d87-a3b2-caabbc6f59a4",
+      "status": "match",
+      "steps_checked": 29,
+      "extension_steps": 0,
+      "restore_seconds": 2.905023125000298,
+      "map_match": true,
+      "entry_match": true,
+      "save_seconds": 0.10051920800469816,
+      "created_checkpoint": {
+        "path": "artifacts/runs/05ff5400-680d-4d87-a3b2-caabbc6f59a4/map-checkpoint.json",
+        "sha256": "01f133ac2633a265e635968764d99848a782d59eba65e0f53f2cfa116dbbff82"
+      },
+      "final_hash": "cee482205899d35aeb33a0c085f5ead0095f5cadd5447338563ef78c1408c6da",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "1d0cd837131d39037b23d76ac6d72859d77744d9e1e919b3d6eda58ed2fc7e98",
+      "seconds": 3.9356365830171853,
+      "wire.jsonl_sha256": "80f21463fbfa0826e74899ee35d5528e291cf313257aaafd90687cb1219321f0",
+      "engine.stderr.log_sha256": "41dc9c633ff5d047b4922fe90fb8c9d63d532272838460b95a1aef690c6014de",
+      "trace_path": "artifacts/runs/05ff5400-680d-4d87-a3b2-caabbc6f59a4/decisions.jsonl",
+      "trace_sha256": "f9fc38287c9c05c1be14f982b96ebcd5083c0994325ecd43118b4b983c079ad7"
+    },
+    {
+      "case": "Regent-b",
+      "label": "uct",
+      "mode": "C1",
+      "run_id": "83e86f00-835b-41dc-b5ff-2b83bc9f8599",
+      "status": "match",
+      "steps_checked": 29,
+      "extension_steps": 0,
+      "restore_seconds": 1.110150958178565,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "cee482205899d35aeb33a0c085f5ead0095f5cadd5447338563ef78c1408c6da",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "1d0cd837131d39037b23d76ac6d72859d77744d9e1e919b3d6eda58ed2fc7e98",
+      "seconds": 2.2337109581567347,
+      "wire.jsonl_sha256": "de7451f1281057d521877f0da4d92197b9c574d16e9a017a11b2a9e8716599bb",
+      "engine.stderr.log_sha256": "6b085c33a6b5ea4a1161f5c8a0993d2fb63456c91eea2e64d593a07b605f37f9",
+      "trace_path": "artifacts/runs/83e86f00-835b-41dc-b5ff-2b83bc9f8599/decisions.jsonl",
+      "trace_sha256": "47584f22eb35f2f9574ebe2c4594920ff39f96acdb1d8a138218eaa3a2ccb233"
+    },
+    {
+      "case": "Regent-b",
+      "label": "uct",
+      "mode": "C2",
+      "run_id": "cb2ab3f8-88ad-4f14-8d43-b0a95dfd2d42",
+      "status": "match",
+      "steps_checked": 29,
+      "extension_steps": 0,
+      "restore_seconds": 1.241325750015676,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "cee482205899d35aeb33a0c085f5ead0095f5cadd5447338563ef78c1408c6da",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "1d0cd837131d39037b23d76ac6d72859d77744d9e1e919b3d6eda58ed2fc7e98",
+      "seconds": 2.5862746671773493,
+      "wire.jsonl_sha256": "381f66903286bf98cd59b7d07c1bc864cb703b36a846e0baa88886342e5d677b",
+      "engine.stderr.log_sha256": "6b085c33a6b5ea4a1161f5c8a0993d2fb63456c91eea2e64d593a07b605f37f9",
+      "trace_path": "artifacts/runs/cb2ab3f8-88ad-4f14-8d43-b0a95dfd2d42/decisions.jsonl",
+      "trace_sha256": "6cfd67ed89971afdc77f6668f7503e13cdd96e46be41ccb7691a10b8c47aca07"
+    },
+    {
+      "case": "Regent-b",
+      "label": "uct",
+      "mode": "C3",
+      "run_id": "ce1de3ff-aaf4-4f79-80c3-a36a8d2ef120",
+      "status": "match",
+      "steps_checked": 29,
+      "extension_steps": 0,
+      "restore_seconds": 1.8805138329043984,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "cee482205899d35aeb33a0c085f5ead0095f5cadd5447338563ef78c1408c6da",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "1d0cd837131d39037b23d76ac6d72859d77744d9e1e919b3d6eda58ed2fc7e98",
+      "seconds": 3.0059100000653416,
+      "wire.jsonl_sha256": "fb7f90a5c7d8b9dd4fc4754d6f3ab94328a52901f72ae216e9509281c0d8c29b",
+      "engine.stderr.log_sha256": "6b085c33a6b5ea4a1161f5c8a0993d2fb63456c91eea2e64d593a07b605f37f9",
+      "trace_path": "artifacts/runs/ce1de3ff-aaf4-4f79-80c3-a36a8d2ef120/decisions.jsonl",
+      "trace_sha256": "583a523f21b8421dfb6777b78f57e13a79f69e34dff8babe42004dec3727247d"
+    },
+    {
+      "case": "Necrobinder-b",
+      "label": "control",
+      "mode": "B",
+      "run_id": "222679ee-6aba-46fd-9ad2-db7eea62afae",
+      "status": "match",
+      "steps_checked": 33,
+      "extension_steps": 0,
+      "restore_seconds": 8.153940291842446,
+      "map_match": true,
+      "entry_match": true,
+      "save_seconds": 0.08375758305191994,
+      "created_checkpoint": {
+        "path": "artifacts/runs/222679ee-6aba-46fd-9ad2-db7eea62afae/map-checkpoint.json",
+        "sha256": "1a6df244e4152d79aeaa5d4fe938dc9321be32348d580b26fb474c7a50adad3e"
+      },
+      "final_hash": "53313caaad66aef8639af61b53c54e397f0594787c6b16eee234ea51de5b4ff6",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "083b25285934bb99ed509d554dfb5f45a0d29738cf97904aacd313540209f999",
+      "seconds": 9.340578791918233,
+      "wire.jsonl_sha256": "6ec61e10014ee1ba030655e4d27d013ace6695f0be5882f39f36ac8270845488",
+      "engine.stderr.log_sha256": "b0dcc7dd0a1d9ccd93aff996545e265bfeca98b12e42a5269883b3adfe3b1305",
+      "trace_path": "artifacts/runs/222679ee-6aba-46fd-9ad2-db7eea62afae/decisions.jsonl",
+      "trace_sha256": "fc81bfcb091da1561a259d24b1143f46ef0ea4410a8764e939a29660ead93140"
+    },
+    {
+      "case": "Necrobinder-b",
+      "label": "control",
+      "mode": "C1",
+      "run_id": "9a2f6317-b526-470d-b4ea-09ebfa470da4",
+      "status": "match",
+      "steps_checked": 33,
+      "extension_steps": 0,
+      "restore_seconds": 5.381936416961253,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "53313caaad66aef8639af61b53c54e397f0594787c6b16eee234ea51de5b4ff6",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "083b25285934bb99ed509d554dfb5f45a0d29738cf97904aacd313540209f999",
+      "seconds": 6.653911541914567,
+      "wire.jsonl_sha256": "a1afa96c59e9e3a3ded02701272cb21f7703ff33260f27a2a08a34cc245485bf",
+      "engine.stderr.log_sha256": "8c42418515e2a43f1f66ab36e8cdc164acf912153a72b6eaf699b7184991faa9",
+      "trace_path": "artifacts/runs/9a2f6317-b526-470d-b4ea-09ebfa470da4/decisions.jsonl",
+      "trace_sha256": "430e5cf4e055722732453a8d8d0fc3e21bdc08c1c3eeead954a5c1dda93d8b50"
+    },
+    {
+      "case": "Necrobinder-b",
+      "label": "control",
+      "mode": "C2",
+      "run_id": "3ee821c5-e87d-48db-9f46-aca981834c40",
+      "status": "match",
+      "steps_checked": 33,
+      "extension_steps": 0,
+      "restore_seconds": 1.1119285421445966,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "53313caaad66aef8639af61b53c54e397f0594787c6b16eee234ea51de5b4ff6",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "083b25285934bb99ed509d554dfb5f45a0d29738cf97904aacd313540209f999",
+      "seconds": 2.378846500068903,
+      "wire.jsonl_sha256": "4fab859984d8b65e9f8580694ee5f1e722667ddc8918dfc3dce2a201d42a49f4",
+      "engine.stderr.log_sha256": "8c42418515e2a43f1f66ab36e8cdc164acf912153a72b6eaf699b7184991faa9",
+      "trace_path": "artifacts/runs/3ee821c5-e87d-48db-9f46-aca981834c40/decisions.jsonl",
+      "trace_sha256": "9ac8746de495bcfbcb247046af9d8e182737bcde20f871897e64f31e6e35e3ac"
+    },
+    {
+      "case": "Necrobinder-b",
+      "label": "control",
+      "mode": "C3",
+      "run_id": "ea495b10-22cd-49d0-a0e4-9c6e0972cf79",
+      "status": "match",
+      "steps_checked": 33,
+      "extension_steps": 0,
+      "restore_seconds": 1.1029272919986397,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "53313caaad66aef8639af61b53c54e397f0594787c6b16eee234ea51de5b4ff6",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "083b25285934bb99ed509d554dfb5f45a0d29738cf97904aacd313540209f999",
+      "seconds": 2.362936541903764,
+      "wire.jsonl_sha256": "db62cbc59103d095494d5ddd38f81e4633667cb21ef97f6818ca1b0605617bfe",
+      "engine.stderr.log_sha256": "8c42418515e2a43f1f66ab36e8cdc164acf912153a72b6eaf699b7184991faa9",
+      "trace_path": "artifacts/runs/ea495b10-22cd-49d0-a0e4-9c6e0972cf79/decisions.jsonl",
+      "trace_sha256": "175ce25b5ac5fb817803a6adba26e0d91fb2db02b11725fc67979aff7176532e"
+    },
+    {
+      "case": "Necrobinder-b",
+      "label": "flat",
+      "mode": "B",
+      "run_id": "56acc270-fece-4eba-a21b-98f978684348",
+      "status": "match",
+      "steps_checked": 33,
+      "extension_steps": 0,
+      "restore_seconds": 2.8435408750083297,
+      "map_match": true,
+      "entry_match": true,
+      "save_seconds": 0.08681691694073379,
+      "created_checkpoint": {
+        "path": "artifacts/runs/56acc270-fece-4eba-a21b-98f978684348/map-checkpoint.json",
+        "sha256": "f6a2c9a504bf1cb59351bd54b576cc5de6dd799b4cf236e0e2ef5888faba2268"
+      },
+      "final_hash": "f6f26c0281970962e8323a89c0e1c38b536c678d189ee410d946cd175d305099",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "058d6c99cf35a5cfea4ec094c34ab5d016dfb9b8ed8f5394c6f379704b156acb",
+      "seconds": 4.101545708952472,
+      "wire.jsonl_sha256": "353c265cf3ce3e5e7474ef494d7c81400a55e0b48db8d11d39d3c4dfbf50872b",
+      "engine.stderr.log_sha256": "2d0f35626d8b28a346c413648583a9381bc3aed6dcc6ebe31e4549f271da313c",
+      "trace_path": "artifacts/runs/56acc270-fece-4eba-a21b-98f978684348/decisions.jsonl",
+      "trace_sha256": "9b107ef45c5b6951136e9fcd3c847cb1de4be882645ccd124b48cb0c01a5c939"
+    },
+    {
+      "case": "Necrobinder-b",
+      "label": "flat",
+      "mode": "C1",
+      "run_id": "b0676162-ed21-4e9d-887e-a0628401e751",
+      "status": "match",
+      "steps_checked": 33,
+      "extension_steps": 0,
+      "restore_seconds": 1.0978465001098812,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "f6f26c0281970962e8323a89c0e1c38b536c678d189ee410d946cd175d305099",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "058d6c99cf35a5cfea4ec094c34ab5d016dfb9b8ed8f5394c6f379704b156acb",
+      "seconds": 2.356886416906491,
+      "wire.jsonl_sha256": "0143d8fc0c5d1c89aa747c44d8478b6065003e4e7210015687b1c0f04b9308a7",
+      "engine.stderr.log_sha256": "5b565cccc1ace660c83baef6503b70cce58a45c52e29a3241e53fad7d913d191",
+      "trace_path": "artifacts/runs/b0676162-ed21-4e9d-887e-a0628401e751/decisions.jsonl",
+      "trace_sha256": "96d22780049fd9262c920f660249c09e1b17bd40335e40499333c20f02456729"
+    },
+    {
+      "case": "Necrobinder-b",
+      "label": "flat",
+      "mode": "C2",
+      "run_id": "368fdf56-4bf4-4835-a975-2df363b3d498",
+      "status": "match",
+      "steps_checked": 33,
+      "extension_steps": 0,
+      "restore_seconds": 1.4044857081025839,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "f6f26c0281970962e8323a89c0e1c38b536c678d189ee410d946cd175d305099",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "058d6c99cf35a5cfea4ec094c34ab5d016dfb9b8ed8f5394c6f379704b156acb",
+      "seconds": 2.6652812079992145,
+      "wire.jsonl_sha256": "1879c4946b68c0a3b0a01b818bf7486de02e35adc339131e6ceab72370fecdef",
+      "engine.stderr.log_sha256": "5b565cccc1ace660c83baef6503b70cce58a45c52e29a3241e53fad7d913d191",
+      "trace_path": "artifacts/runs/368fdf56-4bf4-4835-a975-2df363b3d498/decisions.jsonl",
+      "trace_sha256": "1f8fc799082655402cd6f7ce3ca322525b76a5dea3eab7004772da0ce05a9662"
+    },
+    {
+      "case": "Necrobinder-b",
+      "label": "flat",
+      "mode": "C3",
+      "run_id": "752b73f6-b2c5-47cf-b340-2a9567361831",
+      "status": "match",
+      "steps_checked": 33,
+      "extension_steps": 0,
+      "restore_seconds": 3.171357207931578,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "f6f26c0281970962e8323a89c0e1c38b536c678d189ee410d946cd175d305099",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "058d6c99cf35a5cfea4ec094c34ab5d016dfb9b8ed8f5394c6f379704b156acb",
+      "seconds": 4.434859000146389,
+      "wire.jsonl_sha256": "d0fc60cc204ec4b7e030030fa51c603cbc241a7f6410fca3863173911f0106bc",
+      "engine.stderr.log_sha256": "5b565cccc1ace660c83baef6503b70cce58a45c52e29a3241e53fad7d913d191",
+      "trace_path": "artifacts/runs/752b73f6-b2c5-47cf-b340-2a9567361831/decisions.jsonl",
+      "trace_sha256": "77cf0ff11e035198f3504ccd45ef3560c4f60f594445f399b4cfff401ade923a"
+    },
+    {
+      "case": "Necrobinder-b",
+      "label": "uct",
+      "mode": "B",
+      "run_id": "5db8f4bb-f99f-4ae9-b97a-a9f773b47bf2",
+      "status": "match",
+      "steps_checked": 33,
+      "extension_steps": 0,
+      "restore_seconds": 3.8855778330471367,
+      "map_match": true,
+      "entry_match": true,
+      "save_seconds": 0.08384916605427861,
+      "created_checkpoint": {
+        "path": "artifacts/runs/5db8f4bb-f99f-4ae9-b97a-a9f773b47bf2/map-checkpoint.json",
+        "sha256": "9b0395dfb95024ea41c3a1ecef0bd458f64542853d90ac1461b33ed394aff3fb"
+      },
+      "final_hash": "f6f26c0281970962e8323a89c0e1c38b536c678d189ee410d946cd175d305099",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "6544be2b9031b1735ba5b3f257f36b0efb2d10bc127b3d7020568027767d35cf",
+      "seconds": 5.088210416026413,
+      "wire.jsonl_sha256": "396286a0fdd50b3f1daf81e1959c7bee46304e48e859a466e1591f7247ede929",
+      "engine.stderr.log_sha256": "b8b192d37a548b0da3634993a07e5774d0038d00ec3b718e87f82cd98c1cf924",
+      "trace_path": "artifacts/runs/5db8f4bb-f99f-4ae9-b97a-a9f773b47bf2/decisions.jsonl",
+      "trace_sha256": "7e1a0fc0fe3423a2a9252e67ea01eea0818de1f9884e9901f8bfdf4553063a6d"
+    },
+    {
+      "case": "Necrobinder-b",
+      "label": "uct",
+      "mode": "C1",
+      "run_id": "85561347-b17a-4b80-9225-d69d43ac9b03",
+      "status": "match",
+      "steps_checked": 33,
+      "extension_steps": 0,
+      "restore_seconds": 1.170370708918199,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "f6f26c0281970962e8323a89c0e1c38b536c678d189ee410d946cd175d305099",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "6544be2b9031b1735ba5b3f257f36b0efb2d10bc127b3d7020568027767d35cf",
+      "seconds": 2.4267677089665085,
+      "wire.jsonl_sha256": "b2c52c7d0fabf624f1f55933cde16ce3ae01967ab0ceba2635072c64aa901fa0",
+      "engine.stderr.log_sha256": "ee7529920f1f55770d75798eda33a8f0a20cd3ff2686764f5350548fa091bde3",
+      "trace_path": "artifacts/runs/85561347-b17a-4b80-9225-d69d43ac9b03/decisions.jsonl",
+      "trace_sha256": "4371c9a01737a9fe507430e37d315aace39ef548ad9351a170a4f77f71eb431d"
+    },
+    {
+      "case": "Necrobinder-b",
+      "label": "uct",
+      "mode": "C2",
+      "run_id": "ec0bd5c1-b20e-464b-93c5-043d72d45299",
+      "status": "match",
+      "steps_checked": 33,
+      "extension_steps": 0,
+      "restore_seconds": 1.095687124878168,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "f6f26c0281970962e8323a89c0e1c38b536c678d189ee410d946cd175d305099",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "6544be2b9031b1735ba5b3f257f36b0efb2d10bc127b3d7020568027767d35cf",
+      "seconds": 2.3473836658522487,
+      "wire.jsonl_sha256": "6dca4b6d4b7415c9d94e3828f02f3f5d3954f8649a81a330893ccfb5a0031f43",
+      "engine.stderr.log_sha256": "ee7529920f1f55770d75798eda33a8f0a20cd3ff2686764f5350548fa091bde3",
+      "trace_path": "artifacts/runs/ec0bd5c1-b20e-464b-93c5-043d72d45299/decisions.jsonl",
+      "trace_sha256": "1d50b4b4c55f5b54c609b82a40f0f109f66ca84820e098ac696ddf94291dbc0d"
+    },
+    {
+      "case": "Necrobinder-b",
+      "label": "uct",
+      "mode": "C3",
+      "run_id": "3521c4c0-b2a3-4baa-a6ba-2b6ff95ed054",
+      "status": "match",
+      "steps_checked": 33,
+      "extension_steps": 0,
+      "restore_seconds": 1.1413091670256108,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "f6f26c0281970962e8323a89c0e1c38b536c678d189ee410d946cd175d305099",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "6544be2b9031b1735ba5b3f257f36b0efb2d10bc127b3d7020568027767d35cf",
+      "seconds": 2.394085334148258,
+      "wire.jsonl_sha256": "aefce4c5ae8792eedce6e6baf01eecdd598a5fdb049c30d593e9cd5b30b561bd",
+      "engine.stderr.log_sha256": "ee7529920f1f55770d75798eda33a8f0a20cd3ff2686764f5350548fa091bde3",
+      "trace_path": "artifacts/runs/3521c4c0-b2a3-4baa-a6ba-2b6ff95ed054/decisions.jsonl",
+      "trace_sha256": "5fe375db1f007b90111150a1521150eeac9ea0248389b0aa70542d8c06d7c663"
+    }
+  ],
+  "seconds": 175.5338121249806,
+  "summary": {
+    "match": 120
+  },
+  "audit": {
+    "raw_traces": 120,
+    "failures": [],
+    "pass": true
+  },
+  "checkpoint_manifest": {
+    "Ironclad-a": {
+      "path": "artifacts/runs/2e3cf869-2bde-411a-97a3-fe3fd97527f3/map-checkpoint.json",
+      "sha256": "f071575f93f995d251a26be6a36e4ab4f0cb33f2fb07a7c9914416ba66ce4dbc"
+    },
+    "Silent-a": {
+      "path": "artifacts/runs/b7213438-4ce0-45d5-b337-4429cec86d65/map-checkpoint.json",
+      "sha256": "9f15f31694da73e8f326e8de64aa103335c3e162a53ca8d40957d7226106dd09"
+    },
+    "Defect-a": {
+      "path": "artifacts/runs/e134cd9a-1874-4859-8f62-9cb88210475f/map-checkpoint.json",
+      "sha256": "b907a79c6834a698bf02bc29317582d1e79552749fcae026c0afdd905f385c53"
+    },
+    "Regent-a": {
+      "path": "artifacts/runs/1df18d8c-36cf-453c-a641-dffc3c7cb0c6/map-checkpoint.json",
+      "sha256": "868f9f4c21bfae1b31d8c5fe1856a76865c00f9e5c94b9b4a9a8862e57d277fa"
+    },
+    "Necrobinder-a": {
+      "path": "artifacts/runs/3f56cc16-d87d-485f-9bee-e77f39d4c3ec/map-checkpoint.json",
+      "sha256": "4b144ee509ea1316a361961e01ccd7f3649fa455c34af3ad4802a0510bfadcd9"
+    },
+    "Ironclad-b": {
+      "path": "artifacts/runs/0cbc792b-a602-4d7d-bf4a-47b5b76f86ca/map-checkpoint.json",
+      "sha256": "b0ce841a0d4e9b7b01a21b8a4806d9116c5657093bb914087db4d9b861bbe893"
+    },
+    "Silent-b": {
+      "path": "artifacts/runs/16c9af61-3438-44fe-bb34-fe551a0e98e5/map-checkpoint.json",
+      "sha256": "d7990cc4756aa9333673a59cc2bb773995f3639e794304622e25460452f7e572"
+    },
+    "Defect-b": {
+      "path": "artifacts/runs/38582312-e391-41b7-8a47-50e23eead85f/map-checkpoint.json",
+      "sha256": "0fb98a8ef9a11509124c571666e8f72d799ca71a2c63b27922c5044dee41c960"
+    },
+    "Regent-b": {
+      "path": "artifacts/runs/76199e87-a0b3-463c-809c-033917d088a9/map-checkpoint.json",
+      "sha256": "0b26fd5ee9f9d9f436ff117936ea37ecdb05e70e34af7708438ae9733bc16c0b"
+    },
+    "Necrobinder-b": {
+      "path": "artifacts/runs/f21702c8-ed15-4f64-b239-1b63a1235f95/map-checkpoint.json",
+      "sha256": "7b5e92e9f4ce02808c606fa5ef04552f0b569275f475ac133bd182f87e32b12b"
+    }
+  },
+  "preflight_file_sha256": "b1f139829a39023a3944d537b18400a4d899509890f2e3483c5c838bcc132d97",
+  "comparisons": [
+    {
+      "case": "Ironclad-a",
+      "label": "control",
+      "mode": "B",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 0.9547685143158691
+    },
+    {
+      "case": "Ironclad-a",
+      "label": "control",
+      "mode": "C1",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.621077088748311
+    },
+    {
+      "case": "Ironclad-a",
+      "label": "control",
+      "mode": "C2",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.522617635769321
+    },
+    {
+      "case": "Ironclad-a",
+      "label": "control",
+      "mode": "C3",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.639101169618668
+    },
+    {
+      "case": "Ironclad-a",
+      "label": "flat",
+      "mode": "B",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 1.123203768883935
+    },
+    {
+      "case": "Ironclad-a",
+      "label": "flat",
+      "mode": "C1",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.7432368458253094
+    },
+    {
+      "case": "Ironclad-a",
+      "label": "flat",
+      "mode": "C2",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.7289250224615365
+    },
+    {
+      "case": "Ironclad-a",
+      "label": "flat",
+      "mode": "C3",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.843817646551325
+    },
+    {
+      "case": "Ironclad-a",
+      "label": "uct",
+      "mode": "B",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 0.9842009503930502
+    },
+    {
+      "case": "Ironclad-a",
+      "label": "uct",
+      "mode": "C1",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.3606641777318385
+    },
+    {
+      "case": "Ironclad-a",
+      "label": "uct",
+      "mode": "C2",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.5308122179843027
+    },
+    {
+      "case": "Ironclad-a",
+      "label": "uct",
+      "mode": "C3",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 1.954545763191786
+    },
+    {
+      "case": "Silent-a",
+      "label": "control",
+      "mode": "B",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 0.9892576678670063
+    },
+    {
+      "case": "Silent-a",
+      "label": "control",
+      "mode": "C1",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.4297968715782905
+    },
+    {
+      "case": "Silent-a",
+      "label": "control",
+      "mode": "C2",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 3.2924424999237165
+    },
+    {
+      "case": "Silent-a",
+      "label": "control",
+      "mode": "C3",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 3.304531644676739
+    },
+    {
+      "case": "Silent-a",
+      "label": "flat",
+      "mode": "B",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 0.9793577400253625
+    },
+    {
+      "case": "Silent-a",
+      "label": "flat",
+      "mode": "C1",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 3.2473153363970373
+    },
+    {
+      "case": "Silent-a",
+      "label": "flat",
+      "mode": "C2",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 3.150505051510344
+    },
+    {
+      "case": "Silent-a",
+      "label": "flat",
+      "mode": "C3",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 3.127705229227242
+    },
+    {
+      "case": "Silent-a",
+      "label": "uct",
+      "mode": "B",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 0.9779946646082999
+    },
+    {
+      "case": "Silent-a",
+      "label": "uct",
+      "mode": "C1",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 3.1477503301999645
+    },
+    {
+      "case": "Silent-a",
+      "label": "uct",
+      "mode": "C2",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.594079673379835
+    },
+    {
+      "case": "Silent-a",
+      "label": "uct",
+      "mode": "C3",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.8421688723880885
+    },
+    {
+      "case": "Defect-a",
+      "label": "control",
+      "mode": "B",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 0.997806478304686
+    },
+    {
+      "case": "Defect-a",
+      "label": "control",
+      "mode": "C1",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.758123328762447
+    },
+    {
+      "case": "Defect-a",
+      "label": "control",
+      "mode": "C2",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.873216752492672
+    },
+    {
+      "case": "Defect-a",
+      "label": "control",
+      "mode": "C3",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.866855063747377
+    },
+    {
+      "case": "Defect-a",
+      "label": "flat",
+      "mode": "B",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 0.98535506074302
+    },
+    {
+      "case": "Defect-a",
+      "label": "flat",
+      "mode": "C1",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.8432632444150356
+    },
+    {
+      "case": "Defect-a",
+      "label": "flat",
+      "mode": "C2",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.791985634786323
+    },
+    {
+      "case": "Defect-a",
+      "label": "flat",
+      "mode": "C3",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.922415355992695
+    },
+    {
+      "case": "Defect-a",
+      "label": "uct",
+      "mode": "B",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 0.9782147422460362
+    },
+    {
+      "case": "Defect-a",
+      "label": "uct",
+      "mode": "C1",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.829939371776879
+    },
+    {
+      "case": "Defect-a",
+      "label": "uct",
+      "mode": "C2",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.9438432994059562
+    },
+    {
+      "case": "Defect-a",
+      "label": "uct",
+      "mode": "C3",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.689450532635255
+    },
+    {
+      "case": "Regent-a",
+      "label": "control",
+      "mode": "B",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 0.9802977993139296
+    },
+    {
+      "case": "Regent-a",
+      "label": "control",
+      "mode": "C1",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.852392246872662
+    },
+    {
+      "case": "Regent-a",
+      "label": "control",
+      "mode": "C2",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.984724514369057
+    },
+    {
+      "case": "Regent-a",
+      "label": "control",
+      "mode": "C3",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.943346139348345
+    },
+    {
+      "case": "Regent-a",
+      "label": "flat",
+      "mode": "B",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 0.9978976577169071
+    },
+    {
+      "case": "Regent-a",
+      "label": "flat",
+      "mode": "C1",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.8512336802794143
+    },
+    {
+      "case": "Regent-a",
+      "label": "flat",
+      "mode": "C2",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.989228013466956
+    },
+    {
+      "case": "Regent-a",
+      "label": "flat",
+      "mode": "C3",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 3.0220784594524606
+    },
+    {
+      "case": "Regent-a",
+      "label": "uct",
+      "mode": "B",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 0.9890400758477701
+    },
+    {
+      "case": "Regent-a",
+      "label": "uct",
+      "mode": "C1",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.8698881588361504
+    },
+    {
+      "case": "Regent-a",
+      "label": "uct",
+      "mode": "C2",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.7037772633459562
+    },
+    {
+      "case": "Regent-a",
+      "label": "uct",
+      "mode": "C3",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.7732960973593883
+    },
+    {
+      "case": "Necrobinder-a",
+      "label": "control",
+      "mode": "B",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 0.9806414138028455
+    },
+    {
+      "case": "Necrobinder-a",
+      "label": "control",
+      "mode": "C1",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.733453602641278
+    },
+    {
+      "case": "Necrobinder-a",
+      "label": "control",
+      "mode": "C2",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.7675789221461495
+    },
+    {
+      "case": "Necrobinder-a",
+      "label": "control",
+      "mode": "C3",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.7723122368792312
+    },
+    {
+      "case": "Necrobinder-a",
+      "label": "flat",
+      "mode": "B",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 0.9732936697226134
+    },
+    {
+      "case": "Necrobinder-a",
+      "label": "flat",
+      "mode": "C1",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.8083256782087145
+    },
+    {
+      "case": "Necrobinder-a",
+      "label": "flat",
+      "mode": "C2",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.7805421543753015
+    },
+    {
+      "case": "Necrobinder-a",
+      "label": "flat",
+      "mode": "C3",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.6598485176472
+    },
+    {
+      "case": "Necrobinder-a",
+      "label": "uct",
+      "mode": "B",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 0.9072111839213246
+    },
+    {
+      "case": "Necrobinder-a",
+      "label": "uct",
+      "mode": "C1",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 1.9812026069318829
+    },
+    {
+      "case": "Necrobinder-a",
+      "label": "uct",
+      "mode": "C2",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.555691229913873
+    },
+    {
+      "case": "Necrobinder-a",
+      "label": "uct",
+      "mode": "C3",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.5678263962883543
+    },
+    {
+      "case": "Ironclad-b",
+      "label": "control",
+      "mode": "B",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 0.9629797542860206
+    },
+    {
+      "case": "Ironclad-b",
+      "label": "control",
+      "mode": "C1",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.7133971829216676
+    },
+    {
+      "case": "Ironclad-b",
+      "label": "control",
+      "mode": "C2",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.716980660398548
+    },
+    {
+      "case": "Ironclad-b",
+      "label": "control",
+      "mode": "C3",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.7867818976915624
+    },
+    {
+      "case": "Ironclad-b",
+      "label": "flat",
+      "mode": "B",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 0.9830937310314036
+    },
+    {
+      "case": "Ironclad-b",
+      "label": "flat",
+      "mode": "C1",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.811621142607576
+    },
+    {
+      "case": "Ironclad-b",
+      "label": "flat",
+      "mode": "C2",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.862933670909328
+    },
+    {
+      "case": "Ironclad-b",
+      "label": "flat",
+      "mode": "C3",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.609909520159814
+    },
+    {
+      "case": "Ironclad-b",
+      "label": "uct",
+      "mode": "B",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 0.9915994278341996
+    },
+    {
+      "case": "Ironclad-b",
+      "label": "uct",
+      "mode": "C1",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.4996748211871207
+    },
+    {
+      "case": "Ironclad-b",
+      "label": "uct",
+      "mode": "C2",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.4652290718032517
+    },
+    {
+      "case": "Ironclad-b",
+      "label": "uct",
+      "mode": "C3",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.602113375124011
+    },
+    {
+      "case": "Silent-b",
+      "label": "control",
+      "mode": "B",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 0.890879281193428
+    },
+    {
+      "case": "Silent-b",
+      "label": "control",
+      "mode": "C1",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.387746359555746
+    },
+    {
+      "case": "Silent-b",
+      "label": "control",
+      "mode": "C2",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.568178538945547
+    },
+    {
+      "case": "Silent-b",
+      "label": "control",
+      "mode": "C3",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.8217397380390996
+    },
+    {
+      "case": "Silent-b",
+      "label": "flat",
+      "mode": "B",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 0.982083989966537
+    },
+    {
+      "case": "Silent-b",
+      "label": "flat",
+      "mode": "C1",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 3.038209848789531
+    },
+    {
+      "case": "Silent-b",
+      "label": "flat",
+      "mode": "C2",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 3.0234248729145428
+    },
+    {
+      "case": "Silent-b",
+      "label": "flat",
+      "mode": "C3",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 3.0590591698000056
+    },
+    {
+      "case": "Silent-b",
+      "label": "uct",
+      "mode": "B",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 0.9694288279749875
+    },
+    {
+      "case": "Silent-b",
+      "label": "uct",
+      "mode": "C1",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 3.0087617617001388
+    },
+    {
+      "case": "Silent-b",
+      "label": "uct",
+      "mode": "C2",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 3.0039385767472444
+    },
+    {
+      "case": "Silent-b",
+      "label": "uct",
+      "mode": "C3",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.95256316386545
+    },
+    {
+      "case": "Defect-b",
+      "label": "control",
+      "mode": "B",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 0.9735664966535639
+    },
+    {
+      "case": "Defect-b",
+      "label": "control",
+      "mode": "C1",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 3.0003870713970935
+    },
+    {
+      "case": "Defect-b",
+      "label": "control",
+      "mode": "C2",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.820801467738476
+    },
+    {
+      "case": "Defect-b",
+      "label": "control",
+      "mode": "C3",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.9392823131532335
+    },
+    {
+      "case": "Defect-b",
+      "label": "flat",
+      "mode": "B",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 0.9986692094565891
+    },
+    {
+      "case": "Defect-b",
+      "label": "flat",
+      "mode": "C1",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 3.0181001032459966
+    },
+    {
+      "case": "Defect-b",
+      "label": "flat",
+      "mode": "C2",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 3.0608720203828654
+    },
+    {
+      "case": "Defect-b",
+      "label": "flat",
+      "mode": "C3",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.9049812520434264
+    },
+    {
+      "case": "Defect-b",
+      "label": "uct",
+      "mode": "B",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 0.9457804937668666
+    },
+    {
+      "case": "Defect-b",
+      "label": "uct",
+      "mode": "C1",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.9423098613445595
+    },
+    {
+      "case": "Defect-b",
+      "label": "uct",
+      "mode": "C2",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.458486059577842
+    },
+    {
+      "case": "Defect-b",
+      "label": "uct",
+      "mode": "C3",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.828898047462169
+    },
+    {
+      "case": "Regent-b",
+      "label": "control",
+      "mode": "B",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 0.9675572514543354
+    },
+    {
+      "case": "Regent-b",
+      "label": "control",
+      "mode": "C1",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.502966584648699
+    },
+    {
+      "case": "Regent-b",
+      "label": "control",
+      "mode": "C2",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.5203560956453996
+    },
+    {
+      "case": "Regent-b",
+      "label": "control",
+      "mode": "C3",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.493784482256419
+    },
+    {
+      "case": "Regent-b",
+      "label": "flat",
+      "mode": "B",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 0.9884362702190034
+    },
+    {
+      "case": "Regent-b",
+      "label": "flat",
+      "mode": "C1",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.590480560287604
+    },
+    {
+      "case": "Regent-b",
+      "label": "flat",
+      "mode": "C2",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.4308277454967744
+    },
+    {
+      "case": "Regent-b",
+      "label": "flat",
+      "mode": "C3",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.4246011714334497
+    },
+    {
+      "case": "Regent-b",
+      "label": "uct",
+      "mode": "B",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 0.9798144464600473
+    },
+    {
+      "case": "Regent-b",
+      "label": "uct",
+      "mode": "C1",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.563960877758366
+    },
+    {
+      "case": "Regent-b",
+      "label": "uct",
+      "mode": "C2",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.293019076692688
+    },
+    {
+      "case": "Regent-b",
+      "label": "uct",
+      "mode": "C3",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 1.5136201475208761
+    },
+    {
+      "case": "Necrobinder-b",
+      "label": "control",
+      "mode": "B",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 0.3422910254631294
+    },
+    {
+      "case": "Necrobinder-b",
+      "label": "control",
+      "mode": "C1",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 0.5185904046104923
+    },
+    {
+      "case": "Necrobinder-b",
+      "label": "control",
+      "mode": "C2",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.510071896056187
+    },
+    {
+      "case": "Necrobinder-b",
+      "label": "control",
+      "mode": "C3",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.530557185689192
+    },
+    {
+      "case": "Necrobinder-b",
+      "label": "flat",
+      "mode": "B",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 0.991378926451476
+    },
+    {
+      "case": "Necrobinder-b",
+      "label": "flat",
+      "mode": "C1",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.5677783731191
+    },
+    {
+      "case": "Necrobinder-b",
+      "label": "flat",
+      "mode": "C2",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.007159263866818
+    },
+    {
+      "case": "Necrobinder-b",
+      "label": "flat",
+      "mode": "C3",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 0.8889022318067012
+    },
+    {
+      "case": "Necrobinder-b",
+      "label": "uct",
+      "mode": "B",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 0.73920980959371
+    },
+    {
+      "case": "Necrobinder-b",
+      "label": "uct",
+      "mode": "C1",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.4541431430586713
+    },
+    {
+      "case": "Necrobinder-b",
+      "label": "uct",
+      "mode": "C2",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.621421010534998
+    },
+    {
+      "case": "Necrobinder-b",
+      "label": "uct",
+      "mode": "C3",
+      "status": "match",
+      "full_path_match": true,
+      "final_match": true,
+      "speedup": 2.51663382115274
+    }
+  ],
+  "median_restore_speedup": 2.762851125454298,
+  "minimum_restore_speedup": 0.5185904046104923,
+  "correctness_pass": true,
+  "promotion_pass": false,
+  "source_bank_file_sha256": "9126084a560545fd5e86b3181bfbe78a44a00781d278408bdd918e6738d3010a"
+}
