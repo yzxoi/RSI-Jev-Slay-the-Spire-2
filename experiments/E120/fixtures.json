@@ -1,0 +1,6035 @@
+{
+  "manifest": {
+    "schema_version": 1,
+    "code_commit": "2d89786bc1e6110ad32d884e657af989216a1f85",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "71505f31e29c370667636600a58fe2b3e270f98e99e3c5a384d176a7f0188274",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+      "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4",
+    "experiment": "E120",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.5",
+    "model_calls": 0,
+    "model_cost_usd": 0
+  },
+  "configs": [
+    {
+      "case": "Ironclad-a",
+      "character": "Ironclad",
+      "seed": "e120_20261001_a",
+      "ascension": 0,
+      "index": 0
+    },
+    {
+      "case": "Silent-a",
+      "character": "Silent",
+      "seed": "e120_20261001_a",
+      "ascension": 0,
+      "index": 1
+    },
+    {
+      "case": "Defect-a",
+      "character": "Defect",
+      "seed": "e120_20261001_a",
+      "ascension": 0,
+      "index": 2
+    },
+    {
+      "case": "Regent-a",
+      "character": "Regent",
+      "seed": "e120_20261001_a",
+      "ascension": 0,
+      "index": 3
+    },
+    {
+      "case": "Necrobinder-a",
+      "character": "Necrobinder",
+      "seed": "e120_20261001_a",
+      "ascension": 0,
+      "index": 4
+    },
+    {
+      "case": "Ironclad-b",
+      "character": "Ironclad",
+      "seed": "e120_20261001_b",
+      "ascension": 0,
+      "index": 5
+    },
+    {
+      "case": "Silent-b",
+      "character": "Silent",
+      "seed": "e120_20261001_b",
+      "ascension": 0,
+      "index": 6
+    },
+    {
+      "case": "Defect-b",
+      "character": "Defect",
+      "seed": "e120_20261001_b",
+      "ascension": 0,
+      "index": 7
+    },
+    {
+      "case": "Regent-b",
+      "character": "Regent",
+      "seed": "e120_20261001_b",
+      "ascension": 0,
+      "index": 8
+    },
+    {
+      "case": "Necrobinder-b",
+      "character": "Necrobinder",
+      "seed": "e120_20261001_b",
+      "ascension": 0,
+      "index": 9
+    }
+  ],
+  "limits": {
+    "simulations": 24,
+    "search_seconds": 120,
+    "probe_seconds": 15,
+    "probe_actions": 120,
+    "fixture_seconds": 90,
+    "fixture_actions": 700,
+    "rollout_epsilon": 0.1,
+    "workers": 2
+  },
+  "fixtures": [
+    {
+      "case": "Ironclad-a",
+      "character": "Ironclad",
+      "seed": "e120_20261001_a",
+      "ascension": 0,
+      "index": 0,
+      "status": "ready",
+      "run_id": "9e402bed-b3b0-4bb9-8f88-26890d013900",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Ironclad",
+          "seed": "e120_20261001_a",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 4,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_cards",
+          "args": {
+            "indices": "0"
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 3
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "claim_potion_reward",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 4
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 4,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "claim_potion_reward",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 5
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 4,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "claim_potion_reward",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 6
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "leave_room",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 7
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_cards",
+          "args": {
+            "indices": "0"
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 8
+          }
+        }
+      ],
+      "steps": 66,
+      "entry_hash": "6e4e1ccf69c33333e0b927bf5bfeb4cbcdc91e71f111ec8d697c98ccc56f551a",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 8
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 1,
+          "row": 8,
+          "type": "Elite"
+        },
+        "id": "a000"
+      },
+      "floor": 9,
+      "room_type": "Elite",
+      "hp": 61,
+      "max_hp": 80,
+      "potion_capacity": 3,
+      "enemies": [
+        "Bygone Effigy"
+      ],
+      "entry_potions": [
+        "COLORLESS_POTION"
+      ],
+      "prefix_hash": "e96a1b0a11e1b7f480a158851d76115eb6648578843e286880cdaeec8495c592",
+      "seconds": 3.4315468329004943,
+      "wire.jsonl_sha256": "b56f5e0adfd082e9ce904ff4693f8494c183ddf7492c9b901205fa257482c7b3",
+      "engine.stderr.log_sha256": "2ca059363483eacc66c77e30bb60560c727266da0e1d6f5d8ba06c6f85e5e9c1",
+      "trace_path": "artifacts/runs/9e402bed-b3b0-4bb9-8f88-26890d013900/decisions.jsonl",
+      "trace_sha256": "0ddab7c58a8dfd02d8b62b23bc782aa28420859e6780b722af9e3daabb06a018"
+    },
+    {
+      "case": "Silent-a",
+      "character": "Silent",
+      "seed": "e120_20261001_a",
+      "ascension": 0,
+      "index": 1,
+      "status": "ready",
+      "run_id": "8c33d266-0161-4441-ac9a-66ea762398db",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Silent",
+          "seed": "e120_20261001_a",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 6
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_cards",
+          "args": {
+            "indices": "2"
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 4
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_cards",
+          "args": {
+            "indices": "0"
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_cards",
+          "args": {
+            "indices": "0"
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 3
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_cards",
+          "args": {
+            "indices": "1"
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "claim_potion_reward",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 4
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 4,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 4,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "claim_potion_reward",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 5
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 5,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_cards",
+          "args": {
+            "indices": "3"
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 4,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "claim_potion_reward",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 6
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "leave_room",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 7
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_cards",
+          "args": {
+            "indices": "0"
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 8
+          }
+        }
+      ],
+      "steps": 94,
+      "entry_hash": "38f142fa72c7ee7bb7f050be7fbab74f61a6a7640586555a43a2ec447702b1fd",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 8
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 1,
+          "row": 8,
+          "type": "Elite"
+        },
+        "id": "a000"
+      },
+      "floor": 9,
+      "room_type": "Elite",
+      "hp": 64,
+      "max_hp": 70,
+      "potion_capacity": 3,
+      "enemies": [
+        "Bygone Effigy"
+      ],
+      "entry_potions": [
+        "COLORLESS_POTION"
+      ],
+      "prefix_hash": "c23e43ab5b4c96130b2e94f74350ab95024a118465e1e6eb1d3f1494543170d5",
+      "seconds": 4.116419041994959,
+      "wire.jsonl_sha256": "e675705275672b5096d3f9a75c784304ba7c1a29fb59fa240c1e6c702b54162e",
+      "engine.stderr.log_sha256": "3586888639a843c114277cacb8edf17035c02ce346a121428df96f31c7639220",
+      "trace_path": "artifacts/runs/8c33d266-0161-4441-ac9a-66ea762398db/decisions.jsonl",
+      "trace_sha256": "7514c9ac1f0f9cf290bd067ad421271ec68c42ecf908621a0a63e089b1c899d1"
+    },
+    {
+      "case": "Defect-a",
+      "character": "Defect",
+      "seed": "e120_20261001_a",
+      "ascension": 0,
+      "index": 2,
+      "status": "ready",
+      "run_id": "7560f04f-3a4e-47a7-a358-f84cd0c99917",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Defect",
+          "seed": "e120_20261001_a",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_cards",
+          "args": {
+            "indices": "0"
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 3
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 4,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "claim_potion_reward",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 4
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "claim_potion_reward",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 5
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "claim_potion_reward",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 6
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "leave_room",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 7
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 8
+          }
+        }
+      ],
+      "steps": 76,
+      "entry_hash": "c83c2c19cb3f1088f3fa3ec602bfadd71d79c09b27c159dfe6bdbc3c42422ab7",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 8
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 1,
+          "row": 8,
+          "type": "Elite"
+        },
+        "id": "a000"
+      },
+      "floor": 9,
+      "room_type": "Elite",
+      "hp": 70,
+      "max_hp": 75,
+      "potion_capacity": 3,
+      "enemies": [
+        "Bygone Effigy"
+      ],
+      "entry_potions": [
+        "COLORLESS_POTION"
+      ],
+      "prefix_hash": "d09d0b9ceaf6ffddbc79b799e2ae2c26ab34384a974a1560e022a6ad412bc2cc",
+      "seconds": 3.1622105001006275,
+      "wire.jsonl_sha256": "67ced80fe07db0349222a74484305b30f99226706123b8fafb6eedcaf2686fe5",
+      "engine.stderr.log_sha256": "5886615fe06b4235cd06a2a32f7398f90f29adb1efc075f59f587583b8f56105",
+      "trace_path": "artifacts/runs/7560f04f-3a4e-47a7-a358-f84cd0c99917/decisions.jsonl",
+      "trace_sha256": "1bfca06ed910536f58335d18c8b8afa994b30e58ffa8289bc859862d0175e124"
+    },
+    {
+      "case": "Regent-a",
+      "character": "Regent",
+      "seed": "e120_20261001_a",
+      "ascension": 0,
+      "index": 3,
+      "status": "ready",
+      "run_id": "41cbbb70-2615-4b6e-b8ef-eba225e0e8d6",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Regent",
+          "seed": "e120_20261001_a",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 4,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_cards",
+          "args": {
+            "indices": "0"
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 3
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 4,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 5,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "claim_potion_reward",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 4
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 4,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "claim_potion_reward",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 5
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 5,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "claim_potion_reward",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 6
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "leave_room",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 7
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_cards",
+          "args": {
+            "indices": "0"
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 8
+          }
+        }
+      ],
+      "steps": 81,
+      "entry_hash": "6f5f504f06f6b0a8d7b94c2a8c1249095a22fcc1587c29cd14bcc5804f56bb9b",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 8
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 1,
+          "row": 8,
+          "type": "Elite"
+        },
+        "id": "a000"
+      },
+      "floor": 9,
+      "room_type": "Elite",
+      "hp": 58,
+      "max_hp": 75,
+      "potion_capacity": 3,
+      "enemies": [
+        "Bygone Effigy"
+      ],
+      "entry_potions": [
+        "COLORLESS_POTION"
+      ],
+      "prefix_hash": "333df727c7512e79c79fa291a162eb7bc54c1909d784782120a9a054abfbd7c3",
+      "seconds": 3.3764698749873787,
+      "wire.jsonl_sha256": "036d2e100d67c0b84bf3c5d3f631778a53c0f8260aa1f333c350b891362e0f7a",
+      "engine.stderr.log_sha256": "12bda444c7a5052c3b5919e80321614aabbe09de2924d8ab6b31876c768c89f8",
+      "trace_path": "artifacts/runs/41cbbb70-2615-4b6e-b8ef-eba225e0e8d6/decisions.jsonl",
+      "trace_sha256": "4a33f3cd78e9ba33308adaf3e328119563c23996c0c1dc78ae828368041449ff"
+    },
+    {
+      "case": "Necrobinder-a",
+      "character": "Necrobinder",
+      "seed": "e120_20261001_a",
+      "ascension": 0,
+      "index": 4,
+      "status": "ready",
+      "run_id": "4a5cf5df-6462-43d0-b7e5-2e053c7cebbc",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Necrobinder",
+          "seed": "e120_20261001_a",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_cards",
+          "args": {
+            "indices": "0"
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 3
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 4,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "claim_potion_reward",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 4
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "claim_potion_reward",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 5
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "claim_potion_reward",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 6
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "leave_room",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 7
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_cards",
+          "args": {
+            "indices": "0"
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 8
+          }
+        }
+      ],
+      "steps": 75,
+      "entry_hash": "9c4cb37915501ed953edcddc3e90cd5508694229b9a4034bad00cfd68654305e",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 8
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 1,
+          "row": 8,
+          "type": "Elite"
+        },
+        "id": "a000"
+      },
+      "floor": 9,
+      "room_type": "Elite",
+      "hp": 53,
+      "max_hp": 66,
+      "potion_capacity": 3,
+      "enemies": [
+        "Bygone Effigy"
+      ],
+      "entry_potions": [
+        "COLORLESS_POTION"
+      ],
+      "prefix_hash": "111212a3b9b57b4fd43bf931b34737ae9fb8ff27830cce9757848f938bc9d2d6",
+      "seconds": 3.0965803749859333,
+      "wire.jsonl_sha256": "43070691836e3ac7eeff9016274ba2c59122b451980db5271b6f6098e30e3f1b",
+      "engine.stderr.log_sha256": "5057b89b53d034f168232604e651dca4111afe254be0fdeb5feecc90c984a902",
+      "trace_path": "artifacts/runs/4a5cf5df-6462-43d0-b7e5-2e053c7cebbc/decisions.jsonl",
+      "trace_sha256": "14cb7d1af3a3cd1ce9b1035b9ee6c0fef391b3c0177dbb3d8feb81661a2d0f38"
+    },
+    {
+      "case": "Ironclad-b",
+      "character": "Ironclad",
+      "seed": "e120_20261001_b",
+      "ascension": 0,
+      "index": 5,
+      "status": "ready",
+      "run_id": "051c8341-8106-4113-b121-3107d803bb3d",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Ironclad",
+          "seed": "e120_20261001_b",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 4
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "claim_potion_reward",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_cards",
+          "args": {
+            "indices": "0"
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "claim_potion_reward",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 3
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_cards",
+          "args": {
+            "indices": "3"
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "claim_potion_reward",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 4
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "leave_room",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 5
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 4
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_cards",
+          "args": {
+            "indices": "2"
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 4,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_cards",
+          "args": {
+            "indices": "3"
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_cards",
+          "args": {
+            "indices": "0"
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 6
+          }
+        }
+      ],
+      "steps": 77,
+      "entry_hash": "4225cca1a0aef3a460a7cfed7bc3cd6a433b14f15460942d3fb1c3ac6f35e166",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 6
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 1,
+          "row": 6,
+          "type": "Elite"
+        },
+        "id": "a000"
+      },
+      "floor": 7,
+      "room_type": "Elite",
+      "hp": 59,
+      "max_hp": 80,
+      "potion_capacity": 3,
+      "enemies": [
+        "Bygone Effigy"
+      ],
+      "entry_potions": [],
+      "prefix_hash": "b88b2be37bb470e245f1e503d2cf0639ff59e404c2e7283bc9893fd2fdc75747",
+      "seconds": 3.0871269169729203,
+      "wire.jsonl_sha256": "9d8a0ab9d532033b3cbe62b913eb199655f743a4188f5f705eb12dd4665cceff",
+      "engine.stderr.log_sha256": "7d08de1cbc145f22edf116a22bde0210c3a0d30a823deefa602713c0a61c05bf",
+      "trace_path": "artifacts/runs/051c8341-8106-4113-b121-3107d803bb3d/decisions.jsonl",
+      "trace_sha256": "a6938df270eb71440837b33f150920f8a9459797955dd3efd6ef0d9daf07ab39"
+    },
+    {
+      "case": "Silent-b",
+      "character": "Silent",
+      "seed": "e120_20261001_b",
+      "ascension": 0,
+      "index": 6,
+      "status": "ready",
+      "run_id": "3118fe97-7d9a-42cf-a0c7-8670632d2952",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Silent",
+          "seed": "e120_20261001_b",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_cards",
+          "args": {
+            "indices": "2"
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 4
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "claim_potion_reward",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "claim_potion_reward",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 3
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 4,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "claim_potion_reward",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 4
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "leave_room",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 5
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 6,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 6,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 4,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 6
+          }
+        }
+      ],
+      "steps": 82,
+      "entry_hash": "f1aee8d4194eab8f07d7d3ae4365a26f5684a1048958ba8983a52cd7799601df",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 6
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 1,
+          "row": 6,
+          "type": "Elite"
+        },
+        "id": "a000"
+      },
+      "floor": 7,
+      "room_type": "Elite",
+      "hp": 50,
+      "max_hp": 70,
+      "potion_capacity": 3,
+      "enemies": [
+        "Bygone Effigy"
+      ],
+      "entry_potions": [],
+      "prefix_hash": "49b4b3e6907a15fdfd314ea6908d1b25151708cc3c139a2af5ed4dbeb7462eef",
+      "seconds": 3.4546746669802815,
+      "wire.jsonl_sha256": "81d0bc4eaefb72a1f3b56f0d049b690616d187585673fa98ac3f9a3644c4b746",
+      "engine.stderr.log_sha256": "b18b809459af179528e2ee2ebea70f9e3e6ff9ebadc6af3ea0264c6e40934997",
+      "trace_path": "artifacts/runs/3118fe97-7d9a-42cf-a0c7-8670632d2952/decisions.jsonl",
+      "trace_sha256": "c60af58de17f3cb46923666a377478e2c1c24251763db8067c114a342317c137"
+    },
+    {
+      "case": "Defect-b",
+      "character": "Defect",
+      "seed": "e120_20261001_b",
+      "ascension": 0,
+      "index": 7,
+      "status": "ready",
+      "run_id": "fdadcab0-a5e8-4134-ac6f-292a9ee94968",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Defect",
+          "seed": "e120_20261001_b",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 4
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "claim_potion_reward",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "claim_potion_reward",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 3
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "claim_potion_reward",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 4
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "leave_room",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 5
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 4,
+            "target_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 4,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 6
+          }
+        }
+      ],
+      "steps": 81,
+      "entry_hash": "13f8600f5edf63ae0c7e63cacb98bcd2b78c08975a269a831bcd7c6550942e3a",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 6
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 1,
+          "row": 6,
+          "type": "Elite"
+        },
+        "id": "a000"
+      },
+      "floor": 7,
+      "room_type": "Elite",
+      "hp": 37,
+      "max_hp": 75,
+      "potion_capacity": 3,
+      "enemies": [
+        "Bygone Effigy"
+      ],
+      "entry_potions": [],
+      "prefix_hash": "babdbe086d305d21c1592714493ff97982c5c86c8ebdbe602cf7cff8083f15fd",
+      "seconds": 3.4124109579715878,
+      "wire.jsonl_sha256": "beb0024d008b95a2b5c49dc14349f12a406d9992e0d8172169b2aade900a606e",
+      "engine.stderr.log_sha256": "d47e6b2e8f189d81c4388943cfde9aef9b21100764f7b9882e8a73362a512831",
+      "trace_path": "artifacts/runs/fdadcab0-a5e8-4134-ac6f-292a9ee94968/decisions.jsonl",
+      "trace_sha256": "c8614f04876dc3060edb98c6124fb2dd0bceb864775bcd979ee67e12f2b22cd2"
+    },
+    {
+      "case": "Regent-b",
+      "character": "Regent",
+      "seed": "e120_20261001_b",
+      "ascension": 0,
+      "index": 8,
+      "status": "ready",
+      "run_id": "3fa344ed-1bc5-4e7e-ae8d-acef3b9fc937",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Regent",
+          "seed": "e120_20261001_b",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 4
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "claim_potion_reward",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "claim_potion_reward",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 3
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 4,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 5,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "claim_potion_reward",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 4
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "leave_room",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 5
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 5,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 6
+          }
+        }
+      ],
+      "steps": 65,
+      "entry_hash": "7cbacbe4b73fb6d7a5dc28d507392641d298a962f7f4cc7950282376293a863b",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 6
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 1,
+          "row": 6,
+          "type": "Elite"
+        },
+        "id": "a000"
+      },
+      "floor": 7,
+      "room_type": "Elite",
+      "hp": 41,
+      "max_hp": 75,
+      "potion_capacity": 3,
+      "enemies": [
+        "Bygone Effigy"
+      ],
+      "entry_potions": [],
+      "prefix_hash": "3c316dcb2dda5501797403fc418d6e4eefa8c25337cfc83690b289a7adba99e0",
+      "seconds": 2.85332633391954,
+      "wire.jsonl_sha256": "0e921ed0eebf5fb0c869198f04c4f439804fe0aee850daaacb6d3882be1d39c2",
+      "engine.stderr.log_sha256": "6d2eb722904c31cafdaa4b814a42874be9de8fd130b8e2d3c606d9b6bd05dee7",
+      "trace_path": "artifacts/runs/3fa344ed-1bc5-4e7e-ae8d-acef3b9fc937/decisions.jsonl",
+      "trace_sha256": "25585ff97f2cb00f2d29e9c1386fa3da81574eef70944db651129b789f4fb38e"
+    },
+    {
+      "case": "Necrobinder-b",
+      "character": "Necrobinder",
+      "seed": "e120_20261001_b",
+      "ascension": 0,
+      "index": 9,
+      "status": "ready",
+      "run_id": "fd3c3d95-7174-483e-b536-36e9fd813a14",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Necrobinder",
+          "seed": "e120_20261001_b",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 4
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "claim_potion_reward",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "claim_potion_reward",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 3
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "claim_potion_reward",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 4
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "leave_room",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 5
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 4,
+            "target_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "end_turn",
+          "args": {}
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 6
+          }
+        }
+      ],
+      "steps": 65,
+      "entry_hash": "d23a8005d5bd30f4990811f8f0d6367b4340f775fb247e96a8ece9d5bff87cfa",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 6
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 1,
+          "row": 6,
+          "type": "Elite"
+        },
+        "id": "a000"
+      },
+      "floor": 7,
+      "room_type": "Elite",
+      "hp": 47,
+      "max_hp": 66,
+      "potion_capacity": 3,
+      "enemies": [
+        "Bygone Effigy"
+      ],
+      "entry_potions": [],
+      "prefix_hash": "eb64fac70f09878aacedd6f040e9f3a22d2f313d1128fff2d24fc847ea4682de",
+      "seconds": 2.9041442091111094,
+      "wire.jsonl_sha256": "b1c9ecd1ded2d6b88830b3bd92b2290c4912075d3bd3d9633957f247a8671cb0",
+      "engine.stderr.log_sha256": "188f0e607982c28db33a082a16e4978233ce68933cbf930cecbc654663c8b23f",
+      "trace_path": "artifacts/runs/fd3c3d95-7174-483e-b536-36e9fd813a14/decisions.jsonl",
+      "trace_sha256": "02cb1f8b755dfa693b26d820a076d9e4489dbfc81bccd50b4fdbffee69a8f98a"
+    }
+  ],
+  "seconds": 16.904280625050887
+}

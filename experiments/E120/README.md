@@ -32,3 +32,16 @@ Promotion gate: all ten entries and selected plans valid; search must improve at
 ## Iteration log
 
 1. Initial implementation: actual per-action UCT expansion/backpropagation, root-balanced MC, full-engine rollout, terminal incumbent retention, independent selected-plan verification, immutable fixtures and raw-evidence hashing. Fresh-engine replay is intentionally retained; checkpoint optimization is a distinct follow-up experiment. Incomplete rollouts have no terminal utility; all defeats tie so early suicide is not preferred. Verification cost is reported separately from the search budget. The shared initial control is charged to both arms, but its path is not inserted as fabricated UCT samples.
+2. Implementation SHA `2d89786`: eight synthetic search tests and 15 existing teacher/macro/resource tests passed. Fixture command `python3 scripts/evaluate_battle_search_e120.py freeze --output experiments/E120/fixtures.json` produced 10/10 legitimate entries without errors or state edits. Both seeds' first elite is Bygone Effigy (floor 9 for seed a, floor 7 for seed b). Keep this prespecified bank; encounter diversity is consequently limited to one enemy type and cannot support broad combat-generalization claims. Full prefixes, dependency hashes, initial inventories and fixture trace hashes are in `fixtures.json`. Commit this bank before arm evaluation.
+
+## Commands
+
+```bash
+python3 -m unittest discover -s tests -p 'test_mcts.py' -v
+python3 scripts/evaluate_battle_search_e120.py freeze --output experiments/E120/fixtures.json
+# Commit frozen fixtures before comparison; output must not already exist.
+python3 scripts/evaluate_battle_search_e120.py run --output artifacts/runs/e120-v1.json
+python3 scripts/evaluate_battle_search_e120.py audit --output artifacts/runs/e120-v1.json
+```
+
+Historical engine: `dependencies.json` pins sts2-cli `084d1aa3d8e118ca7ce8d8774ad16d6be9c92367`, .NET SDK 9.0.318 and game v0.111.0. This experiment does not rebuild or modify the ignored engine checkout. Manifest DLL hashes establish the tested binaries. No paid model requests.
