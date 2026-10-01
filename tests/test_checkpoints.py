@@ -27,6 +27,18 @@ class CheckpointTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 wire_pairs(p)
 
+    def test_wire_pairs_keep_duplicate_commands_in_order(self):
+        with tempfile.TemporaryDirectory() as directory:
+            p = Path(directory) / 'wire.jsonl'
+            records = [{'kind': 'state', 'data': {'type': 'ready'}}]
+            for i in range(2):
+                records += [{'kind': 'command', 'data': {'cmd': 'action', 'action': 'end_turn'}},
+                            {'kind': 'state', 'data': {'round': i + 1}}]
+            p.write_text(''.join(json.dumps(r) + '\n' for r in records))
+            pairs = wire_pairs(p)
+            self.assertEqual(len(pairs), 2)
+            self.assertEqual([state['round'] for _, state in pairs], [1, 2])
+
 
 if __name__ == '__main__':
     unittest.main()
