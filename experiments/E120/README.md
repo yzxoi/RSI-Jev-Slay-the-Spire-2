@@ -1,6 +1,6 @@
 # E120: real-engine flat Monte Carlo versus UCT battle search
 
-Issue: [#230](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/230). Status: protocol frozen before fixture generation or game evaluation.
+Issue: [#230](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/230). PR: [#231](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/pull/231). Status: completed; opt-in measurement infrastructure selected for merge, **neither search policy promoted to the default controller**. The following protocol was frozen before fixture generation or game evaluation.
 
 ## Question and baseline
 
@@ -45,3 +45,55 @@ python3 scripts/evaluate_battle_search_e120.py audit --output artifacts/runs/e12
 ```
 
 Historical engine: `dependencies.json` pins sts2-cli `084d1aa3d8e118ca7ce8d8774ad16d6be9c92367`, .NET SDK 9.0.318 and game v0.111.0. This experiment does not rebuild or modify the ignored engine checkout. Manifest DLL hashes establish the tested binaries. No paid model requests.
+
+## Results — 2026-10-01
+
+Tested comparison SHA: **`311164bc1cf4165c624c92280514c2ec49aa52c4`**. Exact command: `python3 scripts/evaluate_battle_search_e120.py run --output artifacts/runs/e120-v1.json`. The ten-case batch completed in **1000.91 seconds** on the local Apple M3 Max, with two case workers. Every arm reached its 24-simulation limit; no wall-time caps, action caps, engine errors, replay-entry mismatches or selected-plan mismatches occurred. The runner made **zero model calls**; this does not measure the Codex development/review conversation's token cost.
+
+| Case | Control | Flat MC | UCT |
+| --- | ---: | ---: | ---: |
+| Ironclad a | clear, 31 HP | clear, 31 HP | clear, 31 HP |
+| Silent a | clear, 44 HP | clear, 44 HP | clear, 44 HP |
+| Defect a | clear, 39 HP | clear, 52 HP | clear, 52 HP |
+| Regent a | clear, 45 HP | clear, 45 HP | clear, 45 HP |
+| Necrobinder a | clear, 9 HP | clear, 9 HP | clear, 26 HP |
+| Ironclad b | defeat | defeat | defeat |
+| Silent b | clear, 40 HP | clear, 40 HP | clear, 40 HP |
+| Defect b | clear, 6 HP | clear, 6 HP | clear, 6 HP |
+| Regent b | defeat | **clear, 5 HP** | **clear, 6 HP** |
+| Necrobinder b | clear, 3 HP | clear, 8 HP | clear, 8 HP |
+
+These are **fixed battle-entry outcomes**, not full-run victories or an estimate of 80%/90% full-run win rate. All chosen plans ended with zero potions. Seed a supplied one Colorless Potion per character; seed b supplied none. Potion weights 0/4/8 therefore give identical final rankings on this bank, but this does not validate a general potion valuation scheme. Both search arms rescued Regent b; neither rescued Ironclad b.
+
+| Measurement | Control | Flat MC | UCT |
+| --- | ---: | ---: | ---: |
+| Selected battle plans clearing | 8/10 | 9/10 | 9/10 |
+| Strict resource-score gains over control | — | 3/10 | 4/10 |
+| Median paired resource-score gain | — | 0 | 0 |
+| Mean paired HP gain (defeat = 0 HP) | — | +2.3 | +4.1 |
+| Median charged search/rollout seconds | 3.91 | 93.55 | 93.19 |
+| Summed probe time spent restoring the prefix | — | 80.61% | 80.55% |
+| Maximum explicitly expanded tree depth | — | 1 | 2 in every case |
+
+The control time includes process startup, replay and battle execution; search times include the same control incumbent plus all probes, and exclude final independent verification. Root widths ranged from 6 to 11 actions. Every battle continuation still ran to a real engine boundary: tree depth 2 refers to UCT's explicit action selection before its rollout, **not** a two-action simulation horizon.
+
+At eight charged simulations, both search arms still cleared 8/10 entries and each had mean HP gain +1.3. At 24 they reached the table above. UCT beat flat in 2/10 selected plans and tied 8/10; median paired difference was zero. Algorithms had different fixed rollout RNG seeds and no repetitions across algorithm seeds. Thus the observed +1.8 mean HP advantage over flat is descriptive; it does not isolate the benefit of UCB allocation from sampling variability.
+
+### Trace findings and evidence boundary
+
+- **Defect a:** both search plans ended the battle on round 4 rather than control round 5, leaving 52 instead of 39 HP. Several actions differ, so this is evidence for the complete continuation, not a causal attribution of 13 HP to one card. Sources: control `9a735a73-8941-4c65-994b-878732734a6f`, flat best `252169d8-3afe-48dc-8a9c-c78fc3569f89`, UCT best `f1158d58-4668-4979-bff3-d6d769f5c405`.
+- **Necrobinder a:** UCT's best trajectory first played Defend, then Colorless Potion; its subsequent **random rollout** selected card index 2 (Salvo), whereas control selected index 0 (Nostalgia). It ended on round 5 instead of 6 and retained 17 more HP. The decisive alternative selection was outside the two explicitly expanded tree edges. This supports searching alternative continuations, not a claim that UCB itself understood this card interaction.
+- **Ironclad b:** every control/search continuation lost. All six root action means were zero in both arms. The current terminal utility gives no information distinguishing different failed trajectories. More informative failure evaluation is an untested follow-up, not a post-hoc change to this batch.
+- The search retained the certified control incumbent. Consequently, absence of regressions on this deterministic bank is partly a property of incumbent retention and verified replay; it is not independent evidence of broad strategic competence.
+
+There were **470 distinct control/search continuations** (10 control + 230 flat + 230 UCT), **30 independent selected-plan verifications**, and **10 fixture-generation runs**. Summing the per-arm probe counts gives 480 because the ten shared control incumbents are charged to both arms. Those are not independent seed samples. All 500 post-fixture continuations matched their frozen entry hash; all 30 verification paths and terminal states matched their source plans. An independent audit of all **510** local trace/wire/stderr triples passed. No selection-space truncation was exercised. This demonstrates observed reproducibility on this bank, not universal CLI correctness, coverage of the known chained-selector bug, or parity with current native multiplayer gameplay.
+
+Compact data: [`results.json`](results.json) and [`fixtures.json`](fixtures.json). The results file retains every probe's status, time, path hash and raw trace references, plus the complete original report's SHA-256. It omits only the duplicate fixture records, already committed separately. Raw evidence remains under ignored `artifacts/runs/`. Validation command: `python3 scripts/evaluate_battle_search_e120.py audit --output artifacts/runs/e120-v1.json`.
+
+### Decision and next work
+
+**Strength gate failed for both arms**: each had median paired gain zero rather than the required >=3. **UCT preference gate also failed**: its median paired advantage over flat was zero. Keep the default controller unchanged. Merge the opt-in search/evaluation infrastructure and complete positive/negative evidence because the correctness gate, fresh-plan verification and trace audit passed; do not advertise a generally stronger or faster agent.
+
+The main demonstrated engineering bottleneck is prefix restoration, consuming about four-fifths of probe time. A separately tested faithful checkpoint near room entry should precede much larger search budgets. After reducing that cost, replicate rollout RNG seeds and compare budgets before crediting UCB for an allocation advantage. Failure-value shaping and better generated-card rollouts are separate hypotheses; neither has been validated here. All ten cases involve one elite type at A0 in historical v0.111.0. Broader encounters, higher ascension, rewards/deck construction and full-run evaluation remain necessary.
+
+3. Results iteration: record the exact tested SHA, all ten cells, all caps/errors (none), matched budgets, timing, source hashes and decision above. This iteration changes evidence/documentation only; the tested search implementation is unchanged.

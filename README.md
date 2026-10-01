@@ -38,6 +38,8 @@
 
 [E118](experiments/E118/README.md)补上了 1/2/4/8 步、8 个新 seed 的浅层测量，并比较 Jev 与 DeepSeek、Qwen、Kimi 的低推理配置。Jev 主测 68/96；已返回的主测中 DeepSeek 为 58/59、Qwen 45/80、Kimi 83/84。后三者均因网络/限流退出而覆盖不全，这些分母不能直接当完整准确率排名；但 Kimi 已确定答对 83 道，已超过 Jev 全题库的 68 道。共 363 次实际请求，已报告 $0.9877，另保留 $0.8006 未确认费用上限。原始失败、续跑规则和 trace 哈希均可审查；还不能据此估计模型内部规划深度。独立推理 benchmark 只需 Python 和 OpenRouter，不依赖游戏。
 
+[E120](experiments/E120/README.md)实现了零模型调用的真实引擎动作树搜索，对比均匀蒙特卡洛与 UCT。两个新 seed、五角色的十个固定 A0 精英入口，原规划器胜 8 个，两种搜索各胜 9 个；均匀搜索改善 3 个入口，UCT 改善 4 个。30 次所选方案独立重放一致，510 份轨迹审计通过。但每场搜索中位耗时约 93 秒，约 81% 用于恢复历史，UCT 显式展开仅两层，且未达到预设的整体提升门槛。保留可选实验工具，未替换默认控制器。这是同一种精英的战斗入口测试，不是整局胜率或高进阶泛化证据。
+
 需要本地合法安装的游戏，以及 `dependencies.json` 固定的 headless 依赖和 .NET SDK。原生实战另需已运行的 [STS2-Agent MCP](https://github.com/CharTyr/STS2-Agent)。脚本会从本地游戏安装读取专有文件；仓库不包含游戏二进制。Jev 调用使用环境变量 `OPENROUTER_RSI_JEV_KEY`，也可放在被 Git 忽略的 `.env` 中；不要提交或打印密钥。
 
 当前 CLI 补丁针对历史 **v0.111.0**。本机 Steam DLL 已更新，直接自动读取新版会出现接口编译错误；当前版本适配由 [E094 / #182](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/182)跟踪。复现历史实验时先将 `STS2_GAME_DIR` 指向已核对哈希的旧版原始 DLL 本地目录，再运行构建；具体哈希见[版本说明](docs/cli-resources.md#版本限制)。
