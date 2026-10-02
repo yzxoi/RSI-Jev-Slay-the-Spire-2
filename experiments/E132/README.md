@@ -2,7 +2,7 @@
 
 Issue: https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/248
 
-Status: preregistered; no game evaluation yet.
+Status: bank and reference paths frozen; independent restore verification next.
 
 ## Question and hypothesis
 
@@ -26,7 +26,7 @@ Use a 10-minute batch work budget excluding implementation/analysis; stop launch
 
 ## Iteration 1 — natural bank freeze
 
-Preparation used clean SHA `63c45db` with the pinned v0.111.0 engine. All six fixed configurations reached genuine Elite entries; no seed replacement or state editing. The freeze batch took 16.563 s; all six raw bundles passed the hash audit. Eight existing checkpoint/restore unit tests passed. The first unittest invocation used package-style names even though `tests` is not a package; it failed discovery before any gameplay, then discovery mode passed.
+Preparation used clean SHA `63c45db2002359e4b81cea9a5ef152e922471baa` with the pinned v0.111.0 engine. Five of six fixed configurations reached genuine Elite entries; `Ironclad-b-A0` instead reached a Boss under the fixed preparation policy and is excluded from elite validation, with its complete preparation retained. No seed replacement or state editing. The previous prose incorrectly equated all six `ready` statuses with Elite; this correction follows inspection of `room_type`. The machine-readable completeness gate already correctly failed. The freeze batch took 16.563 s; all six raw bundles passed the hash audit. Eight existing checkpoint/restore unit tests passed. The first unittest invocation used package-style names even though `tests` is not a package; it failed discovery before any gameplay, then discovery mode passed.
 
 ```sh
 python3 -m unittest discover -s tests -p 'test_checkpoints.py'
@@ -35,3 +35,15 @@ python3 scripts/validate_elite_bank_e132.py freeze --output experiments/E132/fix
 ```
 
 The bank is frozen before capture; failures in the next stages remain evidence.
+
+## Iteration 1 — frozen reference continuations
+
+Capture SHA `001d7db4694cc3a0100f34df46edb1244187b4d7`. All five eligible entries matched full-prefix, save-call and loaded-map/entry paths, with original seed/ascension verified in the native files. All are Phrog Parasite, floor 9; this is not broad enemy coverage.
+
+Ten reference paths are complete: four victories extended through rewards to the next combat second-turn opening; six legitimate deaths. Each entry has two distinct legal-policy trajectories. In case order A0-a/A5-a/A5-b/A10-a/A10-b, control remaining HP is 20/24/0/0/0 and epsilon15 HP is 24/19/0/0/0. This is a fidelity fixture, not a strength comparison or ten independent seeds. Capture took 92.472 s, cumulative batch time 109.035 s; all 41 preparation/capture bundles audited.
+
+```sh
+python3 scripts/validate_elite_bank_e132.py capture --output experiments/E132/references-v1.json
+```
+
+Before independent verification, corrected the exported index scope to count eligible entries rather than claim six cases. No game-policy, fixed inputs or gates changed. The completeness gate stays failed (5/6).

@@ -1,0 +1,4068 @@
+{
+  "manifest": {
+    "schema_version": 1,
+    "code_commit": "001d7db4694cc3a0100f34df46edb1244187b4d7",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "71505f31e29c370667636600a58fe2b3e270f98e99e3c5a384d176a7f0188274",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+      "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4",
+    "experiment": "E132",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.5",
+    "model_calls": 0,
+    "model_cost_usd": 0
+  },
+  "configs": [
+    {
+      "case": "Ironclad-a-A0",
+      "character": "Ironclad",
+      "seed": "e132_20261002_a",
+      "ascension": 0,
+      "index": 0
+    },
+    {
+      "case": "Ironclad-b-A0",
+      "character": "Ironclad",
+      "seed": "e132_20261002_b",
+      "ascension": 0,
+      "index": 1
+    },
+    {
+      "case": "Ironclad-a-A5",
+      "character": "Ironclad",
+      "seed": "e132_20261002_a",
+      "ascension": 5,
+      "index": 2
+    },
+    {
+      "case": "Ironclad-b-A5",
+      "character": "Ironclad",
+      "seed": "e132_20261002_b",
+      "ascension": 5,
+      "index": 3
+    },
+    {
+      "case": "Ironclad-a-A10",
+      "character": "Ironclad",
+      "seed": "e132_20261002_a",
+      "ascension": 10,
+      "index": 4
+    },
+    {
+      "case": "Ironclad-b-A10",
+      "character": "Ironclad",
+      "seed": "e132_20261002_b",
+      "ascension": 10,
+      "index": 5
+    }
+  ],
+  "mode": "capture",
+  "sources": {
+    "fixtures": {
+      "path": "experiments/E132/fixtures-v1.json",
+      "sha256": "97461a8f62c42a9455465caabbb9af604e10e3514951f114f7fc84a02255c1fb"
+    }
+  },
+  "availability": [
+    {
+      "case": "Ironclad-a-A0",
+      "status": "ready",
+      "room_type": "Elite"
+    },
+    {
+      "case": "Ironclad-b-A0",
+      "status": "ready",
+      "room_type": "Boss"
+    },
+    {
+      "case": "Ironclad-a-A5",
+      "status": "ready",
+      "room_type": "Elite"
+    },
+    {
+      "case": "Ironclad-b-A5",
+      "status": "ready",
+      "room_type": "Elite"
+    },
+    {
+      "case": "Ironclad-a-A10",
+      "status": "ready",
+      "room_type": "Elite"
+    },
+    {
+      "case": "Ironclad-b-A10",
+      "status": "ready",
+      "room_type": "Elite"
+    }
+  ],
+  "results": [
+    {
+      "case": "Ironclad-a-A0",
+      "preflight": [
+        {
+          "mode": "A",
+          "case": "Ironclad-a-A0",
+          "run_id": "0a7bdef2-bdf6-4aec-a0df-afcae2d9eabe",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 4.377268124837428,
+          "map_hash": "b34f1dd01661fd8fcbde3d379745efc2cd0511573e3b04644766df5811090f89",
+          "entry_hash": "0a45cd3f30d7f9099aeabc3f8a687bd4675aa6fc8b79a0aa8f0d79bd7de83d71",
+          "seconds": 4.3862929998431355,
+          "wire.jsonl_sha256": "f4ac6f8dfca18e83fe2a20ee84ba18c3231276c8e1bc0a4a6b7f8adf64b14d72",
+          "engine.stderr.log_sha256": "18cbcaef8e3a98847386bedb7511c1d87d7df30ece44f7efbae41eb0a7019d47",
+          "trace_path": "artifacts/runs/0a7bdef2-bdf6-4aec-a0df-afcae2d9eabe/decisions.jsonl",
+          "trace_sha256": "c30835893127f462bd593d807e2cd16f5e86d6cdb7dee6f7cda798f286156848"
+        },
+        {
+          "mode": "B",
+          "case": "Ironclad-a-A0",
+          "run_id": "8b9df66d-78c2-46f8-b36d-772ee411d5c4",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 4.055500166956335,
+          "map_hash": "b34f1dd01661fd8fcbde3d379745efc2cd0511573e3b04644766df5811090f89",
+          "save_seconds": 0.08263033395633101,
+          "checkpoint": {
+            "path": "artifacts/runs/8b9df66d-78c2-46f8-b36d-772ee411d5c4/map-checkpoint.json",
+            "sha256": "90dc392b3d266bbf2a9bd20212d1b38bc2e25ee34381d9f42e8540b0d2d25680"
+          },
+          "entry_hash": "0a45cd3f30d7f9099aeabc3f8a687bd4675aa6fc8b79a0aa8f0d79bd7de83d71",
+          "seconds": 4.0653592080343515,
+          "wire.jsonl_sha256": "0c8f4036de1820a4751fece2a6b744d76494495cd62547a709eb0f5e8cb03111",
+          "engine.stderr.log_sha256": "5b42b7fa598496ca650b2462125f29e126108eb094e329e98c0aae5d588d6cb0",
+          "trace_path": "artifacts/runs/8b9df66d-78c2-46f8-b36d-772ee411d5c4/decisions.jsonl",
+          "trace_sha256": "183d85a957278165ebc9e01c1d9a9d92ae75e6fac666af6c2a8bb119e2946bae"
+        },
+        {
+          "mode": "C",
+          "case": "Ironclad-a-A0",
+          "run_id": "a46aeb16-64a0-4e86-a024-59855a8c1a85",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 1.0666345420759171,
+          "map_hash": "b34f1dd01661fd8fcbde3d379745efc2cd0511573e3b04644766df5811090f89",
+          "entry_hash": "0a45cd3f30d7f9099aeabc3f8a687bd4675aa6fc8b79a0aa8f0d79bd7de83d71",
+          "seconds": 1.075938916997984,
+          "wire.jsonl_sha256": "3915f6735d23904f9abc61e6e920025c03d18bf6abcfbe9540cfe74c05fd9a80",
+          "engine.stderr.log_sha256": "8f0a65aaae7cb44a9ba9cca1706ab90f46dc37965fe4f43d6bf1aa146b57c0aa",
+          "trace_path": "artifacts/runs/a46aeb16-64a0-4e86-a024-59855a8c1a85/decisions.jsonl",
+          "trace_sha256": "2a2c31e0a95f773139e88ba6b405fa223e7e02da971da81fa288fc5ef9f8fdcb"
+        }
+      ],
+      "native_identity_match": true,
+      "checkpoint": {
+        "path": "artifacts/runs/8b9df66d-78c2-46f8-b36d-772ee411d5c4/map-checkpoint.json",
+        "sha256": "90dc392b3d266bbf2a9bd20212d1b38bc2e25ee34381d9f42e8540b0d2d25680"
+      },
+      "references": [
+        {
+          "case": "Ironclad-a-A0",
+          "label": "control",
+          "status": "match",
+          "battle": {
+            "label": "control",
+            "run_id": "cd5b1fa0-4d05-4b42-a0ca-4d4428e11d04",
+            "status": "clear",
+            "steps": 20,
+            "entry_verified": true,
+            "replay_seconds": 3.8802352498751134,
+            "replay_commands": 103,
+            "sources": {
+              "control": 20
+            },
+            "selection_truncations": 0,
+            "last_combat_round": 6,
+            "restore_mode": "full_prefix",
+            "hp": 20,
+            "max_hp": 80,
+            "potions": [],
+            "final_hash": "d5be944861b7ee9704c07f75deee456779edfa18054f0e3618de0bf0a06f90d3",
+            "path_hash": "79622e7afe08f3bda283ba81016752aba482e0ae4812b0cab1b7ed6e2f4d5bdf",
+            "transition_hash": "b1ed3ed4c8ac1edec46d4423c7b7e778cf60798efc5bdd9768a7babc7f008379",
+            "seconds": 4.498547582887113,
+            "wire.jsonl_sha256": "7390050345392043ec1c5e374382673294b5b2f797f725a727ed45cd3521ea2c",
+            "engine.stderr.log_sha256": "d9ea0422eba62d8fb5f939d7bd6a8c6ba8e2da8d9b1524ee01b04d445924ef5b",
+            "trace_path": "artifacts/runs/cd5b1fa0-4d05-4b42-a0ca-4d4428e11d04/decisions.jsonl",
+            "trace_sha256": "19911324eec2dab86ffc8eadede5339b7c25a559d392387c9cce27dc41a27fd0"
+          },
+          "continuation": {
+            "case": "Ironclad-a-A0",
+            "label": "control",
+            "mode": "A",
+            "run_id": "648c09b0-1d7c-4727-9be3-cd7bdc218075",
+            "status": "match",
+            "steps_checked": 20,
+            "extension_steps": 7,
+            "steps": [
+              {
+                "before": "0a45cd3f30d7f9099aeabc3f8a687bd4675aa6fc8b79a0aa8f0d79bd7de83d71",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 6
+                  }
+                },
+                "after": "077cb263ca617aa019204b6cba8ead36a5b3c83a0d5d16418db09732281284e3"
+              },
+              {
+                "before": "077cb263ca617aa019204b6cba8ead36a5b3c83a0d5d16418db09732281284e3",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0,
+                    "target_index": 0
+                  }
+                },
+                "after": "9fba11d00b98bc3353a559114da3168058f0af594e5b3ac2b5ee3c3210d15f8d"
+              },
+              {
+                "before": "9fba11d00b98bc3353a559114da3168058f0af594e5b3ac2b5ee3c3210d15f8d",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "9eafc0a386257b4113dd0c7399b578889d85577c02b83d4be4660e0a89e15840"
+              },
+              {
+                "before": "9eafc0a386257b4113dd0c7399b578889d85577c02b83d4be4660e0a89e15840",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 4
+                  }
+                },
+                "after": "ca6c2cce493d94f8bf06efaca472ff88e0499425318298ff801fe1106c9e47f8"
+              },
+              {
+                "before": "ca6c2cce493d94f8bf06efaca472ff88e0499425318298ff801fe1106c9e47f8",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1,
+                    "target_index": 0
+                  }
+                },
+                "after": "564229d9414ce7de753adfd221349d8cd3827f55618fd3f05925bfe258aa55a0"
+              },
+              {
+                "before": "564229d9414ce7de753adfd221349d8cd3827f55618fd3f05925bfe258aa55a0",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0,
+                    "target_index": 0
+                  }
+                },
+                "after": "5e4be164caca4879b6db643ffc353e4cc795658937ed06d88e61c7c0f7ea129f"
+              },
+              {
+                "before": "5e4be164caca4879b6db643ffc353e4cc795658937ed06d88e61c7c0f7ea129f",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "7d9be9c8affd35c03585e4f81888c5d90a588ec7ed30f1dda9afdff3c7dfad58"
+              },
+              {
+                "before": "7d9be9c8affd35c03585e4f81888c5d90a588ec7ed30f1dda9afdff3c7dfad58",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 3,
+                    "target_index": 0
+                  }
+                },
+                "after": "f268e1abdd98463076eec3aa07e2af432b11a5592e02bd7ce9f3c8c88a9e02b0"
+              },
+              {
+                "before": "f268e1abdd98463076eec3aa07e2af432b11a5592e02bd7ce9f3c8c88a9e02b0",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "842552487fe24a62ca6a548e8ba0a7980aba695d30a2a53917f2fe8ab943476f"
+              },
+              {
+                "before": "842552487fe24a62ca6a548e8ba0a7980aba695d30a2a53917f2fe8ab943476f",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 4,
+                    "target_index": 0
+                  }
+                },
+                "after": "9367c75e89b1c0192dd31ff8de24a8d09316a5a3988550c759a41f90e37ea781"
+              },
+              {
+                "before": "9367c75e89b1c0192dd31ff8de24a8d09316a5a3988550c759a41f90e37ea781",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1
+                  }
+                },
+                "after": "48c52ce39a5895d98d0bc41dd9b1585ff4d9d5e20eeefa5af462eebb1d61929d"
+              },
+              {
+                "before": "48c52ce39a5895d98d0bc41dd9b1585ff4d9d5e20eeefa5af462eebb1d61929d",
+                "action": {
+                  "cmd": "action",
+                  "action": "select_cards",
+                  "args": {
+                    "indices": "0"
+                  }
+                },
+                "after": "7b7aebed3b8142cb0ceef670731ab08382382ae4386a8d44aa4a0d026c029340"
+              },
+              {
+                "before": "7b7aebed3b8142cb0ceef670731ab08382382ae4386a8d44aa4a0d026c029340",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1
+                  }
+                },
+                "after": "227992e1ff216357249cc13e29b9b624d00226ba25879acf92867ab384561f6a"
+              },
+              {
+                "before": "227992e1ff216357249cc13e29b9b624d00226ba25879acf92867ab384561f6a",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "6c46daf3bb16f05ff9bb5befd7098f949c7320e4c7f53e2dcbe69f122130143b"
+              },
+              {
+                "before": "6c46daf3bb16f05ff9bb5befd7098f949c7320e4c7f53e2dcbe69f122130143b",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0,
+                    "target_index": 3
+                  }
+                },
+                "after": "acd537645b0af0cde9433d7e04254fba0a7f51b9539a656b6672b3cbb868b7eb"
+              },
+              {
+                "before": "acd537645b0af0cde9433d7e04254fba0a7f51b9539a656b6672b3cbb868b7eb",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 2,
+                    "target_index": 1
+                  }
+                },
+                "after": "abf946ee9ec89e886e35fccc0d76cae5ed33b5e7a660108ddbcff61d02b16df0"
+              },
+              {
+                "before": "abf946ee9ec89e886e35fccc0d76cae5ed33b5e7a660108ddbcff61d02b16df0",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 2
+                  }
+                },
+                "after": "54e4c04cea7d47c86d9ff93070513ec9fc75cc893d6432d77098d15f95dc4733"
+              },
+              {
+                "before": "54e4c04cea7d47c86d9ff93070513ec9fc75cc893d6432d77098d15f95dc4733",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "11349449c7e5546307d8e48498944a831ba5cf9403503c0791d93e2cd8f97068"
+              },
+              {
+                "before": "11349449c7e5546307d8e48498944a831ba5cf9403503c0791d93e2cd8f97068",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1,
+                    "target_index": 1
+                  }
+                },
+                "after": "5542e26a4db0e99e8f96555c8637f38461605a7a8ab1d8a1101a91043e36fc0d"
+              },
+              {
+                "before": "5542e26a4db0e99e8f96555c8637f38461605a7a8ab1d8a1101a91043e36fc0d",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0,
+                    "target_index": 0
+                  }
+                },
+                "after": "d5be944861b7ee9704c07f75deee456779edfa18054f0e3618de0bf0a06f90d3"
+              },
+              {
+                "before": "d5be944861b7ee9704c07f75deee456779edfa18054f0e3618de0bf0a06f90d3",
+                "action": {
+                  "cmd": "action",
+                  "action": "select_card_reward",
+                  "args": {
+                    "card_index": 0
+                  }
+                },
+                "after": "dbf57110a3b3a60d360836620f39a25faa5c36f1c4081cc5a1ef70cf4137c5cf"
+              },
+              {
+                "before": "dbf57110a3b3a60d360836620f39a25faa5c36f1c4081cc5a1ef70cf4137c5cf",
+                "action": {
+                  "cmd": "action",
+                  "action": "select_map_node",
+                  "args": {
+                    "col": 0,
+                    "row": 9
+                  }
+                },
+                "after": "326fd7fbaf7458410c0939a005e2241bb2f807b1d07814a815e87fbc37344f71"
+              },
+              {
+                "before": "326fd7fbaf7458410c0939a005e2241bb2f807b1d07814a815e87fbc37344f71",
+                "action": {
+                  "cmd": "action",
+                  "action": "select_map_node",
+                  "args": {
+                    "col": 0,
+                    "row": 10
+                  }
+                },
+                "after": "1b414f975f127373b783f7bc53758f1a06558a7a145e909aeaac735fb95ab545"
+              },
+              {
+                "before": "1b414f975f127373b783f7bc53758f1a06558a7a145e909aeaac735fb95ab545",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0
+                  }
+                },
+                "after": "4d909076d0b65aaf820c65fa16d1a4396b8e5c105863d8713b431f89cb260e4e"
+              },
+              {
+                "before": "4d909076d0b65aaf820c65fa16d1a4396b8e5c105863d8713b431f89cb260e4e",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0,
+                    "target_index": 1
+                  }
+                },
+                "after": "28f302f2b5953114682c40c0f6732b3eebf7604531e894dfe8e7659a62ec3d49"
+              },
+              {
+                "before": "28f302f2b5953114682c40c0f6732b3eebf7604531e894dfe8e7659a62ec3d49",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0,
+                    "target_index": 1
+                  }
+                },
+                "after": "fccc87614e9dfaa95e6e2c02cc9c68bf4998139a4171c33a8575d76e8e31b5e0"
+              },
+              {
+                "before": "fccc87614e9dfaa95e6e2c02cc9c68bf4998139a4171c33a8575d76e8e31b5e0",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "414ff85b04c12ba29d18b9c0b1880c6aee1768dac581dbe528368886f2eb6475"
+              }
+            ],
+            "restore_seconds": 3.9914284581318498,
+            "map_match": true,
+            "entry_match": true,
+            "battle_status": "clear",
+            "stop_reason": "next_combat_second_turn",
+            "final_hash": "414ff85b04c12ba29d18b9c0b1880c6aee1768dac581dbe528368886f2eb6475",
+            "final_decision": "combat_play",
+            "final_context": {
+              "act": 1,
+              "act_name": "Overgrowth",
+              "floor": 11,
+              "room_type": "Monster",
+              "boss": {
+                "id": "VANTOM_BOSS",
+                "name": "Vantom"
+              }
+            },
+            "path_hash": "2dc731bc2c90c3445c6fcf43dfe8ac9ef3f4a2fed9ddf4b21008cb7bd32f97f2",
+            "seconds": 4.791449832962826,
+            "wire.jsonl_sha256": "47a41f6617ee69dbc2a6b7473f38825d602081906f1ef7aa9b4c217b22164176",
+            "engine.stderr.log_sha256": "41b365865b3ce8ebc701425b25565fe4ad8d00060b18509325e230cf46b31398",
+            "trace_path": "artifacts/runs/648c09b0-1d7c-4727-9be3-cd7bdc218075/decisions.jsonl",
+            "trace_sha256": "45e7aef0d5e668c72ccfcb5ec89ddfa426357d31ff2497e4371fa8bf33d6bbfc"
+          }
+        },
+        {
+          "case": "Ironclad-a-A0",
+          "label": "epsilon15",
+          "status": "match",
+          "battle": {
+            "label": "epsilon15",
+            "run_id": "6b4be054-3238-4abe-90cd-a7785d373f9c",
+            "status": "clear",
+            "steps": 23,
+            "entry_verified": true,
+            "replay_seconds": 3.9314969170372933,
+            "replay_commands": 103,
+            "sources": {
+              "control": 18,
+              "epsilon15": 5
+            },
+            "selection_truncations": 0,
+            "last_combat_round": 7,
+            "restore_mode": "full_prefix",
+            "hp": 24,
+            "max_hp": 80,
+            "potions": [],
+            "final_hash": "8b5ff02e7cf9bee14d2c7388f3425a309fa113982ab6c0cafea0239eaa6ccc91",
+            "path_hash": "83e4ba6dd212c98d67fda807e737c21d09c0c2eda0f5ae90275e81dc7cd3bbfd",
+            "transition_hash": "e0c5ec4e59dc401d01361334e0a759220772b16575c3be08eb80c487942f6117",
+            "seconds": 4.651537874946371,
+            "wire.jsonl_sha256": "8af4c44a16ecd5b8e3ab6c788320af3893a947cea971528a6d88db8112e2f9c6",
+            "engine.stderr.log_sha256": "d8c109a9909be7277e416a33ed15ca0787b45dfc50f654371546052c3358533e",
+            "trace_path": "artifacts/runs/6b4be054-3238-4abe-90cd-a7785d373f9c/decisions.jsonl",
+            "trace_sha256": "1a00908e16d9e55986b8d9f480a551c0aafe374d493e8f8075ef13b38c12a282"
+          },
+          "continuation": {
+            "case": "Ironclad-a-A0",
+            "label": "epsilon15",
+            "mode": "A",
+            "run_id": "1600e79d-6e84-4ae9-beaa-165fbcfd3cb6",
+            "status": "match",
+            "steps_checked": 23,
+            "extension_steps": 7,
+            "steps": [
+              {
+                "before": "0a45cd3f30d7f9099aeabc3f8a687bd4675aa6fc8b79a0aa8f0d79bd7de83d71",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 6
+                  }
+                },
+                "after": "077cb263ca617aa019204b6cba8ead36a5b3c83a0d5d16418db09732281284e3"
+              },
+              {
+                "before": "077cb263ca617aa019204b6cba8ead36a5b3c83a0d5d16418db09732281284e3",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 5
+                  }
+                },
+                "after": "3d9dea0d06e1b975458f7b75bd585448b5b759b4fa7970f58bae93eeb5366bd6"
+              },
+              {
+                "before": "3d9dea0d06e1b975458f7b75bd585448b5b759b4fa7970f58bae93eeb5366bd6",
+                "action": {
+                  "cmd": "action",
+                  "action": "select_cards",
+                  "args": {
+                    "indices": "0"
+                  }
+                },
+                "after": "f89f5fc285950a89190bca434c37b825f061a3b26eef6a5174af680cb9b6f6a9"
+              },
+              {
+                "before": "f89f5fc285950a89190bca434c37b825f061a3b26eef6a5174af680cb9b6f6a9",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "a932e2d51a56f04081eafdcdbae979a2ab292b392b2d293c24218fd16b0283bc"
+              },
+              {
+                "before": "a932e2d51a56f04081eafdcdbae979a2ab292b392b2d293c24218fd16b0283bc",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 4
+                  }
+                },
+                "after": "4dc7b397d29aa6869f57b34a0cc84fc471d7720ebedb05a3d87a695a41ebcb6e"
+              },
+              {
+                "before": "4dc7b397d29aa6869f57b34a0cc84fc471d7720ebedb05a3d87a695a41ebcb6e",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1,
+                    "target_index": 0
+                  }
+                },
+                "after": "bf6158134f50f7cc572ffeaaa83d2e8ff86c6ac193c0cd66bdb3e251b71a25c3"
+              },
+              {
+                "before": "bf6158134f50f7cc572ffeaaa83d2e8ff86c6ac193c0cd66bdb3e251b71a25c3",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0,
+                    "target_index": 0
+                  }
+                },
+                "after": "99e634e003820a2f3c58a9bff05a77b9786b7335b35f2c4b622f32cb4772ea82"
+              },
+              {
+                "before": "99e634e003820a2f3c58a9bff05a77b9786b7335b35f2c4b622f32cb4772ea82",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "059e41102e1cb31f87f8be5b33c561455a49161e2657b1df71af0c7d472d45fa"
+              },
+              {
+                "before": "059e41102e1cb31f87f8be5b33c561455a49161e2657b1df71af0c7d472d45fa",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 3,
+                    "target_index": 0
+                  }
+                },
+                "after": "5d59960b78c415247e44e53d781fe96aa47b08a68fc9678426d70890093c23f8"
+              },
+              {
+                "before": "5d59960b78c415247e44e53d781fe96aa47b08a68fc9678426d70890093c23f8",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1
+                  }
+                },
+                "after": "c03e2b8b40c170429c00857d54b13f0e872af9c362fde812126473d2151eab96"
+              },
+              {
+                "before": "c03e2b8b40c170429c00857d54b13f0e872af9c362fde812126473d2151eab96",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "98ea37ded61bb95638e2432a6522fdf64119e4c922b3c8bd4df54de91fbf0870"
+              },
+              {
+                "before": "98ea37ded61bb95638e2432a6522fdf64119e4c922b3c8bd4df54de91fbf0870",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 2
+                  }
+                },
+                "after": "b8cee2548eb9f8fb56cc58512f5a6ca6e25d3f2f6622356d671a9dabc63cc614"
+              },
+              {
+                "before": "b8cee2548eb9f8fb56cc58512f5a6ca6e25d3f2f6622356d671a9dabc63cc614",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 3,
+                    "target_index": 0
+                  }
+                },
+                "after": "1420f523f490c01346037963e99d11b503a8de49bc3972c3fb8b7e0cde08e3ae"
+              },
+              {
+                "before": "1420f523f490c01346037963e99d11b503a8de49bc3972c3fb8b7e0cde08e3ae",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 2
+                  }
+                },
+                "after": "dfe8468c41e8813752825c93403fc7b4aa6ccb2ceaff8724b72847a7137893f6"
+              },
+              {
+                "before": "dfe8468c41e8813752825c93403fc7b4aa6ccb2ceaff8724b72847a7137893f6",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1
+                  }
+                },
+                "after": "2eb61b11e1b83c64e122ff00a7368e5c9b5aef6b8e8b23f88d9b8376c0aa47a2"
+              },
+              {
+                "before": "2eb61b11e1b83c64e122ff00a7368e5c9b5aef6b8e8b23f88d9b8376c0aa47a2",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "0d40de7e4804450aa55d59722b44455710e28342d09758f7bc85e1ee3c3256f6"
+              },
+              {
+                "before": "0d40de7e4804450aa55d59722b44455710e28342d09758f7bc85e1ee3c3256f6",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0,
+                    "target_index": 0
+                  }
+                },
+                "after": "e830584be0fba403e7fbf1282845731eb770b5f7af2ffbc028415edb0881753d"
+              },
+              {
+                "before": "e830584be0fba403e7fbf1282845731eb770b5f7af2ffbc028415edb0881753d",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 2,
+                    "target_index": 3
+                  }
+                },
+                "after": "434d8dcab6c8f57e1a5e1c67d50622abcab86a98ef59f3b18a24d25585cd5450"
+              },
+              {
+                "before": "434d8dcab6c8f57e1a5e1c67d50622abcab86a98ef59f3b18a24d25585cd5450",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "547d25267fa67e0f381b00439c3d11b96f3d458705cf0972da93d41454dd02e2"
+              },
+              {
+                "before": "547d25267fa67e0f381b00439c3d11b96f3d458705cf0972da93d41454dd02e2",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0,
+                    "target_index": 0
+                  }
+                },
+                "after": "791ea93b534383eb3648c4e58537c4188647784967b8b2226477ff187e9d2bc6"
+              },
+              {
+                "before": "791ea93b534383eb3648c4e58537c4188647784967b8b2226477ff187e9d2bc6",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0,
+                    "target_index": 1
+                  }
+                },
+                "after": "f3e0541317771f27b80690122d6a75d742b3111a67d0a2de414ae6371409e05a"
+              },
+              {
+                "before": "f3e0541317771f27b80690122d6a75d742b3111a67d0a2de414ae6371409e05a",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "32ba115f407678cb3be01447750e09cb96280f902b3707ff271e28c9fe30065f"
+              },
+              {
+                "before": "32ba115f407678cb3be01447750e09cb96280f902b3707ff271e28c9fe30065f",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1,
+                    "target_index": 0
+                  }
+                },
+                "after": "8b5ff02e7cf9bee14d2c7388f3425a309fa113982ab6c0cafea0239eaa6ccc91"
+              },
+              {
+                "before": "8b5ff02e7cf9bee14d2c7388f3425a309fa113982ab6c0cafea0239eaa6ccc91",
+                "action": {
+                  "cmd": "action",
+                  "action": "select_card_reward",
+                  "args": {
+                    "card_index": 0
+                  }
+                },
+                "after": "d28a6b887b74a998c2f48291bbf90aeb0109de1a80b7d33fc07a8b6d9413cbe9"
+              },
+              {
+                "before": "d28a6b887b74a998c2f48291bbf90aeb0109de1a80b7d33fc07a8b6d9413cbe9",
+                "action": {
+                  "cmd": "action",
+                  "action": "select_map_node",
+                  "args": {
+                    "col": 0,
+                    "row": 9
+                  }
+                },
+                "after": "2f76c40454cc944a7fbcffc1e3045ccd92dc1883ddd31e480a9a7f20d9666e58"
+              },
+              {
+                "before": "2f76c40454cc944a7fbcffc1e3045ccd92dc1883ddd31e480a9a7f20d9666e58",
+                "action": {
+                  "cmd": "action",
+                  "action": "select_map_node",
+                  "args": {
+                    "col": 0,
+                    "row": 10
+                  }
+                },
+                "after": "cef26b46c13131860a0cbe2b4b32c02e9318481a02511b438e400f57e2f56471"
+              },
+              {
+                "before": "cef26b46c13131860a0cbe2b4b32c02e9318481a02511b438e400f57e2f56471",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0
+                  }
+                },
+                "after": "6136fb504dc657a423f925091262b5432f4614ae5a961b6bbdc38308576e3df1"
+              },
+              {
+                "before": "6136fb504dc657a423f925091262b5432f4614ae5a961b6bbdc38308576e3df1",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0,
+                    "target_index": 1
+                  }
+                },
+                "after": "7b5a317a56dedcfb1f6ac27d55051e81872f5b9686a242509965a8b4bb76c19a"
+              },
+              {
+                "before": "7b5a317a56dedcfb1f6ac27d55051e81872f5b9686a242509965a8b4bb76c19a",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0,
+                    "target_index": 1
+                  }
+                },
+                "after": "2d64be5f5709d4e7ac348c2535f9b40364aa9ce935e045a80276ef2dea6919c1"
+              },
+              {
+                "before": "2d64be5f5709d4e7ac348c2535f9b40364aa9ce935e045a80276ef2dea6919c1",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "2e761b59fea0ea2e2983ac26042d00695873621978862341033272f95d5f8330"
+              }
+            ],
+            "restore_seconds": 3.9088925840333104,
+            "map_match": true,
+            "entry_match": true,
+            "battle_status": "clear",
+            "stop_reason": "next_combat_second_turn",
+            "final_hash": "2e761b59fea0ea2e2983ac26042d00695873621978862341033272f95d5f8330",
+            "final_decision": "combat_play",
+            "final_context": {
+              "act": 1,
+              "act_name": "Overgrowth",
+              "floor": 11,
+              "room_type": "Monster",
+              "boss": {
+                "id": "VANTOM_BOSS",
+                "name": "Vantom"
+              }
+            },
+            "path_hash": "588a01e47eb568f08e882a1bd9fcf983279aa33d672f914012562ba7ee92e845",
+            "seconds": 4.799077916890383,
+            "wire.jsonl_sha256": "25937c9791fa9b286f51ee94f48ae24d360600d750d4f25c4939fc9e9fe85ed1",
+            "engine.stderr.log_sha256": "804893e39be70bdbad0dad6cedc1675a3e1ea782c3a5e12f83247282c75e0205",
+            "trace_path": "artifacts/runs/1600e79d-6e84-4ae9-beaa-165fbcfd3cb6/decisions.jsonl",
+            "trace_sha256": "5cd687922b539ae0073741107a043b122f73e9d7f69f9e9b8efb9283b4614cc6"
+          }
+        }
+      ],
+      "status": "match"
+    },
+    {
+      "case": "Ironclad-a-A5",
+      "preflight": [
+        {
+          "mode": "A",
+          "case": "Ironclad-a-A5",
+          "run_id": "c2cb0b3b-904f-4909-9473-d70f985fb778",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 3.9299071670975536,
+          "map_hash": "5b1ccb220fc4eb9f19ddb8465ac106868fe0346372eb6f5b177bc6f9729ac96c",
+          "entry_hash": "ddfbccf578ce686fe0c540893a370904d20959501b6aa080ce3ccb84a2e59dd2",
+          "seconds": 3.9390921669546515,
+          "wire.jsonl_sha256": "cbd2da03f841ebeeaacd2c565208813bc4b2a7e711cdc7432491759e8928e2b4",
+          "engine.stderr.log_sha256": "bb6d33220969ce1f092ef273daa111daa73ce359f97230b367983ef6f6cac19e",
+          "trace_path": "artifacts/runs/c2cb0b3b-904f-4909-9473-d70f985fb778/decisions.jsonl",
+          "trace_sha256": "e4f1348789ae8936247d31a3b1ebcd2bdb7ee5f3b87598721634a0121f047350"
+        },
+        {
+          "mode": "B",
+          "case": "Ironclad-a-A5",
+          "run_id": "1f6744d1-d10e-48d5-9802-343463a4d629",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 4.151261624880135,
+          "map_hash": "5b1ccb220fc4eb9f19ddb8465ac106868fe0346372eb6f5b177bc6f9729ac96c",
+          "save_seconds": 0.09062870917841792,
+          "checkpoint": {
+            "path": "artifacts/runs/1f6744d1-d10e-48d5-9802-343463a4d629/map-checkpoint.json",
+            "sha256": "90b0d2bcabe7d472bae7ab423bdb9665eeb1eefcb0d3e711f1b82e043223a896"
+          },
+          "entry_hash": "ddfbccf578ce686fe0c540893a370904d20959501b6aa080ce3ccb84a2e59dd2",
+          "seconds": 4.160567415878177,
+          "wire.jsonl_sha256": "d28b615fba94cefb80177e24c060fe90bc6c78867c8fc84c22841dd031955803",
+          "engine.stderr.log_sha256": "c2c29fd024c0dba86cf9c44842402c94b13398f184b2cdb463f0e1c54c5e91b7",
+          "trace_path": "artifacts/runs/1f6744d1-d10e-48d5-9802-343463a4d629/decisions.jsonl",
+          "trace_sha256": "a1d24b1927163e4040bd6060a993cb3e4726e06a56ceb633a264be6f087a5996"
+        },
+        {
+          "mode": "C",
+          "case": "Ironclad-a-A5",
+          "run_id": "c65a73dd-bbbb-4470-83d9-ddecc91b3266",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 1.2010056250728667,
+          "map_hash": "5b1ccb220fc4eb9f19ddb8465ac106868fe0346372eb6f5b177bc6f9729ac96c",
+          "entry_hash": "ddfbccf578ce686fe0c540893a370904d20959501b6aa080ce3ccb84a2e59dd2",
+          "seconds": 1.2103818331379443,
+          "wire.jsonl_sha256": "8a5ebe16d0bd5dba8b1be70d46de9884e57b9aae852a32101896aab5b9fd894d",
+          "engine.stderr.log_sha256": "2562bea591394efb9e4466fcb11cbf19f8393b91816706963ac3ae20ab4f9027",
+          "trace_path": "artifacts/runs/c65a73dd-bbbb-4470-83d9-ddecc91b3266/decisions.jsonl",
+          "trace_sha256": "23b7c48901223c8d6359840f0e306d0c10b86cc949b892c4a0857c9f8d18e933"
+        }
+      ],
+      "native_identity_match": true,
+      "checkpoint": {
+        "path": "artifacts/runs/1f6744d1-d10e-48d5-9802-343463a4d629/map-checkpoint.json",
+        "sha256": "90b0d2bcabe7d472bae7ab423bdb9665eeb1eefcb0d3e711f1b82e043223a896"
+      },
+      "references": [
+        {
+          "case": "Ironclad-a-A5",
+          "label": "control",
+          "status": "match",
+          "battle": {
+            "label": "control",
+            "run_id": "9dfa90c9-9267-443b-b36d-b68b03237550",
+            "status": "clear",
+            "steps": 22,
+            "entry_verified": true,
+            "replay_seconds": 3.794855374842882,
+            "replay_commands": 100,
+            "sources": {
+              "control": 22
+            },
+            "selection_truncations": 0,
+            "last_combat_round": 6,
+            "restore_mode": "full_prefix",
+            "hp": 24,
+            "max_hp": 80,
+            "potions": [],
+            "final_hash": "036378e82ef808dc96755778b75fbac989a70f6d703393ba461afe67c0c77c90",
+            "path_hash": "63362feb16b789d8dac38aeaeff3ba0ef244669a0db0680b4ea2785d445435e4",
+            "transition_hash": "7648ed017156ff6747a85deca8f91c20cc71058b58a8d1896d085548c46ef14e",
+            "seconds": 4.502546292031184,
+            "wire.jsonl_sha256": "d1e862248e60b06ed962133147745f734900275ac734121ce7c78ede94b74e7a",
+            "engine.stderr.log_sha256": "678535c8e1588d1a7d9bd17e1761ab6d1c6ae6ed0d937e3f7ef139d57c1b07f6",
+            "trace_path": "artifacts/runs/9dfa90c9-9267-443b-b36d-b68b03237550/decisions.jsonl",
+            "trace_sha256": "5b2d4abe7bdbb883fc97de76d1327a511f78c84f2b52a296612508d02f47a9c1"
+          },
+          "continuation": {
+            "case": "Ironclad-a-A5",
+            "label": "control",
+            "mode": "A",
+            "run_id": "2ca3cb9d-2c63-4064-9410-814e726036fa",
+            "status": "match",
+            "steps_checked": 22,
+            "extension_steps": 7,
+            "steps": [
+              {
+                "before": "ddfbccf578ce686fe0c540893a370904d20959501b6aa080ce3ccb84a2e59dd2",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1
+                  }
+                },
+                "after": "5ef87ff50f3d3aadf64f19bca7288fc5566e41e588da05fb55651ebfc3d31410"
+              },
+              {
+                "before": "5ef87ff50f3d3aadf64f19bca7288fc5566e41e588da05fb55651ebfc3d31410",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 2,
+                    "target_index": 0
+                  }
+                },
+                "after": "196e436094c39921c7b19cfdcd8a8d59c3a1f4805507105354988dff856c3f4a"
+              },
+              {
+                "before": "196e436094c39921c7b19cfdcd8a8d59c3a1f4805507105354988dff856c3f4a",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "2aa7193b0c317e12347655ee1348cac4e9ba5d202098b7a452277014000b4226"
+              },
+              {
+                "before": "2aa7193b0c317e12347655ee1348cac4e9ba5d202098b7a452277014000b4226",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 3,
+                    "target_index": 0
+                  }
+                },
+                "after": "1e4d77aa32356942d8b874c7925884ec462c9a25116fa9b48b412b342533797b"
+              },
+              {
+                "before": "1e4d77aa32356942d8b874c7925884ec462c9a25116fa9b48b412b342533797b",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1
+                  }
+                },
+                "after": "c694929b6ff0417a1d24d7e1271ed88d3ef03131f4f899931bb0a4e91aa78570"
+              },
+              {
+                "before": "c694929b6ff0417a1d24d7e1271ed88d3ef03131f4f899931bb0a4e91aa78570",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1
+                  }
+                },
+                "after": "76cfd9f8422f7f0a4795df13811a10d15819fb4b5aee956a054d7f5c5829c139"
+              },
+              {
+                "before": "76cfd9f8422f7f0a4795df13811a10d15819fb4b5aee956a054d7f5c5829c139",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "64d13d1ce901bfb10d549fc07829476da736143fe0a95f9c18c71804b1c728ac"
+              },
+              {
+                "before": "64d13d1ce901bfb10d549fc07829476da736143fe0a95f9c18c71804b1c728ac",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 4,
+                    "target_index": 0
+                  }
+                },
+                "after": "96674c1ca6876b6a77685849867605cb800c1350b4b4bed94ffadf406beccb65"
+              },
+              {
+                "before": "96674c1ca6876b6a77685849867605cb800c1350b4b4bed94ffadf406beccb65",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 2,
+                    "target_index": 0
+                  }
+                },
+                "after": "66d561c35a822ffa451f0f197f03382e1452354d4945beb3b50bc7cb5faa089f"
+              },
+              {
+                "before": "66d561c35a822ffa451f0f197f03382e1452354d4945beb3b50bc7cb5faa089f",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 2,
+                    "target_index": 0
+                  }
+                },
+                "after": "1a3708e1134850b9414aa4f376c01ea5f0ccaf1496c496450baedde0ba9df6a2"
+              },
+              {
+                "before": "1a3708e1134850b9414aa4f376c01ea5f0ccaf1496c496450baedde0ba9df6a2",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1
+                  }
+                },
+                "after": "c5fa11380c852aa267d1ddbd941271322c1172f48d71e6d3c41ac4d60bf587e4"
+              },
+              {
+                "before": "c5fa11380c852aa267d1ddbd941271322c1172f48d71e6d3c41ac4d60bf587e4",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "8d92bd844e6b249feae64e8c2cbb3c4d12f808d9cd481f78108ff62d64216d22"
+              },
+              {
+                "before": "8d92bd844e6b249feae64e8c2cbb3c4d12f808d9cd481f78108ff62d64216d22",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1
+                  }
+                },
+                "after": "2d71a468a7300dba13cb4f6d0ab25d159d2f92ff5e8b228582999fbff81bf21f"
+              },
+              {
+                "before": "2d71a468a7300dba13cb4f6d0ab25d159d2f92ff5e8b228582999fbff81bf21f",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 3
+                  }
+                },
+                "after": "7a776634033f03bcfcee3b0218baeb0a769b070f91110792f23d800600a1d4be"
+              },
+              {
+                "before": "7a776634033f03bcfcee3b0218baeb0a769b070f91110792f23d800600a1d4be",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "958466d7b043edf7d5d7b28b546d17b5d71c38adeda09edcd737dbb9a086d068"
+              },
+              {
+                "before": "958466d7b043edf7d5d7b28b546d17b5d71c38adeda09edcd737dbb9a086d068",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0,
+                    "target_index": 0
+                  }
+                },
+                "after": "04bcbc8c3fdd6b4b61d128ba798ec65058efcb149b141994464afa6c48bd18d1"
+              },
+              {
+                "before": "04bcbc8c3fdd6b4b61d128ba798ec65058efcb149b141994464afa6c48bd18d1",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0,
+                    "target_index": 3
+                  }
+                },
+                "after": "25c9d0000b456bb5d0106e9170cb3fcdfa95328c9ebff3adef48895ef91cdc67"
+              },
+              {
+                "before": "25c9d0000b456bb5d0106e9170cb3fcdfa95328c9ebff3adef48895ef91cdc67",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 2,
+                    "target_index": 1
+                  }
+                },
+                "after": "07a723b51fa5502f6e6738a72f08e16c743f9d6a8016a61bdfd70ddd6d007524"
+              },
+              {
+                "before": "07a723b51fa5502f6e6738a72f08e16c743f9d6a8016a61bdfd70ddd6d007524",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1
+                  }
+                },
+                "after": "ade4540b6fc8ee56a08c31f10434f5fd0f04956e03baee807eac927fb0b63bbe"
+              },
+              {
+                "before": "ade4540b6fc8ee56a08c31f10434f5fd0f04956e03baee807eac927fb0b63bbe",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "9db26fe0795fd38f3f1d4f8e660e14727e7dbda26fcd87ee2ffd4cbd29c84be1"
+              },
+              {
+                "before": "9db26fe0795fd38f3f1d4f8e660e14727e7dbda26fcd87ee2ffd4cbd29c84be1",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1,
+                    "target_index": 1
+                  }
+                },
+                "after": "944b0a6e25c4fa70ff3238faaec235b5c5ee2e42e9a67eedf801422c74fea392"
+              },
+              {
+                "before": "944b0a6e25c4fa70ff3238faaec235b5c5ee2e42e9a67eedf801422c74fea392",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1,
+                    "target_index": 0
+                  }
+                },
+                "after": "036378e82ef808dc96755778b75fbac989a70f6d703393ba461afe67c0c77c90"
+              },
+              {
+                "before": "036378e82ef808dc96755778b75fbac989a70f6d703393ba461afe67c0c77c90",
+                "action": {
+                  "cmd": "action",
+                  "action": "select_card_reward",
+                  "args": {
+                    "card_index": 0
+                  }
+                },
+                "after": "4731a193e8adcf2d8bbf078573570d691bb28c147ec956b2d9232ca47afd1f75"
+              },
+              {
+                "before": "4731a193e8adcf2d8bbf078573570d691bb28c147ec956b2d9232ca47afd1f75",
+                "action": {
+                  "cmd": "action",
+                  "action": "select_map_node",
+                  "args": {
+                    "col": 0,
+                    "row": 9
+                  }
+                },
+                "after": "77a8672507e8529d8fc91c22ab4b62e4e1a7be8a90f5fb797c5d90cd7ec203af"
+              },
+              {
+                "before": "77a8672507e8529d8fc91c22ab4b62e4e1a7be8a90f5fb797c5d90cd7ec203af",
+                "action": {
+                  "cmd": "action",
+                  "action": "select_map_node",
+                  "args": {
+                    "col": 0,
+                    "row": 10
+                  }
+                },
+                "after": "7207c14d2b5a332e45670a74e2f238ad126840891742963fd7870da3f448ba3d"
+              },
+              {
+                "before": "7207c14d2b5a332e45670a74e2f238ad126840891742963fd7870da3f448ba3d",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 4
+                  }
+                },
+                "after": "94aad75b5bf8480007aa61d2edc6ba7b8f9f2f65696cb49a9a7ec42569766a68"
+              },
+              {
+                "before": "94aad75b5bf8480007aa61d2edc6ba7b8f9f2f65696cb49a9a7ec42569766a68",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1,
+                    "target_index": 1
+                  }
+                },
+                "after": "25e6d01e7f12913c20bd2dc684f8b15b6b815bb7aa05502befe0afd4b568d088"
+              },
+              {
+                "before": "25e6d01e7f12913c20bd2dc684f8b15b6b815bb7aa05502befe0afd4b568d088",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1,
+                    "target_index": 1
+                  }
+                },
+                "after": "38099e046f29d8fb99486fefe324552f6456e794d53bb3a79764cede68f73f0e"
+              },
+              {
+                "before": "38099e046f29d8fb99486fefe324552f6456e794d53bb3a79764cede68f73f0e",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "5b68053dedbf75150a4890b8d0843db657047010a527c6c428b357b0ff776fe4"
+              }
+            ],
+            "restore_seconds": 3.91530766710639,
+            "map_match": true,
+            "entry_match": true,
+            "battle_status": "clear",
+            "stop_reason": "next_combat_second_turn",
+            "final_hash": "5b68053dedbf75150a4890b8d0843db657047010a527c6c428b357b0ff776fe4",
+            "final_decision": "combat_play",
+            "final_context": {
+              "act": 1,
+              "act_name": "Overgrowth",
+              "floor": 11,
+              "room_type": "Monster",
+              "boss": {
+                "id": "VANTOM_BOSS",
+                "name": "Vantom"
+              }
+            },
+            "path_hash": "4d15c868bc7fa3a20d5469da671703470fa2db5f070ccf89985ab23d8a97ecaf",
+            "seconds": 4.799662166973576,
+            "wire.jsonl_sha256": "b55eeea84defa86564f8e9a698c010044cd6e4cee5f4acd81aa00438396480aa",
+            "engine.stderr.log_sha256": "9ad404d469ede2dbe88a7f6dc5034eca24e3d6d45d3b1cee739a41d37b3245e2",
+            "trace_path": "artifacts/runs/2ca3cb9d-2c63-4064-9410-814e726036fa/decisions.jsonl",
+            "trace_sha256": "225cb1fc5afe0fef353d1a6e8c336b378959bd4a8e609c8f400a26e805dc8827"
+          }
+        },
+        {
+          "case": "Ironclad-a-A5",
+          "label": "epsilon15",
+          "status": "match",
+          "battle": {
+            "label": "epsilon15",
+            "run_id": "f267af30-d6ef-4dc8-bb8d-c24f6f8cfb12",
+            "status": "clear",
+            "steps": 24,
+            "entry_verified": true,
+            "replay_seconds": 3.826027875067666,
+            "replay_commands": 100,
+            "sources": {
+              "control": 20,
+              "epsilon15": 4
+            },
+            "selection_truncations": 0,
+            "last_combat_round": 8,
+            "restore_mode": "full_prefix",
+            "hp": 19,
+            "max_hp": 80,
+            "potions": [],
+            "final_hash": "c59f11b88e010f23f5b4ec3540f49bc1263eb8095721aae3c5904657db51243c",
+            "path_hash": "f591d6340941e99fbd0f7069c138d80819b922e8f95ff5b9a0c23c1a60c55342",
+            "transition_hash": "b3d93dd46e3cd6b819d064d1b9c769687217acc1824e275fc1f669a850b072c5",
+            "seconds": 4.615006832871586,
+            "wire.jsonl_sha256": "181617159617a1013db8d8c947093e30e498bfeb8f773a332886a221d223cdd5",
+            "engine.stderr.log_sha256": "7748a645fa909c038fddaf8c2dc9b738c7f809c044fcb2e6e0133919599be8b6",
+            "trace_path": "artifacts/runs/f267af30-d6ef-4dc8-bb8d-c24f6f8cfb12/decisions.jsonl",
+            "trace_sha256": "a49ba3a82bf70e54ea02e281d062d75794642c0b37e8e56cec5df5a9ca4759dc"
+          },
+          "continuation": {
+            "case": "Ironclad-a-A5",
+            "label": "epsilon15",
+            "mode": "A",
+            "run_id": "eafb01f3-0df0-4219-9a67-83ed6403e904",
+            "status": "match",
+            "steps_checked": 24,
+            "extension_steps": 7,
+            "steps": [
+              {
+                "before": "ddfbccf578ce686fe0c540893a370904d20959501b6aa080ce3ccb84a2e59dd2",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1
+                  }
+                },
+                "after": "5ef87ff50f3d3aadf64f19bca7288fc5566e41e588da05fb55651ebfc3d31410"
+              },
+              {
+                "before": "5ef87ff50f3d3aadf64f19bca7288fc5566e41e588da05fb55651ebfc3d31410",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 2,
+                    "target_index": 0
+                  }
+                },
+                "after": "196e436094c39921c7b19cfdcd8a8d59c3a1f4805507105354988dff856c3f4a"
+              },
+              {
+                "before": "196e436094c39921c7b19cfdcd8a8d59c3a1f4805507105354988dff856c3f4a",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "2aa7193b0c317e12347655ee1348cac4e9ba5d202098b7a452277014000b4226"
+              },
+              {
+                "before": "2aa7193b0c317e12347655ee1348cac4e9ba5d202098b7a452277014000b4226",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 3,
+                    "target_index": 0
+                  }
+                },
+                "after": "1e4d77aa32356942d8b874c7925884ec462c9a25116fa9b48b412b342533797b"
+              },
+              {
+                "before": "1e4d77aa32356942d8b874c7925884ec462c9a25116fa9b48b412b342533797b",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1
+                  }
+                },
+                "after": "c694929b6ff0417a1d24d7e1271ed88d3ef03131f4f899931bb0a4e91aa78570"
+              },
+              {
+                "before": "c694929b6ff0417a1d24d7e1271ed88d3ef03131f4f899931bb0a4e91aa78570",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1
+                  }
+                },
+                "after": "76cfd9f8422f7f0a4795df13811a10d15819fb4b5aee956a054d7f5c5829c139"
+              },
+              {
+                "before": "76cfd9f8422f7f0a4795df13811a10d15819fb4b5aee956a054d7f5c5829c139",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "64d13d1ce901bfb10d549fc07829476da736143fe0a95f9c18c71804b1c728ac"
+              },
+              {
+                "before": "64d13d1ce901bfb10d549fc07829476da736143fe0a95f9c18c71804b1c728ac",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "d3b9f427027015fffec7ee68111d124fb6a59f3bf9d8a139f53a9346f4467ece"
+              },
+              {
+                "before": "d3b9f427027015fffec7ee68111d124fb6a59f3bf9d8a139f53a9346f4467ece",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 4
+                  }
+                },
+                "after": "498c77d9493dcdbd5246b3270d68ece64d1627ad6c4f479cb5cfb78274c11631"
+              },
+              {
+                "before": "498c77d9493dcdbd5246b3270d68ece64d1627ad6c4f479cb5cfb78274c11631",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1
+                  }
+                },
+                "after": "3e336b739e5ce0d0db50492b4be84aebb08beec1250264c061a5a9984bf8cd36"
+              },
+              {
+                "before": "3e336b739e5ce0d0db50492b4be84aebb08beec1250264c061a5a9984bf8cd36",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "4102b0182c44de9e1a8573368fc68dab9b1e289ae153bf65199fbe59e40539aa"
+              },
+              {
+                "before": "4102b0182c44de9e1a8573368fc68dab9b1e289ae153bf65199fbe59e40539aa",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 4,
+                    "target_index": 0
+                  }
+                },
+                "after": "d26470a64805c4048218db65eb360816e3249427b5bfd51a78d585c2f474fbff"
+              },
+              {
+                "before": "d26470a64805c4048218db65eb360816e3249427b5bfd51a78d585c2f474fbff",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0,
+                    "target_index": 0
+                  }
+                },
+                "after": "99300214081dd26e4eb8c686de8eba4e722839786200b0e672178312acc394e6"
+              },
+              {
+                "before": "99300214081dd26e4eb8c686de8eba4e722839786200b0e672178312acc394e6",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0,
+                    "target_index": 0
+                  }
+                },
+                "after": "c3a57b890641ecc161e5e3c78cf352b2667a1f04a0a0cd043dd434ca44d1c61c"
+              },
+              {
+                "before": "c3a57b890641ecc161e5e3c78cf352b2667a1f04a0a0cd043dd434ca44d1c61c",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1
+                  }
+                },
+                "after": "34a174f2452307f3d8c56027accdefa6d1933c5e6ebd7bbfe59710ac54da9025"
+              },
+              {
+                "before": "34a174f2452307f3d8c56027accdefa6d1933c5e6ebd7bbfe59710ac54da9025",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "ab842f6bfffd8511bb6848389cd3a15fe10b22b0e0418e5ffa0843678436e755"
+              },
+              {
+                "before": "ab842f6bfffd8511bb6848389cd3a15fe10b22b0e0418e5ffa0843678436e755",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1,
+                    "target_index": 2
+                  }
+                },
+                "after": "20c6ecadc4e3b44d3ca20c119fb13285b13c95585749c8f731a21db0143565d2"
+              },
+              {
+                "before": "20c6ecadc4e3b44d3ca20c119fb13285b13c95585749c8f731a21db0143565d2",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1,
+                    "target_index": 0
+                  }
+                },
+                "after": "c8be8f481d86dcc673636020139a87107d4a7e7d8a74789463fb274ddb37a6a2"
+              },
+              {
+                "before": "c8be8f481d86dcc673636020139a87107d4a7e7d8a74789463fb274ddb37a6a2",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "fb55136e5ca207bf1292bd78d5f5af644a49b4fe460e36964583a1fba78f997b"
+              },
+              {
+                "before": "fb55136e5ca207bf1292bd78d5f5af644a49b4fe460e36964583a1fba78f997b",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1
+                  }
+                },
+                "after": "e04f8f9da7cab6277932956be28ed520ee268849c217fb16920169ddc9814c7c"
+              },
+              {
+                "before": "e04f8f9da7cab6277932956be28ed520ee268849c217fb16920169ddc9814c7c",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0
+                  }
+                },
+                "after": "e7b507f8fa8527857dea1c7f9688582bc0431c36c6a8b4cce47217141b20ea86"
+              },
+              {
+                "before": "e7b507f8fa8527857dea1c7f9688582bc0431c36c6a8b4cce47217141b20ea86",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "6794d21b39bde6d0de2da74e8a92ecf5400ce2ef11b455e19575b6131d6b2cc5"
+              },
+              {
+                "before": "6794d21b39bde6d0de2da74e8a92ecf5400ce2ef11b455e19575b6131d6b2cc5",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0,
+                    "target_index": 1
+                  }
+                },
+                "after": "a46ed3a2f64d8cf3ecf085a2d6292525afe706d380a99dc622d63a33c95ca609"
+              },
+              {
+                "before": "a46ed3a2f64d8cf3ecf085a2d6292525afe706d380a99dc622d63a33c95ca609",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0,
+                    "target_index": 0
+                  }
+                },
+                "after": "c59f11b88e010f23f5b4ec3540f49bc1263eb8095721aae3c5904657db51243c"
+              },
+              {
+                "before": "c59f11b88e010f23f5b4ec3540f49bc1263eb8095721aae3c5904657db51243c",
+                "action": {
+                  "cmd": "action",
+                  "action": "select_card_reward",
+                  "args": {
+                    "card_index": 0
+                  }
+                },
+                "after": "f7bcdd85ab42bbb41edc77940b017d28849d54ed9fed99760f8e3caf7ae4a906"
+              },
+              {
+                "before": "f7bcdd85ab42bbb41edc77940b017d28849d54ed9fed99760f8e3caf7ae4a906",
+                "action": {
+                  "cmd": "action",
+                  "action": "select_map_node",
+                  "args": {
+                    "col": 0,
+                    "row": 9
+                  }
+                },
+                "after": "c5235d820203ac581ffeb5a0e3375b906373110a070a41460f159e529282a8ba"
+              },
+              {
+                "before": "c5235d820203ac581ffeb5a0e3375b906373110a070a41460f159e529282a8ba",
+                "action": {
+                  "cmd": "action",
+                  "action": "select_map_node",
+                  "args": {
+                    "col": 0,
+                    "row": 10
+                  }
+                },
+                "after": "714c635de088cd1e24239286504e60b25797eca7ce5d7da67b055112d3e8721c"
+              },
+              {
+                "before": "714c635de088cd1e24239286504e60b25797eca7ce5d7da67b055112d3e8721c",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1
+                  }
+                },
+                "after": "47895cc64de8abc761f41299c88276b5deb6c9377713d4214a5f55861db1fc36"
+              },
+              {
+                "before": "47895cc64de8abc761f41299c88276b5deb6c9377713d4214a5f55861db1fc36",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 2,
+                    "target_index": 1
+                  }
+                },
+                "after": "a73fcf7931d53ca910541bad713469fd513265331ec1ff0048d32143909db8ce"
+              },
+              {
+                "before": "a73fcf7931d53ca910541bad713469fd513265331ec1ff0048d32143909db8ce",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1,
+                    "target_index": 1
+                  }
+                },
+                "after": "4a4410f27e9f4160f35179d7b3e7170f1024cf1e2ecfadab29b26c5eb7342397"
+              },
+              {
+                "before": "4a4410f27e9f4160f35179d7b3e7170f1024cf1e2ecfadab29b26c5eb7342397",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "8805f7f78ab9f4b253a867e88db6b4a38dd0a61e204c5e282b4ddf17ab864172"
+              }
+            ],
+            "restore_seconds": 3.816331333015114,
+            "map_match": true,
+            "entry_match": true,
+            "battle_status": "clear",
+            "stop_reason": "next_combat_second_turn",
+            "final_hash": "8805f7f78ab9f4b253a867e88db6b4a38dd0a61e204c5e282b4ddf17ab864172",
+            "final_decision": "combat_play",
+            "final_context": {
+              "act": 1,
+              "act_name": "Overgrowth",
+              "floor": 11,
+              "room_type": "Monster",
+              "boss": {
+                "id": "VANTOM_BOSS",
+                "name": "Vantom"
+              }
+            },
+            "path_hash": "89766ee134d879153951e91c67bcc5363946c29f3723d603e8165ad91288abdd",
+            "seconds": 4.7715092920698225,
+            "wire.jsonl_sha256": "2085acd42da6bd7f6a8606d65a5db878ae86d50ecc140d7f3853cdb803f64620",
+            "engine.stderr.log_sha256": "fb81ddddee9efa0b6910fc1d27033a94e8318a6378b6da286fbdc885e8d268b7",
+            "trace_path": "artifacts/runs/eafb01f3-0df0-4219-9a67-83ed6403e904/decisions.jsonl",
+            "trace_sha256": "a76e7405b1705f1c71ac8685bb7978197ba6876ef63428be1af68f51f0872fa2"
+          }
+        }
+      ],
+      "status": "match"
+    },
+    {
+      "case": "Ironclad-b-A5",
+      "preflight": [
+        {
+          "mode": "A",
+          "case": "Ironclad-b-A5",
+          "run_id": "9087fc57-6dee-4cab-ba2b-7f877db13bff",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 4.535105708055198,
+          "map_hash": "3d16d7836eb416fa03f5572567b8c750d9801596463746df012127befdfa9d8e",
+          "entry_hash": "827661136b172f7a795b265e7e3066d5d9a9bdfb0b353d05151cbef2cd600ae1",
+          "seconds": 4.545252125011757,
+          "wire.jsonl_sha256": "542713ef0ab13d2d11f413efdc2ddc9b643e5dc55a3b8ae0e741883d6d1802c1",
+          "engine.stderr.log_sha256": "66fafb2f3470ce7ee20efc6c1d71e635236a659385f21b12fd09a143466c8e29",
+          "trace_path": "artifacts/runs/9087fc57-6dee-4cab-ba2b-7f877db13bff/decisions.jsonl",
+          "trace_sha256": "fa2cda4f50b6e292b7635495b7a6640b45390647e7847b3e8fafff38b92563fa"
+        },
+        {
+          "mode": "B",
+          "case": "Ironclad-b-A5",
+          "run_id": "80ebd7a9-9705-4bd4-a865-61590c1670d9",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 4.567745000123978,
+          "map_hash": "3d16d7836eb416fa03f5572567b8c750d9801596463746df012127befdfa9d8e",
+          "save_seconds": 0.08842454082332551,
+          "checkpoint": {
+            "path": "artifacts/runs/80ebd7a9-9705-4bd4-a865-61590c1670d9/map-checkpoint.json",
+            "sha256": "b8893ac7f2ab47e23da6d34b0c33cf788e72e297474353312e2cec26959d8121"
+          },
+          "entry_hash": "827661136b172f7a795b265e7e3066d5d9a9bdfb0b353d05151cbef2cd600ae1",
+          "seconds": 4.577510167146102,
+          "wire.jsonl_sha256": "d6619ef7a7215fd21256f61b2aed49eb39c40f27e26a21a7d49f0202a1662e76",
+          "engine.stderr.log_sha256": "a62d0b14ca389cdd9dfc8aa6fb3064615c656bc1793c2cf505f4f3718ad272ca",
+          "trace_path": "artifacts/runs/80ebd7a9-9705-4bd4-a865-61590c1670d9/decisions.jsonl",
+          "trace_sha256": "ffcc6a9c3b5830646920f642ea7e92027fc0c6b53aa7309982bdbbc466ee53aa"
+        },
+        {
+          "mode": "C",
+          "case": "Ironclad-b-A5",
+          "run_id": "7d37a0ad-9164-4738-a964-223d23c5caa4",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 1.1154374999459833,
+          "map_hash": "3d16d7836eb416fa03f5572567b8c750d9801596463746df012127befdfa9d8e",
+          "entry_hash": "827661136b172f7a795b265e7e3066d5d9a9bdfb0b353d05151cbef2cd600ae1",
+          "seconds": 1.1247954580467194,
+          "wire.jsonl_sha256": "666866454740aabbb2a120b15fba316a3d2f9b6da5dbf137851a2ed7de0742d0",
+          "engine.stderr.log_sha256": "c3e3cbac3a21f1a35aef0553bdb095d17e4752e30a7083d1503ff82628ea16b4",
+          "trace_path": "artifacts/runs/7d37a0ad-9164-4738-a964-223d23c5caa4/decisions.jsonl",
+          "trace_sha256": "328dc00a012876792e36504522e8bc84af542901ad24ecddee13ef0131fa4bd9"
+        }
+      ],
+      "native_identity_match": true,
+      "checkpoint": {
+        "path": "artifacts/runs/80ebd7a9-9705-4bd4-a865-61590c1670d9/map-checkpoint.json",
+        "sha256": "b8893ac7f2ab47e23da6d34b0c33cf788e72e297474353312e2cec26959d8121"
+      },
+      "references": [
+        {
+          "case": "Ironclad-b-A5",
+          "label": "control",
+          "status": "match",
+          "battle": {
+            "label": "control",
+            "run_id": "e5af119f-a8fe-4dc9-8a2d-c14903208c3c",
+            "status": "defeat",
+            "steps": 40,
+            "entry_verified": true,
+            "replay_seconds": 4.430072209099308,
+            "replay_commands": 116,
+            "sources": {
+              "control": 40
+            },
+            "selection_truncations": 0,
+            "last_combat_round": 10,
+            "restore_mode": "full_prefix",
+            "hp": 0,
+            "max_hp": 80,
+            "potions": [],
+            "final_hash": "046ee7058c167517eaa32d6351bd89f1df1a4b9462c12a7ec66f8a1c7637f376",
+            "path_hash": "d985c5d1a32b09756970bb1236c98bffac0bd0f26217d0b8333ec44b6e4bff04",
+            "transition_hash": "e7cbe1282b31bf334b63096280f868ab80cdbdf0b118ea2043dada1dffa403e9",
+            "seconds": 5.729774459032342,
+            "wire.jsonl_sha256": "4984b373d6e9e3d44d9b7e9a4db28ccacb98b37c8a627f4a028ae2eedc63c380",
+            "engine.stderr.log_sha256": "460c015f8c41661d14c92993f177a3bbf907b27323201c24d4e7d6edd827368c",
+            "trace_path": "artifacts/runs/e5af119f-a8fe-4dc9-8a2d-c14903208c3c/decisions.jsonl",
+            "trace_sha256": "94098bc1663647c6dceddb6859583ba16634a2b2415a8a81abe3740badc10b5c"
+          },
+          "continuation": {
+            "case": "Ironclad-b-A5",
+            "label": "control",
+            "mode": "A",
+            "run_id": "a32cf005-8bf8-4d83-ac45-bf557695be60",
+            "status": "match",
+            "steps_checked": 40,
+            "extension_steps": 0,
+            "steps": [
+              {
+                "before": "827661136b172f7a795b265e7e3066d5d9a9bdfb0b353d05151cbef2cd600ae1",
+                "action": {
+                  "cmd": "action",
+                  "action": "use_potion",
+                  "args": {
+                    "potion_index": 0
+                  }
+                },
+                "after": "a1c9ab6bfc2016f54fe8f87b48f9b74a305414c6b134e6b35ac48fed097a4a54"
+              },
+              {
+                "before": "a1c9ab6bfc2016f54fe8f87b48f9b74a305414c6b134e6b35ac48fed097a4a54",
+                "action": {
+                  "cmd": "action",
+                  "action": "select_cards",
+                  "args": {
+                    "indices": "2"
+                  }
+                },
+                "after": "7c732dea4c83c6a23b64065b792a490d6bcfcc87077f615e12913966dbd4efae"
+              },
+              {
+                "before": "7c732dea4c83c6a23b64065b792a490d6bcfcc87077f615e12913966dbd4efae",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 2
+                  }
+                },
+                "after": "9dcd1f6f89f23f142ed3a5fe5d0dc56ebbb1503756501aeb81f8de70799b10e2"
+              },
+              {
+                "before": "9dcd1f6f89f23f142ed3a5fe5d0dc56ebbb1503756501aeb81f8de70799b10e2",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 5
+                  }
+                },
+                "after": "454ba05d885c1f184202f0c9a2465ae3a59cf99a86791183bb581dce3bc87ee3"
+              },
+              {
+                "before": "454ba05d885c1f184202f0c9a2465ae3a59cf99a86791183bb581dce3bc87ee3",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 3
+                  }
+                },
+                "after": "143020dec52565308f2f6270841a8a93a59651a78cb84cf27efe732ae26649ea"
+              },
+              {
+                "before": "143020dec52565308f2f6270841a8a93a59651a78cb84cf27efe732ae26649ea",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0,
+                    "target_index": 0
+                  }
+                },
+                "after": "55b955b4e106b3ea6aa9b85f526d1effcf42907821dd417b180bc489d34f7c0c"
+              },
+              {
+                "before": "55b955b4e106b3ea6aa9b85f526d1effcf42907821dd417b180bc489d34f7c0c",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "d9607e7a376c080ac61b041bef7b03ab2508b51ee9308e5cddac31d94a128be7"
+              },
+              {
+                "before": "d9607e7a376c080ac61b041bef7b03ab2508b51ee9308e5cddac31d94a128be7",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0
+                  }
+                },
+                "after": "670ae461badca05fcf537c0368bdb99abceeee1c148b0d733d50d4271a0e259b"
+              },
+              {
+                "before": "670ae461badca05fcf537c0368bdb99abceeee1c148b0d733d50d4271a0e259b",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1,
+                    "target_index": 0
+                  }
+                },
+                "after": "3e31b4726c6b5baaf61708af0a5befbf7e1da7d16c41033dcc3dd17be2fd9daf"
+              },
+              {
+                "before": "3e31b4726c6b5baaf61708af0a5befbf7e1da7d16c41033dcc3dd17be2fd9daf",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1,
+                    "target_index": 0
+                  }
+                },
+                "after": "f9788e015d988bd643943dc7377f92c7ac6428d46bde3177e22305f716b52e2b"
+              },
+              {
+                "before": "f9788e015d988bd643943dc7377f92c7ac6428d46bde3177e22305f716b52e2b",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "d5099d78bb47893a27cfc2f873d29373419ee8626a489d1f9bfa6ab499a5707e"
+              },
+              {
+                "before": "d5099d78bb47893a27cfc2f873d29373419ee8626a489d1f9bfa6ab499a5707e",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0,
+                    "target_index": 0
+                  }
+                },
+                "after": "ce45e29960c2f19e551b8efca37487cc598c26ea32e0e015cb4a42cff8f9c6a9"
+              },
+              {
+                "before": "ce45e29960c2f19e551b8efca37487cc598c26ea32e0e015cb4a42cff8f9c6a9",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0,
+                    "target_index": 0
+                  }
+                },
+                "after": "910a6e6f0b3fde33724e7e5393c2e820491402a2c772d984c68254297ccb7fcf"
+              },
+              {
+                "before": "910a6e6f0b3fde33724e7e5393c2e820491402a2c772d984c68254297ccb7fcf",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1,
+                    "target_index": 0
+                  }
+                },
+                "after": "e79df217787a3c855cc49316ad0d8fc5d2524f3c0a3ff913c48ffdece43b10f8"
+              },
+              {
+                "before": "e79df217787a3c855cc49316ad0d8fc5d2524f3c0a3ff913c48ffdece43b10f8",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "c1d264ce07ab0e3517df59d207a0e4fdc894c20173e2add728c3dbfabdd3c51c"
+              },
+              {
+                "before": "c1d264ce07ab0e3517df59d207a0e4fdc894c20173e2add728c3dbfabdd3c51c",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 2,
+                    "target_index": 0
+                  }
+                },
+                "after": "cc592906e87c11f711ce0d995383eacac8419f1a07decc47c38d5222f0c1c2fe"
+              },
+              {
+                "before": "cc592906e87c11f711ce0d995383eacac8419f1a07decc47c38d5222f0c1c2fe",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1,
+                    "target_index": 0
+                  }
+                },
+                "after": "e69a93ba550a06abf2376f7708e0a4d0144f998e79a5dd83c8ce8e9d4e3a9980"
+              },
+              {
+                "before": "e69a93ba550a06abf2376f7708e0a4d0144f998e79a5dd83c8ce8e9d4e3a9980",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 2
+                  }
+                },
+                "after": "1853b0002f03bb2308e4a227e8133a003a0c00de26ef129c0cc51c2cab70866f"
+              },
+              {
+                "before": "1853b0002f03bb2308e4a227e8133a003a0c00de26ef129c0cc51c2cab70866f",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "b94b48e3729f81a5baf89928deb4abe761660d1767f75790c4be1b2f0bf2ce77"
+              },
+              {
+                "before": "b94b48e3729f81a5baf89928deb4abe761660d1767f75790c4be1b2f0bf2ce77",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 2
+                  }
+                },
+                "after": "eb72d80472eb2f6dc2df2b1c839a3d65e21f08672388436e1c045a37fb085b41"
+              },
+              {
+                "before": "eb72d80472eb2f6dc2df2b1c839a3d65e21f08672388436e1c045a37fb085b41",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0
+                  }
+                },
+                "after": "b2ea656288a46b74ce4f783f0908f26a1b81a2e93d43946bf7a385228f347280"
+              },
+              {
+                "before": "b2ea656288a46b74ce4f783f0908f26a1b81a2e93d43946bf7a385228f347280",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "62d07e34aeb150ef19aa6c8e6a0b0e4b32722aa2e55e19569f893abca500bdbc"
+              },
+              {
+                "before": "62d07e34aeb150ef19aa6c8e6a0b0e4b32722aa2e55e19569f893abca500bdbc",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 2,
+                    "target_index": 0
+                  }
+                },
+                "after": "0891204928cb9f7354a2a5a030cd38f90009d7a68c0d64eac5b4259f7deb52ab"
+              },
+              {
+                "before": "0891204928cb9f7354a2a5a030cd38f90009d7a68c0d64eac5b4259f7deb52ab",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 2,
+                    "target_index": 0
+                  }
+                },
+                "after": "e8165cfcb226cfcd29b24cf7bda0a251607d798117eff4831ffcef15929d812c"
+              },
+              {
+                "before": "e8165cfcb226cfcd29b24cf7bda0a251607d798117eff4831ffcef15929d812c",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 2
+                  }
+                },
+                "after": "ac00482f38771f4c914d0ac84bbc7d372b4a9d97d23469ab6479dbc4eb0e014b"
+              },
+              {
+                "before": "ac00482f38771f4c914d0ac84bbc7d372b4a9d97d23469ab6479dbc4eb0e014b",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "27f7b4a4e7a1df2b387ebb4a74462a009c953a428a8cbc5fdc6925ec319090b5"
+              },
+              {
+                "before": "27f7b4a4e7a1df2b387ebb4a74462a009c953a428a8cbc5fdc6925ec319090b5",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 2
+                  }
+                },
+                "after": "c12d05b9389d4aa7bf34717cb003febfa954f78170bc07dd2fc6169d7d00daf5"
+              },
+              {
+                "before": "c12d05b9389d4aa7bf34717cb003febfa954f78170bc07dd2fc6169d7d00daf5",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1,
+                    "target_index": 0
+                  }
+                },
+                "after": "fb2cda0f5231b9b8c7606e9110665a6067837429bfbd4c3d11432b687c78f60b"
+              },
+              {
+                "before": "fb2cda0f5231b9b8c7606e9110665a6067837429bfbd4c3d11432b687c78f60b",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0,
+                    "target_index": 0
+                  }
+                },
+                "after": "cd07fb70053a5b07e3cf9b3f51f0d197cc8ef5e0aa7f1d10227fb8285fa1830f"
+              },
+              {
+                "before": "cd07fb70053a5b07e3cf9b3f51f0d197cc8ef5e0aa7f1d10227fb8285fa1830f",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1
+                  }
+                },
+                "after": "3a9bfc912a731a7a8f5b002be43dbdae6c19b7c07dbdf4f3add631586079283d"
+              },
+              {
+                "before": "3a9bfc912a731a7a8f5b002be43dbdae6c19b7c07dbdf4f3add631586079283d",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "05935b5f9e1d5422691c9c6807771f30dd1d716ce11b4ea2ba51eb6d2e38bb9e"
+              },
+              {
+                "before": "05935b5f9e1d5422691c9c6807771f30dd1d716ce11b4ea2ba51eb6d2e38bb9e",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1
+                  }
+                },
+                "after": "1d6bb15ddba8372590ab52b7eed4abd697ce39d1ad7686a5d59d9b38aa933361"
+              },
+              {
+                "before": "1d6bb15ddba8372590ab52b7eed4abd697ce39d1ad7686a5d59d9b38aa933361",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 3,
+                    "target_index": 0
+                  }
+                },
+                "after": "066a093041a835c5178f564849d258e75f4c62b2e6815f6634cd5fef2d2c477f"
+              },
+              {
+                "before": "066a093041a835c5178f564849d258e75f4c62b2e6815f6634cd5fef2d2c477f",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "39b839e0ceaa590ebb6a0ea096ae5227883a7cb48155ea1b2afdcf13764ef5bc"
+              },
+              {
+                "before": "39b839e0ceaa590ebb6a0ea096ae5227883a7cb48155ea1b2afdcf13764ef5bc",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0
+                  }
+                },
+                "after": "ad054c3365d7251706614cff8e3894ebe1dba35f0de2a2848c09c5f7fdbee95f"
+              },
+              {
+                "before": "ad054c3365d7251706614cff8e3894ebe1dba35f0de2a2848c09c5f7fdbee95f",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1,
+                    "target_index": 0
+                  }
+                },
+                "after": "4f16bfde066dc8adceb48632cc4bfb8d3b164bc9f4d3fe9fd92448c6ce015f47"
+              },
+              {
+                "before": "4f16bfde066dc8adceb48632cc4bfb8d3b164bc9f4d3fe9fd92448c6ce015f47",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 3,
+                    "target_index": 0
+                  }
+                },
+                "after": "77e43b62fbcb9f8bc454ca177c5d456dbf7cc3d75c3e568f1d5aca4b02f660d5"
+              },
+              {
+                "before": "77e43b62fbcb9f8bc454ca177c5d456dbf7cc3d75c3e568f1d5aca4b02f660d5",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "46f1d03d3e4749a5d4ede4c3152fa33b55f1da508e209e3cbe9e12a5fa7a391d"
+              },
+              {
+                "before": "46f1d03d3e4749a5d4ede4c3152fa33b55f1da508e209e3cbe9e12a5fa7a391d",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 3
+                  }
+                },
+                "after": "153a086157e53669f37feb551c10bc761c6eec7481d8544bef72aca3ab0d7f1a"
+              },
+              {
+                "before": "153a086157e53669f37feb551c10bc761c6eec7481d8544bef72aca3ab0d7f1a",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "046ee7058c167517eaa32d6351bd89f1df1a4b9462c12a7ec66f8a1c7637f376"
+              }
+            ],
+            "restore_seconds": 4.47488091699779,
+            "map_match": true,
+            "entry_match": true,
+            "battle_status": "defeat",
+            "stop_reason": "game_over",
+            "final_hash": "046ee7058c167517eaa32d6351bd89f1df1a4b9462c12a7ec66f8a1c7637f376",
+            "final_decision": "game_over",
+            "final_context": {
+              "act": 1,
+              "act_name": "Overgrowth",
+              "floor": 9,
+              "room_type": "Elite",
+              "boss": {
+                "id": "CEREMONIAL_BEAST_BOSS",
+                "name": "Ceremonial Beast"
+              }
+            },
+            "path_hash": "e7cbe1282b31bf334b63096280f868ab80cdbdf0b118ea2043dada1dffa403e9",
+            "seconds": 5.744266124907881,
+            "wire.jsonl_sha256": "4c8b3aeb97d7912608cbea4eebb91dd421b0f3b1b230185855160208b155cb25",
+            "engine.stderr.log_sha256": "460c015f8c41661d14c92993f177a3bbf907b27323201c24d4e7d6edd827368c",
+            "trace_path": "artifacts/runs/a32cf005-8bf8-4d83-ac45-bf557695be60/decisions.jsonl",
+            "trace_sha256": "63baa77ff5ccc48bd33378949a01453762842824ff191fd65bbb99e0888df453"
+          }
+        },
+        {
+          "case": "Ironclad-b-A5",
+          "label": "epsilon15",
+          "status": "match",
+          "battle": {
+            "label": "epsilon15",
+            "run_id": "c5c00110-0304-4573-9e55-fc2f3677526b",
+            "status": "defeat",
+            "steps": 25,
+            "entry_verified": true,
+            "replay_seconds": 4.460458541987464,
+            "replay_commands": 116,
+            "sources": {
+              "control": 22,
+              "epsilon15": 3
+            },
+            "selection_truncations": 0,
+            "last_combat_round": 7,
+            "restore_mode": "full_prefix",
+            "hp": 0,
+            "max_hp": 80,
+            "potions": [],
+            "final_hash": "046ee7058c167517eaa32d6351bd89f1df1a4b9462c12a7ec66f8a1c7637f376",
+            "path_hash": "582a7ba862d3035d95deda5ea93f4e3249902c2f8b9d8117e4a8158196ef2e5c",
+            "transition_hash": "a85bf8cc78d15cbc7d6bd3ae26996e10d74d4193a1d047ab2f3aa28893d3014e",
+            "seconds": 5.250146667007357,
+            "wire.jsonl_sha256": "7524240a076e3a63adf09fc9627dd1a2df679fc5344399a07520dfac51973d95",
+            "engine.stderr.log_sha256": "d493df761fea2d14efaa28fbb4af39ade4f816cbf908deea51e27a848dd7fe37",
+            "trace_path": "artifacts/runs/c5c00110-0304-4573-9e55-fc2f3677526b/decisions.jsonl",
+            "trace_sha256": "17c29275fbe2122357658dd0094eca721081bf50c6dd1b69ac6a0a7bd277a069"
+          },
+          "continuation": {
+            "case": "Ironclad-b-A5",
+            "label": "epsilon15",
+            "mode": "A",
+            "run_id": "ef802957-de26-4bf8-991a-2bca5cafb07b",
+            "status": "match",
+            "steps_checked": 25,
+            "extension_steps": 0,
+            "steps": [
+              {
+                "before": "827661136b172f7a795b265e7e3066d5d9a9bdfb0b353d05151cbef2cd600ae1",
+                "action": {
+                  "cmd": "action",
+                  "action": "use_potion",
+                  "args": {
+                    "potion_index": 0
+                  }
+                },
+                "after": "a1c9ab6bfc2016f54fe8f87b48f9b74a305414c6b134e6b35ac48fed097a4a54"
+              },
+              {
+                "before": "a1c9ab6bfc2016f54fe8f87b48f9b74a305414c6b134e6b35ac48fed097a4a54",
+                "action": {
+                  "cmd": "action",
+                  "action": "skip_select",
+                  "args": {}
+                },
+                "after": "511a28f757d7d2014d52dd4162d2b5808ac510de68e17a0435ab0ee031eac2b1"
+              },
+              {
+                "before": "511a28f757d7d2014d52dd4162d2b5808ac510de68e17a0435ab0ee031eac2b1",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 2
+                  }
+                },
+                "after": "777827958bcf55cde35c32f5c0195354ca5603f5aea123e7d4d6300fe0fe7f8a"
+              },
+              {
+                "before": "777827958bcf55cde35c32f5c0195354ca5603f5aea123e7d4d6300fe0fe7f8a",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 4
+                  }
+                },
+                "after": "2f2cbe36cb1202834e17e211551e8c8bdb656045308710f8cf70d677259e3e5a"
+              },
+              {
+                "before": "2f2cbe36cb1202834e17e211551e8c8bdb656045308710f8cf70d677259e3e5a",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 3
+                  }
+                },
+                "after": "461d8c32ddbde66db0acc99e542799c14d69203c3871e00d026636c36e5c0292"
+              },
+              {
+                "before": "461d8c32ddbde66db0acc99e542799c14d69203c3871e00d026636c36e5c0292",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0,
+                    "target_index": 0
+                  }
+                },
+                "after": "bc4ebd22b41355eb10b495b8c645f4b499f1244e5e8bbf43d280d14d7a734657"
+              },
+              {
+                "before": "bc4ebd22b41355eb10b495b8c645f4b499f1244e5e8bbf43d280d14d7a734657",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "4220a8cb5f8d6258a0872160f64ce57ac315914ae00fd836445aad0f410ec514"
+              },
+              {
+                "before": "4220a8cb5f8d6258a0872160f64ce57ac315914ae00fd836445aad0f410ec514",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0
+                  }
+                },
+                "after": "e8b54e882b1a23115fd20c7df04c7e96486036f7eb27bc9ee203a1ba4b0642b7"
+              },
+              {
+                "before": "e8b54e882b1a23115fd20c7df04c7e96486036f7eb27bc9ee203a1ba4b0642b7",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1,
+                    "target_index": 0
+                  }
+                },
+                "after": "df9f18b93c73d1014d55364ed7dd44b8f8ffa65c86e9f3e39683620ba5da2498"
+              },
+              {
+                "before": "df9f18b93c73d1014d55364ed7dd44b8f8ffa65c86e9f3e39683620ba5da2498",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1,
+                    "target_index": 0
+                  }
+                },
+                "after": "18251141600febfe921cb0481b893936af01461bcbf6766d5c50962d2c6c2111"
+              },
+              {
+                "before": "18251141600febfe921cb0481b893936af01461bcbf6766d5c50962d2c6c2111",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "b71b02ab9bb6b5c36136d1819270256b0d08845cb053aa4d1c9b87717aa36f42"
+              },
+              {
+                "before": "b71b02ab9bb6b5c36136d1819270256b0d08845cb053aa4d1c9b87717aa36f42",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0,
+                    "target_index": 0
+                  }
+                },
+                "after": "db8b3ff6df213b04adcaa8a3c93e24f112a9cec3d7144bfc225a57ca19d5d08e"
+              },
+              {
+                "before": "db8b3ff6df213b04adcaa8a3c93e24f112a9cec3d7144bfc225a57ca19d5d08e",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0,
+                    "target_index": 0
+                  }
+                },
+                "after": "e162085b723ad5c141ab74b12533e9446b756184741f3e4a10067384d3a71f05"
+              },
+              {
+                "before": "e162085b723ad5c141ab74b12533e9446b756184741f3e4a10067384d3a71f05",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "f4e2e301beb90a2f77b6654361eda3a9d4c1f5b20f9699edbb9f0dbe1541fc77"
+              },
+              {
+                "before": "f4e2e301beb90a2f77b6654361eda3a9d4c1f5b20f9699edbb9f0dbe1541fc77",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1,
+                    "target_index": 0
+                  }
+                },
+                "after": "6b5f57de599a1f592bd3a24fe5a5327d5404fb310b3972b35897f10bf5bd7014"
+              },
+              {
+                "before": "6b5f57de599a1f592bd3a24fe5a5327d5404fb310b3972b35897f10bf5bd7014",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0,
+                    "target_index": 0
+                  }
+                },
+                "after": "8ac0a81660c8dc08e79f996fe585e38a059a863c81646d190d4ca2cb686f1380"
+              },
+              {
+                "before": "8ac0a81660c8dc08e79f996fe585e38a059a863c81646d190d4ca2cb686f1380",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1
+                  }
+                },
+                "after": "6e30cb029e256412ef1ccda6c049e90d3fec4d95a5e3e68e67db7ac3df5377e2"
+              },
+              {
+                "before": "6e30cb029e256412ef1ccda6c049e90d3fec4d95a5e3e68e67db7ac3df5377e2",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "c93b504153eb84dc8919595633adc82fbfe207c3d250688ab4545ef67480b0cd"
+              },
+              {
+                "before": "c93b504153eb84dc8919595633adc82fbfe207c3d250688ab4545ef67480b0cd",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "bf7b7598000e0274f4f985123f9c5ea1f8f6bb0e4fe57bc25074bb1642730ea0"
+              },
+              {
+                "before": "bf7b7598000e0274f4f985123f9c5ea1f8f6bb0e4fe57bc25074bb1642730ea0",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 2,
+                    "target_index": 0
+                  }
+                },
+                "after": "f1b0977f49ecff2687c6b06b0d68b6c436365003b6ad3a5d9bb2fabcc46af03b"
+              },
+              {
+                "before": "f1b0977f49ecff2687c6b06b0d68b6c436365003b6ad3a5d9bb2fabcc46af03b",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0
+                  }
+                },
+                "after": "e0416b8b5acb3779d8830d6f19511ebef88424ffed39f9f6021827784ded03fe"
+              },
+              {
+                "before": "e0416b8b5acb3779d8830d6f19511ebef88424ffed39f9f6021827784ded03fe",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "7f021708e2081bb4d2c0f31e549444949001e06a58e6ebfface07b2341c4f36e"
+              },
+              {
+                "before": "7f021708e2081bb4d2c0f31e549444949001e06a58e6ebfface07b2341c4f36e",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1,
+                    "target_index": 0
+                  }
+                },
+                "after": "226a29a85641d50b8311cd6c77ddbaf02f35d2b527fd8fb4f4bbe045c62acc43"
+              },
+              {
+                "before": "226a29a85641d50b8311cd6c77ddbaf02f35d2b527fd8fb4f4bbe045c62acc43",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1
+                  }
+                },
+                "after": "a818de9df214228982e0e9ca04bc05e40fd6e94a0665c1ceb05670291d17c0fd"
+              },
+              {
+                "before": "a818de9df214228982e0e9ca04bc05e40fd6e94a0665c1ceb05670291d17c0fd",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "046ee7058c167517eaa32d6351bd89f1df1a4b9462c12a7ec66f8a1c7637f376"
+              }
+            ],
+            "restore_seconds": 4.479057084070519,
+            "map_match": true,
+            "entry_match": true,
+            "battle_status": "defeat",
+            "stop_reason": "game_over",
+            "final_hash": "046ee7058c167517eaa32d6351bd89f1df1a4b9462c12a7ec66f8a1c7637f376",
+            "final_decision": "game_over",
+            "final_context": {
+              "act": 1,
+              "act_name": "Overgrowth",
+              "floor": 9,
+              "room_type": "Elite",
+              "boss": {
+                "id": "CEREMONIAL_BEAST_BOSS",
+                "name": "Ceremonial Beast"
+              }
+            },
+            "path_hash": "a85bf8cc78d15cbc7d6bd3ae26996e10d74d4193a1d047ab2f3aa28893d3014e",
+            "seconds": 5.263133459025994,
+            "wire.jsonl_sha256": "b8b746c14fd2d1e7589f61cb59cdc5efa7123d6338f10440b59bb57cb3433ad7",
+            "engine.stderr.log_sha256": "d493df761fea2d14efaa28fbb4af39ade4f816cbf908deea51e27a848dd7fe37",
+            "trace_path": "artifacts/runs/ef802957-de26-4bf8-991a-2bca5cafb07b/decisions.jsonl",
+            "trace_sha256": "91b62e0d7a0e364fe7522b957b0e38a54cc3c8c995c7c8dbc07e825d5f95ddb6"
+          }
+        }
+      ],
+      "status": "match"
+    },
+    {
+      "case": "Ironclad-a-A10",
+      "preflight": [
+        {
+          "mode": "A",
+          "case": "Ironclad-a-A10",
+          "run_id": "d0ec4a2b-31c6-49aa-9d6f-0fcd581b8286",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 4.794785249978304,
+          "map_hash": "94e73ed4736d2953c38955a6da45c51732330e742f198214fe993b11d3b7d2a8",
+          "entry_hash": "758d0b003d73e1e8828f19edeba7a156fd71dac64a4b85c326508a785e29db06",
+          "seconds": 4.803685332881287,
+          "wire.jsonl_sha256": "926a942d77a7e09798ce153cf6ae65016319441934a198d7a1731ff5c695b290",
+          "engine.stderr.log_sha256": "84028a05a340b5afa7c118cee95c69f16881966f60be56662efe805e70ed0026",
+          "trace_path": "artifacts/runs/d0ec4a2b-31c6-49aa-9d6f-0fcd581b8286/decisions.jsonl",
+          "trace_sha256": "b717039b4469390747e37da5e5c8794a5d6fb9b904aae744b07b5992e41e54e7"
+        },
+        {
+          "mode": "B",
+          "case": "Ironclad-a-A10",
+          "run_id": "1ed50dea-e0b2-44b5-9b73-4976930c5594",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 4.8488378340844065,
+          "map_hash": "94e73ed4736d2953c38955a6da45c51732330e742f198214fe993b11d3b7d2a8",
+          "save_seconds": 0.08570329216308892,
+          "checkpoint": {
+            "path": "artifacts/runs/1ed50dea-e0b2-44b5-9b73-4976930c5594/map-checkpoint.json",
+            "sha256": "8d232e54759e8ec7802db3fccdcdd56276e773d71597e023f77dd66aa52f2d2f"
+          },
+          "entry_hash": "758d0b003d73e1e8828f19edeba7a156fd71dac64a4b85c326508a785e29db06",
+          "seconds": 4.85820437502116,
+          "wire.jsonl_sha256": "423e849405294c84b9cfcd0aa2e3d823cee79cdf047628966a138a78414b0cbd",
+          "engine.stderr.log_sha256": "1546887acabc12febb0c9d04843bd4f239636f9af377b3f47f9c124fd56fb3f0",
+          "trace_path": "artifacts/runs/1ed50dea-e0b2-44b5-9b73-4976930c5594/decisions.jsonl",
+          "trace_sha256": "0dc5954b2c003e52180c863377112e46d2544b61fd6a1a6a08ef92c23773ba84"
+        },
+        {
+          "mode": "C",
+          "case": "Ironclad-a-A10",
+          "run_id": "231baed1-b357-4ae8-a23f-35fb3cafc9e9",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 1.1844890001229942,
+          "map_hash": "94e73ed4736d2953c38955a6da45c51732330e742f198214fe993b11d3b7d2a8",
+          "entry_hash": "758d0b003d73e1e8828f19edeba7a156fd71dac64a4b85c326508a785e29db06",
+          "seconds": 1.193839207990095,
+          "wire.jsonl_sha256": "ced903df23a8666f590c8a9f965563e56b023fac047c5b86079c898144c39b65",
+          "engine.stderr.log_sha256": "3e56b3560ba93321cf1a57981c0fa6c0e0fff3aa36a467e55e8237febce208f2",
+          "trace_path": "artifacts/runs/231baed1-b357-4ae8-a23f-35fb3cafc9e9/decisions.jsonl",
+          "trace_sha256": "688cf98060ad547b0e7dfa4fb4f5c2273e041bb63a86f15797e953634f4d5d21"
+        }
+      ],
+      "native_identity_match": true,
+      "checkpoint": {
+        "path": "artifacts/runs/1ed50dea-e0b2-44b5-9b73-4976930c5594/map-checkpoint.json",
+        "sha256": "8d232e54759e8ec7802db3fccdcdd56276e773d71597e023f77dd66aa52f2d2f"
+      },
+      "references": [
+        {
+          "case": "Ironclad-a-A10",
+          "label": "control",
+          "status": "match",
+          "battle": {
+            "label": "control",
+            "run_id": "8a77e198-3fac-4054-9fa3-a7f12b741966",
+            "status": "defeat",
+            "steps": 34,
+            "entry_verified": true,
+            "replay_seconds": 4.754342332947999,
+            "replay_commands": 130,
+            "sources": {
+              "control": 34
+            },
+            "selection_truncations": 0,
+            "last_combat_round": 9,
+            "restore_mode": "full_prefix",
+            "hp": 0,
+            "max_hp": 80,
+            "potions": [],
+            "final_hash": "05c2f756b4ec51c6d8ab488286a75e61d9ab5bf67d9591832c6aa3f430da0677",
+            "path_hash": "6bd7fcfb7045036e98b0e5f8f6a64dc222d3651d130a44edd0bd3ce89ef689ad",
+            "transition_hash": "3fda42e0d4d2240446b9e1e6a31be17cb0d5c859b0d04261689726c95e182040",
+            "seconds": 5.813123499974608,
+            "wire.jsonl_sha256": "00265beb99ebbc3fbfa28fc5060c0744f7f12661b515eaf7f925a82f7932cd92",
+            "engine.stderr.log_sha256": "909c020364d7f331a658ca4862382cefdd91aa1eebf5a9cf8f13614a42dbe3b1",
+            "trace_path": "artifacts/runs/8a77e198-3fac-4054-9fa3-a7f12b741966/decisions.jsonl",
+            "trace_sha256": "f4f696cc0cc809c5015d91a25792cd271e38f657902d55283a67e7f8b1ad482c"
+          },
+          "continuation": {
+            "case": "Ironclad-a-A10",
+            "label": "control",
+            "mode": "A",
+            "run_id": "a0269821-f47f-42fa-947e-2e752e1e6af2",
+            "status": "match",
+            "steps_checked": 34,
+            "extension_steps": 0,
+            "steps": [
+              {
+                "before": "758d0b003d73e1e8828f19edeba7a156fd71dac64a4b85c326508a785e29db06",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 5,
+                    "target_index": 0
+                  }
+                },
+                "after": "b504e9d3c5528c9ef270c97122ed699cb6861387b118bbd3d6d857701044df02"
+              },
+              {
+                "before": "b504e9d3c5528c9ef270c97122ed699cb6861387b118bbd3d6d857701044df02",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1,
+                    "target_index": 0
+                  }
+                },
+                "after": "055fdf6ad732c4a25de03d4f61e45681ae712e0452590cb19a7c718225963c97"
+              },
+              {
+                "before": "055fdf6ad732c4a25de03d4f61e45681ae712e0452590cb19a7c718225963c97",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1,
+                    "target_index": 0
+                  }
+                },
+                "after": "1ba053641200ba9cdca071a0f0b240bb1c8a5c6bddb037074251e50afec1649b"
+              },
+              {
+                "before": "1ba053641200ba9cdca071a0f0b240bb1c8a5c6bddb037074251e50afec1649b",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0
+                  }
+                },
+                "after": "445411aa8e191ed7d30a7c15e20bcfdf375b829e38271d85e738f0652bb36e42"
+              },
+              {
+                "before": "445411aa8e191ed7d30a7c15e20bcfdf375b829e38271d85e738f0652bb36e42",
+                "action": {
+                  "cmd": "action",
+                  "action": "select_cards",
+                  "args": {
+                    "indices": "2"
+                  }
+                },
+                "after": "4dbe31529c3da27802767b675b96e0d6113f9c1455d0859070f5761bd638e8b9"
+              },
+              {
+                "before": "4dbe31529c3da27802767b675b96e0d6113f9c1455d0859070f5761bd638e8b9",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "ca088152921762d0ee9ea9d4f82d3a6576e4c63486e6edd1ee5813f2d56a9fe9"
+              },
+              {
+                "before": "ca088152921762d0ee9ea9d4f82d3a6576e4c63486e6edd1ee5813f2d56a9fe9",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 3
+                  }
+                },
+                "after": "0604136261b871e3fddc4fbc30c53eff3feae31ed6133edc8542caacd145f4b2"
+              },
+              {
+                "before": "0604136261b871e3fddc4fbc30c53eff3feae31ed6133edc8542caacd145f4b2",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0,
+                    "target_index": 0
+                  }
+                },
+                "after": "74c7c803fbea57e9c101de022f10e6bbbdc388cae36b1a7771bdc03e58ce4bb5"
+              },
+              {
+                "before": "74c7c803fbea57e9c101de022f10e6bbbdc388cae36b1a7771bdc03e58ce4bb5",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0,
+                    "target_index": 0
+                  }
+                },
+                "after": "dc45fd478e680a07d944e73c7292ccef879da5f24a8a00ef6e45e0cfaa7e184f"
+              },
+              {
+                "before": "dc45fd478e680a07d944e73c7292ccef879da5f24a8a00ef6e45e0cfaa7e184f",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "7eaac506a67e13483d661934a41e2b68ef5ca58030cf77e87d35d480075cde6c"
+              },
+              {
+                "before": "7eaac506a67e13483d661934a41e2b68ef5ca58030cf77e87d35d480075cde6c",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1,
+                    "target_index": 0
+                  }
+                },
+                "after": "a589d1f528fe9428a6e917b48d4523d64bcb7286f8082ae57c3d7b4d027f479e"
+              },
+              {
+                "before": "a589d1f528fe9428a6e917b48d4523d64bcb7286f8082ae57c3d7b4d027f479e",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0
+                  }
+                },
+                "after": "3b407648bd7c45c239e6cb90aa3d764ef08d135d61baf32287a2c320f5fc3296"
+              },
+              {
+                "before": "3b407648bd7c45c239e6cb90aa3d764ef08d135d61baf32287a2c320f5fc3296",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "6e91edcf41998e052e4db21154d546c2e35a907b62d08df998a030cc58cb4c7a"
+              },
+              {
+                "before": "6e91edcf41998e052e4db21154d546c2e35a907b62d08df998a030cc58cb4c7a",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 2
+                  }
+                },
+                "after": "c4860188ea8b3cd2173057e148d7979e27e7c75c8983ce84a49c659a17c00167"
+              },
+              {
+                "before": "c4860188ea8b3cd2173057e148d7979e27e7c75c8983ce84a49c659a17c00167",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1
+                  }
+                },
+                "after": "8d07a53785d279151658c68210ae8689005f0c323fddebbab365b6b76209a30c"
+              },
+              {
+                "before": "8d07a53785d279151658c68210ae8689005f0c323fddebbab365b6b76209a30c",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "5e6f388aa5ece1f96388205e690de88f8e0c9cf76f7cc1bf6405f5ca84595e82"
+              },
+              {
+                "before": "5e6f388aa5ece1f96388205e690de88f8e0c9cf76f7cc1bf6405f5ca84595e82",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 3,
+                    "target_index": 0
+                  }
+                },
+                "after": "5fc80a134dde94b62ddcbc38cd6e17c073a28527cfaf866d6785915d462d53e9"
+              },
+              {
+                "before": "5fc80a134dde94b62ddcbc38cd6e17c073a28527cfaf866d6785915d462d53e9",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 2,
+                    "target_index": 0
+                  }
+                },
+                "after": "16ddb27781516dca20fdb0be5642262ea4b81d43997d569fff186294c4991400"
+              },
+              {
+                "before": "16ddb27781516dca20fdb0be5642262ea4b81d43997d569fff186294c4991400",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "445a89fa713924a54387209eaa235b8d75a77aee1fc635e0be3a7952fb1c7ed5"
+              },
+              {
+                "before": "445a89fa713924a54387209eaa235b8d75a77aee1fc635e0be3a7952fb1c7ed5",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 3
+                  }
+                },
+                "after": "5310045d5e748173d683bfa6b951253275ba30bf500be76452971240b115a5d5"
+              },
+              {
+                "before": "5310045d5e748173d683bfa6b951253275ba30bf500be76452971240b115a5d5",
+                "action": {
+                  "cmd": "action",
+                  "action": "select_cards",
+                  "args": {
+                    "indices": "1"
+                  }
+                },
+                "after": "8210b959deff22070ec77d2c12bea6886bcc9e27fb7f041ada5681761d2400cc"
+              },
+              {
+                "before": "8210b959deff22070ec77d2c12bea6886bcc9e27fb7f041ada5681761d2400cc",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1,
+                    "target_index": 0
+                  }
+                },
+                "after": "51d599c36e595c3e60b673a992f3d1b5452cde20d9aea9982048af9043b1c9b4"
+              },
+              {
+                "before": "51d599c36e595c3e60b673a992f3d1b5452cde20d9aea9982048af9043b1c9b4",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0
+                  }
+                },
+                "after": "873ca31c5c537e16e9755e8141f5618983ce80096203b17dee217874428d9056"
+              },
+              {
+                "before": "873ca31c5c537e16e9755e8141f5618983ce80096203b17dee217874428d9056",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "4f6c2aa95e0d3db3e4c8d50049159cf4e5edd1e1d3e4fed414d7d84287b04e76"
+              },
+              {
+                "before": "4f6c2aa95e0d3db3e4c8d50049159cf4e5edd1e1d3e4fed414d7d84287b04e76",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1
+                  }
+                },
+                "after": "e14c2abeb0ca03be3cbff45f2038170a5fdfc5fafa70f5bdd9a854b3ba4be53c"
+              },
+              {
+                "before": "e14c2abeb0ca03be3cbff45f2038170a5fdfc5fafa70f5bdd9a854b3ba4be53c",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1
+                  }
+                },
+                "after": "8dbd1fd219f4f3e1a5148a2b26020962acf9dea2b9370f5a7347a3cca1dbc0cf"
+              },
+              {
+                "before": "8dbd1fd219f4f3e1a5148a2b26020962acf9dea2b9370f5a7347a3cca1dbc0cf",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 2
+                  }
+                },
+                "after": "6482d02a54e3d8cbb4d1e56130ae6669a214897192de94643c68ad3ceec8d207"
+              },
+              {
+                "before": "6482d02a54e3d8cbb4d1e56130ae6669a214897192de94643c68ad3ceec8d207",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "679e99ac0c18acf4e723eb4445218636cc3a83b1228d2269200ddf088e358bbf"
+              },
+              {
+                "before": "679e99ac0c18acf4e723eb4445218636cc3a83b1228d2269200ddf088e358bbf",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 4,
+                    "target_index": 0
+                  }
+                },
+                "after": "c7fbc8727061bd4ce391bca499952f27ae59c8877b336bda19db27125758fa41"
+              },
+              {
+                "before": "c7fbc8727061bd4ce391bca499952f27ae59c8877b336bda19db27125758fa41",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 2,
+                    "target_index": 0
+                  }
+                },
+                "after": "f44cca0032049ac774ff5b744fe524b671b40c2f99ae99a4bafa3e5f2111b010"
+              },
+              {
+                "before": "f44cca0032049ac774ff5b744fe524b671b40c2f99ae99a4bafa3e5f2111b010",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "500900198ab16c6c00750adbed235f183e1f4b388af06528035c4a5997036039"
+              },
+              {
+                "before": "500900198ab16c6c00750adbed235f183e1f4b388af06528035c4a5997036039",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1
+                  }
+                },
+                "after": "c57f4a1cf3c2940d70c4f7a57463bc3e2a2c027b0ec8ec09214bcabd1cc5ea71"
+              },
+              {
+                "before": "c57f4a1cf3c2940d70c4f7a57463bc3e2a2c027b0ec8ec09214bcabd1cc5ea71",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 3,
+                    "target_index": 0
+                  }
+                },
+                "after": "7846e2387abdf9194470ef24586cb766dcb5eea917a4ed1566c0346145f3c484"
+              },
+              {
+                "before": "7846e2387abdf9194470ef24586cb766dcb5eea917a4ed1566c0346145f3c484",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "05c2f756b4ec51c6d8ab488286a75e61d9ab5bf67d9591832c6aa3f430da0677"
+              }
+            ],
+            "restore_seconds": 4.8080235831439495,
+            "map_match": true,
+            "entry_match": true,
+            "battle_status": "defeat",
+            "stop_reason": "game_over",
+            "final_hash": "05c2f756b4ec51c6d8ab488286a75e61d9ab5bf67d9591832c6aa3f430da0677",
+            "final_decision": "game_over",
+            "final_context": {
+              "act": 1,
+              "act_name": "Overgrowth",
+              "floor": 9,
+              "room_type": "Elite",
+              "boss": {
+                "id": "VANTOM_BOSS",
+                "name": "Vantom"
+              }
+            },
+            "path_hash": "3fda42e0d4d2240446b9e1e6a31be17cb0d5c859b0d04261689726c95e182040",
+            "seconds": 5.843755250098184,
+            "wire.jsonl_sha256": "0013d665e124fc4bff55f25db83b855b4835d6ead230ab48750fc7024ca554fd",
+            "engine.stderr.log_sha256": "909c020364d7f331a658ca4862382cefdd91aa1eebf5a9cf8f13614a42dbe3b1",
+            "trace_path": "artifacts/runs/a0269821-f47f-42fa-947e-2e752e1e6af2/decisions.jsonl",
+            "trace_sha256": "8e4768fdc3561586d0713d7fa8fac763d357e359e7dd0642769a1080bdf91363"
+          }
+        },
+        {
+          "case": "Ironclad-a-A10",
+          "label": "epsilon15",
+          "status": "match",
+          "battle": {
+            "label": "epsilon15",
+            "run_id": "46753a39-0447-4ca7-a17a-604407d2ec72",
+            "status": "defeat",
+            "steps": 33,
+            "entry_verified": true,
+            "replay_seconds": 4.79332045908086,
+            "replay_commands": 130,
+            "sources": {
+              "control": 32,
+              "epsilon15": 1
+            },
+            "selection_truncations": 0,
+            "last_combat_round": 9,
+            "restore_mode": "full_prefix",
+            "hp": 0,
+            "max_hp": 80,
+            "potions": [],
+            "final_hash": "05c2f756b4ec51c6d8ab488286a75e61d9ab5bf67d9591832c6aa3f430da0677",
+            "path_hash": "d13043abdd92dc72b790e451c120bb0932b485a98444a13a75906cec2187a24e",
+            "transition_hash": "3050766935c426cb6f15ca0117561c99e03da8ccf9b7bb153afa983da5fec502",
+            "seconds": 5.822034750133753,
+            "wire.jsonl_sha256": "40a659ee1c293db1f1e3be6cd2433a95a5bfc8cc7068b5272fc195b9d3f03d2d",
+            "engine.stderr.log_sha256": "a434be810b3163b7f243cb67c73b7139c90c983500f41a117e6562b53198723c",
+            "trace_path": "artifacts/runs/46753a39-0447-4ca7-a17a-604407d2ec72/decisions.jsonl",
+            "trace_sha256": "1a2346b1a18851c9fe60e415507d016551297a74983fee1e9b58a473c0532331"
+          },
+          "continuation": {
+            "case": "Ironclad-a-A10",
+            "label": "epsilon15",
+            "mode": "A",
+            "run_id": "b1e9e358-7ee0-4310-884a-56ded8222380",
+            "status": "match",
+            "steps_checked": 33,
+            "extension_steps": 0,
+            "steps": [
+              {
+                "before": "758d0b003d73e1e8828f19edeba7a156fd71dac64a4b85c326508a785e29db06",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 5,
+                    "target_index": 0
+                  }
+                },
+                "after": "b504e9d3c5528c9ef270c97122ed699cb6861387b118bbd3d6d857701044df02"
+              },
+              {
+                "before": "b504e9d3c5528c9ef270c97122ed699cb6861387b118bbd3d6d857701044df02",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1,
+                    "target_index": 0
+                  }
+                },
+                "after": "055fdf6ad732c4a25de03d4f61e45681ae712e0452590cb19a7c718225963c97"
+              },
+              {
+                "before": "055fdf6ad732c4a25de03d4f61e45681ae712e0452590cb19a7c718225963c97",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1,
+                    "target_index": 0
+                  }
+                },
+                "after": "1ba053641200ba9cdca071a0f0b240bb1c8a5c6bddb037074251e50afec1649b"
+              },
+              {
+                "before": "1ba053641200ba9cdca071a0f0b240bb1c8a5c6bddb037074251e50afec1649b",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0
+                  }
+                },
+                "after": "445411aa8e191ed7d30a7c15e20bcfdf375b829e38271d85e738f0652bb36e42"
+              },
+              {
+                "before": "445411aa8e191ed7d30a7c15e20bcfdf375b829e38271d85e738f0652bb36e42",
+                "action": {
+                  "cmd": "action",
+                  "action": "select_cards",
+                  "args": {
+                    "indices": "2"
+                  }
+                },
+                "after": "4dbe31529c3da27802767b675b96e0d6113f9c1455d0859070f5761bd638e8b9"
+              },
+              {
+                "before": "4dbe31529c3da27802767b675b96e0d6113f9c1455d0859070f5761bd638e8b9",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "ca088152921762d0ee9ea9d4f82d3a6576e4c63486e6edd1ee5813f2d56a9fe9"
+              },
+              {
+                "before": "ca088152921762d0ee9ea9d4f82d3a6576e4c63486e6edd1ee5813f2d56a9fe9",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 3
+                  }
+                },
+                "after": "0604136261b871e3fddc4fbc30c53eff3feae31ed6133edc8542caacd145f4b2"
+              },
+              {
+                "before": "0604136261b871e3fddc4fbc30c53eff3feae31ed6133edc8542caacd145f4b2",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0,
+                    "target_index": 0
+                  }
+                },
+                "after": "74c7c803fbea57e9c101de022f10e6bbbdc388cae36b1a7771bdc03e58ce4bb5"
+              },
+              {
+                "before": "74c7c803fbea57e9c101de022f10e6bbbdc388cae36b1a7771bdc03e58ce4bb5",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "1ba9fe9a0d059ff993f50a705720314d4291cc9d4885d915f7dc6a91a5d5a878"
+              },
+              {
+                "before": "1ba9fe9a0d059ff993f50a705720314d4291cc9d4885d915f7dc6a91a5d5a878",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1,
+                    "target_index": 0
+                  }
+                },
+                "after": "e69fe1270b5f1340419880889136c2bda1e0dc3e7818016572cde1493e9c37d3"
+              },
+              {
+                "before": "e69fe1270b5f1340419880889136c2bda1e0dc3e7818016572cde1493e9c37d3",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0
+                  }
+                },
+                "after": "ce8fe7ef3863e54b27f411fc3688df546c9150aa00822aa0a6f9f001149e48b8"
+              },
+              {
+                "before": "ce8fe7ef3863e54b27f411fc3688df546c9150aa00822aa0a6f9f001149e48b8",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "c1bc4270e3bab5de10d0bc6311324aaf1762a0b4622fbd5bd5f779a3b3235094"
+              },
+              {
+                "before": "c1bc4270e3bab5de10d0bc6311324aaf1762a0b4622fbd5bd5f779a3b3235094",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 2
+                  }
+                },
+                "after": "61816ceaa5d391dca91748e86513656d9f64819be1340bc41cfe343ef9ee8871"
+              },
+              {
+                "before": "61816ceaa5d391dca91748e86513656d9f64819be1340bc41cfe343ef9ee8871",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1
+                  }
+                },
+                "after": "2d16daefb6d957952a776340792b9d678c5e34f027bbf81596c1ac569e419ca6"
+              },
+              {
+                "before": "2d16daefb6d957952a776340792b9d678c5e34f027bbf81596c1ac569e419ca6",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "610f3f0f9ed227c779dfd3875e47a40b5b905a0d331eb3a621b220a33eb6ea15"
+              },
+              {
+                "before": "610f3f0f9ed227c779dfd3875e47a40b5b905a0d331eb3a621b220a33eb6ea15",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 3,
+                    "target_index": 0
+                  }
+                },
+                "after": "7fbc117971e7cd6cd4e096dd4bcfdce2bc801536f8072b2c7971557e3150b8c0"
+              },
+              {
+                "before": "7fbc117971e7cd6cd4e096dd4bcfdce2bc801536f8072b2c7971557e3150b8c0",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 2,
+                    "target_index": 0
+                  }
+                },
+                "after": "16ddb27781516dca20fdb0be5642262ea4b81d43997d569fff186294c4991400"
+              },
+              {
+                "before": "16ddb27781516dca20fdb0be5642262ea4b81d43997d569fff186294c4991400",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "445a89fa713924a54387209eaa235b8d75a77aee1fc635e0be3a7952fb1c7ed5"
+              },
+              {
+                "before": "445a89fa713924a54387209eaa235b8d75a77aee1fc635e0be3a7952fb1c7ed5",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 3
+                  }
+                },
+                "after": "5310045d5e748173d683bfa6b951253275ba30bf500be76452971240b115a5d5"
+              },
+              {
+                "before": "5310045d5e748173d683bfa6b951253275ba30bf500be76452971240b115a5d5",
+                "action": {
+                  "cmd": "action",
+                  "action": "select_cards",
+                  "args": {
+                    "indices": "1"
+                  }
+                },
+                "after": "8210b959deff22070ec77d2c12bea6886bcc9e27fb7f041ada5681761d2400cc"
+              },
+              {
+                "before": "8210b959deff22070ec77d2c12bea6886bcc9e27fb7f041ada5681761d2400cc",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1,
+                    "target_index": 0
+                  }
+                },
+                "after": "51d599c36e595c3e60b673a992f3d1b5452cde20d9aea9982048af9043b1c9b4"
+              },
+              {
+                "before": "51d599c36e595c3e60b673a992f3d1b5452cde20d9aea9982048af9043b1c9b4",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0
+                  }
+                },
+                "after": "873ca31c5c537e16e9755e8141f5618983ce80096203b17dee217874428d9056"
+              },
+              {
+                "before": "873ca31c5c537e16e9755e8141f5618983ce80096203b17dee217874428d9056",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "4f6c2aa95e0d3db3e4c8d50049159cf4e5edd1e1d3e4fed414d7d84287b04e76"
+              },
+              {
+                "before": "4f6c2aa95e0d3db3e4c8d50049159cf4e5edd1e1d3e4fed414d7d84287b04e76",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1
+                  }
+                },
+                "after": "e14c2abeb0ca03be3cbff45f2038170a5fdfc5fafa70f5bdd9a854b3ba4be53c"
+              },
+              {
+                "before": "e14c2abeb0ca03be3cbff45f2038170a5fdfc5fafa70f5bdd9a854b3ba4be53c",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1
+                  }
+                },
+                "after": "8dbd1fd219f4f3e1a5148a2b26020962acf9dea2b9370f5a7347a3cca1dbc0cf"
+              },
+              {
+                "before": "8dbd1fd219f4f3e1a5148a2b26020962acf9dea2b9370f5a7347a3cca1dbc0cf",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 2
+                  }
+                },
+                "after": "6482d02a54e3d8cbb4d1e56130ae6669a214897192de94643c68ad3ceec8d207"
+              },
+              {
+                "before": "6482d02a54e3d8cbb4d1e56130ae6669a214897192de94643c68ad3ceec8d207",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "679e99ac0c18acf4e723eb4445218636cc3a83b1228d2269200ddf088e358bbf"
+              },
+              {
+                "before": "679e99ac0c18acf4e723eb4445218636cc3a83b1228d2269200ddf088e358bbf",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 4,
+                    "target_index": 0
+                  }
+                },
+                "after": "c7fbc8727061bd4ce391bca499952f27ae59c8877b336bda19db27125758fa41"
+              },
+              {
+                "before": "c7fbc8727061bd4ce391bca499952f27ae59c8877b336bda19db27125758fa41",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 2,
+                    "target_index": 0
+                  }
+                },
+                "after": "f44cca0032049ac774ff5b744fe524b671b40c2f99ae99a4bafa3e5f2111b010"
+              },
+              {
+                "before": "f44cca0032049ac774ff5b744fe524b671b40c2f99ae99a4bafa3e5f2111b010",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "500900198ab16c6c00750adbed235f183e1f4b388af06528035c4a5997036039"
+              },
+              {
+                "before": "500900198ab16c6c00750adbed235f183e1f4b388af06528035c4a5997036039",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1
+                  }
+                },
+                "after": "c57f4a1cf3c2940d70c4f7a57463bc3e2a2c027b0ec8ec09214bcabd1cc5ea71"
+              },
+              {
+                "before": "c57f4a1cf3c2940d70c4f7a57463bc3e2a2c027b0ec8ec09214bcabd1cc5ea71",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 3,
+                    "target_index": 0
+                  }
+                },
+                "after": "7846e2387abdf9194470ef24586cb766dcb5eea917a4ed1566c0346145f3c484"
+              },
+              {
+                "before": "7846e2387abdf9194470ef24586cb766dcb5eea917a4ed1566c0346145f3c484",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "05c2f756b4ec51c6d8ab488286a75e61d9ab5bf67d9591832c6aa3f430da0677"
+              }
+            ],
+            "restore_seconds": 4.803403167054057,
+            "map_match": true,
+            "entry_match": true,
+            "battle_status": "defeat",
+            "stop_reason": "game_over",
+            "final_hash": "05c2f756b4ec51c6d8ab488286a75e61d9ab5bf67d9591832c6aa3f430da0677",
+            "final_decision": "game_over",
+            "final_context": {
+              "act": 1,
+              "act_name": "Overgrowth",
+              "floor": 9,
+              "room_type": "Elite",
+              "boss": {
+                "id": "VANTOM_BOSS",
+                "name": "Vantom"
+              }
+            },
+            "path_hash": "3050766935c426cb6f15ca0117561c99e03da8ccf9b7bb153afa983da5fec502",
+            "seconds": 5.8134409580379725,
+            "wire.jsonl_sha256": "f9dd26b08b00eeae54e9d4f3bf931ce8c5434e1f233cc38ed5dba4e507e93c35",
+            "engine.stderr.log_sha256": "a434be810b3163b7f243cb67c73b7139c90c983500f41a117e6562b53198723c",
+            "trace_path": "artifacts/runs/b1e9e358-7ee0-4310-884a-56ded8222380/decisions.jsonl",
+            "trace_sha256": "c6c8eee4f1653e230a7df362e54b0bae6977ae10c5513b2ef3c1cd17cd534657"
+          }
+        }
+      ],
+      "status": "match"
+    },
+    {
+      "case": "Ironclad-b-A10",
+      "preflight": [
+        {
+          "mode": "A",
+          "case": "Ironclad-b-A10",
+          "run_id": "b55ff29f-de2a-460e-8f95-a65c097eb497",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 4.864978458965197,
+          "map_hash": "dd2cb223d194aaed19e2af875d59aa9027b9da43d56d97c820f75735ae24c0a5",
+          "entry_hash": "70954cec636a7fdc91a6b28850a1f33fb9655d8bcdec084fa1dbc368c7ab9231",
+          "seconds": 4.874739459017292,
+          "wire.jsonl_sha256": "120935b6a211554eeabde8a6fa493562f45b791386a1f62c6bad3a1896e5d35e",
+          "engine.stderr.log_sha256": "6815af901164ca27c642fbaa4d9563cfd047a48d7e975c980494d8f2febecf71",
+          "trace_path": "artifacts/runs/b55ff29f-de2a-460e-8f95-a65c097eb497/decisions.jsonl",
+          "trace_sha256": "724180f2ff2c0262661d2924d01627fd5cf423f6d990f7f3acf07ac17fd0501d"
+        },
+        {
+          "mode": "B",
+          "case": "Ironclad-b-A10",
+          "run_id": "fe2154f4-88cf-4983-9dd6-bae321a0d5a3",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 4.97501983307302,
+          "map_hash": "dd2cb223d194aaed19e2af875d59aa9027b9da43d56d97c820f75735ae24c0a5",
+          "save_seconds": 0.09691387508064508,
+          "checkpoint": {
+            "path": "artifacts/runs/fe2154f4-88cf-4983-9dd6-bae321a0d5a3/map-checkpoint.json",
+            "sha256": "eaf73d29054c4f485eddc96186fab0ca3c3eb3795eb2b84c8bc14ae47bce8f02"
+          },
+          "entry_hash": "70954cec636a7fdc91a6b28850a1f33fb9655d8bcdec084fa1dbc368c7ab9231",
+          "seconds": 4.984854249982163,
+          "wire.jsonl_sha256": "911918f8568185e618a3a8b18633d2eb8d25d70f5260edd37291cf425ac06fa0",
+          "engine.stderr.log_sha256": "7e02d2057112d40b47ae5fdd4f25dcab507b668ea5bc4d47e6ad32aa78bb7d27",
+          "trace_path": "artifacts/runs/fe2154f4-88cf-4983-9dd6-bae321a0d5a3/decisions.jsonl",
+          "trace_sha256": "29ff3a48f6674fd81c6352543196bfb0ae646d567447b0b6c229c3ae34758eda"
+        },
+        {
+          "mode": "C",
+          "case": "Ironclad-b-A10",
+          "run_id": "0961cde8-bc47-4802-8b3b-0510e8b23675",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 1.1505826250649989,
+          "map_hash": "dd2cb223d194aaed19e2af875d59aa9027b9da43d56d97c820f75735ae24c0a5",
+          "entry_hash": "70954cec636a7fdc91a6b28850a1f33fb9655d8bcdec084fa1dbc368c7ab9231",
+          "seconds": 1.1594844579230994,
+          "wire.jsonl_sha256": "a419974b71895f63652f62be1d4ef3aa935525ed6928b2793b973f7bb531d963",
+          "engine.stderr.log_sha256": "9c9d9f6d8586aae63d6cd652d8f7587a722f15eeff3915d39190e578c6097600",
+          "trace_path": "artifacts/runs/0961cde8-bc47-4802-8b3b-0510e8b23675/decisions.jsonl",
+          "trace_sha256": "82b58c252949332b6692d03e0af9fac73c124c7cc4a69571cc724e559923058f"
+        }
+      ],
+      "native_identity_match": true,
+      "checkpoint": {
+        "path": "artifacts/runs/fe2154f4-88cf-4983-9dd6-bae321a0d5a3/map-checkpoint.json",
+        "sha256": "eaf73d29054c4f485eddc96186fab0ca3c3eb3795eb2b84c8bc14ae47bce8f02"
+      },
+      "references": [
+        {
+          "case": "Ironclad-b-A10",
+          "label": "control",
+          "status": "match",
+          "battle": {
+            "label": "control",
+            "run_id": "14d4df6e-898a-49fd-be48-47b7626500f8",
+            "status": "defeat",
+            "steps": 12,
+            "entry_verified": true,
+            "replay_seconds": 4.835847208974883,
+            "replay_commands": 128,
+            "sources": {
+              "control": 12
+            },
+            "selection_truncations": 0,
+            "last_combat_round": 2,
+            "restore_mode": "full_prefix",
+            "hp": 0,
+            "max_hp": 80,
+            "potions": [],
+            "final_hash": "046ee7058c167517eaa32d6351bd89f1df1a4b9462c12a7ec66f8a1c7637f376",
+            "path_hash": "ce1b130c3bee3074e8ba310f729f40c3bd7ac408fa9341015475a2a5d860a75e",
+            "transition_hash": "d618b93e7c1789c48b75601b2e0e960b58382d0366fdc53b2b6c1c414e963ec0",
+            "seconds": 5.2218996251467615,
+            "wire.jsonl_sha256": "12a8109c8600931c1e4dcd2b57df6599543f8874a894819a7b6e1e9b7abba0bd",
+            "engine.stderr.log_sha256": "083a27caa6bc8d213adab8a3f2c2b003a8f4cfc20f3d4489f3cebd37f7c5779d",
+            "trace_path": "artifacts/runs/14d4df6e-898a-49fd-be48-47b7626500f8/decisions.jsonl",
+            "trace_sha256": "6012a2b429d93df23f45cec52016022b71a2799c4ae4e5d8858238f7639a690e"
+          },
+          "continuation": {
+            "case": "Ironclad-b-A10",
+            "label": "control",
+            "mode": "A",
+            "run_id": "aa8cd88c-fd84-4353-af46-28cd9efc8537",
+            "status": "match",
+            "steps_checked": 12,
+            "extension_steps": 0,
+            "steps": [
+              {
+                "before": "70954cec636a7fdc91a6b28850a1f33fb9655d8bcdec084fa1dbc368c7ab9231",
+                "action": {
+                  "cmd": "action",
+                  "action": "use_potion",
+                  "args": {
+                    "potion_index": 0
+                  }
+                },
+                "after": "1a04e6cbb378fff637753698a33cdf5ddf56b9486405b00156a805bf298cb0bc"
+              },
+              {
+                "before": "1a04e6cbb378fff637753698a33cdf5ddf56b9486405b00156a805bf298cb0bc",
+                "action": {
+                  "cmd": "action",
+                  "action": "select_cards",
+                  "args": {
+                    "indices": "2"
+                  }
+                },
+                "after": "6a0a07c2350e887b384bbcc204d78e8d6338d41f9dbfb34332ad0970bfb1eab4"
+              },
+              {
+                "before": "6a0a07c2350e887b384bbcc204d78e8d6338d41f9dbfb34332ad0970bfb1eab4",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 2,
+                    "target_index": 0
+                  }
+                },
+                "after": "e9556782f47967043d2fc3225032be8793806c3651efbff4845ce275a385fd2e"
+              },
+              {
+                "before": "e9556782f47967043d2fc3225032be8793806c3651efbff4845ce275a385fd2e",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 3
+                  }
+                },
+                "after": "0d0513cba954434083cf1d6c807cef2a68dba20152dc48420c45cbf94b8e4539"
+              },
+              {
+                "before": "0d0513cba954434083cf1d6c807cef2a68dba20152dc48420c45cbf94b8e4539",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1,
+                    "target_index": 0
+                  }
+                },
+                "after": "e37d9d52f4d2d9dc21b9fce696401cf3944ace103c9279d52cfabe588c0c647b"
+              },
+              {
+                "before": "e37d9d52f4d2d9dc21b9fce696401cf3944ace103c9279d52cfabe588c0c647b",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "1f72421e40023f7634a2d007ce80d4b1bc65ff6958ef639289cdbbc53b2a0159"
+              },
+              {
+                "before": "1f72421e40023f7634a2d007ce80d4b1bc65ff6958ef639289cdbbc53b2a0159",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0
+                  }
+                },
+                "after": "12363fe6af4cd325982e68b507d1888bb33396c3c54a7131fcd3c66e5d84110e"
+              },
+              {
+                "before": "12363fe6af4cd325982e68b507d1888bb33396c3c54a7131fcd3c66e5d84110e",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1,
+                    "target_index": 0
+                  }
+                },
+                "after": "7cc778befed8ef80c149e25a8763098b4190089819f4bb52f0806343cb485365"
+              },
+              {
+                "before": "7cc778befed8ef80c149e25a8763098b4190089819f4bb52f0806343cb485365",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0
+                  }
+                },
+                "after": "9f8c46385ddbf879c05b577055e53711b1c85c7201e3d7aeef99f5b75ab9658e"
+              },
+              {
+                "before": "9f8c46385ddbf879c05b577055e53711b1c85c7201e3d7aeef99f5b75ab9658e",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 2,
+                    "target_index": 0
+                  }
+                },
+                "after": "a5174abc33bb81e452f20d4e9052885e2baa3efc3707793e6ed7dd1d6815a578"
+              },
+              {
+                "before": "a5174abc33bb81e452f20d4e9052885e2baa3efc3707793e6ed7dd1d6815a578",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 2,
+                    "target_index": 0
+                  }
+                },
+                "after": "9f42777cc373ba2763b1d3ea33df8e7bae52b83b0bd9f3d1f67deb68d8cfcf71"
+              },
+              {
+                "before": "9f42777cc373ba2763b1d3ea33df8e7bae52b83b0bd9f3d1f67deb68d8cfcf71",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "046ee7058c167517eaa32d6351bd89f1df1a4b9462c12a7ec66f8a1c7637f376"
+              }
+            ],
+            "restore_seconds": 4.964919833000749,
+            "map_match": true,
+            "entry_match": true,
+            "battle_status": "defeat",
+            "stop_reason": "game_over",
+            "final_hash": "046ee7058c167517eaa32d6351bd89f1df1a4b9462c12a7ec66f8a1c7637f376",
+            "final_decision": "game_over",
+            "final_context": {
+              "act": 1,
+              "act_name": "Overgrowth",
+              "floor": 9,
+              "room_type": "Elite",
+              "boss": {
+                "id": "CEREMONIAL_BEAST_BOSS",
+                "name": "Ceremonial Beast"
+              }
+            },
+            "path_hash": "d618b93e7c1789c48b75601b2e0e960b58382d0366fdc53b2b6c1c414e963ec0",
+            "seconds": 5.329549083020538,
+            "wire.jsonl_sha256": "e1377397e605da2b3eb8b904d68f4df3f71c37fcb986a1607456ded11d6fe253",
+            "engine.stderr.log_sha256": "083a27caa6bc8d213adab8a3f2c2b003a8f4cfc20f3d4489f3cebd37f7c5779d",
+            "trace_path": "artifacts/runs/aa8cd88c-fd84-4353-af46-28cd9efc8537/decisions.jsonl",
+            "trace_sha256": "bf3f3edb52044b626823134662a94649386e6d0413a532592d6f90fd0424083e"
+          }
+        },
+        {
+          "case": "Ironclad-b-A10",
+          "label": "epsilon15",
+          "status": "match",
+          "battle": {
+            "label": "epsilon15",
+            "run_id": "e3cbf482-9d2a-4561-b399-ea2baf05afe5",
+            "status": "defeat",
+            "steps": 10,
+            "entry_verified": true,
+            "replay_seconds": 4.985382207902148,
+            "replay_commands": 128,
+            "sources": {
+              "epsilon15": 2,
+              "control": 8
+            },
+            "selection_truncations": 0,
+            "last_combat_round": 2,
+            "restore_mode": "full_prefix",
+            "hp": 0,
+            "max_hp": 80,
+            "potions": [],
+            "final_hash": "046ee7058c167517eaa32d6351bd89f1df1a4b9462c12a7ec66f8a1c7637f376",
+            "path_hash": "3e9dc324e9898cd0afc9b4713c9149b080a44e199d7167600ef2d806b20ff930",
+            "transition_hash": "262ad26e0b9c082cead18a2ef35b35127bc146cd59f501e1fdd27519b46e379a",
+            "seconds": 5.270147250033915,
+            "wire.jsonl_sha256": "9e08e1b003a227fa11c723ac8075f9fd282abfb0f35742288b90078943773cdf",
+            "engine.stderr.log_sha256": "4cb6d2369b379a2985e52795fd7aaf0c2e25f280e01259e2433b1db746aa4b84",
+            "trace_path": "artifacts/runs/e3cbf482-9d2a-4561-b399-ea2baf05afe5/decisions.jsonl",
+            "trace_sha256": "7776a4ecdda2675655f8782d1b50c1be7cf44fab7a3cc936e709cf96d7e8b1ff"
+          },
+          "continuation": {
+            "case": "Ironclad-b-A10",
+            "label": "epsilon15",
+            "mode": "A",
+            "run_id": "07389885-3b26-438c-b4df-49e89fbb1f52",
+            "status": "match",
+            "steps_checked": 10,
+            "extension_steps": 0,
+            "steps": [
+              {
+                "before": "70954cec636a7fdc91a6b28850a1f33fb9655d8bcdec084fa1dbc368c7ab9231",
+                "action": {
+                  "cmd": "action",
+                  "action": "use_potion",
+                  "args": {
+                    "potion_index": 0
+                  }
+                },
+                "after": "1a04e6cbb378fff637753698a33cdf5ddf56b9486405b00156a805bf298cb0bc"
+              },
+              {
+                "before": "1a04e6cbb378fff637753698a33cdf5ddf56b9486405b00156a805bf298cb0bc",
+                "action": {
+                  "cmd": "action",
+                  "action": "select_cards",
+                  "args": {
+                    "indices": "2"
+                  }
+                },
+                "after": "6a0a07c2350e887b384bbcc204d78e8d6338d41f9dbfb34332ad0970bfb1eab4"
+              },
+              {
+                "before": "6a0a07c2350e887b384bbcc204d78e8d6338d41f9dbfb34332ad0970bfb1eab4",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 2,
+                    "target_index": 0
+                  }
+                },
+                "after": "e9556782f47967043d2fc3225032be8793806c3651efbff4845ce275a385fd2e"
+              },
+              {
+                "before": "e9556782f47967043d2fc3225032be8793806c3651efbff4845ce275a385fd2e",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "b8cd071062a24e1c9cf8e724f2a34816574d5f887d07cdc33ee96f57a6121254"
+              },
+              {
+                "before": "b8cd071062a24e1c9cf8e724f2a34816574d5f887d07cdc33ee96f57a6121254",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0
+                  }
+                },
+                "after": "44412978f1d9247e16a3e8526df3a8e6519d2550d991cdc1af676e27a9bc7cc9"
+              },
+              {
+                "before": "44412978f1d9247e16a3e8526df3a8e6519d2550d991cdc1af676e27a9bc7cc9",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 1,
+                    "target_index": 0
+                  }
+                },
+                "after": "285eff365faaa0d3412d3d1d179077ddfac4e8c3f3c6622f62571c894c2bc977"
+              },
+              {
+                "before": "285eff365faaa0d3412d3d1d179077ddfac4e8c3f3c6622f62571c894c2bc977",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 0
+                  }
+                },
+                "after": "c1229b6d6dd98297fa52dfc97535ebb575f0885c0bfcc8b777da104656d77b5d"
+              },
+              {
+                "before": "c1229b6d6dd98297fa52dfc97535ebb575f0885c0bfcc8b777da104656d77b5d",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 2,
+                    "target_index": 0
+                  }
+                },
+                "after": "7d5c101655a1e5a665c6aae94e51f6c7734221fd33e7b5c6099990a5941e6e81"
+              },
+              {
+                "before": "7d5c101655a1e5a665c6aae94e51f6c7734221fd33e7b5c6099990a5941e6e81",
+                "action": {
+                  "cmd": "action",
+                  "action": "play_card",
+                  "args": {
+                    "card_index": 2,
+                    "target_index": 0
+                  }
+                },
+                "after": "4cc975754857ff7aa413bd210174c5e8404eeba7e7ff7033890f8f6fb42b699c"
+              },
+              {
+                "before": "4cc975754857ff7aa413bd210174c5e8404eeba7e7ff7033890f8f6fb42b699c",
+                "action": {
+                  "cmd": "action",
+                  "action": "end_turn",
+                  "args": {}
+                },
+                "after": "046ee7058c167517eaa32d6351bd89f1df1a4b9462c12a7ec66f8a1c7637f376"
+              }
+            ],
+            "restore_seconds": 5.0456184591166675,
+            "map_match": true,
+            "entry_match": true,
+            "battle_status": "defeat",
+            "stop_reason": "game_over",
+            "final_hash": "046ee7058c167517eaa32d6351bd89f1df1a4b9462c12a7ec66f8a1c7637f376",
+            "final_decision": "game_over",
+            "final_context": {
+              "act": 1,
+              "act_name": "Overgrowth",
+              "floor": 9,
+              "room_type": "Elite",
+              "boss": {
+                "id": "CEREMONIAL_BEAST_BOSS",
+                "name": "Ceremonial Beast"
+              }
+            },
+            "path_hash": "262ad26e0b9c082cead18a2ef35b35127bc146cd59f501e1fdd27519b46e379a",
+            "seconds": 5.331114833941683,
+            "wire.jsonl_sha256": "eec408faabe571f4e5221309b9cf5be68c924e4b835c1d17a2afd18f41eef8f9",
+            "engine.stderr.log_sha256": "4cb6d2369b379a2985e52795fd7aaf0c2e25f280e01259e2433b1db746aa4b84",
+            "trace_path": "artifacts/runs/07389885-3b26-438c-b4df-49e89fbb1f52/decisions.jsonl",
+            "trace_sha256": "8b2d726bf632ebcf81bdb5112c150acdf580513c60e0e667954db370f5ba3966"
+          }
+        }
+      ],
+      "status": "match"
+    }
+  ],
+  "capture_pass": true,
+  "seconds": 92.47235954203643,
+  "batch_seconds": 109.03517495910637,
+  "summary": {
+    "match": 5
+  },
+  "audit": {
+    "raw_traces": 41,
+    "failures": [],
+    "pass": true
+  }
+}

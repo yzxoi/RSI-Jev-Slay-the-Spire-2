@@ -199,7 +199,7 @@ def main():
                         ('case', 'seed', 'character', 'ascension', 'prefix_hash', 'entry_hash', 'floor', 'enemies')},
                         'map_hash': digest(source_map(f)), 'engine': {k: version[k] for k in ENGINE_KEYS},
                         'allow_unpromoted': True, 'performance_promotion_pass': False,
-                        'validation_scope': 'E132: exact six cases, two continuations each; research only'})
+                        'validation_scope': f'E132: {len(fixtures)} available of six configs, two continuations each; research only'})
     report['seconds'] = time.monotonic() - started
     report['batch_seconds'] = used + report['seconds']
     report['summary'] = dict(Counter(r['status'] for r in report.get('results', report.get('fixtures', []))))
