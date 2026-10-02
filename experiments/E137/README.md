@@ -13,3 +13,18 @@ Preflight before any resumed gradients: real original train-094-b7 save reset th
 Issue: https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/257
 
 Resume adds a real consistency gate before the first resumed optimizer step: every previously terminal member of each interrupted batch must reproduce its original transition/final hashes under the same weights and sampling seeds. All191 old terminal members per affected learner are retained; the one failed member must now complete legitimately. E136's committed proof and an audit of all inherited card-selection menus must pass before allowing inherited updates/validation selections. New checkpoints save the exact shuffle RNG state.
+
+## Compatibility result and merge decision
+
+Tested SHA `8d53dd6`.29 focused synthetic tests passed, including exact model/Adam/shuffle-RNG equality after serialization/resumption, KL early-stop epoch boundary accounting, strict retry eligibility, one attempt maximum and shared deadline. Source inherited2640 episodes/44832 decisions were checked; all712 actual card-selection menus remain byte-identical under E136. The committed source training report and3024 raw bundles audited.
+
+The exact original train-094-b7 /S1701 update13 weights /update14 sampled seed reset successfully in three fresh processes; all three sampled battle clears had identical trajectories, and all three independent full-prefix replays matched. Seven original/new trace bundles audited;24.628s. This does not erase or solve the original intermittent loader stall.
+
+```sh
+python3 -m pytest tests/test_ppo_resume.py tests/test_ppo_actions.py tests/test_ppo.py tests/test_ppo_bank.py tests/test_ppo_scale.py tests/test_research_restore.py -q
+python3 scripts/validate_ppo_resume_e137.py --output artifacts/runs/e137-validation-v1.json
+```
+
+**Merge:** the narrow reset-retry and exact-resume compatibility gates passed. Enable only for the explicitly requested E133 resume path. Native save bytes and engine hashes unchanged. Mid-battle errors, state mismatch, defeat, caps and other timeouts are never retried. No playing-strength evidence from this compatibility case.
+
+**E133 v2 amendment before resumed gradients:** source `experiments/E133/training-v1.json`, original623-entry certificate and same264-seed bank; use E136 complete selections with unchanged features/weights. Resume1701 after13 optimizer steps and1702 after0. Rerun entire interrupted192-case batches with fixed original sample seeds and require every previously terminal member's full trajectory equal before optimizer update. Preserve original failed batches by immutable source reference; charge original800.340/53.763 workseconds against the same3600s learner ceiling. Stop at32 total optimized updates each, not32 additional; effective model training ceiling remains6144 episodes each, with attempted/retried episodes reported separately. Original checkpoint validation ranks and held-out gates unchanged; no test policies evaluated yet. A new report v2 includes inherited evidence and current session costs. No additional training-budget extension is authorized by this amendment.
