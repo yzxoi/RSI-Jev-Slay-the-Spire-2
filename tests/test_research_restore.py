@@ -45,6 +45,18 @@ class ResearchRestoreTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,'bytes changed'):
                 restore_entry(send,frozen,snapshot,manifest)
 
+    def test_changed_godot_stub_is_not_accepted_as_same_engine(self):
+        from rsi.trace import digest
+        from rsi.research_restore import ENGINE_KEYS
+        manifest={k:'pinned' for k in ENGINE_KEYS}
+        frozen={'case':'c','prefix':[],'entry_hash':'entry'}
+        snapshot={'allow_unpromoted':True,'case':'c','prefix_hash':digest([]),'entry_hash':'entry',
+                  'engine':{**manifest,'godot_stubs_sha256':'different'}}
+        def send(_):
+            self.fail('Changed stub must fail before any engine action')
+        with self.assertRaisesRegex(ValueError,'engine changed'):
+            restore_entry(send,frozen,snapshot,manifest)
+
 
 if __name__=='__main__':
     unittest.main()

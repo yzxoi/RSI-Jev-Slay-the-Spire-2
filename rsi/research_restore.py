@@ -6,7 +6,7 @@ from .checkpoints import file_hash, require_map
 from .engine import ROOT
 from .trace import digest
 
-ENGINE_KEYS = ('headless_assembly_sha256', 'headless_game_sha256', 'game_dll_sha256')
+ENGINE_KEYS = ('headless_assembly_sha256', 'headless_game_sha256', 'game_dll_sha256', 'godot_stubs_sha256')
 
 
 def research_snapshots(index_path, manifest, *, allow_unpromoted=False):
@@ -31,7 +31,7 @@ def research_snapshots(index_path, manifest, *, allow_unpromoted=False):
     if timing['promotion_pass'] != index['performance_promotion_pass']:
         raise ValueError('Performance promotion was relabeled')
     for key in ENGINE_KEYS:
-        if index['engine'][key] != manifest[key] or fidelity['manifest'][key] != manifest[key]:
+        if index['engine'].get(key) != manifest[key] or fidelity['manifest'].get(key) != manifest[key]:
             raise ValueError('Checkpoint engine version mismatch')
     snapshots = {}
     for entry in index['entries']:
@@ -51,7 +51,7 @@ def restore_entry(send, frozen, snapshot, manifest):
         raise ValueError('Checkpoint belongs to another action history')
     if snapshot['entry_hash'] != frozen['entry_hash']:
         raise ValueError('Checkpoint entry identity mismatch')
-    if any(snapshot['engine'][k] != manifest[k] for k in ENGINE_KEYS):
+    if any(snapshot['engine'].get(k) != manifest[k] for k in ENGINE_KEYS):
         raise ValueError('Checkpoint engine changed')
     path = ROOT / snapshot['path']
     if file_hash(path) != snapshot['sha256']:

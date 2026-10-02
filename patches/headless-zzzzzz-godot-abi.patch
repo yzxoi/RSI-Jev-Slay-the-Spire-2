@@ -1,0 +1,19 @@
+diff --git a/src/GodotStubs/Core.cs b/src/GodotStubs/Core.cs
+--- a/src/GodotStubs/Core.cs
++++ b/src/GodotStubs/Core.cs
+@@ -6,6 +6,15 @@ public class GodotObject
+ {
+     public class SignalName { }
+ 
++    // Exact ABI references are resolved even in unexecuted visual branches.
++    // The official TestMode path must do the real gameplay work. Never turn
++    // a visual signal carrying gameplay callbacks into a successful no-op.
++    public Error Connect(StringName signal, Callable callable, uint flags = 0)
++        => throw new NotSupportedException("Headless visual GodotObject.Connect was invoked");
++
++    public Variant CallDeferred(StringName method, params Variant[] args)
++        => throw new NotSupportedException("Headless visual GodotObject.CallDeferred was invoked");
++
+     public static bool IsInstanceValid(GodotObject? obj) => obj != null;
+     public virtual bool IsQueuedForDeletion() => false;
+ 

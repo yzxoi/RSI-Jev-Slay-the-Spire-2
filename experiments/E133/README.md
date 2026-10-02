@@ -50,3 +50,26 @@ python3 scripts/retrain_ppo_e133.py freeze --output artifacts/runs/e133-fixtures
 All 264 selected seeds retained: 224 reached the planned boundary; 40 naturally died after providing earlier entries. No preparation errors/caps or seed replacements. Preparation took 133.287 seconds; 264 raw bundles hash-audited. The training subset has 575 unique first/second/last entries, including 423 Monster / 151 Elite / 1 Boss; 29 ordered exported enemy-list signatures, 423 deck hashes, 198 entries with potions; HP min/median/max 1/64/91. Ascension entry counts A0/A5/A10 = 192/191/192 (one seed has only two distinct positions). 574/575 training entries have an immediate true Map boundary, one retains explicit full-prefix mode. This is much broader than E127's 191 Monster + 1 Elite entries, but preparation survival and conditional battle skill remain distinct.
 
 After freeze execution started, separate commit `735fa81` added plotting and corrected inherited episode trace scope metadata to E133; no game-policy or freeze changes. Native reset certification uses the next clean committed version. PR #251 attachment was attempted; Codex rejected it because this thread exceeds 100 attachment identities. GitHub PR remains available.
+
+## Certification v1 — failed; no training started
+
+Code SHA `7046576ab533f3b3b80ffcb73d88c5bec110da92`; 623 eligible training/validation entries checked in 784.463 s, with 2,477 raw traces audited. 611 native certifications and one predeclared non-Map full-prefix entry passed; eleven records failed. Ten native failures involve entry or later continuation mismatches (including Unknown-room resolution); one genuine headless error at `train-150-b8` occurs after Colorless Potion selects Rolling Boulder: missing GodotObject.Connect(StringName, Callable, UInt32) during RollingBoulderPower.AfterPlayerTurnStart, then end-turn timeout. The training gate is failed and no optimizer was run.
+
+All failed cases, frozen before further evaluation: train-019-b5, train-044-b2, train-090-b8, train-097-b2, train-102-b2, train-113-b5, train-129-b5, train-131-b2, train-150-b8, train-155-b6, val-009-b3.
+
+Separate [E134 #252](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/252) tests explicit full-prefix reset recovery without deleting samples or silently retrying native saves. It must block on the genuine engine failure; that requires a separate compatibility fix. Any E133 v2 protocol/engine change must be recorded before another evaluation; data/model/reward/selection/test gates remain fixed unless explicitly amended.
+
+## v2 compatibility amendment before recertification/training
+
+E135 PR #255 passed and merged into the dependent compatibility branch: exact original Rolling Boulder mechanics now run; all 264 preparation histories / 23,498 actions / 1,460 entry states are unchanged. Switch BANK to the separately committed fixtures-v2.json, bind all reset evidence to the new adapter and Godot stub hashes, and rerun all 623 training/validation certificates. Every native-incompatible case then undergoes the fixed E134 full-prefix proof; runtime errors still block. v1 failed certifications remain intact. Each v2 certification/recovery is a separately timed batch, not included retroactively in the failed v1 budget.
+
+No changes to sample IDs, preparation choices, network, learning settings, reward, learner seeds, episode/work budget, checkpoint selection or test gates. Baseline E127 weights retain their original file/bank/encoder/runtime checks, then transfer explicitly to the repaired evaluation adapter only with the committed E135 exact-history equivalence proof. Test records disclose source and actual runtime hashes. No historical evaluation is relabeled or replayed with falsified runtime metadata.
+
+## Certification v2 — original engine error resolved, native failures retained
+
+Tested SHA `97ec4c1`; 623 entries, 785.361 seconds, all 2480 raw traces audited. 612 native + one predeclared full-prefix entry passed. The same ten native continuation mismatches remain: train-019-b5, train-044-b2, train-090-b8, train-097-b2, train-102-b2, train-113-b5, train-129-b5, train-131-b2, train-155-b6, val-009-b3. `train-150-b8` now passes all A/B/C1/C2 paths, including genuine battle clear. No new engine errors; the all-native gate remains explicitly failed. Freeze this complete result before E134 v2 recovery. No optimizer has run. 24 focused PPO/scale/bank/fallback/restore tests pass; original E127 S1701/S1702 weights loaded with the audited migration proof, without policy evaluation on the held-out set.
+
+```sh
+python3 scripts/retrain_ppo_e133.py certify_train --output artifacts/runs/e133-certificate-train-v2.json
+python3 -m pytest tests/test_ppo.py tests/test_ppo_scale.py tests/test_ppo_bank.py tests/test_reset_fallback.py tests/test_research_restore.py -q
+```
