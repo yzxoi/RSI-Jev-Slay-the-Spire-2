@@ -2,7 +2,7 @@
 
 Issue: https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/250
 
-Status: preregistered, implementation in progress; no gameplay yet.
+Status: natural bank frozen; reset certification before training.
 
 ## Objective and hypothesis
 
@@ -37,3 +37,16 @@ Practical improvement gate for BOTH long learners: at least +3 challenging clear
 ## Deliverables and limits
 
 Versioned issue/PR/commits, exact code SHAs and commands, compact machine-readable reports, native-save/trace/model hashes, loss/value/entropy/KL and train/validation reward curves, difficulty/panel held-out results and resource/throughput costs. Raw traces and weights local ignored; never proprietary binaries/secrets. Update research/decision records and private Notion. This learns combat from planner-prepared routes/decks/rewards, not end-to-end deck-building/full-run play. Initial model remains small so data and restoration are the focus; broad character training is separate.
+
+## Preparation v1
+
+Implementation/freeze SHA `e3ae398`; 14 synthetic PPO, split/selection and checkpoint-reset tests passed. Commands:
+
+```sh
+python3 -m unittest discover -s tests -p 'test_ppo*.py' -v
+python3 scripts/retrain_ppo_e133.py freeze --output artifacts/runs/e133-fixtures-v1.json
+```
+
+All 264 selected seeds retained: 224 reached the planned boundary; 40 naturally died after providing earlier entries. No preparation errors/caps or seed replacements. Preparation took 133.287 seconds; 264 raw bundles hash-audited. The training subset has 575 unique first/second/last entries, including 423 Monster / 151 Elite / 1 Boss; 29 ordered exported enemy-list signatures, 423 deck hashes, 198 entries with potions; HP min/median/max 1/64/91. Ascension entry counts A0/A5/A10 = 192/191/192 (one seed has only two distinct positions). 574/575 training entries have an immediate true Map boundary, one retains explicit full-prefix mode. This is much broader than E127's 191 Monster + 1 Elite entries, but preparation survival and conditional battle skill remain distinct.
+
+After freeze execution started, separate commit `735fa81` added plotting and corrected inherited episode trace scope metadata to E133; no game-policy or freeze changes. Native reset certification uses the next clean committed version. PR #251 attachment was attempted; Codex rejected it because this thread exceeds 100 attachment identities. GitHub PR remains available.
