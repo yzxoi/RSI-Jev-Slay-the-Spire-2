@@ -72,6 +72,8 @@ def main():
                  x['seconds']for x in direct['arms'][f"L-{row['learner']}"]['records'])if direct else None,
                'nonterminal_leaf_predictions':leaf_count,'out_of_reward_range_predictions':out_of_range,
                'calibration_rows':calibration,
+               'terminal_rollout_death_leaves':sum(x['actual']==-1 for x in calibration),
+               'positive_predictions_before_rollout_death':sum(x['actual']==-1 and x['predicted']>0 for x in calibration),
                'critic_mse':statistics.mean((x['predicted']-x['actual'])**2 for x in calibration)if calibration else None,
                'assume_clear_current_hp_mse':statistics.mean((x['naive_clear_current_hp']-x['actual'])**2 for x in calibration)if calibration else None}
   models.append({'learner':row['learner'],'arms':arms,'comparisons':row.get('comparisons')})

@@ -6,7 +6,8 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
-p=argparse.ArgumentParser();p.add_argument('--source',required=True);p.add_argument('--direct',required=True);p.add_argument('--output-dir',required=True);a=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument('--source',required=True);p.add_argument('--direct',required=True)
+p.add_argument('--analysis');p.add_argument('--output-dir',required=True);a=p.parse_args()
 r=json.loads(Path(a.source).read_text());d=json.loads(Path(a.direct).read_text());directory=Path(a.output_dir);directory.mkdir(parents=True,exist_ok=True)
 fig,axes=plt.subplots(1,3,figsize=(16,5),constrained_layout=True)
 colors=['#0072B2','#D55E00'];labels=[]
@@ -29,3 +30,21 @@ axes[2].set_xlabel('Median battle wall time (seconds)')
 fig.suptitle('Frozen policy + PUCT: learned value versus terminal actor rollouts\nSame 24 held-out seeds; 16 simulations at each round entry; no search training',fontsize=14)
 for ext in('png','svg'):fig.savefig(directory/f'search-results.{ext}',dpi=170,facecolor='white')
 plt.close(fig)
+
+if a.analysis:
+ analysis=json.loads(Path(a.analysis).read_text())
+ fig,axes=plt.subplots(1,len(analysis['models']),figsize=(12,5),squeeze=False,constrained_layout=True)
+ for ax,row in zip(axes[0],analysis['models']):
+  arm=row['arms']['rollout'];xs=arm['calibration_rows']
+  actual=np.array([x['actual']for x in xs]);pred=np.array([x['predicted']for x in xs])
+  ax.scatter(actual,pred,s=12,alpha=.18,color='#0072B2',edgecolors='none')
+  ax.plot([-1,1.25],[-1,1.25],color='black',lw=1,label='Exact calibration')
+  ax.axhline(1.25,color='#D55E00',ls='--',lw=.8,label='Maximum possible reward')
+  ax.axhline(-1,color='#D55E00',ls='--',lw=.8)
+  ax.set_title(f"Learner {row['learner']} | n={len(xs)} leaves\n"
+               f"Critic MSE {arm['critic_mse']:.4f}; simple HP comparator {arm['assume_clear_current_hp_mse']:.4f}")
+  ax.set_xlabel('Actual greedy-continuation return');ax.set_ylabel('Raw critic prediction (before clamp)')
+  ax.grid(alpha=.2);ax.legend(fontsize=8,loc='lower right')
+ fig.suptitle('Critic calibration on leaves visited by terminal-rollout search\nDescriptive, correlated samples; the HP comparator assumes a win and is not a policy',fontsize=13)
+ for ext in('png','svg'):fig.savefig(directory/f'value-calibration.{ext}',dpi=170,facecolor='white')
+ plt.close(fig)
