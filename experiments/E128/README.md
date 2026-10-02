@@ -25,3 +25,11 @@ Issue #243. Before test, run synthetic single-player backup/depth/cache checks a
 The implementation allows preflight as soon as the preregistered L-1701 learner has completed and selected its final checkpoint, while the independent second learner finishes. Formal test still requires all four valid E127 training runs. Preflight and test must match the exact selected L-1701 record, including weight SHA, widths and update. This changes scheduling only, not search parameters or validation/test inputs.
 
 Preflight checkpoint committed before evaluation: `artifacts/runs/e127-training-v1/L-1701-24.pt`, SHA256 `bc310bcf3df545b40f459f0583c52273821ade0e885c12c7ab806529b2267cd5`. Three synthetic PUCT checks passed at `1c56dde`. Added descriptive calibration against assuming a clear at current HP; this is not a gameplay control and does not change selection or any gate.
+
+## Preflight v1 result
+
+Tested SHA `f879ad2`. Command: `python3 scripts/evaluate_neural_search_e128.py preflight --training artifacts/runs/e127-training-v1/L-1701.json --output artifacts/runs/e128-preflight-v1.json`.
+
+Both evaluators completed both fixed validation battles; all four complete trajectories replayed exactly. 207 trace bundles hash-audited, zero caps/illegal actions/transition errors. Value search final HP 80/70; terminal-rollout search 80/76; the frozen direct actor's existing validation records are 80/61. These two development cases are not strength evidence on held-out test seeds.
+
+Value: 8 searched roots, 111 new-edge probes, 3 changes from actor, depth up to 3, median battle wall 129.48 s. Rollout: 6 roots, 88 probes, 3 changes, depth up to 2, median 111.46 s. Thus faster leaf evaluation does not guarantee faster battles: chosen actions change battle length and the number of future searches. Value restore/probe time 247.66/254.01 s (97.5%); rollout 184.40/217.76 s. Preflight overlapped E127 training, so these timings are descriptive, not a dedicated hardware benchmark. Formal test keeps frozen settings.
