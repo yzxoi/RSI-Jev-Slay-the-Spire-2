@@ -108,3 +108,9 @@ python3 scripts/plot_retraining_e133.py --training experiments/E133/training-v2.
 ```
 
 Training and difficulty curves were rendered and visually checked.
+
+Held-out recovery at `da624c7`: both failed native cases passed all6 independent full-prefix checks,12.966s; combined388 raw bundles audited. Final test routing94 native +2 full-prefix, all96 entries retained. The source native failures remain failed. Freeze the passing certificate before evaluating any test-policy arm.
+
+```sh
+python3 scripts/recover_resets_e134.py --source experiments/E133/certificate-test-v1.json --output artifacts/runs/e134-recovery-test-v1.json
+```
