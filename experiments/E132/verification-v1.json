@@ -1,0 +1,2258 @@
+{
+  "manifest": {
+    "schema_version": 1,
+    "code_commit": "b1b6601b27f5e42b64bd8d1143b7e3bbdd91fe9a",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "71505f31e29c370667636600a58fe2b3e270f98e99e3c5a384d176a7f0188274",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+      "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4",
+    "experiment": "E132",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.5",
+    "model_calls": 0,
+    "model_cost_usd": 0
+  },
+  "configs": [
+    {
+      "case": "Ironclad-a-A0",
+      "character": "Ironclad",
+      "seed": "e132_20261002_a",
+      "ascension": 0,
+      "index": 0
+    },
+    {
+      "case": "Ironclad-b-A0",
+      "character": "Ironclad",
+      "seed": "e132_20261002_b",
+      "ascension": 0,
+      "index": 1
+    },
+    {
+      "case": "Ironclad-a-A5",
+      "character": "Ironclad",
+      "seed": "e132_20261002_a",
+      "ascension": 5,
+      "index": 2
+    },
+    {
+      "case": "Ironclad-b-A5",
+      "character": "Ironclad",
+      "seed": "e132_20261002_b",
+      "ascension": 5,
+      "index": 3
+    },
+    {
+      "case": "Ironclad-a-A10",
+      "character": "Ironclad",
+      "seed": "e132_20261002_a",
+      "ascension": 10,
+      "index": 4
+    },
+    {
+      "case": "Ironclad-b-A10",
+      "character": "Ironclad",
+      "seed": "e132_20261002_b",
+      "ascension": 10,
+      "index": 5
+    }
+  ],
+  "mode": "verify",
+  "sources": {
+    "fixtures": {
+      "path": "experiments/E132/fixtures-v1.json",
+      "sha256": "97461a8f62c42a9455465caabbb9af604e10e3514951f114f7fc84a02255c1fb"
+    },
+    "references": {
+      "path": "experiments/E132/references-v1.json",
+      "sha256": "7d0051c82b97fb016d190f82f16666bd0dfd3b8a40cabf3d63dd5546192193aa"
+    }
+  },
+  "availability": [
+    {
+      "case": "Ironclad-a-A0",
+      "status": "ready",
+      "room_type": "Elite"
+    },
+    {
+      "case": "Ironclad-b-A0",
+      "status": "ready",
+      "room_type": "Boss"
+    },
+    {
+      "case": "Ironclad-a-A5",
+      "status": "ready",
+      "room_type": "Elite"
+    },
+    {
+      "case": "Ironclad-b-A5",
+      "status": "ready",
+      "room_type": "Elite"
+    },
+    {
+      "case": "Ironclad-a-A10",
+      "status": "ready",
+      "room_type": "Elite"
+    },
+    {
+      "case": "Ironclad-b-A10",
+      "status": "ready",
+      "room_type": "Elite"
+    }
+  ],
+  "results": [
+    {
+      "case": "Ironclad-a-A0",
+      "label": "control",
+      "mode": "B",
+      "run_id": "45a6a83a-a053-460d-b44c-aefda0124b98",
+      "status": "match",
+      "steps_checked": 27,
+      "extension_steps": 0,
+      "restore_seconds": 4.61947533278726,
+      "map_match": true,
+      "entry_match": true,
+      "save_seconds": 0.08362833294086158,
+      "created_checkpoint": {
+        "path": "artifacts/runs/45a6a83a-a053-460d-b44c-aefda0124b98/map-checkpoint.json",
+        "sha256": "3ec8a6a22f8b95fd7826fdb2d2fa9d00237282e101e700967ecbc979f1323bfe"
+      },
+      "final_hash": "414ff85b04c12ba29d18b9c0b1880c6aee1768dac581dbe528368886f2eb6475",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 11,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "2dc731bc2c90c3445c6fcf43dfe8ac9ef3f4a2fed9ddf4b21008cb7bd32f97f2",
+      "seconds": 5.407028790796176,
+      "wire.jsonl_sha256": "bce65b5a43ba64e0417e24fc0091240a772c94f9602d73e98d42082aabd936b8",
+      "engine.stderr.log_sha256": "01375b5508da9d7be08be1f9747d96798319b52ec1f880eef3c166f331bfc352",
+      "trace_path": "artifacts/runs/45a6a83a-a053-460d-b44c-aefda0124b98/decisions.jsonl",
+      "trace_sha256": "25b90a628c4682ffa3ef54906a46c65fe5e7232ead2e767c1dc72d1ec7b070ba",
+      "full_path_match": true,
+      "final_match": true
+    },
+    {
+      "case": "Ironclad-a-A0",
+      "label": "control",
+      "mode": "C1",
+      "run_id": "28754ec8-594e-4e85-b829-33b2f45dabd4",
+      "status": "match",
+      "steps_checked": 27,
+      "extension_steps": 0,
+      "restore_seconds": 1.5658157081343234,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "414ff85b04c12ba29d18b9c0b1880c6aee1768dac581dbe528368886f2eb6475",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 11,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "2dc731bc2c90c3445c6fcf43dfe8ac9ef3f4a2fed9ddf4b21008cb7bd32f97f2",
+      "seconds": 2.4609382080379874,
+      "wire.jsonl_sha256": "77db6186d40146918016ed9d4a9e77c3ee689aa4ff0650c3b2ab7d95f99e4a80",
+      "engine.stderr.log_sha256": "8e0a3fe1b4e6ef8e5bed015cfae2e11c456c8da085f75e5f8101afeea0bfde07",
+      "trace_path": "artifacts/runs/28754ec8-594e-4e85-b829-33b2f45dabd4/decisions.jsonl",
+      "trace_sha256": "c230514989f1f153ba23c78db472982a52e9523d7c4ffb295ad238d7e4ad7db3",
+      "full_path_match": true,
+      "final_match": true
+    },
+    {
+      "case": "Ironclad-a-A0",
+      "label": "control",
+      "mode": "C2",
+      "run_id": "1a4c996a-4bb4-414d-be7b-6616ffe512b9",
+      "status": "match",
+      "steps_checked": 27,
+      "extension_steps": 0,
+      "restore_seconds": 1.1935528330504894,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "414ff85b04c12ba29d18b9c0b1880c6aee1768dac581dbe528368886f2eb6475",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 11,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "2dc731bc2c90c3445c6fcf43dfe8ac9ef3f4a2fed9ddf4b21008cb7bd32f97f2",
+      "seconds": 2.06639420799911,
+      "wire.jsonl_sha256": "309bb7c13881f2d82c4db763fca96c36594b4a8a08415d15b981a89238b8a729",
+      "engine.stderr.log_sha256": "8e0a3fe1b4e6ef8e5bed015cfae2e11c456c8da085f75e5f8101afeea0bfde07",
+      "trace_path": "artifacts/runs/1a4c996a-4bb4-414d-be7b-6616ffe512b9/decisions.jsonl",
+      "trace_sha256": "9441816ac32976f36c0ca60e194d75fd8eae38940e47da4af71b1799cbeaf821",
+      "full_path_match": true,
+      "final_match": true
+    },
+    {
+      "case": "Ironclad-a-A0",
+      "label": "control",
+      "mode": "C3",
+      "run_id": "3f3d515f-1205-4ae8-a063-4956cc20bcf3",
+      "status": "match",
+      "steps_checked": 27,
+      "extension_steps": 0,
+      "restore_seconds": 1.1739787920378149,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "414ff85b04c12ba29d18b9c0b1880c6aee1768dac581dbe528368886f2eb6475",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 11,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "2dc731bc2c90c3445c6fcf43dfe8ac9ef3f4a2fed9ddf4b21008cb7bd32f97f2",
+      "seconds": 2.041593125090003,
+      "wire.jsonl_sha256": "697096546f31658c27d909cd5a4e3da6e7c275ad4f8832dc03ec5c14508aead0",
+      "engine.stderr.log_sha256": "8e0a3fe1b4e6ef8e5bed015cfae2e11c456c8da085f75e5f8101afeea0bfde07",
+      "trace_path": "artifacts/runs/3f3d515f-1205-4ae8-a063-4956cc20bcf3/decisions.jsonl",
+      "trace_sha256": "c1234bd382cd6e2016507e583450bdd079ca3d4f2cfe842e456c1c9264da0c96",
+      "full_path_match": true,
+      "final_match": true
+    },
+    {
+      "case": "Ironclad-a-A0",
+      "label": "epsilon15",
+      "mode": "B",
+      "run_id": "c543e1e5-a6b0-449a-8197-308295481b82",
+      "status": "match",
+      "steps_checked": 30,
+      "extension_steps": 0,
+      "restore_seconds": 4.003329291008413,
+      "map_match": true,
+      "entry_match": true,
+      "save_seconds": 0.08526879083365202,
+      "created_checkpoint": {
+        "path": "artifacts/runs/c543e1e5-a6b0-449a-8197-308295481b82/map-checkpoint.json",
+        "sha256": "39fb2f3049a9722527c5b5dd9776878116f56886d893171f501d1e54361a3074"
+      },
+      "final_hash": "2e761b59fea0ea2e2983ac26042d00695873621978862341033272f95d5f8330",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 11,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "588a01e47eb568f08e882a1bd9fcf983279aa33d672f914012562ba7ee92e845",
+      "seconds": 4.883665957953781,
+      "wire.jsonl_sha256": "506d1993678b03aa16faed4495b2e3deea2768b93546b20e848dee063e55cf77",
+      "engine.stderr.log_sha256": "52ce5727026eb8fffbd03dce8136b554e43a7ca220822617c50945398da00c86",
+      "trace_path": "artifacts/runs/c543e1e5-a6b0-449a-8197-308295481b82/decisions.jsonl",
+      "trace_sha256": "9d51dcc9ed6f748f939e724652cc9addcc35992a1b7e97cc45b8fbc0c8e1e100",
+      "full_path_match": true,
+      "final_match": true
+    },
+    {
+      "case": "Ironclad-a-A0",
+      "label": "epsilon15",
+      "mode": "C1",
+      "run_id": "f289c6d4-0e8e-4731-8387-f64021616559",
+      "status": "match",
+      "steps_checked": 30,
+      "extension_steps": 0,
+      "restore_seconds": 1.2501209161709994,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "2e761b59fea0ea2e2983ac26042d00695873621978862341033272f95d5f8330",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 11,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "588a01e47eb568f08e882a1bd9fcf983279aa33d672f914012562ba7ee92e845",
+      "seconds": 2.227899666177109,
+      "wire.jsonl_sha256": "44ab1ab414c50fec80f9a965af288b820adb2be51438ec93175cd73ebdfc81a6",
+      "engine.stderr.log_sha256": "53583f7c635e5869511a616f3c0501a6485496075e8f59e33c0d1aeb0c61cb4c",
+      "trace_path": "artifacts/runs/f289c6d4-0e8e-4731-8387-f64021616559/decisions.jsonl",
+      "trace_sha256": "b69c6c5c869b57ececec50666617ddb31ccd8e90593b994c5f138c3b70287fd2",
+      "full_path_match": true,
+      "final_match": true
+    },
+    {
+      "case": "Ironclad-a-A0",
+      "label": "epsilon15",
+      "mode": "C2",
+      "run_id": "d2caa511-6dac-4d62-ad14-57277714eb82",
+      "status": "match",
+      "steps_checked": 30,
+      "extension_steps": 0,
+      "restore_seconds": 1.1595955828670412,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "2e761b59fea0ea2e2983ac26042d00695873621978862341033272f95d5f8330",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 11,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "588a01e47eb568f08e882a1bd9fcf983279aa33d672f914012562ba7ee92e845",
+      "seconds": 2.1466618329286575,
+      "wire.jsonl_sha256": "4bfc7c2a4ab088f66458ec3aa15506d3729a8b173420828868cc1f79de6cdad8",
+      "engine.stderr.log_sha256": "53583f7c635e5869511a616f3c0501a6485496075e8f59e33c0d1aeb0c61cb4c",
+      "trace_path": "artifacts/runs/d2caa511-6dac-4d62-ad14-57277714eb82/decisions.jsonl",
+      "trace_sha256": "6d3fbfc279f40d0b9c3c6de4e04d0121d86e511b415e1c7e48ec96a8f3a96242",
+      "full_path_match": true,
+      "final_match": true
+    },
+    {
+      "case": "Ironclad-a-A0",
+      "label": "epsilon15",
+      "mode": "C3",
+      "run_id": "4a058015-7ce6-4a33-ab2f-aae037b439b0",
+      "status": "match",
+      "steps_checked": 30,
+      "extension_steps": 0,
+      "restore_seconds": 1.198114083148539,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "2e761b59fea0ea2e2983ac26042d00695873621978862341033272f95d5f8330",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 11,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "588a01e47eb568f08e882a1bd9fcf983279aa33d672f914012562ba7ee92e845",
+      "seconds": 2.1741103751119226,
+      "wire.jsonl_sha256": "c311baf2561fbd335294ecb9c33a84c9ef94987aeb5c5f3923aa6c731ba3f4b7",
+      "engine.stderr.log_sha256": "53583f7c635e5869511a616f3c0501a6485496075e8f59e33c0d1aeb0c61cb4c",
+      "trace_path": "artifacts/runs/4a058015-7ce6-4a33-ab2f-aae037b439b0/decisions.jsonl",
+      "trace_sha256": "b8674b50c73099a232bcaca06c8faf1adf7e56589b3fbd66c9ff16aeb3c1b9b9",
+      "full_path_match": true,
+      "final_match": true
+    },
+    {
+      "case": "Ironclad-a-A5",
+      "label": "control",
+      "mode": "B",
+      "run_id": "2b157bc4-defb-4393-aa90-fb705347df92",
+      "status": "match",
+      "steps_checked": 29,
+      "extension_steps": 0,
+      "restore_seconds": 3.9381212079897523,
+      "map_match": true,
+      "entry_match": true,
+      "save_seconds": 0.08891287492588162,
+      "created_checkpoint": {
+        "path": "artifacts/runs/2b157bc4-defb-4393-aa90-fb705347df92/map-checkpoint.json",
+        "sha256": "f85e5162905589c334cbf1da80343aa55be22bf68134fee3ce7468983613c784"
+      },
+      "final_hash": "5b68053dedbf75150a4890b8d0843db657047010a527c6c428b357b0ff776fe4",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 11,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "4d15c868bc7fa3a20d5469da671703470fa2db5f070ccf89985ab23d8a97ecaf",
+      "seconds": 4.823148041963577,
+      "wire.jsonl_sha256": "7106aafe4d793fde3013bb0d3f90a1073c9fce27b9f982c473ac21972441ae94",
+      "engine.stderr.log_sha256": "971acccb21ff521be073e281641d482dafcdac532a91f0a9a1cebc8ad1b91a46",
+      "trace_path": "artifacts/runs/2b157bc4-defb-4393-aa90-fb705347df92/decisions.jsonl",
+      "trace_sha256": "098c34a3673303079cac2dd2eb442e1ab15ab87394aadc6ebdada0d9448ecb22",
+      "full_path_match": true,
+      "final_match": true
+    },
+    {
+      "case": "Ironclad-a-A5",
+      "label": "control",
+      "mode": "C1",
+      "run_id": "2a044701-b6ca-488a-9cc9-c3341d6c6dfa",
+      "status": "match",
+      "steps_checked": 29,
+      "extension_steps": 0,
+      "restore_seconds": 1.1883902919944376,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "5b68053dedbf75150a4890b8d0843db657047010a527c6c428b357b0ff776fe4",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 11,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "4d15c868bc7fa3a20d5469da671703470fa2db5f070ccf89985ab23d8a97ecaf",
+      "seconds": 2.164311582921073,
+      "wire.jsonl_sha256": "2863c05516eb4eee8a89c6255c5d21886c34271f3ca3dee7991a2b4cb6e6563b",
+      "engine.stderr.log_sha256": "514337e8e6ff47250e5f03542a6eff3fd72deb0b1d0b998265760152ffafb376",
+      "trace_path": "artifacts/runs/2a044701-b6ca-488a-9cc9-c3341d6c6dfa/decisions.jsonl",
+      "trace_sha256": "8ad8015c62f58679f96c7f2a4b8beac8f48e19fed40eb8db0d55d1513f18a2ad",
+      "full_path_match": true,
+      "final_match": true
+    },
+    {
+      "case": "Ironclad-a-A5",
+      "label": "control",
+      "mode": "C2",
+      "run_id": "cab12453-b28f-456a-86fb-fffa38f28e7a",
+      "status": "match",
+      "steps_checked": 29,
+      "extension_steps": 0,
+      "restore_seconds": 1.1769441671203822,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "5b68053dedbf75150a4890b8d0843db657047010a527c6c428b357b0ff776fe4",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 11,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "4d15c868bc7fa3a20d5469da671703470fa2db5f070ccf89985ab23d8a97ecaf",
+      "seconds": 2.146439083153382,
+      "wire.jsonl_sha256": "2a8924ae80fc8ddf1c2295a9a7ec22828f78e5ba60e946e47bce175a641c1433",
+      "engine.stderr.log_sha256": "514337e8e6ff47250e5f03542a6eff3fd72deb0b1d0b998265760152ffafb376",
+      "trace_path": "artifacts/runs/cab12453-b28f-456a-86fb-fffa38f28e7a/decisions.jsonl",
+      "trace_sha256": "ab3a1809a0e9b4b3eaa637573d7fa307b855542cca58b9af2d9f2bab26467736",
+      "full_path_match": true,
+      "final_match": true
+    },
+    {
+      "case": "Ironclad-a-A5",
+      "label": "control",
+      "mode": "C3",
+      "run_id": "04b852d5-904d-4563-a4e3-071c548aa2a6",
+      "status": "match",
+      "steps_checked": 29,
+      "extension_steps": 0,
+      "restore_seconds": 1.1720006249379367,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "5b68053dedbf75150a4890b8d0843db657047010a527c6c428b357b0ff776fe4",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 11,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "4d15c868bc7fa3a20d5469da671703470fa2db5f070ccf89985ab23d8a97ecaf",
+      "seconds": 2.136352458037436,
+      "wire.jsonl_sha256": "c9bec03fca92d64db6f49f401daaf5d99c9a69cf15ff32610920688d04f131c6",
+      "engine.stderr.log_sha256": "514337e8e6ff47250e5f03542a6eff3fd72deb0b1d0b998265760152ffafb376",
+      "trace_path": "artifacts/runs/04b852d5-904d-4563-a4e3-071c548aa2a6/decisions.jsonl",
+      "trace_sha256": "549460855a886742975d2e3f5df7200b4fff9f4e062e826b1b797900eff9a093",
+      "full_path_match": true,
+      "final_match": true
+    },
+    {
+      "case": "Ironclad-a-A5",
+      "label": "epsilon15",
+      "mode": "B",
+      "run_id": "97c7958c-679a-49c3-8001-141b0ad26c2d",
+      "status": "match",
+      "steps_checked": 31,
+      "extension_steps": 0,
+      "restore_seconds": 3.9600086249411106,
+      "map_match": true,
+      "entry_match": true,
+      "save_seconds": 0.08453008299693465,
+      "created_checkpoint": {
+        "path": "artifacts/runs/97c7958c-679a-49c3-8001-141b0ad26c2d/map-checkpoint.json",
+        "sha256": "a9128270f1a559a622d556f45d4cd4d7f26fd909f78baa185a0b74223f2f5f30"
+      },
+      "final_hash": "8805f7f78ab9f4b253a867e88db6b4a38dd0a61e204c5e282b4ddf17ab864172",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 11,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "89766ee134d879153951e91c67bcc5363946c29f3723d603e8165ad91288abdd",
+      "seconds": 4.908686666982248,
+      "wire.jsonl_sha256": "7cb9e923d9e064f232fb2993322b6480c7953f733f6dd84a73f37012a5af8af8",
+      "engine.stderr.log_sha256": "0427eed32514c6e7b8f030df8e8e3ea48442c4cf16e8af67b4380600226afd85",
+      "trace_path": "artifacts/runs/97c7958c-679a-49c3-8001-141b0ad26c2d/decisions.jsonl",
+      "trace_sha256": "6f090ecb1f03c83cc083b8dace0c3c0e10fa411f232a0a03b926efdcccd657e5",
+      "full_path_match": true,
+      "final_match": true
+    },
+    {
+      "case": "Ironclad-a-A5",
+      "label": "epsilon15",
+      "mode": "C1",
+      "run_id": "c07b2796-28f3-421e-b68f-4dd101125f01",
+      "status": "match",
+      "steps_checked": 31,
+      "extension_steps": 0,
+      "restore_seconds": 1.4544312919024378,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "8805f7f78ab9f4b253a867e88db6b4a38dd0a61e204c5e282b4ddf17ab864172",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 11,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "89766ee134d879153951e91c67bcc5363946c29f3723d603e8165ad91288abdd",
+      "seconds": 2.5052523750346154,
+      "wire.jsonl_sha256": "4b833f0d5575c053a3f2152fffdcd5c9ac43936b86bbf37ab817a60d6577d572",
+      "engine.stderr.log_sha256": "93c6626cfe60d7e93909a93511d8245db07d73aa7510e613c684180254513e04",
+      "trace_path": "artifacts/runs/c07b2796-28f3-421e-b68f-4dd101125f01/decisions.jsonl",
+      "trace_sha256": "a640e86335da7e8be408f813f26dcb6ad187b8d675f833508093c069951d0593",
+      "full_path_match": true,
+      "final_match": true
+    },
+    {
+      "case": "Ironclad-a-A5",
+      "label": "epsilon15",
+      "mode": "C2",
+      "run_id": "86b90c21-961b-4f3a-ae91-50b73a13c1b6",
+      "status": "match",
+      "steps_checked": 31,
+      "extension_steps": 0,
+      "restore_seconds": 1.1609579580835998,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "8805f7f78ab9f4b253a867e88db6b4a38dd0a61e204c5e282b4ddf17ab864172",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 11,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "89766ee134d879153951e91c67bcc5363946c29f3723d603e8165ad91288abdd",
+      "seconds": 2.2013694171328098,
+      "wire.jsonl_sha256": "ddfbe5be6b448b461568fead5a1e274d73500ec430ece4b08a8e972f8a566758",
+      "engine.stderr.log_sha256": "93c6626cfe60d7e93909a93511d8245db07d73aa7510e613c684180254513e04",
+      "trace_path": "artifacts/runs/86b90c21-961b-4f3a-ae91-50b73a13c1b6/decisions.jsonl",
+      "trace_sha256": "2ca99dded5fbf665ba37692f72a8c5ae47d322992178a8398f55e06bbab097a5",
+      "full_path_match": true,
+      "final_match": true
+    },
+    {
+      "case": "Ironclad-a-A5",
+      "label": "epsilon15",
+      "mode": "C3",
+      "run_id": "dffec248-b62d-42be-aa0d-6f0a591ed7f8",
+      "status": "match",
+      "steps_checked": 31,
+      "extension_steps": 0,
+      "restore_seconds": 1.277219207957387,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "8805f7f78ab9f4b253a867e88db6b4a38dd0a61e204c5e282b4ddf17ab864172",
+      "final_decision": "combat_play",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 11,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "89766ee134d879153951e91c67bcc5363946c29f3723d603e8165ad91288abdd",
+      "seconds": 2.3198810829780996,
+      "wire.jsonl_sha256": "2306e43ecd0785ab6ceb02ef847970f20cb1651fa276b658e5a90e3a798eb52e",
+      "engine.stderr.log_sha256": "93c6626cfe60d7e93909a93511d8245db07d73aa7510e613c684180254513e04",
+      "trace_path": "artifacts/runs/dffec248-b62d-42be-aa0d-6f0a591ed7f8/decisions.jsonl",
+      "trace_sha256": "774878c7c111bd50a71961414800630b887fe1e7c03733d60fe617647da8731f",
+      "full_path_match": true,
+      "final_match": true
+    },
+    {
+      "case": "Ironclad-b-A5",
+      "label": "control",
+      "mode": "B",
+      "run_id": "43bee5ce-7825-4512-af8f-b5c8f970cebc",
+      "status": "match",
+      "steps_checked": 40,
+      "extension_steps": 0,
+      "restore_seconds": 4.587689833948389,
+      "map_match": true,
+      "entry_match": true,
+      "save_seconds": 0.08739529107697308,
+      "created_checkpoint": {
+        "path": "artifacts/runs/43bee5ce-7825-4512-af8f-b5c8f970cebc/map-checkpoint.json",
+        "sha256": "3eef39572e1ef04d6b598264b16fae8ae511e46ed28a88cec5b0592fe2f587a9"
+      },
+      "final_hash": "046ee7058c167517eaa32d6351bd89f1df1a4b9462c12a7ec66f8a1c7637f376",
+      "final_decision": "game_over",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "e7cbe1282b31bf334b63096280f868ab80cdbdf0b118ea2043dada1dffa403e9",
+      "seconds": 5.852497125044465,
+      "wire.jsonl_sha256": "c3a485623bff0559aa773c0685e484bd91484a58c0ae1e1b79c2c513219e1667",
+      "engine.stderr.log_sha256": "f58394c1998186628b0ef9e3a279e9c058df1f2339cbcc3ddaa6bba45957496a",
+      "trace_path": "artifacts/runs/43bee5ce-7825-4512-af8f-b5c8f970cebc/decisions.jsonl",
+      "trace_sha256": "d30b89abe8e95e3fea286c4c5fb00279fefea1cae7860dc8c54c0dd7fc800a73",
+      "full_path_match": true,
+      "final_match": true
+    },
+    {
+      "case": "Ironclad-b-A5",
+      "label": "control",
+      "mode": "C1",
+      "run_id": "f98a3c43-9748-47c7-8649-5bf74db37499",
+      "status": "match",
+      "steps_checked": 40,
+      "extension_steps": 0,
+      "restore_seconds": 1.1822697080206126,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "046ee7058c167517eaa32d6351bd89f1df1a4b9462c12a7ec66f8a1c7637f376",
+      "final_decision": "game_over",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "e7cbe1282b31bf334b63096280f868ab80cdbdf0b118ea2043dada1dffa403e9",
+      "seconds": 2.5313940411433578,
+      "wire.jsonl_sha256": "2280d36c39a8a5d6ce320720cee9634ebf80b6a9434861ff563145c3ac98e28e",
+      "engine.stderr.log_sha256": "09f6b60925d29a77bed2c7a81d03967a459d5f02c98464224aead77b7838097a",
+      "trace_path": "artifacts/runs/f98a3c43-9748-47c7-8649-5bf74db37499/decisions.jsonl",
+      "trace_sha256": "b6bb28d63f9810fa5ca0fcb61789366f75ea8d4a2b4c3f2af93c9eb0c2aedb4c",
+      "full_path_match": true,
+      "final_match": true
+    },
+    {
+      "case": "Ironclad-b-A5",
+      "label": "control",
+      "mode": "C2",
+      "run_id": "79e29106-26d4-447c-ab1c-9dc904a5818c",
+      "status": "match",
+      "steps_checked": 40,
+      "extension_steps": 0,
+      "restore_seconds": 1.188114000018686,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "046ee7058c167517eaa32d6351bd89f1df1a4b9462c12a7ec66f8a1c7637f376",
+      "final_decision": "game_over",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "e7cbe1282b31bf334b63096280f868ab80cdbdf0b118ea2043dada1dffa403e9",
+      "seconds": 2.5235094998497516,
+      "wire.jsonl_sha256": "a76aa4f9d2215b7ecbd851d4f3152ca92e08208a689ba586a0c20302622e7d31",
+      "engine.stderr.log_sha256": "09f6b60925d29a77bed2c7a81d03967a459d5f02c98464224aead77b7838097a",
+      "trace_path": "artifacts/runs/79e29106-26d4-447c-ab1c-9dc904a5818c/decisions.jsonl",
+      "trace_sha256": "5c73d775d8f4111aa2fa74d86476d6ad029f5e846d6353a790ca088c529f83ef",
+      "full_path_match": true,
+      "final_match": true
+    },
+    {
+      "case": "Ironclad-b-A5",
+      "label": "control",
+      "mode": "C3",
+      "run_id": "df5cb017-5a8c-48a6-95a8-bfad5a2b4dd2",
+      "status": "match",
+      "steps_checked": 40,
+      "extension_steps": 0,
+      "restore_seconds": 1.144805665826425,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "046ee7058c167517eaa32d6351bd89f1df1a4b9462c12a7ec66f8a1c7637f376",
+      "final_decision": "game_over",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "e7cbe1282b31bf334b63096280f868ab80cdbdf0b118ea2043dada1dffa403e9",
+      "seconds": 2.480351540958509,
+      "wire.jsonl_sha256": "976869b7ffca3cda35bc128765408c9dffa4cf20079da45cf490b2103d57e2ed",
+      "engine.stderr.log_sha256": "09f6b60925d29a77bed2c7a81d03967a459d5f02c98464224aead77b7838097a",
+      "trace_path": "artifacts/runs/df5cb017-5a8c-48a6-95a8-bfad5a2b4dd2/decisions.jsonl",
+      "trace_sha256": "4cb28467ad253d1d93d863a6aed2182372e490b8e0f3c497c95317cc35eea323",
+      "full_path_match": true,
+      "final_match": true
+    },
+    {
+      "case": "Ironclad-b-A5",
+      "label": "epsilon15",
+      "mode": "B",
+      "run_id": "e77d4204-8b31-4b78-8565-b79a72c1539e",
+      "status": "match",
+      "steps_checked": 25,
+      "extension_steps": 0,
+      "restore_seconds": 4.612070041941479,
+      "map_match": true,
+      "entry_match": true,
+      "save_seconds": 0.08425125014036894,
+      "created_checkpoint": {
+        "path": "artifacts/runs/e77d4204-8b31-4b78-8565-b79a72c1539e/map-checkpoint.json",
+        "sha256": "867602c17c97ab2b271c2a95ff04afdc0ad45df725e912356572f82a7deb5d86"
+      },
+      "final_hash": "046ee7058c167517eaa32d6351bd89f1df1a4b9462c12a7ec66f8a1c7637f376",
+      "final_decision": "game_over",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "a85bf8cc78d15cbc7d6bd3ae26996e10d74d4193a1d047ab2f3aa28893d3014e",
+      "seconds": 5.391466666944325,
+      "wire.jsonl_sha256": "9ce42fcb35a5061e25210d844f2d4a5172d0acc8c6e1de1897409609452dd2da",
+      "engine.stderr.log_sha256": "23c22c7cf5397b8145e970d0112b36e3a4c28160e960670f0d9773f04f61e79e",
+      "trace_path": "artifacts/runs/e77d4204-8b31-4b78-8565-b79a72c1539e/decisions.jsonl",
+      "trace_sha256": "eba15b01779096d8041224d07849a1ab1679c4f827bb1e9277ec8aeb411b27e9",
+      "full_path_match": true,
+      "final_match": true
+    },
+    {
+      "case": "Ironclad-b-A5",
+      "label": "epsilon15",
+      "mode": "C1",
+      "run_id": "f07842cd-8ace-4cdd-9350-1c0c1acdedd2",
+      "status": "match",
+      "steps_checked": 25,
+      "extension_steps": 0,
+      "restore_seconds": 1.15544275008142,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "046ee7058c167517eaa32d6351bd89f1df1a4b9462c12a7ec66f8a1c7637f376",
+      "final_decision": "game_over",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "a85bf8cc78d15cbc7d6bd3ae26996e10d74d4193a1d047ab2f3aa28893d3014e",
+      "seconds": 2.0035862082149833,
+      "wire.jsonl_sha256": "3902db1145190eb7d44e172aba47f03d1326a73f98ae7c4190dc195d6ea1d8be",
+      "engine.stderr.log_sha256": "fde14810cb1b578dd34558861f4d71cae78a8b18746b3e4a7c26b9fc2f0e210f",
+      "trace_path": "artifacts/runs/f07842cd-8ace-4cdd-9350-1c0c1acdedd2/decisions.jsonl",
+      "trace_sha256": "f3f59417db83179d906e92ff1465b968e5cd9ad434defe1978de95027ec0ac05",
+      "full_path_match": true,
+      "final_match": true
+    },
+    {
+      "case": "Ironclad-b-A5",
+      "label": "epsilon15",
+      "mode": "C2",
+      "run_id": "a8f47ff1-852e-42fa-8225-6b55120408c7",
+      "status": "match",
+      "steps_checked": 25,
+      "extension_steps": 0,
+      "restore_seconds": 1.1634547079447657,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "046ee7058c167517eaa32d6351bd89f1df1a4b9462c12a7ec66f8a1c7637f376",
+      "final_decision": "game_over",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "a85bf8cc78d15cbc7d6bd3ae26996e10d74d4193a1d047ab2f3aa28893d3014e",
+      "seconds": 2.0097871248144656,
+      "wire.jsonl_sha256": "6e49677d932bf467f5e1b31e0c6442e63ba11da332e8ecf745b02e1706f69fd4",
+      "engine.stderr.log_sha256": "fde14810cb1b578dd34558861f4d71cae78a8b18746b3e4a7c26b9fc2f0e210f",
+      "trace_path": "artifacts/runs/a8f47ff1-852e-42fa-8225-6b55120408c7/decisions.jsonl",
+      "trace_sha256": "bb9db7ea28b75e3070e316f87de34e5f24997904bba52e622bb4c984e3bb58e1",
+      "full_path_match": true,
+      "final_match": true
+    },
+    {
+      "case": "Ironclad-b-A5",
+      "label": "epsilon15",
+      "mode": "C3",
+      "run_id": "60e2f905-a804-4796-9700-16b061d9df29",
+      "status": "match",
+      "steps_checked": 25,
+      "extension_steps": 0,
+      "restore_seconds": 1.1583710839040577,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "046ee7058c167517eaa32d6351bd89f1df1a4b9462c12a7ec66f8a1c7637f376",
+      "final_decision": "game_over",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "a85bf8cc78d15cbc7d6bd3ae26996e10d74d4193a1d047ab2f3aa28893d3014e",
+      "seconds": 2.0030510840006173,
+      "wire.jsonl_sha256": "d31e30e22b96a878ab76837c5947df28a4b19d0210f9a7f59fb156aa1b270bfd",
+      "engine.stderr.log_sha256": "fde14810cb1b578dd34558861f4d71cae78a8b18746b3e4a7c26b9fc2f0e210f",
+      "trace_path": "artifacts/runs/60e2f905-a804-4796-9700-16b061d9df29/decisions.jsonl",
+      "trace_sha256": "496f5a1ef94966ed7d975ddb85f7605e2ae72acd1f4cf4b31fae2b791dc21da5",
+      "full_path_match": true,
+      "final_match": true
+    },
+    {
+      "case": "Ironclad-a-A10",
+      "label": "control",
+      "mode": "B",
+      "run_id": "87fd56ca-62dd-4efb-ad1d-afe1552292fb",
+      "status": "match",
+      "steps_checked": 34,
+      "extension_steps": 0,
+      "restore_seconds": 4.856255917111412,
+      "map_match": true,
+      "entry_match": true,
+      "save_seconds": 0.0800523750949651,
+      "created_checkpoint": {
+        "path": "artifacts/runs/87fd56ca-62dd-4efb-ad1d-afe1552292fb/map-checkpoint.json",
+        "sha256": "f8f242fd3f3220a89f65d44f374ea2f7c2bfe495fdb4d68c90449d9bd6358321"
+      },
+      "final_hash": "05c2f756b4ec51c6d8ab488286a75e61d9ab5bf67d9591832c6aa3f430da0677",
+      "final_decision": "game_over",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Elite",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "3fda42e0d4d2240446b9e1e6a31be17cb0d5c859b0d04261689726c95e182040",
+      "seconds": 5.8980708331801,
+      "wire.jsonl_sha256": "ecbd4b23d32c5dd95abe966ceafb66ae2606ee46000bc33c78d2296b0b8f7987",
+      "engine.stderr.log_sha256": "702daa3c81235242214f4470ed1bcac31a2f9a4c152300fe940c56a3e5bfa898",
+      "trace_path": "artifacts/runs/87fd56ca-62dd-4efb-ad1d-afe1552292fb/decisions.jsonl",
+      "trace_sha256": "488ae3be610d995ea6c5f2188f3ec3a15686ac4cf035e41d28ab4e5ea1d00456",
+      "full_path_match": true,
+      "final_match": true
+    },
+    {
+      "case": "Ironclad-a-A10",
+      "label": "control",
+      "mode": "C1",
+      "run_id": "2f58d86e-e052-4f0e-8975-9b4a58e13ca2",
+      "status": "match",
+      "steps_checked": 34,
+      "extension_steps": 0,
+      "restore_seconds": 1.205606000032276,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "05c2f756b4ec51c6d8ab488286a75e61d9ab5bf67d9591832c6aa3f430da0677",
+      "final_decision": "game_over",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Elite",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "3fda42e0d4d2240446b9e1e6a31be17cb0d5c859b0d04261689726c95e182040",
+      "seconds": 2.3210813750047237,
+      "wire.jsonl_sha256": "6de3a2520daf6351c70f5ffb48c88e99227dcea3210d7c13133fb4c8ece0ae3c",
+      "engine.stderr.log_sha256": "93766a519c107ab002a64908a77ac1d4b8585da13298f66530731f03addbb248",
+      "trace_path": "artifacts/runs/2f58d86e-e052-4f0e-8975-9b4a58e13ca2/decisions.jsonl",
+      "trace_sha256": "c1a654df2354ab68bf8c627d0134da90a810113d0ee6cc2beb51f8966b09017f",
+      "full_path_match": true,
+      "final_match": true
+    },
+    {
+      "case": "Ironclad-a-A10",
+      "label": "control",
+      "mode": "C2",
+      "run_id": "365d9f48-cb8c-48e9-b657-793c2ba9655e",
+      "status": "match",
+      "steps_checked": 34,
+      "extension_steps": 0,
+      "restore_seconds": 1.169686249922961,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "05c2f756b4ec51c6d8ab488286a75e61d9ab5bf67d9591832c6aa3f430da0677",
+      "final_decision": "game_over",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Elite",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "3fda42e0d4d2240446b9e1e6a31be17cb0d5c859b0d04261689726c95e182040",
+      "seconds": 2.2804385419003665,
+      "wire.jsonl_sha256": "2800c12c10be593782defbfdb3b6a575c1579846faa122d97d5c4768eed64d6d",
+      "engine.stderr.log_sha256": "93766a519c107ab002a64908a77ac1d4b8585da13298f66530731f03addbb248",
+      "trace_path": "artifacts/runs/365d9f48-cb8c-48e9-b657-793c2ba9655e/decisions.jsonl",
+      "trace_sha256": "68e0f9c46f198670969fdb43a547d0694a1d49d15b5e1e0214c72dfc4a79fc03",
+      "full_path_match": true,
+      "final_match": true
+    },
+    {
+      "case": "Ironclad-a-A10",
+      "label": "control",
+      "mode": "C3",
+      "run_id": "5f0a458c-a5c3-4d56-a0eb-4bba7429a51c",
+      "status": "match",
+      "steps_checked": 34,
+      "extension_steps": 0,
+      "restore_seconds": 1.1638915420044214,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "05c2f756b4ec51c6d8ab488286a75e61d9ab5bf67d9591832c6aa3f430da0677",
+      "final_decision": "game_over",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Elite",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "3fda42e0d4d2240446b9e1e6a31be17cb0d5c859b0d04261689726c95e182040",
+      "seconds": 2.2689374170731753,
+      "wire.jsonl_sha256": "7aa7bc4d86c1ed9fd92adef2c7d7c47679238f0bce2816107f7f3bc247d5c2f4",
+      "engine.stderr.log_sha256": "93766a519c107ab002a64908a77ac1d4b8585da13298f66530731f03addbb248",
+      "trace_path": "artifacts/runs/5f0a458c-a5c3-4d56-a0eb-4bba7429a51c/decisions.jsonl",
+      "trace_sha256": "eb16eb2331a07ea0cda849376a9850e454a97ca3a1eeb6e82af57dc708ffc4a8",
+      "full_path_match": true,
+      "final_match": true
+    },
+    {
+      "case": "Ironclad-a-A10",
+      "label": "epsilon15",
+      "mode": "B",
+      "run_id": "7706a9f0-b031-4861-8227-77a1b9650b39",
+      "status": "match",
+      "steps_checked": 33,
+      "extension_steps": 0,
+      "restore_seconds": 4.9692010001745075,
+      "map_match": true,
+      "entry_match": true,
+      "save_seconds": 0.09011474996805191,
+      "created_checkpoint": {
+        "path": "artifacts/runs/7706a9f0-b031-4861-8227-77a1b9650b39/map-checkpoint.json",
+        "sha256": "9bcf6bce508d668293e058a5aa6931ff93c9f7902e0d94e752dbfbbb77168317"
+      },
+      "final_hash": "05c2f756b4ec51c6d8ab488286a75e61d9ab5bf67d9591832c6aa3f430da0677",
+      "final_decision": "game_over",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Elite",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "3050766935c426cb6f15ca0117561c99e03da8ccf9b7bb153afa983da5fec502",
+      "seconds": 5.968748084036633,
+      "wire.jsonl_sha256": "899726695acc9175561bf19dd28452a391c12f5c2790b924b50046ba2d5132dd",
+      "engine.stderr.log_sha256": "a804ac7a656c5200f6c604d4d72fe882d9420bade09a73ab967bbce2d6589d88",
+      "trace_path": "artifacts/runs/7706a9f0-b031-4861-8227-77a1b9650b39/decisions.jsonl",
+      "trace_sha256": "7bd8bee4b7ab3b1bc7b133564631444f11aeda6f07e90d4bd7b6fd0d286b0f0e",
+      "full_path_match": true,
+      "final_match": true
+    },
+    {
+      "case": "Ironclad-a-A10",
+      "label": "epsilon15",
+      "mode": "C1",
+      "run_id": "92cb04cf-ba95-48eb-a58f-00c3c4fb3ce0",
+      "status": "match",
+      "steps_checked": 33,
+      "extension_steps": 0,
+      "restore_seconds": 1.2425331249833107,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "05c2f756b4ec51c6d8ab488286a75e61d9ab5bf67d9591832c6aa3f430da0677",
+      "final_decision": "game_over",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Elite",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "3050766935c426cb6f15ca0117561c99e03da8ccf9b7bb153afa983da5fec502",
+      "seconds": 2.3299895839300007,
+      "wire.jsonl_sha256": "3242a4fdfabbcfdc83f3abd08f539ce71a1892ecd9370f8dd81233d15b20ffc3",
+      "engine.stderr.log_sha256": "c0383cef310992666e5ef92a66e1b6d81e04d4fec759d2408077743576a30b40",
+      "trace_path": "artifacts/runs/92cb04cf-ba95-48eb-a58f-00c3c4fb3ce0/decisions.jsonl",
+      "trace_sha256": "08cf397111da4947254d419fb0ecf3b3b58cb9b33e2f09cd836b0e75342839d8",
+      "full_path_match": true,
+      "final_match": true
+    },
+    {
+      "case": "Ironclad-a-A10",
+      "label": "epsilon15",
+      "mode": "C2",
+      "run_id": "f5577a31-742a-4c2c-8a97-fbd03eaca19a",
+      "status": "match",
+      "steps_checked": 33,
+      "extension_steps": 0,
+      "restore_seconds": 1.171670707874,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "05c2f756b4ec51c6d8ab488286a75e61d9ab5bf67d9591832c6aa3f430da0677",
+      "final_decision": "game_over",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Elite",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "3050766935c426cb6f15ca0117561c99e03da8ccf9b7bb153afa983da5fec502",
+      "seconds": 2.2400141248945147,
+      "wire.jsonl_sha256": "b79a260c100266848146b7abcfe25924101394c59b5018ccc41e7c13c2e03c10",
+      "engine.stderr.log_sha256": "c0383cef310992666e5ef92a66e1b6d81e04d4fec759d2408077743576a30b40",
+      "trace_path": "artifacts/runs/f5577a31-742a-4c2c-8a97-fbd03eaca19a/decisions.jsonl",
+      "trace_sha256": "d35eff3987d3c8438377526afe39b23cd0fdf9565a8b3f6ac011c29876265d26",
+      "full_path_match": true,
+      "final_match": true
+    },
+    {
+      "case": "Ironclad-a-A10",
+      "label": "epsilon15",
+      "mode": "C3",
+      "run_id": "73df07f4-71a9-461d-9d2f-5da2db0f74d7",
+      "status": "match",
+      "steps_checked": 33,
+      "extension_steps": 0,
+      "restore_seconds": 1.15703854104504,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "05c2f756b4ec51c6d8ab488286a75e61d9ab5bf67d9591832c6aa3f430da0677",
+      "final_decision": "game_over",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Elite",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "path_hash": "3050766935c426cb6f15ca0117561c99e03da8ccf9b7bb153afa983da5fec502",
+      "seconds": 2.2257153331302106,
+      "wire.jsonl_sha256": "b0b80568e3520477ec03dfa2ac6772175baebec14e79238f196586472ca6b2e2",
+      "engine.stderr.log_sha256": "c0383cef310992666e5ef92a66e1b6d81e04d4fec759d2408077743576a30b40",
+      "trace_path": "artifacts/runs/73df07f4-71a9-461d-9d2f-5da2db0f74d7/decisions.jsonl",
+      "trace_sha256": "6a973c1ad37b059cd61c078758fd639450b6ad117934dc828cbb195fc0c90b13",
+      "full_path_match": true,
+      "final_match": true
+    },
+    {
+      "case": "Ironclad-b-A10",
+      "label": "control",
+      "mode": "B",
+      "run_id": "e8126969-43a4-4eda-8e02-ef1c2593ff8c",
+      "status": "match",
+      "steps_checked": 12,
+      "extension_steps": 0,
+      "restore_seconds": 4.926346542080864,
+      "map_match": true,
+      "entry_match": true,
+      "save_seconds": 0.08468166692182422,
+      "created_checkpoint": {
+        "path": "artifacts/runs/e8126969-43a4-4eda-8e02-ef1c2593ff8c/map-checkpoint.json",
+        "sha256": "062c9173ee2bc8d5e1368848472040d7b0ead78230efa533f5482f29a47c1a34"
+      },
+      "final_hash": "046ee7058c167517eaa32d6351bd89f1df1a4b9462c12a7ec66f8a1c7637f376",
+      "final_decision": "game_over",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "d618b93e7c1789c48b75601b2e0e960b58382d0366fdc53b2b6c1c414e963ec0",
+      "seconds": 5.266894083004445,
+      "wire.jsonl_sha256": "919335266be645b2104507043caa55393159602344df9b73f395e53a6bacf60d",
+      "engine.stderr.log_sha256": "877fea4e628bc9d0c4b8194e36e0ff1e127e8b903c8071dd129c545cc3af9a88",
+      "trace_path": "artifacts/runs/e8126969-43a4-4eda-8e02-ef1c2593ff8c/decisions.jsonl",
+      "trace_sha256": "88f27f7f3871f900210f526f9aa449cf58c7800e2c19a8bc6c8077ac3521af2e",
+      "full_path_match": true,
+      "final_match": true
+    },
+    {
+      "case": "Ironclad-b-A10",
+      "label": "control",
+      "mode": "C1",
+      "run_id": "b3c2a4ba-ef6b-4938-ae09-1e198190575e",
+      "status": "match",
+      "steps_checked": 12,
+      "extension_steps": 0,
+      "restore_seconds": 1.1673058338928968,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "046ee7058c167517eaa32d6351bd89f1df1a4b9462c12a7ec66f8a1c7637f376",
+      "final_decision": "game_over",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "d618b93e7c1789c48b75601b2e0e960b58382d0366fdc53b2b6c1c414e963ec0",
+      "seconds": 1.5635760000441223,
+      "wire.jsonl_sha256": "f17a6d6d19b808bb9f174935f1f6cb9ca10b368bbb06a77cf6ca6b086bc55cde",
+      "engine.stderr.log_sha256": "01d3bc077b7e2b929dbd5373f154da9dd55ca4ef7219e65c1ab5b472e27ea4a2",
+      "trace_path": "artifacts/runs/b3c2a4ba-ef6b-4938-ae09-1e198190575e/decisions.jsonl",
+      "trace_sha256": "002ccb025acb7d45d606540bca1f6a4997852fb0d00a17e5f311e152c5e4fb01",
+      "full_path_match": true,
+      "final_match": true
+    },
+    {
+      "case": "Ironclad-b-A10",
+      "label": "control",
+      "mode": "C2",
+      "run_id": "349b9e3c-42b2-4e7b-9406-806f04b4eec8",
+      "status": "match",
+      "steps_checked": 12,
+      "extension_steps": 0,
+      "restore_seconds": 1.1443448329810053,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "046ee7058c167517eaa32d6351bd89f1df1a4b9462c12a7ec66f8a1c7637f376",
+      "final_decision": "game_over",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "d618b93e7c1789c48b75601b2e0e960b58382d0366fdc53b2b6c1c414e963ec0",
+      "seconds": 1.5464863749220967,
+      "wire.jsonl_sha256": "b7b358193012b37d837486eb8a990c2bb46d37876ebabb5b896c6f04256de9dc",
+      "engine.stderr.log_sha256": "01d3bc077b7e2b929dbd5373f154da9dd55ca4ef7219e65c1ab5b472e27ea4a2",
+      "trace_path": "artifacts/runs/349b9e3c-42b2-4e7b-9406-806f04b4eec8/decisions.jsonl",
+      "trace_sha256": "73227a0dd7c269423777036f6356808346e4bc0fb488c54e32e525ba735d8f5b",
+      "full_path_match": true,
+      "final_match": true
+    },
+    {
+      "case": "Ironclad-b-A10",
+      "label": "control",
+      "mode": "C3",
+      "run_id": "2d720126-b5bc-4d19-8938-487e85331ff0",
+      "status": "match",
+      "steps_checked": 12,
+      "extension_steps": 0,
+      "restore_seconds": 1.1451144160237163,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "046ee7058c167517eaa32d6351bd89f1df1a4b9462c12a7ec66f8a1c7637f376",
+      "final_decision": "game_over",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "d618b93e7c1789c48b75601b2e0e960b58382d0366fdc53b2b6c1c414e963ec0",
+      "seconds": 1.5431465830188245,
+      "wire.jsonl_sha256": "59bdf76a4ed2b09ef09e6fd16f2ff4884e71f75a2525a4357c54f6eb5613bd4b",
+      "engine.stderr.log_sha256": "01d3bc077b7e2b929dbd5373f154da9dd55ca4ef7219e65c1ab5b472e27ea4a2",
+      "trace_path": "artifacts/runs/2d720126-b5bc-4d19-8938-487e85331ff0/decisions.jsonl",
+      "trace_sha256": "524d73658f6678dc48067d16e968f3b0eaf62b182c7ce3f8260114ec8358064d",
+      "full_path_match": true,
+      "final_match": true
+    },
+    {
+      "case": "Ironclad-b-A10",
+      "label": "epsilon15",
+      "mode": "B",
+      "run_id": "8b3f2763-e1c3-4eea-87f4-1c1fe1620d5c",
+      "status": "match",
+      "steps_checked": 10,
+      "extension_steps": 0,
+      "restore_seconds": 4.9952197500970215,
+      "map_match": true,
+      "entry_match": true,
+      "save_seconds": 0.08321408391930163,
+      "created_checkpoint": {
+        "path": "artifacts/runs/8b3f2763-e1c3-4eea-87f4-1c1fe1620d5c/map-checkpoint.json",
+        "sha256": "c65efab10b76b4488f066a6f8608ead1e2c3e79d13a7afd247c571e0ca965c23"
+      },
+      "final_hash": "046ee7058c167517eaa32d6351bd89f1df1a4b9462c12a7ec66f8a1c7637f376",
+      "final_decision": "game_over",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "262ad26e0b9c082cead18a2ef35b35127bc146cd59f501e1fdd27519b46e379a",
+      "seconds": 5.274007000029087,
+      "wire.jsonl_sha256": "5e6dfe9f487f06de33f9d8a408dd74068fa27e4920509aa9318edb6ce284bcd3",
+      "engine.stderr.log_sha256": "6bafe74b286f6fd8e86e19cb300d7d3c80e4e05d92d517015793b6ec0f4d0980",
+      "trace_path": "artifacts/runs/8b3f2763-e1c3-4eea-87f4-1c1fe1620d5c/decisions.jsonl",
+      "trace_sha256": "894e91eb9402dfd65863c9f7d52bf66e9ec3fe1ce58f339b69dccd4b413c4eae",
+      "full_path_match": true,
+      "final_match": true
+    },
+    {
+      "case": "Ironclad-b-A10",
+      "label": "epsilon15",
+      "mode": "C1",
+      "run_id": "98ccd2db-e7e1-4412-8165-64bdb9898981",
+      "status": "match",
+      "steps_checked": 10,
+      "extension_steps": 0,
+      "restore_seconds": 1.1573321670293808,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "046ee7058c167517eaa32d6351bd89f1df1a4b9462c12a7ec66f8a1c7637f376",
+      "final_decision": "game_over",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "262ad26e0b9c082cead18a2ef35b35127bc146cd59f501e1fdd27519b46e379a",
+      "seconds": 1.488944417098537,
+      "wire.jsonl_sha256": "c3ea8ee8529b904761751cc5a451a51f743d09723dc37ebf777211eba6f6ee3a",
+      "engine.stderr.log_sha256": "977a92340219968faec80b1715a27d09a869efb86cb2d50c9dfa7a6087241886",
+      "trace_path": "artifacts/runs/98ccd2db-e7e1-4412-8165-64bdb9898981/decisions.jsonl",
+      "trace_sha256": "ab9af736c794be2e1c299e877b2e2f3c56cc04ee5bb5ca221b01c22e22dc5d52",
+      "full_path_match": true,
+      "final_match": true
+    },
+    {
+      "case": "Ironclad-b-A10",
+      "label": "epsilon15",
+      "mode": "C2",
+      "run_id": "5a008253-a8ec-4fe6-b95e-6fcdb81c7431",
+      "status": "match",
+      "steps_checked": 10,
+      "extension_steps": 0,
+      "restore_seconds": 1.1975273750722408,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "046ee7058c167517eaa32d6351bd89f1df1a4b9462c12a7ec66f8a1c7637f376",
+      "final_decision": "game_over",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "262ad26e0b9c082cead18a2ef35b35127bc146cd59f501e1fdd27519b46e379a",
+      "seconds": 1.5326281250454485,
+      "wire.jsonl_sha256": "068da033dd841d5019deb345465fea324d2ad8be25062c4c15e1408df7d91f17",
+      "engine.stderr.log_sha256": "977a92340219968faec80b1715a27d09a869efb86cb2d50c9dfa7a6087241886",
+      "trace_path": "artifacts/runs/5a008253-a8ec-4fe6-b95e-6fcdb81c7431/decisions.jsonl",
+      "trace_sha256": "c82e0805e9feb290ecbb1017c1d50ffca2de32317eff4cc6d33f105e8cd5e484",
+      "full_path_match": true,
+      "final_match": true
+    },
+    {
+      "case": "Ironclad-b-A10",
+      "label": "epsilon15",
+      "mode": "C3",
+      "run_id": "85c1a298-a4ab-4b40-a708-0d2bceb9138a",
+      "status": "match",
+      "steps_checked": 10,
+      "extension_steps": 0,
+      "restore_seconds": 1.1491603748872876,
+      "map_match": true,
+      "entry_match": true,
+      "final_hash": "046ee7058c167517eaa32d6351bd89f1df1a4b9462c12a7ec66f8a1c7637f376",
+      "final_decision": "game_over",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "path_hash": "262ad26e0b9c082cead18a2ef35b35127bc146cd59f501e1fdd27519b46e379a",
+      "seconds": 1.4850620420183986,
+      "wire.jsonl_sha256": "c75ef08a8b0929c6751ec2d7ab5cfa76e2ee90c3b8ed6835c276c2e6ab82b97d",
+      "engine.stderr.log_sha256": "977a92340219968faec80b1715a27d09a869efb86cb2d50c9dfa7a6087241886",
+      "trace_path": "artifacts/runs/85c1a298-a4ab-4b40-a708-0d2bceb9138a/decisions.jsonl",
+      "trace_sha256": "4c6594229528c690bd36ea722bf62f6a0951a001739ef75cd453fbee50667206",
+      "full_path_match": true,
+      "final_match": true
+    }
+  ],
+  "fidelity_pass": true,
+  "timing_pairs": [
+    {
+      "case": "Ironclad-a-A0",
+      "repeat": 0,
+      "order": [
+        "A",
+        "C"
+      ],
+      "paths": {
+        "A": {
+          "case": "Ironclad-a-A0",
+          "mode": "A",
+          "run_id": "cd2f88b8-3917-443f-a308-82f164fc03df",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 4.174414957873523,
+          "map_hash": "b34f1dd01661fd8fcbde3d379745efc2cd0511573e3b04644766df5811090f89",
+          "entry_hash": "0a45cd3f30d7f9099aeabc3f8a687bd4675aa6fc8b79a0aa8f0d79bd7de83d71",
+          "seconds": 4.184523792006075,
+          "wire.jsonl_sha256": "ee0248157c67b31e89db9a9a43d1177e7cdf5322f7b60f9ebdd2ed992614de61",
+          "engine.stderr.log_sha256": "18cbcaef8e3a98847386bedb7511c1d87d7df30ece44f7efbae41eb0a7019d47",
+          "trace_path": "artifacts/runs/cd2f88b8-3917-443f-a308-82f164fc03df/decisions.jsonl",
+          "trace_sha256": "4b093638e83ceaafe06bc26d2ecbb1b99dfc0a96b57e586e55880db0046f86ee"
+        },
+        "C": {
+          "case": "Ironclad-a-A0",
+          "mode": "C",
+          "run_id": "decb7f7e-2682-4cce-913a-37d8c1608156",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 1.1021873329300433,
+          "map_hash": "b34f1dd01661fd8fcbde3d379745efc2cd0511573e3b04644766df5811090f89",
+          "entry_hash": "0a45cd3f30d7f9099aeabc3f8a687bd4675aa6fc8b79a0aa8f0d79bd7de83d71",
+          "seconds": 1.1115237919148058,
+          "wire.jsonl_sha256": "abbcdcdc30eeb88ef0712439173e4037abbc1c67e3a24123828995d1dabcb0b1",
+          "engine.stderr.log_sha256": "8f0a65aaae7cb44a9ba9cca1706ab90f46dc37965fe4f43d6bf1aa146b57c0aa",
+          "trace_path": "artifacts/runs/decb7f7e-2682-4cce-913a-37d8c1608156/decisions.jsonl",
+          "trace_sha256": "b5426bf31574a31a20ddaa3f0798bf8f018f47c032122710c5b4bfd83ba22a2d"
+        }
+      },
+      "status": "match",
+      "speedup": 3.7873915197122634
+    },
+    {
+      "case": "Ironclad-a-A0",
+      "repeat": 1,
+      "order": [
+        "C",
+        "A"
+      ],
+      "paths": {
+        "C": {
+          "case": "Ironclad-a-A0",
+          "mode": "C",
+          "run_id": "9466140a-9eaf-4539-bde5-c1fd3f4ab783",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 1.1723577089142054,
+          "map_hash": "b34f1dd01661fd8fcbde3d379745efc2cd0511573e3b04644766df5811090f89",
+          "entry_hash": "0a45cd3f30d7f9099aeabc3f8a687bd4675aa6fc8b79a0aa8f0d79bd7de83d71",
+          "seconds": 1.1817999589256942,
+          "wire.jsonl_sha256": "6b3a1b1e71c2926f9e3d43db29ffbebb8c72756a5d0b0f1d79a0f8590382e03c",
+          "engine.stderr.log_sha256": "8f0a65aaae7cb44a9ba9cca1706ab90f46dc37965fe4f43d6bf1aa146b57c0aa",
+          "trace_path": "artifacts/runs/9466140a-9eaf-4539-bde5-c1fd3f4ab783/decisions.jsonl",
+          "trace_sha256": "a86be1f8cf831fc65409bd411bc4a83f05ebd15582a0cca07d547748530ce2dd"
+        },
+        "A": {
+          "case": "Ironclad-a-A0",
+          "mode": "A",
+          "run_id": "668bcf4e-e6ba-48ba-87f8-2ffb77112f49",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 3.943067958112806,
+          "map_hash": "b34f1dd01661fd8fcbde3d379745efc2cd0511573e3b04644766df5811090f89",
+          "entry_hash": "0a45cd3f30d7f9099aeabc3f8a687bd4675aa6fc8b79a0aa8f0d79bd7de83d71",
+          "seconds": 3.9528695000335574,
+          "wire.jsonl_sha256": "c1b27f8d0f0a0b2c75bfd2582ca73f1caf73f22e0fa35f73e64bd91e860b8284",
+          "engine.stderr.log_sha256": "18cbcaef8e3a98847386bedb7511c1d87d7df30ece44f7efbae41eb0a7019d47",
+          "trace_path": "artifacts/runs/668bcf4e-e6ba-48ba-87f8-2ffb77112f49/decisions.jsonl",
+          "trace_sha256": "70ab7f6bf82592050cee99d02416a7f2fd2954ed4a28c91d579991f5aa19f877"
+        }
+      },
+      "status": "match",
+      "speedup": 3.3633659147980786
+    },
+    {
+      "case": "Ironclad-a-A0",
+      "repeat": 2,
+      "order": [
+        "A",
+        "C"
+      ],
+      "paths": {
+        "A": {
+          "case": "Ironclad-a-A0",
+          "mode": "A",
+          "run_id": "7e3e890f-536f-4e9e-9acf-4f12508d0783",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 3.902685415931046,
+          "map_hash": "b34f1dd01661fd8fcbde3d379745efc2cd0511573e3b04644766df5811090f89",
+          "entry_hash": "0a45cd3f30d7f9099aeabc3f8a687bd4675aa6fc8b79a0aa8f0d79bd7de83d71",
+          "seconds": 3.9121925830841064,
+          "wire.jsonl_sha256": "5ed251fa692a4e53415e042361a817e764af5cbd8f34e675c1b13a891c0ad8ce",
+          "engine.stderr.log_sha256": "18cbcaef8e3a98847386bedb7511c1d87d7df30ece44f7efbae41eb0a7019d47",
+          "trace_path": "artifacts/runs/7e3e890f-536f-4e9e-9acf-4f12508d0783/decisions.jsonl",
+          "trace_sha256": "86bbb9ec07ee077ef27cd88b0c2eb55c13e4928c0c61f934b00ca5a3807e8c54"
+        },
+        "C": {
+          "case": "Ironclad-a-A0",
+          "mode": "C",
+          "run_id": "ff189e55-a3e6-4141-bb79-a81682b1ff3d",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 1.0910925841890275,
+          "map_hash": "b34f1dd01661fd8fcbde3d379745efc2cd0511573e3b04644766df5811090f89",
+          "entry_hash": "0a45cd3f30d7f9099aeabc3f8a687bd4675aa6fc8b79a0aa8f0d79bd7de83d71",
+          "seconds": 1.1004439999815077,
+          "wire.jsonl_sha256": "89aea6b69a464dad06c6877c95dc76aea409fb36042d782efa86bd90dc17b01a",
+          "engine.stderr.log_sha256": "8f0a65aaae7cb44a9ba9cca1706ab90f46dc37965fe4f43d6bf1aa146b57c0aa",
+          "trace_path": "artifacts/runs/ff189e55-a3e6-4141-bb79-a81682b1ff3d/decisions.jsonl",
+          "trace_sha256": "e07115f72c3a8827d06a356bfa0a85de7adb304bd01e5d50339e4e44e7331464"
+        }
+      },
+      "status": "match",
+      "speedup": 3.5768599956453566
+    },
+    {
+      "case": "Ironclad-a-A5",
+      "repeat": 0,
+      "order": [
+        "A",
+        "C"
+      ],
+      "paths": {
+        "A": {
+          "case": "Ironclad-a-A5",
+          "mode": "A",
+          "run_id": "a6451af2-42f5-4440-830e-3651098627d5",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 3.85782100004144,
+          "map_hash": "5b1ccb220fc4eb9f19ddb8465ac106868fe0346372eb6f5b177bc6f9729ac96c",
+          "entry_hash": "ddfbccf578ce686fe0c540893a370904d20959501b6aa080ce3ccb84a2e59dd2",
+          "seconds": 3.8678931249305606,
+          "wire.jsonl_sha256": "020c940b41b879b9956f13d6d6f54edc9fc442257353b24433afd49a1ea31a77",
+          "engine.stderr.log_sha256": "bb6d33220969ce1f092ef273daa111daa73ce359f97230b367983ef6f6cac19e",
+          "trace_path": "artifacts/runs/a6451af2-42f5-4440-830e-3651098627d5/decisions.jsonl",
+          "trace_sha256": "f5e6f89ea2744b53ffc4d49f38bab5fd717a4eedacaf117bcdb91758beea2897"
+        },
+        "C": {
+          "case": "Ironclad-a-A5",
+          "mode": "C",
+          "run_id": "7011760a-ddec-43f3-b2a9-1b49cedd4f1f",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 1.1430805420968682,
+          "map_hash": "5b1ccb220fc4eb9f19ddb8465ac106868fe0346372eb6f5b177bc6f9729ac96c",
+          "entry_hash": "ddfbccf578ce686fe0c540893a370904d20959501b6aa080ce3ccb84a2e59dd2",
+          "seconds": 1.15235691703856,
+          "wire.jsonl_sha256": "6928c2963676e261290b0948762521a37092f16590e68ec1434aca40b5b19636",
+          "engine.stderr.log_sha256": "2562bea591394efb9e4466fcb11cbf19f8393b91816706963ac3ae20ab4f9027",
+          "trace_path": "artifacts/runs/7011760a-ddec-43f3-b2a9-1b49cedd4f1f/decisions.jsonl",
+          "trace_sha256": "200aa896d481332b10838dedcbf13596601ec10c8c76386381d56d014f40956f"
+        }
+      },
+      "status": "match",
+      "speedup": 3.3749336621237984
+    },
+    {
+      "case": "Ironclad-a-A5",
+      "repeat": 1,
+      "order": [
+        "C",
+        "A"
+      ],
+      "paths": {
+        "C": {
+          "case": "Ironclad-a-A5",
+          "mode": "C",
+          "run_id": "38e406f7-4971-46c0-8f4e-732266a9f7a2",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 1.2409702909644693,
+          "map_hash": "5b1ccb220fc4eb9f19ddb8465ac106868fe0346372eb6f5b177bc6f9729ac96c",
+          "entry_hash": "ddfbccf578ce686fe0c540893a370904d20959501b6aa080ce3ccb84a2e59dd2",
+          "seconds": 1.2503479581791908,
+          "wire.jsonl_sha256": "49b36920a52bd0f068afdcb54d97b0bd44fe57550d8d5ca602a30c3dc342643c",
+          "engine.stderr.log_sha256": "2562bea591394efb9e4466fcb11cbf19f8393b91816706963ac3ae20ab4f9027",
+          "trace_path": "artifacts/runs/38e406f7-4971-46c0-8f4e-732266a9f7a2/decisions.jsonl",
+          "trace_sha256": "ea6f0f8420d267468aeb1ebdcf1f0362141c47d8261422d4641a4600ff986048"
+        },
+        "A": {
+          "case": "Ironclad-a-A5",
+          "mode": "A",
+          "run_id": "029af49d-b2a0-4074-876a-cafd5fa45fd9",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 3.8640269169118255,
+          "map_hash": "5b1ccb220fc4eb9f19ddb8465ac106868fe0346372eb6f5b177bc6f9729ac96c",
+          "entry_hash": "ddfbccf578ce686fe0c540893a370904d20959501b6aa080ce3ccb84a2e59dd2",
+          "seconds": 3.8733752500265837,
+          "wire.jsonl_sha256": "11ef92e2d2b9198902f17c38f042d6eef9100ce40293792bf751dfa09f2c6db9",
+          "engine.stderr.log_sha256": "bb6d33220969ce1f092ef273daa111daa73ce359f97230b367983ef6f6cac19e",
+          "trace_path": "artifacts/runs/029af49d-b2a0-4074-876a-cafd5fa45fd9/decisions.jsonl",
+          "trace_sha256": "454359f13de97eeac5bc2b82752912bb5ba3e0682b9eec0f49b9a47b87849243"
+        }
+      },
+      "status": "match",
+      "speedup": 3.1137142807091247
+    },
+    {
+      "case": "Ironclad-a-A5",
+      "repeat": 2,
+      "order": [
+        "A",
+        "C"
+      ],
+      "paths": {
+        "A": {
+          "case": "Ironclad-a-A5",
+          "mode": "A",
+          "run_id": "087f48c6-9034-4fcc-9613-1adebbd60995",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 3.8786236671730876,
+          "map_hash": "5b1ccb220fc4eb9f19ddb8465ac106868fe0346372eb6f5b177bc6f9729ac96c",
+          "entry_hash": "ddfbccf578ce686fe0c540893a370904d20959501b6aa080ce3ccb84a2e59dd2",
+          "seconds": 3.888600792037323,
+          "wire.jsonl_sha256": "df08665b740a6fbdabfc479f6591abd0815856b41a371e1db3f56a3b3a96cdfa",
+          "engine.stderr.log_sha256": "bb6d33220969ce1f092ef273daa111daa73ce359f97230b367983ef6f6cac19e",
+          "trace_path": "artifacts/runs/087f48c6-9034-4fcc-9613-1adebbd60995/decisions.jsonl",
+          "trace_sha256": "01b6f76c356817cf7ecad16c0987678b94efe9ae7bc7366c62304de1675d2669"
+        },
+        "C": {
+          "case": "Ironclad-a-A5",
+          "mode": "C",
+          "run_id": "5b8e3bae-105b-48b6-86bc-5bbf5236242e",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 1.1793559580110013,
+          "map_hash": "5b1ccb220fc4eb9f19ddb8465ac106868fe0346372eb6f5b177bc6f9729ac96c",
+          "entry_hash": "ddfbccf578ce686fe0c540893a370904d20959501b6aa080ce3ccb84a2e59dd2",
+          "seconds": 1.1887141249608248,
+          "wire.jsonl_sha256": "170926b931cd703cd8c301851fad8b22ca36c16d6199f4b988bcb00542f99443",
+          "engine.stderr.log_sha256": "2562bea591394efb9e4466fcb11cbf19f8393b91816706963ac3ae20ab4f9027",
+          "trace_path": "artifacts/runs/5b8e3bae-105b-48b6-86bc-5bbf5236242e/decisions.jsonl",
+          "trace_sha256": "77afec9a74800dd328f7eb95a996b2121d93af95b88af39ebacb6b88039f0747"
+        }
+      },
+      "status": "match",
+      "speedup": 3.288764211370446
+    },
+    {
+      "case": "Ironclad-b-A5",
+      "repeat": 0,
+      "order": [
+        "C",
+        "A"
+      ],
+      "paths": {
+        "C": {
+          "case": "Ironclad-b-A5",
+          "mode": "C",
+          "run_id": "db66c52e-56b4-4ac0-86d2-64f916b0b413",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 1.1400761250406504,
+          "map_hash": "3d16d7836eb416fa03f5572567b8c750d9801596463746df012127befdfa9d8e",
+          "entry_hash": "827661136b172f7a795b265e7e3066d5d9a9bdfb0b353d05151cbef2cd600ae1",
+          "seconds": 1.1494930409826338,
+          "wire.jsonl_sha256": "da74523f2cec4b2937f1b5aea90dea776791598b84b86b100837b0034fae6e9d",
+          "engine.stderr.log_sha256": "c3e3cbac3a21f1a35aef0553bdb095d17e4752e30a7083d1503ff82628ea16b4",
+          "trace_path": "artifacts/runs/db66c52e-56b4-4ac0-86d2-64f916b0b413/decisions.jsonl",
+          "trace_sha256": "da18e0f669ba5814a002f8a351aaa87b223ee2d2678515ad993b6e63bc309721"
+        },
+        "A": {
+          "case": "Ironclad-b-A5",
+          "mode": "A",
+          "run_id": "6462da92-c1db-4011-bc78-b37610bb3f66",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 4.539515833836049,
+          "map_hash": "3d16d7836eb416fa03f5572567b8c750d9801596463746df012127befdfa9d8e",
+          "entry_hash": "827661136b172f7a795b265e7e3066d5d9a9bdfb0b353d05151cbef2cd600ae1",
+          "seconds": 4.54983629193157,
+          "wire.jsonl_sha256": "128af24f7893352072fe5b569f0fa52e3d4ddccd26a40857bec361febc1c0b31",
+          "engine.stderr.log_sha256": "66fafb2f3470ce7ee20efc6c1d71e635236a659385f21b12fd09a143466c8e29",
+          "trace_path": "artifacts/runs/6462da92-c1db-4011-bc78-b37610bb3f66/decisions.jsonl",
+          "trace_sha256": "15e3d9e1852617461df320a2f2e345dd8cdb58f469ef7be087283768d783cfc1"
+        }
+      },
+      "status": "match",
+      "speedup": 3.9817655454140737
+    },
+    {
+      "case": "Ironclad-b-A5",
+      "repeat": 1,
+      "order": [
+        "A",
+        "C"
+      ],
+      "paths": {
+        "A": {
+          "case": "Ironclad-b-A5",
+          "mode": "A",
+          "run_id": "fff0962b-5917-47ea-8554-56304f88c993",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 4.458903667051345,
+          "map_hash": "3d16d7836eb416fa03f5572567b8c750d9801596463746df012127befdfa9d8e",
+          "entry_hash": "827661136b172f7a795b265e7e3066d5d9a9bdfb0b353d05151cbef2cd600ae1",
+          "seconds": 4.468492625048384,
+          "wire.jsonl_sha256": "dfdd6c9e4139982e37c690b5f262d593ddc8ff16cf5a65e2c281459b5823ac27",
+          "engine.stderr.log_sha256": "66fafb2f3470ce7ee20efc6c1d71e635236a659385f21b12fd09a143466c8e29",
+          "trace_path": "artifacts/runs/fff0962b-5917-47ea-8554-56304f88c993/decisions.jsonl",
+          "trace_sha256": "af7035a8a90ee430eadf8e761cb73959abcb1eac3ee35da8f15aaf60d425a503"
+        },
+        "C": {
+          "case": "Ironclad-b-A5",
+          "mode": "C",
+          "run_id": "ff12e769-9da7-45fb-b07a-6954287e3582",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 1.1619097499642521,
+          "map_hash": "3d16d7836eb416fa03f5572567b8c750d9801596463746df012127befdfa9d8e",
+          "entry_hash": "827661136b172f7a795b265e7e3066d5d9a9bdfb0b353d05151cbef2cd600ae1",
+          "seconds": 1.1712506250478327,
+          "wire.jsonl_sha256": "183069f8b316f2bc4b4ca7e4851e56e47c0a69b6f2f391c4ec352261dd133f0a",
+          "engine.stderr.log_sha256": "c3e3cbac3a21f1a35aef0553bdb095d17e4752e30a7083d1503ff82628ea16b4",
+          "trace_path": "artifacts/runs/ff12e769-9da7-45fb-b07a-6954287e3582/decisions.jsonl",
+          "trace_sha256": "3ce3a0bcc75c07ac47bc13c8cbc687559566e757e9010b3afadb16043f7aa19d"
+        }
+      },
+      "status": "match",
+      "speedup": 3.8375645502488727
+    },
+    {
+      "case": "Ironclad-b-A5",
+      "repeat": 2,
+      "order": [
+        "C",
+        "A"
+      ],
+      "paths": {
+        "C": {
+          "case": "Ironclad-b-A5",
+          "mode": "C",
+          "run_id": "5e6b8eca-1b6b-4434-93fd-aa632efd0502",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 1.208253415999934,
+          "map_hash": "3d16d7836eb416fa03f5572567b8c750d9801596463746df012127befdfa9d8e",
+          "entry_hash": "827661136b172f7a795b265e7e3066d5d9a9bdfb0b353d05151cbef2cd600ae1",
+          "seconds": 1.2171407078858465,
+          "wire.jsonl_sha256": "bdb24e0564c6737e3829bcbf16f642ee504bebc24a9b62595fbb2827652b6dea",
+          "engine.stderr.log_sha256": "c3e3cbac3a21f1a35aef0553bdb095d17e4752e30a7083d1503ff82628ea16b4",
+          "trace_path": "artifacts/runs/5e6b8eca-1b6b-4434-93fd-aa632efd0502/decisions.jsonl",
+          "trace_sha256": "dd6fd680a66f6ecfce998be61a585b21a0528d7f5a6b954d63362c4ff15976fb"
+        },
+        "A": {
+          "case": "Ironclad-b-A5",
+          "mode": "A",
+          "run_id": "b313b5f2-44d8-4733-83b2-e6e158e9f3be",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 4.506549458019435,
+          "map_hash": "3d16d7836eb416fa03f5572567b8c750d9801596463746df012127befdfa9d8e",
+          "entry_hash": "827661136b172f7a795b265e7e3066d5d9a9bdfb0b353d05151cbef2cd600ae1",
+          "seconds": 4.516005166107789,
+          "wire.jsonl_sha256": "ca989bf7eaa955a192ac4187f84e4b74db7755cb59cfd5b3bdb7d0016000739f",
+          "engine.stderr.log_sha256": "66fafb2f3470ce7ee20efc6c1d71e635236a659385f21b12fd09a143466c8e29",
+          "trace_path": "artifacts/runs/b313b5f2-44d8-4733-83b2-e6e158e9f3be/decisions.jsonl",
+          "trace_sha256": "34ca77bb5de7d8aebbcd0bbe1913540b466df8aa6ae99ea34095aef6dd56ecc1"
+        }
+      },
+      "status": "match",
+      "speedup": 3.7298048557883665
+    },
+    {
+      "case": "Ironclad-a-A10",
+      "repeat": 0,
+      "order": [
+        "A",
+        "C"
+      ],
+      "paths": {
+        "A": {
+          "case": "Ironclad-a-A10",
+          "mode": "A",
+          "run_id": "4bb4480a-90e3-496c-936a-db10a229804f",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 4.796491792192683,
+          "map_hash": "94e73ed4736d2953c38955a6da45c51732330e742f198214fe993b11d3b7d2a8",
+          "entry_hash": "758d0b003d73e1e8828f19edeba7a156fd71dac64a4b85c326508a785e29db06",
+          "seconds": 4.8060128330253065,
+          "wire.jsonl_sha256": "160885fa9f5bd5c697a0d0f7a8fd9525b71035fe7bdd1b873f1e64a58c9ea987",
+          "engine.stderr.log_sha256": "84028a05a340b5afa7c118cee95c69f16881966f60be56662efe805e70ed0026",
+          "trace_path": "artifacts/runs/4bb4480a-90e3-496c-936a-db10a229804f/decisions.jsonl",
+          "trace_sha256": "e3cae40ee4c0e2e2c27dfc9ab28abad23310eee4380eb91809362a544087cce3"
+        },
+        "C": {
+          "case": "Ironclad-a-A10",
+          "mode": "C",
+          "run_id": "336d48d5-27bc-495b-ad2f-65e2e45ac8a2",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 1.247991125099361,
+          "map_hash": "94e73ed4736d2953c38955a6da45c51732330e742f198214fe993b11d3b7d2a8",
+          "entry_hash": "758d0b003d73e1e8828f19edeba7a156fd71dac64a4b85c326508a785e29db06",
+          "seconds": 1.2573282921221107,
+          "wire.jsonl_sha256": "bd74ac6b063e2ad352a7361ecb6ee42d4b4e8c33d6a79e324f65e2138b1b8d73",
+          "engine.stderr.log_sha256": "3e56b3560ba93321cf1a57981c0fa6c0e0fff3aa36a467e55e8237febce208f2",
+          "trace_path": "artifacts/runs/336d48d5-27bc-495b-ad2f-65e2e45ac8a2/decisions.jsonl",
+          "trace_sha256": "90c9b2843910c715ceb84fc11e5cdaf8410deedbcc51158da4565d9d8ebde7a5"
+        }
+      },
+      "status": "match",
+      "speedup": 3.843370113558141
+    },
+    {
+      "case": "Ironclad-a-A10",
+      "repeat": 1,
+      "order": [
+        "C",
+        "A"
+      ],
+      "paths": {
+        "C": {
+          "case": "Ironclad-a-A10",
+          "mode": "C",
+          "run_id": "4b15530e-7697-465b-8bf1-25a029aa33a4",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 1.1515174999367446,
+          "map_hash": "94e73ed4736d2953c38955a6da45c51732330e742f198214fe993b11d3b7d2a8",
+          "entry_hash": "758d0b003d73e1e8828f19edeba7a156fd71dac64a4b85c326508a785e29db06",
+          "seconds": 1.160564332967624,
+          "wire.jsonl_sha256": "d0b8cc4728ed5129a8904fb9630f1eefb4092e69f32795e1f66d89c61ba0fb75",
+          "engine.stderr.log_sha256": "3e56b3560ba93321cf1a57981c0fa6c0e0fff3aa36a467e55e8237febce208f2",
+          "trace_path": "artifacts/runs/4b15530e-7697-465b-8bf1-25a029aa33a4/decisions.jsonl",
+          "trace_sha256": "eb5d62cdb1af9405f956a8e3da3bf01e3d59a1c876579722a2b663ffa574ef9a"
+        },
+        "A": {
+          "case": "Ironclad-a-A10",
+          "mode": "A",
+          "run_id": "d540e5ea-179d-43c6-98c8-c0136a40d3ed",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 4.833447708049789,
+          "map_hash": "94e73ed4736d2953c38955a6da45c51732330e742f198214fe993b11d3b7d2a8",
+          "entry_hash": "758d0b003d73e1e8828f19edeba7a156fd71dac64a4b85c326508a785e29db06",
+          "seconds": 4.842862791148946,
+          "wire.jsonl_sha256": "5174d7d5e0efd025c9b12a3a5b2cda8966eac7a9787a0ce5491eb670a435e553",
+          "engine.stderr.log_sha256": "84028a05a340b5afa7c118cee95c69f16881966f60be56662efe805e70ed0026",
+          "trace_path": "artifacts/runs/d540e5ea-179d-43c6-98c8-c0136a40d3ed/decisions.jsonl",
+          "trace_sha256": "10a4d585d85d11b7a16e82105e2880e7635fe7c2517e92b09c32898b838cfafc"
+        }
+      },
+      "status": "match",
+      "speedup": 4.1974591860873165
+    },
+    {
+      "case": "Ironclad-a-A10",
+      "repeat": 2,
+      "order": [
+        "A",
+        "C"
+      ],
+      "paths": {
+        "A": {
+          "case": "Ironclad-a-A10",
+          "mode": "A",
+          "run_id": "47197efa-d88e-4e39-a37f-b82e4b4184ec",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 4.875746540958062,
+          "map_hash": "94e73ed4736d2953c38955a6da45c51732330e742f198214fe993b11d3b7d2a8",
+          "entry_hash": "758d0b003d73e1e8828f19edeba7a156fd71dac64a4b85c326508a785e29db06",
+          "seconds": 4.884834707947448,
+          "wire.jsonl_sha256": "f2767e279d783cd53e8923caeaa63baef3c4397436e4e48c991db3d29d9f2da1",
+          "engine.stderr.log_sha256": "84028a05a340b5afa7c118cee95c69f16881966f60be56662efe805e70ed0026",
+          "trace_path": "artifacts/runs/47197efa-d88e-4e39-a37f-b82e4b4184ec/decisions.jsonl",
+          "trace_sha256": "d957396b5f7b33d52e5c81504816fe6b87632bf013265580653788143f358d26"
+        },
+        "C": {
+          "case": "Ironclad-a-A10",
+          "mode": "C",
+          "run_id": "df22d2f9-7c67-4d2c-a7a7-1e6efa14d3d4",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 1.3309860827866942,
+          "map_hash": "94e73ed4736d2953c38955a6da45c51732330e742f198214fe993b11d3b7d2a8",
+          "entry_hash": "758d0b003d73e1e8828f19edeba7a156fd71dac64a4b85c326508a785e29db06",
+          "seconds": 1.340383374830708,
+          "wire.jsonl_sha256": "c0cd409708d10fcb4fdea5b3046a8b8b947c5813e293457595fc56c7540866c0",
+          "engine.stderr.log_sha256": "3e56b3560ba93321cf1a57981c0fa6c0e0fff3aa36a467e55e8237febce208f2",
+          "trace_path": "artifacts/runs/df22d2f9-7c67-4d2c-a7a7-1e6efa14d3d4/decisions.jsonl",
+          "trace_sha256": "640782ec9580471512590806bfd04ccfd15ff4f6375d4c0730fb0e804fcb0b27"
+        }
+      },
+      "status": "match",
+      "speedup": 3.663258845464169
+    },
+    {
+      "case": "Ironclad-b-A10",
+      "repeat": 0,
+      "order": [
+        "C",
+        "A"
+      ],
+      "paths": {
+        "C": {
+          "case": "Ironclad-b-A10",
+          "mode": "C",
+          "run_id": "dfb20b4d-575b-46d3-a383-63c30180122f",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 1.230994083918631,
+          "map_hash": "dd2cb223d194aaed19e2af875d59aa9027b9da43d56d97c820f75735ae24c0a5",
+          "entry_hash": "70954cec636a7fdc91a6b28850a1f33fb9655d8bcdec084fa1dbc368c7ab9231",
+          "seconds": 1.2403434589505196,
+          "wire.jsonl_sha256": "a0d4f44d86ba8e0efb7ef37204ce0b9e4992294928a1075774ddd6f04d344a8a",
+          "engine.stderr.log_sha256": "9c9d9f6d8586aae63d6cd652d8f7587a722f15eeff3915d39190e578c6097600",
+          "trace_path": "artifacts/runs/dfb20b4d-575b-46d3-a383-63c30180122f/decisions.jsonl",
+          "trace_sha256": "68c31f83a496d60f4f1b6d1761ea8c439b0a4a6700d0ad1fa6b553309b0f7e19"
+        },
+        "A": {
+          "case": "Ironclad-b-A10",
+          "mode": "A",
+          "run_id": "3caac9b3-6735-4815-98f2-593f2be0a050",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 5.04107845807448,
+          "map_hash": "dd2cb223d194aaed19e2af875d59aa9027b9da43d56d97c820f75735ae24c0a5",
+          "entry_hash": "70954cec636a7fdc91a6b28850a1f33fb9655d8bcdec084fa1dbc368c7ab9231",
+          "seconds": 5.049498375039548,
+          "wire.jsonl_sha256": "257317634f20337273f8b7ebd5771207a604442ee35b8adf21fbd6b450207453",
+          "engine.stderr.log_sha256": "6815af901164ca27c642fbaa4d9563cfd047a48d7e975c980494d8f2febecf71",
+          "trace_path": "artifacts/runs/3caac9b3-6735-4815-98f2-593f2be0a050/decisions.jsonl",
+          "trace_sha256": "29b30674a70a2c7c72d406d1fa6bbfe18afbeb605e09e9a223c16dc1c949212e"
+        }
+      },
+      "status": "match",
+      "speedup": 4.095128095195376
+    },
+    {
+      "case": "Ironclad-b-A10",
+      "repeat": 1,
+      "order": [
+        "A",
+        "C"
+      ],
+      "paths": {
+        "A": {
+          "case": "Ironclad-b-A10",
+          "mode": "A",
+          "run_id": "85aef33d-2182-4fe7-899c-4f32bfdd4843",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 5.060928708175197,
+          "map_hash": "dd2cb223d194aaed19e2af875d59aa9027b9da43d56d97c820f75735ae24c0a5",
+          "entry_hash": "70954cec636a7fdc91a6b28850a1f33fb9655d8bcdec084fa1dbc368c7ab9231",
+          "seconds": 5.069967749994248,
+          "wire.jsonl_sha256": "35034ef40b74722167571e8c4f4141d9e6240d377407d47885a52154d8f4e258",
+          "engine.stderr.log_sha256": "6815af901164ca27c642fbaa4d9563cfd047a48d7e975c980494d8f2febecf71",
+          "trace_path": "artifacts/runs/85aef33d-2182-4fe7-899c-4f32bfdd4843/decisions.jsonl",
+          "trace_sha256": "fab83ef06fc8915fdd0d007d4a3589b126e0141641ee7f1fbb5f4a8c325057ec"
+        },
+        "C": {
+          "case": "Ironclad-b-A10",
+          "mode": "C",
+          "run_id": "fe5045c9-de57-43e9-9780-799fa2f32862",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 1.16900849994272,
+          "map_hash": "dd2cb223d194aaed19e2af875d59aa9027b9da43d56d97c820f75735ae24c0a5",
+          "entry_hash": "70954cec636a7fdc91a6b28850a1f33fb9655d8bcdec084fa1dbc368c7ab9231",
+          "seconds": 1.17842916585505,
+          "wire.jsonl_sha256": "a728f7bd10e086cb622842684cca7a32ea4147e5a505499b1243c6eb540c4ab4",
+          "engine.stderr.log_sha256": "9c9d9f6d8586aae63d6cd652d8f7587a722f15eeff3915d39190e578c6097600",
+          "trace_path": "artifacts/runs/fe5045c9-de57-43e9-9780-799fa2f32862/decisions.jsonl",
+          "trace_sha256": "812fa5e605cb4546755113bf635991edd836165096dd9c7e28f12a90f622e584"
+        }
+      },
+      "status": "match",
+      "speedup": 4.32924885355682
+    },
+    {
+      "case": "Ironclad-b-A10",
+      "repeat": 2,
+      "order": [
+        "C",
+        "A"
+      ],
+      "paths": {
+        "C": {
+          "case": "Ironclad-b-A10",
+          "mode": "C",
+          "run_id": "876f7a25-83e8-4b4d-8db2-e25158285dd0",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 1.2218509169761091,
+          "map_hash": "dd2cb223d194aaed19e2af875d59aa9027b9da43d56d97c820f75735ae24c0a5",
+          "entry_hash": "70954cec636a7fdc91a6b28850a1f33fb9655d8bcdec084fa1dbc368c7ab9231",
+          "seconds": 1.2310983329080045,
+          "wire.jsonl_sha256": "bab2f92433cfb7ad4f83ec881a64b4526241a69b952de4ae5a0b4c102c5b6678",
+          "engine.stderr.log_sha256": "9c9d9f6d8586aae63d6cd652d8f7587a722f15eeff3915d39190e578c6097600",
+          "trace_path": "artifacts/runs/876f7a25-83e8-4b4d-8db2-e25158285dd0/decisions.jsonl",
+          "trace_sha256": "7fa31abc613953a8b898caa9164200878be0df10fd7a21bd46b3566fcee24c65"
+        },
+        "A": {
+          "case": "Ironclad-b-A10",
+          "mode": "A",
+          "run_id": "8c969328-3fb6-41e7-ad42-efcd138f59ea",
+          "status": "match",
+          "map_match": true,
+          "entry_match": true,
+          "restore_seconds": 5.052366584073752,
+          "map_hash": "dd2cb223d194aaed19e2af875d59aa9027b9da43d56d97c820f75735ae24c0a5",
+          "entry_hash": "70954cec636a7fdc91a6b28850a1f33fb9655d8bcdec084fa1dbc368c7ab9231",
+          "seconds": 5.061829000012949,
+          "wire.jsonl_sha256": "491020e1038cfe358acf35ad4f52ec41a2546211c4d6df4191831bd0e66181a4",
+          "engine.stderr.log_sha256": "6815af901164ca27c642fbaa4d9563cfd047a48d7e975c980494d8f2febecf71",
+          "trace_path": "artifacts/runs/8c969328-3fb6-41e7-ad42-efcd138f59ea/decisions.jsonl",
+          "trace_sha256": "43e4cafb43d3e7be88ef1472c4f3a4afc5e8e5936b779305469ff3993b509cbf"
+        }
+      },
+      "status": "match",
+      "speedup": 4.1350106742789645
+    }
+  ],
+  "timing": {
+    "A": {
+      "n": 15,
+      "median": 4.506549458019435,
+      "p95": 5.060928708175197,
+      "max": 5.060928708175197
+    },
+    "C": {
+      "n": 15,
+      "median": 1.1723577089142054,
+      "p95": 1.3309860827866942,
+      "max": 1.3309860827866942
+    },
+    "median_paired_speedup": 3.7873915197122634
+  },
+  "checkpoint_files_unchanged": true,
+  "pilot_speed_pass": true,
+  "completeness_pass": false,
+  "entries": [
+    {
+      "path": "artifacts/runs/8b9df66d-78c2-46f8-b36d-772ee411d5c4/map-checkpoint.json",
+      "sha256": "90dc392b3d266bbf2a9bd20212d1b38bc2e25ee34381d9f42e8540b0d2d25680",
+      "case": "Ironclad-a-A0",
+      "seed": "e132_20261002_a",
+      "character": "Ironclad",
+      "ascension": 0,
+      "prefix_hash": "7fcd050d595346b91492f7215116f96480dd1c77e4dacdb785ca12b57c3f8461",
+      "entry_hash": "0a45cd3f30d7f9099aeabc3f8a687bd4675aa6fc8b79a0aa8f0d79bd7de83d71",
+      "floor": 9,
+      "enemies": [
+        "Phrog Parasite"
+      ],
+      "map_hash": "b34f1dd01661fd8fcbde3d379745efc2cd0511573e3b04644766df5811090f89",
+      "engine": {
+        "headless_assembly_sha256": "71505f31e29c370667636600a58fe2b3e270f98e99e3c5a384d176a7f0188274",
+        "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+        "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+      },
+      "allow_unpromoted": true,
+      "performance_promotion_pass": false,
+      "validation_scope": "E132: 5 available of six configs, two continuations each; research only"
+    },
+    {
+      "path": "artifacts/runs/1f6744d1-d10e-48d5-9802-343463a4d629/map-checkpoint.json",
+      "sha256": "90b0d2bcabe7d472bae7ab423bdb9665eeb1eefcb0d3e711f1b82e043223a896",
+      "case": "Ironclad-a-A5",
+      "seed": "e132_20261002_a",
+      "character": "Ironclad",
+      "ascension": 5,
+      "prefix_hash": "2b4390f0855d3853d0fa7500ac77e72b3b83e6b873f0a40f5e4ff73228cebced",
+      "entry_hash": "ddfbccf578ce686fe0c540893a370904d20959501b6aa080ce3ccb84a2e59dd2",
+      "floor": 9,
+      "enemies": [
+        "Phrog Parasite"
+      ],
+      "map_hash": "5b1ccb220fc4eb9f19ddb8465ac106868fe0346372eb6f5b177bc6f9729ac96c",
+      "engine": {
+        "headless_assembly_sha256": "71505f31e29c370667636600a58fe2b3e270f98e99e3c5a384d176a7f0188274",
+        "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+        "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+      },
+      "allow_unpromoted": true,
+      "performance_promotion_pass": false,
+      "validation_scope": "E132: 5 available of six configs, two continuations each; research only"
+    },
+    {
+      "path": "artifacts/runs/80ebd7a9-9705-4bd4-a865-61590c1670d9/map-checkpoint.json",
+      "sha256": "b8893ac7f2ab47e23da6d34b0c33cf788e72e297474353312e2cec26959d8121",
+      "case": "Ironclad-b-A5",
+      "seed": "e132_20261002_b",
+      "character": "Ironclad",
+      "ascension": 5,
+      "prefix_hash": "c1bea1d07cde1ee9598333604f8d5c79c458c64a93c993c59c4f6bff225daa00",
+      "entry_hash": "827661136b172f7a795b265e7e3066d5d9a9bdfb0b353d05151cbef2cd600ae1",
+      "floor": 9,
+      "enemies": [
+        "Phrog Parasite"
+      ],
+      "map_hash": "3d16d7836eb416fa03f5572567b8c750d9801596463746df012127befdfa9d8e",
+      "engine": {
+        "headless_assembly_sha256": "71505f31e29c370667636600a58fe2b3e270f98e99e3c5a384d176a7f0188274",
+        "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+        "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+      },
+      "allow_unpromoted": true,
+      "performance_promotion_pass": false,
+      "validation_scope": "E132: 5 available of six configs, two continuations each; research only"
+    },
+    {
+      "path": "artifacts/runs/1ed50dea-e0b2-44b5-9b73-4976930c5594/map-checkpoint.json",
+      "sha256": "8d232e54759e8ec7802db3fccdcdd56276e773d71597e023f77dd66aa52f2d2f",
+      "case": "Ironclad-a-A10",
+      "seed": "e132_20261002_a",
+      "character": "Ironclad",
+      "ascension": 10,
+      "prefix_hash": "ba87dc532ea88c0c186a2d328cefaf959d391ea2d5bbeee059553d35ef54c772",
+      "entry_hash": "758d0b003d73e1e8828f19edeba7a156fd71dac64a4b85c326508a785e29db06",
+      "floor": 9,
+      "enemies": [
+        "Phrog Parasite"
+      ],
+      "map_hash": "94e73ed4736d2953c38955a6da45c51732330e742f198214fe993b11d3b7d2a8",
+      "engine": {
+        "headless_assembly_sha256": "71505f31e29c370667636600a58fe2b3e270f98e99e3c5a384d176a7f0188274",
+        "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+        "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+      },
+      "allow_unpromoted": true,
+      "performance_promotion_pass": false,
+      "validation_scope": "E132: 5 available of six configs, two continuations each; research only"
+    },
+    {
+      "path": "artifacts/runs/fe2154f4-88cf-4983-9dd6-bae321a0d5a3/map-checkpoint.json",
+      "sha256": "eaf73d29054c4f485eddc96186fab0ca3c3eb3795eb2b84c8bc14ae47bce8f02",
+      "case": "Ironclad-b-A10",
+      "seed": "e132_20261002_b",
+      "character": "Ironclad",
+      "ascension": 10,
+      "prefix_hash": "8c755231b0e0c2b6a8f4e47a134c1b18c0a3d7409ee275d1d07aa2dfae76185b",
+      "entry_hash": "70954cec636a7fdc91a6b28850a1f33fb9655d8bcdec084fa1dbc368c7ab9231",
+      "floor": 9,
+      "enemies": [
+        "Phrog Parasite"
+      ],
+      "map_hash": "dd2cb223d194aaed19e2af875d59aa9027b9da43d56d97c820f75735ae24c0a5",
+      "engine": {
+        "headless_assembly_sha256": "71505f31e29c370667636600a58fe2b3e270f98e99e3c5a384d176a7f0188274",
+        "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+        "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4"
+      },
+      "allow_unpromoted": true,
+      "performance_promotion_pass": false,
+      "validation_scope": "E132: 5 available of six configs, two continuations each; research only"
+    }
+  ],
+  "seconds": 109.92062574997544,
+  "batch_seconds": 218.9558007090818,
+  "summary": {
+    "match": 40
+  },
+  "audit": {
+    "raw_traces": 111,
+    "failures": [],
+    "pass": true
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "timing": {
+    "A": {
+      "n": 15,
+      "median": 4.506549458019435,
+      "p95": 5.060928708175197,
+      "max": 5.060928708175197
+    },
+    "C": {
+      "n": 15,
+      "median": 1.1723577089142054,
+      "p95": 1.3309860827866942,
+      "max": 1.3309860827866942
+    },
+    "median_paired_speedup": 3.7873915197122634
+  },
+  "per_case": [
+    {
+      "case": "Ironclad-a-A0",
+      "A_median": 3.943067958112806,
+      "C_median": 1.1021873329300433,
+      "paired_median": 3.5768599956453566
+    },
+    {
+      "case": "Ironclad-a-A10",
+      "A_median": 4.833447708049789,
+      "C_median": 1.247991125099361,
+      "paired_median": 3.843370113558141
+    },
+    {
+      "case": "Ironclad-a-A5",
+      "A_median": 3.8640269169118255,
+      "C_median": 1.1793559580110013,
+      "paired_median": 3.288764211370446
+    },
+    {
+      "case": "Ironclad-b-A10",
+      "A_median": 5.052366584073752,
+      "C_median": 1.2218509169761091,
+      "paired_median": 4.1350106742789645
+    },
+    {
+      "case": "Ironclad-b-A5",
+      "A_median": 4.506549458019435,
+      "C_median": 1.1619097499642521,
+      "paired_median": 3.8375645502488727
+    }
+  ],
+  "median_components": {
+    "A": {
+      "ready": 0.054086923599243164,
+      "initialize_or_load": 0.9077577590942383,
+      "remaining_actions": 3.4830148220062256
+    },
+    "C": {
+      "ready": 0.05360269546508789,
+      "initialize_or_load": 1.0230200290679932,
+      "remaining_actions": 0.09520530700683594
+    }
+  },
+  "source": "experiments/E132/verification-v1.json",
+  "source_sha256": "54f55ce47d4a7315fa08c650d7c5cd058a8ace0dfc2538bf76c7ab14263edf99",
+  "method": "Component medians derived from existing wire timestamps; no additional gameplay; ready starts at trace manifest time."
+}

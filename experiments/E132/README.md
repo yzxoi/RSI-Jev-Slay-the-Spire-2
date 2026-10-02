@@ -2,7 +2,7 @@
 
 Issue: https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/248
 
-Status: bank and reference paths frozen; independent restore verification next.
+Status: completed. Five eligible saves passed fidelity and scoped speed gates; bank completeness failed (5/6). Research utility retained; no default strategy promotion.
 
 ## Question and hypothesis
 
@@ -47,3 +47,75 @@ python3 scripts/validate_elite_bank_e132.py capture --output experiments/E132/re
 ```
 
 Before independent verification, corrected the exported index scope to count eligible entries rather than claim six cases. No game-policy, fixed inputs or gates changed. The completeness gate stays failed (5/6).
+
+## Results and decision
+
+Verification/timing SHA `b1b6601b27f5e42b64bd8d1143b7e3bbdd91fe9a`.
+
+```sh
+python3 scripts/validate_elite_bank_e132.py verify --output experiments/E132/verification-v1.json
+```
+
+| Metric | Result |
+| --- | --- |
+| Prespecified configurations | 6 (two seed strings × A0/A5/A10, Ironclad) |
+| Eligible natural Elite entries | 5; A0-b reached Boss instead and is retained as unavailable |
+| Preflight A/B/C map + combat-entry comparisons | 15/15 exact; native seed and ascension unchanged |
+| Frozen full-prefix paths | 10: 4 victories through rewards/next-battle turn 2, 6 real deaths |
+| Independent continuation checks | 40/40 exact (10 save-call B, 30 restored C) |
+| Paired timing restores | 15 pairs / 30 paths, all exact |
+| Full-prefix restore median / p95 | 4.507 / 5.061 s |
+| Native-map restore median / p95 | 1.172 / 1.331 s |
+| Median of paired speedup ratios | 3.787× |
+| Native save-call median | 0.0884 s (five preflights; excludes reaching the map) |
+| Raw evidence audit | 111 unique trace bundles, zero hash mismatches |
+| Total gameplay batches | 218.956 s, below 600 s; zero execution errors/caps |
+| Gates | fidelity PASS for available entries; pilot speed PASS; completeness FAIL |
+
+The final report's `entries` list is the reusable local save index: five unchanged files, original seed/ascension, canonical-prefix/entry/map hashes and engine versions. Both distinct policy paths from each save were checked; repeated loads are not independent game seeds. The old E121 stricter performance failures remain unchanged. No full run or model training was evaluated, and these numbers do not show stronger search/PPO.
+
+Decision: merge the optional bank validator, scoped reusable save index and all evidence, including the missing case. Do not claim a complete six-entry curriculum or change the default restoration/real-game policy. Existing evidence supports prioritizing a common battle-entry reset path before training expansion or E129 warm-worker work. E128 omitted building native snapshots for its new bank despite E121/E124 availability; that integration omission, not lack of save support, made its repeated full-prefix restores unnecessarily expensive.
+
+All five entries are floor-9 Phrog Parasite, so this is insufficient enemy diversity. The control loses three of five battles; save fidelity does not make those starting states easy or demonstrate that all are winnable. Natural starts include different decks/relics/potions/HP; the A10-b entry has 8 HP. Keep preparation failures and curriculum coverage visible when constructing a larger bank.
+
+## Why restoration still costs about one second
+
+Post-hoc wire timing on the 15 matched pairs (descriptive component medians, not an additive accounting identity):
+
+| Stage | Full-prefix A | Saved-map C |
+| --- | --- | --- |
+| Start process to ready | 0.054 s | 0.054 s |
+| First command: start_run / load_save | 0.908 s | 1.023 s |
+| Remaining actions through entry | 3.483 s | 0.095 s |
+
+Saving removes the earlier floors' replay; fresh-process loading still initializes/deserializes the engine. Saving once is amortized across rollouts. E129 remains unexecuted: persistent-worker resets might amortize initialization, but need separate contamination/RNG/event-handler fidelity checks. Arbitrary mid-combat snapshots are not implemented: the current adapter's non-Map `SaveCheckpoint` path rewrites pre-room coordinates, not a faithful combat-state clone. Only call it at the true Map boundary. For an internal battle node, load that boundary and replay the battle-local action prefix with state-hash checks.
+
+## Reuse and training interface
+
+The existing low-level `rsi.research_restore.restore_entry(send, frozen, snapshot, manifest)` validates engine/file/history identity, sends `load_save`, checks the Map, enters via the original freshly legal action, and checks the battle hash. Existing `rsi.battle_search.probe(..., checkpoint=snapshot)` then runs a bounded fresh policy rollout with raw trace logging. These five entries stay explicit research opt-in; do not feed this report into the E121-specific `research_snapshots` evidence loader.
+
+Example for this local, validated bank (not an additional evaluated run):
+
+```python
+from rsi.battle_search import probe
+from rsi.checkpoints import file_hash
+from scripts.validate_elite_bank_e132 import read_evidence
+from scripts.evaluate_battle_search_e120 import manifest
+
+version = {**manifest(), "experiment": "new_preregistered_experiment"}
+proof = read_evidence("experiments/E132/verification-v1.json", version)
+assert proof["fidelity_pass"] and proof["checkpoint_files_unchanged"]
+sources = {}
+for name, record in proof["sources"].items():
+    assert file_hash(record["path"]) == record["sha256"]
+    sources[name] = read_evidence(record["path"], version)
+snapshot = next(e for e in proof["entries"] if e["case"] == "Ironclad-a-A5")
+frozen = next(f for f in sources["fixtures"]["fixtures"] if f["case"] == snapshot["case"])
+result = probe(frozen, version, "new_rollout", checkpoint=snapshot, seconds=30)
+```
+
+For training, create each difficulty through `start_run(ascension=...)`; never edit the ascension field of an existing save. Partition by base game seed **before** deriving multiple ascensions/paths, so correlated siblings stay in the same train/validation/test split. Within training, sample different legal policies/action sequences from each save. Identical actions plus identical RNG reproduce the same trajectory; repeated replay alone does not add independent experience. Expanding characters/enemies/decks/relics/potion inventories and adding new naturally generated seeds is separate from making resets fast.
+
+Environment: Apple M3 Max, CPU, macOS 26.6.2 arm64, Python 3.13.5, .NET 9.0.318; original game v0.111.0. Full code/adapter/original and patched DLL hashes are in each report manifest. No engine changes, paid-model calls or live-game writes. Raw traces and native saves remain ignored under `artifacts/runs/`.
+
+PR: https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/pull/249. Codex attachment was attempted but the app rejected it because this thread already exceeds 100 attachment identities; the PR remains available normally on GitHub.

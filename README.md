@@ -48,6 +48,8 @@
 
 研究资料已整理为[进展与决策、实验记录和学习搜索方案](docs/research/learning-search/README.md)，并同步到用户的 [Notion 私人研究区](https://app.notion.com/p/3edd59e86a7481109f71feb47a8286e4)。[E127](experiments/E127/README.md)已完成 6,144 场训练：在相同 24 个未见 seed 的战斗入口上，7.4 万参数模型两份各胜 23/24，63.9 万参数模型两份各胜 22/24，程序规划器 23/24。扩参门槛失败，96 条模型方案精确重放一致；[loss/reward 曲线](experiments/E127/figures/training-curves.png)与[配对结果](experiments/E127/figures/heldout-results.png)已保存。[E128](experiments/E128/README.md) 固定权重搜索对照已完成：96 场中 86 胜、4 负、6 超时，90 条完成方案精确重放，5,880 份 trace 核验通过；两项推广门槛失败。完成样本的 HP 差值中位数均为 0，单场耗时中位数 116～156 秒。[搜索结果与估值图](experiments/E128/figures/search-results.png)已归档；当前策略不推广到默认实战。
 
+[E132](experiments/E132/README.md) 验证 A0/A5/A10 的原生精英战前存档：6 组预选配置有 5 个精英入口可用，另一个到达 Boss，未补换种子。40 次完整续演全部一致，111 份 trace 审计通过；15 组配对恢复中位耗时从 4.507 降到 1.172 秒。可用入口的精确性与本轮速度门槛通过，完整性门槛失败；五个入口都为同一种精英。已保留可复用研究存档索引与 API，尚未重新训练模型或推广默认实战策略。E128 未为新 bank 复用已有存档路径的遗漏已记录。
+
 需要本地合法安装的游戏，以及 `dependencies.json` 固定的 headless 依赖和 .NET SDK。原生实战另需已运行的 [STS2-Agent MCP](https://github.com/CharTyr/STS2-Agent)。脚本会从本地游戏安装读取专有文件；仓库不包含游戏二进制。Jev 调用使用环境变量 `OPENROUTER_RSI_JEV_KEY`，也可放在被 Git 忽略的 `.env` 中；不要提交或打印密钥。
 
 当前 CLI 补丁针对历史 **v0.111.0**。本机 Steam DLL 已更新，直接自动读取新版会出现接口编译错误；当前版本适配由 [E094 / #182](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/182)跟踪。复现历史实验时先将 `STS2_GAME_DIR` 指向已核对哈希的旧版原始 DLL 本地目录，再运行构建；具体哈希见[版本说明](docs/cli-resources.md#版本限制)。
