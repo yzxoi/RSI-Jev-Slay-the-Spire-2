@@ -1,0 +1,21 @@
+{
+  "tested_code_sha": "f2299d46311e14159b96bde46d0d7798b4bff97e",
+  "command": "python3 -m unittest discover -s tests -p 'test_ppo.py' -v",
+  "scope": "synthetic unit tests, not gameplay",
+  "tests": 6,
+  "passed": 4,
+  "failures": [
+    {
+      "test": "gae_terminal_returns_and_truncation_bootstrap",
+      "expected": -1.0,
+      "actual": -0.9999999403953552,
+      "reason": "float32 rounding versus seven-decimal unittest default"
+    },
+    {
+      "test": "optimizer_learns_synthetic_one_step_bandit",
+      "updates": 24,
+      "required_probability": 0.9,
+      "actual_probability": 0.7926344871520996
+    }
+  ]
+}
