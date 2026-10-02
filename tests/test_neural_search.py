@@ -1,11 +1,21 @@
 """Synthetic PUCT invariants, not game-strength evidence."""
 import unittest
+from unittest.mock import patch
 try:
  import torch
+ import numpy as np
 except ImportError as exc:raise unittest.SkipTest('Optional neural search dependencies missing')from exc
 from rsi.neural_search import Edge,Node,PUCT,normalized,SearchPolicy
 
 class PUCTTests(unittest.TestCase):
+ def test_expired_parent_budget_prevents_any_engine_probe(self):
+  policy=SearchPolicy({}, {}, None, 'value', battle_deadline=10)
+  choice={'action':{'action':'end_turn','args':{}}}
+  state={'decision':'combat_play','round':1,'player':{'hp':1,'max_hp':80}}
+  with patch.object(policy,'infer',return_value=([choice],np.array([1.]),0.)), \
+       patch.object(policy,'probe') as probe, patch('rsi.neural_search.time.monotonic',return_value=11):
+   with self.assertRaises(TimeoutError):policy(state,[choice],None,[])
+   probe.assert_not_called()
  def test_parent_budget_reaches_every_root(self):
   policy=SearchPolicy({}, {}, None, 'value', battle_deadline=240)
   self.assertEqual(policy.root_deadline(200),240)

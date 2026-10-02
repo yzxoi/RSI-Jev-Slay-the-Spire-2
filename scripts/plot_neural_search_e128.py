@@ -16,7 +16,9 @@ for i,row in enumerate(r['models']):
   ds=[(x['hp']if x['status']=='clear'else 0)-(b['hp']if b['status']=='clear'else 0)for x,b in zip(ev['records'],base['records'])if x['status']in('clear','defeat')and b['status']in('clear','defeat')]
   if len(ds)==len(base['records']):
    axes[0].scatter(ds,[y]*len(ds),s=20,alpha=.4,color=colors[j]);axes[0].plot(np.median(ds),y,'D',color='black')
-  axes[1].barh(y,ev['summary']['clears'],color=colors[j]);axes[1].text(ev['summary']['clears'],y,f"  {ev['summary']['clears']}/{len(base['records'])}",va='center')
+  counts=ev['summary']['statuses'];capped=sum(n for s,n in counts.items() if s not in ('clear','defeat'))
+  axes[1].barh(y,ev['summary']['clears'],color=colors[j]);axes[1].text(1,y,
+    f"{counts.get('clear',0)} clear / {counts.get('defeat',0)} defeat / {capped} censored",va='center',fontsize=8,color='white')
   axes[2].barh(y,ev['search_summary']['median_battle_seconds'],color=colors[j])
 for ax in axes:ax.set_yticks(range(len(labels)),labels);ax.grid(axis='x',alpha=.2)
 axes[0].axvline(0,color='gray',lw=.8);axes[0].set_xlabel('HP-equivalent delta vs direct actor\nDiamond = paired median; defeats = 0')
