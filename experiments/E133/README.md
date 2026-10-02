@@ -2,7 +2,7 @@
 
 Issue: https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/250
 
-Status: natural bank frozen; reset certification before training.
+Status: both retraining replicates completed; selected weight hashes locked before held-out evaluation.
 
 ## Objective and hypothesis
 
@@ -80,3 +80,20 @@ Training SHA `383da286fa4402083b327a1c698bf6bac71e492b`. Results: `[{"learner": 
 
 Learner 1701 fixed validation at 1,536 episodes: early 24/24 (initial 14/24), challenging 16/24 (initial 3/24); challenging A0/A5/A10 = 7/8, 6/8, 3/8. These are validation results, not independent test results or comparison to E127/strong planner. Original failed batches and weight checkpoints retained; fixes require atomic compatibility experiments and a declared resume policy before another training iteration.
 **E133 v2 amendment before resumed gradients:** source `experiments/E133/training-v1.json`, original623-entry certificate and same264-seed bank; use E136 complete selections with unchanged features/weights. Resume1701 after13 optimizer steps and1702 after0. Rerun entire interrupted192-case batches with fixed original sample seeds and require every previously terminal member's full trajectory equal before optimizer update. Preserve original failed batches by immutable source reference; charge original800.340/53.763 workseconds against the same3600s learner ceiling. Stop at32 total optimized updates each, not32 additional; effective model training ceiling remains6144 episodes each, with attempted/retried episodes reported separately. Original checkpoint validation ranks and held-out gates unchanged; no test policies evaluated yet. A new report v2 includes inherited evidence and current session costs. No additional training-budget extension is authorized by this amendment.
+
+## Training v2 complete; weight selection locked before held-out continuations
+
+Resume/training SHA `ee3f06f4b591b7ff0b9077aa45edb1c6c235d980`. Both learners completed32 optimizer updates /6144 episodes each, **12288 effective episodes /196445 optimized transitions** total, at73794 parameters each. All382 previously terminal trajectories from the two interrupted batches matched exactly before their resumed optimizer updates. No automatic reset retry occurred in this v2 training. Effective training+validation audit:12768 raw bundles, zero failures; original384 rejected-batch attempts remain in separately committed v1, not counted as optimized episodes.
+
+Cumulative collection/optimization (including original failed work):1701=1818.552s,1702=1753.795s. Cumulative training plus validation:1897.577+1827.924=3725.502s (62.09min). Actual optimizer work:16.457+15.410=31.867s. Thus sampling/restoration still dominates; no paid model API calls. Source phase hashes, raw traces and all66 checkpoint hashes retained; binary weights local ignored.
+
+| Learner | Short selection | Long selection | Challenging validation at0/8/16/24/32 | Early validation after training |
+| --- | --- | --- | --- | --- |
+|1701|update8 /1536 episodes|update24 /4608 episodes|3/16/17/17/16 out of24|24/24 at all trained checkpoints|
+|1702|update8 /1536 episodes|update32 /6144 episodes|6/14/17/17/17 out of24|24/24 at all trained checkpoints|
+
+The last1701 checkpoint regressed and is not selected. Both learners' best challenging validation counts remain below the original same-entry planner's19/24; these validation observations are not the independent test result. The48 held-out seed policy continuations remain unrun as this selection is committed.
+
+```sh
+python3 scripts/retrain_ppo_e133.py train --resume experiments/E133/training-v1.json --certificate experiments/E134/recovery-train-v2.json --output artifacts/runs/e133-training-v2.json
+```
