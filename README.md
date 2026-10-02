@@ -46,7 +46,7 @@
 
 [E125](experiments/E125/README.md)实现可选的 PPO 神经网络基线。原定精英入口准备有 5/40 条提前战败，保留失败后，在训练前统一改为同一批种子的第一场战斗。两个 7.4 万参数模型各训练 384 场；按验证集选定权重后，均通过同样的 16 个未见 seed，平均剩 73.6 / 74.1 HP，仍落后于程序基线的 79.75 HP，未通过预设扩训门槛。一份未训练模型的动作上限保留为未完成样本，未计为战败。32 条最终方案独立回放一致，1,000 份原始轨迹审计通过。训练含验证约六分钟、零模型 API 调用；当前停止追加训练，未接入默认实战。这里只证明基础战斗中的学习可行性，尚未证明长期规划或优于简单规则。
 
-研究资料已整理为[进展与决策、实验记录和学习搜索方案](docs/research/learning-search/README.md)，并同步到用户的 [Notion 私人研究区](https://app.notion.com/p/3edd59e86a7481109f71feb47a8286e4)。E127 正在进行有界容量/训练规模对照，E128 将用固定权重检验 policy/value 搜索；未完成结果不作策略推广依据。
+研究资料已整理为[进展与决策、实验记录和学习搜索方案](docs/research/learning-search/README.md)，并同步到用户的 [Notion 私人研究区](https://app.notion.com/p/3edd59e86a7481109f71feb47a8286e4)。[E127](experiments/E127/README.md)已完成 6,144 场训练：在相同 24 个未见 seed 的战斗入口上，7.4 万参数模型两份各胜 23/24，63.9 万参数模型两份各胜 22/24，程序规划器 23/24。扩参门槛失败，96 条模型方案精确重放一致；[loss/reward 曲线](experiments/E127/figures/training-curves.png)与[配对结果](experiments/E127/figures/heldout-results.png)已保存。E128 正在以固定权重检验 policy/value 搜索；未完成结果不作策略推广依据。
 
 需要本地合法安装的游戏，以及 `dependencies.json` 固定的 headless 依赖和 .NET SDK。原生实战另需已运行的 [STS2-Agent MCP](https://github.com/CharTyr/STS2-Agent)。脚本会从本地游戏安装读取专有文件；仓库不包含游戏二进制。Jev 调用使用环境变量 `OPENROUTER_RSI_JEV_KEY`，也可放在被 Git 忽略的 `.env` 中；不要提交或打印密钥。
 

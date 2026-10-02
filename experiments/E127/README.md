@@ -37,3 +37,56 @@ Selected by validation only, committed before any E127 held-out test:
 | L / 1702 | 639,234 | 12 | 60df31d914efb2365f2901552a2b17961ecf9f51358f690573546cacc320eb40 |
 
 S-1702 reached 16/16 validation clears at update 18, then regressed to 15/16 at update 24. Both larger models reached 16/16. This corrects an interim verbal summary that looked only at the small models' final checkpoints; no checkpoint selection rule or test protocol changed.
+
+## Held-out result and decision
+
+Test SHA `c076f4b`, 24 preselected unseen game seeds, last of three natural battle entries per seed. All 192 primary evaluations and 96 new-model independent full-prefix replays completed, no caps/actual errors. Every replay matched. Combined preparation/preflight/train/validation/test audit: **6,888 unique raw trace bundles, all hashes valid**. All 100 saved checkpoint hashes verified.
+
+| Arm | Clears / 24 | Median paired HP-equivalent vs planner | Mean paired delta |
+| --- | ---: | ---: | ---: |
+| Planner | 23 | 0 | 0 |
+| Attack priority | 21 | -5 | -6.250 |
+| E125 / 1701 | 22 | -3 | -3.708 |
+| E125 / 1702 | 22 | -2 | -3.417 |
+| S / 1701 | 23 | -2 | -3.292 |
+| S / 1702 | 23 | -2 | -2.792 |
+| L / 1701 | 22 | 0 | -2.583 |
+| L / 1702 | 22 | -3 | -4.375 |
+
+Both scale and capacity gates failed. L has one fewer clear than both planner and corresponding S; median L-minus-S resource delta is zero for each learner. L exceeds attack-priority by one clear, but median resource improvements +2/+1.5 are below the +3 gate. S expanded-training models both gain one clear over E125 on this cohort, but that comparison changes both training data distribution and budget. It is not an isolated training-duration effect. Two training initializations share the same 24 test seeds; there are not 96 independent game seeds.
+
+**Decision:** merge the optional capacity-configurable network, evaluator, plots, diagnostics and reproducible negative evidence; stop this scaling run at its fixed budget and do not promote a larger policy or change the default controller. Continue only the already registered E128 frozen-model inference contrast. Do not interpret the failure as proof PPO cannot work at larger scale.
+
+### What the curves and traces establish
+
+Training + validation wall cost was 1,942.51 s (32.38 min); actual optimizer work 28.99 s (1.49%). This CPU pilot is dominated by collecting/replaying game trajectories, not gradient calculation. Four networks total 6,144 training battles / 100,932 transitions; each network gets 1,536 battles, 4x E125. L is 8.66x the parameters of S. Zero external model API calls; authoring/analysis assistant tokens are not counted as game inference cost.
+
+Training loss and reward improve, but validation is non-monotonic and capacity does not transfer to the held-out cohort. Validation game states are fixed; training batches rotate their battle ordinal, so training reward fluctuations also reflect batch composition. Plots show raw update averages with no smoothing and a separate validation detail panel. HP-equivalent includes terminal defeats as zero, avoiding comparison only among survivors.
+
+On held-out greedy trajectories, MC value MSE was 0.03475 / 0.04216 for S and 0.34644 / 0.41237 for L. This is a diagnostic on different resulting paths, **not** a matched-state causal capacity comparison, and differs from the GAE-target training loss.
+
+`forced-terminal-v1.json` exhaustively lists the six observed defeat endpoints across all four selected models. All six had exactly one legal candidate, end_turn, followed by actual game_over defeat. In `test-09-b3` (Bygone Effigy), L-1701 predicted 0.6896 at HP2/block5/energy0, enemy attack23; L-1702 predicted 1.1321 at HP13/block10/energy0, enemy attack23. Their observed immediate reward is -1. S cleared that battle at HP11, planner at HP13. These establish endpoint critic errors, not which earlier action causally lost the fight. [E130 #246](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/246) separately proposes exact forced-action closure; it has not been run.
+
+![Loss, reward, entropy and KL](figures/training-curves.png)
+![Validation detail](figures/validation-detail.png)
+![Paired held-out results](figures/heldout-results.png)
+
+## Reproduction
+
+```bash
+python3 -m unittest discover -s tests -p 'test_ppo.py' -v
+python3 -m unittest discover -s tests -p 'test_ppo_scale.py' -v
+python3 scripts/scale_ppo_e127.py freeze --output artifacts/runs/e127-fixtures-v1.json
+# Freeze the bank as experiments/E127/fixtures.json before later phases.
+python3 scripts/scale_ppo_e127.py preflight --output artifacts/runs/e127-preflight-v1.json
+python3 scripts/scale_ppo_e127.py train --preflight artifacts/runs/e127-preflight-v1.json --output artifacts/runs/e127-training-v1.json
+# Commit the selected checkpoint hashes before test.
+python3 scripts/scale_ppo_e127.py test --training artifacts/runs/e127-training-v1.json --output artifacts/runs/e127-test-v1.json
+python3 scripts/analyze_scale_e127.py --output artifacts/runs/e127-analysis-v1.json
+python3 scripts/diagnose_value_e127.py --output artifacts/runs/e127-forced-terminal-v1.json
+python3 scripts/plot_ppo_research.py --training artifacts/runs/e127-training-v1.json --test artifacts/runs/e127-test-v1.json --output-dir experiments/E127/figures
+```
+
+Reports refuse to overwrite evidence. Reproduction requires a fresh output path and separately registered rerun; do not delete old traces. Optional dependencies match E125: Python 3.13.5, torch 2.11.0, numpy 2.3.2; plotting used local Matplotlib. SDK 9.0.318, historical game v0.111.0. Every report embeds exact game/headless/dependency hashes and tested Git SHA. This does not validate the current Steam version, full runs, high ascension, multiple characters or learned deck/reward selection.
+
+Exact training code: `803d841c83f37da955478a741b944b796b781a24`; held-out evaluator: `c076f4bcb5f75eecff6f7fe1b8a6ea874bbd9bba`; exhaustive endpoint diagnostic: `d23e4fe34a6378969eb47948beed96f1ad0cd63a`.
