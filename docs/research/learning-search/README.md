@@ -10,4 +10,9 @@
 
 GitHub 的实验 README、提交和 PR 是不可回写的证据来源；这里和 Notion 是面向阅读的索引。旧结论被修订时说明原因，不用新结果覆盖旧失败。原始决策与 wire trace、模型权重存于本机 `artifacts/runs/`，公开报告给出哈希。
 
-Notion 发布状态：2026-10-02 已读取范例；工作记录库拒绝创建页面（缺少 create page 权限），已向用户请求可写父页面。文档先本地保存，权限可用后同步。
+Notion：按用户指定发布在私人区域。工作记录库只有读权限，未改动该库。
+
+- [研究主页](https://app.notion.com/p/3edd59e86a7481109f71feb47a8286e4)
+- [研究进展与决策](https://app.notion.com/p/3edd59e86a74817493b6c8af2a1f64ae)
+- [实验记录](https://app.notion.com/p/3edd59e86a7481a0b815ea69ab35bdaa)
+- [方案](https://app.notion.com/p/3edd59e86a74812384ffd952d87412da)
