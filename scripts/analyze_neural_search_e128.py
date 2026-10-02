@@ -61,9 +61,23 @@ def restore_diagnostics(records):
      for i,name in enumerate(names)})
 
 
+def fixture_coverage(path):
+ bank=json.loads(Path(path).read_text());splits={}
+ for split in ('train','val','test'):
+  fixtures=[f for f in bank['fixtures']if f['split']==split]
+  if split!='train':
+   fixtures=[max((f for f in fixtures if f['seed']==seed),key=lambda f:f['ordinal'])
+             for seed in sorted({f['seed']for f in fixtures})]
+  splits[split]=dict(entries=len(fixtures),room_types=dict(Counter(f['room_type']for f in fixtures)),
+    floor_range=[min(f['floor']for f in fixtures),max(f['floor']for f in fixtures)],
+    encounters=dict(Counter(' / '.join(sorted(f['enemies']))for f in fixtures)))
+ return dict(source_sha256=file_hash(path),splits=splits,
+  scope='Unique natural entry states, not episode counts or all subsequently spawned enemies; train uses all entries, val/test last available')
+
+
 def main():
  p=argparse.ArgumentParser();p.add_argument('--source',required=True);p.add_argument('--output',required=True)
- p.add_argument('--direct');a=p.parse_args()
+ p.add_argument('--direct');p.add_argument('--fixtures',default=str(ROOT/'experiments/E127/fixtures.json'));a=p.parse_args()
  out=Path(a.output)
  if out.exists():raise ValueError('Preserve analysis')
  r=json.loads(Path(a.source).read_text());models=[]
@@ -99,6 +113,7 @@ def main():
  result={'source_sha256':file_hash(a.source),'audit':audit(r),'models':models,
          'passed':r['passed'],'strength_gate':r.get('strength_gate'),'value_efficiency_gate':r.get('value_efficiency_gate'),
          'seconds':r['seconds'],'direct_sha256':file_hash(a.direct)if a.direct else None,
+         'fixture_coverage':fixture_coverage(a.fixtures),
          'notes':['Calibration is descriptive and conditioned on visited rollout leaves.',
           'The simple comparator assumes a clear at current HP; not an executable policy or win-rate baseline.',
           'Different search paths are not paired counterfactuals; repeated leaves/cases are correlated.',
