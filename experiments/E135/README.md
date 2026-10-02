@@ -43,7 +43,9 @@ Recollection ran at `66798bd`; comparison and the additional stub-provenance che
 ```sh
 python3 scripts/retrain_ppo_e133.py freeze --output artifacts/runs/e133-fixtures-v2.json
 python3 scripts/validate_godot_abi_e135.py compare-bank --new-bank artifacts/runs/e133-fixtures-v2.json --output artifacts/runs/e135-preparation-equivalence-v1.json
-python3 -m unittest tests.test_research_restore
+python3 -m pytest tests/test_research_restore.py tests/test_reset_fallback.py tests/test_ppo_bank.py -q
 ```
 
 **Merge:** the frozen failure, original mechanic, three continuation replays, full preparation regression and provenance gates passed. Retain the guarded ABI addition. This proves compatibility only for the tested paths; native save fidelity and broader PPO policy paths remain separate gates. E133 must recertify under all four new runtime hashes before training.
+
+Validation invocation correction: `python3 -m unittest tests.test_research_restore` failed to import the tests directory as a package; this was a command error, not a failed mechanism check. The pytest invocation above loads the files directly.
