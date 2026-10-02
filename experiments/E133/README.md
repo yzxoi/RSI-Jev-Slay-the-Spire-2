@@ -2,7 +2,7 @@
 
 Issue: https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/250
 
-Status: both retraining replicates completed; selected weight hashes locked before held-out evaluation.
+Status: training and held-out evaluation complete; execution passed, both strength promotion gates failed. Optional research retained; no further automatic expansion.
 
 ## Objective and hypothesis
 
@@ -121,4 +121,43 @@ Tested SHA `1dfa5650ecbad629581a30d358b347a08a2e966b`. All48 fixed independent t
 
 ```sh
 python3 scripts/retrain_ppo_e133.py test --training experiments/E133/training-v2.json --certificate experiments/E134/recovery-test-v1.json --output artifacts/runs/e133-test-v1.json
+```
+
+## Final interpretation and decision
+
+All strategies clear48/48 early entries. The challenging panel results are:
+
+| 策略 | 困难 A0 /16 | 困难 A5 /16 | 困难 A10 /16 | 困难总计 /48 |
+| --- | ---: | ---: | ---: | ---: |
+| 程序规划器 | 12 | 10 | 3 | 25 |
+| 攻击优先 | 10 | 3 | 3 | 16 |
+| 旧 S /1701 | 8 | 8 | 2 | 18 |
+| 旧 S /1702 | 9 | 6 | 3 | 18 |
+| 新短训 /1701 | 10 | 9 | 1 | 20 |
+| 新长训 /1701 | 12 | 10 | 2 | 24 |
+| 新短训 /1702 | 12 | 9 | 2 | 23 |
+| 新长训 /1702 | 12 | 10 | 3 | 25 |
+
+The longer-trained selections gain6/7 clears over their corresponding E127 models, and4/2 over their own short-budget selections. These are observed improvements on the fixed sample, not proof that scaling will continue. Versus E127, each new model wins9 formerly lost entries but loses3/2 formerly won entries. Versus planner, they win2/3 formerly lost entries and lose3/3 previously won ones. No strategy dominates every entry.
+
+Both formal gates remain **failed**: all challenging paired HP-equivalent medians versus old/short models are0 rather than the preregistered+2, and long1701's24 clears do not match planner25. Paired mean HP-equivalent versus old models improves+6.646/+7.750, versus short models+4.396/+3.021, but those means do not retroactively replace the registered median criterion. Defeats counted as0 create a substantial point mass at0; report both mean and median and never silently reinterpret the gate. Early battles remain less efficient than planner: both new models lose a median5 additional HP.
+
+Most importantly, A10 challenging clears remain2/16 and3/16, exactly the corresponding old-model counts, while planner is3/16. Gains concentrate in A0/A5. Validation rewards plateau near3000 episodes;1701 regresses at the final checkpoint. A smaller GAE value loss did not establish high-ascension mastery. Greedy-trajectory value MSE fell numerically (old2.275/2.032; new1.108/0.900), but these are different visited states and the critic was trained under stochastic actions: this is not a matched-state causal comparison or an unbiased estimate of the stochastic policy's value.
+
+**Decision:** retain/merge the optional research pipeline, completed model evidence and compatibility fixes; do not promote a new default real-game policy or automatically add training budget. The measured gains over old models are useful, but neither consistent superiority to the strongest simple baseline nor an A10 improvement was demonstrated. This jointly changes training coverage and duration; E131's matched-budget curriculum experiment remains unexecuted. Further work should first diagnose representation and hard-state decisions using fixed counterfactuals/available E130-E131 proposals, not assume another fourfold run will solve the gap. No new experiment is silently started.
+
+**Scope:** historical v0.111.0, Ironclad Act1 natural single battles atA0/A5/A10. Planner supplies routes, rewards, card choices and resource preparation outside the battle. These learned models are not full-run or multi-character policies; this does not validate current Steam-version real play. No external model API calls; assistant research/development tokens were not costed.
+
+## Artifacts and reproducibility
+
+- [Completed training and locked checkpoints](training-v2.json); [original failed attempts](training-v1.json). All66 actual weight files stay under ignored `artifacts/runs/` and are verified by the public hashes.
+- [Held-out results](test-v1.json), [accounting and paired difficulty diagnostics](analysis-v1.json). Combined bank/reset/source-training/completed-training/test audit: **17466** unique raw bundles, zero hash failures. This count includes384 rejected-batch attempts retained outside the12288 optimized episodes.
+- [Learning curves](figures/training-curves.png), [validation by difficulty](figures/validation-difficulty.png), [held-out outcomes and paired HP](figures/heldout-results.png); PNG andSVG generated and visually inspected.
+- Atomic compatibility records: [E134 reset routing](../E134/README.md), [E135 ABI/provenance](../E135/README.md), [E136 complete menus](../E136/README.md), [E137 exact resume](../E137/README.md). Their failure histories are preserved.
+
+Analysis and final plotting SHA `4f80152`; no policy/refitting changes during analysis.
+
+```sh
+python3 scripts/analyze_retraining_e133.py --output artifacts/runs/e133-analysis-v1.json
+python3 scripts/plot_retraining_e133.py --training experiments/E133/training-v2.json --test experiments/E133/test-v1.json --output-dir experiments/E133/figures
 ```

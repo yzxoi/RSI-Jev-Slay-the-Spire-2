@@ -6,7 +6,9 @@
 
 ## 当前轮次
 
-- [E133 #250](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/250) / [PR #251](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/pull/251)：用户授权更多数据重训。准备 SHA `e3ae398`，264 个 seed / 1,460 个自然入口，575 个训练候选入口含 151 精英；40 次准备途中正常死亡保留。14 项合成检查通过，264 份准备 trace 哈希通过；原生恢复认证中，尚未报告学习结果。
+- [E133 #250](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/250) / [PR #251](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/pull/251)：已完成。575个训练入口含151精英，两个S各6144场；恢复训练SHA `ee3f06f`，权重选择提交 `efa2ed5`，测试SHA `1dfa565`。48个未见seed困难入口：旧S18/18，新短训20/23，新长训24/25，规划器25；A10仍2/16、3/16。768场对照与384次新模型重放全部成功，两个强度门槛失败。包括原中断尝试的17466份bundle汇总审计通过。[结果、完整失败历史和图表](../../../experiments/E133/README.md)。
+- E134 [PR #254](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/pull/254)：训练/验证固定612原生+11完整重放，测试94+2；保留原生偏差。E135 [PR #255](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/pull/255)：原版Rolling Boulder机制通过，264准备历史完全一致。
+- E136 [PR #258](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/pull/258)：完整191项合法菜单、原模型/随机种子/18步前缀一致、三次终局重放。E137 [PR #259](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/pull/259)：模型/Adam/shuffle RNG精确恢复，仅训练出牌前加载超时允许一次留痕重试；29项相关测试通过，v2实际未触发重试。
 
 - [E132 #248](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/248) / [PR #249](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/pull/249)：多难度精英入口存档。准备 SHA `63c45db`，冻结路径 SHA `001d7db`，验证 SHA `b1b6601`；5/6 精英可用，40/40 续演一致，111 份 trace 审计通过。恢复中位数 4.507→1.172 秒；精确性/速度通过，入口完整性失败。共 218.956 秒，无模型 API；[全部结果与复用示例](../../../experiments/E132/README.md)。
 
