@@ -23,3 +23,15 @@ Verify each frozen path with B (fresh prefix plus a save call) and C1/C2/C3 (thr
 Bank completeness requires all six prespecified entries available; bank fidelity requires every A/B/C and all continuation/reward/draw comparisons exact, unchanged files and zero execution/cap/audit errors. Report preparation availability separately from conditional fidelity. A useful pilot speed result requires pooled paired median restoration speedup >=1.5 and C p95 no worse than A p95, with all comparisons retained. This is a new scoped research gate, not a relabeling of E121's stricter failed speed gates or a production default promotion.
 
 Use a 10-minute batch work budget excluding implementation/analysis; stop launching new evaluation work if exhausted, retaining unstarted cases. Preserve local unedited save files, raw traces, public hashes, code SHAs, timing and all failures. No policy-training, search-strength, full-run win or hidden-state-universality claim. If valid, publish a reusable index for these exact entries/engine versions and a documented reset/rollout API; do not silently plug an uncertified snapshot into E128 or mutate ascension inside a save.
+
+## Iteration 1 — natural bank freeze
+
+Preparation used clean SHA `63c45db` with the pinned v0.111.0 engine. All six fixed configurations reached genuine Elite entries; no seed replacement or state editing. The freeze batch took 16.563 s; all six raw bundles passed the hash audit. Eight existing checkpoint/restore unit tests passed. The first unittest invocation used package-style names even though `tests` is not a package; it failed discovery before any gameplay, then discovery mode passed.
+
+```sh
+python3 -m unittest discover -s tests -p 'test_checkpoints.py'
+python3 -m unittest discover -s tests -p 'test_research_restore.py'
+python3 scripts/validate_elite_bank_e132.py freeze --output experiments/E132/fixtures-v1.json
+```
+
+The bank is frozen before capture; failures in the next stages remain evidence.
