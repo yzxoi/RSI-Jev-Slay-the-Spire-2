@@ -52,7 +52,9 @@ def main():
     output=Path(a.output).resolve()
     if output.exists():raise ValueError('Preserve previous evidence')
     directory=output.with_suffix('');directory.mkdir(exist_ok=False)
-    v={**version(),'experiment':'E128','search_limits':dict(simulations=16,c_puct=1.5,max_depth=8,max_rounds=6)}
+    v={**version(),'experiment':'E128','engine_workers':4,'max_engine_processes':8,
+       'search_limits':dict(simulations=16,c_puct=1.5,max_depth=8,max_rounds=6,
+                            probe_seconds=15,root_seconds=60,battle_seconds=240,rollout_action_cap=120)}
     b=bank(v);tr=json.loads(Path(a.training).read_text())
     if a.phase=='preflight' and 'learners' not in tr:
         if tr['status']!='complete' or tr['size']!='L' or tr['learner']!=1701:
