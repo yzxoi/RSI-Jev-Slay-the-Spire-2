@@ -50,7 +50,7 @@ def read_committed(path, v):
     subprocess.run(['git', 'ls-files', '--error-unmatch', str(path.relative_to(ROOT))],
                    cwd=ROOT, check=True, stdout=subprocess.DEVNULL)
     r = json.loads(path.read_text())
-    if any(r['manifest'][k] != v[k] for k in ENGINE_KEYS):
+    if any(r['manifest'].get(k) != v[k] for k in ENGINE_KEYS):
         raise ValueError('Frozen evidence engine changed')
     if not r['audit']['pass'] or not audit(r)['pass']:
         raise ValueError('Frozen evidence/raw trace audit failed')
