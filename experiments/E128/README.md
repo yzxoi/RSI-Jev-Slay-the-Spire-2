@@ -95,8 +95,16 @@ python3 scripts/analyze_neural_search_e128.py --source artifacts/runs/e128-test-
 python3 scripts/plot_neural_search_e128.py --source artifacts/runs/e128-test-v1.json --direct experiments/E127/test-v1.json --analysis artifacts/runs/e128-analysis-v1.json --output-dir experiments/E128/figures
 ```
 
-Formal evaluation remains at be4b791a; later diagnostic/plot commits only read completed traces. Analysis/figures were generated at 0bd335eb52202fd9b251bb1767e41e8c375f39d7. Commit b207d18 fixes nested deadlines, c2102b8 adds the expired-parent no-probe check, and 8eb9d59 corrects worker metadata. Five synthetic PUCT/deadline tests passed. The correction is now undergoing the original two-entry validation preflight, at clean SHA 0bd335e; it will not replace the held-out v1 results.
+Formal evaluation remains at be4b791a; later diagnostic/plot commits only read completed traces. Analysis/figures were generated at 0bd335eb52202fd9b251bb1767e41e8c375f39d7. Commit b207d18 fixes nested deadlines, c2102b8 adds the expired-parent no-probe check, and 8eb9d59 corrects worker metadata. Five synthetic PUCT/deadline tests passed. The correction passed the original two-entry validation preflight at clean SHA 0bd335e; it does not replace the held-out v1 results.
 
 ## Decision
 
 Reject this configuration for strategy promotion and stop automatic scaling/search-budget increases. Preserve the optional PUCT implementation, exact replay checks, budget correction and negative evidence; no default/live controller change. [E129 #245](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/245), [E130 #246](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/246), and [E131 #247](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/247) are distinct pending proposals, not executed remedies.
+
+## Corrected preflight v2 and final tool decision
+
+Tested clean SHA `0bd335eb52202fd9b251bb1767e41e8c375f39d7`. Command: `python3 scripts/evaluate_neural_search_e128.py preflight --training artifacts/runs/e127-training-v1.json --output artifacts/runs/e128-preflight-v2.json`. All four battles cleared and all four independent trajectory replays matched; 207 trace bundles hash-audited, zero caps/errors/illegal actions. Elapsed 379.46 seconds. Value HP 80/70, rollout 80/76, unchanged from v1. Every complete transition hash and every probe's leaf/final hash, path depth and return also matched v1 (see `preflight-consistency-v2.json`).
+
+The original easy validation cases do not exercise the 240-second cutoff. Deadline behavior is covered separately by synthetic parent-deadline and expired-parent/no-engine-probe checks; engine cleanup may add its documented shutdown grace. No corrected-code held-out strength rerun was performed or claimed. Minor plotting/analysis work overlapped this validation repeat; its timing is descriptive.
+
+Merge the optional research tools and evidence after this successful compatibility check, while rejecting policy promotion. Both registered held-out gates remain failed. Raw traces/models remain local and ignored; public artifacts contain compact outcomes and hashes.

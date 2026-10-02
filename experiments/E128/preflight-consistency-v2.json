@@ -1,0 +1,31 @@
+{
+  "before_sha256": "a8ca40c8869ef04147ad48ed4c52aab1fe2fac86e06e885fcac28e5a9fcce31f",
+  "after_sha256": "c1ae665492b9b58bda9686dbc66f830409a17b90e27a161d886219ea0f3a1a18",
+  "records": [
+    {
+      "mode": "value",
+      "case": "val-00-b3",
+      "outcome_and_transition_match": true,
+      "probe_paths_and_returns_match": true
+    },
+    {
+      "mode": "value",
+      "case": "val-01-b3",
+      "outcome_and_transition_match": true,
+      "probe_paths_and_returns_match": true
+    },
+    {
+      "mode": "rollout",
+      "case": "val-00-b3",
+      "outcome_and_transition_match": true,
+      "probe_paths_and_returns_match": true
+    },
+    {
+      "mode": "rollout",
+      "case": "val-01-b3",
+      "outcome_and_transition_match": true,
+      "probe_paths_and_returns_match": true
+    }
+  ],
+  "passed": true
+}
