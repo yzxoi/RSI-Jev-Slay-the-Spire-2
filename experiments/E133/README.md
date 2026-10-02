@@ -58,3 +58,9 @@ Code SHA `7046576ab533f3b3b80ffcb73d88c5bec110da92`; 623 eligible training/valid
 All failed cases, frozen before further evaluation: train-019-b5, train-044-b2, train-090-b8, train-097-b2, train-102-b2, train-113-b5, train-129-b5, train-131-b2, train-150-b8, train-155-b6, val-009-b3.
 
 Separate [E134 #252](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/252) tests explicit full-prefix reset recovery without deleting samples or silently retrying native saves. It must block on the genuine engine failure; that requires a separate compatibility fix. Any E133 v2 protocol/engine change must be recorded before another evaluation; data/model/reward/selection/test gates remain fixed unless explicitly amended.
+
+## v2 compatibility amendment before recertification/training
+
+E135 PR #255 passed and merged into the dependent compatibility branch: exact original Rolling Boulder mechanics now run; all 264 preparation histories / 23,498 actions / 1,460 entry states are unchanged. Switch BANK to the separately committed fixtures-v2.json, bind all reset evidence to the new adapter and Godot stub hashes, and rerun all 623 training/validation certificates. Every native-incompatible case then undergoes the fixed E134 full-prefix proof; runtime errors still block. v1 failed certifications remain intact. Each v2 certification/recovery is a separately timed batch, not included retroactively in the failed v1 budget.
+
+No changes to sample IDs, preparation choices, network, learning settings, reward, learner seeds, episode/work budget, checkpoint selection or test gates. Baseline E127 weights retain their original file/bank/encoder/runtime checks, then transfer explicitly to the repaired evaluation adapter only with the committed E135 exact-history equivalence proof. Test records disclose source and actual runtime hashes. No historical evaluation is relabeled or replayed with falsified runtime metadata.

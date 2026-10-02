@@ -44,3 +44,9 @@ python3 scripts/recover_resets_e134.py --source experiments/E133/certificate-tra
 ```
 
 Decision: retain results, keep PR open, do not train or merge a passing routing certificate. Separate engine compatibility repair must address the Rolling Boulder missing Godot ABI, followed by renewed evidence bound to the new dependency hashes. No sample was removed.
+
+## v2 compatibility amendment before recertification/training
+
+E135 PR #255 passed and merged into the dependent compatibility branch: exact original Rolling Boulder mechanics now run; all 264 preparation histories / 23,498 actions / 1,460 entry states are unchanged. Switch BANK to the separately committed fixtures-v2.json, bind all reset evidence to the new adapter and Godot stub hashes, and rerun all 623 training/validation certificates. Every native-incompatible case then undergoes the fixed E134 full-prefix proof; runtime errors still block. v1 failed certifications remain intact. Each v2 certification/recovery is a separately timed batch, not included retroactively in the failed v1 budget.
+
+No changes to sample IDs, preparation choices, network, learning settings, reward, learner seeds, episode/work budget, checkpoint selection or test gates. Baseline E127 weights retain their original file/bank/encoder/runtime checks, then transfer explicitly to the repaired evaluation adapter only with the committed E135 exact-history equivalence proof. Test records disclose source and actual runtime hashes. No historical evaluation is relabeled or replayed with falsified runtime metadata.

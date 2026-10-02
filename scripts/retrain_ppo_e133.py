@@ -25,7 +25,8 @@ from scripts.evaluate_battle_search_e120 import audit, manifest, write
 from scripts.pilot_ppo_e125 import summarize, valid, paired_delta
 from scripts.scale_ppo_e127 import attack_priority, load_checkpoint as load_e127
 
-BANK = ROOT / 'experiments/E133/fixtures-v1.json'
+BANK = ROOT / 'experiments/E133/fixtures-v2.json'
+ADAPTER_PROOF = ROOT / 'experiments/E135/preparation-equivalence-v1.json'
 COUNTS = {'train': 192, 'val': 24, 'test': 48}
 LEARNERS = (1701, 1702)
 CONFIGS = [dict(case=f'{split}-{i:03}', seed=f'e133_20261002_{split}_{i:03}',
@@ -226,6 +227,40 @@ def load_model(cp, v):
     return model
 
 
+def adapter_transfer_source(proof, v):
+    """Allow old weights, never old runtime identity, across the audited ABI repair."""
+    checks = proof.get('checks', [])
+    old, new = proof.get('old_engine', {}), proof.get('new_engine', {})
+    if (not proof.get('passed') or not proof.get('audit', {}).get('pass')
+            or not proof.get('proprietary_game_dlls_unchanged')
+            or len(checks) != len(CONFIGS)
+            or [c.get('case') for c in checks] != [c['case'] for c in CONFIGS]
+            or not all(c.get('status_match') and c.get('entry_match')
+                       and c.get('full_command_state_sequence_match') for c in checks)
+            or any(new.get(k) != v.get(k) or not new.get(k) for k in ENGINE_KEYS)
+            or any(old.get(k) != new.get(k) for k in ('headless_game_sha256', 'game_dll_sha256'))):
+        raise ValueError('Unverified adapter transfer')
+    return {**v, **{k: old[k] for k in ENGINE_KEYS}}
+
+
+def legacy_baselines(v):
+    proof = read_committed(ADAPTER_PROOF, v)
+    source_version = adapter_transfer_source(proof, v)
+    if (file_hash(BANK) != proof['new_bank']['sha256']
+            or file_hash(ROOT/proof['old_bank']['path']) != proof['old_bank']['sha256']):
+        raise ValueError('Adapter transfer bank changed')
+    # The legacy loader validates checkpoint bytes, original training bank, encoder
+    # and original engine. Only weights transfer; evaluation always uses v.
+    old = json.loads((ROOT/'experiments/E127/training-v1.json').read_text())
+    models = [(row, load_e127(row['selected'], source_version))
+              for row in old['learners'] if row['size'] == 'S']
+    evidence = dict(proof_path=str(ADAPTER_PROOF.relative_to(ROOT)), proof_sha256=file_hash(ADAPTER_PROOF),
+                    source_engine={k: source_version[k] for k in ENGINE_KEYS},
+                    runtime_engine={k: v[k] for k in ENGINE_KEYS},
+                    checkpoints=[r['selected'] for r, _ in models])
+    return models, evidence
+
+
 def selection_score(validation):
     c, e = validation['panels']['challenging'], validation['panels']['early']
     return c['clears'], c['mean_reward'], e['clears'], e['mean_reward'], -validation['update']
@@ -348,11 +383,10 @@ def test(v,b,output,training,certificate):
     directory.mkdir(exist_ok=False,parents=True)
     report = dict(manifest=v,bank_sha256=file_hash(BANK),training_sha256=file_hash(training),
                   certificate_sha256=file_hash(certificate),arms={})
-    old = json.loads((ROOT/'experiments/E127/training-v1.json').read_text())
+    old, report['baseline_adapter_transfer'] = legacy_baselines(v)
     arms = [('planner',None,None,None),('attack_priority',None,attack_priority,None)]
-    for row in old['learners']:
-        if row['size']=='S':
-            arms.append((f"E127-{row['learner']}",load_e127(row['selected'],v),None,None))
+    for row, model in old:
+        arms.append((f"E127-{row['learner']}",model,None,None))
     for row in t['learners']:
         for budget in ('short','long'):
             cp = row[budget+'_selected']

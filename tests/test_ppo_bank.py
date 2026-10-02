@@ -8,6 +8,23 @@ from scripts.retrain_ppo_e133 import CONFIGS, training_pool, training_entries, p
 
 
 class BankTests(unittest.TestCase):
+    def test_legacy_weights_require_audited_exact_adapter_migration(self):
+        from scripts.retrain_ppo_e133 import adapter_transfer_source
+        from rsi.research_restore import ENGINE_KEYS
+        v = {k: 'current' for k in ENGINE_KEYS}
+        old = {**v, 'headless_assembly_sha256': 'previous', 'godot_stubs_sha256': 'old_stub'}
+        proof = dict(passed=True, audit={'pass': True}, proprietary_game_dlls_unchanged=True,
+                     old_engine=old, new_engine=v,
+                     checks=[dict(case=c['case'], status_match=True, entry_match=True,
+                                  full_command_state_sequence_match=True) for c in CONFIGS])
+        self.assertEqual(adapter_transfer_source(proof, v), old)
+        for invalid in ({**proof, 'passed': False}, {**proof, 'checks': proof['checks'][:-1]},
+                        {**proof, 'old_engine': {**old, 'game_dll_sha256': 'different_rules'}}):
+            with self.assertRaisesRegex(ValueError, 'Unverified adapter'):
+                adapter_transfer_source(invalid, v)
+        with self.assertRaisesRegex(ValueError, 'Unverified adapter'):
+            adapter_transfer_source(proof, {**v, 'godot_stubs_sha256': 'unverified'})
+
     def test_distinct_seeds_and_balanced_ascensions(self):
         self.assertEqual(len({c['seed'] for c in CONFIGS}), 264)
         for split,n in [('train',192),('val',24),('test',48)]:
