@@ -40,6 +40,26 @@ def plots(training, directory, test=None):
     fig.suptitle('PPO capacity / data pilot — two initialization seeds per size\nRaw update means; no smoothing; stars = validation-selected checkpoints',fontsize=15)
     for ext in ('png','svg'):fig.savefig(directory/f'training-curves.{ext}',dpi=170,facecolor='white')
     plt.close(fig)
+    fig,axes=plt.subplots(1,3,figsize=(15,4.5),constrained_layout=True)
+    for row in r['learners']:
+        size=row.get('size','E125');seed=row['learner'];style='-' if seed==1701 else '--';color=COLORS[size]
+        vs=row['validations'];us=row['updates']
+        x=[sum(u['summary']['n'] for u in us if u['update']<=v['update']) for v in vs]
+        label=f'{size} / {seed}'
+        axes[0].plot(x,[v['summary']['clears'] for v in vs],style,color=color,marker='o',label=label)
+        # Same cases at every checkpoint; all terminal defeats remain zero in this resource proxy.
+        hp=[np.mean([q['hp'] if q['status']=='clear' else 0 for q in v['records']])
+            if v.get('passed',v.get('pass')) else np.nan for v in vs]
+        axes[1].plot(x,hp,style,color=color,marker='o')
+        positive=[(xx,v['summary']['mean_reward']) for xx,v in zip(x,vs) if xx>0 and v.get('passed',v.get('pass'))]
+        if positive:axes[2].plot(*zip(*positive),style,color=color,marker='o')
+    for ax,title in zip(axes,['Validation clears','Validation mean HP-equivalent','Validation reward after first update']):
+        ax.set_title(title);ax.set_xlabel('Completed training episodes');ax.grid(alpha=.2)
+    axes[0].set_ylim(0,max(v['summary']['n'] for row in r['learners'] for v in row['validations'])+1)
+    fig.legend(*axes[0].get_legend_handles_labels(),loc='outside lower center',ncol=4)
+    fig.suptitle('Validation detail: fixed unseen game seeds; terminal defeats count as zero HP\nRight panel zooms trained checkpoints; original initialization is retained in the main figure',fontsize=13)
+    for ext in ('png','svg'):fig.savefig(directory/f'validation-detail.{ext}',dpi=170,facecolor='white')
+    plt.close(fig)
     if test:
         t=json.loads(Path(test).read_text());arms=t['arms'];names=list(arms)
         fig,ax=plt.subplots(1,2,figsize=(13,5),constrained_layout=True)
