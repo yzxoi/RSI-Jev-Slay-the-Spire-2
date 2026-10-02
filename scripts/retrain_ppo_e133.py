@@ -151,8 +151,25 @@ def snapshots(path, v, b, testing=False):
         raise ValueError('Incomplete/mismatched reset certificate')
     result = {}
     certificate_hash = file_hash(path)
+    original = None
+    if 'source_certificate' in r:
+        from rsi.reset_fallback import PROTOCOL, recovery_valid
+        source = r['source_certificate']
+        if r.get('protocol')!=PROTOCOL or file_hash(source['path'])!=source['sha256']:
+            raise ValueError('Unrecognized or edited recovery provenance')
+        raw = read_committed(source['path'],v)
+        if raw['cases']!=r['cases'] or raw['bank_sha256']!=r['bank_sha256'] or raw['testing']!=testing:
+            raise ValueError('Recovery belongs to another cohort')
+        original = {q['case']:q for q in raw['records']}
     for f, q in zip(fs, r['records']):
-        if q['status'] != 'match' or q['native'] != f['native_map_available']:
+        recovered = q.get('restore_reason')=='verified_full_prefix_recovery'
+        if recovered:
+            if (original is None or q.get('original_native_failure')!=original[f['case']]
+                    or not recovery_valid(q)):
+                raise ValueError('Full-prefix recovery proof is missing or invalid')
+        elif original is not None and q!=original[f['case']]:
+            raise ValueError('Previously passing certificate was changed')
+        if q['status'] != 'match' or q['native'] != (f['native_map_available'] and not recovered):
             raise ValueError('Uncertified restore mode')
         s = q.get('snapshot')
         if q['native'] and (not s or file_hash(ROOT/s['path']) != s['sha256']
