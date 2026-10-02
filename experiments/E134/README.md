@@ -33,3 +33,14 @@ Failure of any source/fallback/runtime consistency check blocks training/test; r
 Source: `experiments/E133/certificate-train-v1.json`, code SHA `7046576ab533f3b3b80ffcb73d88c5bec110da92`, 623 cases. Failed IDs: train-019-b5, train-044-b2, train-090-b8, train-097-b2, train-102-b2, train-113-b5, train-129-b5, train-131-b2, train-150-b8, train-155-b6, val-009-b3. Ten are native continuation failures with complete original full-prefix references; `train-150-b8` has an original A runtime error (missing Godot Connect ABI after Rolling Boulder), so it is deliberately ineligible. The combined routing gate must remain failed until the engine problem is separately resolved; successful recovery of the other ten cannot authorize dropping this case or beginning training.
 
 Implementation `1d6f419`; four synthetic source/provenance/replay checks passed. No recovery gameplay yet.
+
+## Recovery v1 result — routing gate remains failed
+
+Tested SHA `46c33ff`; all ten native-incompatible cases passed two complete full-prefix continuation replays plus one PPO full-prefix battle replay (30 independent runs). The original map/entry/actions/rewards/next draws exactly matched. `train-150-b8` was rejected as ineligible before replay because the original A failed inside the engine. All 2,507 combined source/recovery raw traces audited, recovery took 21.466 s. This yields 611 certified native + 11 certified full-prefix entries and one blocked entry; the report's raw mode counts include the blocked record and are not a claim of 12 valid fallback entries.
+
+```sh
+python3 -m unittest discover -s tests -p 'test_reset_fallback.py' -v
+python3 scripts/recover_resets_e134.py --source experiments/E133/certificate-train-v1.json --output artifacts/runs/e134-recovery-train-v1.json
+```
+
+Decision: retain results, keep PR open, do not train or merge a passing routing certificate. Separate engine compatibility repair must address the Rolling Boulder missing Godot ABI, followed by renewed evidence bound to the new dependency hashes. No sample was removed.
