@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Fixed E133 data, certification, training and locked held-out evaluation."""
 import argparse
+import copy
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
 import json
@@ -208,9 +209,10 @@ def evaluate(fs, v, label, snaps, model=None, policy=None, verify=False):
                 passed=valid(records) and (not verify or all(r.get('verification_match') for r in records)))
 
 
-def save_model(path, model, optimizer, v, learner, index):
+def save_model(path, model, optimizer, v, learner, index, rng=None):
     torch.save(dict(model=model.state_dict(), optimizer=optimizer.state_dict(), config=model.config,
-                    manifest=v, bank_sha256=file_hash(BANK), learner=learner, update=index), path)
+                    manifest=v, bank_sha256=file_hash(BANK), learner=learner, update=index,
+                    shuffle_rng_state=rng.bit_generator.state if rng is not None else None), path)
     return dict(path=str(path.relative_to(ROOT)), sha256=file_hash(path), update=index, config=model.config)
 
 
@@ -267,29 +269,70 @@ def selection_score(validation):
     return c['clears'], c['mean_reward'], e['clears'], e['mean_reward'], -validation['update']
 
 
-def train(v, b, output, certificate):
+def train(v, b, output, certificate, resume=None):
+    from rsi.ppo_resume import PROTOCOL, shuffle_rng, training_episode
     snaps = snapshots(certificate, v, b)
     directory = output.with_suffix('')
     directory.mkdir(exist_ok=False, parents=True)
     report = dict(manifest=v, bank_sha256=file_hash(BANK), certificate_sha256=file_hash(certificate),
                   learners=[], passed=True)
+    source = None
+    if resume:
+        source = read_committed(resume, v)
+        proof = read_committed(ROOT/'experiments/E137/validation-v1.json', v)
+        if (not proof['passed'] or proof['source_training']['sha256'] != file_hash(resume)
+                or source['bank_sha256'] != file_hash(BANK)
+                or source['certificate_sha256'] != file_hash(certificate)
+                or source['manifest']['hyperparameters'] != HP
+                or [r['learner'] for r in source['learners']] != list(LEARNERS)):
+            raise ValueError('Uncertified resume source')
+        report['resume_source'] = dict(path=str(resume), sha256=file_hash(resume),
+                                       protocol=PROTOCOL, proof_sha256=file_hash(ROOT/'experiments/E137/validation-v1.json'))
+    v = {**v, 'training_resume_protocol': PROTOCOL if resume else None}
+    report['manifest'] = v
     for learner in LEARNERS:
         started = time.monotonic()
         work = 0.
+        inherited_seconds = 0.
         torch.manual_seed(learner)
         rng = np.random.default_rng(learner)
         model = ActorCritic()
         optimizer = torch.optim.Adam(model.parameters(), lr=HP['lr'], eps=1e-5)
         row = dict(size='S', learner=learner, parameters=sum(p.numel() for p in model.parameters()),
                    updates=[], validations=[], checkpoints=[], status='running')
+        interrupted = {}
+        if source:
+            old = next(r for r in source['learners'] if r['learner']==learner)
+            completed = [u for u in old['updates'] if 'optimization' in u]
+            rng = shuffle_rng(learner, completed)
+            row.update(updates=copy.deepcopy(completed), validations=copy.deepcopy(old['validations']),
+                       checkpoints=copy.deepcopy(old['checkpoints']),
+                       resume_from=dict(completed_updates=len(completed), source_status=old['status'],
+                                        skipped_updates=[u['update'] for u in old['updates'] if 'optimization' not in u]))
+            cp = row['checkpoints'][-1]
+            if cp['update'] != len(completed):
+                raise ValueError('Checkpoint does not follow completed optimizer history')
+            model = load_model(cp, v)
+            saved = torch.load(ROOT/cp['path'], map_location='cpu', weights_only=True)
+            optimizer = torch.optim.Adam(model.parameters(), lr=HP['lr'], eps=1e-5)
+            optimizer.load_state_dict(saved['optimizer'])
+            if saved.get('shuffle_rng_state') is not None and saved['shuffle_rng_state'] != rng.bit_generator.state:
+                raise ValueError('Reconstructed shuffle RNG differs from saved state')
+            work = old['work_seconds']; inherited_seconds = old['seconds']
+            interrupted = {u['update']:u for u in old['updates'] if 'optimization' not in u}
+            row['resume_from']['checkpoint'] = cp
+            row['resume_from']['shuffle_rng_state'] = rng.bit_generator.state
+            print(json.dumps({'learner':learner,'phase':'resume','completed_updates':len(completed),
+                              'charged_prior_work_seconds':work}),flush=True)
+        else:
+            cp = save_model(directory/f'S-{learner}-00.pt', model, optimizer, v, learner, 0, rng)
+            row['checkpoints'].append(cp)
+            val = evaluate(panel_entries(b, 'val'), {**v, 'checkpoint': cp}, f'{learner}:val:0', snaps, model=model)
+            val['update'] = 0
+            row['validations'].append(val)
+            print(json.dumps({'learner':learner, 'validation':0, 'panels':val['panels']}), flush=True)
         report['learners'].append(row)
-        cp = save_model(directory/f'S-{learner}-00.pt', model, optimizer, v, learner, 0)
-        row['checkpoints'].append(cp)
-        val = evaluate(panel_entries(b, 'val'), {**v, 'checkpoint': cp}, f'{learner}:val:0', snaps, model=model)
-        val['update'] = 0
-        row['validations'].append(val)
-        print(json.dumps({'learner':learner, 'validation':0, 'panels':val['panels']}), flush=True)
-        for index in range(1,33):
+        for index in range(len(row['updates'])+1,33):
             if work >= 3600:
                 row['status'] = 'time_cap'
                 break
@@ -302,12 +345,19 @@ def train(v, b, output, certificate):
                     return (dict(case=f['case'],status='unstarted',steps=0,seconds=0,
                                  entry_verified=False,illegal_actions=0,reason='Learner work deadline'), [])
                 sample = int(digest([learner,index,f['case']])[:16],16)
-                return episode(f, {**v, 'checkpoint':cp}, f'{learner}:train:{index}', model=model,
+                collect_episode = training_episode if resume else episode
+                return collect_episode(f, {**v, 'checkpoint':cp}, f'{learner}:train:{index}', model=model,
                                sample_seed=sample, checkpoint=snaps[f['case']], seconds=min(30,left))
             batch = pool_map(run, training_entries(b,index))
             records = [compact(r) for r,_ in batch]
             step = dict(update=index, episodes=records, summary=summarize(records))
-            if not valid(records):
+            replay_match = True
+            if index in interrupted:
+                prior = {r['case']:r for r in interrupted[index]['episodes'] if r['status'] in ('clear','defeat')}
+                step['interrupted_batch_consistency'] = [dict(case=r['case'],match=matched(prior[r['case']],r))
+                                                         for r in records if r['case'] in prior]
+                replay_match = all(q['match'] for q in step['interrupted_batch_consistency'])
+            if not valid(records) or not replay_match:
                 step['optimizer_skipped'] = True
                 row['updates'].append(step)
                 row['status'] = 'invalid'
@@ -328,7 +378,7 @@ def train(v, b, output, certificate):
             step['median_restore_seconds'] = statistics.median(r['replay_seconds'] for r in records)
             work += step['collection_and_optimization_seconds']
             row['updates'].append(step)
-            cp = save_model(directory/f'S-{learner}-{index:02}.pt', model,optimizer,v,learner,index)
+            cp = save_model(directory/f'S-{learner}-{index:02}.pt', model,optimizer,v,learner,index,rng)
             row['checkpoints'].append(cp)
             print(json.dumps({'learner':learner,'update':index,'work_seconds':work,
                               'summary':step['summary'],'optimization':step['optimization']}),flush=True)
@@ -345,7 +395,8 @@ def train(v, b, output, certificate):
             if vals:
                 best = max(vals,key=selection_score)
                 row[name+'_selected'] = next(c for c in row['checkpoints'] if c['update']==best['update'])
-        row.update(selected=row.get('long_selected'), work_seconds=work, seconds=time.monotonic()-started)
+        row.update(selected=row.get('long_selected'), work_seconds=work,
+                   seconds=inherited_seconds+time.monotonic()-started, current_session_seconds=time.monotonic()-started)
         report['passed'] &= row['status']=='complete' and bool(row.get('short_selected')) and bool(row.get('long_selected'))
         write(directory/f'S-{learner}.json',row)
     report['audit'] = audit(report)
@@ -444,6 +495,7 @@ def main():
     parser.add_argument('--output',required=True)
     parser.add_argument('--certificate')
     parser.add_argument('--training')
+    parser.add_argument('--resume', help='Committed incomplete training report with E137 resume proof')
     args = parser.parse_args()
     output = Path(args.output).resolve()
     if output.exists():
@@ -459,7 +511,7 @@ def main():
         if args.phase=='certify_train':
             certification(v,b,output)
         elif args.phase=='train':
-            train(v,b,output,args.certificate)
+            train(v,b,output,args.certificate,args.resume)
         elif args.phase=='certify_test':
             locked_training(args.training,v)
             certification(v,b,output,True)

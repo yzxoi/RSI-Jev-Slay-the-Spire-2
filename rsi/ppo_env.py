@@ -43,7 +43,10 @@ def episode(frozen, manifest, label, model=None, sample_seed=None, expected=None
     try:
         if digest(frozen['prefix']) != frozen['prefix_hash']:
             raise ValueError('Changed canonical reset prefix')
-        engine = Headless(trace.directory, timeout=10, resource_decisions=True)
+        remaining = deadline-time.monotonic()
+        if remaining <= 0:
+            raise TimeoutError('Episode time cap before engine startup')
+        engine = Headless(trace.directory, timeout=min(10, remaining), resource_decisions=True)
         if checkpoint:
             from .research_restore import restore_entry
             state = restore_entry(send, frozen, checkpoint, manifest)
