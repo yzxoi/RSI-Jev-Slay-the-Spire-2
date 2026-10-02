@@ -110,12 +110,15 @@ def encode(state, choices, previous=None):
 
 
 class ActorCritic(nn.Module):
-    def __init__(self):
+    def __init__(self, state_width=128, action_width=64):
         super().__init__()
-        self.state = nn.Sequential(nn.Linear(STATE_DIM, 128), nn.Tanh(), nn.Linear(128, 128), nn.Tanh())
-        self.action = nn.Sequential(nn.Linear(ACTION_DIM, 64), nn.Tanh())
-        self.actor = nn.Sequential(nn.Linear(192, 64), nn.Tanh(), nn.Linear(64, 1))
-        self.value = nn.Linear(128, 1)
+        self.config = dict(state_width=state_width, action_width=action_width)
+        self.state = nn.Sequential(nn.Linear(STATE_DIM, state_width), nn.Tanh(),
+                                   nn.Linear(state_width, state_width), nn.Tanh())
+        self.action = nn.Sequential(nn.Linear(ACTION_DIM, action_width), nn.Tanh())
+        self.actor = nn.Sequential(nn.Linear(state_width + action_width, action_width),
+                                   nn.Tanh(), nn.Linear(action_width, 1))
+        self.value = nn.Linear(state_width, 1)
         for module in self.modules():
             if isinstance(module, nn.Linear):
                 nn.init.orthogonal_(module.weight, math.sqrt(2))

@@ -20,11 +20,12 @@ def reward_for(result):
     raise ValueError('Censored episode has no training reward')
 
 
-def episode(frozen, manifest, label, model=None, sample_seed=None, expected=None):
+def episode(frozen, manifest, label, model=None, sample_seed=None, expected=None,
+            policy=None, seconds=30):
     uid = str(uuid.uuid4())
     trace = Trace(ROOT / 'artifacts/runs' / uid, {**manifest, 'scope': 'E125_battle',
                   'label': label, 'case': frozen['case'], 'sample_seed': sample_seed})
-    started = time.monotonic(); deadline = started + 30
+    started = time.monotonic(); deadline = started + seconds
     result = dict(case=frozen['case'], label=label, run_id=uid, status='error', steps=0,
                   entry_verified=False, replay_seconds=0., plan=[], inference_seconds=0.,
                   illegal_actions=0, decisions=Counter())
@@ -62,6 +63,9 @@ def episode(frozen, manifest, label, model=None, sample_seed=None, expected=None
                 if step >= len(expected) or before != expected[step]['before']:
                     raise ValueError('Verification before-state mismatch')
                 chosen = next(c for c in choices if c['action'] == expected[step]['action'])
+            elif policy is not None:
+                chosen, extra = policy(state, choices, previous, result['plan'])
+                payload.update(extra)
             elif model is None:
                 chosen = baseline_choice(state, previous)
             else:
