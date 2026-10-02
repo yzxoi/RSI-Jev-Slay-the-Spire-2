@@ -35,3 +35,15 @@ python3 scripts/validate_godot_abi_e135.py case --output artifacts/runs/e135-cas
 ```
 
 The original v1 error evidence and runtime backup remain unchanged. Next: recollect and compare all 264 preselected preparation histories before accepting an engine-version migration. PR #255 attachment was attempted; the app's 100-identity limit rejected it.
+
+## Complete preparation regression and decision
+
+Recollection ran at `66798bd`; comparison and the additional stub-provenance check ran at `9fedcf0`. All **264** fixed seed histories, **23,498** canonical command/state pairs and **1,460** battle entries matched the original bank exactly. Both proprietary game DLLs stayed byte-identical. All **528** old/new raw trace bundles passed audit. The refreshed bank is `experiments/E133/fixtures-v2.json`; v1 remains intact. The new provenance test rejects a changed Godot stub hash (5 restore tests pass; 23 focused tests across the three modules).
+
+```sh
+python3 scripts/retrain_ppo_e133.py freeze --output artifacts/runs/e133-fixtures-v2.json
+python3 scripts/validate_godot_abi_e135.py compare-bank --new-bank artifacts/runs/e133-fixtures-v2.json --output artifacts/runs/e135-preparation-equivalence-v1.json
+python3 -m unittest tests.test_research_restore
+```
+
+**Merge:** the frozen failure, original mechanic, three continuation replays, full preparation regression and provenance gates passed. Retain the guarded ABI addition. This proves compatibility only for the tested paths; native save fidelity and broader PPO policy paths remain separate gates. E133 must recertify under all four new runtime hashes before training.
