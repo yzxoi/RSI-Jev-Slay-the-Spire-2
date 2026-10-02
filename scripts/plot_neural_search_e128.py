@@ -22,11 +22,18 @@ for i,row in enumerate(r['models']):
   counts=ev['summary']['statuses'];capped=sum(n for s,n in counts.items() if s not in ('clear','defeat'))
   axes[1].barh(y,ev['summary']['clears'],color=colors[j]);axes[1].text(1,y,
     f"{counts.get('clear',0)} clear / {counts.get('defeat',0)} defeat / {capped} censored",va='center',fontsize=8,color='white')
+  axes[1].scatter(base['summary']['clears'],y,marker='|',s=150,color='black',zorder=3,
+                  label='Direct actor'if y==0 else None)
   axes[2].barh(y,ev['search_summary']['median_battle_seconds'],color=colors[j])
-for ax in axes:ax.set_yticks(range(len(labels)),labels);ax.grid(axis='x',alpha=.2)
+  axes[2].scatter(np.median([x['seconds']for x in base['records']]),y,marker='|',s=150,color='black',zorder=3,
+                  label='Direct actor'if y==0 else None)
+for ax in axes:
+ ax.set_yticks(range(len(labels)),labels);ax.set_ylim(-.6,len(labels)-.4);ax.grid(axis='x',alpha=.2)
 axes[0].axvline(0,color='gray',lw=.8);axes[0].set_xlabel('HP-equivalent delta vs direct actor\nComplete pairs only; censored cases omitted\nDiamond = conditional median; defeats = 0')
+limit=max(2,*(abs(x)for x in axes[0].get_xlim()));axes[0].set_xlim(-limit,limit)
 axes[1].set_xlabel('Complete battle clears');axes[1].set_xlim(0,28)
 axes[2].set_xlabel('Median battle wall time (seconds)')
+axes[1].legend(fontsize=8,loc='upper right');axes[2].legend(fontsize=8,loc='upper right')
 fig.suptitle('Frozen policy + PUCT: learned value versus terminal actor rollouts\nSame 24 held-out seeds; 16 simulations at each round entry; no search training',fontsize=14)
 for ext in('png','svg'):fig.savefig(directory/f'search-results.{ext}',dpi=170,facecolor='white')
 plt.close(fig)
