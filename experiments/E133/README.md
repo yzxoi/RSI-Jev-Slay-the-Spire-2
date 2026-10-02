@@ -73,3 +73,9 @@ Tested SHA `97ec4c1`; 623 entries, 785.361 seconds, all 2480 raw traces audited.
 python3 scripts/retrain_ppo_e133.py certify_train --output artifacts/runs/e133-certificate-train-v2.json
 python3 -m pytest tests/test_ppo.py tests/test_ppo_scale.py tests/test_ppo_bank.py tests/test_reset_fallback.py tests/test_research_restore.py -q
 ```
+
+## Training v1 — incomplete batches preserved; test remains locked
+
+Training SHA `383da286fa4402083b327a1c698bf6bac71e492b`. Results: `[{"learner": 1701, "updates": 13, "optimized_episodes": 2496, "attempted_episodes": 2688, "work_seconds": 800.3398571661673, "status": "invalid"}, {"learner": 1702, "updates": 0, "optimized_episodes": 0, "attempted_episodes": 192, "work_seconds": 53.76325754215941, "status": "invalid"}]`. All 3,024 raw trace bundles audited. Learner 1701 made 13 valid updates (2,496 optimized episodes); update 14 had one load_save timeout before entry/any policy action, so the entire batch was skipped. Learner 1702 update 1 reached a legitimate 19-card choose-up-to-two selection (191 possibilities), but the inherited macro candidate cap returned 128; encoder correctly rejected truncation. Its entire batch was skipped and no gradient update performed. Both stop conditions held. No held-out model evaluation or successful long-training claim.
+
+Learner 1701 fixed validation at 1,536 episodes: early 24/24 (initial 14/24), challenging 16/24 (initial 3/24); challenging A0/A5/A10 = 7/8, 6/8, 3/8. These are validation results, not independent test results or comparison to E127/strong planner. Original failed batches and weight checkpoints retained; fixes require atomic compatibility experiments and a declared resume policy before another training iteration.
