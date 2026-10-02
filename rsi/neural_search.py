@@ -79,9 +79,9 @@ class PUCT:
                         q=e.total/e.visits if e.visits else None) for e in self.root.edges])
 
 
-def make_node(model,state,previous,value=None):
+def make_node(model,state,previous,value=None,evaluator=None):
     if boundary(state):return Node(state,previous,normalized(reward_for(outcome(state))),terminal=True)
-    choices,priors,pred=inference(model,state,previous)
+    choices,priors,pred=(evaluator(state,previous) if evaluator else inference(model,state,previous))
     return Node(state,previous,normalized(pred if value is None else value),
                 [Edge(c,float(p)) for c,p in zip(choices,priors)])
 
@@ -91,15 +91,22 @@ class SearchPolicy:
         if mode not in ('value','rollout'):raise ValueError('Unknown leaf evaluator')
         self.frozen,self.manifest,self.model,self.mode=frozen,manifest,model,mode
         self.rounds=set();self.roots=[];self.probes=[]
+        self.neural_seconds=0.;self.neural_calls=0
+
+    def infer(self,state,previous):
+        started=time.monotonic()
+        result=inference(self.model,state,previous)
+        self.neural_seconds+=time.monotonic()-started;self.neural_calls+=1
+        return result
 
     def __call__(self,state,choices,previous,history):
-        _,probs,pred=inference(self.model,state,previous)
+        _,probs,pred=self.infer(state,previous)
         greedy=choices[int(np.argmax(probs))]
         turn=state.get('round')
         if state['decision']!='combat_play' or turn in self.rounds or len(self.rounds)>=6:
             return greedy,dict(source='greedy_actor',probabilities=probs.tolist(),value=pred)
         self.rounds.add(turn);started=time.monotonic();deadline=started+60
-        root=make_node(self.model,state,previous)
+        root=make_node(self.model,state,previous,evaluator=self.infer)
         def expand(path):
             leaf,prev,value,record=self.probe(state,history,path,deadline)
             self.probes.append(record)
@@ -107,7 +114,7 @@ class SearchPolicy:
                 raise TimeoutError(f"Search probe censored: {record['status']}")
             if record['status'] not in ('leaf','clear','defeat'):
                 raise RuntimeError(f"Search probe {record['status']}: {record.get('error','')}")
-            return make_node(self.model,leaf,prev,value)
+            return make_node(self.model,leaf,prev,value,evaluator=self.infer)
         tree=PUCT(root,expand)
         for _ in range(16):
             if time.monotonic()>=deadline:raise TimeoutError('Search root time cap')
@@ -152,7 +159,7 @@ class SearchPolicy:
                 value=reward_for(outcome(leaf));result.update(status=boundary(leaf),leaf_terminal=True,
                                                            leaf_prediction=value,return_value=value)
             else:
-                _,_,prediction=inference(self.model,leaf,previous)
+                _,_,prediction=self.infer(leaf,previous)
                 result.update(leaf_terminal=False,leaf_prediction=prediction)
                 if self.mode=='value':
                     value=prediction;result.update(status='leaf',return_value=value)
@@ -162,7 +169,7 @@ class SearchPolicy:
                             value=reward_for(outcome(state));result.update(status=boundary(state),return_value=value,
                                     rollout_steps=step,squared_error=(prediction-value)**2);break
                         if step==120:result['status']='action_cap';break
-                        cs,ps,_=inference(self.model,state,previous);chosen=cs[int(np.argmax(ps))]
+                        cs,ps,_=self.infer(state,previous);chosen=cs[int(np.argmax(ps))]
                         trace.write('decision',dict(before=digest(state),candidates=cs,chosen=chosen,source='actor_rollout'))
                         state=send(chosen['action']);previous=chosen;result['steps']+=1
             result.update(leaf_hash=digest(leaf),final_hash=digest(state))

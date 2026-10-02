@@ -22,6 +22,9 @@ def evaluate(fs,v,model,mode):
     def run(f):
         policy=SearchPolicy(f,v,model,mode)
         r,_=episode(f,v,'E128:'+mode,policy=policy,seconds=240)
+        r['inference_seconds']=policy.neural_seconds
+        r['neural_calls']=policy.neural_calls
+        r['inference_scope']='feature encoding + tensor prep + network forward; includes simulated states'
         if r['status'] in ('clear','defeat'):
             replay,_=episode(f,v,'E128:verify',expected=r['plan'])
             r['verification']=compact(replay)
