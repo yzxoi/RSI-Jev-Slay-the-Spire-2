@@ -21,3 +21,7 @@ Continue toward search-guided training only if BOTH value-search models preserve
 ## Implementation and preflight protocol
 
 Issue #243. Before test, run synthetic single-player backup/depth/cache checks and a real-engine preflight on fixed validation entries val-00/val-01 with L-1701, both search evaluators, plus exact full-prefix replays. This preflight diagnoses implementation only; no hyperparameter selection. A real error blocks formal test until a separately committed fix and fully recorded repeat. Training is E127; frozen search creates no gradients.
+
+The implementation allows preflight as soon as the preregistered L-1701 learner has completed and selected its final checkpoint, while the independent second learner finishes. Formal test still requires all four valid E127 training runs. Preflight and test must match the exact selected L-1701 record, including weight SHA, widths and update. This changes scheduling only, not search parameters or validation/test inputs.
+
+Preflight checkpoint committed before evaluation: `artifacts/runs/e127-training-v1/L-1701-24.pt`, SHA256 `bc310bcf3df545b40f459f0583c52273821ade0e885c12c7ab806529b2267cd5`. Three synthetic PUCT checks passed at `1c56dde`. Added descriptive calibration against assuming a clear at current HP; this is not a gameplay control and does not change selection or any gate.

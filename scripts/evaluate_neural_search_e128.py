@@ -51,12 +51,18 @@ def main():
     directory=output.with_suffix('');directory.mkdir(exist_ok=False)
     v={**version(),'experiment':'E128','search_limits':dict(simulations=16,c_puct=1.5,max_depth=8,max_rounds=6)}
     b=bank(v);tr=json.loads(Path(a.training).read_text())
-    if not tr['passed'] or not tr['audit']['pass']:raise ValueError('E127 valid training required')
-    selected=[r for r in tr['learners'] if r['size']=='L']
+    if a.phase=='preflight' and 'learners' not in tr:
+        if tr['status']!='complete' or tr['size']!='L' or tr['learner']!=1701:
+            raise ValueError('Preflight requires completed L-1701')
+        selected=[tr]
+    else:
+        if not tr['passed'] or not tr['audit']['pass']:raise ValueError('E127 valid training required')
+        selected=[r for r in tr['learners'] if r['size']=='L']
     if a.phase=='preflight':selected=selected[:1];fs=entries(b,'val')[:2]
     else:
         pf=json.loads(Path(a.preflight).read_text())
-        if not pf['passed'] or pf['training_sha256']!=file_hash(a.training):raise ValueError('Search preflight required')
+        if not pf['passed'] or not pf['audit']['pass'] or pf['selected']!=[selected[0]['selected']]:
+            raise ValueError('Exact selected-model search preflight required')
         fs=entries(b,'test')
     report=dict(manifest=v,training_sha256=file_hash(a.training),phase=a.phase,
                 selected=[r['selected']for r in selected],models=[],passed=True)
