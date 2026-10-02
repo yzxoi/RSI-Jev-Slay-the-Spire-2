@@ -114,3 +114,11 @@ Held-out recovery at `da624c7`: both failed native cases passed all6 independent
 ```sh
 python3 scripts/recover_resets_e134.py --source experiments/E133/certificate-test-v1.json --output artifacts/runs/e134-recovery-test-v1.json
 ```
+
+## Held-out result v1 — complete evaluation, strength gates failed
+
+Tested SHA `1dfa5650ecbad629581a30d358b347a08a2e966b`. All48 fixed independent test seeds and both panels evaluated for all8 arms:768 primary battles, no incomplete outcome or illegal/reset error. All384 selected new-model trajectories independently replayed from canonical full history with every hash/outcome exact.1152 raw bundles audited. Test wall time375.142s. All arms cleared48/48 early entries. Challenging clears /48: planner25, attack-priority16, oldE127 S1701/S1702 both18, newshort1701=20, newlong1701=24, newshort1702=23, newlong1702=25. Execution gate passes; both preregistered practical and longer-training gates fail. Full paired metrics and difficulty results are in test-v1.json; failure is retained. Detailed accounting and final promotion decision follow, with no further automatic budget expansion.
+
+```sh
+python3 scripts/retrain_ppo_e133.py test --training experiments/E133/training-v2.json --certificate experiments/E134/recovery-test-v1.json --output artifacts/runs/e133-test-v1.json
+```
