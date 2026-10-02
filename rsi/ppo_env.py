@@ -23,7 +23,7 @@ def reward_for(result):
 def episode(frozen, manifest, label, model=None, sample_seed=None, expected=None,
             policy=None, seconds=30, checkpoint=None):
     uid = str(uuid.uuid4())
-    trace = Trace(ROOT / 'artifacts/runs' / uid, {**manifest, 'scope': 'E125_battle',
+    trace = Trace(ROOT / 'artifacts/runs' / uid, {**manifest, 'scope': manifest.get('experiment', 'E125')+'_battle',
                   'label': label, 'case': frozen['case'], 'sample_seed': sample_seed,
                   'restore_checkpoint': checkpoint})
     started = time.monotonic(); deadline = started + seconds
