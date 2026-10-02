@@ -2,7 +2,7 @@
 
 Issue: https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/252
 
-Status: preregistered; waiting for complete E133 v1 certificate before recovery evaluation.
+Status: v1 routing failed and is preserved; v2 routing passed after separate E135 engine compatibility repair.
 
 ## Motivation and scoped objective
 
@@ -50,3 +50,13 @@ Decision: retain results, keep PR open, do not train or merge a passing routing 
 E135 PR #255 passed and merged into the dependent compatibility branch: exact original Rolling Boulder mechanics now run; all 264 preparation histories / 23,498 actions / 1,460 entry states are unchanged. Switch BANK to the separately committed fixtures-v2.json, bind all reset evidence to the new adapter and Godot stub hashes, and rerun all 623 training/validation certificates. Every native-incompatible case then undergoes the fixed E134 full-prefix proof; runtime errors still block. v1 failed certifications remain intact. Each v2 certification/recovery is a separately timed batch, not included retroactively in the failed v1 budget.
 
 No changes to sample IDs, preparation choices, network, learning settings, reward, learner seeds, episode/work budget, checkpoint selection or test gates. Baseline E127 weights retain their original file/bank/encoder/runtime checks, then transfer explicitly to the repaired evaluation adapter only with the committed E135 exact-history equivalence proof. Test records disclose source and actual runtime hashes. No historical evaluation is relabeled or replayed with falsified runtime metadata.
+
+## Recovery v2 — complete routing gate passed
+
+After E135's separately verified ABI repair, E133 regenerated all 623 certificates on the unchanged v2 cohort at `97ec4c1`. The ten known native failures persisted, the Rolling Boulder engine error disappeared, and no new failures arose. Original v1 results are preserved. Recovery v2 ran at `455b329`: all 30 independent full-prefix replays matched, including both extended reward/next-draw continuations and the PPO battle reset per case. Combined source/recovery audit: **2,510** raw bundles, zero failures. Recovery wall time **24.380 s**. Final frozen routing: **612 native + 11 explicit full-prefix**, all 623 entries retained. Native restoration itself is still not universally correct.
+
+```sh
+python3 scripts/recover_resets_e134.py --source experiments/E133/certificate-train-v2.json --output artifacts/runs/e134-recovery-train-v2.json
+```
+
+**Merge decision:** merge E134 into pending E133 because exhaustive routing, source integrity and every replay passed. Use the new bound certificate for training; do not convert original native failures into successes or enable runtime fallback. E133's model/learning/budget/held-out gates stay fixed. The known failure mode at Unknown rooms remains unresolved in native save semantics; exact full-prefix routing is the conservative workaround.
