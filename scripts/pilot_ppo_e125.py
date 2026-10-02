@@ -28,7 +28,7 @@ BANK = ROOT / 'experiments/E125/fixtures.json'
 
 def version():
     return {**manifest(), 'experiment': 'E125', 'encoder': ENCODER_VERSION,
-            'torch': torch.__version__, 'numpy': np.__version__, 'device': 'cpu',
+            'torch': str(torch.__version__), 'numpy': str(np.__version__), 'device': 'cpu',
             'torch_threads': torch.get_num_threads(), 'hyperparameters': HP, 'splits': SPLITS,
             'learner_seeds': LEARNERS, 'scope': 'Ironclad A0 first Elite; no full runs'}
 

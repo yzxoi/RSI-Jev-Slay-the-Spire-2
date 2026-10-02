@@ -39,6 +39,7 @@ References: PPO https://arxiv.org/abs/1707.06347 ; invalid action masking https:
 ## Iteration log and commands
 
 1. Implement a 276-feature state encoder and 144-feature dynamic candidate encoder, masked shared actor/critic, complete-episode PPO, strict canonical-prefix reset, frozen seed splits and separate validation-selected test phase. All network weights and raw training traces stay in ignored artifacts. PyTorch is an optional experimental dependency, not imported by the default controller. Initial implementation is committed before synthetic tests or gameplay.
+2. Initial synthetic suite at `f2299d4` passed 4/6. The GAE death-return assertion differed by one float32 rounding unit (5.96e-8); use six-decimal tolerance. The synthetic bandit reached 0.7926 probability for its rewarding action after 24 updates, below the test's 0.9 criterion. Preserve that failed observation and extend only this synthetic test to 64 updates, retaining the 0.9 criterion and all optimizer/gameplay budgets. Store framework version metadata as plain strings for safe weights-only checkpoint loading. No game has run yet.
 
 ```bash
 python3 -m unittest discover -s tests -p "test_ppo.py" -v

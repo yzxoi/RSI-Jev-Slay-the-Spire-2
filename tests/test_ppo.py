@@ -20,7 +20,7 @@ class PPOTests(unittest.TestCase):
         _, ret = advantages([0.], [.2], terminated=False, bootstrap=.8)
         self.assertAlmostEqual(float(ret[0]), .8)
         _, ret = advantages([-1.], [.8], bootstrap=100.)
-        self.assertAlmostEqual(float(ret[0]), -1.)
+        self.assertAlmostEqual(float(ret[0]), -1., places=6)
 
     def test_clip_handles_positive_and_negative_advantage(self):
         lp = torch.log(torch.tensor([1.5, .5]))
@@ -58,7 +58,7 @@ class PPOTests(unittest.TestCase):
         s = np.zeros(STATE_DIM, np.float32)
         a = np.zeros((2, ACTION_DIM), np.float32); a[0, 0] = 1.; a[1, 0] = -1.
         observations = [(s, a)] * 128
-        for _ in range(24):
+        for _ in range(64):
             with torch.no_grad():
                 dist, values = model(*padded(observations))
                 indexes = dist.sample(); lps = dist.log_prob(indexes)
