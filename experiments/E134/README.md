@@ -27,3 +27,9 @@ E133 v2 may resume training on exactly its frozen samples, model/seeds/episodes/
 ## Exit and records
 
 Failure of any source/fallback/runtime consistency check blocks training/test; report it rather than removing the entry. Publish code SHA, exact input hashes/cases, commands, measured modes and all trace hashes. Raw native saves/traces stay ignored. One separate PR for this compatibility fix, based on the E133 branch; merge into that branch only after the routing gate passes. True native Unknown-node restoration remains an open follow-up, not solved by this routing experiment.
+
+## Frozen v1 source failures
+
+Source: `experiments/E133/certificate-train-v1.json`, code SHA `7046576ab533f3b3b80ffcb73d88c5bec110da92`, 623 cases. Failed IDs: train-019-b5, train-044-b2, train-090-b8, train-097-b2, train-102-b2, train-113-b5, train-129-b5, train-131-b2, train-150-b8, train-155-b6, val-009-b3. Ten are native continuation failures with complete original full-prefix references; `train-150-b8` has an original A runtime error (missing Godot Connect ABI after Rolling Boulder), so it is deliberately ineligible. The combined routing gate must remain failed until the engine problem is separately resolved; successful recovery of the other ten cannot authorize dropping this case or beginning training.
+
+Implementation `1d6f419`; four synthetic source/provenance/replay checks passed. No recovery gameplay yet.
