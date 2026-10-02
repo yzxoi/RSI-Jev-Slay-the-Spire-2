@@ -21,3 +21,17 @@ Create an additive managed source patch for GodotStubs/Core.cs, and update setup
 Merge the ABI/provenance compatibility fix into the pending E134/E133 branch only if the frozen failure is resolved with exact pre-error states and three exact new-path replays, all 264 preparation histories/entries match, game DLL hashes are unchanged, and trace audits pass. Otherwise stop and retain the failure. No Godot/Steam global installation changes; proprietary files local ignored.
 
 E133 v2 amendment, before retraining: keep all samples, model, learning settings, learner seeds, episode/work budgets and selection/test gates unchanged; use the separately recorded E135 adapter/stub hashes and refreshed identical bank, rerun per-entry certification, then E134 routing for any native-incompatible entries. Fail closed on any remaining real engine error. Training remains stopped until these gates pass. Record every added preparation/certification batch separately; do not retroactively claim the original 30-minute certification budget included new experiments.
+
+## ABI build and frozen-case result v1
+
+Implementation/test SHA `232caa3`. Additive source patch applied only to the ignored Godot stub Core.cs, local pinned SDK build succeeded (0 errors; nine warnings, including existing member-hiding warnings and new guarded base CallDeferred hiding). 22 focused synthetic tests passed (14 PPO/sampling + 4 fallback proof + 4 research restore).
+
+The exact real failure prefix and four pre-error actions retained every observed hash. The formerly failing end_turn now advances round 1→2, Byrdonis HP 83→78, Rolling Boulder Amount 5→10, verifying the original unpowered 5 damage and +5 scaling. Neither unsupported visual method was invoked (they deliberately throw). The unchanged planner continued to legitimate battle clear; three independent complete-path replays matched all transitions/outcomes. Five source/current trace bundles audited. Case validation took 26.270 s; this one case is compatibility evidence, not a win-rate measurement.
+
+```sh
+git -C vendor/sts2-cli apply ../../patches/headless-zzzzzz-godot-abi.patch
+.tools/dotnet/dotnet build vendor/sts2-cli/src/Sts2Headless/Sts2Headless.csproj --no-restore -v:q
+python3 scripts/validate_godot_abi_e135.py case --output artifacts/runs/e135-case-v1.json
+```
+
+The original v1 error evidence and runtime backup remain unchanged. Next: recollect and compare all 264 preselected preparation histories before accepting an engine-version migration. PR #255 attachment was attempted; the app's 100-identity limit rejected it.
