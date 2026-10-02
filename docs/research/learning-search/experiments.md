@@ -6,6 +6,8 @@
 
 ## 当前轮次
 
+- [E132 #248](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/248) / [PR #249](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/pull/249)：多难度精英入口存档。准备 SHA `63c45db`，冻结路径 SHA `001d7db`，验证 SHA `b1b6601`；5/6 精英可用，40/40 续演一致，111 份 trace 审计通过。恢复中位数 4.507→1.172 秒；精确性/速度通过，入口完整性失败。共 218.956 秒，无模型 API；[全部结果与复用示例](../../../experiments/E132/README.md)。
+
 - [E127 预注册](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/241)，[PR #242](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/pull/242)，[完整记录](../../../experiments/E127/README.md)。
 - 实现 b928d4d；104 个 seed 全部准备成功，312 入口，无替换。冻结 a958d71。32 条 preflight/独立 replay 一致；规划器验证集 15胜/1负。
 - 训练 SHA 803d841c83f37da955478a741b944b796b781a24；4 个模型各完成 1,536 场，共 100,932 个动作。测试 SHA c076f4bcb5f75eecff6f7fe1b8a6ea874bbd9bba。S各23/24，L各22/24，规划器23/24，两个门槛失败；96条模型方案独立重放一致，6,888份trace bundle审计通过。实际优化器28.99秒，训练含验证1,942.51秒。
