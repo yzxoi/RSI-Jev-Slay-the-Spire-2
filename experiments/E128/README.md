@@ -43,3 +43,60 @@ Formal v1 runs at frozen SHA `be4b791a4f066379ecf74996543c6bfa71b2f92c`. In its 
 Before any follow-up evaluation, iteration 2 passes the parent deadline into every search root and clips process startup/read timeouts to the remaining simulation budget. It does not change priors, values, tree selection, training, seed sets or increase any budget. A synthetic nested-deadline invariant is added. Once v1 has finished, rerun only the fixed validation preflight to check implementation and replay consistency; do not rerun/replace the held-out cohort or claim a passed v1 gate. Engine-process cleanup can add its documented shutdown grace after a timeout.
 
 An accounting correction before that repeat overrides the inherited E127 `engine_workers: 8` metadata with the actual E128 value of **4 battle workers / at most 8 engine processes** and enumerates all time limits. The v1 manifest's inherited worker label is inaccurate; the v1 executor source and fixed protocol both used four workers throughout. `E125_battle` in the generic episode trace's legacy `scope` field denotes the reused episode helper; `experiment: E128`, case, label, checkpoint and code SHA identify this experiment. The legacy `model_calls: 0` counter means external language-model API calls; local neural calls and their measured time are reported separately.
+
+## Formal v1 result
+
+Tested SHA `be4b791a4f066379ecf74996543c6bfa71b2f92c`. Completed the entire fixed cohort: **96 searched battles on 24 shared game seeds**, not 96 independent seeds. Elapsed 3683.70 seconds (61.39 minutes). **Both strength and value-efficiency gates failed.**
+
+| Learner / leaf evaluator | Clear | Defeat | Censored | Median battle seconds | Exact terminal replays |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| 1701 / value | 21 | 1 | 2 | 116.29 | 22 |
+| 1701 / rollout | 21 | 1 | 2 | 130.14 | 22 |
+| 1702 / value | 22 | 1 | 1 | 135.83 | 23 |
+| 1702 / rollout | 22 | 1 | 1 | 156.40 | 23 |
+
+Direct E127 L actors each cleared 22/24 with two defeats and no caps; median battle time was 2.59/2.62 seconds. Planner cleared 23/24. Search took about 45–60 times the direct median wall time. Timing includes legitimate entry restoration; no external language-model API calls were made. All **90 terminal searched plans replayed exactly**; all **5,880 trace bundles** hash-audited, with no illegal actions, actual transition errors, forced game-over stalls or audit failures. Six timeouts remain censored. L-1701 timed out on test-05/test-09 in both arms; L-1702 on test-09 in both arms. The original v1 budget-propagation defect and measured overshoots are retained above.
+
+![Search outcomes, conditional paired HP and wall time](figures/search-results.png)
+
+Completed-pair observations (exclude censored cases, **not** whole-cohort effect estimates):
+
+| Learner / mode | Complete pairs | HP improved / equal / worse vs direct | Conditional median HP delta | Executed search changes / executed roots |
+| --- | ---: | --- | ---: | --- |
+| 1701 / value | 22 | 0 / 21 / 1 | 0 | 11 / 92 |
+| 1701 / rollout | 22 | 0 / 22 / 0 | 0 | 2 / 92 |
+| 1702 / value | 23 | 1 / 21 / 1 | 0 | 17 / 96 |
+| 1702 / rollout | 23 | 5 / 18 / 0 | 0 | 6 / 95 |
+
+L-1701 value lost 2 HP on test-12; its rollout arm matched direct on all 22 completed cases. L-1702 value lost 7 HP on test-12 and gained 3 on test-19; rollout gained 1/4/2/3/4 HP on test-00/11/12/19/21. None of these conditional observations recovers the censored outcomes or passes the registered full-cohort gate. All 90 completed search inventories were empty, equal to their corresponding direct-policy inventories. Thirteen of 24 test entries initially carried potions (eleven with one, two with three); this objective has no explicit cross-battle potion reserve value. No resource-preservation or full-run improvement is established.
+
+## What the diagnostics establish
+
+1. **Restoration dominates this implementation.** Value arms used 2,962.37/3,210.64 seconds restoring out of 3,050.70/3,301.25 total probe seconds (both about 97%). In L-1701 value, approximate stage medians were 0.058 seconds to process-ready, 0.865 for start_run, and 1.151 for the remaining canonical prefix/history. A process pool alone is not proof of faster complete restoration. E129 will measure complete exact reset separately.
+2. **Search is shallow and often outcome-equivalent.** Each root had a median six legal actions and five visited actions. Most completed roots reached depth 2–3, despite the depth-8 cap. Rollout arms had median visited-edge normalized Q spread near zero / 0.00278. These statistics are consistent with many explored continuations yielding the same outcome; they do not prove that all legal actions are equivalent or that deeper search cannot help.
+3. **The critic can misjudge dangerous continuations.** The table below compares each nonterminal rollout leaf prediction to an actual continuation by its own frozen actor. Samples share cases and paths; they are correlated, not independent games. The simple comparator assumes a clear at current HP and is neither a policy nor an oracle. Unlike the two-case preflight, the held-out critic beats that comparator for one learner and loses for the other.
+
+| Learner | Rollout leaves | Critic MSE | Simple HP MSE | Death continuations with positive predicted return | Out-of-reward-range predictions |
+| --- | ---: | ---: | ---: | --- | --- |
+| 1701 | 1255 | 0.222267 | 0.308377 | 68 / 78 | 296 / 1255 |
+| 1702 | 1363 | 0.331966 | 0.302231 | 71 / 84 | 425 / 1363 |
+
+![Held-out leaf critic calibration](figures/value-calibration.png)
+
+4. **The entry curriculum is mostly easy.** The frozen bank has 192 unique training entries: 191 ordinary Monster and one Elite (Phrog Parasite), floors 2–8. The last-entry validation panel includes one Byrdonis; the test panel one Bygone Effigy, absent from training-entry encounters. This counts entry states, not all later spawned enemies, and does not prove novelty caused a loss. It motivates E131 at fixed capacity and episode budget before further widening.
+
+## Reproduction, versions and iteration record
+
+The official engine/DLL/patch hashes and selected model hashes are in `test-v1.json`; game v0.111.0, pinned headless upstream 084d1aa3d8e118ca7ce8d8774ad16d6be9c92367, .NET 9.0.318, Python 3.13.5, PyTorch 2.11.0, NumPy 2.3.2, Apple M3 Max CPU. Figures use Matplotlib 3.10.5. This is single-battle Ironclad A0 research, with entry decks/routes/rewards prepared by the unchanged planner. It does not evaluate high ascension, other characters, learned reward selection, current Steam compatibility or complete runs.
+
+```bash
+python3 scripts/evaluate_neural_search_e128.py test --training artifacts/runs/e127-training-v1.json --direct artifacts/runs/e127-test-v1.json --preflight artifacts/runs/e128-preflight-v1.json --output artifacts/runs/e128-test-v1.json
+python3 scripts/analyze_neural_search_e128.py --source artifacts/runs/e128-test-v1.json --direct experiments/E127/test-v1.json --output artifacts/runs/e128-analysis-v1.json
+python3 scripts/plot_neural_search_e128.py --source artifacts/runs/e128-test-v1.json --direct experiments/E127/test-v1.json --analysis artifacts/runs/e128-analysis-v1.json --output-dir experiments/E128/figures
+```
+
+Formal evaluation remains at be4b791a; later diagnostic/plot commits only read completed traces. Analysis/figures were generated at 0bd335eb52202fd9b251bb1767e41e8c375f39d7. Commit b207d18 fixes nested deadlines, c2102b8 adds the expired-parent no-probe check, and 8eb9d59 corrects worker metadata. Five synthetic PUCT/deadline tests passed. The correction is now undergoing the original two-entry validation preflight, at clean SHA 0bd335e; it will not replace the held-out v1 results.
+
+## Decision
+
+Reject this configuration for strategy promotion and stop automatic scaling/search-budget increases. Preserve the optional PUCT implementation, exact replay checks, budget correction and negative evidence; no default/live controller change. [E129 #245](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/245), [E130 #246](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/246), and [E131 #247](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/247) are distinct pending proposals, not executed remedies.
