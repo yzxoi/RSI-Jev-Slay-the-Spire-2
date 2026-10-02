@@ -1,6 +1,14 @@
 # E125: bounded masked-PPO battle-learning pilot
 
-Issue: [#238](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/238). Protocol frozen before evaluation.
+Issue: [#238](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/238). PR: [#239](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/pull/239). Original v1 entry gate failed before any PPO training; explicit v2 feasibility amendment below.
+
+## V2 amendment, frozen before any training
+
+At SHA `888b74a88e593357f17dcf0b6249e40bf11366ac`, six synthetic checks passed, but the original 40-seed fixture batch produced only 35 target entries; the fixed pre-entry controller died on `train-04`, `train-08`, `train-10`, `val-05`, `test-01`. All 40 traces audited. The reused E120 entry predicate also accepts a Boss when no Elite was reached (five surviving cases), so v1 did not implement an exclusively Elite benchmark. Preserve the failed batch in `fixtures-v1.json`; **v1 stops without training or policy-strength results**. No failed seed is removed or replaced.
+
+Before observing any learned policy, change the scope for **every one of the same 40 seeds** to its first natural combat. Extract the shorter canonical prefix/entry from the original hashed wire logs, freeze/commit this new bank, and independently replay validation entries before training. Existing raw traces may contain later actions, but the new episode reset replays only the prefix to first combat. All train/validation/test membership, PPO settings, learner seeds, selection rules, budgets and strength gates remain unchanged. This is a simpler feasibility pilot, not a pass of the original Elite-entry gate; results cannot establish Elite/Boss or developed-deck strength. No default controller or game engine changes.
+
+The remainder records the original v1 protocol verbatim where it mentions Elite; this amendment defines the actual v2 training scope. Preparation outcomes from test seeds were seen; learned-policy test outcomes remain sealed until checkpoint selection. The post-v1 scope change is disclosed and all seeds are retained.
 
 
 ## Objective / hypothesis
@@ -40,10 +48,12 @@ References: PPO https://arxiv.org/abs/1707.06347 ; invalid action masking https:
 
 1. Implement a 276-feature state encoder and 144-feature dynamic candidate encoder, masked shared actor/critic, complete-episode PPO, strict canonical-prefix reset, frozen seed splits and separate validation-selected test phase. All network weights and raw training traces stay in ignored artifacts. PyTorch is an optional experimental dependency, not imported by the default controller. Initial implementation is committed before synthetic tests or gameplay.
 2. Initial synthetic suite at `f2299d4` passed 4/6. The GAE death-return assertion differed by one float32 rounding unit (5.96e-8); use six-decimal tolerance. The synthetic bandit reached 0.7926 probability for its rewarding action after 24 updates, below the test's 0.9 criterion. Preserve that failed observation and extend only this synthetic test to 64 updates, retaining the 0.9 criterion and all optimizer/gameplay budgets. Store framework version metadata as plain strings for safe weights-only checkpoint loading. No game has run yet.
+3. At `888b74a`, synthetic suite 6/6 passed. V1 freeze took 42.67 s: 35 ready, five legitimate pre-entry defeats, no trace hash failures. Stop v1 per its gate. V2 recovers first-combat boundaries for all 40 original seeds, keeping the failed preparation data and preregistering the scope change above before any training. No training-derived hyperparameter or test-result changes.
 
 ```bash
 python3 -m unittest discover -s tests -p "test_ppo.py" -v
 python3 scripts/pilot_ppo_e125.py freeze --output artifacts/runs/e125-fixtures-v1.json
+python3 scripts/pilot_ppo_e125.py first-combat-bank --source artifacts/runs/e125-fixtures-v1.json --output artifacts/runs/e125-fixtures-v2.json
 # Publish and commit the immutable 40-entry fixture bank before preflight/training.
 python3 scripts/pilot_ppo_e125.py preflight --output artifacts/runs/e125-preflight-v1.json
 python3 scripts/pilot_ppo_e125.py train --preflight artifacts/runs/e125-preflight-v1.json --output artifacts/runs/e125-training-v1.json

@@ -14,7 +14,7 @@ sys.path.insert(0, str(ROOT))
 import numpy as np
 import torch
 from rsi.battle_search import compact, fixture
-from rsi.checkpoints import file_hash
+from rsi.checkpoints import file_hash, wire_pairs
 from rsi.ppo import ActorCritic, ENCODER_VERSION, HP, update
 from rsi.ppo_env import episode
 from rsi.trace import digest
@@ -30,7 +30,7 @@ def version():
     return {**manifest(), 'experiment': 'E125', 'encoder': ENCODER_VERSION,
             'torch': str(torch.__version__), 'numpy': str(np.__version__), 'device': 'cpu',
             'torch_threads': torch.get_num_threads(), 'hyperparameters': HP, 'splits': SPLITS,
-            'learner_seeds': LEARNERS, 'scope': 'Ironclad A0 first Elite; no full runs'}
+            'learner_seeds': LEARNERS, 'scope': 'E125 v2 Ironclad A0 first combat; no full runs'}
 
 
 def pool_map(function, items):
@@ -95,6 +95,40 @@ def freeze(v, output):
     r['audit'] = audit(r); write(output, r)
     print(json.dumps({'pass': r['pass'], 'audit': r['audit'],
                       'statuses': dict(Counter(f['status'] for f in records)), 'seconds': r['seconds']}), flush=True)
+
+
+def first_combat_bank(v, source, output):
+    """Recover every original seed's earlier legal boundary, never replace seeds."""
+    old = json.loads(Path(source).read_text())
+    if not audit(old)['pass']:
+        raise ValueError('Changed original fixture evidence')
+    records = []
+    for f in old['fixtures']:
+        path = ROOT / f['trace_path']
+        pairs = wire_pairs(path.parent / 'wire.jsonl')
+        index = next(i for i, (_, s) in enumerate(pairs) if s.get('decision') == 'combat_play')
+        prefix = [cmd for cmd, _ in pairs[:index+1]]
+        state = pairs[index][1]
+        selections = [json.loads(line)['data']['choice'] for line in path.read_text().splitlines()
+                      if json.loads(line)['kind'] == 'selected']
+        if index < 1 or selections[index-1]['action'] != prefix[-1]:
+            raise ValueError('Original first-combat history mismatch')
+        records.append({**{k: f[k] for k in ('case', 'seed', 'character', 'ascension', 'index',
+                          'trace_path', 'trace_sha256', 'wire.jsonl_sha256', 'engine.stderr.log_sha256')},
+                        'status': 'ready', 'prefix': prefix, 'prefix_hash': digest(prefix),
+                        'entry_hash': digest(state), 'previous': selections[index-1],
+                        'floor': state['context']['floor'], 'room_type': state['context']['room_type'],
+                        'hp': state['player']['hp'], 'max_hp': state['player']['max_hp'],
+                        'enemies': [e['name'] for e in state['enemies']],
+                        'source_scope': 'Original full fixture trace; reset uses only its first combat prefix'})
+    expected = [s for seeds in SPLITS.values() for s in seeds]
+    if [f['seed'] for f in records] != expected:
+        raise ValueError('Seed cohort changed')
+    r = {'manifest': v, 'source': {'path': source, 'sha256': file_hash(source)},
+         'fixtures': records, 'pass': True}
+    r['audit'] = audit(r); write(output, r)
+    print(json.dumps({'entries': len(records), 'enemies': dict(Counter('/'.join(f['enemies']) for f in records)),
+                      'audit': r['audit']}), flush=True)
 
 
 def save_checkpoint(path, model, optimizer, learner, index, v):
@@ -245,10 +279,11 @@ def test(v, b, output, training):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('phase', choices=('freeze', 'preflight', 'train', 'test'))
+    parser.add_argument('phase', choices=('freeze', 'first-combat-bank', 'preflight', 'train', 'test'))
     parser.add_argument('--output', required=True)
     parser.add_argument('--preflight')
     parser.add_argument('--training')
+    parser.add_argument('--source')
     args = parser.parse_args()
     torch.set_num_threads(1); torch.set_num_interop_threads(1)
     torch.use_deterministic_algorithms(True)
@@ -259,6 +294,8 @@ def main():
     v = version()
     if args.phase == 'freeze':
         freeze(v, output)
+    elif args.phase == 'first-combat-bank':
+        first_combat_bank(v, args.source, output)
     else:
         b = bank(v)
         if args.phase == 'preflight':
