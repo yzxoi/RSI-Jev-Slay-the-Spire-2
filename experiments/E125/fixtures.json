@@ -1,0 +1,2757 @@
+{
+  "manifest": {
+    "schema_version": 1,
+    "code_commit": "2cb82155dd5ac2a794b3df143772ee811ab8dc16",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "71505f31e29c370667636600a58fe2b3e270f98e99e3c5a384d176a7f0188274",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+      "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4",
+    "experiment": "E125",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.5",
+    "model_calls": 0,
+    "model_cost_usd": 0,
+    "encoder": "e125-structured-hash-v1",
+    "torch": "2.11.0",
+    "numpy": "2.3.2",
+    "device": "cpu",
+    "torch_threads": 1,
+    "hyperparameters": {
+      "lr": 0.0003,
+      "clip": 0.2,
+      "gamma": 1.0,
+      "gae_lambda": 0.95,
+      "epochs": 4,
+      "minibatch": 128,
+      "entropy": 0.01,
+      "value": 0.5,
+      "grad_norm": 0.5,
+      "target_kl": 0.03
+    },
+    "splits": {
+      "train": [
+        "e125_20261002_train_00",
+        "e125_20261002_train_01",
+        "e125_20261002_train_02",
+        "e125_20261002_train_03",
+        "e125_20261002_train_04",
+        "e125_20261002_train_05",
+        "e125_20261002_train_06",
+        "e125_20261002_train_07",
+        "e125_20261002_train_08",
+        "e125_20261002_train_09",
+        "e125_20261002_train_10",
+        "e125_20261002_train_11",
+        "e125_20261002_train_12",
+        "e125_20261002_train_13",
+        "e125_20261002_train_14",
+        "e125_20261002_train_15"
+      ],
+      "val": [
+        "e125_20261002_val_00",
+        "e125_20261002_val_01",
+        "e125_20261002_val_02",
+        "e125_20261002_val_03",
+        "e125_20261002_val_04",
+        "e125_20261002_val_05",
+        "e125_20261002_val_06",
+        "e125_20261002_val_07"
+      ],
+      "test": [
+        "e125_20261002_test_00",
+        "e125_20261002_test_01",
+        "e125_20261002_test_02",
+        "e125_20261002_test_03",
+        "e125_20261002_test_04",
+        "e125_20261002_test_05",
+        "e125_20261002_test_06",
+        "e125_20261002_test_07",
+        "e125_20261002_test_08",
+        "e125_20261002_test_09",
+        "e125_20261002_test_10",
+        "e125_20261002_test_11",
+        "e125_20261002_test_12",
+        "e125_20261002_test_13",
+        "e125_20261002_test_14",
+        "e125_20261002_test_15"
+      ]
+    },
+    "learner_seeds": [
+      1701,
+      1702
+    ],
+    "scope": "E125 v2 Ironclad A0 first combat; no full runs"
+  },
+  "source": {
+    "path": "artifacts/runs/e125-fixtures-v1.json",
+    "sha256": "d392b3b05b44756406dd1af386424088e13f7f39b6943d056bd20e47bf269449"
+  },
+  "fixtures": [
+    {
+      "case": "train-00",
+      "seed": "e125_20261002_train_00",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 0,
+      "trace_path": "artifacts/runs/c40836ae-0c0b-405c-987b-afdcdb0c246e/decisions.jsonl",
+      "trace_sha256": "eaddaec483f64529b84e272855f381d88d6a51221b86712298bdcbdfa9c8334e",
+      "wire.jsonl_sha256": "8b46128c04ee9ebacf9d98abf092ab3520cac375f0225bb8b8f7d8a4a0e6e7f9",
+      "engine.stderr.log_sha256": "879bf8f3ed2068ac58278beb1efd536711394768b462a5111af9a739386fff10",
+      "status": "ready",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Ironclad",
+          "seed": "e125_20261002_train_00",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 1
+          }
+        }
+      ],
+      "prefix_hash": "9b5725827195a33c3df4a8e73c393212c560f9b9465256e2f57fa0dea906050e",
+      "entry_hash": "c777854dee9b430d8674ec34c39bb883c11c5079b87b98cec3d1784b851e56fd",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 2,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "floor": 2,
+      "room_type": "Monster",
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Leaf Slime (S)",
+        "Twig Slime (M)",
+        "Twig Slime (S)"
+      ],
+      "source_scope": "Original full fixture trace; reset uses only its first combat prefix"
+    },
+    {
+      "case": "train-01",
+      "seed": "e125_20261002_train_01",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 1,
+      "trace_path": "artifacts/runs/24b1feaa-1514-433c-8c41-a37ee7f78b56/decisions.jsonl",
+      "trace_sha256": "c991e41493b0cd9bcc947d40eb2d7bc56cc682584abc18c78bdbd2f22cddaf1d",
+      "wire.jsonl_sha256": "830b6473c7390e3f4278fdcd9ac511f782457141072f9bc740956b04cbb339e8",
+      "engine.stderr.log_sha256": "707ad0ea865ae83f2ee15b13f49e5a25c0f00706ae09cdb7c9e7695a68377652",
+      "status": "ready",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Ironclad",
+          "seed": "e125_20261002_train_01",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 1
+          }
+        }
+      ],
+      "prefix_hash": "f9d1714693c259095fa7398943028dcdb80796eb00ee96591e4aea4ff0c16293",
+      "entry_hash": "0b387e2ec6fc530a16ad781940ca1204ca5c462f1bbb35886bbb52c6351e6da8",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 1,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "floor": 2,
+      "room_type": "Monster",
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Fuzzy Wurm Crawler"
+      ],
+      "source_scope": "Original full fixture trace; reset uses only its first combat prefix"
+    },
+    {
+      "case": "train-02",
+      "seed": "e125_20261002_train_02",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 2,
+      "trace_path": "artifacts/runs/29474738-5936-4da7-94cf-ce94bb422e5e/decisions.jsonl",
+      "trace_sha256": "7bf218d2bcbdd0ff13a463faa40cf3536afeb5b44cf0fe820b7190af44cec5e4",
+      "wire.jsonl_sha256": "f2b8994f7df9c6f9f94f80502f2be0f17241a8334f6f544a2f78a8795c4516e4",
+      "engine.stderr.log_sha256": "7c52356ed220a628b166d8f3aaa4a48fd40c83b2af020eb5cd73c6f0d64a99bc",
+      "status": "ready",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Ironclad",
+          "seed": "e125_20261002_train_02",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_cards",
+          "args": {
+            "indices": "0"
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 1
+          }
+        }
+      ],
+      "prefix_hash": "5cf326054fccb74f60b89a5e5284e71921302d895b4c05f77f2fa41f4cdddd17",
+      "entry_hash": "ff6cb2fa848db335f931e5c468005043ac1befbc40649b7adc566ed6741f9630",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 2,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "floor": 2,
+      "room_type": "Monster",
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Twig Slime (S)",
+        "Leaf Slime (M)",
+        "Leaf Slime (S)"
+      ],
+      "source_scope": "Original full fixture trace; reset uses only its first combat prefix"
+    },
+    {
+      "case": "train-03",
+      "seed": "e125_20261002_train_03",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 3,
+      "trace_path": "artifacts/runs/0c1f58a6-0bfe-409d-a981-f6e46f1aad14/decisions.jsonl",
+      "trace_sha256": "72567faad43d5c50160b06c9070577b27d65b76c2714bcdaba695a423daeea3c",
+      "wire.jsonl_sha256": "84cef2383989721e76871f3664dafde7f9c7ff064d3f3c467bc4e228e10fc477",
+      "engine.stderr.log_sha256": "f9fc02970e38a19a1ded998202f069d2148958cf9524e40351be3635069299e1",
+      "status": "ready",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Ironclad",
+          "seed": "e125_20261002_train_03",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_bundle",
+          "args": {
+            "bundle_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 1
+          }
+        }
+      ],
+      "prefix_hash": "96e9499536ea7fd1345b1638f6c6266038b8fd30a7090eeef4a3d4e62c5a7b88",
+      "entry_hash": "e145c9577d57d70eb8067817647310f0819d89a10aab94f71a02bb0cb0915713",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 1,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "floor": 2,
+      "room_type": "Monster",
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Twig Slime (S)",
+        "Twig Slime (M)",
+        "Leaf Slime (S)"
+      ],
+      "source_scope": "Original full fixture trace; reset uses only its first combat prefix"
+    },
+    {
+      "case": "train-04",
+      "seed": "e125_20261002_train_04",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 4,
+      "trace_path": "artifacts/runs/3f26836a-60b4-451c-bf82-09dc1b1d7766/decisions.jsonl",
+      "trace_sha256": "3a70f2efeeca2c60327e565429d22aef7c6d42f62a65ef18033e9e2e6d7bf5a7",
+      "wire.jsonl_sha256": "604588e860fc29ae2e53bee29069760d634bac7cf2804f07d66abee62cb80478",
+      "engine.stderr.log_sha256": "6ebc9dc200c6ff2f8c9ceb8bf1f02a54c5693fcc711d8879c3d65668c419a36f",
+      "status": "ready",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Ironclad",
+          "seed": "e125_20261002_train_04",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 4,
+            "row": 1
+          }
+        }
+      ],
+      "prefix_hash": "aa87dc3c34219cac143152c01b9161dc2f1b62837cae9cdf1bfebb9b7cde2ff9",
+      "entry_hash": "4567f74a4f287fec9e722d0b7eb5cb3657a1ca35aa154b56d5acf65b676a87f5",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 4,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 4,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "floor": 2,
+      "room_type": "Monster",
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Fuzzy Wurm Crawler"
+      ],
+      "source_scope": "Original full fixture trace; reset uses only its first combat prefix"
+    },
+    {
+      "case": "train-05",
+      "seed": "e125_20261002_train_05",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 5,
+      "trace_path": "artifacts/runs/26751729-1555-4699-a73a-30da1732154b/decisions.jsonl",
+      "trace_sha256": "c884fb4fd9ab6a7e920918722bdef351297cd71941e6aaaad6ce1e7af2639481",
+      "wire.jsonl_sha256": "60e84e49cccf451a88ad43e8b5151d39dd79a54dcc8def76aac1e21646389fee",
+      "engine.stderr.log_sha256": "cf664f8fcfa70bf3288e51dfe028e74396a8d6ad516832ebe22121ae96d88d99",
+      "status": "ready",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Ironclad",
+          "seed": "e125_20261002_train_05",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 1
+          }
+        }
+      ],
+      "prefix_hash": "fefd668619de855630b5dba8c93054707f053f1956753f2761c37e577041cb78",
+      "entry_hash": "7d4929a0be1b9c150c0f188a61f9c65ba6c14cd7b56c90c0bd1ffed39dc15f7d",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 0,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "floor": 2,
+      "room_type": "Monster",
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Leaf Slime (S)",
+        "Twig Slime (M)",
+        "Twig Slime (S)"
+      ],
+      "source_scope": "Original full fixture trace; reset uses only its first combat prefix"
+    },
+    {
+      "case": "train-06",
+      "seed": "e125_20261002_train_06",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 6,
+      "trace_path": "artifacts/runs/f1655624-2d65-4f65-9507-b86eebb80143/decisions.jsonl",
+      "trace_sha256": "5524c816ae5e7afe3858358f33be193c7315d318524093448aa7869cbb739249",
+      "wire.jsonl_sha256": "1c7e4833ba731694d282ea2051847568477397b2fcff86699509043ebea2ce20",
+      "engine.stderr.log_sha256": "0202b29571d0a5aadaa285b4f57322e48611c9e64cd5aff5e98decb665b1d17b",
+      "status": "ready",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Ironclad",
+          "seed": "e125_20261002_train_06",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 1
+          }
+        }
+      ],
+      "prefix_hash": "0e0cdac7d8b064d0d08a7fbf99a351f398bbe10569cf70ae71c6046b5850f3cb",
+      "entry_hash": "ea9d87333192d9c5e8917e0d4fc433f122334bdcd7038a8a0795ad62248aed5a",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 1,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "floor": 2,
+      "room_type": "Monster",
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Fuzzy Wurm Crawler"
+      ],
+      "source_scope": "Original full fixture trace; reset uses only its first combat prefix"
+    },
+    {
+      "case": "train-07",
+      "seed": "e125_20261002_train_07",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 7,
+      "trace_path": "artifacts/runs/16dfd05d-6b60-4fad-b390-08f31d1d7f15/decisions.jsonl",
+      "trace_sha256": "00268da70fde222c7ec57fe9f7a100c67b460ae71f05faa19f36d11d8c14c8e4",
+      "wire.jsonl_sha256": "bb6049cb3d20abe1f9f85e92f7fc10d902c1ba428681007b81c3491f5f4a70ae",
+      "engine.stderr.log_sha256": "2d148066115bdd8e139c712655460b161a4a1adddfb3d610d2ea4cb7acf0999b",
+      "status": "ready",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Ironclad",
+          "seed": "e125_20261002_train_07",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 1
+          }
+        }
+      ],
+      "prefix_hash": "c12934c18458b97e530d1d98e699871790d5ea7f7c211c59805a18f79e5edac8",
+      "entry_hash": "9622f251c14f60e6e570b1c6a5496c0a4d356872e4e600dfc2a2657a9b987917",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 2,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "floor": 2,
+      "room_type": "Monster",
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Twig Slime (S)",
+        "Twig Slime (M)",
+        "Leaf Slime (S)"
+      ],
+      "source_scope": "Original full fixture trace; reset uses only its first combat prefix"
+    },
+    {
+      "case": "train-08",
+      "seed": "e125_20261002_train_08",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 8,
+      "trace_path": "artifacts/runs/1d88ab11-7a93-4c9a-b2e5-21128c0c5265/decisions.jsonl",
+      "trace_sha256": "88cf302b70c6c5c6be1689cdc01e7690cfc51dbc1eb432cb5b62d182c696fd7d",
+      "wire.jsonl_sha256": "6769d25296bb76a37257775780e5a869a366456d0296b8a66ab6ac4c3e948153",
+      "engine.stderr.log_sha256": "8cf3a8c9ac5f1d43c3efd59d9e306a524fad19ddb021fc338440fa70aa71ffd9",
+      "status": "ready",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Ironclad",
+          "seed": "e125_20261002_train_08",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 1
+          }
+        }
+      ],
+      "prefix_hash": "b4ee69ccbe271b5f6c9f39d9b9293c2317ed83800762c7ec04bfa83ecf3fc7bc",
+      "entry_hash": "8cdc28231c8c293d1b8bdcc07f9289f96d0f81a71f5f414e98a0a7c977f00883",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 2,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "floor": 2,
+      "room_type": "Monster",
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Fuzzy Wurm Crawler"
+      ],
+      "source_scope": "Original full fixture trace; reset uses only its first combat prefix"
+    },
+    {
+      "case": "train-09",
+      "seed": "e125_20261002_train_09",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 9,
+      "trace_path": "artifacts/runs/ebe3426d-b287-4507-bdeb-d97673deb08b/decisions.jsonl",
+      "trace_sha256": "2f5ea6c545f6c37694f59aa5fe5392fc851671bfcd269f3d8f6f81037d176878",
+      "wire.jsonl_sha256": "54a90364cce9f3db7d9fc0fadbb65ce616f6897263a9779ff3172fef25a6c7c7",
+      "engine.stderr.log_sha256": "4cc663976015d9440c1df567776552dc6b5257416d7653d518e8844f27572f6c",
+      "status": "ready",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Ironclad",
+          "seed": "e125_20261002_train_09",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 1
+          }
+        }
+      ],
+      "prefix_hash": "f1d5928297db67de176b26d26ac66f1d38535d5c8e75485cbfdc81c741e3ea7c",
+      "entry_hash": "5390ec6d91848a83768e72dc6eebfa49bde50925d495e19364a00df34a09208d",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 1,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "floor": 2,
+      "room_type": "Monster",
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Shrinker Beetle"
+      ],
+      "source_scope": "Original full fixture trace; reset uses only its first combat prefix"
+    },
+    {
+      "case": "train-10",
+      "seed": "e125_20261002_train_10",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 10,
+      "trace_path": "artifacts/runs/7efa4e03-5aac-416c-a135-dea4f918e280/decisions.jsonl",
+      "trace_sha256": "21b2a55a5f16dfa8f9ec9b65337cbbea4fa05769f16074b21312362e46fdff43",
+      "wire.jsonl_sha256": "62232122e54219f3250015ff92222bdbc41ec510d31a87d36b41779e57881778",
+      "engine.stderr.log_sha256": "87fa66be5cea7dcf09a9607f3e4f1973279a86c82616bb6a87d5712dafebad90",
+      "status": "ready",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Ironclad",
+          "seed": "e125_20261002_train_10",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 1
+          }
+        }
+      ],
+      "prefix_hash": "4468ebe7cb72198fc103d3f7a00f1770b7dcf37b627055a3f13c96679cb362ac",
+      "entry_hash": "1eb6ec4260b0fe847db7f1dc2ee094da4c1f0f7de3677707612b4df891b2e6fb",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 1,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "floor": 2,
+      "room_type": "Monster",
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Fuzzy Wurm Crawler"
+      ],
+      "source_scope": "Original full fixture trace; reset uses only its first combat prefix"
+    },
+    {
+      "case": "train-11",
+      "seed": "e125_20261002_train_11",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 11,
+      "trace_path": "artifacts/runs/f6d2eb39-9bfe-4433-9a9e-d9d355f03f75/decisions.jsonl",
+      "trace_sha256": "b04ce40baea931695387bfa6aa245d27a43cb1040ef66755ed6692163e7c7f96",
+      "wire.jsonl_sha256": "4f1bb4cb368def4d08ce37464db1d39963d15295520e03209a1fd46b5d394d01",
+      "engine.stderr.log_sha256": "325e4ebf53a4c28dcea9190b5dde9bdb68955a111632ae0542a4f41bff735779",
+      "status": "ready",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Ironclad",
+          "seed": "e125_20261002_train_11",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 1
+          }
+        }
+      ],
+      "prefix_hash": "54b1106630a3c6f01e2441dbaf9c59608c8a830f6b0d7e9184522f65ff9f0390",
+      "entry_hash": "64efd7890e365e2f50ba5594e85fd9475fde8e7498858dfddd3f1fcff3d1f4c3",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 1,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "floor": 2,
+      "room_type": "Monster",
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Leaf Slime (S)",
+        "Leaf Slime (M)",
+        "Twig Slime (S)"
+      ],
+      "source_scope": "Original full fixture trace; reset uses only its first combat prefix"
+    },
+    {
+      "case": "train-12",
+      "seed": "e125_20261002_train_12",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 12,
+      "trace_path": "artifacts/runs/27bbdc5f-466b-457e-a4bf-58abab4a96e0/decisions.jsonl",
+      "trace_sha256": "ebbf1cbfac05fd2c6c081c42b4ca410793a794326b4d2f8a3f1985861f32605e",
+      "wire.jsonl_sha256": "24ca43e59e2fd428c0692ee2acb17f212300382bf3cb2d7c563896af987125cb",
+      "engine.stderr.log_sha256": "3f14ed2531616bd38e03931de570da5b4ba061143b9386e8e1b774a81e009a50",
+      "status": "ready",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Ironclad",
+          "seed": "e125_20261002_train_12",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 1
+          }
+        }
+      ],
+      "prefix_hash": "b3a1a393b9cf1600aef140cbe11145a14d2ce2585ea81cd0e8c4bed5d17ebdf2",
+      "entry_hash": "bcbaf271a3c7e916fdda052898190bba2f48b14a5486a82676e1c91e9a7152c9",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 1,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "floor": 2,
+      "room_type": "Monster",
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Twig Slime (S)",
+        "Leaf Slime (M)",
+        "Leaf Slime (S)"
+      ],
+      "source_scope": "Original full fixture trace; reset uses only its first combat prefix"
+    },
+    {
+      "case": "train-13",
+      "seed": "e125_20261002_train_13",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 13,
+      "trace_path": "artifacts/runs/1f8cd218-6ee8-49d1-963e-98d87ec9828b/decisions.jsonl",
+      "trace_sha256": "7db90672cf4e9f2fdeb26adc67eeb53b1634b5ee29acc60bac7d33abafa20dc2",
+      "wire.jsonl_sha256": "1d75cd436ca611ca7077213098ac9a1d877f31f25567d6ca169bdf95e7aa72c2",
+      "engine.stderr.log_sha256": "088bbf8d760c3491c67684000084c30551c2614169d0162e42be3f62e7d32af0",
+      "status": "ready",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Ironclad",
+          "seed": "e125_20261002_train_13",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_cards",
+          "args": {
+            "indices": "0"
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 1
+          }
+        }
+      ],
+      "prefix_hash": "1cb851a083937607bdc86b6d7d41874f9ad66de804ee9f16cff4aeaa941b0633",
+      "entry_hash": "a5b1bdee6ea8a3ed38b11fa773e0e7eccf1e7f0b6c4b067fc5b4341224bd57d0",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 0,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "floor": 2,
+      "room_type": "Monster",
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Fuzzy Wurm Crawler"
+      ],
+      "source_scope": "Original full fixture trace; reset uses only its first combat prefix"
+    },
+    {
+      "case": "train-14",
+      "seed": "e125_20261002_train_14",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 14,
+      "trace_path": "artifacts/runs/1e952b50-bfd7-47c6-9934-f299f276ad8b/decisions.jsonl",
+      "trace_sha256": "24244c968f4dc057bcc2eae073e17802b7a04cc1657901dd3f3132e696e24f01",
+      "wire.jsonl_sha256": "bc5bdc0841398b7d43be71d544e421490e5c367b5931a4f70bd161858fcd80ee",
+      "engine.stderr.log_sha256": "9338c6ed491e431be152ca07e87675862f7d53b95a134ac3283bed77dd3942c8",
+      "status": "ready",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Ironclad",
+          "seed": "e125_20261002_train_14",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 1
+          }
+        }
+      ],
+      "prefix_hash": "59ed407254733bf1e8a2931f7e707561d582b52443b2b2984ad73879c3f6d0d4",
+      "entry_hash": "99dae32231ecdf3e1106fc83ddb6b36998fa19477b28eaa7eca06c327e9593e2",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 2,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "floor": 2,
+      "room_type": "Monster",
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Shrinker Beetle"
+      ],
+      "source_scope": "Original full fixture trace; reset uses only its first combat prefix"
+    },
+    {
+      "case": "train-15",
+      "seed": "e125_20261002_train_15",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 15,
+      "trace_path": "artifacts/runs/9320b5bf-040a-4f5c-ad61-4eb5f90f8d93/decisions.jsonl",
+      "trace_sha256": "a3c46d476267230710369b81f840fb15918198a3b1e4de42e1c6dc2f5c235ee6",
+      "wire.jsonl_sha256": "27ba30adc4518773d335938ef7fd76559f9f8fb4db1f6742174fd1028654f65a",
+      "engine.stderr.log_sha256": "38b7865adb7b844d8967a050e8a9f09cb45cc735bac9d8e83fc89b3b7efda399",
+      "status": "ready",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Ironclad",
+          "seed": "e125_20261002_train_15",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 1
+          }
+        }
+      ],
+      "prefix_hash": "0a05b718a5dccb888b18144b31dbb8798d3cb19eba1b6d0f7bcbba5ab60ab6b8",
+      "entry_hash": "9820487a14474c91129ff66f035412a8ae23c6f5ab48780d3aea4c36923315d0",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 2,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "floor": 2,
+      "room_type": "Monster",
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Twig Slime (S)",
+        "Leaf Slime (M)",
+        "Leaf Slime (S)"
+      ],
+      "source_scope": "Original full fixture trace; reset uses only its first combat prefix"
+    },
+    {
+      "case": "val-00",
+      "seed": "e125_20261002_val_00",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 16,
+      "trace_path": "artifacts/runs/65f05744-da53-436a-96cf-7285f9dd550f/decisions.jsonl",
+      "trace_sha256": "652d604999d7a6ab7ba99a0ecb774823226b0932a051ed2ff11f3dd4646e6c54",
+      "wire.jsonl_sha256": "339e966d5c2e7388cd6bd5a8109f691fe708c0416697b704998faa169a712a52",
+      "engine.stderr.log_sha256": "7a289c9c4cd3f251d20f712e5b9e577eee2cc4d36fb12ee2ca71187d3ac167e9",
+      "status": "ready",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Ironclad",
+          "seed": "e125_20261002_val_00",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_bundle",
+          "args": {
+            "bundle_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 1
+          }
+        }
+      ],
+      "prefix_hash": "806b0acddba9a1229642ad661dbd8164b005247d7e8e43253d6913f61d22627b",
+      "entry_hash": "92425c69667221de1be3abc42563ec2f243dd147ad0fb31bb9d0c0dce21c2368",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 2,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "floor": 2,
+      "room_type": "Monster",
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Nibbit"
+      ],
+      "source_scope": "Original full fixture trace; reset uses only its first combat prefix"
+    },
+    {
+      "case": "val-01",
+      "seed": "e125_20261002_val_01",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 17,
+      "trace_path": "artifacts/runs/5a5d788d-e03a-48f0-9e5d-092995f86ae5/decisions.jsonl",
+      "trace_sha256": "b8f6a1c1fc34e5f9b3742fc38f8caf3cee0095a37a5457c00c1ead8a9235eb7c",
+      "wire.jsonl_sha256": "7fbac694f4337cad8cf8cb6154067a6e83e9ca1445da785a842f5c15cc351ae7",
+      "engine.stderr.log_sha256": "72e9f201305be5bcd21a695fc21173a888ac190fc92205ce7ab2e171531939a0",
+      "status": "ready",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Ironclad",
+          "seed": "e125_20261002_val_01",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_cards",
+          "args": {
+            "indices": "0"
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 1
+          }
+        }
+      ],
+      "prefix_hash": "02f2adbafab86bff927a212eedb916a01f12a9ef5b2d5db2bc3949b20e6e03d7",
+      "entry_hash": "04663344ef41068b0cde81bed966b7a866df8374e64ed5bd319eef99f141a241",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 2,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "floor": 2,
+      "room_type": "Monster",
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Leaf Slime (S)",
+        "Twig Slime (M)",
+        "Twig Slime (S)"
+      ],
+      "source_scope": "Original full fixture trace; reset uses only its first combat prefix"
+    },
+    {
+      "case": "val-02",
+      "seed": "e125_20261002_val_02",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 18,
+      "trace_path": "artifacts/runs/f6185635-a38d-478e-ada2-7f2aa6bebcce/decisions.jsonl",
+      "trace_sha256": "2f7951528647189c8e28040d0286d4925ab3d84f09dd35247b24ca38286c21bd",
+      "wire.jsonl_sha256": "05ec0295201e907c488fc85256c3487f407b2c3e3a22155d775193c47e474cbe",
+      "engine.stderr.log_sha256": "55ca36679a7c62dcdeb63d7bbeb00ef33210a93b5697023e62e899946d356c8a",
+      "status": "ready",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Ironclad",
+          "seed": "e125_20261002_val_02",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_cards",
+          "args": {
+            "indices": "0"
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 1
+          }
+        }
+      ],
+      "prefix_hash": "ce37c84dcc28301349f1cd9f693363c016d06188df01f4a947f4f63e488bab70",
+      "entry_hash": "178e2cf55e5a6ce0368d396c17d7b551ecccf63d348bcba88132ef02d53e820e",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 0,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "floor": 2,
+      "room_type": "Monster",
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Nibbit"
+      ],
+      "source_scope": "Original full fixture trace; reset uses only its first combat prefix"
+    },
+    {
+      "case": "val-03",
+      "seed": "e125_20261002_val_03",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 19,
+      "trace_path": "artifacts/runs/a108cd93-3c93-42c3-a7d0-5a14d073d6a4/decisions.jsonl",
+      "trace_sha256": "d5c3afdc7160e9de4fde0e6e548b6b367aaf5da0cd2dd089ea8b35acd481d6bc",
+      "wire.jsonl_sha256": "2fffc49fc70fdb4e7f3089d2f1f5f805903f8fddde1ca9de98777b620570c74b",
+      "engine.stderr.log_sha256": "9bc2af4f44a33e6464d7880ffb430540bf73fd7617c92e91783b2ab7520aee0a",
+      "status": "ready",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Ironclad",
+          "seed": "e125_20261002_val_03",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 1
+          }
+        }
+      ],
+      "prefix_hash": "adffc3a6f260350e7437f9b9f52421e8ba0784e448f3b2524770bf8c625e36a0",
+      "entry_hash": "95704cee823cfc55b6b1bbd83d00cb74190aafdfdf1143789cb5bc887a6e6422",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 1,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "floor": 2,
+      "room_type": "Monster",
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Leaf Slime (S)",
+        "Twig Slime (M)",
+        "Twig Slime (S)"
+      ],
+      "source_scope": "Original full fixture trace; reset uses only its first combat prefix"
+    },
+    {
+      "case": "val-04",
+      "seed": "e125_20261002_val_04",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 20,
+      "trace_path": "artifacts/runs/dac3c9bf-307c-4d42-a3f9-7615e5ff3660/decisions.jsonl",
+      "trace_sha256": "ab04c97ab506f36cfd8209d49d056527e39d25d10b2bd999f14a986bdaf13e33",
+      "wire.jsonl_sha256": "cb37d05fb025e1b169aed8ccbd834809ca91f072ff21fcdd78c37579b540fff2",
+      "engine.stderr.log_sha256": "7e94941db40afca734c83431b1740a6b77bc1729254088907172a9e3a35ddf88",
+      "status": "ready",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Ironclad",
+          "seed": "e125_20261002_val_04",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 1
+          }
+        }
+      ],
+      "prefix_hash": "7de86f00d250af84692cff134c8504bdd7a125ce39ec6ecaeb9ca943b76848ab",
+      "entry_hash": "9cf04cf1400c926f5cadd6819c10069d57975667c1e6acfc25876106a643a5f5",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 1,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "floor": 2,
+      "room_type": "Monster",
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Fuzzy Wurm Crawler"
+      ],
+      "source_scope": "Original full fixture trace; reset uses only its first combat prefix"
+    },
+    {
+      "case": "val-05",
+      "seed": "e125_20261002_val_05",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 21,
+      "trace_path": "artifacts/runs/0e9d74f1-cdf3-4f77-84ed-34b5ed1a8d91/decisions.jsonl",
+      "trace_sha256": "0fa4570990d9a1951e23480e837bdc35d218c7136c1cbbed2b5abf78c1b93658",
+      "wire.jsonl_sha256": "29e3c5b31ab9b045ac89f7625b2df81316a0b26e4a29ad92abbf29673976a73e",
+      "engine.stderr.log_sha256": "042d682ac8ce97e09e22771fbced86dece2b3b54052be7878fead85e24686d78",
+      "status": "ready",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Ironclad",
+          "seed": "e125_20261002_val_05",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 1
+          }
+        }
+      ],
+      "prefix_hash": "3db80637d1277482356e9f6ab6ba3875609464b793080810d73a9c5db57182e5",
+      "entry_hash": "bd5d71156130d9a3c9f74cf0f8ec109a84972ef2e9dce6474517ddbf94b900f5",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 1,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "floor": 2,
+      "room_type": "Monster",
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Fuzzy Wurm Crawler"
+      ],
+      "source_scope": "Original full fixture trace; reset uses only its first combat prefix"
+    },
+    {
+      "case": "val-06",
+      "seed": "e125_20261002_val_06",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 22,
+      "trace_path": "artifacts/runs/33aa541e-1007-4614-b631-05450375323f/decisions.jsonl",
+      "trace_sha256": "f16f68b616a13d485e331a71a3828c0346ea5e432c2849e703e664c10e03cdc5",
+      "wire.jsonl_sha256": "8bf315c7b65783b0e4c8864e68cce24febf6a5a661abdae4a8d5550d4d3c6146",
+      "engine.stderr.log_sha256": "1ab5ba5f6abeb172103fbb9454e6dd4d69ea930c5cec415d517dc93cd2a80a86",
+      "status": "ready",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Ironclad",
+          "seed": "e125_20261002_val_06",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 1
+          }
+        }
+      ],
+      "prefix_hash": "9e2b06bdd3594f3547231d05595efcb0626c858baf56b69fd5d17949d4c1b4fc",
+      "entry_hash": "c30f771b47a389a2dc8fa0e0ac2ac975e1d7eb00d38d8f14e9ea1c3949a39835",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 0,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "floor": 2,
+      "room_type": "Monster",
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Fuzzy Wurm Crawler"
+      ],
+      "source_scope": "Original full fixture trace; reset uses only its first combat prefix"
+    },
+    {
+      "case": "val-07",
+      "seed": "e125_20261002_val_07",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 23,
+      "trace_path": "artifacts/runs/9800d243-c673-43fc-a6fe-4bd0081de7ac/decisions.jsonl",
+      "trace_sha256": "12024e3ec33f2c07a57268635e9d73207aaafbb23a8ce8199387c6e9f4842fe6",
+      "wire.jsonl_sha256": "ea415455108dee2054da8b3759297ef88468c03e12fdd85ad77b662b230c58c7",
+      "engine.stderr.log_sha256": "38f8c50c46c0ef0d65d30b6c1a892f50605f768f8145554ed07bccee9fba1fe4",
+      "status": "ready",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Ironclad",
+          "seed": "e125_20261002_val_07",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 1
+          }
+        }
+      ],
+      "prefix_hash": "bfe861d60a46f9050b02b65f19695a394aa0e4e4dc96f0514ab363efc66810d3",
+      "entry_hash": "4de1253e2f226f3efd7ef13a4a303bc6585b8a021321f55d7075be60f16fb367",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 1,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "floor": 2,
+      "room_type": "Monster",
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Nibbit"
+      ],
+      "source_scope": "Original full fixture trace; reset uses only its first combat prefix"
+    },
+    {
+      "case": "test-00",
+      "seed": "e125_20261002_test_00",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 24,
+      "trace_path": "artifacts/runs/9dc341c2-379b-4ef5-9ac1-5acc26731055/decisions.jsonl",
+      "trace_sha256": "fd7ff99c07724e3a5815025aefddd033e817dbf08d03ef37778f8594c0ab9b57",
+      "wire.jsonl_sha256": "31c360a535572e6887d07a942c65327b458682a9a07fbb3dfbd1a94c4bc3435b",
+      "engine.stderr.log_sha256": "78ea5068a651ab66bfe158b2b9479dc7bd3036ac33849f6b8f406baf3d857c6e",
+      "status": "ready",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Ironclad",
+          "seed": "e125_20261002_test_00",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 1
+          }
+        }
+      ],
+      "prefix_hash": "84e2925ac48eb91b342737a5d1592a061f582dd124944928c1d6fb9b3c9662e5",
+      "entry_hash": "7502b06e527cadf873352a9e1f5c6a0857be2842894391a1151bac9f2f175228",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 0,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "floor": 2,
+      "room_type": "Monster",
+      "hp": 91,
+      "max_hp": 91,
+      "enemies": [
+        "Leaf Slime (S)",
+        "Twig Slime (M)",
+        "Twig Slime (S)"
+      ],
+      "source_scope": "Original full fixture trace; reset uses only its first combat prefix"
+    },
+    {
+      "case": "test-01",
+      "seed": "e125_20261002_test_01",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 25,
+      "trace_path": "artifacts/runs/30b4446f-e855-4e72-935d-1c3958c1cd0c/decisions.jsonl",
+      "trace_sha256": "1451008ad951dc2565f6cae7becbf817f2f3a879d11f4adfc8bf879dee53e3cb",
+      "wire.jsonl_sha256": "c4e94d9bc2bfc79cc7cf5b319725107fdb5fa7b8174057a7127e32793b18c7d6",
+      "engine.stderr.log_sha256": "fc1b102a7500e779e3a3b6ddfef1ca1d86fc53f3d0ba9615b2b3cbb32f0ad3ed",
+      "status": "ready",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Ironclad",
+          "seed": "e125_20261002_test_01",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 1
+          }
+        }
+      ],
+      "prefix_hash": "8b97748def7e9b6cdd70d21c1c08821ea1fb27bd49dd6798d132535b7ed57a07",
+      "entry_hash": "7549e8308b92976db7b8dca4089818b541e699610b043df15149cd440e76379e",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 1,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "floor": 2,
+      "room_type": "Monster",
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Twig Slime (S)",
+        "Twig Slime (M)",
+        "Leaf Slime (S)"
+      ],
+      "source_scope": "Original full fixture trace; reset uses only its first combat prefix"
+    },
+    {
+      "case": "test-02",
+      "seed": "e125_20261002_test_02",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 26,
+      "trace_path": "artifacts/runs/2a7a5ccb-bd47-429e-91e1-7a5bf30a842f/decisions.jsonl",
+      "trace_sha256": "20a46662cff36a9c1ca15c89fcbc2dce9a38ef1223d2bc0af27dac0a43ea2d52",
+      "wire.jsonl_sha256": "501a3fc1c1dd6f3d07e60802a8a73db93a92b1ee01b3721a6d07fd394a10ea37",
+      "engine.stderr.log_sha256": "056b87bf0c5f7525f6fca33809776f93e08fa8fc4d013ee52c85c480659eec88",
+      "status": "ready",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Ironclad",
+          "seed": "e125_20261002_test_02",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 1
+          }
+        }
+      ],
+      "prefix_hash": "6f1ea0d4f52a7ff3b7abe84d6e8cb33f0ec9e614c0f4819c1f56e22ef9e02c69",
+      "entry_hash": "8e27e363f115ed63ea3e7583bab82b31bc5a8e7f6ffa486877147282206bd325",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 2,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "floor": 2,
+      "room_type": "Monster",
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Leaf Slime (S)",
+        "Leaf Slime (M)",
+        "Twig Slime (S)"
+      ],
+      "source_scope": "Original full fixture trace; reset uses only its first combat prefix"
+    },
+    {
+      "case": "test-03",
+      "seed": "e125_20261002_test_03",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 27,
+      "trace_path": "artifacts/runs/6e5986d5-13ec-4c90-867d-254f9c691d52/decisions.jsonl",
+      "trace_sha256": "3653d76d81b200c77080cb3638fdeeac83d9abeb15703d2cabd6fd95d8f9dd2d",
+      "wire.jsonl_sha256": "c1d99ec215c4c07dd33a8b5190cf271346d68b9dbe20fd156f21a341760f6847",
+      "engine.stderr.log_sha256": "85df8f5994307edba9a9f0c762618814a13b32bd36f401c37caa6dc229409c08",
+      "status": "ready",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Ironclad",
+          "seed": "e125_20261002_test_03",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 1
+          }
+        }
+      ],
+      "prefix_hash": "2f2bf3d47ab7f54dbafbd2d4756847442cb29de571ecf65b50b28579f43c99a4",
+      "entry_hash": "b704c3d7fdcaab4887f87a151fd682934c17ec9ca8d0bd234dec45672b585dc5",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 2,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "floor": 2,
+      "room_type": "Monster",
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Leaf Slime (S)",
+        "Leaf Slime (M)",
+        "Twig Slime (S)"
+      ],
+      "source_scope": "Original full fixture trace; reset uses only its first combat prefix"
+    },
+    {
+      "case": "test-04",
+      "seed": "e125_20261002_test_04",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 28,
+      "trace_path": "artifacts/runs/3c74e845-e9dc-4310-99e2-90898b7c8e57/decisions.jsonl",
+      "trace_sha256": "64a24086382d7457bb680ca97de214d7b28d8843a3ee035ebe9e973728e54227",
+      "wire.jsonl_sha256": "119ac3f23de8ac3c08c17fcdd37178453b468552f94cf64b7489a93fb69c6fba",
+      "engine.stderr.log_sha256": "546a7f0c63e9a97948d3dbcd24a4e8ff8c1f8e78deaa55f15484210689b345ff",
+      "status": "ready",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Ironclad",
+          "seed": "e125_20261002_test_04",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_bundle",
+          "args": {
+            "bundle_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 1
+          }
+        }
+      ],
+      "prefix_hash": "9d595c29d9dbe6b66eec93a8cbedd35c764c88ca4e74e27b8ec558e470fd6087",
+      "entry_hash": "8a29959a9b960d98fab34629295ffa2e267f66dd8118cd0e3cd5a88280b7bdae",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 0,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "floor": 2,
+      "room_type": "Monster",
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Nibbit"
+      ],
+      "source_scope": "Original full fixture trace; reset uses only its first combat prefix"
+    },
+    {
+      "case": "test-05",
+      "seed": "e125_20261002_test_05",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 29,
+      "trace_path": "artifacts/runs/eff6e0fd-8869-4c70-8b82-47eb326d7acf/decisions.jsonl",
+      "trace_sha256": "8613500f4f822c39919835a1eba8717cdbd68ae126bfd0f4676cda78050b1419",
+      "wire.jsonl_sha256": "b52bea23c1d9fc77d37d5758b9d66a728bb334661e8737cdf777c82f604d24d0",
+      "engine.stderr.log_sha256": "9cfa1a20f31bb65f034e88d0beddd820fd660d88d723563f8de0d3cdb565d5c1",
+      "status": "ready",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Ironclad",
+          "seed": "e125_20261002_test_05",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_cards",
+          "args": {
+            "indices": "0"
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 1
+          }
+        }
+      ],
+      "prefix_hash": "87080921088280bac3fcd07091eafcc988e2ee081c2d67ce5ffa842eb8473758",
+      "entry_hash": "d38c50bc2a9487f6eaec5e57fd70b4c477c941176f866791f963d4268163cc0c",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 0,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "floor": 2,
+      "room_type": "Monster",
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Shrinker Beetle"
+      ],
+      "source_scope": "Original full fixture trace; reset uses only its first combat prefix"
+    },
+    {
+      "case": "test-06",
+      "seed": "e125_20261002_test_06",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 30,
+      "trace_path": "artifacts/runs/ac455575-9791-42bd-a32b-8de734709e83/decisions.jsonl",
+      "trace_sha256": "bc3b9efc91e8b1ad1c3df203792c13b7519806b034390bda6c95582d77e2b982",
+      "wire.jsonl_sha256": "80bd2a8953379981b0362170afe5459e18e3f74a7399b5ee6329fbe1abc9318b",
+      "engine.stderr.log_sha256": "852848aab82f33d458a71cb347e127873aab6ab91c0e9993145be55445d42d3c",
+      "status": "ready",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Ironclad",
+          "seed": "e125_20261002_test_06",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 1
+          }
+        }
+      ],
+      "prefix_hash": "9e1b07da753e80f127258ffb3c4d0accf623dc558f7ce85a6c6190cdae1e0800",
+      "entry_hash": "d4073314f55e0baa059e8e2e9ee72814fafc92a30e484073f979f1445844a629",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 1,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "floor": 2,
+      "room_type": "Monster",
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Twig Slime (S)",
+        "Leaf Slime (M)",
+        "Leaf Slime (S)"
+      ],
+      "source_scope": "Original full fixture trace; reset uses only its first combat prefix"
+    },
+    {
+      "case": "test-07",
+      "seed": "e125_20261002_test_07",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 31,
+      "trace_path": "artifacts/runs/7cc871a0-7a6c-4170-a265-af97cf72e311/decisions.jsonl",
+      "trace_sha256": "591fc2a07ec203b57a5cf979fe6dc4255afddd1fcdc79804281669f02ec14c09",
+      "wire.jsonl_sha256": "8b4e8319dabde4d2e1bd13e5fd9d5f9e96636df17d27935b682511088fa68d3f",
+      "engine.stderr.log_sha256": "dda4adb41888fdf28c68fb7eb203b8697de971856fa432561997179d0570249e",
+      "status": "ready",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Ironclad",
+          "seed": "e125_20261002_test_07",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 1
+          }
+        }
+      ],
+      "prefix_hash": "ae8bde95f0439715f1edd5839860722d5fd744b939d39c107777749600c01c08",
+      "entry_hash": "07e02942093942624fcd4b1453076412eeed8a534dba382d89f9271a0b5c70b9",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 0,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "floor": 2,
+      "room_type": "Monster",
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Nibbit"
+      ],
+      "source_scope": "Original full fixture trace; reset uses only its first combat prefix"
+    },
+    {
+      "case": "test-08",
+      "seed": "e125_20261002_test_08",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 32,
+      "trace_path": "artifacts/runs/59648e6b-a375-49dc-b438-ef1c5589e029/decisions.jsonl",
+      "trace_sha256": "52617752a76f0ae0f7dabbef4c3650d62dbb98369e9cdc9f7d4d338827d0fc6e",
+      "wire.jsonl_sha256": "e358618b83442f74f8adf0657f3c919aef0af8217bd6697a9fc2e2613a342873",
+      "engine.stderr.log_sha256": "c6185952e5075cc592f4aac3d1ee126015cbd814d8e2a84f183c449ef6af950d",
+      "status": "ready",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Ironclad",
+          "seed": "e125_20261002_test_08",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_cards",
+          "args": {
+            "indices": "0"
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 1
+          }
+        }
+      ],
+      "prefix_hash": "82926dfc7d039caa174bd1ef689baf7a2966c9993295aee83d3daa5098ce6406",
+      "entry_hash": "7a137bc1467b5abc7b51e722bd7020b1c1cb8925d11edf649d3cf3132a140ae4",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 0,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "floor": 2,
+      "room_type": "Monster",
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Nibbit"
+      ],
+      "source_scope": "Original full fixture trace; reset uses only its first combat prefix"
+    },
+    {
+      "case": "test-09",
+      "seed": "e125_20261002_test_09",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 33,
+      "trace_path": "artifacts/runs/4ffda77f-e96a-4280-88d5-5bed111fd74b/decisions.jsonl",
+      "trace_sha256": "a6b9fde4754a785cd90f9f6020bc4343e956b3aa41d53089562c6d893d4be703",
+      "wire.jsonl_sha256": "a16bf5456d6ed32b58dc0629b7a511d318cc6d9540d65dfc7d78aafe7c260ecd",
+      "engine.stderr.log_sha256": "eb8114ce9d215e8493d203344c2287cbcc937a773b2614ad3b261c5494a42bd9",
+      "status": "ready",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Ironclad",
+          "seed": "e125_20261002_test_09",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 1
+          }
+        }
+      ],
+      "prefix_hash": "4ad30af864f1be1ce774ab6047ce61a519980d67ef8e83a699e0fbc797a69858",
+      "entry_hash": "0f62e8facb9815bbf5db33219906435fc4dc1cb9d2ec291eee1ed23f39beb74d",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 0,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "floor": 2,
+      "room_type": "Monster",
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Shrinker Beetle"
+      ],
+      "source_scope": "Original full fixture trace; reset uses only its first combat prefix"
+    },
+    {
+      "case": "test-10",
+      "seed": "e125_20261002_test_10",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 34,
+      "trace_path": "artifacts/runs/d2551f93-78c9-432a-b669-fcc008ef56ca/decisions.jsonl",
+      "trace_sha256": "1f1a02d302e0f71c524974877ca6d3574f427648bf50d4c3a60cf05566a8f49d",
+      "wire.jsonl_sha256": "d67a9d46a445b3f9ff998839e63511fab5becca86dbd6dc03d0b51648811cb6e",
+      "engine.stderr.log_sha256": "c6288e1a3d5d1953ea98c2dec8ab4b807e6ba6fcf0f7893aa769ff2f62d545fe",
+      "status": "ready",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Ironclad",
+          "seed": "e125_20261002_test_10",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_cards",
+          "args": {
+            "indices": "0"
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 1
+          }
+        }
+      ],
+      "prefix_hash": "e681420dff9ef2a6d021533df80d3a6a24f42dc7b75f3c4a1f1b8b8ae1cab911",
+      "entry_hash": "494bec3fd9a82426ec25babb822704f1a8d1a30407bfcedc02e5af3baf9e8e85",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 2,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "floor": 2,
+      "room_type": "Monster",
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Leaf Slime (S)",
+        "Twig Slime (M)",
+        "Twig Slime (S)"
+      ],
+      "source_scope": "Original full fixture trace; reset uses only its first combat prefix"
+    },
+    {
+      "case": "test-11",
+      "seed": "e125_20261002_test_11",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 35,
+      "trace_path": "artifacts/runs/396ad03f-00e9-4655-bd7c-d92af57c8666/decisions.jsonl",
+      "trace_sha256": "a3c2e5aae44afedce9746d19b9f95495a77d005d097ef5b130b34cebae7fbd67",
+      "wire.jsonl_sha256": "cfe64d5ba110b979aa10203ad6a61a8b6c4fd3928da9665d519d52fc9cba7821",
+      "engine.stderr.log_sha256": "b2fa0cfb2712e9bb262f842f622af3faa828e225b4bd61413c5fa81236db15fc",
+      "status": "ready",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Ironclad",
+          "seed": "e125_20261002_test_11",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_cards",
+          "args": {
+            "indices": "0"
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 1
+          }
+        }
+      ],
+      "prefix_hash": "ffd3575b4458f2279fee66e105d1dfaf1655cb2402be8c22113a261aeba2690d",
+      "entry_hash": "3da97dea6658b034808ec90dd4f736e7f107e011fbbd96dd5c4c4ea4d16bd589",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 1,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "floor": 2,
+      "room_type": "Monster",
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Twig Slime (S)",
+        "Leaf Slime (M)",
+        "Leaf Slime (S)"
+      ],
+      "source_scope": "Original full fixture trace; reset uses only its first combat prefix"
+    },
+    {
+      "case": "test-12",
+      "seed": "e125_20261002_test_12",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 36,
+      "trace_path": "artifacts/runs/4d086b7f-a014-4442-abd6-c1d5fba4d34c/decisions.jsonl",
+      "trace_sha256": "0b252823fe7035f008970dae164f9d28a0b94a13381467b18e0255d7472b588a",
+      "wire.jsonl_sha256": "1daafc5c242f73c8c1109621f2210352c03e8178ab3d62d5841140a159d2cb2f",
+      "engine.stderr.log_sha256": "84d19097f3c6403de6d621411081389c40df57e46e31d49ad76efebda9204ddf",
+      "status": "ready",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Ironclad",
+          "seed": "e125_20261002_test_12",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 1
+          }
+        }
+      ],
+      "prefix_hash": "80f38ea9eefee4b7fb5d01e37733182e682973386bbd277afd45dcc686a039da",
+      "entry_hash": "0b62b8538b791de70d74110b08e1f95168ce994187c3001c35f2552ecab493cc",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 0,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "floor": 2,
+      "room_type": "Monster",
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Nibbit"
+      ],
+      "source_scope": "Original full fixture trace; reset uses only its first combat prefix"
+    },
+    {
+      "case": "test-13",
+      "seed": "e125_20261002_test_13",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 37,
+      "trace_path": "artifacts/runs/0ab253af-ab3f-47a8-a8d5-3ff30b3094b0/decisions.jsonl",
+      "trace_sha256": "8d41bf5eec5ee2937dba837446d2530bd8edb79c24aee0fcb1daba34e33716de",
+      "wire.jsonl_sha256": "1954bd57966bf3105ee0976b5b789e3da2a3e77b0e9e3394cbb1aba382d062cd",
+      "engine.stderr.log_sha256": "f26bf9ba1aba09e5cbaeee1643d3f07117115ea9371a06a84f78112ada49437c",
+      "status": "ready",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Ironclad",
+          "seed": "e125_20261002_test_13",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 1
+          }
+        }
+      ],
+      "prefix_hash": "327bc833718a520c2ccb8862aed640eb01f3c00c8c4a5e1617695b55aa3b9df1",
+      "entry_hash": "4f6521cc65e719a41ab29bd87c9cd97ede1f2531fff0a66375e45685b56e5325",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 0,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "floor": 2,
+      "room_type": "Monster",
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Nibbit"
+      ],
+      "source_scope": "Original full fixture trace; reset uses only its first combat prefix"
+    },
+    {
+      "case": "test-14",
+      "seed": "e125_20261002_test_14",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 38,
+      "trace_path": "artifacts/runs/9b6c84d0-0385-4131-b5d7-6c9f815595af/decisions.jsonl",
+      "trace_sha256": "384f951dcb33255c36c57f19db87b770bf95160d11ef0a07e6f286f2e4de27f5",
+      "wire.jsonl_sha256": "384b397876b5a12c71950feeaa5a5ccc29a212d0c3c4eb384fccc3214e30f3a9",
+      "engine.stderr.log_sha256": "b1e83bbacb9b4fbb9db9f15c3118571638d3391d3ac11565b7f8c5447dbe0d94",
+      "status": "ready",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Ironclad",
+          "seed": "e125_20261002_test_14",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_cards",
+          "args": {
+            "indices": "0"
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 1
+          }
+        }
+      ],
+      "prefix_hash": "8e3eaf5db500917b007fa285df000078b62f45f54bde843005d479a586461adb",
+      "entry_hash": "c328a128de09f020a95aa020d711d705c4d287ff6014624f0bfc2bd76e1b4722",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 0,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "floor": 2,
+      "room_type": "Monster",
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Twig Slime (S)",
+        "Leaf Slime (M)",
+        "Leaf Slime (S)"
+      ],
+      "source_scope": "Original full fixture trace; reset uses only its first combat prefix"
+    },
+    {
+      "case": "test-15",
+      "seed": "e125_20261002_test_15",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 39,
+      "trace_path": "artifacts/runs/db6e1e14-32f8-4cdc-b73b-ea617acf7af7/decisions.jsonl",
+      "trace_sha256": "2e840cd54cfb58d014ecbe439ad1d2d2d09d94dde394bae52e35df2da80b9d50",
+      "wire.jsonl_sha256": "9d6ebb7ebbef95a88aac0b9d1c7027ce1e8594aa59b5d8e60b1bfc3d1d267147",
+      "engine.stderr.log_sha256": "57f7802c9653ae6438971ddc2626870424bc94b142fa137d2965f077c24b7e36",
+      "status": "ready",
+      "prefix": [
+        {
+          "cmd": "start_run",
+          "character": "Ironclad",
+          "seed": "e125_20261002_test_15",
+          "ascension": 0
+        },
+        {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 1
+          }
+        }
+      ],
+      "prefix_hash": "ff9345b8c00aae4f583612059f38923ed0a852bcac852318f8f67ef0474c952d",
+      "entry_hash": "05d73c1aa2e1c720795aeeae6f55ce2989be38f646d30827cbd7238e9219b583",
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 1,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "floor": 2,
+      "room_type": "Monster",
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Leaf Slime (S)",
+        "Twig Slime (M)",
+        "Twig Slime (S)"
+      ],
+      "source_scope": "Original full fixture trace; reset uses only its first combat prefix"
+    }
+  ],
+  "pass": true,
+  "audit": {
+    "raw_traces": 40,
+    "failures": [],
+    "pass": true
+  }
+}
