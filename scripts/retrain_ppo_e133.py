@@ -18,6 +18,7 @@ from rsi.battle_search import compact
 from rsi.checkpoints import file_hash
 from rsi.ppo import ActorCritic, ENCODER_VERSION, HP, update
 from rsi.ppo_env import episode
+from rsi.ppo_actions import ACTION_SPACE, complete_baseline
 from rsi.research_restore import ENGINE_KEYS
 from rsi.trace import digest
 from rsi.training_bank import collect, certify, matched
@@ -40,7 +41,7 @@ def pool_map(fn, items):
 
 
 def version():
-    return {**manifest(), 'experiment': 'E133', 'encoder': ENCODER_VERSION,
+    return {**manifest(), 'experiment': 'E133', 'encoder': ENCODER_VERSION, 'ppo_action_space': ACTION_SPACE,
             'hyperparameters': HP, 'torch': str(torch.__version__), 'numpy': str(np.__version__),
             'device': 'cpu', 'torch_threads': torch.get_num_threads(), 'engine_workers': 8,
             'learner_seeds': list(LEARNERS), 'scope': 'Ironclad A0/A5/A10 natural single battles'}
@@ -384,7 +385,11 @@ def test(v,b,output,training,certificate):
     report = dict(manifest=v,bank_sha256=file_hash(BANK),training_sha256=file_hash(training),
                   certificate_sha256=file_hash(certificate),arms={})
     old, report['baseline_adapter_transfer'] = legacy_baselines(v)
-    arms = [('planner',None,None,None),('attack_priority',None,attack_priority,None)]
+    def attack_with_complete_menu(state, choices, previous, plan):
+        if state.get('decision') == 'card_select':
+            return complete_baseline(state, choices, previous), {'source': 'same_heuristic_complete_menu'}
+        return attack_priority(state, choices, previous, plan)
+    arms = [('planner',None,None,None),('attack_priority',None,attack_with_complete_menu,None)]
     for row, model in old:
         arms.append((f"E127-{row['learner']}",model,None,None))
     for row in t['learners']:

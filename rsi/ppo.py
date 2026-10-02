@@ -50,8 +50,8 @@ def incoming(enemy):
                for i in enemy.get('intents', []))
 
 
-def encode(state, choices, previous=None):
-    if not 0 < len(choices) <= MAX_ACTIONS:
+def encode(state, choices, previous=None, *, max_actions=MAX_ACTIONS):
+    if not 0 < len(choices) <= max_actions:
         raise ValueError('Empty or overflowing legal candidate set')
     if state.get('decision') == 'card_select':
         n = len(state.get('cards', []))

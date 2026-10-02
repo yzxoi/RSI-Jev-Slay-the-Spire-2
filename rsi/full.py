@@ -30,7 +30,7 @@ def advance_skill_counter(count, card):
     return count + int(bool(card and card.get('type') == 'Skill'))
 
 
-def macro_candidates(state, history=None, *, resource_decisions=False):
+def macro_candidates(state, history=None, *, resource_decisions=False, selection_cap=128):
     d = state.get('decision'); out = []
     def add(name, metadata=None, **args):
         out.append({'action': action(name, **args), 'name': name, 'details': metadata})
@@ -56,7 +56,7 @@ def macro_candidates(state, history=None, *, resource_decisions=False):
         cards = state.get('cards', []); lo = state.get('min_select', 1); hi = state.get('max_select', 1)
         # The Jev choice schema has one criterion per candidate. Bound the full
         # request, rather than each combination-size batch, and keep skip legal.
-        selection_limit = 128 - int(lo == 0)
+        selection_limit = selection_cap - int(lo == 0)
         for n in range(max(1, lo), min(len(cards), hi) + 1):
             remaining = selection_limit - len(out)
             if remaining <= 0: break

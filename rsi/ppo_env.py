@@ -9,6 +9,7 @@ import torch
 from .battle_search import baseline_choice, boundary, choices_for, finish, outcome
 from .engine import ROOT, Headless
 from .ppo import encode, padded
+from .ppo_actions import ACTION_SPACE, ACTION_LIMIT, complete_choices, complete_baseline
 from .trace import Trace, digest
 
 
@@ -61,8 +62,9 @@ def episode(frozen, manifest, label, model=None, sample_seed=None, expected=None
                 break
             if step == 120:
                 result['status'] = 'action_cap'; break
-            choices = choices_for(state)
-            encoded = encode(state, choices, previous)
+            complete = manifest.get('ppo_action_space') == ACTION_SPACE
+            choices = complete_choices(state) if complete else choices_for(state)
+            encoded = encode(state, choices, previous, **({'max_actions': ACTION_LIMIT} if complete else {}))
             before = digest(state)
             payload = dict(before=before, candidates=choices)
             if expected is not None:
@@ -73,7 +75,7 @@ def episode(frozen, manifest, label, model=None, sample_seed=None, expected=None
                 chosen, extra = policy(state, choices, previous, result['plan'])
                 payload.update(extra)
             elif model is None:
-                chosen = baseline_choice(state, previous)
+                chosen = complete_baseline(state, choices, previous) if complete else baseline_choice(state, previous)
             else:
                 clock = time.monotonic()
                 with torch.inference_mode():
