@@ -97,3 +97,14 @@ The last1701 checkpoint regressed and is not selected. Both learners' best chall
 ```sh
 python3 scripts/retrain_ppo_e133.py train --resume experiments/E133/training-v1.json --certificate experiments/E134/recovery-train-v2.json --output artifacts/runs/e133-training-v2.json
 ```
+
+## Held-out reset certification, before learned-policy evaluation
+
+Tested SHA `efa2ed5`; all96 panel entries from48 fixed independent test seeds checked in 131.164s.94 native entries passed; failed native continuation cases: test-036-b2, test-045-b6. Original control paths terminate legitimately; all382 raw bundles audited. Preserve this failed all-native certificate, then apply the already preregistered E134 exhaustive full-prefix routing protocol to both failed cases before policy comparisons. No test sample replacements or model reselection.
+
+```sh
+python3 scripts/retrain_ppo_e133.py certify_test --training experiments/E133/training-v2.json --output artifacts/runs/e133-certificate-test-v1.json
+python3 scripts/plot_retraining_e133.py --training experiments/E133/training-v2.json --output-dir experiments/E133/figures
+```
+
+Training and difficulty curves were rendered and visually checked.
