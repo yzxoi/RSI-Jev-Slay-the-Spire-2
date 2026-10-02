@@ -15,3 +15,10 @@ Select checkpoint by validation clears, mean reward, earliest tie. Commit select
 Execution: no real reset/transition/illegal-action errors; all independent replays exact. Strength: both larger models preserve planner clears and median paired HP-equivalent delta >= -2; beat attack-priority with same-or-more clears and median >= +3. Capacity claim additionally requires both paired L models preserve S clears and median >= +2. Defeats score 0 HP-equivalent; censored outcomes have no numeric score and invalidate that pair's aggregate strength claim. No automatic extensions or live-controller promotion. If the gate fails, stop scaling and diagnose representation/reward/value calibration.
 
 Publish training policy/value/total loss, entropy/KL, reward/clear rate, held-out validation reward/HP, wall-time/throughput, final paired results, raw trace hashes and all failed attempts. Two replicates are exploratory, not confidence in general game mastery. Prefix planner prepares the deck/routes; learned policy controls one battle only. No full-run/high-ascension/multicharacter claim. Separate E128 will test inference-time policy/value tree search using frozen selected models; no search-guided training claim.
+
+## Iteration 1 preparation
+
+- Implementation `b928d4d`: six synthetic PPO checks passed (`artifacts/runs/e127-synthetic-v1.log`). No gameplay claim from these checks.
+- Fixture collection `b928d4d`: all 104 seeds reached all three entries; 312 frozen entries, no replacement or unavailable entry. 31.284 s wall, 104 raw trace bundles hash-audited.
+- Frozen bank committed as `a958d71`; preflight at that SHA: 16 validation entries plus 16 exact independent replays. Planner 15 clears / 1 legitimate defeat, no caps/errors. Audit 32 trace bundles passed. The defeat remains in validation/training selection criteria.
+- Optional checkpoint architecture now records widths. Default `ActorCritic()` remains E125-compatible.
