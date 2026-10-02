@@ -1,0 +1,1956 @@
+{
+  "manifest": {
+    "schema_version": 2,
+    "code_commit": "9fedcf0e13e7e8750be02fcb9b0d05678b2121e1",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "9da8b930e0ac9fc17677856c50de8d632647f2e8eab52f2f2f9fce2c84a1aadd",
+    "godot_stubs_sha256": "1fd436ecb06e289ba2f9236bbdd1d0816bfb09a0083ef52f259b3560bbce6c06",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+      "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772",
+      "headless-zzzzzz-godot-abi.patch": "5239d3836d279de5143f7d56bece1f061c6c4002de696fce28f9f7f3922ededc"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4",
+    "experiment": "E135",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.5",
+    "model_calls": 0,
+    "model_cost_usd": 0,
+    "scope": "ABI compatibility; original TestMode damage logic"
+  },
+  "old_engine": {
+    "schema_version": 1,
+    "code_commit": "cfe05243e8c1f8cb7307be7733caa39c03640101",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "71505f31e29c370667636600a58fe2b3e270f98e99e3c5a384d176a7f0188274",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+      "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4",
+    "godot_stubs_sha256": "9dd5af8b912a391e5f8f13b0153d9d4630f94ef25079fe5506b71ba51edf3f4b"
+  },
+  "new_engine": {
+    "schema_version": 2,
+    "code_commit": "9fedcf0e13e7e8750be02fcb9b0d05678b2121e1",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "9da8b930e0ac9fc17677856c50de8d632647f2e8eab52f2f2f9fce2c84a1aadd",
+    "godot_stubs_sha256": "1fd436ecb06e289ba2f9236bbdd1d0816bfb09a0083ef52f259b3560bbce6c06",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+      "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772",
+      "headless-zzzzzz-godot-abi.patch": "5239d3836d279de5143f7d56bece1f061c6c4002de696fce28f9f7f3922ededc"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4",
+    "experiment": "E135",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.5",
+    "model_calls": 0,
+    "model_cost_usd": 0,
+    "scope": "ABI compatibility; original TestMode damage logic"
+  },
+  "old_bank": {
+    "path": "experiments/E133/fixtures-v1.json",
+    "sha256": "63d760a697ee90f0cb9703d132f01d0d7c1efb6415e8d0807db86d6633a37d32"
+  },
+  "new_bank": {
+    "path": "artifacts/runs/e133-fixtures-v2.json",
+    "sha256": "8c0208d7b491b5c11077d095dc31e4878eb930df574f394a8ff7a93fd45991cb"
+  },
+  "checks": [
+    {
+      "case": "train-000",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 88
+    },
+    {
+      "case": "train-001",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 64
+    },
+    {
+      "case": "train-002",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 94
+    },
+    {
+      "case": "train-003",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 102
+    },
+    {
+      "case": "train-004",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 114
+    },
+    {
+      "case": "train-005",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 103
+    },
+    {
+      "case": "train-006",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 91
+    },
+    {
+      "case": "train-007",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 58
+    },
+    {
+      "case": "train-008",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 55
+    },
+    {
+      "case": "train-009",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 114
+    },
+    {
+      "case": "train-010",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 47
+    },
+    {
+      "case": "train-011",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 127
+    },
+    {
+      "case": "train-012",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 65
+    },
+    {
+      "case": "train-013",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 69
+    },
+    {
+      "case": "train-014",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 82
+    },
+    {
+      "case": "train-015",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 61
+    },
+    {
+      "case": "train-016",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 86
+    },
+    {
+      "case": "train-017",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 93
+    },
+    {
+      "case": "train-018",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 97
+    },
+    {
+      "case": "train-019",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 83
+    },
+    {
+      "case": "train-020",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 115
+    },
+    {
+      "case": "train-021",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 60
+    },
+    {
+      "case": "train-022",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 94
+    },
+    {
+      "case": "train-023",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 64
+    },
+    {
+      "case": "train-024",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 68
+    },
+    {
+      "case": "train-025",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 68
+    },
+    {
+      "case": "train-026",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 100
+    },
+    {
+      "case": "train-027",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 124
+    },
+    {
+      "case": "train-028",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 113
+    },
+    {
+      "case": "train-029",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 57
+    },
+    {
+      "case": "train-030",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 108
+    },
+    {
+      "case": "train-031",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 100
+    },
+    {
+      "case": "train-032",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 87
+    },
+    {
+      "case": "train-033",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 149
+    },
+    {
+      "case": "train-034",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 65
+    },
+    {
+      "case": "train-035",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 85
+    },
+    {
+      "case": "train-036",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 163
+    },
+    {
+      "case": "train-037",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 84
+    },
+    {
+      "case": "train-038",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 81
+    },
+    {
+      "case": "train-039",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 175
+    },
+    {
+      "case": "train-040",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 105
+    },
+    {
+      "case": "train-041",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 62
+    },
+    {
+      "case": "train-042",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 139
+    },
+    {
+      "case": "train-043",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 110
+    },
+    {
+      "case": "train-044",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 41
+    },
+    {
+      "case": "train-045",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 73
+    },
+    {
+      "case": "train-046",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 67
+    },
+    {
+      "case": "train-047",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 75
+    },
+    {
+      "case": "train-048",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 110
+    },
+    {
+      "case": "train-049",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 130
+    },
+    {
+      "case": "train-050",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 89
+    },
+    {
+      "case": "train-051",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 103
+    },
+    {
+      "case": "train-052",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 47
+    },
+    {
+      "case": "train-053",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 127
+    },
+    {
+      "case": "train-054",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 150
+    },
+    {
+      "case": "train-055",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 102
+    },
+    {
+      "case": "train-056",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 63
+    },
+    {
+      "case": "train-057",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 154
+    },
+    {
+      "case": "train-058",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 48
+    },
+    {
+      "case": "train-059",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 89
+    },
+    {
+      "case": "train-060",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 44
+    },
+    {
+      "case": "train-061",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 90
+    },
+    {
+      "case": "train-062",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 82
+    },
+    {
+      "case": "train-063",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 116
+    },
+    {
+      "case": "train-064",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 92
+    },
+    {
+      "case": "train-065",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 106
+    },
+    {
+      "case": "train-066",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 144
+    },
+    {
+      "case": "train-067",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 55
+    },
+    {
+      "case": "train-068",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 70
+    },
+    {
+      "case": "train-069",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 89
+    },
+    {
+      "case": "train-070",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 60
+    },
+    {
+      "case": "train-071",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 66
+    },
+    {
+      "case": "train-072",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 133
+    },
+    {
+      "case": "train-073",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 99
+    },
+    {
+      "case": "train-074",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 105
+    },
+    {
+      "case": "train-075",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 56
+    },
+    {
+      "case": "train-076",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 33
+    },
+    {
+      "case": "train-077",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 89
+    },
+    {
+      "case": "train-078",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 119
+    },
+    {
+      "case": "train-079",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 102
+    },
+    {
+      "case": "train-080",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 77
+    },
+    {
+      "case": "train-081",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 68
+    },
+    {
+      "case": "train-082",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 106
+    },
+    {
+      "case": "train-083",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 78
+    },
+    {
+      "case": "train-084",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 137
+    },
+    {
+      "case": "train-085",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 82
+    },
+    {
+      "case": "train-086",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 113
+    },
+    {
+      "case": "train-087",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 118
+    },
+    {
+      "case": "train-088",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 64
+    },
+    {
+      "case": "train-089",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 100
+    },
+    {
+      "case": "train-090",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 122
+    },
+    {
+      "case": "train-091",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 67
+    },
+    {
+      "case": "train-092",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 64
+    },
+    {
+      "case": "train-093",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 46
+    },
+    {
+      "case": "train-094",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 80
+    },
+    {
+      "case": "train-095",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 61
+    },
+    {
+      "case": "train-096",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 50
+    },
+    {
+      "case": "train-097",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 103
+    },
+    {
+      "case": "train-098",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 61
+    },
+    {
+      "case": "train-099",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 59
+    },
+    {
+      "case": "train-100",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 108
+    },
+    {
+      "case": "train-101",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 84
+    },
+    {
+      "case": "train-102",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 66
+    },
+    {
+      "case": "train-103",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 63
+    },
+    {
+      "case": "train-104",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 58
+    },
+    {
+      "case": "train-105",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 45
+    },
+    {
+      "case": "train-106",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 135
+    },
+    {
+      "case": "train-107",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 60
+    },
+    {
+      "case": "train-108",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 94
+    },
+    {
+      "case": "train-109",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 42
+    },
+    {
+      "case": "train-110",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 73
+    },
+    {
+      "case": "train-111",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 125
+    },
+    {
+      "case": "train-112",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 120
+    },
+    {
+      "case": "train-113",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 71
+    },
+    {
+      "case": "train-114",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 66
+    },
+    {
+      "case": "train-115",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 144
+    },
+    {
+      "case": "train-116",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 105
+    },
+    {
+      "case": "train-117",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 69
+    },
+    {
+      "case": "train-118",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 108
+    },
+    {
+      "case": "train-119",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 82
+    },
+    {
+      "case": "train-120",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 53
+    },
+    {
+      "case": "train-121",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 46
+    },
+    {
+      "case": "train-122",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 126
+    },
+    {
+      "case": "train-123",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 95
+    },
+    {
+      "case": "train-124",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 75
+    },
+    {
+      "case": "train-125",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 77
+    },
+    {
+      "case": "train-126",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 93
+    },
+    {
+      "case": "train-127",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 87
+    },
+    {
+      "case": "train-128",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 154
+    },
+    {
+      "case": "train-129",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 71
+    },
+    {
+      "case": "train-130",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 102
+    },
+    {
+      "case": "train-131",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 62
+    },
+    {
+      "case": "train-132",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 54
+    },
+    {
+      "case": "train-133",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 86
+    },
+    {
+      "case": "train-134",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 73
+    },
+    {
+      "case": "train-135",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 125
+    },
+    {
+      "case": "train-136",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 53
+    },
+    {
+      "case": "train-137",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 86
+    },
+    {
+      "case": "train-138",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 143
+    },
+    {
+      "case": "train-139",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 62
+    },
+    {
+      "case": "train-140",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 93
+    },
+    {
+      "case": "train-141",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 89
+    },
+    {
+      "case": "train-142",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 99
+    },
+    {
+      "case": "train-143",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 65
+    },
+    {
+      "case": "train-144",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 99
+    },
+    {
+      "case": "train-145",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 56
+    },
+    {
+      "case": "train-146",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 77
+    },
+    {
+      "case": "train-147",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 81
+    },
+    {
+      "case": "train-148",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 97
+    },
+    {
+      "case": "train-149",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 98
+    },
+    {
+      "case": "train-150",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 164
+    },
+    {
+      "case": "train-151",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 38
+    },
+    {
+      "case": "train-152",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 50
+    },
+    {
+      "case": "train-153",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 137
+    },
+    {
+      "case": "train-154",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 60
+    },
+    {
+      "case": "train-155",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 131
+    },
+    {
+      "case": "train-156",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 87
+    },
+    {
+      "case": "train-157",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 82
+    },
+    {
+      "case": "train-158",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 63
+    },
+    {
+      "case": "train-159",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 62
+    },
+    {
+      "case": "train-160",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 133
+    },
+    {
+      "case": "train-161",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 49
+    },
+    {
+      "case": "train-162",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 95
+    },
+    {
+      "case": "train-163",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 111
+    },
+    {
+      "case": "train-164",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 89
+    },
+    {
+      "case": "train-165",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 147
+    },
+    {
+      "case": "train-166",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 137
+    },
+    {
+      "case": "train-167",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 102
+    },
+    {
+      "case": "train-168",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 110
+    },
+    {
+      "case": "train-169",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 108
+    },
+    {
+      "case": "train-170",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 72
+    },
+    {
+      "case": "train-171",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 131
+    },
+    {
+      "case": "train-172",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 78
+    },
+    {
+      "case": "train-173",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 46
+    },
+    {
+      "case": "train-174",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 112
+    },
+    {
+      "case": "train-175",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 126
+    },
+    {
+      "case": "train-176",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 65
+    },
+    {
+      "case": "train-177",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 104
+    },
+    {
+      "case": "train-178",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 141
+    },
+    {
+      "case": "train-179",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 64
+    },
+    {
+      "case": "train-180",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 142
+    },
+    {
+      "case": "train-181",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 106
+    },
+    {
+      "case": "train-182",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 77
+    },
+    {
+      "case": "train-183",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 143
+    },
+    {
+      "case": "train-184",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 149
+    },
+    {
+      "case": "train-185",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 130
+    },
+    {
+      "case": "train-186",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 101
+    },
+    {
+      "case": "train-187",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 100
+    },
+    {
+      "case": "train-188",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 60
+    },
+    {
+      "case": "train-189",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 103
+    },
+    {
+      "case": "train-190",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 85
+    },
+    {
+      "case": "train-191",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 142
+    },
+    {
+      "case": "val-000",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 65
+    },
+    {
+      "case": "val-001",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 48
+    },
+    {
+      "case": "val-002",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 83
+    },
+    {
+      "case": "val-003",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 44
+    },
+    {
+      "case": "val-004",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 71
+    },
+    {
+      "case": "val-005",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 130
+    },
+    {
+      "case": "val-006",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 60
+    },
+    {
+      "case": "val-007",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 100
+    },
+    {
+      "case": "val-008",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 130
+    },
+    {
+      "case": "val-009",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 36
+    },
+    {
+      "case": "val-010",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 54
+    },
+    {
+      "case": "val-011",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 118
+    },
+    {
+      "case": "val-012",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 154
+    },
+    {
+      "case": "val-013",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 118
+    },
+    {
+      "case": "val-014",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 78
+    },
+    {
+      "case": "val-015",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 103
+    },
+    {
+      "case": "val-016",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 51
+    },
+    {
+      "case": "val-017",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 154
+    },
+    {
+      "case": "val-018",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 67
+    },
+    {
+      "case": "val-019",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 98
+    },
+    {
+      "case": "val-020",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 96
+    },
+    {
+      "case": "val-021",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 105
+    },
+    {
+      "case": "val-022",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 54
+    },
+    {
+      "case": "val-023",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 106
+    },
+    {
+      "case": "test-000",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 94
+    },
+    {
+      "case": "test-001",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 69
+    },
+    {
+      "case": "test-002",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 93
+    },
+    {
+      "case": "test-003",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 60
+    },
+    {
+      "case": "test-004",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 62
+    },
+    {
+      "case": "test-005",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 62
+    },
+    {
+      "case": "test-006",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 71
+    },
+    {
+      "case": "test-007",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 55
+    },
+    {
+      "case": "test-008",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 54
+    },
+    {
+      "case": "test-009",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 168
+    },
+    {
+      "case": "test-010",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 96
+    },
+    {
+      "case": "test-011",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 64
+    },
+    {
+      "case": "test-012",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 59
+    },
+    {
+      "case": "test-013",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 91
+    },
+    {
+      "case": "test-014",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 49
+    },
+    {
+      "case": "test-015",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 118
+    },
+    {
+      "case": "test-016",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 95
+    },
+    {
+      "case": "test-017",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 76
+    },
+    {
+      "case": "test-018",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 52
+    },
+    {
+      "case": "test-019",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 143
+    },
+    {
+      "case": "test-020",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 95
+    },
+    {
+      "case": "test-021",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 101
+    },
+    {
+      "case": "test-022",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 132
+    },
+    {
+      "case": "test-023",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 109
+    },
+    {
+      "case": "test-024",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 76
+    },
+    {
+      "case": "test-025",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 92
+    },
+    {
+      "case": "test-026",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 103
+    },
+    {
+      "case": "test-027",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 61
+    },
+    {
+      "case": "test-028",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 94
+    },
+    {
+      "case": "test-029",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 120
+    },
+    {
+      "case": "test-030",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 43
+    },
+    {
+      "case": "test-031",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 59
+    },
+    {
+      "case": "test-032",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 68
+    },
+    {
+      "case": "test-033",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 51
+    },
+    {
+      "case": "test-034",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 68
+    },
+    {
+      "case": "test-035",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 85
+    },
+    {
+      "case": "test-036",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 44
+    },
+    {
+      "case": "test-037",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 90
+    },
+    {
+      "case": "test-038",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 95
+    },
+    {
+      "case": "test-039",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 53
+    },
+    {
+      "case": "test-040",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 55
+    },
+    {
+      "case": "test-041",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 78
+    },
+    {
+      "case": "test-042",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 67
+    },
+    {
+      "case": "test-043",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 66
+    },
+    {
+      "case": "test-044",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 80
+    },
+    {
+      "case": "test-045",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 86
+    },
+    {
+      "case": "test-046",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 142
+    },
+    {
+      "case": "test-047",
+      "status_match": true,
+      "full_command_state_sequence_match": true,
+      "entry_match": true,
+      "commands": 61
+    }
+  ],
+  "proprietary_game_dlls_unchanged": true,
+  "audit": {
+    "raw_traces": 528,
+    "failures": [],
+    "pass": true
+  },
+  "passed": true
+}
