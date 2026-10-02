@@ -6,6 +6,8 @@
 
 ## 当前轮次
 
+- [E133 #250](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/250) / [PR #251](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/pull/251)：用户授权更多数据重训。准备 SHA `e3ae398`，264 个 seed / 1,460 个自然入口，575 个训练候选入口含 151 精英；40 次准备途中正常死亡保留。14 项合成检查通过，264 份准备 trace 哈希通过；原生恢复认证中，尚未报告学习结果。
+
 - [E132 #248](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/248) / [PR #249](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/pull/249)：多难度精英入口存档。准备 SHA `63c45db`，冻结路径 SHA `001d7db`，验证 SHA `b1b6601`；5/6 精英可用，40/40 续演一致，111 份 trace 审计通过。恢复中位数 4.507→1.172 秒；精确性/速度通过，入口完整性失败。共 218.956 秒，无模型 API；[全部结果与复用示例](../../../experiments/E132/README.md)。
 
 - [E127 预注册](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/241)，[PR #242](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/pull/242)，[完整记录](../../../experiments/E127/README.md)。
