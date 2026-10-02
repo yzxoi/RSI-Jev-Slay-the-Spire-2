@@ -22,3 +22,18 @@ Publish training policy/value/total loss, entropy/KL, reward/clear rate, held-ou
 - Fixture collection `b928d4d`: all 104 seeds reached all three entries; 312 frozen entries, no replacement or unavailable entry. 31.284 s wall, 104 raw trace bundles hash-audited.
 - Frozen bank committed as `a958d71`; preflight at that SHA: 16 validation entries plus 16 exact independent replays. Planner 15 clears / 1 legitimate defeat, no caps/errors. Audit 32 trace bundles passed. The defeat remains in validation/training selection criteria.
 - Optional checkpoint architecture now records widths. Default `ActorCritic()` remains E125-compatible.
+
+## Training v1 and locked selection
+
+Training SHA `803d841` (runnable code loaded before subsequent documentation/plotting commits). All four learners completed 24 updates: 6,144 training battles, 100,932 transitions; no incomplete training episodes, illegal actions or actual reset/transition errors. All 6,464 training + validation trace bundles hash-audited. Eight total synthetic checks passed (six core PPO and two capacity/control checks). The preflight for E128 overlapped part of later training; wall times are measured work costs, not isolated processor benchmarks.
+
+Selected by validation only, committed before any E127 held-out test:
+
+| Size / learner | Parameters | Update | SHA256 |
+| --- | ---: | ---: | --- |
+| S / 1701 | 73,794 | 24 | 04d3f72a3e656dbaf2f0b63a128deef5194a8c9b4d1f0228973b8fcc0d1d3844 |
+| L / 1701 | 639,234 | 24 | bc310bcf3df545b40f459f0583c52273821ade0e885c12c7ab806529b2267cd5 |
+| S / 1702 | 73,794 | 18 | 9a0accdea5f9db54f06541c33a70ae480643f4f8713664be8036c497733109ab |
+| L / 1702 | 639,234 | 12 | 60df31d914efb2365f2901552a2b17961ecf9f51358f690573546cacc320eb40 |
+
+S-1702 reached 16/16 validation clears at update 18, then regressed to 15/16 at update 24. Both larger models reached 16/16. This corrects an interim verbal summary that looked only at the small models' final checkpoints; no checkpoint selection rule or test protocol changed.
