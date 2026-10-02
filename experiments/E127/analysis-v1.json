@@ -1,0 +1,977 @@
+{
+  "sources": {
+    "fixtures": {
+      "path": "artifacts/runs/e127-fixtures-v1.json",
+      "sha256": "afeff46ae085b5c04ea250da74a769b8f75df6820722e4e6d7d42dd3db4d1e38"
+    },
+    "preflight": {
+      "path": "artifacts/runs/e127-preflight-v1.json",
+      "sha256": "56c4618027268ac6be9c0629fc01874e55569cb0af2e94dcf8923c0125a07f1c"
+    },
+    "training": {
+      "path": "artifacts/runs/e127-training-v1.json",
+      "sha256": "2e43099f98e97879ef552b166c57ed69074def90bddfd38195670e794d374232"
+    },
+    "test": {
+      "path": "artifacts/runs/e127-test-v1.json",
+      "sha256": "9e51c233e0c1351212dca323bf76df140c835e188719983a4d6316c1be794156"
+    }
+  },
+  "audit": {
+    "raw_traces": 6888,
+    "failures": [],
+    "pass": true
+  },
+  "models": [
+    {
+      "size": "S",
+      "learner": 1701,
+      "status": "complete",
+      "parameters": 73794,
+      "selected": {
+        "path": "artifacts/runs/e127-training-v1/S-1701-24.pt",
+        "sha256": "04d3f72a3e656dbaf2f0b63a128deef5194a8c9b4d1f0228973b8fcc0d1d3844",
+        "update": 24,
+        "config": {
+          "state_width": 128,
+          "action_width": 64
+        }
+      },
+      "seconds": 466.5909069168847,
+      "work_seconds": 434.9676675000228,
+      "episodes": 1536,
+      "transitions": 23662,
+      "optimizer_seconds": 3.0991546656005085,
+      "validation_curve": [
+        {
+          "update": 0,
+          "passed": true,
+          "summary": {
+            "n": 16,
+            "statuses": {
+              "clear": 11,
+              "defeat": 5
+            },
+            "clears": 11,
+            "mean_reward": 0.4874461206896552,
+            "mean_clear_hp": 52.90909090909091,
+            "steps": 218,
+            "engine_seconds": 41.04039995907806,
+            "inference_seconds": 0.11918502952903509,
+            "illegal_actions": 0
+          }
+        },
+        {
+          "update": 6,
+          "passed": true,
+          "summary": {
+            "n": 16,
+            "statuses": {
+              "clear": 15,
+              "defeat": 1
+            },
+            "clears": 15,
+            "mean_reward": 1.0896484375,
+            "mean_clear_hp": 73.73333333333333,
+            "steps": 212,
+            "engine_seconds": 39.601134332828224,
+            "inference_seconds": 0.13343533407896757,
+            "illegal_actions": 0
+          }
+        },
+        {
+          "update": 12,
+          "passed": true,
+          "summary": {
+            "n": 16,
+            "statuses": {
+              "clear": 15,
+              "defeat": 1
+            },
+            "clears": 15,
+            "mean_reward": 1.0857421875,
+            "mean_clear_hp": 72.4,
+            "steps": 236,
+            "engine_seconds": 40.963553291745484,
+            "inference_seconds": 0.12224313383921981,
+            "illegal_actions": 0
+          }
+        },
+        {
+          "update": 18,
+          "passed": true,
+          "summary": {
+            "n": 16,
+            "statuses": {
+              "clear": 15,
+              "defeat": 1
+            },
+            "clears": 15,
+            "mean_reward": 1.0896484375,
+            "mean_clear_hp": 73.73333333333333,
+            "steps": 229,
+            "engine_seconds": 41.848963749362156,
+            "inference_seconds": 0.10751591389998794,
+            "illegal_actions": 0
+          }
+        },
+        {
+          "update": 24,
+          "passed": true,
+          "summary": {
+            "n": 16,
+            "statuses": {
+              "clear": 15,
+              "defeat": 1
+            },
+            "clears": 15,
+            "mean_reward": 1.091015625,
+            "mean_clear_hp": 74.2,
+            "steps": 216,
+            "engine_seconds": 41.609349293867126,
+            "inference_seconds": 0.10114303743466735,
+            "illegal_actions": 0
+          }
+        }
+      ],
+      "test": {
+        "n": 24,
+        "statuses": {
+          "clear": 23,
+          "defeat": 1
+        },
+        "clears": 23,
+        "mean_reward": 1.132421875,
+        "mean_clear_hp": 68.6086956521739,
+        "steps": 310,
+        "engine_seconds": 61.983170583844185,
+        "inference_seconds": 0.17871754057705402,
+        "illegal_actions": 0
+      },
+      "behavior": {
+        "actions": {
+          "CARD.STRIKE_IRONCLAD": 127,
+          "CARD.DEFEND_IRONCLAD": 37,
+          "CARD.BATTLE_TRANCE": 2,
+          "end_turn": 66,
+          "CARD.BULLY": 2,
+          "CARD.BASH": 34,
+          "CARD.IRON_WAVE": 2,
+          "use_potion": 17,
+          "CARD.SPITE": 6,
+          "CARD.RAGE": 1,
+          "CARD.CASCADE": 2,
+          "CARD.PECK": 1,
+          "CARD.TREMBLE": 4,
+          "CARD.BODY_SLAM": 1,
+          "CARD.PERFECTED_STRIKE": 1,
+          "CARD.HEADBUTT": 1,
+          "select_cards": 1,
+          "CARD.RAMPAGE": 1,
+          "CARD.ANGER": 2,
+          "CARD.BLOODLETTING": 1,
+          "skip_select": 1
+        },
+        "decisions": {
+          "combat_play": 308,
+          "card_select": 2
+        },
+        "potions_remaining": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        "forward_and_selection_ms_per_step": 0.5765081954098517
+      },
+      "heldout_greedy_mc_value_mse": 0.03475326021076543
+    },
+    {
+      "size": "L",
+      "learner": 1701,
+      "status": "complete",
+      "parameters": 639234,
+      "selected": {
+        "path": "artifacts/runs/e127-training-v1/L-1701-24.pt",
+        "sha256": "bc310bcf3df545b40f459f0583c52273821ade0e885c12c7ab806529b2267cd5",
+        "update": 24,
+        "config": {
+          "state_width": 512,
+          "action_width": 256
+        }
+      },
+      "seconds": 480.2472606659867,
+      "work_seconds": 448.1252928741742,
+      "episodes": 1536,
+      "transitions": 24323,
+      "optimizer_seconds": 10.614130374742672,
+      "validation_curve": [
+        {
+          "update": 0,
+          "passed": true,
+          "summary": {
+            "n": 16,
+            "statuses": {
+              "defeat": 16
+            },
+            "clears": 0,
+            "mean_reward": -1.0,
+            "mean_clear_hp": null,
+            "steps": 234,
+            "engine_seconds": 43.10682008555159,
+            "inference_seconds": 0.17753716465085745,
+            "illegal_actions": 0
+          }
+        },
+        {
+          "update": 6,
+          "passed": true,
+          "summary": {
+            "n": 16,
+            "statuses": {
+              "clear": 15,
+              "defeat": 1
+            },
+            "clears": 15,
+            "mean_reward": 1.0939453125,
+            "mean_clear_hp": 75.2,
+            "steps": 191,
+            "engine_seconds": 39.39654241595417,
+            "inference_seconds": 0.13845066563226283,
+            "illegal_actions": 0
+          }
+        },
+        {
+          "update": 12,
+          "passed": true,
+          "summary": {
+            "n": 16,
+            "statuses": {
+              "clear": 15,
+              "defeat": 1
+            },
+            "clears": 15,
+            "mean_reward": 1.0927734375,
+            "mean_clear_hp": 74.8,
+            "steps": 191,
+            "engine_seconds": 40.24367662705481,
+            "inference_seconds": 0.1586144936736673,
+            "illegal_actions": 0
+          }
+        },
+        {
+          "update": 18,
+          "passed": true,
+          "summary": {
+            "n": 16,
+            "statuses": {
+              "clear": 16
+            },
+            "clears": 16,
+            "mean_reward": 1.2150704920977011,
+            "mean_clear_hp": 69.25,
+            "steps": 209,
+            "engine_seconds": 39.63869991549291,
+            "inference_seconds": 0.15518549201078713,
+            "illegal_actions": 0
+          }
+        },
+        {
+          "update": 24,
+          "passed": true,
+          "summary": {
+            "n": 16,
+            "statuses": {
+              "clear": 16
+            },
+            "clears": 16,
+            "mean_reward": 1.2212890625,
+            "mean_clear_hp": 71.25,
+            "steps": 227,
+            "engine_seconds": 41.90652758209035,
+            "inference_seconds": 0.16401908919215202,
+            "illegal_actions": 0
+          }
+        }
+      ],
+      "test": {
+        "n": 24,
+        "statuses": {
+          "clear": 22,
+          "defeat": 2
+        },
+        "clears": 22,
+        "mean_reward": 1.0513020833333333,
+        "mean_clear_hp": 72.5,
+        "steps": 365,
+        "engine_seconds": 62.971491834381595,
+        "inference_seconds": 0.2582814178895205,
+        "illegal_actions": 0
+      },
+      "behavior": {
+        "actions": {
+          "CARD.TAUNT": 1,
+          "CARD.STRIKE_IRONCLAD": 110,
+          "CARD.DEFEND_IRONCLAD": 77,
+          "CARD.BATTLE_TRANCE": 3,
+          "end_turn": 76,
+          "CARD.BULLY": 2,
+          "CARD.BASH": 35,
+          "CARD.MOLTEN_FIST": 1,
+          "use_potion": 17,
+          "CARD.SPITE": 8,
+          "CARD.RAGE": 1,
+          "CARD.WROUGHT_IN_WAR": 1,
+          "CARD.CASCADE": 3,
+          "CARD.RUPTURE": 1,
+          "CARD.PECK": 1,
+          "CARD.TREMBLE": 3,
+          "CARD.IRON_WAVE": 1,
+          "CARD.POMMEL_STRIKE": 1,
+          "CARD.PERFECTED_STRIKE": 1,
+          "CARD.ONE_TWO_PUNCH": 1,
+          "CARD.HEADBUTT": 3,
+          "CARD.RAMPAGE": 1,
+          "select_cards": 2,
+          "CARD.THUNDERCLAP": 1,
+          "CARD.ANGER": 4,
+          "CARD.NEOWS_FURY": 2,
+          "skip_select": 2,
+          "CARD.BLOODLETTING": 2,
+          "CARD.SWORD_BOOMERANG": 2,
+          "CARD.ASHEN_STRIKE": 1,
+          "CARD.FEAR": 1
+        },
+        "decisions": {
+          "combat_play": 361,
+          "card_select": 4
+        },
+        "potions_remaining": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        "forward_and_selection_ms_per_step": 0.7076203229849878
+      },
+      "heldout_greedy_mc_value_mse": 0.3464393375008126
+    },
+    {
+      "size": "S",
+      "learner": 1702,
+      "status": "complete",
+      "parameters": 73794,
+      "selected": {
+        "path": "artifacts/runs/e127-training-v1/S-1702-18.pt",
+        "sha256": "9a0accdea5f9db54f06541c33a70ae480643f4f8713664be8036c497733109ab",
+        "update": 18,
+        "config": {
+          "state_width": 128,
+          "action_width": 64
+        }
+      },
+      "seconds": 496.40907137515023,
+      "work_seconds": 460.49363733199425,
+      "episodes": 1536,
+      "transitions": 25647,
+      "optimizer_seconds": 3.535423954250291,
+      "validation_curve": [
+        {
+          "update": 0,
+          "passed": true,
+          "summary": {
+            "n": 16,
+            "statuses": {
+              "clear": 15,
+              "defeat": 1
+            },
+            "clears": 15,
+            "mean_reward": 1.0829539331896552,
+            "mean_clear_hp": 71.4,
+            "steps": 519,
+            "engine_seconds": 53.51599204191007,
+            "inference_seconds": 0.3946798339020461,
+            "illegal_actions": 0
+          }
+        },
+        {
+          "update": 6,
+          "passed": true,
+          "summary": {
+            "n": 16,
+            "statuses": {
+              "clear": 15,
+              "defeat": 1
+            },
+            "clears": 15,
+            "mean_reward": 1.088898617097701,
+            "mean_clear_hp": 73.46666666666667,
+            "steps": 314,
+            "engine_seconds": 45.275661209598184,
+            "inference_seconds": 0.1811667166184634,
+            "illegal_actions": 0
+          }
+        },
+        {
+          "update": 12,
+          "passed": true,
+          "summary": {
+            "n": 16,
+            "statuses": {
+              "clear": 15,
+              "defeat": 1
+            },
+            "clears": 15,
+            "mean_reward": 1.0826486170977012,
+            "mean_clear_hp": 71.33333333333333,
+            "steps": 316,
+            "engine_seconds": 45.73642478999682,
+            "inference_seconds": 0.1630140806082636,
+            "illegal_actions": 0
+          }
+        },
+        {
+          "update": 18,
+          "passed": true,
+          "summary": {
+            "n": 16,
+            "statuses": {
+              "clear": 16
+            },
+            "clears": 16,
+            "mean_reward": 1.2140625,
+            "mean_clear_hp": 68.9375,
+            "steps": 193,
+            "engine_seconds": 41.1323694169987,
+            "inference_seconds": 0.10257121152244508,
+            "illegal_actions": 0
+          }
+        },
+        {
+          "update": 24,
+          "passed": true,
+          "summary": {
+            "n": 16,
+            "statuses": {
+              "clear": 15,
+              "defeat": 1
+            },
+            "clears": 15,
+            "mean_reward": 1.08828125,
+            "mean_clear_hp": 73.26666666666667,
+            "steps": 224,
+            "engine_seconds": 40.78139212797396,
+            "inference_seconds": 0.11418066686019301,
+            "illegal_actions": 0
+          }
+        }
+      ],
+      "test": {
+        "n": 24,
+        "statuses": {
+          "clear": 23,
+          "defeat": 1
+        },
+        "clears": 23,
+        "mean_reward": 1.133984375,
+        "mean_clear_hp": 69.1304347826087,
+        "steps": 275,
+        "engine_seconds": 60.07141516637057,
+        "inference_seconds": 0.1364540362264961,
+        "illegal_actions": 0
+      },
+      "behavior": {
+        "actions": {
+          "CARD.STRIKE_IRONCLAD": 111,
+          "CARD.DEFEND_IRONCLAD": 20,
+          "CARD.BATTLE_TRANCE": 2,
+          "end_turn": 56,
+          "CARD.BULLY": 2,
+          "CARD.POMMEL_STRIKE": 2,
+          "CARD.BASH": 33,
+          "CARD.MOLTEN_FIST": 2,
+          "use_potion": 17,
+          "CARD.SPITE": 6,
+          "CARD.RAGE": 1,
+          "CARD.WROUGHT_IN_WAR": 1,
+          "CARD.CASCADE": 2,
+          "CARD.RUPTURE": 1,
+          "CARD.PECK": 1,
+          "CARD.IRON_WAVE": 2,
+          "CARD.PERFECTED_STRIKE": 2,
+          "CARD.HEADBUTT": 1,
+          "select_cards": 2,
+          "CARD.RAMPAGE": 1,
+          "CARD.NEOWS_FURY": 2,
+          "CARD.ANGER": 2,
+          "CARD.BLOODLETTING": 1,
+          "skip_select": 1,
+          "CARD.HAVOC": 1,
+          "CARD.SWORD_BOOMERANG": 1,
+          "CARD.BREAKTHROUGH": 1,
+          "CARD.TREMBLE": 1
+        },
+        "decisions": {
+          "combat_play": 272,
+          "card_select": 3
+        },
+        "potions_remaining": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        "forward_and_selection_ms_per_step": 0.49619649536907673
+      },
+      "heldout_greedy_mc_value_mse": 0.04216033465991884
+    },
+    {
+      "size": "L",
+      "learner": 1702,
+      "status": "complete",
+      "parameters": 639234,
+      "selected": {
+        "path": "artifacts/runs/e127-training-v1/L-1702-12.pt",
+        "sha256": "60df31d914efb2365f2901552a2b17961ecf9f51358f690573546cacc320eb40",
+        "update": 12,
+        "config": {
+          "state_width": 512,
+          "action_width": 256
+        }
+      },
+      "seconds": 499.2641210409347,
+      "work_seconds": 465.3588835396804,
+      "episodes": 1536,
+      "transitions": 27300,
+      "optimizer_seconds": 11.740917751332745,
+      "validation_curve": [
+        {
+          "update": 0,
+          "passed": true,
+          "summary": {
+            "n": 16,
+            "statuses": {
+              "clear": 13,
+              "defeat": 3
+            },
+            "clears": 13,
+            "mean_reward": 0.7691271551724138,
+            "mean_clear_hp": 57.15384615384615,
+            "steps": 183,
+            "engine_seconds": 39.58120970847085,
+            "inference_seconds": 0.15997066721320152,
+            "illegal_actions": 0
+          }
+        },
+        {
+          "update": 6,
+          "passed": true,
+          "summary": {
+            "n": 16,
+            "statuses": {
+              "clear": 16
+            },
+            "clears": 16,
+            "mean_reward": 1.211945492097701,
+            "mean_clear_hp": 68.25,
+            "steps": 282,
+            "engine_seconds": 43.14334779093042,
+            "inference_seconds": 0.2552490511443466,
+            "illegal_actions": 0
+          }
+        },
+        {
+          "update": 12,
+          "passed": true,
+          "summary": {
+            "n": 16,
+            "statuses": {
+              "clear": 16
+            },
+            "clears": 16,
+            "mean_reward": 1.2130859375,
+            "mean_clear_hp": 68.625,
+            "steps": 288,
+            "engine_seconds": 45.3930345387198,
+            "inference_seconds": 0.20885034184902906,
+            "illegal_actions": 0
+          }
+        },
+        {
+          "update": 18,
+          "passed": true,
+          "summary": {
+            "n": 16,
+            "statuses": {
+              "clear": 15,
+              "defeat": 1
+            },
+            "clears": 15,
+            "mean_reward": 1.087890625,
+            "mean_clear_hp": 73.13333333333334,
+            "steps": 365,
+            "engine_seconds": 47.53405454172753,
+            "inference_seconds": 0.29517517425119877,
+            "illegal_actions": 0
+          }
+        },
+        {
+          "update": 24,
+          "passed": true,
+          "summary": {
+            "n": 16,
+            "statuses": {
+              "clear": 15,
+              "defeat": 1
+            },
+            "clears": 15,
+            "mean_reward": 1.093781429597701,
+            "mean_clear_hp": 75.13333333333334,
+            "steps": 319,
+            "engine_seconds": 46.5263954999391,
+            "inference_seconds": 0.29447983857244253,
+            "illegal_actions": 0
+          }
+        }
+      ],
+      "test": {
+        "n": 24,
+        "statuses": {
+          "clear": 22,
+          "defeat": 2
+        },
+        "clears": 22,
+        "mean_reward": 1.045703125,
+        "mean_clear_hp": 70.54545454545455,
+        "steps": 358,
+        "engine_seconds": 64.3619580429513,
+        "inference_seconds": 0.35453950986266136,
+        "illegal_actions": 0
+      },
+      "behavior": {
+        "actions": {
+          "CARD.DEFEND_IRONCLAD": 77,
+          "CARD.TAUNT": 2,
+          "CARD.STRIKE_IRONCLAD": 107,
+          "CARD.BATTLE_TRANCE": 3,
+          "end_turn": 76,
+          "CARD.BULLY": 2,
+          "CARD.SECOND_WIND": 1,
+          "CARD.BASH": 40,
+          "use_potion": 17,
+          "CARD.RAGE": 1,
+          "CARD.SPITE": 7,
+          "CARD.CASCADE": 2,
+          "CARD.PECK": 1,
+          "CARD.TWIN_STRIKE": 2,
+          "CARD.TREMBLE": 2,
+          "CARD.ONE_TWO_PUNCH": 2,
+          "CARD.ARMAMENTS": 2,
+          "select_cards": 3,
+          "CARD.RAMPAGE": 1,
+          "CARD.NEOWS_FURY": 2,
+          "CARD.ANGER": 4,
+          "CARD.BLOODLETTING": 1,
+          "CARD.BLOOD_WALL": 1,
+          "CARD.HAVOC": 2
+        },
+        "decisions": {
+          "combat_play": 355,
+          "card_select": 3
+        },
+        "potions_remaining": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        "forward_and_selection_ms_per_step": 0.990333826432015
+      },
+      "heldout_greedy_mc_value_mse": 0.4123671538272388
+    }
+  ],
+  "comparisons": {
+    "L-1701_vs_planner": {
+      "clear_delta": -1,
+      "hp_equivalent_deltas": [
+        -3,
+        0,
+        -5,
+        0,
+        -10,
+        0,
+        0,
+        0,
+        0,
+        -13,
+        -2,
+        0,
+        0,
+        0,
+        -1,
+        -5,
+        0,
+        -15,
+        -5,
+        5,
+        -8,
+        0,
+        0,
+        0
+      ],
+      "median_hp_delta": 0.0,
+      "mean_hp_delta": -2.5833333333333335
+    },
+    "L-1701_vs_attack_priority": {
+      "clear_delta": 1,
+      "hp_equivalent_deltas": [
+        13,
+        0,
+        4,
+        0,
+        0,
+        2,
+        0,
+        5,
+        0,
+        0,
+        9,
+        2,
+        2,
+        4,
+        11,
+        3,
+        1,
+        0,
+        11,
+        10,
+        -5,
+        9,
+        7,
+        0
+      ],
+      "median_hp_delta": 2.0,
+      "mean_hp_delta": 3.6666666666666665
+    },
+    "L-1701_vs_S-1701": {
+      "clear_delta": -1,
+      "hp_equivalent_deltas": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        13,
+        -11,
+        0,
+        5,
+        5,
+        4,
+        1,
+        -5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        0,
+        0
+      ],
+      "median_hp_delta": 0.0,
+      "mean_hp_delta": 0.7083333333333334
+    },
+    "L-1702_vs_planner": {
+      "clear_delta": -1,
+      "hp_equivalent_deltas": [
+        -4,
+        0,
+        -5,
+        -7,
+        -12,
+        0,
+        -9,
+        0,
+        -8,
+        -13,
+        -2,
+        -17,
+        -2,
+        -4,
+        -2,
+        0,
+        0,
+        -9,
+        -5,
+        4,
+        0,
+        -10,
+        0,
+        0
+      ],
+      "median_hp_delta": -3.0,
+      "mean_hp_delta": -4.375
+    },
+    "L-1702_vs_attack_priority": {
+      "clear_delta": 1,
+      "hp_equivalent_deltas": [
+        12,
+        0,
+        4,
+        -7,
+        -2,
+        2,
+        -9,
+        5,
+        -8,
+        0,
+        9,
+        -15,
+        0,
+        0,
+        10,
+        8,
+        1,
+        6,
+        11,
+        9,
+        3,
+        -1,
+        7,
+        0
+      ],
+      "median_hp_delta": 1.5,
+      "mean_hp_delta": 1.875
+    },
+    "L-1702_vs_S-1702": {
+      "clear_delta": -1,
+      "hp_equivalent_deltas": [
+        4,
+        0,
+        0,
+        -7,
+        -2,
+        2,
+        -9,
+        0,
+        -8,
+        -11,
+        0,
+        -12,
+        -2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        9,
+        4,
+        -10,
+        4,
+        0
+      ],
+      "median_hp_delta": 0.0,
+      "mean_hp_delta": -1.5833333333333333
+    }
+  },
+  "total_training_episodes": 6144,
+  "total_training_transitions": 100932,
+  "training_wall_seconds": 1942.5113599989563,
+  "optimizer_seconds": 28.989626745926216,
+  "heldout_seeds": 24,
+  "scale_gate": false,
+  "capacity_gate": false,
+  "selected_policy_replays": 96,
+  "notes": [
+    "24 shared held-out game seeds, not 96 independent seeds.",
+    "Training has one battle episode per seed/update; entry ordinal cycles deterministically.",
+    "Policy/value loss uses on-policy GAE targets; evaluation MSE uses greedy terminal returns.",
+    "Endpoint HP-equivalent counts terminal defeats as zero; censored pairs are never scored.",
+    "No full-run, high-ascension or multicharacter conclusion.",
+    "No external model API calls."
+  ]
+}
