@@ -1,7 +1,10 @@
 """Synthetic math/optimizer checks, never battle-win evidence."""
 import unittest
-import numpy as np
-import torch
+try:
+    import numpy as np
+    import torch
+except ImportError as exc:
+    raise unittest.SkipTest('Optional E125 PyTorch/NumPy dependencies are not installed') from exc
 
 from rsi.ppo import (ActorCritic, STATE_DIM, ACTION_DIM, MAX_ACTIONS, HP,
                      advantages, clipped_policy_loss, encode, padded, update)
