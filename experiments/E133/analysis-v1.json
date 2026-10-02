@@ -1,0 +1,5274 @@
+{
+  "sources": {
+    "bank": {
+      "path": "experiments/E133/fixtures-v2.json",
+      "sha256": "8c0208d7b491b5c11077d095dc31e4878eb930df574f394a8ff7a93fd45991cb"
+    },
+    "failed_training": {
+      "path": "experiments/E133/training-v1.json",
+      "sha256": "38d5652d3668f215c0ce4c149add9c4defb797cc9ae166b96f37939ce15d8231"
+    },
+    "training": {
+      "path": "experiments/E133/training-v2.json",
+      "sha256": "2544b0b528b1bad4fdcc66e61f6bf4780cc233af048c587a165f75612216fe50"
+    },
+    "test": {
+      "path": "experiments/E133/test-v1.json",
+      "sha256": "a6e674dbde279eb8c546c31ef9035e94c4d8162b8d5e9d9232c1f6c62cfebde2"
+    },
+    "train_certificate": {
+      "path": "experiments/E134/recovery-train-v2.json",
+      "sha256": "b16485b3357b42ffba27438bd60fd11153cdd70d247aff15d4624b2aea1f642e"
+    },
+    "test_certificate": {
+      "path": "experiments/E134/recovery-test-v1.json",
+      "sha256": "93e86568e3355c0fe6d09ca5b7068b6a80d201f9e2d127c3fde2044c2bab227e"
+    }
+  },
+  "models": [
+    {
+      "learner": 1701,
+      "parameters": 73794,
+      "effective_episodes": 6144,
+      "optimized_transitions": 99558,
+      "rejected_batch_attempts": 192,
+      "reset_retry_attempts": 0,
+      "optimizer_seconds": 16.456715044099838,
+      "work_seconds": 1818.5518450834788,
+      "training_validation_seconds": 1897.5774199590087,
+      "short_selected": {
+        "path": "artifacts/runs/e133-training-v1/S-1701-08.pt",
+        "sha256": "1d536425001654fc4001a0ee60b0c873a2485795b26483223e95c01555ab14a8",
+        "update": 8,
+        "config": {
+          "state_width": 128,
+          "action_width": 64
+        }
+      },
+      "long_selected": {
+        "path": "artifacts/runs/e133-training-v2/S-1701-24.pt",
+        "sha256": "0b7acb1a4937222978279e784fb13e11289b876c6f26e95d11ae51db983d4c3c",
+        "update": 24,
+        "config": {
+          "state_width": 128,
+          "action_width": 64
+        }
+      },
+      "validation_curve": [
+        {
+          "update": 0,
+          "passed": true,
+          "panels": {
+            "early": {
+              "n": 24,
+              "statuses": {
+                "clear": 14,
+                "defeat": 10
+              },
+              "clears": 14,
+              "mean_reward": 0.2600546588827839,
+              "mean_clear_hp": 52.214285714285715,
+              "steps": 303,
+              "engine_seconds": 67.04419808718376,
+              "inference_seconds": 0.2110609570518136,
+              "illegal_actions": 0
+            },
+            "challenging": {
+              "n": 24,
+              "statuses": {
+                "defeat": 21,
+                "clear": 3
+              },
+              "clears": 3,
+              "mean_reward": -0.7438347138554217,
+              "mean_clear_hp": 16,
+              "steps": 297,
+              "engine_seconds": 56.14032612298615,
+              "inference_seconds": 0.18218379188328981,
+              "illegal_actions": 0
+            }
+          },
+          "by_difficulty": {
+            "early:A0": {
+              "n": 8,
+              "statuses": {
+                "clear": 4,
+                "defeat": 4
+              },
+              "clears": 4,
+              "mean_reward": 0.10390625,
+              "mean_clear_hp": 66.5,
+              "steps": 100,
+              "engine_seconds": 20.89813666907139,
+              "inference_seconds": 0.0692820898257196,
+              "illegal_actions": 0
+            },
+            "early:A5": {
+              "n": 8,
+              "statuses": {
+                "clear": 7,
+                "defeat": 1
+              },
+              "clears": 7,
+              "mean_reward": 0.8775755494505495,
+              "mean_clear_hp": 47.57142857142857,
+              "steps": 99,
+              "engine_seconds": 22.912756458157673,
+              "inference_seconds": 0.06457407982088625,
+              "illegal_actions": 0
+            },
+            "early:A10": {
+              "n": 8,
+              "statuses": {
+                "defeat": 5,
+                "clear": 3
+              },
+              "clears": 3,
+              "mean_reward": -0.2013178228021978,
+              "mean_clear_hp": 44,
+              "steps": 104,
+              "engine_seconds": 23.233304959954694,
+              "inference_seconds": 0.07720478740520775,
+              "illegal_actions": 0
+            },
+            "challenging:A0": {
+              "n": 8,
+              "statuses": {
+                "defeat": 6,
+                "clear": 2
+              },
+              "clears": 2,
+              "mean_reward": -0.48828125,
+              "mean_clear_hp": 15,
+              "steps": 109,
+              "engine_seconds": 19.965469707734883,
+              "inference_seconds": 0.0588477891869843,
+              "illegal_actions": 0
+            },
+            "challenging:A5": {
+              "n": 8,
+              "statuses": {
+                "defeat": 7,
+                "clear": 1
+              },
+              "clears": 1,
+              "mean_reward": -0.7432228915662651,
+              "mean_clear_hp": 18,
+              "steps": 109,
+              "engine_seconds": 18.674903582781553,
+              "inference_seconds": 0.07957288576290011,
+              "illegal_actions": 0
+            },
+            "challenging:A10": {
+              "n": 8,
+              "statuses": {
+                "defeat": 8
+              },
+              "clears": 0,
+              "mean_reward": -1.0,
+              "mean_clear_hp": null,
+              "steps": 79,
+              "engine_seconds": 17.499952832469717,
+              "inference_seconds": 0.0437631169334054,
+              "illegal_actions": 0
+            }
+          }
+        },
+        {
+          "update": 8,
+          "passed": true,
+          "panels": {
+            "early": {
+              "n": 24,
+              "statuses": {
+                "clear": 24
+              },
+              "clears": 24,
+              "mean_reward": 1.1954934607937244,
+              "mean_clear_hp": 63.375,
+              "steps": 322,
+              "engine_seconds": 55.113631792599335,
+              "inference_seconds": 0.2033372458536178,
+              "illegal_actions": 0
+            },
+            "challenging": {
+              "n": 24,
+              "statuses": {
+                "clear": 16,
+                "defeat": 8
+              },
+              "clears": 16,
+              "mean_reward": 0.39165127198353855,
+              "mean_clear_hp": 28.4375,
+              "steps": 500,
+              "engine_seconds": 55.10635242029093,
+              "inference_seconds": 0.35076755518093705,
+              "illegal_actions": 0
+            }
+          },
+          "by_difficulty": {
+            "early:A0": {
+              "n": 8,
+              "statuses": {
+                "clear": 8
+              },
+              "clears": 8,
+              "mean_reward": 1.23203125,
+              "mean_clear_hp": 74.25,
+              "steps": 91,
+              "engine_seconds": 17.265261667314917,
+              "inference_seconds": 0.051942453952506185,
+              "illegal_actions": 0
+            },
+            "early:A5": {
+              "n": 8,
+              "statuses": {
+                "clear": 8
+              },
+              "clears": 8,
+              "mean_reward": 1.189596797216338,
+              "mean_clear_hp": 62.125,
+              "steps": 103,
+              "engine_seconds": 18.512196749914438,
+              "inference_seconds": 0.06764375255443156,
+              "illegal_actions": 0
+            },
+            "early:A10": {
+              "n": 8,
+              "statuses": {
+                "clear": 8
+              },
+              "clears": 8,
+              "mean_reward": 1.1648523351648352,
+              "mean_clear_hp": 53.75,
+              "steps": 128,
+              "engine_seconds": 19.33617337536998,
+              "inference_seconds": 0.08375103934668005,
+              "illegal_actions": 0
+            },
+            "challenging:A0": {
+              "n": 8,
+              "statuses": {
+                "clear": 7,
+                "defeat": 1
+              },
+              "clears": 7,
+              "mean_reward": 0.84453125,
+              "mean_clear_hp": 34.57142857142857,
+              "steps": 168,
+              "engine_seconds": 18.66729583614506,
+              "inference_seconds": 0.1164343401324004,
+              "illegal_actions": 0
+            },
+            "challenging:A5": {
+              "n": 8,
+              "statuses": {
+                "clear": 6,
+                "defeat": 2
+              },
+              "clears": 6,
+              "mean_reward": 0.5608913159506157,
+              "mean_clear_hp": 27.166666666666668,
+              "steps": 190,
+              "engine_seconds": 19.03447679243982,
+              "inference_seconds": 0.13248358899727464,
+              "illegal_actions": 0
+            },
+            "challenging:A10": {
+              "n": 8,
+              "statuses": {
+                "defeat": 5,
+                "clear": 3
+              },
+              "clears": 3,
+              "mean_reward": -0.23046875,
+              "mean_clear_hp": 16.666666666666668,
+              "steps": 142,
+              "engine_seconds": 17.404579791706055,
+              "inference_seconds": 0.10184962605126202,
+              "illegal_actions": 0
+            }
+          }
+        },
+        {
+          "update": 16,
+          "passed": true,
+          "panels": {
+            "early": {
+              "n": 24,
+              "statuses": {
+                "clear": 24
+              },
+              "clears": 24,
+              "mean_reward": 1.1990313072344323,
+              "mean_clear_hp": 64.375,
+              "steps": 277,
+              "engine_seconds": 66.57428683433682,
+              "inference_seconds": 0.18441765289753675,
+              "illegal_actions": 0
+            },
+            "challenging": {
+              "n": 24,
+              "statuses": {
+                "clear": 17,
+                "defeat": 7
+              },
+              "clears": 17,
+              "mean_reward": 0.4745625013791429,
+              "mean_clear_hp": 26.58823529411765,
+              "steps": 481,
+              "engine_seconds": 69.26884720730595,
+              "inference_seconds": 0.3128446340560913,
+              "illegal_actions": 0
+            }
+          },
+          "by_difficulty": {
+            "early:A0": {
+              "n": 8,
+              "statuses": {
+                "clear": 8
+              },
+              "clears": 8,
+              "mean_reward": 1.23046875,
+              "mean_clear_hp": 73.75,
+              "steps": 82,
+              "engine_seconds": 20.309439125005156,
+              "inference_seconds": 0.06206429214216769,
+              "illegal_actions": 0
+            },
+            "early:A5": {
+              "n": 8,
+              "statuses": {
+                "clear": 8
+              },
+              "clears": 8,
+              "mean_reward": 1.1937242445054945,
+              "mean_clear_hp": 63.125,
+              "steps": 89,
+              "engine_seconds": 23.254551000893116,
+              "inference_seconds": 0.05690520047210157,
+              "illegal_actions": 0
+            },
+            "early:A10": {
+              "n": 8,
+              "statuses": {
+                "clear": 8
+              },
+              "clears": 8,
+              "mean_reward": 1.1729009271978021,
+              "mean_clear_hp": 56.25,
+              "steps": 106,
+              "engine_seconds": 23.010296708438545,
+              "inference_seconds": 0.0654481602832675,
+              "illegal_actions": 0
+            },
+            "challenging:A0": {
+              "n": 8,
+              "statuses": {
+                "clear": 7,
+                "defeat": 1
+              },
+              "clears": 7,
+              "mean_reward": 0.8355468749999999,
+              "mean_clear_hp": 31.285714285714285,
+              "steps": 164,
+              "engine_seconds": 23.650754707399756,
+              "inference_seconds": 0.10731842112727463,
+              "illegal_actions": 0
+            },
+            "challenging:A5": {
+              "n": 8,
+              "statuses": {
+                "clear": 7,
+                "defeat": 1
+              },
+              "clears": 7,
+              "mean_reward": 0.8135312541374288,
+              "mean_clear_hp": 24.285714285714285,
+              "steps": 173,
+              "engine_seconds": 23.80379799893126,
+              "inference_seconds": 0.11023267381824553,
+              "illegal_actions": 0
+            },
+            "challenging:A10": {
+              "n": 8,
+              "statuses": {
+                "defeat": 5,
+                "clear": 3
+              },
+              "clears": 3,
+              "mean_reward": -0.225390625,
+              "mean_clear_hp": 21,
+              "steps": 144,
+              "engine_seconds": 21.81429450097494,
+              "inference_seconds": 0.09529353911057115,
+              "illegal_actions": 0
+            }
+          }
+        },
+        {
+          "update": 24,
+          "passed": true,
+          "panels": {
+            "early": {
+              "n": 24,
+              "statuses": {
+                "clear": 24
+              },
+              "clears": 24,
+              "mean_reward": 1.2002031822344321,
+              "mean_clear_hp": 64.75,
+              "steps": 274,
+              "engine_seconds": 47.058998082298785,
+              "inference_seconds": 0.1497729632537812,
+              "illegal_actions": 0
+            },
+            "challenging": {
+              "n": 24,
+              "statuses": {
+                "clear": 17,
+                "defeat": 7
+              },
+              "clears": 17,
+              "mean_reward": 0.478334250463392,
+              "mean_clear_hp": 28.235294117647058,
+              "steps": 475,
+              "engine_seconds": 51.91082716919482,
+              "inference_seconds": 0.28884242894127965,
+              "illegal_actions": 0
+            }
+          },
+          "by_difficulty": {
+            "early:A0": {
+              "n": 8,
+              "statuses": {
+                "clear": 8
+              },
+              "clears": 8,
+              "mean_reward": 1.231640625,
+              "mean_clear_hp": 74.125,
+              "steps": 80,
+              "engine_seconds": 15.25551308458671,
+              "inference_seconds": 0.043820958118885756,
+              "illegal_actions": 0
+            },
+            "early:A5": {
+              "n": 8,
+              "statuses": {
+                "clear": 8
+              },
+              "clears": 8,
+              "mean_reward": 1.1956773695054945,
+              "mean_clear_hp": 63.75,
+              "steps": 91,
+              "engine_seconds": 16.013904456747696,
+              "inference_seconds": 0.05262800445780158,
+              "illegal_actions": 0
+            },
+            "early:A10": {
+              "n": 8,
+              "statuses": {
+                "clear": 8
+              },
+              "clears": 8,
+              "mean_reward": 1.1732915521978022,
+              "mean_clear_hp": 56.375,
+              "steps": 103,
+              "engine_seconds": 15.78958054096438,
+              "inference_seconds": 0.053324000677093863,
+              "illegal_actions": 0
+            },
+            "challenging:A0": {
+              "n": 8,
+              "statuses": {
+                "clear": 7,
+                "defeat": 1
+              },
+              "clears": 7,
+              "mean_reward": 0.8453124999999999,
+              "mean_clear_hp": 34.857142857142854,
+              "steps": 160,
+              "engine_seconds": 17.67562512587756,
+              "inference_seconds": 0.10569346323609352,
+              "illegal_actions": 0
+            },
+            "challenging:A5": {
+              "n": 8,
+              "statuses": {
+                "clear": 7,
+                "defeat": 1
+              },
+              "clears": 7,
+              "mean_reward": 0.8135183763901761,
+              "mean_clear_hp": 24.142857142857142,
+              "steps": 173,
+              "engine_seconds": 17.728987333364785,
+              "inference_seconds": 0.09666979708708823,
+              "illegal_actions": 0
+            },
+            "challenging:A10": {
+              "n": 8,
+              "statuses": {
+                "defeat": 5,
+                "clear": 3
+              },
+              "clears": 3,
+              "mean_reward": -0.223828125,
+              "mean_clear_hp": 22.333333333333332,
+              "steps": 142,
+              "engine_seconds": 16.506214709952474,
+              "inference_seconds": 0.0864791686180979,
+              "illegal_actions": 0
+            }
+          }
+        },
+        {
+          "update": 32,
+          "passed": true,
+          "panels": {
+            "early": {
+              "n": 24,
+              "statuses": {
+                "clear": 24
+              },
+              "clears": 24,
+              "mean_reward": 1.1970781822344323,
+              "mean_clear_hp": 63.75,
+              "steps": 278,
+              "engine_seconds": 54.02515854220837,
+              "inference_seconds": 0.14284083666279912,
+              "illegal_actions": 0
+            },
+            "challenging": {
+              "n": 24,
+              "statuses": {
+                "clear": 16,
+                "defeat": 8
+              },
+              "clears": 16,
+              "mean_reward": 0.3946102921300587,
+              "mean_clear_hp": 29.8125,
+              "steps": 481,
+              "engine_seconds": 56.91012496105395,
+              "inference_seconds": 0.2952060855459422,
+              "illegal_actions": 0
+            }
+          },
+          "by_difficulty": {
+            "early:A0": {
+              "n": 8,
+              "statuses": {
+                "clear": 8
+              },
+              "clears": 8,
+              "mean_reward": 1.231640625,
+              "mean_clear_hp": 74.125,
+              "steps": 80,
+              "engine_seconds": 17.4372686247807,
+              "inference_seconds": 0.043127502547577024,
+              "illegal_actions": 0
+            },
+            "early:A5": {
+              "n": 8,
+              "statuses": {
+                "clear": 8
+              },
+              "clears": 8,
+              "mean_reward": 1.1937242445054945,
+              "mean_clear_hp": 63.125,
+              "steps": 90,
+              "engine_seconds": 19.85340120922774,
+              "inference_seconds": 0.04471191926859319,
+              "illegal_actions": 0
+            },
+            "early:A10": {
+              "n": 8,
+              "statuses": {
+                "clear": 8
+              },
+              "clears": 8,
+              "mean_reward": 1.165869677197802,
+              "mean_clear_hp": 54,
+              "steps": 108,
+              "engine_seconds": 16.734488708199933,
+              "inference_seconds": 0.055001414846628904,
+              "illegal_actions": 0
+            },
+            "challenging:A0": {
+              "n": 8,
+              "statuses": {
+                "clear": 7,
+                "defeat": 1
+              },
+              "clears": 7,
+              "mean_reward": 0.846484375,
+              "mean_clear_hp": 35.285714285714285,
+              "steps": 159,
+              "engine_seconds": 19.245931417681277,
+              "inference_seconds": 0.09881054167635739,
+              "illegal_actions": 0
+            },
+            "challenging:A5": {
+              "n": 8,
+              "statuses": {
+                "clear": 6,
+                "defeat": 2
+              },
+              "clears": 6,
+              "mean_reward": 0.5600027513901761,
+              "mean_clear_hp": 26.666666666666668,
+              "steps": 179,
+              "engine_seconds": 19.599980250233784,
+              "inference_seconds": 0.10644783871248364,
+              "illegal_actions": 0
+            },
+            "challenging:A10": {
+              "n": 8,
+              "statuses": {
+                "defeat": 5,
+                "clear": 3
+              },
+              "clears": 3,
+              "mean_reward": -0.22265625,
+              "mean_clear_hp": 23.333333333333332,
+              "steps": 143,
+              "engine_seconds": 18.06421329313889,
+              "inference_seconds": 0.08994770515710115,
+              "illegal_actions": 0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "learner": 1702,
+      "parameters": 73794,
+      "effective_episodes": 6144,
+      "optimized_transitions": 96887,
+      "rejected_batch_attempts": 192,
+      "reset_retry_attempts": 0,
+      "optimizer_seconds": 15.41032112413086,
+      "work_seconds": 1753.7947759162635,
+      "training_validation_seconds": 1827.9243889986537,
+      "short_selected": {
+        "path": "artifacts/runs/e133-training-v2/S-1702-08.pt",
+        "sha256": "dbc574b0282d536d89f2c02e26711c29b7d5f2a5ef48476721a11cfc8591d7df",
+        "update": 8,
+        "config": {
+          "state_width": 128,
+          "action_width": 64
+        }
+      },
+      "long_selected": {
+        "path": "artifacts/runs/e133-training-v2/S-1702-32.pt",
+        "sha256": "1b8bac0f472944ea1987e2ff07a94153ce298e301c930af2ce4b28eb2ad205b8",
+        "update": 32,
+        "config": {
+          "state_width": 128,
+          "action_width": 64
+        }
+      },
+      "validation_curve": [
+        {
+          "update": 0,
+          "passed": true,
+          "panels": {
+            "early": {
+              "n": 24,
+              "statuses": {
+                "clear": 21,
+                "defeat": 3
+              },
+              "clears": 21,
+              "mean_reward": 0.9185825892857142,
+              "mean_clear_hp": 62.476190476190474,
+              "steps": 743,
+              "engine_seconds": 64.28050887468271,
+              "inference_seconds": 0.5706613489892334,
+              "illegal_actions": 0
+            },
+            "challenging": {
+              "n": 24,
+              "statuses": {
+                "clear": 6,
+                "defeat": 18
+              },
+              "clears": 6,
+              "mean_reward": -0.4730440132783883,
+              "mean_clear_hp": 35.833333333333336,
+              "steps": 619,
+              "engine_seconds": 57.118751041125506,
+              "inference_seconds": 0.4706221765372902,
+              "illegal_actions": 0
+            }
+          },
+          "by_difficulty": {
+            "early:A0": {
+              "n": 8,
+              "statuses": {
+                "clear": 8
+              },
+              "clears": 8,
+              "mean_reward": 1.221484375,
+              "mean_clear_hp": 70.875,
+              "steps": 254,
+              "engine_seconds": 21.880941041046754,
+              "inference_seconds": 0.18197681987658143,
+              "illegal_actions": 0
+            },
+            "early:A5": {
+              "n": 8,
+              "statuses": {
+                "clear": 7,
+                "defeat": 1
+              },
+              "clears": 7,
+              "mean_reward": 0.9130666208791209,
+              "mean_clear_hp": 61,
+              "steps": 206,
+              "engine_seconds": 20.429357583634555,
+              "inference_seconds": 0.141703283181414,
+              "illegal_actions": 0
+            },
+            "early:A10": {
+              "n": 8,
+              "statuses": {
+                "defeat": 2,
+                "clear": 6
+              },
+              "clears": 6,
+              "mean_reward": 0.621196771978022,
+              "mean_clear_hp": 53,
+              "steps": 283,
+              "engine_seconds": 21.9702102500014,
+              "inference_seconds": 0.24698124593123794,
+              "illegal_actions": 0
+            },
+            "challenging:A0": {
+              "n": 8,
+              "statuses": {
+                "clear": 3,
+                "defeat": 5
+              },
+              "clears": 3,
+              "mean_reward": -0.20859375,
+              "mean_clear_hp": 35.333333333333336,
+              "steps": 211,
+              "engine_seconds": 19.343129667220637,
+              "inference_seconds": 0.16294013219885528,
+              "illegal_actions": 0
+            },
+            "challenging:A5": {
+              "n": 8,
+              "statuses": {
+                "clear": 2,
+                "defeat": 6
+              },
+              "clears": 2,
+              "mean_reward": -0.4730382898351648,
+              "mean_clear_hp": 38.5,
+              "steps": 225,
+              "engine_seconds": 19.556057666661218,
+              "inference_seconds": 0.16542288451455534,
+              "illegal_actions": 0
+            },
+            "challenging:A10": {
+              "n": 8,
+              "statuses": {
+                "defeat": 7,
+                "clear": 1
+              },
+              "clears": 1,
+              "mean_reward": -0.7375,
+              "mean_clear_hp": 32,
+              "steps": 183,
+              "engine_seconds": 18.21956370724365,
+              "inference_seconds": 0.1422591598238796,
+              "illegal_actions": 0
+            }
+          }
+        },
+        {
+          "update": 8,
+          "passed": true,
+          "panels": {
+            "early": {
+              "n": 24,
+              "statuses": {
+                "clear": 24
+              },
+              "clears": 24,
+              "mean_reward": 1.1964271405677656,
+              "mean_clear_hp": 63.541666666666664,
+              "steps": 270,
+              "engine_seconds": 52.511992833111435,
+              "inference_seconds": 0.13973112613894045,
+              "illegal_actions": 0
+            },
+            "challenging": {
+              "n": 24,
+              "statuses": {
+                "clear": 14,
+                "defeat": 10
+              },
+              "clears": 14,
+              "mean_reward": 0.22086060588507878,
+              "mean_clear_hp": 30.214285714285715,
+              "steps": 455,
+              "engine_seconds": 52.79217299912125,
+              "inference_seconds": 0.2729665688239038,
+              "illegal_actions": 0
+            }
+          },
+          "by_difficulty": {
+            "early:A0": {
+              "n": 8,
+              "statuses": {
+                "clear": 8
+              },
+              "clears": 8,
+              "mean_reward": 1.230078125,
+              "mean_clear_hp": 73.625,
+              "steps": 81,
+              "engine_seconds": 19.06199412466958,
+              "inference_seconds": 0.043841453501954675,
+              "illegal_actions": 0
+            },
+            "early:A5": {
+              "n": 8,
+              "statuses": {
+                "clear": 8
+              },
+              "clears": 8,
+              "mean_reward": 1.1937242445054945,
+              "mean_clear_hp": 63.125,
+              "steps": 88,
+              "engine_seconds": 16.923178125172853,
+              "inference_seconds": 0.044926383066922426,
+              "illegal_actions": 0
+            },
+            "early:A10": {
+              "n": 8,
+              "statuses": {
+                "clear": 8
+              },
+              "clears": 8,
+              "mean_reward": 1.1654790521978022,
+              "mean_clear_hp": 53.875,
+              "steps": 101,
+              "engine_seconds": 16.526820583269,
+              "inference_seconds": 0.05096328957006335,
+              "illegal_actions": 0
+            },
+            "challenging:A0": {
+              "n": 8,
+              "statuses": {
+                "clear": 7,
+                "defeat": 1
+              },
+              "clears": 7,
+              "mean_reward": 0.8359375,
+              "mean_clear_hp": 31.428571428571427,
+              "steps": 156,
+              "engine_seconds": 17.945283874869347,
+              "inference_seconds": 0.1023233758751303,
+              "illegal_actions": 0
+            },
+            "challenging:A5": {
+              "n": 8,
+              "statuses": {
+                "clear": 4,
+                "defeat": 4
+              },
+              "clears": 4,
+              "mean_reward": 0.04578494265523633,
+              "mean_clear_hp": 31,
+              "steps": 160,
+              "engine_seconds": 17.94754441641271,
+              "inference_seconds": 0.083531079813838,
+              "illegal_actions": 0
+            },
+            "challenging:A10": {
+              "n": 8,
+              "statuses": {
+                "defeat": 5,
+                "clear": 3
+              },
+              "clears": 3,
+              "mean_reward": -0.219140625,
+              "mean_clear_hp": 26.333333333333332,
+              "steps": 139,
+              "engine_seconds": 16.89934470783919,
+              "inference_seconds": 0.0871121131349355,
+              "illegal_actions": 0
+            }
+          }
+        },
+        {
+          "update": 16,
+          "passed": true,
+          "panels": {
+            "early": {
+              "n": 24,
+              "statuses": {
+                "clear": 24
+              },
+              "clears": 24,
+              "mean_reward": 1.2000658195970695,
+              "mean_clear_hp": 64.79166666666667,
+              "steps": 272,
+              "engine_seconds": 48.83674658625387,
+              "inference_seconds": 0.1453293825034052,
+              "illegal_actions": 0
+            },
+            "challenging": {
+              "n": 24,
+              "statuses": {
+                "clear": 17,
+                "defeat": 7
+              },
+              "clears": 17,
+              "mean_reward": 0.4781568237234653,
+              "mean_clear_hp": 28.176470588235293,
+              "steps": 465,
+              "engine_seconds": 52.931613790336996,
+              "inference_seconds": 0.2738712152931839,
+              "illegal_actions": 0
+            }
+          },
+          "by_difficulty": {
+            "early:A0": {
+              "n": 8,
+              "statuses": {
+                "clear": 8
+              },
+              "clears": 8,
+              "mean_reward": 1.228125,
+              "mean_clear_hp": 73,
+              "steps": 81,
+              "engine_seconds": 14.344809332629666,
+              "inference_seconds": 0.04754775669425726,
+              "illegal_actions": 0
+            },
+            "early:A5": {
+              "n": 8,
+              "statuses": {
+                "clear": 8
+              },
+              "clears": 8,
+              "mean_reward": 1.195097870879121,
+              "mean_clear_hp": 63.625,
+              "steps": 90,
+              "engine_seconds": 16.578674918739125,
+              "inference_seconds": 0.04907271359115839,
+              "illegal_actions": 0
+            },
+            "early:A10": {
+              "n": 8,
+              "statuses": {
+                "clear": 8
+              },
+              "clears": 8,
+              "mean_reward": 1.1769745879120879,
+              "mean_clear_hp": 57.75,
+              "steps": 101,
+              "engine_seconds": 17.913262334885076,
+              "inference_seconds": 0.048708912217989564,
+              "illegal_actions": 0
+            },
+            "challenging:A0": {
+              "n": 8,
+              "statuses": {
+                "clear": 7,
+                "defeat": 1
+              },
+              "clears": 7,
+              "mean_reward": 0.85546875,
+              "mean_clear_hp": 38.57142857142857,
+              "steps": 143,
+              "engine_seconds": 17.4148293340113,
+              "inference_seconds": 0.08914704760536551,
+              "illegal_actions": 0
+            },
+            "challenging:A5": {
+              "n": 8,
+              "statuses": {
+                "clear": 8
+              },
+              "clears": 8,
+              "mean_reward": 1.063376721170396,
+              "mean_clear_hp": 21.125,
+              "steps": 181,
+              "engine_seconds": 18.363820624537766,
+              "inference_seconds": 0.10527049796655774,
+              "illegal_actions": 0
+            },
+            "challenging:A10": {
+              "n": 8,
+              "statuses": {
+                "defeat": 6,
+                "clear": 2
+              },
+              "clears": 2,
+              "mean_reward": -0.484375,
+              "mean_clear_hp": 20,
+              "steps": 141,
+              "engine_seconds": 17.15296383178793,
+              "inference_seconds": 0.07945366972126067,
+              "illegal_actions": 0
+            }
+          }
+        },
+        {
+          "update": 24,
+          "passed": true,
+          "panels": {
+            "early": {
+              "n": 24,
+              "statuses": {
+                "clear": 24
+              },
+              "clears": 24,
+              "mean_reward": 1.199414777930403,
+              "mean_clear_hp": 64.58333333333333,
+              "steps": 270,
+              "engine_seconds": 49.88769549969584,
+              "inference_seconds": 0.14612742513418198,
+              "illegal_actions": 0
+            },
+            "challenging": {
+              "n": 24,
+              "statuses": {
+                "clear": 17,
+                "defeat": 7
+              },
+              "clears": 17,
+              "mean_reward": 0.47906828205679863,
+              "mean_clear_hp": 28.58823529411765,
+              "steps": 460,
+              "engine_seconds": 53.58600137778558,
+              "inference_seconds": 0.2950646816752851,
+              "illegal_actions": 0
+            }
+          },
+          "by_difficulty": {
+            "early:A0": {
+              "n": 8,
+              "statuses": {
+                "clear": 8
+              },
+              "clears": 8,
+              "mean_reward": 1.231640625,
+              "mean_clear_hp": 74.125,
+              "steps": 79,
+              "engine_seconds": 15.894371375674382,
+              "inference_seconds": 0.04724875860847533,
+              "illegal_actions": 0
+            },
+            "early:A5": {
+              "n": 8,
+              "statuses": {
+                "clear": 8
+              },
+              "clears": 8,
+              "mean_reward": 1.195097870879121,
+              "mean_clear_hp": 63.625,
+              "steps": 90,
+              "engine_seconds": 17.963458500569686,
+              "inference_seconds": 0.04491907963529229,
+              "illegal_actions": 0
+            },
+            "early:A10": {
+              "n": 8,
+              "statuses": {
+                "clear": 8
+              },
+              "clears": 8,
+              "mean_reward": 1.171505837912088,
+              "mean_clear_hp": 56,
+              "steps": 101,
+              "engine_seconds": 16.02986562345177,
+              "inference_seconds": 0.05395958689041436,
+              "illegal_actions": 0
+            },
+            "challenging:A0": {
+              "n": 8,
+              "statuses": {
+                "clear": 7,
+                "defeat": 1
+              },
+              "clears": 7,
+              "mean_reward": 0.857421875,
+              "mean_clear_hp": 39.285714285714285,
+              "steps": 139,
+              "engine_seconds": 17.378166209207848,
+              "inference_seconds": 0.07779595418833196,
+              "illegal_actions": 0
+            },
+            "challenging:A5": {
+              "n": 8,
+              "statuses": {
+                "clear": 6,
+                "defeat": 2
+              },
+              "clears": 6,
+              "mean_reward": 0.5520485961703958,
+              "mean_clear_hp": 23.333333333333332,
+              "steps": 171,
+              "engine_seconds": 18.194393500918522,
+              "inference_seconds": 0.10081991064362228,
+              "illegal_actions": 0
+            },
+            "challenging:A10": {
+              "n": 8,
+              "statuses": {
+                "defeat": 4,
+                "clear": 4
+              },
+              "clears": 4,
+              "mean_reward": 0.027734374999999978,
+              "mean_clear_hp": 17.75,
+              "steps": 150,
+              "engine_seconds": 18.013441667659208,
+              "inference_seconds": 0.11644881684333086,
+              "illegal_actions": 0
+            }
+          }
+        },
+        {
+          "update": 32,
+          "passed": true,
+          "panels": {
+            "early": {
+              "n": 24,
+              "statuses": {
+                "clear": 24
+              },
+              "clears": 24,
+              "mean_reward": 1.198056891025641,
+              "mean_clear_hp": 64.08333333333333,
+              "steps": 274,
+              "engine_seconds": 53.10532425157726,
+              "inference_seconds": 0.16072437376715243,
+              "illegal_actions": 0
+            },
+            "challenging": {
+              "n": 24,
+              "statuses": {
+                "clear": 17,
+                "defeat": 7
+              },
+              "clears": 17,
+              "mean_reward": 0.48069196428571426,
+              "mean_clear_hp": 29.294117647058822,
+              "steps": 473,
+              "engine_seconds": 55.706588169327006,
+              "inference_seconds": 0.30510921333916485,
+              "illegal_actions": 0
+            }
+          },
+          "by_difficulty": {
+            "early:A0": {
+              "n": 8,
+              "statuses": {
+                "clear": 8
+              },
+              "clears": 8,
+              "mean_reward": 1.23671875,
+              "mean_clear_hp": 75.75,
+              "steps": 74,
+              "engine_seconds": 17.281730042072013,
+              "inference_seconds": 0.048102290369570255,
+              "illegal_actions": 0
+            },
+            "early:A5": {
+              "n": 8,
+              "statuses": {
+                "clear": 8
+              },
+              "clears": 8,
+              "mean_reward": 1.195097870879121,
+              "mean_clear_hp": 63.625,
+              "steps": 92,
+              "engine_seconds": 17.439335624454543,
+              "inference_seconds": 0.04710770398378372,
+              "illegal_actions": 0
+            },
+            "early:A10": {
+              "n": 8,
+              "statuses": {
+                "clear": 8
+              },
+              "clears": 8,
+              "mean_reward": 1.1623540521978022,
+              "mean_clear_hp": 52.875,
+              "steps": 108,
+              "engine_seconds": 18.384258585050702,
+              "inference_seconds": 0.06551437941379845,
+              "illegal_actions": 0
+            },
+            "challenging:A0": {
+              "n": 8,
+              "statuses": {
+                "clear": 8
+              },
+              "clears": 8,
+              "mean_reward": 1.111328125,
+              "mean_clear_hp": 35.625,
+              "steps": 150,
+              "engine_seconds": 18.63806400075555,
+              "inference_seconds": 0.09384129079990089,
+              "illegal_actions": 0
+            },
+            "challenging:A5": {
+              "n": 8,
+              "statuses": {
+                "clear": 6,
+                "defeat": 2
+              },
+              "clears": 6,
+              "mean_reward": 0.5596540178571429,
+              "mean_clear_hp": 26.5,
+              "steps": 172,
+              "engine_seconds": 18.910543042700738,
+              "inference_seconds": 0.11094013066031039,
+              "illegal_actions": 0
+            },
+            "challenging:A10": {
+              "n": 8,
+              "statuses": {
+                "defeat": 5,
+                "clear": 3
+              },
+              "clears": 3,
+              "mean_reward": -0.22890625,
+              "mean_clear_hp": 18,
+              "steps": 151,
+              "engine_seconds": 18.15798112587072,
+              "inference_seconds": 0.10032779187895358,
+              "illegal_actions": 0
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "arms": {
+    "planner": {
+      "passed": true,
+      "alias_of": null,
+      "panels": {
+        "early": {
+          "summary": {
+            "n": 48,
+            "statuses": {
+              "clear": 48
+            },
+            "clears": 48,
+            "mean_reward": 1.2119119162087912,
+            "mean_clear_hp": 66.52083333333333,
+            "steps": 631,
+            "engine_seconds": 146.37960174842738,
+            "inference_seconds": 0.0,
+            "illegal_actions": 0
+          },
+          "versus_planner": {
+            "clear_delta": 0,
+            "hp_equivalent_deltas": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "median_hp_delta": 0.0,
+            "mean_hp_delta": 0
+          },
+          "on_policy_value_mse": null,
+          "outcome_disagreements": []
+        },
+        "challenging": {
+          "summary": {
+            "n": 48,
+            "statuses": {
+              "defeat": 23,
+              "clear": 25
+            },
+            "clears": 25,
+            "mean_reward": 0.10640415469348659,
+            "mean_clear_hp": 40.56,
+            "steps": 877,
+            "engine_seconds": 101.33219121163711,
+            "inference_seconds": 0.0,
+            "illegal_actions": 0
+          },
+          "versus_planner": {
+            "clear_delta": 0,
+            "hp_equivalent_deltas": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "median_hp_delta": 0.0,
+            "mean_hp_delta": 0
+          },
+          "on_policy_value_mse": null,
+          "outcome_disagreements": []
+        }
+      },
+      "by_difficulty": {
+        "early:A0": {
+          "n": 16,
+          "statuses": {
+            "clear": 16
+          },
+          "clears": 16,
+          "mean_reward": 1.2392578125,
+          "mean_clear_hp": 72.0625,
+          "steps": 201,
+          "engine_seconds": 52.78560287388973,
+          "inference_seconds": 0.0,
+          "illegal_actions": 0
+        },
+        "early:A5": {
+          "n": 16,
+          "statuses": {
+            "clear": 16
+          },
+          "clears": 16,
+          "mean_reward": 1.2134701236263736,
+          "mean_clear_hp": 68.9375,
+          "steps": 185,
+          "engine_seconds": 46.25806928984821,
+          "inference_seconds": 0.0,
+          "illegal_actions": 0
+        },
+        "early:A10": {
+          "n": 16,
+          "statuses": {
+            "clear": 16
+          },
+          "clears": 16,
+          "mean_reward": 1.1830078125,
+          "mean_clear_hp": 58.5625,
+          "steps": 245,
+          "engine_seconds": 47.33592958468944,
+          "inference_seconds": 0.0,
+          "illegal_actions": 0
+        },
+        "challenging:A0": {
+          "n": 16,
+          "statuses": {
+            "defeat": 4,
+            "clear": 12
+          },
+          "clears": 12,
+          "mean_reward": 0.5975215517241379,
+          "mean_clear_hp": 42.333333333333336,
+          "steps": 276,
+          "engine_seconds": 34.84201900009066,
+          "inference_seconds": 0.0,
+          "illegal_actions": 0
+        },
+        "challenging:A5": {
+          "n": 16,
+          "statuses": {
+            "clear": 10,
+            "defeat": 6
+          },
+          "clears": 10,
+          "mean_reward": 0.3330774066091954,
+          "mean_clear_hp": 43.3,
+          "steps": 329,
+          "engine_seconds": 34.436478750547394,
+          "inference_seconds": 0.0,
+          "illegal_actions": 0
+        },
+        "challenging:A10": {
+          "n": 16,
+          "statuses": {
+            "defeat": 13,
+            "clear": 3
+          },
+          "clears": 3,
+          "mean_reward": -0.6113864942528735,
+          "mean_clear_hp": 24.333333333333332,
+          "steps": 272,
+          "engine_seconds": 32.05369346099906,
+          "inference_seconds": 0.0,
+          "illegal_actions": 0
+        }
+      }
+    },
+    "attack_priority": {
+      "passed": true,
+      "alias_of": null,
+      "panels": {
+        "early": {
+          "summary": {
+            "n": 48,
+            "statuses": {
+              "clear": 48
+            },
+            "clears": 48,
+            "mean_reward": 1.1844641492068755,
+            "mean_clear_hp": 57.729166666666664,
+            "steps": 530,
+            "engine_seconds": 100.77031275141053,
+            "inference_seconds": 0.0,
+            "illegal_actions": 0
+          },
+          "versus_planner": {
+            "clear_delta": 0,
+            "hp_equivalent_deltas": [
+              -5,
+              -11,
+              -14,
+              -9,
+              -20,
+              -22,
+              2,
+              0,
+              2,
+              -10,
+              -14,
+              -4,
+              -10,
+              -18,
+              -16,
+              0,
+              -4,
+              -13,
+              0,
+              -4,
+              4,
+              -8,
+              -5,
+              -10,
+              -3,
+              -8,
+              -4,
+              -12,
+              -10,
+              -15,
+              0,
+              -8,
+              3,
+              -19,
+              -5,
+              -16,
+              -5,
+              -18,
+              -10,
+              1,
+              -12,
+              -5,
+              -17,
+              -26,
+              -18,
+              -7,
+              -10,
+              -9
+            ],
+            "median_hp_delta": -9.0,
+            "mean_hp_delta": -8.791666666666666
+          },
+          "on_policy_value_mse": null,
+          "outcome_disagreements": []
+        },
+        "challenging": {
+          "summary": {
+            "n": 48,
+            "statuses": {
+              "defeat": 32,
+              "clear": 16
+            },
+            "clears": 16,
+            "mean_reward": -0.310117337164751,
+            "mean_clear_hp": 22.75,
+            "steps": 667,
+            "engine_seconds": 101.06672695511952,
+            "inference_seconds": 0.0,
+            "illegal_actions": 0
+          },
+          "versus_planner": {
+            "clear_delta": -9,
+            "hp_equivalent_deltas": [
+              0,
+              -33,
+              0,
+              -47,
+              0,
+              0,
+              15,
+              0,
+              0,
+              -15,
+              -39,
+              -10,
+              0,
+              -59,
+              17,
+              0,
+              -13,
+              12,
+              -21,
+              0,
+              0,
+              -33,
+              -22,
+              0,
+              -13,
+              -41,
+              0,
+              -43,
+              -52,
+              0,
+              0,
+              -36,
+              0,
+              -38,
+              -54,
+              0,
+              -13,
+              0,
+              0,
+              -18,
+              -28,
+              0,
+              0,
+              0,
+              -22,
+              -18,
+              0,
+              -26
+            ],
+            "median_hp_delta": 0.0,
+            "mean_hp_delta": -13.541666666666666
+          },
+          "on_policy_value_mse": null,
+          "outcome_disagreements": [
+            {
+              "case": "test-001-b4",
+              "ascension": 5,
+              "entry_hp": 55,
+              "enemies": [
+                "Phrog Parasite"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/81764711-3fca-4267-927a-1f568e9451af/decisions.jsonl",
+              "trace_sha256": "7b5da3f3fbe81ae76bf3c7b62023c6cf65a67be58e3a5468e4f0bb6365939086",
+              "wire.jsonl_sha256": "f33b924a542649db89de45f5c1a494dfd8684cbb8bbd8ea8e56fde367ab2e2b3",
+              "engine.stderr.log_sha256": "34bbabbb77b3868b8a35208de443f50bea1e618331dc19ef0968e22c88aba535",
+              "value_calibration": null
+            },
+            {
+              "case": "test-003-b5",
+              "ascension": 0,
+              "entry_hp": 66,
+              "enemies": [
+                "Phrog Parasite"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/0610ab11-444b-4935-b4dc-5b647646ce02/decisions.jsonl",
+              "trace_sha256": "fb3264c42c9d8a10cafe697ac85a50e2bb1c759d6999b487704a5db5140a69d0",
+              "wire.jsonl_sha256": "6565b3a2be67edff9568ffe1c5d088ed8b66e8d0e1da0b6a533bc7fa006117cd",
+              "engine.stderr.log_sha256": "f6207cef67bada3568ffc2e9621a937636113ea7124da9911e265e6b9b6589e7",
+              "value_calibration": null
+            },
+            {
+              "case": "test-006-b4",
+              "ascension": 0,
+              "entry_hp": 57,
+              "enemies": [
+                "Byrdonis"
+              ],
+              "arm_status": "clear",
+              "planner_status": "defeat",
+              "trace_path": "artifacts/runs/d6764b7c-2506-4013-8283-a353acc19134/decisions.jsonl",
+              "trace_sha256": "50fcf6db6bcb18b00dc4ff2c3a296e14e076fddf04a121e51b2b705ff0a69fd5",
+              "wire.jsonl_sha256": "1c93478db6ace569a25c8d5be23c79d7d05f9b00e091358c5c9e41d5df62beba",
+              "engine.stderr.log_sha256": "73044c49d486595ca816da20db79fa3fec504c8cd3512460bc5fc6a71bbb7321",
+              "value_calibration": null
+            },
+            {
+              "case": "test-011-b5",
+              "ascension": 10,
+              "entry_hp": 61,
+              "enemies": [
+                "Byrdonis"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/7063dbed-08e2-4277-851d-2f63bd927e05/decisions.jsonl",
+              "trace_sha256": "711d5013b20e5de421d9eaa8875f8e140f543f2ae86639c0102825329b7a4526",
+              "wire.jsonl_sha256": "918cbab8b25e137058139f4ddab1dff3f580f657920f0479565d4f97807cbc63",
+              "engine.stderr.log_sha256": "6c29cb1bc1e605189e81c2654802b5b94678ccf46e316c9082cdffd1b68c9907",
+              "value_calibration": null
+            },
+            {
+              "case": "test-013-b7",
+              "ascension": 5,
+              "entry_hp": 63,
+              "enemies": [
+                "Phrog Parasite"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/2966a958-f246-40c7-97df-1aa38be6fa18/decisions.jsonl",
+              "trace_sha256": "2c82d7d11ed71ae72b00832c4317bad2d7f60427d22cbe9a0b9213889bb22c13",
+              "wire.jsonl_sha256": "40cb6f9008725990e57e10cb128131aada95d8a9723d436cdf336863666b1990",
+              "engine.stderr.log_sha256": "e60d4d22d96825cf542b835e09f49efe1cec6e8de10d4bfff2c2b2e32a4bed79",
+              "value_calibration": null
+            },
+            {
+              "case": "test-014-b4",
+              "ascension": 10,
+              "entry_hp": 61,
+              "enemies": [
+                "Byrdonis"
+              ],
+              "arm_status": "clear",
+              "planner_status": "defeat",
+              "trace_path": "artifacts/runs/3c4ae43c-4fb8-4add-9d17-e4278e588fb9/decisions.jsonl",
+              "trace_sha256": "fc724dcb8888d99277339a9a38e64f85532cf2790e0f7bc6d48e401cc39158c9",
+              "wire.jsonl_sha256": "98bba3fe1a559ae6829a318502d17eaca4c2c071831977b729c576f566459fdd",
+              "engine.stderr.log_sha256": "c3fd05169db492da44e0471e1cabfb6694e88d589ee40b15e7dff19a9dab192c",
+              "value_calibration": null
+            },
+            {
+              "case": "test-016-b7",
+              "ascension": 5,
+              "entry_hp": 40,
+              "enemies": [
+                "Byrdonis"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/25211b08-6538-4213-8ced-0dffeba34568/decisions.jsonl",
+              "trace_sha256": "78ed957d96160ac1185c95a015c99ad7f53f513808d110460134d2d35c1cd1e8",
+              "wire.jsonl_sha256": "3f1eadda80d28d0d6228b845b05a95ca83fbf3eee3446be8d25d761ac032969a",
+              "engine.stderr.log_sha256": "e18c8879cf33047b76f8dcfebac083349a8ee4347d72229db719bd9770f5ae4d",
+              "value_calibration": null
+            },
+            {
+              "case": "test-017-b4",
+              "ascension": 10,
+              "entry_hp": 39,
+              "enemies": [
+                "Nibbit",
+                "Nibbit"
+              ],
+              "arm_status": "clear",
+              "planner_status": "defeat",
+              "trace_path": "artifacts/runs/9d6d244a-cd87-4ba5-a656-c3504b107400/decisions.jsonl",
+              "trace_sha256": "5bb5e974a9bfa2e46ce728c8a8aa9fe2d33f00bc9326ab9ccc6ab830035ce18a",
+              "wire.jsonl_sha256": "13cc64868a77fb23acb36ca2e274a16dae44c94e10f6319257fc8ba357a8d74d",
+              "engine.stderr.log_sha256": "5b7147090f098b5f2e77ce1f0d56619c7fa5d9549c8ae814c614ab667fb8a4da",
+              "value_calibration": null
+            },
+            {
+              "case": "test-021-b6",
+              "ascension": 0,
+              "entry_hp": 62,
+              "enemies": [
+                "Byrdonis"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/9fb6a6e6-1da3-4724-8f19-e09f710635c5/decisions.jsonl",
+              "trace_sha256": "c908ab85db1a75e9055d45ecc2f0f72b5b0902a7dfe5f8566207d0c12606b5bd",
+              "wire.jsonl_sha256": "b2ca3c4ff3dde68090d6f242ee5f101e9a56091c281b6b845a862d1a982a396f",
+              "engine.stderr.log_sha256": "e33bf9da47badc89ec0b914c89725a7f793fe7958f68cb170d3d03b097c3d774",
+              "value_calibration": null
+            },
+            {
+              "case": "test-025-b7",
+              "ascension": 5,
+              "entry_hp": 58,
+              "enemies": [
+                "Bygone Effigy"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/e95b635f-a76b-4ed3-ae03-82b92232c395/decisions.jsonl",
+              "trace_sha256": "865cdab54f7602d43f182d8fa16b5b604f8a95171ba257d396258ef79afa220e",
+              "wire.jsonl_sha256": "e372a6e47f3882044374c4b7b85f0b5163b8d52eee80cd9a3ab7076ed003bfe1",
+              "engine.stderr.log_sha256": "28ddab80990c6ae9263761768103c904e9828cff836944eb81b93413fe982e1f",
+              "value_calibration": null
+            },
+            {
+              "case": "test-028-b7",
+              "ascension": 5,
+              "entry_hp": 71,
+              "enemies": [
+                "Byrdonis"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/8e454313-ff21-4c4b-8803-0e5d1de56dd0/decisions.jsonl",
+              "trace_sha256": "b8416c21869a42c9d391ddc0244c5dcc44a6f5916620b765807e6ce277caa2f8",
+              "wire.jsonl_sha256": "a8f53a571b523a94267c60c6f8f91bd359f400e7659e77ca1a49f8036fac49a0",
+              "engine.stderr.log_sha256": "7bf79b45b3e833f78e326f3a6a70467895d273c76d7dc8c0254360a6c969de83",
+              "value_calibration": null
+            },
+            {
+              "case": "test-034-b5",
+              "ascension": 5,
+              "entry_hp": 78,
+              "enemies": [
+                "Bygone Effigy"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/0b04b3e1-9e90-48ba-bd44-c79a71cfad67/decisions.jsonl",
+              "trace_sha256": "0fea82d845ad4903e478ebc3aeb0bf37a86e293b7e6262f985a4ac430da74a84",
+              "wire.jsonl_sha256": "fc3abfa4e0fd093f2cfe09950540caf23564318a27f616f5653f098493a18b44",
+              "engine.stderr.log_sha256": "b73baa763f10ab53ba15bb9cf528a468c096dc094f0a30c92e3e2953ca14acd5",
+              "value_calibration": null
+            },
+            {
+              "case": "test-039-b5",
+              "ascension": 0,
+              "entry_hp": 75,
+              "enemies": [
+                "Bygone Effigy"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/e51eb3ff-9c38-4b0b-b023-078806d60476/decisions.jsonl",
+              "trace_sha256": "f29366cae6e94059ccce230d93fd915b0efcce633768980aea5bae98d06e082b",
+              "wire.jsonl_sha256": "ff50da6c261190980e84d3e7a39b2d33681808b38d3030cf2a31abaa8e4459e0",
+              "engine.stderr.log_sha256": "b6091b27c380a463de682b53b29c76e23972c56dfd06e5f8692cf54b55d5aeda",
+              "value_calibration": null
+            },
+            {
+              "case": "test-040-b4",
+              "ascension": 5,
+              "entry_hp": 73,
+              "enemies": [
+                "Bygone Effigy"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/0a2fd9bd-c49e-49c6-8ec7-0ac44ac1a8c3/decisions.jsonl",
+              "trace_sha256": "302ae18bbfe4a738e66f8e1b98c91099c4e05b6ad1bae6ffc9dff8b0ac261281",
+              "wire.jsonl_sha256": "8e7d1bdc8f213e88420c457a3e26886334868544b71fff30d7fbf3be57b039b9",
+              "engine.stderr.log_sha256": "57ad384de38725aae5a65bb62ae188808dc858c76d08adb7d9ebdc5071844be3",
+              "value_calibration": null
+            },
+            {
+              "case": "test-044-b5",
+              "ascension": 10,
+              "entry_hp": 61,
+              "enemies": [
+                "Phrog Parasite"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/432a92ce-c986-481c-86a0-576f7eb51459/decisions.jsonl",
+              "trace_sha256": "5a722ac3747058cc916d2abb037a9ea7fd24f9eff5d1d48a71de7f62ae622c0e",
+              "wire.jsonl_sha256": "0818e2bf2f378ac670e6fa29318474e83a4c7fc03834a38d644a2091913a89fd",
+              "engine.stderr.log_sha256": "4e4e61db6d63a39a268ffe5c955ab4d3e76c44e5df63338f723002d20c872cfb",
+              "value_calibration": null
+            }
+          ]
+        }
+      },
+      "by_difficulty": {
+        "early:A0": {
+          "n": 16,
+          "statuses": {
+            "clear": 16
+          },
+          "clears": 16,
+          "mean_reward": 1.219414511494253,
+          "mean_clear_hp": 65.6875,
+          "steps": 183,
+          "engine_seconds": 33.34829929145053,
+          "inference_seconds": 0.0,
+          "illegal_actions": 0
+        },
+        "early:A5": {
+          "n": 16,
+          "statuses": {
+            "clear": 16
+          },
+          "clears": 16,
+          "mean_reward": 1.1796810611263737,
+          "mean_clear_hp": 58.125,
+          "steps": 164,
+          "engine_seconds": 34.88404754223302,
+          "inference_seconds": 0.0,
+          "illegal_actions": 0
+        },
+        "early:A10": {
+          "n": 16,
+          "statuses": {
+            "clear": 16
+          },
+          "clears": 16,
+          "mean_reward": 1.154296875,
+          "mean_clear_hp": 49.375,
+          "steps": 183,
+          "engine_seconds": 32.53796591772698,
+          "inference_seconds": 0.0,
+          "illegal_actions": 0
+        },
+        "challenging:A0": {
+          "n": 16,
+          "statuses": {
+            "defeat": 6,
+            "clear": 10
+          },
+          "clears": 10,
+          "mean_reward": 0.3003524604885057,
+          "mean_clear_hp": 26.4,
+          "steps": 243,
+          "engine_seconds": 35.91596124926582,
+          "inference_seconds": 0.0,
+          "illegal_actions": 0
+        },
+        "challenging:A5": {
+          "n": 16,
+          "statuses": {
+            "defeat": 13,
+            "clear": 3
+          },
+          "clears": 3,
+          "mean_reward": -0.6140625,
+          "mean_clear_hp": 18.666666666666668,
+          "steps": 235,
+          "engine_seconds": 33.92539583146572,
+          "inference_seconds": 0.0,
+          "illegal_actions": 0
+        },
+        "challenging:A10": {
+          "n": 16,
+          "statuses": {
+            "defeat": 13,
+            "clear": 3
+          },
+          "clears": 3,
+          "mean_reward": -0.6166419719827586,
+          "mean_clear_hp": 14.666666666666666,
+          "steps": 189,
+          "engine_seconds": 31.22536987438798,
+          "inference_seconds": 0.0,
+          "illegal_actions": 0
+        }
+      }
+    },
+    "E127-1701": {
+      "passed": true,
+      "alias_of": null,
+      "panels": {
+        "early": {
+          "summary": {
+            "n": 48,
+            "statuses": {
+              "clear": 48
+            },
+            "clears": 48,
+            "mean_reward": 1.1979407117068754,
+            "mean_clear_hp": 62.041666666666664,
+            "steps": 614,
+            "engine_seconds": 104.5034347944893,
+            "inference_seconds": 0.32022599782794714,
+            "illegal_actions": 0
+          },
+          "versus_planner": {
+            "clear_delta": 0,
+            "hp_equivalent_deltas": [
+              -5,
+              -5,
+              -9,
+              0,
+              0,
+              -17,
+              11,
+              0,
+              2,
+              -10,
+              -5,
+              -8,
+              -10,
+              0,
+              -2,
+              0,
+              -5,
+              -18,
+              0,
+              -4,
+              -10,
+              -8,
+              -6,
+              -5,
+              -6,
+              -26,
+              4,
+              -7,
+              -9,
+              1,
+              0,
+              -14,
+              -4,
+              -3,
+              0,
+              -10,
+              -2,
+              -8,
+              -2,
+              1,
+              0,
+              -5,
+              -7,
+              -11,
+              -1,
+              -4,
+              -9,
+              21
+            ],
+            "median_hp_delta": -5.0,
+            "mean_hp_delta": -4.479166666666667
+          },
+          "on_policy_value_mse": 0.010674678503929702,
+          "outcome_disagreements": []
+        },
+        "challenging": {
+          "summary": {
+            "n": 48,
+            "statuses": {
+              "defeat": 30,
+              "clear": 18
+            },
+            "clears": 18,
+            "mean_reward": -0.21851427801724138,
+            "mean_clear_hp": 27.833333333333332,
+            "steps": 872,
+            "engine_seconds": 104.76354041858576,
+            "inference_seconds": 0.4431551950983703,
+            "illegal_actions": 0
+          },
+          "versus_planner": {
+            "clear_delta": -7,
+            "hp_equivalent_deltas": [
+              0,
+              -33,
+              0,
+              -47,
+              0,
+              0,
+              7,
+              0,
+              0,
+              -22,
+              -37,
+              -10,
+              0,
+              -59,
+              0,
+              0,
+              -5,
+              17,
+              -16,
+              0,
+              0,
+              -11,
+              -23,
+              0,
+              -9,
+              20,
+              0,
+              -54,
+              -30,
+              0,
+              0,
+              -63,
+              0,
+              -51,
+              -18,
+              0,
+              -16,
+              0,
+              0,
+              -18,
+              -13,
+              0,
+              -18,
+              0,
+              -22,
+              -21,
+              39,
+              0
+            ],
+            "median_hp_delta": 0.0,
+            "mean_hp_delta": -10.6875
+          },
+          "on_policy_value_mse": 2.275351535567535,
+          "outcome_disagreements": [
+            {
+              "case": "test-001-b4",
+              "ascension": 5,
+              "entry_hp": 55,
+              "enemies": [
+                "Phrog Parasite"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/c26d8b38-236f-4434-9654-d043cd0b4ad5/decisions.jsonl",
+              "trace_sha256": "6846d12c4de9b1e7240e762e7c03cd8beaf41361e4b553bb62906afb2bd63caf",
+              "wire.jsonl_sha256": "e1be7d0e4e1861c6dcd7e97f943bc3b21e06c816505591e200b8bdc731a502ec",
+              "engine.stderr.log_sha256": "3da20cdae5c72cbb6a99dae446647c8fdfaa6d14282920e66ba155678b1b4f4a",
+              "value_calibration": {
+                "n": 27,
+                "mse": 2.0116478954517767,
+                "mean_prediction": 0.37181024637970106,
+                "actual_return": -1.0
+              }
+            },
+            {
+              "case": "test-003-b5",
+              "ascension": 0,
+              "entry_hp": 66,
+              "enemies": [
+                "Phrog Parasite"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/0b5f3d5c-6c2b-4920-bde0-8540ec75df5d/decisions.jsonl",
+              "trace_sha256": "6ae69b1ac642b80a345b34c530162dda833dd4020c45b021461fa4b78d4dea1b",
+              "wire.jsonl_sha256": "70133cc6973d587080adc9b601391c9f245acd9a56c30e1bed771f85c69ebaaa",
+              "engine.stderr.log_sha256": "0f4df87e06c5104f199293ddcab676f1e6a4bfffe977e58a0846f18a1e32ebe5",
+              "value_calibration": {
+                "n": 32,
+                "mse": 3.010111328766129,
+                "mean_prediction": 0.6978496712399647,
+                "actual_return": -1.0
+              }
+            },
+            {
+              "case": "test-006-b4",
+              "ascension": 0,
+              "entry_hp": 57,
+              "enemies": [
+                "Byrdonis"
+              ],
+              "arm_status": "clear",
+              "planner_status": "defeat",
+              "trace_path": "artifacts/runs/4dd4b58e-ac33-42b9-9e55-b979db12e35c/decisions.jsonl",
+              "trace_sha256": "0c7601a81bef0528bf1376bdc76c291fbb809aacee4d7f6150d904a323f41ab5",
+              "wire.jsonl_sha256": "b359bcc5ccc13bc759a2a9661cb3235785de144d8f079b861cb61f64751d65f6",
+              "engine.stderr.log_sha256": "0e9edc6ff0547ed651038add14480f38ab859a2376603a049fc422cf3e251a7b",
+              "value_calibration": {
+                "n": 18,
+                "mse": 0.005335237860993947,
+                "mean_prediction": 1.039036515686247,
+                "actual_return": 1.021875
+              }
+            },
+            {
+              "case": "test-011-b5",
+              "ascension": 10,
+              "entry_hp": 61,
+              "enemies": [
+                "Byrdonis"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/193bb12d-4cd9-410f-8ddb-a633264246e9/decisions.jsonl",
+              "trace_sha256": "dd7b3f90523287a0b1b5a63d67c8eea6ec820d67d497ffabdac3b60da3c68de6",
+              "wire.jsonl_sha256": "ca060a3afef6624ea70381769be3b55b7b18624df8b6449d47a3eb1f5410d3ec",
+              "engine.stderr.log_sha256": "06e3e7b6fc71f625346d7917398cf079c4eb6373cd4b45065ee8e243e143a2b6",
+              "value_calibration": {
+                "n": 15,
+                "mse": 4.235087871851609,
+                "mean_prediction": 1.055966822306315,
+                "actual_return": -1.0
+              }
+            },
+            {
+              "case": "test-013-b7",
+              "ascension": 5,
+              "entry_hp": 63,
+              "enemies": [
+                "Phrog Parasite"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/eb9a5fdc-c8e1-4b59-8ee9-fc9a43a21ff5/decisions.jsonl",
+              "trace_sha256": "dd142519075a2904fbe2982c621bdbd0e5a46406bc1c1bb55ca631248883cb9d",
+              "wire.jsonl_sha256": "f21802ad7034db704668b31726690a7ae658b8ee9e68d61759317ed72c755ea4",
+              "engine.stderr.log_sha256": "6f1e4e303bf0bc8ae51c2383a8350272a83c381c2257407e64c88c46754af833",
+              "value_calibration": {
+                "n": 40,
+                "mse": 3.510716709993853,
+                "mean_prediction": 0.8493798289448022,
+                "actual_return": -1.0
+              }
+            },
+            {
+              "case": "test-017-b4",
+              "ascension": 10,
+              "entry_hp": 39,
+              "enemies": [
+                "Nibbit",
+                "Nibbit"
+              ],
+              "arm_status": "clear",
+              "planner_status": "defeat",
+              "trace_path": "artifacts/runs/27e257d6-b424-4961-86d4-34ee31f168e3/decisions.jsonl",
+              "trace_sha256": "dacd64d8c427d88fb7cedec2b67fec40e4bc7f71cb31832a166ee4e97eebb5e1",
+              "wire.jsonl_sha256": "3c4956be88b44e720701ba7b16cab86dad3e1dd09cdda264f233bd8eef58abd7",
+              "engine.stderr.log_sha256": "a96ee93cc005121f2a38471dc1a3e5d38ed6f967724be85f0da94394deb37ce8",
+              "value_calibration": {
+                "n": 17,
+                "mse": 0.02011184028251934,
+                "mean_prediction": 0.9690349172143375,
+                "actual_return": 1.053125
+              }
+            },
+            {
+              "case": "test-027-b5",
+              "ascension": 0,
+              "entry_hp": 71,
+              "enemies": [
+                "Phrog Parasite"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/6994f140-f399-4c66-a541-13720820aaf9/decisions.jsonl",
+              "trace_sha256": "be4bb49d81e47dd8c86c2b473432637ed0f83301ee3475ccf0945a6056f1ddc8",
+              "wire.jsonl_sha256": "8c1b0d3bf99083572fd6e6a515c5e5ee6bd166d40083249a9ac60c6924b0d87e",
+              "engine.stderr.log_sha256": "0200e77cf54a5346abf927df55351689a848fabaf99ffeeb59d4b25932a4d0e8",
+              "value_calibration": {
+                "n": 30,
+                "mse": 2.2812713606339745,
+                "mean_prediction": 0.4646262345214685,
+                "actual_return": -1.0
+              }
+            },
+            {
+              "case": "test-031-b6",
+              "ascension": 5,
+              "entry_hp": 80,
+              "enemies": [
+                "Bygone Effigy"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/42bdd83d-4108-47c1-b149-6f2fb9aecb3f/decisions.jsonl",
+              "trace_sha256": "6b0f18a24972d00ac2af18e186371de7f62bb39862571671b83e8fb26255505d",
+              "wire.jsonl_sha256": "f6e6aac04219863dad1d89630ddc72f86f792c02c2c436d334806dada9d306fb",
+              "engine.stderr.log_sha256": "5c4d8c0db1e2312559517c1840165d158c43909f4916ec4b7cf887aa234ba158",
+              "value_calibration": {
+                "n": 30,
+                "mse": 4.5120996493407795,
+                "mean_prediction": 1.120615154504776,
+                "actual_return": -1.0
+              }
+            },
+            {
+              "case": "test-033-b5",
+              "ascension": 0,
+              "entry_hp": 73,
+              "enemies": [
+                "Byrdonis"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/31a5e504-edf0-4af7-bd19-7b5049628c51/decisions.jsonl",
+              "trace_sha256": "3de5a713b6866eeec3f5efeb5f49963938b6d0625042a75461d70c27c9fa82e9",
+              "wire.jsonl_sha256": "4d71fef5e7c4324b9213ca04d69255c2120cafd3521aaa2c9d98f2587baba72e",
+              "engine.stderr.log_sha256": "8d68477428c56410cd251ad4b8189bb5b4b67e86f6099325e81050ce5b9adda6",
+              "value_calibration": {
+                "n": 17,
+                "mse": 4.879188588728408,
+                "mean_prediction": 1.2079202988568474,
+                "actual_return": -1.0
+              }
+            },
+            {
+              "case": "test-039-b5",
+              "ascension": 0,
+              "entry_hp": 75,
+              "enemies": [
+                "Bygone Effigy"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/c668c04a-c2a8-4e8a-8e6a-716d75a055b0/decisions.jsonl",
+              "trace_sha256": "338d5f78741fd15da56dbbdaa8a20b6e23be48eb128b4dddc8cb1dbecf80cb8d",
+              "wire.jsonl_sha256": "90c0991f496c4f3f3d4629a56b113730d98b4d56d9e199600e2ba6692051f4df",
+              "engine.stderr.log_sha256": "35f81f4e9892e94b1fc5f1495c57053e2d37e0007149bda02ffbbdd914a6f81b",
+              "value_calibration": {
+                "n": 31,
+                "mse": 3.7560075130835138,
+                "mean_prediction": 0.9360584309024196,
+                "actual_return": -1.0
+              }
+            },
+            {
+              "case": "test-042-b5",
+              "ascension": 0,
+              "entry_hp": 61,
+              "enemies": [
+                "Bygone Effigy"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/dfa095fc-cc7e-4f39-8a1c-93eb834af0fa/decisions.jsonl",
+              "trace_sha256": "01b1d3bdb551c443ada6e647e50aff2af5807c8bac3f0a2cc7198f63c9d0822e",
+              "wire.jsonl_sha256": "2817a11cd568a92f8b3f52deec9c3f1312edb30b822a0855d83ce8c93d3bc8f1",
+              "engine.stderr.log_sha256": "dfdf950f299b88d57b41c82d29b49ecaded85f08c3bf6691a617fb607bb67dc1",
+              "value_calibration": {
+                "n": 17,
+                "mse": 3.431074674092106,
+                "mean_prediction": 0.8487531683024239,
+                "actual_return": -1.0
+              }
+            },
+            {
+              "case": "test-044-b5",
+              "ascension": 10,
+              "entry_hp": 61,
+              "enemies": [
+                "Phrog Parasite"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/66f56786-7679-481f-ab35-68920f28f995/decisions.jsonl",
+              "trace_sha256": "279f91f566137ba4810d9be34ff67ffdfe361ea65cf50660d83deafb026ef43b",
+              "wire.jsonl_sha256": "e50e7bc20b51e29d26309bce7e57339151d97cc2101071d0d5e87c2ecd71d021",
+              "engine.stderr.log_sha256": "a32905fb3f3fb2247dad9d626371f50c4191a35250e938f4e38e142c9474a9cd",
+              "value_calibration": {
+                "n": 31,
+                "mse": 2.89526351940194,
+                "mean_prediction": 0.6741065160641747,
+                "actual_return": -1.0
+              }
+            },
+            {
+              "case": "test-046-b5",
+              "ascension": 5,
+              "entry_hp": 44,
+              "enemies": [
+                "Fogmog"
+              ],
+              "arm_status": "clear",
+              "planner_status": "defeat",
+              "trace_path": "artifacts/runs/942ae043-6362-4485-8ce4-f1d7e32c8c6d/decisions.jsonl",
+              "trace_sha256": "7ccb79e87f5d575ccac3a083bcd476ed51a2de639d4076b9f4e1363239fef12b",
+              "wire.jsonl_sha256": "a0496515dc7ed8c210639b591dce366c7f29b0b87b869b3ec2cd1e0ea64133de",
+              "engine.stderr.log_sha256": "1b7290eac21dde0963ff96acf0d0007d847fa561d9ce3def92ee3fe6d61d6055",
+              "value_calibration": {
+                "n": 19,
+                "mse": 0.005428316739044444,
+                "mean_prediction": 1.1705934750406366,
+                "actual_return": 1.121875
+              }
+            }
+          ]
+        }
+      },
+      "by_difficulty": {
+        "early:A0": {
+          "n": 16,
+          "statuses": {
+            "clear": 16
+          },
+          "clears": 16,
+          "mean_reward": 1.2295707614942528,
+          "mean_clear_hp": 68.9375,
+          "steps": 205,
+          "engine_seconds": 35.20710179465823,
+          "inference_seconds": 0.10096408589743078,
+          "illegal_actions": 0
+        },
+        "early:A5": {
+          "n": 16,
+          "statuses": {
+            "clear": 16
+          },
+          "clears": 16,
+          "mean_reward": 1.1935482486263735,
+          "mean_clear_hp": 62.5625,
+          "steps": 204,
+          "engine_seconds": 36.09493574989028,
+          "inference_seconds": 0.10917387343943119,
+          "illegal_actions": 0
+        },
+        "early:A10": {
+          "n": 16,
+          "statuses": {
+            "clear": 16
+          },
+          "clears": 16,
+          "mean_reward": 1.170703125,
+          "mean_clear_hp": 54.625,
+          "steps": 205,
+          "engine_seconds": 33.20139724994078,
+          "inference_seconds": 0.11008803849108517,
+          "illegal_actions": 0
+        },
+        "challenging:A0": {
+          "n": 16,
+          "statuses": {
+            "defeat": 8,
+            "clear": 8
+          },
+          "clears": 8,
+          "mean_reward": 0.04408674568965518,
+          "mean_clear_hp": 29,
+          "steps": 301,
+          "engine_seconds": 36.72218675236218,
+          "inference_seconds": 0.15399650484323502,
+          "illegal_actions": 0
+        },
+        "challenging:A5": {
+          "n": 16,
+          "statuses": {
+            "defeat": 8,
+            "clear": 8
+          },
+          "clears": 8,
+          "mean_reward": 0.03968660201149425,
+          "mean_clear_hp": 26.375,
+          "steps": 323,
+          "engine_seconds": 36.01577299903147,
+          "inference_seconds": 0.1677695345133543,
+          "illegal_actions": 0
+        },
+        "challenging:A10": {
+          "n": 16,
+          "statuses": {
+            "defeat": 14,
+            "clear": 2
+          },
+          "clears": 2,
+          "mean_reward": -0.7393161817528735,
+          "mean_clear_hp": 29,
+          "steps": 248,
+          "engine_seconds": 32.025580667192116,
+          "inference_seconds": 0.121389155741781,
+          "illegal_actions": 0
+        }
+      }
+    },
+    "E127-1702": {
+      "passed": true,
+      "alias_of": null,
+      "panels": {
+        "early": {
+          "summary": {
+            "n": 48,
+            "statuses": {
+              "clear": 48
+            },
+            "clears": 48,
+            "mean_reward": 1.1965346113716264,
+            "mean_clear_hp": 61.583333333333336,
+            "steps": 579,
+            "engine_seconds": 100.22730896039866,
+            "inference_seconds": 0.2846891162917018,
+            "illegal_actions": 0
+          },
+          "versus_planner": {
+            "clear_delta": 0,
+            "hp_equivalent_deltas": [
+              -10,
+              -5,
+              -9,
+              0,
+              0,
+              -17,
+              11,
+              0,
+              2,
+              -10,
+              -5,
+              -8,
+              -10,
+              0,
+              -2,
+              0,
+              -4,
+              -5,
+              0,
+              -4,
+              -10,
+              -8,
+              -6,
+              -5,
+              -8,
+              -26,
+              4,
+              -12,
+              0,
+              -6,
+              0,
+              -14,
+              -5,
+              -8,
+              0,
+              -10,
+              -8,
+              -8,
+              -2,
+              1,
+              0,
+              -5,
+              -11,
+              -11,
+              -7,
+              -8,
+              -9,
+              21
+            ],
+            "median_hp_delta": -5.0,
+            "mean_hp_delta": -4.9375
+          },
+          "on_policy_value_mse": 0.01193972792347053,
+          "outcome_disagreements": []
+        },
+        "challenging": {
+          "summary": {
+            "n": 48,
+            "statuses": {
+              "defeat": 30,
+              "clear": 18
+            },
+            "clears": 18,
+            "mean_reward": -0.21802562260536398,
+            "mean_clear_hp": 28,
+            "steps": 833,
+            "engine_seconds": 100.17086420790292,
+            "inference_seconds": 0.4413530440069735,
+            "illegal_actions": 0
+          },
+          "versus_planner": {
+            "clear_delta": -7,
+            "hp_equivalent_deltas": [
+              0,
+              -33,
+              0,
+              -47,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -2,
+              -49,
+              -10,
+              0,
+              -59,
+              0,
+              -11,
+              -13,
+              17,
+              -16,
+              0,
+              0,
+              -11,
+              -22,
+              0,
+              -9,
+              -19,
+              0,
+              -31,
+              -24,
+              0,
+              0,
+              -63,
+              0,
+              -28,
+              -40,
+              9,
+              3,
+              0,
+              0,
+              -18,
+              -13,
+              0,
+              -18,
+              0,
+              -22,
+              -16,
+              35,
+              0
+            ],
+            "median_hp_delta": 0.0,
+            "mean_hp_delta": -10.625
+          },
+          "on_policy_value_mse": 2.0324456956670174,
+          "outcome_disagreements": [
+            {
+              "case": "test-001-b4",
+              "ascension": 5,
+              "entry_hp": 55,
+              "enemies": [
+                "Phrog Parasite"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/d79fb309-c635-497a-b267-26a32f48793c/decisions.jsonl",
+              "trace_sha256": "e5ef8b4e84c0788bb0da310abf8e13b70fbf2ef9272bd7c2f9e97977cbc43e43",
+              "wire.jsonl_sha256": "9c3907684ae4c4559a92b708b4d63d0b5531696b7d33af5dd5c57140ac6bf38a",
+              "engine.stderr.log_sha256": "9609f4ca378a80023a3947c19a7c8cfd489987210a28dc0ced8485918abebd72",
+              "value_calibration": {
+                "n": 30,
+                "mse": 1.699024722724496,
+                "mean_prediction": 0.24419723032042384,
+                "actual_return": -1.0
+              }
+            },
+            {
+              "case": "test-003-b5",
+              "ascension": 0,
+              "entry_hp": 66,
+              "enemies": [
+                "Phrog Parasite"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/89de91d9-e1cc-45d0-a6e4-be5651e3c263/decisions.jsonl",
+              "trace_sha256": "51bea631848428bd7246bfd21c35f040dd6ab4c6b938fa71efe5717d26e79472",
+              "wire.jsonl_sha256": "cb08336c2a0a750cb320c700e863cf214f81739ac7e7978be9a02403f1fc8447",
+              "engine.stderr.log_sha256": "e94634872628834601a39be3b0765060f170ffd25adb3463f61be6054b2e4c9b",
+              "value_calibration": {
+                "n": 31,
+                "mse": 3.77825679902408,
+                "mean_prediction": 0.9324424824407024,
+                "actual_return": -1.0
+              }
+            },
+            {
+              "case": "test-010-b6",
+              "ascension": 5,
+              "entry_hp": 70,
+              "enemies": [
+                "Phrog Parasite"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/ef0008eb-f65f-4b97-aff8-233374a8669e/decisions.jsonl",
+              "trace_sha256": "bf1f4e4f6134dace049d612a3db84e0ced9710eed54dade1e1a9a53c7866159b",
+              "wire.jsonl_sha256": "d44b24bdf3af84daa934fa49707151ac55f90cd3250e8401ca482458cfb4270c",
+              "engine.stderr.log_sha256": "8caabcd7444f7bda86f7d0c815cfd0725c392417b18ee929ad33694cfa649e25",
+              "value_calibration": {
+                "n": 33,
+                "mse": 1.5590288503654541,
+                "mean_prediction": 0.2028531205247749,
+                "actual_return": -1.0
+              }
+            },
+            {
+              "case": "test-011-b5",
+              "ascension": 10,
+              "entry_hp": 61,
+              "enemies": [
+                "Byrdonis"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/401dc5ef-4c3d-4c41-8b0c-980cff2fba69/decisions.jsonl",
+              "trace_sha256": "37daf9988cb6455ba649c0b6e3cf08af977c8122669423943598be510e1a81f1",
+              "wire.jsonl_sha256": "7ae5d110591692129364b8739b97fc010fc56abe880bbdecf0366e91f1049dad",
+              "engine.stderr.log_sha256": "5f7a1693122685249fb2c7247eb4170f4e3ea5b9cd3b6f6e37d6179f7d96f2ec",
+              "value_calibration": {
+                "n": 15,
+                "mse": 3.4102103411507767,
+                "mean_prediction": 0.8358755548795064,
+                "actual_return": -1.0
+              }
+            },
+            {
+              "case": "test-013-b7",
+              "ascension": 5,
+              "entry_hp": 63,
+              "enemies": [
+                "Phrog Parasite"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/793a1add-a20b-4752-8dce-4a72459310b9/decisions.jsonl",
+              "trace_sha256": "3be805e18a8a504eed94c0571d0a4ed62807b0c454822e73a392386d05f3d04e",
+              "wire.jsonl_sha256": "d7d7532f9411f437743c38e22b3cd027d1cdd6642051b674a1a8503e318f8b2d",
+              "engine.stderr.log_sha256": "3e74416f462370a672538cc2cd3e3e2999c4ecfe4b15baa90aaa5750d55c66c2",
+              "value_calibration": {
+                "n": 34,
+                "mse": 3.298750138822481,
+                "mean_prediction": 0.8117548209779403,
+                "actual_return": -1.0
+              }
+            },
+            {
+              "case": "test-016-b7",
+              "ascension": 5,
+              "entry_hp": 40,
+              "enemies": [
+                "Byrdonis"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/d3a1aa56-6aa0-44e7-800f-72c854a127e9/decisions.jsonl",
+              "trace_sha256": "a1629927fb308f5dc1d4045ea2f1ae6333cda4011750fe22230c2d39fd34c2be",
+              "wire.jsonl_sha256": "87514c1f7cf72ceb40a68c5945e541ce394f89cea443a09e891b0963069803da",
+              "engine.stderr.log_sha256": "912004f09cb1c460dbe3c6cbe2262c589250c6a7a648e9fd515a86097ee98a1c",
+              "value_calibration": {
+                "n": 12,
+                "mse": 3.7658748753844407,
+                "mean_prediction": 0.9387596646944681,
+                "actual_return": -1.0
+              }
+            },
+            {
+              "case": "test-017-b4",
+              "ascension": 10,
+              "entry_hp": 39,
+              "enemies": [
+                "Nibbit",
+                "Nibbit"
+              ],
+              "arm_status": "clear",
+              "planner_status": "defeat",
+              "trace_path": "artifacts/runs/2a1281ea-4100-442f-8ed7-476f5d4342f6/decisions.jsonl",
+              "trace_sha256": "b28bc8ca04f5914df8ca2fe886fc29b720d940a534c253924ae1c97ee095546a",
+              "wire.jsonl_sha256": "d049eaf48e4200b137798bf4b1f5cb0acf84ccb0830088dbe76b4d1ff7205b12",
+              "engine.stderr.log_sha256": "a96ee93cc005121f2a38471dc1a3e5d38ed6f967724be85f0da94394deb37ce8",
+              "value_calibration": {
+                "n": 17,
+                "mse": 0.022468005565618735,
+                "mean_prediction": 1.1981299133861767,
+                "actual_return": 1.053125
+              }
+            },
+            {
+              "case": "test-031-b6",
+              "ascension": 5,
+              "entry_hp": 80,
+              "enemies": [
+                "Bygone Effigy"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/af887f93-517c-47ca-93ec-34232c2ab808/decisions.jsonl",
+              "trace_sha256": "1df6e4c217317a04eca0cab43764310acdae82b64143f3d860bd8b5aa29f324f",
+              "wire.jsonl_sha256": "ec68ad165f82e3f51ba8eb8f0bebfde8f40818bf0e2c6fc536aff1ae586c8594",
+              "engine.stderr.log_sha256": "e2669ad7d5107154a5352e153376bb6fcc82acf2e05de753e5bc7b1b4b66ea4a",
+              "value_calibration": {
+                "n": 26,
+                "mse": 4.198744824238582,
+                "mean_prediction": 1.0468313900324016,
+                "actual_return": -1.0
+              }
+            },
+            {
+              "case": "test-035-b5",
+              "ascension": 10,
+              "entry_hp": 53,
+              "enemies": [
+                "Byrdonis"
+              ],
+              "arm_status": "clear",
+              "planner_status": "defeat",
+              "trace_path": "artifacts/runs/a16f3859-6cc0-43db-961d-843e32c8147f/decisions.jsonl",
+              "trace_sha256": "c3f4c06c45b58900ae64cf0e343b4ccf89e28ec7c7aad74b371e70144ac23cfa",
+              "wire.jsonl_sha256": "6f6c06734a056aa35c05bcd726c3998bae6600ab78dfdfa4766338c55cfb6ad8",
+              "engine.stderr.log_sha256": "d575f346583fc63f917fb31f2e038c161a2db34703b3c8313210780c51a2e8de",
+              "value_calibration": {
+                "n": 13,
+                "mse": 0.024211281989120512,
+                "mean_prediction": 0.8803975215324988,
+                "actual_return": 1.028125
+              }
+            },
+            {
+              "case": "test-039-b5",
+              "ascension": 0,
+              "entry_hp": 75,
+              "enemies": [
+                "Bygone Effigy"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/f06bdc25-3988-46ff-bbfa-4cd72c369a71/decisions.jsonl",
+              "trace_sha256": "b5d4f1859812c31ff244cf6092febeb5b1cf2f77460d4a55aaa51fcd0cde3d2a",
+              "wire.jsonl_sha256": "c028ace52c8033788e0ba9181ae68bac876fac3bfa70fa0b577014a6b242b2e5",
+              "engine.stderr.log_sha256": "1121167c0b7e3bf46b32728c0e6c2129f44b2a2af8c999bb2407f68002dcbeec",
+              "value_calibration": {
+                "n": 26,
+                "mse": 3.86264261949943,
+                "mean_prediction": 0.962833801141152,
+                "actual_return": -1.0
+              }
+            },
+            {
+              "case": "test-042-b5",
+              "ascension": 0,
+              "entry_hp": 61,
+              "enemies": [
+                "Bygone Effigy"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/156c2ece-dfe7-4539-8b98-be7b0e7c2871/decisions.jsonl",
+              "trace_sha256": "57328b8ecea602c739bbefcbf63988da96f19d027044cae3efcafa226f096593",
+              "wire.jsonl_sha256": "8f46cd7ad3dd98d94e1e811bf7ab4ab0c0cb149d4b76312a4b2600386eba2e86",
+              "engine.stderr.log_sha256": "70f7fa84e1006ff30abbec1969751eddc48c16f0c6f56ca9ef5741950637cc7f",
+              "value_calibration": {
+                "n": 17,
+                "mse": 3.6304909527932905,
+                "mean_prediction": 0.9039683832841761,
+                "actual_return": -1.0
+              }
+            },
+            {
+              "case": "test-044-b5",
+              "ascension": 10,
+              "entry_hp": 61,
+              "enemies": [
+                "Phrog Parasite"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/c484cf54-b265-4a74-a85f-f578aa1d315f/decisions.jsonl",
+              "trace_sha256": "6218e766c5a8593d3a647b482c8c5d413e3c7e04e54d52e876a87fc45b03227c",
+              "wire.jsonl_sha256": "dc2df626e4c2374d2db250b4fe62239a33da7816193ea4811e8cb5e2e36c001f",
+              "engine.stderr.log_sha256": "c0b902c5df7a5cb5a5758206489710ef659608249156591efa1db262b5d2d784",
+              "value_calibration": {
+                "n": 27,
+                "mse": 3.199711837901472,
+                "mean_prediction": 0.7830586278880084,
+                "actual_return": -1.0
+              }
+            },
+            {
+              "case": "test-046-b5",
+              "ascension": 5,
+              "entry_hp": 44,
+              "enemies": [
+                "Fogmog"
+              ],
+              "arm_status": "clear",
+              "planner_status": "defeat",
+              "trace_path": "artifacts/runs/98e0e0e3-966d-40bb-a638-7cea1937209f/decisions.jsonl",
+              "trace_sha256": "aac708dfef43cdba844c29171e0372944cce271c1fc29767a4a0a1c13483f28a",
+              "wire.jsonl_sha256": "53b0b567b81c915b9630a69906738b2dfcc29fe7c6d145997739f90eace684b4",
+              "engine.stderr.log_sha256": "3cf295c7e6c04934361fec57de54a66ae8936144a9d36bca35fd0d37c4eafbe0",
+              "value_calibration": {
+                "n": 20,
+                "mse": 0.009823774362057947,
+                "mean_prediction": 1.0529311656951905,
+                "actual_return": 1.109375
+              }
+            }
+          ]
+        }
+      },
+      "by_difficulty": {
+        "early:A0": {
+          "n": 16,
+          "statuses": {
+            "clear": 16
+          },
+          "clears": 16,
+          "mean_reward": 1.2235946479885058,
+          "mean_clear_hp": 67,
+          "steps": 193,
+          "engine_seconds": 33.3838319175411,
+          "inference_seconds": 0.0922592154238373,
+          "illegal_actions": 0
+        },
+        "early:A5": {
+          "n": 16,
+          "statuses": {
+            "clear": 16
+          },
+          "clears": 16,
+          "mean_reward": 1.1955013736263735,
+          "mean_clear_hp": 63.1875,
+          "steps": 196,
+          "engine_seconds": 33.64481125189923,
+          "inference_seconds": 0.0977538307197392,
+          "illegal_actions": 0
+        },
+        "early:A10": {
+          "n": 16,
+          "statuses": {
+            "clear": 16
+          },
+          "clears": 16,
+          "mean_reward": 1.1705078125,
+          "mean_clear_hp": 54.5625,
+          "steps": 190,
+          "engine_seconds": 33.19866579095833,
+          "inference_seconds": 0.09467607014812529,
+          "illegal_actions": 0
+        },
+        "challenging:A0": {
+          "n": 16,
+          "statuses": {
+            "defeat": 7,
+            "clear": 9
+          },
+          "clears": 9,
+          "mean_reward": 0.18307067169540228,
+          "mean_clear_hp": 33.77777777777778,
+          "steps": 281,
+          "engine_seconds": 34.91822783299722,
+          "inference_seconds": 0.15164608345367014,
+          "illegal_actions": 0
+        },
+        "challenging:A5": {
+          "n": 16,
+          "statuses": {
+            "defeat": 10,
+            "clear": 6
+          },
+          "clears": 6,
+          "mean_reward": -0.22458917025862069,
+          "mean_clear_hp": 22.166666666666668,
+          "steps": 317,
+          "engine_seconds": 34.511036708019674,
+          "inference_seconds": 0.16640699398703873,
+          "illegal_actions": 0
+        },
+        "challenging:A10": {
+          "n": 16,
+          "statuses": {
+            "defeat": 13,
+            "clear": 3
+          },
+          "clears": 3,
+          "mean_reward": -0.6125583692528735,
+          "mean_clear_hp": 22.333333333333332,
+          "steps": 235,
+          "engine_seconds": 30.74159966688603,
+          "inference_seconds": 0.12329996656626463,
+          "illegal_actions": 0
+        }
+      }
+    },
+    "short-1701": {
+      "passed": true,
+      "alias_of": null,
+      "panels": {
+        "early": {
+          "summary": {
+            "n": 48,
+            "statuses": {
+              "clear": 48
+            },
+            "clears": 48,
+            "mean_reward": 1.1960264995421246,
+            "mean_clear_hp": 61.4375,
+            "steps": 643,
+            "engine_seconds": 94.16855962318368,
+            "inference_seconds": 0.34335084282793105,
+            "illegal_actions": 0
+          },
+          "versus_planner": {
+            "clear_delta": 0,
+            "hp_equivalent_deltas": [
+              0,
+              -5,
+              -12,
+              -9,
+              -8,
+              -17,
+              11,
+              0,
+              2,
+              -12,
+              -5,
+              -9,
+              -10,
+              -8,
+              0,
+              2,
+              -4,
+              -13,
+              0,
+              -4,
+              -10,
+              -8,
+              -5,
+              -5,
+              -3,
+              -8,
+              -10,
+              -12,
+              -5,
+              -6,
+              0,
+              -8,
+              -5,
+              -3,
+              0,
+              -13,
+              0,
+              -9,
+              0,
+              1,
+              -12,
+              0,
+              -2,
+              -11,
+              -13,
+              -4,
+              -5,
+              13
+            ],
+            "median_hp_delta": -5.0,
+            "mean_hp_delta": -5.083333333333333
+          },
+          "on_policy_value_mse": 0.13339271762882543,
+          "outcome_disagreements": []
+        },
+        "challenging": {
+          "summary": {
+            "n": 48,
+            "statuses": {
+              "defeat": 28,
+              "clear": 20
+            },
+            "clears": 20,
+            "mean_reward": -0.12784063697318007,
+            "mean_clear_hp": 30.45,
+            "steps": 831,
+            "engine_seconds": 93.04666808340698,
+            "inference_seconds": 0.4522921077441424,
+            "illegal_actions": 0
+          },
+          "versus_planner": {
+            "clear_delta": -5,
+            "hp_equivalent_deltas": [
+              0,
+              -33,
+              0,
+              -36,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4,
+              -18,
+              -10,
+              0,
+              -34,
+              0,
+              0,
+              -5,
+              0,
+              -16,
+              0,
+              0,
+              -9,
+              -18,
+              0,
+              -21,
+              -3,
+              0,
+              -24,
+              -19,
+              0,
+              0,
+              -13,
+              0,
+              -15,
+              -31,
+              0,
+              -8,
+              0,
+              0,
+              -18,
+              -28,
+              0,
+              -18,
+              0,
+              -22,
+              -21,
+              30,
+              -11
+            ],
+            "median_hp_delta": -1.5,
+            "mean_hp_delta": -8.4375
+          },
+          "on_policy_value_mse": 1.2954754995447626,
+          "outcome_disagreements": [
+            {
+              "case": "test-001-b4",
+              "ascension": 5,
+              "entry_hp": 55,
+              "enemies": [
+                "Phrog Parasite"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/a8b41258-609c-4f6f-a178-a312adc1ec49/decisions.jsonl",
+              "trace_sha256": "20521fce513e742a5f77c8a4e6148d98487bce326c83db40632d46f209d04a1b",
+              "wire.jsonl_sha256": "1ef571341b6c68fda8c1a2510bbe8dbed5cacccfeaf37cb299b32d11f42d6caa",
+              "engine.stderr.log_sha256": "6006e7e4df132c5b38f5a047005f31592f7eba20d8fa249fcfaf7562d13542c7",
+              "value_calibration": {
+                "n": 28,
+                "mse": 0.11208507431635886,
+                "mean_prediction": -0.731314443051815,
+                "actual_return": -1.0
+              }
+            },
+            {
+              "case": "test-011-b5",
+              "ascension": 10,
+              "entry_hp": 61,
+              "enemies": [
+                "Byrdonis"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/fbffa734-9bbd-45a4-b600-8dec80b3dd95/decisions.jsonl",
+              "trace_sha256": "855d5d15378d411b83279d6c9ec8213621c799982015e893b8c30517f07c3f57",
+              "wire.jsonl_sha256": "040318edb2b06423147c27857cb4abb486b841e56aa694180715d52a8271c2b9",
+              "engine.stderr.log_sha256": "5b14eebd3b816202afbbfd57eefe5d8d42c7bdf57aee34d0cbe21ed62686ba03",
+              "value_calibration": {
+                "n": 16,
+                "mse": 0.10676017233153257,
+                "mean_prediction": -0.7276260629296303,
+                "actual_return": -1.0
+              }
+            },
+            {
+              "case": "test-039-b5",
+              "ascension": 0,
+              "entry_hp": 75,
+              "enemies": [
+                "Bygone Effigy"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/6706b7a1-8e9d-4dd3-a28b-8d153f4b124e/decisions.jsonl",
+              "trace_sha256": "6d0a45dfd10a49ff52bf7567d6891ec2bd15ff5ba1ae741a036c0630361bd647",
+              "wire.jsonl_sha256": "9b3ae677faaeb19b88dc3f7aa37d88f36f1e1197dc40c38b6aecefe4fdf747c6",
+              "engine.stderr.log_sha256": "347d4c4d4f4d7adfbf0ccc49b153d6aa80e0b13c875be9fce857ac492bfebc9b",
+              "value_calibration": {
+                "n": 25,
+                "mse": 0.03964903240129601,
+                "mean_prediction": -0.8653635430335999,
+                "actual_return": -1.0
+              }
+            },
+            {
+              "case": "test-040-b4",
+              "ascension": 5,
+              "entry_hp": 73,
+              "enemies": [
+                "Bygone Effigy"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/2c51b4c9-9032-46a2-b3db-177f470b2805/decisions.jsonl",
+              "trace_sha256": "7c2e18db8173fd863bd2f51a4bdcb9cffa11b90499567d359c3c975111c78c3e",
+              "wire.jsonl_sha256": "670bb885c3d7770f0a6188ba530e46cae20ad1c0481786ed6c420870ccdde152",
+              "engine.stderr.log_sha256": "d7677fda1f5090cef2d9085a64dd55e28c5878ab45187072d02531acbd0653ba",
+              "value_calibration": {
+                "n": 26,
+                "mse": 0.5156763634104263,
+                "mean_prediction": -0.292281537101819,
+                "actual_return": -1.0
+              }
+            },
+            {
+              "case": "test-042-b5",
+              "ascension": 0,
+              "entry_hp": 61,
+              "enemies": [
+                "Bygone Effigy"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/75da6fc8-9a90-4406-97a8-53729440398b/decisions.jsonl",
+              "trace_sha256": "ac6b818fac20375c573663ba2756d92ab0df46c6d9e022f2dc63ba8858473b8e",
+              "wire.jsonl_sha256": "d46c0bbc4e6dd7352ae4e952b22780b8d615a95434c59732f03b3714e795d411",
+              "engine.stderr.log_sha256": "2306d3cfe9c21f45c653d812ec8fbbda99bd2b9d0feb01e00a56986cb6c973fb",
+              "value_calibration": {
+                "n": 17,
+                "mse": 0.06828968520257017,
+                "mean_prediction": -0.7921020879464991,
+                "actual_return": -1.0
+              }
+            },
+            {
+              "case": "test-044-b5",
+              "ascension": 10,
+              "entry_hp": 61,
+              "enemies": [
+                "Phrog Parasite"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/c3e3d1f0-ba1e-4d2d-9c87-c2c8143c9353/decisions.jsonl",
+              "trace_sha256": "af1989c48dc029acd57696ec3eac2f8fa3a2ad0ac21d97ca7137dce415b23ec3",
+              "wire.jsonl_sha256": "f0c166d294e38d186db6e415ca374e18b74eb54f88d69117bfad844321ba49f7",
+              "engine.stderr.log_sha256": "9ec7bc8ab60c2270532938041e6a3ea61eadc8b03b184923abe5c395470be318",
+              "value_calibration": {
+                "n": 28,
+                "mse": 0.4563750747497436,
+                "mean_prediction": -0.3612845955150468,
+                "actual_return": -1.0
+              }
+            },
+            {
+              "case": "test-046-b5",
+              "ascension": 5,
+              "entry_hp": 44,
+              "enemies": [
+                "Fogmog"
+              ],
+              "arm_status": "clear",
+              "planner_status": "defeat",
+              "trace_path": "artifacts/runs/0ebb4705-aeed-40e4-8b7e-f28c654db1f9/decisions.jsonl",
+              "trace_sha256": "8ccedfb2d3c06a7f91681df1875f6a31037408914d2d32487c6d5400ef3b8edc",
+              "wire.jsonl_sha256": "6bf2f1079971e81fee1d944797e559b9f21782cca7331906ad9df408e82ed30a",
+              "engine.stderr.log_sha256": "bf272b5df93777271d455f476705cc5c395d9f9c834e2dcf1fd5bb65e153bb72",
+              "value_calibration": {
+                "n": 20,
+                "mse": 1.594046180281655,
+                "mean_prediction": -0.16205643825232982,
+                "actual_return": 1.09375
+              }
+            }
+          ]
+        }
+      },
+      "by_difficulty": {
+        "early:A0": {
+          "n": 16,
+          "statuses": {
+            "clear": 16
+          },
+          "clears": 16,
+          "mean_reward": 1.2296875,
+          "mean_clear_hp": 69,
+          "steps": 211,
+          "engine_seconds": 31.901882832171395,
+          "inference_seconds": 0.10703488229773939,
+          "illegal_actions": 0
+        },
+        "early:A5": {
+          "n": 16,
+          "statuses": {
+            "clear": 16
+          },
+          "clears": 16,
+          "mean_reward": 1.1945248111263735,
+          "mean_clear_hp": 62.875,
+          "steps": 205,
+          "engine_seconds": 31.9205998738762,
+          "inference_seconds": 0.11202616337686777,
+          "illegal_actions": 0
+        },
+        "early:A10": {
+          "n": 16,
+          "statuses": {
+            "clear": 16
+          },
+          "clears": 16,
+          "mean_reward": 1.1638671875,
+          "mean_clear_hp": 52.4375,
+          "steps": 227,
+          "engine_seconds": 30.346076917136088,
+          "inference_seconds": 0.12428979715332389,
+          "illegal_actions": 0
+        },
+        "challenging:A0": {
+          "n": 16,
+          "statuses": {
+            "defeat": 6,
+            "clear": 10
+          },
+          "clears": 10,
+          "mean_reward": 0.3110721982758621,
+          "mean_clear_hp": 31.8,
+          "steps": 296,
+          "engine_seconds": 33.6300198759418,
+          "inference_seconds": 0.16616828460246325,
+          "illegal_actions": 0
+        },
+        "challenging:A5": {
+          "n": 16,
+          "statuses": {
+            "defeat": 7,
+            "clear": 9
+          },
+          "clears": 9,
+          "mean_reward": 0.17501795977011492,
+          "mean_clear_hp": 29,
+          "steps": 300,
+          "engine_seconds": 30.722410706570372,
+          "inference_seconds": 0.1589347068220377,
+          "illegal_actions": 0
+        },
+        "challenging:A10": {
+          "n": 16,
+          "statuses": {
+            "defeat": 15,
+            "clear": 1
+          },
+          "clears": 1,
+          "mean_reward": -0.8696120689655172,
+          "mean_clear_hp": 30,
+          "steps": 235,
+          "engine_seconds": 28.694237500894815,
+          "inference_seconds": 0.12718911631964147,
+          "illegal_actions": 0
+        }
+      }
+    },
+    "long-1701": {
+      "passed": true,
+      "alias_of": null,
+      "panels": {
+        "early": {
+          "summary": {
+            "n": 48,
+            "statuses": {
+              "clear": 48
+            },
+            "clears": 48,
+            "mean_reward": 1.1998287325402088,
+            "mean_clear_hp": 62.645833333333336,
+            "steps": 573,
+            "engine_seconds": 98.36408625124022,
+            "inference_seconds": 0.35957943298853934,
+            "illegal_actions": 0
+          },
+          "versus_planner": {
+            "clear_delta": 0,
+            "hp_equivalent_deltas": [
+              -5,
+              -5,
+              -9,
+              0,
+              0,
+              -8,
+              0,
+              0,
+              -2,
+              -10,
+              -5,
+              -9,
+              -10,
+              0,
+              0,
+              0,
+              -4,
+              -5,
+              0,
+              -4,
+              4,
+              -8,
+              -5,
+              -5,
+              -3,
+              -7,
+              4,
+              -12,
+              -5,
+              2,
+              0,
+              -8,
+              -5,
+              -3,
+              0,
+              -10,
+              0,
+              -9,
+              -5,
+              0,
+              -5,
+              -5,
+              -7,
+              -12,
+              -13,
+              -4,
+              -10,
+              21
+            ],
+            "median_hp_delta": -5.0,
+            "mean_hp_delta": -3.875
+          },
+          "on_policy_value_mse": 0.03881760122705607,
+          "outcome_disagreements": []
+        },
+        "challenging": {
+          "summary": {
+            "n": 48,
+            "statuses": {
+              "defeat": 24,
+              "clear": 24
+            },
+            "clears": 24,
+            "mean_reward": 0.05225395114942529,
+            "mean_clear_hp": 34.166666666666664,
+            "steps": 824,
+            "engine_seconds": 98.40501841413788,
+            "inference_seconds": 0.4052896280772984,
+            "illegal_actions": 0
+          },
+          "versus_planner": {
+            "clear_delta": -1,
+            "hp_equivalent_deltas": [
+              0,
+              -10,
+              0,
+              -35,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4,
+              -10,
+              -10,
+              0,
+              -18,
+              12,
+              0,
+              -13,
+              0,
+              -10,
+              0,
+              0,
+              -9,
+              -10,
+              0,
+              8,
+              -19,
+              0,
+              -21,
+              -3,
+              0,
+              0,
+              -13,
+              0,
+              -17,
+              -8,
+              0,
+              5,
+              0,
+              0,
+              -8,
+              0,
+              0,
+              0,
+              0,
+              -22,
+              -13,
+              30,
+              4
+            ],
+            "median_hp_delta": 0.0,
+            "mean_hp_delta": -4.041666666666667
+          },
+          "on_policy_value_mse": 1.1080678041689187,
+          "outcome_disagreements": [
+            {
+              "case": "test-011-b5",
+              "ascension": 10,
+              "entry_hp": 61,
+              "enemies": [
+                "Byrdonis"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/818cc2cf-7855-4ff0-b982-b8e4025978bf/decisions.jsonl",
+              "trace_sha256": "4afaa513cfc9b354599bc4380833a33f27654d31b7522c05583ab408ba0d2919",
+              "wire.jsonl_sha256": "db996a546454119ba969f50b490ecdab66ca695593e0ed305f68152e65375e4f",
+              "engine.stderr.log_sha256": "b2a17936bb98b556ff8ba795c305d4e6862e262b0050512c435d5b711def5ba0",
+              "value_calibration": {
+                "n": 23,
+                "mse": 1.3163463397196942,
+                "mean_prediction": 0.12552087972669498,
+                "actual_return": -1.0
+              }
+            },
+            {
+              "case": "test-014-b4",
+              "ascension": 10,
+              "entry_hp": 61,
+              "enemies": [
+                "Byrdonis"
+              ],
+              "arm_status": "clear",
+              "planner_status": "defeat",
+              "trace_path": "artifacts/runs/4506a9a3-6fde-46bf-8ffa-7f892079f4eb/decisions.jsonl",
+              "trace_sha256": "9661ca3bfe02cea7662dbf5debe955ddee4e0934d680bfadf04aefddc1800882",
+              "wire.jsonl_sha256": "fc0827239cab615b4b8c063445633ef25c7bab07107aabccf385365e0fe8ad6f",
+              "engine.stderr.log_sha256": "9e2097ee060fa2582853496b6da8fbe809531bd86255efdd3ff84bf9d27da97d",
+              "value_calibration": {
+                "n": 17,
+                "mse": 0.9672751884023536,
+                "mean_prediction": 0.05997021655168604,
+                "actual_return": 1.0375
+              }
+            },
+            {
+              "case": "test-016-b7",
+              "ascension": 5,
+              "entry_hp": 40,
+              "enemies": [
+                "Byrdonis"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/e1129acc-e955-4b9f-b276-aaacbb7e3b06/decisions.jsonl",
+              "trace_sha256": "1f8a115b0ca8ddc18e3df4a110db3aa1f289f34447db0b35d49b2d69807c1eab",
+              "wire.jsonl_sha256": "b3171dac9aa5506ddc7fd47ad6776b19e6d9a936829a20e998a8381aa98fe8e1",
+              "engine.stderr.log_sha256": "b896df9086b6f6288094bfb265fda0a7666517be13f00f1a651866c92e3e24f2",
+              "value_calibration": {
+                "n": 13,
+                "mse": 2.442092770316911,
+                "mean_prediction": 0.557266292663721,
+                "actual_return": -1.0
+              }
+            },
+            {
+              "case": "test-044-b5",
+              "ascension": 10,
+              "entry_hp": 61,
+              "enemies": [
+                "Phrog Parasite"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/c9986718-9681-4f32-be4f-f0c763eca167/decisions.jsonl",
+              "trace_sha256": "068b6c3842325f516d269dfce26454a1cafafa8cdabb74e038e54700c14a737b",
+              "wire.jsonl_sha256": "a30bee5faabe8e04161fdb64dccff4f924521f4508583c03229238fa4a97c718",
+              "engine.stderr.log_sha256": "4c482cbb42721ff27cc8212f96275fc0a2926ff2fe13ccae57be8ea42a4e40a9",
+              "value_calibration": {
+                "n": 27,
+                "mse": 0.19268178420150284,
+                "mean_prediction": -0.5990180119320199,
+                "actual_return": -1.0
+              }
+            },
+            {
+              "case": "test-046-b5",
+              "ascension": 5,
+              "entry_hp": 44,
+              "enemies": [
+                "Fogmog"
+              ],
+              "arm_status": "clear",
+              "planner_status": "defeat",
+              "trace_path": "artifacts/runs/0e461a51-c77b-4973-84f2-d505739b5a1e/decisions.jsonl",
+              "trace_sha256": "c08c9026570bad551b5d48ea9a5b664391fc30ac37388d59a4c7a0275f507f19",
+              "wire.jsonl_sha256": "aae652dc4a6296cf7d8fb4d82ea1c0433a15988d730cd9628704123d514fc0e8",
+              "engine.stderr.log_sha256": "ff823a033073d44286af14b6f1ece80ad445687bdf0d101a54e4d69d04495b4f",
+              "value_calibration": {
+                "n": 19,
+                "mse": 0.06759040088821777,
+                "mean_prediction": 0.8801847225741336,
+                "actual_return": 1.09375
+              }
+            }
+          ]
+        }
+      },
+      "by_difficulty": {
+        "early:A0": {
+          "n": 16,
+          "statuses": {
+            "clear": 16
+          },
+          "clears": 16,
+          "mean_reward": 1.227227011494253,
+          "mean_clear_hp": 68.1875,
+          "steps": 199,
+          "engine_seconds": 33.408621044130996,
+          "inference_seconds": 0.137482340214774,
+          "illegal_actions": 0
+        },
+        "early:A5": {
+          "n": 16,
+          "statuses": {
+            "clear": 16
+          },
+          "clears": 16,
+          "mean_reward": 1.1980404361263737,
+          "mean_clear_hp": 64,
+          "steps": 180,
+          "engine_seconds": 31.254071998875588,
+          "inference_seconds": 0.10958095965906978,
+          "illegal_actions": 0
+        },
+        "early:A10": {
+          "n": 16,
+          "statuses": {
+            "clear": 16
+          },
+          "clears": 16,
+          "mean_reward": 1.17421875,
+          "mean_clear_hp": 55.75,
+          "steps": 194,
+          "engine_seconds": 33.70139320823364,
+          "inference_seconds": 0.11251613311469555,
+          "illegal_actions": 0
+        },
+        "challenging:A0": {
+          "n": 16,
+          "statuses": {
+            "defeat": 4,
+            "clear": 12
+          },
+          "clears": 12,
+          "mean_reward": 0.5772876257183908,
+          "mean_clear_hp": 33.666666666666664,
+          "steps": 274,
+          "engine_seconds": 34.55718950065784,
+          "inference_seconds": 0.1342207444831729,
+          "illegal_actions": 0
+        },
+        "challenging:A5": {
+          "n": 16,
+          "statuses": {
+            "clear": 10,
+            "defeat": 6
+          },
+          "clears": 10,
+          "mean_reward": 0.31904858117816093,
+          "mean_clear_hp": 35.9,
+          "steps": 298,
+          "engine_seconds": 33.093829665798694,
+          "inference_seconds": 0.1532028359360993,
+          "illegal_actions": 0
+        },
+        "challenging:A10": {
+          "n": 16,
+          "statuses": {
+            "defeat": 14,
+            "clear": 2
+          },
+          "clears": 2,
+          "mean_reward": -0.7395743534482758,
+          "mean_clear_hp": 28.5,
+          "steps": 252,
+          "engine_seconds": 30.75399924768135,
+          "inference_seconds": 0.11786604765802622,
+          "illegal_actions": 0
+        }
+      }
+    },
+    "short-1702": {
+      "passed": true,
+      "alias_of": null,
+      "panels": {
+        "early": {
+          "summary": {
+            "n": 48,
+            "statuses": {
+              "clear": 48
+            },
+            "clears": 48,
+            "mean_reward": 1.199703762473159,
+            "mean_clear_hp": 62.604166666666664,
+            "steps": 546,
+            "engine_seconds": 92.96307487715967,
+            "inference_seconds": 0.27357754623517394,
+            "illegal_actions": 0
+          },
+          "versus_planner": {
+            "clear_delta": 0,
+            "hp_equivalent_deltas": [
+              -6,
+              -5,
+              -9,
+              0,
+              0,
+              -8,
+              11,
+              0,
+              2,
+              -10,
+              -5,
+              -9,
+              -10,
+              0,
+              0,
+              -4,
+              -4,
+              -5,
+              0,
+              -4,
+              -10,
+              -8,
+              -5,
+              -5,
+              -4,
+              -12,
+              4,
+              -12,
+              -5,
+              2,
+              0,
+              -8,
+              8,
+              -4,
+              0,
+              -10,
+              -9,
+              -9,
+              -5,
+              0,
+              -5,
+              -5,
+              -14,
+              -12,
+              -2,
+              -4,
+              -9,
+              21
+            ],
+            "median_hp_delta": -5.0,
+            "mean_hp_delta": -3.9166666666666665
+          },
+          "on_policy_value_mse": 0.08797649407152743,
+          "outcome_disagreements": []
+        },
+        "challenging": {
+          "summary": {
+            "n": 48,
+            "statuses": {
+              "defeat": 25,
+              "clear": 23
+            },
+            "clears": 23,
+            "mean_reward": 0.004976352969348656,
+            "mean_clear_hp": 31.782608695652176,
+            "steps": 743,
+            "engine_seconds": 92.55901825311594,
+            "inference_seconds": 0.4028671281412244,
+            "illegal_actions": 0
+          },
+          "versus_planner": {
+            "clear_delta": -2,
+            "hp_equivalent_deltas": [
+              0,
+              -33,
+              0,
+              -47,
+              0,
+              0,
+              15,
+              0,
+              0,
+              -8,
+              -26,
+              -10,
+              0,
+              -15,
+              17,
+              -11,
+              -13,
+              0,
+              -1,
+              0,
+              0,
+              -9,
+              -22,
+              0,
+              -14,
+              -24,
+              0,
+              -24,
+              -6,
+              0,
+              0,
+              -13,
+              0,
+              -20,
+              -8,
+              0,
+              5,
+              0,
+              0,
+              -7,
+              -5,
+              0,
+              0,
+              0,
+              -22,
+              -21,
+              35,
+              4
+            ],
+            "median_hp_delta": 0.0,
+            "mean_hp_delta": -5.895833333333333
+          },
+          "on_policy_value_mse": 1.2070468489397035,
+          "outcome_disagreements": [
+            {
+              "case": "test-001-b4",
+              "ascension": 5,
+              "entry_hp": 55,
+              "enemies": [
+                "Phrog Parasite"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/8fcdd15f-43bc-4431-b195-b66a3884b9ef/decisions.jsonl",
+              "trace_sha256": "7e441726c836a75bebd70a4fcc6002895d37af3776b2c3670c8c4129c41cc7f4",
+              "wire.jsonl_sha256": "2f731611d60e057726b626e23f96bab7b3481fb275b468eea703a1b557fd10d2",
+              "engine.stderr.log_sha256": "eca2a9b3d4b91535e523d709cf57fb779e50f0432a7d917b0426c58b208ca5c7",
+              "value_calibration": {
+                "n": 31,
+                "mse": 0.3657177349573019,
+                "mean_prediction": -0.4465856590578633,
+                "actual_return": -1.0
+              }
+            },
+            {
+              "case": "test-003-b5",
+              "ascension": 0,
+              "entry_hp": 66,
+              "enemies": [
+                "Phrog Parasite"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/d2a6ac93-9462-49d4-b542-06936728e8a1/decisions.jsonl",
+              "trace_sha256": "3ec235635956f768ba14fd2647d89cbf3594c44f585116d922905a7e941cacef",
+              "wire.jsonl_sha256": "7578fb6ee8c35db9af6cde7dbc62bbeace380a75c60da46d462ef3f0e2260039",
+              "engine.stderr.log_sha256": "19df8f15ef507c4ddae12e713305fad744d264c9dfa91dc4abef3ccdc53e3b7f",
+              "value_calibration": {
+                "n": 32,
+                "mse": 0.4626581084296558,
+                "mean_prediction": -0.3953912639990449,
+                "actual_return": -1.0
+              }
+            },
+            {
+              "case": "test-006-b4",
+              "ascension": 0,
+              "entry_hp": 57,
+              "enemies": [
+                "Byrdonis"
+              ],
+              "arm_status": "clear",
+              "planner_status": "defeat",
+              "trace_path": "artifacts/runs/ded84d89-9b82-4adb-9d4c-6a66ec5b0226/decisions.jsonl",
+              "trace_sha256": "d981cd6ac330157a8b7e4888744297ea7739c278b13ad886c860334599a5b32e",
+              "wire.jsonl_sha256": "2e2dfc649e890408521e2dbbd21d6409613145e2d0313c650bf75c3390475c77",
+              "engine.stderr.log_sha256": "bcc6353ed6fed43a82381f2414001065abb2fbdba9f3a5d29ef7db43cee2aa7d",
+              "value_calibration": {
+                "n": 10,
+                "mse": 0.43271509645182854,
+                "mean_prediction": 0.41213228115811945,
+                "actual_return": 1.046875
+              }
+            },
+            {
+              "case": "test-011-b5",
+              "ascension": 10,
+              "entry_hp": 61,
+              "enemies": [
+                "Byrdonis"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/51924224-1c37-48be-8c77-7b74a2ea2b71/decisions.jsonl",
+              "trace_sha256": "c0a9067b866f6c25acb777fb7f2d6ac6e2e3b0193f7a56f7abf1462764289f5d",
+              "wire.jsonl_sha256": "57b23b4f70a56aa30a4225d9489cfa0531ce428460b34a97c9e15f49d7c635c3",
+              "engine.stderr.log_sha256": "8407f303549fa5b6ec5867083906614b6ec1b21d3daad5e387c7970c7ac1717d",
+              "value_calibration": {
+                "n": 15,
+                "mse": 0.6658726333283315,
+                "mean_prediction": -0.19285426239172618,
+                "actual_return": -1.0
+              }
+            },
+            {
+              "case": "test-014-b4",
+              "ascension": 10,
+              "entry_hp": 61,
+              "enemies": [
+                "Byrdonis"
+              ],
+              "arm_status": "clear",
+              "planner_status": "defeat",
+              "trace_path": "artifacts/runs/c68cbcef-9881-4c0b-b0db-46935dc20c61/decisions.jsonl",
+              "trace_sha256": "9fe3357d3a3980bdf6c300d21bf5d8920cbff3e8503f24ce9641361291c0a59f",
+              "wire.jsonl_sha256": "0f78dda1562118c71616639945f8643022e04e12e83de4707a6aabe2d5edfa55",
+              "engine.stderr.log_sha256": "d83980cda0c7cc952392adad43534eca1ddcb1dda1ee18da24d8281bf721e118",
+              "value_calibration": {
+                "n": 13,
+                "mse": 2.2980377754569963,
+                "mean_prediction": -0.4598503273267012,
+                "actual_return": 1.053125
+              }
+            },
+            {
+              "case": "test-016-b7",
+              "ascension": 5,
+              "entry_hp": 40,
+              "enemies": [
+                "Byrdonis"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/d2d50610-52b6-45dd-8cdc-ab2c0a2813dd/decisions.jsonl",
+              "trace_sha256": "4e33432be4bfa8792c81f197a57956f642778e5629719584faac64744c528dd7",
+              "wire.jsonl_sha256": "2acff5a895793208dfc9bf7d87db85e8002a5657afdf7f416f6f5ddfd1dc5438",
+              "engine.stderr.log_sha256": "de6e8a5422a5146f7dcefb758cd1df60974dc306b010480674313c07d01ceec4",
+              "value_calibration": {
+                "n": 13,
+                "mse": 0.9082478207667329,
+                "mean_prediction": -0.05183820290347704,
+                "actual_return": -1.0
+              }
+            },
+            {
+              "case": "test-044-b5",
+              "ascension": 10,
+              "entry_hp": 61,
+              "enemies": [
+                "Phrog Parasite"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/b53dfb53-0f35-4ac2-a66d-986da5f0d1e2/decisions.jsonl",
+              "trace_sha256": "77f465004831133768e646a6744080f386c0a03787004cd183adee1d567665db",
+              "wire.jsonl_sha256": "f73be4a96db8276c0aabf4f5a820e865ac353d4866603a93eaaff9c917d4af0b",
+              "engine.stderr.log_sha256": "1bc848eec58454f0d5432e475fb6eb8bb07a019d9136fda4e91637dd959e8193",
+              "value_calibration": {
+                "n": 20,
+                "mse": 0.27007496045312185,
+                "mean_prediction": -0.5091656938195228,
+                "actual_return": -1.0
+              }
+            },
+            {
+              "case": "test-046-b5",
+              "ascension": 5,
+              "entry_hp": 44,
+              "enemies": [
+                "Fogmog"
+              ],
+              "arm_status": "clear",
+              "planner_status": "defeat",
+              "trace_path": "artifacts/runs/ca0e5527-48e2-43fc-b33d-79c2f80c29d0/decisions.jsonl",
+              "trace_sha256": "cd8ca1960db1403de09df41c1096bacd283d366d5883026a6a5537cc5b809d38",
+              "wire.jsonl_sha256": "205ad6b4722fe21322223febd5415667b4f69471eac3028a513f702097f3f117",
+              "engine.stderr.log_sha256": "8f0458a44842e8a34f40b2b4aceb4af1592068da200b1c143b81bbd8d130aa86",
+              "value_calibration": {
+                "n": 19,
+                "mse": 0.539205577746066,
+                "mean_prediction": 0.4410976618528366,
+                "actual_return": 1.109375
+              }
+            }
+          ]
+        }
+      },
+      "by_difficulty": {
+        "early:A0": {
+          "n": 16,
+          "statuses": {
+            "clear": 16
+          },
+          "clears": 16,
+          "mean_reward": 1.2248989762931035,
+          "mean_clear_hp": 67.4375,
+          "steps": 195,
+          "engine_seconds": 30.354443915886804,
+          "inference_seconds": 0.09721849323250353,
+          "illegal_actions": 0
+        },
+        "early:A5": {
+          "n": 16,
+          "statuses": {
+            "clear": 16
+          },
+          "clears": 16,
+          "mean_reward": 1.1972591861263737,
+          "mean_clear_hp": 63.75,
+          "steps": 169,
+          "engine_seconds": 32.075249292189255,
+          "inference_seconds": 0.08726392546668649,
+          "illegal_actions": 0
+        },
+        "early:A10": {
+          "n": 16,
+          "statuses": {
+            "clear": 16
+          },
+          "clears": 16,
+          "mean_reward": 1.176953125,
+          "mean_clear_hp": 56.625,
+          "steps": 182,
+          "engine_seconds": 30.53338166908361,
+          "inference_seconds": 0.08909512753598392,
+          "illegal_actions": 0
+        },
+        "challenging:A0": {
+          "n": 16,
+          "statuses": {
+            "defeat": 4,
+            "clear": 12
+          },
+          "clears": 12,
+          "mean_reward": 0.570337194683908,
+          "mean_clear_hp": 30.5,
+          "steps": 260,
+          "engine_seconds": 32.689053375972435,
+          "inference_seconds": 0.13472387148067355,
+          "illegal_actions": 0
+        },
+        "challenging:A5": {
+          "n": 16,
+          "statuses": {
+            "defeat": 7,
+            "clear": 9
+          },
+          "clears": 9,
+          "mean_reward": 0.18318965517241378,
+          "mean_clear_hp": 33.666666666666664,
+          "steps": 262,
+          "engine_seconds": 30.789314999477938,
+          "inference_seconds": 0.13634733017534018,
+          "illegal_actions": 0
+        },
+        "challenging:A10": {
+          "n": 16,
+          "statuses": {
+            "defeat": 14,
+            "clear": 2
+          },
+          "clears": 2,
+          "mean_reward": -0.7385977909482758,
+          "mean_clear_hp": 31,
+          "steps": 221,
+          "engine_seconds": 29.080649877665564,
+          "inference_seconds": 0.13179592648521066,
+          "illegal_actions": 0
+        }
+      }
+    },
+    "long-1702": {
+      "passed": true,
+      "alias_of": null,
+      "panels": {
+        "early": {
+          "summary": {
+            "n": 48,
+            "statuses": {
+              "clear": 48
+            },
+            "clears": 48,
+            "mean_reward": 1.1972949083064923,
+            "mean_clear_hp": 61.833333333333336,
+            "steps": 547,
+            "engine_seconds": 94.49006725125946,
+            "inference_seconds": 0.27340656891465187,
+            "illegal_actions": 0
+          },
+          "versus_planner": {
+            "clear_delta": 0,
+            "hp_equivalent_deltas": [
+              -6,
+              -5,
+              -9,
+              -5,
+              0,
+              -8,
+              11,
+              0,
+              2,
+              -10,
+              -5,
+              -9,
+              -10,
+              0,
+              -2,
+              -3,
+              -4,
+              -31,
+              0,
+              -4,
+              4,
+              -8,
+              -5,
+              -5,
+              -3,
+              -12,
+              4,
+              -12,
+              -5,
+              -2,
+              0,
+              -8,
+              -5,
+              0,
+              -8,
+              -10,
+              4,
+              -9,
+              -5,
+              0,
+              0,
+              -5,
+              -14,
+              -11,
+              -18,
+              -5,
+              -10,
+              21
+            ],
+            "median_hp_delta": -5.0,
+            "mean_hp_delta": -4.6875
+          },
+          "on_policy_value_mse": 0.0359373430712805,
+          "outcome_disagreements": []
+        },
+        "challenging": {
+          "summary": {
+            "n": 48,
+            "statuses": {
+              "defeat": 23,
+              "clear": 25
+            },
+            "clears": 25,
+            "mean_reward": 0.09757168941570882,
+            "mean_clear_hp": 35.04,
+            "steps": 751,
+            "engine_seconds": 93.35453591751866,
+            "inference_seconds": 0.40621313732117414,
+            "illegal_actions": 0
+          },
+          "versus_planner": {
+            "clear_delta": 0,
+            "hp_equivalent_deltas": [
+              0,
+              -7,
+              0,
+              -11,
+              0,
+              0,
+              15,
+              0,
+              0,
+              -8,
+              -21,
+              5,
+              0,
+              -15,
+              17,
+              -11,
+              -13,
+              0,
+              -1,
+              0,
+              0,
+              -11,
+              -14,
+              0,
+              -11,
+              -1,
+              0,
+              -14,
+              -6,
+              0,
+              0,
+              -13,
+              0,
+              -20,
+              -8,
+              0,
+              21,
+              0,
+              0,
+              -18,
+              0,
+              0,
+              0,
+              0,
+              -22,
+              -13,
+              38,
+              4
+            ],
+            "median_hp_delta": 0.0,
+            "mean_hp_delta": -2.875
+          },
+          "on_policy_value_mse": 0.8998278450498794,
+          "outcome_disagreements": [
+            {
+              "case": "test-006-b4",
+              "ascension": 0,
+              "entry_hp": 57,
+              "enemies": [
+                "Byrdonis"
+              ],
+              "arm_status": "clear",
+              "planner_status": "defeat",
+              "trace_path": "artifacts/runs/0df53b1c-bc6f-441d-a55d-95439f08d9fa/decisions.jsonl",
+              "trace_sha256": "ef61b91e1d7eaf707de58a49e7c5e4070b24a5b024f4206b50078cda685946ad",
+              "wire.jsonl_sha256": "70175800daa4e65443c94ac5a601cfd72604e40e2b09734464a435061702ddd4",
+              "engine.stderr.log_sha256": "bcc6353ed6fed43a82381f2414001065abb2fbdba9f3a5d29ef7db43cee2aa7d",
+              "value_calibration": {
+                "n": 10,
+                "mse": 0.24645878478199998,
+                "mean_prediction": 0.5945436522364617,
+                "actual_return": 1.046875
+              }
+            },
+            {
+              "case": "test-014-b4",
+              "ascension": 10,
+              "entry_hp": 61,
+              "enemies": [
+                "Byrdonis"
+              ],
+              "arm_status": "clear",
+              "planner_status": "defeat",
+              "trace_path": "artifacts/runs/8f1a3202-14e0-48fd-8705-557075083316/decisions.jsonl",
+              "trace_sha256": "17dc841be1b6a91c91f59caa0089f1716741072c559d150f3f37ccd541357422",
+              "wire.jsonl_sha256": "ac6c54491f20eb52d7a02e6fa3cfb43a191cf25876a5bdace0d658119d136d92",
+              "engine.stderr.log_sha256": "d83980cda0c7cc952392adad43534eca1ddcb1dda1ee18da24d8281bf721e118",
+              "value_calibration": {
+                "n": 13,
+                "mse": 0.9599925702178445,
+                "mean_prediction": 0.08226607052179483,
+                "actual_return": 1.053125
+              }
+            },
+            {
+              "case": "test-016-b7",
+              "ascension": 5,
+              "entry_hp": 40,
+              "enemies": [
+                "Byrdonis"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/1dcd2351-0107-4b90-afae-a6a36539989d/decisions.jsonl",
+              "trace_sha256": "4bb87a8e080301363e0a4149f74eb0102aca33b3363e386458c8592e5e471c8f",
+              "wire.jsonl_sha256": "e00a7f88afdece5dd0eb0c319076eb8faf41cc28617620d1e2d47c7cbeb62d48",
+              "engine.stderr.log_sha256": "75d0386f05e6410400ad42570f60c77774ef5ab9c81f4b0af2b80370edb2caff",
+              "value_calibration": {
+                "n": 13,
+                "mse": 2.2578857357915183,
+                "mean_prediction": 0.5001534338180835,
+                "actual_return": -1.0
+              }
+            },
+            {
+              "case": "test-039-b5",
+              "ascension": 0,
+              "entry_hp": 75,
+              "enemies": [
+                "Bygone Effigy"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/320d6d9e-5cab-402e-878d-00645bf8a345/decisions.jsonl",
+              "trace_sha256": "3f78a18683bc9bc1217e1c8fff97f602c9515d232f3ca6b79f4b48b395fc7475",
+              "wire.jsonl_sha256": "00308dc5e615dab360a5d07d7893e64edc8cb8780a109c2061e12d19bf033438",
+              "engine.stderr.log_sha256": "f03c4281f86283877cfaab64e99abf7a9dd3f1ddec09154176e9a1b2c1e01ad9",
+              "value_calibration": {
+                "n": 19,
+                "mse": 1.730350652835903,
+                "mean_prediction": 0.3086532852367351,
+                "actual_return": -1.0
+              }
+            },
+            {
+              "case": "test-044-b5",
+              "ascension": 10,
+              "entry_hp": 61,
+              "enemies": [
+                "Phrog Parasite"
+              ],
+              "arm_status": "defeat",
+              "planner_status": "clear",
+              "trace_path": "artifacts/runs/ae321395-05c8-4919-9d0a-8269ce039f51/decisions.jsonl",
+              "trace_sha256": "ead315dc4e0767dbca5c3ebdcceceaf93adc1c79d48a99ee9e0a88b46c9f40ee",
+              "wire.jsonl_sha256": "4d47b9f726a7cd99addb4488c9d2a2a96c1c6ba9062dfd5e8d9d128fba8358fa",
+              "engine.stderr.log_sha256": "4f5d4982eecc755477fae55298c043d623856533ef51ef29eff4df1050f336e9",
+              "value_calibration": {
+                "n": 24,
+                "mse": 1.3139626543300553,
+                "mean_prediction": 0.12715085846139118,
+                "actual_return": -1.0
+              }
+            },
+            {
+              "case": "test-046-b5",
+              "ascension": 5,
+              "entry_hp": 44,
+              "enemies": [
+                "Fogmog"
+              ],
+              "arm_status": "clear",
+              "planner_status": "defeat",
+              "trace_path": "artifacts/runs/91eb722e-4f0a-425a-8160-7e32bc685954/decisions.jsonl",
+              "trace_sha256": "10cf787b9c87e9839d0140596f7e7322ac214a85cfc2ea1294e86a940c78c9a1",
+              "wire.jsonl_sha256": "99a008aad77d01eb5524e51d87c64d6a7bbde659ac00eab2ca7943b0bd8857cf",
+              "engine.stderr.log_sha256": "430a3e1624288db9c90e32ccd17cece414d8dae43c0d6346007975b5082f3b76",
+              "value_calibration": {
+                "n": 19,
+                "mse": 0.022164376937724137,
+                "mean_prediction": 1.0142494659674794,
+                "actual_return": 1.11875
+              }
+            }
+          ]
+        }
+      },
+      "by_difficulty": {
+        "early:A0": {
+          "n": 16,
+          "statuses": {
+            "clear": 16
+          },
+          "clears": 16,
+          "mean_reward": 1.2274380387931034,
+          "mean_clear_hp": 68.25,
+          "steps": 185,
+          "engine_seconds": 32.42026412580162,
+          "inference_seconds": 0.09433424146845937,
+          "illegal_actions": 0
+        },
+        "early:A5": {
+          "n": 16,
+          "statuses": {
+            "clear": 16
+          },
+          "clears": 16,
+          "mean_reward": 1.1966732486263736,
+          "mean_clear_hp": 63.5625,
+          "steps": 168,
+          "engine_seconds": 30.1138924153056,
+          "inference_seconds": 0.0853654951788485,
+          "illegal_actions": 0
+        },
+        "early:A10": {
+          "n": 16,
+          "statuses": {
+            "clear": 16
+          },
+          "clears": 16,
+          "mean_reward": 1.1677734375,
+          "mean_clear_hp": 53.6875,
+          "steps": 194,
+          "engine_seconds": 31.95591071015224,
+          "inference_seconds": 0.093706832267344,
+          "illegal_actions": 0
+        },
+        "challenging:A0": {
+          "n": 16,
+          "statuses": {
+            "defeat": 4,
+            "clear": 12
+          },
+          "clears": 12,
+          "mean_reward": 0.5818830818965517,
+          "mean_clear_hp": 35.5,
+          "steps": 246,
+          "engine_seconds": 33.09061946021393,
+          "inference_seconds": 0.12091319868341088,
+          "illegal_actions": 0
+        },
+        "challenging:A5": {
+          "n": 16,
+          "statuses": {
+            "clear": 10,
+            "defeat": 6
+          },
+          "clears": 10,
+          "mean_reward": 0.3215000897988506,
+          "mean_clear_hp": 37.3,
+          "steps": 279,
+          "engine_seconds": 31.046661123633385,
+          "inference_seconds": 0.155366534832865,
+          "illegal_actions": 0
+        },
+        "challenging:A10": {
+          "n": 16,
+          "statuses": {
+            "defeat": 13,
+            "clear": 3
+          },
+          "clears": 3,
+          "mean_reward": -0.6106681034482758,
+          "mean_clear_hp": 25.666666666666668,
+          "steps": 226,
+          "engine_seconds": 29.217255333671346,
+          "inference_seconds": 0.12993340380489826,
+          "illegal_actions": 0
+        }
+      }
+    }
+  },
+  "by_difficulty_comparisons": {
+    "long-1701_vs_E127-1701": {
+      "early:A0": {
+        "clear_delta": 0,
+        "hp_equivalent_deltas": [
+          0,
+          0,
+          -11,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          -5,
+          0,
+          0,
+          2,
+          -1,
+          0,
+          0
+        ],
+        "median_hp_delta": 0.0,
+        "mean_hp_delta": -0.75
+      },
+      "early:A5": {
+        "clear_delta": 0,
+        "hp_equivalent_deltas": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          19,
+          4,
+          6,
+          0,
+          -1,
+          -5,
+          -1,
+          -1
+        ],
+        "median_hp_delta": 0.0,
+        "mean_hp_delta": 1.4375
+      },
+      "early:A10": {
+        "clear_delta": 0,
+        "hp_equivalent_deltas": [
+          0,
+          9,
+          -4,
+          -1,
+          2,
+          13,
+          14,
+          0,
+          0,
+          1,
+          -1,
+          0,
+          -3,
+          0,
+          -12,
+          0
+        ],
+        "median_hp_delta": 0.0,
+        "mean_hp_delta": 1.125
+      },
+      "challenging:A0": {
+        "clear_delta": 4,
+        "hp_equivalent_deltas": [
+          0,
+          12,
+          -7,
+          18,
+          0,
+          0,
+          6,
+          2,
+          17,
+          33,
+          0,
+          34,
+          21,
+          10,
+          18,
+          8
+        ],
+        "median_hp_delta": 9.0,
+        "mean_hp_delta": 10.75
+      },
+      "challenging:A5": {
+        "clear_delta": 2,
+        "hp_equivalent_deltas": [
+          23,
+          0,
+          0,
+          27,
+          41,
+          -8,
+          0,
+          13,
+          -39,
+          27,
+          50,
+          10,
+          0,
+          13,
+          0,
+          -9
+        ],
+        "median_hp_delta": 5.0,
+        "mean_hp_delta": 9.25
+      },
+      "challenging:A10": {
+        "clear_delta": 0,
+        "hp_equivalent_deltas": [
+          0,
+          0,
+          0,
+          0,
+          12,
+          -17,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          4
+        ],
+        "median_hp_delta": 0.0,
+        "mean_hp_delta": -0.0625
+      }
+    },
+    "long-1701_vs_short-1701": {
+      "early:A0": {
+        "clear_delta": 0,
+        "hp_equivalent_deltas": [
+          -5,
+          9,
+          -11,
+          2,
+          0,
+          -2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          -5,
+          0
+        ],
+        "median_hp_delta": 0.0,
+        "mean_hp_delta": -0.8125
+      },
+      "early:A5": {
+        "clear_delta": 0,
+        "hp_equivalent_deltas": [
+          0,
+          8,
+          0,
+          0,
+          8,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          7,
+          -1,
+          -5
+        ],
+        "median_hp_delta": 0.0,
+        "mean_hp_delta": 1.125
+      },
+      "early:A10": {
+        "clear_delta": 0,
+        "hp_equivalent_deltas": [
+          3,
+          9,
+          -4,
+          0,
+          0,
+          8,
+          14,
+          0,
+          14,
+          8,
+          0,
+          3,
+          -5,
+          -5,
+          0,
+          8
+        ],
+        "median_hp_delta": 1.5,
+        "mean_hp_delta": 3.3125
+      },
+      "challenging:A0": {
+        "clear_delta": 2,
+        "hp_equivalent_deltas": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          6,
+          0,
+          29,
+          3,
+          0,
+          -2,
+          13,
+          10,
+          18,
+          8
+        ],
+        "median_hp_delta": 0.5,
+        "mean_hp_delta": 5.375
+      },
+      "challenging:A5": {
+        "clear_delta": 1,
+        "hp_equivalent_deltas": [
+          23,
+          0,
+          0,
+          8,
+          16,
+          -8,
+          0,
+          8,
+          -16,
+          16,
+          0,
+          23,
+          0,
+          28,
+          0,
+          0
+        ],
+        "median_hp_delta": 0.0,
+        "mean_hp_delta": 6.125
+      },
+      "challenging:A10": {
+        "clear_delta": 1,
+        "hp_equivalent_deltas": [
+          0,
+          0,
+          0,
+          0,
+          12,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          15
+        ],
+        "median_hp_delta": 0.0,
+        "mean_hp_delta": 1.6875
+      }
+    },
+    "long-1701_vs_planner": {
+      "early:A0": {
+        "clear_delta": 0,
+        "hp_equivalent_deltas": [
+          -5,
+          0,
+          0,
+          -10,
+          -10,
+          0,
+          0,
+          -8,
+          -3,
+          -12,
+          0,
+          -3,
+          0,
+          0,
+          -7,
+          -4
+        ],
+        "median_hp_delta": -3.0,
+        "mean_hp_delta": -3.875
+      },
+      "early:A5": {
+        "clear_delta": 0,
+        "hp_equivalent_deltas": [
+          -5,
+          0,
+          0,
+          -5,
+          0,
+          -4,
+          -4,
+          -5,
+          -7,
+          -5,
+          -8,
+          0,
+          -9,
+          -5,
+          -12,
+          -10
+        ],
+        "median_hp_delta": -5.0,
+        "mean_hp_delta": -4.9375
+      },
+      "early:A10": {
+        "clear_delta": 0,
+        "hp_equivalent_deltas": [
+          -9,
+          -8,
+          -2,
+          -9,
+          0,
+          -5,
+          4,
+          -5,
+          4,
+          2,
+          -5,
+          -10,
+          -5,
+          -5,
+          -13,
+          21
+        ],
+        "median_hp_delta": -5.0,
+        "mean_hp_delta": -2.8125
+      },
+      "challenging:A0": {
+        "clear_delta": 0,
+        "hp_equivalent_deltas": [
+          0,
+          -35,
+          0,
+          -4,
+          0,
+          0,
+          -10,
+          -9,
+          8,
+          -21,
+          0,
+          -17,
+          5,
+          -8,
+          0,
+          -13
+        ],
+        "median_hp_delta": -2.0,
+        "mean_hp_delta": -6.5
+      },
+      "challenging:A5": {
+        "clear_delta": 0,
+        "hp_equivalent_deltas": [
+          -10,
+          0,
+          0,
+          -10,
+          -18,
+          -13,
+          0,
+          -10,
+          -19,
+          -3,
+          -13,
+          -8,
+          0,
+          0,
+          0,
+          30
+        ],
+        "median_hp_delta": -5.5,
+        "mean_hp_delta": -4.625
+      },
+      "challenging:A10": {
+        "clear_delta": -1,
+        "hp_equivalent_deltas": [
+          0,
+          0,
+          0,
+          -10,
+          12,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -22,
+          4
+        ],
+        "median_hp_delta": 0.0,
+        "mean_hp_delta": -1
+      }
+    },
+    "long-1702_vs_E127-1702": {
+      "early:A0": {
+        "clear_delta": 0,
+        "hp_equivalent_deltas": [
+          4,
+          -5,
+          0,
+          0,
+          0,
+          -3,
+          0,
+          0,
+          5,
+          0,
+          0,
+          8,
+          12,
+          -1,
+          -3,
+          3
+        ],
+        "median_hp_delta": 0.0,
+        "mean_hp_delta": 1.25
+      },
+      "early:A5": {
+        "clear_delta": 0,
+        "hp_equivalent_deltas": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          14,
+          -5,
+          6,
+          -8,
+          -1,
+          0,
+          0,
+          -1
+        ],
+        "median_hp_delta": 0.0,
+        "mean_hp_delta": 0.375
+      },
+      "early:A10": {
+        "clear_delta": 0,
+        "hp_equivalent_deltas": [
+          0,
+          9,
+          0,
+          -1,
+          0,
+          -26,
+          14,
+          0,
+          0,
+          4,
+          0,
+          0,
+          -3,
+          0,
+          -11,
+          0
+        ],
+        "median_hp_delta": 0.0,
+        "mean_hp_delta": -0.875
+      },
+      "challenging:A0": {
+        "clear_delta": 3,
+        "hp_equivalent_deltas": [
+          0,
+          36,
+          15,
+          -6,
+          0,
+          0,
+          15,
+          0,
+          -2,
+          17,
+          0,
+          8,
+          18,
+          0,
+          18,
+          3
+        ],
+        "median_hp_delta": 1.5,
+        "mean_hp_delta": 7.625
+      },
+      "challenging:A5": {
+        "clear_delta": 4,
+        "hp_equivalent_deltas": [
+          26,
+          0,
+          0,
+          28,
+          44,
+          0,
+          0,
+          8,
+          18,
+          18,
+          50,
+          32,
+          0,
+          13,
+          0,
+          3
+        ],
+        "median_hp_delta": 10.5,
+        "mean_hp_delta": 15
+      },
+      "challenging:A10": {
+        "clear_delta": 0,
+        "hp_equivalent_deltas": [
+          0,
+          0,
+          0,
+          15,
+          17,
+          -17,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -9,
+          0,
+          0,
+          0,
+          4
+        ],
+        "median_hp_delta": 0.0,
+        "mean_hp_delta": 0.625
+      }
+    },
+    "long-1702_vs_short-1702": {
+      "early:A0": {
+        "clear_delta": 0,
+        "hp_equivalent_deltas": [
+          0,
+          -5,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          4,
+          13,
+          0,
+          0,
+          -1
+        ],
+        "median_hp_delta": 0.0,
+        "mean_hp_delta": 0.8125
+      },
+      "early:A5": {
+        "clear_delta": 0,
+        "hp_equivalent_deltas": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -8,
+          0,
+          5,
+          1,
+          -1
+        ],
+        "median_hp_delta": 0.0,
+        "mean_hp_delta": -0.1875
+      },
+      "early:A10": {
+        "clear_delta": 0,
+        "hp_equivalent_deltas": [
+          0,
+          0,
+          0,
+          0,
+          -2,
+          -26,
+          14,
+          0,
+          0,
+          -4,
+          -13,
+          0,
+          0,
+          0,
+          -16,
+          0
+        ],
+        "median_hp_delta": 0.0,
+        "mean_hp_delta": -2.9375
+      },
+      "challenging:A0": {
+        "clear_delta": 0,
+        "hp_equivalent_deltas": [
+          0,
+          36,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -2,
+          3,
+          10,
+          0,
+          0,
+          16,
+          -11,
+          0,
+          8
+        ],
+        "median_hp_delta": 0.0,
+        "mean_hp_delta": 3.75
+      },
+      "challenging:A5": {
+        "clear_delta": 1,
+        "hp_equivalent_deltas": [
+          26,
+          0,
+          0,
+          5,
+          0,
+          0,
+          0,
+          8,
+          23,
+          0,
+          0,
+          0,
+          0,
+          5,
+          0,
+          3
+        ],
+        "median_hp_delta": 0.0,
+        "mean_hp_delta": 4.375
+      },
+      "challenging:A10": {
+        "clear_delta": 1,
+        "hp_equivalent_deltas": [
+          0,
+          0,
+          0,
+          15,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "median_hp_delta": 0.0,
+        "mean_hp_delta": 0.9375
+      }
+    },
+    "long-1702_vs_planner": {
+      "early:A0": {
+        "clear_delta": 0,
+        "hp_equivalent_deltas": [
+          -6,
+          -5,
+          11,
+          -10,
+          -10,
+          -3,
+          0,
+          -8,
+          -3,
+          -12,
+          0,
+          0,
+          4,
+          0,
+          -14,
+          -5
+        ],
+        "median_hp_delta": -4.0,
+        "mean_hp_delta": -3.8125
+      },
+      "early:A5": {
+        "clear_delta": 0,
+        "hp_equivalent_deltas": [
+          -5,
+          0,
+          0,
+          -5,
+          0,
+          -4,
+          -4,
+          -5,
+          -12,
+          -5,
+          -8,
+          -8,
+          -9,
+          0,
+          -11,
+          -10
+        ],
+        "median_hp_delta": -5.0,
+        "mean_hp_delta": -5.375
+      },
+      "early:A10": {
+        "clear_delta": 0,
+        "hp_equivalent_deltas": [
+          -9,
+          -8,
+          2,
+          -9,
+          -2,
+          -31,
+          4,
+          -5,
+          4,
+          -2,
+          -5,
+          -10,
+          -5,
+          -5,
+          -18,
+          21
+        ],
+        "median_hp_delta": -5.0,
+        "mean_hp_delta": -4.875
+      },
+      "challenging:A0": {
+        "clear_delta": 0,
+        "hp_equivalent_deltas": [
+          0,
+          -11,
+          15,
+          -8,
+          0,
+          -11,
+          -1,
+          -11,
+          -11,
+          -14,
+          0,
+          -20,
+          21,
+          -18,
+          0,
+          -13
+        ],
+        "median_hp_delta": -9.5,
+        "mean_hp_delta": -5.125
+      },
+      "challenging:A5": {
+        "clear_delta": 0,
+        "hp_equivalent_deltas": [
+          -7,
+          0,
+          0,
+          -21,
+          -15,
+          -13,
+          0,
+          -14,
+          -1,
+          -6,
+          -13,
+          -8,
+          0,
+          0,
+          0,
+          38
+        ],
+        "median_hp_delta": -3.5,
+        "mean_hp_delta": -3.75
+      },
+      "challenging:A10": {
+        "clear_delta": 0,
+        "hp_equivalent_deltas": [
+          0,
+          0,
+          0,
+          5,
+          17,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -22,
+          4
+        ],
+        "median_hp_delta": 0.0,
+        "mean_hp_delta": 0.25
+      }
+    }
+  },
+  "independent_test_seeds": 48,
+  "test_panel_entries": 96,
+  "execution_pass": true,
+  "practical_improvement_pass": false,
+  "longer_training_pass": false,
+  "total_effective_episodes": 12288,
+  "total_optimized_transitions": 196445,
+  "total_rejected_batch_attempts": 384,
+  "total_reset_retry_attempts": 0,
+  "total_optimizer_seconds": 31.867036168230698,
+  "total_work_seconds": 3572.3466209997423,
+  "total_training_validation_seconds": 3725.5018089576624,
+  "selected_policy_replays": 384,
+  "audit": {
+    "raw_traces": 17466,
+    "failures": [],
+    "pass": true
+  },
+  "notes": [
+    "48 independent test seeds shared by all arms; two within-seed panels and two learners are correlated.",
+    "Initial failed batches and their work cost are retained; rejected attempts are not optimized episodes.",
+    "HP-equivalent assigns legitimate defeats zero; incomplete panels are unscored.",
+    "Value MSE is against each greedy policy own terminal return; paths differ, so this is not paired-state causal evidence.",
+    "Models consume planner-prepared Ironclad Act1 battle entries, not learned route/reward or full-run policies.",
+    "Three difficulty strata are A0/A5/A10, sixteen independent held-out seeds each.",
+    "No external model API calls; assistant research/development cost is not included."
+  ]
+}

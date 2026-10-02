@@ -1,0 +1,215 @@
+{
+  "manifest": {
+    "schema_version": 2,
+    "code_commit": "08ee3f1106ca412e942472573f8927663748c917",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "9da8b930e0ac9fc17677856c50de8d632647f2e8eab52f2f2f9fce2c84a1aadd",
+    "godot_stubs_sha256": "1fd436ecb06e289ba2f9236bbdd1d0816bfb09a0083ef52f259b3560bbce6c06",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+      "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772",
+      "headless-zzzzzz-godot-abi.patch": "5239d3836d279de5143f7d56bece1f061c6c4002de696fce28f9f7f3922ededc"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4",
+    "experiment": "E136",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.5",
+    "model_calls": 0,
+    "model_cost_usd": 0,
+    "encoder": "e125-structured-hash-v1",
+    "ppo_action_space": "e136-complete-subsets-v1",
+    "hyperparameters": {
+      "lr": 0.0003,
+      "clip": 0.2,
+      "gamma": 1.0,
+      "gae_lambda": 0.95,
+      "epochs": 4,
+      "minibatch": 128,
+      "entropy": 0.01,
+      "value": 0.5,
+      "grad_norm": 0.5,
+      "target_kl": 0.03
+    },
+    "torch": "2.11.0",
+    "numpy": "2.3.2",
+    "device": "cpu",
+    "torch_threads": 1,
+    "engine_workers": 8,
+    "learner_seeds": [
+      1701,
+      1702
+    ],
+    "scope": "Ironclad A0/A5/A10 natural single battles"
+  },
+  "source_training": {
+    "path": "experiments/E133/training-v1.json",
+    "sha256": "38d5652d3668f215c0ce4c149add9c4defb797cc9ae166b96f37939ce15d8231"
+  },
+  "source_failure": {
+    "case": "train-113-b5",
+    "label": "1702:train:1",
+    "run_id": "d9ee34b4-e0f9-4cde-ab95-a9923af60876",
+    "status": "error",
+    "steps": 18,
+    "entry_verified": true,
+    "replay_seconds": 3.24339233385399,
+    "inference_seconds": 0.014775456860661507,
+    "illegal_actions": 0,
+    "decisions": {
+      "combat_play": 18
+    },
+    "restore_mode": "full_prefix",
+    "error": "ValueError: Truncated card selection action space",
+    "transition_hash": "8c44ec0d53a6fa98e2ae60309d4cc8e1d9f3962428b51093a6407165fec7d784",
+    "seconds": 3.847555249929428,
+    "wire.jsonl_sha256": "a8c73c86d402b22e2384020d4897038a2ba848aa4e3537fccb2fcb55cfe206cc",
+    "engine.stderr.log_sha256": "27bc8ef15975e2626f40a84030f5bddc6db0869a844dd2a86753d12ab533f65f",
+    "trace_path": "artifacts/runs/d9ee34b4-e0f9-4cde-ab95-a9923af60876/decisions.jsonl",
+    "trace_sha256": "a9bf7391f00dee76bff3c909c5ccfa0b0dc7eb32e62fc995e7d174787a5569d8"
+  },
+  "checkpoint": {
+    "path": "artifacts/runs/e133-training-v1/S-1702-00.pt",
+    "sha256": "01af6762d118ef18e3a014b2deaee0a1feee4067cdcbd538a00f58b4e80de237",
+    "update": 0,
+    "config": {
+      "state_width": 128,
+      "action_width": 64
+    }
+  },
+  "primary": {
+    "case": "train-113-b5",
+    "label": "original_sample_complete_menu",
+    "run_id": "75ccfcdb-053c-41b2-8aa8-b9502501715a",
+    "status": "defeat",
+    "steps": 22,
+    "entry_verified": true,
+    "replay_seconds": 3.538753582863137,
+    "inference_seconds": 0.013158084591850638,
+    "illegal_actions": 0,
+    "decisions": {
+      "combat_play": 21,
+      "card_select": 1
+    },
+    "restore_mode": "full_prefix",
+    "hp": 0,
+    "max_hp": 87,
+    "potions": [],
+    "final_hash": "07ce561cd77b13eb096b3658e62bc8f52b4b503945969016c9ffc39f9243bdf2",
+    "transition_hash": "d0c2c9a92346447e9578797ed46f0b5dfb36fdf1820a91eb45ee1fe2b64a49b7",
+    "seconds": 4.24899374996312,
+    "wire.jsonl_sha256": "fbca6290b13fa1d01870236c4b8e67290f96566af42513d8c913d556cf0c2c7e",
+    "engine.stderr.log_sha256": "f9bd881842623053d8ed4f89b744ccbb89d8d15aa35a7cc7a26317872cb7fc1a",
+    "trace_path": "artifacts/runs/75ccfcdb-053c-41b2-8aa8-b9502501715a/decisions.jsonl",
+    "trace_sha256": "fa94d8416cb4b92dacff980145cfe923615f2c1892fcb86224c614a08b7ff441",
+    "reward": -1.0
+  },
+  "legal_choices": 191,
+  "old_transition_match": true,
+  "encoded_choices_at_failure": 191,
+  "replays": [
+    {
+      "case": "train-113-b5",
+      "label": "independent_full_prefix:0",
+      "run_id": "7517f7f6-dbb6-43f7-84c1-bab15404c26b",
+      "status": "defeat",
+      "steps": 22,
+      "entry_verified": true,
+      "replay_seconds": 3.0002420409582555,
+      "inference_seconds": 0.0,
+      "illegal_actions": 0,
+      "decisions": {
+        "combat_play": 21,
+        "card_select": 1
+      },
+      "restore_mode": "full_prefix",
+      "hp": 0,
+      "max_hp": 87,
+      "potions": [],
+      "final_hash": "07ce561cd77b13eb096b3658e62bc8f52b4b503945969016c9ffc39f9243bdf2",
+      "transition_hash": "d0c2c9a92346447e9578797ed46f0b5dfb36fdf1820a91eb45ee1fe2b64a49b7",
+      "seconds": 3.7137482911348343,
+      "wire.jsonl_sha256": "08422ed184b0d87277372e1356b500e9d5e865633678bb453b10b714057442ed",
+      "engine.stderr.log_sha256": "f9bd881842623053d8ed4f89b744ccbb89d8d15aa35a7cc7a26317872cb7fc1a",
+      "trace_path": "artifacts/runs/7517f7f6-dbb6-43f7-84c1-bab15404c26b/decisions.jsonl",
+      "trace_sha256": "8916ef5ea5a4e26ff36c70c061279cb88a1c21e84adfaa8509d4e13e418abeb7",
+      "reward": -1.0,
+      "match": true
+    },
+    {
+      "case": "train-113-b5",
+      "label": "independent_full_prefix:1",
+      "run_id": "b482c72c-7d12-4771-a389-e7810e7ce5c3",
+      "status": "defeat",
+      "steps": 22,
+      "entry_verified": true,
+      "replay_seconds": 3.012325166957453,
+      "inference_seconds": 0.0,
+      "illegal_actions": 0,
+      "decisions": {
+        "combat_play": 21,
+        "card_select": 1
+      },
+      "restore_mode": "full_prefix",
+      "hp": 0,
+      "max_hp": 87,
+      "potions": [],
+      "final_hash": "07ce561cd77b13eb096b3658e62bc8f52b4b503945969016c9ffc39f9243bdf2",
+      "transition_hash": "d0c2c9a92346447e9578797ed46f0b5dfb36fdf1820a91eb45ee1fe2b64a49b7",
+      "seconds": 3.704761624801904,
+      "wire.jsonl_sha256": "3ca706f4f2092b35db350b61e8d98f780e09bd7444a001e1bf119212e1c14c50",
+      "engine.stderr.log_sha256": "f9bd881842623053d8ed4f89b744ccbb89d8d15aa35a7cc7a26317872cb7fc1a",
+      "trace_path": "artifacts/runs/b482c72c-7d12-4771-a389-e7810e7ce5c3/decisions.jsonl",
+      "trace_sha256": "5a8a5f2dd6d980eb9e070459f7515a44668f4bc948063b1818f438f634ff3d0c",
+      "reward": -1.0,
+      "match": true
+    },
+    {
+      "case": "train-113-b5",
+      "label": "independent_full_prefix:2",
+      "run_id": "7b41a5c0-7545-4c44-84f3-5b60775f54fd",
+      "status": "defeat",
+      "steps": 22,
+      "entry_verified": true,
+      "replay_seconds": 2.982122916029766,
+      "inference_seconds": 0.0,
+      "illegal_actions": 0,
+      "decisions": {
+        "combat_play": 21,
+        "card_select": 1
+      },
+      "restore_mode": "full_prefix",
+      "hp": 0,
+      "max_hp": 87,
+      "potions": [],
+      "final_hash": "07ce561cd77b13eb096b3658e62bc8f52b4b503945969016c9ffc39f9243bdf2",
+      "transition_hash": "d0c2c9a92346447e9578797ed46f0b5dfb36fdf1820a91eb45ee1fe2b64a49b7",
+      "seconds": 3.68658029101789,
+      "wire.jsonl_sha256": "f78787891c3bd565886ebcc8532cfa9c7cff70ec9036997c726a19ad3a6766b6",
+      "engine.stderr.log_sha256": "f9bd881842623053d8ed4f89b744ccbb89d8d15aa35a7cc7a26317872cb7fc1a",
+      "trace_path": "artifacts/runs/7b41a5c0-7545-4c44-84f3-5b60775f54fd/decisions.jsonl",
+      "trace_sha256": "96f5a7f71dad5bd7d91978b58b1ce3b9c9f42c78bd889295fb4f80a0b7b472d0",
+      "reward": -1.0,
+      "match": true
+    }
+  ],
+  "passed": true,
+  "audit": {
+    "raw_traces": 5,
+    "failures": [],
+    "pass": true
+  },
+  "seconds": 18.021415165858343
+}

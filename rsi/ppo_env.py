@@ -9,6 +9,7 @@ import torch
 from .battle_search import baseline_choice, boundary, choices_for, finish, outcome
 from .engine import ROOT, Headless
 from .ppo import encode, padded
+from .ppo_actions import ACTION_SPACE, ACTION_LIMIT, complete_choices, complete_baseline
 from .trace import Trace, digest
 
 
@@ -21,14 +22,16 @@ def reward_for(result):
 
 
 def episode(frozen, manifest, label, model=None, sample_seed=None, expected=None,
-            policy=None, seconds=30):
+            policy=None, seconds=30, checkpoint=None):
     uid = str(uuid.uuid4())
-    trace = Trace(ROOT / 'artifacts/runs' / uid, {**manifest, 'scope': 'E125_battle',
-                  'label': label, 'case': frozen['case'], 'sample_seed': sample_seed})
+    trace = Trace(ROOT / 'artifacts/runs' / uid, {**manifest, 'scope': manifest.get('experiment', 'E125')+'_battle',
+                  'label': label, 'case': frozen['case'], 'sample_seed': sample_seed,
+                  'restore_checkpoint': checkpoint})
     started = time.monotonic(); deadline = started + seconds
     result = dict(case=frozen['case'], label=label, run_id=uid, status='error', steps=0,
                   entry_verified=False, replay_seconds=0., plan=[], inference_seconds=0.,
-                  illegal_actions=0, decisions=Counter())
+                  illegal_actions=0, decisions=Counter(),
+                  restore_mode='research_checkpoint' if checkpoint else 'full_prefix')
     engine = None; state = {}; data = []; previous = frozen['previous']
     rng = np.random.default_rng(sample_seed)
     def send(command):
@@ -40,9 +43,16 @@ def episode(frozen, manifest, label, model=None, sample_seed=None, expected=None
     try:
         if digest(frozen['prefix']) != frozen['prefix_hash']:
             raise ValueError('Changed canonical reset prefix')
-        engine = Headless(trace.directory, timeout=10, resource_decisions=True)
-        for cmd in frozen['prefix']:
-            state = send(cmd)
+        remaining = deadline-time.monotonic()
+        if remaining <= 0:
+            raise TimeoutError('Episode time cap before engine startup')
+        engine = Headless(trace.directory, timeout=min(10, remaining), resource_decisions=True)
+        if checkpoint:
+            from .research_restore import restore_entry
+            state = restore_entry(send, frozen, checkpoint, manifest)
+        else:
+            for cmd in frozen['prefix']:
+                state = send(cmd)
         result['replay_seconds'] = time.monotonic() - started
         if digest(state) != frozen['entry_hash']:
             raise ValueError('Reset entry mismatch')
@@ -55,8 +65,9 @@ def episode(frozen, manifest, label, model=None, sample_seed=None, expected=None
                 break
             if step == 120:
                 result['status'] = 'action_cap'; break
-            choices = choices_for(state)
-            encoded = encode(state, choices, previous)
+            complete = manifest.get('ppo_action_space') == ACTION_SPACE
+            choices = complete_choices(state) if complete else choices_for(state)
+            encoded = encode(state, choices, previous, **({'max_actions': ACTION_LIMIT} if complete else {}))
             before = digest(state)
             payload = dict(before=before, candidates=choices)
             if expected is not None:
@@ -67,7 +78,7 @@ def episode(frozen, manifest, label, model=None, sample_seed=None, expected=None
                 chosen, extra = policy(state, choices, previous, result['plan'])
                 payload.update(extra)
             elif model is None:
-                chosen = baseline_choice(state, previous)
+                chosen = complete_baseline(state, choices, previous) if complete else baseline_choice(state, previous)
             else:
                 clock = time.monotonic()
                 with torch.inference_mode():
