@@ -1,0 +1,762 @@
+{
+  "sources": {
+    "fixtures": {
+      "path": "artifacts/runs/e125-fixtures-v1.json",
+      "sha256": "d392b3b05b44756406dd1af386424088e13f7f39b6943d056bd20e47bf269449"
+    },
+    "preflight": {
+      "path": "artifacts/runs/e125-preflight-v1.json",
+      "sha256": "cd93d7bd8f0d17091e648e60c40ceb5f584ab052a0ecb3b05146182734f2e320"
+    },
+    "training": {
+      "path": "artifacts/runs/e125-training-v1.json",
+      "sha256": "b10427ae53a313aceeaa0f71e43b7f3dbcf6490028b195ce275e0b4772f29e03"
+    },
+    "test": {
+      "path": "artifacts/runs/e125-test-v1.json",
+      "sha256": "1babbd82970b271f90fe15a405f63e9f7633251c842b74e36eacbd58c835383a"
+    }
+  },
+  "audit": {
+    "raw_traces": 1000,
+    "failures": [],
+    "pass": true
+  },
+  "planner_summary": {
+    "n": 16,
+    "statuses": {
+      "clear": 16
+    },
+    "clears": 16,
+    "mean_reward": 1.2470703125,
+    "mean_clear_hp": 79.75,
+    "steps": 218,
+    "engine_seconds": 28.985578541876748,
+    "inference_seconds": 0.0,
+    "illegal_actions": 0
+  },
+  "planner_behavior": {
+    "actions": {
+      "CARD.STRIKE_IRONCLAD": 98,
+      "end_turn": 49,
+      "CARD.DEFEND_IRONCLAD": 31,
+      "CARD.SLIMED": 5,
+      "CARD.BASH": 20,
+      "use_potion": 6,
+      "select_cards": 2,
+      "CARD.SHRUG_IT_OFF": 2,
+      "CARD.TRUE_GRIT": 1,
+      "CARD.ASHEN_STRIKE": 1,
+      "CARD.PROWESS": 1,
+      "CARD.DOMINATE": 1,
+      "CARD.NEOWS_FURY": 1
+    },
+    "decisions": {
+      "combat_play": 216,
+      "card_select": 2
+    },
+    "potions_remaining": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "forward_and_selection_ms_per_step": 0.0
+  },
+  "models": [
+    {
+      "learner": 1701,
+      "selected_update": 8,
+      "test_rows": [
+        {
+          "case": "test-00",
+          "planner_hp": 91,
+          "initial_status": "defeat",
+          "initial_hp": 0,
+          "selected_status": "clear",
+          "selected_hp": 83,
+          "hp_delta_vs_planner": -8
+        },
+        {
+          "case": "test-01",
+          "planner_hp": 75,
+          "initial_status": "defeat",
+          "initial_hp": 0,
+          "selected_status": "clear",
+          "selected_hp": 61,
+          "hp_delta_vs_planner": -14
+        },
+        {
+          "case": "test-02",
+          "planner_hp": 80,
+          "initial_status": "defeat",
+          "initial_hp": 0,
+          "selected_status": "clear",
+          "selected_hp": 72,
+          "hp_delta_vs_planner": -8
+        },
+        {
+          "case": "test-03",
+          "planner_hp": 80,
+          "initial_status": "defeat",
+          "initial_hp": 0,
+          "selected_status": "clear",
+          "selected_hp": 75,
+          "hp_delta_vs_planner": -5
+        },
+        {
+          "case": "test-04",
+          "planner_hp": 80,
+          "initial_status": "clear",
+          "initial_hp": 68,
+          "selected_status": "clear",
+          "selected_hp": 73,
+          "hp_delta_vs_planner": -7
+        },
+        {
+          "case": "test-05",
+          "planner_hp": 78,
+          "initial_status": "defeat",
+          "initial_hp": 0,
+          "selected_status": "clear",
+          "selected_hp": 79,
+          "hp_delta_vs_planner": 1
+        },
+        {
+          "case": "test-06",
+          "planner_hp": 80,
+          "initial_status": "defeat",
+          "initial_hp": 0,
+          "selected_status": "clear",
+          "selected_hp": 72,
+          "hp_delta_vs_planner": -8
+        },
+        {
+          "case": "test-07",
+          "planner_hp": 80,
+          "initial_status": "clear",
+          "initial_hp": 68,
+          "selected_status": "clear",
+          "selected_hp": 74,
+          "hp_delta_vs_planner": -6
+        },
+        {
+          "case": "test-08",
+          "planner_hp": 80,
+          "initial_status": "clear",
+          "initial_hp": 74,
+          "selected_status": "clear",
+          "selected_hp": 74,
+          "hp_delta_vs_planner": -6
+        },
+        {
+          "case": "test-09",
+          "planner_hp": 80,
+          "initial_status": "defeat",
+          "initial_hp": 0,
+          "selected_status": "clear",
+          "selected_hp": 79,
+          "hp_delta_vs_planner": -1
+        },
+        {
+          "case": "test-10",
+          "planner_hp": 74,
+          "initial_status": "defeat",
+          "initial_hp": 0,
+          "selected_status": "clear",
+          "selected_hp": 72,
+          "hp_delta_vs_planner": -2
+        },
+        {
+          "case": "test-11",
+          "planner_hp": 80,
+          "initial_status": "defeat",
+          "initial_hp": 0,
+          "selected_status": "clear",
+          "selected_hp": 80,
+          "hp_delta_vs_planner": 0
+        },
+        {
+          "case": "test-12",
+          "planner_hp": 80,
+          "initial_status": "clear",
+          "initial_hp": 74,
+          "selected_status": "clear",
+          "selected_hp": 74,
+          "hp_delta_vs_planner": -6
+        },
+        {
+          "case": "test-13",
+          "planner_hp": 80,
+          "initial_status": "clear",
+          "initial_hp": 68,
+          "selected_status": "clear",
+          "selected_hp": 74,
+          "hp_delta_vs_planner": -6
+        },
+        {
+          "case": "test-14",
+          "planner_hp": 78,
+          "initial_status": "defeat",
+          "initial_hp": 0,
+          "selected_status": "clear",
+          "selected_hp": 67,
+          "hp_delta_vs_planner": -11
+        },
+        {
+          "case": "test-15",
+          "planner_hp": 80,
+          "initial_status": "defeat",
+          "initial_hp": 0,
+          "selected_status": "clear",
+          "selected_hp": 69,
+          "hp_delta_vs_planner": -11
+        }
+      ],
+      "initial_summary": {
+        "n": 16,
+        "statuses": {
+          "defeat": 11,
+          "clear": 5
+        },
+        "clears": 5,
+        "mean_reward": -0.30625,
+        "mean_clear_hp": 70.4,
+        "steps": 244,
+        "engine_seconds": 27.049425039906055,
+        "inference_seconds": 0.11364283692091703,
+        "illegal_actions": 0
+      },
+      "selected_summary": {
+        "n": 16,
+        "statuses": {
+          "clear": 16
+        },
+        "clears": 16,
+        "mean_reward": 1.2281185611263736,
+        "mean_clear_hp": 73.625,
+        "steps": 179,
+        "engine_seconds": 24.265860916581005,
+        "inference_seconds": 0.07667991379275918,
+        "illegal_actions": 0
+      },
+      "median_hp_delta_vs_planner": -6.0,
+      "mean_hp_delta_vs_planner": -6.125,
+      "initial_behavior": {
+        "actions": {
+          "CARD.STRIKE_IRONCLAD": 69,
+          "end_turn": 148,
+          "CARD.BASH": 16,
+          "use_potion": 2,
+          "skip_select": 1,
+          "CARD.SLIMED": 1,
+          "CARD.SWORD_BOOMERANG": 1,
+          "CARD.ASHEN_STRIKE": 1,
+          "CARD.PROWESS": 1,
+          "CARD.JUGGERNAUT": 1,
+          "CARD.DOMINATE": 1,
+          "CARD.NEOWS_FURY": 1,
+          "select_cards": 1
+        },
+        "decisions": {
+          "combat_play": 242,
+          "card_select": 2
+        },
+        "potions_remaining": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [
+            "SNECKO_OIL"
+          ],
+          [],
+          [],
+          [],
+          [],
+          [
+            "FIRE_POTION"
+          ],
+          [
+            "STRENGTH_POTION",
+            "EXPLOSIVE_AMPOULE"
+          ],
+          [],
+          []
+        ],
+        "forward_and_selection_ms_per_step": 0.4657493316431026
+      },
+      "selected_behavior": {
+        "actions": {
+          "CARD.STRIKE_IRONCLAD": 87,
+          "end_turn": 41,
+          "CARD.BASH": 27,
+          "CARD.SLIMED": 8,
+          "CARD.DEFEND_IRONCLAD": 7,
+          "use_potion": 6,
+          "skip_select": 1,
+          "CARD.SWORD_BOOMERANG": 1,
+          "CARD.DOMINATE": 1
+        },
+        "decisions": {
+          "combat_play": 178,
+          "card_select": 1
+        },
+        "potions_remaining": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        "forward_and_selection_ms_per_step": 0.4283794066634591
+      },
+      "training_episodes": 384,
+      "training_steps": 7043,
+      "optimizer_seconds": 0.8331481271889061,
+      "training_wall_seconds_with_validation": 175.90563608403318,
+      "parameters": 73794,
+      "validation_curve": [
+        {
+          "update": 0,
+          "summary": {
+            "n": 8,
+            "statuses": {
+              "clear": 6,
+              "defeat": 2
+            },
+            "clears": 6,
+            "mean_reward": 0.647265625,
+            "mean_clear_hp": 62.833333333333336,
+            "steps": 108,
+            "engine_seconds": 13.394241456408054,
+            "inference_seconds": 0.05317238578572869,
+            "illegal_actions": 0
+          }
+        },
+        {
+          "update": 4,
+          "summary": {
+            "n": 8,
+            "statuses": {
+              "clear": 8
+            },
+            "clears": 8,
+            "mean_reward": 1.219140625,
+            "mean_clear_hp": 70.125,
+            "steps": 93,
+            "engine_seconds": 12.150620542932302,
+            "inference_seconds": 0.04931365814991295,
+            "illegal_actions": 0
+          }
+        },
+        {
+          "update": 8,
+          "summary": {
+            "n": 8,
+            "statuses": {
+              "clear": 8
+            },
+            "clears": 8,
+            "mean_reward": 1.221875,
+            "mean_clear_hp": 71,
+            "steps": 95,
+            "engine_seconds": 12.097430833149701,
+            "inference_seconds": 0.0459849217440933,
+            "illegal_actions": 0
+          }
+        },
+        {
+          "update": 12,
+          "summary": {
+            "n": 8,
+            "statuses": {
+              "clear": 8
+            },
+            "clears": 8,
+            "mean_reward": 1.220703125,
+            "mean_clear_hp": 70.625,
+            "steps": 95,
+            "engine_seconds": 12.018009206978604,
+            "inference_seconds": 0.04034250741824508,
+            "illegal_actions": 0
+          }
+        }
+      ]
+    },
+    {
+      "learner": 1702,
+      "selected_update": 4,
+      "test_rows": [
+        {
+          "case": "test-00",
+          "planner_hp": 91,
+          "initial_status": "clear",
+          "initial_hp": 53,
+          "selected_status": "clear",
+          "selected_hp": 83,
+          "hp_delta_vs_planner": -8
+        },
+        {
+          "case": "test-01",
+          "planner_hp": 75,
+          "initial_status": "clear",
+          "initial_hp": 45,
+          "selected_status": "clear",
+          "selected_hp": 69,
+          "hp_delta_vs_planner": -6
+        },
+        {
+          "case": "test-02",
+          "planner_hp": 80,
+          "initial_status": "clear",
+          "initial_hp": 37,
+          "selected_status": "clear",
+          "selected_hp": 72,
+          "hp_delta_vs_planner": -8
+        },
+        {
+          "case": "test-03",
+          "planner_hp": 80,
+          "initial_status": "clear",
+          "initial_hp": 9,
+          "selected_status": "clear",
+          "selected_hp": 66,
+          "hp_delta_vs_planner": -14
+        },
+        {
+          "case": "test-04",
+          "planner_hp": 80,
+          "initial_status": "clear",
+          "initial_hp": 77,
+          "selected_status": "clear",
+          "selected_hp": 73,
+          "hp_delta_vs_planner": -7
+        },
+        {
+          "case": "test-05",
+          "planner_hp": 78,
+          "initial_status": "clear",
+          "initial_hp": 74,
+          "selected_status": "clear",
+          "selected_hp": 79,
+          "hp_delta_vs_planner": 1
+        },
+        {
+          "case": "test-06",
+          "planner_hp": 80,
+          "initial_status": "clear",
+          "initial_hp": 59,
+          "selected_status": "clear",
+          "selected_hp": 72,
+          "hp_delta_vs_planner": -8
+        },
+        {
+          "case": "test-07",
+          "planner_hp": 80,
+          "initial_status": "clear",
+          "initial_hp": 77,
+          "selected_status": "clear",
+          "selected_hp": 74,
+          "hp_delta_vs_planner": -6
+        },
+        {
+          "case": "test-08",
+          "planner_hp": 80,
+          "initial_status": "clear",
+          "initial_hp": 79,
+          "selected_status": "clear",
+          "selected_hp": 74,
+          "hp_delta_vs_planner": -6
+        },
+        {
+          "case": "test-09",
+          "planner_hp": 80,
+          "initial_status": "clear",
+          "initial_hp": 78,
+          "selected_status": "clear",
+          "selected_hp": 79,
+          "hp_delta_vs_planner": -1
+        },
+        {
+          "case": "test-10",
+          "planner_hp": 74,
+          "initial_status": "clear",
+          "initial_hp": 25,
+          "selected_status": "clear",
+          "selected_hp": 72,
+          "hp_delta_vs_planner": -2
+        },
+        {
+          "case": "test-11",
+          "planner_hp": 80,
+          "initial_status": "defeat",
+          "initial_hp": 0,
+          "selected_status": "clear",
+          "selected_hp": 80,
+          "hp_delta_vs_planner": 0
+        },
+        {
+          "case": "test-12",
+          "planner_hp": 80,
+          "initial_status": "clear",
+          "initial_hp": 80,
+          "selected_status": "clear",
+          "selected_hp": 74,
+          "hp_delta_vs_planner": -6
+        },
+        {
+          "case": "test-13",
+          "planner_hp": 80,
+          "initial_status": "clear",
+          "initial_hp": 80,
+          "selected_status": "clear",
+          "selected_hp": 74,
+          "hp_delta_vs_planner": -6
+        },
+        {
+          "case": "test-14",
+          "planner_hp": 78,
+          "initial_status": "action_cap",
+          "initial_hp": null,
+          "selected_status": "clear",
+          "selected_hp": 74,
+          "hp_delta_vs_planner": -4
+        },
+        {
+          "case": "test-15",
+          "planner_hp": 80,
+          "initial_status": "clear",
+          "initial_hp": 74,
+          "selected_status": "clear",
+          "selected_hp": 71,
+          "hp_delta_vs_planner": -9
+        }
+      ],
+      "initial_summary": {
+        "n": 16,
+        "statuses": {
+          "clear": 14,
+          "defeat": 1,
+          "action_cap": 1
+        },
+        "clears": 14,
+        "mean_reward": 1.0417902930402931,
+        "mean_clear_hp": 60.5,
+        "steps": 916,
+        "engine_seconds": 48.28375191357918,
+        "inference_seconds": 0.42157875117845833,
+        "illegal_actions": 0
+      },
+      "selected_summary": {
+        "n": 16,
+        "statuses": {
+          "clear": 16
+        },
+        "clears": 16,
+        "mean_reward": 1.2296810611263735,
+        "mean_clear_hp": 74.125,
+        "steps": 182,
+        "engine_seconds": 24.206362502183765,
+        "inference_seconds": 0.0865679201669991,
+        "illegal_actions": 0
+      },
+      "median_hp_delta_vs_planner": -6.0,
+      "mean_hp_delta_vs_planner": -5.625,
+      "initial_behavior": {
+        "actions": {
+          "CARD.DEFEND_IRONCLAD": 363,
+          "CARD.STRIKE_IRONCLAD": 126,
+          "end_turn": 218,
+          "CARD.SLIMED": 175,
+          "CARD.SHRUG_IT_OFF": 13,
+          "use_potion": 6,
+          "skip_select": 2,
+          "CARD.TRUE_GRIT": 1,
+          "CARD.ASHEN_STRIKE": 2,
+          "CARD.PROWESS": 1,
+          "CARD.COLOSSUS": 4,
+          "CARD.CATASTROPHE": 3,
+          "CARD.DOMINATE": 1,
+          "CARD.NEOWS_FURY": 1
+        },
+        "decisions": {
+          "combat_play": 914,
+          "card_select": 2
+        },
+        "potions_remaining": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          null,
+          []
+        ],
+        "forward_and_selection_ms_per_step": 0.4602388113301947
+      },
+      "selected_behavior": {
+        "actions": {
+          "CARD.STRIKE_IRONCLAD": 86,
+          "end_turn": 42,
+          "CARD.BASH": 27,
+          "CARD.SLIMED": 8,
+          "CARD.DEFEND_IRONCLAD": 7,
+          "use_potion": 6,
+          "skip_select": 1,
+          "CARD.SWORD_BOOMERANG": 1,
+          "CARD.ASHEN_STRIKE": 1,
+          "CARD.DOMINATE": 1,
+          "CARD.NEOWS_FURY": 1,
+          "select_cards": 1
+        },
+        "decisions": {
+          "combat_play": 180,
+          "card_select": 2
+        },
+        "potions_remaining": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        "forward_and_selection_ms_per_step": 0.4756479130054896
+      },
+      "training_episodes": 384,
+      "training_steps": 6743,
+      "optimizer_seconds": 0.8221863328944892,
+      "training_wall_seconds_with_validation": 176.84905316587538,
+      "parameters": 73794,
+      "validation_curve": [
+        {
+          "update": 0,
+          "summary": {
+            "n": 8,
+            "statuses": {
+              "clear": 8
+            },
+            "clears": 8,
+            "mean_reward": 1.20703125,
+            "mean_clear_hp": 66.25,
+            "steps": 307,
+            "engine_seconds": 19.088112248573452,
+            "inference_seconds": 0.1542967204004526,
+            "illegal_actions": 0
+          }
+        },
+        {
+          "update": 4,
+          "summary": {
+            "n": 8,
+            "statuses": {
+              "clear": 8
+            },
+            "clears": 8,
+            "mean_reward": 1.21875,
+            "mean_clear_hp": 70,
+            "steps": 93,
+            "engine_seconds": 12.212973793968558,
+            "inference_seconds": 0.038785629440099,
+            "illegal_actions": 0
+          }
+        },
+        {
+          "update": 8,
+          "summary": {
+            "n": 8,
+            "statuses": {
+              "clear": 8
+            },
+            "clears": 8,
+            "mean_reward": 1.21875,
+            "mean_clear_hp": 70,
+            "steps": 92,
+            "engine_seconds": 11.925765875028446,
+            "inference_seconds": 0.041687954450026155,
+            "illegal_actions": 0
+          }
+        },
+        {
+          "update": 12,
+          "summary": {
+            "n": 8,
+            "statuses": {
+              "clear": 8
+            },
+            "clears": 8,
+            "mean_reward": 1.21875,
+            "mean_clear_hp": 70,
+            "steps": 93,
+            "engine_seconds": 11.741303499322385,
+            "inference_seconds": 0.03966371878050268,
+            "illegal_actions": 0
+          }
+        }
+      ]
+    }
+  ],
+  "selected_policy_replays_pass": true,
+  "selected_policy_replays": 32,
+  "all_model_checkpoint_hashes_pass": true,
+  "independent_test_seeds": 16,
+  "training_episode_total": 768,
+  "training_step_total": 13786,
+  "continue_training_gate": false,
+  "scope_notes": [
+    "V1 preparation failed; v2 moved every original seed to first combat before training.",
+    "One 1702 initial-policy action cap is censored, never relabeled as defeat or scored zero.",
+    "Original aggregate test pass remains false; both selected policies and all 32 replays pass separately.",
+    "Both selected policies lose median 6 HP versus the planner, exceeding the preregistered 5-HP tolerance.",
+    "Model inference metric includes tensor preparation/forward/selection, excludes feature encoding and engine I/O.",
+    "Defend counts describe behavior on different resulting paths; no causal counterfactual benefit is inferred.",
+    "Two learners share the same 16 held-out game seeds, not 32 independent seeds.",
+    "No full-run, Elite, high-ascension, multi-character or general foresight claim."
+  ]
+}
