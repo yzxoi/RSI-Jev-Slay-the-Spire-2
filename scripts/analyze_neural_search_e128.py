@@ -2,6 +2,7 @@
 """Offline search accounting and value-vs-simple-HP calibration."""
 import argparse,json,statistics,sys
 from collections import Counter
+from itertools import islice
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
 from rsi.trace import digest
@@ -43,6 +44,23 @@ def completed_pairs(ev,base):
   improved=sum(d>0 for d in ds),equal=sum(d==0 for d in ds),worse=sum(d<0 for d in ds),pairs=pairs)
 
 
+def restore_diagnostics(records):
+ rows=[]
+ for case in records:
+  for probe in case['probes']:
+   if not probe['entry_verified']:continue
+   path=ROOT/probe['trace_path']
+   with path.open()as f:manifest=json.loads(next(f))
+   with path.with_name('wire.jsonl').open()as f:wire=[json.loads(x)for x in islice(f,3)]
+   if len(wire)!=3 or wire[0]['data'].get('type')!='ready' or wire[1]['data'].get('cmd')!='start_run':continue
+   ready=wire[0]['time']-manifest['time'];start=wire[2]['time']-wire[1]['time']
+   rows.append((ready,start,probe['replay_seconds']-ready-start))
+ names=('process_ready','start_run_response','remaining_prefix_and_history')
+ return dict(n=len(rows),scope='Approximate stage timing from recorded wall timestamps; restore total uses monotonic clock',
+  **{name:dict(total_seconds=sum(x[i]for x in rows),median_seconds=statistics.median(x[i]for x in rows)if rows else None)
+     for i,name in enumerate(names)})
+
+
 def main():
  p=argparse.ArgumentParser();p.add_argument('--source',required=True);p.add_argument('--output',required=True)
  p.add_argument('--direct');a=p.parse_args()
@@ -67,6 +85,7 @@ def main():
    arms[name]={'summary':ev['summary'],'search_summary':ev['search_summary'],'passed':ev['passed'],
                'complete_trajectory_replays':sum(x.get('verification_match',False)for x in ev['records']),
                'root_diagnostics':root_diagnostics(ev['records']),
+               'restore_diagnostics':restore_diagnostics(ev['records']),
                'completed_pairs_vs_direct':completed_pairs(ev,direct['arms'][f"L-{row['learner']}"])if direct else None,
                'median_wall_ratio_vs_direct':ev['search_summary']['median_battle_seconds']/statistics.median(
                  x['seconds']for x in direct['arms'][f"L-{row['learner']}"]['records'])if direct else None,
