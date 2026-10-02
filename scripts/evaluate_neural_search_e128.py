@@ -20,7 +20,7 @@ from scripts.evaluate_battle_search_e120 import audit,write
 
 def evaluate(fs,v,model,mode):
     def run(f):
-        policy=SearchPolicy(f,v,model,mode)
+        policy=SearchPolicy(f,v,model,mode,battle_deadline=time.monotonic()+240)
         r,_=episode(f,v,'E128:'+mode,policy=policy,seconds=240)
         r['inference_seconds']=policy.neural_seconds
         r['neural_calls']=policy.neural_calls

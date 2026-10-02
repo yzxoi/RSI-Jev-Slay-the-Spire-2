@@ -3,9 +3,14 @@ import unittest
 try:
  import torch
 except ImportError as exc:raise unittest.SkipTest('Optional neural search dependencies missing')from exc
-from rsi.neural_search import Edge,Node,PUCT,normalized
+from rsi.neural_search import Edge,Node,PUCT,normalized,SearchPolicy
 
 class PUCTTests(unittest.TestCase):
+ def test_parent_budget_reaches_every_root(self):
+  policy=SearchPolicy({}, {}, None, 'value', battle_deadline=240)
+  self.assertEqual(policy.root_deadline(200),240)
+  self.assertEqual(policy.root_deadline(10),70)
+  self.assertEqual(policy.root_deadline(245),240)
  def test_single_player_delayed_reward_and_visits(self):
   root=Node({},None,.5,[Edge({'name':'bad'},.8),Edge({'name':'delayed'},.2)])
   def expand(path):

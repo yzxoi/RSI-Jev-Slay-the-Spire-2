@@ -87,11 +87,16 @@ def make_node(model,state,previous,value=None,evaluator=None):
 
 
 class SearchPolicy:
-    def __init__(self,frozen,manifest,model,mode):
+    def __init__(self,frozen,manifest,model,mode,battle_deadline=None):
         if mode not in ('value','rollout'):raise ValueError('Unknown leaf evaluator')
         self.frozen,self.manifest,self.model,self.mode=frozen,manifest,model,mode
         self.rounds=set();self.roots=[];self.probes=[]
         self.neural_seconds=0.;self.neural_calls=0
+        self.battle_deadline=battle_deadline
+
+    def root_deadline(self,started):
+        deadline=started+60
+        return min(deadline,self.battle_deadline) if self.battle_deadline is not None else deadline
 
     def infer(self,state,previous):
         started=time.monotonic()
@@ -105,7 +110,7 @@ class SearchPolicy:
         turn=state.get('round')
         if state['decision']!='combat_play' or turn in self.rounds or len(self.rounds)>=6:
             return greedy,dict(source='greedy_actor',probabilities=probs.tolist(),value=pred)
-        self.rounds.add(turn);started=time.monotonic();deadline=started+60
+        self.rounds.add(turn);started=time.monotonic();deadline=self.root_deadline(started)
         root=make_node(self.model,state,previous,evaluator=self.infer)
         def expand(path):
             leaf,prev,value,record=self.probe(state,history,path,deadline)
@@ -138,7 +143,9 @@ class SearchPolicy:
             engine.timeout=min(10,remaining);return engine.send(command)
         try:
             if digest(self.frozen['prefix'])!=self.frozen['prefix_hash']:raise ValueError('Changed reset prefix')
-            engine=Headless(trace.directory,timeout=10,resource_decisions=True)
+            remaining=deadline-time.monotonic()
+            if remaining<=0:raise TimeoutError('No simulation budget remains')
+            engine=Headless(trace.directory,timeout=min(10,remaining),resource_decisions=True)
             for cmd in self.frozen['prefix']:state=send(cmd)
             if digest(state)!=self.frozen['entry_hash']:raise ValueError('Reset mismatch')
             for h in history:
