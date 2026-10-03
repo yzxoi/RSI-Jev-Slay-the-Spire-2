@@ -2,7 +2,11 @@
 
 这是一个公开的、以证据驱动的《杀戮尖塔 2》智能体实验仓库。目标是用确定性计算处理规则与风险，让廉价的 Jev 做大量选择，只在关键且不确定的局面调用 Astra，最终提高多角色、高进阶的整局胜率。
 
-当前学习研究的验收目标是：**一个冻结的网络独立完成铁甲战士 A0～A10 整局**，包含路线、奖励、选牌、商店、事件与用药；训练可使用教师和搜索，验收不由 Astra 或规划器接管。目前尚未达到。[E138](experiments/E138/README.md)完成 M3 Max CPU/MPS profiling，小网络单步推理保留 CPU；[E139](experiments/E139/README.md)采集五角色自然整局，787 个战斗入口仅26个第二幕、第三幕为零；[E140](experiments/E140/README.md)完成阶段上下文网络、离线 AWR 与新采样 PPO 对照，176 次新 seed 整局尝试全部战败，两个算法的扩张门槛均失败。[训练与整局结果图](experiments/E140/figures/pilot-results.png)。[E141](experiments/E141/README.md)只读观测通过45次重放；[E142](experiments/E142/README.md)分支教师使30个训练入口的胜场6→11，但[E143](experiments/E143/README.md)匹配蒸馏仍未改善新seed整局（110次均败）。[E144](experiments/E144/README.md)取消精英优先后第二幕到达仅1→2/30，也未过扩张门槛。[E145](experiments/E145/README.md)完整幕正反馈诊断已完成：120条路径全败、零Boss遭遇，过幕奖励密度门槛失败；六战前缀仍有15条成功，另行登记短课程on-policy训练。[本轮诊断、结果与下一步](docs/research/learning-search/2026-10-03-rl-diagnosis.md)。
+当前学习研究的验收目标是：**一个冻结的网络独立完成铁甲战士 A0～A10 整局**，包含路线、奖励、选牌、商店、事件与用药；训练可使用教师和搜索，验收不由 Astra 或规划器接管。目前尚未达到。
+
+最新[E146](experiments/E146/README.md)已实际训练跨六场战斗的on-policy PPO，局外选择也获得后续回报：两份115,778参数模型、1,152条新轨迹、103,127次决策。30个新seed上，六战成功从训练前7/30变为7/30、4/30，三者第一幕均0/30；未通过扩训门槛，默认策略不变。18条重放与1,350份训练/验证trace审计通过。[结果、曲线与停止理由](docs/research/learning-search/2026-10-03-onpolicy-pilot.md)。
+
+此前[E138–E144阶段诊断](docs/research/learning-search/2026-10-03-rl-diagnosis.md)覆盖M3 Max profiling、五角色数据、在线/离线训练、只读观测、分支教师及蒸馏。[E145](experiments/E145/README.md)完整幕正反馈诊断120条路径全败、零Boss遭遇，因此先验证有正样本的六战课程，没有直接放大完整幕稀疏奖励训练。
 
 **截至 2026-10-03：系统能控制真实游戏并完成过一局 A0，但还不是稳定通关的低 Astra 成本策略。** 请按下面的证据边界理解结果。
 

@@ -22,3 +22,23 @@ Commands: `python3 -m unittest discover -s tests -p 'test_onpolicy*.py'`; `pytho
 Tested code `a479421` (full SHA/runtime hashes in training-v1.json). Both learners completed all 12 updates: 1,152 natural trajectories on 576 matched base game seeds, 103,127 fresh actor decisions. Every macro phase participates in the return target. All 1,152 trace bundles passed audit; no censors, stale behavior or non-neural actions. Source checkpoint unchanged. Wall time 733.140s. Per-update weights, optimizer/RNG state and raw traces remain under ignored artifacts/runs; hashes published. Last checkpoints frozen now, without DEV selection.
 
 14 relevant synthetic/unit checks passed. Training success rates are not held-out results. All selected seeds/difficulties and failures are retained in training-v1.json. Evaluation not yet run at this commit.
+
+## Held-out result and decision
+
+Evaluation SHA `7602356f0a8f55f2c221290e144cf50000d88a14`, after training/weight freeze. All 180 selected attempts completed at their boundary or natural defeat; zero errors/censors or non-neural actions. All 18 preselected independent replays matched. All 198 evaluation bundles and 1,152 training bundles passed raw hash audit. Evaluated weights unchanged. Evaluation 115.168s; training 733.140s. These are 30 independent DEV game seeds, not 180 independent samples.
+
+| Frozen actor | Six battles A0 /10 | A5 /10 | A10 /10 | Six battles /30 | First-act clears /30 | First-act Boss encounters |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Initial BC1702 | 3 | 2 | 2 | 7 | 0 | 1 |
+| PPO1901 | 3 | 2 | 2 | 7 | 0 | 3 |
+| PPO1902 | 4 | 0 | 0 | 4 | 0 | 1 |
+
+Paired six-battle outcomes: 1901 gains4/regresses4/ties22; 1902 gains1/regresses4/ties25. All 90 complete-act attempts naturally died; Boss reach is not Boss clear. Training had 157/1,152 curriculum successes (1901:75, 1902:82), 995 defeats, 103,127 fresh actor decisions. Training rewards/critic losses are not independent strength evidence. Pre-update sampled-logprob error <=1.37e-6; 24 updates finite, no KL stop, mean-update KL0.00187–0.00442. CPU optimizer27.62s vs collection700.03s; GPU update-only acceleration remains a small portion of this pipeline.
+
+Execution passes, expansion fails. Merge opt-in on-policy collection/training/boundary infrastructure and all evidence; stop this exact recipe's automatic scale-up, do not replace the default policy. This does not establish that on-policy RL/PPO is generally ineffective. It isolates neither network representation nor critic sharing nor reward horizon individually. E141 rich observations remain untrained in this isolation; the six-battle endpoint omits later deck/potion value. A0–A10 independent full-run acceptance remains unmet and all330 final seeds unused.
+
+Post-hoc compatibility check: all90 paired horizon histories match on their shared prefix, 8,845 command/state pairs. No extra engine rollouts or strength claims. Reproduce with `python3 scripts/audit_onpolicy_horizons_e146.py --evaluation experiments/E146/evaluation-v1.json --output artifacts/runs/e146-horizon-recheck.json`.
+
+Curve command: `python3 scripts/plot_onpolicy_e146.py --training experiments/E146/training-v1.json --evaluation experiments/E146/evaluation-v1.json --output-dir experiments/E146/figures`. Curves are unsmoothed; each training point uses48 new seeds.
+
+![Training and held-out results](figures/onpolicy-results.png)
