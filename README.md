@@ -4,7 +4,9 @@
 
 当前学习研究的验收目标是：**一个冻结的网络独立完成铁甲战士 A0～A10 整局**，包含路线、奖励、选牌、商店、事件与用药；训练可使用教师和搜索，验收不由 Astra 或规划器接管。目前尚未达到。
 
-最新[E147](experiments/E147/README.md)已完成全量trace诊断与AlphaZero/MuZero训练文献对照：发现课程进度未进入网络、末次领奖缺少后续价值监督；也用具体出牌序列说明不能将整段失败归罪于单个动作。保留终局value监督，建议先验证任务表示和局面搜索目标，再扩大训练。[诊断、曲线和三项未执行提案](docs/research/learning-search/2026-10-03-credit-and-search.md)。本轮未重新训练或改变默认策略。
+最新[E148](experiments/E148/README.md)已完成任务状态对照：固定actor采集576条新路径，训练四个critic；补充进度/难度让未见seed误差下降4.40%/3.51%，但仍输给简单进度基线，终点校准未修复。训练拟合很好、泛化很差，停止同配方扩量，不推广critic。6重放、582份trace与全部51,343行张量重建核验通过。[结果与曲线](docs/research/learning-search/2026-10-03-task-value-pilot.md)。
+
+此前[E147](experiments/E147/README.md)已完成全量trace诊断与AlphaZero/MuZero训练文献对照：发现课程进度未进入网络、末次领奖缺少后续价值监督；也用具体出牌序列说明不能将整段失败归罪于单个动作。保留终局value监督，建议先验证任务表示和局面搜索目标，再扩大训练。[诊断、曲线和三项未执行提案](docs/research/learning-search/2026-10-03-credit-and-search.md)。本轮未重新训练或改变默认策略。
 
 此前[E146](experiments/E146/README.md)已实际训练跨六场战斗的on-policy PPO，局外选择也获得后续回报：两份115,778参数模型、1,152条新轨迹、103,127次决策。30个新seed上，六战成功从训练前7/30变为7/30、4/30，三者第一幕均0/30；未通过扩训门槛，默认策略不变。18条重放与1,350份训练/验证trace审计通过。[结果、曲线与停止理由](docs/research/learning-search/2026-10-03-onpolicy-pilot.md)。
 
