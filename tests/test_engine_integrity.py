@@ -16,3 +16,12 @@ class IntegrityTests(unittest.TestCase):
             finish(trace,result,None,time.monotonic())
             self.assertEqual(result['status'],'error')
             self.assertIn('MissingMethodException',result['error'])
+
+    def test_case_insensitive_unobserved_exception(self):
+        from rsi.engine import ROOT
+        with tempfile.TemporaryDirectory(dir=ROOT/'artifacts/runs') as tmp:
+            trace=Trace(Path(tmp), {'synthetic':True})
+            (Path(tmp)/'engine.stderr.log').write_text('[WARN] Unobserved task exception: System.InvalidOperationException: failed initialization')
+            result={'status':'clear'}
+            finish(trace,result,None,time.monotonic())
+            self.assertEqual(result['status'],'error')

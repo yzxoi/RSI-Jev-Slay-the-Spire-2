@@ -81,8 +81,8 @@ def finish(trace, result, engine, started):
         error_text = stderr.read_text()
         if 'forcing game_over' in error_text:
             result.update(status='error', error='Engine forced game_over after a stall')
-        for marker in ('MissingMethodException', 'NullReferenceException', 'UNOBSERVED TASK', 'Headless visual'):
-            if marker in error_text:
+        for marker in ('MissingMethodException', 'NullReferenceException', 'Unobserved task exception', '[FATAL] Unhandled', 'Headless visual'):
+            if marker.casefold() in error_text.casefold():
                 result.update(status='error', error='Engine stderr integrity failure: '+marker)
                 break
     result['seconds'] = time.monotonic() - started

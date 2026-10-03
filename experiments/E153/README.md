@@ -67,3 +67,11 @@ Iteration v2 adds the existing e140 encoder identifier to the manifest and immed
 ## Training v2 complete; freeze before TEST
 
 Tested8ebc7e3:both learners complete6updates,288fresh on-policy episodes plus63full-run stage/baseline DEV attempts in226.015s. All stage monitors naturally defeated with0Act2 arrivals. Execution gate passes;353raw bundles audited. First48paths and all model tensors at update2 exactly match preserved v1; duplicate restart compute is not independent data. Final checkpoint hashes frozen in training-v2.json before33newseed TEST and held-out local evaluation. No checkpoint selection from stage outcomes.
+
+## Final fixed TEST result
+
+Evaluated79d49d7,300.780s. All99neural complete-run attempts naturally defeated: initial0/33Act2 arrivals,2301also0/33,2302has2/33 (A2-000,A4-001),noAct3/nofullwins. Local combat(initial→2301→2302):Monster12/12→12/12→12/12;Elite6/12→6/12→9/12;Boss2/12→2/12→3/12. Preparation results12/7/1→12/6/1→12/7/4 for referenceMonster/Elite/Boss, each denominator12. Preparation can change actual next room.
+
+Planner:32natural defeats plus1execution error among33fixed attempts;3observedAct2 arrivals,including the later errored path. `planner:test-A3-002` fails on choose_option with missing Godot.Vector2I.get_One(). No replacement/continuation/seed removal. All216local evaluation episodes complete;71independent replays and419raw-bundle hashes pass. The benchmark execution gate fails because of the one planner error. Learner2302meets the numerical per-learner strength thresholds,2301does not; combined expansion gate fails independently of the engine error. Keep tool/evidence only; do not promote models or expand this recipe. Final330acceptance seeds unused.
+
+A read-only final review found the generic asynchronous stderr marker used the wrong case; use the actual Program.cs string with case-insensitive matching and a focused synthetic test. Re-scan all stopped/current training/evaluation stderr in the report. This post-evaluation guard change cannot improve or relabel game outcomes; preserve exact testedSHA/exception.
