@@ -193,6 +193,18 @@ def evaluate(v,bank_path,training_path,output):
             steps=record['steps'],trace_sha256=record['trace_sha256'],
             mse={n:metrics(p[m],y[m],cases[m])['mse'] for n,p in predictions.items()}))
     seed_names=sorted({r['seed'] for r in report['cases']});rng=np.random.default_rng(148)
+    # Two independent action-sampling streams at the identical starting input.
+    # This estimates return noise only at starts, not at arbitrary later states.
+    start_pairs=[]
+    for seed in seed_names:
+        ix=[np.flatnonzero(cases==i)[0] for i in ids if bank['records'][i]['seed']==seed]
+        if len(ix)!=2 or not np.array_equal(d['states'][ix[0]],d['states'][ix[1]]) or not np.array_equal(d['tasks'][ix[0]],d['tasks'][ix[1]]):
+            raise ValueError('Repeated seed has different starting critic inputs')
+        start_pairs.append(ix)
+    noise=float(np.mean([(float(y[a])-float(y[b]))**2/2 for a,b in start_pairs]))
+    report['initial_return_noise']=dict(game_seed_pairs=len(start_pairs),variance_estimate=noise,
+        note='Paired-return noise estimate at identical starting inputs only; finite-sample, not a full-trajectory noise floor or gate.',
+        initial_mse_minus_noise={k:m['initial']['mse']-noise for k,m in report['metrics'].items()})
     draws=rng.integers(len(seed_names),size=(2000,len(seed_names)))
     goal_seeds={bank['records'][i]['seed'] for i in np.unique(cases[goal])}
     best_simple=min(report['metrics'][b]['all']['mse'] for b in ('constant','progress_ridge'))
