@@ -28,7 +28,7 @@ def legal_choices(state, history):
     return macro_candidates(state, history, resource_decisions=True)
 
 
-def run(config, manifest, model=None, controller=None, seconds=180, actions=2400):
+def run(config, manifest, model=None, controller=None, seconds=180, actions=2400, macro_controller=None):
     trace = Trace(ROOT/'artifacts/runs'/str(uuid.uuid4()), {**manifest,'scope':'E139_full_run','config':config})
     start=time.monotonic();deadline=start+seconds
     r={**config,'status':'error','steps':0,'entries':[],'scenes':Counter(),'phase_seconds':Counter(),
@@ -87,7 +87,7 @@ def run(config, manifest, model=None, controller=None, seconds=180, actions=2400
                 r['network_calls']+=1
             else:
                 clock=time.monotonic()
-                selected=complete_baseline(state,choices,previous) if active or d=='card_select' else macro_choice(state)
+                selected=complete_baseline(state,choices,previous) if active or d=='card_select' else (macro_controller or macro_choice)(state)
                 r['phase_seconds']['planner']+=time.monotonic()-clock;r['planner_calls']+=1
             matches=[i for i,c in enumerate(choices) if c['action']==selected['action']]
             if not matches:r['illegal_actions']+=1;raise ValueError('Choice outside legal menu')
