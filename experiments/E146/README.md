@@ -1,0 +1,18 @@
+# E146 — Six-battle on-policy PPO pilot
+
+Hypothesis: fresh on-policy credit across six natural battles and all intervening macro decisions improves unknown-seed prefix survival and transfers to first-act progress, unlike isolated-battle PPO. E145 TRAIN-derived 1/3/6-battle coverage was 120/117/15 of120; shorter curricula already saturate. This is a bounded pilot, not a full-run win claim.
+
+Baseline: frozen E140 BC1702 (115,778 parameters; phase encoder unchanged). Two learners 1901/1902 share its actor initialization; reset only the critic output head to zero for the new return target. No teachers/search/BC auxiliary/forced choices. All actions are masked actor samples at temperature1 during training, greedy during evaluation.
+
+Task: start a natural Ironclad run at A0/A5/A10; after six actual battle clears complete pending card/potion rewards and stop at the next live map. Death is -1; success is +1 + .25*HP/maxHP, zero intermediate rewards. No engine setters. Boundary successes are curriculum_clear, never victory. Errors/caps are censored; any incomplete batch stops that learner before gradients.
+
+Fixed training:12 updates x48 new games each x2 learners =1,152 attempts (576 independent game seeds, matched across learners), eight workers CPU. For update u=0..11, difficulty a in0/5/10, i=0..15: seed e146_train_Ironclad_A{a}_u{u:02}_{i:02}; sampling seed learner*1000000+u*48+batch_index. Fresh trajectories only once, 4 PPO epochs. lr1e-4, gamma1, GAE lambda1 for complete Monte Carlo prefix credit, clip.2, minibatch128, entropy.01, value coefficient.5, gradnorm.5, KL early stop.03. Each attempt180s/2400actions, perlearner1200s including collection/updates. Save optimizer/RNG/weights each update, freeze last fully completed checkpoint before DEV. Log preupdate probability parity and macro/combat transition coverage. No checkpoint selection on DEV.
+
+Fixed DEV:30 new seeds e146_dev_Ironclad_A{a}_{00..09}, allthree frozen actors, both six-battle and entire first-act boundary, 180 attempts. Same seeds across arms/horizons are correlated, not180 independent samples. Eight workers,180s/2400actions perattempt,600s total. Replays: i00 eachdifficulty x3actors x2horizons =18. Keep every failure/censor, audit all trace hashes, verify all source/evaluated weights unchanged.
+
+Decision: execution requires complete budgets, finite updates, zero non-neural actions, exact replays and audit. Expand curriculum only if BOTH learners gain >=3/30 six-battle successes over baseline, neither loses >1/10 at any difficulty, and neither lowers first-act clears. Full-act gains reported separately; no default promotion from short-task gains. Otherwise stop this recipe and diagnose, without rerolling seeds/checkpoint cherry-picking. Final330acceptance seeds unused. Historical v0.111.0 CLI only.
+
+
+Issue [276](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/276). Implementation: optional six-battle live-map boundary with independent replay; sampler records the actual behavior log-probability; pre-update probability/value parity for every collected decision; configurable PPO GAE without changing previous defaults. Zero critic head leaves initial policy identical.
+
+Commands: `python3 -m unittest discover -s tests -p 'test_onpolicy*.py'`; `python3 -m unittest discover -s tests -p test_run_env.py`; `python3 -m unittest discover -s tests -p test_ppo.py`; then, after commit, `python3 scripts/pilot_onpolicy_e146.py train --output artifacts/runs/e146-training-v1.json`. Freeze training metadata in a commit before `python3 scripts/pilot_onpolicy_e146.py evaluate --training experiments/E146/training-v1.json --output artifacts/runs/e146-evaluation-v1.json`.

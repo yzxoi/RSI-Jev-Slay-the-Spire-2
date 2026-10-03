@@ -166,12 +166,13 @@ def clipped_policy_loss(logprob, old_logprob, advantage, clip=.2):
     return -torch.minimum(ratio * advantage, ratio.clamp(1-clip, 1+clip) * advantage).mean()
 
 
-def update(model, optimizer, episodes, rng):
+def update(model, optimizer, episodes, rng, hp=None):
+    hp = HP if hp is None else {**HP, **hp}
     records, advs, returns = [], [], []
     for trajectory, reward in episodes:
         values = [x['value'] for x in trajectory]
         adv, ret = advantages([0.] * (len(values)-1) + [reward], values,
-                              gamma=HP['gamma'], lam=HP['gae_lambda'])
+                              gamma=hp['gamma'], lam=hp['gae_lambda'])
         records.extend(trajectory); advs.extend(adv); returns.extend(ret)
     obs = [x['encoded'] for x in records]
     old = torch.tensor([x['logprob'] for x in records])
@@ -179,29 +180,29 @@ def update(model, optimizer, episodes, rng):
     adv = torch.tensor(np.asarray(advs)); ret = torch.tensor(np.asarray(returns))
     adv = (adv - adv.mean()) / (adv.std(unbiased=False) + 1e-8)
     metrics = []; stopped = False
-    for epoch in range(HP['epochs']):
+    for epoch in range(hp['epochs']):
         indices = rng.permutation(len(records))
-        for offset in range(0, len(records), HP['minibatch']):
-            ix = indices[offset:offset + HP['minibatch']]
+        for offset in range(0, len(records), hp['minibatch']):
+            ix = indices[offset:offset + hp['minibatch']]
             dist, value = model(*padded([obs[i] for i in ix]))
             lp = dist.log_prob(chosen[ix])
             logratio = lp - old[ix]; ratio = logratio.exp()
             kl = ((ratio - 1) - logratio).mean()
-            if kl.item() > HP['target_kl']:
+            if kl.item() > hp['target_kl']:
                 stopped = True
                 break
-            pg = clipped_policy_loss(lp, old[ix], adv[ix], HP['clip'])
+            pg = clipped_policy_loss(lp, old[ix], adv[ix], hp['clip'])
             vl = .5 * (value - ret[ix]).square().mean()
             ent = dist.entropy().mean()
-            loss = pg + HP['value'] * vl - HP['entropy'] * ent
+            loss = pg + hp['value'] * vl - hp['entropy'] * ent
             if not torch.isfinite(loss):
                 raise ValueError('Nonfinite PPO loss')
             optimizer.zero_grad(); loss.backward()
-            norm = nn.utils.clip_grad_norm_(model.parameters(), HP['grad_norm'], error_if_nonfinite=True)
+            norm = nn.utils.clip_grad_norm_(model.parameters(), hp['grad_norm'], error_if_nonfinite=True)
             optimizer.step()
             metrics.append(dict(loss=loss.item(), policy_loss=pg.item(), value_loss=vl.item(),
                                 entropy=ent.item(), kl=kl.item(), grad_norm=norm.item(),
-                                clip_fraction=((ratio-1).abs() > HP['clip']).float().mean().item()))
+                                clip_fraction=((ratio-1).abs() > hp['clip']).float().mean().item()))
         if stopped:
             break
     if not metrics:

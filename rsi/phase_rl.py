@@ -46,7 +46,9 @@ def extend_model(source):
     return model
 
 
-def controller(model, sample_seed=None):
+def controller(model, sample_seed=None, trajectory=None):
+    if trajectory is not None and sample_seed is None:
+        raise ValueError('On-policy collection requires a stochastic behavior policy')
     rng = np.random.default_rng(sample_seed)
     def choose(state,choices,previous):
         encoded=phase_encode(state,choices,previous,max_actions=4096)
@@ -59,6 +61,9 @@ def controller(model, sample_seed=None):
         extra=dict(probabilities=probs.tolist(),value=float(v[0]),old_logprob=float(dist.logits[0,index]))
         if sample_seed is not None:
             extra.update(sample_seed=sample_seed,sampling_logprob=float(np.log(probs[index])))
+        if trajectory is not None:
+            trajectory.append(dict(encoded=encoded,index=index,phase=state['decision'],
+                                   value=extra['value'],logprob=extra['sampling_logprob']))
         return choices[index],extra
     return choose
 
