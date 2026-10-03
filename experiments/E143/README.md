@@ -14,3 +14,11 @@ Commands: `python3 scripts/distill_teacher_e143.py train --output artifacts/runs
 ## Training completed, frozen before evaluation
 
 Issue270; tested7d8145d. Four115,778parameter checkpoints finished64×128examples each, total32768sample presentations (not new engine transitions),9.739s including source encoding/audit. Matched self/teacher paths contain715/699decisions fromthe same30roots, plus9041anchor decisions.527source bundles audited. Each model samples everyroot; actualcounts retained in training-v1.json. Model/hash checkpoints committed before any new-seed evaluation. No critic loss or new PPO updates.
+
+## Evaluation and decision
+
+Tested030eb6c.110full-run attempts on22newshared seeds all ended in legitimate defeat, noAct2/Act3 arrivals for anyarm.120seen-root single-battle evaluations all terminal; self-imitation1801/1802 each8/30clear, teacher-distillation both7/30. Original frozen model had6/30 at E142; searched teacher11/30 is an oracle-selected training reference, not actor performance.12preselected neural fullpaths replayed exactly; all242rawbundles audited. Wall191.213s.
+
+Expansion gate fails. Merge optional matched distillation harness and full negative evidence; no default promotion or added optimization. Lower actor loss/verified better training plans did not transfer to new full-run progress. Two teacher variants underperform their equal-update self-imitation controls onseen roots; neither approximates search11/30. This does not prove all distillation or search-improved RL ineffective; it tests this small115,778parameter encoder,30root dataset,64update schedule. E141 richer observations were deliberately not introduced into this isolation experiment. Final330acceptance seeds remain unused, network-onlyA0..A10 acceptance unmet.
+
+Next separate registeredE144 targets a concrete collection/teaching bias: E120 macro_choice forces elites, fixed_macro otherwise takes first rewards and leaves shops. A training difficulty collector is not yet an effective full-run teacher. Ablate only the elite override before conflating route bias with PPO failure.
