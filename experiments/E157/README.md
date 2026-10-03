@@ -24,3 +24,7 @@ python3 scripts/validate_teacher_maps_e157.py verify --capture experiments/E157/
 ## Capture v1
 
 Tested `bab9ad3c28c387322213d2f840fb80106400e4e1`:all30 roots have genuine preceding Map boundaries;60 full reference suffixes and60 independent save-call replays complete and match every state/final hash.120raw bundles audit. Capture140.740s/166.242CPU seconds. Native seed/ascension identities preserved; game/runtime binaries unchanged. Freeze all reference-plan and native-save hashes before C loads and paired timing. This passes save-call invariance only, not loaded recovery or speed.
+
+## Verification v1 — fidelity failure, reuse forbidden
+
+Tested0078011:112/120 C paths match;8 repeatable failures belong to the combat and preparation roots of `e149_train_Ironclad_A0_002`. At map coordinate(2,13), the original run enters a Monster room with Axe/Assassin/Brute Raiders; loaded runs enter the Dense Vegetation event. The preparation root itself matches before this later divergence. Thus visible root-hash equality alone is insufficient. No timing run is launched, no snapshot index is exported, and E149 cannot use these saves.240raw bundles audit;74.623s verification,215.364s cumulative gameplay. Keep all failures and locate the underlying adapter/native-save behavior separately; do not whitelist the28 passing roots into the complete30-root experiment.
