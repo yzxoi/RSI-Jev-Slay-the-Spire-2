@@ -53,3 +53,7 @@ Frozen errors: `train-A0-011` stalls on original ReattachPower animation method 
 Use E154 guarded ABI fix (dependentPR#293, merge1dda233) and the separately frozen `collection-v2.json`. Fixed seeds, all learning/evaluation settings and gates remain plan-v1. Collection at50db5d7:90natural defeats,14Act2 arrivals,0Act3 arrivals,47Boss entries in83.447s. E154 validates88unchanged histories and both corrected paths; old Act3 arrival was an invalid skipped Kaiser Crab fight. No seeds excluded or replaced. Trial event remains a known unsupported path (#294), with fail-closed runtime exception detection. Successful current cohort does not certify every game mechanic.
 
 Continue bank/training under corrected assembly/stub hashes, full-prefix root validation on every episode. `collection-v1` stays failed and must not supply new roots. No policy promotion from this compatibility fix.
+
+## Frozen natural bank
+
+Bank/preflight tested at eb9855d,19.609s. TRAIN:246Monster roots (82per A0/A5/A10),178Elite (56/66/56),28Boss (15/8/5); each has a separate preceding-preparation root,904TRAIN roots total. DEV:36Monster,23Elite,19Boss (156roots total). All Boss roots are Act1; only2TRAINElite roots are Act2. This is a staged first-act pilot, not coverage of all acts. Six fixed-stratum continuations and independent replays passed,12trace bundles audited. Every later episode must verify its exact natural root again. Freeze bank before two learners and recurring full-run monitors.
