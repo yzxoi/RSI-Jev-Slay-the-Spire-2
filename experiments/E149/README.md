@@ -38,3 +38,7 @@ Tested `1137867fb89517b0102263e19cf557733534f3e7`: all15 new seeds naturally def
 ## Frozen bank / preflight
 
 Tested `57419c55170be1902f86709dc5f3646cc7454112`:30 natural roots prepared in57.795s; six greedy continuations independently replayed action-by-action,12 bundles audited. Exact legal candidate sets and all raw-root hashes are frozen in bank-v1.json before search. Full-prefix responses are checked at every command. All game RNG remains fixed by the original prefix: sample variation is **continuation-policy randomness**, not a distribution over unknown draw piles. Teaching value is conditional on this underlying state; this experiment cannot certify privileged targets as unbiased values for a partially observed student. No native-rule certification is claimed.
+
+## Evaluation v1 — incomplete, no teaching promotion
+
+Tested `aaf71f7`:320.946s wall/704.262s parent+childCPU;8/30 roots complete,22roots time out.395raw bundles audit with no hash mismatch. Most later failures happen during process startup or full-prefix restoration, before root verification. The protocol fails execution and cannot establish the teacher's overall quality; do not discard those roots or report the8finished cases as a complete benchmark. No E150/training is started. A separate bounded execution diagnostic is required before deciding whether a scheduling-only rerun is warranted; preserve original outputs.
