@@ -13,3 +13,11 @@ Gate: all120paths terminal at the specified boundary or natural defeat, all6repl
 Synthetic tests: Boss rewards do not count as act clear; legitimate liveAct2map requires priorBoss; invalid crossing errors; full-run default remains unbounded by acts. Stochastic controller reproduces sample streams, stays within masked choices and log-probs match reported probabilities. A frozen positive E139 training history is used only to verify the boundary machinery, not counted among new sampled successes.
 
 Commands after implementation commit: `python3 -m unittest discover -s tests -p test_onpolicy_act.py`; `python3 -m unittest discover -s tests -p test_run_env.py`; `python3 scripts/audit_onpolicy_e145.py --output artifacts/runs/e145-onpolicy-v1.json`.
+
+## Result and decision
+
+Tested implementation `bb13f3b` (full SHA and dependency/runtime hashes in coverage-v1.json). All 120 attempts ended in natural defeat: 0 first-act Boss encounters, 0 Act2 arrivals at each difficulty. 10,915 actor decisions covered combat, events, maps, card selection/rewards, potion rewards, shops, rests and bundles; 0 planner actions, 0 gradients. Six new greedy histories plus one old known-positive boundary replay matched exactly. All 128 referenced raw bundles passed hash audit; source weights unchanged. Elapsed 87.368 s. Boundary/controller tests 2/2, existing run-environment tests 3/3 passed.
+
+Execution gate passes; complete-act positive-feedback gate fails. Merge opt-in diagnostic and preserved negative evidence, with no default policy change and no sparse whole-act PPO scale-up. No full-run victories claimed.
+
+Derived TRAIN-only prefix analysis (not a replacement gate): after battle rewards, 120/120 trajectories reached a map after >=1 clear; 117/120 after >=3; 15/120 after >=6 (A0:10/40, A5:4/40, A10:1/40). These are correlated samples on 24 base seeds. This motivates a separately registered six-battle on-policy pilot; shorter horizons already saturate. Raw replay-derived per-case counts in prefix-coverage-v1.json.

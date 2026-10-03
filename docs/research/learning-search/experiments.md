@@ -13,7 +13,7 @@
 - [E142](../../../experiments/E142/README.md)：已完成；30训练根局面胜场6→11，8个有意义改善均重放一致，452条路径审计；局部教师门槛通过。
 - [E143](../../../experiments/E143/README.md)：已完成；匹配教师蒸馏不及自模仿（已见入口7/30对8/30），110新seed整局全败，停止此配方扩训。
 - [E144](../../../experiments/E144/README.md)：已完成；60个自然对照全败，取消精英优先后第二幕1→2/30；门槛失败。
-- [E145 #273](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/273)：仅提案，未执行；先检验完整幕的on-policy正反馈密度，不直接增加梯度训练。
+- [E145 #273](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/273)：已完成；120条自然路径全败、零Boss遭遇，门槛失败；派生六战前缀15/120成功，支持单独检验较短课程。
 
 - [E133 #250](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/250) / [PR #251](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/pull/251)：已完成。575个训练入口含151精英，两个S各6144场；恢复训练SHA `ee3f06f`，权重选择提交 `efa2ed5`，测试SHA `1dfa565`。48个未见seed困难入口：旧S18/18，新短训20/23，新长训24/25，规划器25；A10仍2/16、3/16。768场对照与384次新模型重放全部成功，两个强度门槛失败。包括原中断尝试的17466份bundle汇总审计通过。[结果、完整失败历史和图表](../../../experiments/E133/README.md)。
 - E134 [PR #254](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/pull/254)：训练/验证固定612原生+11完整重放，测试94+2；保留原生偏差。E135 [PR #255](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/pull/255)：原版Rolling Boulder机制通过，264准备历史完全一致。
