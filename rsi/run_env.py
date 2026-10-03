@@ -36,6 +36,19 @@ def act_transition(state, target, boss_seen):
     return True
 
 
+def battle_transition(state, target, clears):
+    """Stop only on a living map after all rewards for the target battle."""
+    if target is None or clears < target or run_outcome(state) is not None:
+        return False
+    if clears != target or state.get('decision') == 'combat_play':
+        raise ValueError('Unexpected battle boundary; refusing to start another battle')
+    if state.get('decision') != 'map_select':
+        return False
+    if state.get('player', {}).get('hp', 0) <= 0:
+        raise ValueError('Curriculum map is not alive')
+    return True
+
+
 def legal_choices(state, history):
     if state.get('decision') in ('combat_play', 'card_select'):
         return complete_choices(state)
@@ -43,16 +56,19 @@ def legal_choices(state, history):
 
 
 def run(config, manifest, model=None, controller=None, seconds=180, actions=2400, macro_controller=None,
-        stop_after_act=None):
+        stop_after_act=None, stop_after_battles=None):
     if stop_after_act not in (None, 1, 2):
         raise ValueError('Research act boundary must be 1, 2 or None for a full run')
+    if stop_after_battles is not None and (type(stop_after_battles) is not int or stop_after_battles < 1 or stop_after_act is not None):
+        raise ValueError('Research battle boundary must be a positive integer, exclusive of act boundary')
     trace = Trace(ROOT/'artifacts/runs'/str(uuid.uuid4()), {**manifest,'scope':manifest.get('experiment','E139')+'_run','config':config,
-                  'stop_after_act':stop_after_act})
+                  'stop_after_act':stop_after_act,'stop_after_battles':stop_after_battles})
     start=time.monotonic();deadline=start+seconds
     r={**config,'status':'error','steps':0,'entries':[],'scenes':Counter(),'phase_seconds':Counter(),
        'action_counts':Counter(),'cards_seen':set(),'relics_seen':set(),'acts_seen':set(),'max_floor':0,
        'illegal_actions':0,'network_calls':0,'planner_calls':0,'transitions':[],
-       'stop_after_act':stop_after_act,'target_boss_seen':False}
+       'stop_after_act':stop_after_act,'target_boss_seen':False,
+       'stop_after_battles':stop_after_battles,'completed_battles':0}
     state={};previous=None;history={};active=False;engine=None;last=None;unchanged=0
     def send(command):
         remaining=deadline-time.monotonic()
@@ -73,12 +89,18 @@ def run(config, manifest, model=None, controller=None, seconds=180, actions=2400
             r['relics_seen'].update(c.get('id',c.get('name')) for c in p.get('relics',[]))
             terminal=run_outcome(state)
             if terminal:r['status']=terminal;break
+            if active:
+                outcome=boundary(state)
+                if outcome:
+                    active=False
+                    r['completed_battles']+=int(outcome=='clear')
             if act_transition(state,stop_after_act,r['target_boss_seen']):
                 r['status']='act_clear';break
+            if battle_transition(state,stop_after_battles,r['completed_battles']):
+                r['status']='curriculum_clear';break
             if step==actions:r['status']='action_cap';break
             before=digest(state);unchanged=unchanged+1 if last==before else 0;last=before
             if unchanged>=5:raise ValueError('Six repeated states; no progress')
-            if active and boundary(state):active=False
             d=state['decision']
             if d=='combat_play' and context.get('room_type')=='Boss' and context.get('act')==stop_after_act:
                 r['target_boss_seen']=True
@@ -124,7 +146,8 @@ def run(config, manifest, model=None, controller=None, seconds=180, actions=2400
     except TimeoutError as exc:r.update(status='timeout',error=str(exc))
     except Exception as exc:r.update(status='error',error=f'{type(exc).__name__}: {exc}')
     r.update(final_hash=digest(state),transition_hash=digest(r.pop('transitions')),
-             final_context=state.get('context'),final_hp=state.get('player',{}).get('hp'))
+             final_context=state.get('context'),final_hp=state.get('player',{}).get('hp'),
+             final_max_hp=state.get('player',{}).get('max_hp'))
     for k in ('cards_seen','relics_seen','acts_seen'):r[k]=sorted(r[k])
     finish(trace,r,engine,start)
     return r
@@ -138,6 +161,7 @@ def replay(record, manifest, seconds=180):
     trace=Trace(ROOT/'artifacts/runs'/str(uuid.uuid4()),{**manifest,'scope':'E139_independent_replay','case':record['case']})
     start=time.monotonic();engine=None;r=dict(case=record['case'],status='error',steps=0)
     boss_seen=False;target=record.get('stop_after_act')
+    battle_target=record.get('stop_after_battles');active=False;clears=0
     try:
         engine=Headless(trace.directory,timeout=15,resource_decisions=True)
         for i,(command,expected) in enumerate(pairs):
@@ -148,9 +172,19 @@ def replay(record, manifest, seconds=180):
             c=state.get('context') or {}
             if state.get('decision')=='combat_play' and c.get('room_type')=='Boss' and c.get('act')==target:
                 boss_seen=True
+            if battle_target is not None:
+                if active:
+                    outcome=boundary(state)
+                    if outcome:
+                        active=False;clears+=int(outcome=='clear')
+                if state.get('decision')=='combat_play':active=True
+                if battle_transition(state,battle_target,clears) and i!=len(pairs)-1:
+                    raise ValueError('Replay continued past curriculum boundary')
             r['steps']+=1
         terminal=run_outcome(state)
         if act_transition(state,target,boss_seen):terminal='act_clear'
+        if battle_transition(state,battle_target,clears):terminal='curriculum_clear'
+        if record['status']=='curriculum_clear' and terminal!='curriculum_clear':raise ValueError('Curriculum replay lacks true boundary')
         if record['status']=='act_clear' and terminal!='act_clear':raise ValueError('Act-clear replay lacks true boundary')
         r.update(status='match',outcome=terminal,final_hash=digest(state))
     except Exception as exc:r.update(error=f'{type(exc).__name__}: {exc}')

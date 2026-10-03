@@ -6,6 +6,8 @@
 
 ## 当前轮次
 
+- [E146](../../../experiments/E146/README.md)：已完成；两份模型1,152条六战on-policy轨迹、103,127次新决策。30新seed六战成功7→7/4，完整幕均0；18独立重放、1,350份审计通过。扩训门槛失败。[曲线与结论](2026-10-03-onpolicy-pilot.md)。
+
 - [E138](../../../experiments/E138/README.md)：已完成M3 Max CPU/MPS实测；CPU默认保留。
 - [E139](../../../experiments/E139/README.md)：已完成126次五英雄/三控制臂完整自然尝试与15整局重放；全部战败，第三幕覆盖为零。
 - [E140](../../../experiments/E140/README.md)：已完成BC/AWR/PPO比较，1024新增训练战斗、176新seed整局与288次级验证；未通过继续扩张门槛，原错误/权重/曲线/trace保留。
