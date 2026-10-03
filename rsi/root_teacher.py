@@ -103,11 +103,12 @@ def candidates(model, root, state):
 
 
 def rollout(root, manifest, model, label, *, first_action=None, sample_seed=None,
-            full=False, expected=None, seconds=30):
+            full=False, expected=None, seconds=30, snapshot=None, capture=None, restore_only=False):
     trace = Trace(ROOT/'artifacts/runs'/str(uuid.uuid4()),
         {**manifest, 'scope': 'E149_root_continuation', 'case': root['case'], 'label': label,
          'first_action': first_action, 'sample_seed': sample_seed, 'full': full,
-         'prefix_hash': root['prefix_hash'], 'root_hash': root['root_hash']})
+         'prefix_hash': root['prefix_hash'], 'root_hash': root['root_hash'],
+         'snapshot':snapshot,'capture':capture,'restore_only':restore_only})
     start = time.monotonic()
     deadline = start+seconds
     r = dict(case=root['case'], seed=root['seed'], label=label, mode=root['mode'],
@@ -130,16 +131,26 @@ def rollout(root, manifest, model, label, *, first_action=None, sample_seed=None
         if digest(root['prefix']) != root['prefix_hash'] or len(root['prefix']) != len(root['prefix_state_hashes']):
             raise ValueError('Invalid root prefix')
         engine = Headless(trace.directory, timeout=min(15, seconds), resource_decisions=True)
-        for command, expected_hash in zip(root['prefix'], root['prefix_state_hashes']):
-            state = send(command)
-            if digest(state) != expected_hash:
-                raise ValueError('Restored prefix response mismatch')
+        if snapshot is not None or capture is not None:
+            from .map_prefix import restore
+            state,restore_commands=restore(send,root,manifest,trace.directory,snapshot=snapshot,capture=capture)
+            r['restore_mode']='native_map_short_prefix' if snapshot is not None else 'full_prefix_save_call'
+            if capture is not None:r['checkpoint']=capture
+        else:
+            for command, expected_hash in zip(root['prefix'], root['prefix_state_hashes']):
+                state = send(command)
+                if digest(state) != expected_hash:
+                    raise ValueError('Restored prefix response mismatch')
+            restore_commands=len(root['prefix'])
         if digest(state) != root['root_hash']:
             raise ValueError('Root identity mismatch')
         require_resource_interface(state)
         r.update(entry_verified=True, restore_seconds=time.monotonic()-start,
-                 restore_commands=len(root['prefix']), entry_potions=len(state.get('player', {}).get('potions', [])))
+                 restore_commands=restore_commands, entry_potions=len(state.get('player', {}).get('potions', [])))
         for step in range(limit+1):
+            if restore_only:
+                r['status']='restored'
+                break
             context = state.get('context') or {}
             if context.get('act'):
                 acts.add(context['act'])
