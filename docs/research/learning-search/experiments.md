@@ -6,6 +6,8 @@
 
 ## 当前轮次
 
+- [E147](../../../experiments/E147/README.md)：已完成只读trace与AlphaZero训练目标诊断；全量1,152训练轨迹、180 DEV，审计1,350bundle/51checkpoint。任务进度输入缺失、末端领奖目标与后续价值脱节；记录具体动作序列避免错误归因。无新训练或游戏动作。[E147 详细诊断与 AlphaZero 对照](2026-10-03-credit-and-search.md)。E148/#279、E149/#280、E150/#281仅登记提案。
+
 - [E146](../../../experiments/E146/README.md)：已完成；两份模型1,152条六战on-policy轨迹、103,127次新决策。30新seed六战成功7→7/4，完整幕均0；18独立重放、1,350份审计通过。扩训门槛失败。[曲线与结论](2026-10-03-onpolicy-pilot.md)。
 
 - [E138](../../../experiments/E138/README.md)：已完成M3 Max CPU/MPS实测；CPU默认保留。
