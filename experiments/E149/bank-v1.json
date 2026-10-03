@@ -1,0 +1,5430 @@
+{
+  "manifest": {
+    "schema_version": 2,
+    "code_commit": "57419c55170be1902f86709dc5f3646cc7454112",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "15cc006c2ffdf8f1e3ef78c349368c4f338fb7139243ccfdf1eec5f892c42c86",
+    "godot_stubs_sha256": "2bb3b99863f651decb27cf3ceead489046808e60d95ccbc28048ad094ecc856a",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+      "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772",
+      "headless-zzzzzz-godot-abi.patch": "5239d3836d279de5143f7d56bece1f061c6c4002de696fce28f9f7f3922ededc",
+      "headless-zzzzzzz-learning-observations.patch": "d51db8457fdb9348340a829c84fa77e9620c476ba16a7c6e224b286ecb2dfd07",
+      "headless-zzzzzzzz-encounter-abi.patch": "e4a730f9e58fddebef8ef924fcd8d0adc03d72d1148f8d29b2f9ea60556696cc"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4",
+    "experiment": "E149",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.5",
+    "model_calls": 0,
+    "model_cost_usd": 0,
+    "encoder": "e140-phase-context-v1",
+    "torch": "2.11.0",
+    "device": "cpu"
+  },
+  "plan_sha256": "fba35a43fb927cb5a6235bb6a26fa97193c9d566322959f1e3d30a5224c6d55e",
+  "collection": {
+    "path": "experiments/E149/collection-v1.json",
+    "sha256": "53c5201868d3b47e6b0fde08574b0c63268490353042251acd8a591f311bd5a0"
+  },
+  "roots": [
+    {
+      "case": "train-A0-000:combat",
+      "seed": "e149_train_Ironclad_A0_000",
+      "ascension": 0,
+      "mode": "combat",
+      "reference_room_type": "Elite",
+      "root_phase": "combat_play",
+      "root_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 13,
+        "room_type": "Elite",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "root_hash": "bd0aa9eaeb12b5e4735dcfc9dcf0caf76d38b719365aa523d3e93d39704c6108",
+      "prefix_hash": "f24b44f776e36e47f35542e1a1ab9b9f4bfc41a73dce2db9d2660ff9f84bcb76",
+      "index": 0,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-00.json",
+        "sha256": "4265fa4fae7012fea94bd09df862cab0f912223d4ea68a80e1f3d746b0dc5685"
+      },
+      "candidates": {
+        "choices": [
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 0,
+                "target_index": 0
+              }
+            },
+            "card_id": "CARD.STRIKE_IRONCLAD",
+            "name": "Strike",
+            "id": "a000"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 1
+              }
+            },
+            "card_id": "CARD.DEFEND_IRONCLAD",
+            "name": "Defend",
+            "id": "a001"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 2
+              }
+            },
+            "card_id": "CARD.DEFEND_IRONCLAD",
+            "name": "Defend",
+            "id": "a002"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 3
+              }
+            },
+            "card_id": "CARD.TRUE_GRIT",
+            "name": "True Grit",
+            "id": "a003"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 4
+              }
+            },
+            "card_id": "CARD.EXPECT_A_FIGHT",
+            "name": "Expect a Fight",
+            "id": "a004"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "end_turn",
+              "args": {}
+            },
+            "name": "End turn",
+            "id": "a005"
+          }
+        ],
+        "probabilities": [
+          0.0695887182734372,
+          0.13012019720779264,
+          0.13012019720779264,
+          0.13858437028938173,
+          0.5236088408103883,
+          0.007977676211207539
+        ],
+        "selected_indices": [
+          4,
+          0,
+          5,
+          3
+        ],
+        "actions": [
+          {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 4
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 0,
+              "target_index": 0
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "end_turn",
+            "args": {}
+          },
+          {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 3
+            }
+          }
+        ],
+        "omitted": 2
+      }
+    },
+    {
+      "case": "train-A0-000:prepare",
+      "seed": "e149_train_Ironclad_A0_000",
+      "ascension": 0,
+      "mode": "prepare",
+      "reference_room_type": "Elite",
+      "root_phase": "card_reward",
+      "root_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Monster",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "root_hash": "d6067af398d481374864032c98c69d5254535c267772ed967ec9aeeafb2bb8b7",
+      "prefix_hash": "0c8f0d7786e9ecafcf66eaf3872602d4c6dac79a1f91964bf0244b32d065897f",
+      "index": 1,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-01.json",
+        "sha256": "e90bde0614f3c861e87a20cbeb23c6b08879084e8c04c0bab685ae158fba90ca"
+      },
+      "candidates": {
+        "choices": [
+          {
+            "action": {
+              "cmd": "action",
+              "action": "select_card_reward",
+              "args": {
+                "card_index": 0
+              }
+            },
+            "name": "select_card_reward",
+            "details": {
+              "index": 0,
+              "id": "CARD.TWIN_STRIKE",
+              "name": "Twin Strike",
+              "cost": 1,
+              "type": "Attack",
+              "rarity": "Common",
+              "description": "Deal {Damage:diff()} damage twice.",
+              "stats": {
+                "damage": 5
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "damage": 7
+                },
+                "description": "Deal {Damage:diff()} damage twice.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            "id": "a000"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "select_card_reward",
+              "args": {
+                "card_index": 1
+              }
+            },
+            "name": "select_card_reward",
+            "details": {
+              "index": 1,
+              "id": "CARD.SWORD_BOOMERANG",
+              "name": "Sword Boomerang",
+              "cost": 1,
+              "type": "Attack",
+              "rarity": "Common",
+              "description": "Deal {Damage:diff()} damage to a random enemy {Repeat:diff()} times.",
+              "stats": {
+                "damage": 3,
+                "repeat": 3
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "damage": 3,
+                  "repeat": 4
+                },
+                "description": "Deal {Damage:diff()} damage to a random enemy {Repeat:diff()} times.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            "id": "a001"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "select_card_reward",
+              "args": {
+                "card_index": 2
+              }
+            },
+            "name": "select_card_reward",
+            "details": {
+              "index": 2,
+              "id": "CARD.DISMANTLE",
+              "name": "Dismantle",
+              "cost": 1,
+              "type": "Attack",
+              "rarity": "Uncommon",
+              "description": "Deal {Damage:diff()} damage.\nIf the enemy is Vulnerable, hits twice.",
+              "stats": {
+                "damage": 8
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "damage": 10
+                },
+                "description": "Deal {Damage:diff()} damage.\nIf the enemy is Vulnerable, hits twice.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            "id": "a002"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "skip_card_reward",
+              "args": {}
+            },
+            "name": "skip_card_reward",
+            "details": null,
+            "id": "a003"
+          }
+        ],
+        "probabilities": [
+          0.21907409922875348,
+          0.0754178139645712,
+          0.7025040833002679,
+          0.003004003506407364
+        ],
+        "selected_indices": [
+          2,
+          0,
+          3,
+          1
+        ],
+        "actions": [
+          {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 2
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 0
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "skip_card_reward",
+            "args": {}
+          },
+          {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 1
+            }
+          }
+        ],
+        "omitted": 0
+      }
+    },
+    {
+      "case": "train-A0-001:combat",
+      "seed": "e149_train_Ironclad_A0_001",
+      "ascension": 0,
+      "mode": "combat",
+      "reference_room_type": "Elite",
+      "root_phase": "combat_play",
+      "root_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "root_hash": "98b7512acc00f820e6b5f9628de4a036f660c1c812566d80ec2827936cd8fc5f",
+      "prefix_hash": "02991ca1c3f447c8fa2dc97c640d683768d71940fd078cd026afef9509aff366",
+      "index": 2,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-02.json",
+        "sha256": "8dc63f6ba885660f9785b26f3ed8f82193dca145a2c2d48295fbd01595a22f23"
+      },
+      "candidates": {
+        "choices": [
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 0,
+                "target_index": 0
+              }
+            },
+            "card_id": "CARD.TWIN_STRIKE",
+            "name": "Twin Strike",
+            "id": "a000"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 1
+              }
+            },
+            "card_id": "CARD.DEFEND_IRONCLAD",
+            "name": "Defend",
+            "id": "a001"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 2
+              }
+            },
+            "card_id": "CARD.VICIOUS",
+            "name": "Vicious",
+            "id": "a002"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 3,
+                "target_index": 0
+              }
+            },
+            "card_id": "CARD.TWIN_STRIKE",
+            "name": "Twin Strike",
+            "id": "a003"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 4,
+                "target_index": 0
+              }
+            },
+            "card_id": "CARD.STRIKE_IRONCLAD",
+            "name": "Strike",
+            "id": "a004"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "end_turn",
+              "args": {}
+            },
+            "name": "End turn",
+            "id": "a005"
+          }
+        ],
+        "probabilities": [
+          0.3245204199120449,
+          0.08037524937970114,
+          0.19829288785249996,
+          0.3245204199120449,
+          0.06896826854498647,
+          0.003322754398722639
+        ],
+        "selected_indices": [
+          0,
+          2,
+          5,
+          3
+        ],
+        "actions": [
+          {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 0,
+              "target_index": 0
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 2
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "end_turn",
+            "args": {}
+          },
+          {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 3,
+              "target_index": 0
+            }
+          }
+        ],
+        "omitted": 2
+      }
+    },
+    {
+      "case": "train-A0-001:prepare",
+      "seed": "e149_train_Ironclad_A0_001",
+      "ascension": 0,
+      "mode": "prepare",
+      "reference_room_type": "Elite",
+      "root_phase": "card_reward",
+      "root_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 8,
+        "room_type": "Monster",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "root_hash": "c53c9e9fa9349bf3022b2666a1043c73c4e838e83db15e610de007fcd77a40a7",
+      "prefix_hash": "48ec7231819d028b642a4d96973b1b5157c8fb82733c81ced452509510f2c9a3",
+      "index": 3,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-03.json",
+        "sha256": "d1a6f9837dcb6807068a7753af4eb5809728702210405e4e2a46cd00a975e360"
+      },
+      "candidates": {
+        "choices": [
+          {
+            "action": {
+              "cmd": "action",
+              "action": "select_card_reward",
+              "args": {
+                "card_index": 0
+              }
+            },
+            "name": "select_card_reward",
+            "details": {
+              "index": 0,
+              "id": "CARD.OFFERING",
+              "name": "Offering",
+              "cost": 0,
+              "type": "Skill",
+              "rarity": "Rare",
+              "description": "Lose {HpLoss:diff()} HP.\nGain {Energy:energyIcons()}.\nDraw {Cards:diff()} cards.",
+              "stats": {
+                "hploss": 6,
+                "energy": 2,
+                "cards": 3
+              },
+              "keywords": [
+                "Exhaust"
+              ],
+              "after_upgrade": {
+                "cost": 0,
+                "stats": {
+                  "hploss": 6,
+                  "energy": 2,
+                  "cards": 5
+                },
+                "description": "Lose {HpLoss:diff()} HP.\nGain {Energy:energyIcons()}.\nDraw {Cards:diff()} cards.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            "id": "a000"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "select_card_reward",
+              "args": {
+                "card_index": 1
+              }
+            },
+            "name": "select_card_reward",
+            "details": {
+              "index": 1,
+              "id": "CARD.TRUE_GRIT",
+              "name": "True Grit",
+              "cost": 1,
+              "type": "Skill",
+              "rarity": "Common",
+              "description": "Gain {Block:diff()} Block.\nExhaust 1 card{IfUpgraded:show:| at random}.",
+              "stats": {
+                "block": 7
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 9
+                },
+                "description": "Gain {Block:diff()} Block.\nExhaust 1 card{IfUpgraded:show:| at random}.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            "id": "a001"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "select_card_reward",
+              "args": {
+                "card_index": 2
+              }
+            },
+            "name": "select_card_reward",
+            "details": {
+              "index": 2,
+              "id": "CARD.BULLY",
+              "name": "Bully",
+              "cost": 0,
+              "type": "Attack",
+              "rarity": "Uncommon",
+              "description": "Deal {CalculatedDamage:diff()} damage.\nDeals {ExtraDamage:diff()} additional damage for each Vulnerable on the enemy.",
+              "stats": {
+                "calculationbase": 4,
+                "extradamage": 2,
+                "calculateddamage": 4
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 0,
+                "stats": {
+                  "calculationbase": 4,
+                  "extradamage": 3,
+                  "calculateddamage": 4
+                },
+                "description": "Deal {CalculatedDamage:diff()} damage.\nDeals {ExtraDamage:diff()} additional damage for each Vulnerable on the enemy.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            "id": "a002"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "skip_card_reward",
+              "args": {}
+            },
+            "name": "skip_card_reward",
+            "details": null,
+            "id": "a003"
+          }
+        ],
+        "probabilities": [
+          0.3093943963064491,
+          0.21577145641531326,
+          0.4638314648828983,
+          0.011002682395339363
+        ],
+        "selected_indices": [
+          2,
+          0,
+          3,
+          1
+        ],
+        "actions": [
+          {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 2
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 0
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "skip_card_reward",
+            "args": {}
+          },
+          {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 1
+            }
+          }
+        ],
+        "omitted": 0
+      }
+    },
+    {
+      "case": "train-A0-002:combat",
+      "seed": "e149_train_Ironclad_A0_002",
+      "ascension": 0,
+      "mode": "combat",
+      "reference_room_type": "Monster",
+      "root_phase": "combat_play",
+      "root_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 14,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "root_hash": "809620af597655116dd23d8bb7d6a46f5350dd1c37982a63899a95c3cd88d02a",
+      "prefix_hash": "9a87731726ed52e41dac915fb241579b775b81b54281ae00eddf7049586f2522",
+      "index": 4,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-04.json",
+        "sha256": "8be7a83cc18e42d7e935cc525066f42b519b8d32fda81ae6eef04b1d78c0c7b2"
+      },
+      "candidates": {
+        "choices": [
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 0,
+                "target_index": 0
+              }
+            },
+            "card_id": "CARD.STRIKE_IRONCLAD",
+            "name": "Strike",
+            "id": "a000"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 0,
+                "target_index": 1
+              }
+            },
+            "card_id": "CARD.STRIKE_IRONCLAD",
+            "name": "Strike",
+            "id": "a001"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 0,
+                "target_index": 2
+              }
+            },
+            "card_id": "CARD.STRIKE_IRONCLAD",
+            "name": "Strike",
+            "id": "a002"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 1
+              }
+            },
+            "card_id": "CARD.FEEL_NO_PAIN",
+            "name": "Feel No Pain",
+            "id": "a003"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 2
+              }
+            },
+            "card_id": "CARD.NOT_YET",
+            "name": "Not Yet",
+            "id": "a004"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 3,
+                "target_index": 0
+              }
+            },
+            "card_id": "CARD.TREMBLE",
+            "name": "Tremble",
+            "id": "a005"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 3,
+                "target_index": 1
+              }
+            },
+            "card_id": "CARD.TREMBLE",
+            "name": "Tremble",
+            "id": "a006"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 3,
+                "target_index": 2
+              }
+            },
+            "card_id": "CARD.TREMBLE",
+            "name": "Tremble",
+            "id": "a007"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 4
+              }
+            },
+            "card_id": "CARD.ARMAMENTS",
+            "name": "Armaments",
+            "id": "a008"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "end_turn",
+              "args": {}
+            },
+            "name": "End turn",
+            "id": "a009"
+          },
+          {
+            "id": "p010",
+            "action": {
+              "cmd": "action",
+              "action": "use_potion",
+              "args": {
+                "potion_index": 0,
+                "target_index": 0
+              }
+            },
+            "name": "Vulnerable Potion",
+            "details": {
+              "index": 0,
+              "name": "Vulnerable Potion",
+              "description": "Apply {VulnerablePower} Vulnerable.",
+              "vars": {
+                "VulnerablePower": 3
+              },
+              "target_type": "AnyEnemy",
+              "id": "VULNERABLE_POTION",
+              "slot_index": 0,
+              "usage": "CombatOnly",
+              "can_use": true,
+              "can_discard": true
+            }
+          },
+          {
+            "id": "p011",
+            "action": {
+              "cmd": "action",
+              "action": "use_potion",
+              "args": {
+                "potion_index": 0,
+                "target_index": 1
+              }
+            },
+            "name": "Vulnerable Potion",
+            "details": {
+              "index": 0,
+              "name": "Vulnerable Potion",
+              "description": "Apply {VulnerablePower} Vulnerable.",
+              "vars": {
+                "VulnerablePower": 3
+              },
+              "target_type": "AnyEnemy",
+              "id": "VULNERABLE_POTION",
+              "slot_index": 0,
+              "usage": "CombatOnly",
+              "can_use": true,
+              "can_discard": true
+            }
+          },
+          {
+            "id": "p012",
+            "action": {
+              "cmd": "action",
+              "action": "use_potion",
+              "args": {
+                "potion_index": 0,
+                "target_index": 2
+              }
+            },
+            "name": "Vulnerable Potion",
+            "details": {
+              "index": 0,
+              "name": "Vulnerable Potion",
+              "description": "Apply {VulnerablePower} Vulnerable.",
+              "vars": {
+                "VulnerablePower": 3
+              },
+              "target_type": "AnyEnemy",
+              "id": "VULNERABLE_POTION",
+              "slot_index": 0,
+              "usage": "CombatOnly",
+              "can_use": true,
+              "can_discard": true
+            }
+          }
+        ],
+        "probabilities": [
+          0.016271591252460575,
+          0.010374830821467677,
+          0.021476925773212675,
+          0.01217542919931065,
+          0.0017309674711638774,
+          0.01777396527368039,
+          0.010363049592199672,
+          0.0209789010814289,
+          0.009249173014792543,
+          0.0006616414608938008,
+          0.32723205648600057,
+          0.22363806281696277,
+          0.3280734057564259
+        ],
+        "selected_indices": [
+          12,
+          10,
+          9,
+          11
+        ],
+        "actions": [
+          {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0,
+              "target_index": 2
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0,
+              "target_index": 0
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "end_turn",
+            "args": {}
+          },
+          {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0,
+              "target_index": 1
+            }
+          }
+        ],
+        "omitted": 9
+      }
+    },
+    {
+      "case": "train-A0-002:prepare",
+      "seed": "e149_train_Ironclad_A0_002",
+      "ascension": 0,
+      "mode": "prepare",
+      "reference_room_type": "Monster",
+      "root_phase": "potion_reward",
+      "root_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 13,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "root_hash": "7566ab53982b6aa5ce81b9089188732021910d8dafbb939312294a120c6bae1f",
+      "prefix_hash": "b2c95983875cb055a0209c131273cb9369cc22b669580197fa720ccb5c5b8ae1",
+      "index": 5,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-05.json",
+        "sha256": "56fa11f0524b96613468ea3332060b13ea41f440638b8fdb5ec2556677e52f2f"
+      },
+      "candidates": {
+        "choices": [
+          {
+            "action": {
+              "cmd": "action",
+              "action": "claim_potion_reward",
+              "args": {}
+            },
+            "name": "claim_potion_reward",
+            "details": {
+              "id": "VULNERABLE_POTION",
+              "name": "Vulnerable Potion",
+              "description": "Apply {VulnerablePower} Vulnerable.",
+              "target_type": "AnyEnemy",
+              "usage": "CombatOnly",
+              "vars": {
+                "VulnerablePower": 3
+              }
+            },
+            "id": "a000"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "skip_potion_reward",
+              "args": {}
+            },
+            "name": "skip_potion_reward",
+            "details": null,
+            "id": "a001"
+          }
+        ],
+        "probabilities": [
+          0.9949680755114226,
+          0.005031924488577361
+        ],
+        "selected_indices": [
+          0,
+          1
+        ],
+        "actions": [
+          {
+            "cmd": "action",
+            "action": "claim_potion_reward",
+            "args": {}
+          },
+          {
+            "cmd": "action",
+            "action": "skip_potion_reward",
+            "args": {}
+          }
+        ],
+        "omitted": 0
+      }
+    },
+    {
+      "case": "train-A0-003:combat",
+      "seed": "e149_train_Ironclad_A0_003",
+      "ascension": 0,
+      "mode": "combat",
+      "reference_room_type": "Monster",
+      "root_phase": "combat_play",
+      "root_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 7,
+        "room_type": "Monster",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "root_hash": "5d6cf2a9dce7df724c44bab09a0091b9cfa4966c3fbc1c6c7daac32e83128097",
+      "prefix_hash": "841f435dfaa969b9d5dbfdc48cd1a47c8c6f414c53df695a51e3297b6d52b478",
+      "index": 6,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-06.json",
+        "sha256": "4f407916fb67dbac5d25f0e79ba8e6099177c8f5951957b61e98042295b18aea"
+      },
+      "candidates": {
+        "choices": [
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 0
+              }
+            },
+            "card_id": "CARD.DEFEND_IRONCLAD",
+            "name": "Defend",
+            "id": "a000"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 1
+              }
+            },
+            "card_id": "CARD.DEFEND_IRONCLAD",
+            "name": "Defend",
+            "id": "a001"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 2,
+                "target_index": 0
+              }
+            },
+            "card_id": "CARD.STRIKE_IRONCLAD",
+            "name": "Strike",
+            "id": "a002"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 3,
+                "target_index": 0
+              }
+            },
+            "card_id": "CARD.STRIKE_IRONCLAD",
+            "name": "Strike",
+            "id": "a003"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 4,
+                "target_index": 0
+              }
+            },
+            "card_id": "CARD.TEAR_ASUNDER",
+            "name": "Tear Asunder",
+            "id": "a004"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "end_turn",
+              "args": {}
+            },
+            "name": "End turn",
+            "id": "a005"
+          }
+        ],
+        "probabilities": [
+          0.05020841937434517,
+          0.05020841937434517,
+          0.05760847755667389,
+          0.05760847755667389,
+          0.7787325353222618,
+          0.005633670815700029
+        ],
+        "selected_indices": [
+          4,
+          0,
+          5,
+          2
+        ],
+        "actions": [
+          {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 4,
+              "target_index": 0
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 0
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "end_turn",
+            "args": {}
+          },
+          {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 2,
+              "target_index": 0
+            }
+          }
+        ],
+        "omitted": 2
+      }
+    },
+    {
+      "case": "train-A0-003:prepare",
+      "seed": "e149_train_Ironclad_A0_003",
+      "ascension": 0,
+      "mode": "prepare",
+      "reference_room_type": "Monster",
+      "root_phase": "card_reward",
+      "root_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 6,
+        "room_type": "Monster",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "root_hash": "5ad874499186e5a692ec732371b2f5056d380aed378cfa1321856c3e4e6cbab2",
+      "prefix_hash": "f756545f4b6e5a4d06713fcad9e9ce3afa73abb5d2d8aca423ceb4b5be44ad90",
+      "index": 7,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-07.json",
+        "sha256": "9fb8042a778aea7f69d8f9c971284bb21eca99a69f14aa84c25663669e7cc89b"
+      },
+      "candidates": {
+        "choices": [
+          {
+            "action": {
+              "cmd": "action",
+              "action": "select_card_reward",
+              "args": {
+                "card_index": 0
+              }
+            },
+            "name": "select_card_reward",
+            "details": {
+              "index": 0,
+              "id": "CARD.TREMBLE",
+              "name": "Tremble",
+              "cost": 1,
+              "type": "Skill",
+              "rarity": "Common",
+              "description": "Apply {VulnerablePower:diff()} Vulnerable.",
+              "stats": {
+                "vulnerablepower": 3
+              },
+              "keywords": [
+                "Exhaust"
+              ],
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "vulnerablepower": 4
+                },
+                "description": "Apply {VulnerablePower:diff()} Vulnerable.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            "id": "a000"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "select_card_reward",
+              "args": {
+                "card_index": 1
+              }
+            },
+            "name": "select_card_reward",
+            "details": {
+              "index": 1,
+              "id": "CARD.SWORD_BOOMERANG",
+              "name": "Sword Boomerang",
+              "cost": 1,
+              "type": "Attack",
+              "rarity": "Common",
+              "description": "Deal {Damage:diff()} damage to a random enemy {Repeat:diff()} times.",
+              "stats": {
+                "damage": 3,
+                "repeat": 3
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "damage": 3,
+                  "repeat": 4
+                },
+                "description": "Deal {Damage:diff()} damage to a random enemy {Repeat:diff()} times.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            "id": "a001"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "select_card_reward",
+              "args": {
+                "card_index": 2
+              }
+            },
+            "name": "select_card_reward",
+            "details": {
+              "index": 2,
+              "id": "CARD.STOMP",
+              "name": "Stomp",
+              "cost": 3,
+              "type": "Attack",
+              "rarity": "Uncommon",
+              "description": "Deal {Damage:diff()} damage to ALL enemies.\nCosts 1 less {energyPrefix:energyIcons(1)} for each Attack played this turn.",
+              "stats": {
+                "damage": 12
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 3,
+                "stats": {
+                  "damage": 15
+                },
+                "description": "Deal {Damage:diff()} damage to ALL enemies.\nCosts 1 less {energyPrefix:energyIcons(1)} for each Attack played this turn.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            "id": "a002"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "skip_card_reward",
+              "args": {}
+            },
+            "name": "skip_card_reward",
+            "details": null,
+            "id": "a003"
+          }
+        ],
+        "probabilities": [
+          0.33467206545922196,
+          0.4015270494009948,
+          0.2459064139755801,
+          0.017894471164203087
+        ],
+        "selected_indices": [
+          1,
+          0,
+          3,
+          2
+        ],
+        "actions": [
+          {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 1
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 0
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "skip_card_reward",
+            "args": {}
+          },
+          {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 2
+            }
+          }
+        ],
+        "omitted": 0
+      }
+    },
+    {
+      "case": "train-A0-004:combat",
+      "seed": "e149_train_Ironclad_A0_004",
+      "ascension": 0,
+      "mode": "combat",
+      "reference_room_type": "Elite",
+      "root_phase": "combat_play",
+      "root_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "root_hash": "d4d424ae049dac59aef991244533f25184edcdff7df375c05566699b7eee8f68",
+      "prefix_hash": "cc3358b6fb6db652697a4cbe1c6cece402c8f6e001aaef8c68b1c175104fe058",
+      "index": 8,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-08.json",
+        "sha256": "027b189e4f4e2ef84d2153623ed42b3748e8fc7448085f307f5869735fc0bc46"
+      },
+      "candidates": {
+        "choices": [
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 0,
+                "target_index": 0
+              }
+            },
+            "card_id": "CARD.STRIKE_IRONCLAD",
+            "name": "Strike",
+            "id": "a000"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 1
+              }
+            },
+            "card_id": "CARD.DEFEND_IRONCLAD",
+            "name": "Defend",
+            "id": "a001"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 2,
+                "target_index": 0
+              }
+            },
+            "card_id": "CARD.STRIKE_IRONCLAD",
+            "name": "Strike",
+            "id": "a002"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 3,
+                "target_index": 0
+              }
+            },
+            "card_id": "CARD.STRIKE_IRONCLAD",
+            "name": "Strike",
+            "id": "a003"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 4
+              }
+            },
+            "card_id": "CARD.DEFEND_IRONCLAD",
+            "name": "Defend",
+            "id": "a004"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "end_turn",
+              "args": {}
+            },
+            "name": "End turn",
+            "id": "a005"
+          }
+        ],
+        "probabilities": [
+          0.05591399509419541,
+          0.4059926534748138,
+          0.05591399509419541,
+          0.05591399509419541,
+          0.4059926534748138,
+          0.020272707767786193
+        ],
+        "selected_indices": [
+          1,
+          5,
+          4,
+          0
+        ],
+        "actions": [
+          {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 1
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "end_turn",
+            "args": {}
+          },
+          {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 4
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 0,
+              "target_index": 0
+            }
+          }
+        ],
+        "omitted": 2
+      }
+    },
+    {
+      "case": "train-A0-004:prepare",
+      "seed": "e149_train_Ironclad_A0_004",
+      "ascension": 0,
+      "mode": "prepare",
+      "reference_room_type": "Elite",
+      "root_phase": "card_reward",
+      "root_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 8,
+        "room_type": "Monster",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "root_hash": "c646bc214bf561bb6d86868fd11c8f4659b7612508f9cd72820df183fa730e66",
+      "prefix_hash": "bbc02079cb6d76e734bf00c32b16a3085589842f8e257b4846f6f6f54e504799",
+      "index": 9,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-09.json",
+        "sha256": "50b0e37fca0d423ce606178d0e2b9f61a495df8763257a44f18a33684f55b39b"
+      },
+      "candidates": {
+        "choices": [
+          {
+            "action": {
+              "cmd": "action",
+              "action": "select_card_reward",
+              "args": {
+                "card_index": 0
+              }
+            },
+            "name": "select_card_reward",
+            "details": {
+              "index": 0,
+              "id": "CARD.POMMEL_STRIKE",
+              "name": "Pommel Strike",
+              "cost": 1,
+              "type": "Attack",
+              "rarity": "Common",
+              "description": "Deal {Damage:diff()} damage.\nDraw {Cards:diff()} {Cards:plural:card|cards}.",
+              "stats": {
+                "damage": 9,
+                "cards": 1
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "damage": 10,
+                  "cards": 2
+                },
+                "description": "Deal {Damage:diff()} damage.\nDraw {Cards:diff()} {Cards:plural:card|cards}.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            "id": "a000"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "select_card_reward",
+              "args": {
+                "card_index": 1
+              }
+            },
+            "name": "select_card_reward",
+            "details": {
+              "index": 1,
+              "id": "CARD.THUNDERCLAP",
+              "name": "Thunderclap",
+              "cost": 1,
+              "type": "Attack",
+              "rarity": "Common",
+              "description": "Deal {Damage:diff()} damage and apply {VulnerablePower:diff()} Vulnerable to ALL enemies.",
+              "stats": {
+                "damage": 4,
+                "vulnerablepower": 1
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "damage": 7,
+                  "vulnerablepower": 1
+                },
+                "description": "Deal {Damage:diff()} damage and apply {VulnerablePower:diff()} Vulnerable to ALL enemies.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            "id": "a001"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "select_card_reward",
+              "args": {
+                "card_index": 2
+              }
+            },
+            "name": "select_card_reward",
+            "details": {
+              "index": 2,
+              "id": "CARD.PERFECTED_STRIKE",
+              "name": "Perfected Strike",
+              "cost": 2,
+              "type": "Attack",
+              "rarity": "Common",
+              "description": "Deal {CalculatedDamage:diff()} damage.\nDeals {ExtraDamage:diff()} additional damage for ALL your cards containing “Strike”.",
+              "stats": {
+                "calculationbase": 6,
+                "extradamage": 2,
+                "calculateddamage": 6
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 2,
+                "stats": {
+                  "calculationbase": 6,
+                  "extradamage": 3,
+                  "calculateddamage": 6
+                },
+                "description": "Deal {CalculatedDamage:diff()} damage.\nDeals {ExtraDamage:diff()} additional damage for ALL your cards containing “Strike”.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            "id": "a002"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "skip_card_reward",
+              "args": {}
+            },
+            "name": "skip_card_reward",
+            "details": null,
+            "id": "a003"
+          }
+        ],
+        "probabilities": [
+          0.8096274024393306,
+          0.12569917562837932,
+          0.060790798708925044,
+          0.00388262322336496
+        ],
+        "selected_indices": [
+          0,
+          3,
+          1,
+          2
+        ],
+        "actions": [
+          {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 0
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "skip_card_reward",
+            "args": {}
+          },
+          {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 1
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 2
+            }
+          }
+        ],
+        "omitted": 0
+      }
+    },
+    {
+      "case": "train-A5-000:combat",
+      "seed": "e149_train_Ironclad_A5_000",
+      "ascension": 5,
+      "mode": "combat",
+      "reference_room_type": "Monster",
+      "root_phase": "combat_play",
+      "root_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 6,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "root_hash": "afb5f4bb42cd7b4a3cd386d1dc1aae3d2d7360cdfd2b4fb66d7c2045ef7a4630",
+      "prefix_hash": "1265d7507101976f31c4291f96a88fcd0c9e0ffc5a32e717cfc8cc7d23376f59",
+      "index": 10,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-10.json",
+        "sha256": "62619307c49ad824243a9662de2f03d478899f5c9f753d32c8e1b88f32e6e3fb"
+      },
+      "candidates": {
+        "choices": [
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 0
+              }
+            },
+            "card_id": "CARD.BREAKTHROUGH",
+            "name": "Breakthrough",
+            "id": "a000"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 1,
+                "target_index": 0
+              }
+            },
+            "card_id": "CARD.STRIKE_IRONCLAD",
+            "name": "Strike",
+            "id": "a001"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 2,
+                "target_index": 0
+              }
+            },
+            "card_id": "CARD.STRIKE_IRONCLAD",
+            "name": "Strike",
+            "id": "a002"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 3
+              }
+            },
+            "card_id": "CARD.FORGOTTEN_RITUAL",
+            "name": "Forgotten Ritual",
+            "id": "a003"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 4,
+                "target_index": 0
+              }
+            },
+            "card_id": "CARD.BASH",
+            "name": "Bash",
+            "id": "a004"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "end_turn",
+              "args": {}
+            },
+            "name": "End turn",
+            "id": "a005"
+          }
+        ],
+        "probabilities": [
+          0.46030697298059486,
+          0.032137008651861275,
+          0.032137008651861275,
+          0.010096161364317393,
+          0.46475216847336387,
+          0.0005706798780013563
+        ],
+        "selected_indices": [
+          4,
+          5,
+          0,
+          1
+        ],
+        "actions": [
+          {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 4,
+              "target_index": 0
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "end_turn",
+            "args": {}
+          },
+          {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 0
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 1,
+              "target_index": 0
+            }
+          }
+        ],
+        "omitted": 2
+      }
+    },
+    {
+      "case": "train-A5-000:prepare",
+      "seed": "e149_train_Ironclad_A5_000",
+      "ascension": 5,
+      "mode": "prepare",
+      "reference_room_type": "Monster",
+      "root_phase": "card_reward",
+      "root_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 5,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "root_hash": "dede69ea156c70e3ebd39ee34d6bef6152c1f59798f938fa070d737f879a2f19",
+      "prefix_hash": "229aed38764333e563ab24646a99ac57627b6a357f016e733a7d27468c5fec06",
+      "index": 11,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-11.json",
+        "sha256": "e983ae88728bfc931607f4a8771cabc4e32534a0fa7050c348af3813794380f4"
+      },
+      "candidates": {
+        "choices": [
+          {
+            "action": {
+              "cmd": "action",
+              "action": "select_card_reward",
+              "args": {
+                "card_index": 0
+              }
+            },
+            "name": "select_card_reward",
+            "details": {
+              "index": 0,
+              "id": "CARD.TREMBLE",
+              "name": "Tremble",
+              "cost": 1,
+              "type": "Skill",
+              "rarity": "Common",
+              "description": "Apply {VulnerablePower:diff()} Vulnerable.",
+              "stats": {
+                "vulnerablepower": 3
+              },
+              "keywords": [
+                "Exhaust"
+              ],
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "vulnerablepower": 4
+                },
+                "description": "Apply {VulnerablePower:diff()} Vulnerable.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            "id": "a000"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "select_card_reward",
+              "args": {
+                "card_index": 1
+              }
+            },
+            "name": "select_card_reward",
+            "details": {
+              "index": 1,
+              "id": "CARD.EXPECT_A_FIGHT",
+              "name": "Expect a Fight",
+              "cost": 3,
+              "type": "Skill",
+              "rarity": "Uncommon",
+              "description": "Gain {CalculatedBlock:diff()} Block.\nGains {CalculationExtra:diff()} additional Block for each Strength you have.",
+              "stats": {
+                "calculationbase": 15,
+                "calculationextra": 5,
+                "calculatedblock": 15
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 3,
+                "stats": {
+                  "calculationbase": 16,
+                  "calculationextra": 8,
+                  "calculatedblock": 16
+                },
+                "description": "Gain {CalculatedBlock:diff()} Block.\nGains {CalculationExtra:diff()} additional Block for each Strength you have.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            "id": "a001"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "select_card_reward",
+              "args": {
+                "card_index": 2
+              }
+            },
+            "name": "select_card_reward",
+            "details": {
+              "index": 2,
+              "id": "CARD.ARMAMENTS",
+              "name": "Armaments",
+              "cost": 1,
+              "type": "Skill",
+              "rarity": "Common",
+              "description": "Gain {Block:diff()} Block.\nUpgrade {IfUpgraded:show:ALL cards|a card} in your Hand.",
+              "stats": {
+                "block": 5
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 5
+                },
+                "description": "Gain {Block:diff()} Block.\nUpgrade {IfUpgraded:show:ALL cards|a card} in your Hand.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            "id": "a002"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "skip_card_reward",
+              "args": {}
+            },
+            "name": "skip_card_reward",
+            "details": null,
+            "id": "a003"
+          }
+        ],
+        "probabilities": [
+          0.1123844367353847,
+          0.3139336357481109,
+          0.5696677475382093,
+          0.004014179978295174
+        ],
+        "selected_indices": [
+          2,
+          0,
+          3,
+          1
+        ],
+        "actions": [
+          {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 2
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 0
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "skip_card_reward",
+            "args": {}
+          },
+          {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 1
+            }
+          }
+        ],
+        "omitted": 0
+      }
+    },
+    {
+      "case": "train-A5-001:combat",
+      "seed": "e149_train_Ironclad_A5_001",
+      "ascension": 5,
+      "mode": "combat",
+      "reference_room_type": "Monster",
+      "root_phase": "combat_play",
+      "root_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "root_hash": "f8b6019cb8887f54aa5a838265cb2391975b632c354eabf118823884f0c72f39",
+      "prefix_hash": "a0e9dac0686b5987c9db9704636c8fdc7e45603378514708e33b015e9fba2e69",
+      "index": 12,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-12.json",
+        "sha256": "26aba99b8f20ed63f3c9f6858e1aee60987e6833fbdcc0267af0d463a36109af"
+      },
+      "candidates": {
+        "choices": [
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 0,
+                "target_index": 0
+              }
+            },
+            "card_id": "CARD.HEADBUTT",
+            "name": "Headbutt",
+            "id": "a000"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 0,
+                "target_index": 1
+              }
+            },
+            "card_id": "CARD.HEADBUTT",
+            "name": "Headbutt",
+            "id": "a001"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 1,
+                "target_index": 0
+              }
+            },
+            "card_id": "CARD.STRIKE_IRONCLAD",
+            "name": "Strike",
+            "id": "a002"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 1,
+                "target_index": 1
+              }
+            },
+            "card_id": "CARD.STRIKE_IRONCLAD",
+            "name": "Strike",
+            "id": "a003"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 2,
+                "target_index": 0
+              }
+            },
+            "card_id": "CARD.STRIKE_IRONCLAD",
+            "name": "Strike",
+            "id": "a004"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 2,
+                "target_index": 1
+              }
+            },
+            "card_id": "CARD.STRIKE_IRONCLAD",
+            "name": "Strike",
+            "id": "a005"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 3
+              }
+            },
+            "card_id": "CARD.ARMAMENTS",
+            "name": "Armaments",
+            "id": "a006"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 4
+              }
+            },
+            "card_id": "CARD.DEFEND_IRONCLAD",
+            "name": "Defend",
+            "id": "a007"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "end_turn",
+              "args": {}
+            },
+            "name": "End turn",
+            "id": "a008"
+          }
+        ],
+        "probabilities": [
+          0.581422992045587,
+          0.2062617268749501,
+          0.05615644973903074,
+          0.01893524849820851,
+          0.05615644973903074,
+          0.01893524849820851,
+          0.03389191298374329,
+          0.026357373560232936,
+          0.0018825980610081212
+        ],
+        "selected_indices": [
+          0,
+          6,
+          8,
+          1
+        ],
+        "actions": [
+          {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 0,
+              "target_index": 0
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 3
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "end_turn",
+            "args": {}
+          },
+          {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 0,
+              "target_index": 1
+            }
+          }
+        ],
+        "omitted": 5
+      }
+    },
+    {
+      "case": "train-A5-001:prepare",
+      "seed": "e149_train_Ironclad_A5_001",
+      "ascension": 5,
+      "mode": "prepare",
+      "reference_room_type": "Monster",
+      "root_phase": "card_reward",
+      "root_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 6,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "root_hash": "1f0419cbb06f7c983dea102710a898bb6c5808834485b31afef8c6bdd82af389",
+      "prefix_hash": "028e61556b0f81955d8b055b43ea68b4b55c2869b593bc54bb9445b50ff4fd0b",
+      "index": 13,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-13.json",
+        "sha256": "a26910793e464f71b8bbd40a72865bea0620cda7c236b15f3cb5e4be13418d47"
+      },
+      "candidates": {
+        "choices": [
+          {
+            "action": {
+              "cmd": "action",
+              "action": "select_card_reward",
+              "args": {
+                "card_index": 0
+              }
+            },
+            "name": "select_card_reward",
+            "details": {
+              "index": 0,
+              "id": "CARD.BLOODLETTING",
+              "name": "Bloodletting",
+              "cost": 0,
+              "type": "Skill",
+              "rarity": "Uncommon",
+              "description": "Lose {HpLoss:diff()} HP.\nGain {Energy:energyIcons()}.",
+              "stats": {
+                "hploss": 3,
+                "energy": 2
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 0,
+                "stats": {
+                  "hploss": 3,
+                  "energy": 3
+                },
+                "description": "Lose {HpLoss:diff()} HP.\nGain {Energy:energyIcons()}.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            "id": "a000"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "select_card_reward",
+              "args": {
+                "card_index": 1
+              }
+            },
+            "name": "select_card_reward",
+            "details": {
+              "index": 1,
+              "id": "CARD.ARMAMENTS",
+              "name": "Armaments",
+              "cost": 1,
+              "type": "Skill",
+              "rarity": "Common",
+              "description": "Gain {Block:diff()} Block.\nUpgrade {IfUpgraded:show:ALL cards|a card} in your Hand.",
+              "stats": {
+                "block": 5
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 5
+                },
+                "description": "Gain {Block:diff()} Block.\nUpgrade {IfUpgraded:show:ALL cards|a card} in your Hand.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            "id": "a001"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "select_card_reward",
+              "args": {
+                "card_index": 2
+              }
+            },
+            "name": "select_card_reward",
+            "details": {
+              "index": 2,
+              "id": "CARD.CINDER",
+              "name": "Cinder",
+              "cost": 2,
+              "type": "Attack",
+              "rarity": "Common",
+              "description": "Deal {Damage:diff()} damage.\nExhaust 1 card at random.",
+              "stats": {
+                "damage": 18
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 2,
+                "stats": {
+                  "damage": 24
+                },
+                "description": "Deal {Damage:diff()} damage.\nExhaust 1 card at random.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            "id": "a002"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "skip_card_reward",
+              "args": {}
+            },
+            "name": "skip_card_reward",
+            "details": null,
+            "id": "a003"
+          }
+        ],
+        "probabilities": [
+          0.693795314166727,
+          0.26040663226667543,
+          0.04263625231164291,
+          0.0031618012549546525
+        ],
+        "selected_indices": [
+          0,
+          3,
+          1,
+          2
+        ],
+        "actions": [
+          {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 0
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "skip_card_reward",
+            "args": {}
+          },
+          {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 1
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 2
+            }
+          }
+        ],
+        "omitted": 0
+      }
+    },
+    {
+      "case": "train-A5-002:combat",
+      "seed": "e149_train_Ironclad_A5_002",
+      "ascension": 5,
+      "mode": "combat",
+      "reference_room_type": "Monster",
+      "root_phase": "combat_play",
+      "root_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 6,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "root_hash": "92b9acc476a0840c390bbe1e74f5c78cd0f1cb7c15e11b92aede3c7dbbf68e24",
+      "prefix_hash": "6f8185e18e48a168752f549111d452f00b96557853d452b0510f9963caeb1e1b",
+      "index": 14,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-14.json",
+        "sha256": "0a943852d93235dd6dd2b7336d231ed18e470926a6d502d92dc2ec6578578bda"
+      },
+      "candidates": {
+        "choices": [
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 0,
+                "target_index": 0
+              }
+            },
+            "card_id": "CARD.STRIKE_IRONCLAD",
+            "name": "Strike",
+            "id": "a000"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 0,
+                "target_index": 1
+              }
+            },
+            "card_id": "CARD.STRIKE_IRONCLAD",
+            "name": "Strike",
+            "id": "a001"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 1
+              }
+            },
+            "card_id": "CARD.DEFEND_IRONCLAD",
+            "name": "Defend",
+            "id": "a002"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 2
+              }
+            },
+            "card_id": "CARD.DEFEND_IRONCLAD",
+            "name": "Defend",
+            "id": "a003"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 3,
+                "target_index": 0
+              }
+            },
+            "card_id": "CARD.STRIKE_IRONCLAD",
+            "name": "Strike",
+            "id": "a004"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 3,
+                "target_index": 1
+              }
+            },
+            "card_id": "CARD.STRIKE_IRONCLAD",
+            "name": "Strike",
+            "id": "a005"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "end_turn",
+              "args": {}
+            },
+            "name": "End turn",
+            "id": "a006"
+          }
+        ],
+        "probabilities": [
+          0.0678999534215288,
+          0.10717648086647612,
+          0.32124488255971656,
+          0.32124488255971656,
+          0.0678999534215288,
+          0.10717648086647612,
+          0.007357366304557022
+        ],
+        "selected_indices": [
+          2,
+          6,
+          3,
+          1
+        ],
+        "actions": [
+          {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 1
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "end_turn",
+            "args": {}
+          },
+          {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 2
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 0,
+              "target_index": 1
+            }
+          }
+        ],
+        "omitted": 3
+      }
+    },
+    {
+      "case": "train-A5-002:prepare",
+      "seed": "e149_train_Ironclad_A5_002",
+      "ascension": 5,
+      "mode": "prepare",
+      "reference_room_type": "Monster",
+      "root_phase": "card_reward",
+      "root_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 5,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "root_hash": "63d9f6a1afa1e987c3afb64a8b521c85c112803016a7e51934f53aac1faa8f8e",
+      "prefix_hash": "3953936c9e23b8fbfaf11579176b8b54c4d49e642cdfecf5a63b37fccb4bf7da",
+      "index": 15,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-15.json",
+        "sha256": "d69e3afe288637edab52d3da06eba59a1bbaa711958648c7ba14843b939c1316"
+      },
+      "candidates": {
+        "choices": [
+          {
+            "action": {
+              "cmd": "action",
+              "action": "select_card_reward",
+              "args": {
+                "card_index": 0
+              }
+            },
+            "name": "select_card_reward",
+            "details": {
+              "index": 0,
+              "id": "CARD.SECOND_WIND",
+              "name": "Second Wind",
+              "cost": 1,
+              "type": "Skill",
+              "rarity": "Uncommon",
+              "description": "Exhaust all non-Attack cards in your Hand. Gain {Block:diff()} Block for each card Exhausted.",
+              "stats": {
+                "block": 5
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 7
+                },
+                "description": "Exhaust all non-Attack cards in your Hand. Gain {Block:diff()} Block for each card Exhausted.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            "id": "a000"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "select_card_reward",
+              "args": {
+                "card_index": 1
+              }
+            },
+            "name": "select_card_reward",
+            "details": {
+              "index": 1,
+              "id": "CARD.PILLAGE",
+              "name": "Pillage",
+              "cost": 1,
+              "type": "Attack",
+              "rarity": "Uncommon",
+              "description": "Deal {Damage:diff()} damage.\nDraw cards until you draw a non-Attack card.",
+              "stats": {
+                "damage": 6
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "damage": 9
+                },
+                "description": "Deal {Damage:diff()} damage.\nDraw cards until you draw a non-Attack card.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            "id": "a001"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "select_card_reward",
+              "args": {
+                "card_index": 2
+              }
+            },
+            "name": "select_card_reward",
+            "details": {
+              "index": 2,
+              "id": "CARD.BATTLE_TRANCE",
+              "name": "Battle Trance",
+              "cost": 0,
+              "type": "Skill",
+              "rarity": "Uncommon",
+              "description": "Draw {Cards:diff()} cards.\nYou cannot draw additional cards this turn.",
+              "stats": {
+                "cards": 3
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 0,
+                "stats": {
+                  "cards": 4
+                },
+                "description": "Draw {Cards:diff()} cards.\nYou cannot draw additional cards this turn.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            "id": "a002"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "skip_card_reward",
+              "args": {}
+            },
+            "name": "skip_card_reward",
+            "details": null,
+            "id": "a003"
+          }
+        ],
+        "probabilities": [
+          0.188531477602746,
+          0.6882043638704647,
+          0.12262354327328946,
+          0.0006406152534998493
+        ],
+        "selected_indices": [
+          1,
+          0,
+          3,
+          2
+        ],
+        "actions": [
+          {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 1
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 0
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "skip_card_reward",
+            "args": {}
+          },
+          {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 2
+            }
+          }
+        ],
+        "omitted": 0
+      }
+    },
+    {
+      "case": "train-A5-003:combat",
+      "seed": "e149_train_Ironclad_A5_003",
+      "ascension": 5,
+      "mode": "combat",
+      "reference_room_type": "Monster",
+      "root_phase": "combat_play",
+      "root_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "root_hash": "6ef8c63b252bd4cf67f38ce2c1bf01bb991a4c933d96076f045d937f021c5633",
+      "prefix_hash": "b2be4f721d8fce532cc2d0bb702e4a8096149ce7ea75c34269c547ddef71ed36",
+      "index": 16,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-16.json",
+        "sha256": "9d7704ad6d11bbec026df427134fca816ea6d4eafdb4a731b58aa67f0f695ce0"
+      },
+      "candidates": {
+        "choices": [
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 1
+              }
+            },
+            "card_id": "CARD.BREAKTHROUGH",
+            "name": "Breakthrough",
+            "id": "a000"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 2,
+                "target_index": 0
+              }
+            },
+            "card_id": "CARD.STRIKE_IRONCLAD",
+            "name": "Strike",
+            "id": "a001"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 3,
+                "target_index": 0
+              }
+            },
+            "card_id": "CARD.BASH",
+            "name": "Bash",
+            "id": "a002"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 4
+              }
+            },
+            "card_id": "CARD.DEFEND_IRONCLAD",
+            "name": "Defend",
+            "id": "a003"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "end_turn",
+              "args": {}
+            },
+            "name": "End turn",
+            "id": "a004"
+          }
+        ],
+        "probabilities": [
+          0.4674941682419511,
+          0.04660773062961483,
+          0.43151963753040684,
+          0.05264412742172946,
+          0.0017343361762977682
+        ],
+        "selected_indices": [
+          0,
+          2,
+          4,
+          3
+        ],
+        "actions": [
+          {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 1
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 3,
+              "target_index": 0
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "end_turn",
+            "args": {}
+          },
+          {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 4
+            }
+          }
+        ],
+        "omitted": 1
+      }
+    },
+    {
+      "case": "train-A5-003:prepare",
+      "seed": "e149_train_Ironclad_A5_003",
+      "ascension": 5,
+      "mode": "prepare",
+      "reference_room_type": "Monster",
+      "root_phase": "card_reward",
+      "root_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 7,
+        "room_type": "Elite",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "root_hash": "0f9157a6d24af37548e90f851e1e6b92fe492dca9f2199daeaebaae32f0e4170",
+      "prefix_hash": "cbe21f65fcad242aa924f3c2f28e5128907b19f6dcea0d0b7c022fae3cf6576f",
+      "index": 17,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-17.json",
+        "sha256": "36c81a967da4dc2f592f01b2a7f4d58416637a24f79673f999ef1d844138beff"
+      },
+      "candidates": {
+        "choices": [
+          {
+            "action": {
+              "cmd": "action",
+              "action": "select_card_reward",
+              "args": {
+                "card_index": 0
+              }
+            },
+            "name": "select_card_reward",
+            "details": {
+              "index": 0,
+              "id": "CARD.FORGOTTEN_RITUAL",
+              "name": "Forgotten Ritual",
+              "cost": 1,
+              "type": "Skill",
+              "rarity": "Uncommon",
+              "description": "Gain {Energy:energyIcons()}.",
+              "stats": {
+                "energy": 3
+              },
+              "keywords": [
+                "Exhaust"
+              ],
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "energy": 4
+                },
+                "description": "Gain {Energy:energyIcons()}.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            "id": "a000"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "select_card_reward",
+              "args": {
+                "card_index": 1
+              }
+            },
+            "name": "select_card_reward",
+            "details": {
+              "index": 1,
+              "id": "CARD.TRUE_GRIT",
+              "name": "True Grit",
+              "cost": 1,
+              "type": "Skill",
+              "rarity": "Common",
+              "description": "Gain {Block:diff()} Block.\nExhaust 1 card{IfUpgraded:show:| at random}.",
+              "stats": {
+                "block": 7
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 9
+                },
+                "description": "Gain {Block:diff()} Block.\nExhaust 1 card{IfUpgraded:show:| at random}.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            "id": "a001"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "select_card_reward",
+              "args": {
+                "card_index": 2
+              }
+            },
+            "name": "select_card_reward",
+            "details": {
+              "index": 2,
+              "id": "CARD.ARMAMENTS",
+              "name": "Armaments",
+              "cost": 1,
+              "type": "Skill",
+              "rarity": "Common",
+              "description": "Gain {Block:diff()} Block.\nUpgrade {IfUpgraded:show:ALL cards|a card} in your Hand.",
+              "stats": {
+                "block": 5
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "block": 5
+                },
+                "description": "Gain {Block:diff()} Block.\nUpgrade {IfUpgraded:show:ALL cards|a card} in your Hand.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            "id": "a002"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "skip_card_reward",
+              "args": {}
+            },
+            "name": "skip_card_reward",
+            "details": null,
+            "id": "a003"
+          }
+        ],
+        "probabilities": [
+          0.3749299597758185,
+          0.13667898110000498,
+          0.483736738665088,
+          0.004654320459088567
+        ],
+        "selected_indices": [
+          2,
+          0,
+          3,
+          1
+        ],
+        "actions": [
+          {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 2
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 0
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "skip_card_reward",
+            "args": {}
+          },
+          {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 1
+            }
+          }
+        ],
+        "omitted": 0
+      }
+    },
+    {
+      "case": "train-A5-004:combat",
+      "seed": "e149_train_Ironclad_A5_004",
+      "ascension": 5,
+      "mode": "combat",
+      "reference_room_type": "Elite",
+      "root_phase": "combat_play",
+      "root_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 15,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "root_hash": "5d7cfb685836fbd0c15f41fe8114cfd37224d60d3c820a3a36d2d272e57eb94d",
+      "prefix_hash": "07bbcc4034cc0ed343cac48fb3b7c3d3ab0a70b972cf608dae4ec6a38c2628b5",
+      "index": 18,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-18.json",
+        "sha256": "8bda81b025f704e19b21dae70f22a3dc71c5ea53fa7cfc23c6e3301fc0d95d6a"
+      },
+      "candidates": {
+        "choices": [
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 0,
+                "target_index": 0
+              }
+            },
+            "card_id": "CARD.STRIKE_IRONCLAD",
+            "name": "Strike",
+            "id": "a000"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 2
+              }
+            },
+            "card_id": "CARD.DEFEND_IRONCLAD",
+            "name": "Defend",
+            "id": "a001"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 3,
+                "target_index": 0
+              }
+            },
+            "card_id": "CARD.STRIKE_IRONCLAD",
+            "name": "Strike",
+            "id": "a002"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 4,
+                "target_index": 0
+              }
+            },
+            "card_id": "CARD.DISMANTLE",
+            "name": "Dismantle",
+            "id": "a003"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "end_turn",
+              "args": {}
+            },
+            "name": "End turn",
+            "id": "a004"
+          }
+        ],
+        "probabilities": [
+          0.0986033179594336,
+          0.5190830556036429,
+          0.0986033179594336,
+          0.26050748062467305,
+          0.023202827852816917
+        ],
+        "selected_indices": [
+          1,
+          3,
+          4,
+          0
+        ],
+        "actions": [
+          {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 2
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 4,
+              "target_index": 0
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "end_turn",
+            "args": {}
+          },
+          {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 0,
+              "target_index": 0
+            }
+          }
+        ],
+        "omitted": 1
+      }
+    },
+    {
+      "case": "train-A5-004:prepare",
+      "seed": "e149_train_Ironclad_A5_004",
+      "ascension": 5,
+      "mode": "prepare",
+      "reference_room_type": "Elite",
+      "root_phase": "card_reward",
+      "root_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 14,
+        "room_type": "Monster",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "root_hash": "805333326f644a0d85dffd354f40c57bc77ab8674d9cbf48e92a3661b77df337",
+      "prefix_hash": "b0a3731825a3e06ae3d3ba9ea8b9e5834a939c8bb30fe67adfec1fd46885971c",
+      "index": 19,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-19.json",
+        "sha256": "8c24ecdc0a98623bc0b09c0ce74022ec3d19ca82c877f0467dcc0ef001d5411c"
+      },
+      "candidates": {
+        "choices": [
+          {
+            "action": {
+              "cmd": "action",
+              "action": "select_card_reward",
+              "args": {
+                "card_index": 0
+              }
+            },
+            "name": "select_card_reward",
+            "details": {
+              "index": 0,
+              "id": "CARD.IRON_WAVE",
+              "name": "Iron Wave",
+              "cost": 1,
+              "type": "Attack",
+              "rarity": "Common",
+              "description": "Gain {Block:diff()} Block.\nDeal {Damage:diff()} damage.",
+              "stats": {
+                "damage": 5,
+                "block": 5
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "damage": 7,
+                  "block": 7
+                },
+                "description": "Gain {Block:diff()} Block.\nDeal {Damage:diff()} damage.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            "id": "a000"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "select_card_reward",
+              "args": {
+                "card_index": 1
+              }
+            },
+            "name": "select_card_reward",
+            "details": {
+              "index": 1,
+              "id": "CARD.RAMPAGE",
+              "name": "Rampage",
+              "cost": 1,
+              "type": "Attack",
+              "rarity": "Uncommon",
+              "description": "Deal {Damage:diff()} damage.\nIncrease this card's damage by {Increase:diff()} this combat.",
+              "stats": {
+                "damage": 10,
+                "increase": 5
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "damage": 10,
+                  "increase": 10
+                },
+                "description": "Deal {Damage:diff()} damage.\nIncrease this card's damage by {Increase:diff()} this combat.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            "id": "a001"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "select_card_reward",
+              "args": {
+                "card_index": 2
+              }
+            },
+            "name": "select_card_reward",
+            "details": {
+              "index": 2,
+              "id": "CARD.PACTS_END",
+              "name": "Pact's End",
+              "cost": 0,
+              "type": "Attack",
+              "rarity": "Rare",
+              "description": "If you have {Cards:diff()} or more {Cards:plural:card|cards} in your Exhaust Pile,\ndeal {Damage:diff()} damage to ALL enemies.",
+              "stats": {
+                "damage": 18,
+                "cards": 3
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 0,
+                "stats": {
+                  "damage": 24,
+                  "cards": 3
+                },
+                "description": "If you have {Cards:diff()} or more {Cards:plural:card|cards} in your Exhaust Pile,\ndeal {Damage:diff()} damage to ALL enemies.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            "id": "a002"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "skip_card_reward",
+              "args": {}
+            },
+            "name": "skip_card_reward",
+            "details": null,
+            "id": "a003"
+          }
+        ],
+        "probabilities": [
+          0.10041153159743695,
+          0.7447381414497214,
+          0.15128036924905078,
+          0.0035699577037908384
+        ],
+        "selected_indices": [
+          1,
+          0,
+          3,
+          2
+        ],
+        "actions": [
+          {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 1
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 0
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "skip_card_reward",
+            "args": {}
+          },
+          {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 2
+            }
+          }
+        ],
+        "omitted": 0
+      }
+    },
+    {
+      "case": "train-A10-000:combat",
+      "seed": "e149_train_Ironclad_A10_000",
+      "ascension": 10,
+      "mode": "combat",
+      "reference_room_type": "Elite",
+      "root_phase": "combat_play",
+      "root_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 7,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "root_hash": "53acaffd83facbce87896762097d2f9405b0797e022f5da32d7081d43245a0e8",
+      "prefix_hash": "8ca98af98fec589cee5bebbbe768b3059562b8b19650076826ee7273fc195f12",
+      "index": 20,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-20.json",
+        "sha256": "5f540b46faeea56a3ed96d7e051aaa16c9c152fb49840fcd1b33cc4103baa033"
+      },
+      "candidates": {
+        "choices": [
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 0,
+                "target_index": 0
+              }
+            },
+            "card_id": "CARD.STRIKE_IRONCLAD",
+            "name": "Strike",
+            "id": "a000"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 1,
+                "target_index": 0
+              }
+            },
+            "card_id": "CARD.STRIKE_IRONCLAD",
+            "name": "Strike",
+            "id": "a001"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 2,
+                "target_index": 0
+              }
+            },
+            "card_id": "CARD.STRIKE_IRONCLAD",
+            "name": "Strike",
+            "id": "a002"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 3,
+                "target_index": 0
+              }
+            },
+            "card_id": "CARD.STRIKE_IRONCLAD",
+            "name": "Strike",
+            "id": "a003"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 4
+              }
+            },
+            "card_id": "CARD.DEFEND_IRONCLAD",
+            "name": "Defend",
+            "id": "a004"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "end_turn",
+              "args": {}
+            },
+            "name": "End turn",
+            "id": "a005"
+          }
+        ],
+        "probabilities": [
+          0.05177633817577236,
+          0.06340508884413135,
+          0.05177633817577236,
+          0.05177633817577236,
+          0.7647662730337446,
+          0.016499623594807
+        ],
+        "selected_indices": [
+          4,
+          1,
+          5,
+          0
+        ],
+        "actions": [
+          {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 4
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 1,
+              "target_index": 0
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "end_turn",
+            "args": {}
+          },
+          {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 0,
+              "target_index": 0
+            }
+          }
+        ],
+        "omitted": 2
+      }
+    },
+    {
+      "case": "train-A10-000:prepare",
+      "seed": "e149_train_Ironclad_A10_000",
+      "ascension": 10,
+      "mode": "prepare",
+      "reference_room_type": "Elite",
+      "root_phase": "card_reward",
+      "root_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 5,
+        "room_type": "Monster",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "root_hash": "95c9e96176900dd3aa6cfdc8baf35aac14afa6d52d017a696476451840db9578",
+      "prefix_hash": "3d6397e92b5cd509754725262fa33e3936170d39af1604fd1fa18df2fb80e2d0",
+      "index": 21,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-21.json",
+        "sha256": "ba6b91504bed1c654e684c4118bbd377ed99a3b8bacfe124bd9b4385f08e19ba"
+      },
+      "candidates": {
+        "choices": [
+          {
+            "action": {
+              "cmd": "action",
+              "action": "select_card_reward",
+              "args": {
+                "card_index": 0
+              }
+            },
+            "name": "select_card_reward",
+            "details": {
+              "index": 0,
+              "id": "CARD.RUPTURE",
+              "name": "Rupture",
+              "cost": 1,
+              "type": "Power",
+              "rarity": "Uncommon",
+              "description": "Whenever you lose HP on your turn, gain {StrengthPower:diff()} Strength.",
+              "stats": {
+                "strengthpower": 1
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "strengthpower": 2
+                },
+                "description": "Whenever you lose HP on your turn, gain {StrengthPower:diff()} Strength.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            "id": "a000"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "select_card_reward",
+              "args": {
+                "card_index": 1
+              }
+            },
+            "name": "select_card_reward",
+            "details": {
+              "index": 1,
+              "id": "CARD.BURNING_PACT",
+              "name": "Burning Pact",
+              "cost": 1,
+              "type": "Skill",
+              "rarity": "Uncommon",
+              "description": "Exhaust 1 card.\nDraw {Cards:diff()} cards.",
+              "stats": {
+                "cards": 2
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "cards": 3
+                },
+                "description": "Exhaust 1 card.\nDraw {Cards:diff()} cards.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            "id": "a001"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "select_card_reward",
+              "args": {
+                "card_index": 2
+              }
+            },
+            "name": "select_card_reward",
+            "details": {
+              "index": 2,
+              "id": "CARD.BATTLE_TRANCE",
+              "name": "Battle Trance",
+              "cost": 0,
+              "type": "Skill",
+              "rarity": "Uncommon",
+              "description": "Draw {Cards:diff()} cards.\nYou cannot draw additional cards this turn.",
+              "stats": {
+                "cards": 3
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 0,
+                "stats": {
+                  "cards": 4
+                },
+                "description": "Draw {Cards:diff()} cards.\nYou cannot draw additional cards this turn.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            "id": "a002"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "skip_card_reward",
+              "args": {}
+            },
+            "name": "skip_card_reward",
+            "details": null,
+            "id": "a003"
+          }
+        ],
+        "probabilities": [
+          0.09644989533397232,
+          0.7279979450324183,
+          0.17466327161002262,
+          0.0008888880235866821
+        ],
+        "selected_indices": [
+          1,
+          0,
+          3,
+          2
+        ],
+        "actions": [
+          {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 1
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 0
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "skip_card_reward",
+            "args": {}
+          },
+          {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 2
+            }
+          }
+        ],
+        "omitted": 0
+      }
+    },
+    {
+      "case": "train-A10-001:combat",
+      "seed": "e149_train_Ironclad_A10_001",
+      "ascension": 10,
+      "mode": "combat",
+      "reference_room_type": "Elite",
+      "root_phase": "combat_play",
+      "root_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Elite",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "root_hash": "a3e2c6e07d0cd33e8851679a33de085a1bad566d6385483be5c1df0673b173b5",
+      "prefix_hash": "2267d699af0e8d2f02af3488cb40fe1a9d8185a948612c80da4bd29fe87fa5e5",
+      "index": 22,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-22.json",
+        "sha256": "189b650dc7ee90f6e5abf28949adb89615ce1547a302a8e09512ca4917ad7207"
+      },
+      "candidates": {
+        "choices": [
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 0
+              }
+            },
+            "card_id": "CARD.DEFEND_IRONCLAD",
+            "name": "Defend",
+            "id": "a000"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 1,
+                "target_index": 0
+              }
+            },
+            "card_id": "CARD.STRIKE_IRONCLAD",
+            "name": "Strike",
+            "id": "a001"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 2,
+                "target_index": 0
+              }
+            },
+            "card_id": "CARD.STRIKE_IRONCLAD",
+            "name": "Strike",
+            "id": "a002"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 4,
+                "target_index": 0
+              }
+            },
+            "card_id": "CARD.STRIKE_IRONCLAD",
+            "name": "Strike",
+            "id": "a003"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "end_turn",
+              "args": {}
+            },
+            "name": "End turn",
+            "id": "a004"
+          },
+          {
+            "id": "p005",
+            "action": {
+              "cmd": "action",
+              "action": "use_potion",
+              "args": {
+                "potion_index": 0
+              }
+            },
+            "name": "Swift Potion",
+            "details": {
+              "index": 0,
+              "name": "Swift Potion",
+              "description": "Draw {Cards} {Cards:plural:card|cards}.",
+              "vars": {
+                "Cards": 3
+              },
+              "target_type": "AnyPlayer",
+              "id": "SWIFT_POTION",
+              "slot_index": 0,
+              "usage": "CombatOnly",
+              "can_use": true,
+              "can_discard": true
+            }
+          }
+        ],
+        "probabilities": [
+          0.01948410955279482,
+          0.004640894327749738,
+          0.004640894327749738,
+          0.004640894327749738,
+          0.0008146491339397021,
+          0.9657785583300162
+        ],
+        "selected_indices": [
+          5,
+          4,
+          0,
+          1
+        ],
+        "actions": [
+          {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "end_turn",
+            "args": {}
+          },
+          {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 0
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 1,
+              "target_index": 0
+            }
+          }
+        ],
+        "omitted": 2
+      }
+    },
+    {
+      "case": "train-A10-001:prepare",
+      "seed": "e149_train_Ironclad_A10_001",
+      "ascension": 10,
+      "mode": "prepare",
+      "reference_room_type": "Elite",
+      "root_phase": "potion_reward",
+      "root_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 8,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "root_hash": "617bb74c69485356c39a5549fa0c8fdf00755d1146cd290c77df823bdd7a8f7d",
+      "prefix_hash": "f6d91eaa8e562a078628c6de02d07e53f2f53a1c5dfd523824b8ffff8942e0c7",
+      "index": 23,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-23.json",
+        "sha256": "2ceaacbcabbc8ffd167b9cc74ed4c8c0df989102b526dc9bf2b9615085158ebd"
+      },
+      "candidates": {
+        "choices": [
+          {
+            "action": {
+              "cmd": "action",
+              "action": "claim_potion_reward",
+              "args": {}
+            },
+            "name": "claim_potion_reward",
+            "details": {
+              "id": "SWIFT_POTION",
+              "name": "Swift Potion",
+              "description": "Draw {Cards} {Cards:plural:card|cards}.",
+              "target_type": "AnyPlayer",
+              "usage": "CombatOnly",
+              "vars": {
+                "Cards": 3
+              }
+            },
+            "id": "a000"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "skip_potion_reward",
+              "args": {}
+            },
+            "name": "skip_potion_reward",
+            "details": null,
+            "id": "a001"
+          }
+        ],
+        "probabilities": [
+          0.9979833157685317,
+          0.0020166842314682677
+        ],
+        "selected_indices": [
+          0,
+          1
+        ],
+        "actions": [
+          {
+            "cmd": "action",
+            "action": "claim_potion_reward",
+            "args": {}
+          },
+          {
+            "cmd": "action",
+            "action": "skip_potion_reward",
+            "args": {}
+          }
+        ],
+        "omitted": 0
+      }
+    },
+    {
+      "case": "train-A10-002:combat",
+      "seed": "e149_train_Ironclad_A10_002",
+      "ascension": 10,
+      "mode": "combat",
+      "reference_room_type": "Elite",
+      "root_phase": "combat_play",
+      "root_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 7,
+        "room_type": "Elite",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "root_hash": "91660476935316eb0b63d87adaccdbc4b966c03df4a607fa0f67e10550dc60b2",
+      "prefix_hash": "213dcbeca375c89c494e464e68d4bd77cd67086180103263df2106435db25b7f",
+      "index": 24,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-24.json",
+        "sha256": "697b4882de9ab67698636eebd7fe5b89fe6483f51ad6f938000b8fb05d9abca1"
+      },
+      "candidates": {
+        "choices": [
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 0
+              }
+            },
+            "card_id": "CARD.DEFEND_IRONCLAD",
+            "name": "Defend",
+            "id": "a000"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 1,
+                "target_index": 0
+              }
+            },
+            "card_id": "CARD.STRIKE_IRONCLAD",
+            "name": "Strike",
+            "id": "a001"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 2,
+                "target_index": 0
+              }
+            },
+            "card_id": "CARD.TREMBLE",
+            "name": "Tremble",
+            "id": "a002"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 4,
+                "target_index": 0
+              }
+            },
+            "card_id": "CARD.STRIKE_IRONCLAD",
+            "name": "Strike",
+            "id": "a003"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "end_turn",
+              "args": {}
+            },
+            "name": "End turn",
+            "id": "a004"
+          },
+          {
+            "id": "p005",
+            "action": {
+              "cmd": "action",
+              "action": "use_potion",
+              "args": {
+                "potion_index": 0
+              }
+            },
+            "name": "Liquid Bronze",
+            "details": {
+              "index": 0,
+              "name": "Liquid Bronze",
+              "description": "Gain {ThornsPower} Thorns.",
+              "vars": {
+                "ThornsPower": 3
+              },
+              "target_type": "AnyPlayer",
+              "id": "LIQUID_BRONZE",
+              "slot_index": 0,
+              "usage": "CombatOnly",
+              "can_use": true,
+              "can_discard": true
+            }
+          },
+          {
+            "id": "p006",
+            "action": {
+              "cmd": "action",
+              "action": "use_potion",
+              "args": {
+                "potion_index": 1
+              }
+            },
+            "name": "Cure All",
+            "details": {
+              "index": 1,
+              "name": "Cure All",
+              "description": "Gain {Energy:energyIcons()}. Draw {Cards} {Cards:plural:card|cards}.",
+              "vars": {
+                "Energy": 1,
+                "Cards": 2
+              },
+              "target_type": "AnyPlayer",
+              "id": "CURE_ALL",
+              "slot_index": 1,
+              "usage": "CombatOnly",
+              "can_use": true,
+              "can_discard": true
+            }
+          }
+        ],
+        "probabilities": [
+          0.0023474651460218625,
+          0.002815938796099089,
+          0.0014432277574325358,
+          0.002815938796099089,
+          0.00010066920398152236,
+          0.233244211191021,
+          0.7572325491093449
+        ],
+        "selected_indices": [
+          6,
+          5,
+          4,
+          1
+        ],
+        "actions": [
+          {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 1
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "end_turn",
+            "args": {}
+          },
+          {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 1,
+              "target_index": 0
+            }
+          }
+        ],
+        "omitted": 3
+      }
+    },
+    {
+      "case": "train-A10-002:prepare",
+      "seed": "e149_train_Ironclad_A10_002",
+      "ascension": 10,
+      "mode": "prepare",
+      "reference_room_type": "Elite",
+      "root_phase": "card_reward",
+      "root_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 5,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "root_hash": "0721509dc99d42320a2df7e04e1f9a5b64a385a9d295045b85a437d790d22131",
+      "prefix_hash": "779519017644322eb0dd09b19ecc491dba2e2807f59d1ecc25889ad08df07729",
+      "index": 25,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-25.json",
+        "sha256": "279c69ceaaa214b7514ade27fbd14e02a6f1609cda596acbfd06ed1483a5e78c"
+      },
+      "candidates": {
+        "choices": [
+          {
+            "action": {
+              "cmd": "action",
+              "action": "select_card_reward",
+              "args": {
+                "card_index": 0
+              }
+            },
+            "name": "select_card_reward",
+            "details": {
+              "index": 0,
+              "id": "CARD.TREMBLE",
+              "name": "Tremble",
+              "cost": 1,
+              "type": "Skill",
+              "rarity": "Common",
+              "description": "Apply {VulnerablePower:diff()} Vulnerable.",
+              "stats": {
+                "vulnerablepower": 3
+              },
+              "keywords": [
+                "Exhaust"
+              ],
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "vulnerablepower": 4
+                },
+                "description": "Apply {VulnerablePower:diff()} Vulnerable.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            "id": "a000"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "select_card_reward",
+              "args": {
+                "card_index": 1
+              }
+            },
+            "name": "select_card_reward",
+            "details": {
+              "index": 1,
+              "id": "CARD.CINDER",
+              "name": "Cinder",
+              "cost": 2,
+              "type": "Attack",
+              "rarity": "Common",
+              "description": "Deal {Damage:diff()} damage.\nExhaust 1 card at random.",
+              "stats": {
+                "damage": 18
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 2,
+                "stats": {
+                  "damage": 24
+                },
+                "description": "Deal {Damage:diff()} damage.\nExhaust 1 card at random.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            "id": "a001"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "select_card_reward",
+              "args": {
+                "card_index": 2
+              }
+            },
+            "name": "select_card_reward",
+            "details": {
+              "index": 2,
+              "id": "CARD.INFERNAL_BLADE",
+              "name": "Infernal Blade",
+              "cost": 1,
+              "type": "Skill",
+              "rarity": "Uncommon",
+              "description": "Add a random Attack into your Hand. It's free to play this turn.",
+              "stats": null,
+              "keywords": [
+                "Exhaust"
+              ],
+              "after_upgrade": {
+                "cost": 0,
+                "stats": null,
+                "description": "Add a random Attack into your Hand. It's free to play this turn.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            "id": "a002"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "skip_card_reward",
+              "args": {}
+            },
+            "name": "skip_card_reward",
+            "details": null,
+            "id": "a003"
+          }
+        ],
+        "probabilities": [
+          0.48197698054488397,
+          0.20805980032615587,
+          0.2888509896898532,
+          0.021112229439107
+        ],
+        "selected_indices": [
+          0,
+          3,
+          2,
+          1
+        ],
+        "actions": [
+          {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 0
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "skip_card_reward",
+            "args": {}
+          },
+          {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 2
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 1
+            }
+          }
+        ],
+        "omitted": 0
+      }
+    },
+    {
+      "case": "train-A10-003:combat",
+      "seed": "e149_train_Ironclad_A10_003",
+      "ascension": 10,
+      "mode": "combat",
+      "reference_room_type": "Monster",
+      "root_phase": "combat_play",
+      "root_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 5,
+        "room_type": "Monster",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "root_hash": "ca85733b8127fa783aff133a707038f4485cdf23ad94a02cebfa326d794522aa",
+      "prefix_hash": "0da8c63b12828dd886885d4e27b3c283314b4614662d2a378c644c45d3c5f804",
+      "index": 26,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-26.json",
+        "sha256": "cec3014ae5e7452d84c0f765183eee7098b4f9316a351397bc97684825f86cef"
+      },
+      "candidates": {
+        "choices": [
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 0
+              }
+            },
+            "card_id": "CARD.DEFEND_IRONCLAD",
+            "name": "Defend",
+            "id": "a000"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 1,
+                "target_index": 0
+              }
+            },
+            "card_id": "CARD.STRIKE_IRONCLAD",
+            "name": "Strike",
+            "id": "a001"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 2,
+                "target_index": 0
+              }
+            },
+            "card_id": "CARD.STRIKE_IRONCLAD",
+            "name": "Strike",
+            "id": "a002"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 3
+              }
+            },
+            "card_id": "CARD.DEFEND_IRONCLAD",
+            "name": "Defend",
+            "id": "a003"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 4
+              }
+            },
+            "card_id": "CARD.STONE_ARMOR",
+            "name": "Stone Armor",
+            "id": "a004"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "end_turn",
+              "args": {}
+            },
+            "name": "End turn",
+            "id": "a005"
+          },
+          {
+            "id": "p006",
+            "action": {
+              "cmd": "action",
+              "action": "use_potion",
+              "args": {
+                "potion_index": 0
+              }
+            },
+            "name": "Strength Potion",
+            "details": {
+              "index": 0,
+              "name": "Strength Potion",
+              "description": "Gain {StrengthPower} Strength.",
+              "vars": {
+                "StrengthPower": 2
+              },
+              "target_type": "AnyPlayer",
+              "id": "STRENGTH_POTION",
+              "slot_index": 0,
+              "usage": "CombatOnly",
+              "can_use": true,
+              "can_discard": true
+            }
+          }
+        ],
+        "probabilities": [
+          0.011549397291037738,
+          0.018912967162349026,
+          0.018912967162349026,
+          0.011549397291037738,
+          0.00851904874304974,
+          0.0006321580105077614,
+          0.929924064339669
+        ],
+        "selected_indices": [
+          6,
+          5,
+          1,
+          2
+        ],
+        "actions": [
+          {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "end_turn",
+            "args": {}
+          },
+          {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 1,
+              "target_index": 0
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 2,
+              "target_index": 0
+            }
+          }
+        ],
+        "omitted": 3
+      }
+    },
+    {
+      "case": "train-A10-003:prepare",
+      "seed": "e149_train_Ironclad_A10_003",
+      "ascension": 10,
+      "mode": "prepare",
+      "reference_room_type": "Monster",
+      "root_phase": "potion_reward",
+      "root_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 4,
+        "room_type": "Monster",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "root_hash": "cfa67f55b8e63c2372d328dd79182011248d97bffb723172d9294ab631d12016",
+      "prefix_hash": "8514fc1c0323f64e4c2313403e483aa613313d36114ea43ded8b32d205458f4c",
+      "index": 27,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-27.json",
+        "sha256": "14b3be1b32ad438ebc44ad2e82dcf34fe649e1cbb6fa73a0e769fb534e95e3b2"
+      },
+      "candidates": {
+        "choices": [
+          {
+            "action": {
+              "cmd": "action",
+              "action": "claim_potion_reward",
+              "args": {}
+            },
+            "name": "claim_potion_reward",
+            "details": {
+              "id": "STRENGTH_POTION",
+              "name": "Strength Potion",
+              "description": "Gain {StrengthPower} Strength.",
+              "target_type": "AnyPlayer",
+              "usage": "CombatOnly",
+              "vars": {
+                "StrengthPower": 2
+              }
+            },
+            "id": "a000"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "skip_potion_reward",
+              "args": {}
+            },
+            "name": "skip_potion_reward",
+            "details": null,
+            "id": "a001"
+          }
+        ],
+        "probabilities": [
+          0.9989151682534547,
+          0.0010848317465453141
+        ],
+        "selected_indices": [
+          0,
+          1
+        ],
+        "actions": [
+          {
+            "cmd": "action",
+            "action": "claim_potion_reward",
+            "args": {}
+          },
+          {
+            "cmd": "action",
+            "action": "skip_potion_reward",
+            "args": {}
+          }
+        ],
+        "omitted": 0
+      }
+    },
+    {
+      "case": "train-A10-004:combat",
+      "seed": "e149_train_Ironclad_A10_004",
+      "ascension": 10,
+      "mode": "combat",
+      "reference_room_type": "Elite",
+      "root_phase": "combat_play",
+      "root_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 8,
+        "room_type": "Elite",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "root_hash": "82a60fdc9d49f1507c3158164d926cdb3d24a4557306db154083fef26f23c192",
+      "prefix_hash": "4631c10f9aba41ce689f598d96a43d3040c852bedea439c5380257c74ee4d569",
+      "index": 28,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-28.json",
+        "sha256": "3383958dcf53185a7400db15026b593ed60aabfb04dacdb3a2a2992725ed6110"
+      },
+      "candidates": {
+        "choices": [
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 0
+              }
+            },
+            "card_id": "CARD.DEFEND_IRONCLAD",
+            "name": "Defend",
+            "id": "a000"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 2
+              }
+            },
+            "card_id": "CARD.DEFEND_IRONCLAD",
+            "name": "Defend",
+            "id": "a001"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 3
+              }
+            },
+            "card_id": "CARD.DEFEND_IRONCLAD",
+            "name": "Defend",
+            "id": "a002"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 4,
+                "target_index": 0
+              }
+            },
+            "card_id": "CARD.STRIKE_IRONCLAD",
+            "name": "Strike",
+            "id": "a003"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "end_turn",
+              "args": {}
+            },
+            "name": "End turn",
+            "id": "a004"
+          }
+        ],
+        "probabilities": [
+          0.30507268081080724,
+          0.30507268081080724,
+          0.30507268081080724,
+          0.06320320520535087,
+          0.02157875236222742
+        ],
+        "selected_indices": [
+          0,
+          4,
+          1,
+          2
+        ],
+        "actions": [
+          {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 0
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "end_turn",
+            "args": {}
+          },
+          {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 2
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "play_card",
+            "args": {
+              "card_index": 3
+            }
+          }
+        ],
+        "omitted": 1
+      }
+    },
+    {
+      "case": "train-A10-004:prepare",
+      "seed": "e149_train_Ironclad_A10_004",
+      "ascension": 10,
+      "mode": "prepare",
+      "reference_room_type": "Elite",
+      "root_phase": "card_reward",
+      "root_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 6,
+        "room_type": "Monster",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "root_hash": "9dfea6ea52325a524972ffa0d8592744dd650719f72278836ab89c6b46e44225",
+      "prefix_hash": "e6e6de7029b446f2d237f745974c17daa5858faa8815bcabbb4ad38107d811f3",
+      "index": 29,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-29.json",
+        "sha256": "7050e269d269a5accf687c6666e77814fa6ad6f2df770f6c5ac32c6b3d29464d"
+      },
+      "candidates": {
+        "choices": [
+          {
+            "action": {
+              "cmd": "action",
+              "action": "select_card_reward",
+              "args": {
+                "card_index": 0
+              }
+            },
+            "name": "select_card_reward",
+            "details": {
+              "index": 0,
+              "id": "CARD.RUPTURE",
+              "name": "Rupture",
+              "cost": 1,
+              "type": "Power",
+              "rarity": "Uncommon",
+              "description": "Whenever you lose HP on your turn, gain {StrengthPower:diff()} Strength.",
+              "stats": {
+                "strengthpower": 1
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "strengthpower": 2
+                },
+                "description": "Whenever you lose HP on your turn, gain {StrengthPower:diff()} Strength.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            "id": "a000"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "select_card_reward",
+              "args": {
+                "card_index": 1
+              }
+            },
+            "name": "select_card_reward",
+            "details": {
+              "index": 1,
+              "id": "CARD.SETUP_STRIKE",
+              "name": "Setup Strike",
+              "cost": 1,
+              "type": "Attack",
+              "rarity": "Common",
+              "description": "Deal {Damage:diff()} damage.\nGain {StrengthPower:diff()} Strength this turn.",
+              "stats": {
+                "damage": 7,
+                "strengthpower": 3
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 1,
+                "stats": {
+                  "damage": 9,
+                  "strengthpower": 4
+                },
+                "description": "Deal {Damage:diff()} damage.\nGain {StrengthPower:diff()} Strength this turn.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            "id": "a001"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "select_card_reward",
+              "args": {
+                "card_index": 2
+              }
+            },
+            "name": "select_card_reward",
+            "details": {
+              "index": 2,
+              "id": "CARD.PERFECTED_STRIKE",
+              "name": "Perfected Strike",
+              "cost": 2,
+              "type": "Attack",
+              "rarity": "Common",
+              "description": "Deal {CalculatedDamage:diff()} damage.\nDeals {ExtraDamage:diff()} additional damage for ALL your cards containing “Strike”.",
+              "stats": {
+                "calculationbase": 6,
+                "extradamage": 2,
+                "calculateddamage": 6
+              },
+              "keywords": null,
+              "after_upgrade": {
+                "cost": 2,
+                "stats": {
+                  "calculationbase": 6,
+                  "extradamage": 3,
+                  "calculateddamage": 6
+                },
+                "description": "Deal {CalculatedDamage:diff()} damage.\nDeals {ExtraDamage:diff()} additional damage for ALL your cards containing “Strike”.",
+                "added_keywords": null,
+                "removed_keywords": null
+              }
+            },
+            "id": "a002"
+          },
+          {
+            "action": {
+              "cmd": "action",
+              "action": "skip_card_reward",
+              "args": {}
+            },
+            "name": "skip_card_reward",
+            "details": null,
+            "id": "a003"
+          }
+        ],
+        "probabilities": [
+          0.4598444189847339,
+          0.4280009349435742,
+          0.10789596490368182,
+          0.004258681168010108
+        ],
+        "selected_indices": [
+          0,
+          3,
+          1,
+          2
+        ],
+        "actions": [
+          {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 0
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "skip_card_reward",
+            "args": {}
+          },
+          {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 1
+            }
+          },
+          {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 2
+            }
+          }
+        ],
+        "omitted": 0
+      }
+    }
+  ],
+  "preflights": [
+    {
+      "case": "train-A0-000:combat",
+      "reference": {
+        "case": "train-A0-000:combat",
+        "seed": "e149_train_Ironclad_A0_000",
+        "label": "preflight:greedy",
+        "mode": "combat",
+        "ascension": 0,
+        "status": "defeat",
+        "steps": 14,
+        "scenes": {
+          "combat_play": 14
+        },
+        "entry_verified": true,
+        "restore_mode": "full_prefix",
+        "sample_seed": null,
+        "first_action": {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 4
+          }
+        },
+        "full": false,
+        "acts_seen": [
+          1
+        ],
+        "network_calls": 13,
+        "restore_seconds": 5.564862667117268,
+        "restore_commands": 120,
+        "entry_potions": 0,
+        "hp": 0,
+        "max_hp": 80,
+        "gold": 246,
+        "potions": [],
+        "deck_hash": "96cd4bbac6064d10d38d23f95e94d248e755937fe6acaf6feafbc1ad69a142f7",
+        "actual_room_type": "Elite",
+        "final_hash": "e2ae7d576464c2136745c8b06f476df2f438523472456104e9ea1ec7a421a00a",
+        "transition_hash": "e6a983ac7154afe4ccb47475909c232621bc3d3b02c1e7cd417df57b98df7ad4",
+        "seconds": 6.013221374945715,
+        "wire.jsonl_sha256": "36134ea8ba1b44ba364e93ced10f48144e20bd9a214f3e21344ca0cc3d38eca5",
+        "engine.stderr.log_sha256": "c15d1a3d7e4c9f64f1050646f52cc0b92650fdc1cc52bd360a32ac67cb4499c8",
+        "trace_path": "artifacts/runs/bf9c9cf8-3b08-430d-b77b-ba572d12c870/decisions.jsonl",
+        "trace_sha256": "7bcd90f27b5f4e46012b1c5640fba48b651729dc9a7747de16f93dcfdd63bece",
+        "utility": -1.0
+      },
+      "replay": {
+        "case": "train-A0-000:combat",
+        "seed": "e149_train_Ironclad_A0_000",
+        "label": "preflight:independent-replay",
+        "mode": "combat",
+        "ascension": 0,
+        "status": "defeat",
+        "steps": 14,
+        "scenes": {
+          "combat_play": 14
+        },
+        "entry_verified": true,
+        "restore_mode": "full_prefix",
+        "sample_seed": null,
+        "first_action": null,
+        "full": false,
+        "acts_seen": [
+          1
+        ],
+        "network_calls": 0,
+        "restore_seconds": 6.207102207932621,
+        "restore_commands": 120,
+        "entry_potions": 0,
+        "hp": 0,
+        "max_hp": 80,
+        "gold": 246,
+        "potions": [],
+        "deck_hash": "96cd4bbac6064d10d38d23f95e94d248e755937fe6acaf6feafbc1ad69a142f7",
+        "actual_room_type": "Elite",
+        "final_hash": "e2ae7d576464c2136745c8b06f476df2f438523472456104e9ea1ec7a421a00a",
+        "transition_hash": "e6a983ac7154afe4ccb47475909c232621bc3d3b02c1e7cd417df57b98df7ad4",
+        "seconds": 6.640093750087544,
+        "wire.jsonl_sha256": "abfff887612e6fea58e9061e1b811364e7de90a7a9bac0e78a732310fc28ec1f",
+        "engine.stderr.log_sha256": "c15d1a3d7e4c9f64f1050646f52cc0b92650fdc1cc52bd360a32ac67cb4499c8",
+        "trace_path": "artifacts/runs/43d480bf-7b8a-43bc-b0cb-d9506e3304c4/decisions.jsonl",
+        "trace_sha256": "52b7498214cdaa208d198b303532e23771dd7f1959ebd7869da0e44ae48873e6",
+        "utility": -1.0
+      },
+      "passed": true
+    },
+    {
+      "case": "train-A0-000:prepare",
+      "reference": {
+        "case": "train-A0-000:prepare",
+        "seed": "e149_train_Ironclad_A0_000",
+        "label": "preflight:greedy",
+        "mode": "prepare",
+        "ascension": 0,
+        "status": "defeat",
+        "steps": 16,
+        "scenes": {
+          "card_reward": 1,
+          "map_select": 1,
+          "combat_play": 14
+        },
+        "entry_verified": true,
+        "restore_mode": "full_prefix",
+        "sample_seed": null,
+        "first_action": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 2
+          }
+        },
+        "full": false,
+        "acts_seen": [
+          1
+        ],
+        "network_calls": 15,
+        "restore_seconds": 5.145473707932979,
+        "restore_commands": 118,
+        "entry_potions": 0,
+        "hp": 0,
+        "max_hp": 80,
+        "gold": 246,
+        "potions": [],
+        "deck_hash": "96cd4bbac6064d10d38d23f95e94d248e755937fe6acaf6feafbc1ad69a142f7",
+        "actual_room_type": "Elite",
+        "final_hash": "e2ae7d576464c2136745c8b06f476df2f438523472456104e9ea1ec7a421a00a",
+        "transition_hash": "2b46a033028808b36c9f8dcadb0af4fe6fb37cc44360da058ac36664369c8433",
+        "seconds": 5.62435624981299,
+        "wire.jsonl_sha256": "344884a5f3eb4d23871e1348be81b5c0cf139232b1d21017e4bbda96a20bd700",
+        "engine.stderr.log_sha256": "c15d1a3d7e4c9f64f1050646f52cc0b92650fdc1cc52bd360a32ac67cb4499c8",
+        "trace_path": "artifacts/runs/97c08219-26dc-40b3-9220-af001fb93ad5/decisions.jsonl",
+        "trace_sha256": "1913569789e9a23dc393559c264b67b414e0c9e371ceb2b7a6b0e7147a6097c9",
+        "utility": -1.0
+      },
+      "replay": {
+        "case": "train-A0-000:prepare",
+        "seed": "e149_train_Ironclad_A0_000",
+        "label": "preflight:independent-replay",
+        "mode": "prepare",
+        "ascension": 0,
+        "status": "defeat",
+        "steps": 16,
+        "scenes": {
+          "card_reward": 1,
+          "map_select": 1,
+          "combat_play": 14
+        },
+        "entry_verified": true,
+        "restore_mode": "full_prefix",
+        "sample_seed": null,
+        "first_action": null,
+        "full": false,
+        "acts_seen": [
+          1
+        ],
+        "network_calls": 0,
+        "restore_seconds": 5.2379742078483105,
+        "restore_commands": 118,
+        "entry_potions": 0,
+        "hp": 0,
+        "max_hp": 80,
+        "gold": 246,
+        "potions": [],
+        "deck_hash": "96cd4bbac6064d10d38d23f95e94d248e755937fe6acaf6feafbc1ad69a142f7",
+        "actual_room_type": "Elite",
+        "final_hash": "e2ae7d576464c2136745c8b06f476df2f438523472456104e9ea1ec7a421a00a",
+        "transition_hash": "2b46a033028808b36c9f8dcadb0af4fe6fb37cc44360da058ac36664369c8433",
+        "seconds": 5.862990999827161,
+        "wire.jsonl_sha256": "2415137e0f011298912b9c0633b88b3a8270eafa43c1fbc4401e7aeeab5105dc",
+        "engine.stderr.log_sha256": "c15d1a3d7e4c9f64f1050646f52cc0b92650fdc1cc52bd360a32ac67cb4499c8",
+        "trace_path": "artifacts/runs/98b6ee72-2e56-4460-9740-1b890329da5b/decisions.jsonl",
+        "trace_sha256": "7df5378758d051b5bdc758c37bdb500eb09aa46665f63102eddd4128283b2130",
+        "utility": -1.0
+      },
+      "passed": true
+    },
+    {
+      "case": "train-A5-000:combat",
+      "reference": {
+        "case": "train-A5-000:combat",
+        "seed": "e149_train_Ironclad_A5_000",
+        "label": "preflight:greedy",
+        "mode": "combat",
+        "ascension": 5,
+        "status": "defeat",
+        "steps": 23,
+        "scenes": {
+          "combat_play": 22,
+          "card_select": 1
+        },
+        "entry_verified": true,
+        "restore_mode": "full_prefix",
+        "sample_seed": null,
+        "first_action": {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 4,
+            "target_index": 0
+          }
+        },
+        "full": false,
+        "acts_seen": [
+          1
+        ],
+        "network_calls": 22,
+        "restore_seconds": 3.3712086249142885,
+        "restore_commands": 74,
+        "entry_potions": 0,
+        "hp": 0,
+        "max_hp": 80,
+        "gold": 146,
+        "potions": [],
+        "deck_hash": "a5afffbf32223ab2346611525daf14710cc08ce1fdd6ca01a6b547a98b549a7a",
+        "actual_room_type": "Monster",
+        "final_hash": "5a38054258d12227bff03aeb8c1902508948df24af0938ff1eef40fd71fcaf51",
+        "transition_hash": "537917c1f1231dfc038cc9f622393a403f44c1e3a8385f94b404e7152dcfefb0",
+        "seconds": 4.5099731248337775,
+        "wire.jsonl_sha256": "5a9bf030da5fcc98cec90f92f398f1ba533a31ed638b8d3b6029c3b329cb612a",
+        "engine.stderr.log_sha256": "75e6e046df605fe02024e17244a27c90bdab1684e2d0c6981403110f3e58cbb6",
+        "trace_path": "artifacts/runs/a7d6fc75-b5b6-45ff-a0c4-51ab664b0cc0/decisions.jsonl",
+        "trace_sha256": "e631aff87540babe0bfb9a8dae884169702b463088c180b2038799dac9b21434",
+        "utility": -1.0
+      },
+      "replay": {
+        "case": "train-A5-000:combat",
+        "seed": "e149_train_Ironclad_A5_000",
+        "label": "preflight:independent-replay",
+        "mode": "combat",
+        "ascension": 5,
+        "status": "defeat",
+        "steps": 23,
+        "scenes": {
+          "combat_play": 22,
+          "card_select": 1
+        },
+        "entry_verified": true,
+        "restore_mode": "full_prefix",
+        "sample_seed": null,
+        "first_action": null,
+        "full": false,
+        "acts_seen": [
+          1
+        ],
+        "network_calls": 0,
+        "restore_seconds": 4.355514790862799,
+        "restore_commands": 74,
+        "entry_potions": 0,
+        "hp": 0,
+        "max_hp": 80,
+        "gold": 146,
+        "potions": [],
+        "deck_hash": "a5afffbf32223ab2346611525daf14710cc08ce1fdd6ca01a6b547a98b549a7a",
+        "actual_room_type": "Monster",
+        "final_hash": "5a38054258d12227bff03aeb8c1902508948df24af0938ff1eef40fd71fcaf51",
+        "transition_hash": "537917c1f1231dfc038cc9f622393a403f44c1e3a8385f94b404e7152dcfefb0",
+        "seconds": 5.083499749889597,
+        "wire.jsonl_sha256": "07afd6b200c6427b44909851aa90395d5437f65f94d688989a30fc40dacd76cb",
+        "engine.stderr.log_sha256": "75e6e046df605fe02024e17244a27c90bdab1684e2d0c6981403110f3e58cbb6",
+        "trace_path": "artifacts/runs/19ee79cb-1136-44fb-b3d1-1d610459c8f0/decisions.jsonl",
+        "trace_sha256": "4f0fa941c11e96bdf5cf061d7aa9c414c0c47cad8fd95117f967196a50393c06",
+        "utility": -1.0
+      },
+      "passed": true
+    },
+    {
+      "case": "train-A5-000:prepare",
+      "reference": {
+        "case": "train-A5-000:prepare",
+        "seed": "e149_train_Ironclad_A5_000",
+        "label": "preflight:greedy",
+        "mode": "prepare",
+        "ascension": 5,
+        "status": "defeat",
+        "steps": 25,
+        "scenes": {
+          "card_reward": 1,
+          "map_select": 1,
+          "combat_play": 22,
+          "card_select": 1
+        },
+        "entry_verified": true,
+        "restore_mode": "full_prefix",
+        "sample_seed": null,
+        "first_action": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 2
+          }
+        },
+        "full": false,
+        "acts_seen": [
+          1
+        ],
+        "network_calls": 24,
+        "restore_seconds": 4.1348347088787705,
+        "restore_commands": 72,
+        "entry_potions": 0,
+        "hp": 0,
+        "max_hp": 80,
+        "gold": 146,
+        "potions": [],
+        "deck_hash": "a5afffbf32223ab2346611525daf14710cc08ce1fdd6ca01a6b547a98b549a7a",
+        "actual_room_type": "Monster",
+        "final_hash": "5a38054258d12227bff03aeb8c1902508948df24af0938ff1eef40fd71fcaf51",
+        "transition_hash": "3a977b7a955eaa42774717bf614f2ee2c62efa28418deae3bd2310d3845bc2ac",
+        "seconds": 4.954664249904454,
+        "wire.jsonl_sha256": "455219ce1cb12b7255c18421f67e2490099f69e8e4aa1a104f67e0758fdcfbc0",
+        "engine.stderr.log_sha256": "75e6e046df605fe02024e17244a27c90bdab1684e2d0c6981403110f3e58cbb6",
+        "trace_path": "artifacts/runs/e2c8641d-b428-467b-b599-c7eddcf42477/decisions.jsonl",
+        "trace_sha256": "960c352568471bfc995abee788415b200b3cdbf1cd291f0db629fd88de1d59fe",
+        "utility": -1.0
+      },
+      "replay": {
+        "case": "train-A5-000:prepare",
+        "seed": "e149_train_Ironclad_A5_000",
+        "label": "preflight:independent-replay",
+        "mode": "prepare",
+        "ascension": 5,
+        "status": "defeat",
+        "steps": 25,
+        "scenes": {
+          "card_reward": 1,
+          "map_select": 1,
+          "combat_play": 22,
+          "card_select": 1
+        },
+        "entry_verified": true,
+        "restore_mode": "full_prefix",
+        "sample_seed": null,
+        "first_action": null,
+        "full": false,
+        "acts_seen": [
+          1
+        ],
+        "network_calls": 0,
+        "restore_seconds": 4.070079458178952,
+        "restore_commands": 72,
+        "entry_potions": 0,
+        "hp": 0,
+        "max_hp": 80,
+        "gold": 146,
+        "potions": [],
+        "deck_hash": "a5afffbf32223ab2346611525daf14710cc08ce1fdd6ca01a6b547a98b549a7a",
+        "actual_room_type": "Monster",
+        "final_hash": "5a38054258d12227bff03aeb8c1902508948df24af0938ff1eef40fd71fcaf51",
+        "transition_hash": "3a977b7a955eaa42774717bf614f2ee2c62efa28418deae3bd2310d3845bc2ac",
+        "seconds": 4.941427041077986,
+        "wire.jsonl_sha256": "28812b42afcacb4c0b3cc04352c808df5d8a2735824142db3412b11e756a6c7c",
+        "engine.stderr.log_sha256": "75e6e046df605fe02024e17244a27c90bdab1684e2d0c6981403110f3e58cbb6",
+        "trace_path": "artifacts/runs/584eff45-a22e-4e79-bcec-3e56938b1fba/decisions.jsonl",
+        "trace_sha256": "2987c784753a8e9d09aebd2828655209e7916a34428d9074320632c8bb8e5e66",
+        "utility": -1.0
+      },
+      "passed": true
+    },
+    {
+      "case": "train-A10-000:combat",
+      "reference": {
+        "case": "train-A10-000:combat",
+        "seed": "e149_train_Ironclad_A10_000",
+        "label": "preflight:greedy",
+        "mode": "combat",
+        "ascension": 10,
+        "status": "defeat",
+        "steps": 13,
+        "scenes": {
+          "combat_play": 13
+        },
+        "entry_verified": true,
+        "restore_mode": "full_prefix",
+        "sample_seed": null,
+        "first_action": {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 4
+          }
+        },
+        "full": false,
+        "acts_seen": [
+          1
+        ],
+        "network_calls": 12,
+        "restore_seconds": 3.1705973339267075,
+        "restore_commands": 66,
+        "entry_potions": 0,
+        "hp": 0,
+        "max_hp": 87,
+        "gold": 146,
+        "potions": [],
+        "deck_hash": "5498a85c43eac5220a765de11d2736b7102a1a47a23320d473a14afc3eb031c1",
+        "actual_room_type": "Elite",
+        "final_hash": "e5b405b89ea2638235f76dcbf4361d5f7728e9418589b3f7fb836bff0a4bfbfa",
+        "transition_hash": "99743225f4cec5d26bd831f7bbe35bfcb50a818f280f24aca77816664c742b97",
+        "seconds": 3.5802340840455145,
+        "wire.jsonl_sha256": "d001173f309dd18b85df666a6fe875de17249bbc5177476fbd4367971bd448b5",
+        "engine.stderr.log_sha256": "1b076513941b4e96bce361a7b3ae360eb71b250ec42e98c0ee4ef711f63b17b1",
+        "trace_path": "artifacts/runs/72c1ebdf-6d57-4342-8f17-e9b8c906c71d/decisions.jsonl",
+        "trace_sha256": "c152a1a03f9d29e9181456f2c069e2201f86c251a733e43c3e3207bcf1e8ecae",
+        "utility": -1.0
+      },
+      "replay": {
+        "case": "train-A10-000:combat",
+        "seed": "e149_train_Ironclad_A10_000",
+        "label": "preflight:independent-replay",
+        "mode": "combat",
+        "ascension": 10,
+        "status": "defeat",
+        "steps": 13,
+        "scenes": {
+          "combat_play": 13
+        },
+        "entry_verified": true,
+        "restore_mode": "full_prefix",
+        "sample_seed": null,
+        "first_action": null,
+        "full": false,
+        "acts_seen": [
+          1
+        ],
+        "network_calls": 0,
+        "restore_seconds": 2.865144707961008,
+        "restore_commands": 66,
+        "entry_potions": 0,
+        "hp": 0,
+        "max_hp": 87,
+        "gold": 146,
+        "potions": [],
+        "deck_hash": "5498a85c43eac5220a765de11d2736b7102a1a47a23320d473a14afc3eb031c1",
+        "actual_room_type": "Elite",
+        "final_hash": "e5b405b89ea2638235f76dcbf4361d5f7728e9418589b3f7fb836bff0a4bfbfa",
+        "transition_hash": "99743225f4cec5d26bd831f7bbe35bfcb50a818f280f24aca77816664c742b97",
+        "seconds": 3.266753749921918,
+        "wire.jsonl_sha256": "0475ca0fcb996bdce540be86801a754d24d27c4231d79ee5c51dc9ec572cef21",
+        "engine.stderr.log_sha256": "1b076513941b4e96bce361a7b3ae360eb71b250ec42e98c0ee4ef711f63b17b1",
+        "trace_path": "artifacts/runs/ef83ed46-4db2-49d9-945c-66f668faba68/decisions.jsonl",
+        "trace_sha256": "1833a99994045e5411d06b4ba1c5dc995afbfe16b76b86c47be9670cac710579",
+        "utility": -1.0
+      },
+      "passed": true
+    },
+    {
+      "case": "train-A10-000:prepare",
+      "reference": {
+        "case": "train-A10-000:prepare",
+        "seed": "e149_train_Ironclad_A10_000",
+        "label": "preflight:greedy",
+        "mode": "prepare",
+        "ascension": 10,
+        "status": "defeat",
+        "steps": 17,
+        "scenes": {
+          "card_reward": 1,
+          "map_select": 2,
+          "event_choice": 1,
+          "combat_play": 13
+        },
+        "entry_verified": true,
+        "restore_mode": "full_prefix",
+        "sample_seed": null,
+        "first_action": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 1
+          }
+        },
+        "full": false,
+        "acts_seen": [
+          1
+        ],
+        "network_calls": 16,
+        "restore_seconds": 2.8547527499031276,
+        "restore_commands": 62,
+        "entry_potions": 0,
+        "hp": 0,
+        "max_hp": 87,
+        "gold": 146,
+        "potions": [],
+        "deck_hash": "5498a85c43eac5220a765de11d2736b7102a1a47a23320d473a14afc3eb031c1",
+        "actual_room_type": "Elite",
+        "final_hash": "e5b405b89ea2638235f76dcbf4361d5f7728e9418589b3f7fb836bff0a4bfbfa",
+        "transition_hash": "62a7bac60845517b46956ce285a3d9564b0d39ba6dbc391eece54432f777d83c",
+        "seconds": 3.323089291807264,
+        "wire.jsonl_sha256": "4eab07e2a8b93179ab6687fc7e3853313817531866dd87a1c81d9f997ea7fc49",
+        "engine.stderr.log_sha256": "1b076513941b4e96bce361a7b3ae360eb71b250ec42e98c0ee4ef711f63b17b1",
+        "trace_path": "artifacts/runs/0821e5b5-5d63-44e3-91d8-3ef6a6fe0c58/decisions.jsonl",
+        "trace_sha256": "dfdacf00676d1ab81abb2fb46da7cf6640d53bb8585ac311da44af4ae46bd48b",
+        "utility": -1.0
+      },
+      "replay": {
+        "case": "train-A10-000:prepare",
+        "seed": "e149_train_Ironclad_A10_000",
+        "label": "preflight:independent-replay",
+        "mode": "prepare",
+        "ascension": 10,
+        "status": "defeat",
+        "steps": 17,
+        "scenes": {
+          "card_reward": 1,
+          "map_select": 2,
+          "event_choice": 1,
+          "combat_play": 13
+        },
+        "entry_verified": true,
+        "restore_mode": "full_prefix",
+        "sample_seed": null,
+        "first_action": null,
+        "full": false,
+        "acts_seen": [
+          1
+        ],
+        "network_calls": 0,
+        "restore_seconds": 2.853429791983217,
+        "restore_commands": 62,
+        "entry_potions": 0,
+        "hp": 0,
+        "max_hp": 87,
+        "gold": 146,
+        "potions": [],
+        "deck_hash": "5498a85c43eac5220a765de11d2736b7102a1a47a23320d473a14afc3eb031c1",
+        "actual_room_type": "Elite",
+        "final_hash": "e5b405b89ea2638235f76dcbf4361d5f7728e9418589b3f7fb836bff0a4bfbfa",
+        "transition_hash": "62a7bac60845517b46956ce285a3d9564b0d39ba6dbc391eece54432f777d83c",
+        "seconds": 3.306530041852966,
+        "wire.jsonl_sha256": "d499d104c98a06a8ddcb4a533094d9305c5c357f075198aca1f18d50d3ab02bb",
+        "engine.stderr.log_sha256": "1b076513941b4e96bce361a7b3ae360eb71b250ec42e98c0ee4ef711f63b17b1",
+        "trace_path": "artifacts/runs/316e1c43-cf72-405e-8351-e3350b3f85dd/decisions.jsonl",
+        "trace_sha256": "f44e908c96439d68c0c8c35ab9d40f150a98985c68f4a41ba1b097d681207c0a",
+        "utility": -1.0
+      },
+      "passed": true
+    }
+  ],
+  "seconds": 57.79484595917165,
+  "audit": {
+    "raw_traces": 12,
+    "failures": [],
+    "pass": true
+  },
+  "passed": true
+}

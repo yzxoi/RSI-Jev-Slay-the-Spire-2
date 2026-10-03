@@ -1,0 +1,240 @@
+{
+  "manifest": {
+    "schema_version": 2,
+    "code_commit": "6e8b5ace259e1d86374638378a51bca100388f82",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "15cc006c2ffdf8f1e3ef78c349368c4f338fb7139243ccfdf1eec5f892c42c86",
+    "godot_stubs_sha256": "2bb3b99863f651decb27cf3ceead489046808e60d95ccbc28048ad094ecc856a",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+      "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772",
+      "headless-zzzzzz-godot-abi.patch": "5239d3836d279de5143f7d56bece1f061c6c4002de696fce28f9f7f3922ededc",
+      "headless-zzzzzzz-learning-observations.patch": "d51db8457fdb9348340a829c84fa77e9620c476ba16a7c6e224b286ecb2dfd07",
+      "headless-zzzzzzzz-encounter-abi.patch": "e4a730f9e58fddebef8ef924fcd8d0adc03d72d1148f8d29b2f9ea60556696cc"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4",
+    "experiment": "E149",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.5",
+    "model_calls": 0,
+    "model_cost_usd": 0,
+    "encoder": "e140-phase-context-v1",
+    "torch": "2.11.0",
+    "device": "cpu"
+  },
+  "checkpoint": {
+    "path": "artifacts/runs/e140-training-v2/1702-bc.pt",
+    "sha256": "6f17f85ac348aa942f9c1c34b0fa6d1567df0be52f3be4a724a27798b8bab6ec",
+    "label": "BC",
+    "config": {
+      "state_width": 128,
+      "action_width": 64,
+      "state_dim": 540,
+      "action_dim": 272
+    }
+  },
+  "parameters": 115778,
+  "collection": [
+    {
+      "case": "train-A0-000",
+      "seed": "e149_train_Ironclad_A0_000",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 0,
+      "split": "train",
+      "arm": "neural_all"
+    },
+    {
+      "case": "train-A0-001",
+      "seed": "e149_train_Ironclad_A0_001",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 1,
+      "split": "train",
+      "arm": "neural_all"
+    },
+    {
+      "case": "train-A0-002",
+      "seed": "e149_train_Ironclad_A0_002",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 2,
+      "split": "train",
+      "arm": "neural_all"
+    },
+    {
+      "case": "train-A0-003",
+      "seed": "e149_train_Ironclad_A0_003",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 3,
+      "split": "train",
+      "arm": "neural_all"
+    },
+    {
+      "case": "train-A0-004",
+      "seed": "e149_train_Ironclad_A0_004",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 4,
+      "split": "train",
+      "arm": "neural_all"
+    },
+    {
+      "case": "train-A5-000",
+      "seed": "e149_train_Ironclad_A5_000",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 0,
+      "split": "train",
+      "arm": "neural_all"
+    },
+    {
+      "case": "train-A5-001",
+      "seed": "e149_train_Ironclad_A5_001",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 1,
+      "split": "train",
+      "arm": "neural_all"
+    },
+    {
+      "case": "train-A5-002",
+      "seed": "e149_train_Ironclad_A5_002",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 2,
+      "split": "train",
+      "arm": "neural_all"
+    },
+    {
+      "case": "train-A5-003",
+      "seed": "e149_train_Ironclad_A5_003",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 3,
+      "split": "train",
+      "arm": "neural_all"
+    },
+    {
+      "case": "train-A5-004",
+      "seed": "e149_train_Ironclad_A5_004",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 4,
+      "split": "train",
+      "arm": "neural_all"
+    },
+    {
+      "case": "train-A10-000",
+      "seed": "e149_train_Ironclad_A10_000",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 0,
+      "split": "train",
+      "arm": "neural_all"
+    },
+    {
+      "case": "train-A10-001",
+      "seed": "e149_train_Ironclad_A10_001",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 1,
+      "split": "train",
+      "arm": "neural_all"
+    },
+    {
+      "case": "train-A10-002",
+      "seed": "e149_train_Ironclad_A10_002",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 2,
+      "split": "train",
+      "arm": "neural_all"
+    },
+    {
+      "case": "train-A10-003",
+      "seed": "e149_train_Ironclad_A10_003",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 3,
+      "split": "train",
+      "arm": "neural_all"
+    },
+    {
+      "case": "train-A10-004",
+      "seed": "e149_train_Ironclad_A10_004",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 4,
+      "split": "train",
+      "arm": "neural_all"
+    }
+  ],
+  "budgets": {
+    "collect": 180,
+    "bank": 240,
+    "evaluate": 900,
+    "cpu": 1800,
+    "local_seconds": 30,
+    "full_seconds": 90,
+    "search_p95": 60
+  },
+  "discovery_repeats": 4,
+  "validation_repeats": 6,
+  "candidates": 4,
+  "bootstrap": {
+    "seed": 149,
+    "repeats": 10000,
+    "cluster": "game_seed"
+  },
+  "known_unsupported": [
+    {
+      "mechanic": "Crystal Sphere",
+      "issue": 64
+    },
+    {
+      "mechanic": "Trial",
+      "issue": 294
+    }
+  ],
+  "foundation": {
+    "e154": {
+      "path": "experiments/E154/validation-v2.json",
+      "sha256": "fa20687ee9549fa304ac342c1694dfceb9f465af95eba4b96b6200f8003bb772"
+    },
+    "restoration": "full prefix; old certificates not applied across runtime versions",
+    "native_equivalence_claim": false
+  },
+  "final_acceptance_seeds_unused": true,
+  "workers": 4,
+  "source_plan": {
+    "path": "experiments/E149/plan-v1.json",
+    "sha256": "fba35a43fb927cb5a6235bb6a26fa97193c9d566322959f1e3d30a5224c6d55e"
+  },
+  "scheduling_proof": {
+    "path": "experiments/E149/restore-diagnostic-v2.json",
+    "sha256": "ad0a0152aa75f58ffc4da46bb34ac19ab65e883f9170d120ea438b7ef764e311"
+  },
+  "restore_certificate": {
+    "path": "experiments/E158/validation-v1.json",
+    "sha256": "b57fbf6d8a1f2c2bd7371d3f26bcdf5a263a23d683aac1409ed610426842b248"
+  },
+  "parity_reference": {
+    "path": "experiments/E149/evaluation-v2.json",
+    "sha256": "a305ceb46079975e52a2b30b1de99321d67d8444668b012fc3666ffa0c99f7e4"
+  }
+}

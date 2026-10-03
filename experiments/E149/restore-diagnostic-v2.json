@@ -1,0 +1,321 @@
+{
+  "manifest": {
+    "schema_version": 2,
+    "code_commit": "ad300295702efa376a48239e0beda57ac0995cfb",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "15cc006c2ffdf8f1e3ef78c349368c4f338fb7139243ccfdf1eec5f892c42c86",
+    "godot_stubs_sha256": "2bb3b99863f651decb27cf3ceead489046808e60d95ccbc28048ad094ecc856a",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+      "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772",
+      "headless-zzzzzz-godot-abi.patch": "5239d3836d279de5143f7d56bece1f061c6c4002de696fce28f9f7f3922ededc",
+      "headless-zzzzzzz-learning-observations.patch": "d51db8457fdb9348340a829c84fa77e9620c476ba16a7c6e224b286ecb2dfd07",
+      "headless-zzzzzzzz-encounter-abi.patch": "e4a730f9e58fddebef8ef924fcd8d0adc03d72d1148f8d29b2f9ea60556696cc"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4",
+    "experiment": "E149",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.5",
+    "model_calls": 0,
+    "model_cost_usd": 0,
+    "encoder": "e140-phase-context-v1",
+    "torch": "2.11.0",
+    "device": "cpu"
+  },
+  "bank": {
+    "path": "experiments/E149/bank-v1.json",
+    "sha256": "ddc65527130d1bcb6035bedc7e4e5899320ecd4779be343536a5e3ced2cd4f43"
+  },
+  "rounds": [
+    {
+      "workers": 4,
+      "records": [
+        {
+          "case": "train-A0-000:combat",
+          "result": {
+            "case": "train-A0-000:combat",
+            "seed": "e149_train_Ironclad_A0_000",
+            "label": "diagnostic:workers4",
+            "mode": "combat",
+            "ascension": 0,
+            "status": "defeat",
+            "steps": 14,
+            "scenes": {
+              "combat_play": 14
+            },
+            "entry_verified": true,
+            "restore_mode": "full_prefix",
+            "sample_seed": null,
+            "first_action": null,
+            "full": false,
+            "acts_seen": [
+              1
+            ],
+            "network_calls": 0,
+            "restore_seconds": 6.418228209018707,
+            "restore_commands": 120,
+            "entry_potions": 0,
+            "hp": 0,
+            "max_hp": 80,
+            "gold": 246,
+            "potions": [],
+            "deck_hash": "96cd4bbac6064d10d38d23f95e94d248e755937fe6acaf6feafbc1ad69a142f7",
+            "actual_room_type": "Elite",
+            "final_hash": "e2ae7d576464c2136745c8b06f476df2f438523472456104e9ea1ec7a421a00a",
+            "transition_hash": "e6a983ac7154afe4ccb47475909c232621bc3d3b02c1e7cd417df57b98df7ad4",
+            "seconds": 6.852988959057257,
+            "wire.jsonl_sha256": "e7f537e225fd250e54713b76110b3c7cf597d3674fbbd032453d9ef7c5eb951a",
+            "engine.stderr.log_sha256": "c15d1a3d7e4c9f64f1050646f52cc0b92650fdc1cc52bd360a32ac67cb4499c8",
+            "trace_path": "artifacts/runs/6fb03f5e-60e3-41ec-bc17-d41e4f1b9b7e/decisions.jsonl",
+            "trace_sha256": "4b839760608422ad6da87bc1743f6e71a3ce269541407185c248f26c0ca0a8bd",
+            "utility": -1.0
+          },
+          "exact": true
+        },
+        {
+          "case": "train-A0-000:prepare",
+          "result": {
+            "case": "train-A0-000:prepare",
+            "seed": "e149_train_Ironclad_A0_000",
+            "label": "diagnostic:workers4",
+            "mode": "prepare",
+            "ascension": 0,
+            "status": "defeat",
+            "steps": 16,
+            "scenes": {
+              "card_reward": 1,
+              "map_select": 1,
+              "combat_play": 14
+            },
+            "entry_verified": true,
+            "restore_mode": "full_prefix",
+            "sample_seed": null,
+            "first_action": null,
+            "full": false,
+            "acts_seen": [
+              1
+            ],
+            "network_calls": 0,
+            "restore_seconds": 6.655423833057284,
+            "restore_commands": 118,
+            "entry_potions": 0,
+            "hp": 0,
+            "max_hp": 80,
+            "gold": 246,
+            "potions": [],
+            "deck_hash": "96cd4bbac6064d10d38d23f95e94d248e755937fe6acaf6feafbc1ad69a142f7",
+            "actual_room_type": "Elite",
+            "final_hash": "e2ae7d576464c2136745c8b06f476df2f438523472456104e9ea1ec7a421a00a",
+            "transition_hash": "2b46a033028808b36c9f8dcadb0af4fe6fb37cc44360da058ac36664369c8433",
+            "seconds": 7.123290417017415,
+            "wire.jsonl_sha256": "acdf524630af18683f4b51657d80cb6d7f4631ac31dbb0dcc5ba766e6c067379",
+            "engine.stderr.log_sha256": "c15d1a3d7e4c9f64f1050646f52cc0b92650fdc1cc52bd360a32ac67cb4499c8",
+            "trace_path": "artifacts/runs/e54e308c-0a2f-4c52-9f50-f657560c7922/decisions.jsonl",
+            "trace_sha256": "8b2050fbb5eb051dd093b0e563dddbb9919be7adbfc79a8050125bbe0f4b0e3b",
+            "utility": -1.0
+          },
+          "exact": true
+        },
+        {
+          "case": "train-A5-000:combat",
+          "result": {
+            "case": "train-A5-000:combat",
+            "seed": "e149_train_Ironclad_A5_000",
+            "label": "diagnostic:workers4",
+            "mode": "combat",
+            "ascension": 5,
+            "status": "defeat",
+            "steps": 23,
+            "scenes": {
+              "combat_play": 22,
+              "card_select": 1
+            },
+            "entry_verified": true,
+            "restore_mode": "full_prefix",
+            "sample_seed": null,
+            "first_action": null,
+            "full": false,
+            "acts_seen": [
+              1
+            ],
+            "network_calls": 0,
+            "restore_seconds": 4.001925165997818,
+            "restore_commands": 74,
+            "entry_potions": 0,
+            "hp": 0,
+            "max_hp": 80,
+            "gold": 146,
+            "potions": [],
+            "deck_hash": "a5afffbf32223ab2346611525daf14710cc08ce1fdd6ca01a6b547a98b549a7a",
+            "actual_room_type": "Monster",
+            "final_hash": "5a38054258d12227bff03aeb8c1902508948df24af0938ff1eef40fd71fcaf51",
+            "transition_hash": "537917c1f1231dfc038cc9f622393a403f44c1e3a8385f94b404e7152dcfefb0",
+            "seconds": 4.699927082983777,
+            "wire.jsonl_sha256": "6f1739a827801600081cfec4a5fe98f97ab0bf3c05afea22c14126858e61acf5",
+            "engine.stderr.log_sha256": "75e6e046df605fe02024e17244a27c90bdab1684e2d0c6981403110f3e58cbb6",
+            "trace_path": "artifacts/runs/c3081346-365a-4bfe-9d0c-8e4dff27d29c/decisions.jsonl",
+            "trace_sha256": "5e5ad72af47d04b1a4d200cb9d317e584bf2a8f8efadaa9c63bcda71513ce77e",
+            "utility": -1.0
+          },
+          "exact": true
+        },
+        {
+          "case": "train-A5-000:prepare",
+          "result": {
+            "case": "train-A5-000:prepare",
+            "seed": "e149_train_Ironclad_A5_000",
+            "label": "diagnostic:workers4",
+            "mode": "prepare",
+            "ascension": 5,
+            "status": "defeat",
+            "steps": 25,
+            "scenes": {
+              "card_reward": 1,
+              "map_select": 1,
+              "combat_play": 22,
+              "card_select": 1
+            },
+            "entry_verified": true,
+            "restore_mode": "full_prefix",
+            "sample_seed": null,
+            "first_action": null,
+            "full": false,
+            "acts_seen": [
+              1
+            ],
+            "network_calls": 0,
+            "restore_seconds": 4.240483874920756,
+            "restore_commands": 72,
+            "entry_potions": 0,
+            "hp": 0,
+            "max_hp": 80,
+            "gold": 146,
+            "potions": [],
+            "deck_hash": "a5afffbf32223ab2346611525daf14710cc08ce1fdd6ca01a6b547a98b549a7a",
+            "actual_room_type": "Monster",
+            "final_hash": "5a38054258d12227bff03aeb8c1902508948df24af0938ff1eef40fd71fcaf51",
+            "transition_hash": "3a977b7a955eaa42774717bf614f2ee2c62efa28418deae3bd2310d3845bc2ac",
+            "seconds": 4.9735434169415385,
+            "wire.jsonl_sha256": "f44760f00017e83528fa52fae2eddd4e0cfebd570b3e5dfd28f5391ac38f88e4",
+            "engine.stderr.log_sha256": "75e6e046df605fe02024e17244a27c90bdab1684e2d0c6981403110f3e58cbb6",
+            "trace_path": "artifacts/runs/3d3455ef-fb10-4ebc-8f24-45c036ff997a/decisions.jsonl",
+            "trace_sha256": "6a8bb3bc6c38ee7b42df3233b2c4ebf5cb7c5a83ec81feeca51068c030cfdcbb",
+            "utility": -1.0
+          },
+          "exact": true
+        },
+        {
+          "case": "train-A10-000:combat",
+          "result": {
+            "case": "train-A10-000:combat",
+            "seed": "e149_train_Ironclad_A10_000",
+            "label": "diagnostic:workers4",
+            "mode": "combat",
+            "ascension": 10,
+            "status": "defeat",
+            "steps": 13,
+            "scenes": {
+              "combat_play": 13
+            },
+            "entry_verified": true,
+            "restore_mode": "full_prefix",
+            "sample_seed": null,
+            "first_action": null,
+            "full": false,
+            "acts_seen": [
+              1
+            ],
+            "network_calls": 0,
+            "restore_seconds": 2.8581810409668833,
+            "restore_commands": 66,
+            "entry_potions": 0,
+            "hp": 0,
+            "max_hp": 87,
+            "gold": 146,
+            "potions": [],
+            "deck_hash": "5498a85c43eac5220a765de11d2736b7102a1a47a23320d473a14afc3eb031c1",
+            "actual_room_type": "Elite",
+            "final_hash": "e5b405b89ea2638235f76dcbf4361d5f7728e9418589b3f7fb836bff0a4bfbfa",
+            "transition_hash": "99743225f4cec5d26bd831f7bbe35bfcb50a818f280f24aca77816664c742b97",
+            "seconds": 3.257418666034937,
+            "wire.jsonl_sha256": "2990c5224a926607ff1abafd34a2d48f6c8a358f3e3b0044680c1f4a67b16be3",
+            "engine.stderr.log_sha256": "1b076513941b4e96bce361a7b3ae360eb71b250ec42e98c0ee4ef711f63b17b1",
+            "trace_path": "artifacts/runs/3cf8a668-3f10-40d4-8d5f-a92444a00686/decisions.jsonl",
+            "trace_sha256": "6b44fa1c2d472fec34ca5cccf926507e9efd16378236a5d09058a0145011ff7c",
+            "utility": -1.0
+          },
+          "exact": true
+        },
+        {
+          "case": "train-A10-000:prepare",
+          "result": {
+            "case": "train-A10-000:prepare",
+            "seed": "e149_train_Ironclad_A10_000",
+            "label": "diagnostic:workers4",
+            "mode": "prepare",
+            "ascension": 10,
+            "status": "defeat",
+            "steps": 17,
+            "scenes": {
+              "card_reward": 1,
+              "map_select": 2,
+              "event_choice": 1,
+              "combat_play": 13
+            },
+            "entry_verified": true,
+            "restore_mode": "full_prefix",
+            "sample_seed": null,
+            "first_action": null,
+            "full": false,
+            "acts_seen": [
+              1
+            ],
+            "network_calls": 0,
+            "restore_seconds": 2.8254242080729455,
+            "restore_commands": 62,
+            "entry_potions": 0,
+            "hp": 0,
+            "max_hp": 87,
+            "gold": 146,
+            "potions": [],
+            "deck_hash": "5498a85c43eac5220a765de11d2736b7102a1a47a23320d473a14afc3eb031c1",
+            "actual_room_type": "Elite",
+            "final_hash": "e5b405b89ea2638235f76dcbf4361d5f7728e9418589b3f7fb836bff0a4bfbfa",
+            "transition_hash": "62a7bac60845517b46956ce285a3d9564b0d39ba6dbc391eece54432f777d83c",
+            "seconds": 3.2758913750294596,
+            "wire.jsonl_sha256": "3b087149a6b1d787f9b66725ea249e89259aa68f037d7d7554b5ede45842c424",
+            "engine.stderr.log_sha256": "1b076513941b4e96bce361a7b3ae360eb71b250ec42e98c0ee4ef711f63b17b1",
+            "trace_path": "artifacts/runs/8ab6500f-b6a6-4825-a126-5b3c7ce9c1ad/decisions.jsonl",
+            "trace_sha256": "81fcf603aa62fdf43c08225a699d6033222f8310236a15dec7f099ecc7dd82b2",
+            "utility": -1.0
+          },
+          "exact": true
+        }
+      ],
+      "seconds": 8.25353983300738,
+      "p95_seconds": 7.0557150525273755,
+      "passed": true
+    }
+  ],
+  "seconds": 8.342515708878636,
+  "audit": {
+    "raw_traces": 6,
+    "failures": [],
+    "pass": true
+  },
+  "passed": true,
+  "limitations": "Sequential diagnostic rounds confound concurrency with host load/time; no causal speedup claim."
+}

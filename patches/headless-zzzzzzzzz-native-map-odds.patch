@@ -1,0 +1,16 @@
+--- a/src/Sts2Headless/RunSimulator.cs
++++ b/src/Sts2Headless/RunSimulator.cs
+@@ -559,6 +559,13 @@
+                 // EnterAct clears visited coords and ActFloor — restore them from save
+                 if (savedVisitedCoords.Count > 0)
+                 {
++                    // Map reconstruction also resets accumulated unknown-room odds.
++                    // Preserve the exact serialized probabilities for this existing act.
++                    var unknownOdds = _runState.Odds.UnknownMapPoint;
++                    unknownOdds.MonsterOdds = save.SerializableOdds.UnknownMapPointMonsterOddsValue;
++                    unknownOdds.EliteOdds = save.SerializableOdds.UnknownMapPointEliteOddsValue;
++                    unknownOdds.TreasureOdds = save.SerializableOdds.UnknownMapPointTreasureOddsValue;
++                    unknownOdds.ShopOdds = save.SerializableOdds.UnknownMapPointShopOddsValue;
+                     if (_runState.VisitedMapCoords == null || _runState.VisitedMapCoords.Count == 0)
+                     {
+                         foreach (var coord in savedVisitedCoords)
