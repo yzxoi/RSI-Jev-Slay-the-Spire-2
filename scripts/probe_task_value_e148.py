@@ -122,6 +122,62 @@ def load_data(bank):
     return {k:v for k,v in np.load(path).items()}
 
 
+def recover_collected(v,plan_path,directory,output):
+    """Recover only an already complete cohort; no engine/model actions or resampling."""
+    start=time.monotonic();frozen=checked(plan_path)
+    if frozen['configs']!=configs() or frozen['settings']!=SETTINGS:raise ValueError('Changed recovery protocol')
+    records=[json.loads((directory/(c['case']+'.json')).read_text()) for c in frozen['configs']]
+    for c,r in zip(frozen['configs'],records):
+        if any(r[k]!=value for k,value in c.items()) or r['status'] not in ('defeat','curriculum_clear'):
+            raise ValueError('Recovery cannot select or substitute incomplete cases')
+    raw_audit=audit(records)
+    if not raw_audit['pass']:raise ValueError('Changed recovery traces')
+    path=directory/'tensors.npz';before=file_hash(path);d={k:x for k,x in np.load(path).items()}
+    if len(d['targets'])!=sum(r['steps'] for r in records) or len(np.unique(d['case_ids']))!=576:
+        raise ValueError('Incomplete original tensors')
+    parity=[];begins=[];ends=[];source_manifest=None
+    for i,r in enumerate(records):
+        if time.monotonic()-start>180:raise TimeoutError('Read-only recovery budget')
+        rows=[json.loads(line) for line in (ROOT/r['trace_path']).read_text().splitlines()]
+        header=rows[0]['data'];begins.append(rows[0]['time']);ends.append(rows[-1]['time'])
+        if source_manifest is None:source_manifest={k:val for k,val in header.items() if k not in ('config','scope','stop_after_act','stop_after_battles','behavior_checkpoint')}
+        if header['code_commit']!=source_manifest['code_commit'] or header['behavior_checkpoint']!=frozen['behavior']:
+            raise ValueError('Changed original collection actor/code')
+        for key in ('headless_game_sha256','headless_assembly_sha256','game_dll_sha256'):
+            if header[key]!=v[key]:raise ValueError('Changed engine for recovery')
+        pairs=wire_pairs((ROOT/r['trace_path']).with_name('wire.jsonl'))
+        events=[x['data'] for x in rows if x['kind']=='decision'];positions=np.flatnonzero(d['case_ids']==i)
+        if len(events)!=r['steps'] or len(positions)!=r['steps'] or len(pairs)!=r['steps']+1:
+            raise ValueError('Incomplete action/tensor alignment')
+        observer=Progress(r['ascension']);previous=None
+        for j,event in enumerate(events):
+            state=pairs[j][1];ctx=observer.observe(state);pos=positions[j]
+            if event['before']!=digest(state) or pairs[j+1][0]!=event['chosen']['action'] or ctx!=event['value_task_context']:
+                raise ValueError('Changed original action or task metadata')
+            expected=phase_encode(state,event['candidates'],previous,max_actions=4096)[0]
+            if not np.array_equal(expected,d['states'][pos]) or not np.array_equal(task_features(ctx),d['tasks'][pos]):
+                raise ValueError('Changed saved state or task tensor')
+            if d['phases'][pos]!=PHASES.index(state['decision']) or d['targets'][pos]!=np.float32(reward(r)):
+                raise ValueError('Changed label or phase')
+            previous=event['chosen']
+        if r['network_calls']!=r['steps'] or r['planner_calls'] or r.get('verification',{}).get('status','match')!='match':
+            raise ValueError('Original controller or replay failed')
+        parity.append(dict(case=r['case'],decisions=len(events),exact=True))
+    if file_hash(path)!=before:raise ValueError('Recovery must be read-only')
+    span=max(ends)-min(begins);elapsed=time.monotonic()-start
+    report=dict(manifest=source_manifest,recovery_manifest=v,plan_sha256=file_hash(plan_path),behavior=frozen['behavior'],settings=SETTINGS,
+        records=records,audit=raw_audit,actor_unchanged=file_hash(ROOT/frozen['behavior']['path'])==frozen['behavior']['sha256'],
+        tensors=dict(path=str(path.relative_to(ROOT)),sha256=before,rows=len(d['targets'])),tensor_reconstruction=parity,
+        recovery_seconds=elapsed,observed_collection_trace_span_seconds=span,
+        seconds=SETTINGS['collection_budget'],seconds_kind='Conservative full collection budget charge including recovery; trace span excludes setup/serialization.',
+        coverage={split:dict(trajectories=len(rs),game_seeds=len({r['seed'] for r in rs}),statuses=dict(Counter(r['status'] for r in rs)),
+                    phases=dict(sum((Counter(r['scenes']) for r in rs),Counter())))
+                  for split in ('train','dev') for rs in [[r for r in records if r['split']==split]]},
+        final_acceptance_seeds_unused=True,new_recovery_game_actions=0)
+    report['execution_pass']=report['actor_unchanged'] and span+elapsed<SETTINGS['collection_budget']
+    write(output,report);return report
+
+
 def fit(v,bank_path,output):
     start=time.monotonic();bank=checked(bank_path);d=load_data(bank);actor=load_phase(bank['behavior'])
     ids=np.array([i for i,r in enumerate(bank['records']) if r['split']=='train'])
@@ -232,14 +288,17 @@ def evaluate(v,bank_path,training_path,output):
 
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('mode',choices=('plan','collect','fit','evaluate'))
-    for name in ('plan','bank','training','output'):p.add_argument('--'+name,type=Path,required=name=='output')
+    p=argparse.ArgumentParser();p.add_argument('mode',choices=('plan','collect','recover','fit','evaluate'))
+    for name in ('plan','bank','training','output','collected-dir'):p.add_argument('--'+name,type=Path,required=name=='output')
     a=p.parse_args()
+    for key,value in vars(a).items():
+        if isinstance(value,Path):setattr(a,key,value.resolve())
     if a.output.exists():raise ValueError('Preserve prior attempts')
     torch.set_num_threads(1)
     v={**manifest(),'experiment':'E148','torch':str(torch.__version__),'numpy':np.__version__,'device':'cpu'}
     if a.mode=='plan':result=plan(v,a.output)
     elif a.mode=='collect':result=collect(v,a.plan,a.output)
+    elif a.mode=='recover':result=recover_collected(v,a.plan,a.collected_dir,a.output)
     elif a.mode=='fit':result=fit(v,a.bank,a.output)
     else:result=evaluate(v,a.bank,a.training,a.output)
     print(json.dumps({k:result[k] for k in ('seconds','execution_pass','coverage','gates','expansion_gate') if k in result}),flush=True)
