@@ -1,0 +1,21 @@
+# E139 — Full-run observability and multi-hero natural trajectory bank
+
+User objective: one frozen neural controller independently completes Ironclad A0–A10, including route/events/rewards/deck/shop/potion choices. Training-time search/teacher data are allowed; acceptance play has no teacher, Astra, planner or search override, no reset/rollback/edited game state. Report every attempt. At final promotion evaluate30 locked independent seeds per ascension0..10 (330 runs), require at least one legitimate full victory in EVERY difficulty and no execution errors; report win-rate confidence intervals rather than implying this minimal completion gate is stable mastery. Final seed strings are e139_final_Ironclad_A{asc}_{000..029}, reserved and not executed by this pilot. Future stable-win-rate threshold is distinct from this minimum completion gate.
+
+Hypothesis: E133's single-battle scope and missing global state are primary obstacles. Measure full-run baselines before inventing another RL algorithm. Collect60 natural complete attempts: five characters × A0/A5/A10 × four independent training seeds named e139_train_{character}_A{asc}_{00..03}. No role/ascension shares seed strings. Then22 development cases: Ironclad A0..10 × two new seeds e139_dev_Ironclad_A{asc}_{00..01}. Compare same-entry-start three arms: unchanged E120 planner/macro policy; frozen E133 long-1702 combat plus that macro policy; frozen E133 long-1702 all decisions. No retraining, no oracle gate claiming network-only for hybrid. 126 total attempts,8 workers, each<=180s /2400actions, transport<=15s. Stop unexplained repeated state after6 identical consecutive decisions. Preserve failures/deaths/caps, no seed replacement.
+
+Export every natural battle entry across every reached act plus all macro decisions, previous semantic action, chosen action, legality, transition hashes. Public bank stores trace references+offsets, not repeatedly copied full prefixes. Reconstruct prefixes from audited local wire; no game state edits. Summarize character/ascension/act/room/decision/card/relic coverage, final outcomes and reached floors. Include elapsed engine, encoding and network timing. Known full-history restoration limits remain explicit; this experiment does not certify native saves.
+
+Verification: first training seed of each character/difficulty (15 preselected runs), if terminal, independently replay its complete command/state path; include defeats. Any error stays an error. No failed-path substitution. Validation unit tests cover full-run terminal vs single-battle boundary and finite mask choices. Decision: retain infrastructure/data if provenance/legality/execution accounting is correct; no neural promotion or mastery claim from this small development cohort. New distinct engine or policy fixes are separate issues.
+
+Command: `python3 scripts/collect_fullrun_e139.py --output artifacts/runs/e139-bank-v1.json`
+
+## Result v1
+
+Tested SHA `a727d8e`; three full-run boundary/legal-menu tests passed. All126 attempts ended in legitimate defeat (0 victories,0 errors/caps); all15 preselected complete-run replays matched.141 raw bundles audited.126 attempts are82 independent game seeds (60train +22development); three development arms share22seeds. Wall94.547s.
+
+Collected787 battle entries:761 Act1,26 Act2,0 Act3. Training-only60runs provide404 entries (384Act1/20Act2); all five heroes covered. Macro decisions include events, routes, card/potion rewards, card selection, shops, rests, bundles. Public metadata uses raw trace offsets, avoiding repeated full-history storage.
+
+Development: planner0/22 wins,2/22 reachAct2; neural-combat+planner-macro0/22 and0Act2; neural-all0/22 and0Act2. Maximum local floor is17; the engine resets floor numbering per act, so max_floor is NOT total run progression. Neural-all's median local floor10 vs planner8 does not establish superiority: routes can avoid combat and only planner reaches Act2.
+
+Decision: retain auditable data/full-phase execution infrastructure and capability gap evidence; no policy promotion. No Act3 training data exists in this cohort. The objective remains unmet. Do not repeatedly sample the same failing curriculum and call it broader level coverage. Need richer phase context, better preparation/strategy, and explicit training-time improvement operators. Final330seeds remain reserved, unused.
