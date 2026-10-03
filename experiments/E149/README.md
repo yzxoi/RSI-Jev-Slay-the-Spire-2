@@ -30,3 +30,7 @@ python3 scripts/pilot_root_teacher_e149.py evaluate --plan experiments/E149/plan
 ```
 
 Raw decisions, candidate distributions, plans, states and wire responses stay in ignored artifacts/runs. Public results retain compact outcomes and hashes. Frozen game version v0.111.0, dependency/model versions and exact tested SHAs are emitted by every stage.
+
+## Natural collection v1
+
+Tested `1137867fb89517b0102263e19cf557733534f3e7`: all15 new seeds naturally defeated, noAct2/Boss entry; median within-act floor9,max15. Collection 20.826s;18 raw bundles including3 complete independent replays audit exactly. All decision phases encountered, including76card-reward/32potion-reward/13rest/3shop decisions. Proceed to predeclared last-encounter/preparation bank, with no source resampling. These outcomes describe the frozen baseline, not search strength.
