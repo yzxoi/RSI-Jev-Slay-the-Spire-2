@@ -4,7 +4,9 @@
 
 当前学习研究的验收目标是：**一个冻结的网络独立完成铁甲战士 A0～A10 整局**，包含路线、奖励、选牌、商店、事件与用药；训练可使用教师和搜索，验收不由 Astra 或规划器接管。目前尚未达到。
 
-最新[E151](experiments/E151/README.md)只读复核：验证集药水全部在训练中见过，约94.5%的critic误差仍来自已知物品状态；新物品不足以解释泛化失败。[分析](docs/research/learning-search/2026-10-03-item-novelty.md)。
+最新[E152](experiments/E152/README.md)已完成共享属性编码对照：同参数/训练数据，72个全新seed上MSE点估计降低12.49%/16.06%，但仍输给简单ridge、A5回退且终点校准不足，门槛失败。不接回PPO/搜索，默认策略不变。[结果与曲线](docs/research/learning-search/2026-10-03-shared-value.md)。
+
+此前[E151](experiments/E151/README.md)只读复核：验证集药水全部在训练中见过，约94.5%的critic误差仍来自已知物品状态；新物品不足以解释泛化失败。[分析](docs/research/learning-search/2026-10-03-item-novelty.md)。
 
 此前[E148](experiments/E148/README.md)已完成任务状态对照：固定actor采集576条新路径，训练四个critic；补充进度/难度让未见seed误差下降4.40%/3.51%，但仍输给简单进度基线，终点校准未修复。训练拟合很好、泛化很差，停止同配方扩量，不推广critic。6重放、582份trace与全部51,343行张量重建核验通过。[结果与曲线](docs/research/learning-search/2026-10-03-task-value-pilot.md)。
 
