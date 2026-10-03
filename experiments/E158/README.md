@@ -16,3 +16,9 @@ python3 scripts/validate_map_odds_e158.py --output artifacts/runs/e158-validatio
 ```
 
 Decompiled original game sources remain private under ignored artifacts/private. The public patch only modifies the open headless adapter to rehydrate existing serialized fields. The preceding E157 decompiler invocation without the local runtime override failed before inspection; using DOTNET_ROOT and DOTNET_ROLL_FORWARD=Major resolved it.
+
+## Validation v1 / scoped reuse decision
+
+Tested `ae67ae2df98099c4cc1f7ea24c89b71a9d62b349`. Build0errors/1warning. All60 ordinary full-prefix paths remain exact; all120loaded paths now match every expected response/final hash, including the8 formerly failing replays. All120paired timing paths restore the intended root. Native files, original/patched game DLLs and Godot stubs remain unchanged; only the adapter assembly changes.420bundles audit, no mismatch/error/cap. Validation231.122s/338.125CPU seconds.
+
+Full-prefix median/p95=3.801/6.015s; Map+short-prefix=1.676/2.546s; median of60 paired speedup ratios=2.118x. Fidelity and scoped performance gates pass for all30exact roots/runtime. Merge this loading correction and certificate, allowing an explicitly frozen E149 recovery-only iteration. No neural policy, playing-strength or universal hidden-state-clone claim; E157old-runtime failure stays recorded.
