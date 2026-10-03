@@ -9,3 +9,9 @@ Use30fixed NEW training-only configurations (5heroes × A0/A5/A10 ×2) seed e144
 Implementation uses the existing fixed_macro routing, without cautious_route or new ranking features. Only map choices can differ from the elite-first arm; same complete combat/potion/card-select planner and identical nonmap macro decisions. Add an opt-in macro callback to run_env; default stays unchanged and callbacks remain classified as programmatic planning, not network calls.
 
 Command: `python3 scripts/ablate_route_e144.py --output artifacts/runs/e144-route-v1.json`.
+
+## Result and decision
+
+Tested997d023. Threefull-run boundary/menu unit tests passed.60natural fullruns all legitimate defeats;10preselected full histories replayed exactly,70rawbundles audited;62.805s. Elite-priority arm1/30Act2arrival; existing route ranking2/30; neitherAct3arrival, neitherIroncladA0Act2arrival. Collection gate fails (needed+3/30, observed+1/30). Allselected seeds/characters retained; no errors/caps.
+
+Merge the optional one-factor experiment/callback and evidence; do not replace the default collection teacher or training policy. Forcingelites is a concrete objective mismatch, but removing it alone did not meet the practical coverage gate. First-card rewards/leave-shop choices and actual combat/card semantics remain untested separate hypotheses, not proven causes. New60train traces/battle-entry offsets are retained without silently mixing them into any prior completed training. No acceptance seed, model update or inference GPU work here.
