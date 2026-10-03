@@ -20,3 +20,7 @@ python3 scripts/validate_teacher_maps_e157.py capture --output artifacts/runs/e1
 # Commit the capture manifest before independent verification.
 python3 scripts/validate_teacher_maps_e157.py verify --capture experiments/E157/capture-v1.json --output artifacts/runs/e157-verification-v1.json
 ```
+
+## Capture v1
+
+Tested `bab9ad3c28c387322213d2f840fb80106400e4e1`:all30 roots have genuine preceding Map boundaries;60 full reference suffixes and60 independent save-call replays complete and match every state/final hash.120raw bundles audit. Capture140.740s/166.242CPU seconds. Native seed/ascension identities preserved; game/runtime binaries unchanged. Freeze all reference-plan and native-save hashes before C loads and paired timing. This passes save-call invariance only, not loaded recovery or speed.
