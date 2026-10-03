@@ -35,3 +35,5 @@ python3 scripts/diagnose_credit_e147.py --output artifacts/runs/e147-diagnosis-r
 # Choose a new directory for publication; preserves checked-in diagnosis-v2.json.
 python3 scripts/publish_credit_e147.py --source artifacts/runs/e147-diagnosis-reproduction.json --output artifacts/runs/e147-publication-reproduction
 ```
+
+Publication metadata correction (#283): the generic helper supplied an inherited E120 label inside the nested publication manifest; the audit's own E147 label/SHA was already correct. Code9cf24b1 regenerates into a new ignored directory with experiment=E147 and scope=derived_publication. Every non-publication data field is exactly equal, and raw diagnosis hash is unchanged. Original public hash/history remain in PR282; before/after hashes and command in `publication-label-fix.json`. Original figures are retained; no new game outcomes or model changes.
