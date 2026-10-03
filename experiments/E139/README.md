@@ -9,3 +9,13 @@ Export every natural battle entry across every reached act plus all macro decisi
 Verification: first training seed of each character/difficulty (15 preselected runs), if terminal, independently replay its complete command/state path; include defeats. Any error stays an error. No failed-path substitution. Validation unit tests cover full-run terminal vs single-battle boundary and finite mask choices. Decision: retain infrastructure/data if provenance/legality/execution accounting is correct; no neural promotion or mastery claim from this small development cohort. New distinct engine or policy fixes are separate issues.
 
 Command: `python3 scripts/collect_fullrun_e139.py --output artifacts/runs/e139-bank-v1.json`
+
+## Result v1
+
+Tested SHA `a727d8e`; three full-run boundary/legal-menu tests passed. All126 attempts ended in legitimate defeat (0 victories,0 errors/caps); all15 preselected complete-run replays matched.141 raw bundles audited.126 attempts are82 independent game seeds (60train +22development); three development arms share22seeds. Wall94.547s.
+
+Collected787 battle entries:761 Act1,26 Act2,0 Act3. Training-only60runs provide404 entries (384Act1/20Act2); all five heroes covered. Macro decisions include events, routes, card/potion rewards, card selection, shops, rests, bundles. Public metadata uses raw trace offsets, avoiding repeated full-history storage.
+
+Development: planner0/22 wins,2/22 reachAct2; neural-combat+planner-macro0/22 and0Act2; neural-all0/22 and0Act2. Maximum local floor is17; the engine resets floor numbering per act, so max_floor is NOT total run progression. Neural-all's median local floor10 vs planner8 does not establish superiority: routes can avoid combat and only planner reaches Act2.
+
+Decision: retain auditable data/full-phase execution infrastructure and capability gap evidence; no policy promotion. No Act3 training data exists in this cohort. The objective remains unmet. Do not repeatedly sample the same failing curriculum and call it broader level coverage. Need richer phase context, better preparation/strategy, and explicit training-time improvement operators. Final330seeds remain reserved, unused.
