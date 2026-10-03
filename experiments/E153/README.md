@@ -63,3 +63,7 @@ Bank/preflight tested at eb9855d,19.609s. TRAIN:246Monster roots (82per A0/A5/A1
 At9b2dd0a initial9full runs all defeated; learner2301 completed48ordinary/preparation paths,all cleared (update returns1.19865/1.18828). Before its first stage monitor, strict checkpoint reload failed: saved E153 manifest omitted the required encoder version. No further stage/TEST execution occurred; weights, optimizer/RNG and all paths remain intact in v1. This is serialization failure, not training success or game defeat.
 
 Iteration v2 adds the existing e140 encoder identifier to the manifest and immediately round-trips each saved checkpoint. Restart the identical bounded pilot from unchanged source/learner seeds/configs, preserving v1; no selection or resampling from outcomes. The first48new training paths/weights must match v1 exactly (apart from metadata), so the small restart does not hide trajectory changes. Report duplicate compute separately and do not count it as independent training data.
+
+## Training v2 complete; freeze before TEST
+
+Tested8ebc7e3:both learners complete6updates,288fresh on-policy episodes plus63full-run stage/baseline DEV attempts in226.015s. All stage monitors naturally defeated with0Act2 arrivals. Execution gate passes;353raw bundles audited. First48paths and all model tensors at update2 exactly match preserved v1; duplicate restart compute is not independent data. Final checkpoint hashes frozen in training-v2.json before33newseed TEST and held-out local evaluation. No checkpoint selection from stage outcomes.
