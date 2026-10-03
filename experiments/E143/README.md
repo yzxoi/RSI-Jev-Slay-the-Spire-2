@@ -10,3 +10,7 @@ Commit4final weight hashes before any evaluation. Four newmodels + originalE140B
 Expansion requires both teacher learner variants gain >=2Act2 arrivals/22 over their paired self-imitation control AND original frozen model, no fewerA0Act2arrivals than either, and all attempts/replays exact and uncensored. Full victories/Act3/rewards and local floors separatelyreported; Act2 is only pilot progress, not final acceptance. If gate fails stop expanding this recipe. If passes separately design next curriculum; no automatic training extension. E139330finalacceptance seeds untouched; the ultimate network-onlyIroncladA0..A10 objective remains unmet until actual full victories.
 
 Commands: `python3 scripts/distill_teacher_e143.py train --output artifacts/runs/e143-training-v1.json`; commit completed weight hashes in `experiments/E143/training-v1.json`; then `python3 scripts/distill_teacher_e143.py evaluate --training experiments/E143/training-v1.json --output artifacts/runs/e143-evaluation-v1.json`.
+
+## Training completed, frozen before evaluation
+
+Issue270; tested7d8145d. Four115,778parameter checkpoints finished64×128examples each, total32768sample presentations (not new engine transitions),9.739s including source encoding/audit. Matched self/teacher paths contain715/699decisions fromthe same30roots, plus9041anchor decisions.527source bundles audited. Each model samples everyroot; actualcounts retained in training-v1.json. Model/hash checkpoints committed before any new-seed evaluation. No critic loss or new PPO updates.
