@@ -57,3 +57,9 @@ Continue bank/training under corrected assembly/stub hashes, full-prefix root va
 ## Frozen natural bank
 
 Bank/preflight tested at eb9855d,19.609s. TRAIN:246Monster roots (82per A0/A5/A10),178Elite (56/66/56),28Boss (15/8/5); each has a separate preceding-preparation root,904TRAIN roots total. DEV:36Monster,23Elite,19Boss (156roots total). All Boss roots are Act1; only2TRAINElite roots are Act2. This is a staged first-act pilot, not coverage of all acts. Six fixed-stratum continuations and independent replays passed,12trace bundles audited. Every later episode must verify its exact natural root again. Freeze bank before two learners and recurring full-run monitors.
+
+## Training v1 integration stop
+
+At9b2dd0a initial9full runs all defeated; learner2301 completed48ordinary/preparation paths,all cleared (update returns1.19865/1.18828). Before its first stage monitor, strict checkpoint reload failed: saved E153 manifest omitted the required encoder version. No further stage/TEST execution occurred; weights, optimizer/RNG and all paths remain intact in v1. This is serialization failure, not training success or game defeat.
+
+Iteration v2 adds the existing e140 encoder identifier to the manifest and immediately round-trips each saved checkpoint. Restart the identical bounded pilot from unchanged source/learner seeds/configs, preserving v1; no selection or resampling from outcomes. The first48new training paths/weights must match v1 exactly (apart from metadata), so the small restart does not hide trajectory changes. Report duplicate compute separately and do not count it as independent training data.

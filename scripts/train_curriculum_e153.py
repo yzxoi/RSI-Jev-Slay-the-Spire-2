@@ -14,7 +14,7 @@ import numpy as np
 import torch
 from rsi.curriculum import ROOMS, roots, episode, cautious_macro
 from rsi.checkpoints import file_hash
-from rsi.phase_rl import controller
+from rsi.phase_rl import controller, ENCODER
 from rsi.ppo import update
 from rsi.run_env import run, replay
 from scripts.evaluate_battle_search_e120 import manifest, write, audit
@@ -263,6 +263,7 @@ def train(v, plan_path, bank_path, output):
                 model.eval()
                 item['optimization_seconds'] = time.monotonic()-clock
                 row['selected'] = save(directory/f'{learner}-u{u+1}.pt', model, v, f'real-{stage}-u{u+1}')
+                load_phase(row['selected'])  # Verify serialization before starting another game.
                 item['checkpoint'] = row['selected']
                 resume = directory/f'{learner}-u{u+1}-optimizer.pt'
                 torch.save(dict(optimizer=optimizer.state_dict(), numpy_rng=rng.bit_generator.state,
@@ -367,7 +368,7 @@ if __name__ == '__main__':
     if a.output.exists():
         raise ValueError('Preserve previous attempt')
     torch.set_num_threads(1)
-    v = {**manifest(), 'experiment': 'E153', 'torch': str(torch.__version__), 'numpy': np.__version__, 'device': 'cpu'}
+    v = {**manifest(), 'experiment': 'E153', 'torch': str(torch.__version__), 'numpy': np.__version__, 'device': 'cpu', 'encoder': ENCODER}
     if a.mode == 'plan':
         r = plan(v, a.output)
     elif a.mode == 'collect':
