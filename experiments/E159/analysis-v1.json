@@ -1,0 +1,5983 @@
+{
+  "manifest": {
+    "schema_version": 2,
+    "code_commit": "417913bc62ba3e355e6f6e927e1a0a0aa2cfbf48",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "a32485ef4c34641acc26f0c85454ba767bd4b06c4c06258e59baa26b5a72b54f",
+    "godot_stubs_sha256": "2bb3b99863f651decb27cf3ceead489046808e60d95ccbc28048ad094ecc856a",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+      "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772",
+      "headless-zzzzzz-godot-abi.patch": "5239d3836d279de5143f7d56bece1f061c6c4002de696fce28f9f7f3922ededc",
+      "headless-zzzzzzz-learning-observations.patch": "d51db8457fdb9348340a829c84fa77e9620c476ba16a7c6e224b286ecb2dfd07",
+      "headless-zzzzzzzz-encounter-abi.patch": "e4a730f9e58fddebef8ef924fcd8d0adc03d72d1148f8d29b2f9ea60556696cc",
+      "headless-zzzzzzzzz-native-map-odds.patch": "86ee5561968629b094a1f63e214f32e8a3ae7b5614fffcb470d52886287e1885"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4",
+    "experiment": "E120",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.5",
+    "model_calls": 0,
+    "model_cost_usd": 0
+  },
+  "source": {
+    "path": "experiments/E159/evaluation-v1.json",
+    "sha256": "82fe70dc192fb257da8fbd5ef5ecc8e8dc0fbe96d044232972f00e310968d06c"
+  },
+  "prior": {
+    "path": "experiments/E149/analysis-v3.json",
+    "sha256": "def3834e9c75d28b95f171b4f99b4a7f7bedd9c95ea760dc09b3dabf2b9868b6"
+  },
+  "tested_sha": "4d2c0ddfa6def563e177c6cce7bf39507d75a2f1",
+  "summary": {
+    "complete": true,
+    "integrity": true,
+    "paths": 120,
+    "statuses": {
+      "defeat": 120
+    },
+    "actor_parity": {
+      "expected": 60,
+      "compared": 60,
+      "matched": 60
+    },
+    "program_replays": {
+      "expected": 6,
+      "completed": 6,
+      "matched": 6
+    },
+    "continuation_gate": true,
+    "final_acceptance_seeds_unused": true,
+    "rows": [
+      {
+        "case": "train-A0-000:combat",
+        "seed": "e149_train_Ironclad_A0_000",
+        "mode": "combat",
+        "ascension": 0,
+        "values": {
+          "actor_actor": -1.0,
+          "selected_actor": -1.0,
+          "actor_program": -1.0,
+          "selected_program": -1.0
+        },
+        "continuation_delta": 0.0,
+        "action_delta_actor": 0.0,
+        "action_delta_program": 0.0,
+        "interaction": 0.0
+      },
+      {
+        "case": "train-A0-000:prepare",
+        "seed": "e149_train_Ironclad_A0_000",
+        "mode": "prepare",
+        "ascension": 0,
+        "values": {
+          "actor_actor": -1.0,
+          "selected_actor": -1.0,
+          "actor_program": 1.13125,
+          "selected_program": 1.128125
+        },
+        "continuation_delta": 2.13125,
+        "action_delta_actor": 0.0,
+        "action_delta_program": -0.0031250000000000444,
+        "interaction": -0.0031250000000000444
+      },
+      {
+        "case": "train-A0-001:combat",
+        "seed": "e149_train_Ironclad_A0_001",
+        "mode": "combat",
+        "ascension": 0,
+        "values": {
+          "actor_actor": -1.0,
+          "selected_actor": -1.0,
+          "actor_program": -1.0,
+          "selected_program": -1.0
+        },
+        "continuation_delta": 0.0,
+        "action_delta_actor": 0.0,
+        "action_delta_program": 0.0,
+        "interaction": 0.0
+      },
+      {
+        "case": "train-A0-001:prepare",
+        "seed": "e149_train_Ironclad_A0_001",
+        "mode": "prepare",
+        "ascension": 0,
+        "values": {
+          "actor_actor": -1.0,
+          "selected_actor": -1.0,
+          "actor_program": -1.0,
+          "selected_program": -1.0
+        },
+        "continuation_delta": 0.0,
+        "action_delta_actor": 0.0,
+        "action_delta_program": 0.0,
+        "interaction": 0.0
+      },
+      {
+        "case": "train-A0-002:combat",
+        "seed": "e149_train_Ironclad_A0_002",
+        "mode": "combat",
+        "ascension": 0,
+        "values": {
+          "actor_actor": -1.0,
+          "selected_actor": -1.0,
+          "actor_program": -1.0,
+          "selected_program": -1.0
+        },
+        "continuation_delta": 0.0,
+        "action_delta_actor": 0.0,
+        "action_delta_program": 0.0,
+        "interaction": 0.0
+      },
+      {
+        "case": "train-A0-002:prepare",
+        "seed": "e149_train_Ironclad_A0_002",
+        "mode": "prepare",
+        "ascension": 0,
+        "values": {
+          "actor_actor": -1.0,
+          "selected_actor": -1.0,
+          "actor_program": 1.0277777777777777,
+          "selected_program": 1.0277777777777777
+        },
+        "continuation_delta": 2.0277777777777777,
+        "action_delta_actor": 0.0,
+        "action_delta_program": 0.0,
+        "interaction": 0.0
+      },
+      {
+        "case": "train-A0-003:combat",
+        "seed": "e149_train_Ironclad_A0_003",
+        "mode": "combat",
+        "ascension": 0,
+        "values": {
+          "actor_actor": -1.0,
+          "selected_actor": -1.0,
+          "actor_program": -1.0,
+          "selected_program": -1.0
+        },
+        "continuation_delta": 0.0,
+        "action_delta_actor": 0.0,
+        "action_delta_program": 0.0,
+        "interaction": 0.0
+      },
+      {
+        "case": "train-A0-003:prepare",
+        "seed": "e149_train_Ironclad_A0_003",
+        "mode": "prepare",
+        "ascension": 0,
+        "values": {
+          "actor_actor": -1.0,
+          "selected_actor": -1.0,
+          "actor_program": -1.0,
+          "selected_program": -1.0
+        },
+        "continuation_delta": 0.0,
+        "action_delta_actor": 0.0,
+        "action_delta_program": 0.0,
+        "interaction": 0.0
+      },
+      {
+        "case": "train-A0-004:combat",
+        "seed": "e149_train_Ironclad_A0_004",
+        "mode": "combat",
+        "ascension": 0,
+        "values": {
+          "actor_actor": -1.0,
+          "selected_actor": -1.0,
+          "actor_program": -1.0,
+          "selected_program": -1.0
+        },
+        "continuation_delta": 0.0,
+        "action_delta_actor": 0.0,
+        "action_delta_program": 0.0,
+        "interaction": 0.0
+      },
+      {
+        "case": "train-A0-004:prepare",
+        "seed": "e149_train_Ironclad_A0_004",
+        "mode": "prepare",
+        "ascension": 0,
+        "values": {
+          "actor_actor": -1.0,
+          "selected_actor": -1.0,
+          "actor_program": 1.046875,
+          "selected_program": 1.046875
+        },
+        "continuation_delta": 2.046875,
+        "action_delta_actor": 0.0,
+        "action_delta_program": 0.0,
+        "interaction": 0.0
+      },
+      {
+        "case": "train-A5-000:combat",
+        "seed": "e149_train_Ironclad_A5_000",
+        "mode": "combat",
+        "ascension": 5,
+        "values": {
+          "actor_actor": -1.0,
+          "selected_actor": -1.0,
+          "actor_program": 1.06875,
+          "selected_program": 1.06875
+        },
+        "continuation_delta": 2.06875,
+        "action_delta_actor": 0.0,
+        "action_delta_program": 0.0,
+        "interaction": 0.0
+      },
+      {
+        "case": "train-A5-000:prepare",
+        "seed": "e149_train_Ironclad_A5_000",
+        "mode": "prepare",
+        "ascension": 5,
+        "values": {
+          "actor_actor": -1.0,
+          "selected_actor": -1.0,
+          "actor_program": 1.1375,
+          "selected_program": 1.1375
+        },
+        "continuation_delta": 2.1375,
+        "action_delta_actor": 0.0,
+        "action_delta_program": 0.0,
+        "interaction": 0.0
+      },
+      {
+        "case": "train-A5-001:combat",
+        "seed": "e149_train_Ironclad_A5_001",
+        "mode": "combat",
+        "ascension": 5,
+        "values": {
+          "actor_actor": -1.0,
+          "selected_actor": 1.021978021978022,
+          "actor_program": 1.054945054945055,
+          "selected_program": 1.0467032967032968
+        },
+        "continuation_delta": 2.0549450549450547,
+        "action_delta_actor": 2.021978021978022,
+        "action_delta_program": -0.008241758241758212,
+        "interaction": -2.03021978021978
+      },
+      {
+        "case": "train-A5-001:prepare",
+        "seed": "e149_train_Ironclad_A5_001",
+        "mode": "prepare",
+        "ascension": 5,
+        "values": {
+          "actor_actor": -1.0,
+          "selected_actor": -1.0,
+          "actor_program": 1.0467032967032968,
+          "selected_program": 1.0467032967032968
+        },
+        "continuation_delta": 2.0467032967032965,
+        "action_delta_actor": 0.0,
+        "action_delta_program": 0.0,
+        "interaction": 0.0
+      },
+      {
+        "case": "train-A5-002:combat",
+        "seed": "e149_train_Ironclad_A5_002",
+        "mode": "combat",
+        "ascension": 5,
+        "values": {
+          "actor_actor": -1.0,
+          "selected_actor": -1.0,
+          "actor_program": 1.034375,
+          "selected_program": 1.034375
+        },
+        "continuation_delta": 2.034375,
+        "action_delta_actor": 0.0,
+        "action_delta_program": 0.0,
+        "interaction": 0.0
+      },
+      {
+        "case": "train-A5-002:prepare",
+        "seed": "e149_train_Ironclad_A5_002",
+        "mode": "prepare",
+        "ascension": 5,
+        "values": {
+          "actor_actor": -1.0,
+          "selected_actor": -1.0,
+          "actor_program": 1.034375,
+          "selected_program": 1.034375
+        },
+        "continuation_delta": 2.034375,
+        "action_delta_actor": 0.0,
+        "action_delta_program": 0.0,
+        "interaction": 0.0
+      },
+      {
+        "case": "train-A5-003:combat",
+        "seed": "e149_train_Ironclad_A5_003",
+        "mode": "combat",
+        "ascension": 5,
+        "values": {
+          "actor_actor": -1.0,
+          "selected_actor": -1.0,
+          "actor_program": 1.046875,
+          "selected_program": 1.065625
+        },
+        "continuation_delta": 2.046875,
+        "action_delta_actor": 0.0,
+        "action_delta_program": 0.018750000000000044,
+        "interaction": 0.018750000000000044
+      },
+      {
+        "case": "train-A5-003:prepare",
+        "seed": "e149_train_Ironclad_A5_003",
+        "mode": "prepare",
+        "ascension": 5,
+        "values": {
+          "actor_actor": -1.0,
+          "selected_actor": -1.0,
+          "actor_program": 1.065625,
+          "selected_program": 1.115625
+        },
+        "continuation_delta": 2.065625,
+        "action_delta_actor": 0.0,
+        "action_delta_program": 0.050000000000000044,
+        "interaction": 0.050000000000000044
+      },
+      {
+        "case": "train-A5-004:combat",
+        "seed": "e149_train_Ironclad_A5_004",
+        "mode": "combat",
+        "ascension": 5,
+        "values": {
+          "actor_actor": -1.0,
+          "selected_actor": -1.0,
+          "actor_program": -1.0,
+          "selected_program": -1.0
+        },
+        "continuation_delta": 0.0,
+        "action_delta_actor": 0.0,
+        "action_delta_program": 0.0,
+        "interaction": 0.0
+      },
+      {
+        "case": "train-A5-004:prepare",
+        "seed": "e149_train_Ironclad_A5_004",
+        "mode": "prepare",
+        "ascension": 5,
+        "values": {
+          "actor_actor": -1.0,
+          "selected_actor": -1.0,
+          "actor_program": -1.0,
+          "selected_program": -1.0
+        },
+        "continuation_delta": 0.0,
+        "action_delta_actor": 0.0,
+        "action_delta_program": 0.0,
+        "interaction": 0.0
+      },
+      {
+        "case": "train-A10-000:combat",
+        "seed": "e149_train_Ironclad_A10_000",
+        "mode": "combat",
+        "ascension": 10,
+        "values": {
+          "actor_actor": -1.0,
+          "selected_actor": -1.0,
+          "actor_program": -1.0,
+          "selected_program": -1.0
+        },
+        "continuation_delta": 0.0,
+        "action_delta_actor": 0.0,
+        "action_delta_program": 0.0,
+        "interaction": 0.0
+      },
+      {
+        "case": "train-A10-000:prepare",
+        "seed": "e149_train_Ironclad_A10_000",
+        "mode": "prepare",
+        "ascension": 10,
+        "values": {
+          "actor_actor": -1.0,
+          "selected_actor": -1.0,
+          "actor_program": 1.103448275862069,
+          "selected_program": 1.103448275862069
+        },
+        "continuation_delta": 2.103448275862069,
+        "action_delta_actor": 0.0,
+        "action_delta_program": 0.0,
+        "interaction": 0.0
+      },
+      {
+        "case": "train-A10-001:combat",
+        "seed": "e149_train_Ironclad_A10_001",
+        "mode": "combat",
+        "ascension": 10,
+        "values": {
+          "actor_actor": -1.0,
+          "selected_actor": -1.0,
+          "actor_program": -1.0,
+          "selected_program": -1.0
+        },
+        "continuation_delta": 0.0,
+        "action_delta_actor": 0.0,
+        "action_delta_program": 0.0,
+        "interaction": 0.0
+      },
+      {
+        "case": "train-A10-001:prepare",
+        "seed": "e149_train_Ironclad_A10_001",
+        "mode": "prepare",
+        "ascension": 10,
+        "values": {
+          "actor_actor": -1.0,
+          "selected_actor": -1.0,
+          "actor_program": 1.0875,
+          "selected_program": 1.0875
+        },
+        "continuation_delta": 2.0875,
+        "action_delta_actor": 0.0,
+        "action_delta_program": 0.0,
+        "interaction": 0.0
+      },
+      {
+        "case": "train-A10-002:combat",
+        "seed": "e149_train_Ironclad_A10_002",
+        "mode": "combat",
+        "ascension": 10,
+        "values": {
+          "actor_actor": 1.034375,
+          "selected_actor": 1.034375,
+          "actor_program": 1.090625,
+          "selected_program": 1.090625
+        },
+        "continuation_delta": 0.05624999999999991,
+        "action_delta_actor": 0.0,
+        "action_delta_program": 0.0,
+        "interaction": 0.0
+      },
+      {
+        "case": "train-A10-002:prepare",
+        "seed": "e149_train_Ironclad_A10_002",
+        "mode": "prepare",
+        "ascension": 10,
+        "values": {
+          "actor_actor": 1.034375,
+          "selected_actor": 1.034375,
+          "actor_program": 1.090625,
+          "selected_program": 1.090625
+        },
+        "continuation_delta": 0.05624999999999991,
+        "action_delta_actor": 0.0,
+        "action_delta_program": 0.0,
+        "interaction": 0.0
+      },
+      {
+        "case": "train-A10-003:combat",
+        "seed": "e149_train_Ironclad_A10_003",
+        "mode": "combat",
+        "ascension": 10,
+        "values": {
+          "actor_actor": -1.0,
+          "selected_actor": -1.0,
+          "actor_program": 1.071875,
+          "selected_program": 1.071875
+        },
+        "continuation_delta": 2.071875,
+        "action_delta_actor": 0.0,
+        "action_delta_program": 0.0,
+        "interaction": 0.0
+      },
+      {
+        "case": "train-A10-003:prepare",
+        "seed": "e149_train_Ironclad_A10_003",
+        "mode": "prepare",
+        "ascension": 10,
+        "values": {
+          "actor_actor": -1.0,
+          "selected_actor": -1.0,
+          "actor_program": 1.071875,
+          "selected_program": 1.071875
+        },
+        "continuation_delta": 2.071875,
+        "action_delta_actor": 0.0,
+        "action_delta_program": 0.0,
+        "interaction": 0.0
+      },
+      {
+        "case": "train-A10-004:combat",
+        "seed": "e149_train_Ironclad_A10_004",
+        "mode": "combat",
+        "ascension": 10,
+        "values": {
+          "actor_actor": -1.0,
+          "selected_actor": -1.0,
+          "actor_program": -1.0,
+          "selected_program": -1.0
+        },
+        "continuation_delta": 0.0,
+        "action_delta_actor": 0.0,
+        "action_delta_program": 0.0,
+        "interaction": 0.0
+      },
+      {
+        "case": "train-A10-004:prepare",
+        "seed": "e149_train_Ironclad_A10_004",
+        "mode": "prepare",
+        "ascension": 10,
+        "values": {
+          "actor_actor": -1.0,
+          "selected_actor": -1.0,
+          "actor_program": -1.0,
+          "selected_program": -1.0
+        },
+        "continuation_delta": 0.0,
+        "action_delta_actor": 0.0,
+        "action_delta_program": 0.0,
+        "interaction": 0.0
+      }
+    ],
+    "independent_game_seeds": 15,
+    "positive_seeds": 11,
+    "continuation_delta": 1.0380749801762732,
+    "cluster95": [
+      0.6226147962629643,
+      1.4514093977841283
+    ],
+    "by_mode": {
+      "combat": 0.6888713369963371,
+      "prepare": 1.387278623356209
+    },
+    "by_ascension": {
+      "0": 0.6205902777777779,
+      "5": 1.648914835164835,
+      "10": 0.8447198275862068
+    },
+    "counts": {
+      "actor_actor": {
+        "first_clears": 2,
+        "act2": 0,
+        "act3": 0,
+        "victories": 0
+      },
+      "selected_actor": {
+        "first_clears": 3,
+        "act2": 0,
+        "act3": 0,
+        "victories": 0
+      },
+      "actor_program": {
+        "first_clears": 17,
+        "act2": 0,
+        "act3": 0,
+        "victories": 0
+      },
+      "selected_program": {
+        "first_clears": 17,
+        "act2": 1,
+        "act3": 0,
+        "victories": 0
+      }
+    },
+    "mean_interaction": -0.06548649267399267,
+    "gates": {
+      "integrity": true,
+      "budget": true,
+      "effect": true,
+      "lower_bound": true,
+      "positive_seeds": true,
+      "no_stratum_regression": true,
+      "no_lost_baseline_progress": true
+    }
+  },
+  "audit": {
+    "raw_traces": 126,
+    "failures": [],
+    "pass": true
+  },
+  "seconds": 97.8158251249697,
+  "cpu_seconds": 155.47239199999999,
+  "rows": [
+    {
+      "case": "train-A0-000:combat",
+      "seed": "e149_train_Ironclad_A0_000",
+      "ascension": 0,
+      "mode": "combat",
+      "entries": {
+        "actor_actor": {
+          "state_hash": "bd0aa9eaeb12b5e4735dcfc9dcf0caf76d38b719365aa523d3e93d39704c6108",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 13,
+          "enemies": [
+            "Bygone Effigy"
+          ],
+          "hp": 41,
+          "max_hp": 80,
+          "deck_hash": "96cd4bbac6064d10d38d23f95e94d248e755937fe6acaf6feafbc1ad69a142f7",
+          "potions": []
+        },
+        "selected_actor": {
+          "state_hash": "bd0aa9eaeb12b5e4735dcfc9dcf0caf76d38b719365aa523d3e93d39704c6108",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 13,
+          "enemies": [
+            "Bygone Effigy"
+          ],
+          "hp": 41,
+          "max_hp": 80,
+          "deck_hash": "96cd4bbac6064d10d38d23f95e94d248e755937fe6acaf6feafbc1ad69a142f7",
+          "potions": []
+        },
+        "actor_program": {
+          "state_hash": "bd0aa9eaeb12b5e4735dcfc9dcf0caf76d38b719365aa523d3e93d39704c6108",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 13,
+          "enemies": [
+            "Bygone Effigy"
+          ],
+          "hp": 41,
+          "max_hp": 80,
+          "deck_hash": "96cd4bbac6064d10d38d23f95e94d248e755937fe6acaf6feafbc1ad69a142f7",
+          "potions": []
+        },
+        "selected_program": {
+          "state_hash": "bd0aa9eaeb12b5e4735dcfc9dcf0caf76d38b719365aa523d3e93d39704c6108",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 13,
+          "enemies": [
+            "Bygone Effigy"
+          ],
+          "hp": 41,
+          "max_hp": 80,
+          "deck_hash": "96cd4bbac6064d10d38d23f95e94d248e755937fe6acaf6feafbc1ad69a142f7",
+          "potions": []
+        }
+      },
+      "local": {
+        "actor_actor": {
+          "status": "defeat",
+          "steps": 14,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 246,
+          "potions": [],
+          "deck_hash": "96cd4bbac6064d10d38d23f95e94d248e755937fe6acaf6feafbc1ad69a142f7",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "e2ae7d576464c2136745c8b06f476df2f438523472456104e9ea1ec7a421a00a",
+          "transition_hash": "e6a983ac7154afe4ccb47475909c232621bc3d3b02c1e7cd417df57b98df7ad4",
+          "utility": -1.0
+        },
+        "selected_actor": {
+          "status": "defeat",
+          "steps": 14,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 246,
+          "potions": [],
+          "deck_hash": "96cd4bbac6064d10d38d23f95e94d248e755937fe6acaf6feafbc1ad69a142f7",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "e2ae7d576464c2136745c8b06f476df2f438523472456104e9ea1ec7a421a00a",
+          "transition_hash": "e6a983ac7154afe4ccb47475909c232621bc3d3b02c1e7cd417df57b98df7ad4",
+          "utility": -1.0
+        },
+        "actor_program": {
+          "status": "defeat",
+          "steps": 18,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 246,
+          "potions": [],
+          "deck_hash": "96cd4bbac6064d10d38d23f95e94d248e755937fe6acaf6feafbc1ad69a142f7",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "e2ae7d576464c2136745c8b06f476df2f438523472456104e9ea1ec7a421a00a",
+          "transition_hash": "7ba720ebaca0fb83fa7eebfc08cd9c756c4f9da59752d019f60d671372296c14",
+          "utility": -1.0
+        },
+        "selected_program": {
+          "status": "defeat",
+          "steps": 18,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 246,
+          "potions": [],
+          "deck_hash": "96cd4bbac6064d10d38d23f95e94d248e755937fe6acaf6feafbc1ad69a142f7",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "e2ae7d576464c2136745c8b06f476df2f438523472456104e9ea1ec7a421a00a",
+          "transition_hash": "7ba720ebaca0fb83fa7eebfc08cd9c756c4f9da59752d019f60d671372296c14",
+          "utility": -1.0
+        }
+      },
+      "act2": {
+        "actor_actor": false,
+        "selected_actor": false,
+        "actor_program": false,
+        "selected_program": false
+      },
+      "final_context": {
+        "actor_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 13,
+          "room_type": "Elite",
+          "boss": {
+            "id": "THE_KIN_BOSS",
+            "name": "Kin Priest"
+          }
+        },
+        "selected_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 13,
+          "room_type": "Elite",
+          "boss": {
+            "id": "THE_KIN_BOSS",
+            "name": "Kin Priest"
+          }
+        },
+        "actor_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 13,
+          "room_type": "Elite",
+          "boss": {
+            "id": "THE_KIN_BOSS",
+            "name": "Kin Priest"
+          }
+        },
+        "selected_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 13,
+          "room_type": "Elite",
+          "boss": {
+            "id": "THE_KIN_BOSS",
+            "name": "Kin Priest"
+          }
+        }
+      },
+      "encounter_changed": false,
+      "previous_all_discovery_losses": true,
+      "rescued": false,
+      "lost": false
+    },
+    {
+      "case": "train-A0-000:prepare",
+      "seed": "e149_train_Ironclad_A0_000",
+      "ascension": 0,
+      "mode": "prepare",
+      "entries": {
+        "actor_actor": {
+          "state_hash": "bd0aa9eaeb12b5e4735dcfc9dcf0caf76d38b719365aa523d3e93d39704c6108",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 13,
+          "enemies": [
+            "Bygone Effigy"
+          ],
+          "hp": 41,
+          "max_hp": 80,
+          "deck_hash": "96cd4bbac6064d10d38d23f95e94d248e755937fe6acaf6feafbc1ad69a142f7",
+          "potions": []
+        },
+        "selected_actor": {
+          "state_hash": "03f1234d7d97bfa2081c37ad065dbaa0d9654676a3a98c4acf2de17d28005efa",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 13,
+          "enemies": [
+            "Bygone Effigy"
+          ],
+          "hp": 41,
+          "max_hp": 80,
+          "deck_hash": "52b5568ebfa81ec1c510415fc89f9d8eb64b1d29845337baed36251691aeb208",
+          "potions": []
+        },
+        "actor_program": {
+          "state_hash": "4e4b10fff95fd1a1c331dc736ae0d82ed04778bbaff3c440173b9695cb5b4eda",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 14,
+          "enemies": [
+            "Twig Slime (M)",
+            "Flyconid"
+          ],
+          "hp": 65,
+          "max_hp": 80,
+          "deck_hash": "96cd4bbac6064d10d38d23f95e94d248e755937fe6acaf6feafbc1ad69a142f7",
+          "potions": []
+        },
+        "selected_program": {
+          "state_hash": "82229465662e171b36930650e7d47ca6490e962b2654ce77c78b0f641dce745b",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 14,
+          "enemies": [
+            "Twig Slime (M)",
+            "Flyconid"
+          ],
+          "hp": 65,
+          "max_hp": 80,
+          "deck_hash": "52b5568ebfa81ec1c510415fc89f9d8eb64b1d29845337baed36251691aeb208",
+          "potions": []
+        }
+      },
+      "local": {
+        "actor_actor": {
+          "status": "defeat",
+          "steps": 16,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 246,
+          "potions": [],
+          "deck_hash": "96cd4bbac6064d10d38d23f95e94d248e755937fe6acaf6feafbc1ad69a142f7",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "e2ae7d576464c2136745c8b06f476df2f438523472456104e9ea1ec7a421a00a",
+          "transition_hash": "2b46a033028808b36c9f8dcadb0af4fe6fb37cc44360da058ac36664369c8433",
+          "utility": -1.0
+        },
+        "selected_actor": {
+          "status": "defeat",
+          "steps": 18,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 246,
+          "potions": [],
+          "deck_hash": "52b5568ebfa81ec1c510415fc89f9d8eb64b1d29845337baed36251691aeb208",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "e7e137eb2f2953ed5185cba2f0234562dbad7745724967b9042186c774370458",
+          "transition_hash": "b5f5b5c346b6d40ab3e76a73fc58fa6efba1f32abbbdc0de80445557cd5b19ad",
+          "utility": -1.0
+        },
+        "actor_program": {
+          "status": "clear",
+          "steps": 24,
+          "hp": 42,
+          "max_hp": 80,
+          "gold": 256,
+          "potions": [],
+          "deck_hash": "96cd4bbac6064d10d38d23f95e94d248e755937fe6acaf6feafbc1ad69a142f7",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "865aa0a79e7494e14eace0a29684c3393bc909b96ffd1c973634ddb3f63e3165",
+          "transition_hash": "50a893c9b5388a25e939289da3c8c0994749fd32e5f99b17a8a90e87f20d5dc3",
+          "utility": 1.13125
+        },
+        "selected_program": {
+          "status": "clear",
+          "steps": 24,
+          "hp": 41,
+          "max_hp": 80,
+          "gold": 256,
+          "potions": [],
+          "deck_hash": "52b5568ebfa81ec1c510415fc89f9d8eb64b1d29845337baed36251691aeb208",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "fa41eb87bccf6523918bbcb976403ac38848b5b920b274915360f6a44c49d48a",
+          "transition_hash": "b476a8a20b41fe903c7e26e73b8dc5ec8ff66a24b3ff3686c75f6c04fbfb1086",
+          "utility": 1.128125
+        }
+      },
+      "act2": {
+        "actor_actor": false,
+        "selected_actor": false,
+        "actor_program": false,
+        "selected_program": true
+      },
+      "final_context": {
+        "actor_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 13,
+          "room_type": "Elite",
+          "boss": {
+            "id": "THE_KIN_BOSS",
+            "name": "Kin Priest"
+          }
+        },
+        "selected_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 13,
+          "room_type": "Elite",
+          "boss": {
+            "id": "THE_KIN_BOSS",
+            "name": "Kin Priest"
+          }
+        },
+        "actor_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 17,
+          "room_type": "Boss",
+          "boss": {
+            "id": "THE_KIN_BOSS",
+            "name": "Kin Priest"
+          }
+        },
+        "selected_program": {
+          "act": 2,
+          "act_name": "Hive",
+          "floor": 2,
+          "room_type": "Monster",
+          "boss": {
+            "id": "KAISER_CRAB_BOSS",
+            "name": "KAISER_CRAB.name"
+          }
+        }
+      },
+      "encounter_changed": true,
+      "previous_all_discovery_losses": false,
+      "rescued": true,
+      "lost": false
+    },
+    {
+      "case": "train-A0-001:combat",
+      "seed": "e149_train_Ironclad_A0_001",
+      "ascension": 0,
+      "mode": "combat",
+      "entries": {
+        "actor_actor": {
+          "state_hash": "98b7512acc00f820e6b5f9628de4a036f660c1c812566d80ec2827936cd8fc5f",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 9,
+          "enemies": [
+            "Bygone Effigy"
+          ],
+          "hp": 24,
+          "max_hp": 80,
+          "deck_hash": "45f0f343301d7b35ce03b504982ca1abc4065c57c7b071c44543e5c575282c9a",
+          "potions": []
+        },
+        "selected_actor": {
+          "state_hash": "98b7512acc00f820e6b5f9628de4a036f660c1c812566d80ec2827936cd8fc5f",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 9,
+          "enemies": [
+            "Bygone Effigy"
+          ],
+          "hp": 24,
+          "max_hp": 80,
+          "deck_hash": "45f0f343301d7b35ce03b504982ca1abc4065c57c7b071c44543e5c575282c9a",
+          "potions": []
+        },
+        "actor_program": {
+          "state_hash": "98b7512acc00f820e6b5f9628de4a036f660c1c812566d80ec2827936cd8fc5f",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 9,
+          "enemies": [
+            "Bygone Effigy"
+          ],
+          "hp": 24,
+          "max_hp": 80,
+          "deck_hash": "45f0f343301d7b35ce03b504982ca1abc4065c57c7b071c44543e5c575282c9a",
+          "potions": []
+        },
+        "selected_program": {
+          "state_hash": "98b7512acc00f820e6b5f9628de4a036f660c1c812566d80ec2827936cd8fc5f",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 9,
+          "enemies": [
+            "Bygone Effigy"
+          ],
+          "hp": 24,
+          "max_hp": 80,
+          "deck_hash": "45f0f343301d7b35ce03b504982ca1abc4065c57c7b071c44543e5c575282c9a",
+          "potions": []
+        }
+      },
+      "local": {
+        "actor_actor": {
+          "status": "defeat",
+          "steps": 17,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 176,
+          "potions": [],
+          "deck_hash": "45f0f343301d7b35ce03b504982ca1abc4065c57c7b071c44543e5c575282c9a",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "64b6904189f105d88b30673c395a9114b280310db323a5f96f6b9adfd5bdb642",
+          "transition_hash": "8df6fa24ee771a902e6951b9bf6564dd90c9252a2a2785f7c70b8ec9a83e998e",
+          "utility": -1.0
+        },
+        "selected_actor": {
+          "status": "defeat",
+          "steps": 17,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 176,
+          "potions": [],
+          "deck_hash": "45f0f343301d7b35ce03b504982ca1abc4065c57c7b071c44543e5c575282c9a",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "64b6904189f105d88b30673c395a9114b280310db323a5f96f6b9adfd5bdb642",
+          "transition_hash": "8df6fa24ee771a902e6951b9bf6564dd90c9252a2a2785f7c70b8ec9a83e998e",
+          "utility": -1.0
+        },
+        "actor_program": {
+          "status": "defeat",
+          "steps": 15,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 176,
+          "potions": [],
+          "deck_hash": "45f0f343301d7b35ce03b504982ca1abc4065c57c7b071c44543e5c575282c9a",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "64b6904189f105d88b30673c395a9114b280310db323a5f96f6b9adfd5bdb642",
+          "transition_hash": "f80c0669e75772c859d4844f801766784aa95a29fe1d956b5d28b44591b7d608",
+          "utility": -1.0
+        },
+        "selected_program": {
+          "status": "defeat",
+          "steps": 15,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 176,
+          "potions": [],
+          "deck_hash": "45f0f343301d7b35ce03b504982ca1abc4065c57c7b071c44543e5c575282c9a",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "64b6904189f105d88b30673c395a9114b280310db323a5f96f6b9adfd5bdb642",
+          "transition_hash": "f80c0669e75772c859d4844f801766784aa95a29fe1d956b5d28b44591b7d608",
+          "utility": -1.0
+        }
+      },
+      "act2": {
+        "actor_actor": false,
+        "selected_actor": false,
+        "actor_program": false,
+        "selected_program": false
+      },
+      "final_context": {
+        "actor_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 9,
+          "room_type": "Elite",
+          "boss": {
+            "id": "CEREMONIAL_BEAST_BOSS",
+            "name": "Ceremonial Beast"
+          }
+        },
+        "selected_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 9,
+          "room_type": "Elite",
+          "boss": {
+            "id": "CEREMONIAL_BEAST_BOSS",
+            "name": "Ceremonial Beast"
+          }
+        },
+        "actor_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 9,
+          "room_type": "Elite",
+          "boss": {
+            "id": "CEREMONIAL_BEAST_BOSS",
+            "name": "Ceremonial Beast"
+          }
+        },
+        "selected_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 9,
+          "room_type": "Elite",
+          "boss": {
+            "id": "CEREMONIAL_BEAST_BOSS",
+            "name": "Ceremonial Beast"
+          }
+        }
+      },
+      "encounter_changed": false,
+      "previous_all_discovery_losses": true,
+      "rescued": false,
+      "lost": false
+    },
+    {
+      "case": "train-A0-001:prepare",
+      "seed": "e149_train_Ironclad_A0_001",
+      "ascension": 0,
+      "mode": "prepare",
+      "entries": {
+        "actor_actor": {
+          "state_hash": "98b7512acc00f820e6b5f9628de4a036f660c1c812566d80ec2827936cd8fc5f",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 9,
+          "enemies": [
+            "Bygone Effigy"
+          ],
+          "hp": 24,
+          "max_hp": 80,
+          "deck_hash": "45f0f343301d7b35ce03b504982ca1abc4065c57c7b071c44543e5c575282c9a",
+          "potions": []
+        },
+        "selected_actor": {
+          "state_hash": "98b7512acc00f820e6b5f9628de4a036f660c1c812566d80ec2827936cd8fc5f",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 9,
+          "enemies": [
+            "Bygone Effigy"
+          ],
+          "hp": 24,
+          "max_hp": 80,
+          "deck_hash": "45f0f343301d7b35ce03b504982ca1abc4065c57c7b071c44543e5c575282c9a",
+          "potions": []
+        },
+        "actor_program": {
+          "state_hash": "98b7512acc00f820e6b5f9628de4a036f660c1c812566d80ec2827936cd8fc5f",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 9,
+          "enemies": [
+            "Bygone Effigy"
+          ],
+          "hp": 24,
+          "max_hp": 80,
+          "deck_hash": "45f0f343301d7b35ce03b504982ca1abc4065c57c7b071c44543e5c575282c9a",
+          "potions": []
+        },
+        "selected_program": {
+          "state_hash": "98b7512acc00f820e6b5f9628de4a036f660c1c812566d80ec2827936cd8fc5f",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 9,
+          "enemies": [
+            "Bygone Effigy"
+          ],
+          "hp": 24,
+          "max_hp": 80,
+          "deck_hash": "45f0f343301d7b35ce03b504982ca1abc4065c57c7b071c44543e5c575282c9a",
+          "potions": []
+        }
+      },
+      "local": {
+        "actor_actor": {
+          "status": "defeat",
+          "steps": 19,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 176,
+          "potions": [],
+          "deck_hash": "45f0f343301d7b35ce03b504982ca1abc4065c57c7b071c44543e5c575282c9a",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "64b6904189f105d88b30673c395a9114b280310db323a5f96f6b9adfd5bdb642",
+          "transition_hash": "8d01f9321ab9ea25018684ff2fa43bfe1db81fdbb017796f819c087a45dc4c53",
+          "utility": -1.0
+        },
+        "selected_actor": {
+          "status": "defeat",
+          "steps": 19,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 176,
+          "potions": [],
+          "deck_hash": "45f0f343301d7b35ce03b504982ca1abc4065c57c7b071c44543e5c575282c9a",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "64b6904189f105d88b30673c395a9114b280310db323a5f96f6b9adfd5bdb642",
+          "transition_hash": "8d01f9321ab9ea25018684ff2fa43bfe1db81fdbb017796f819c087a45dc4c53",
+          "utility": -1.0
+        },
+        "actor_program": {
+          "status": "defeat",
+          "steps": 17,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 176,
+          "potions": [],
+          "deck_hash": "45f0f343301d7b35ce03b504982ca1abc4065c57c7b071c44543e5c575282c9a",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "64b6904189f105d88b30673c395a9114b280310db323a5f96f6b9adfd5bdb642",
+          "transition_hash": "c53f3bb23fec9921ab994310d3be77682dcca872c48536136ac0bf02518ab564",
+          "utility": -1.0
+        },
+        "selected_program": {
+          "status": "defeat",
+          "steps": 17,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 176,
+          "potions": [],
+          "deck_hash": "45f0f343301d7b35ce03b504982ca1abc4065c57c7b071c44543e5c575282c9a",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "64b6904189f105d88b30673c395a9114b280310db323a5f96f6b9adfd5bdb642",
+          "transition_hash": "c53f3bb23fec9921ab994310d3be77682dcca872c48536136ac0bf02518ab564",
+          "utility": -1.0
+        }
+      },
+      "act2": {
+        "actor_actor": false,
+        "selected_actor": false,
+        "actor_program": false,
+        "selected_program": false
+      },
+      "final_context": {
+        "actor_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 9,
+          "room_type": "Elite",
+          "boss": {
+            "id": "CEREMONIAL_BEAST_BOSS",
+            "name": "Ceremonial Beast"
+          }
+        },
+        "selected_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 9,
+          "room_type": "Elite",
+          "boss": {
+            "id": "CEREMONIAL_BEAST_BOSS",
+            "name": "Ceremonial Beast"
+          }
+        },
+        "actor_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 9,
+          "room_type": "Elite",
+          "boss": {
+            "id": "CEREMONIAL_BEAST_BOSS",
+            "name": "Ceremonial Beast"
+          }
+        },
+        "selected_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 9,
+          "room_type": "Elite",
+          "boss": {
+            "id": "CEREMONIAL_BEAST_BOSS",
+            "name": "Ceremonial Beast"
+          }
+        }
+      },
+      "encounter_changed": false,
+      "previous_all_discovery_losses": true,
+      "rescued": false,
+      "lost": false
+    },
+    {
+      "case": "train-A0-002:combat",
+      "seed": "e149_train_Ironclad_A0_002",
+      "ascension": 0,
+      "mode": "combat",
+      "entries": {
+        "actor_actor": {
+          "state_hash": "809620af597655116dd23d8bb7d6a46f5350dd1c37982a63899a95c3cd88d02a",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 14,
+          "enemies": [
+            "Axe Raider",
+            "Assassin Raider",
+            "Brute Raider"
+          ],
+          "hp": 23,
+          "max_hp": 90,
+          "deck_hash": "b11eda3f19113d6e6c9a5660fdf979b01dc9258f929c7362daee85426788b5d5",
+          "potions": [
+            "VULNERABLE_POTION"
+          ]
+        },
+        "selected_actor": {
+          "state_hash": "809620af597655116dd23d8bb7d6a46f5350dd1c37982a63899a95c3cd88d02a",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 14,
+          "enemies": [
+            "Axe Raider",
+            "Assassin Raider",
+            "Brute Raider"
+          ],
+          "hp": 23,
+          "max_hp": 90,
+          "deck_hash": "b11eda3f19113d6e6c9a5660fdf979b01dc9258f929c7362daee85426788b5d5",
+          "potions": [
+            "VULNERABLE_POTION"
+          ]
+        },
+        "actor_program": {
+          "state_hash": "809620af597655116dd23d8bb7d6a46f5350dd1c37982a63899a95c3cd88d02a",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 14,
+          "enemies": [
+            "Axe Raider",
+            "Assassin Raider",
+            "Brute Raider"
+          ],
+          "hp": 23,
+          "max_hp": 90,
+          "deck_hash": "b11eda3f19113d6e6c9a5660fdf979b01dc9258f929c7362daee85426788b5d5",
+          "potions": [
+            "VULNERABLE_POTION"
+          ]
+        },
+        "selected_program": {
+          "state_hash": "809620af597655116dd23d8bb7d6a46f5350dd1c37982a63899a95c3cd88d02a",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 14,
+          "enemies": [
+            "Axe Raider",
+            "Assassin Raider",
+            "Brute Raider"
+          ],
+          "hp": 23,
+          "max_hp": 90,
+          "deck_hash": "b11eda3f19113d6e6c9a5660fdf979b01dc9258f929c7362daee85426788b5d5",
+          "potions": [
+            "VULNERABLE_POTION"
+          ]
+        }
+      },
+      "local": {
+        "actor_actor": {
+          "status": "defeat",
+          "steps": 11,
+          "hp": 0,
+          "max_hp": 90,
+          "gold": 296,
+          "potions": [],
+          "deck_hash": "b11eda3f19113d6e6c9a5660fdf979b01dc9258f929c7362daee85426788b5d5",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "74f491ad083c346a2ea5bcf7f9c686a865752f8c2a1458d9a7d68351a53fa141",
+          "transition_hash": "24e44d18c33fefe9100c102fd6933bb050d6816737187646a092b7b9b1a38e05",
+          "utility": -1.0
+        },
+        "selected_actor": {
+          "status": "defeat",
+          "steps": 11,
+          "hp": 0,
+          "max_hp": 90,
+          "gold": 296,
+          "potions": [],
+          "deck_hash": "b11eda3f19113d6e6c9a5660fdf979b01dc9258f929c7362daee85426788b5d5",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "74f491ad083c346a2ea5bcf7f9c686a865752f8c2a1458d9a7d68351a53fa141",
+          "transition_hash": "24e44d18c33fefe9100c102fd6933bb050d6816737187646a092b7b9b1a38e05",
+          "utility": -1.0
+        },
+        "actor_program": {
+          "status": "defeat",
+          "steps": 15,
+          "hp": 0,
+          "max_hp": 90,
+          "gold": 296,
+          "potions": [],
+          "deck_hash": "b11eda3f19113d6e6c9a5660fdf979b01dc9258f929c7362daee85426788b5d5",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "74f491ad083c346a2ea5bcf7f9c686a865752f8c2a1458d9a7d68351a53fa141",
+          "transition_hash": "1d5d2451fa636d4a516b2c927319ab99d871a7a4de1bf980b2bcad49cb366e5b",
+          "utility": -1.0
+        },
+        "selected_program": {
+          "status": "defeat",
+          "steps": 15,
+          "hp": 0,
+          "max_hp": 90,
+          "gold": 296,
+          "potions": [],
+          "deck_hash": "b11eda3f19113d6e6c9a5660fdf979b01dc9258f929c7362daee85426788b5d5",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "74f491ad083c346a2ea5bcf7f9c686a865752f8c2a1458d9a7d68351a53fa141",
+          "transition_hash": "1d5d2451fa636d4a516b2c927319ab99d871a7a4de1bf980b2bcad49cb366e5b",
+          "utility": -1.0
+        }
+      },
+      "act2": {
+        "actor_actor": false,
+        "selected_actor": false,
+        "actor_program": false,
+        "selected_program": false
+      },
+      "final_context": {
+        "actor_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 14,
+          "room_type": "Monster",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        },
+        "selected_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 14,
+          "room_type": "Monster",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        },
+        "actor_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 14,
+          "room_type": "Monster",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        },
+        "selected_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 14,
+          "room_type": "Monster",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        }
+      },
+      "encounter_changed": false,
+      "previous_all_discovery_losses": true,
+      "rescued": false,
+      "lost": false
+    },
+    {
+      "case": "train-A0-002:prepare",
+      "seed": "e149_train_Ironclad_A0_002",
+      "ascension": 0,
+      "mode": "prepare",
+      "entries": {
+        "actor_actor": {
+          "state_hash": "809620af597655116dd23d8bb7d6a46f5350dd1c37982a63899a95c3cd88d02a",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 14,
+          "enemies": [
+            "Axe Raider",
+            "Assassin Raider",
+            "Brute Raider"
+          ],
+          "hp": 23,
+          "max_hp": 90,
+          "deck_hash": "b11eda3f19113d6e6c9a5660fdf979b01dc9258f929c7362daee85426788b5d5",
+          "potions": [
+            "VULNERABLE_POTION"
+          ]
+        },
+        "selected_actor": {
+          "state_hash": "809620af597655116dd23d8bb7d6a46f5350dd1c37982a63899a95c3cd88d02a",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 14,
+          "enemies": [
+            "Axe Raider",
+            "Assassin Raider",
+            "Brute Raider"
+          ],
+          "hp": 23,
+          "max_hp": 90,
+          "deck_hash": "b11eda3f19113d6e6c9a5660fdf979b01dc9258f929c7362daee85426788b5d5",
+          "potions": [
+            "VULNERABLE_POTION"
+          ]
+        },
+        "actor_program": {
+          "state_hash": "858d7747f87b2fe717430f39c6d3d40cb1eff117688c5691c5d46344d62c2ed2",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 14,
+          "enemies": [
+            "Axe Raider",
+            "Assassin Raider",
+            "Brute Raider"
+          ],
+          "hp": 23,
+          "max_hp": 90,
+          "deck_hash": "95d30063f185c242febb35369ab789e6874d802c149e9253651b0e30c9d562e2",
+          "potions": [
+            "VULNERABLE_POTION"
+          ]
+        },
+        "selected_program": {
+          "state_hash": "858d7747f87b2fe717430f39c6d3d40cb1eff117688c5691c5d46344d62c2ed2",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 14,
+          "enemies": [
+            "Axe Raider",
+            "Assassin Raider",
+            "Brute Raider"
+          ],
+          "hp": 23,
+          "max_hp": 90,
+          "deck_hash": "95d30063f185c242febb35369ab789e6874d802c149e9253651b0e30c9d562e2",
+          "potions": [
+            "VULNERABLE_POTION"
+          ]
+        }
+      },
+      "local": {
+        "actor_actor": {
+          "status": "defeat",
+          "steps": 14,
+          "hp": 0,
+          "max_hp": 90,
+          "gold": 296,
+          "potions": [],
+          "deck_hash": "b11eda3f19113d6e6c9a5660fdf979b01dc9258f929c7362daee85426788b5d5",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "74f491ad083c346a2ea5bcf7f9c686a865752f8c2a1458d9a7d68351a53fa141",
+          "transition_hash": "7b87ed6fc0e013c3f0a455bb7ca376fef1e8bffc76aa2a3cada58704d3b6a301",
+          "utility": -1.0
+        },
+        "selected_actor": {
+          "status": "defeat",
+          "steps": 14,
+          "hp": 0,
+          "max_hp": 90,
+          "gold": 296,
+          "potions": [],
+          "deck_hash": "b11eda3f19113d6e6c9a5660fdf979b01dc9258f929c7362daee85426788b5d5",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "74f491ad083c346a2ea5bcf7f9c686a865752f8c2a1458d9a7d68351a53fa141",
+          "transition_hash": "7b87ed6fc0e013c3f0a455bb7ca376fef1e8bffc76aa2a3cada58704d3b6a301",
+          "utility": -1.0
+        },
+        "actor_program": {
+          "status": "clear",
+          "steps": 18,
+          "hp": 10,
+          "max_hp": 90,
+          "gold": 313,
+          "potions": [],
+          "deck_hash": "95d30063f185c242febb35369ab789e6874d802c149e9253651b0e30c9d562e2",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "286c67acc5a73af0bd7500206ba8ef87d24c96546da4a5ab9b0ecd1d7b9c3d73",
+          "transition_hash": "9b9dcd4f2562f1ef251a315d5c7b0f741a7e86b2ac152c869f5e32583795052b",
+          "utility": 1.0277777777777777
+        },
+        "selected_program": {
+          "status": "clear",
+          "steps": 18,
+          "hp": 10,
+          "max_hp": 90,
+          "gold": 313,
+          "potions": [],
+          "deck_hash": "95d30063f185c242febb35369ab789e6874d802c149e9253651b0e30c9d562e2",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "286c67acc5a73af0bd7500206ba8ef87d24c96546da4a5ab9b0ecd1d7b9c3d73",
+          "transition_hash": "9b9dcd4f2562f1ef251a315d5c7b0f741a7e86b2ac152c869f5e32583795052b",
+          "utility": 1.0277777777777777
+        }
+      },
+      "act2": {
+        "actor_actor": false,
+        "selected_actor": false,
+        "actor_program": false,
+        "selected_program": false
+      },
+      "final_context": {
+        "actor_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 14,
+          "room_type": "Monster",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        },
+        "selected_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 14,
+          "room_type": "Monster",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        },
+        "actor_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 15,
+          "room_type": "Monster",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        },
+        "selected_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 15,
+          "room_type": "Monster",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        }
+      },
+      "encounter_changed": false,
+      "previous_all_discovery_losses": true,
+      "rescued": true,
+      "lost": false
+    },
+    {
+      "case": "train-A0-003:combat",
+      "seed": "e149_train_Ironclad_A0_003",
+      "ascension": 0,
+      "mode": "combat",
+      "entries": {
+        "actor_actor": {
+          "state_hash": "5d6cf2a9dce7df724c44bab09a0091b9cfa4966c3fbc1c6c7daac32e83128097",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 7,
+          "enemies": [
+            "Vine Shambler"
+          ],
+          "hp": 18,
+          "max_hp": 80,
+          "deck_hash": "429aae6b79492285461385124b41cb8cb997194aff5b6ef6a9a1233e656df717",
+          "potions": []
+        },
+        "selected_actor": {
+          "state_hash": "5d6cf2a9dce7df724c44bab09a0091b9cfa4966c3fbc1c6c7daac32e83128097",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 7,
+          "enemies": [
+            "Vine Shambler"
+          ],
+          "hp": 18,
+          "max_hp": 80,
+          "deck_hash": "429aae6b79492285461385124b41cb8cb997194aff5b6ef6a9a1233e656df717",
+          "potions": []
+        },
+        "actor_program": {
+          "state_hash": "5d6cf2a9dce7df724c44bab09a0091b9cfa4966c3fbc1c6c7daac32e83128097",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 7,
+          "enemies": [
+            "Vine Shambler"
+          ],
+          "hp": 18,
+          "max_hp": 80,
+          "deck_hash": "429aae6b79492285461385124b41cb8cb997194aff5b6ef6a9a1233e656df717",
+          "potions": []
+        },
+        "selected_program": {
+          "state_hash": "5d6cf2a9dce7df724c44bab09a0091b9cfa4966c3fbc1c6c7daac32e83128097",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 7,
+          "enemies": [
+            "Vine Shambler"
+          ],
+          "hp": 18,
+          "max_hp": 80,
+          "deck_hash": "429aae6b79492285461385124b41cb8cb997194aff5b6ef6a9a1233e656df717",
+          "potions": []
+        }
+      },
+      "local": {
+        "actor_actor": {
+          "status": "defeat",
+          "steps": 10,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 309,
+          "potions": [],
+          "deck_hash": "429aae6b79492285461385124b41cb8cb997194aff5b6ef6a9a1233e656df717",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "3f988f406ba09445e366d2a4a80e97f35fdefd35f815bd353aa66ae1445438f5",
+          "transition_hash": "9951f767021447d1a66a0a84afda10e3b2d313fa8f0ab567b0aee14229539ffc",
+          "utility": -1.0
+        },
+        "selected_actor": {
+          "status": "defeat",
+          "steps": 10,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 309,
+          "potions": [],
+          "deck_hash": "429aae6b79492285461385124b41cb8cb997194aff5b6ef6a9a1233e656df717",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "3f988f406ba09445e366d2a4a80e97f35fdefd35f815bd353aa66ae1445438f5",
+          "transition_hash": "9951f767021447d1a66a0a84afda10e3b2d313fa8f0ab567b0aee14229539ffc",
+          "utility": -1.0
+        },
+        "actor_program": {
+          "status": "defeat",
+          "steps": 10,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 309,
+          "potions": [],
+          "deck_hash": "429aae6b79492285461385124b41cb8cb997194aff5b6ef6a9a1233e656df717",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "3f988f406ba09445e366d2a4a80e97f35fdefd35f815bd353aa66ae1445438f5",
+          "transition_hash": "b2c9e408fbc29606322a6e2e8173000673cc5c02d6fc84b7324121c29aebb8c2",
+          "utility": -1.0
+        },
+        "selected_program": {
+          "status": "defeat",
+          "steps": 10,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 309,
+          "potions": [],
+          "deck_hash": "429aae6b79492285461385124b41cb8cb997194aff5b6ef6a9a1233e656df717",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "3f988f406ba09445e366d2a4a80e97f35fdefd35f815bd353aa66ae1445438f5",
+          "transition_hash": "b2c9e408fbc29606322a6e2e8173000673cc5c02d6fc84b7324121c29aebb8c2",
+          "utility": -1.0
+        }
+      },
+      "act2": {
+        "actor_actor": false,
+        "selected_actor": false,
+        "actor_program": false,
+        "selected_program": false
+      },
+      "final_context": {
+        "actor_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 7,
+          "room_type": "Monster",
+          "boss": {
+            "id": "CEREMONIAL_BEAST_BOSS",
+            "name": "Ceremonial Beast"
+          }
+        },
+        "selected_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 7,
+          "room_type": "Monster",
+          "boss": {
+            "id": "CEREMONIAL_BEAST_BOSS",
+            "name": "Ceremonial Beast"
+          }
+        },
+        "actor_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 7,
+          "room_type": "Monster",
+          "boss": {
+            "id": "CEREMONIAL_BEAST_BOSS",
+            "name": "Ceremonial Beast"
+          }
+        },
+        "selected_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 7,
+          "room_type": "Monster",
+          "boss": {
+            "id": "CEREMONIAL_BEAST_BOSS",
+            "name": "Ceremonial Beast"
+          }
+        }
+      },
+      "encounter_changed": false,
+      "previous_all_discovery_losses": true,
+      "rescued": false,
+      "lost": false
+    },
+    {
+      "case": "train-A0-003:prepare",
+      "seed": "e149_train_Ironclad_A0_003",
+      "ascension": 0,
+      "mode": "prepare",
+      "entries": {
+        "actor_actor": {
+          "state_hash": "5d6cf2a9dce7df724c44bab09a0091b9cfa4966c3fbc1c6c7daac32e83128097",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 7,
+          "enemies": [
+            "Vine Shambler"
+          ],
+          "hp": 18,
+          "max_hp": 80,
+          "deck_hash": "429aae6b79492285461385124b41cb8cb997194aff5b6ef6a9a1233e656df717",
+          "potions": []
+        },
+        "selected_actor": {
+          "state_hash": "5d6cf2a9dce7df724c44bab09a0091b9cfa4966c3fbc1c6c7daac32e83128097",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 7,
+          "enemies": [
+            "Vine Shambler"
+          ],
+          "hp": 18,
+          "max_hp": 80,
+          "deck_hash": "429aae6b79492285461385124b41cb8cb997194aff5b6ef6a9a1233e656df717",
+          "potions": []
+        },
+        "actor_program": {
+          "state_hash": "5d6cf2a9dce7df724c44bab09a0091b9cfa4966c3fbc1c6c7daac32e83128097",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 7,
+          "enemies": [
+            "Vine Shambler"
+          ],
+          "hp": 18,
+          "max_hp": 80,
+          "deck_hash": "429aae6b79492285461385124b41cb8cb997194aff5b6ef6a9a1233e656df717",
+          "potions": []
+        },
+        "selected_program": {
+          "state_hash": "5d6cf2a9dce7df724c44bab09a0091b9cfa4966c3fbc1c6c7daac32e83128097",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 7,
+          "enemies": [
+            "Vine Shambler"
+          ],
+          "hp": 18,
+          "max_hp": 80,
+          "deck_hash": "429aae6b79492285461385124b41cb8cb997194aff5b6ef6a9a1233e656df717",
+          "potions": []
+        }
+      },
+      "local": {
+        "actor_actor": {
+          "status": "defeat",
+          "steps": 12,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 309,
+          "potions": [],
+          "deck_hash": "429aae6b79492285461385124b41cb8cb997194aff5b6ef6a9a1233e656df717",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "3f988f406ba09445e366d2a4a80e97f35fdefd35f815bd353aa66ae1445438f5",
+          "transition_hash": "368730e2b75e0275f6b44a83e649e3051eb3da48e3e933d89c6ceb6bb240e5bd",
+          "utility": -1.0
+        },
+        "selected_actor": {
+          "status": "defeat",
+          "steps": 12,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 309,
+          "potions": [],
+          "deck_hash": "429aae6b79492285461385124b41cb8cb997194aff5b6ef6a9a1233e656df717",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "3f988f406ba09445e366d2a4a80e97f35fdefd35f815bd353aa66ae1445438f5",
+          "transition_hash": "368730e2b75e0275f6b44a83e649e3051eb3da48e3e933d89c6ceb6bb240e5bd",
+          "utility": -1.0
+        },
+        "actor_program": {
+          "status": "defeat",
+          "steps": 17,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 309,
+          "potions": [],
+          "deck_hash": "429aae6b79492285461385124b41cb8cb997194aff5b6ef6a9a1233e656df717",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "3f988f406ba09445e366d2a4a80e97f35fdefd35f815bd353aa66ae1445438f5",
+          "transition_hash": "44c4eb46dead365f3f0f6d97409f8b9aa2e62c8dd8c568f449c23fc51ef5cfa0",
+          "utility": -1.0
+        },
+        "selected_program": {
+          "status": "defeat",
+          "steps": 17,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 309,
+          "potions": [],
+          "deck_hash": "429aae6b79492285461385124b41cb8cb997194aff5b6ef6a9a1233e656df717",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "3f988f406ba09445e366d2a4a80e97f35fdefd35f815bd353aa66ae1445438f5",
+          "transition_hash": "44c4eb46dead365f3f0f6d97409f8b9aa2e62c8dd8c568f449c23fc51ef5cfa0",
+          "utility": -1.0
+        }
+      },
+      "act2": {
+        "actor_actor": false,
+        "selected_actor": false,
+        "actor_program": false,
+        "selected_program": false
+      },
+      "final_context": {
+        "actor_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 7,
+          "room_type": "Monster",
+          "boss": {
+            "id": "CEREMONIAL_BEAST_BOSS",
+            "name": "Ceremonial Beast"
+          }
+        },
+        "selected_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 7,
+          "room_type": "Monster",
+          "boss": {
+            "id": "CEREMONIAL_BEAST_BOSS",
+            "name": "Ceremonial Beast"
+          }
+        },
+        "actor_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 7,
+          "room_type": "Monster",
+          "boss": {
+            "id": "CEREMONIAL_BEAST_BOSS",
+            "name": "Ceremonial Beast"
+          }
+        },
+        "selected_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 7,
+          "room_type": "Monster",
+          "boss": {
+            "id": "CEREMONIAL_BEAST_BOSS",
+            "name": "Ceremonial Beast"
+          }
+        }
+      },
+      "encounter_changed": false,
+      "previous_all_discovery_losses": true,
+      "rescued": false,
+      "lost": false
+    },
+    {
+      "case": "train-A0-004:combat",
+      "seed": "e149_train_Ironclad_A0_004",
+      "ascension": 0,
+      "mode": "combat",
+      "entries": {
+        "actor_actor": {
+          "state_hash": "d4d424ae049dac59aef991244533f25184edcdff7df375c05566699b7eee8f68",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 9,
+          "enemies": [
+            "Byrdonis"
+          ],
+          "hp": 37,
+          "max_hp": 80,
+          "deck_hash": "1698f2ceaa090b15dc5a82cd6fb1e13a973013cb35bc233eebb46c64cf7f33c4",
+          "potions": []
+        },
+        "selected_actor": {
+          "state_hash": "d4d424ae049dac59aef991244533f25184edcdff7df375c05566699b7eee8f68",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 9,
+          "enemies": [
+            "Byrdonis"
+          ],
+          "hp": 37,
+          "max_hp": 80,
+          "deck_hash": "1698f2ceaa090b15dc5a82cd6fb1e13a973013cb35bc233eebb46c64cf7f33c4",
+          "potions": []
+        },
+        "actor_program": {
+          "state_hash": "d4d424ae049dac59aef991244533f25184edcdff7df375c05566699b7eee8f68",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 9,
+          "enemies": [
+            "Byrdonis"
+          ],
+          "hp": 37,
+          "max_hp": 80,
+          "deck_hash": "1698f2ceaa090b15dc5a82cd6fb1e13a973013cb35bc233eebb46c64cf7f33c4",
+          "potions": []
+        },
+        "selected_program": {
+          "state_hash": "d4d424ae049dac59aef991244533f25184edcdff7df375c05566699b7eee8f68",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 9,
+          "enemies": [
+            "Byrdonis"
+          ],
+          "hp": 37,
+          "max_hp": 80,
+          "deck_hash": "1698f2ceaa090b15dc5a82cd6fb1e13a973013cb35bc233eebb46c64cf7f33c4",
+          "potions": []
+        }
+      },
+      "local": {
+        "actor_actor": {
+          "status": "defeat",
+          "steps": 22,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 178,
+          "potions": [],
+          "deck_hash": "1698f2ceaa090b15dc5a82cd6fb1e13a973013cb35bc233eebb46c64cf7f33c4",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "4f8a0325418e74768041da680fa9e248a7679de8f835417e05ca6d432d85d5a7",
+          "transition_hash": "f286c04eb4367d7717277ddd33a5f8e737d683309fb154d1cfe09ae3ac129b81",
+          "utility": -1.0
+        },
+        "selected_actor": {
+          "status": "defeat",
+          "steps": 22,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 178,
+          "potions": [],
+          "deck_hash": "1698f2ceaa090b15dc5a82cd6fb1e13a973013cb35bc233eebb46c64cf7f33c4",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "4f8a0325418e74768041da680fa9e248a7679de8f835417e05ca6d432d85d5a7",
+          "transition_hash": "f286c04eb4367d7717277ddd33a5f8e737d683309fb154d1cfe09ae3ac129b81",
+          "utility": -1.0
+        },
+        "actor_program": {
+          "status": "defeat",
+          "steps": 22,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 178,
+          "potions": [],
+          "deck_hash": "1698f2ceaa090b15dc5a82cd6fb1e13a973013cb35bc233eebb46c64cf7f33c4",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "4f8a0325418e74768041da680fa9e248a7679de8f835417e05ca6d432d85d5a7",
+          "transition_hash": "a11344b524d04f0fd80ba36b643052b74c82d18b84a2a972a3bc5f1667b8896c",
+          "utility": -1.0
+        },
+        "selected_program": {
+          "status": "defeat",
+          "steps": 22,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 178,
+          "potions": [],
+          "deck_hash": "1698f2ceaa090b15dc5a82cd6fb1e13a973013cb35bc233eebb46c64cf7f33c4",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "4f8a0325418e74768041da680fa9e248a7679de8f835417e05ca6d432d85d5a7",
+          "transition_hash": "a11344b524d04f0fd80ba36b643052b74c82d18b84a2a972a3bc5f1667b8896c",
+          "utility": -1.0
+        }
+      },
+      "act2": {
+        "actor_actor": false,
+        "selected_actor": false,
+        "actor_program": false,
+        "selected_program": false
+      },
+      "final_context": {
+        "actor_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 9,
+          "room_type": "Elite",
+          "boss": {
+            "id": "CEREMONIAL_BEAST_BOSS",
+            "name": "Ceremonial Beast"
+          }
+        },
+        "selected_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 9,
+          "room_type": "Elite",
+          "boss": {
+            "id": "CEREMONIAL_BEAST_BOSS",
+            "name": "Ceremonial Beast"
+          }
+        },
+        "actor_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 9,
+          "room_type": "Elite",
+          "boss": {
+            "id": "CEREMONIAL_BEAST_BOSS",
+            "name": "Ceremonial Beast"
+          }
+        },
+        "selected_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 9,
+          "room_type": "Elite",
+          "boss": {
+            "id": "CEREMONIAL_BEAST_BOSS",
+            "name": "Ceremonial Beast"
+          }
+        }
+      },
+      "encounter_changed": false,
+      "previous_all_discovery_losses": true,
+      "rescued": false,
+      "lost": false
+    },
+    {
+      "case": "train-A0-004:prepare",
+      "seed": "e149_train_Ironclad_A0_004",
+      "ascension": 0,
+      "mode": "prepare",
+      "entries": {
+        "actor_actor": {
+          "state_hash": "d4d424ae049dac59aef991244533f25184edcdff7df375c05566699b7eee8f68",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 9,
+          "enemies": [
+            "Byrdonis"
+          ],
+          "hp": 37,
+          "max_hp": 80,
+          "deck_hash": "1698f2ceaa090b15dc5a82cd6fb1e13a973013cb35bc233eebb46c64cf7f33c4",
+          "potions": []
+        },
+        "selected_actor": {
+          "state_hash": "d4d424ae049dac59aef991244533f25184edcdff7df375c05566699b7eee8f68",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 9,
+          "enemies": [
+            "Byrdonis"
+          ],
+          "hp": 37,
+          "max_hp": 80,
+          "deck_hash": "1698f2ceaa090b15dc5a82cd6fb1e13a973013cb35bc233eebb46c64cf7f33c4",
+          "potions": []
+        },
+        "actor_program": {
+          "state_hash": "b5bb96b809b847da97a6c691c741fbb64430e063cd881003e653ac0d0ede0a19",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 9,
+          "enemies": [
+            "Mawler"
+          ],
+          "hp": 37,
+          "max_hp": 80,
+          "deck_hash": "1698f2ceaa090b15dc5a82cd6fb1e13a973013cb35bc233eebb46c64cf7f33c4",
+          "potions": []
+        },
+        "selected_program": {
+          "state_hash": "b5bb96b809b847da97a6c691c741fbb64430e063cd881003e653ac0d0ede0a19",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 9,
+          "enemies": [
+            "Mawler"
+          ],
+          "hp": 37,
+          "max_hp": 80,
+          "deck_hash": "1698f2ceaa090b15dc5a82cd6fb1e13a973013cb35bc233eebb46c64cf7f33c4",
+          "potions": []
+        }
+      },
+      "local": {
+        "actor_actor": {
+          "status": "defeat",
+          "steps": 24,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 178,
+          "potions": [],
+          "deck_hash": "1698f2ceaa090b15dc5a82cd6fb1e13a973013cb35bc233eebb46c64cf7f33c4",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "4f8a0325418e74768041da680fa9e248a7679de8f835417e05ca6d432d85d5a7",
+          "transition_hash": "fdc81fdcc3403e8cb76914e966faad6eba350a3934486504debe9368b2e33514",
+          "utility": -1.0
+        },
+        "selected_actor": {
+          "status": "defeat",
+          "steps": 24,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 178,
+          "potions": [],
+          "deck_hash": "1698f2ceaa090b15dc5a82cd6fb1e13a973013cb35bc233eebb46c64cf7f33c4",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "4f8a0325418e74768041da680fa9e248a7679de8f835417e05ca6d432d85d5a7",
+          "transition_hash": "fdc81fdcc3403e8cb76914e966faad6eba350a3934486504debe9368b2e33514",
+          "utility": -1.0
+        },
+        "actor_program": {
+          "status": "clear",
+          "steps": 24,
+          "hp": 15,
+          "max_hp": 80,
+          "gold": 191,
+          "potions": [],
+          "deck_hash": "1698f2ceaa090b15dc5a82cd6fb1e13a973013cb35bc233eebb46c64cf7f33c4",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "2c1ba62dd11341ce86f635825455f08937044c1c1b67a0f4e4298cd1836540d4",
+          "transition_hash": "42ae41e154d5aba2ba9db19e0314fc54728584f2676bc27926b972bfd5a8272c",
+          "utility": 1.046875
+        },
+        "selected_program": {
+          "status": "clear",
+          "steps": 24,
+          "hp": 15,
+          "max_hp": 80,
+          "gold": 191,
+          "potions": [],
+          "deck_hash": "1698f2ceaa090b15dc5a82cd6fb1e13a973013cb35bc233eebb46c64cf7f33c4",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "2c1ba62dd11341ce86f635825455f08937044c1c1b67a0f4e4298cd1836540d4",
+          "transition_hash": "42ae41e154d5aba2ba9db19e0314fc54728584f2676bc27926b972bfd5a8272c",
+          "utility": 1.046875
+        }
+      },
+      "act2": {
+        "actor_actor": false,
+        "selected_actor": false,
+        "actor_program": false,
+        "selected_program": false
+      },
+      "final_context": {
+        "actor_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 9,
+          "room_type": "Elite",
+          "boss": {
+            "id": "CEREMONIAL_BEAST_BOSS",
+            "name": "Ceremonial Beast"
+          }
+        },
+        "selected_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 9,
+          "room_type": "Elite",
+          "boss": {
+            "id": "CEREMONIAL_BEAST_BOSS",
+            "name": "Ceremonial Beast"
+          }
+        },
+        "actor_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 15,
+          "room_type": "Monster",
+          "boss": {
+            "id": "CEREMONIAL_BEAST_BOSS",
+            "name": "Ceremonial Beast"
+          }
+        },
+        "selected_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 15,
+          "room_type": "Monster",
+          "boss": {
+            "id": "CEREMONIAL_BEAST_BOSS",
+            "name": "Ceremonial Beast"
+          }
+        }
+      },
+      "encounter_changed": true,
+      "previous_all_discovery_losses": true,
+      "rescued": true,
+      "lost": false
+    },
+    {
+      "case": "train-A5-000:combat",
+      "seed": "e149_train_Ironclad_A5_000",
+      "ascension": 5,
+      "mode": "combat",
+      "entries": {
+        "actor_actor": {
+          "state_hash": "afb5f4bb42cd7b4a3cd386d1dc1aae3d2d7360cdfd2b4fb66d7c2045ef7a4630",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 6,
+          "enemies": [
+            "Fogmog"
+          ],
+          "hp": 28,
+          "max_hp": 80,
+          "deck_hash": "a5afffbf32223ab2346611525daf14710cc08ce1fdd6ca01a6b547a98b549a7a",
+          "potions": []
+        },
+        "selected_actor": {
+          "state_hash": "afb5f4bb42cd7b4a3cd386d1dc1aae3d2d7360cdfd2b4fb66d7c2045ef7a4630",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 6,
+          "enemies": [
+            "Fogmog"
+          ],
+          "hp": 28,
+          "max_hp": 80,
+          "deck_hash": "a5afffbf32223ab2346611525daf14710cc08ce1fdd6ca01a6b547a98b549a7a",
+          "potions": []
+        },
+        "actor_program": {
+          "state_hash": "afb5f4bb42cd7b4a3cd386d1dc1aae3d2d7360cdfd2b4fb66d7c2045ef7a4630",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 6,
+          "enemies": [
+            "Fogmog"
+          ],
+          "hp": 28,
+          "max_hp": 80,
+          "deck_hash": "a5afffbf32223ab2346611525daf14710cc08ce1fdd6ca01a6b547a98b549a7a",
+          "potions": []
+        },
+        "selected_program": {
+          "state_hash": "afb5f4bb42cd7b4a3cd386d1dc1aae3d2d7360cdfd2b4fb66d7c2045ef7a4630",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 6,
+          "enemies": [
+            "Fogmog"
+          ],
+          "hp": 28,
+          "max_hp": 80,
+          "deck_hash": "a5afffbf32223ab2346611525daf14710cc08ce1fdd6ca01a6b547a98b549a7a",
+          "potions": []
+        }
+      },
+      "local": {
+        "actor_actor": {
+          "status": "defeat",
+          "steps": 23,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 146,
+          "potions": [],
+          "deck_hash": "a5afffbf32223ab2346611525daf14710cc08ce1fdd6ca01a6b547a98b549a7a",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "5a38054258d12227bff03aeb8c1902508948df24af0938ff1eef40fd71fcaf51",
+          "transition_hash": "537917c1f1231dfc038cc9f622393a403f44c1e3a8385f94b404e7152dcfefb0",
+          "utility": -1.0
+        },
+        "selected_actor": {
+          "status": "defeat",
+          "steps": 23,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 146,
+          "potions": [],
+          "deck_hash": "a5afffbf32223ab2346611525daf14710cc08ce1fdd6ca01a6b547a98b549a7a",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "5a38054258d12227bff03aeb8c1902508948df24af0938ff1eef40fd71fcaf51",
+          "transition_hash": "537917c1f1231dfc038cc9f622393a403f44c1e3a8385f94b404e7152dcfefb0",
+          "utility": -1.0
+        },
+        "actor_program": {
+          "status": "clear",
+          "steps": 17,
+          "hp": 22,
+          "max_hp": 80,
+          "gold": 157,
+          "potions": [],
+          "deck_hash": "a5afffbf32223ab2346611525daf14710cc08ce1fdd6ca01a6b547a98b549a7a",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "048ae9b0a940206605a63f21a9b326d55e9458822170202fdb602f084cd0436c",
+          "transition_hash": "bacc288474eb359bdf7a96df5acba8251552ae3dc4c94dcd4ace6f94ab41529f",
+          "utility": 1.06875
+        },
+        "selected_program": {
+          "status": "clear",
+          "steps": 17,
+          "hp": 22,
+          "max_hp": 80,
+          "gold": 157,
+          "potions": [],
+          "deck_hash": "a5afffbf32223ab2346611525daf14710cc08ce1fdd6ca01a6b547a98b549a7a",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "048ae9b0a940206605a63f21a9b326d55e9458822170202fdb602f084cd0436c",
+          "transition_hash": "bacc288474eb359bdf7a96df5acba8251552ae3dc4c94dcd4ace6f94ab41529f",
+          "utility": 1.06875
+        }
+      },
+      "act2": {
+        "actor_actor": false,
+        "selected_actor": false,
+        "actor_program": false,
+        "selected_program": false
+      },
+      "final_context": {
+        "actor_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 6,
+          "room_type": "Monster",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        },
+        "selected_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 6,
+          "room_type": "Monster",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        },
+        "actor_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 9,
+          "room_type": "Elite",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        },
+        "selected_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 9,
+          "room_type": "Elite",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        }
+      },
+      "encounter_changed": false,
+      "previous_all_discovery_losses": false,
+      "rescued": true,
+      "lost": false
+    },
+    {
+      "case": "train-A5-000:prepare",
+      "seed": "e149_train_Ironclad_A5_000",
+      "ascension": 5,
+      "mode": "prepare",
+      "entries": {
+        "actor_actor": {
+          "state_hash": "afb5f4bb42cd7b4a3cd386d1dc1aae3d2d7360cdfd2b4fb66d7c2045ef7a4630",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 6,
+          "enemies": [
+            "Fogmog"
+          ],
+          "hp": 28,
+          "max_hp": 80,
+          "deck_hash": "a5afffbf32223ab2346611525daf14710cc08ce1fdd6ca01a6b547a98b549a7a",
+          "potions": []
+        },
+        "selected_actor": {
+          "state_hash": "460601efdec8ee7e871c82791881c2a1c62b6013252361153f92f90cd135f173",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 6,
+          "enemies": [
+            "Fogmog"
+          ],
+          "hp": 28,
+          "max_hp": 80,
+          "deck_hash": "8065d144d17fb39036271284c6fa5dd98c652728d1a4739ba44774f068f97258",
+          "potions": []
+        },
+        "actor_program": {
+          "state_hash": "75e57660e709f6b83c5ec7221436f410eb5f27dab8c545922709c864c439ec6c",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 8,
+          "enemies": [
+            "Fogmog"
+          ],
+          "hp": 52,
+          "max_hp": 80,
+          "deck_hash": "b0ba5c6f6ea7d05059bc736391122c0fb6ce9c7fce974fc27d887772903b4c74",
+          "potions": []
+        },
+        "selected_program": {
+          "state_hash": "c0795cdee51937410c900e4fd267420778adb03adf1185b64a5774bcef338571",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 8,
+          "enemies": [
+            "Fogmog"
+          ],
+          "hp": 52,
+          "max_hp": 80,
+          "deck_hash": "9b5ca06ebe8b56c9cd81479f2cbddd0ebc21568a64c1e207fc1eada6e44e5666",
+          "potions": []
+        }
+      },
+      "local": {
+        "actor_actor": {
+          "status": "defeat",
+          "steps": 25,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 146,
+          "potions": [],
+          "deck_hash": "a5afffbf32223ab2346611525daf14710cc08ce1fdd6ca01a6b547a98b549a7a",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "5a38054258d12227bff03aeb8c1902508948df24af0938ff1eef40fd71fcaf51",
+          "transition_hash": "3a977b7a955eaa42774717bf614f2ee2c62efa28418deae3bd2310d3845bc2ac",
+          "utility": -1.0
+        },
+        "selected_actor": {
+          "status": "defeat",
+          "steps": 21,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 146,
+          "potions": [],
+          "deck_hash": "8065d144d17fb39036271284c6fa5dd98c652728d1a4739ba44774f068f97258",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "ed6ccd7e4d1a7055fd8a964c80511fbe129164a00218981a6eec763066a9afbd",
+          "transition_hash": "d9c7e7bbee2bf62ed44256a6f40b728bcc1a3240399d96c32d5029f977939a1a",
+          "utility": -1.0
+        },
+        "actor_program": {
+          "status": "clear",
+          "steps": 29,
+          "hp": 44,
+          "max_hp": 80,
+          "gold": 157,
+          "potions": [],
+          "deck_hash": "b0ba5c6f6ea7d05059bc736391122c0fb6ce9c7fce974fc27d887772903b4c74",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "3a2863e5ec42cc78c9718febb5eaa699ee44c4ecad412409ccd23e14f7821ba4",
+          "transition_hash": "823ba6c356c3b9c385a1abcc7da10325e03a3060af5e14f221273e70cb07e51f",
+          "utility": 1.1375
+        },
+        "selected_program": {
+          "status": "clear",
+          "steps": 27,
+          "hp": 44,
+          "max_hp": 80,
+          "gold": 157,
+          "potions": [],
+          "deck_hash": "9b5ca06ebe8b56c9cd81479f2cbddd0ebc21568a64c1e207fc1eada6e44e5666",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "019183e278b3bb1d5b7f3e4f8508e4067f7008502d41a0d27b0239f96e687a9b",
+          "transition_hash": "d17d178bf139859e20cecbec7c0a0d9eafa2bb58b00c97cf791b31f915d45521",
+          "utility": 1.1375
+        }
+      },
+      "act2": {
+        "actor_actor": false,
+        "selected_actor": false,
+        "actor_program": false,
+        "selected_program": false
+      },
+      "final_context": {
+        "actor_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 6,
+          "room_type": "Monster",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        },
+        "selected_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 6,
+          "room_type": "Monster",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        },
+        "actor_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 9,
+          "room_type": "Elite",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        },
+        "selected_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 9,
+          "room_type": "Elite",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        }
+      },
+      "encounter_changed": true,
+      "previous_all_discovery_losses": false,
+      "rescued": true,
+      "lost": false
+    },
+    {
+      "case": "train-A5-001:combat",
+      "seed": "e149_train_Ironclad_A5_001",
+      "ascension": 5,
+      "mode": "combat",
+      "entries": {
+        "actor_actor": {
+          "state_hash": "f8b6019cb8887f54aa5a838265cb2391975b632c354eabf118823884f0c72f39",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 9,
+          "enemies": [
+            "Snapping Jaxfruit",
+            "Flyconid"
+          ],
+          "hp": 42,
+          "max_hp": 91,
+          "deck_hash": "bebaad2d6907a91ed406488ed73c43359d8a7795d33964124731b0378df0fa05",
+          "potions": []
+        },
+        "selected_actor": {
+          "state_hash": "f8b6019cb8887f54aa5a838265cb2391975b632c354eabf118823884f0c72f39",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 9,
+          "enemies": [
+            "Snapping Jaxfruit",
+            "Flyconid"
+          ],
+          "hp": 42,
+          "max_hp": 91,
+          "deck_hash": "bebaad2d6907a91ed406488ed73c43359d8a7795d33964124731b0378df0fa05",
+          "potions": []
+        },
+        "actor_program": {
+          "state_hash": "f8b6019cb8887f54aa5a838265cb2391975b632c354eabf118823884f0c72f39",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 9,
+          "enemies": [
+            "Snapping Jaxfruit",
+            "Flyconid"
+          ],
+          "hp": 42,
+          "max_hp": 91,
+          "deck_hash": "bebaad2d6907a91ed406488ed73c43359d8a7795d33964124731b0378df0fa05",
+          "potions": []
+        },
+        "selected_program": {
+          "state_hash": "f8b6019cb8887f54aa5a838265cb2391975b632c354eabf118823884f0c72f39",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 9,
+          "enemies": [
+            "Snapping Jaxfruit",
+            "Flyconid"
+          ],
+          "hp": 42,
+          "max_hp": 91,
+          "deck_hash": "bebaad2d6907a91ed406488ed73c43359d8a7795d33964124731b0378df0fa05",
+          "potions": []
+        }
+      },
+      "local": {
+        "actor_actor": {
+          "status": "defeat",
+          "steps": 19,
+          "hp": 0,
+          "max_hp": 91,
+          "gold": 157,
+          "potions": [],
+          "deck_hash": "bebaad2d6907a91ed406488ed73c43359d8a7795d33964124731b0378df0fa05",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "ea1a861c4c78f693aeb769b3d3bcd15f1d0fe0833d2d4e73372d2cfa3dd807cc",
+          "transition_hash": "3d704c3280a13a07d40ff096778abfae4da74f8b223fa55db2fefbed508550ff",
+          "utility": -1.0
+        },
+        "selected_actor": {
+          "status": "clear",
+          "steps": 26,
+          "hp": 8,
+          "max_hp": 91,
+          "gold": 165,
+          "potions": [],
+          "deck_hash": "bebaad2d6907a91ed406488ed73c43359d8a7795d33964124731b0378df0fa05",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "6932b135e337d66148abaf821537375a22cfd9b2619337ed06cb2825426facb3",
+          "transition_hash": "09242b4c394e9924f0dfc5bae30530a28c67267d4dde53c2b51d91f0a419e663",
+          "utility": 1.021978021978022
+        },
+        "actor_program": {
+          "status": "clear",
+          "steps": 26,
+          "hp": 20,
+          "max_hp": 91,
+          "gold": 165,
+          "potions": [],
+          "deck_hash": "bebaad2d6907a91ed406488ed73c43359d8a7795d33964124731b0378df0fa05",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "8a4fd86a33808383dca434d45ab534086023ece701eb794266bc0a9fc31a6098",
+          "transition_hash": "29cbb45e57c02121e8938d6e6faf34f1c93c86ca0cae2242dd348628a16d8172",
+          "utility": 1.054945054945055
+        },
+        "selected_program": {
+          "status": "clear",
+          "steps": 27,
+          "hp": 17,
+          "max_hp": 91,
+          "gold": 165,
+          "potions": [],
+          "deck_hash": "bebaad2d6907a91ed406488ed73c43359d8a7795d33964124731b0378df0fa05",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "38d1cd9fda02a8fdff0d2da075933d8bfbfb9e5e72a105f6ef8e8ce1ba668df2",
+          "transition_hash": "06e2ebced6055e0b7fc5b51a18c377410923bd78d9622ee75c279aa07fb0670e",
+          "utility": 1.0467032967032968
+        }
+      },
+      "act2": {
+        "actor_actor": false,
+        "selected_actor": false,
+        "actor_program": false,
+        "selected_program": false
+      },
+      "final_context": {
+        "actor_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 9,
+          "room_type": "Monster",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        },
+        "selected_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 11,
+          "room_type": "Elite",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        },
+        "actor_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 17,
+          "room_type": "Boss",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        },
+        "selected_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 17,
+          "room_type": "Boss",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        }
+      },
+      "encounter_changed": false,
+      "previous_all_discovery_losses": false,
+      "rescued": true,
+      "lost": false
+    },
+    {
+      "case": "train-A5-001:prepare",
+      "seed": "e149_train_Ironclad_A5_001",
+      "ascension": 5,
+      "mode": "prepare",
+      "entries": {
+        "actor_actor": {
+          "state_hash": "f8b6019cb8887f54aa5a838265cb2391975b632c354eabf118823884f0c72f39",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 9,
+          "enemies": [
+            "Snapping Jaxfruit",
+            "Flyconid"
+          ],
+          "hp": 42,
+          "max_hp": 91,
+          "deck_hash": "bebaad2d6907a91ed406488ed73c43359d8a7795d33964124731b0378df0fa05",
+          "potions": []
+        },
+        "selected_actor": {
+          "state_hash": "f8b6019cb8887f54aa5a838265cb2391975b632c354eabf118823884f0c72f39",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 9,
+          "enemies": [
+            "Snapping Jaxfruit",
+            "Flyconid"
+          ],
+          "hp": 42,
+          "max_hp": 91,
+          "deck_hash": "bebaad2d6907a91ed406488ed73c43359d8a7795d33964124731b0378df0fa05",
+          "potions": []
+        },
+        "actor_program": {
+          "state_hash": "f8b6019cb8887f54aa5a838265cb2391975b632c354eabf118823884f0c72f39",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 9,
+          "enemies": [
+            "Snapping Jaxfruit",
+            "Flyconid"
+          ],
+          "hp": 42,
+          "max_hp": 91,
+          "deck_hash": "bebaad2d6907a91ed406488ed73c43359d8a7795d33964124731b0378df0fa05",
+          "potions": []
+        },
+        "selected_program": {
+          "state_hash": "f8b6019cb8887f54aa5a838265cb2391975b632c354eabf118823884f0c72f39",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 9,
+          "enemies": [
+            "Snapping Jaxfruit",
+            "Flyconid"
+          ],
+          "hp": 42,
+          "max_hp": 91,
+          "deck_hash": "bebaad2d6907a91ed406488ed73c43359d8a7795d33964124731b0378df0fa05",
+          "potions": []
+        }
+      },
+      "local": {
+        "actor_actor": {
+          "status": "defeat",
+          "steps": 25,
+          "hp": 0,
+          "max_hp": 91,
+          "gold": 157,
+          "potions": [],
+          "deck_hash": "bebaad2d6907a91ed406488ed73c43359d8a7795d33964124731b0378df0fa05",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "ea1a861c4c78f693aeb769b3d3bcd15f1d0fe0833d2d4e73372d2cfa3dd807cc",
+          "transition_hash": "19dfc2487c727884095062043c3226ea78e228668718accdd5767d8c0adafe37",
+          "utility": -1.0
+        },
+        "selected_actor": {
+          "status": "defeat",
+          "steps": 25,
+          "hp": 0,
+          "max_hp": 91,
+          "gold": 157,
+          "potions": [],
+          "deck_hash": "bebaad2d6907a91ed406488ed73c43359d8a7795d33964124731b0378df0fa05",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "ea1a861c4c78f693aeb769b3d3bcd15f1d0fe0833d2d4e73372d2cfa3dd807cc",
+          "transition_hash": "19dfc2487c727884095062043c3226ea78e228668718accdd5767d8c0adafe37",
+          "utility": -1.0
+        },
+        "actor_program": {
+          "status": "clear",
+          "steps": 33,
+          "hp": 17,
+          "max_hp": 91,
+          "gold": 165,
+          "potions": [],
+          "deck_hash": "bebaad2d6907a91ed406488ed73c43359d8a7795d33964124731b0378df0fa05",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "38d1cd9fda02a8fdff0d2da075933d8bfbfb9e5e72a105f6ef8e8ce1ba668df2",
+          "transition_hash": "d8e8cab4ea6e83594b7c23701860abcf3b8f8c7e6106b6efe5b4887437c80fb6",
+          "utility": 1.0467032967032968
+        },
+        "selected_program": {
+          "status": "clear",
+          "steps": 33,
+          "hp": 17,
+          "max_hp": 91,
+          "gold": 165,
+          "potions": [],
+          "deck_hash": "bebaad2d6907a91ed406488ed73c43359d8a7795d33964124731b0378df0fa05",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "38d1cd9fda02a8fdff0d2da075933d8bfbfb9e5e72a105f6ef8e8ce1ba668df2",
+          "transition_hash": "d8e8cab4ea6e83594b7c23701860abcf3b8f8c7e6106b6efe5b4887437c80fb6",
+          "utility": 1.0467032967032968
+        }
+      },
+      "act2": {
+        "actor_actor": false,
+        "selected_actor": false,
+        "actor_program": false,
+        "selected_program": false
+      },
+      "final_context": {
+        "actor_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 9,
+          "room_type": "Monster",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        },
+        "selected_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 9,
+          "room_type": "Monster",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        },
+        "actor_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 17,
+          "room_type": "Boss",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        },
+        "selected_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 17,
+          "room_type": "Boss",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        }
+      },
+      "encounter_changed": false,
+      "previous_all_discovery_losses": false,
+      "rescued": true,
+      "lost": false
+    },
+    {
+      "case": "train-A5-002:combat",
+      "seed": "e149_train_Ironclad_A5_002",
+      "ascension": 5,
+      "mode": "combat",
+      "entries": {
+        "actor_actor": {
+          "state_hash": "92b9acc476a0840c390bbe1e74f5c78cd0f1cb7c15e11b92aede3c7dbbf68e24",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 6,
+          "enemies": [
+            "Nibbit",
+            "Nibbit"
+          ],
+          "hp": 34,
+          "max_hp": 80,
+          "deck_hash": "d2d2f812b3e64fa87e2478ba3a5c1fd7f89799f1f3cebd7757072271ae56d853",
+          "potions": []
+        },
+        "selected_actor": {
+          "state_hash": "92b9acc476a0840c390bbe1e74f5c78cd0f1cb7c15e11b92aede3c7dbbf68e24",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 6,
+          "enemies": [
+            "Nibbit",
+            "Nibbit"
+          ],
+          "hp": 34,
+          "max_hp": 80,
+          "deck_hash": "d2d2f812b3e64fa87e2478ba3a5c1fd7f89799f1f3cebd7757072271ae56d853",
+          "potions": []
+        },
+        "actor_program": {
+          "state_hash": "92b9acc476a0840c390bbe1e74f5c78cd0f1cb7c15e11b92aede3c7dbbf68e24",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 6,
+          "enemies": [
+            "Nibbit",
+            "Nibbit"
+          ],
+          "hp": 34,
+          "max_hp": 80,
+          "deck_hash": "d2d2f812b3e64fa87e2478ba3a5c1fd7f89799f1f3cebd7757072271ae56d853",
+          "potions": []
+        },
+        "selected_program": {
+          "state_hash": "92b9acc476a0840c390bbe1e74f5c78cd0f1cb7c15e11b92aede3c7dbbf68e24",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 6,
+          "enemies": [
+            "Nibbit",
+            "Nibbit"
+          ],
+          "hp": 34,
+          "max_hp": 80,
+          "deck_hash": "d2d2f812b3e64fa87e2478ba3a5c1fd7f89799f1f3cebd7757072271ae56d853",
+          "potions": []
+        }
+      },
+      "local": {
+        "actor_actor": {
+          "status": "defeat",
+          "steps": 26,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 140,
+          "potions": [],
+          "deck_hash": "d2d2f812b3e64fa87e2478ba3a5c1fd7f89799f1f3cebd7757072271ae56d853",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "bcfd8988bb1005c2ed16774d1465c540b27b04fe35f18ad6369a1d7146640886",
+          "transition_hash": "b34072d7b6b4ff372d1cfa020db15d65fa73c0001047e5b407b84f9269d9ef88",
+          "utility": -1.0
+        },
+        "selected_actor": {
+          "status": "defeat",
+          "steps": 26,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 140,
+          "potions": [],
+          "deck_hash": "d2d2f812b3e64fa87e2478ba3a5c1fd7f89799f1f3cebd7757072271ae56d853",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "bcfd8988bb1005c2ed16774d1465c540b27b04fe35f18ad6369a1d7146640886",
+          "transition_hash": "b34072d7b6b4ff372d1cfa020db15d65fa73c0001047e5b407b84f9269d9ef88",
+          "utility": -1.0
+        },
+        "actor_program": {
+          "status": "clear",
+          "steps": 32,
+          "hp": 11,
+          "max_hp": 80,
+          "gold": 155,
+          "potions": [],
+          "deck_hash": "d2d2f812b3e64fa87e2478ba3a5c1fd7f89799f1f3cebd7757072271ae56d853",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "b9bc9c8740a255ff9ffe3fe25205d031e4a2ed71214056a2e7a4282afe3500ba",
+          "transition_hash": "a070b4dc1356b4dfd2c5dbea74f2c89d37590fba4ad48c1ecdd79bb4f7e6373d",
+          "utility": 1.034375
+        },
+        "selected_program": {
+          "status": "clear",
+          "steps": 32,
+          "hp": 11,
+          "max_hp": 80,
+          "gold": 155,
+          "potions": [],
+          "deck_hash": "d2d2f812b3e64fa87e2478ba3a5c1fd7f89799f1f3cebd7757072271ae56d853",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "b9bc9c8740a255ff9ffe3fe25205d031e4a2ed71214056a2e7a4282afe3500ba",
+          "transition_hash": "a070b4dc1356b4dfd2c5dbea74f2c89d37590fba4ad48c1ecdd79bb4f7e6373d",
+          "utility": 1.034375
+        }
+      },
+      "act2": {
+        "actor_actor": false,
+        "selected_actor": false,
+        "actor_program": false,
+        "selected_program": false
+      },
+      "final_context": {
+        "actor_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 6,
+          "room_type": "Monster",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        },
+        "selected_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 6,
+          "room_type": "Monster",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        },
+        "actor_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 17,
+          "room_type": "Boss",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        },
+        "selected_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 17,
+          "room_type": "Boss",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        }
+      },
+      "encounter_changed": false,
+      "previous_all_discovery_losses": true,
+      "rescued": true,
+      "lost": false
+    },
+    {
+      "case": "train-A5-002:prepare",
+      "seed": "e149_train_Ironclad_A5_002",
+      "ascension": 5,
+      "mode": "prepare",
+      "entries": {
+        "actor_actor": {
+          "state_hash": "92b9acc476a0840c390bbe1e74f5c78cd0f1cb7c15e11b92aede3c7dbbf68e24",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 6,
+          "enemies": [
+            "Nibbit",
+            "Nibbit"
+          ],
+          "hp": 34,
+          "max_hp": 80,
+          "deck_hash": "d2d2f812b3e64fa87e2478ba3a5c1fd7f89799f1f3cebd7757072271ae56d853",
+          "potions": []
+        },
+        "selected_actor": {
+          "state_hash": "92b9acc476a0840c390bbe1e74f5c78cd0f1cb7c15e11b92aede3c7dbbf68e24",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 6,
+          "enemies": [
+            "Nibbit",
+            "Nibbit"
+          ],
+          "hp": 34,
+          "max_hp": 80,
+          "deck_hash": "d2d2f812b3e64fa87e2478ba3a5c1fd7f89799f1f3cebd7757072271ae56d853",
+          "potions": []
+        },
+        "actor_program": {
+          "state_hash": "92b9acc476a0840c390bbe1e74f5c78cd0f1cb7c15e11b92aede3c7dbbf68e24",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 6,
+          "enemies": [
+            "Nibbit",
+            "Nibbit"
+          ],
+          "hp": 34,
+          "max_hp": 80,
+          "deck_hash": "d2d2f812b3e64fa87e2478ba3a5c1fd7f89799f1f3cebd7757072271ae56d853",
+          "potions": []
+        },
+        "selected_program": {
+          "state_hash": "92b9acc476a0840c390bbe1e74f5c78cd0f1cb7c15e11b92aede3c7dbbf68e24",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 6,
+          "enemies": [
+            "Nibbit",
+            "Nibbit"
+          ],
+          "hp": 34,
+          "max_hp": 80,
+          "deck_hash": "d2d2f812b3e64fa87e2478ba3a5c1fd7f89799f1f3cebd7757072271ae56d853",
+          "potions": []
+        }
+      },
+      "local": {
+        "actor_actor": {
+          "status": "defeat",
+          "steps": 28,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 140,
+          "potions": [],
+          "deck_hash": "d2d2f812b3e64fa87e2478ba3a5c1fd7f89799f1f3cebd7757072271ae56d853",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "bcfd8988bb1005c2ed16774d1465c540b27b04fe35f18ad6369a1d7146640886",
+          "transition_hash": "6aa9a59f23a247ad75805186b6ebc1d3e25836605a92f898ea941524a8fbad63",
+          "utility": -1.0
+        },
+        "selected_actor": {
+          "status": "defeat",
+          "steps": 28,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 140,
+          "potions": [],
+          "deck_hash": "d2d2f812b3e64fa87e2478ba3a5c1fd7f89799f1f3cebd7757072271ae56d853",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "bcfd8988bb1005c2ed16774d1465c540b27b04fe35f18ad6369a1d7146640886",
+          "transition_hash": "6aa9a59f23a247ad75805186b6ebc1d3e25836605a92f898ea941524a8fbad63",
+          "utility": -1.0
+        },
+        "actor_program": {
+          "status": "clear",
+          "steps": 34,
+          "hp": 11,
+          "max_hp": 80,
+          "gold": 155,
+          "potions": [],
+          "deck_hash": "d2d2f812b3e64fa87e2478ba3a5c1fd7f89799f1f3cebd7757072271ae56d853",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "b9bc9c8740a255ff9ffe3fe25205d031e4a2ed71214056a2e7a4282afe3500ba",
+          "transition_hash": "d403f7a95c71cbb67045ca8416dd429ea9ea6510a2f222b591975b37aead43c2",
+          "utility": 1.034375
+        },
+        "selected_program": {
+          "status": "clear",
+          "steps": 34,
+          "hp": 11,
+          "max_hp": 80,
+          "gold": 155,
+          "potions": [],
+          "deck_hash": "d2d2f812b3e64fa87e2478ba3a5c1fd7f89799f1f3cebd7757072271ae56d853",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "b9bc9c8740a255ff9ffe3fe25205d031e4a2ed71214056a2e7a4282afe3500ba",
+          "transition_hash": "d403f7a95c71cbb67045ca8416dd429ea9ea6510a2f222b591975b37aead43c2",
+          "utility": 1.034375
+        }
+      },
+      "act2": {
+        "actor_actor": false,
+        "selected_actor": false,
+        "actor_program": false,
+        "selected_program": false
+      },
+      "final_context": {
+        "actor_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 6,
+          "room_type": "Monster",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        },
+        "selected_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 6,
+          "room_type": "Monster",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        },
+        "actor_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 17,
+          "room_type": "Boss",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        },
+        "selected_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 17,
+          "room_type": "Boss",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        }
+      },
+      "encounter_changed": false,
+      "previous_all_discovery_losses": true,
+      "rescued": true,
+      "lost": false
+    },
+    {
+      "case": "train-A5-003:combat",
+      "seed": "e149_train_Ironclad_A5_003",
+      "ascension": 5,
+      "mode": "combat",
+      "entries": {
+        "actor_actor": {
+          "state_hash": "6ef8c63b252bd4cf67f38ce2c1bf01bb991a4c933d96076f045d937f021c5633",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 9,
+          "enemies": [
+            "Fogmog"
+          ],
+          "hp": 32,
+          "max_hp": 80,
+          "deck_hash": "ca72473ae3b657a35573c8a40de9f8a32638aa761c363adec37d55c27c856e89",
+          "potions": []
+        },
+        "selected_actor": {
+          "state_hash": "6ef8c63b252bd4cf67f38ce2c1bf01bb991a4c933d96076f045d937f021c5633",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 9,
+          "enemies": [
+            "Fogmog"
+          ],
+          "hp": 32,
+          "max_hp": 80,
+          "deck_hash": "ca72473ae3b657a35573c8a40de9f8a32638aa761c363adec37d55c27c856e89",
+          "potions": []
+        },
+        "actor_program": {
+          "state_hash": "6ef8c63b252bd4cf67f38ce2c1bf01bb991a4c933d96076f045d937f021c5633",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 9,
+          "enemies": [
+            "Fogmog"
+          ],
+          "hp": 32,
+          "max_hp": 80,
+          "deck_hash": "ca72473ae3b657a35573c8a40de9f8a32638aa761c363adec37d55c27c856e89",
+          "potions": []
+        },
+        "selected_program": {
+          "state_hash": "6ef8c63b252bd4cf67f38ce2c1bf01bb991a4c933d96076f045d937f021c5633",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 9,
+          "enemies": [
+            "Fogmog"
+          ],
+          "hp": 32,
+          "max_hp": 80,
+          "deck_hash": "ca72473ae3b657a35573c8a40de9f8a32638aa761c363adec37d55c27c856e89",
+          "potions": []
+        }
+      },
+      "local": {
+        "actor_actor": {
+          "status": "defeat",
+          "steps": 27,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 184,
+          "potions": [],
+          "deck_hash": "ca72473ae3b657a35573c8a40de9f8a32638aa761c363adec37d55c27c856e89",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "8644c8a46aebff9a6acdd7bc4368042096343873c6e561e835e76bc001b5d63c",
+          "transition_hash": "080d90dd4cb04a88cc9a053a8716afcbe43ca3d6d22e3d6add488f3b09a2a891",
+          "utility": -1.0
+        },
+        "selected_actor": {
+          "status": "defeat",
+          "steps": 27,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 184,
+          "potions": [],
+          "deck_hash": "ca72473ae3b657a35573c8a40de9f8a32638aa761c363adec37d55c27c856e89",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "8644c8a46aebff9a6acdd7bc4368042096343873c6e561e835e76bc001b5d63c",
+          "transition_hash": "fab1f98f12cc929e3a79e3792e337ecaa386a6883438ea350c35ea52ac0bd69b",
+          "utility": -1.0
+        },
+        "actor_program": {
+          "status": "clear",
+          "steps": 19,
+          "hp": 15,
+          "max_hp": 80,
+          "gold": 194,
+          "potions": [],
+          "deck_hash": "ca72473ae3b657a35573c8a40de9f8a32638aa761c363adec37d55c27c856e89",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "da93f4fea7c28816a96ab4a446f29f23993b5655fa66a0a274415aec31a897bc",
+          "transition_hash": "988f1d6c2bda377c20a4d94d5bdac0d866ddc08e00b9aa4a471666f3895ab599",
+          "utility": 1.046875
+        },
+        "selected_program": {
+          "status": "clear",
+          "steps": 16,
+          "hp": 21,
+          "max_hp": 80,
+          "gold": 194,
+          "potions": [],
+          "deck_hash": "ca72473ae3b657a35573c8a40de9f8a32638aa761c363adec37d55c27c856e89",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "af08b955aecbacd16ef07d11e64a80b6a2e52bea01b2952701879f99331d6571",
+          "transition_hash": "655267648f07eb6a9daf961c21a617060e2181102ae35884439d0af8dc44e559",
+          "utility": 1.065625
+        }
+      },
+      "act2": {
+        "actor_actor": false,
+        "selected_actor": false,
+        "actor_program": false,
+        "selected_program": false
+      },
+      "final_context": {
+        "actor_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 9,
+          "room_type": "Monster",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        },
+        "selected_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 9,
+          "room_type": "Monster",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        },
+        "actor_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 11,
+          "room_type": "Elite",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        },
+        "selected_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 11,
+          "room_type": "Elite",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        }
+      },
+      "encounter_changed": false,
+      "previous_all_discovery_losses": false,
+      "rescued": true,
+      "lost": false
+    },
+    {
+      "case": "train-A5-003:prepare",
+      "seed": "e149_train_Ironclad_A5_003",
+      "ascension": 5,
+      "mode": "prepare",
+      "entries": {
+        "actor_actor": {
+          "state_hash": "6ef8c63b252bd4cf67f38ce2c1bf01bb991a4c933d96076f045d937f021c5633",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 9,
+          "enemies": [
+            "Fogmog"
+          ],
+          "hp": 32,
+          "max_hp": 80,
+          "deck_hash": "ca72473ae3b657a35573c8a40de9f8a32638aa761c363adec37d55c27c856e89",
+          "potions": []
+        },
+        "selected_actor": {
+          "state_hash": "3416572a0b5cc508eb050d2ac3ea4995a278c254b185e41122ba5e74549effcf",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 9,
+          "enemies": [
+            "Fogmog"
+          ],
+          "hp": 32,
+          "max_hp": 80,
+          "deck_hash": "387fe27e747b932177a2d2106c7529f61642367cf9f5eb629396425d7231edd0",
+          "potions": []
+        },
+        "actor_program": {
+          "state_hash": "6ef8c63b252bd4cf67f38ce2c1bf01bb991a4c933d96076f045d937f021c5633",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 9,
+          "enemies": [
+            "Fogmog"
+          ],
+          "hp": 32,
+          "max_hp": 80,
+          "deck_hash": "ca72473ae3b657a35573c8a40de9f8a32638aa761c363adec37d55c27c856e89",
+          "potions": []
+        },
+        "selected_program": {
+          "state_hash": "3416572a0b5cc508eb050d2ac3ea4995a278c254b185e41122ba5e74549effcf",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 9,
+          "enemies": [
+            "Fogmog"
+          ],
+          "hp": 32,
+          "max_hp": 80,
+          "deck_hash": "387fe27e747b932177a2d2106c7529f61642367cf9f5eb629396425d7231edd0",
+          "potions": []
+        }
+      },
+      "local": {
+        "actor_actor": {
+          "status": "defeat",
+          "steps": 31,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 184,
+          "potions": [],
+          "deck_hash": "ca72473ae3b657a35573c8a40de9f8a32638aa761c363adec37d55c27c856e89",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "8644c8a46aebff9a6acdd7bc4368042096343873c6e561e835e76bc001b5d63c",
+          "transition_hash": "51ed4d945335825c1efedee401f32d19f182d9f9118c541711c9a912c67492b4",
+          "utility": -1.0
+        },
+        "selected_actor": {
+          "status": "defeat",
+          "steps": 29,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 184,
+          "potions": [],
+          "deck_hash": "387fe27e747b932177a2d2106c7529f61642367cf9f5eb629396425d7231edd0",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "2cc6c0f7c29941fd1f8bcb678204a44f83eb185199f8763bbc5350c41c36b5c4",
+          "transition_hash": "0c21de110da1b85ff48b23e3f7a361afb75377a6d3fd99fbdd055a26eae55508",
+          "utility": -1.0
+        },
+        "actor_program": {
+          "status": "clear",
+          "steps": 20,
+          "hp": 21,
+          "max_hp": 80,
+          "gold": 194,
+          "potions": [],
+          "deck_hash": "ca72473ae3b657a35573c8a40de9f8a32638aa761c363adec37d55c27c856e89",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "af08b955aecbacd16ef07d11e64a80b6a2e52bea01b2952701879f99331d6571",
+          "transition_hash": "23f20095c43c11a908f71e49d44e06ad31c5aeed688bcdfa2add9a927f533aa5",
+          "utility": 1.065625
+        },
+        "selected_program": {
+          "status": "clear",
+          "steps": 19,
+          "hp": 37,
+          "max_hp": 80,
+          "gold": 194,
+          "potions": [],
+          "deck_hash": "387fe27e747b932177a2d2106c7529f61642367cf9f5eb629396425d7231edd0",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "5526e9d2dcdde60ae5059e024587ec1d0dfca9e380afda17976e85cecbe2090b",
+          "transition_hash": "5acf14e00d5a988d4d5ac7481debfc9ed213345602e72204555edd38e4dc8bf4",
+          "utility": 1.115625
+        }
+      },
+      "act2": {
+        "actor_actor": false,
+        "selected_actor": false,
+        "actor_program": false,
+        "selected_program": false
+      },
+      "final_context": {
+        "actor_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 9,
+          "room_type": "Monster",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        },
+        "selected_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 9,
+          "room_type": "Monster",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        },
+        "actor_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 11,
+          "room_type": "Elite",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        },
+        "selected_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 17,
+          "room_type": "Boss",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        }
+      },
+      "encounter_changed": false,
+      "previous_all_discovery_losses": false,
+      "rescued": true,
+      "lost": false
+    },
+    {
+      "case": "train-A5-004:combat",
+      "seed": "e149_train_Ironclad_A5_004",
+      "ascension": 5,
+      "mode": "combat",
+      "entries": {
+        "actor_actor": {
+          "state_hash": "5d7cfb685836fbd0c15f41fe8114cfd37224d60d3c820a3a36d2d272e57eb94d",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 15,
+          "enemies": [
+            "Bygone Effigy"
+          ],
+          "hp": 19,
+          "max_hp": 80,
+          "deck_hash": "a54517766490eb9c399962f5b177b0d7f7eb667ce0c968b4abcb1c94b1fbaa5d",
+          "potions": []
+        },
+        "selected_actor": {
+          "state_hash": "5d7cfb685836fbd0c15f41fe8114cfd37224d60d3c820a3a36d2d272e57eb94d",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 15,
+          "enemies": [
+            "Bygone Effigy"
+          ],
+          "hp": 19,
+          "max_hp": 80,
+          "deck_hash": "a54517766490eb9c399962f5b177b0d7f7eb667ce0c968b4abcb1c94b1fbaa5d",
+          "potions": []
+        },
+        "actor_program": {
+          "state_hash": "5d7cfb685836fbd0c15f41fe8114cfd37224d60d3c820a3a36d2d272e57eb94d",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 15,
+          "enemies": [
+            "Bygone Effigy"
+          ],
+          "hp": 19,
+          "max_hp": 80,
+          "deck_hash": "a54517766490eb9c399962f5b177b0d7f7eb667ce0c968b4abcb1c94b1fbaa5d",
+          "potions": []
+        },
+        "selected_program": {
+          "state_hash": "5d7cfb685836fbd0c15f41fe8114cfd37224d60d3c820a3a36d2d272e57eb94d",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 15,
+          "enemies": [
+            "Bygone Effigy"
+          ],
+          "hp": 19,
+          "max_hp": 80,
+          "deck_hash": "a54517766490eb9c399962f5b177b0d7f7eb667ce0c968b4abcb1c94b1fbaa5d",
+          "potions": []
+        }
+      },
+      "local": {
+        "actor_actor": {
+          "status": "defeat",
+          "steps": 16,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 302,
+          "potions": [],
+          "deck_hash": "a54517766490eb9c399962f5b177b0d7f7eb667ce0c968b4abcb1c94b1fbaa5d",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "99b9b93569d0738bec9ef82487bd7f24baede20c07ad34cf11da6096642e54ca",
+          "transition_hash": "78678c0511991db944b407583ee70cf124c545076282741a0f477d5cabf6c41e",
+          "utility": -1.0
+        },
+        "selected_actor": {
+          "status": "defeat",
+          "steps": 16,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 302,
+          "potions": [],
+          "deck_hash": "a54517766490eb9c399962f5b177b0d7f7eb667ce0c968b4abcb1c94b1fbaa5d",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "99b9b93569d0738bec9ef82487bd7f24baede20c07ad34cf11da6096642e54ca",
+          "transition_hash": "78678c0511991db944b407583ee70cf124c545076282741a0f477d5cabf6c41e",
+          "utility": -1.0
+        },
+        "actor_program": {
+          "status": "defeat",
+          "steps": 16,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 302,
+          "potions": [],
+          "deck_hash": "a54517766490eb9c399962f5b177b0d7f7eb667ce0c968b4abcb1c94b1fbaa5d",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "99b9b93569d0738bec9ef82487bd7f24baede20c07ad34cf11da6096642e54ca",
+          "transition_hash": "5e280874bcb39fca25ae68913f3e3fe938fd9b9445e9432416376a9ce24e17a2",
+          "utility": -1.0
+        },
+        "selected_program": {
+          "status": "defeat",
+          "steps": 16,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 302,
+          "potions": [],
+          "deck_hash": "a54517766490eb9c399962f5b177b0d7f7eb667ce0c968b4abcb1c94b1fbaa5d",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "99b9b93569d0738bec9ef82487bd7f24baede20c07ad34cf11da6096642e54ca",
+          "transition_hash": "5e280874bcb39fca25ae68913f3e3fe938fd9b9445e9432416376a9ce24e17a2",
+          "utility": -1.0
+        }
+      },
+      "act2": {
+        "actor_actor": false,
+        "selected_actor": false,
+        "actor_program": false,
+        "selected_program": false
+      },
+      "final_context": {
+        "actor_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 15,
+          "room_type": "Elite",
+          "boss": {
+            "id": "CEREMONIAL_BEAST_BOSS",
+            "name": "Ceremonial Beast"
+          }
+        },
+        "selected_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 15,
+          "room_type": "Elite",
+          "boss": {
+            "id": "CEREMONIAL_BEAST_BOSS",
+            "name": "Ceremonial Beast"
+          }
+        },
+        "actor_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 15,
+          "room_type": "Elite",
+          "boss": {
+            "id": "CEREMONIAL_BEAST_BOSS",
+            "name": "Ceremonial Beast"
+          }
+        },
+        "selected_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 15,
+          "room_type": "Elite",
+          "boss": {
+            "id": "CEREMONIAL_BEAST_BOSS",
+            "name": "Ceremonial Beast"
+          }
+        }
+      },
+      "encounter_changed": false,
+      "previous_all_discovery_losses": true,
+      "rescued": false,
+      "lost": false
+    },
+    {
+      "case": "train-A5-004:prepare",
+      "seed": "e149_train_Ironclad_A5_004",
+      "ascension": 5,
+      "mode": "prepare",
+      "entries": {
+        "actor_actor": {
+          "state_hash": "5d7cfb685836fbd0c15f41fe8114cfd37224d60d3c820a3a36d2d272e57eb94d",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 15,
+          "enemies": [
+            "Bygone Effigy"
+          ],
+          "hp": 19,
+          "max_hp": 80,
+          "deck_hash": "a54517766490eb9c399962f5b177b0d7f7eb667ce0c968b4abcb1c94b1fbaa5d",
+          "potions": []
+        },
+        "selected_actor": {
+          "state_hash": "5d7cfb685836fbd0c15f41fe8114cfd37224d60d3c820a3a36d2d272e57eb94d",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 15,
+          "enemies": [
+            "Bygone Effigy"
+          ],
+          "hp": 19,
+          "max_hp": 80,
+          "deck_hash": "a54517766490eb9c399962f5b177b0d7f7eb667ce0c968b4abcb1c94b1fbaa5d",
+          "potions": []
+        },
+        "actor_program": {
+          "state_hash": "5d7cfb685836fbd0c15f41fe8114cfd37224d60d3c820a3a36d2d272e57eb94d",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 15,
+          "enemies": [
+            "Bygone Effigy"
+          ],
+          "hp": 19,
+          "max_hp": 80,
+          "deck_hash": "a54517766490eb9c399962f5b177b0d7f7eb667ce0c968b4abcb1c94b1fbaa5d",
+          "potions": []
+        },
+        "selected_program": {
+          "state_hash": "5d7cfb685836fbd0c15f41fe8114cfd37224d60d3c820a3a36d2d272e57eb94d",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 15,
+          "enemies": [
+            "Bygone Effigy"
+          ],
+          "hp": 19,
+          "max_hp": 80,
+          "deck_hash": "a54517766490eb9c399962f5b177b0d7f7eb667ce0c968b4abcb1c94b1fbaa5d",
+          "potions": []
+        }
+      },
+      "local": {
+        "actor_actor": {
+          "status": "defeat",
+          "steps": 18,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 302,
+          "potions": [],
+          "deck_hash": "a54517766490eb9c399962f5b177b0d7f7eb667ce0c968b4abcb1c94b1fbaa5d",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "99b9b93569d0738bec9ef82487bd7f24baede20c07ad34cf11da6096642e54ca",
+          "transition_hash": "e1c237aadaada74c56b1c37db0c6195dff60fd065c8cd49a71cd8cddec118f4c",
+          "utility": -1.0
+        },
+        "selected_actor": {
+          "status": "defeat",
+          "steps": 18,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 302,
+          "potions": [],
+          "deck_hash": "a54517766490eb9c399962f5b177b0d7f7eb667ce0c968b4abcb1c94b1fbaa5d",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "99b9b93569d0738bec9ef82487bd7f24baede20c07ad34cf11da6096642e54ca",
+          "transition_hash": "e1c237aadaada74c56b1c37db0c6195dff60fd065c8cd49a71cd8cddec118f4c",
+          "utility": -1.0
+        },
+        "actor_program": {
+          "status": "defeat",
+          "steps": 18,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 302,
+          "potions": [],
+          "deck_hash": "a54517766490eb9c399962f5b177b0d7f7eb667ce0c968b4abcb1c94b1fbaa5d",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "99b9b93569d0738bec9ef82487bd7f24baede20c07ad34cf11da6096642e54ca",
+          "transition_hash": "0f8bc757b77056152c309b649706854aeff2906d4e546830af7861dafa26b539",
+          "utility": -1.0
+        },
+        "selected_program": {
+          "status": "defeat",
+          "steps": 18,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 302,
+          "potions": [],
+          "deck_hash": "a54517766490eb9c399962f5b177b0d7f7eb667ce0c968b4abcb1c94b1fbaa5d",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "99b9b93569d0738bec9ef82487bd7f24baede20c07ad34cf11da6096642e54ca",
+          "transition_hash": "0f8bc757b77056152c309b649706854aeff2906d4e546830af7861dafa26b539",
+          "utility": -1.0
+        }
+      },
+      "act2": {
+        "actor_actor": false,
+        "selected_actor": false,
+        "actor_program": false,
+        "selected_program": false
+      },
+      "final_context": {
+        "actor_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 15,
+          "room_type": "Elite",
+          "boss": {
+            "id": "CEREMONIAL_BEAST_BOSS",
+            "name": "Ceremonial Beast"
+          }
+        },
+        "selected_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 15,
+          "room_type": "Elite",
+          "boss": {
+            "id": "CEREMONIAL_BEAST_BOSS",
+            "name": "Ceremonial Beast"
+          }
+        },
+        "actor_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 15,
+          "room_type": "Elite",
+          "boss": {
+            "id": "CEREMONIAL_BEAST_BOSS",
+            "name": "Ceremonial Beast"
+          }
+        },
+        "selected_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 15,
+          "room_type": "Elite",
+          "boss": {
+            "id": "CEREMONIAL_BEAST_BOSS",
+            "name": "Ceremonial Beast"
+          }
+        }
+      },
+      "encounter_changed": false,
+      "previous_all_discovery_losses": true,
+      "rescued": false,
+      "lost": false
+    },
+    {
+      "case": "train-A10-000:combat",
+      "seed": "e149_train_Ironclad_A10_000",
+      "ascension": 10,
+      "mode": "combat",
+      "entries": {
+        "actor_actor": {
+          "state_hash": "53acaffd83facbce87896762097d2f9405b0797e022f5da32d7081d43245a0e8",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 7,
+          "enemies": [
+            "Byrdonis"
+          ],
+          "hp": 32,
+          "max_hp": 87,
+          "deck_hash": "5498a85c43eac5220a765de11d2736b7102a1a47a23320d473a14afc3eb031c1",
+          "potions": []
+        },
+        "selected_actor": {
+          "state_hash": "53acaffd83facbce87896762097d2f9405b0797e022f5da32d7081d43245a0e8",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 7,
+          "enemies": [
+            "Byrdonis"
+          ],
+          "hp": 32,
+          "max_hp": 87,
+          "deck_hash": "5498a85c43eac5220a765de11d2736b7102a1a47a23320d473a14afc3eb031c1",
+          "potions": []
+        },
+        "actor_program": {
+          "state_hash": "53acaffd83facbce87896762097d2f9405b0797e022f5da32d7081d43245a0e8",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 7,
+          "enemies": [
+            "Byrdonis"
+          ],
+          "hp": 32,
+          "max_hp": 87,
+          "deck_hash": "5498a85c43eac5220a765de11d2736b7102a1a47a23320d473a14afc3eb031c1",
+          "potions": []
+        },
+        "selected_program": {
+          "state_hash": "53acaffd83facbce87896762097d2f9405b0797e022f5da32d7081d43245a0e8",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 7,
+          "enemies": [
+            "Byrdonis"
+          ],
+          "hp": 32,
+          "max_hp": 87,
+          "deck_hash": "5498a85c43eac5220a765de11d2736b7102a1a47a23320d473a14afc3eb031c1",
+          "potions": []
+        }
+      },
+      "local": {
+        "actor_actor": {
+          "status": "defeat",
+          "steps": 13,
+          "hp": 0,
+          "max_hp": 87,
+          "gold": 146,
+          "potions": [],
+          "deck_hash": "5498a85c43eac5220a765de11d2736b7102a1a47a23320d473a14afc3eb031c1",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "e5b405b89ea2638235f76dcbf4361d5f7728e9418589b3f7fb836bff0a4bfbfa",
+          "transition_hash": "99743225f4cec5d26bd831f7bbe35bfcb50a818f280f24aca77816664c742b97",
+          "utility": -1.0
+        },
+        "selected_actor": {
+          "status": "defeat",
+          "steps": 13,
+          "hp": 0,
+          "max_hp": 87,
+          "gold": 146,
+          "potions": [],
+          "deck_hash": "5498a85c43eac5220a765de11d2736b7102a1a47a23320d473a14afc3eb031c1",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "e5b405b89ea2638235f76dcbf4361d5f7728e9418589b3f7fb836bff0a4bfbfa",
+          "transition_hash": "99743225f4cec5d26bd831f7bbe35bfcb50a818f280f24aca77816664c742b97",
+          "utility": -1.0
+        },
+        "actor_program": {
+          "status": "defeat",
+          "steps": 15,
+          "hp": 0,
+          "max_hp": 87,
+          "gold": 146,
+          "potions": [],
+          "deck_hash": "5498a85c43eac5220a765de11d2736b7102a1a47a23320d473a14afc3eb031c1",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "e5b405b89ea2638235f76dcbf4361d5f7728e9418589b3f7fb836bff0a4bfbfa",
+          "transition_hash": "8c4c86138b5963d58bda53f666d13fddcd7a58df5631a318ba052ba0e4c8f6c1",
+          "utility": -1.0
+        },
+        "selected_program": {
+          "status": "defeat",
+          "steps": 15,
+          "hp": 0,
+          "max_hp": 87,
+          "gold": 146,
+          "potions": [],
+          "deck_hash": "5498a85c43eac5220a765de11d2736b7102a1a47a23320d473a14afc3eb031c1",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "e5b405b89ea2638235f76dcbf4361d5f7728e9418589b3f7fb836bff0a4bfbfa",
+          "transition_hash": "8c4c86138b5963d58bda53f666d13fddcd7a58df5631a318ba052ba0e4c8f6c1",
+          "utility": -1.0
+        }
+      },
+      "act2": {
+        "actor_actor": false,
+        "selected_actor": false,
+        "actor_program": false,
+        "selected_program": false
+      },
+      "final_context": {
+        "actor_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 7,
+          "room_type": "Elite",
+          "boss": {
+            "id": "CEREMONIAL_BEAST_BOSS",
+            "name": "Ceremonial Beast"
+          }
+        },
+        "selected_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 7,
+          "room_type": "Elite",
+          "boss": {
+            "id": "CEREMONIAL_BEAST_BOSS",
+            "name": "Ceremonial Beast"
+          }
+        },
+        "actor_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 7,
+          "room_type": "Elite",
+          "boss": {
+            "id": "CEREMONIAL_BEAST_BOSS",
+            "name": "Ceremonial Beast"
+          }
+        },
+        "selected_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 7,
+          "room_type": "Elite",
+          "boss": {
+            "id": "CEREMONIAL_BEAST_BOSS",
+            "name": "Ceremonial Beast"
+          }
+        }
+      },
+      "encounter_changed": false,
+      "previous_all_discovery_losses": true,
+      "rescued": false,
+      "lost": false
+    },
+    {
+      "case": "train-A10-000:prepare",
+      "seed": "e149_train_Ironclad_A10_000",
+      "ascension": 10,
+      "mode": "prepare",
+      "entries": {
+        "actor_actor": {
+          "state_hash": "53acaffd83facbce87896762097d2f9405b0797e022f5da32d7081d43245a0e8",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 7,
+          "enemies": [
+            "Byrdonis"
+          ],
+          "hp": 32,
+          "max_hp": 87,
+          "deck_hash": "5498a85c43eac5220a765de11d2736b7102a1a47a23320d473a14afc3eb031c1",
+          "potions": []
+        },
+        "selected_actor": {
+          "state_hash": "53acaffd83facbce87896762097d2f9405b0797e022f5da32d7081d43245a0e8",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 7,
+          "enemies": [
+            "Byrdonis"
+          ],
+          "hp": 32,
+          "max_hp": 87,
+          "deck_hash": "5498a85c43eac5220a765de11d2736b7102a1a47a23320d473a14afc3eb031c1",
+          "potions": []
+        },
+        "actor_program": {
+          "state_hash": "4e7b032636bbc5b1128806debd5de6108d373d4be8e2814984f3b05d5cf4a226",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 8,
+          "enemies": [
+            "Fogmog"
+          ],
+          "hp": 58,
+          "max_hp": 87,
+          "deck_hash": "5498a85c43eac5220a765de11d2736b7102a1a47a23320d473a14afc3eb031c1",
+          "potions": []
+        },
+        "selected_program": {
+          "state_hash": "4e7b032636bbc5b1128806debd5de6108d373d4be8e2814984f3b05d5cf4a226",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 8,
+          "enemies": [
+            "Fogmog"
+          ],
+          "hp": 58,
+          "max_hp": 87,
+          "deck_hash": "5498a85c43eac5220a765de11d2736b7102a1a47a23320d473a14afc3eb031c1",
+          "potions": []
+        }
+      },
+      "local": {
+        "actor_actor": {
+          "status": "defeat",
+          "steps": 17,
+          "hp": 0,
+          "max_hp": 87,
+          "gold": 146,
+          "potions": [],
+          "deck_hash": "5498a85c43eac5220a765de11d2736b7102a1a47a23320d473a14afc3eb031c1",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "e5b405b89ea2638235f76dcbf4361d5f7728e9418589b3f7fb836bff0a4bfbfa",
+          "transition_hash": "62a7bac60845517b46956ce285a3d9564b0d39ba6dbc391eece54432f777d83c",
+          "utility": -1.0
+        },
+        "selected_actor": {
+          "status": "defeat",
+          "steps": 17,
+          "hp": 0,
+          "max_hp": 87,
+          "gold": 146,
+          "potions": [],
+          "deck_hash": "5498a85c43eac5220a765de11d2736b7102a1a47a23320d473a14afc3eb031c1",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "e5b405b89ea2638235f76dcbf4361d5f7728e9418589b3f7fb836bff0a4bfbfa",
+          "transition_hash": "62a7bac60845517b46956ce285a3d9564b0d39ba6dbc391eece54432f777d83c",
+          "utility": -1.0
+        },
+        "actor_program": {
+          "status": "clear",
+          "steps": 35,
+          "hp": 36,
+          "max_hp": 87,
+          "gold": 160,
+          "potions": [],
+          "deck_hash": "5498a85c43eac5220a765de11d2736b7102a1a47a23320d473a14afc3eb031c1",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "7976b7574de2d044d1c48a057d2af61dabd3b7a4254608e503d461d9a93ff0cd",
+          "transition_hash": "aee01590b215690e2e0acd12e6ff2d5c748965f76b4c3c081b68f2f3b43d235d",
+          "utility": 1.103448275862069
+        },
+        "selected_program": {
+          "status": "clear",
+          "steps": 35,
+          "hp": 36,
+          "max_hp": 87,
+          "gold": 160,
+          "potions": [],
+          "deck_hash": "5498a85c43eac5220a765de11d2736b7102a1a47a23320d473a14afc3eb031c1",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "7976b7574de2d044d1c48a057d2af61dabd3b7a4254608e503d461d9a93ff0cd",
+          "transition_hash": "aee01590b215690e2e0acd12e6ff2d5c748965f76b4c3c081b68f2f3b43d235d",
+          "utility": 1.103448275862069
+        }
+      },
+      "act2": {
+        "actor_actor": false,
+        "selected_actor": false,
+        "actor_program": false,
+        "selected_program": false
+      },
+      "final_context": {
+        "actor_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 7,
+          "room_type": "Elite",
+          "boss": {
+            "id": "CEREMONIAL_BEAST_BOSS",
+            "name": "Ceremonial Beast"
+          }
+        },
+        "selected_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 7,
+          "room_type": "Elite",
+          "boss": {
+            "id": "CEREMONIAL_BEAST_BOSS",
+            "name": "Ceremonial Beast"
+          }
+        },
+        "actor_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 11,
+          "room_type": "Elite",
+          "boss": {
+            "id": "CEREMONIAL_BEAST_BOSS",
+            "name": "Ceremonial Beast"
+          }
+        },
+        "selected_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 11,
+          "room_type": "Elite",
+          "boss": {
+            "id": "CEREMONIAL_BEAST_BOSS",
+            "name": "Ceremonial Beast"
+          }
+        }
+      },
+      "encounter_changed": true,
+      "previous_all_discovery_losses": true,
+      "rescued": true,
+      "lost": false
+    },
+    {
+      "case": "train-A10-001:combat",
+      "seed": "e149_train_Ironclad_A10_001",
+      "ascension": 10,
+      "mode": "combat",
+      "entries": {
+        "actor_actor": {
+          "state_hash": "a3e2c6e07d0cd33e8851679a33de085a1bad566d6385483be5c1df0673b173b5",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 9,
+          "enemies": [
+            "Bygone Effigy"
+          ],
+          "hp": 39,
+          "max_hp": 80,
+          "deck_hash": "be8339938b501dafe9e0288812cf2ab66581676dbfd50f531a9758093b15067d",
+          "potions": [
+            "SWIFT_POTION"
+          ]
+        },
+        "selected_actor": {
+          "state_hash": "a3e2c6e07d0cd33e8851679a33de085a1bad566d6385483be5c1df0673b173b5",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 9,
+          "enemies": [
+            "Bygone Effigy"
+          ],
+          "hp": 39,
+          "max_hp": 80,
+          "deck_hash": "be8339938b501dafe9e0288812cf2ab66581676dbfd50f531a9758093b15067d",
+          "potions": [
+            "SWIFT_POTION"
+          ]
+        },
+        "actor_program": {
+          "state_hash": "a3e2c6e07d0cd33e8851679a33de085a1bad566d6385483be5c1df0673b173b5",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 9,
+          "enemies": [
+            "Bygone Effigy"
+          ],
+          "hp": 39,
+          "max_hp": 80,
+          "deck_hash": "be8339938b501dafe9e0288812cf2ab66581676dbfd50f531a9758093b15067d",
+          "potions": [
+            "SWIFT_POTION"
+          ]
+        },
+        "selected_program": {
+          "state_hash": "a3e2c6e07d0cd33e8851679a33de085a1bad566d6385483be5c1df0673b173b5",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 9,
+          "enemies": [
+            "Bygone Effigy"
+          ],
+          "hp": 39,
+          "max_hp": 80,
+          "deck_hash": "be8339938b501dafe9e0288812cf2ab66581676dbfd50f531a9758093b15067d",
+          "potions": [
+            "SWIFT_POTION"
+          ]
+        }
+      },
+      "local": {
+        "actor_actor": {
+          "status": "defeat",
+          "steps": 22,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 147,
+          "potions": [],
+          "deck_hash": "be8339938b501dafe9e0288812cf2ab66581676dbfd50f531a9758093b15067d",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "69c6a7b63ef4a33c8e00d032d7a823846ed034a04dee3ce569d5d891aea4c930",
+          "transition_hash": "5a701276af2a73aea7513a5626a4da7aab19aa0cba572aea249c96094fbbed98",
+          "utility": -1.0
+        },
+        "selected_actor": {
+          "status": "defeat",
+          "steps": 22,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 147,
+          "potions": [],
+          "deck_hash": "be8339938b501dafe9e0288812cf2ab66581676dbfd50f531a9758093b15067d",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "69c6a7b63ef4a33c8e00d032d7a823846ed034a04dee3ce569d5d891aea4c930",
+          "transition_hash": "5a701276af2a73aea7513a5626a4da7aab19aa0cba572aea249c96094fbbed98",
+          "utility": -1.0
+        },
+        "actor_program": {
+          "status": "defeat",
+          "steps": 16,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 147,
+          "potions": [],
+          "deck_hash": "be8339938b501dafe9e0288812cf2ab66581676dbfd50f531a9758093b15067d",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "69c6a7b63ef4a33c8e00d032d7a823846ed034a04dee3ce569d5d891aea4c930",
+          "transition_hash": "5d923d7f69ad41d37c6c82ac24ef994efe086d32a2732bafc132f2e7075224ee",
+          "utility": -1.0
+        },
+        "selected_program": {
+          "status": "defeat",
+          "steps": 16,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 147,
+          "potions": [],
+          "deck_hash": "be8339938b501dafe9e0288812cf2ab66581676dbfd50f531a9758093b15067d",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "69c6a7b63ef4a33c8e00d032d7a823846ed034a04dee3ce569d5d891aea4c930",
+          "transition_hash": "5d923d7f69ad41d37c6c82ac24ef994efe086d32a2732bafc132f2e7075224ee",
+          "utility": -1.0
+        }
+      },
+      "act2": {
+        "actor_actor": false,
+        "selected_actor": false,
+        "actor_program": false,
+        "selected_program": false
+      },
+      "final_context": {
+        "actor_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 9,
+          "room_type": "Elite",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        },
+        "selected_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 9,
+          "room_type": "Elite",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        },
+        "actor_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 9,
+          "room_type": "Elite",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        },
+        "selected_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 9,
+          "room_type": "Elite",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        }
+      },
+      "encounter_changed": false,
+      "previous_all_discovery_losses": true,
+      "rescued": false,
+      "lost": false
+    },
+    {
+      "case": "train-A10-001:prepare",
+      "seed": "e149_train_Ironclad_A10_001",
+      "ascension": 10,
+      "mode": "prepare",
+      "entries": {
+        "actor_actor": {
+          "state_hash": "a3e2c6e07d0cd33e8851679a33de085a1bad566d6385483be5c1df0673b173b5",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 9,
+          "enemies": [
+            "Bygone Effigy"
+          ],
+          "hp": 39,
+          "max_hp": 80,
+          "deck_hash": "be8339938b501dafe9e0288812cf2ab66581676dbfd50f531a9758093b15067d",
+          "potions": [
+            "SWIFT_POTION"
+          ]
+        },
+        "selected_actor": {
+          "state_hash": "a3e2c6e07d0cd33e8851679a33de085a1bad566d6385483be5c1df0673b173b5",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 9,
+          "enemies": [
+            "Bygone Effigy"
+          ],
+          "hp": 39,
+          "max_hp": 80,
+          "deck_hash": "be8339938b501dafe9e0288812cf2ab66581676dbfd50f531a9758093b15067d",
+          "potions": [
+            "SWIFT_POTION"
+          ]
+        },
+        "actor_program": {
+          "state_hash": "553847f8503aeef1b4d4ba7e81bfcc3f2ebf70232f7716f289015a21aea59418",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 9,
+          "enemies": [
+            "Inklet",
+            "Inklet",
+            "Inklet"
+          ],
+          "hp": 39,
+          "max_hp": 80,
+          "deck_hash": "be8339938b501dafe9e0288812cf2ab66581676dbfd50f531a9758093b15067d",
+          "potions": [
+            "SWIFT_POTION"
+          ]
+        },
+        "selected_program": {
+          "state_hash": "553847f8503aeef1b4d4ba7e81bfcc3f2ebf70232f7716f289015a21aea59418",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 9,
+          "enemies": [
+            "Inklet",
+            "Inklet",
+            "Inklet"
+          ],
+          "hp": 39,
+          "max_hp": 80,
+          "deck_hash": "be8339938b501dafe9e0288812cf2ab66581676dbfd50f531a9758093b15067d",
+          "potions": [
+            "SWIFT_POTION"
+          ]
+        }
+      },
+      "local": {
+        "actor_actor": {
+          "status": "defeat",
+          "steps": 25,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 147,
+          "potions": [],
+          "deck_hash": "be8339938b501dafe9e0288812cf2ab66581676dbfd50f531a9758093b15067d",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "69c6a7b63ef4a33c8e00d032d7a823846ed034a04dee3ce569d5d891aea4c930",
+          "transition_hash": "a45421a4012b4ff47a732ac718a1cf0d0d46d12cd0c7a83b9ed9a3b101475208",
+          "utility": -1.0
+        },
+        "selected_actor": {
+          "status": "defeat",
+          "steps": 25,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 147,
+          "potions": [],
+          "deck_hash": "be8339938b501dafe9e0288812cf2ab66581676dbfd50f531a9758093b15067d",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "69c6a7b63ef4a33c8e00d032d7a823846ed034a04dee3ce569d5d891aea4c930",
+          "transition_hash": "a45421a4012b4ff47a732ac718a1cf0d0d46d12cd0c7a83b9ed9a3b101475208",
+          "utility": -1.0
+        },
+        "actor_program": {
+          "status": "clear",
+          "steps": 19,
+          "hp": 28,
+          "max_hp": 80,
+          "gold": 161,
+          "potions": [],
+          "deck_hash": "cf2db0f0ff6aaf7a9da80a39eb77d03f66bfc1fecdbcda26233efcbd4481d749",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "7cdc4689e5de903aba9d2d6c198bb1fc6e013c447f4fff9bc4b17fe9a7087ed7",
+          "transition_hash": "643ad1908c40496734e855f4518e211789e7615b91db22d9ee82ae0e3655cdba",
+          "utility": 1.0875
+        },
+        "selected_program": {
+          "status": "clear",
+          "steps": 19,
+          "hp": 28,
+          "max_hp": 80,
+          "gold": 161,
+          "potions": [],
+          "deck_hash": "cf2db0f0ff6aaf7a9da80a39eb77d03f66bfc1fecdbcda26233efcbd4481d749",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "7cdc4689e5de903aba9d2d6c198bb1fc6e013c447f4fff9bc4b17fe9a7087ed7",
+          "transition_hash": "643ad1908c40496734e855f4518e211789e7615b91db22d9ee82ae0e3655cdba",
+          "utility": 1.0875
+        }
+      },
+      "act2": {
+        "actor_actor": false,
+        "selected_actor": false,
+        "actor_program": false,
+        "selected_program": false
+      },
+      "final_context": {
+        "actor_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 9,
+          "room_type": "Elite",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        },
+        "selected_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 9,
+          "room_type": "Elite",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        },
+        "actor_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 17,
+          "room_type": "Boss",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        },
+        "selected_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 17,
+          "room_type": "Boss",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        }
+      },
+      "encounter_changed": true,
+      "previous_all_discovery_losses": true,
+      "rescued": true,
+      "lost": false
+    },
+    {
+      "case": "train-A10-002:combat",
+      "seed": "e149_train_Ironclad_A10_002",
+      "ascension": 10,
+      "mode": "combat",
+      "entries": {
+        "actor_actor": {
+          "state_hash": "91660476935316eb0b63d87adaccdbc4b966c03df4a607fa0f67e10550dc60b2",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 7,
+          "enemies": [
+            "Phrog Parasite"
+          ],
+          "hp": 44,
+          "max_hp": 80,
+          "deck_hash": "766a2f98be671c8991840c5e4ec1eaf059128d584754af383c0dacdeea597932",
+          "potions": [
+            "LIQUID_BRONZE",
+            "CURE_ALL"
+          ]
+        },
+        "selected_actor": {
+          "state_hash": "91660476935316eb0b63d87adaccdbc4b966c03df4a607fa0f67e10550dc60b2",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 7,
+          "enemies": [
+            "Phrog Parasite"
+          ],
+          "hp": 44,
+          "max_hp": 80,
+          "deck_hash": "766a2f98be671c8991840c5e4ec1eaf059128d584754af383c0dacdeea597932",
+          "potions": [
+            "LIQUID_BRONZE",
+            "CURE_ALL"
+          ]
+        },
+        "actor_program": {
+          "state_hash": "91660476935316eb0b63d87adaccdbc4b966c03df4a607fa0f67e10550dc60b2",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 7,
+          "enemies": [
+            "Phrog Parasite"
+          ],
+          "hp": 44,
+          "max_hp": 80,
+          "deck_hash": "766a2f98be671c8991840c5e4ec1eaf059128d584754af383c0dacdeea597932",
+          "potions": [
+            "LIQUID_BRONZE",
+            "CURE_ALL"
+          ]
+        },
+        "selected_program": {
+          "state_hash": "91660476935316eb0b63d87adaccdbc4b966c03df4a607fa0f67e10550dc60b2",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 7,
+          "enemies": [
+            "Phrog Parasite"
+          ],
+          "hp": 44,
+          "max_hp": 80,
+          "deck_hash": "766a2f98be671c8991840c5e4ec1eaf059128d584754af383c0dacdeea597932",
+          "potions": [
+            "LIQUID_BRONZE",
+            "CURE_ALL"
+          ]
+        }
+      },
+      "local": {
+        "actor_actor": {
+          "status": "clear",
+          "steps": 30,
+          "hp": 11,
+          "max_hp": 80,
+          "gold": 131,
+          "potions": [],
+          "deck_hash": "766a2f98be671c8991840c5e4ec1eaf059128d584754af383c0dacdeea597932",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "c48ed9398236293aba3c732d58fbd7632f32729b3c308b27608920a212ca5c5c",
+          "transition_hash": "2418b94d127ae4a504f7651781c420dda718e68f70df7520129f7ab9b1591a73",
+          "utility": 1.034375
+        },
+        "selected_actor": {
+          "status": "clear",
+          "steps": 30,
+          "hp": 11,
+          "max_hp": 80,
+          "gold": 131,
+          "potions": [],
+          "deck_hash": "766a2f98be671c8991840c5e4ec1eaf059128d584754af383c0dacdeea597932",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "c48ed9398236293aba3c732d58fbd7632f32729b3c308b27608920a212ca5c5c",
+          "transition_hash": "2418b94d127ae4a504f7651781c420dda718e68f70df7520129f7ab9b1591a73",
+          "utility": 1.034375
+        },
+        "actor_program": {
+          "status": "clear",
+          "steps": 23,
+          "hp": 29,
+          "max_hp": 80,
+          "gold": 131,
+          "potions": [],
+          "deck_hash": "766a2f98be671c8991840c5e4ec1eaf059128d584754af383c0dacdeea597932",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "7dc66651f01a2bf1e5924b60e7514ea5f4b166fc7679d4a4ac2964ae05441b5f",
+          "transition_hash": "9b6ea1b7b29cee4df51026fcef74af4a520a7e8cc4e1606d2fad3f1243a52e14",
+          "utility": 1.090625
+        },
+        "selected_program": {
+          "status": "clear",
+          "steps": 23,
+          "hp": 29,
+          "max_hp": 80,
+          "gold": 131,
+          "potions": [],
+          "deck_hash": "766a2f98be671c8991840c5e4ec1eaf059128d584754af383c0dacdeea597932",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "7dc66651f01a2bf1e5924b60e7514ea5f4b166fc7679d4a4ac2964ae05441b5f",
+          "transition_hash": "9b6ea1b7b29cee4df51026fcef74af4a520a7e8cc4e1606d2fad3f1243a52e14",
+          "utility": 1.090625
+        }
+      },
+      "act2": {
+        "actor_actor": false,
+        "selected_actor": false,
+        "actor_program": false,
+        "selected_program": false
+      },
+      "final_context": {
+        "actor_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 9,
+          "room_type": "Event",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        },
+        "selected_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 9,
+          "room_type": "Event",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        },
+        "actor_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 17,
+          "room_type": "Boss",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        },
+        "selected_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 17,
+          "room_type": "Boss",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        }
+      },
+      "encounter_changed": false,
+      "previous_all_discovery_losses": false,
+      "rescued": false,
+      "lost": false
+    },
+    {
+      "case": "train-A10-002:prepare",
+      "seed": "e149_train_Ironclad_A10_002",
+      "ascension": 10,
+      "mode": "prepare",
+      "entries": {
+        "actor_actor": {
+          "state_hash": "91660476935316eb0b63d87adaccdbc4b966c03df4a607fa0f67e10550dc60b2",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 7,
+          "enemies": [
+            "Phrog Parasite"
+          ],
+          "hp": 44,
+          "max_hp": 80,
+          "deck_hash": "766a2f98be671c8991840c5e4ec1eaf059128d584754af383c0dacdeea597932",
+          "potions": [
+            "LIQUID_BRONZE",
+            "CURE_ALL"
+          ]
+        },
+        "selected_actor": {
+          "state_hash": "91660476935316eb0b63d87adaccdbc4b966c03df4a607fa0f67e10550dc60b2",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 7,
+          "enemies": [
+            "Phrog Parasite"
+          ],
+          "hp": 44,
+          "max_hp": 80,
+          "deck_hash": "766a2f98be671c8991840c5e4ec1eaf059128d584754af383c0dacdeea597932",
+          "potions": [
+            "LIQUID_BRONZE",
+            "CURE_ALL"
+          ]
+        },
+        "actor_program": {
+          "state_hash": "91660476935316eb0b63d87adaccdbc4b966c03df4a607fa0f67e10550dc60b2",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 7,
+          "enemies": [
+            "Phrog Parasite"
+          ],
+          "hp": 44,
+          "max_hp": 80,
+          "deck_hash": "766a2f98be671c8991840c5e4ec1eaf059128d584754af383c0dacdeea597932",
+          "potions": [
+            "LIQUID_BRONZE",
+            "CURE_ALL"
+          ]
+        },
+        "selected_program": {
+          "state_hash": "91660476935316eb0b63d87adaccdbc4b966c03df4a607fa0f67e10550dc60b2",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 7,
+          "enemies": [
+            "Phrog Parasite"
+          ],
+          "hp": 44,
+          "max_hp": 80,
+          "deck_hash": "766a2f98be671c8991840c5e4ec1eaf059128d584754af383c0dacdeea597932",
+          "potions": [
+            "LIQUID_BRONZE",
+            "CURE_ALL"
+          ]
+        }
+      },
+      "local": {
+        "actor_actor": {
+          "status": "clear",
+          "steps": 34,
+          "hp": 11,
+          "max_hp": 80,
+          "gold": 131,
+          "potions": [],
+          "deck_hash": "766a2f98be671c8991840c5e4ec1eaf059128d584754af383c0dacdeea597932",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "c48ed9398236293aba3c732d58fbd7632f32729b3c308b27608920a212ca5c5c",
+          "transition_hash": "1dca52eb80af0acc3519f8a9fe98f15076cdfef96a629c550fd0dff6791fbf27",
+          "utility": 1.034375
+        },
+        "selected_actor": {
+          "status": "clear",
+          "steps": 34,
+          "hp": 11,
+          "max_hp": 80,
+          "gold": 131,
+          "potions": [],
+          "deck_hash": "766a2f98be671c8991840c5e4ec1eaf059128d584754af383c0dacdeea597932",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "c48ed9398236293aba3c732d58fbd7632f32729b3c308b27608920a212ca5c5c",
+          "transition_hash": "1dca52eb80af0acc3519f8a9fe98f15076cdfef96a629c550fd0dff6791fbf27",
+          "utility": 1.034375
+        },
+        "actor_program": {
+          "status": "clear",
+          "steps": 27,
+          "hp": 29,
+          "max_hp": 80,
+          "gold": 131,
+          "potions": [],
+          "deck_hash": "766a2f98be671c8991840c5e4ec1eaf059128d584754af383c0dacdeea597932",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "7dc66651f01a2bf1e5924b60e7514ea5f4b166fc7679d4a4ac2964ae05441b5f",
+          "transition_hash": "21c60dda66c44782a0b92f8ed2592b86ff23d581ee3bc273b72828807592ea2b",
+          "utility": 1.090625
+        },
+        "selected_program": {
+          "status": "clear",
+          "steps": 27,
+          "hp": 29,
+          "max_hp": 80,
+          "gold": 131,
+          "potions": [],
+          "deck_hash": "766a2f98be671c8991840c5e4ec1eaf059128d584754af383c0dacdeea597932",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "7dc66651f01a2bf1e5924b60e7514ea5f4b166fc7679d4a4ac2964ae05441b5f",
+          "transition_hash": "21c60dda66c44782a0b92f8ed2592b86ff23d581ee3bc273b72828807592ea2b",
+          "utility": 1.090625
+        }
+      },
+      "act2": {
+        "actor_actor": false,
+        "selected_actor": false,
+        "actor_program": false,
+        "selected_program": false
+      },
+      "final_context": {
+        "actor_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 9,
+          "room_type": "Event",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        },
+        "selected_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 9,
+          "room_type": "Event",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        },
+        "actor_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 17,
+          "room_type": "Boss",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        },
+        "selected_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 17,
+          "room_type": "Boss",
+          "boss": {
+            "id": "VANTOM_BOSS",
+            "name": "Vantom"
+          }
+        }
+      },
+      "encounter_changed": false,
+      "previous_all_discovery_losses": false,
+      "rescued": false,
+      "lost": false
+    },
+    {
+      "case": "train-A10-003:combat",
+      "seed": "e149_train_Ironclad_A10_003",
+      "ascension": 10,
+      "mode": "combat",
+      "entries": {
+        "actor_actor": {
+          "state_hash": "ca85733b8127fa783aff133a707038f4485cdf23ad94a02cebfa326d794522aa",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 5,
+          "enemies": [
+            "Fogmog"
+          ],
+          "hp": 40,
+          "max_hp": 80,
+          "deck_hash": "ba7af9974cf0ea6cac87f0d7a171d5e851e0405e4075d9abd8ea35ff3276d9ed",
+          "potions": [
+            "STRENGTH_POTION"
+          ]
+        },
+        "selected_actor": {
+          "state_hash": "ca85733b8127fa783aff133a707038f4485cdf23ad94a02cebfa326d794522aa",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 5,
+          "enemies": [
+            "Fogmog"
+          ],
+          "hp": 40,
+          "max_hp": 80,
+          "deck_hash": "ba7af9974cf0ea6cac87f0d7a171d5e851e0405e4075d9abd8ea35ff3276d9ed",
+          "potions": [
+            "STRENGTH_POTION"
+          ]
+        },
+        "actor_program": {
+          "state_hash": "ca85733b8127fa783aff133a707038f4485cdf23ad94a02cebfa326d794522aa",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 5,
+          "enemies": [
+            "Fogmog"
+          ],
+          "hp": 40,
+          "max_hp": 80,
+          "deck_hash": "ba7af9974cf0ea6cac87f0d7a171d5e851e0405e4075d9abd8ea35ff3276d9ed",
+          "potions": [
+            "STRENGTH_POTION"
+          ]
+        },
+        "selected_program": {
+          "state_hash": "ca85733b8127fa783aff133a707038f4485cdf23ad94a02cebfa326d794522aa",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 5,
+          "enemies": [
+            "Fogmog"
+          ],
+          "hp": 40,
+          "max_hp": 80,
+          "deck_hash": "ba7af9974cf0ea6cac87f0d7a171d5e851e0405e4075d9abd8ea35ff3276d9ed",
+          "potions": [
+            "STRENGTH_POTION"
+          ]
+        }
+      },
+      "local": {
+        "actor_actor": {
+          "status": "defeat",
+          "steps": 23,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 132,
+          "potions": [],
+          "deck_hash": "ba7af9974cf0ea6cac87f0d7a171d5e851e0405e4075d9abd8ea35ff3276d9ed",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "69c85ae5348cf7d8b0513ef077e59536854606e3688bafa7a8e1f4f096111d8b",
+          "transition_hash": "f150c37bf1070f46d482139f3298c16b55b76811df96f79c67dcf0d606246fb8",
+          "utility": -1.0
+        },
+        "selected_actor": {
+          "status": "defeat",
+          "steps": 23,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 132,
+          "potions": [],
+          "deck_hash": "ba7af9974cf0ea6cac87f0d7a171d5e851e0405e4075d9abd8ea35ff3276d9ed",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "69c85ae5348cf7d8b0513ef077e59536854606e3688bafa7a8e1f4f096111d8b",
+          "transition_hash": "8a1d51305e358bf159b46d44823910fbaa391fcc0b16964cc777ec7ac407edd8",
+          "utility": -1.0
+        },
+        "actor_program": {
+          "status": "clear",
+          "steps": 21,
+          "hp": 23,
+          "max_hp": 80,
+          "gold": 140,
+          "potions": [],
+          "deck_hash": "ba7af9974cf0ea6cac87f0d7a171d5e851e0405e4075d9abd8ea35ff3276d9ed",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "f47cd9bb0443a51149bc76c23228bd9ad21bdfbd6dab73df5b28a31afa8336f4",
+          "transition_hash": "3d5ce8ae146dc595fba93197a224d189ba818fff117cb41e355ee9d9e522a6ef",
+          "utility": 1.071875
+        },
+        "selected_program": {
+          "status": "clear",
+          "steps": 21,
+          "hp": 23,
+          "max_hp": 80,
+          "gold": 140,
+          "potions": [],
+          "deck_hash": "ba7af9974cf0ea6cac87f0d7a171d5e851e0405e4075d9abd8ea35ff3276d9ed",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "f47cd9bb0443a51149bc76c23228bd9ad21bdfbd6dab73df5b28a31afa8336f4",
+          "transition_hash": "9eb8f1dcf1d476b019846d3255411c4f09859c7f2f440a9fa6bd926630e6d053",
+          "utility": 1.071875
+        }
+      },
+      "act2": {
+        "actor_actor": false,
+        "selected_actor": false,
+        "actor_program": false,
+        "selected_program": false
+      },
+      "final_context": {
+        "actor_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 5,
+          "room_type": "Monster",
+          "boss": {
+            "id": "THE_KIN_BOSS",
+            "name": "Kin Priest"
+          }
+        },
+        "selected_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 5,
+          "room_type": "Monster",
+          "boss": {
+            "id": "THE_KIN_BOSS",
+            "name": "Kin Priest"
+          }
+        },
+        "actor_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 6,
+          "room_type": "Monster",
+          "boss": {
+            "id": "THE_KIN_BOSS",
+            "name": "Kin Priest"
+          }
+        },
+        "selected_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 6,
+          "room_type": "Monster",
+          "boss": {
+            "id": "THE_KIN_BOSS",
+            "name": "Kin Priest"
+          }
+        }
+      },
+      "encounter_changed": false,
+      "previous_all_discovery_losses": false,
+      "rescued": true,
+      "lost": false
+    },
+    {
+      "case": "train-A10-003:prepare",
+      "seed": "e149_train_Ironclad_A10_003",
+      "ascension": 10,
+      "mode": "prepare",
+      "entries": {
+        "actor_actor": {
+          "state_hash": "ca85733b8127fa783aff133a707038f4485cdf23ad94a02cebfa326d794522aa",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 5,
+          "enemies": [
+            "Fogmog"
+          ],
+          "hp": 40,
+          "max_hp": 80,
+          "deck_hash": "ba7af9974cf0ea6cac87f0d7a171d5e851e0405e4075d9abd8ea35ff3276d9ed",
+          "potions": [
+            "STRENGTH_POTION"
+          ]
+        },
+        "selected_actor": {
+          "state_hash": "ca85733b8127fa783aff133a707038f4485cdf23ad94a02cebfa326d794522aa",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 5,
+          "enemies": [
+            "Fogmog"
+          ],
+          "hp": 40,
+          "max_hp": 80,
+          "deck_hash": "ba7af9974cf0ea6cac87f0d7a171d5e851e0405e4075d9abd8ea35ff3276d9ed",
+          "potions": [
+            "STRENGTH_POTION"
+          ]
+        },
+        "actor_program": {
+          "state_hash": "ca85733b8127fa783aff133a707038f4485cdf23ad94a02cebfa326d794522aa",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 5,
+          "enemies": [
+            "Fogmog"
+          ],
+          "hp": 40,
+          "max_hp": 80,
+          "deck_hash": "ba7af9974cf0ea6cac87f0d7a171d5e851e0405e4075d9abd8ea35ff3276d9ed",
+          "potions": [
+            "STRENGTH_POTION"
+          ]
+        },
+        "selected_program": {
+          "state_hash": "ca85733b8127fa783aff133a707038f4485cdf23ad94a02cebfa326d794522aa",
+          "room_type": "Monster",
+          "act": 1,
+          "floor": 5,
+          "enemies": [
+            "Fogmog"
+          ],
+          "hp": 40,
+          "max_hp": 80,
+          "deck_hash": "ba7af9974cf0ea6cac87f0d7a171d5e851e0405e4075d9abd8ea35ff3276d9ed",
+          "potions": [
+            "STRENGTH_POTION"
+          ]
+        }
+      },
+      "local": {
+        "actor_actor": {
+          "status": "defeat",
+          "steps": 26,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 132,
+          "potions": [],
+          "deck_hash": "ba7af9974cf0ea6cac87f0d7a171d5e851e0405e4075d9abd8ea35ff3276d9ed",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "69c85ae5348cf7d8b0513ef077e59536854606e3688bafa7a8e1f4f096111d8b",
+          "transition_hash": "0d56df572461966c197a37940124c51be550a850295bb186cb2c1a12c148fca3",
+          "utility": -1.0
+        },
+        "selected_actor": {
+          "status": "defeat",
+          "steps": 26,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 132,
+          "potions": [],
+          "deck_hash": "ba7af9974cf0ea6cac87f0d7a171d5e851e0405e4075d9abd8ea35ff3276d9ed",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "69c85ae5348cf7d8b0513ef077e59536854606e3688bafa7a8e1f4f096111d8b",
+          "transition_hash": "0d56df572461966c197a37940124c51be550a850295bb186cb2c1a12c148fca3",
+          "utility": -1.0
+        },
+        "actor_program": {
+          "status": "clear",
+          "steps": 24,
+          "hp": 23,
+          "max_hp": 80,
+          "gold": 140,
+          "potions": [],
+          "deck_hash": "ba7af9974cf0ea6cac87f0d7a171d5e851e0405e4075d9abd8ea35ff3276d9ed",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "f47cd9bb0443a51149bc76c23228bd9ad21bdfbd6dab73df5b28a31afa8336f4",
+          "transition_hash": "f7711777856bf6144fb582688a9518660785c29c7e64083977101f70e4f68cd3",
+          "utility": 1.071875
+        },
+        "selected_program": {
+          "status": "clear",
+          "steps": 24,
+          "hp": 23,
+          "max_hp": 80,
+          "gold": 140,
+          "potions": [],
+          "deck_hash": "ba7af9974cf0ea6cac87f0d7a171d5e851e0405e4075d9abd8ea35ff3276d9ed",
+          "started": true,
+          "room_type": "Monster",
+          "act": 1,
+          "final_hash": "f47cd9bb0443a51149bc76c23228bd9ad21bdfbd6dab73df5b28a31afa8336f4",
+          "transition_hash": "f7711777856bf6144fb582688a9518660785c29c7e64083977101f70e4f68cd3",
+          "utility": 1.071875
+        }
+      },
+      "act2": {
+        "actor_actor": false,
+        "selected_actor": false,
+        "actor_program": false,
+        "selected_program": false
+      },
+      "final_context": {
+        "actor_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 5,
+          "room_type": "Monster",
+          "boss": {
+            "id": "THE_KIN_BOSS",
+            "name": "Kin Priest"
+          }
+        },
+        "selected_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 5,
+          "room_type": "Monster",
+          "boss": {
+            "id": "THE_KIN_BOSS",
+            "name": "Kin Priest"
+          }
+        },
+        "actor_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 6,
+          "room_type": "Monster",
+          "boss": {
+            "id": "THE_KIN_BOSS",
+            "name": "Kin Priest"
+          }
+        },
+        "selected_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 6,
+          "room_type": "Monster",
+          "boss": {
+            "id": "THE_KIN_BOSS",
+            "name": "Kin Priest"
+          }
+        }
+      },
+      "encounter_changed": false,
+      "previous_all_discovery_losses": false,
+      "rescued": true,
+      "lost": false
+    },
+    {
+      "case": "train-A10-004:combat",
+      "seed": "e149_train_Ironclad_A10_004",
+      "ascension": 10,
+      "mode": "combat",
+      "entries": {
+        "actor_actor": {
+          "state_hash": "82a60fdc9d49f1507c3158164d926cdb3d24a4557306db154083fef26f23c192",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 8,
+          "enemies": [
+            "Byrdonis"
+          ],
+          "hp": 79,
+          "max_hp": 80,
+          "deck_hash": "a06013eb143c8924f471731c9f070bcf13f3da5d3c0993395eeedcc3b0b2c3f4",
+          "potions": []
+        },
+        "selected_actor": {
+          "state_hash": "82a60fdc9d49f1507c3158164d926cdb3d24a4557306db154083fef26f23c192",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 8,
+          "enemies": [
+            "Byrdonis"
+          ],
+          "hp": 79,
+          "max_hp": 80,
+          "deck_hash": "a06013eb143c8924f471731c9f070bcf13f3da5d3c0993395eeedcc3b0b2c3f4",
+          "potions": []
+        },
+        "actor_program": {
+          "state_hash": "82a60fdc9d49f1507c3158164d926cdb3d24a4557306db154083fef26f23c192",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 8,
+          "enemies": [
+            "Byrdonis"
+          ],
+          "hp": 79,
+          "max_hp": 80,
+          "deck_hash": "a06013eb143c8924f471731c9f070bcf13f3da5d3c0993395eeedcc3b0b2c3f4",
+          "potions": []
+        },
+        "selected_program": {
+          "state_hash": "82a60fdc9d49f1507c3158164d926cdb3d24a4557306db154083fef26f23c192",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 8,
+          "enemies": [
+            "Byrdonis"
+          ],
+          "hp": 79,
+          "max_hp": 80,
+          "deck_hash": "a06013eb143c8924f471731c9f070bcf13f3da5d3c0993395eeedcc3b0b2c3f4",
+          "potions": []
+        }
+      },
+      "local": {
+        "actor_actor": {
+          "status": "defeat",
+          "steps": 18,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 154,
+          "potions": [],
+          "deck_hash": "a06013eb143c8924f471731c9f070bcf13f3da5d3c0993395eeedcc3b0b2c3f4",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "ff9d734d754a8c3fbbedb4307d17bf9ef1ef66d3b46fe75f7dc67328bf952c39",
+          "transition_hash": "a195193caeb5c0fe5622bd75c073921a9a9c6b70ea852e9fc5e1a60480168059",
+          "utility": -1.0
+        },
+        "selected_actor": {
+          "status": "defeat",
+          "steps": 18,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 154,
+          "potions": [],
+          "deck_hash": "a06013eb143c8924f471731c9f070bcf13f3da5d3c0993395eeedcc3b0b2c3f4",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "ff9d734d754a8c3fbbedb4307d17bf9ef1ef66d3b46fe75f7dc67328bf952c39",
+          "transition_hash": "a195193caeb5c0fe5622bd75c073921a9a9c6b70ea852e9fc5e1a60480168059",
+          "utility": -1.0
+        },
+        "actor_program": {
+          "status": "defeat",
+          "steps": 23,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 154,
+          "potions": [],
+          "deck_hash": "a06013eb143c8924f471731c9f070bcf13f3da5d3c0993395eeedcc3b0b2c3f4",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "ff9d734d754a8c3fbbedb4307d17bf9ef1ef66d3b46fe75f7dc67328bf952c39",
+          "transition_hash": "7599f08db137f621fccb661c9b4e0be82be0c492168ced613deb9e2e1563d94f",
+          "utility": -1.0
+        },
+        "selected_program": {
+          "status": "defeat",
+          "steps": 23,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 154,
+          "potions": [],
+          "deck_hash": "a06013eb143c8924f471731c9f070bcf13f3da5d3c0993395eeedcc3b0b2c3f4",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "ff9d734d754a8c3fbbedb4307d17bf9ef1ef66d3b46fe75f7dc67328bf952c39",
+          "transition_hash": "7599f08db137f621fccb661c9b4e0be82be0c492168ced613deb9e2e1563d94f",
+          "utility": -1.0
+        }
+      },
+      "act2": {
+        "actor_actor": false,
+        "selected_actor": false,
+        "actor_program": false,
+        "selected_program": false
+      },
+      "final_context": {
+        "actor_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 8,
+          "room_type": "Elite",
+          "boss": {
+            "id": "THE_KIN_BOSS",
+            "name": "Kin Priest"
+          }
+        },
+        "selected_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 8,
+          "room_type": "Elite",
+          "boss": {
+            "id": "THE_KIN_BOSS",
+            "name": "Kin Priest"
+          }
+        },
+        "actor_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 8,
+          "room_type": "Elite",
+          "boss": {
+            "id": "THE_KIN_BOSS",
+            "name": "Kin Priest"
+          }
+        },
+        "selected_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 8,
+          "room_type": "Elite",
+          "boss": {
+            "id": "THE_KIN_BOSS",
+            "name": "Kin Priest"
+          }
+        }
+      },
+      "encounter_changed": false,
+      "previous_all_discovery_losses": false,
+      "rescued": false,
+      "lost": false
+    },
+    {
+      "case": "train-A10-004:prepare",
+      "seed": "e149_train_Ironclad_A10_004",
+      "ascension": 10,
+      "mode": "prepare",
+      "entries": {
+        "actor_actor": {
+          "state_hash": "82a60fdc9d49f1507c3158164d926cdb3d24a4557306db154083fef26f23c192",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 8,
+          "enemies": [
+            "Byrdonis"
+          ],
+          "hp": 79,
+          "max_hp": 80,
+          "deck_hash": "a06013eb143c8924f471731c9f070bcf13f3da5d3c0993395eeedcc3b0b2c3f4",
+          "potions": []
+        },
+        "selected_actor": {
+          "state_hash": "82a60fdc9d49f1507c3158164d926cdb3d24a4557306db154083fef26f23c192",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 8,
+          "enemies": [
+            "Byrdonis"
+          ],
+          "hp": 79,
+          "max_hp": 80,
+          "deck_hash": "a06013eb143c8924f471731c9f070bcf13f3da5d3c0993395eeedcc3b0b2c3f4",
+          "potions": []
+        },
+        "actor_program": {
+          "state_hash": "8b214fdf4db29ace438727490b15d36b503def60286492ec83aa5e2402fd8194",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 8,
+          "enemies": [
+            "Byrdonis"
+          ],
+          "hp": 55,
+          "max_hp": 80,
+          "deck_hash": "8e709ce70bf77127a7db164e8c544a546813ef0809e301b4ac0ea19fdea5bbc7",
+          "potions": []
+        },
+        "selected_program": {
+          "state_hash": "8b214fdf4db29ace438727490b15d36b503def60286492ec83aa5e2402fd8194",
+          "room_type": "Elite",
+          "act": 1,
+          "floor": 8,
+          "enemies": [
+            "Byrdonis"
+          ],
+          "hp": 55,
+          "max_hp": 80,
+          "deck_hash": "8e709ce70bf77127a7db164e8c544a546813ef0809e301b4ac0ea19fdea5bbc7",
+          "potions": []
+        }
+      },
+      "local": {
+        "actor_actor": {
+          "status": "defeat",
+          "steps": 22,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 154,
+          "potions": [],
+          "deck_hash": "a06013eb143c8924f471731c9f070bcf13f3da5d3c0993395eeedcc3b0b2c3f4",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "ff9d734d754a8c3fbbedb4307d17bf9ef1ef66d3b46fe75f7dc67328bf952c39",
+          "transition_hash": "60090c17e8d69794f2106ffacc7d5982d72c761b66d8ed4a3c89fb9f4bdd459f",
+          "utility": -1.0
+        },
+        "selected_actor": {
+          "status": "defeat",
+          "steps": 22,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 154,
+          "potions": [],
+          "deck_hash": "a06013eb143c8924f471731c9f070bcf13f3da5d3c0993395eeedcc3b0b2c3f4",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "ff9d734d754a8c3fbbedb4307d17bf9ef1ef66d3b46fe75f7dc67328bf952c39",
+          "transition_hash": "60090c17e8d69794f2106ffacc7d5982d72c761b66d8ed4a3c89fb9f4bdd459f",
+          "utility": -1.0
+        },
+        "actor_program": {
+          "status": "defeat",
+          "steps": 24,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 154,
+          "potions": [],
+          "deck_hash": "8e709ce70bf77127a7db164e8c544a546813ef0809e301b4ac0ea19fdea5bbc7",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "f54fbce95dc52e8d5c1aba2202696f5fd3b4df28033682d5ffc341485269ccdd",
+          "transition_hash": "ee6973f05f22ef19d3a44c7f740f684ccf59afcf820f250a978ba0aef3ad9a54",
+          "utility": -1.0
+        },
+        "selected_program": {
+          "status": "defeat",
+          "steps": 24,
+          "hp": 0,
+          "max_hp": 80,
+          "gold": 154,
+          "potions": [],
+          "deck_hash": "8e709ce70bf77127a7db164e8c544a546813ef0809e301b4ac0ea19fdea5bbc7",
+          "started": true,
+          "room_type": "Elite",
+          "act": 1,
+          "final_hash": "f54fbce95dc52e8d5c1aba2202696f5fd3b4df28033682d5ffc341485269ccdd",
+          "transition_hash": "ee6973f05f22ef19d3a44c7f740f684ccf59afcf820f250a978ba0aef3ad9a54",
+          "utility": -1.0
+        }
+      },
+      "act2": {
+        "actor_actor": false,
+        "selected_actor": false,
+        "actor_program": false,
+        "selected_program": false
+      },
+      "final_context": {
+        "actor_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 8,
+          "room_type": "Elite",
+          "boss": {
+            "id": "THE_KIN_BOSS",
+            "name": "Kin Priest"
+          }
+        },
+        "selected_actor": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 8,
+          "room_type": "Elite",
+          "boss": {
+            "id": "THE_KIN_BOSS",
+            "name": "Kin Priest"
+          }
+        },
+        "actor_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 8,
+          "room_type": "Elite",
+          "boss": {
+            "id": "THE_KIN_BOSS",
+            "name": "Kin Priest"
+          }
+        },
+        "selected_program": {
+          "act": 1,
+          "act_name": "Overgrowth",
+          "floor": 8,
+          "room_type": "Elite",
+          "boss": {
+            "id": "THE_KIN_BOSS",
+            "name": "Kin Priest"
+          }
+        }
+      },
+      "encounter_changed": false,
+      "previous_all_discovery_losses": true,
+      "rescued": false,
+      "lost": false
+    }
+  ],
+  "first_fight_wire_checks": 120,
+  "rescued": 15,
+  "lost": 0,
+  "rescued_previous_all_loss": 6,
+  "changed_encounters": [
+    "train-A0-000:prepare",
+    "train-A0-004:prepare",
+    "train-A5-000:prepare",
+    "train-A10-000:prepare",
+    "train-A10-001:prepare"
+  ],
+  "counts_by_mode": {
+    "combat": {
+      "actor_actor": 1,
+      "selected_actor": 2,
+      "actor_program": 6,
+      "selected_program": 6
+    },
+    "prepare": {
+      "actor_actor": 1,
+      "selected_actor": 1,
+      "actor_program": 11,
+      "selected_program": 11
+    }
+  },
+  "counts_by_ascension": {
+    "0": {
+      "actor_actor": 0,
+      "selected_actor": 0,
+      "actor_program": 3,
+      "selected_program": 3
+    },
+    "5": {
+      "actor_actor": 0,
+      "selected_actor": 1,
+      "actor_program": 8,
+      "selected_program": 8
+    },
+    "10": {
+      "actor_actor": 2,
+      "selected_actor": 2,
+      "actor_program": 6,
+      "selected_program": 6
+    }
+  }
+}
