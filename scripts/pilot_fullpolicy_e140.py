@@ -70,7 +70,7 @@ def source_data():
 
 def save(path,model,v,label):
     torch.save(dict(model=model.state_dict(),config=model.config,manifest=v,label=label),path)
-    return dict(path=str(path.relative_to(ROOT)),sha256=file_hash(path),label=label,config=model.config)
+    return dict(path=str(path.resolve().relative_to(ROOT)),sha256=file_hash(path),label=label,config=model.config)
 
 
 def train(v,output):
@@ -92,9 +92,11 @@ def train(v,output):
                 losses.append(bc_step(model,optimizer,batch))
             row['bc_curve'].append(dict(epoch=epoch,loss=float(np.mean(losses))))
         row['bc_seconds']=time.monotonic()-clock;row['bc']=save(directory/f'{learner}-bc.pt',model,v,'BC')
+        write(directory/f'{learner}.json',row)
         off=copy.deepcopy(model);offopt=torch.optim.Adam(off.parameters(),lr=3e-4);clock=time.monotonic()
         row['awr_curve']=offline_fit(off,offopt,offline,macro,rng)
         row['awr_seconds']=time.monotonic()-clock;row['awr']=save(directory/f'{learner}-awr.pt',off,v,'AWR')
+        write(directory/f'{learner}.json',row)
         optimizer=torch.optim.Adam(model.parameters(),lr=HP['lr']);online_start=time.monotonic()
         for index in range(8):
             batch=[iron[(index*48+i)%len(iron)] for i in range(48)]
@@ -106,6 +108,7 @@ def train(v,output):
             with ThreadPoolExecutor(max_workers=8) as pool:outputs=list(pool.map(collect,enumerate(batch)))
             results=[r for r,_ in outputs];u=dict(update=index+1,episodes=[{k:val for k,val in r.items() if k!='plan'} for r in results])
             row['updates'].append(u)
+            write(directory/f'{learner}.json',row)
             if not all(r['status'] in ('clear','defeat') for r in results):
                 row['status']='stopped_incomplete_batch';break
             clock=time.monotonic();u['optimization']=update(model,optimizer,[(data,r['reward']) for r,data in outputs],rng)
@@ -180,6 +183,7 @@ def evaluate(v,training_path,output):
 
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('phase',choices=('train','evaluate'));p.add_argument('--output',type=Path,required=True);p.add_argument('--training',type=Path);a=p.parse_args()
+    a.output=a.output.resolve()
     if a.output.exists():raise ValueError('Preserve prior output')
     torch.set_num_threads(1);v={**manifest(),'experiment':'E140','encoder':ENCODER,'ppo_action_space':ACTION_SPACE,'torch':str(torch.__version__),'device':'cpu'}
     if a.phase=='train':train(v,a.output)

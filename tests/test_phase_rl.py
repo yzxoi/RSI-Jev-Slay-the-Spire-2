@@ -24,3 +24,9 @@ class PhaseEncodingTests(unittest.TestCase):
     def test_awr_detaches_baseline_and_favours_larger_advantage(self):
         v=torch.tensor([.1,.1],requires_grad=True);w=awr_weights(torch.tensor([-1.,1.]),v)
         self.assertFalse(w.requires_grad);self.assertGreater(w[1],w[0]);self.assertAlmostEqual(float(w.mean()),1.)
+
+    def test_training_split_boundary(self):
+        from scripts.pilot_fullpolicy_e140 import require_train
+        for record in ({'case':'test-000'},{'case':'val-000'},{'case':'train-000','split':'dev'}):
+            with self.assertRaises(ValueError):require_train(record)
+        require_train({'case':'train-000','split':'train'})
