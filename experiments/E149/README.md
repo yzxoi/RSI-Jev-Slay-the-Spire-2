@@ -1,0 +1,32 @@
+# E149 — Independently verified repeated-rollout teacher
+
+Issue [#280](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/280). No gradients or default-policy changes.
+
+## Protocol v1, frozen before collection
+
+Hypothesis: mean outcomes of repeated exact-engine continuations can select root actions that improve the frozen BC1702 actor on independent continuation streams. Start with the uniform selector itself; defer adaptive allocation until this simplest teacher works. This narrows the original three-arm proposal following the roadmap comment: a uniform teacher need not beat itself to qualify. No claim about sequential-halving/Gumbel is possible here.
+
+Collect 15 new natural Ironclad full runs: A0/A5/A10 × indices000..004, seed `e149_train_Ironclad_A{a}_{i:03}`. All phases use frozen E140 BC1702 greedily, unchanged encoder and complete legal menus. For each source choose its last naturally entered battle and the preceding clear reward boundary (Neow if there was no earlier battle): 30 TRAIN roots, paired within15 independent game seeds. This intentionally diagnoses student-visited late difficulties, not representative win rate. Preserve every selected seed, failure and missing root; no replacement. Collection must complete and independent replays of index000 at each difficulty must match before any search. Freeze roots, exact legal candidate lists, root/prefix hashes and checkpoint identity in a tracked bank before search.
+
+At most4 root candidates: actor greedy; legal simple planner/cautious macro choice; end_turn or skip_card_reward when present; remaining slots by descending actor probability, stable legal-order ties. All candidate probabilities and omitted actions recorded. No state/RNG/reward edits. Continuation policy is the same frozen actor sampled at temperature1. At continuation step t>0 use inverse-CDF sampling with a common preselected uniform stream across candidates; force only the first action. Discovery streams `14900000 + root_index*100 + k`, k0..3. Select highest **mean** local utility, ties prefer actor. Local outcome is next genuine battle clear (1+.25HP/maxHP) or death(-1); initial reward is not a win, final reward is not claimed as useful. Potions/gold/deck changes reported separately; this utility is not whole-run value.
+
+Per root budget: <=16 discovery continuations,6 independent validation streams for each of selected and actor (12),2 greedy local continuations,2 greedy full suffixes = <=32 paths. Validation streams `14910000 + root_index*100 + k`, k0..5, disjoint from discovery. Greedy suffixes continue to actual full-run termination and report Act2/Act3 arrival; they are restored conditional evaluations, not independent natural victories. First root of each mode/difficulty additionally has one independent action-by-action replay as a correctness preflight, outside32 search/evaluation paths. No selected action may depend on validation outcomes. Publish score means/variance/visit counts and selection optimism, not only winners.
+
+Environment foundation: pin all four runtime DLL hashes to E154 validation-v2, retain known unsupported Crystal Sphere(#64)/Trial(#294), fail on stderr exceptions. Old map certificates bind a different engine and arbitrary reward roots have no certified shortcut, so use verified full-prefix recovery for **all** roots; no silent fallback. Compare every restored response hash with the source prefix, then independently replay six preflight suffixes. This is bounded consistency/known-compatibility evidence, not universal/native engine certification (#297 remains separate).
+
+Budgets: collection180s, bank/preflight240s, teacher900s wall and1800s aggregate parent+child CPU;8workers, local30s/300actions, full suffix90s/2400actions. Stop launching work on global budget exhaustion; retain unstarted/capped cases. Include restoration and actual engine transitions in costs. CPU may overshoot by in-flight bounded probes; overshoot fails the gate. Practical teacher latency gate: p95 serial discovery time per root <=60s (not amortized wall time).
+
+Teacher gate requires all15 collection seeds/30roots and all probes/replays complete, audit/runtime integrity, budgets met; independent validation mean utility delta >=.05, 95% paired bootstrap lower bound >0 clustered by15 game seeds (10000 resamples,RNG149); >=5 seeds with positive mean delta; no negative mean in combat/preparation or A0/A5/A10; greedy local clear count and mean utility do not regress; greedy full-suffix Act2 arrivals do not decrease and no actor full victory is lost. This is an exploratory conditional teacher gate, not actor-only/full-game acceptance. If it fails, stop before E150. If it passes, E150 still needs its own frozen learning/holdout protocol. Final330 acceptance seeds remain unused.
+
+## Reproduction
+
+```sh
+python3 -m unittest discover -s tests -p test_root_teacher.py
+python3 scripts/pilot_root_teacher_e149.py plan --output artifacts/runs/e149-plan-v1.json
+# Commit copied plan before collection; commit each result before next stage.
+python3 scripts/pilot_root_teacher_e149.py collect --plan experiments/E149/plan-v1.json --output artifacts/runs/e149-collection-v1.json
+python3 scripts/pilot_root_teacher_e149.py bank --plan experiments/E149/plan-v1.json --collection experiments/E149/collection-v1.json --output artifacts/runs/e149-bank-v1.json
+python3 scripts/pilot_root_teacher_e149.py evaluate --plan experiments/E149/plan-v1.json --bank experiments/E149/bank-v1.json --output artifacts/runs/e149-evaluation-v1.json
+```
+
+Raw decisions, candidate distributions, plans, states and wire responses stay in ignored artifacts/runs. Public results retain compact outcomes and hashes. Frozen game version v0.111.0, dependency/model versions and exact tested SHAs are emitted by every stage.
