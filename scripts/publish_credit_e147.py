@@ -22,7 +22,7 @@ def main(source,output):
     output.mkdir(parents=True,exist_ok=True)
     if (output/'diagnosis-v2.json').exists():raise ValueError('Preserve published result')
     report={k:v for k,v in full.items() if k not in ('episodes','training_fatal','rescoring','dev')}
-    report['publication']=dict(manifest=manifest(),raw_diagnosis_path=str(source),raw_diagnosis_sha256=file_hash(source),
+    report['publication']=dict(manifest={**manifest(),'experiment':'E147','scope':'derived_publication'},raw_diagnosis_path=str(source),raw_diagnosis_sha256=file_hash(source),
         omitted='Per-episode/fatal/rescore detail stays in local raw audit; all raw source hashes also indexed by E146.')
     report['dev']={k:{**{a:b for a,b in v.items() if a!='fatal'},
         'fatal_summary':dict(n=len(v['fatal']),forced=sum(x['choices']==1 for x in v['fatal']),
