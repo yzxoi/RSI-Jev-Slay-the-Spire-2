@@ -33,11 +33,14 @@ def check(v, collection, output):
             row['first_difference_context'] = after.get('context')
             row['old_enemies'] = [{k:e.get(k) for k in ('id','name','hp','powers')} for e in before.get('enemies', [])]
             row['new_enemies'] = [{k:e.get(k) for k in ('id','name','hp','powers')} for e in after.get('enemies', [])]
-            crusher = next((e for e in after.get('enemies', []) if e.get('id') == 'MONSTER.CRUSHER'), {})
-            names = {e.get('id') for e in crusher.get('powers', [])}
+            crusher = next((e for e in after.get('enemies', []) if e.get('name') == 'Crusher'), {})
+            names = {e.get('name') for e in crusher.get('powers', [])}
             row['pass'] = (ap[n][0] == bp[n][0] and after.get('decision') == 'combat_play' and
                 after.get('context', {}).get('room_type') == 'Boss' and
-                {'POWER.BACK_ATTACK_LEFT_POWER', 'POWER.CRAB_RAGE_POWER'} <= names)
+                {'Back Attack', 'Crab Rage'} <= names and before.get('decision') == 'card_reward' and
+                before.get('gold_earned') == 100 and before.get('context') == after.get('context'))
+            row['old_decision'] = before.get('decision')
+            row['new_decision'] = after.get('decision')
         else:
             row['pass'] = row['full_match'] and a['status'] == b['status']
         if a['status'] == 'error' and b['status'] in ('victory', 'defeat'):

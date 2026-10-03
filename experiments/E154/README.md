@@ -16,3 +16,9 @@ python3 scripts/validate_encounter_abi_e154.py --collection artifacts/runs/e153-
 ```
 
 Initial ilspy invocation needed DOTNET_ROLL_FORWARD=Major for .NET8 target under .NET9. An edit assertion stopped before changing UI.cs; corrected before testing. Both command failures preserved in task history; no game runs used the partial edit. Raw decompilation/binary backups remain ignored locally.
+
+## Iteration v1
+
+Tested50db5d7:90/90natural defeats,14Act2 arrivals,0Act3 arrivals,47Boss entries;83.447s. All88unaffected histories match exactly, train-A0-011 has334exact prefix pairs then a genuine42gold clear reward at the previously failed segment kill. Both changed full paths independently replay exactly;194bundles audited, game DLLs unchanged.
+
+Validation v1 failed because the assertion expected enemy/power IDs absent from this export (it exports names). More significantly, old dev-A0-002 did not merely omit Boss powers: after384exact pairs, entering Kaiser Crab returned a100gold reward immediately, skipping the whole fight. The corrected response is a genuine combat with Crusher/Rocket and original Back Attack/Crab Rage powers. Thus the old Act3 arrival was invalid. Fix only the assertion to match exported names and explicitly require the observed old reward→new combat difference at identical context/action. Preserve v1; rerun validation, not resample collection. Original Trial UI error remains unresolved, no longer naturally reached by this corrected path.
