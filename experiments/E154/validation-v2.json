@@ -1,0 +1,1033 @@
+{
+  "manifest": {
+    "schema_version": 2,
+    "code_commit": "3385c29a8422ca68473e4a71601e4c5d2f1f0468",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "15cc006c2ffdf8f1e3ef78c349368c4f338fb7139243ccfdf1eec5f892c42c86",
+    "godot_stubs_sha256": "2bb3b99863f651decb27cf3ceead489046808e60d95ccbc28048ad094ecc856a",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+      "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772",
+      "headless-zzzzzz-godot-abi.patch": "5239d3836d279de5143f7d56bece1f061c6c4002de696fce28f9f7f3922ededc",
+      "headless-zzzzzzz-learning-observations.patch": "d51db8457fdb9348340a829c84fa77e9620c476ba16a7c6e224b286ecb2dfd07",
+      "headless-zzzzzzzz-encounter-abi.patch": "e4a730f9e58fddebef8ef924fcd8d0adc03d72d1148f8d29b2f9ea60556696cc"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4",
+    "experiment": "E154",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.5",
+    "model_calls": 0,
+    "model_cost_usd": 0
+  },
+  "collection_sha256": "9e788331d0c5397d37a6b87218676ac52e5cdb43b08512517879fe4fc45e94e6",
+  "checks": [
+    {
+      "case": "train-A0-000",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 93,
+      "old_pairs": 93,
+      "new_pairs": 93,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A0-001",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 170,
+      "old_pairs": 170,
+      "new_pairs": 170,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A0-002",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 108,
+      "old_pairs": 108,
+      "new_pairs": 108,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A0-003",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 204,
+      "old_pairs": 204,
+      "new_pairs": 204,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A0-004",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 154,
+      "old_pairs": 154,
+      "new_pairs": 154,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A0-005",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 333,
+      "old_pairs": 333,
+      "new_pairs": 333,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A0-006",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 400,
+      "old_pairs": 400,
+      "new_pairs": 400,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A0-007",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 346,
+      "old_pairs": 346,
+      "new_pairs": 346,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A0-008",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 144,
+      "old_pairs": 144,
+      "new_pairs": 144,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A0-009",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 152,
+      "old_pairs": 152,
+      "new_pairs": 152,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A0-010",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 243,
+      "old_pairs": 243,
+      "new_pairs": 243,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A0-011",
+      "old_status": "error",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 334,
+      "old_pairs": 335,
+      "new_pairs": 361,
+      "full_match": false,
+      "pass": true,
+      "after_failed_action": {
+        "decision": "card_reward",
+        "gold_earned": 42,
+        "context": {
+          "act": 2,
+          "act_name": "Hive",
+          "floor": 13,
+          "room_type": "Elite",
+          "boss": {
+            "id": "KAISER_CRAB_BOSS",
+            "name": "KAISER_CRAB.name"
+          }
+        }
+      },
+      "verification": {
+        "case": "train-A0-011",
+        "status": "match",
+        "steps": 361,
+        "outcome": "defeat",
+        "final_hash": "7fc133c2d4493eaa5d873146744621f601b9d5c4b3c4fb75a54b3002cf5a5765",
+        "seconds": 13.104614540934563,
+        "wire.jsonl_sha256": "ee51a1546a511eff3cc5dc5b6a93aedd2ce95298ec0ddd550b48cafc3712b965",
+        "engine.stderr.log_sha256": "a6d055e7709246809801be9db7f6daa06c133fe798ca0b1cd619e5139a8a0f62",
+        "trace_path": "artifacts/runs/6a719b8d-f4a5-4069-839c-842a79ef2eb8/decisions.jsonl",
+        "trace_sha256": "45e952c381b722f956b131262ed88ad000a314dcdb5e593b540e9292b8e6ddce"
+      }
+    },
+    {
+      "case": "train-A0-012",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 210,
+      "old_pairs": 210,
+      "new_pairs": 210,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A0-013",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 175,
+      "old_pairs": 175,
+      "new_pairs": 175,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A0-014",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 256,
+      "old_pairs": 256,
+      "new_pairs": 256,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A0-015",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 83,
+      "old_pairs": 83,
+      "new_pairs": 83,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A0-016",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 157,
+      "old_pairs": 157,
+      "new_pairs": 157,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A0-017",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 138,
+      "old_pairs": 138,
+      "new_pairs": 138,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A5-000",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 272,
+      "old_pairs": 272,
+      "new_pairs": 272,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A5-001",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 177,
+      "old_pairs": 177,
+      "new_pairs": 177,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A5-002",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 209,
+      "old_pairs": 209,
+      "new_pairs": 209,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A5-003",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 136,
+      "old_pairs": 136,
+      "new_pairs": 136,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A5-004",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 214,
+      "old_pairs": 214,
+      "new_pairs": 214,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A5-005",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 230,
+      "old_pairs": 230,
+      "new_pairs": 230,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A5-006",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 182,
+      "old_pairs": 182,
+      "new_pairs": 182,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A5-007",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 195,
+      "old_pairs": 195,
+      "new_pairs": 195,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A5-008",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 152,
+      "old_pairs": 152,
+      "new_pairs": 152,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A5-009",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 120,
+      "old_pairs": 120,
+      "new_pairs": 120,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A5-010",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 161,
+      "old_pairs": 161,
+      "new_pairs": 161,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A5-011",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 325,
+      "old_pairs": 325,
+      "new_pairs": 325,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A5-012",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 64,
+      "old_pairs": 64,
+      "new_pairs": 64,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A5-013",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 95,
+      "old_pairs": 95,
+      "new_pairs": 95,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A5-014",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 91,
+      "old_pairs": 91,
+      "new_pairs": 91,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A5-015",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 160,
+      "old_pairs": 160,
+      "new_pairs": 160,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A5-016",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 49,
+      "old_pairs": 49,
+      "new_pairs": 49,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A5-017",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 120,
+      "old_pairs": 120,
+      "new_pairs": 120,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A10-000",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 69,
+      "old_pairs": 69,
+      "new_pairs": 69,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A10-001",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 164,
+      "old_pairs": 164,
+      "new_pairs": 164,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A10-002",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 156,
+      "old_pairs": 156,
+      "new_pairs": 156,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A10-003",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 117,
+      "old_pairs": 117,
+      "new_pairs": 117,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A10-004",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 240,
+      "old_pairs": 240,
+      "new_pairs": 240,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A10-005",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 42,
+      "old_pairs": 42,
+      "new_pairs": 42,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A10-006",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 182,
+      "old_pairs": 182,
+      "new_pairs": 182,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A10-007",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 99,
+      "old_pairs": 99,
+      "new_pairs": 99,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A10-008",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 78,
+      "old_pairs": 78,
+      "new_pairs": 78,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A10-009",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 92,
+      "old_pairs": 92,
+      "new_pairs": 92,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A10-010",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 109,
+      "old_pairs": 109,
+      "new_pairs": 109,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A10-011",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 85,
+      "old_pairs": 85,
+      "new_pairs": 85,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A10-012",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 176,
+      "old_pairs": 176,
+      "new_pairs": 176,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A10-013",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 72,
+      "old_pairs": 72,
+      "new_pairs": 72,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A10-014",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 162,
+      "old_pairs": 162,
+      "new_pairs": 162,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A10-015",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 182,
+      "old_pairs": 182,
+      "new_pairs": 182,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A10-016",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 138,
+      "old_pairs": 138,
+      "new_pairs": 138,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "train-A10-017",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 128,
+      "old_pairs": 128,
+      "new_pairs": 128,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "dev-A0-000",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 210,
+      "old_pairs": 210,
+      "new_pairs": 210,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "dev-A0-001",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 212,
+      "old_pairs": 212,
+      "new_pairs": 212,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "dev-A0-002",
+      "old_status": "error",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 384,
+      "old_pairs": 423,
+      "new_pairs": 402,
+      "full_match": false,
+      "first_difference_context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 16,
+        "room_type": "Boss",
+        "boss": {
+          "id": "KAISER_CRAB_BOSS",
+          "name": "KAISER_CRAB.name"
+        }
+      },
+      "old_enemies": [],
+      "new_enemies": [
+        {
+          "id": null,
+          "name": "Crusher",
+          "hp": 208,
+          "powers": [
+            {
+              "name": "Back Attack",
+              "description": "Deals 50% more damage when it is attacking you from behind.",
+              "amount": 1
+            },
+            {
+              "name": "Crab Rage",
+              "description": "When an ally dies, this creature gains 5 Strength and 99 Block.",
+              "amount": 1
+            }
+          ]
+        },
+        {
+          "id": null,
+          "name": "Rocket",
+          "hp": 198,
+          "powers": [
+            {
+              "name": "Back Attack",
+              "description": "Deals 50% more damage when it is attacking you from behind.",
+              "amount": 1
+            },
+            {
+              "name": "Crab Rage",
+              "description": "When an ally dies, this creature gains 5 Strength and 99 Block.",
+              "amount": 1
+            }
+          ]
+        }
+      ],
+      "pass": true,
+      "old_decision": "card_reward",
+      "new_decision": "combat_play",
+      "verification": {
+        "case": "dev-A0-002",
+        "status": "match",
+        "steps": 402,
+        "outcome": "defeat",
+        "final_hash": "a28d5e3d8c0cbb0bd747931e3b6546d0d7a6b97037614e01066c1cc5a8fc81f7",
+        "seconds": 13.717513125156984,
+        "wire.jsonl_sha256": "5abe2e466fdfed3b6d8dc984aa29b116a5ae437c71851b7e1e1fa87af6c7a079",
+        "engine.stderr.log_sha256": "d11da4afcc305ce08305d3dc796a68a1cf79ab7b32396c349f40ba6ed1e43c86",
+        "trace_path": "artifacts/runs/b0b0daab-3055-4676-bb0b-173a42fc44e3/decisions.jsonl",
+        "trace_sha256": "8ca38c77de9b6d78381f9bc02188c75a1d6ca5b9cdc6fdeff1b7862a64731ddc"
+      }
+    },
+    {
+      "case": "dev-A0-003",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 177,
+      "old_pairs": 177,
+      "new_pairs": 177,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "dev-A0-004",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 297,
+      "old_pairs": 297,
+      "new_pairs": 297,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "dev-A0-005",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 269,
+      "old_pairs": 269,
+      "new_pairs": 269,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "dev-A0-006",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 233,
+      "old_pairs": 233,
+      "new_pairs": 233,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "dev-A0-007",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 160,
+      "old_pairs": 160,
+      "new_pairs": 160,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "dev-A0-008",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 234,
+      "old_pairs": 234,
+      "new_pairs": 234,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "dev-A0-009",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 180,
+      "old_pairs": 180,
+      "new_pairs": 180,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "dev-A0-010",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 269,
+      "old_pairs": 269,
+      "new_pairs": 269,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "dev-A0-011",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 270,
+      "old_pairs": 270,
+      "new_pairs": 270,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "dev-A5-000",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 232,
+      "old_pairs": 232,
+      "new_pairs": 232,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "dev-A5-001",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 188,
+      "old_pairs": 188,
+      "new_pairs": 188,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "dev-A5-002",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 54,
+      "old_pairs": 54,
+      "new_pairs": 54,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "dev-A5-003",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 157,
+      "old_pairs": 157,
+      "new_pairs": 157,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "dev-A5-004",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 34,
+      "old_pairs": 34,
+      "new_pairs": 34,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "dev-A5-005",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 138,
+      "old_pairs": 138,
+      "new_pairs": 138,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "dev-A5-006",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 286,
+      "old_pairs": 286,
+      "new_pairs": 286,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "dev-A5-007",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 105,
+      "old_pairs": 105,
+      "new_pairs": 105,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "dev-A5-008",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 160,
+      "old_pairs": 160,
+      "new_pairs": 160,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "dev-A5-009",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 231,
+      "old_pairs": 231,
+      "new_pairs": 231,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "dev-A5-010",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 95,
+      "old_pairs": 95,
+      "new_pairs": 95,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "dev-A5-011",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 125,
+      "old_pairs": 125,
+      "new_pairs": 125,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "dev-A10-000",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 185,
+      "old_pairs": 185,
+      "new_pairs": 185,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "dev-A10-001",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 111,
+      "old_pairs": 111,
+      "new_pairs": 111,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "dev-A10-002",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 202,
+      "old_pairs": 202,
+      "new_pairs": 202,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "dev-A10-003",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 105,
+      "old_pairs": 105,
+      "new_pairs": 105,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "dev-A10-004",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 81,
+      "old_pairs": 81,
+      "new_pairs": 81,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "dev-A10-005",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 58,
+      "old_pairs": 58,
+      "new_pairs": 58,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "dev-A10-006",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 78,
+      "old_pairs": 78,
+      "new_pairs": 78,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "dev-A10-007",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 102,
+      "old_pairs": 102,
+      "new_pairs": 102,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "dev-A10-008",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 114,
+      "old_pairs": 114,
+      "new_pairs": 114,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "dev-A10-009",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 168,
+      "old_pairs": 168,
+      "new_pairs": 168,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "dev-A10-010",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 85,
+      "old_pairs": 85,
+      "new_pairs": 85,
+      "full_match": true,
+      "pass": true
+    },
+    {
+      "case": "dev-A10-011",
+      "old_status": "defeat",
+      "new_status": "defeat",
+      "exact_prefix_pairs": 118,
+      "old_pairs": 118,
+      "new_pairs": 118,
+      "full_match": true,
+      "pass": true
+    }
+  ],
+  "proprietary_game_unchanged": true,
+  "audit": {
+    "raw_traces": 194,
+    "failures": [],
+    "pass": true
+  },
+  "seconds": 29.599929874995723,
+  "pass": true
+}

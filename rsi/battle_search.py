@@ -77,8 +77,14 @@ def finish(trace, result, engine, started):
     if engine:
         engine.close()
     stderr = trace.directory / 'engine.stderr.log'
-    if stderr.exists() and 'forcing game_over' in stderr.read_text():
-        result.update(status='error', error='Engine forced game_over after a stall')
+    if stderr.exists():
+        error_text = stderr.read_text()
+        if 'forcing game_over' in error_text:
+            result.update(status='error', error='Engine forced game_over after a stall')
+        for marker in ('MissingMethodException', 'NullReferenceException', 'UNOBSERVED TASK', 'Headless visual'):
+            if marker in error_text:
+                result.update(status='error', error='Engine stderr integrity failure: '+marker)
+                break
     result['seconds'] = time.monotonic() - started
     for filename in ('wire.jsonl', 'engine.stderr.log'):
         path = trace.directory / filename
