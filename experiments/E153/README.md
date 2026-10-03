@@ -41,3 +41,9 @@ python3 scripts/train_curriculum_e153.py train --plan experiments/E153/plan-v1.j
 # Freeze final weights before evaluation on the33untouched test seeds.
 python3 scripts/train_curriculum_e153.py evaluate --plan experiments/E153/plan-v1.json --bank experiments/E153/bank-v1.json --training experiments/E153/training-v1.json --output artifacts/runs/e153-evaluation-v1.json
 ```
+
+## Collection v1: integrity stop before training
+
+Tested SHA `93a9c28`; all90fixed seeds completed in91.632s.88natural defeats,2execution errors;14Act2 arrivals,1Act3 arrival,45Boss entries.96raw bundles (including6independent replays) hash-audited. No training or policy improvement claim. `max_floor` is the maximum **within-act** floor, not total floors travelled.
+
+Frozen errors: `train-A0-011` stalls on original ReattachPower animation method JIT because Godot.Node.GetIndex(bool) is missing; `dev-A0-002` errors on Trial.Accept's unguarded NEventRoom UI access. The latter also has an earlier unobserved Crusher.AfterAddedToRoom JIT failure for CanvasItem.SetVisible(bool), potentially skipping its original power application. Thus even successful state responses are not sufficient evidence of engine integrity. Keep both original paths and hashes; do not remove or substitute seeds. Training is stopped. A separate compatibility experiment will add exact guarded ABI signatures, compare unchanged histories, verify original Crusher powers, and rerun the identical90seeds before any curriculum fitting. Trial UI access remains separately tracked if encountered with the corrected combat semantics.
