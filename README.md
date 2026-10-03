@@ -2,6 +2,8 @@
 
 这是一个公开的、以证据驱动的《杀戮尖塔 2》智能体实验仓库。目标是用确定性计算处理规则与风险，让廉价的 Jev 做大量选择，只在关键且不确定的局面调用 Astra，最终提高多角色、高进阶的整局胜率。
 
+当前学习研究的验收目标是：**一个冻结的网络独立完成铁甲战士 A0～A10 整局**，包含路线、奖励、选牌、商店、事件与用药；训练可使用教师和搜索，验收不由 Astra 或规划器接管。目前尚未达到。[E138](experiments/E138/README.md)完成 M3 Max CPU/MPS profiling，小网络单步推理保留 CPU；[E139](experiments/E139/README.md)采集五角色自然整局，787 个战斗入口仅26个第二幕、第三幕为零；[E140](experiments/E140/README.md)完成阶段上下文网络、离线 AWR 与新采样 PPO 对照，176 次新 seed 整局尝试全部战败，两个算法的扩张门槛均失败。[训练与整局结果图](experiments/E140/figures/pilot-results.png)。下一步优先补齐可用观测和后期课程，注册的 [E141](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/265)、[E142](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/266) 尚未执行。
+
 **截至 2026-10-03：系统能控制真实游戏并完成过一局 A0，但还不是稳定通关的低 Astra 成本策略。** 请按下面的证据边界理解结果。
 
 | 验证范围 | 已观察到的结果 | 不能据此声称 |

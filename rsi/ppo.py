@@ -110,12 +110,14 @@ def encode(state, choices, previous=None, *, max_actions=MAX_ACTIONS):
 
 
 class ActorCritic(nn.Module):
-    def __init__(self, state_width=128, action_width=64):
+    def __init__(self, state_width=128, action_width=64, state_dim=STATE_DIM, action_dim=ACTION_DIM):
         super().__init__()
         self.config = dict(state_width=state_width, action_width=action_width)
-        self.state = nn.Sequential(nn.Linear(STATE_DIM, state_width), nn.Tanh(),
+        if (state_dim, action_dim) != (STATE_DIM, ACTION_DIM):
+            self.config.update(state_dim=state_dim, action_dim=action_dim)
+        self.state = nn.Sequential(nn.Linear(state_dim, state_width), nn.Tanh(),
                                    nn.Linear(state_width, state_width), nn.Tanh())
-        self.action = nn.Sequential(nn.Linear(ACTION_DIM, action_width), nn.Tanh())
+        self.action = nn.Sequential(nn.Linear(action_dim, action_width), nn.Tanh())
         self.actor = nn.Sequential(nn.Linear(state_width + action_width, action_width),
                                    nn.Tanh(), nn.Linear(action_width, 1))
         self.value = nn.Linear(state_width, 1)
@@ -137,7 +139,10 @@ class ActorCritic(nn.Module):
 def padded(observations):
     n = max(len(a) for _, a in observations)
     states = torch.from_numpy(np.stack([s for s, _ in observations]))
-    actions = torch.zeros(len(observations), n, ACTION_DIM)
+    action_dim = observations[0][1].shape[1]
+    if any(a.shape[1] != action_dim for _, a in observations):
+        raise ValueError('Mixed encoder action dimensions')
+    actions = torch.zeros(len(observations), n, action_dim)
     mask = torch.zeros(len(observations), n, dtype=torch.bool)
     for i, (_, a) in enumerate(observations):
         actions[i, :len(a)] = torch.from_numpy(a)
