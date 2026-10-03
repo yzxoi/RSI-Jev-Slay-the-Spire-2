@@ -1,0 +1,1070 @@
+{
+  "manifest": {
+    "schema_version": 2,
+    "code_commit": "05894e2e6dfb1e470efa3e254974114ef7d537cd",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "15cc006c2ffdf8f1e3ef78c349368c4f338fb7139243ccfdf1eec5f892c42c86",
+    "godot_stubs_sha256": "2bb3b99863f651decb27cf3ceead489046808e60d95ccbc28048ad094ecc856a",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+      "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772",
+      "headless-zzzzzz-godot-abi.patch": "5239d3836d279de5143f7d56bece1f061c6c4002de696fce28f9f7f3922ededc",
+      "headless-zzzzzzz-learning-observations.patch": "d51db8457fdb9348340a829c84fa77e9620c476ba16a7c6e224b286ecb2dfd07",
+      "headless-zzzzzzzz-encounter-abi.patch": "e4a730f9e58fddebef8ef924fcd8d0adc03d72d1148f8d29b2f9ea60556696cc"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4",
+    "experiment": "E153",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.5",
+    "model_calls": 0,
+    "model_cost_usd": 0,
+    "mode": "read_only_report"
+  },
+  "restart": {
+    "paths_match": true,
+    "weights_equal": true,
+    "duplicate_training_episodes": 48
+  },
+  "training_seconds": 226.0153378751129,
+  "evaluation_seconds": 300.7804049998522,
+  "training": {
+    "2301": {
+      "parameters": 115778,
+      "episodes": 144,
+      "statuses": {
+        "clear": 93,
+        "defeat": 51
+      },
+      "transitions": 2749,
+      "phases": {
+        "combat_play": 2516,
+        "card_select": 64,
+        "event_choice": 31,
+        "map_select": 77,
+        "card_reward": 29,
+        "bundle_select": 2,
+        "potion_reward": 12,
+        "rest_site": 15,
+        "shop": 3
+      },
+      "restore_seconds": 486.5158148689661,
+      "summed_episode_seconds": 585.6125179110095,
+      "optimization_seconds": 0.5084512068424374,
+      "max_logprob_error": 7.29347291006377e-07
+    },
+    "2302": {
+      "parameters": 115778,
+      "episodes": 144,
+      "statuses": {
+        "clear": 93,
+        "defeat": 51
+      },
+      "transitions": 2681,
+      "phases": {
+        "combat_play": 2459,
+        "card_select": 49,
+        "event_choice": 34,
+        "map_select": 73,
+        "card_reward": 37,
+        "bundle_select": 1,
+        "potion_reward": 12,
+        "rest_site": 14,
+        "shop": 2
+      },
+      "restore_seconds": 472.332783379592,
+      "summed_episode_seconds": 565.3239571638405,
+      "optimization_seconds": 0.5818513727281243,
+      "max_logprob_error": 1.0084052979308922e-06
+    }
+  },
+  "monitors": {
+    "initial": {
+      "n": 9,
+      "statuses": {
+        "defeat": 9
+      },
+      "act2": 0,
+      "act3": 0,
+      "boss_entries": 1,
+      "mean_battles": 5.0,
+      "decisions": 923,
+      "network_calls": 923,
+      "planner_calls": 0
+    },
+    "2301": {
+      "Monster": {
+        "n": 9,
+        "statuses": {
+          "defeat": 9
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 1,
+        "mean_battles": 5.111111111111111,
+        "decisions": 935,
+        "network_calls": 935,
+        "planner_calls": 0
+      },
+      "Elite": {
+        "n": 9,
+        "statuses": {
+          "defeat": 9
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 0,
+        "mean_battles": 5.111111111111111,
+        "decisions": 938,
+        "network_calls": 938,
+        "planner_calls": 0
+      },
+      "Boss": {
+        "n": 9,
+        "statuses": {
+          "defeat": 9
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 0,
+        "mean_battles": 4.777777777777778,
+        "decisions": 914,
+        "network_calls": 914,
+        "planner_calls": 0
+      }
+    },
+    "2302": {
+      "Monster": {
+        "n": 9,
+        "statuses": {
+          "defeat": 9
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 1,
+        "mean_battles": 5.111111111111111,
+        "decisions": 922,
+        "network_calls": 922,
+        "planner_calls": 0
+      },
+      "Elite": {
+        "n": 9,
+        "statuses": {
+          "defeat": 9
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 0,
+        "mean_battles": 5.0,
+        "decisions": 887,
+        "network_calls": 887,
+        "planner_calls": 0
+      },
+      "Boss": {
+        "n": 9,
+        "statuses": {
+          "defeat": 9
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 0,
+        "mean_battles": 4.888888888888889,
+        "decisions": 902,
+        "network_calls": 902,
+        "planner_calls": 0
+      }
+    }
+  },
+  "local": {
+    "initial": {
+      "combat": {
+        "Monster": {
+          "n": 12,
+          "statuses": {
+            "clear": 12
+          },
+          "mean_hp_fraction": 0.7606913919413919,
+          "actual_rooms": {
+            "Monster": 12
+          }
+        },
+        "Elite": {
+          "n": 12,
+          "statuses": {
+            "defeat": 6,
+            "clear": 6
+          },
+          "mean_hp_fraction": 0.17015086206896554,
+          "actual_rooms": {
+            "Elite": 12
+          }
+        },
+        "Boss": {
+          "n": 12,
+          "statuses": {
+            "defeat": 10,
+            "clear": 2
+          },
+          "mean_hp_fraction": 0.03374840357598979,
+          "actual_rooms": {
+            "Boss": 12
+          }
+        }
+      },
+      "prepare": {
+        "Monster": {
+          "n": 12,
+          "statuses": {
+            "clear": 12
+          },
+          "mean_hp_fraction": 0.7698145604395604,
+          "actual_rooms": {
+            "Monster": 12
+          }
+        },
+        "Elite": {
+          "n": 12,
+          "statuses": {
+            "defeat": 5,
+            "clear": 7
+          },
+          "mean_hp_fraction": 0.22167544699872288,
+          "actual_rooms": {
+            "Elite": 12
+          }
+        },
+        "Boss": {
+          "n": 12,
+          "statuses": {
+            "defeat": 11,
+            "clear": 1
+          },
+          "mean_hp_fraction": 0.024904214559386975,
+          "actual_rooms": {
+            "Boss": 12
+          }
+        }
+      }
+    },
+    "2301": {
+      "combat": {
+        "Monster": {
+          "n": 12,
+          "statuses": {
+            "clear": 12
+          },
+          "mean_hp_fraction": 0.7658997252747253,
+          "actual_rooms": {
+            "Monster": 12
+          }
+        },
+        "Elite": {
+          "n": 12,
+          "statuses": {
+            "defeat": 6,
+            "clear": 6
+          },
+          "mean_hp_fraction": 0.17640086206896552,
+          "actual_rooms": {
+            "Elite": 12
+          }
+        },
+        "Boss": {
+          "n": 12,
+          "statuses": {
+            "defeat": 10,
+            "clear": 2
+          },
+          "mean_hp_fraction": 0.03374840357598979,
+          "actual_rooms": {
+            "Boss": 12
+          }
+        }
+      },
+      "prepare": {
+        "Monster": {
+          "n": 12,
+          "statuses": {
+            "clear": 12
+          },
+          "mean_hp_fraction": 0.7836309523809524,
+          "actual_rooms": {
+            "Monster": 12
+          }
+        },
+        "Elite": {
+          "n": 12,
+          "statuses": {
+            "defeat": 6,
+            "clear": 6
+          },
+          "mean_hp_fraction": 0.19259259259259262,
+          "actual_rooms": {
+            "Elite": 12
+          }
+        },
+        "Boss": {
+          "n": 12,
+          "statuses": {
+            "defeat": 11,
+            "clear": 1
+          },
+          "mean_hp_fraction": 0.024904214559386975,
+          "actual_rooms": {
+            "Boss": 12
+          }
+        }
+      }
+    },
+    "2302": {
+      "combat": {
+        "Monster": {
+          "n": 12,
+          "statuses": {
+            "clear": 12
+          },
+          "mean_hp_fraction": 0.779441391941392,
+          "actual_rooms": {
+            "Monster": 12
+          }
+        },
+        "Elite": {
+          "n": 12,
+          "statuses": {
+            "clear": 9,
+            "defeat": 3
+          },
+          "mean_hp_fraction": 0.30471743295019155,
+          "actual_rooms": {
+            "Elite": 12
+          }
+        },
+        "Boss": {
+          "n": 12,
+          "statuses": {
+            "defeat": 9,
+            "clear": 3
+          },
+          "mean_hp_fraction": 0.06778604161971301,
+          "actual_rooms": {
+            "Boss": 12
+          }
+        }
+      },
+      "prepare": {
+        "Monster": {
+          "n": 12,
+          "statuses": {
+            "clear": 12
+          },
+          "mean_hp_fraction": 0.7759271978021977,
+          "actual_rooms": {
+            "Monster": 12
+          }
+        },
+        "Elite": {
+          "n": 12,
+          "statuses": {
+            "defeat": 5,
+            "clear": 7
+          },
+          "mean_hp_fraction": 0.24417305236270756,
+          "actual_rooms": {
+            "Elite": 12
+          }
+        },
+        "Boss": {
+          "n": 12,
+          "statuses": {
+            "defeat": 8,
+            "clear": 4
+          },
+          "mean_hp_fraction": 0.06723128427616258,
+          "actual_rooms": {
+            "Boss": 12
+          }
+        }
+      }
+    }
+  },
+  "full": {
+    "initial": {
+      "n": 33,
+      "statuses": {
+        "defeat": 33
+      },
+      "act2": 0,
+      "act3": 0,
+      "boss_entries": 5,
+      "mean_battles": 4.393939393939394,
+      "decisions": 3408,
+      "network_calls": 3408,
+      "planner_calls": 0
+    },
+    "2301": {
+      "n": 33,
+      "statuses": {
+        "defeat": 33
+      },
+      "act2": 0,
+      "act3": 0,
+      "boss_entries": 4,
+      "mean_battles": 4.424242424242424,
+      "decisions": 3434,
+      "network_calls": 3434,
+      "planner_calls": 0
+    },
+    "2302": {
+      "n": 33,
+      "statuses": {
+        "defeat": 33
+      },
+      "act2": 2,
+      "act3": 0,
+      "boss_entries": 5,
+      "mean_battles": 4.9393939393939394,
+      "decisions": 3480,
+      "network_calls": 3480,
+      "planner_calls": 0
+    },
+    "planner": {
+      "n": 33,
+      "statuses": {
+        "defeat": 32,
+        "error": 1
+      },
+      "act2": 3,
+      "act3": 0,
+      "boss_entries": 13,
+      "mean_battles": 5.878787878787879,
+      "decisions": 4829,
+      "network_calls": 0,
+      "planner_calls": 4830
+    }
+  },
+  "by_difficulty": {
+    "initial": {
+      "0": {
+        "n": 3,
+        "statuses": {
+          "defeat": 3
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 1,
+        "mean_battles": 6.0,
+        "decisions": 394,
+        "network_calls": 394,
+        "planner_calls": 0
+      },
+      "1": {
+        "n": 3,
+        "statuses": {
+          "defeat": 3
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 1,
+        "mean_battles": 5.0,
+        "decisions": 339,
+        "network_calls": 339,
+        "planner_calls": 0
+      },
+      "2": {
+        "n": 3,
+        "statuses": {
+          "defeat": 3
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 1,
+        "mean_battles": 6.333333333333333,
+        "decisions": 427,
+        "network_calls": 427,
+        "planner_calls": 0
+      },
+      "3": {
+        "n": 3,
+        "statuses": {
+          "defeat": 3
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 0,
+        "mean_battles": 4.0,
+        "decisions": 251,
+        "network_calls": 251,
+        "planner_calls": 0
+      },
+      "4": {
+        "n": 3,
+        "statuses": {
+          "defeat": 3
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 1,
+        "mean_battles": 4.333333333333333,
+        "decisions": 334,
+        "network_calls": 334,
+        "planner_calls": 0
+      },
+      "5": {
+        "n": 3,
+        "statuses": {
+          "defeat": 3
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 1,
+        "mean_battles": 5.0,
+        "decisions": 397,
+        "network_calls": 397,
+        "planner_calls": 0
+      },
+      "6": {
+        "n": 3,
+        "statuses": {
+          "defeat": 3
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 0,
+        "mean_battles": 3.3333333333333335,
+        "decisions": 213,
+        "network_calls": 213,
+        "planner_calls": 0
+      },
+      "7": {
+        "n": 3,
+        "statuses": {
+          "defeat": 3
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 0,
+        "mean_battles": 4.333333333333333,
+        "decisions": 314,
+        "network_calls": 314,
+        "planner_calls": 0
+      },
+      "8": {
+        "n": 3,
+        "statuses": {
+          "defeat": 3
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 0,
+        "mean_battles": 3.0,
+        "decisions": 235,
+        "network_calls": 235,
+        "planner_calls": 0
+      },
+      "9": {
+        "n": 3,
+        "statuses": {
+          "defeat": 3
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 0,
+        "mean_battles": 3.3333333333333335,
+        "decisions": 267,
+        "network_calls": 267,
+        "planner_calls": 0
+      },
+      "10": {
+        "n": 3,
+        "statuses": {
+          "defeat": 3
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 0,
+        "mean_battles": 3.6666666666666665,
+        "decisions": 237,
+        "network_calls": 237,
+        "planner_calls": 0
+      }
+    },
+    "2301": {
+      "0": {
+        "n": 3,
+        "statuses": {
+          "defeat": 3
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 1,
+        "mean_battles": 6.333333333333333,
+        "decisions": 443,
+        "network_calls": 443,
+        "planner_calls": 0
+      },
+      "1": {
+        "n": 3,
+        "statuses": {
+          "defeat": 3
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 1,
+        "mean_battles": 5.333333333333333,
+        "decisions": 370,
+        "network_calls": 370,
+        "planner_calls": 0
+      },
+      "2": {
+        "n": 3,
+        "statuses": {
+          "defeat": 3
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 1,
+        "mean_battles": 6.333333333333333,
+        "decisions": 431,
+        "network_calls": 431,
+        "planner_calls": 0
+      },
+      "3": {
+        "n": 3,
+        "statuses": {
+          "defeat": 3
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 0,
+        "mean_battles": 4.0,
+        "decisions": 266,
+        "network_calls": 266,
+        "planner_calls": 0
+      },
+      "4": {
+        "n": 3,
+        "statuses": {
+          "defeat": 3
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 0,
+        "mean_battles": 3.3333333333333335,
+        "decisions": 236,
+        "network_calls": 236,
+        "planner_calls": 0
+      },
+      "5": {
+        "n": 3,
+        "statuses": {
+          "defeat": 3
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 1,
+        "mean_battles": 5.0,
+        "decisions": 388,
+        "network_calls": 388,
+        "planner_calls": 0
+      },
+      "6": {
+        "n": 3,
+        "statuses": {
+          "defeat": 3
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 0,
+        "mean_battles": 3.3333333333333335,
+        "decisions": 210,
+        "network_calls": 210,
+        "planner_calls": 0
+      },
+      "7": {
+        "n": 3,
+        "statuses": {
+          "defeat": 3
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 0,
+        "mean_battles": 4.333333333333333,
+        "decisions": 313,
+        "network_calls": 313,
+        "planner_calls": 0
+      },
+      "8": {
+        "n": 3,
+        "statuses": {
+          "defeat": 3
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 0,
+        "mean_battles": 3.3333333333333335,
+        "decisions": 247,
+        "network_calls": 247,
+        "planner_calls": 0
+      },
+      "9": {
+        "n": 3,
+        "statuses": {
+          "defeat": 3
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 0,
+        "mean_battles": 3.6666666666666665,
+        "decisions": 287,
+        "network_calls": 287,
+        "planner_calls": 0
+      },
+      "10": {
+        "n": 3,
+        "statuses": {
+          "defeat": 3
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 0,
+        "mean_battles": 3.6666666666666665,
+        "decisions": 243,
+        "network_calls": 243,
+        "planner_calls": 0
+      }
+    },
+    "2302": {
+      "0": {
+        "n": 3,
+        "statuses": {
+          "defeat": 3
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 1,
+        "mean_battles": 7.666666666666667,
+        "decisions": 443,
+        "network_calls": 443,
+        "planner_calls": 0
+      },
+      "1": {
+        "n": 3,
+        "statuses": {
+          "defeat": 3
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 1,
+        "mean_battles": 5.333333333333333,
+        "decisions": 368,
+        "network_calls": 368,
+        "planner_calls": 0
+      },
+      "2": {
+        "n": 3,
+        "statuses": {
+          "defeat": 3
+        },
+        "act2": 1,
+        "act3": 0,
+        "boss_entries": 1,
+        "mean_battles": 8.333333333333334,
+        "decisions": 530,
+        "network_calls": 530,
+        "planner_calls": 0
+      },
+      "3": {
+        "n": 3,
+        "statuses": {
+          "defeat": 3
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 0,
+        "mean_battles": 3.6666666666666665,
+        "decisions": 228,
+        "network_calls": 228,
+        "planner_calls": 0
+      },
+      "4": {
+        "n": 3,
+        "statuses": {
+          "defeat": 3
+        },
+        "act2": 1,
+        "act3": 0,
+        "boss_entries": 1,
+        "mean_battles": 5.333333333333333,
+        "decisions": 374,
+        "network_calls": 374,
+        "planner_calls": 0
+      },
+      "5": {
+        "n": 3,
+        "statuses": {
+          "defeat": 3
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 1,
+        "mean_battles": 5.0,
+        "decisions": 332,
+        "network_calls": 332,
+        "planner_calls": 0
+      },
+      "6": {
+        "n": 3,
+        "statuses": {
+          "defeat": 3
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 0,
+        "mean_battles": 3.3333333333333335,
+        "decisions": 192,
+        "network_calls": 192,
+        "planner_calls": 0
+      },
+      "7": {
+        "n": 3,
+        "statuses": {
+          "defeat": 3
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 0,
+        "mean_battles": 4.666666666666667,
+        "decisions": 334,
+        "network_calls": 334,
+        "planner_calls": 0
+      },
+      "8": {
+        "n": 3,
+        "statuses": {
+          "defeat": 3
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 0,
+        "mean_battles": 3.6666666666666665,
+        "decisions": 228,
+        "network_calls": 228,
+        "planner_calls": 0
+      },
+      "9": {
+        "n": 3,
+        "statuses": {
+          "defeat": 3
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 0,
+        "mean_battles": 3.6666666666666665,
+        "decisions": 241,
+        "network_calls": 241,
+        "planner_calls": 0
+      },
+      "10": {
+        "n": 3,
+        "statuses": {
+          "defeat": 3
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 0,
+        "mean_battles": 3.6666666666666665,
+        "decisions": 210,
+        "network_calls": 210,
+        "planner_calls": 0
+      }
+    },
+    "planner": {
+      "0": {
+        "n": 3,
+        "statuses": {
+          "defeat": 3
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 1,
+        "mean_battles": 7.0,
+        "decisions": 433,
+        "network_calls": 0,
+        "planner_calls": 433
+      },
+      "1": {
+        "n": 3,
+        "statuses": {
+          "defeat": 3
+        },
+        "act2": 1,
+        "act3": 0,
+        "boss_entries": 2,
+        "mean_battles": 7.333333333333333,
+        "decisions": 550,
+        "network_calls": 0,
+        "planner_calls": 550
+      },
+      "2": {
+        "n": 3,
+        "statuses": {
+          "defeat": 3
+        },
+        "act2": 1,
+        "act3": 0,
+        "boss_entries": 2,
+        "mean_battles": 7.0,
+        "decisions": 498,
+        "network_calls": 0,
+        "planner_calls": 498
+      },
+      "3": {
+        "n": 3,
+        "statuses": {
+          "defeat": 2,
+          "error": 1
+        },
+        "act2": 1,
+        "act3": 0,
+        "boss_entries": 1,
+        "mean_battles": 5.666666666666667,
+        "decisions": 362,
+        "network_calls": 0,
+        "planner_calls": 363
+      },
+      "4": {
+        "n": 3,
+        "statuses": {
+          "defeat": 3
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 2,
+        "mean_battles": 6.333333333333333,
+        "decisions": 563,
+        "network_calls": 0,
+        "planner_calls": 563
+      },
+      "5": {
+        "n": 3,
+        "statuses": {
+          "defeat": 3
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 0,
+        "mean_battles": 4.0,
+        "decisions": 273,
+        "network_calls": 0,
+        "planner_calls": 273
+      },
+      "6": {
+        "n": 3,
+        "statuses": {
+          "defeat": 3
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 0,
+        "mean_battles": 4.0,
+        "decisions": 309,
+        "network_calls": 0,
+        "planner_calls": 309
+      },
+      "7": {
+        "n": 3,
+        "statuses": {
+          "defeat": 3
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 2,
+        "mean_battles": 5.666666666666667,
+        "decisions": 458,
+        "network_calls": 0,
+        "planner_calls": 458
+      },
+      "8": {
+        "n": 3,
+        "statuses": {
+          "defeat": 3
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 1,
+        "mean_battles": 5.0,
+        "decisions": 385,
+        "network_calls": 0,
+        "planner_calls": 385
+      },
+      "9": {
+        "n": 3,
+        "statuses": {
+          "defeat": 3
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 1,
+        "mean_battles": 6.0,
+        "decisions": 490,
+        "network_calls": 0,
+        "planner_calls": 490
+      },
+      "10": {
+        "n": 3,
+        "statuses": {
+          "defeat": 3
+        },
+        "act2": 0,
+        "act3": 0,
+        "boss_entries": 1,
+        "mean_battles": 6.666666666666667,
+        "decisions": 508,
+        "network_calls": 0,
+        "planner_calls": 508
+      }
+    }
+  },
+  "gates": {
+    "2301": {
+      "boss_coverage": true,
+      "two_more_act2": false,
+      "difficulty_guard": true,
+      "no_lost_full_win": true,
+      "local_no_regression": true,
+      "pass": false
+    },
+    "2302": {
+      "boss_coverage": true,
+      "two_more_act2": true,
+      "difficulty_guard": true,
+      "no_lost_full_win": true,
+      "local_no_regression": true,
+      "pass": true
+    }
+  },
+  "expansion_gate": false,
+  "audit": {
+    "raw_traces": 830,
+    "failures": [],
+    "pass": true
+  },
+  "stderr_unclassified_failures": [],
+  "sources": {
+    "training-v1.json": "57e1ca4634437bc01e097a273d46229e4324267602b7d088f16b489e69ba5465",
+    "training-v2.json": "a3011c2cf8f1d0238139b779c86f9dc7ad2fcef2b5f09c14d6273e62847784fb",
+    "evaluation-v1.json": "699d376a7884de4eaf0f15eb1ee5b65461f28539df54be1b9ddfe0e4b5c063ba"
+  }
+}

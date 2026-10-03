@@ -75,3 +75,11 @@ Evaluated79d49d7,300.780s. All99neural complete-run attempts naturally defeated:
 Planner:32natural defeats plus1execution error among33fixed attempts;3observedAct2 arrivals,including the later errored path. `planner:test-A3-002` fails on choose_option with missing Godot.Vector2I.get_One(). No replacement/continuation/seed removal. All216local evaluation episodes complete;71independent replays and419raw-bundle hashes pass. The benchmark execution gate fails because of the one planner error. Learner2302meets the numerical per-learner strength thresholds,2301does not; combined expansion gate fails independently of the engine error. Keep tool/evidence only; do not promote models or expand this recipe. Final330acceptance seeds unused.
 
 A read-only final review found the generic asynchronous stderr marker used the wrong case; use the actual Program.cs string with case-insensitive matching and a focused synthetic test. Re-scan all stopped/current training/evaluation stderr in the report. This post-evaluation guard change cannot improve or relabel game outcomes; preserve exact testedSHA/exception.
+
+## Read-only report and integration decision
+
+Report at05894e2:830training/evaluation/stopped-attempt bundles audit,0unclassified stderr exceptions. Duplicate first48paths and all update2model tensors exact. 5focused synthetic tests pass. Training93clear/51defeat for each learner despite different held-out outcomes;830bundles are not830independent seeds. Optimizer sum1.090s;full-prefix restoration83.3%of summed training episode time. Training macro coverage includes66card-reward,24potion-reward and5shop decisions across both learners. Two held-out Act2 successes are A2-000/A4-001;noA0/A10Act2 arrival or full-game win.
+
+Crystal Sphere grid-size ABI issue tracked unexecuted as#295;Trial remains#294. Preserve current TEST as incomplete,do not repair/retry it into a favorable benchmark. Merge the opt-in curriculum framework, complete evidence and E154 compatibility correction; retain failed expansion decision and default controller. [Readable report and figures](../../docs/research/learning-search/2026-10-03-real-curriculum.md).
+
+Notion私人研究主页、决策、实验和方案四页已同步；复读核对E153与结果存在，原有图片0/2/7/0保留。README与本地D020/研究报告更新，图已逐张查看。
