@@ -1,6 +1,6 @@
 """Synthetic diagnostic math; not game-strength tests."""
 import unittest
-from scripts.diagnose_credit_e147 import measure
+from scripts.diagnose_credit_e147 import measure,name
 
 
 class CreditAuditTests(unittest.TestCase):
@@ -21,3 +21,8 @@ class CreditAuditTests(unittest.TestCase):
         for r in rows:r['reward']=-1
         self.assertIsNone(measure(rows)['explained_variance'])
         self.assertEqual(measure([]),{'n':0})
+
+    def test_menu_metadata_may_be_a_list(self):
+        action={'action':{'action':'select_cards'},'name':'Choose cards','details':[{'name':'Strike'}]}
+        self.assertEqual(name(action),'Choose cards')
+        self.assertEqual(name({**action,'details':{'title':'A named option'}}),'A named option')

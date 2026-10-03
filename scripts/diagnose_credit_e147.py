@@ -42,6 +42,7 @@ def measure(rows):
 
 def name(choice):
     detail=choice.get('details') or {}
+    if not isinstance(detail,dict):return choice.get('name',choice['action']['action'])
     return detail.get('title',detail.get('name',choice.get('name',choice['action']['action'])))
 
 
@@ -125,7 +126,10 @@ def main(output):
             if time.monotonic()>deadline:raise TimeoutError('Audit budget')
             batch=[]
             for record in update['episodes']:
-                rows,events,pairs=load(record,reward(record));batch+=rows
+                rows,events,pairs=load(record,reward(record))
+                raw_adv,_=advantages([0.]*(len(rows)-1)+[reward(record)],[x['value'] for x in rows],gamma=1.,lam=1.)
+                for x,a in zip(rows,raw_adv):x['raw_adv']=float(a)
+                batch+=rows
                 details.append(dict(case=record['case'],seed=record['seed'],learner=learner['learner'],update=update['update'],
                     ascension=record['ascension'],status=record['status'],steps=record['steps'],
                     forced=sum(x['choices']==1 for x in rows),reward=reward(record),first_value=rows[0]['value'],
@@ -138,8 +142,8 @@ def main(output):
                 if update['update']==1 and record['case'].endswith('-00'):
                     selected.append((record,events,pairs))
                 initials.append(rows[0])
-            raw=np.asarray([x['reward']-x['value'] for x in batch],dtype=np.float32)
-            normalized=(raw-raw.mean())/(raw.std()+1e-8)
+            raw=torch.tensor(np.asarray([x['raw_adv'] for x in batch],dtype=np.float32))
+            normalized=(raw-raw.mean())/(raw.std(unbiased=False)+1e-8)
             for row,a,b in zip(batch,raw,normalized):row.update(raw_adv=float(a),adv=float(b))
             report['training'].append(dict(learner=learner['learner'],update=update['update'],all=measure(batch),
                 by_phase=group(batch,'phase'),by_ascension=group(batch,'ascension'),
