@@ -1,0 +1,1004 @@
+{
+  "manifest": {
+    "schema_version": 2,
+    "code_commit": "8beed49ed6927540fb2158e1c5639940b23c8607",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "a32485ef4c34641acc26f0c85454ba767bd4b06c4c06258e59baa26b5a72b54f",
+    "godot_stubs_sha256": "2bb3b99863f651decb27cf3ceead489046808e60d95ccbc28048ad094ecc856a",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+      "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772",
+      "headless-zzzzzz-godot-abi.patch": "5239d3836d279de5143f7d56bece1f061c6c4002de696fce28f9f7f3922ededc",
+      "headless-zzzzzzz-learning-observations.patch": "d51db8457fdb9348340a829c84fa77e9620c476ba16a7c6e224b286ecb2dfd07",
+      "headless-zzzzzzzz-encounter-abi.patch": "e4a730f9e58fddebef8ef924fcd8d0adc03d72d1148f8d29b2f9ea60556696cc",
+      "headless-zzzzzzzzz-native-map-odds.patch": "86ee5561968629b094a1f63e214f32e8a3ae7b5614fffcb470d52886287e1885"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4",
+    "experiment": "E159",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.5",
+    "model_calls": 0,
+    "model_cost_usd": 0,
+    "encoder": "e140-phase-context-v1",
+    "torch": "2.11.0",
+    "device": "cpu",
+    "numpy": "2.3.2"
+  },
+  "source": {
+    "path": "experiments/E149/evaluation-v3.json",
+    "sha256": "c09e42923175723c872d9050f7b505475b7d392689736a9ec2fd9b722e80fb18"
+  },
+  "bank": {
+    "path": "experiments/E149/bank-v1.json",
+    "sha256": "ddc65527130d1bcb6035bedc7e4e5899320ecd4779be343536a5e3ced2cd4f43"
+  },
+  "restore_certificate": {
+    "path": "experiments/E158/validation-v1.json",
+    "sha256": "b57fbf6d8a1f2c2bd7371d3f26bcdf5a263a23d683aac1409ed610426842b248"
+  },
+  "checkpoint": {
+    "path": "artifacts/runs/e140-training-v2/1702-bc.pt",
+    "sha256": "6f17f85ac348aa942f9c1c34b0fa6d1567df0be52f3be4a724a27798b8bab6ec",
+    "label": "BC",
+    "config": {
+      "state_width": 128,
+      "action_width": 64,
+      "state_dim": 540,
+      "action_dim": 272
+    }
+  },
+  "roots": [
+    {
+      "index": 0,
+      "case": "train-A0-000:combat",
+      "seed": "e149_train_Ironclad_A0_000",
+      "mode": "combat",
+      "ascension": 0,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-00.json",
+        "sha256": "4265fa4fae7012fea94bd09df862cab0f912223d4ea68a80e1f3d746b0dc5685"
+      },
+      "first_actions": {
+        "actor": {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 4
+          }
+        },
+        "selected": {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 4
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "index": 1,
+      "case": "train-A0-000:prepare",
+      "seed": "e149_train_Ironclad_A0_000",
+      "mode": "prepare",
+      "ascension": 0,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-01.json",
+        "sha256": "e90bde0614f3c861e87a20cbeb23c6b08879084e8c04c0bab685ae158fba90ca"
+      },
+      "first_actions": {
+        "actor": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 2
+          }
+        },
+        "selected": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 1
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "index": 2,
+      "case": "train-A0-001:combat",
+      "seed": "e149_train_Ironclad_A0_001",
+      "mode": "combat",
+      "ascension": 0,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-02.json",
+        "sha256": "8dc63f6ba885660f9785b26f3ed8f82193dca145a2c2d48295fbd01595a22f23"
+      },
+      "first_actions": {
+        "actor": {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        "selected": {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        }
+      },
+      "replay": false
+    },
+    {
+      "index": 3,
+      "case": "train-A0-001:prepare",
+      "seed": "e149_train_Ironclad_A0_001",
+      "mode": "prepare",
+      "ascension": 0,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-03.json",
+        "sha256": "d1a6f9837dcb6807068a7753af4eb5809728702210405e4e2a46cd00a975e360"
+      },
+      "first_actions": {
+        "actor": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 2
+          }
+        },
+        "selected": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 2
+          }
+        }
+      },
+      "replay": false
+    },
+    {
+      "index": 4,
+      "case": "train-A0-002:combat",
+      "seed": "e149_train_Ironclad_A0_002",
+      "mode": "combat",
+      "ascension": 0,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-04.json",
+        "sha256": "8be7a83cc18e42d7e935cc525066f42b519b8d32fda81ae6eef04b1d78c0c7b2"
+      },
+      "first_actions": {
+        "actor": {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 0,
+            "target_index": 2
+          }
+        },
+        "selected": {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 0,
+            "target_index": 2
+          }
+        }
+      },
+      "replay": false
+    },
+    {
+      "index": 5,
+      "case": "train-A0-002:prepare",
+      "seed": "e149_train_Ironclad_A0_002",
+      "mode": "prepare",
+      "ascension": 0,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-05.json",
+        "sha256": "56fa11f0524b96613468ea3332060b13ea41f440638b8fdb5ec2556677e52f2f"
+      },
+      "first_actions": {
+        "actor": {
+          "cmd": "action",
+          "action": "claim_potion_reward",
+          "args": {}
+        },
+        "selected": {
+          "cmd": "action",
+          "action": "claim_potion_reward",
+          "args": {}
+        }
+      },
+      "replay": false
+    },
+    {
+      "index": 6,
+      "case": "train-A0-003:combat",
+      "seed": "e149_train_Ironclad_A0_003",
+      "mode": "combat",
+      "ascension": 0,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-06.json",
+        "sha256": "4f407916fb67dbac5d25f0e79ba8e6099177c8f5951957b61e98042295b18aea"
+      },
+      "first_actions": {
+        "actor": {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 4,
+            "target_index": 0
+          }
+        },
+        "selected": {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 4,
+            "target_index": 0
+          }
+        }
+      },
+      "replay": false
+    },
+    {
+      "index": 7,
+      "case": "train-A0-003:prepare",
+      "seed": "e149_train_Ironclad_A0_003",
+      "mode": "prepare",
+      "ascension": 0,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-07.json",
+        "sha256": "9fb8042a778aea7f69d8f9c971284bb21eca99a69f14aa84c25663669e7cc89b"
+      },
+      "first_actions": {
+        "actor": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 1
+          }
+        },
+        "selected": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 1
+          }
+        }
+      },
+      "replay": false
+    },
+    {
+      "index": 8,
+      "case": "train-A0-004:combat",
+      "seed": "e149_train_Ironclad_A0_004",
+      "mode": "combat",
+      "ascension": 0,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-08.json",
+        "sha256": "027b189e4f4e2ef84d2153623ed42b3748e8fc7448085f307f5869735fc0bc46"
+      },
+      "first_actions": {
+        "actor": {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1
+          }
+        },
+        "selected": {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1
+          }
+        }
+      },
+      "replay": false
+    },
+    {
+      "index": 9,
+      "case": "train-A0-004:prepare",
+      "seed": "e149_train_Ironclad_A0_004",
+      "mode": "prepare",
+      "ascension": 0,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-09.json",
+        "sha256": "50b0e37fca0d423ce606178d0e2b9f61a495df8763257a44f18a33684f55b39b"
+      },
+      "first_actions": {
+        "actor": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        "selected": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        }
+      },
+      "replay": false
+    },
+    {
+      "index": 10,
+      "case": "train-A5-000:combat",
+      "seed": "e149_train_Ironclad_A5_000",
+      "mode": "combat",
+      "ascension": 5,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-10.json",
+        "sha256": "62619307c49ad824243a9662de2f03d478899f5c9f753d32c8e1b88f32e6e3fb"
+      },
+      "first_actions": {
+        "actor": {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 4,
+            "target_index": 0
+          }
+        },
+        "selected": {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 4,
+            "target_index": 0
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "index": 11,
+      "case": "train-A5-000:prepare",
+      "seed": "e149_train_Ironclad_A5_000",
+      "mode": "prepare",
+      "ascension": 5,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-11.json",
+        "sha256": "e983ae88728bfc931607f4a8771cabc4e32534a0fa7050c348af3813794380f4"
+      },
+      "first_actions": {
+        "actor": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 2
+          }
+        },
+        "selected": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 1
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "index": 12,
+      "case": "train-A5-001:combat",
+      "seed": "e149_train_Ironclad_A5_001",
+      "mode": "combat",
+      "ascension": 5,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-12.json",
+        "sha256": "26aba99b8f20ed63f3c9f6858e1aee60987e6833fbdcc0267af0d463a36109af"
+      },
+      "first_actions": {
+        "actor": {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0,
+            "target_index": 0
+          }
+        },
+        "selected": {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3
+          }
+        }
+      },
+      "replay": false
+    },
+    {
+      "index": 13,
+      "case": "train-A5-001:prepare",
+      "seed": "e149_train_Ironclad_A5_001",
+      "mode": "prepare",
+      "ascension": 5,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-13.json",
+        "sha256": "a26910793e464f71b8bbd40a72865bea0620cda7c236b15f3cb5e4be13418d47"
+      },
+      "first_actions": {
+        "actor": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        "selected": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        }
+      },
+      "replay": false
+    },
+    {
+      "index": 14,
+      "case": "train-A5-002:combat",
+      "seed": "e149_train_Ironclad_A5_002",
+      "mode": "combat",
+      "ascension": 5,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-14.json",
+        "sha256": "0a943852d93235dd6dd2b7336d231ed18e470926a6d502d92dc2ec6578578bda"
+      },
+      "first_actions": {
+        "actor": {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1
+          }
+        },
+        "selected": {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1
+          }
+        }
+      },
+      "replay": false
+    },
+    {
+      "index": 15,
+      "case": "train-A5-002:prepare",
+      "seed": "e149_train_Ironclad_A5_002",
+      "mode": "prepare",
+      "ascension": 5,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-15.json",
+        "sha256": "d69e3afe288637edab52d3da06eba59a1bbaa711958648c7ba14843b939c1316"
+      },
+      "first_actions": {
+        "actor": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 1
+          }
+        },
+        "selected": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 1
+          }
+        }
+      },
+      "replay": false
+    },
+    {
+      "index": 16,
+      "case": "train-A5-003:combat",
+      "seed": "e149_train_Ironclad_A5_003",
+      "mode": "combat",
+      "ascension": 5,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-16.json",
+        "sha256": "9d7704ad6d11bbec026df427134fca816ea6d4eafdb4a731b58aa67f0f695ce0"
+      },
+      "first_actions": {
+        "actor": {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1
+          }
+        },
+        "selected": {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 3,
+            "target_index": 0
+          }
+        }
+      },
+      "replay": false
+    },
+    {
+      "index": 17,
+      "case": "train-A5-003:prepare",
+      "seed": "e149_train_Ironclad_A5_003",
+      "mode": "prepare",
+      "ascension": 5,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-17.json",
+        "sha256": "36c81a967da4dc2f592f01b2a7f4d58416637a24f79673f999ef1d844138beff"
+      },
+      "first_actions": {
+        "actor": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 2
+          }
+        },
+        "selected": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 1
+          }
+        }
+      },
+      "replay": false
+    },
+    {
+      "index": 18,
+      "case": "train-A5-004:combat",
+      "seed": "e149_train_Ironclad_A5_004",
+      "mode": "combat",
+      "ascension": 5,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-18.json",
+        "sha256": "8bda81b025f704e19b21dae70f22a3dc71c5ea53fa7cfc23c6e3301fc0d95d6a"
+      },
+      "first_actions": {
+        "actor": {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2
+          }
+        },
+        "selected": {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 2
+          }
+        }
+      },
+      "replay": false
+    },
+    {
+      "index": 19,
+      "case": "train-A5-004:prepare",
+      "seed": "e149_train_Ironclad_A5_004",
+      "mode": "prepare",
+      "ascension": 5,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-19.json",
+        "sha256": "8c24ecdc0a98623bc0b09c0ce74022ec3d19ca82c877f0467dcc0ef001d5411c"
+      },
+      "first_actions": {
+        "actor": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 1
+          }
+        },
+        "selected": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 1
+          }
+        }
+      },
+      "replay": false
+    },
+    {
+      "index": 20,
+      "case": "train-A10-000:combat",
+      "seed": "e149_train_Ironclad_A10_000",
+      "mode": "combat",
+      "ascension": 10,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-20.json",
+        "sha256": "5f540b46faeea56a3ed96d7e051aaa16c9c152fb49840fcd1b33cc4103baa033"
+      },
+      "first_actions": {
+        "actor": {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 4
+          }
+        },
+        "selected": {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 4
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "index": 21,
+      "case": "train-A10-000:prepare",
+      "seed": "e149_train_Ironclad_A10_000",
+      "mode": "prepare",
+      "ascension": 10,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-21.json",
+        "sha256": "ba6b91504bed1c654e684c4118bbd377ed99a3b8bacfe124bd9b4385f08e19ba"
+      },
+      "first_actions": {
+        "actor": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 1
+          }
+        },
+        "selected": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 1
+          }
+        }
+      },
+      "replay": true
+    },
+    {
+      "index": 22,
+      "case": "train-A10-001:combat",
+      "seed": "e149_train_Ironclad_A10_001",
+      "mode": "combat",
+      "ascension": 10,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-22.json",
+        "sha256": "189b650dc7ee90f6e5abf28949adb89615ce1547a302a8e09512ca4917ad7207"
+      },
+      "first_actions": {
+        "actor": {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 0
+          }
+        },
+        "selected": {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 0
+          }
+        }
+      },
+      "replay": false
+    },
+    {
+      "index": 23,
+      "case": "train-A10-001:prepare",
+      "seed": "e149_train_Ironclad_A10_001",
+      "mode": "prepare",
+      "ascension": 10,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-23.json",
+        "sha256": "2ceaacbcabbc8ffd167b9cc74ed4c8c0df989102b526dc9bf2b9615085158ebd"
+      },
+      "first_actions": {
+        "actor": {
+          "cmd": "action",
+          "action": "claim_potion_reward",
+          "args": {}
+        },
+        "selected": {
+          "cmd": "action",
+          "action": "claim_potion_reward",
+          "args": {}
+        }
+      },
+      "replay": false
+    },
+    {
+      "index": 24,
+      "case": "train-A10-002:combat",
+      "seed": "e149_train_Ironclad_A10_002",
+      "mode": "combat",
+      "ascension": 10,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-24.json",
+        "sha256": "697b4882de9ab67698636eebd7fe5b89fe6483f51ad6f938000b8fb05d9abca1"
+      },
+      "first_actions": {
+        "actor": {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 1
+          }
+        },
+        "selected": {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 1
+          }
+        }
+      },
+      "replay": false
+    },
+    {
+      "index": 25,
+      "case": "train-A10-002:prepare",
+      "seed": "e149_train_Ironclad_A10_002",
+      "mode": "prepare",
+      "ascension": 10,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-25.json",
+        "sha256": "279c69ceaaa214b7514ade27fbd14e02a6f1609cda596acbfd06ed1483a5e78c"
+      },
+      "first_actions": {
+        "actor": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        "selected": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        }
+      },
+      "replay": false
+    },
+    {
+      "index": 26,
+      "case": "train-A10-003:combat",
+      "seed": "e149_train_Ironclad_A10_003",
+      "mode": "combat",
+      "ascension": 10,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-26.json",
+        "sha256": "cec3014ae5e7452d84c0f765183eee7098b4f9316a351397bc97684825f86cef"
+      },
+      "first_actions": {
+        "actor": {
+          "cmd": "action",
+          "action": "use_potion",
+          "args": {
+            "potion_index": 0
+          }
+        },
+        "selected": {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 1,
+            "target_index": 0
+          }
+        }
+      },
+      "replay": false
+    },
+    {
+      "index": 27,
+      "case": "train-A10-003:prepare",
+      "seed": "e149_train_Ironclad_A10_003",
+      "mode": "prepare",
+      "ascension": 10,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-27.json",
+        "sha256": "14b3be1b32ad438ebc44ad2e82dcf34fe649e1cbb6fa73a0e769fb534e95e3b2"
+      },
+      "first_actions": {
+        "actor": {
+          "cmd": "action",
+          "action": "claim_potion_reward",
+          "args": {}
+        },
+        "selected": {
+          "cmd": "action",
+          "action": "claim_potion_reward",
+          "args": {}
+        }
+      },
+      "replay": false
+    },
+    {
+      "index": 28,
+      "case": "train-A10-004:combat",
+      "seed": "e149_train_Ironclad_A10_004",
+      "mode": "combat",
+      "ascension": 10,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-28.json",
+        "sha256": "3383958dcf53185a7400db15026b593ed60aabfb04dacdb3a2a2992725ed6110"
+      },
+      "first_actions": {
+        "actor": {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        "selected": {
+          "cmd": "action",
+          "action": "play_card",
+          "args": {
+            "card_index": 0
+          }
+        }
+      },
+      "replay": false
+    },
+    {
+      "index": 29,
+      "case": "train-A10-004:prepare",
+      "seed": "e149_train_Ironclad_A10_004",
+      "mode": "prepare",
+      "ascension": 10,
+      "raw": {
+        "path": "artifacts/runs/e149-bank-v1/root-29.json",
+        "sha256": "7050e269d269a5accf687c6666e77814fa6ad6f2df770f6c5ac32c6b3d29464d"
+      },
+      "first_actions": {
+        "actor": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        "selected": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        }
+      },
+      "replay": false
+    }
+  ],
+  "arms": [
+    "actor_actor",
+    "selected_actor",
+    "actor_program",
+    "selected_program"
+  ],
+  "arm_order": "rotate by root index modulo4",
+  "program": {
+    "name": "e159-legacy-early-potions-cautious-campaign-v1",
+    "control": {
+      "mode": "legacy",
+      "loss_price": 1.5,
+      "potions": "early"
+    },
+    "sources": [
+      {
+        "path": "rsi/continuation.py",
+        "sha256": "fb83c86f1101df4401bb900fb61e6978f610fb03e37dd0e405efbfdf4799affc"
+      },
+      {
+        "path": "rsi/root_teacher.py",
+        "sha256": "b3dc2fb7c59da91c15243ca98d236c81e5e41b260a5f60308c5c0fee37935d03"
+      },
+      {
+        "path": "rsi/map_prefix.py",
+        "sha256": "093d12e089fc1f78f2c2968fa72f644621277cf1ab9715dd9f522d8ad4a08827"
+      },
+      {
+        "path": "rsi/teacher.py",
+        "sha256": "d72f70a40b801f5b7e120a23cae9515f1a1b2975954c08d0f709b1b20577f852"
+      },
+      {
+        "path": "rsi/planner.py",
+        "sha256": "14c306a6ed751bcfd667e2368d9384972b3018b8fc03650f630a0a206c09399a"
+      },
+      {
+        "path": "rsi/policy.py",
+        "sha256": "c025dd3fcdc748bab0ca5c5e77283fe19310f752bfd05b68dd1cf7c795097341"
+      },
+      {
+        "path": "rsi/potions.py",
+        "sha256": "646d1130569fae5398cb0d664a7acfb28f931a410665ec95d63c8c68220e74f5"
+      },
+      {
+        "path": "rsi/full.py",
+        "sha256": "6b7487c84b19a5366706d1b0306e0f4cca378a5fdae069ca8519b99c58d09370"
+      },
+      {
+        "path": "rsi/resources.py",
+        "sha256": "2bebd83d1a35d41e56098462d446cc2a9df3126da91c9d84f1f32d8efb813797"
+      },
+      {
+        "path": "rsi/ppo_actions.py",
+        "sha256": "6375a879282afd8dd931c069de2d4a3bbec935c78e6b2b1cfaeb4466189db536"
+      },
+      {
+        "path": "rsi/curriculum.py",
+        "sha256": "33715eca5aa9e6a263ad69c9a93181d8e1cc5442ca9d403c12bf30eb7d5fb7fe"
+      },
+      {
+        "path": "rsi/battle_search.py",
+        "sha256": "0326ce689a57b52b7c3ec5b70f7de6825ca3e8fb705ec22d0c0642b4372aa072"
+      },
+      {
+        "path": "rsi/numerical.py",
+        "sha256": "c8ef372d4e4f9f47bb9396cc5db0b8bf2ea0d8f88e9d3660a5a67829b01b3d61"
+      },
+      {
+        "path": "rsi/retaliation.py",
+        "sha256": "1000b5756eeeb2c0f228897e8a69fc322c60d9eb5d402ad91fa88408090971d9"
+      }
+    ],
+    "macro": "cautious_macro: first reward/leave shop, cautious map, claim available potion",
+    "selection": "complete_baseline, preserve triggering parent over interruptions"
+  },
+  "budgets": {
+    "wall": 600,
+    "cpu": 1200,
+    "per_path": 90,
+    "actions": 2400,
+    "workers": 4
+  },
+  "bootstrap": {
+    "seed": 159,
+    "repeats": 10000,
+    "cluster": "game_seed"
+  },
+  "gate": {
+    "effect": 0.1,
+    "positive_seeds": 3,
+    "lower95_strictly_positive": true,
+    "nonnegative_difficulty_and_mode": true,
+    "no_lost_act2_or_victory": true
+  },
+  "known_unsupported": [
+    "Crystal Sphere #64",
+    "Trial #294"
+  ],
+  "final_acceptance_seeds_unused": true,
+  "gradients": 0
+}

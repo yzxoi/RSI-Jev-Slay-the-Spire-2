@@ -28,3 +28,5 @@ python3 scripts/pilot_continuation_e159.py evaluate --plan experiments/E159/plan
 ```
 
 Each output is immutable. Raw state/decisions/expected replay plans stay ignored under artifacts/runs; public compact records contain outcomes and hashes. Historical game v0.111.0, local M3 Max CPU; actual dependencies and runtime hashes recorded by each manifest.
+
+Implementation `8beed49`: nine focused synthetic checks pass (3new measurement/context/censoring,4root selector,2restore contract). Plan generated at that clean SHA, freezes all30roots/four arms/six replay cases and exact program source hashes before game execution. No game paths sampled while preparing the plan.
