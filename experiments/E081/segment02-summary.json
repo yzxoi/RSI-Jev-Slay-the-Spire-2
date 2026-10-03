@@ -1,0 +1,25 @@
+{
+  "tested_code_sha": "1af7d179a1973ca26593ef3dcaa718bbdba8fea9",
+  "game_run_id": "8X3876DS2JL4",
+  "segment": 2,
+  "status": "error",
+  "accepted_actions": 4,
+  "rejections": 0,
+  "end_floor": 11,
+  "end_hp": 45,
+  "end_screen": "COMBAT",
+  "elapsed_seconds": 16.21,
+  "jev_calls": 1,
+  "jev_cost_usd": 0.00024549,
+  "trace_path": "artifacts/runs/442f3a82-1bb9-498f-9dd0-87ec9b178481/decisions.jsonl",
+  "trace_sha256": "4e725691fba25bd9a9fb8f55c07abbcae0f133b21af0f2e6d8d18abd48ac2fe8",
+  "error": "RuntimeError: MCP wait_until_actionable failed: {'error': {'code': 'internal_error', 'message': 'The game thread did not run the posted action in time.', 'retryable': False}}",
+  "fresh_read_after_error": {
+    "run_id": "8X3876DS2JL4",
+    "floor": 11,
+    "turn": 4,
+    "screen": "COMBAT",
+    "hp": 31,
+    "action_readiness": "ready"
+  }
+}

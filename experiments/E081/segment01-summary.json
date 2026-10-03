@@ -1,0 +1,28 @@
+{
+  "tested_code_sha": "7c8a69d37700abb094c8cd6c3d18be05ca63743a",
+  "game_run_id": "8X3876DS2JL4",
+  "character": "Ironclad",
+  "ascension": 1,
+  "segment": 1,
+  "status": "error",
+  "accepted_actions": 156,
+  "rejections": 0,
+  "end_floor": 11,
+  "end_hp": 45,
+  "end_screen": "COMBAT",
+  "elapsed_seconds": 311.475,
+  "jev_calls": 36,
+  "jev_cost_usd": 0.0073269,
+  "uncertain_model_usage_calls": 0,
+  "trace_path": "artifacts/runs/af29b292-6afc-4c3e-b21c-4b2685371598/decisions.jsonl",
+  "trace_sha256": "e0fd99e72429c47b2abf1933cc1ef5e11df8fd2436b80ee16fdf6aff89ecd420",
+  "error": "RuntimeError: MCP wait_until_actionable failed: {'error': {'code': 'internal_error', 'message': 'The game thread did not run the posted action in time.', 'retryable': False}}",
+  "fresh_read_after_error": {
+    "run_id": "8X3876DS2JL4",
+    "floor": 11,
+    "turn": 3,
+    "screen": "COMBAT",
+    "action_readiness": "ready",
+    "controller_running": false
+  }
+}
