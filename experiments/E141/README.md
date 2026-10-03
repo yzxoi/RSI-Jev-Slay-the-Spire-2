@@ -9,3 +9,9 @@ Synthetic encoder checks vary pile order, orb order, Osty HP and a future route 
 Fixed evaluation:45 complete replays max, each180s,900s global wall cap,8workers. For each of15 sources: ordinary replay once; enriched replay twice with repeated observation at every nonterminal state and comparison to existing get_map. Every ordinary response must equal historical state hash, including terminal defeat. The enriched histories must also match each other; all observation arrays/numerics finite; all encoded menus remain valid. Any mismatch/censor fails gate. Preserve prebuild runtime hashes in ignored artifacts/runs/e141-runtime-before/manifest.json; game binaries unchanged. No test/acceptance seeds consumed.
 
 Commands after committing implementation: `.tools/dotnet/dotnet build vendor/sts2-cli/src/Sts2Headless/Sts2Headless.csproj --no-restore`; `python3 -m unittest discover -s tests -p test_rich_observation.py`; `python3 scripts/validate_observations_e141.py --output artifacts/runs/e141-observations-v1.json`.
+
+## Result and merge decision
+
+Tested SHA `e77255d`. Build passed (one existing nullable warning),3 synthetic encoder tests passed. All15 fixed histories ×3 modes passed:45full replays,7386 legacy states exactly equal,4894 extra observations with immediate repeats and cross-process history hashes equal. All45raw trace bundles audited. Wall50.199s. Game DLL/stub hashes unchanged; only adapter assembly changed. Default response schema remains unchanged; no training/checkpoints altered.
+
+Merge the explicit observer and optional encoder. This removes verified input aliases but proves no gameplay improvement and not complete Markov observability. Pile modifiers/trigger counters not exported here remain possible omissions. `observations-v1.json` retains per-case/mode evidence and prebuild runtime hashes. Raw traces, local decompiled inspection and runtime backups remain ignored.
