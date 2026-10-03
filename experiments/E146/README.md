@@ -16,3 +16,9 @@ Decision: execution requires complete budgets, finite updates, zero non-neural a
 Issue [276](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/276). Implementation: optional six-battle live-map boundary with independent replay; sampler records the actual behavior log-probability; pre-update probability/value parity for every collected decision; configurable PPO GAE without changing previous defaults. Zero critic head leaves initial policy identical.
 
 Commands: `python3 -m unittest discover -s tests -p 'test_onpolicy*.py'`; `python3 -m unittest discover -s tests -p test_run_env.py`; `python3 -m unittest discover -s tests -p test_ppo.py`; then, after commit, `python3 scripts/pilot_onpolicy_e146.py train --output artifacts/runs/e146-training-v1.json`. Freeze training metadata in a commit before `python3 scripts/pilot_onpolicy_e146.py evaluate --training experiments/E146/training-v1.json --output artifacts/runs/e146-evaluation-v1.json`.
+
+## Training v1 frozen before DEV
+
+Tested code `a479421` (full SHA/runtime hashes in training-v1.json). Both learners completed all 12 updates: 1,152 natural trajectories on 576 matched base game seeds, 103,127 fresh actor decisions. Every macro phase participates in the return target. All 1,152 trace bundles passed audit; no censors, stale behavior or non-neural actions. Source checkpoint unchanged. Wall time 733.140s. Per-update weights, optimizer/RNG state and raw traces remain under ignored artifacts/runs; hashes published. Last checkpoints frozen now, without DEV selection.
+
+14 relevant synthetic/unit checks passed. Training success rates are not held-out results. All selected seeds/difficulties and failures are retained in training-v1.json. Evaluation not yet run at this commit.
