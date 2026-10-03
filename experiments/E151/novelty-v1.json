@@ -1,0 +1,2236 @@
+{
+  "manifest": {
+    "experiment": "E151",
+    "scope": "read_only_post_hoc_coverage",
+    "code_commit": "88e807d8efa38e794ab184666abdde00be8a2fcf",
+    "python": "3.13.5",
+    "numpy": "2.3.2"
+  },
+  "sources": {
+    "bank_sha256": "954b85d9d0b89e5e6348c68d960b96ddf6d58316a6dd78076fef4e4fb5f8d1af",
+    "evaluation_sha256": "f777af6a9b4fa8e7b34339fb96b126932d77079cb7047f2b784eeb067000f462",
+    "tensors": {
+      "path": "artifacts/runs/e148-bank-v1/tensors.npz",
+      "sha256": "7797e697ed8b71f5fbb76e919ed9a67d953d127c846aa9ec1de54b32cf838976",
+      "rows": 51343
+    },
+    "predictions": {
+      "path": "artifacts/runs/e148-evaluation-v1.npz",
+      "sha256": "e955392c75e92f7286fd1a027e169d2e9aaf7334a1e273a33d078985db731187"
+    },
+    "original_runtime": {
+      "schema_version": 2,
+      "code_commit": "47c7e1559a1f6ab4220b06f44f364d883388da6f",
+      "tracked_dirty": false,
+      "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+      "headless_assembly_sha256": "df07cbc48da1be47f0155e07d99e40e392f6e16e188b3044d2c3d7c0cb4978ff",
+      "godot_stubs_sha256": "1fd436ecb06e289ba2f9236bbdd1d0816bfb09a0083ef52f259b3560bbce6c06",
+      "patches": {
+        "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+        "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+        "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+        "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+        "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+        "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+        "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+        "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772",
+        "headless-zzzzzz-godot-abi.patch": "5239d3836d279de5143f7d56bece1f061c6c4002de696fce28f9f7f3922ededc",
+        "headless-zzzzzzz-learning-observations.patch": "d51db8457fdb9348340a829c84fa77e9620c476ba16a7c6e224b286ecb2dfd07"
+      },
+      "dependencies": {
+        "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+        "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+        "dotnet_sdk": "9.0.318",
+        "game_version_expected": "v0.111.0"
+      },
+      "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4",
+      "experiment": "E148",
+      "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+      "python": "3.13.5",
+      "model_calls": 0,
+      "model_cost_usd": 0,
+      "torch": "2.11.0",
+      "numpy": "2.3.2",
+      "device": "cpu"
+    }
+  },
+  "alignment": {
+    "paths": 576,
+    "raw_files_verified": 1152,
+    "decisions": 51343,
+    "dev_decisions": 12700,
+    "all_hashes_and_actions_pass": true
+  },
+  "definitions": {
+    "identity": "Base card/potion ID with unique TRAIN name aliases; relic name when ID absent. Upgrades not new base identities.",
+    "visible": "Explicit player deck, hand, potions, relics; offered cards, potions, relics and bundle cards. Does not parse textual event references, powers, enemies or hidden state.",
+    "known": "Identity appears anywhere in E148 TRAIN inputs; does not imply well learned or known in this role. Pre-E148 actor pretraining not audited.",
+    "inventory": "Sorted owned deck multiset with exported upgrade flags, owned potions and relics. Excludes hand order, HP, energy, enemies, and future RNG.",
+    "weighting": "Original full-DEV equal-path weights retained. Conditional MSE divides by group mass; additive contribution and error share use full DEV denominator."
+  },
+  "baseline_full_dev": {
+    "decisions": 12700,
+    "paths": 144,
+    "game_seeds": 72,
+    "original_weight_mass": 0.9999999999999999,
+    "models": {
+      "constant": {
+        "conditional_mse": 0.47990454116690623,
+        "contribution_to_full_dev_mse": 0.4799045411669062,
+        "share_of_full_dev_squared_error": 1.0,
+        "mean_value": -0.7333632111549374,
+        "mean_return": -0.7382730161616173
+      },
+      "progress_ridge": {
+        "conditional_mse": 0.4103851404340318,
+        "contribution_to_full_dev_mse": 0.41038514043403174,
+        "share_of_full_dev_squared_error": 1.0,
+        "mean_value": -0.7320346105291086,
+        "mean_return": -0.7382730161616173
+      },
+      "2101-legacy": {
+        "conditional_mse": 0.56332704688675,
+        "contribution_to_full_dev_mse": 0.5633270468867498,
+        "share_of_full_dev_squared_error": 1.0,
+        "mean_value": -0.7094807366725285,
+        "mean_return": -0.7382730161616173
+      },
+      "2101-task": {
+        "conditional_mse": 0.5385355300145528,
+        "contribution_to_full_dev_mse": 0.5385355300145527,
+        "share_of_full_dev_squared_error": 1.0,
+        "mean_value": -0.7214875340452769,
+        "mean_return": -0.7382730161616173
+      },
+      "2102-legacy": {
+        "conditional_mse": 0.5663952124788841,
+        "contribution_to_full_dev_mse": 0.566395212478884,
+        "share_of_full_dev_squared_error": 1.0,
+        "mean_value": -0.7565549775222531,
+        "mean_return": -0.7382730161616173
+      },
+      "2102-task": {
+        "conditional_mse": 0.5465025329664288,
+        "contribution_to_full_dev_mse": 0.5465025329664287,
+        "share_of_full_dev_squared_error": 1.0,
+        "mean_value": -0.766533684435999,
+        "mean_return": -0.7382730161616173
+      }
+    }
+  },
+  "coverage": {
+    "owned": {
+      "card": {
+        "train_distinct_in_scope": 176,
+        "train_distinct_any_visible": 231,
+        "dev_distinct_in_scope": 122,
+        "new_identities": [
+          "id:CARD.BLACK_HOLE",
+          "id:CARD.FETCH",
+          "id:CARD.FLICK_FLACK",
+          "id:CARD.GO_FOR_THE_EYES",
+          "id:CARD.KNOCKOUT_BLOW",
+          "id:CARD.POKE",
+          "id:CARD.SCULPTING_STRIKE",
+          "id:CARD.SOW"
+        ],
+        "new_identity_count": 8,
+        "affected_decisions": 710,
+        "affected_paths": 8,
+        "affected_game_seeds": 7
+      },
+      "potion": {
+        "train_distinct_in_scope": 49,
+        "train_distinct_any_visible": 51,
+        "dev_distinct_in_scope": 48,
+        "new_identities": [],
+        "new_identity_count": 0,
+        "affected_decisions": 0,
+        "affected_paths": 0,
+        "affected_game_seeds": 0
+      },
+      "relic": {
+        "train_distinct_in_scope": 101,
+        "train_distinct_any_visible": 150,
+        "dev_distinct_in_scope": 73,
+        "new_identities": [
+          "name:Kusarigama"
+        ],
+        "new_identity_count": 1,
+        "affected_decisions": 27,
+        "affected_paths": 1,
+        "affected_game_seeds": 1
+      }
+    },
+    "visible": {
+      "card": {
+        "train_distinct_in_scope": 231,
+        "train_distinct_any_visible": 231,
+        "dev_distinct_in_scope": 185,
+        "new_identities": [
+          "id:CARD.BLACK_HOLE",
+          "id:CARD.CLOAK_OF_STARS",
+          "id:CARD.DRAIN_POWER",
+          "id:CARD.FETCH",
+          "id:CARD.FLICK_FLACK",
+          "id:CARD.GO_FOR_THE_EYES",
+          "id:CARD.HIDDEN_CACHE",
+          "id:CARD.INVOKE",
+          "id:CARD.KNOCKOUT_BLOW",
+          "id:CARD.KNOW_THY_PLACE",
+          "id:CARD.LEADING_STRIKE",
+          "id:CARD.POKE",
+          "id:CARD.PULL_FROM_BELOW",
+          "id:CARD.SCRAPE",
+          "id:CARD.SCULPTING_STRIKE",
+          "id:CARD.SKIM",
+          "id:CARD.SMOKESTACK",
+          "id:CARD.SNAP",
+          "id:CARD.SOW",
+          "id:CARD.SPOILS_OF_BATTLE",
+          "id:CARD.WROUGHT_IN_WAR"
+        ],
+        "new_identity_count": 21,
+        "affected_decisions": 726,
+        "affected_paths": 10,
+        "affected_game_seeds": 7
+      },
+      "potion": {
+        "train_distinct_in_scope": 51,
+        "train_distinct_any_visible": 51,
+        "dev_distinct_in_scope": 50,
+        "new_identities": [],
+        "new_identity_count": 0,
+        "affected_decisions": 0,
+        "affected_paths": 0,
+        "affected_game_seeds": 0
+      },
+      "relic": {
+        "train_distinct_in_scope": 150,
+        "train_distinct_any_visible": 150,
+        "dev_distinct_in_scope": 119,
+        "new_identities": [
+          "name:Art of War",
+          "name:Kusarigama"
+        ],
+        "new_identity_count": 2,
+        "affected_decisions": 31,
+        "affected_paths": 4,
+        "affected_game_seeds": 3
+      }
+    }
+  },
+  "groups": {
+    "owned": {
+      "no_new_identity": {
+        "decisions": 11963,
+        "paths": 144,
+        "game_seeds": 72,
+        "original_weight_mass": 0.9501773821244638,
+        "models": {
+          "constant": {
+            "conditional_mse": 0.4767790762243011,
+            "contribution_to_full_dev_mse": 0.4530246944985266,
+            "share_of_full_dev_squared_error": 0.9439891804252983,
+            "mean_value": -0.7333632111549376,
+            "mean_return": -0.740020883251096
+          },
+          "progress_ridge": {
+            "conditional_mse": 0.41228819559242125,
+            "contribution_to_full_dev_mse": 0.3917469183688257,
+            "share_of_full_dev_squared_error": 0.9545835844702031,
+            "mean_value": -0.7343637092681329,
+            "mean_return": -0.740020883251096
+          },
+          "2101-legacy": {
+            "conditional_mse": 0.5577958991547949,
+            "contribution_to_full_dev_mse": 0.5300050472186644,
+            "share_of_full_dev_squared_error": 0.9408478611984976,
+            "mean_value": -0.7286671667854717,
+            "mean_return": -0.740020883251096
+          },
+          "2101-task": {
+            "conditional_mse": 0.536952459219542,
+            "contribution_to_full_dev_mse": 0.5102000820265173,
+            "share_of_full_dev_squared_error": 0.9473842552463165,
+            "mean_value": -0.7348964145343605,
+            "mean_return": -0.740020883251096
+          },
+          "2102-legacy": {
+            "conditional_mse": 0.5625529408564334,
+            "contribution_to_full_dev_mse": 0.5345250806493842,
+            "share_of_full_dev_squared_error": 0.9437316362721057,
+            "mean_value": -0.7732801634341927,
+            "mean_return": -0.740020883251096
+          },
+          "2102-task": {
+            "conditional_mse": 0.5452104449083406,
+            "contribution_to_full_dev_mse": 0.5180466332499213,
+            "share_of_full_dev_squared_error": 0.9479308914415308,
+            "mean_value": -0.777467950311083,
+            "mean_return": -0.740020883251096
+          }
+        }
+      },
+      "new_identity": {
+        "decisions": 737,
+        "paths": 9,
+        "game_seeds": 8,
+        "original_weight_mass": 0.0498226178755362,
+        "models": {
+          "constant": {
+            "conditional_mse": 0.5395109252494348,
+            "contribution_to_full_dev_mse": 0.026879846668379566,
+            "share_of_full_dev_squared_error": 0.05601081957470166,
+            "mean_value": -0.7333632111549385,
+            "mean_return": -0.7049390837791116
+          },
+          "progress_ridge": {
+            "conditional_mse": 0.3740915845041892,
+            "contribution_to_full_dev_mse": 0.01863822206520608,
+            "share_of_full_dev_squared_error": 0.04541641552979699,
+            "mean_value": -0.6876158899375059,
+            "mean_return": -0.7049390837791116
+          },
+          "2101-legacy": {
+            "conditional_mse": 0.6688127017196982,
+            "contribution_to_full_dev_mse": 0.033321999668085495,
+            "share_of_full_dev_squared_error": 0.059152138801502434,
+            "mean_value": -0.3435723859196102,
+            "mean_return": -0.7049390837791116
+          },
+          "2101-task": {
+            "conditional_mse": 0.5687265984059928,
+            "contribution_to_full_dev_mse": 0.028335447988035316,
+            "share_of_full_dev_squared_error": 0.05261574475368341,
+            "mean_value": -0.46576401923186683,
+            "mean_return": -0.7049390837791116
+          },
+          "2102-legacy": {
+            "conditional_mse": 0.6396719640287822,
+            "contribution_to_full_dev_mse": 0.03187013182949976,
+            "share_of_full_dev_squared_error": 0.056268363727894184,
+            "mean_value": -0.4375855206171183,
+            "mean_return": -0.7049390837791116
+          },
+          "2102-task": {
+            "conditional_mse": 0.571144209796328,
+            "contribution_to_full_dev_mse": 0.028455899716507527,
+            "share_of_full_dev_squared_error": 0.05206910855846949,
+            "mean_value": -0.5580040533637286,
+            "mean_return": -0.7049390837791116
+          }
+        }
+      },
+      "entire_path_no_new_identity": {
+        "decisions": 11773,
+        "paths": 135,
+        "game_seeds": 71,
+        "original_weight_mass": 0.9374999994458997,
+        "models": {
+          "constant": {
+            "conditional_mse": 0.45903610692806734,
+            "contribution_to_full_dev_mse": 0.4303463499907111,
+            "share_of_full_dev_squared_error": 0.8967332314553798,
+            "mean_value": -0.7333632111549377,
+            "mean_return": -0.7517613855657658
+          },
+          "progress_ridge": {
+            "conditional_mse": 0.4004927724595129,
+            "contribution_to_full_dev_mse": 0.3754619739588802,
+            "share_of_full_dev_squared_error": 0.914901483912853,
+            "mean_value": -0.7374032844381144,
+            "mean_return": -0.7517613855657658
+          },
+          "2101-legacy": {
+            "conditional_mse": 0.5481202391542834,
+            "contribution_to_full_dev_mse": 0.5138627239034271,
+            "share_of_full_dev_squared_error": 0.9121925296207783,
+            "mean_value": -0.7358012614224388,
+            "mean_return": -0.7517613855657658
+          },
+          "2101-task": {
+            "conditional_mse": 0.5275910439463202,
+            "contribution_to_full_dev_mse": 0.4946166034073368,
+            "share_of_full_dev_squared_error": 0.918447485524253,
+            "mean_value": -0.7423607173731473,
+            "mean_return": -0.7517613855657658
+          },
+          "2102-legacy": {
+            "conditional_mse": 0.5508350529037652,
+            "contribution_to_full_dev_mse": 0.516407861792062,
+            "share_of_full_dev_squared_error": 0.9117447506873381,
+            "mean_value": -0.7796270855429992,
+            "mean_return": -0.7517613855657658
+          },
+          "2102-task": {
+            "conditional_mse": 0.5334414305537413,
+            "contribution_to_full_dev_mse": 0.5001013408485524,
+            "share_of_full_dev_squared_error": 0.9150942780337915,
+            "mean_value": -0.7839259887775123,
+            "mean_return": -0.7517613855657658
+          }
+        }
+      },
+      "post_six_no_new_identity": {
+        "decisions": 27,
+        "paths": 17,
+        "game_seeds": 16,
+        "original_weight_mass": 0.0017167807045507602,
+        "models": {
+          "constant": {
+            "conditional_mse": 3.336098525569512,
+            "contribution_to_full_dev_mse": 0.0057273495771779795,
+            "share_of_full_dev_squared_error": 0.011934351700968928,
+            "mean_value": -0.7333632111549379,
+            "mean_return": 1.0923865046901127
+          },
+          "progress_ridge": {
+            "conditional_mse": 1.6381851962959277,
+            "contribution_to_full_dev_mse": 0.002812404735481548,
+            "share_of_full_dev_squared_error": 0.006853086182669994,
+            "mean_value": -0.1821020380769865,
+            "mean_return": 1.0923865046901127
+          },
+          "2101-legacy": {
+            "conditional_mse": 2.8250322516919835,
+            "contribution_to_full_dev_mse": 0.004849960859438384,
+            "share_of_full_dev_squared_error": 0.00860949405188672,
+            "mean_value": -0.48487944176057435,
+            "mean_return": 1.0923865046901127
+          },
+          "2101-task": {
+            "conditional_mse": 2.7563173172799322,
+            "contribution_to_full_dev_mse": 0.004731992385925303,
+            "share_of_full_dev_squared_error": 0.008786778443007152,
+            "mean_value": -0.46116973939698563,
+            "mean_return": 1.0923865046901127
+          },
+          "2102-legacy": {
+            "conditional_mse": 2.941307460882507,
+            "contribution_to_full_dev_mse": 0.005049579894994278,
+            "share_of_full_dev_squared_error": 0.00891529409808091,
+            "mean_value": -0.5282455985185427,
+            "mean_return": 1.0923865046901127
+          },
+          "2102-task": {
+            "conditional_mse": 2.8604082220663574,
+            "contribution_to_full_dev_mse": 0.004910693642781868,
+            "share_of_full_dev_squared_error": 0.008985674075701913,
+            "mean_value": -0.49856834176780723,
+            "mean_return": 1.0923865046901127
+          }
+        }
+      }
+    },
+    "visible": {
+      "no_new_identity": {
+        "decisions": 11943,
+        "paths": 144,
+        "game_seeds": 72,
+        "original_weight_mass": 0.9488177005925784,
+        "models": {
+          "constant": {
+            "conditional_mse": 0.47638555918777337,
+            "contribution_to_full_dev_mse": 0.4520030508640528,
+            "share_of_full_dev_squared_error": 0.9418603328174185,
+            "mean_value": -0.7333632111549377,
+            "mean_return": -0.7402845794650034
+          },
+          "progress_ridge": {
+            "conditional_mse": 0.41215371851026944,
+            "contribution_to_full_dev_mse": 0.3910587434875947,
+            "share_of_full_dev_squared_error": 0.9529066843745925,
+            "mean_value": -0.734491058983591,
+            "mean_return": -0.7402845794650034
+          },
+          "2101-legacy": {
+            "conditional_mse": 0.5573755344002649,
+            "contribution_to_full_dev_mse": 0.5288477729162189,
+            "share_of_full_dev_squared_error": 0.9387935051919092,
+            "mean_value": -0.7293418675950908,
+            "mean_return": -0.7402845794650034
+          },
+          "2101-task": {
+            "conditional_mse": 0.5365557151452602,
+            "contribution_to_full_dev_mse": 0.5090935598839323,
+            "share_of_full_dev_squared_error": 0.9453295678934597,
+            "mean_value": -0.7354607375119981,
+            "mean_return": -0.7402845794650034
+          },
+          "2102-legacy": {
+            "conditional_mse": 0.5622026375779907,
+            "contribution_to_full_dev_mse": 0.5334278138538319,
+            "share_of_full_dev_squared_error": 0.9417943550744945,
+            "mean_value": -0.773988757646505,
+            "mean_return": -0.7402845794650034
+          },
+          "2102-task": {
+            "conditional_mse": 0.5448663501217338,
+            "contribution_to_full_dev_mse": 0.5169788374527742,
+            "share_of_full_dev_squared_error": 0.9459770198073938,
+            "mean_value": -0.7781014864262829,
+            "mean_return": -0.7402845794650034
+          }
+        }
+      },
+      "new_identity": {
+        "decisions": 757,
+        "paths": 14,
+        "game_seeds": 10,
+        "original_weight_mass": 0.051182299407421486,
+        "models": {
+          "constant": {
+            "conditional_mse": 0.5451394451967041,
+            "contribution_to_full_dev_mse": 0.027901490302853348,
+            "share_of_full_dev_squared_error": 0.05813966718258137,
+            "mean_value": -0.7333632111549384,
+            "mean_return": -0.7009826464398053
+          },
+          "progress_ridge": {
+            "conditional_mse": 0.3775992319648441,
+            "contribution_to_full_dev_mse": 0.019326396946437046,
+            "share_of_full_dev_squared_error": 0.04709331562540752,
+            "mean_value": -0.6864969578407573,
+            "mean_return": -0.7009826464398053
+          },
+          "2101-legacy": {
+            "conditional_mse": 0.673656212591565,
+            "contribution_to_full_dev_mse": 0.03447927397053106,
+            "share_of_full_dev_squared_error": 0.061206494808090955,
+            "mean_value": -0.3412950007581104,
+            "mean_return": -0.7009826464398053
+          },
+          "2101-task": {
+            "conditional_mse": 0.5752373471198753,
+            "contribution_to_full_dev_mse": 0.0294419701306203,
+            "share_of_full_dev_squared_error": 0.0546704321065403,
+            "mean_value": -0.4624522242466637,
+            "mean_return": -0.7009826464398053
+          },
+          "2102-legacy": {
+            "conditional_mse": 0.644117185174213,
+            "contribution_to_full_dev_mse": 0.032967398625052116,
+            "share_of_full_dev_squared_error": 0.058205644925505416,
+            "mean_value": -0.4333674818129303,
+            "mean_return": -0.7009826464398053
+          },
+          "2102-task": {
+            "conditional_mse": 0.5768340980275222,
+            "contribution_to_full_dev_mse": 0.029523695513654555,
+            "share_of_full_dev_squared_error": 0.05402298019260631,
+            "mean_value": -0.5520897182131769,
+            "mean_return": -0.7009826464398053
+          }
+        }
+      },
+      "entire_path_no_new_identity": {
+        "decisions": 11266,
+        "paths": 130,
+        "game_seeds": 68,
+        "original_weight_mass": 0.9027777774430558,
+        "models": {
+          "constant": {
+            "conditional_mse": 0.45021047831038824,
+            "contribution_to_full_dev_mse": 0.4064400149906274,
+            "share_of_full_dev_squared_error": 0.8469184600803172,
+            "mean_value": -0.7333632111549377,
+            "mean_return": -0.7579349008187988
+          },
+          "progress_ridge": {
+            "conditional_mse": 0.3975165288081995,
+            "contribution_to_full_dev_mse": 0.3588690883743448,
+            "share_of_full_dev_squared_error": 0.8744690121937589,
+            "mean_value": -0.7382183538347564,
+            "mean_return": -0.7579349008187988
+          },
+          "2101-legacy": {
+            "conditional_mse": 0.5537109421115487,
+            "contribution_to_full_dev_mse": 0.4998779336653645,
+            "share_of_full_dev_squared_error": 0.8873671811569505,
+            "mean_value": -0.7380484215812173,
+            "mean_return": -0.7579349008187988
+          },
+          "2101-task": {
+            "conditional_mse": 0.5297638503941824,
+            "contribution_to_full_dev_mse": 0.47825903142853543,
+            "share_of_full_dev_squared_error": 0.8880733113664971,
+            "mean_value": -0.7452908359830892,
+            "mean_return": -0.7579349008187988
+          },
+          "2102-legacy": {
+            "conditional_mse": 0.5573010863685102,
+            "contribution_to_full_dev_mse": 0.5031190361183641,
+            "share_of_full_dev_squared_error": 0.8882826426381932,
+            "mean_value": -0.7825879325003151,
+            "mean_return": -0.7579349008187988
+          },
+          "2102-task": {
+            "conditional_mse": 0.5367235985417091,
+            "contribution_to_full_dev_mse": 0.48454213739272306,
+            "share_of_full_dev_squared_error": 0.8866237723778092,
+            "mean_value": -0.7876241415608175,
+            "mean_return": -0.7579349008187988
+          }
+        }
+      },
+      "post_six_no_new_identity": {
+        "decisions": 27,
+        "paths": 17,
+        "game_seeds": 16,
+        "original_weight_mass": 0.0017167807045507602,
+        "models": {
+          "constant": {
+            "conditional_mse": 3.336098525569512,
+            "contribution_to_full_dev_mse": 0.0057273495771779795,
+            "share_of_full_dev_squared_error": 0.011934351700968928,
+            "mean_value": -0.7333632111549379,
+            "mean_return": 1.0923865046901127
+          },
+          "progress_ridge": {
+            "conditional_mse": 1.6381851962959277,
+            "contribution_to_full_dev_mse": 0.002812404735481548,
+            "share_of_full_dev_squared_error": 0.006853086182669994,
+            "mean_value": -0.1821020380769865,
+            "mean_return": 1.0923865046901127
+          },
+          "2101-legacy": {
+            "conditional_mse": 2.8250322516919835,
+            "contribution_to_full_dev_mse": 0.004849960859438384,
+            "share_of_full_dev_squared_error": 0.00860949405188672,
+            "mean_value": -0.48487944176057435,
+            "mean_return": 1.0923865046901127
+          },
+          "2101-task": {
+            "conditional_mse": 2.7563173172799322,
+            "contribution_to_full_dev_mse": 0.004731992385925303,
+            "share_of_full_dev_squared_error": 0.008786778443007152,
+            "mean_value": -0.46116973939698563,
+            "mean_return": 1.0923865046901127
+          },
+          "2102-legacy": {
+            "conditional_mse": 2.941307460882507,
+            "contribution_to_full_dev_mse": 0.005049579894994278,
+            "share_of_full_dev_squared_error": 0.00891529409808091,
+            "mean_value": -0.5282455985185427,
+            "mean_return": 1.0923865046901127
+          },
+          "2102-task": {
+            "conditional_mse": 2.8604082220663574,
+            "contribution_to_full_dev_mse": 0.004910693642781868,
+            "share_of_full_dev_squared_error": 0.008985674075701913,
+            "mean_value": -0.49856834176780723,
+            "mean_return": 1.0923865046901127
+          }
+        }
+      }
+    },
+    "inventory": {
+      "seen_inventory": {
+        "decisions": 1985,
+        "paths": 144,
+        "game_seeds": 72,
+        "original_weight_mass": 0.16514157013520464,
+        "models": {
+          "constant": {
+            "conditional_mse": 0.38370914432776493,
+            "contribution_to_full_dev_mse": 0.06336633056952296,
+            "share_of_full_dev_squared_error": 0.13203944771067452,
+            "mean_value": -0.7333632111549377,
+            "mean_return": -0.8005771880434792
+          },
+          "progress_ridge": {
+            "conditional_mse": 0.3681645359451044,
+            "contribution_to_full_dev_mse": 0.06079926953407353,
+            "share_of_full_dev_squared_error": 0.1481517324671429,
+            "mean_value": -0.8190136574364137,
+            "mean_return": -0.8005771880434792
+          },
+          "2101-legacy": {
+            "conditional_mse": 0.41661107258749003,
+            "contribution_to_full_dev_mse": 0.06879980666280981,
+            "share_of_full_dev_squared_error": 0.12213119722022009,
+            "mean_value": -0.8309707039188868,
+            "mean_return": -0.8005771880434792
+          },
+          "2101-task": {
+            "conditional_mse": 0.40296768688109685,
+            "contribution_to_full_dev_mse": 0.06654671652529584,
+            "share_of_full_dev_squared_error": 0.12356977918151021,
+            "mean_value": -0.8324734241122547,
+            "mean_return": -0.8005771880434792
+          },
+          "2102-legacy": {
+            "conditional_mse": 0.42635504239156263,
+            "contribution_to_full_dev_mse": 0.07040894113560439,
+            "share_of_full_dev_squared_error": 0.12431062195503521,
+            "mean_value": -0.877744281266943,
+            "mean_return": -0.8005771880434792
+          },
+          "2102-task": {
+            "conditional_mse": 0.41188918525481893,
+            "contribution_to_full_dev_mse": 0.06802002677469098,
+            "share_of_full_dev_squared_error": 0.12446424796144431,
+            "mean_value": -0.876562123042328,
+            "mean_return": -0.8005771880434792
+          }
+        }
+      },
+      "new_inventory": {
+        "decisions": 10715,
+        "paths": 144,
+        "game_seeds": 72,
+        "original_weight_mass": 0.8348584298647954,
+        "models": {
+          "constant": {
+            "conditional_mse": 0.498932747992784,
+            "contribution_to_full_dev_mse": 0.4165382105973833,
+            "share_of_full_dev_squared_error": 0.8679605522893256,
+            "mean_value": -0.7333632111549375,
+            "mean_return": -0.7259487604525257
+          },
+          "progress_ridge": {
+            "conditional_mse": 0.4187367083980613,
+            "contribution_to_full_dev_mse": 0.3495858708999582,
+            "share_of_full_dev_squared_error": 0.851848267532857,
+            "mean_value": -0.7148294702786082,
+            "mean_return": -0.7259487604525257
+          },
+          "2101-legacy": {
+            "conditional_mse": 0.592348621674729,
+            "contribution_to_full_dev_mse": 0.49452724022393996,
+            "share_of_full_dev_squared_error": 0.8778688027797797,
+            "mean_value": -0.6854490646799638,
+            "mean_return": -0.7259487604525257
+          },
+          "2101-task": {
+            "conditional_mse": 0.565351916690468,
+            "contribution_to_full_dev_mse": 0.47198881348925675,
+            "share_of_full_dev_squared_error": 0.8764302208184896,
+            "mean_value": -0.6995336512157264,
+            "mean_return": -0.7259487604525257
+          },
+          "2102-legacy": {
+            "conditional_mse": 0.5940962606361946,
+            "contribution_to_full_dev_mse": 0.49598627134327966,
+            "share_of_full_dev_squared_error": 0.8756893780449648,
+            "mean_value": -0.7325827791373943,
+            "mean_return": -0.7259487604525257
+          },
+          "2102-task": {
+            "conditional_mse": 0.5731301129333121,
+            "contribution_to_full_dev_mse": 0.4784825061917378,
+            "share_of_full_dev_squared_error": 0.8755357520385558,
+            "mean_value": -0.7447691930432283,
+            "mean_return": -0.7259487604525257
+          }
+        }
+      },
+      "known_visible_items_new_inventory": {
+        "decisions": 9966,
+        "paths": 137,
+        "game_seeds": 71,
+        "original_weight_mass": 0.7842371434145914,
+        "models": {
+          "constant": {
+            "conditional_mse": 0.4961089695781673,
+            "contribution_to_full_dev_mse": 0.38906708112433835,
+            "share_of_full_dev_squared_error": 0.810717648510487,
+            "mean_value": -0.7333632111549377,
+            "mean_return": -0.7274534711542839
+          },
+          "progress_ridge": {
+            "conditional_mse": 0.42153116158748466,
+            "contribution_to_full_dev_mse": 0.3305803940236035,
+            "share_of_full_dev_squared_error": 0.805536949203314,
+            "mean_value": -0.716696721175592,
+            "mean_return": -0.7274534711542839
+          },
+          "2101-legacy": {
+            "conditional_mse": 0.5870948682332585,
+            "contribution_to_full_dev_mse": 0.4604216023766166,
+            "share_of_full_dev_squared_error": 0.8173255747636397,
+            "mean_value": -0.7075518201650697,
+            "mean_return": -0.7274534711542839
+          },
+          "2101-task": {
+            "conditional_mse": 0.5647236464306304,
+            "contribution_to_full_dev_mse": 0.4428772592954293,
+            "share_of_full_dev_squared_error": 0.8223733339998228,
+            "mean_value": -0.7147223525529488,
+            "mean_return": -0.7274534711542839
+          },
+          "2102-legacy": {
+            "conditional_mse": 0.5909161271664498,
+            "contribution_to_full_dev_mse": 0.46341837556663,
+            "share_of_full_dev_squared_error": 0.8181890760312648,
+            "mean_value": -0.7516988202165248,
+            "mean_return": -0.7274534711542839
+          },
+          "2102-task": {
+            "conditional_mse": 0.5729342508172524,
+            "contribution_to_full_dev_mse": 0.44931632022530105,
+            "share_of_full_dev_squared_error": 0.8221669491381887,
+            "mean_value": -0.7569799904621525,
+            "mean_return": -0.7274534711542839
+          }
+        }
+      }
+    }
+  },
+  "cases": [
+    {
+      "case": "dev-A0-000-r0",
+      "seed": "e148_dev_Ironclad_A0_000",
+      "ascension": 0,
+      "status": "defeat",
+      "decisions": 79,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 77
+    },
+    {
+      "case": "dev-A0-000-r1",
+      "seed": "e148_dev_Ironclad_A0_000",
+      "ascension": 0,
+      "status": "defeat",
+      "decisions": 117,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 115
+    },
+    {
+      "case": "dev-A0-001-r0",
+      "seed": "e148_dev_Ironclad_A0_001",
+      "ascension": 0,
+      "status": "defeat",
+      "decisions": 77,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 75
+    },
+    {
+      "case": "dev-A0-001-r1",
+      "seed": "e148_dev_Ironclad_A0_001",
+      "ascension": 0,
+      "status": "defeat",
+      "decisions": 93,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 77
+    },
+    {
+      "case": "dev-A0-002-r0",
+      "seed": "e148_dev_Ironclad_A0_002",
+      "ascension": 0,
+      "status": "defeat",
+      "decisions": 86,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 84
+    },
+    {
+      "case": "dev-A0-002-r1",
+      "seed": "e148_dev_Ironclad_A0_002",
+      "ascension": 0,
+      "status": "curriculum_clear",
+      "decisions": 96,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 81
+    },
+    {
+      "case": "dev-A0-003-r0",
+      "seed": "e148_dev_Ironclad_A0_003",
+      "ascension": 0,
+      "status": "defeat",
+      "decisions": 80,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 79
+    },
+    {
+      "case": "dev-A0-003-r1",
+      "seed": "e148_dev_Ironclad_A0_003",
+      "ascension": 0,
+      "status": "defeat",
+      "decisions": 80,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 79
+    },
+    {
+      "case": "dev-A0-004-r0",
+      "seed": "e148_dev_Ironclad_A0_004",
+      "ascension": 0,
+      "status": "defeat",
+      "decisions": 72,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 56
+    },
+    {
+      "case": "dev-A0-004-r1",
+      "seed": "e148_dev_Ironclad_A0_004",
+      "ascension": 0,
+      "status": "defeat",
+      "decisions": 90,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 74
+    },
+    {
+      "case": "dev-A0-005-r0",
+      "seed": "e148_dev_Ironclad_A0_005",
+      "ascension": 0,
+      "status": "curriculum_clear",
+      "decisions": 100,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 81
+    },
+    {
+      "case": "dev-A0-005-r1",
+      "seed": "e148_dev_Ironclad_A0_005",
+      "ascension": 0,
+      "status": "defeat",
+      "decisions": 126,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 99
+    },
+    {
+      "case": "dev-A0-006-r0",
+      "seed": "e148_dev_Ironclad_A0_006",
+      "ascension": 0,
+      "status": "defeat",
+      "decisions": 59,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 46
+    },
+    {
+      "case": "dev-A0-006-r1",
+      "seed": "e148_dev_Ironclad_A0_006",
+      "ascension": 0,
+      "status": "defeat",
+      "decisions": 104,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 89
+    },
+    {
+      "case": "dev-A0-007-r0",
+      "seed": "e148_dev_Ironclad_A0_007",
+      "ascension": 0,
+      "status": "defeat",
+      "decisions": 86,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 69
+    },
+    {
+      "case": "dev-A0-007-r1",
+      "seed": "e148_dev_Ironclad_A0_007",
+      "ascension": 0,
+      "status": "defeat",
+      "decisions": 80,
+      "owned_new_decisions": 27,
+      "visible_new_decisions": 27,
+      "new_inventory_decisions": 59
+    },
+    {
+      "case": "dev-A0-008-r0",
+      "seed": "e148_dev_Ironclad_A0_008",
+      "ascension": 0,
+      "status": "curriculum_clear",
+      "decisions": 105,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 93
+    },
+    {
+      "case": "dev-A0-008-r1",
+      "seed": "e148_dev_Ironclad_A0_008",
+      "ascension": 0,
+      "status": "defeat",
+      "decisions": 118,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 98
+    },
+    {
+      "case": "dev-A0-009-r0",
+      "seed": "e148_dev_Ironclad_A0_009",
+      "ascension": 0,
+      "status": "defeat",
+      "decisions": 103,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 101
+    },
+    {
+      "case": "dev-A0-009-r1",
+      "seed": "e148_dev_Ironclad_A0_009",
+      "ascension": 0,
+      "status": "defeat",
+      "decisions": 97,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 95
+    },
+    {
+      "case": "dev-A0-010-r0",
+      "seed": "e148_dev_Ironclad_A0_010",
+      "ascension": 0,
+      "status": "defeat",
+      "decisions": 73,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 57
+    },
+    {
+      "case": "dev-A0-010-r1",
+      "seed": "e148_dev_Ironclad_A0_010",
+      "ascension": 0,
+      "status": "defeat",
+      "decisions": 126,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 109
+    },
+    {
+      "case": "dev-A0-011-r0",
+      "seed": "e148_dev_Ironclad_A0_011",
+      "ascension": 0,
+      "status": "curriculum_clear",
+      "decisions": 122,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 2,
+      "new_inventory_decisions": 120
+    },
+    {
+      "case": "dev-A0-011-r1",
+      "seed": "e148_dev_Ironclad_A0_011",
+      "ascension": 0,
+      "status": "curriculum_clear",
+      "decisions": 109,
+      "owned_new_decisions": 107,
+      "visible_new_decisions": 108,
+      "new_inventory_decisions": 107
+    },
+    {
+      "case": "dev-A0-012-r0",
+      "seed": "e148_dev_Ironclad_A0_012",
+      "ascension": 0,
+      "status": "defeat",
+      "decisions": 100,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 75
+    },
+    {
+      "case": "dev-A0-012-r1",
+      "seed": "e148_dev_Ironclad_A0_012",
+      "ascension": 0,
+      "status": "defeat",
+      "decisions": 77,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 59
+    },
+    {
+      "case": "dev-A0-013-r0",
+      "seed": "e148_dev_Ironclad_A0_013",
+      "ascension": 0,
+      "status": "defeat",
+      "decisions": 124,
+      "owned_new_decisions": 121,
+      "visible_new_decisions": 122,
+      "new_inventory_decisions": 122
+    },
+    {
+      "case": "dev-A0-013-r1",
+      "seed": "e148_dev_Ironclad_A0_013",
+      "ascension": 0,
+      "status": "defeat",
+      "decisions": 57,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 56
+    },
+    {
+      "case": "dev-A0-014-r0",
+      "seed": "e148_dev_Ironclad_A0_014",
+      "ascension": 0,
+      "status": "defeat",
+      "decisions": 105,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 88
+    },
+    {
+      "case": "dev-A0-014-r1",
+      "seed": "e148_dev_Ironclad_A0_014",
+      "ascension": 0,
+      "status": "defeat",
+      "decisions": 113,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 111
+    },
+    {
+      "case": "dev-A0-015-r0",
+      "seed": "e148_dev_Ironclad_A0_015",
+      "ascension": 0,
+      "status": "curriculum_clear",
+      "decisions": 118,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 116
+    },
+    {
+      "case": "dev-A0-015-r1",
+      "seed": "e148_dev_Ironclad_A0_015",
+      "ascension": 0,
+      "status": "defeat",
+      "decisions": 119,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 117
+    },
+    {
+      "case": "dev-A0-016-r0",
+      "seed": "e148_dev_Ironclad_A0_016",
+      "ascension": 0,
+      "status": "curriculum_clear",
+      "decisions": 121,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 107
+    },
+    {
+      "case": "dev-A0-016-r1",
+      "seed": "e148_dev_Ironclad_A0_016",
+      "ascension": 0,
+      "status": "defeat",
+      "decisions": 73,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 71
+    },
+    {
+      "case": "dev-A0-017-r0",
+      "seed": "e148_dev_Ironclad_A0_017",
+      "ascension": 0,
+      "status": "defeat",
+      "decisions": 98,
+      "owned_new_decisions": 95,
+      "visible_new_decisions": 97,
+      "new_inventory_decisions": 96
+    },
+    {
+      "case": "dev-A0-017-r1",
+      "seed": "e148_dev_Ironclad_A0_017",
+      "ascension": 0,
+      "status": "defeat",
+      "decisions": 107,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 106
+    },
+    {
+      "case": "dev-A0-018-r0",
+      "seed": "e148_dev_Ironclad_A0_018",
+      "ascension": 0,
+      "status": "curriculum_clear",
+      "decisions": 122,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 121
+    },
+    {
+      "case": "dev-A0-018-r1",
+      "seed": "e148_dev_Ironclad_A0_018",
+      "ascension": 0,
+      "status": "curriculum_clear",
+      "decisions": 121,
+      "owned_new_decisions": 2,
+      "visible_new_decisions": 4,
+      "new_inventory_decisions": 120
+    },
+    {
+      "case": "dev-A0-019-r0",
+      "seed": "e148_dev_Ironclad_A0_019",
+      "ascension": 0,
+      "status": "defeat",
+      "decisions": 95,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 71
+    },
+    {
+      "case": "dev-A0-019-r1",
+      "seed": "e148_dev_Ironclad_A0_019",
+      "ascension": 0,
+      "status": "defeat",
+      "decisions": 83,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 71
+    },
+    {
+      "case": "dev-A0-020-r0",
+      "seed": "e148_dev_Ironclad_A0_020",
+      "ascension": 0,
+      "status": "defeat",
+      "decisions": 84,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 65
+    },
+    {
+      "case": "dev-A0-020-r1",
+      "seed": "e148_dev_Ironclad_A0_020",
+      "ascension": 0,
+      "status": "defeat",
+      "decisions": 88,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 72
+    },
+    {
+      "case": "dev-A0-021-r0",
+      "seed": "e148_dev_Ironclad_A0_021",
+      "ascension": 0,
+      "status": "defeat",
+      "decisions": 88,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 74
+    },
+    {
+      "case": "dev-A0-021-r1",
+      "seed": "e148_dev_Ironclad_A0_021",
+      "ascension": 0,
+      "status": "curriculum_clear",
+      "decisions": 109,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 92
+    },
+    {
+      "case": "dev-A0-022-r0",
+      "seed": "e148_dev_Ironclad_A0_022",
+      "ascension": 0,
+      "status": "curriculum_clear",
+      "decisions": 110,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 96
+    },
+    {
+      "case": "dev-A0-022-r1",
+      "seed": "e148_dev_Ironclad_A0_022",
+      "ascension": 0,
+      "status": "defeat",
+      "decisions": 74,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 62
+    },
+    {
+      "case": "dev-A0-023-r0",
+      "seed": "e148_dev_Ironclad_A0_023",
+      "ascension": 0,
+      "status": "defeat",
+      "decisions": 83,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 82
+    },
+    {
+      "case": "dev-A0-023-r1",
+      "seed": "e148_dev_Ironclad_A0_023",
+      "ascension": 0,
+      "status": "defeat",
+      "decisions": 97,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 96
+    },
+    {
+      "case": "dev-A5-000-r0",
+      "seed": "e148_dev_Ironclad_A5_000",
+      "ascension": 5,
+      "status": "defeat",
+      "decisions": 79,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 67
+    },
+    {
+      "case": "dev-A5-000-r1",
+      "seed": "e148_dev_Ironclad_A5_000",
+      "ascension": 5,
+      "status": "curriculum_clear",
+      "decisions": 106,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 85
+    },
+    {
+      "case": "dev-A5-001-r0",
+      "seed": "e148_dev_Ironclad_A5_001",
+      "ascension": 5,
+      "status": "curriculum_clear",
+      "decisions": 101,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 99
+    },
+    {
+      "case": "dev-A5-001-r1",
+      "seed": "e148_dev_Ironclad_A5_001",
+      "ascension": 5,
+      "status": "defeat",
+      "decisions": 61,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 60
+    },
+    {
+      "case": "dev-A5-002-r0",
+      "seed": "e148_dev_Ironclad_A5_002",
+      "ascension": 5,
+      "status": "defeat",
+      "decisions": 124,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 107
+    },
+    {
+      "case": "dev-A5-002-r1",
+      "seed": "e148_dev_Ironclad_A5_002",
+      "ascension": 5,
+      "status": "defeat",
+      "decisions": 84,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 66
+    },
+    {
+      "case": "dev-A5-003-r0",
+      "seed": "e148_dev_Ironclad_A5_003",
+      "ascension": 5,
+      "status": "defeat",
+      "decisions": 77,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 47
+    },
+    {
+      "case": "dev-A5-003-r1",
+      "seed": "e148_dev_Ironclad_A5_003",
+      "ascension": 5,
+      "status": "defeat",
+      "decisions": 75,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 74
+    },
+    {
+      "case": "dev-A5-004-r0",
+      "seed": "e148_dev_Ironclad_A5_004",
+      "ascension": 5,
+      "status": "defeat",
+      "decisions": 96,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 61
+    },
+    {
+      "case": "dev-A5-004-r1",
+      "seed": "e148_dev_Ironclad_A5_004",
+      "ascension": 5,
+      "status": "defeat",
+      "decisions": 68,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 67
+    },
+    {
+      "case": "dev-A5-005-r0",
+      "seed": "e148_dev_Ironclad_A5_005",
+      "ascension": 5,
+      "status": "curriculum_clear",
+      "decisions": 104,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 61
+    },
+    {
+      "case": "dev-A5-005-r1",
+      "seed": "e148_dev_Ironclad_A5_005",
+      "ascension": 5,
+      "status": "defeat",
+      "decisions": 61,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 31
+    },
+    {
+      "case": "dev-A5-006-r0",
+      "seed": "e148_dev_Ironclad_A5_006",
+      "ascension": 5,
+      "status": "defeat",
+      "decisions": 86,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 84
+    },
+    {
+      "case": "dev-A5-006-r1",
+      "seed": "e148_dev_Ironclad_A5_006",
+      "ascension": 5,
+      "status": "defeat",
+      "decisions": 116,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 114
+    },
+    {
+      "case": "dev-A5-007-r0",
+      "seed": "e148_dev_Ironclad_A5_007",
+      "ascension": 5,
+      "status": "defeat",
+      "decisions": 111,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 81
+    },
+    {
+      "case": "dev-A5-007-r1",
+      "seed": "e148_dev_Ironclad_A5_007",
+      "ascension": 5,
+      "status": "defeat",
+      "decisions": 93,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 65
+    },
+    {
+      "case": "dev-A5-008-r0",
+      "seed": "e148_dev_Ironclad_A5_008",
+      "ascension": 5,
+      "status": "defeat",
+      "decisions": 94,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 92
+    },
+    {
+      "case": "dev-A5-008-r1",
+      "seed": "e148_dev_Ironclad_A5_008",
+      "ascension": 5,
+      "status": "defeat",
+      "decisions": 100,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 2,
+      "new_inventory_decisions": 83
+    },
+    {
+      "case": "dev-A5-009-r0",
+      "seed": "e148_dev_Ironclad_A5_009",
+      "ascension": 5,
+      "status": "defeat",
+      "decisions": 91,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 1,
+      "new_inventory_decisions": 72
+    },
+    {
+      "case": "dev-A5-009-r1",
+      "seed": "e148_dev_Ironclad_A5_009",
+      "ascension": 5,
+      "status": "defeat",
+      "decisions": 96,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 1,
+      "new_inventory_decisions": 94
+    },
+    {
+      "case": "dev-A5-010-r0",
+      "seed": "e148_dev_Ironclad_A5_010",
+      "ascension": 5,
+      "status": "defeat",
+      "decisions": 94,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 74
+    },
+    {
+      "case": "dev-A5-010-r1",
+      "seed": "e148_dev_Ironclad_A5_010",
+      "ascension": 5,
+      "status": "defeat",
+      "decisions": 74,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 45
+    },
+    {
+      "case": "dev-A5-011-r0",
+      "seed": "e148_dev_Ironclad_A5_011",
+      "ascension": 5,
+      "status": "defeat",
+      "decisions": 61,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 47
+    },
+    {
+      "case": "dev-A5-011-r1",
+      "seed": "e148_dev_Ironclad_A5_011",
+      "ascension": 5,
+      "status": "defeat",
+      "decisions": 64,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 46
+    },
+    {
+      "case": "dev-A5-012-r0",
+      "seed": "e148_dev_Ironclad_A5_012",
+      "ascension": 5,
+      "status": "defeat",
+      "decisions": 86,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 52
+    },
+    {
+      "case": "dev-A5-012-r1",
+      "seed": "e148_dev_Ironclad_A5_012",
+      "ascension": 5,
+      "status": "defeat",
+      "decisions": 84,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 57
+    },
+    {
+      "case": "dev-A5-013-r0",
+      "seed": "e148_dev_Ironclad_A5_013",
+      "ascension": 5,
+      "status": "defeat",
+      "decisions": 78,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 62
+    },
+    {
+      "case": "dev-A5-013-r1",
+      "seed": "e148_dev_Ironclad_A5_013",
+      "ascension": 5,
+      "status": "curriculum_clear",
+      "decisions": 108,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 91
+    },
+    {
+      "case": "dev-A5-014-r0",
+      "seed": "e148_dev_Ironclad_A5_014",
+      "ascension": 5,
+      "status": "curriculum_clear",
+      "decisions": 121,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 107
+    },
+    {
+      "case": "dev-A5-014-r1",
+      "seed": "e148_dev_Ironclad_A5_014",
+      "ascension": 5,
+      "status": "defeat",
+      "decisions": 103,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 89
+    },
+    {
+      "case": "dev-A5-015-r0",
+      "seed": "e148_dev_Ironclad_A5_015",
+      "ascension": 5,
+      "status": "defeat",
+      "decisions": 59,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 58
+    },
+    {
+      "case": "dev-A5-015-r1",
+      "seed": "e148_dev_Ironclad_A5_015",
+      "ascension": 5,
+      "status": "defeat",
+      "decisions": 89,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 88
+    },
+    {
+      "case": "dev-A5-016-r0",
+      "seed": "e148_dev_Ironclad_A5_016",
+      "ascension": 5,
+      "status": "defeat",
+      "decisions": 84,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 68
+    },
+    {
+      "case": "dev-A5-016-r1",
+      "seed": "e148_dev_Ironclad_A5_016",
+      "ascension": 5,
+      "status": "curriculum_clear",
+      "decisions": 114,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 101
+    },
+    {
+      "case": "dev-A5-017-r0",
+      "seed": "e148_dev_Ironclad_A5_017",
+      "ascension": 5,
+      "status": "defeat",
+      "decisions": 93,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 91
+    },
+    {
+      "case": "dev-A5-017-r1",
+      "seed": "e148_dev_Ironclad_A5_017",
+      "ascension": 5,
+      "status": "defeat",
+      "decisions": 77,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 59
+    },
+    {
+      "case": "dev-A5-018-r0",
+      "seed": "e148_dev_Ironclad_A5_018",
+      "ascension": 5,
+      "status": "defeat",
+      "decisions": 72,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 42
+    },
+    {
+      "case": "dev-A5-018-r1",
+      "seed": "e148_dev_Ironclad_A5_018",
+      "ascension": 5,
+      "status": "defeat",
+      "decisions": 82,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 51
+    },
+    {
+      "case": "dev-A5-019-r0",
+      "seed": "e148_dev_Ironclad_A5_019",
+      "ascension": 5,
+      "status": "defeat",
+      "decisions": 74,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 73
+    },
+    {
+      "case": "dev-A5-019-r1",
+      "seed": "e148_dev_Ironclad_A5_019",
+      "ascension": 5,
+      "status": "defeat",
+      "decisions": 67,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 66
+    },
+    {
+      "case": "dev-A5-020-r0",
+      "seed": "e148_dev_Ironclad_A5_020",
+      "ascension": 5,
+      "status": "defeat",
+      "decisions": 100,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 79
+    },
+    {
+      "case": "dev-A5-020-r1",
+      "seed": "e148_dev_Ironclad_A5_020",
+      "ascension": 5,
+      "status": "defeat",
+      "decisions": 93,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 72
+    },
+    {
+      "case": "dev-A5-021-r0",
+      "seed": "e148_dev_Ironclad_A5_021",
+      "ascension": 5,
+      "status": "defeat",
+      "decisions": 65,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 50
+    },
+    {
+      "case": "dev-A5-021-r1",
+      "seed": "e148_dev_Ironclad_A5_021",
+      "ascension": 5,
+      "status": "defeat",
+      "decisions": 91,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 75
+    },
+    {
+      "case": "dev-A5-022-r0",
+      "seed": "e148_dev_Ironclad_A5_022",
+      "ascension": 5,
+      "status": "curriculum_clear",
+      "decisions": 112,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 77
+    },
+    {
+      "case": "dev-A5-022-r1",
+      "seed": "e148_dev_Ironclad_A5_022",
+      "ascension": 5,
+      "status": "defeat",
+      "decisions": 107,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 80
+    },
+    {
+      "case": "dev-A5-023-r0",
+      "seed": "e148_dev_Ironclad_A5_023",
+      "ascension": 5,
+      "status": "defeat",
+      "decisions": 91,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 79
+    },
+    {
+      "case": "dev-A5-023-r1",
+      "seed": "e148_dev_Ironclad_A5_023",
+      "ascension": 5,
+      "status": "defeat",
+      "decisions": 83,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 73
+    },
+    {
+      "case": "dev-A10-000-r0",
+      "seed": "e148_dev_Ironclad_A10_000",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 79,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 53
+    },
+    {
+      "case": "dev-A10-000-r1",
+      "seed": "e148_dev_Ironclad_A10_000",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 65,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 64
+    },
+    {
+      "case": "dev-A10-001-r0",
+      "seed": "e148_dev_Ironclad_A10_001",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 104,
+      "owned_new_decisions": 102,
+      "visible_new_decisions": 103,
+      "new_inventory_decisions": 102
+    },
+    {
+      "case": "dev-A10-001-r1",
+      "seed": "e148_dev_Ironclad_A10_001",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 93,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 78
+    },
+    {
+      "case": "dev-A10-002-r0",
+      "seed": "e148_dev_Ironclad_A10_002",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 98,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 2,
+      "new_inventory_decisions": 96
+    },
+    {
+      "case": "dev-A10-002-r1",
+      "seed": "e148_dev_Ironclad_A10_002",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 138,
+      "owned_new_decisions": 135,
+      "visible_new_decisions": 137,
+      "new_inventory_decisions": 136
+    },
+    {
+      "case": "dev-A10-003-r0",
+      "seed": "e148_dev_Ironclad_A10_003",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 86,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 53
+    },
+    {
+      "case": "dev-A10-003-r1",
+      "seed": "e148_dev_Ironclad_A10_003",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 79,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 78
+    },
+    {
+      "case": "dev-A10-004-r0",
+      "seed": "e148_dev_Ironclad_A10_004",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 133,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 101
+    },
+    {
+      "case": "dev-A10-004-r1",
+      "seed": "e148_dev_Ironclad_A10_004",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 84,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 66
+    },
+    {
+      "case": "dev-A10-005-r0",
+      "seed": "e148_dev_Ironclad_A10_005",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 97,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 77
+    },
+    {
+      "case": "dev-A10-005-r1",
+      "seed": "e148_dev_Ironclad_A10_005",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 96,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 81
+    },
+    {
+      "case": "dev-A10-006-r0",
+      "seed": "e148_dev_Ironclad_A10_006",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 76,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 47
+    },
+    {
+      "case": "dev-A10-006-r1",
+      "seed": "e148_dev_Ironclad_A10_006",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 87,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 86
+    },
+    {
+      "case": "dev-A10-007-r0",
+      "seed": "e148_dev_Ironclad_A10_007",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 68,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 66
+    },
+    {
+      "case": "dev-A10-007-r1",
+      "seed": "e148_dev_Ironclad_A10_007",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 98,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 96
+    },
+    {
+      "case": "dev-A10-008-r0",
+      "seed": "e148_dev_Ironclad_A10_008",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 76,
+      "owned_new_decisions": 73,
+      "visible_new_decisions": 75,
+      "new_inventory_decisions": 74
+    },
+    {
+      "case": "dev-A10-008-r1",
+      "seed": "e148_dev_Ironclad_A10_008",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 77,
+      "owned_new_decisions": 75,
+      "visible_new_decisions": 76,
+      "new_inventory_decisions": 75
+    },
+    {
+      "case": "dev-A10-009-r0",
+      "seed": "e148_dev_Ironclad_A10_009",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 62,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 18
+    },
+    {
+      "case": "dev-A10-009-r1",
+      "seed": "e148_dev_Ironclad_A10_009",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 78,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 77
+    },
+    {
+      "case": "dev-A10-010-r0",
+      "seed": "e148_dev_Ironclad_A10_010",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 115,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 78
+    },
+    {
+      "case": "dev-A10-010-r1",
+      "seed": "e148_dev_Ironclad_A10_010",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 71,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 41
+    },
+    {
+      "case": "dev-A10-011-r0",
+      "seed": "e148_dev_Ironclad_A10_011",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 56,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 41
+    },
+    {
+      "case": "dev-A10-011-r1",
+      "seed": "e148_dev_Ironclad_A10_011",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 71,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 58
+    },
+    {
+      "case": "dev-A10-012-r0",
+      "seed": "e148_dev_Ironclad_A10_012",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 124,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 103
+    },
+    {
+      "case": "dev-A10-012-r1",
+      "seed": "e148_dev_Ironclad_A10_012",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 37,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 19
+    },
+    {
+      "case": "dev-A10-013-r0",
+      "seed": "e148_dev_Ironclad_A10_013",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 68,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 42
+    },
+    {
+      "case": "dev-A10-013-r1",
+      "seed": "e148_dev_Ironclad_A10_013",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 87,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 85
+    },
+    {
+      "case": "dev-A10-014-r0",
+      "seed": "e148_dev_Ironclad_A10_014",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 72,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 43
+    },
+    {
+      "case": "dev-A10-014-r1",
+      "seed": "e148_dev_Ironclad_A10_014",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 63,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 33
+    },
+    {
+      "case": "dev-A10-015-r0",
+      "seed": "e148_dev_Ironclad_A10_015",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 51,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 43
+    },
+    {
+      "case": "dev-A10-015-r1",
+      "seed": "e148_dev_Ironclad_A10_015",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 61,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 52
+    },
+    {
+      "case": "dev-A10-016-r0",
+      "seed": "e148_dev_Ironclad_A10_016",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 75,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 74
+    },
+    {
+      "case": "dev-A10-016-r1",
+      "seed": "e148_dev_Ironclad_A10_016",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 71,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 70
+    },
+    {
+      "case": "dev-A10-017-r0",
+      "seed": "e148_dev_Ironclad_A10_017",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 76,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 52
+    },
+    {
+      "case": "dev-A10-017-r1",
+      "seed": "e148_dev_Ironclad_A10_017",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 58,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 57
+    },
+    {
+      "case": "dev-A10-018-r0",
+      "seed": "e148_dev_Ironclad_A10_018",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 78,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 54
+    },
+    {
+      "case": "dev-A10-018-r1",
+      "seed": "e148_dev_Ironclad_A10_018",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 88,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 86
+    },
+    {
+      "case": "dev-A10-019-r0",
+      "seed": "e148_dev_Ironclad_A10_019",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 79,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 56
+    },
+    {
+      "case": "dev-A10-019-r1",
+      "seed": "e148_dev_Ironclad_A10_019",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 60,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 31
+    },
+    {
+      "case": "dev-A10-020-r0",
+      "seed": "e148_dev_Ironclad_A10_020",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 59,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 44
+    },
+    {
+      "case": "dev-A10-020-r1",
+      "seed": "e148_dev_Ironclad_A10_020",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 96,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 81
+    },
+    {
+      "case": "dev-A10-021-r0",
+      "seed": "e148_dev_Ironclad_A10_021",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 63,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 61
+    },
+    {
+      "case": "dev-A10-021-r1",
+      "seed": "e148_dev_Ironclad_A10_021",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 64,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 49
+    },
+    {
+      "case": "dev-A10-022-r0",
+      "seed": "e148_dev_Ironclad_A10_022",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 82,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 53
+    },
+    {
+      "case": "dev-A10-022-r1",
+      "seed": "e148_dev_Ironclad_A10_022",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 70,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 47
+    },
+    {
+      "case": "dev-A10-023-r0",
+      "seed": "e148_dev_Ironclad_A10_023",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 63,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 48
+    },
+    {
+      "case": "dev-A10-023-r1",
+      "seed": "e148_dev_Ironclad_A10_023",
+      "ascension": 10,
+      "status": "defeat",
+      "decisions": 75,
+      "owned_new_decisions": 0,
+      "visible_new_decisions": 0,
+      "new_inventory_decisions": 62
+    }
+  ],
+  "new_game_actions": 0,
+  "gradient_updates": 0,
+  "new_model_inferences": 0,
+  "final_acceptance_seeds_unused": true,
+  "inventory_counts": {
+    "train_unique": 3853,
+    "dev_unique": 1297
+  },
+  "decision_rule": {
+    "unseen_visible_identities_insufficient": true,
+    "inference": "Descriptive sufficiency check, not a causal intervention or new policy evaluation. Familiar item combinations can still be novel."
+  },
+  "seconds": 10.234399042092264
+}
