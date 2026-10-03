@@ -30,3 +30,13 @@ python3 scripts/pilot_continuation_e159.py evaluate --plan experiments/E159/plan
 Each output is immutable. Raw state/decisions/expected replay plans stay ignored under artifacts/runs; public compact records contain outcomes and hashes. Historical game v0.111.0, local M3 Max CPU; actual dependencies and runtime hashes recorded by each manifest.
 
 Implementation `8beed49`: nine focused synthetic checks pass (3new measurement/context/censoring,4root selector,2restore contract). Plan generated at that clean SHA, freezes all30roots/four arms/six replay cases and exact program source hashes before game execution. No game paths sampled while preparing the plan.
+
+## Evaluation v1 — diagnostic gate passes, no policy promotion
+
+Tested `4d2c0ddfa6def563e177c6cce7bf39507d75a2f1`: all120factorial paths ended in natural defeat, in97.816s wall/155.472s aggregate CPU including six replays. All60actor full suffixes AND first-fight prefixes exactly match E149; all6independent program replays match;126raw bundles audit. No errors, caps, API calls or gradients.
+
+With the SAME original actor first action, program continuation clears17/30first fights versus2/30under the actor. Mean utility gain1.038075,15seed-cluster bootstrap95%[0.622615,1.451409],11/15seeds positive. All strata positive: A0/A5/A10 +0.620590/+1.648915/+0.844720; combat/preparation +0.688871/+1.387279. All preregistered diagnostic gates pass.
+
+All four cells (first action / continuation): actor/actor2clears, selected/actor3, actor/program17, selected/program17. Act2 arrivals0/0/0/1; all120full suffixes ultimately defeat, noAct3. Mean first-action×continuation interaction−0.0654865: the previous search-first-action effect does not grow with this stronger continuation. These are30paired TRAIN roots from15seed clusters, not120independent natural full runs or an unseen-seed strength result.
+
+Decision: retain the isolated instrumentation/evidence. A stronger continuation is demonstrably useful at these roots; authorize only a separately preregistered stronger-teacher comparison, not E150, default-policy promotion or parameter expansion. Continue to preserve full-run and unknown-seed gates; final330seeds unused. Read-only trace analysis and plots follow this result commit.
