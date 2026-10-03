@@ -42,3 +42,7 @@ Tested `57419c55170be1902f86709dc5f3646cc7454112`:30 natural roots prepared in57
 ## Evaluation v1 — incomplete, no teaching promotion
 
 Tested `aaf71f7`:320.946s wall/704.262s parent+childCPU;8/30 roots complete,22roots time out.395raw bundles audit with no hash mismatch. Most later failures happen during process startup or full-prefix restoration, before root verification. The protocol fails execution and cannot establish the teacher's overall quality; do not discard those roots or report the8finished cases as a complete benchmark. No E150/training is started. A separate bounded execution diagnostic is required before deciding whether a scheduling-only rerun is warranted; preserve original outputs.
+
+## Scheduling diagnostic protocol, frozen before execution
+
+Replay exactly the original preflight plans for roots0,1,10,11,20,21 (combat/preparation at index000 of each difficulty), first with1worker then2workers.12paths total, each30s and240s global wall. Compare every prefix/suffix response and final state with the original six preflights; no new policy sampling. Only if all12match and each round p95path latency<=15s may a scheduling-only iteration rerun the same30roots. Keep the original v1 incomplete; new plan must preserve all seeds/candidates/streams/gates, change concurrency only, and report duplicate compute. These sequential rounds are confounded by host load/time, so they cannot prove concurrency caused the v1 slowdown. Command: `python3 scripts/diagnose_teacher_restore_e149.py --output artifacts/runs/e149-restore-diagnostic-v1.json`.
