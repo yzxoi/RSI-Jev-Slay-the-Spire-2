@@ -22,7 +22,7 @@ def reward_for(result):
 
 
 def episode(frozen, manifest, label, model=None, sample_seed=None, expected=None,
-            policy=None, seconds=30, checkpoint=None):
+            policy=None, seconds=30, checkpoint=None, encoder=None):
     uid = str(uuid.uuid4())
     trace = Trace(ROOT / 'artifacts/runs' / uid, {**manifest, 'scope': manifest.get('experiment', 'E125')+'_battle',
                   'label': label, 'case': frozen['case'], 'sample_seed': sample_seed,
@@ -67,7 +67,7 @@ def episode(frozen, manifest, label, model=None, sample_seed=None, expected=None
                 result['status'] = 'action_cap'; break
             complete = manifest.get('ppo_action_space') == ACTION_SPACE
             choices = complete_choices(state) if complete else choices_for(state)
-            encoded = encode(state, choices, previous, **({'max_actions': ACTION_LIMIT} if complete else {}))
+            encoded = (encoder or encode)(state, choices, previous, **({'max_actions': ACTION_LIMIT} if complete else {}))
             before = digest(state)
             payload = dict(before=before, candidates=choices)
             if expected is not None:
