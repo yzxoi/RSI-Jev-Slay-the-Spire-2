@@ -103,12 +103,14 @@ def candidates(model, root, state):
 
 
 def rollout(root, manifest, model, label, *, first_action=None, sample_seed=None,
-            full=False, expected=None, seconds=30, snapshot=None, capture=None, restore_only=False):
+            full=False, expected=None, seconds=30, snapshot=None, capture=None, restore_only=False,
+            continuation=None, track_first_fight=False):
     trace = Trace(ROOT/'artifacts/runs'/str(uuid.uuid4()),
-        {**manifest, 'scope': 'E149_root_continuation', 'case': root['case'], 'label': label,
+        {**manifest, 'scope': manifest.get('experiment', 'E149')+'_root_continuation', 'case': root['case'], 'label': label,
          'first_action': first_action, 'sample_seed': sample_seed, 'full': full,
          'prefix_hash': root['prefix_hash'], 'root_hash': root['root_hash'],
-         'snapshot':snapshot,'capture':capture,'restore_only':restore_only})
+         'snapshot':snapshot,'capture':capture,'restore_only':restore_only,
+         'continuation':getattr(continuation, 'name', 'actor'), 'track_first_fight':track_first_fight})
     start = time.monotonic()
     deadline = start+seconds
     r = dict(case=root['case'], seed=root['seed'], label=label, mode=root['mode'],
@@ -117,6 +119,7 @@ def rollout(root, manifest, model, label, *, first_action=None, sample_seed=None
         first_action=first_action, full=full, acts_seen=[], network_calls=0)
     engine, state, previous, history = None, {}, root['previous'], {}
     tracker, acts = FightBoundary(), set()
+    first_fight = None
     rng = np.random.default_rng(sample_seed)
     limit = 2400 if full else 300
 
@@ -147,6 +150,10 @@ def rollout(root, manifest, model, label, *, first_action=None, sample_seed=None
         require_resource_interface(state)
         r.update(entry_verified=True, restore_seconds=time.monotonic()-start,
                  restore_commands=restore_commands, entry_potions=len(state.get('player', {}).get('potions', [])))
+        if track_first_fight:
+            from .continuation import FirstFight
+            first_fight = FirstFight()
+            r['entry_resources'] = first_fight.resources(state)
         for step in range(limit+1):
             if restore_only:
                 r['status']='restored'
@@ -154,6 +161,8 @@ def rollout(root, manifest, model, label, *, first_action=None, sample_seed=None
             context = state.get('context') or {}
             if context.get('act'):
                 acts.add(context['act'])
+            if track_first_fight:
+                first_fight.observe(state, r['plan'])
             end = run_outcome(state) if full else tracker.observe(state)
             if end:
                 if not full and end == 'clear' and not tracker.started:
@@ -174,6 +183,9 @@ def rollout(root, manifest, model, label, *, first_action=None, sample_seed=None
             elif step == 0 and first_action is not None:
                 action = first_action
                 extra['forced_root'] = True
+            elif continuation is not None:
+                selection, extra = continuation.choose(state, choices, previous)
+                action = selection['action']
             else:
                 p = probabilities(model, state, choices, previous)
                 u = None if sample_seed is None else float(rng.random())
@@ -184,6 +196,8 @@ def rollout(root, manifest, model, label, *, first_action=None, sample_seed=None
             chosen = next((c for c in choices if c['action'] == action), None)
             if chosen is None:
                 raise ValueError('Action not legal in fresh state')
+            if continuation is not None:
+                continuation.remember(state, chosen)
             trace.write('decision', dict(before=before, candidates=choices, chosen=chosen, **extra))
             if state['decision'] == 'map_select':
                 history['removed_here'] = False
@@ -206,6 +220,9 @@ def rollout(root, manifest, model, label, *, first_action=None, sample_seed=None
         potions=[x.get('id', x.get('name')) for x in p.get('potions', [])],
         deck_hash=digest(p.get('deck')), actual_room_type=tracker.room_type,
         final_hash=digest(state), transition_hash=digest(r['plan']), acts_seen=sorted(acts))
+    if track_first_fight:
+        r['first_fight'] = first_fight.result if first_fight is not None else None
+        r['final_context'] = state.get('context')
     finish(trace, r, engine, start)
     if not full and r['status'] in ('clear', 'defeat'):
         r['utility'] = utility(r)
