@@ -45,8 +45,8 @@ def cpu():
                (resource.getrusage(resource.RUSAGE_SELF), resource.getrusage(resource.RUSAGE_CHILDREN)))
 
 
-def parallel(fn, items):
-    with ThreadPoolExecutor(max_workers=8) as pool:
+def parallel(fn, items, workers=8):
+    with ThreadPoolExecutor(max_workers=workers) as pool:
         return list(pool.map(fn, items))
 
 
@@ -197,7 +197,16 @@ def evaluate(v, output, plan_path, bank_path, **_):
     same_runtime(p, v)
     b = checked(bank_path, tracked=True)
     same_runtime(b, v)
-    if not b['passed'] or b['plan_sha256'] != file_hash(plan_path):
+    source_hash = file_hash(plan_path)
+    if 'source_plan' in p:
+        source = checked(ROOT/p['source_plan']['path'], p['source_plan']['sha256'], tracked=True)
+        proof = checked(ROOT/p['scheduling_proof']['path'], p['scheduling_proof']['sha256'], tracked=True)
+        if {k:val for k,val in p.items() if k not in ('source_plan','scheduling_proof','workers')} != source:
+            raise ValueError('Scheduling revision changed the learning protocol')
+        if not proof['passed'] or not any(r['workers']==p['workers'] for r in proof['rounds']):
+            raise ValueError('Scheduling revision lacks matching replay diagnostic')
+        source_hash = p['source_plan']['sha256']
+    if not b['passed'] or b['plan_sha256'] != source_hash:
         raise ValueError('Unverified teacher roots')
     model = load_phase(p['checkpoint'])
     started, cpu_start = time.monotonic(), cpu()
@@ -250,7 +259,7 @@ def evaluate(v, output, plan_path, bank_path, **_):
         write(directory/f'root-{index:02}.json', row)
         print(json.dumps({k: row.get(k) for k in ('case', 'status', 'selected_index', 'validation_delta', 'error')}), flush=True)
         return row
-    records = parallel(one, b['roots'])
+    records = parallel(one, b['roots'], workers=p.get('workers',8))
     seconds, used = time.monotonic()-started, cpu()-cpu_start
     proof = audit(records)
     return dict(manifest=v, plan_sha256=file_hash(plan_path), bank_sha256=file_hash(bank_path),

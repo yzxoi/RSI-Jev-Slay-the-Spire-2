@@ -19,7 +19,7 @@ from scripts.pilot_root_teacher_e149 import checked, version, same_runtime, info
 from scripts.pilot_fullpolicy_e140 import load_phase
 
 
-def main(output):
+def main(output, worker_counts=(1,2)):
     if output.exists():raise ValueError('Preserve prior diagnostics')
     torch.set_num_threads(1)
     v=version();p=checked(ROOT/'experiments/E149/plan-v1.json',tracked=True)
@@ -33,7 +33,7 @@ def main(output):
         expected=[dict(before=digest(pairs[i-1][1]),action=pairs[i][0],after=digest(pairs[i][1])) for i in range(n,len(pairs))]
         fixtures.append((root,pre,expected))
     rounds=[]
-    for workers in (1,2):
+    for workers in worker_counts:
         clock=time.monotonic()
         def one(item):
             root,pre,expected=item
@@ -57,4 +57,5 @@ def main(output):
 
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--output',type=Path,required=True)
-    main(p.parse_args().output)
+    p.add_argument('--workers',type=int,nargs='+',choices=(1,2,4),default=[1,2])
+    a=p.parse_args();main(a.output,a.workers)
