@@ -1,0 +1,25 @@
+--- a/src/GodotStubs/Core.cs
++++ b/src/GodotStubs/Core.cs
+@@ -59,6 +59,10 @@
+     public virtual StringName Name { get; set; } = "";
+ 
+     public Node? GetParent() => _parent;
++
++    // ABI only: original headless paths skip this visual operation.
++    public int GetIndex(bool includeInternal = false)
++        => throw new NotSupportedException("Headless visual Node.GetIndex was invoked");
+ 
+     public Godot.Collections.Array<Node> GetChildren(bool includeInternal = false)
+     {
+--- a/src/GodotStubs/UI.cs
++++ b/src/GodotStubs/UI.cs
+@@ -6,6 +6,9 @@
+     public Color Modulate { get; set; } = Color.White;
+     public Color SelfModulate { get; set; } = Color.White;
+     public bool Visible { get; set; } = true;
++    // ABI only: original headless paths skip this visual operation.
++    public void SetVisible(bool visible)
++        => throw new NotSupportedException("Headless visual CanvasItem.SetVisible was invoked");
+     public virtual void Show() => Visible = true;
+     public virtual void Hide() => Visible = false;
+     public bool IsVisibleInTree() => Visible;

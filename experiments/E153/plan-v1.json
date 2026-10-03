@@ -1,0 +1,1342 @@
+{
+  "manifest": {
+    "schema_version": 2,
+    "code_commit": "f87d1d8cd4224702918fde6fbeb0baa0474b742f",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "df07cbc48da1be47f0155e07d99e40e392f6e16e188b3044d2c3d7c0cb4978ff",
+    "godot_stubs_sha256": "1fd436ecb06e289ba2f9236bbdd1d0816bfb09a0083ef52f259b3560bbce6c06",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+      "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772",
+      "headless-zzzzzz-godot-abi.patch": "5239d3836d279de5143f7d56bece1f061c6c4002de696fce28f9f7f3922ededc",
+      "headless-zzzzzzz-learning-observations.patch": "d51db8457fdb9348340a829c84fa77e9620c476ba16a7c6e224b286ecb2dfd07"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4",
+    "experiment": "E153",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.5",
+    "model_calls": 0,
+    "model_cost_usd": 0,
+    "torch": "2.11.0",
+    "numpy": "2.3.2",
+    "device": "cpu"
+  },
+  "sources": {
+    "E133": {
+      "path": "experiments/E133/fixtures-v2.json",
+      "sha256": "8c0208d7b491b5c11077d095dc31e4878eb930df574f394a8ff7a93fd45991cb"
+    },
+    "E139": {
+      "path": "experiments/E139/bank-v1.json",
+      "sha256": "ad406fb71788c1b8a6c5bcd4f349bd9feb7eeef429fbe34d8db24df7ea96cdfc"
+    },
+    "E140": {
+      "path": "experiments/E140/training-v2.json",
+      "sha256": "17e25d5e0de5400f05e9c05e94b7ccce7c0fea1788c92fd646c81f5b6403d455"
+    }
+  },
+  "behavior": {
+    "path": "artifacts/runs/e140-training-v2/1702-bc.pt",
+    "sha256": "6f17f85ac348aa942f9c1c34b0fa6d1567df0be52f3be4a724a27798b8bab6ec",
+    "label": "BC",
+    "config": {
+      "state_width": 128,
+      "action_width": 64,
+      "state_dim": 540,
+      "action_dim": 272
+    }
+  },
+  "learners": [
+    2301,
+    2302
+  ],
+  "ppo": {
+    "lr": 0.0001,
+    "clip": 0.2,
+    "gamma": 1.0,
+    "gae_lambda": 1.0,
+    "epochs": 4,
+    "minibatch": 128,
+    "entropy": 0.01,
+    "value": 0.5,
+    "grad_norm": 0.5,
+    "target_kl": 0.03
+  },
+  "stages": [
+    [
+      "Monster",
+      [
+        [
+          "combat",
+          "Monster",
+          12
+        ],
+        [
+          "prepare",
+          "Monster",
+          12
+        ]
+      ]
+    ],
+    [
+      "Elite",
+      [
+        [
+          "combat",
+          "Monster",
+          6
+        ],
+        [
+          "combat",
+          "Elite",
+          12
+        ],
+        [
+          "prepare",
+          "Elite",
+          6
+        ]
+      ]
+    ],
+    [
+      "Boss",
+      [
+        [
+          "combat",
+          "Monster",
+          6
+        ],
+        [
+          "combat",
+          "Elite",
+          6
+        ],
+        [
+          "combat",
+          "Boss",
+          6
+        ],
+        [
+          "prepare",
+          "Boss",
+          6
+        ]
+      ]
+    ]
+  ],
+  "updates_per_stage": 2,
+  "collection": [
+    {
+      "case": "train-A0-000",
+      "seed": "e153_train_Ironclad_A0_000",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 0,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A0-001",
+      "seed": "e153_train_Ironclad_A0_001",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 1,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A0-002",
+      "seed": "e153_train_Ironclad_A0_002",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 2,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A0-003",
+      "seed": "e153_train_Ironclad_A0_003",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 3,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A0-004",
+      "seed": "e153_train_Ironclad_A0_004",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 4,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A0-005",
+      "seed": "e153_train_Ironclad_A0_005",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 5,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A0-006",
+      "seed": "e153_train_Ironclad_A0_006",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 6,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A0-007",
+      "seed": "e153_train_Ironclad_A0_007",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 7,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A0-008",
+      "seed": "e153_train_Ironclad_A0_008",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 8,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A0-009",
+      "seed": "e153_train_Ironclad_A0_009",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 9,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A0-010",
+      "seed": "e153_train_Ironclad_A0_010",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 10,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A0-011",
+      "seed": "e153_train_Ironclad_A0_011",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 11,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A0-012",
+      "seed": "e153_train_Ironclad_A0_012",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 12,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A0-013",
+      "seed": "e153_train_Ironclad_A0_013",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 13,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A0-014",
+      "seed": "e153_train_Ironclad_A0_014",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 14,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A0-015",
+      "seed": "e153_train_Ironclad_A0_015",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 15,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A0-016",
+      "seed": "e153_train_Ironclad_A0_016",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 16,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A0-017",
+      "seed": "e153_train_Ironclad_A0_017",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 17,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A5-000",
+      "seed": "e153_train_Ironclad_A5_000",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 0,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A5-001",
+      "seed": "e153_train_Ironclad_A5_001",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 1,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A5-002",
+      "seed": "e153_train_Ironclad_A5_002",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 2,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A5-003",
+      "seed": "e153_train_Ironclad_A5_003",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 3,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A5-004",
+      "seed": "e153_train_Ironclad_A5_004",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 4,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A5-005",
+      "seed": "e153_train_Ironclad_A5_005",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 5,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A5-006",
+      "seed": "e153_train_Ironclad_A5_006",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 6,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A5-007",
+      "seed": "e153_train_Ironclad_A5_007",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 7,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A5-008",
+      "seed": "e153_train_Ironclad_A5_008",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 8,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A5-009",
+      "seed": "e153_train_Ironclad_A5_009",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 9,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A5-010",
+      "seed": "e153_train_Ironclad_A5_010",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 10,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A5-011",
+      "seed": "e153_train_Ironclad_A5_011",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 11,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A5-012",
+      "seed": "e153_train_Ironclad_A5_012",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 12,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A5-013",
+      "seed": "e153_train_Ironclad_A5_013",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 13,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A5-014",
+      "seed": "e153_train_Ironclad_A5_014",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 14,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A5-015",
+      "seed": "e153_train_Ironclad_A5_015",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 15,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A5-016",
+      "seed": "e153_train_Ironclad_A5_016",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 16,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A5-017",
+      "seed": "e153_train_Ironclad_A5_017",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 17,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A10-000",
+      "seed": "e153_train_Ironclad_A10_000",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 0,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A10-001",
+      "seed": "e153_train_Ironclad_A10_001",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 1,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A10-002",
+      "seed": "e153_train_Ironclad_A10_002",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 2,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A10-003",
+      "seed": "e153_train_Ironclad_A10_003",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 3,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A10-004",
+      "seed": "e153_train_Ironclad_A10_004",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 4,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A10-005",
+      "seed": "e153_train_Ironclad_A10_005",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 5,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A10-006",
+      "seed": "e153_train_Ironclad_A10_006",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 6,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A10-007",
+      "seed": "e153_train_Ironclad_A10_007",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 7,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A10-008",
+      "seed": "e153_train_Ironclad_A10_008",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 8,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A10-009",
+      "seed": "e153_train_Ironclad_A10_009",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 9,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A10-010",
+      "seed": "e153_train_Ironclad_A10_010",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 10,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A10-011",
+      "seed": "e153_train_Ironclad_A10_011",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 11,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A10-012",
+      "seed": "e153_train_Ironclad_A10_012",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 12,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A10-013",
+      "seed": "e153_train_Ironclad_A10_013",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 13,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A10-014",
+      "seed": "e153_train_Ironclad_A10_014",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 14,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A10-015",
+      "seed": "e153_train_Ironclad_A10_015",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 15,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A10-016",
+      "seed": "e153_train_Ironclad_A10_016",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 16,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "train-A10-017",
+      "seed": "e153_train_Ironclad_A10_017",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 17,
+      "split": "train",
+      "arm": "planner"
+    },
+    {
+      "case": "dev-A0-000",
+      "seed": "e153_dev_Ironclad_A0_000",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 0,
+      "split": "dev",
+      "arm": "planner"
+    },
+    {
+      "case": "dev-A0-001",
+      "seed": "e153_dev_Ironclad_A0_001",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 1,
+      "split": "dev",
+      "arm": "planner"
+    },
+    {
+      "case": "dev-A0-002",
+      "seed": "e153_dev_Ironclad_A0_002",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 2,
+      "split": "dev",
+      "arm": "planner"
+    },
+    {
+      "case": "dev-A0-003",
+      "seed": "e153_dev_Ironclad_A0_003",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 3,
+      "split": "dev",
+      "arm": "planner"
+    },
+    {
+      "case": "dev-A0-004",
+      "seed": "e153_dev_Ironclad_A0_004",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 4,
+      "split": "dev",
+      "arm": "planner"
+    },
+    {
+      "case": "dev-A0-005",
+      "seed": "e153_dev_Ironclad_A0_005",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 5,
+      "split": "dev",
+      "arm": "planner"
+    },
+    {
+      "case": "dev-A0-006",
+      "seed": "e153_dev_Ironclad_A0_006",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 6,
+      "split": "dev",
+      "arm": "planner"
+    },
+    {
+      "case": "dev-A0-007",
+      "seed": "e153_dev_Ironclad_A0_007",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 7,
+      "split": "dev",
+      "arm": "planner"
+    },
+    {
+      "case": "dev-A0-008",
+      "seed": "e153_dev_Ironclad_A0_008",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 8,
+      "split": "dev",
+      "arm": "planner"
+    },
+    {
+      "case": "dev-A0-009",
+      "seed": "e153_dev_Ironclad_A0_009",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 9,
+      "split": "dev",
+      "arm": "planner"
+    },
+    {
+      "case": "dev-A0-010",
+      "seed": "e153_dev_Ironclad_A0_010",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 10,
+      "split": "dev",
+      "arm": "planner"
+    },
+    {
+      "case": "dev-A0-011",
+      "seed": "e153_dev_Ironclad_A0_011",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 11,
+      "split": "dev",
+      "arm": "planner"
+    },
+    {
+      "case": "dev-A5-000",
+      "seed": "e153_dev_Ironclad_A5_000",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 0,
+      "split": "dev",
+      "arm": "planner"
+    },
+    {
+      "case": "dev-A5-001",
+      "seed": "e153_dev_Ironclad_A5_001",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 1,
+      "split": "dev",
+      "arm": "planner"
+    },
+    {
+      "case": "dev-A5-002",
+      "seed": "e153_dev_Ironclad_A5_002",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 2,
+      "split": "dev",
+      "arm": "planner"
+    },
+    {
+      "case": "dev-A5-003",
+      "seed": "e153_dev_Ironclad_A5_003",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 3,
+      "split": "dev",
+      "arm": "planner"
+    },
+    {
+      "case": "dev-A5-004",
+      "seed": "e153_dev_Ironclad_A5_004",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 4,
+      "split": "dev",
+      "arm": "planner"
+    },
+    {
+      "case": "dev-A5-005",
+      "seed": "e153_dev_Ironclad_A5_005",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 5,
+      "split": "dev",
+      "arm": "planner"
+    },
+    {
+      "case": "dev-A5-006",
+      "seed": "e153_dev_Ironclad_A5_006",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 6,
+      "split": "dev",
+      "arm": "planner"
+    },
+    {
+      "case": "dev-A5-007",
+      "seed": "e153_dev_Ironclad_A5_007",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 7,
+      "split": "dev",
+      "arm": "planner"
+    },
+    {
+      "case": "dev-A5-008",
+      "seed": "e153_dev_Ironclad_A5_008",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 8,
+      "split": "dev",
+      "arm": "planner"
+    },
+    {
+      "case": "dev-A5-009",
+      "seed": "e153_dev_Ironclad_A5_009",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 9,
+      "split": "dev",
+      "arm": "planner"
+    },
+    {
+      "case": "dev-A5-010",
+      "seed": "e153_dev_Ironclad_A5_010",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 10,
+      "split": "dev",
+      "arm": "planner"
+    },
+    {
+      "case": "dev-A5-011",
+      "seed": "e153_dev_Ironclad_A5_011",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 11,
+      "split": "dev",
+      "arm": "planner"
+    },
+    {
+      "case": "dev-A10-000",
+      "seed": "e153_dev_Ironclad_A10_000",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 0,
+      "split": "dev",
+      "arm": "planner"
+    },
+    {
+      "case": "dev-A10-001",
+      "seed": "e153_dev_Ironclad_A10_001",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 1,
+      "split": "dev",
+      "arm": "planner"
+    },
+    {
+      "case": "dev-A10-002",
+      "seed": "e153_dev_Ironclad_A10_002",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 2,
+      "split": "dev",
+      "arm": "planner"
+    },
+    {
+      "case": "dev-A10-003",
+      "seed": "e153_dev_Ironclad_A10_003",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 3,
+      "split": "dev",
+      "arm": "planner"
+    },
+    {
+      "case": "dev-A10-004",
+      "seed": "e153_dev_Ironclad_A10_004",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 4,
+      "split": "dev",
+      "arm": "planner"
+    },
+    {
+      "case": "dev-A10-005",
+      "seed": "e153_dev_Ironclad_A10_005",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 5,
+      "split": "dev",
+      "arm": "planner"
+    },
+    {
+      "case": "dev-A10-006",
+      "seed": "e153_dev_Ironclad_A10_006",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 6,
+      "split": "dev",
+      "arm": "planner"
+    },
+    {
+      "case": "dev-A10-007",
+      "seed": "e153_dev_Ironclad_A10_007",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 7,
+      "split": "dev",
+      "arm": "planner"
+    },
+    {
+      "case": "dev-A10-008",
+      "seed": "e153_dev_Ironclad_A10_008",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 8,
+      "split": "dev",
+      "arm": "planner"
+    },
+    {
+      "case": "dev-A10-009",
+      "seed": "e153_dev_Ironclad_A10_009",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 9,
+      "split": "dev",
+      "arm": "planner"
+    },
+    {
+      "case": "dev-A10-010",
+      "seed": "e153_dev_Ironclad_A10_010",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 10,
+      "split": "dev",
+      "arm": "planner"
+    },
+    {
+      "case": "dev-A10-011",
+      "seed": "e153_dev_Ironclad_A10_011",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 11,
+      "split": "dev",
+      "arm": "planner"
+    }
+  ],
+  "monitors": [
+    {
+      "case": "monitor-A0-000",
+      "seed": "e153_monitor_Ironclad_A0_000",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 0,
+      "split": "monitor",
+      "arm": "planner"
+    },
+    {
+      "case": "monitor-A0-001",
+      "seed": "e153_monitor_Ironclad_A0_001",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 1,
+      "split": "monitor",
+      "arm": "planner"
+    },
+    {
+      "case": "monitor-A0-002",
+      "seed": "e153_monitor_Ironclad_A0_002",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 2,
+      "split": "monitor",
+      "arm": "planner"
+    },
+    {
+      "case": "monitor-A5-000",
+      "seed": "e153_monitor_Ironclad_A5_000",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 0,
+      "split": "monitor",
+      "arm": "planner"
+    },
+    {
+      "case": "monitor-A5-001",
+      "seed": "e153_monitor_Ironclad_A5_001",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 1,
+      "split": "monitor",
+      "arm": "planner"
+    },
+    {
+      "case": "monitor-A5-002",
+      "seed": "e153_monitor_Ironclad_A5_002",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 2,
+      "split": "monitor",
+      "arm": "planner"
+    },
+    {
+      "case": "monitor-A10-000",
+      "seed": "e153_monitor_Ironclad_A10_000",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 0,
+      "split": "monitor",
+      "arm": "planner"
+    },
+    {
+      "case": "monitor-A10-001",
+      "seed": "e153_monitor_Ironclad_A10_001",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 1,
+      "split": "monitor",
+      "arm": "planner"
+    },
+    {
+      "case": "monitor-A10-002",
+      "seed": "e153_monitor_Ironclad_A10_002",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 2,
+      "split": "monitor",
+      "arm": "planner"
+    }
+  ],
+  "tests": [
+    {
+      "case": "test-A0-000",
+      "seed": "e153_test_Ironclad_A0_000",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 0,
+      "split": "test",
+      "arm": "planner"
+    },
+    {
+      "case": "test-A0-001",
+      "seed": "e153_test_Ironclad_A0_001",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 1,
+      "split": "test",
+      "arm": "planner"
+    },
+    {
+      "case": "test-A0-002",
+      "seed": "e153_test_Ironclad_A0_002",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 2,
+      "split": "test",
+      "arm": "planner"
+    },
+    {
+      "case": "test-A1-000",
+      "seed": "e153_test_Ironclad_A1_000",
+      "character": "Ironclad",
+      "ascension": 1,
+      "index": 0,
+      "split": "test",
+      "arm": "planner"
+    },
+    {
+      "case": "test-A1-001",
+      "seed": "e153_test_Ironclad_A1_001",
+      "character": "Ironclad",
+      "ascension": 1,
+      "index": 1,
+      "split": "test",
+      "arm": "planner"
+    },
+    {
+      "case": "test-A1-002",
+      "seed": "e153_test_Ironclad_A1_002",
+      "character": "Ironclad",
+      "ascension": 1,
+      "index": 2,
+      "split": "test",
+      "arm": "planner"
+    },
+    {
+      "case": "test-A2-000",
+      "seed": "e153_test_Ironclad_A2_000",
+      "character": "Ironclad",
+      "ascension": 2,
+      "index": 0,
+      "split": "test",
+      "arm": "planner"
+    },
+    {
+      "case": "test-A2-001",
+      "seed": "e153_test_Ironclad_A2_001",
+      "character": "Ironclad",
+      "ascension": 2,
+      "index": 1,
+      "split": "test",
+      "arm": "planner"
+    },
+    {
+      "case": "test-A2-002",
+      "seed": "e153_test_Ironclad_A2_002",
+      "character": "Ironclad",
+      "ascension": 2,
+      "index": 2,
+      "split": "test",
+      "arm": "planner"
+    },
+    {
+      "case": "test-A3-000",
+      "seed": "e153_test_Ironclad_A3_000",
+      "character": "Ironclad",
+      "ascension": 3,
+      "index": 0,
+      "split": "test",
+      "arm": "planner"
+    },
+    {
+      "case": "test-A3-001",
+      "seed": "e153_test_Ironclad_A3_001",
+      "character": "Ironclad",
+      "ascension": 3,
+      "index": 1,
+      "split": "test",
+      "arm": "planner"
+    },
+    {
+      "case": "test-A3-002",
+      "seed": "e153_test_Ironclad_A3_002",
+      "character": "Ironclad",
+      "ascension": 3,
+      "index": 2,
+      "split": "test",
+      "arm": "planner"
+    },
+    {
+      "case": "test-A4-000",
+      "seed": "e153_test_Ironclad_A4_000",
+      "character": "Ironclad",
+      "ascension": 4,
+      "index": 0,
+      "split": "test",
+      "arm": "planner"
+    },
+    {
+      "case": "test-A4-001",
+      "seed": "e153_test_Ironclad_A4_001",
+      "character": "Ironclad",
+      "ascension": 4,
+      "index": 1,
+      "split": "test",
+      "arm": "planner"
+    },
+    {
+      "case": "test-A4-002",
+      "seed": "e153_test_Ironclad_A4_002",
+      "character": "Ironclad",
+      "ascension": 4,
+      "index": 2,
+      "split": "test",
+      "arm": "planner"
+    },
+    {
+      "case": "test-A5-000",
+      "seed": "e153_test_Ironclad_A5_000",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 0,
+      "split": "test",
+      "arm": "planner"
+    },
+    {
+      "case": "test-A5-001",
+      "seed": "e153_test_Ironclad_A5_001",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 1,
+      "split": "test",
+      "arm": "planner"
+    },
+    {
+      "case": "test-A5-002",
+      "seed": "e153_test_Ironclad_A5_002",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 2,
+      "split": "test",
+      "arm": "planner"
+    },
+    {
+      "case": "test-A6-000",
+      "seed": "e153_test_Ironclad_A6_000",
+      "character": "Ironclad",
+      "ascension": 6,
+      "index": 0,
+      "split": "test",
+      "arm": "planner"
+    },
+    {
+      "case": "test-A6-001",
+      "seed": "e153_test_Ironclad_A6_001",
+      "character": "Ironclad",
+      "ascension": 6,
+      "index": 1,
+      "split": "test",
+      "arm": "planner"
+    },
+    {
+      "case": "test-A6-002",
+      "seed": "e153_test_Ironclad_A6_002",
+      "character": "Ironclad",
+      "ascension": 6,
+      "index": 2,
+      "split": "test",
+      "arm": "planner"
+    },
+    {
+      "case": "test-A7-000",
+      "seed": "e153_test_Ironclad_A7_000",
+      "character": "Ironclad",
+      "ascension": 7,
+      "index": 0,
+      "split": "test",
+      "arm": "planner"
+    },
+    {
+      "case": "test-A7-001",
+      "seed": "e153_test_Ironclad_A7_001",
+      "character": "Ironclad",
+      "ascension": 7,
+      "index": 1,
+      "split": "test",
+      "arm": "planner"
+    },
+    {
+      "case": "test-A7-002",
+      "seed": "e153_test_Ironclad_A7_002",
+      "character": "Ironclad",
+      "ascension": 7,
+      "index": 2,
+      "split": "test",
+      "arm": "planner"
+    },
+    {
+      "case": "test-A8-000",
+      "seed": "e153_test_Ironclad_A8_000",
+      "character": "Ironclad",
+      "ascension": 8,
+      "index": 0,
+      "split": "test",
+      "arm": "planner"
+    },
+    {
+      "case": "test-A8-001",
+      "seed": "e153_test_Ironclad_A8_001",
+      "character": "Ironclad",
+      "ascension": 8,
+      "index": 1,
+      "split": "test",
+      "arm": "planner"
+    },
+    {
+      "case": "test-A8-002",
+      "seed": "e153_test_Ironclad_A8_002",
+      "character": "Ironclad",
+      "ascension": 8,
+      "index": 2,
+      "split": "test",
+      "arm": "planner"
+    },
+    {
+      "case": "test-A9-000",
+      "seed": "e153_test_Ironclad_A9_000",
+      "character": "Ironclad",
+      "ascension": 9,
+      "index": 0,
+      "split": "test",
+      "arm": "planner"
+    },
+    {
+      "case": "test-A9-001",
+      "seed": "e153_test_Ironclad_A9_001",
+      "character": "Ironclad",
+      "ascension": 9,
+      "index": 1,
+      "split": "test",
+      "arm": "planner"
+    },
+    {
+      "case": "test-A9-002",
+      "seed": "e153_test_Ironclad_A9_002",
+      "character": "Ironclad",
+      "ascension": 9,
+      "index": 2,
+      "split": "test",
+      "arm": "planner"
+    },
+    {
+      "case": "test-A10-000",
+      "seed": "e153_test_Ironclad_A10_000",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 0,
+      "split": "test",
+      "arm": "planner"
+    },
+    {
+      "case": "test-A10-001",
+      "seed": "e153_test_Ironclad_A10_001",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 1,
+      "split": "test",
+      "arm": "planner"
+    },
+    {
+      "case": "test-A10-002",
+      "seed": "e153_test_Ironclad_A10_002",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 2,
+      "split": "test",
+      "arm": "planner"
+    }
+  ],
+  "budgets": {
+    "collect": 900,
+    "bank": 180,
+    "train_per_learner": 900,
+    "evaluate": 900
+  },
+  "final_acceptance_seeds_unused": true
+}
