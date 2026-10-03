@@ -4,9 +4,11 @@
 
 当前学习研究的验收目标是：**一个冻结的网络独立完成铁甲战士 A0～A10 整局**，包含路线、奖励、选牌、商店、事件与用药；训练可使用教师和搜索，验收不由 Astra 或规划器接管。目前尚未达到。
 
-[阶段反思与后续路线](docs/research/learning-search/2026-10-03-strategic-review.md)已整理：可信训练环境、搜索驱动学习、整局资源策略、组合表示四个方向；建议先证明可靠教师再形成多轮学习循环。当前属于方案，没有启动扩训或改变纯网络验收。
+[阶段反思与后续路线](docs/research/learning-search/2026-10-03-strategic-review.md)已整理：可信训练环境、搜索驱动学习、整局资源策略、组合表示四个方向；建议先证明可靠教师再形成多轮学习循环。本轮已推进可靠恢复与搜索教师评测，纯网络验收不变。
 
-最新[E153](experiments/E153/README.md)已跑完自然普通战→精英→Boss课程及战前准备训练，并在每阶段持续评测完整局。两模型共288条新轨迹；其中2302在33个新seed上2次进入第二幕，局部精英6→9/12，另一学习器未复现收益，仍无整局胜利。双学习器与完整对照门槛失败，默认不变。[结果、曲线与限制](docs/research/learning-search/2026-10-03-real-curriculum.md)。配套E154修复了旧CLI跳过Kaiser Crab的错误；Trial/Crystal Sphere兼容仍有缺口。
+最新[E149](experiments/E149/README.md)完成15个TRAIN seed的30根状态、936条续演：独立下一战通过25→31/180，贪心2→3/30；收益仅覆盖4/15seed，教师门槛失败，完整续局仍无第二幕。不启动蒸馏或推广策略。E157/E158定位并修复存档加载丢失未知房间概率，恢复配对中位加速2.118倍，729条旧终局路径逐步一致。[完整结果、图表与下一步](docs/research/learning-search/2026-10-03-root-teacher.md)。
+
+此前[E153](experiments/E153/README.md)已跑完自然普通战→精英→Boss课程及战前准备训练，并在每阶段持续评测完整局。两模型共288条新轨迹；其中2302在33个新seed上2次进入第二幕，局部精英6→9/12，另一学习器未复现收益，仍无整局胜利。双学习器与完整对照门槛失败，默认不变。[结果、曲线与限制](docs/research/learning-search/2026-10-03-real-curriculum.md)。配套E154修复了旧CLI跳过Kaiser Crab的错误；Trial/Crystal Sphere兼容仍有缺口。
 
 此前[E152](experiments/E152/README.md)已完成共享属性编码对照：同参数/训练数据，72个全新seed上MSE点估计降低12.49%/16.06%，但仍输给简单ridge、A5回退且终点校准不足，门槛失败。不接回PPO/搜索，默认策略不变。[结果与曲线](docs/research/learning-search/2026-10-03-shared-value.md)。
 
