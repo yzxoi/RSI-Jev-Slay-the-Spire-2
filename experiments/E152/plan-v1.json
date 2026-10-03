@@ -1,0 +1,1876 @@
+{
+  "manifest": {
+    "schema_version": 2,
+    "code_commit": "2c45137f035115a6473febf50654d926a7048e6f",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "df07cbc48da1be47f0155e07d99e40e392f6e16e188b3044d2c3d7c0cb4978ff",
+    "godot_stubs_sha256": "1fd436ecb06e289ba2f9236bbdd1d0816bfb09a0083ef52f259b3560bbce6c06",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+      "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772",
+      "headless-zzzzzz-godot-abi.patch": "5239d3836d279de5143f7d56bece1f061c6c4002de696fce28f9f7f3922ededc",
+      "headless-zzzzzzz-learning-observations.patch": "d51db8457fdb9348340a829c84fa77e9620c476ba16a7c6e224b286ecb2dfd07"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4",
+    "experiment": "E152",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.5",
+    "model_calls": 0,
+    "model_cost_usd": 0,
+    "encoder": "e152-shared-attributes-v1",
+    "torch": "2.11.0",
+    "numpy": "2.3.2",
+    "device": "cpu"
+  },
+  "settings": {
+    "epochs": 24,
+    "lr": 0.0003,
+    "batch": 512,
+    "grad_norm": 1.0,
+    "workers": 8,
+    "prepare_budget": 180,
+    "fit_budget": 180,
+    "collect_budget": 450,
+    "score_budget": 120,
+    "learners": [
+      2201,
+      2202
+    ],
+    "arms": [
+      "hash",
+      "shared"
+    ],
+    "ridge_alpha": 0.01
+  },
+  "configs": [
+    {
+      "case": "test-A0-000-r0",
+      "seed": "e152_test_Ironclad_A0_000",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 0,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000000
+    },
+    {
+      "case": "test-A0-000-r1",
+      "seed": "e152_test_Ironclad_A0_000",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 0,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000001
+    },
+    {
+      "case": "test-A0-001-r0",
+      "seed": "e152_test_Ironclad_A0_001",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 1,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000010
+    },
+    {
+      "case": "test-A0-001-r1",
+      "seed": "e152_test_Ironclad_A0_001",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 1,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000011
+    },
+    {
+      "case": "test-A0-002-r0",
+      "seed": "e152_test_Ironclad_A0_002",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 2,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000020
+    },
+    {
+      "case": "test-A0-002-r1",
+      "seed": "e152_test_Ironclad_A0_002",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 2,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000021
+    },
+    {
+      "case": "test-A0-003-r0",
+      "seed": "e152_test_Ironclad_A0_003",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 3,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000030
+    },
+    {
+      "case": "test-A0-003-r1",
+      "seed": "e152_test_Ironclad_A0_003",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 3,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000031
+    },
+    {
+      "case": "test-A0-004-r0",
+      "seed": "e152_test_Ironclad_A0_004",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 4,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000040
+    },
+    {
+      "case": "test-A0-004-r1",
+      "seed": "e152_test_Ironclad_A0_004",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 4,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000041
+    },
+    {
+      "case": "test-A0-005-r0",
+      "seed": "e152_test_Ironclad_A0_005",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 5,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000050
+    },
+    {
+      "case": "test-A0-005-r1",
+      "seed": "e152_test_Ironclad_A0_005",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 5,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000051
+    },
+    {
+      "case": "test-A0-006-r0",
+      "seed": "e152_test_Ironclad_A0_006",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 6,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000060
+    },
+    {
+      "case": "test-A0-006-r1",
+      "seed": "e152_test_Ironclad_A0_006",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 6,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000061
+    },
+    {
+      "case": "test-A0-007-r0",
+      "seed": "e152_test_Ironclad_A0_007",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 7,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000070
+    },
+    {
+      "case": "test-A0-007-r1",
+      "seed": "e152_test_Ironclad_A0_007",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 7,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000071
+    },
+    {
+      "case": "test-A0-008-r0",
+      "seed": "e152_test_Ironclad_A0_008",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 8,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000080
+    },
+    {
+      "case": "test-A0-008-r1",
+      "seed": "e152_test_Ironclad_A0_008",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 8,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000081
+    },
+    {
+      "case": "test-A0-009-r0",
+      "seed": "e152_test_Ironclad_A0_009",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 9,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000090
+    },
+    {
+      "case": "test-A0-009-r1",
+      "seed": "e152_test_Ironclad_A0_009",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 9,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000091
+    },
+    {
+      "case": "test-A0-010-r0",
+      "seed": "e152_test_Ironclad_A0_010",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 10,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000100
+    },
+    {
+      "case": "test-A0-010-r1",
+      "seed": "e152_test_Ironclad_A0_010",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 10,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000101
+    },
+    {
+      "case": "test-A0-011-r0",
+      "seed": "e152_test_Ironclad_A0_011",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 11,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000110
+    },
+    {
+      "case": "test-A0-011-r1",
+      "seed": "e152_test_Ironclad_A0_011",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 11,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000111
+    },
+    {
+      "case": "test-A0-012-r0",
+      "seed": "e152_test_Ironclad_A0_012",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 12,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000120
+    },
+    {
+      "case": "test-A0-012-r1",
+      "seed": "e152_test_Ironclad_A0_012",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 12,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000121
+    },
+    {
+      "case": "test-A0-013-r0",
+      "seed": "e152_test_Ironclad_A0_013",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 13,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000130
+    },
+    {
+      "case": "test-A0-013-r1",
+      "seed": "e152_test_Ironclad_A0_013",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 13,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000131
+    },
+    {
+      "case": "test-A0-014-r0",
+      "seed": "e152_test_Ironclad_A0_014",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 14,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000140
+    },
+    {
+      "case": "test-A0-014-r1",
+      "seed": "e152_test_Ironclad_A0_014",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 14,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000141
+    },
+    {
+      "case": "test-A0-015-r0",
+      "seed": "e152_test_Ironclad_A0_015",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 15,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000150
+    },
+    {
+      "case": "test-A0-015-r1",
+      "seed": "e152_test_Ironclad_A0_015",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 15,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000151
+    },
+    {
+      "case": "test-A0-016-r0",
+      "seed": "e152_test_Ironclad_A0_016",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 16,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000160
+    },
+    {
+      "case": "test-A0-016-r1",
+      "seed": "e152_test_Ironclad_A0_016",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 16,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000161
+    },
+    {
+      "case": "test-A0-017-r0",
+      "seed": "e152_test_Ironclad_A0_017",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 17,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000170
+    },
+    {
+      "case": "test-A0-017-r1",
+      "seed": "e152_test_Ironclad_A0_017",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 17,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000171
+    },
+    {
+      "case": "test-A0-018-r0",
+      "seed": "e152_test_Ironclad_A0_018",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 18,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000180
+    },
+    {
+      "case": "test-A0-018-r1",
+      "seed": "e152_test_Ironclad_A0_018",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 18,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000181
+    },
+    {
+      "case": "test-A0-019-r0",
+      "seed": "e152_test_Ironclad_A0_019",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 19,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000190
+    },
+    {
+      "case": "test-A0-019-r1",
+      "seed": "e152_test_Ironclad_A0_019",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 19,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000191
+    },
+    {
+      "case": "test-A0-020-r0",
+      "seed": "e152_test_Ironclad_A0_020",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 20,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000200
+    },
+    {
+      "case": "test-A0-020-r1",
+      "seed": "e152_test_Ironclad_A0_020",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 20,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000201
+    },
+    {
+      "case": "test-A0-021-r0",
+      "seed": "e152_test_Ironclad_A0_021",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 21,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000210
+    },
+    {
+      "case": "test-A0-021-r1",
+      "seed": "e152_test_Ironclad_A0_021",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 21,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000211
+    },
+    {
+      "case": "test-A0-022-r0",
+      "seed": "e152_test_Ironclad_A0_022",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 22,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000220
+    },
+    {
+      "case": "test-A0-022-r1",
+      "seed": "e152_test_Ironclad_A0_022",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 22,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000221
+    },
+    {
+      "case": "test-A0-023-r0",
+      "seed": "e152_test_Ironclad_A0_023",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 23,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000230
+    },
+    {
+      "case": "test-A0-023-r1",
+      "seed": "e152_test_Ironclad_A0_023",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 23,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152000231
+    },
+    {
+      "case": "test-A5-000-r0",
+      "seed": "e152_test_Ironclad_A5_000",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 0,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050000
+    },
+    {
+      "case": "test-A5-000-r1",
+      "seed": "e152_test_Ironclad_A5_000",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 0,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050001
+    },
+    {
+      "case": "test-A5-001-r0",
+      "seed": "e152_test_Ironclad_A5_001",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 1,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050010
+    },
+    {
+      "case": "test-A5-001-r1",
+      "seed": "e152_test_Ironclad_A5_001",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 1,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050011
+    },
+    {
+      "case": "test-A5-002-r0",
+      "seed": "e152_test_Ironclad_A5_002",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 2,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050020
+    },
+    {
+      "case": "test-A5-002-r1",
+      "seed": "e152_test_Ironclad_A5_002",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 2,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050021
+    },
+    {
+      "case": "test-A5-003-r0",
+      "seed": "e152_test_Ironclad_A5_003",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 3,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050030
+    },
+    {
+      "case": "test-A5-003-r1",
+      "seed": "e152_test_Ironclad_A5_003",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 3,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050031
+    },
+    {
+      "case": "test-A5-004-r0",
+      "seed": "e152_test_Ironclad_A5_004",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 4,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050040
+    },
+    {
+      "case": "test-A5-004-r1",
+      "seed": "e152_test_Ironclad_A5_004",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 4,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050041
+    },
+    {
+      "case": "test-A5-005-r0",
+      "seed": "e152_test_Ironclad_A5_005",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 5,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050050
+    },
+    {
+      "case": "test-A5-005-r1",
+      "seed": "e152_test_Ironclad_A5_005",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 5,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050051
+    },
+    {
+      "case": "test-A5-006-r0",
+      "seed": "e152_test_Ironclad_A5_006",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 6,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050060
+    },
+    {
+      "case": "test-A5-006-r1",
+      "seed": "e152_test_Ironclad_A5_006",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 6,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050061
+    },
+    {
+      "case": "test-A5-007-r0",
+      "seed": "e152_test_Ironclad_A5_007",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 7,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050070
+    },
+    {
+      "case": "test-A5-007-r1",
+      "seed": "e152_test_Ironclad_A5_007",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 7,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050071
+    },
+    {
+      "case": "test-A5-008-r0",
+      "seed": "e152_test_Ironclad_A5_008",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 8,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050080
+    },
+    {
+      "case": "test-A5-008-r1",
+      "seed": "e152_test_Ironclad_A5_008",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 8,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050081
+    },
+    {
+      "case": "test-A5-009-r0",
+      "seed": "e152_test_Ironclad_A5_009",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 9,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050090
+    },
+    {
+      "case": "test-A5-009-r1",
+      "seed": "e152_test_Ironclad_A5_009",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 9,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050091
+    },
+    {
+      "case": "test-A5-010-r0",
+      "seed": "e152_test_Ironclad_A5_010",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 10,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050100
+    },
+    {
+      "case": "test-A5-010-r1",
+      "seed": "e152_test_Ironclad_A5_010",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 10,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050101
+    },
+    {
+      "case": "test-A5-011-r0",
+      "seed": "e152_test_Ironclad_A5_011",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 11,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050110
+    },
+    {
+      "case": "test-A5-011-r1",
+      "seed": "e152_test_Ironclad_A5_011",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 11,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050111
+    },
+    {
+      "case": "test-A5-012-r0",
+      "seed": "e152_test_Ironclad_A5_012",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 12,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050120
+    },
+    {
+      "case": "test-A5-012-r1",
+      "seed": "e152_test_Ironclad_A5_012",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 12,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050121
+    },
+    {
+      "case": "test-A5-013-r0",
+      "seed": "e152_test_Ironclad_A5_013",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 13,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050130
+    },
+    {
+      "case": "test-A5-013-r1",
+      "seed": "e152_test_Ironclad_A5_013",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 13,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050131
+    },
+    {
+      "case": "test-A5-014-r0",
+      "seed": "e152_test_Ironclad_A5_014",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 14,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050140
+    },
+    {
+      "case": "test-A5-014-r1",
+      "seed": "e152_test_Ironclad_A5_014",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 14,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050141
+    },
+    {
+      "case": "test-A5-015-r0",
+      "seed": "e152_test_Ironclad_A5_015",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 15,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050150
+    },
+    {
+      "case": "test-A5-015-r1",
+      "seed": "e152_test_Ironclad_A5_015",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 15,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050151
+    },
+    {
+      "case": "test-A5-016-r0",
+      "seed": "e152_test_Ironclad_A5_016",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 16,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050160
+    },
+    {
+      "case": "test-A5-016-r1",
+      "seed": "e152_test_Ironclad_A5_016",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 16,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050161
+    },
+    {
+      "case": "test-A5-017-r0",
+      "seed": "e152_test_Ironclad_A5_017",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 17,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050170
+    },
+    {
+      "case": "test-A5-017-r1",
+      "seed": "e152_test_Ironclad_A5_017",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 17,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050171
+    },
+    {
+      "case": "test-A5-018-r0",
+      "seed": "e152_test_Ironclad_A5_018",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 18,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050180
+    },
+    {
+      "case": "test-A5-018-r1",
+      "seed": "e152_test_Ironclad_A5_018",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 18,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050181
+    },
+    {
+      "case": "test-A5-019-r0",
+      "seed": "e152_test_Ironclad_A5_019",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 19,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050190
+    },
+    {
+      "case": "test-A5-019-r1",
+      "seed": "e152_test_Ironclad_A5_019",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 19,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050191
+    },
+    {
+      "case": "test-A5-020-r0",
+      "seed": "e152_test_Ironclad_A5_020",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 20,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050200
+    },
+    {
+      "case": "test-A5-020-r1",
+      "seed": "e152_test_Ironclad_A5_020",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 20,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050201
+    },
+    {
+      "case": "test-A5-021-r0",
+      "seed": "e152_test_Ironclad_A5_021",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 21,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050210
+    },
+    {
+      "case": "test-A5-021-r1",
+      "seed": "e152_test_Ironclad_A5_021",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 21,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050211
+    },
+    {
+      "case": "test-A5-022-r0",
+      "seed": "e152_test_Ironclad_A5_022",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 22,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050220
+    },
+    {
+      "case": "test-A5-022-r1",
+      "seed": "e152_test_Ironclad_A5_022",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 22,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050221
+    },
+    {
+      "case": "test-A5-023-r0",
+      "seed": "e152_test_Ironclad_A5_023",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 23,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050230
+    },
+    {
+      "case": "test-A5-023-r1",
+      "seed": "e152_test_Ironclad_A5_023",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 23,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152050231
+    },
+    {
+      "case": "test-A10-000-r0",
+      "seed": "e152_test_Ironclad_A10_000",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 0,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100000
+    },
+    {
+      "case": "test-A10-000-r1",
+      "seed": "e152_test_Ironclad_A10_000",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 0,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100001
+    },
+    {
+      "case": "test-A10-001-r0",
+      "seed": "e152_test_Ironclad_A10_001",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 1,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100010
+    },
+    {
+      "case": "test-A10-001-r1",
+      "seed": "e152_test_Ironclad_A10_001",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 1,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100011
+    },
+    {
+      "case": "test-A10-002-r0",
+      "seed": "e152_test_Ironclad_A10_002",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 2,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100020
+    },
+    {
+      "case": "test-A10-002-r1",
+      "seed": "e152_test_Ironclad_A10_002",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 2,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100021
+    },
+    {
+      "case": "test-A10-003-r0",
+      "seed": "e152_test_Ironclad_A10_003",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 3,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100030
+    },
+    {
+      "case": "test-A10-003-r1",
+      "seed": "e152_test_Ironclad_A10_003",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 3,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100031
+    },
+    {
+      "case": "test-A10-004-r0",
+      "seed": "e152_test_Ironclad_A10_004",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 4,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100040
+    },
+    {
+      "case": "test-A10-004-r1",
+      "seed": "e152_test_Ironclad_A10_004",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 4,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100041
+    },
+    {
+      "case": "test-A10-005-r0",
+      "seed": "e152_test_Ironclad_A10_005",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 5,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100050
+    },
+    {
+      "case": "test-A10-005-r1",
+      "seed": "e152_test_Ironclad_A10_005",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 5,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100051
+    },
+    {
+      "case": "test-A10-006-r0",
+      "seed": "e152_test_Ironclad_A10_006",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 6,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100060
+    },
+    {
+      "case": "test-A10-006-r1",
+      "seed": "e152_test_Ironclad_A10_006",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 6,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100061
+    },
+    {
+      "case": "test-A10-007-r0",
+      "seed": "e152_test_Ironclad_A10_007",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 7,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100070
+    },
+    {
+      "case": "test-A10-007-r1",
+      "seed": "e152_test_Ironclad_A10_007",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 7,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100071
+    },
+    {
+      "case": "test-A10-008-r0",
+      "seed": "e152_test_Ironclad_A10_008",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 8,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100080
+    },
+    {
+      "case": "test-A10-008-r1",
+      "seed": "e152_test_Ironclad_A10_008",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 8,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100081
+    },
+    {
+      "case": "test-A10-009-r0",
+      "seed": "e152_test_Ironclad_A10_009",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 9,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100090
+    },
+    {
+      "case": "test-A10-009-r1",
+      "seed": "e152_test_Ironclad_A10_009",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 9,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100091
+    },
+    {
+      "case": "test-A10-010-r0",
+      "seed": "e152_test_Ironclad_A10_010",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 10,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100100
+    },
+    {
+      "case": "test-A10-010-r1",
+      "seed": "e152_test_Ironclad_A10_010",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 10,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100101
+    },
+    {
+      "case": "test-A10-011-r0",
+      "seed": "e152_test_Ironclad_A10_011",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 11,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100110
+    },
+    {
+      "case": "test-A10-011-r1",
+      "seed": "e152_test_Ironclad_A10_011",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 11,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100111
+    },
+    {
+      "case": "test-A10-012-r0",
+      "seed": "e152_test_Ironclad_A10_012",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 12,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100120
+    },
+    {
+      "case": "test-A10-012-r1",
+      "seed": "e152_test_Ironclad_A10_012",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 12,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100121
+    },
+    {
+      "case": "test-A10-013-r0",
+      "seed": "e152_test_Ironclad_A10_013",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 13,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100130
+    },
+    {
+      "case": "test-A10-013-r1",
+      "seed": "e152_test_Ironclad_A10_013",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 13,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100131
+    },
+    {
+      "case": "test-A10-014-r0",
+      "seed": "e152_test_Ironclad_A10_014",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 14,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100140
+    },
+    {
+      "case": "test-A10-014-r1",
+      "seed": "e152_test_Ironclad_A10_014",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 14,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100141
+    },
+    {
+      "case": "test-A10-015-r0",
+      "seed": "e152_test_Ironclad_A10_015",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 15,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100150
+    },
+    {
+      "case": "test-A10-015-r1",
+      "seed": "e152_test_Ironclad_A10_015",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 15,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100151
+    },
+    {
+      "case": "test-A10-016-r0",
+      "seed": "e152_test_Ironclad_A10_016",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 16,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100160
+    },
+    {
+      "case": "test-A10-016-r1",
+      "seed": "e152_test_Ironclad_A10_016",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 16,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100161
+    },
+    {
+      "case": "test-A10-017-r0",
+      "seed": "e152_test_Ironclad_A10_017",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 17,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100170
+    },
+    {
+      "case": "test-A10-017-r1",
+      "seed": "e152_test_Ironclad_A10_017",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 17,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100171
+    },
+    {
+      "case": "test-A10-018-r0",
+      "seed": "e152_test_Ironclad_A10_018",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 18,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100180
+    },
+    {
+      "case": "test-A10-018-r1",
+      "seed": "e152_test_Ironclad_A10_018",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 18,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100181
+    },
+    {
+      "case": "test-A10-019-r0",
+      "seed": "e152_test_Ironclad_A10_019",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 19,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100190
+    },
+    {
+      "case": "test-A10-019-r1",
+      "seed": "e152_test_Ironclad_A10_019",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 19,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100191
+    },
+    {
+      "case": "test-A10-020-r0",
+      "seed": "e152_test_Ironclad_A10_020",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 20,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100200
+    },
+    {
+      "case": "test-A10-020-r1",
+      "seed": "e152_test_Ironclad_A10_020",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 20,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100201
+    },
+    {
+      "case": "test-A10-021-r0",
+      "seed": "e152_test_Ironclad_A10_021",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 21,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100210
+    },
+    {
+      "case": "test-A10-021-r1",
+      "seed": "e152_test_Ironclad_A10_021",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 21,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100211
+    },
+    {
+      "case": "test-A10-022-r0",
+      "seed": "e152_test_Ironclad_A10_022",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 22,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100220
+    },
+    {
+      "case": "test-A10-022-r1",
+      "seed": "e152_test_Ironclad_A10_022",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 22,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100221
+    },
+    {
+      "case": "test-A10-023-r0",
+      "seed": "e152_test_Ironclad_A10_023",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 23,
+      "repetition": 0,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100230
+    },
+    {
+      "case": "test-A10-023-r1",
+      "seed": "e152_test_Ironclad_A10_023",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 23,
+      "repetition": 1,
+      "split": "test",
+      "arm": "neural_all",
+      "sample_seed": 152100231
+    }
+  ],
+  "source_bank": {
+    "path": "experiments/E148/bank-v2.json",
+    "sha256": "954b85d9d0b89e5e6348c68d960b96ddf6d58316a6dd78076fef4e4fb5f8d1af"
+  },
+  "source_training": {
+    "path": "experiments/E148/training-v1.json",
+    "sha256": "7aaba83ff2eb59960f66bd855de9d287b60e6933f36c7ddf84a155dbd95c1b16"
+  },
+  "behavior": {
+    "path": "artifacts/runs/e140-training-v2/1702-bc.pt",
+    "sha256": "6f17f85ac348aa942f9c1c34b0fa6d1567df0be52f3be4a724a27798b8bab6ec",
+    "label": "BC",
+    "config": {
+      "state_width": 128,
+      "action_width": 64,
+      "state_dim": 540,
+      "action_dim": 272
+    }
+  },
+  "old_critics": [
+    {
+      "learner": 2101,
+      "arm": "task",
+      "path": "artifacts/runs/e148-training-v1/2101-task.pt",
+      "sha256": "c40ea9a2176bd35e68907a5421b2968d57e0746267481feb8374c0a283ac897c",
+      "parameters": 86529,
+      "curve": [
+        {
+          "epoch": 1,
+          "mse": 0.39810389280319214
+        },
+        {
+          "epoch": 2,
+          "mse": 0.31820619106292725
+        },
+        {
+          "epoch": 3,
+          "mse": 0.27800074219703674
+        },
+        {
+          "epoch": 4,
+          "mse": 0.2448715716600418
+        },
+        {
+          "epoch": 5,
+          "mse": 0.21882005035877228
+        },
+        {
+          "epoch": 6,
+          "mse": 0.19668500125408173
+        },
+        {
+          "epoch": 7,
+          "mse": 0.17406336963176727
+        },
+        {
+          "epoch": 8,
+          "mse": 0.15734761953353882
+        },
+        {
+          "epoch": 9,
+          "mse": 0.14313934743404388
+        },
+        {
+          "epoch": 10,
+          "mse": 0.13316258788108826
+        },
+        {
+          "epoch": 11,
+          "mse": 0.12012080103158951
+        },
+        {
+          "epoch": 12,
+          "mse": 0.11261335015296936
+        },
+        {
+          "epoch": 13,
+          "mse": 0.10434705018997192
+        },
+        {
+          "epoch": 14,
+          "mse": 0.09675484895706177
+        },
+        {
+          "epoch": 15,
+          "mse": 0.09264151751995087
+        },
+        {
+          "epoch": 16,
+          "mse": 0.0865187868475914
+        },
+        {
+          "epoch": 17,
+          "mse": 0.08214043080806732
+        },
+        {
+          "epoch": 18,
+          "mse": 0.07895561307668686
+        },
+        {
+          "epoch": 19,
+          "mse": 0.07574054598808289
+        },
+        {
+          "epoch": 20,
+          "mse": 0.07308878004550934
+        },
+        {
+          "epoch": 21,
+          "mse": 0.07976281642913818
+        },
+        {
+          "epoch": 22,
+          "mse": 0.067380890250206
+        },
+        {
+          "epoch": 23,
+          "mse": 0.06468095630407333
+        },
+        {
+          "epoch": 24,
+          "mse": 0.06261017918586731
+        }
+      ]
+    },
+    {
+      "learner": 2102,
+      "arm": "task",
+      "path": "artifacts/runs/e148-training-v1/2102-task.pt",
+      "sha256": "09c65c0a4e5faf8219491f708e3b635f67ac5c20dcbf242775ee26e19532b18c",
+      "parameters": 86529,
+      "curve": [
+        {
+          "epoch": 1,
+          "mse": 0.39884674549102783
+        },
+        {
+          "epoch": 2,
+          "mse": 0.31650835275650024
+        },
+        {
+          "epoch": 3,
+          "mse": 0.27538618445396423
+        },
+        {
+          "epoch": 4,
+          "mse": 0.24743562936782837
+        },
+        {
+          "epoch": 5,
+          "mse": 0.21837037801742554
+        },
+        {
+          "epoch": 6,
+          "mse": 0.19330920279026031
+        },
+        {
+          "epoch": 7,
+          "mse": 0.17225053906440735
+        },
+        {
+          "epoch": 8,
+          "mse": 0.15605264902114868
+        },
+        {
+          "epoch": 9,
+          "mse": 0.14146609604358673
+        },
+        {
+          "epoch": 10,
+          "mse": 0.12919580936431885
+        },
+        {
+          "epoch": 11,
+          "mse": 0.11891933530569077
+        },
+        {
+          "epoch": 12,
+          "mse": 0.10997089743614197
+        },
+        {
+          "epoch": 13,
+          "mse": 0.10288435965776443
+        },
+        {
+          "epoch": 14,
+          "mse": 0.09860903024673462
+        },
+        {
+          "epoch": 15,
+          "mse": 0.09077005088329315
+        },
+        {
+          "epoch": 16,
+          "mse": 0.08593328297138214
+        },
+        {
+          "epoch": 17,
+          "mse": 0.0838390439748764
+        },
+        {
+          "epoch": 18,
+          "mse": 0.07786425203084946
+        },
+        {
+          "epoch": 19,
+          "mse": 0.07517554610967636
+        },
+        {
+          "epoch": 20,
+          "mse": 0.07181026041507721
+        },
+        {
+          "epoch": 21,
+          "mse": 0.07104656100273132
+        },
+        {
+          "epoch": 22,
+          "mse": 0.06802697479724884
+        },
+        {
+          "epoch": 23,
+          "mse": 0.0662296861410141
+        },
+        {
+          "epoch": 24,
+          "mse": 0.06443235278129578
+        }
+      ]
+    }
+  ],
+  "final_acceptance_seeds_unused": true
+}
