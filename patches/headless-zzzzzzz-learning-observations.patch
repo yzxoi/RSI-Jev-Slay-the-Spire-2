@@ -1,0 +1,71 @@
+--- a/src/Sts2Headless/RunSimulator.cs
++++ b/src/Sts2Headless/RunSimulator.cs
+@@ -3903,6 +3903,56 @@
+         };
+     }
+ 
++    // Opt-in observation only: no pumping, RNG draws, preview updates, or setters.
++    // Array order is the engine's native pile order; not a promise of future draws
++    // after triggers, reshuffles, or card effects.
++    public Dictionary<string, object?> GetLearningObservation()
++    {
++        if (_runState == null) return Error("No run in progress");
++        var player = _runState.Players[0];
++        var result = new Dictionary<string, object?>
++        {
++            ["type"] = "learning_observation",
++            ["schema"] = "e141-internal-v1",
++            ["map"] = _runState.Map == null ? null : GetFullMap(),
++        };
++        if (!CombatManager.Instance.IsInProgress) return result;
++        var pcs = player.PlayerCombatState;
++        if (pcs == null) return result;
++        List<Dictionary<string, object?>> Pile(IEnumerable<CardModel> cards) => cards.Select((c, i) =>
++            new Dictionary<string, object?>
++            {
++                ["position"] = i, ["id"] = c.Id.Entry,
++                ["upgrade_level"] = c.CurrentUpgradeLevel,
++                ["cost"] = c.EnergyCost.GetResolved(),
++                ["star_cost"] = c.CurrentStarCost,
++                ["type"] = c.Type.ToString(),
++                ["target_type"] = c.TargetType.ToString(),
++                ["keywords"] = c.Keywords.Select(k => k.ToString()).ToList(),
++                ["base_stats"] = c.DynamicVars.Values.ToDictionary(d => d.Name, d => (object?)(int)d.BaseValue),
++            }).ToList();
++        result["piles"] = new Dictionary<string, object?>
++        {
++            ["draw"] = Pile(pcs.DrawPile.Cards),
++            ["discard"] = Pile(pcs.DiscardPile.Cards),
++            ["exhaust"] = Pile(pcs.ExhaustPile.Cards),
++        };
++        result["orb_slots"] = pcs.OrbQueue.Capacity;
++        result["orbs"] = pcs.OrbQueue.Orbs.Select((orb, i) => new Dictionary<string, object?>
++        {
++            ["position"] = i, ["id"] = orb.Id.Entry,
++            ["passive"] = (int)orb.PassiveVal, ["evoke"] = (int)orb.EvokeVal,
++        }).ToList();
++        result["stars"] = pcs.Stars;
++        var osty = player.Osty;
++        result["osty"] = osty == null ? null : new Dictionary<string, object?>
++        {
++            ["hp"] = osty.CurrentHp, ["max_hp"] = osty.MaxHp,
++            ["block"] = osty.Block, ["alive"] = osty.IsAlive,
++        };
++        return result;
++    }
++
+     public Dictionary<string, object?> GetFullMap()
+     {
+         if (_runState?.Map == null)
+--- a/src/Sts2Headless/Program.cs
++++ b/src/Sts2Headless/Program.cs
+@@ -158,6 +158,9 @@
+                 var loadLang = cmd.TryGetProperty("lang", out var le) ? (le.GetString() ?? "en") : "en";
+                 return sim.LoadSave(saveJson, loadLang);
+             }
++            case "get_learning_observation":
++                return sim.GetLearningObservation();
++
+             case "get_map":
+                 return sim.GetFullMap();
+ 
