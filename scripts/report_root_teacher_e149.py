@@ -13,7 +13,7 @@ from rsi.root_teacher import utility
 from scripts.evaluate_battle_search_e120 import audit, manifest, write
 
 
-def report(source, output, figures):
+def report(source, output, figures, previous=None):
     data = json.loads(source.read_text())
     records = data['records']
     rows, paths = [], []
@@ -58,6 +58,25 @@ def report(source, output, figures):
             full_act2={arm:sum(2 in r['full'][arm]['acts_seen'] for r in complete) for arm in ('actor','selected')},
             validation_clear={arm:sum(p['status']=='clear' for r in complete for p in r['validation'][arm]) for arm in ('actor','selected')},
             actual_validation_rooms={arm:dict(Counter(p['actual_room_type'] for r in complete for p in r['validation'][arm])) for arm in ('actor','selected')})
+    if previous is not None:
+        old=json.loads(previous.read_text());before={}
+        for row in old['records']:
+            ps=[p for xs in row.get('discovery',[]) for p in xs]
+            ps += [p for xs in row.get('validation',{}).values() for p in xs]
+            ps += [p for name in ('greedy','full') for p in row.get(name,{}).values()]
+            before.update({(p['case'],p['label']):p for p in ps if p['status'] in ('clear','defeat','victory')})
+        compared=0;differences=[]
+        for path in paths:
+            old_path=before.get((path['case'],path['label']))
+            if old_path and path['status'] in ('clear','defeat','victory'):
+                compared+=1
+                keys=('status','steps','transition_hash','final_hash')
+                if any(path.get(k)!=old_path.get(k) for k in keys):
+                    differences.append(dict(case=path['case'],label=path['label'],
+                        before={k:old_path.get(k) for k in keys},after={k:path.get(k) for k in keys}))
+        out['scheduling_parity']=dict(previous_sha256=file_hash(previous),compared_terminal_paths=compared,
+            differences=differences,passed=compared>0 and not differences,
+            note='Failed/incomplete v1 paths remain incomplete; repeated terminal paths are duplicate compute.')
     write(output,out)
     import matplotlib
     matplotlib.use('Agg')
@@ -89,6 +108,7 @@ def report(source, output, figures):
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--source',type=Path,required=True)
     p.add_argument('--output',type=Path,required=True);p.add_argument('--figures',type=Path,required=True)
+    p.add_argument('--previous',type=Path)
     a=p.parse_args()
     if a.output.exists():raise ValueError('Preserve previous analysis')
-    report(a.source.resolve(),a.output,a.figures)
+    report(a.source.resolve(),a.output,a.figures,a.previous)
