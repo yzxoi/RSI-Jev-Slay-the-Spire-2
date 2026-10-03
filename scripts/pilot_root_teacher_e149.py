@@ -53,8 +53,12 @@ def parallel(fn, items, workers=8):
 def version():
     v = {**manifest(), 'experiment': 'E149', 'encoder': ENCODER, 'torch': str(torch.__version__), 'device': 'cpu'}
     evidence = checked(ROOT/'experiments/E154/validation-v2.json')
-    if not evidence['pass'] or any(v[k] != evidence['manifest'][k] for k in ENGINE_KEYS):
-        raise ValueError('Runtime does not match guarded E154 compatibility evidence')
+    compatible=evidence['pass'] and all(v[k] == evidence['manifest'][k] for k in ENGINE_KEYS)
+    bridge_path=ROOT/'experiments/E158/validation-v1.json'
+    if not compatible and bridge_path.exists():
+        bridge=checked(bridge_path,tracked=True)
+        compatible=bridge['passed'] and bridge['fidelity_pass'] and all(v[k]==bridge['manifest'][k] for k in ENGINE_KEYS)
+    if not compatible:raise ValueError('Runtime lacks matching compatibility evidence')
     return v
 
 
@@ -194,14 +198,19 @@ def summarize(records, p, seconds, cpu_seconds, proof):
 
 def evaluate(v, output, plan_path, bank_path, **_):
     p = checked(plan_path, tracked=True)
-    same_runtime(p, v)
     b = checked(bank_path, tracked=True)
-    same_runtime(b, v)
+    snapshots={}
+    if 'restore_certificate' in p:
+        from rsi.map_prefix import certified_snapshots
+        snapshots=certified_snapshots(p['restore_certificate'],bank_path,v)
+        same_runtime(p,b['manifest'])
+    else:
+        same_runtime(p,v);same_runtime(b,v)
     source_hash = file_hash(plan_path)
     if 'source_plan' in p:
         source = checked(ROOT/p['source_plan']['path'], p['source_plan']['sha256'], tracked=True)
         proof = checked(ROOT/p['scheduling_proof']['path'], p['scheduling_proof']['sha256'], tracked=True)
-        if {k:val for k,val in p.items() if k not in ('source_plan','scheduling_proof','workers')} != source:
+        if {k:val for k,val in p.items() if k not in ('source_plan','scheduling_proof','workers','restore_certificate','parity_reference')} != source:
             raise ValueError('Scheduling revision changed the learning protocol')
         if not proof['passed'] or not any(r['workers']==p['workers'] for r in proof['rounds']):
             raise ValueError('Scheduling revision lacks matching replay diagnostic')
@@ -224,7 +233,7 @@ def evaluate(v, output, plan_path, bank_path, **_):
                 raise TimeoutError('Global teacher budget; remaining paths unstarted')
             budget = p['budgets']['full_seconds' if full else 'local_seconds']
             r = rollout(root, v, model, label, first_action=action, sample_seed=seed,
-                full=full, seconds=min(budget, deadline-time.monotonic()))
+                full=full, seconds=min(budget, deadline-time.monotonic()),snapshot=snapshots.get(root['case']))
             if r['status'] not in (('victory', 'defeat') if full else ('clear', 'defeat')):
                 row['failed_probe'] = compact(r)
                 raise ValueError('Incomplete continuation: '+r['status'])
@@ -262,9 +271,27 @@ def evaluate(v, output, plan_path, bank_path, **_):
     records = parallel(one, b['roots'], workers=p.get('workers',8))
     seconds, used = time.monotonic()-started, cpu()-cpu_start
     proof = audit(records)
+    summary=summarize(records,p,seconds,used,proof)
+    parity=None
+    if 'parity_reference' in p:
+        prior=checked(ROOT/p['parity_reference']['path'],p['parity_reference']['sha256'],tracked=True)
+        def terminal_paths(rows):
+            found={}
+            for row in rows:
+                paths=[x for xs in row.get('discovery',[]) for x in xs]
+                paths += [x for xs in row.get('validation',{}).values() for x in xs]
+                paths += [x for name in ('greedy','full') for x in row.get(name,{}).values()]
+                found.update({(x['case'],x['label']):x for x in paths if x['status'] in ('clear','defeat','victory')})
+            return found
+        old,new=terminal_paths(prior['records']),terminal_paths(records)
+        missing=[list(k) for k in old if k not in new]
+        differences=[list(k) for k in old if k in new and any(old[k].get(f)!=new[k].get(f)
+            for f in ('status','steps','transition_hash','final_hash'))]
+        parity=dict(expected=len(old),compared=len(old)-len(missing),missing=missing,differences=differences,
+                    passed=bool(old) and not missing and not differences)
+        summary['teacher_gate']=summary['teacher_gate'] and parity['passed']
     return dict(manifest=v, plan_sha256=file_hash(plan_path), bank_sha256=file_hash(bank_path),
-        records=records, seconds=seconds, cpu_seconds=used, audit=proof,
-        summary=summarize(records, p, seconds, used, proof))
+        records=records, seconds=seconds, cpu_seconds=used, audit=proof,execution_parity=parity,summary=summary)
 
 
 if __name__ == '__main__':

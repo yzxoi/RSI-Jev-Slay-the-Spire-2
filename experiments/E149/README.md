@@ -54,3 +54,9 @@ Diagnostic v2 atad30029: six4worker replays exact,8.343s total,p95case7.056s. Fr
 ## Evaluation v2 — budget stop, partial quality signal
 
 Tested85f27f3 with4workers:22/30 roots complete before the900s wall cap;8remaining roots are explicitly capped/unstarted.733raw bundles audit;1133.073 aggregate CPU seconds. Thus v2 also fails execution and cannot certify the overall teacher. Some completed A5 roots improve under independent continuation streams, including one greedy local defeat→clear; no aggregate promotion is inferred from complete cases. Keep v1/v2 separate and preserve all partial discovery results. Move to separately preregistered E157/#302 native Map plus short-prefix certification before another full teacher attempt; do not extend the budget or start E150.
+
+## Recovery-only iteration v3, frozen before execution
+
+E157found hidden unknown-room probability loss and failed; E158corrected the adapter and independently recertified all30roots/60fresh+120loaded suffixes with original native-save bytes.120paired timing paths show2.118x median speedup. Use only the hashed E158certificate, whose source bank, prior/current runtime, exact path counts and every native file are validated by the consumer. Plan-v3 preserves all original cohort/candidate/continuation/budget/strength/latency settings and4worker scheduling; only recovery/runtime certification changes. Additionally require all729terminal v2 paths reproduced exactly; prior incomplete paths remain incomplete in v2 and all attempts stay separate. Source game DLLs/Godot stubs unchanged.
+
+Command: `python3 scripts/pilot_root_teacher_e149.py evaluate --plan experiments/E149/plan-v3.json --bank experiments/E149/bank-v1.json --output artifacts/runs/e149-evaluation-v3.json`. No training until the complete original teacher gate passes.

@@ -59,3 +59,31 @@ def restore(send, root, manifest, directory, *, snapshot=None, capture=None):
                 engine={k:manifest[k] for k in ENGINE_KEYS})
             identity(root,capture,manifest)
     return state,count
+
+
+def certified_snapshots(reference, bank_path, manifest):
+    """Only the complete, immutable E158 exact-runtime certificate is consumable."""
+    path=ROOT/reference['path']
+    if file_hash(path)!=reference['sha256']:raise ValueError('Edited restoration certificate')
+    report=json.loads(path.read_text())
+    if not report.get('passed') or not report.get('fidelity_pass') or not report['audit']['pass']:
+        raise ValueError('Restoration certificate did not pass')
+    if any(report['manifest'][k]!=manifest[k] for k in ENGINE_KEYS):raise ValueError('Certificate runtime differs')
+    if file_hash(bank_path)!=report['source_bank']['sha256']:raise ValueError('Certificate root bank differs')
+    bank=json.loads(bank_path.read_text())
+    if (len(report.get('fresh',[]))!=30 or len(report.get('loaded',[]))!=30 or
+            any(r['status']!='complete' or len(r['checks'])!=n or not all(x['exact'] for x in r['checks'])
+                for key,n in [('fresh',2),('loaded',4)] for r in report[key])):
+        raise ValueError('Incomplete runtime-bridge proof')
+    source_path=ROOT/report['source']['path']
+    if file_hash(source_path)!=report['source']['sha256']:raise ValueError('Changed source references')
+    source=json.loads(source_path.read_text())
+    if any(source['manifest'][k]!=bank['manifest'][k] for k in ENGINE_KEYS):raise ValueError('Wrong source runtime')
+    snapshots={s['case']:s for s in report['snapshots']}
+    if len(snapshots)!=30 or set(snapshots)!={r['case'] for r in bank['roots']}:
+        raise ValueError('Incomplete certified root coverage')
+    for meta in bank['roots']:
+        root_path=ROOT/meta['raw']['path']
+        if file_hash(root_path)!=meta['raw']['sha256']:raise ValueError('Root artifact changed')
+        identity(json.loads(root_path.read_text()),snapshots[meta['case']],manifest)
+    return snapshots
