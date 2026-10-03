@@ -34,3 +34,7 @@ Raw decisions, candidate distributions, plans, states and wire responses stay in
 ## Natural collection v1
 
 Tested `1137867fb89517b0102263e19cf557733534f3e7`: all15 new seeds naturally defeated, noAct2/Boss entry; median within-act floor9,max15. Collection 20.826s;18 raw bundles including3 complete independent replays audit exactly. All decision phases encountered, including76card-reward/32potion-reward/13rest/3shop decisions. Proceed to predeclared last-encounter/preparation bank, with no source resampling. These outcomes describe the frozen baseline, not search strength.
+
+## Frozen bank / preflight
+
+Tested `57419c55170be1902f86709dc5f3646cc7454112`:30 natural roots prepared in57.795s; six greedy continuations independently replayed action-by-action,12 bundles audited. Exact legal candidate sets and all raw-root hashes are frozen in bank-v1.json before search. Full-prefix responses are checked at every command. All game RNG remains fixed by the original prefix: sample variation is **continuation-policy randomness**, not a distribution over unknown draw piles. Teaching value is conditional on this underlying state; this experiment cannot certify privileged targets as unbiased values for a partially observed student. No native-rule certification is claimed.
