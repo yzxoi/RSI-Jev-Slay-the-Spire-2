@@ -1,0 +1,43 @@
+# E153 — Real encounters, preparation credit and full-run monitoring
+
+Issue [#290](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/290).
+
+## Objective and hypothesis
+Replace arbitrary six-battle curriculum endpoints with genuine ordinary/elite/Boss combat outcomes, attach macro preparation to the next real fight, and measure complete runs after every stage. Test whether this provides useful policy learning without pretending local wins are full-run competence.
+
+## Fixed cohort and controls
+Ironclad training: existing E133 TRAIN only (first Monster and first Elite/Boss per seed), E139 Ironclad TRAIN Boss roots, plus54new natural collector runs (A0/A5/A10×18) using the existing combat planner and cautious fixed macro routing. New local DEV bank:36collector runs (A0/A5/A10×12), kept out of training. Collector seeds e153_{train|dev}_Ironclad_A{a}_{i:03}. All collection runs continue to natural full-game victory/death, with no HP/reward/RNG edits; missing encounters and failures remain recorded. Single-battle and preceding-preparation roots derive only from genuine histories; no boss spawning.
+
+Two learners2301/2302 start at the same frozen BC1702 policy; E152 critic is not promoted. Same e140 encoder/115,778-parameter actor-critic and PPO as E146 (lr1e-4,gamma=lambda1,clip.2,4epochs,batch128,entropy.01,value.5,gradnorm.5,targetKL.03). Reset critic head only. Three fixed stages, two24-episode updates each: Monster(12combat+12prep-Monster),Elite(6Monster+12Elite+6prep-Elite),Boss(6Monster+6Elite+6Boss+6prep-Boss). Fresh on-policy actions each episode; deterministic cycling over TRAIN roots, no outcome-based root selection. Total288training episodes across both learners. Training starts only if every encounter class has>=3independent TRAINseeds and each preparation class has>=1root; all gaps by difficulty/act are reported. Preparation allows all legal routes and stops at the actual next fight, so reference target class can change and must be reported.
+
+## Boundaries and evaluation
+Combat episodes terminate at the first genuine win/death; preparation episodes start at the preceding battle reward boundary (or Neow for first fight), execute all legal macro actions, and terminate after the next genuine fight. The final fight reward is not an action in that episode: reward choices instead belong to the subsequent preparation episode. Target -1 on death,1+.25remainingHP/maxHP on clear,matching existing local battle utility; also record potion/gold/deck inventory, not claim HP-only utility captures full-game value. No six-battle target. Enforce no success at an initial reward menu or in-combat reward interruption.
+
+Fixed recurring-in-training DEV full-run panel:9new seeds(A0/A5/A10×3), baseline then each of3stage checkpoints; no checkpoint selection or schedule changes from DEV. Final TEST after final hashes committed:33different seeds(A0..A10×3), initial BC,each final learner,and existing cautious planner=132complete-run attempts. All phases actor-controlled for neural arms. Local DEV panel deterministically picks first root per seed/type,up to12per encounter type plus preparation counterparts; compare initial/final actors. Boss DEV scarcity is explicitly inconclusive,never filled from TRAIN.
+
+## Gate / budget
+Require execution integrity,>=3held-out Boss seeds for local generalization,each learner >=2additional Act2 arrivals versus initial over33TESTseeds,no >1Act2-arrival regression in any difficulty,and no lost full-game victory; local combat clear count must not regress for any class. Full-run win counts reported separately; any promotion still requires stronger follow-up,never claim final A0-A10 acceptance. If gate fails,stop this recipe expansion and keep default unchanged. Final330acceptance seeds remain unused.
+
+Budget:collection900s/8workers,bank building180s,training+DEV monitoring1800s (max900s each learner),final/local evaluation900s; each restored episode60s/300decisions,full run180s/2400decisions. First-stage first episode per learner and first local/full evaluation per difficulty independently replay; raw trace and weight hashes retained. Full-prefix restoration is used for arbitrary reward roots and counted explicitly; prior native-map certificates do not certify these new starting states. No silent reset fallback or resampling. Every implementation/fix iteration committed before evaluation; result comment before merge/close.
+
+
+## Implementation choices frozen before execution
+
+Encounter roots are the first Monster/Elite/Boss per selected natural source seed; preparation roots start at the preceding actual clear boundary, or original Neow before the first fight. For scheduling and local panels, root lists interleave difficulty buckets in sorted seed/case order. Route choices remain legal/unforced, and actual encountered class is logged separately from the reference class. No policy outcomes select roots. The new bank is TRAIN-only for fitting; local DEV roots come exclusively from the36new collector DEVseeds.
+
+The first6TRAINstrata (combat/preparation × Monster/Elite/Boss) are verified by greedy BC continuation plus an independent action-by-action replay before training. Full-prefix restoration verifies the actual root hash on every episode; no native save is assumed compatible with arbitrary reward starts. Earlier engine versions are accepted only through exact current-engine root/continuation verification. Restoration time remains measured, not treated as inference cost.
+
+Three stages each contain two24-episode on-policy updates per learner. All legal reward/card/potion/map/rest/shop actions encountered in preparation participate in policy gradients. Source actor weights and architecture remain unchanged at initialization; only the value head is reset. ExistingE152 critics/encoder are not deployed. Stage DEV panels are fixed, descriptive and never select checkpoints or alter schedule. Final frozen actor checkpoint is evaluated even if stage monitor outcomes were poor. Runtime failures stop the affected learner rather than removing paths. This isolates a curriculum/coverage package, not one causal ingredient or comparison against a freshly retrained six-battle arm.
+
+## Reproduction
+
+```bash
+python3 -m unittest discover -s tests -p test_curriculum.py
+python3 scripts/train_curriculum_e153.py plan --output artifacts/runs/e153-plan-v1.json
+# Freeze each stage's complete public input manifest before the next command.
+python3 scripts/train_curriculum_e153.py collect --plan experiments/E153/plan-v1.json --output artifacts/runs/e153-collection-v1.json
+python3 scripts/train_curriculum_e153.py bank --plan experiments/E153/plan-v1.json --collection experiments/E153/collection-v1.json --output artifacts/runs/e153-bank-v1.json
+python3 scripts/train_curriculum_e153.py train --plan experiments/E153/plan-v1.json --bank experiments/E153/bank-v1.json --output artifacts/runs/e153-training-v1.json
+# Freeze final weights before evaluation on the33untouched test seeds.
+python3 scripts/train_curriculum_e153.py evaluate --plan experiments/E153/plan-v1.json --bank experiments/E153/bank-v1.json --training experiments/E153/training-v1.json --output artifacts/runs/e153-evaluation-v1.json
+```
