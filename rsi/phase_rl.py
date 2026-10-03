@@ -46,12 +46,20 @@ def extend_model(source):
     return model
 
 
-def controller(model):
+def controller(model, sample_seed=None):
+    rng = np.random.default_rng(sample_seed)
     def choose(state,choices,previous):
         encoded=phase_encode(state,choices,previous,max_actions=4096)
         with torch.inference_mode():
-            dist,v=model(*padded([encoded]));probs=dist.probs[0].numpy();index=int(np.argmax(probs))
-        return choices[index],dict(probabilities=probs.tolist(),value=float(v[0]),old_logprob=float(dist.logits[0,index]))
+            dist,v=model(*padded([encoded]));probs=dist.probs[0].numpy()
+            if sample_seed is None:index=int(np.argmax(probs))
+            else:
+                probs=probs.astype(np.float64);probs/=probs.sum()
+                index=int(rng.choice(len(choices),p=probs))
+        extra=dict(probabilities=probs.tolist(),value=float(v[0]),old_logprob=float(dist.logits[0,index]))
+        if sample_seed is not None:
+            extra.update(sample_seed=sample_seed,sampling_logprob=float(np.log(probs[index])))
+        return choices[index],extra
     return choose
 
 

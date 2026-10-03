@@ -22,18 +22,37 @@ def run_outcome(state):
     return None
 
 
+def act_transition(state, target, boss_seen):
+    """Research boundary: a real, living next-act map after encountering the boss."""
+    if target is None or run_outcome(state) is not None:
+        return False
+    context = state.get('context') or {}
+    act = context.get('act', 0)
+    if act <= target:
+        return False
+    if (act != target + 1 or not boss_seen or state.get('decision') != 'map_select'
+            or context.get('room_type') != 'Map' or state.get('player', {}).get('hp', 0) <= 0):
+        raise ValueError('Unexpected act boundary; refusing to continue past the configured target')
+    return True
+
+
 def legal_choices(state, history):
     if state.get('decision') in ('combat_play', 'card_select'):
         return complete_choices(state)
     return macro_candidates(state, history, resource_decisions=True)
 
 
-def run(config, manifest, model=None, controller=None, seconds=180, actions=2400, macro_controller=None):
-    trace = Trace(ROOT/'artifacts/runs'/str(uuid.uuid4()), {**manifest,'scope':'E139_full_run','config':config})
+def run(config, manifest, model=None, controller=None, seconds=180, actions=2400, macro_controller=None,
+        stop_after_act=None):
+    if stop_after_act not in (None, 1, 2):
+        raise ValueError('Research act boundary must be 1, 2 or None for a full run')
+    trace = Trace(ROOT/'artifacts/runs'/str(uuid.uuid4()), {**manifest,'scope':manifest.get('experiment','E139')+'_run','config':config,
+                  'stop_after_act':stop_after_act})
     start=time.monotonic();deadline=start+seconds
     r={**config,'status':'error','steps':0,'entries':[],'scenes':Counter(),'phase_seconds':Counter(),
        'action_counts':Counter(),'cards_seen':set(),'relics_seen':set(),'acts_seen':set(),'max_floor':0,
-       'illegal_actions':0,'network_calls':0,'planner_calls':0,'transitions':[]}
+       'illegal_actions':0,'network_calls':0,'planner_calls':0,'transitions':[],
+       'stop_after_act':stop_after_act,'target_boss_seen':False}
     state={};previous=None;history={};active=False;engine=None;last=None;unchanged=0
     def send(command):
         remaining=deadline-time.monotonic()
@@ -54,11 +73,15 @@ def run(config, manifest, model=None, controller=None, seconds=180, actions=2400
             r['relics_seen'].update(c.get('id',c.get('name')) for c in p.get('relics',[]))
             terminal=run_outcome(state)
             if terminal:r['status']=terminal;break
+            if act_transition(state,stop_after_act,r['target_boss_seen']):
+                r['status']='act_clear';break
             if step==actions:r['status']='action_cap';break
             before=digest(state);unchanged=unchanged+1 if last==before else 0;last=before
             if unchanged>=5:raise ValueError('Six repeated states; no progress')
             if active and boundary(state):active=False
             d=state['decision']
+            if d=='combat_play' and context.get('room_type')=='Boss' and context.get('act')==stop_after_act:
+                r['target_boss_seen']=True
             if d=='combat_play' and not active:
                 active=True
                 r['entries'].append(dict(ordinal=len(r['entries'])+1,command_count=step+1,
@@ -100,7 +123,8 @@ def run(config, manifest, model=None, controller=None, seconds=180, actions=2400
             previous=selected
     except TimeoutError as exc:r.update(status='timeout',error=str(exc))
     except Exception as exc:r.update(status='error',error=f'{type(exc).__name__}: {exc}')
-    r.update(final_hash=digest(state),transition_hash=digest(r.pop('transitions')))
+    r.update(final_hash=digest(state),transition_hash=digest(r.pop('transitions')),
+             final_context=state.get('context'),final_hp=state.get('player',{}).get('hp'))
     for k in ('cards_seen','relics_seen','acts_seen'):r[k]=sorted(r[k])
     finish(trace,r,engine,start)
     return r
@@ -113,6 +137,7 @@ def replay(record, manifest, seconds=180):
     pairs=wire_pairs(wire)
     trace=Trace(ROOT/'artifacts/runs'/str(uuid.uuid4()),{**manifest,'scope':'E139_independent_replay','case':record['case']})
     start=time.monotonic();engine=None;r=dict(case=record['case'],status='error',steps=0)
+    boss_seen=False;target=record.get('stop_after_act')
     try:
         engine=Headless(trace.directory,timeout=15,resource_decisions=True)
         for i,(command,expected) in enumerate(pairs):
@@ -120,8 +145,14 @@ def replay(record, manifest, seconds=180):
             if remaining<=0:raise TimeoutError('Full replay cap')
             engine.timeout=min(15,remaining);state=engine.send(command)
             if digest(state)!=digest(expected):raise ValueError(f'Full replay diverged at command {i}')
+            c=state.get('context') or {}
+            if state.get('decision')=='combat_play' and c.get('room_type')=='Boss' and c.get('act')==target:
+                boss_seen=True
             r['steps']+=1
-        r.update(status='match',outcome=run_outcome(state),final_hash=digest(state))
+        terminal=run_outcome(state)
+        if act_transition(state,target,boss_seen):terminal='act_clear'
+        if record['status']=='act_clear' and terminal!='act_clear':raise ValueError('Act-clear replay lacks true boundary')
+        r.update(status='match',outcome=terminal,final_hash=digest(state))
     except Exception as exc:r.update(error=f'{type(exc).__name__}: {exc}')
     finish(trace,r,engine,start)
     return r
