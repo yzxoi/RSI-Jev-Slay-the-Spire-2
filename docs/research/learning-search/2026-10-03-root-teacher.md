@@ -1,5 +1,7 @@
 # 重复续演教师：局部有收益，覆盖与整局迁移仍不足
 
+后续执行：[E159结果](2026-10-03-continuation.md)已完成，原首步＋程序后续2→17/30局部通过；下文保留E149当时结论。
+
 2026-10-03；[E149 / PR301](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/pull/301)、[E157 / PR303](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/pull/303)、[E158 / PR305](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/pull/305)。这是对[阶段路线](2026-10-03-strategic-review.md)的实际推进，没有训练新权重或改变默认实战策略。
 
 ## 结论与决定
