@@ -28,7 +28,7 @@ def main(training,evaluation,out):
         wins=e['arms'][n]['summary']['statuses'].get('victory',0)
         axes[1,1].text(values[i]+.25,i,f'{values[i]}/22; full wins {wins}',va='center',fontsize=8)
     for ax in list(axes.flat)[:3]:ax.legend();ax.grid(alpha=.2)
-    fig.suptitle('E140 | Phase-aware BC, offline AWR and fresh PPO\nTraining-time teachers only; full-run evaluation uses network actions')
+    fig.suptitle('E140 | Phase-aware BC, offline AWR and fresh PPO\nNeural arms use no teacher/search at evaluation; planner baseline shown')
     for ext in ('png','svg'):fig.savefig(out/f'pilot-results.{ext}',dpi=160)
     plt.close(fig)
 

@@ -56,3 +56,5 @@ Concrete remaining gaps: noAct3 training observations; fewAct2 observations and 
 Next registered, unexecuted proposals: [E141 richer observation and existing get_map reuse](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/265), [E142 bounded exact-engine branch teachers](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/266). Establish teacher improvement before distilling its labels; never present selected training branches as legitimate one-shot full-run victories. No full-game dynamics model needs to be learned while the actual engine exists.
 
 Artifacts: training-v1-failure.json preserves the initial metadata error; training-v2.json locks22local checkpoint files including6final candidate weights; evaluation-v1.json retains all176full runs,288validation battles and18replays. Raw game traces and weights remain ignored. No external model calls.
+
+Plots generated from frozen reports at ecbb1f4 and visually inspected; caption clarified to distinguish the planner control from neural-only arms. [Curves and outcomes](figures/pilot-results.png).
