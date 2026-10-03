@@ -21,3 +21,13 @@ Commands: `python3 scripts/pilot_fullpolicy_e140.py train --output artifacts/run
 ## Iteration v1 failure
 
 At f6c2c3c,24existing PPO tests and3new phase tests passed. The first BC checkpoint was written, then path metadata generation rejected a relative output path against absolute ROOT. No fresh gameplay or evaluation ran. Preserve checkpoint and exception log; BC curve was in memory and not recovered. Fix resolves output paths and persists each phase/batch. Restart the deterministic offline training as v2, preserving v1; online budgets unchanged. No policy or cohort change.
+
+## Training v2 completed / weights frozen before evaluation
+
+Training SHA `f77dead7922b413265bb2e07cd6c62cadf0cf0c1`. Two115,778parameter models;9041full-run BC examples, 12523 offline battle decisions from768previous episodes, and1024new terminal PPO battles (16642 transitions). Eachlearner completed8×64; no illegal/reset errors or censored episodes.1024new raw traces and828source traces separately audited. Totalv2wall559.927s including preprocessing and allBC/AWR/PPO phases; failedv1BCwork is retained separately and not included in thisv2timer. Offline/new-sampling budgets and distributions differ: candidate-system comparison, not a pure equal-compute algorithm ablation.
+
+Allsix final weight hashes now committed, no validation-based selection. Ordinary PPO remains on-policy; offline AWR and auxiliary supervised macro updates are separate. Full-run evaluation uses only the frozen network with legal menus, no inference-time teacher.
+
+Actual online curriculum counts: `{'Ironclad:Act1:A0': 258, 'Ironclad:Act1:A5': 258, 'Ironclad:Act1:A10': 252, 'Silent:Act1:A0': 32, 'Silent:Act1:A5': 32, 'Silent:Act1:A10': 24, 'Defect:Act1:A0': 14, 'Defect:Act2:A0': 14, 'Defect:Act1:A5': 16, 'Defect:Act1:A10': 16, 'Regent:Act1:A0': 14, 'Regent:Act2:A0': 10, 'Regent:Act1:A5': 14, 'Regent:Act2:A5': 6, 'Regent:Act1:A10': 16, 'Necrobinder:Act1:A0': 16, 'Necrobinder:Act1:A5': 16, 'Necrobinder:Act1:A10': 16}`. The first384Ironclad positions fall entirely within the E133 bank; new Ironclad Act2 entries appear in BC but not fresh PPO this pilot. Other-hero Act2 entries are sampled. This coverage limitation is retained, not silently reshuffled after training. Offline value targets remain single-battle returns, not full-run win probability.
+
+Evaluation will also record custom-controller timing and fail its execution flag on secondary battle-validation errors; these are evaluation-accounting changes, no model or selection change.

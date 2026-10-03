@@ -174,10 +174,13 @@ def evaluate(v,training_path,output):
             count=lambda arm:sum(2 in r['acts_seen'] for r in arm['records'] if r['ascension']==0)
             passed.append(a['act2']>=b['act2']+2 and count(a)>=count(b) and
                           all(r['status'] in ('victory','defeat') for r in a['records']))
-        report['continuation_gate'][name]=all(passed)
+        report['continuation_gate'][name]=all(passed) and (name!='ppo' or training['passed'])
     report['audit']=audit(report);report['seconds']=time.monotonic()-start
     report['execution_pass']=report['audit']['pass'] and all(r['status'] in ('victory','defeat') and
         r.get('verification',{}).get('status','match')=='match' for a in report['arms'].values() for r in a['records'])
+    report['battle_validation_execution_pass']=all(r['status'] in ('clear','defeat') for a in report['arms'].values()
+        for r in a.get('battle_validation',{}).get('records',[]))
+    report['execution_pass'] &= report['battle_validation_execution_pass']
     write(output,report);print(json.dumps(dict(phase='complete',execution_pass=report['execution_pass'],gate=report['continuation_gate'],audit=report['audit'],seconds=report['seconds'])),flush=True)
 
 

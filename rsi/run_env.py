@@ -71,7 +71,9 @@ def run(config, manifest, model=None, controller=None, seconds=180, actions=2400
             payload=dict(before=before,candidates=choices)
             neural=config['arm']=='neural_all' or (config['arm']=='neural_combat' and active)
             if controller is not None:
+                clock=time.monotonic()
                 selected,extra=controller(state,choices,previous);payload.update(extra)
+                r['phase_seconds']['controller_including_encode']+=time.monotonic()-clock
                 r['network_calls']+=1
             elif neural:
                 clock=time.monotonic();encoded=encode(state,choices,previous,max_actions=ACTION_LIMIT)
