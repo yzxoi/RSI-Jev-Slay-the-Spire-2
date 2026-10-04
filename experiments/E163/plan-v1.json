@@ -1,0 +1,905 @@
+{
+  "manifest": {
+    "schema_version": 2,
+    "code_commit": "ea2564c4ff9d3bbb35bda57e93e3da605116031d",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "a32485ef4c34641acc26f0c85454ba767bd4b06c4c06258e59baa26b5a72b54f",
+    "godot_stubs_sha256": "2bb3b99863f651decb27cf3ceead489046808e60d95ccbc28048ad094ecc856a",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+      "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772",
+      "headless-zzzzzz-godot-abi.patch": "5239d3836d279de5143f7d56bece1f061c6c4002de696fce28f9f7f3922ededc",
+      "headless-zzzzzzz-learning-observations.patch": "d51db8457fdb9348340a829c84fa77e9620c476ba16a7c6e224b286ecb2dfd07",
+      "headless-zzzzzzzz-encounter-abi.patch": "e4a730f9e58fddebef8ef924fcd8d0adc03d72d1148f8d29b2f9ea60556696cc",
+      "headless-zzzzzzzzz-native-map-odds.patch": "86ee5561968629b094a1f63e214f32e8a3ae7b5614fffcb470d52886287e1885"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4",
+    "experiment": "E163",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.5",
+    "model_calls": 0,
+    "model_cost_usd": 0
+  },
+  "source_sha256": "7d7d86a9c75b5b920a7f45fe3b4ea03a0782e575ca54b18ff657598263214564",
+  "objectives": [
+    "baseline",
+    "leader",
+    "setup",
+    "leader_setup"
+  ],
+  "discovery": [
+    {
+      "case": "A0-000-act1-floor17",
+      "source": {
+        "case": "A0-000",
+        "trace_path": "artifacts/runs/b158cc80-513e-427d-95ae-3f318411ffb6/decisions.jsonl",
+        "trace_sha256": "abb5d408f8105f4769d418af06b404732ad84cdb21aeaac9485bfffe051d92b3",
+        "wire.jsonl_sha256": "55ff68f39f29172bae9545c3d29a05da8b9f890290eb5674e5ca4fb3c7e057b6",
+        "engine.stderr.log_sha256": "83e96ae1322a518bc830b251c799109e7692ac58ae2791832ea830813c82ec69"
+      },
+      "commands": 137,
+      "prefix_hash": "1cd2d68ccb42e41f9e1e2c96bc640b967c0670ed7af12ebe5750f68619b5bc10",
+      "entry_hash": "9bb52fbe6e3dec55ecd0ecf3e9f5662c3108117a4c0cb78c02ab0828adced5b1",
+      "expected_final_hash": "74b3452fa993bb3e638e1ef8af3eb9b9888e0dcd88476c6be4de37744040d9a1",
+      "reservations": [
+        {
+          "potion_id": "POWER_POTION",
+          "until": "Boss",
+          "release_hp_fraction": 0.35
+        }
+      ],
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 3,
+            "row": 16
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 3,
+          "row": 16,
+          "type": "Boss"
+        },
+        "id": "a000"
+      },
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Kin Follower",
+        "Kin Follower",
+        "Kin Priest"
+      ],
+      "context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      }
+    },
+    {
+      "case": "A0-000-act2-floor2",
+      "source": {
+        "case": "A0-000",
+        "trace_path": "artifacts/runs/b158cc80-513e-427d-95ae-3f318411ffb6/decisions.jsonl",
+        "trace_sha256": "abb5d408f8105f4769d418af06b404732ad84cdb21aeaac9485bfffe051d92b3",
+        "wire.jsonl_sha256": "55ff68f39f29172bae9545c3d29a05da8b9f890290eb5674e5ca4fb3c7e057b6",
+        "engine.stderr.log_sha256": "83e96ae1322a518bc830b251c799109e7692ac58ae2791832ea830813c82ec69"
+      },
+      "commands": 200,
+      "prefix_hash": "5eaddc793e7cb9237f4421bed19574408f7899c4a61cbc983b2649a64473408a",
+      "entry_hash": "d63d71e9ae0a65c3da39cf8a37b8eb91987c4c8cc36a7861291fbef4a4bf3f6d",
+      "expected_final_hash": "60199a77e6dd16fcc381e290251e837cc2541215f7292a80708f066fa3b29cfb",
+      "reservations": [],
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 3,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 3,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a001"
+      },
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Bowlbug (Rock)",
+        "Bowlbug (Nectar)"
+      ],
+      "context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 2,
+        "room_type": "Monster",
+        "boss": {
+          "id": "KAISER_CRAB_BOSS",
+          "name": "KAISER_CRAB.name"
+        }
+      }
+    },
+    {
+      "case": "A0-000-act2-floor3",
+      "source": {
+        "case": "A0-000",
+        "trace_path": "artifacts/runs/b158cc80-513e-427d-95ae-3f318411ffb6/decisions.jsonl",
+        "trace_sha256": "abb5d408f8105f4769d418af06b404732ad84cdb21aeaac9485bfffe051d92b3",
+        "wire.jsonl_sha256": "55ff68f39f29172bae9545c3d29a05da8b9f890290eb5674e5ca4fb3c7e057b6",
+        "engine.stderr.log_sha256": "83e96ae1322a518bc830b251c799109e7692ac58ae2791832ea830813c82ec69"
+      },
+      "commands": 216,
+      "prefix_hash": "2d596ad83784ab12bdf5749a6f764e5f3cc17857699e0ccf472390fa7a3c1ac5",
+      "entry_hash": "6b39968c3bc9f1ad0e5cb00cbc41c5a8ac36852aa9db6a152dcbf93e3887e799",
+      "expected_final_hash": "8cd886eb8df82964c19e18ce3606c33eda99924e8a19a93cfd49f059dbac7ac0",
+      "reservations": [],
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 3,
+            "row": 2
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 3,
+          "row": 2,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Exoskeleton",
+        "Exoskeleton",
+        "Exoskeleton"
+      ],
+      "context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 3,
+        "room_type": "Monster",
+        "boss": {
+          "id": "KAISER_CRAB_BOSS",
+          "name": "KAISER_CRAB.name"
+        }
+      }
+    },
+    {
+      "case": "A0-000-act2-floor6",
+      "source": {
+        "case": "A0-000",
+        "trace_path": "artifacts/runs/b158cc80-513e-427d-95ae-3f318411ffb6/decisions.jsonl",
+        "trace_sha256": "abb5d408f8105f4769d418af06b404732ad84cdb21aeaac9485bfffe051d92b3",
+        "wire.jsonl_sha256": "55ff68f39f29172bae9545c3d29a05da8b9f890290eb5674e5ca4fb3c7e057b6",
+        "engine.stderr.log_sha256": "83e96ae1322a518bc830b251c799109e7692ac58ae2791832ea830813c82ec69"
+      },
+      "commands": 241,
+      "prefix_hash": "a1e2ca1bdb42aba8a9a0fa368bd32a92571174565cccf16569b64d09ed961f99",
+      "entry_hash": "4210d09ad868c695bbc9e97037c7ed10b6dc2199c68e66425772a5cecb159d79",
+      "expected_final_hash": "7e430e4f1a40d95e385aa2839f66f3ab61fb657b279eb58a2af93275a2975e7c",
+      "reservations": [
+        {
+          "potion_id": "MAZALETHS_GIFT",
+          "until": "Boss",
+          "release_hp_fraction": 0.3
+        },
+        {
+          "potion_id": "FIRE_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.45
+        }
+      ],
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 5,
+            "row": 5
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 5,
+          "row": 5,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "hp": 76,
+      "max_hp": 80,
+      "enemies": [
+        "Bowlbug (Rock)",
+        "Bowlbug (Silk)",
+        "Bowlbug (Nectar)"
+      ],
+      "context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 6,
+        "room_type": "Monster",
+        "boss": {
+          "id": "KAISER_CRAB_BOSS",
+          "name": "KAISER_CRAB.name"
+        }
+      }
+    },
+    {
+      "case": "A0-000-act2-floor7",
+      "source": {
+        "case": "A0-000",
+        "trace_path": "artifacts/runs/b158cc80-513e-427d-95ae-3f318411ffb6/decisions.jsonl",
+        "trace_sha256": "abb5d408f8105f4769d418af06b404732ad84cdb21aeaac9485bfffe051d92b3",
+        "wire.jsonl_sha256": "55ff68f39f29172bae9545c3d29a05da8b9f890290eb5674e5ca4fb3c7e057b6",
+        "engine.stderr.log_sha256": "83e96ae1322a518bc830b251c799109e7692ac58ae2791832ea830813c82ec69"
+      },
+      "commands": 269,
+      "prefix_hash": "ef6296d9642d1ba59cb5f43adb8b86f7cf2bad6811cda2d3fe48104cf45c7a4d",
+      "entry_hash": "81c38421ec4b656aaf0f297f6d85443d28b4a0fcdc73ce2212e483ddc71a6079",
+      "expected_final_hash": "15c88a0f7c281e1131f71147edb61e8973ec4d7de944279c03c161463edda08d",
+      "reservations": [
+        {
+          "potion_id": "MAZALETHS_GIFT",
+          "until": "Boss",
+          "release_hp_fraction": 0.3
+        },
+        {
+          "potion_id": "FIRE_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.45
+        }
+      ],
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 4,
+            "row": 6
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 4,
+          "row": 6,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "hp": 71,
+      "max_hp": 80,
+      "enemies": [
+        "Myte",
+        "Myte"
+      ],
+      "context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 7,
+        "room_type": "Monster",
+        "boss": {
+          "id": "KAISER_CRAB_BOSS",
+          "name": "KAISER_CRAB.name"
+        }
+      }
+    },
+    {
+      "case": "A0-001-act1-floor17",
+      "source": {
+        "case": "A0-001",
+        "trace_path": "artifacts/runs/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/decisions.jsonl",
+        "trace_sha256": "e8e1cf51cb04d549d56de7763209f6c6d90657494dd5e780ee45d596cc0508ef",
+        "wire.jsonl_sha256": "e77ed0a7cea1357749745deff0c8217d2526364babbfa21a103e542f6a23ea70",
+        "engine.stderr.log_sha256": "3968a0b8cac3cb25859ce2b57f510df36b2fcc5990eaa051103aef01b0faf010"
+      },
+      "commands": 149,
+      "prefix_hash": "d5dbb5f341c0b74701310c24fe21e3b7c65d24f498acbaa17f8b5945b5178d91",
+      "entry_hash": "1e1e93679c07b26f80759fd6d4f69388a286449bf8abf116c6a93363bce89f35",
+      "expected_final_hash": "d810863baf1768b866bd230952f471b47d1da936706e60703f3083ccd8ea4cae",
+      "reservations": [
+        {
+          "potion_id": "POWER_POTION",
+          "until": "Boss",
+          "release_hp_fraction": 0.35
+        }
+      ],
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 3,
+            "row": 16
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 3,
+          "row": 16,
+          "type": "Boss"
+        },
+        "id": "a000"
+      },
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Ceremonial Beast"
+      ],
+      "context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      }
+    },
+    {
+      "case": "A0-001-act2-floor2",
+      "source": {
+        "case": "A0-001",
+        "trace_path": "artifacts/runs/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/decisions.jsonl",
+        "trace_sha256": "e8e1cf51cb04d549d56de7763209f6c6d90657494dd5e780ee45d596cc0508ef",
+        "wire.jsonl_sha256": "e77ed0a7cea1357749745deff0c8217d2526364babbfa21a103e542f6a23ea70",
+        "engine.stderr.log_sha256": "3968a0b8cac3cb25859ce2b57f510df36b2fcc5990eaa051103aef01b0faf010"
+      },
+      "commands": 185,
+      "prefix_hash": "7dd4cee26ee14f589cbbbd4ac2347c9b03cad99cc1a1fef053ff3e309447073b",
+      "entry_hash": "7b027ab962e51ce9e106ffe4474c34ed13ead5e5aee5b8e300b403d899002c2d",
+      "expected_final_hash": "becef6a0b020d2d2252f350e3a348d8d7e65f150cad9a2ec8c947fa058f0e1a5",
+      "reservations": [],
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 1,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Exoskeleton",
+        "Exoskeleton",
+        "Exoskeleton"
+      ],
+      "context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 2,
+        "room_type": "Monster",
+        "boss": {
+          "id": "KNOWLEDGE_DEMON_BOSS",
+          "name": "Knowledge Demon"
+        }
+      }
+    },
+    {
+      "case": "A0-001-act2-floor3",
+      "source": {
+        "case": "A0-001",
+        "trace_path": "artifacts/runs/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/decisions.jsonl",
+        "trace_sha256": "e8e1cf51cb04d549d56de7763209f6c6d90657494dd5e780ee45d596cc0508ef",
+        "wire.jsonl_sha256": "e77ed0a7cea1357749745deff0c8217d2526364babbfa21a103e542f6a23ea70",
+        "engine.stderr.log_sha256": "3968a0b8cac3cb25859ce2b57f510df36b2fcc5990eaa051103aef01b0faf010"
+      },
+      "commands": 206,
+      "prefix_hash": "f25135283f0122906ea56cfbb65839d06d73a731a9892f91a01eb857a68fd98d",
+      "entry_hash": "7d73f9ce564ecf3debf464e2add32225b36281f823838aae9ef6a884a761dc71",
+      "expected_final_hash": "a457fb62192146dd95951054abb25753b9df69bd5074860dc5486491e810f418",
+      "reservations": [],
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 2
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 1,
+          "row": 2,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "hp": 68,
+      "max_hp": 80,
+      "enemies": [
+        "Tunneler"
+      ],
+      "context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 3,
+        "room_type": "Monster",
+        "boss": {
+          "id": "KNOWLEDGE_DEMON_BOSS",
+          "name": "Knowledge Demon"
+        }
+      }
+    },
+    {
+      "case": "A0-001-act2-floor5",
+      "source": {
+        "case": "A0-001",
+        "trace_path": "artifacts/runs/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/decisions.jsonl",
+        "trace_sha256": "e8e1cf51cb04d549d56de7763209f6c6d90657494dd5e780ee45d596cc0508ef",
+        "wire.jsonl_sha256": "e77ed0a7cea1357749745deff0c8217d2526364babbfa21a103e542f6a23ea70",
+        "engine.stderr.log_sha256": "3968a0b8cac3cb25859ce2b57f510df36b2fcc5990eaa051103aef01b0faf010"
+      },
+      "commands": 229,
+      "prefix_hash": "9fa58a14d067dea138ab4d9e2c0e92f02d31d4199e1d70a5852561393f0f9505",
+      "entry_hash": "78f24a89f97195c9eb3cf42561dd63fef5606c4b9b94f5243181d7624b966ad9",
+      "expected_final_hash": "e6736add8952a423a79ed393072aac424a9c46b664e06b6f7bb8009a24061e8c",
+      "reservations": [
+        {
+          "potion_id": "FYSH_OIL",
+          "until": "Elite",
+          "release_hp_fraction": 0.45
+        },
+        {
+          "potion_id": "ENERGY_POTION",
+          "until": "Boss",
+          "release_hp_fraction": 0.4
+        }
+      ],
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 4
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 0,
+          "row": 4,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "hp": 73,
+      "max_hp": 80,
+      "enemies": [
+        "Louse Progenitor"
+      ],
+      "context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 5,
+        "room_type": "Monster",
+        "boss": {
+          "id": "KNOWLEDGE_DEMON_BOSS",
+          "name": "Knowledge Demon"
+        }
+      }
+    },
+    {
+      "case": "A5-000-act1-floor17",
+      "source": {
+        "case": "A5-000",
+        "trace_path": "artifacts/runs/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/decisions.jsonl",
+        "trace_sha256": "b88ee428d3a1fb781673fbd145113d9de06471472b081638a540886d80be952e",
+        "wire.jsonl_sha256": "37e991266723c7e763050ca6fc8704feedefbaf3a9d991fc1fefd96b44a6d9ea",
+        "engine.stderr.log_sha256": "abfeecd1a6ae400c3e505e00784ebf522ce7ad28cf8371df47e9993b90506d8f"
+      },
+      "commands": 173,
+      "prefix_hash": "805b3160e630d1b57f55b5352e0be53adfd78a8b1d7809fd2fddc7327054942f",
+      "entry_hash": "bb94e9d0294f2d2ecb02e0db31a000c6557a008cb19f058089d6053ce12d9b00",
+      "expected_final_hash": "5b3b7f14455777141c3730d2eb46b85fc92b44b1be1558524277d20bcb49e658",
+      "reservations": [
+        {
+          "potion_id": "STRENGTH_POTION",
+          "until": "Boss",
+          "release_hp_fraction": 0.4
+        },
+        {
+          "potion_id": "VULNERABLE_POTION",
+          "until": "Boss",
+          "release_hp_fraction": 0.4
+        }
+      ],
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 3,
+            "row": 16
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 3,
+          "row": 16,
+          "type": "Boss"
+        },
+        "id": "a000"
+      },
+      "hp": 70,
+      "max_hp": 80,
+      "enemies": [
+        "Ceremonial Beast"
+      ],
+      "context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      }
+    },
+    {
+      "case": "A5-000-act2-floor2",
+      "source": {
+        "case": "A5-000",
+        "trace_path": "artifacts/runs/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/decisions.jsonl",
+        "trace_sha256": "b88ee428d3a1fb781673fbd145113d9de06471472b081638a540886d80be952e",
+        "wire.jsonl_sha256": "37e991266723c7e763050ca6fc8704feedefbaf3a9d991fc1fefd96b44a6d9ea",
+        "engine.stderr.log_sha256": "abfeecd1a6ae400c3e505e00784ebf522ce7ad28cf8371df47e9993b90506d8f"
+      },
+      "commands": 198,
+      "prefix_hash": "ce728d5b695e1d4d2f6060de654cad78a28b93d513112ce46bec9043909b140f",
+      "entry_hash": "e38fb0ecbf70564d36cbe4ac93041455326f68ea9da7b2a19490fb61943ab850",
+      "expected_final_hash": "156c9d8babdb562eab39ec96d5e29b16917b9d5aa354e31549cfff4d4842c060",
+      "reservations": [
+        {
+          "potion_id": "ASHWATER",
+          "until": "Boss",
+          "release_hp_fraction": 0.4
+        }
+      ],
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 1,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "hp": 79,
+      "max_hp": 80,
+      "enemies": [
+        "Thieving Hopper"
+      ],
+      "context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 2,
+        "room_type": "Monster",
+        "boss": {
+          "id": "THE_INSATIABLE_BOSS",
+          "name": "The Insatiable"
+        }
+      }
+    },
+    {
+      "case": "A5-000-act2-floor3",
+      "source": {
+        "case": "A5-000",
+        "trace_path": "artifacts/runs/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/decisions.jsonl",
+        "trace_sha256": "b88ee428d3a1fb781673fbd145113d9de06471472b081638a540886d80be952e",
+        "wire.jsonl_sha256": "37e991266723c7e763050ca6fc8704feedefbaf3a9d991fc1fefd96b44a6d9ea",
+        "engine.stderr.log_sha256": "abfeecd1a6ae400c3e505e00784ebf522ce7ad28cf8371df47e9993b90506d8f"
+      },
+      "commands": 217,
+      "prefix_hash": "56c54aa42535d1ed8500377475a30aa288c6fe1e14e5286486d1992e1456f6dd",
+      "entry_hash": "386c2d0a0c4f9dbeaab5b9c3ba26ae75c4c3d6aa7a809ca6211f9e1b4603b2c1",
+      "expected_final_hash": "0b60b71b66304625d1bfc25af75c87a13d5810763285dc2fcbb21dbc0713ff04",
+      "reservations": [
+        {
+          "potion_id": "ASHWATER",
+          "until": "Boss",
+          "release_hp_fraction": 0.4
+        },
+        {
+          "potion_id": "DEXTERITY_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.4
+        }
+      ],
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 2
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 0,
+          "row": 2,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "hp": 80,
+      "max_hp": 80,
+      "enemies": [
+        "Bowlbug (Rock)",
+        "Bowlbug (Nectar)"
+      ],
+      "context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 3,
+        "room_type": "Monster",
+        "boss": {
+          "id": "THE_INSATIABLE_BOSS",
+          "name": "The Insatiable"
+        }
+      }
+    },
+    {
+      "case": "A5-000-act2-floor6",
+      "source": {
+        "case": "A5-000",
+        "trace_path": "artifacts/runs/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/decisions.jsonl",
+        "trace_sha256": "b88ee428d3a1fb781673fbd145113d9de06471472b081638a540886d80be952e",
+        "wire.jsonl_sha256": "37e991266723c7e763050ca6fc8704feedefbaf3a9d991fc1fefd96b44a6d9ea",
+        "engine.stderr.log_sha256": "abfeecd1a6ae400c3e505e00784ebf522ce7ad28cf8371df47e9993b90506d8f"
+      },
+      "commands": 245,
+      "prefix_hash": "a749feb7566aac99cf4b8b6a0e9e5106e0e8c3b1bca0953f907c337732b7794b",
+      "entry_hash": "1447711bd5a967ab91b87a692a79aa6d4e8071099d09d6a1ea55ad406f14423e",
+      "expected_final_hash": "409d7f900adb73f590114347388e7fd02b76bb8b8b192a876ff08e6c6c6cfd5d",
+      "reservations": [
+        {
+          "potion_id": "DEXTERITY_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.4
+        }
+      ],
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 5
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 0,
+          "row": 5,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "hp": 77,
+      "max_hp": 90,
+      "enemies": [
+        "Hunter Killer"
+      ],
+      "context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 6,
+        "room_type": "Monster",
+        "boss": {
+          "id": "THE_INSATIABLE_BOSS",
+          "name": "The Insatiable"
+        }
+      }
+    },
+    {
+      "case": "A5-000-act2-floor11",
+      "source": {
+        "case": "A5-000",
+        "trace_path": "artifacts/runs/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/decisions.jsonl",
+        "trace_sha256": "b88ee428d3a1fb781673fbd145113d9de06471472b081638a540886d80be952e",
+        "wire.jsonl_sha256": "37e991266723c7e763050ca6fc8704feedefbaf3a9d991fc1fefd96b44a6d9ea",
+        "engine.stderr.log_sha256": "abfeecd1a6ae400c3e505e00784ebf522ce7ad28cf8371df47e9993b90506d8f"
+      },
+      "commands": 285,
+      "prefix_hash": "745880e6c1fe30fae705a34baf007664bf559a19a8090cd82d63d961e429ed18",
+      "entry_hash": "32c94ddeb87aa3ded7cba4a55b288992f16e0ca9ca18b2d35966f974843e9121",
+      "expected_final_hash": "723127cb4151c80048bbf91acb45bf45269918caf90d66bb61844fbe2601e4ff",
+      "reservations": [
+        {
+          "potion_id": "DEXTERITY_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.4
+        }
+      ],
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 10
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 1,
+          "row": 10,
+          "type": "Unknown"
+        },
+        "id": "a000"
+      },
+      "hp": 83,
+      "max_hp": 90,
+      "enemies": [
+        "The Obscura"
+      ],
+      "context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 11,
+        "room_type": "Monster",
+        "boss": {
+          "id": "THE_INSATIABLE_BOSS",
+          "name": "The Insatiable"
+        }
+      }
+    },
+    {
+      "case": "A5-001-act1-floor17",
+      "source": {
+        "case": "A5-001",
+        "trace_path": "artifacts/runs/9c4c8958-5af8-4970-9ebc-7fe483f3354b/decisions.jsonl",
+        "trace_sha256": "702ac0451f3a2c09850db6e774d2be013164387aa11af75504a2304d2cf92291",
+        "wire.jsonl_sha256": "3368b2906d788599358d97b786914c33ecf7d2609c1680ea970935591a741345",
+        "engine.stderr.log_sha256": "18b7dd5fd9aa730fd50d2effac2e531fca2b61c301fce346e589271ec49b221f"
+      },
+      "commands": 152,
+      "prefix_hash": "3ccc97a15844a3cbe1e50cd6aee6993865f6bb5234b13f760750615f76612f4a",
+      "entry_hash": "2def68b45fa35cd56b7f11c7b9c1b9b32504e8992dc99b73e250d4ef57b89e8f",
+      "expected_final_hash": "ccb1abbd81e2a5151fa5db7d123bb0ad87a792859146ca171d045a852150f588",
+      "reservations": [
+        {
+          "potion_id": "ENERGY_POTION",
+          "until": "Boss",
+          "release_hp_fraction": 0.45
+        }
+      ],
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 3,
+            "row": 16
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 3,
+          "row": 16,
+          "type": "Boss"
+        },
+        "id": "a000"
+      },
+      "hp": 94,
+      "max_hp": 103,
+      "enemies": [
+        "Vantom"
+      ],
+      "context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      }
+    }
+  ],
+  "holdout": [
+    {
+      "case": "holdout-A0-000",
+      "seed": "e163_holdout_Ironclad_A0_000",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 0
+    },
+    {
+      "case": "holdout-A0-001",
+      "seed": "e163_holdout_Ironclad_A0_001",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 1
+    },
+    {
+      "case": "holdout-A5-000",
+      "seed": "e163_holdout_Ironclad_A5_000",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 2
+    },
+    {
+      "case": "holdout-A5-001",
+      "seed": "e163_holdout_Ironclad_A5_001",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 3
+    },
+    {
+      "case": "holdout-A10-000",
+      "seed": "e163_holdout_Ironclad_A10_000",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 4
+    },
+    {
+      "case": "holdout-A10-001",
+      "seed": "e163_holdout_Ironclad_A10_001",
+      "character": "Ironclad",
+      "ascension": 10,
+      "index": 5
+    }
+  ],
+  "budgets": {
+    "probe_seconds": 120,
+    "probe_actions": 300,
+    "rpc": 15,
+    "search_seconds": 60,
+    "workers": 4,
+    "global_seconds": 1200
+  },
+  "final_acceptance_seeds_unused": true
+}
