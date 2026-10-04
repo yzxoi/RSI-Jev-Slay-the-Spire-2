@@ -1,0 +1,33 @@
+{
+  "case": "A0-000",
+  "run_id": "ea706bb8-2c06-4ae1-9d38-cd97c5e627d6",
+  "seq": 17,
+  "state_hash": "6463eebe355cfb9175f0de7838c504ae5aaf34e4fb1910ed59827da3af88dbeb",
+  "choice_id": "a001",
+  "campaign_plan": "Upgrade Perfected Strike for additional damage from six Strike cards. One scheduled fight before the shop and a final rest remain; 58 HP plus reserves permits an offensive upgrade now.",
+  "potion_reservations": [
+    {
+      "potion_id": "HEART_OF_IRON",
+      "until": "Elite",
+      "release_hp_fraction": 0.4
+    },
+    {
+      "potion_id": "BLOCK_POTION",
+      "until": "Elite",
+      "release_hp_fraction": 0.5
+    },
+    {
+      "potion_id": "VULNERABLE_POTION",
+      "until": "Boss",
+      "release_hp_fraction": 0.45
+    }
+  ],
+  "acquire_reservation": null,
+  "transaction_steps": [
+    {
+      "kind": "select_deck_card",
+      "index": 11,
+      "potion_reservations": null
+    }
+  ]
+}
