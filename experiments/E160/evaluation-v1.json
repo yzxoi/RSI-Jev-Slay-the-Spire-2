@@ -1,0 +1,4714 @@
+{
+  "manifest": {
+    "schema_version": 2,
+    "code_commit": "e99d72bb918d70b705267280a9e2a5708207e4b9",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "a32485ef4c34641acc26f0c85454ba767bd4b06c4c06258e59baa26b5a72b54f",
+    "godot_stubs_sha256": "2bb3b99863f651decb27cf3ceead489046808e60d95ccbc28048ad094ecc856a",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+      "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772",
+      "headless-zzzzzz-godot-abi.patch": "5239d3836d279de5143f7d56bece1f061c6c4002de696fce28f9f7f3922ededc",
+      "headless-zzzzzzz-learning-observations.patch": "d51db8457fdb9348340a829c84fa77e9620c476ba16a7c6e224b286ecb2dfd07",
+      "headless-zzzzzzzz-encounter-abi.patch": "e4a730f9e58fddebef8ef924fcd8d0adc03d72d1148f8d29b2f9ea60556696cc",
+      "headless-zzzzzzzzz-native-map-odds.patch": "86ee5561968629b094a1f63e214f32e8a3ae7b5614fffcb470d52886287e1885"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4",
+    "experiment": "E160",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.5",
+    "model_calls": 0,
+    "model_cost_usd": 0,
+    "encoder": "e140-phase-context-v1",
+    "torch": "2.11.0",
+    "device": "cpu"
+  },
+  "plan": {
+    "path": "experiments/E160/plan-v1.json",
+    "sha256": "bc1e912d0ebd6beae1fd033790e5df17c52251197b89c9d8ccc689c478f6608b"
+  },
+  "records": [
+    {
+      "case": "A0-000",
+      "seed": "e160_campaign_Ironclad_A0_000",
+      "character": "Ironclad",
+      "ascension": 0,
+      "arm": "program_campaign",
+      "run_id": "83523ab4-ddbb-4775-b39a-5fd28d671b14",
+      "status": "defeat",
+      "steps": 126,
+      "entries": [
+        {
+          "act": 1,
+          "floor": 2,
+          "room_type": "Monster",
+          "hp": 80,
+          "max_hp": 80,
+          "enemies": [
+            "Leaf Slime (S)",
+            "Twig Slime (M)",
+            "Twig Slime (S)"
+          ],
+          "deck_hash": "524c1114de050fa4317b246952447a51cef5ae624ab85d03162e5f189dc9170c",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 4,
+          "room_type": "Monster",
+          "hp": 80,
+          "max_hp": 80,
+          "enemies": [
+            "Nibbit"
+          ],
+          "deck_hash": "62668576e2ba86af9e8c2cc2ddf685183bab825ba543f6ca3ef913173b66e995",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 5,
+          "room_type": "Monster",
+          "hp": 74,
+          "max_hp": 80,
+          "enemies": [
+            "Shrinker Beetle"
+          ],
+          "deck_hash": "e62f59069a35a8face5b8b6f4418457a24a1e34bf01967f5260e295bd023cf90",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 8,
+          "room_type": "Monster",
+          "hp": 78,
+          "max_hp": 80,
+          "enemies": [
+            "Vine Shambler"
+          ],
+          "deck_hash": "8a3f224e6ac6fa29c6a49b4ca8d9070c0c99887c7f46edeb73b08a8176cafafa",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 9,
+          "room_type": "Monster",
+          "hp": 71,
+          "max_hp": 80,
+          "enemies": [
+            "Inklet",
+            "Inklet",
+            "Inklet"
+          ],
+          "deck_hash": "9feb1ff48e6709c5a7bb7a58b90204521cb330d199a5c96165093058f23a4116",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 12,
+          "room_type": "Elite",
+          "hp": 66,
+          "max_hp": 80,
+          "enemies": [
+            "Byrdonis"
+          ],
+          "deck_hash": "9feb1ff48e6709c5a7bb7a58b90204521cb330d199a5c96165093058f23a4116",
+          "potions": 0
+        }
+      ],
+      "completed_battles": 5,
+      "completed_acts": 0,
+      "max_act": 1,
+      "scenes": {
+        "event_choice": 3,
+        "card_select": 2,
+        "map_select": 11,
+        "combat_play": 102,
+        "card_reward": 5,
+        "shop": 1,
+        "potion_reward": 1,
+        "rest_site": 1
+      },
+      "owners": {
+        "program_campaign": 15,
+        "program_combat": 81,
+        "only_legal": 30
+      },
+      "potion_blocks": 0,
+      "illegal_actions": 0,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "3c91f49cc17721c0fbbbc6ba6b97d992d8546109942e6f6a24a2890fdf0ecba2",
+      "transition_hash": "ad840058cdf1df75ea8e77f5f9ace89e24ba94f0cee15c925f235ddaef0094d6",
+      "readonly_map_queries": 11,
+      "expert_packets": 0,
+      "expert_wait_seconds": 0,
+      "expert_input_chars": 0,
+      "expert_output_chars": 0,
+      "teacher_packets": [],
+      "expert_tokens": null,
+      "expert_cost_usd": null,
+      "final_campaign_plan": null,
+      "seconds": 7.095756666967645,
+      "wire.jsonl_sha256": "45c7dd0b8c26b050dc202a6ec28d020bc7f5da5ca3df83f229d26bacf00f241e",
+      "engine.stderr.log_sha256": "2660b702f7a6c7ab8b45aaf88e90c56d9ae30adb541ff4beb1d1401a4a9ee88d",
+      "trace_path": "artifacts/runs/83523ab4-ddbb-4775-b39a-5fd28d671b14/decisions.jsonl",
+      "trace_sha256": "3747ebb4b12c2e007fa65555dbbc191e8d2405975617a243a270c53c7e8edf05",
+      "compute_seconds": 7.095756666967645,
+      "verification": {
+        "case": "A0-000",
+        "status": "match",
+        "steps": 138,
+        "outcome": "defeat",
+        "final_hash": "3c91f49cc17721c0fbbbc6ba6b97d992d8546109942e6f6a24a2890fdf0ecba2",
+        "seconds": 5.2205173331312835,
+        "wire.jsonl_sha256": "7359d94e7c6b048b76ba806731779285c62deb316afb7b5c1337dd411063a872",
+        "engine.stderr.log_sha256": "2660b702f7a6c7ab8b45aaf88e90c56d9ae30adb541ff4beb1d1401a4a9ee88d",
+        "trace_path": "artifacts/runs/dd896f53-1af1-4056-8581-d044410ee9ed/decisions.jsonl",
+        "trace_sha256": "6b4e1f87f5a225694f24ac1733ba5b43996ea32baf7fb63578d5a9fd67199a5f"
+      }
+    },
+    {
+      "case": "A0-000",
+      "seed": "e160_campaign_Ironclad_A0_000",
+      "character": "Ironclad",
+      "ascension": 0,
+      "arm": "astra_campaign",
+      "run_id": "b158cc80-513e-427d-95ae-3f318411ffb6",
+      "status": "timeout",
+      "steps": 268,
+      "entries": [
+        {
+          "act": 1,
+          "floor": 2,
+          "room_type": "Monster",
+          "hp": 80,
+          "max_hp": 80,
+          "enemies": [
+            "Leaf Slime (S)",
+            "Twig Slime (M)",
+            "Twig Slime (S)"
+          ],
+          "deck_hash": "66c380f3484d5f57f9058ce5ff759436ede5559f9c376bd3803da05c0f21f149",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 3,
+          "room_type": "Monster",
+          "hp": 75,
+          "max_hp": 80,
+          "enemies": [
+            "Nibbit"
+          ],
+          "deck_hash": "e6b5b2c0aa7d86dda6003ad9024817764620bd07d1c732944d9271e2c3f13716",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 4,
+          "room_type": "Monster",
+          "hp": 74,
+          "max_hp": 80,
+          "enemies": [
+            "Shrinker Beetle"
+          ],
+          "deck_hash": "3e048fccb4365b491cc96bf1c43b8ef91940003e55e1cbe6ef55b7093b4b9fd9",
+          "potions": 2
+        },
+        {
+          "act": 1,
+          "floor": 8,
+          "room_type": "Monster",
+          "hp": 64,
+          "max_hp": 80,
+          "enemies": [
+            "Vine Shambler"
+          ],
+          "deck_hash": "c4727bd45c5a748cfb20a53a3180c43eb98a70566e4b1819589d5e67b351d627",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 12,
+          "room_type": "Elite",
+          "hp": 73,
+          "max_hp": 80,
+          "enemies": [
+            "Byrdonis"
+          ],
+          "deck_hash": "95928432beeac1564406942b562de25536fa0673920c39b1f9ea97218333e8c2",
+          "potions": 3
+        },
+        {
+          "act": 1,
+          "floor": 15,
+          "room_type": "Monster",
+          "hp": 55,
+          "max_hp": 80,
+          "enemies": [
+            "Inklet",
+            "Inklet",
+            "Inklet"
+          ],
+          "deck_hash": "5f70250ed4ca21bb402bb0fca6d7f862bb10e6a54b11fe566ace763dab9fef00",
+          "potions": 3
+        },
+        {
+          "act": 1,
+          "floor": 17,
+          "room_type": "Boss",
+          "hp": 80,
+          "max_hp": 80,
+          "enemies": [
+            "Kin Follower",
+            "Kin Follower",
+            "Kin Priest"
+          ],
+          "deck_hash": "5cb90d51a7042a7a976bf006f5149ec4cb00c136b46f5461198bfd7ebad85547",
+          "potions": 2
+        },
+        {
+          "act": 2,
+          "floor": 2,
+          "room_type": "Monster",
+          "hp": 80,
+          "max_hp": 80,
+          "enemies": [
+            "Bowlbug (Rock)",
+            "Bowlbug (Nectar)"
+          ],
+          "deck_hash": "ff96f956a29f825ecc79932182d0f8c5cb996705d739b980a93be7e49f692682",
+          "potions": 0
+        },
+        {
+          "act": 2,
+          "floor": 3,
+          "room_type": "Monster",
+          "hp": 80,
+          "max_hp": 80,
+          "enemies": [
+            "Exoskeleton",
+            "Exoskeleton",
+            "Exoskeleton"
+          ],
+          "deck_hash": "f4fa78889bda5137d2d235aebc6fbecb3dcab170073ec3f6929c518e6af16f8d",
+          "potions": 0
+        },
+        {
+          "act": 2,
+          "floor": 6,
+          "room_type": "Monster",
+          "hp": 76,
+          "max_hp": 80,
+          "enemies": [
+            "Bowlbug (Rock)",
+            "Bowlbug (Silk)",
+            "Bowlbug (Nectar)"
+          ],
+          "deck_hash": "f4fa78889bda5137d2d235aebc6fbecb3dcab170073ec3f6929c518e6af16f8d",
+          "potions": 2
+        },
+        {
+          "act": 2,
+          "floor": 7,
+          "room_type": "Monster",
+          "hp": 71,
+          "max_hp": 80,
+          "enemies": [
+            "Myte",
+            "Myte"
+          ],
+          "deck_hash": "685fc7f96884d9a54184d06b457de4e4bbbafdaa2c1a9023272a4aba839c847b",
+          "potions": 2
+        }
+      ],
+      "completed_battles": 11,
+      "completed_acts": 1,
+      "max_act": 2,
+      "scenes": {
+        "event_choice": 6,
+        "card_reward": 12,
+        "map_select": 28,
+        "combat_play": 192,
+        "potion_reward": 5,
+        "rest_site": 6,
+        "card_select": 8,
+        "shop": 11
+      },
+      "owners": {
+        "astra_campaign": 56,
+        "program_combat": 183,
+        "only_legal": 29
+      },
+      "potion_blocks": 110,
+      "illegal_actions": 0,
+      "error": "Global expert packet cap",
+      "final_context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 12,
+        "room_type": "Shop",
+        "boss": {
+          "id": "KAISER_CRAB_BOSS",
+          "name": "KAISER_CRAB.name"
+        }
+      },
+      "final_hp": 80,
+      "final_hash": "df4df1dff6afa9d0283a8079c12f189da4be1b05baacfe5cd2c7dadf57b8bb00",
+      "transition_hash": "89cf59076f905a9908cf5a5ece04652dcf6641c752e48b9b813e49d03f8fad27",
+      "readonly_map_queries": 28,
+      "expert_packets": 56,
+      "expert_wait_seconds": 1773.4636569977738,
+      "expert_input_chars": 615937,
+      "expert_output_chars": 29993,
+      "teacher_packets": [
+        {
+          "seq": 1,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/001.json",
+          "commit": "c2650fd63b7be7f4ecc81b83b6157669cc59b1c5",
+          "packet_hash": "6cdd91bcc60ce44be060dfb4f403aeca7f7413b115cbfd6d3a9e9ef58a108a83",
+          "request_hash": "f7ed6a7e0d1b781d41b9e6210badac1b9a3a8e11afd61b8c0eda063969099ef5",
+          "state_hash": "6a692d95d5594a185cb6706f0afc9aa58e4193a49af79ff83f1b1ea5d3ba6e98",
+          "decision": "event_choice",
+          "choice": {
+            "cmd": "action",
+            "action": "choose_option",
+            "args": {
+              "option_index": 1
+            }
+          }
+        },
+        {
+          "seq": 2,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/002.json",
+          "commit": "55c80b8a249f07e8c5de09e7bc7892ae45d8e8b0",
+          "packet_hash": "7d28decd2f8184a39678e7fc3d7fb0065c7203c736d8aa7510a2eca19f0e9ce4",
+          "request_hash": "49e9554d9bc47b91b4e2748de7bbc105baf64e7b17f49f662ef452954c17770e",
+          "state_hash": "43d8da6a23face3ec9a1f3598735005162c2bfec01615de9d072aa3adf63be20",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 2
+            }
+          }
+        },
+        {
+          "seq": 3,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/003.json",
+          "commit": "6210c9065b65a2ca82e9bb006af5bba6fc08ad77",
+          "packet_hash": "8bbafe13bda2a420747903c6eb8ad226ef92d1aa27aef34720e4f8ba942030a5",
+          "request_hash": "9ddde3df80217ff69aff5ccff7d47c03419ac95c3a4b15e9d0294ff9407e2814",
+          "state_hash": "b62e9cef92413f72a21739a5b200a84e4eb31dd6898d7206d6538ba245286f55",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 2,
+              "row": 1
+            }
+          }
+        },
+        {
+          "seq": 4,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/004.json",
+          "commit": "a013de2f1745f65b8a743112dc40ea45858aa9ca",
+          "packet_hash": "835b5b0b28354d13dec3379c51abc8fcbea6dff231ade782c24ee85aa4c90634",
+          "request_hash": "66632dc5ec757cab6c5cd48ddfcdb82e585513e66a8490057b26c77611d65174",
+          "state_hash": "66823ab27344e5cb91d8027f22890e89c657a383a0ae615988dc9c1f55872bc8",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 1
+            }
+          }
+        },
+        {
+          "seq": 5,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/005.json",
+          "commit": "d752ca93e2e8aab6913962c7f882045d88a31985",
+          "packet_hash": "da0b6a61c675a1d2984958189f16db318a403f3d66f5f9f8de5a96def7374e91",
+          "request_hash": "d44b180fe59ea03c62e29f3945a46a5a6ed652025acb549976f879c03b4b63d9",
+          "state_hash": "5167bb5b5459d3bd7021edbca436a37772993b3e79711a3728b724bc0ef86587",
+          "decision": "potion_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "claim_potion_reward",
+            "args": {}
+          }
+        },
+        {
+          "seq": 6,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/006.json",
+          "commit": "58987319235962b746095c280cec44c3380d7643",
+          "packet_hash": "c3139fc6d6c1960b7f37786fab25f916d9296088ee94143528253549e3d5a2ac",
+          "request_hash": "7656b4070af742a6a9a69c1d0b790a394cf92b3a2a50fd230d14f91731087142",
+          "state_hash": "5a2a4e2d3e52c0fb594306863e7079929eddcf6244811f03854e7640900baeb2",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 2
+            }
+          }
+        },
+        {
+          "seq": 7,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/007.json",
+          "commit": "5464065b8631373e4c2b33da270b3875936075d1",
+          "packet_hash": "592f9e33207292caaa69fe8803a278a388e4cfd2495af337e4a3542b9ab423cf",
+          "request_hash": "b72e5497a8b8349d526684ec976f14dc9c8cb642f56e56abd59946a874ade5bc",
+          "state_hash": "18df9474bd988ce6245bff8ec9e7af24bf84611ffeb143822914c9df2ecc08df",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 3,
+              "row": 3
+            }
+          }
+        },
+        {
+          "seq": 8,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/008.json",
+          "commit": "9bf6ada9628e60e02cf7bc0f017b7eea6791cbe7",
+          "packet_hash": "303fdcc496487832ecd83f917582ec5fdf46c4857efa3c6a49c39ee14c7fc083",
+          "request_hash": "5703bd6967ac4346df0968a770b3c68ecece692ab39847bb2ec1325bcd4929e9",
+          "state_hash": "743178f7deb6fd2922700a9280380e0b4c560dc34e44da7ef34db3b2a11b9323",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 1
+            }
+          }
+        },
+        {
+          "seq": 9,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/009.json",
+          "commit": "732e212de25ca396ffcdb26f34cada6ce19ade7d",
+          "packet_hash": "edb172e02ce6f1e651ad3fb52a46ed7ba187d2443d9140c824e5dd0fb1f70d45",
+          "request_hash": "f49f9ce50d8dff6fc8fed2755db8a8b2bdc0c41d39960ad75b29ebae5e524d34",
+          "state_hash": "7355a4ae2ef17df2c4fe1c0823f1d051e9b622b3fbf25a8ce235fd73ea1378d1",
+          "decision": "event_choice",
+          "choice": {
+            "cmd": "action",
+            "action": "choose_option",
+            "args": {
+              "option_index": 1
+            }
+          }
+        },
+        {
+          "seq": 10,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/010.json",
+          "commit": "79fde08d2439d9b261946e67758a372cafe380b7",
+          "packet_hash": "0cc3277e5a790e812ab7b68bb9d5092107ab790b57976aa6641a8e44801914a7",
+          "request_hash": "5fbfca2f0eb088829ca8a796700515438f76047bb7f56c7a3a8a3cf63d2e8803",
+          "state_hash": "ed645c17db586c0c71a2f300f7c8fbcc2a6df94465d99c89085c41a96bfd6c2e",
+          "decision": "event_choice",
+          "choice": {
+            "cmd": "action",
+            "action": "choose_option",
+            "args": {
+              "option_index": 0
+            }
+          }
+        },
+        {
+          "seq": 11,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/011.json",
+          "commit": "be8bdfac585bdcd79b43b5672df4001c51864d9b",
+          "packet_hash": "adade368e992b7a47d4dbd2ec763ee7ba49dc22594be4804bae07e7088165fbc",
+          "request_hash": "4f5bfa7eed11643b9eb60935f25916ce2727b4df80cba1a32483f1ff31e30e25",
+          "state_hash": "dca1e239e9dddcf03f049a9df077a3500ef56815001ec8074adc191b2cca8757",
+          "decision": "rest_site",
+          "choice": {
+            "cmd": "action",
+            "action": "choose_option",
+            "args": {
+              "option_index": 1
+            }
+          }
+        },
+        {
+          "seq": 12,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/012.json",
+          "commit": "1ef0ba56f7e83b685de46c43485686abcba08a5f",
+          "packet_hash": "d352207b75a4c0e28d9c08a0d891717066987a6a810b20e20ca7d7e0bbd47373",
+          "request_hash": "c4e86badf5b924ead053e343d0e52d66c8730f76bd0774ff2f1abe2cbff62f5b",
+          "state_hash": "69a397192f05702eb7e5ba0a4b4a6ceddada2525c4f460780509d4ead69242df",
+          "decision": "card_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "13"
+            }
+          }
+        },
+        {
+          "seq": 13,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/013.json",
+          "commit": "171a58ae931db422229ee9f550fa2eb9c4b7341d",
+          "packet_hash": "f30bc01a9af583af4751212291306aa0c00874ec4795399f9718c5daa25b5646",
+          "request_hash": "e6557de3b02d52d335d96ccc0999a880fb3274da7d269f80eeff796d7467cfc7",
+          "state_hash": "59a722314b7a6e14582b99dd6b63fbf680bdbb4e15b03fb6f1ce14cf4eadd026",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 2,
+              "row": 7
+            }
+          }
+        },
+        {
+          "seq": 14,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/014.json",
+          "commit": "fd334c119abee92fdeb77fba684bd3b57c9bd668",
+          "packet_hash": "785ec832018fd3266739ef82b09e58c396e9d0c043212a52ba4cc706e220fc74",
+          "request_hash": "c73d8925935e32048910e59be937ab58959caaf49bfdd6a8a5100b666cbcf3c5",
+          "state_hash": "1741860ec52ad7015c6c301442e1d501a7acc62bddaedffa0e6ab57fe1a0531c",
+          "decision": "potion_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "claim_potion_reward",
+            "args": {}
+          }
+        },
+        {
+          "seq": 15,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/015.json",
+          "commit": "4f09d6a2cf13fcb05f9e59e5684b814cb7cf223e",
+          "packet_hash": "ea46fc3f75b989eab231b766e17f605826dd73213f27337bcb8445f5e6be69a3",
+          "request_hash": "210951c6846c448dd199c5243c2e50d297fd14aa5d8c0683439ac1d658dd7631",
+          "state_hash": "d127306a663b552e8822a14921927a11b71642eb1d5b90f5bfdfc97c88adc6b7",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "skip_card_reward",
+            "args": {}
+          }
+        },
+        {
+          "seq": 16,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/016.json",
+          "commit": "3ec80a10e4569dc6647f2f07a7ce841f958bb285",
+          "packet_hash": "b3f6f28f9af6e6af49bbbd3da1cdbc61daf5c5c99267209952b884af741609f8",
+          "request_hash": "11bd16e1c908e8ff3b3fa8cbeca121010e541b74bdf705c737c4b824cd44918d",
+          "state_hash": "628194335317330777a47ed6c9ecfae28b6486a3f76308076203848fa3285d74",
+          "decision": "shop",
+          "choice": {
+            "cmd": "action",
+            "action": "buy_relic",
+            "args": {
+              "relic_index": 0
+            }
+          }
+        },
+        {
+          "seq": 17,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/017.json",
+          "commit": "475cffbe57aea169ab527eacad54bf892f13bb28",
+          "packet_hash": "6e3fcbbcf060eed33f7c8c4f33fbaeedbc288039186ec9853c8fa3bb6e52543f",
+          "request_hash": "c8b83348921d648a3b2caab9ffebfac7ac71c4c2c4f40b0196fcca8944a3fdad",
+          "state_hash": "7e93ea95eef62bf0fcea6d3e6c6afc210a57fd850d6401a39830e0f4d6bbd3ba",
+          "decision": "shop",
+          "choice": {
+            "cmd": "action",
+            "action": "buy_card",
+            "args": {
+              "card_index": 1
+            }
+          }
+        },
+        {
+          "seq": 18,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/018.json",
+          "commit": "9e38ceacd57e5e4c28107e50a199f1d7a823dd5b",
+          "packet_hash": "1445e92d78b8a5d64f1b0fc8376f665e87d32c32cf6ef490ec5c02d87705b000",
+          "request_hash": "0f01da5d6abef98b51877ce6f6f844e77d5ae3b0e320addbd4f1b1e4966812c9",
+          "state_hash": "23420c662af136bd6a7e6def6f3c65d97018b9fd6e7682b4d72316ec362b35e6",
+          "decision": "shop",
+          "choice": {
+            "cmd": "action",
+            "action": "buy_potion",
+            "args": {
+              "potion_index": 2
+            }
+          }
+        },
+        {
+          "seq": 19,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/019.json",
+          "commit": "d885250dce76f8d6b82731097b2749d4f67f4bc5",
+          "packet_hash": "f3bec865f156e8b725fb30e1a4e141d95bc381d3b0fe8fd859941fc415485594",
+          "request_hash": "20810920b416735ebf04a2acbbe681040b5ff4915309c41186eb0c4d41d6a3d6",
+          "state_hash": "0482856a06821e253afc41110dda6a0656bcf5605d4c1ff916c2517d09278e37",
+          "decision": "shop",
+          "choice": {
+            "cmd": "action",
+            "action": "leave_room",
+            "args": {}
+          }
+        },
+        {
+          "seq": 20,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/020.json",
+          "commit": "7e7fa2584a44016935b0cf7d98c3ecc6e2a27f5f",
+          "packet_hash": "194f33f7409538e967c3fe3ec63263156f54f396a3d9d25fefd3a17a317174d7",
+          "request_hash": "0ecd0acf99fd74644c08f1acd4a2e70d88b3c51796a8fbd70e04cf804346ea45",
+          "state_hash": "4d02cb3027acb4980bf7de20b43baa01ba9bcc7cb7f853aa7f3f7e3b4faf3b08",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 4,
+              "row": 9
+            }
+          }
+        },
+        {
+          "seq": 21,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/021.json",
+          "commit": "90b4498be55e37a8c83a2c274301afb0ab8b2bc9",
+          "packet_hash": "3621fd85103ead11fcd2dc576914a7fe90f9478c64bbc12d1c6d3be66e27d355",
+          "request_hash": "7eccc574e2544d6a59531fa5eda6783fa2fd779feb27aa968925adad6a900775",
+          "state_hash": "73faee3132120b877954c57e7feecd0f0257df78a09a93252829b75280c579fd",
+          "decision": "rest_site",
+          "choice": {
+            "cmd": "action",
+            "action": "choose_option",
+            "args": {
+              "option_index": 0
+            }
+          }
+        },
+        {
+          "seq": 22,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/022.json",
+          "commit": "c5a66ccdf2494172f9f4fe889b4b3c2722717a73",
+          "packet_hash": "d5a33c9c6a17a4369eca4d3fd2b6c461a0775294a06648452f53af817422bf84",
+          "request_hash": "f25dbfa6d74d45bd2731b91eb1a28d68caf6f798c48431f66ee5f76cd45471c0",
+          "state_hash": "d8174d0c418931f4257cfc9da60f1e1dcc4c7bd41260770891ff61ff82c5d13c",
+          "decision": "potion_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "claim_potion_reward",
+            "args": {}
+          }
+        },
+        {
+          "seq": 23,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/023.json",
+          "commit": "90d537f7e45b951344f612f2671bf65fb18c0602",
+          "packet_hash": "b324b95b8924a9d0dff124afe2c21fc7da1c3229df500d01390b9cb4595bb880",
+          "request_hash": "afe2be8a92b64d253aee520db59b7ddd40fa4bfc3aca1be6eef19b69fc7cf977",
+          "state_hash": "285a1ad09b309b67f5f2d1ddecd397991d287cd8d677445b42f4e232b45a4128",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 1
+            }
+          }
+        },
+        {
+          "seq": 24,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/024.json",
+          "commit": "a041719b862eab97dda6e096f6fd4e1bcf8d1e72",
+          "packet_hash": "72a474306c73a8fa0e6c022476eb7170bdac27f7c5bab5d2a7fe87c2177f6f21",
+          "request_hash": "5615ef0c7715dc11e1ce1caa85d52fb12d0588538e9ce5831db9167d07a211c9",
+          "state_hash": "e170e5666cfd3ee2dc15ae50a342b2255dca22d978a48b5dd301d5553ca3e493",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 5,
+              "row": 12
+            }
+          }
+        },
+        {
+          "seq": 25,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/025.json",
+          "commit": "6f670c4f34f089892342aad6389c1d6029193b05",
+          "packet_hash": "75df1a7b867d0c38cc96ca2682b5209e8fe13f832a771777d06bed093eceaa34",
+          "request_hash": "2cdbc3363d7aff4d1bca7bd0232efd8c88c966a87b8ec33d1e58e4571885d37c",
+          "state_hash": "e1f050993701f9d1265b23d13102c126bdd28def118cc77453748ea9d12ed60b",
+          "decision": "rest_site",
+          "choice": {
+            "cmd": "action",
+            "action": "choose_option",
+            "args": {
+              "option_index": 1
+            }
+          }
+        },
+        {
+          "seq": 26,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/026.json",
+          "commit": "a4397fed57e857506843d4ad16bb107ba2a0ef62",
+          "packet_hash": "712dea6d3e9864e9c2890134c66ad7cc933875e7d94faa92ff025d84fc0b2b81",
+          "request_hash": "49dbd607270dadc81f67e2df42fb65d3704b85e0aab75b8c463272fc64eeee78",
+          "state_hash": "4c709e09c0bb918cb4c5614bbeb87f952c3b10575383b38ca0bb1332eb93f5d1",
+          "decision": "card_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "13"
+            }
+          }
+        },
+        {
+          "seq": 27,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/027.json",
+          "commit": "41ca592fbecd3e41964f6c0d10ef373c832ba578",
+          "packet_hash": "cdaa3875ffd5b9f84503afbd4b145b8317676e146da33bbaeaeea7c060233ada",
+          "request_hash": "4badb14d22b0d7cb5b2ad6e5ce1f9793f79a5148c4ba25b01d01bb93db22000f",
+          "state_hash": "3d77d9a34a7476a3d5433aae6acfec1d2055cf43c114201d8d397819d8b03d91",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 6,
+              "row": 13
+            }
+          }
+        },
+        {
+          "seq": 28,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/028.json",
+          "commit": "5921a655bea5318b4429ce0b547ff1236837e751",
+          "packet_hash": "26af6b56428ae6f02f3079dc367dafed54b97b4a6923938ca3243ca01722ac68",
+          "request_hash": "adc8b95eab633f391343fa4b0d1a8a8e2612c9b31a9b360f19c556def0402832",
+          "state_hash": "75554359ab91324e02d258fc52bf6caeb45ce75cbc9687c1af27cb24bee4c43e",
+          "decision": "shop",
+          "choice": {
+            "cmd": "action",
+            "action": "remove_card",
+            "args": {}
+          }
+        },
+        {
+          "seq": 29,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/029.json",
+          "commit": "72d99f5f3e746d46c7656cda379f34af2226b6e9",
+          "packet_hash": "2f0bc900f16fdcf349f10af1e951882cfe9eb6e64e5502559ac5c05f39fc8c8e",
+          "request_hash": "2805b3b0b0eda55f20539d52898b824cb56f86f7c58bf6fae2701e7c8abf74b0",
+          "state_hash": "77142b34dfb659cd874ec108984fc347c241e8c34dff66530507c694d2fe8f51",
+          "decision": "card_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0"
+            }
+          }
+        },
+        {
+          "seq": 30,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/030.json",
+          "commit": "0bcc92405aa03a33bdcd1c801dfd9cf4695c065e",
+          "packet_hash": "061c6dbb29e1550bbad9558929d588f1de4970c32ec5fe893026ae0fda343695",
+          "request_hash": "234289cfbe6e4e35a193722d33e113528b39c82a3f948fb343042a2873b8ed2e",
+          "state_hash": "aef8f4ab43a319c790fd9ef7d28209daececb1fcf27e4806c2e2c1542635e7a6",
+          "decision": "shop",
+          "choice": {
+            "cmd": "action",
+            "action": "buy_potion",
+            "args": {
+              "potion_index": 2
+            }
+          }
+        },
+        {
+          "seq": 31,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/031.json",
+          "commit": "3ccc6a7a8283c398d1f173182d80ba8cffe569f0",
+          "packet_hash": "842a051d4d3ec4c63bf6d85ea7f19aeaf04f44fcdb90a3fd2eec1201c3f1bef2",
+          "request_hash": "959561322733545ea639a4d26324d734cee150ab6528df8c02149a8af655564c",
+          "state_hash": "88748615bb9aeb84ce6841580cf749b05ea592900c9c16cd75d89da6ee1624c4",
+          "decision": "potion_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "claim_potion_reward",
+            "args": {}
+          }
+        },
+        {
+          "seq": 32,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/032.json",
+          "commit": "50ed601bf79dfed596043e6012b127f3d0ee5745",
+          "packet_hash": "d4b8c1c1b16f496037603d82c3ce702c00fce9b926454b808b51ac22a05799fc",
+          "request_hash": "cb223bf3844fa3ea2139135220bd572e6b73056673993ccbe47a1e5e70015c77",
+          "state_hash": "1f8b121e6f3a4c1bba3bdca687dafebdd8ac7fdde86330ab3625a836a7acea88",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 0
+            }
+          }
+        },
+        {
+          "seq": 33,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/033.json",
+          "commit": "40f3ccab84a7a343139e913c147e6f927f803b88",
+          "packet_hash": "942f4a81c9aab17dbfc8db6978c33644ab964f5ba7b683a32e79fc9cc94e91f6",
+          "request_hash": "84138fbe0a8dd7bc187a84ea0d62782e71d688bee483bf2fe234494e210f4734",
+          "state_hash": "0932f14b61d43f0c1940b24e31f3e10940442b91f690559434a33c69d875796b",
+          "decision": "rest_site",
+          "choice": {
+            "cmd": "action",
+            "action": "choose_option",
+            "args": {
+              "option_index": 0
+            }
+          }
+        },
+        {
+          "seq": 34,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/034.json",
+          "commit": "2bade941fe87bfa3ba622c4c2d201ca93b48963f",
+          "packet_hash": "bf88d2144daa9d5391ee70b94c70e72c9f68426794d107f0fcd92b451a89d5cc",
+          "request_hash": "e157ccf3a98a7c12e88c37626479518aa570cdfce52031dbf0f3a32c6d372897",
+          "state_hash": "74b3452fa993bb3e638e1ef8af3eb9b9888e0dcd88476c6be4de37744040d9a1",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 0
+            }
+          }
+        },
+        {
+          "seq": 35,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/035.json",
+          "commit": "9482370cc1d83e0ffda307f60567ce61d3f539c4",
+          "packet_hash": "178ede9db62b424197ec03bd69dd72e2c2bb7d2dfa80fbac760d238ac41de9c8",
+          "request_hash": "3045c98fff98dff9b164e4fcc28ed3a5167f83662fd3ad59fd62df040e45662a",
+          "state_hash": "da52a799a0ee819a64193b48dde5e73292cc7da00b3a4eddc2e59ba709d91cdc",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 3,
+              "row": 0
+            }
+          }
+        },
+        {
+          "seq": 36,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/036.json",
+          "commit": "4a979b4262e1c5bb853c78de8fd7af70284307ca",
+          "packet_hash": "5204443c230351977c00a13ea1309804da5f3206271353ac95c9a410a69eb3ae",
+          "request_hash": "16e7129b185436e319cb4e47614d18e31ed8610a984a248059b65ba1009c9333",
+          "state_hash": "5709f35d8ff2486a227f8f307e2577843c5e0ca82a279e994630a9f7c7e3b38a",
+          "decision": "event_choice",
+          "choice": {
+            "cmd": "action",
+            "action": "choose_option",
+            "args": {
+              "option_index": 0
+            }
+          }
+        },
+        {
+          "seq": 37,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/037.json",
+          "commit": "d59c98ffa0ed9f46e8b33fe00f7e38fbf8be096f",
+          "packet_hash": "11823226ddc50206185ccb1a3f676cdb50cfd1a64a32c339374fa33cb5859ab4",
+          "request_hash": "2e5887bcef2fee27ccefcaa2989c2d01b116575944feed176c1b69bc90fc92ed",
+          "state_hash": "c2a2fa77719843b229a11e91164e122f2700b491fa0c71bcb00bfa2d94fd4cfd",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 3,
+              "row": 1
+            }
+          }
+        },
+        {
+          "seq": 38,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/038.json",
+          "commit": "c251d4ed86c32cb12b74f2a2558d2a4e92f6dcb4",
+          "packet_hash": "ca4332a20ff16456418802a7d2125c1c7fc3ee3c21a16691cc6f036514e2b5d0",
+          "request_hash": "726a4e10b8ee2de078702413e5f0f41e308df177bb55f569e82d107d0bfd6b16",
+          "state_hash": "60199a77e6dd16fcc381e290251e837cc2541215f7292a80708f066fa3b29cfb",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 1
+            }
+          }
+        },
+        {
+          "seq": 39,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/039.json",
+          "commit": "bba480f947f378aae0d3e7dec51e5d8f6f8c9c5f",
+          "packet_hash": "4637e93603864df4a7fbbf6fd5738b5c70ac64884cc24f97350fe498bfdfae91",
+          "request_hash": "901d88a074372fd39a6cebde4b21d012d5a7a19e58546f0969571309793dfe87",
+          "state_hash": "8cd886eb8df82964c19e18ce3606c33eda99924e8a19a93cfd49f059dbac7ac0",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "skip_card_reward",
+            "args": {}
+          }
+        },
+        {
+          "seq": 40,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/040.json",
+          "commit": "264d91b28888f8bc662f7c296c50e981ab07cff0",
+          "packet_hash": "f9f49743d09dc761ca9e496f519299c22958828e8a94b3e60b135d27908d78b8",
+          "request_hash": "a6348980b2d7009554bbfdfde6b658c6a3590d1c25261d1dd35438edfaa4f3ae",
+          "state_hash": "9f67d23d3a9b8338494336ea8dd8f1d88ebdb030d0358f666a580f7c79bd9aa2",
+          "decision": "shop",
+          "choice": {
+            "cmd": "action",
+            "action": "buy_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        },
+        {
+          "seq": 41,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/041.json",
+          "commit": "c04efbf9a8baee2e33764de16b819b3af89455b4",
+          "packet_hash": "11a8f5b3c5369dbceefab26f7e80382b949200b9cff3b4800f6a537da24a727c",
+          "request_hash": "6a22c18540bd3cddeeb005e86bcece99605c2c13c891a6258a9919db422eeffc",
+          "state_hash": "207da7e74aee7a7655c420d305f0b9fe0b02bf04627c5422b753c01a996f2d85",
+          "decision": "shop",
+          "choice": {
+            "cmd": "action",
+            "action": "buy_potion",
+            "args": {
+              "potion_index": 2
+            }
+          }
+        },
+        {
+          "seq": 42,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/042.json",
+          "commit": "acb56b5a469a51fd64fb2a736a37d8bf4b29e52c",
+          "packet_hash": "5468906c94c6e2741a1f476ed4e1ebc64074253d4d8fa192ca08276522699d53",
+          "request_hash": "55d346e3bb84a2035f561d067045cbb4e8d35ff55d19b54a670a9e9abb02f8ca",
+          "state_hash": "5df252db036c1590c7e0b34326debe32b5d2da5435f957d6f466669683bedf34",
+          "decision": "event_choice",
+          "choice": {
+            "cmd": "action",
+            "action": "choose_option",
+            "args": {
+              "option_index": 0
+            }
+          }
+        },
+        {
+          "seq": 43,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/043.json",
+          "commit": "85e252aaf7fb0d3c6384817c77842160f849b11b",
+          "packet_hash": "21e2aa62d056510b6e24eaf723713c750b9c9b8c5c03e745aa517f8e6add7504",
+          "request_hash": "3a55039bfb39fe490076a1cd4455ac72828d3333bbcda30c25a1735058c63808",
+          "state_hash": "7e430e4f1a40d95e385aa2839f66f3ab61fb657b279eb58a2af93275a2975e7c",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 1
+            }
+          }
+        },
+        {
+          "seq": 44,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/044.json",
+          "commit": "4784393c16bf4678e3a0c057ae3db035ab1fc7de",
+          "packet_hash": "485d328401bf5143d1ae54c33c9f028c6d1d12cabfa1eac1fd2ef4310379711d",
+          "request_hash": "23045db4d52f6acf1171ec0f6a813a5a86bca8e551a745275913f9892cbb503f",
+          "state_hash": "69da7ec64ce0b0724acf3dab858ed1fb162aaf53b50daa564ea096c9be0ee3be",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 4,
+              "row": 6
+            }
+          }
+        },
+        {
+          "seq": 45,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/045.json",
+          "commit": "457eb49f3b497904ee25159df87401fb0f4a26a0",
+          "packet_hash": "77bb14d7b8a7e65853b0771d902dba59381ff4fde8c5b505269c9a3b162d8313",
+          "request_hash": "2ce64de593bc53f3892dc7ea4dc5a61db15977caeacaf2da2079345d14e9530f",
+          "state_hash": "15c88a0f7c281e1131f71147edb61e8973ec4d7de944279c03c161463edda08d",
+          "decision": "potion_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "claim_potion_reward",
+            "args": {}
+          }
+        },
+        {
+          "seq": 46,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/046.json",
+          "commit": "10eea5743246a0d7f9af5a9bb10f3b13b77ba81c",
+          "packet_hash": "dfdd3276f766e1f3e2dc2508b740fa00e3d57a10b503d8c5b6ce369597957fba",
+          "request_hash": "f609b1b1edc7986d32c9f4b32dbbe498e8d0e498f21c1d837e914aa97764dfc3",
+          "state_hash": "70df6a605c766afb0957e8927e15c5906cfe6d63f6639c267177652719d1520b",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "skip_card_reward",
+            "args": {}
+          }
+        },
+        {
+          "seq": 47,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/047.json",
+          "commit": "f2d785ea8d4dc4bfb09ad4eaa46a63fbac039321",
+          "packet_hash": "a9a3404a0ad083fca07f6f120b8e2f1eecbf57df9267cd22ef5ef5711283e6a3",
+          "request_hash": "bc24880f8983fe3b059331a3f16ff1de997cbf21afac50825dedb38d8dbeac9f",
+          "state_hash": "1978037f686e18d351b37ec373e10b9c43b599d33e053c443e7f196e58b947d2",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 3,
+              "row": 7
+            }
+          }
+        },
+        {
+          "seq": 48,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/048.json",
+          "commit": "8056da355669d77f9d3ea1ebb0bd04baa1bb4e9c",
+          "packet_hash": "a9eeb3330b1068937cea3932eaf757eca5fe8ab383fac723adaf39b6318f57e2",
+          "request_hash": "db33a741cea94ec6143e0542785565b396a9287aab68cb739d34d3318f33cd60",
+          "state_hash": "dbd1e25053e2d4efb7ac5603650066010d565a0f1425fc059a45fc50213dbec5",
+          "decision": "rest_site",
+          "choice": {
+            "cmd": "action",
+            "action": "choose_option",
+            "args": {
+              "option_index": 1
+            }
+          }
+        },
+        {
+          "seq": 49,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/049.json",
+          "commit": "a80dfcd9dde58b806e571771119df847598df9c3",
+          "packet_hash": "d360da5bb2bf4c2daba9f1fa6fa4fdf66edc2bbd88d35d7e0f4af7e6f83c36d7",
+          "request_hash": "01ca66977ed2d3f744ebeb7aa444c4f19c5cdfaf5953ebd69b209cd749918382",
+          "state_hash": "093a943852dd81f6dc2d70a9e04db61201cc1e8c546e1ad95a534f9232aebf2d",
+          "decision": "card_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "9"
+            }
+          }
+        },
+        {
+          "seq": 50,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/050.json",
+          "commit": "edbfe149aa51a26a01cf2499d0b74a918a38a725",
+          "packet_hash": "a17b6198339acf35eab9dfb1f2397511162082335073f49028ad2944ff5c6cb3",
+          "request_hash": "82386adc8b61c51883895cf557586490d260646246d8653f384018c054f29c88",
+          "state_hash": "75549c549299c8c9fdca95068293d72ea633667f032a6637547009fbe41d80dc",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 3,
+              "row": 9
+            }
+          }
+        },
+        {
+          "seq": 51,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/051.json",
+          "commit": "96b44ce85ec85b2d6df46659bbde416b535e53cf",
+          "packet_hash": "afac5572cb8b9c83561ee45e2a2e0223ceba09674697af2f7c6960c666ad2214",
+          "request_hash": "b709fa899405dfcf2fcd183628ced0f09963c1785cbc5d541e328c851a7226f0",
+          "state_hash": "80b255575d37008285b8f1027653a38621b556b08912674bd22d1c1151d7e011",
+          "decision": "rest_site",
+          "choice": {
+            "cmd": "action",
+            "action": "choose_option",
+            "args": {
+              "option_index": 0
+            }
+          }
+        },
+        {
+          "seq": 52,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/052.json",
+          "commit": "c703112a8568e32cd3c790b80e49de4305166a48",
+          "packet_hash": "a95019c3512180778f3b73a406ef5a86bdee23630a2e073a65cbcb48930d62b9",
+          "request_hash": "1f79768f69b3d59846973cdee2c073a9fa5a7c75cd228f251e195cdd069896ca",
+          "state_hash": "d9f1901fb826339131e39da47517af2c46f6a2f2397064ce382aba922f5e66cc",
+          "decision": "event_choice",
+          "choice": {
+            "cmd": "action",
+            "action": "choose_option",
+            "args": {
+              "option_index": 1
+            }
+          }
+        },
+        {
+          "seq": 53,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/053.json",
+          "commit": "676eeb6ffd0470f608a960ae72be7ad89d2955aa",
+          "packet_hash": "9445719bf44b3b5601594063bfdfe153eaaf07f8962c310000b27c9b016dbc0f",
+          "request_hash": "2892947da978673edfa06ef269747ab11cb7f30529e18eec2f3ecc3760253db7",
+          "state_hash": "45939221b467380e82f499cdb8da6f59df87871799a82797ef2c936607b6490a",
+          "decision": "card_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0"
+            }
+          }
+        },
+        {
+          "seq": 54,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/054.json",
+          "commit": "d3b55bc70f435b7383842d66e00c905b4d3705d1",
+          "packet_hash": "57717ae7bdab5e000e18bddda6f20e049cfa6ad4563c9d72775e6cccc738619b",
+          "request_hash": "41ee6a6f821e4d525046df945c95dba84be7eb9caec60f82dbe036e6634553d2",
+          "state_hash": "c4b126b824637b58f49b4d32f7d3dfcae5e8107891cc5d11565a3078f13d0fe6",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 3,
+              "row": 11
+            }
+          }
+        },
+        {
+          "seq": 55,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/055.json",
+          "commit": "887224a1dccc7616cfc28fbef01d099729b05ea0",
+          "packet_hash": "8655a3a30e6bc2d3fbd0e4e6be9ec9c914616d16665c1e00d823c6dc94219324",
+          "request_hash": "9b627501e692bc48863e751b88813bf1603c0aec5fc1aa3dc27a0e82841cd144",
+          "state_hash": "3889c9acc964d86f85b64a28d26c45401b81bca644a8ee4122d3be393599d31f",
+          "decision": "shop",
+          "choice": {
+            "cmd": "action",
+            "action": "remove_card",
+            "args": {}
+          }
+        },
+        {
+          "seq": 56,
+          "path": "experiments/E160/teacher/A0-000/b158cc80-513e-427d-95ae-3f318411ffb6/056.json",
+          "commit": "ba1771257cc72a83a085b8cd9e545fedae0264af",
+          "packet_hash": "8fad9f587d445ab54e55deadb9ac93c8aeb24547c2fdb4326873a3bf9e46c98c",
+          "request_hash": "6760e361aea16b461885f3501c884e2b713de45bfa7926a98dac2795063100a7",
+          "state_hash": "faca34bb0d51d29a9370f959418cfd27668fd2e4996d34bfcefaf633a8180354",
+          "decision": "card_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0"
+            }
+          }
+        }
+      ],
+      "expert_tokens": null,
+      "expert_cost_usd": null,
+      "final_campaign_plan": "Remove basic Strike as planned, retaining the compact strength/AoE core and all defensive cards.",
+      "seconds": 1785.6455680830404,
+      "wire.jsonl_sha256": "55ff68f39f29172bae9545c3d29a05da8b9f890290eb5674e5ca4fb3c7e057b6",
+      "engine.stderr.log_sha256": "83e96ae1322a518bc830b251c799109e7692ac58ae2791832ea830813c82ec69",
+      "trace_path": "artifacts/runs/b158cc80-513e-427d-95ae-3f318411ffb6/decisions.jsonl",
+      "trace_sha256": "abb5d408f8105f4769d418af06b404732ad84cdb21aeaac9485bfffe051d92b3",
+      "compute_seconds": 12.18191108526662
+    },
+    {
+      "case": "A0-001",
+      "seed": "e160_campaign_Ironclad_A0_001",
+      "character": "Ironclad",
+      "ascension": 0,
+      "arm": "program_campaign",
+      "run_id": "65cd4652-898c-40de-b0a5-a7216e2df5b8",
+      "status": "defeat",
+      "steps": 164,
+      "entries": [
+        {
+          "act": 1,
+          "floor": 2,
+          "room_type": "Monster",
+          "hp": 80,
+          "max_hp": 80,
+          "enemies": [
+            "Shrinker Beetle"
+          ],
+          "deck_hash": "7210843babaa7e79c7fc61914a3ae96c977b0c7d902c71f80cd08fe0ff223f9a",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 3,
+          "room_type": "Monster",
+          "hp": 80,
+          "max_hp": 80,
+          "enemies": [
+            "Nibbit"
+          ],
+          "deck_hash": "7ae2770b08cc7c7ba2aeb9d990aed647a363854d0a38517ea4260674e4ef74ec",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 5,
+          "room_type": "Monster",
+          "hp": 74,
+          "max_hp": 80,
+          "enemies": [
+            "Twig Slime (S)",
+            "Twig Slime (M)",
+            "Leaf Slime (S)"
+          ],
+          "deck_hash": "70b870ac61c9bf2096555fde3fd113f66be1eea35a5c0908c8ed2078f9fba1c6",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 7,
+          "room_type": "Monster",
+          "hp": 80,
+          "max_hp": 80,
+          "enemies": [
+            "Snapping Jaxfruit",
+            "Flyconid"
+          ],
+          "deck_hash": "a4feebc4df790ef95a2050bcf4aebd013428b214f8917ed835477a6aa4af9e06",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 12,
+          "room_type": "Monster",
+          "hp": 70,
+          "max_hp": 80,
+          "enemies": [
+            "Twig Slime (M)",
+            "Leaf Slime (M)",
+            "Twig Slime (S)",
+            "Leaf Slime (S)"
+          ],
+          "deck_hash": "fbe633a14e77eeb63502337072b4c6e9a773090e6dd9b73a2f87dc430f9766eb",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 14,
+          "room_type": "Monster",
+          "hp": 66,
+          "max_hp": 80,
+          "enemies": [
+            "Fogmog"
+          ],
+          "deck_hash": "f41fc1612d4df77e1ea86417888cf71a24be8791cd9d2a71d97ef36000b41c0d",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 15,
+          "room_type": "Elite",
+          "hp": 66,
+          "max_hp": 80,
+          "enemies": [
+            "Phrog Parasite"
+          ],
+          "deck_hash": "e99d9b80676289cb7358c6753e349674927a9f2b67fddbee632ca4e73b7166bf",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 17,
+          "room_type": "Boss",
+          "hp": 54,
+          "max_hp": 80,
+          "enemies": [
+            "Ceremonial Beast"
+          ],
+          "deck_hash": "f6f3944a7f2eed8fd4c30f9612be4794df17eb1c6679b86e6d344a05160734c4",
+          "potions": 1
+        }
+      ],
+      "completed_battles": 7,
+      "completed_acts": 0,
+      "max_act": 1,
+      "scenes": {
+        "event_choice": 4,
+        "map_select": 16,
+        "combat_play": 123,
+        "card_reward": 7,
+        "potion_reward": 4,
+        "card_select": 7,
+        "rest_site": 3
+      },
+      "owners": {
+        "program_campaign": 30,
+        "program_combat": 96,
+        "only_legal": 38
+      },
+      "potion_blocks": 0,
+      "illegal_actions": 0,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "95bdbfdb302cd0eaaccdb9d40ebcade2949d2bae5996886eaebd0118e6933974",
+      "transition_hash": "9249565d22f3f46caaa5380c3799acd82f8b1da7547b506c50b22114dac1675b",
+      "readonly_map_queries": 16,
+      "expert_packets": 0,
+      "expert_wait_seconds": 0,
+      "expert_input_chars": 0,
+      "expert_output_chars": 0,
+      "teacher_packets": [],
+      "expert_tokens": null,
+      "expert_cost_usd": null,
+      "final_campaign_plan": null,
+      "seconds": 7.554494042182341,
+      "wire.jsonl_sha256": "7f98a1376cc034b7340445ef057d27ef31b9fee2c315b6d4a6af656bfc9670ef",
+      "engine.stderr.log_sha256": "d41f166c0d2858d9fa4e1d2e63f1438f5b9e524be102d1517afc958fa24cb2a2",
+      "trace_path": "artifacts/runs/65cd4652-898c-40de-b0a5-a7216e2df5b8/decisions.jsonl",
+      "trace_sha256": "09800ca396380d12fbe9fb33e279552704e8ff9f9f7378db26216e112a1d2080",
+      "compute_seconds": 7.554494042182341,
+      "verification": {
+        "case": "A0-001",
+        "status": "match",
+        "steps": 181,
+        "outcome": "defeat",
+        "final_hash": "95bdbfdb302cd0eaaccdb9d40ebcade2949d2bae5996886eaebd0118e6933974",
+        "seconds": 6.653379500145093,
+        "wire.jsonl_sha256": "898b6cff4a1abf25b6e3f00fae277c4a57d53216a7eaac680165c41c90ae4f1b",
+        "engine.stderr.log_sha256": "d41f166c0d2858d9fa4e1d2e63f1438f5b9e524be102d1517afc958fa24cb2a2",
+        "trace_path": "artifacts/runs/3bb9f75d-a027-46e3-b150-438c6f0d0e5a/decisions.jsonl",
+        "trace_sha256": "5aa1caa83bc2cbd0c33daa8dea16a3833a8bc27d6aea0dc2aeb75d686610c1d1"
+      }
+    },
+    {
+      "case": "A0-001",
+      "seed": "e160_campaign_Ironclad_A0_001",
+      "character": "Ironclad",
+      "ascension": 0,
+      "arm": "astra_campaign",
+      "run_id": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+      "status": "timeout",
+      "steps": 224,
+      "entries": [
+        {
+          "act": 1,
+          "floor": 2,
+          "room_type": "Monster",
+          "hp": 80,
+          "max_hp": 80,
+          "enemies": [
+            "Shrinker Beetle"
+          ],
+          "deck_hash": "7210843babaa7e79c7fc61914a3ae96c977b0c7d902c71f80cd08fe0ff223f9a",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 3,
+          "room_type": "Monster",
+          "hp": 80,
+          "max_hp": 80,
+          "enemies": [
+            "Nibbit"
+          ],
+          "deck_hash": "7ae2770b08cc7c7ba2aeb9d990aed647a363854d0a38517ea4260674e4ef74ec",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 4,
+          "room_type": "Monster",
+          "hp": 80,
+          "max_hp": 80,
+          "enemies": [
+            "Leaf Slime (S)",
+            "Leaf Slime (M)",
+            "Twig Slime (S)"
+          ],
+          "deck_hash": "87ac229dbb9f0cb8ffce75930759004f1e159a88debea23820eb8fec8bb09d17",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 8,
+          "room_type": "Monster",
+          "hp": 74,
+          "max_hp": 80,
+          "enemies": [
+            "Snapping Jaxfruit",
+            "Flyconid"
+          ],
+          "deck_hash": "27c78eb9138e6ecdabde87744210572e23c47c248bb3ec8e16e222cf6f670edb",
+          "potions": 2
+        },
+        {
+          "act": 1,
+          "floor": 12,
+          "room_type": "Monster",
+          "hp": 64,
+          "max_hp": 80,
+          "enemies": [
+            "Twig Slime (M)",
+            "Leaf Slime (M)",
+            "Twig Slime (S)",
+            "Leaf Slime (S)"
+          ],
+          "deck_hash": "a0fe353aa065698ad657272173a5163796276dd5bcb0f23c4fb08f713d083953",
+          "potions": 2
+        },
+        {
+          "act": 1,
+          "floor": 14,
+          "room_type": "Monster",
+          "hp": 70,
+          "max_hp": 80,
+          "enemies": [
+            "Fogmog"
+          ],
+          "deck_hash": "f26856164bd1952fd03b7402ba06096cc6646d745a9fd88b78e03c1d90ce9b63",
+          "potions": 3
+        },
+        {
+          "act": 1,
+          "floor": 15,
+          "room_type": "Elite",
+          "hp": 76,
+          "max_hp": 80,
+          "enemies": [
+            "Phrog Parasite"
+          ],
+          "deck_hash": "76c62f6428527b8a7b4722da28fadde227a2312368d6bc815f3ded67e351d61d",
+          "potions": 3
+        },
+        {
+          "act": 1,
+          "floor": 17,
+          "room_type": "Boss",
+          "hp": 80,
+          "max_hp": 80,
+          "enemies": [
+            "Ceremonial Beast"
+          ],
+          "deck_hash": "09f0f9a7e92785f1b7f476958fb439fd35d55d4ed77ac7bae4d5333c3380de19",
+          "potions": 1
+        },
+        {
+          "act": 2,
+          "floor": 2,
+          "room_type": "Monster",
+          "hp": 80,
+          "max_hp": 80,
+          "enemies": [
+            "Exoskeleton",
+            "Exoskeleton",
+            "Exoskeleton"
+          ],
+          "deck_hash": "6d5f07a18df5c6c130ab2f46eaece08f46fd092cc3a6285b6427c9553b34316e",
+          "potions": 0
+        },
+        {
+          "act": 2,
+          "floor": 3,
+          "room_type": "Monster",
+          "hp": 68,
+          "max_hp": 80,
+          "enemies": [
+            "Tunneler"
+          ],
+          "deck_hash": "e55cc66d53093f4a6b911a993893127ad67f41ef1bc501c45fb44eeffc6b8e97",
+          "potions": 1
+        },
+        {
+          "act": 2,
+          "floor": 5,
+          "room_type": "Monster",
+          "hp": 73,
+          "max_hp": 80,
+          "enemies": [
+            "Louse Progenitor"
+          ],
+          "deck_hash": "48467b361de81cd422d22a5a926bc3425270ca33e9b6c7286b338f0086e299ed",
+          "potions": 3
+        }
+      ],
+      "completed_battles": 11,
+      "completed_acts": 1,
+      "max_act": 2,
+      "scenes": {
+        "event_choice": 5,
+        "map_select": 23,
+        "combat_play": 161,
+        "card_reward": 12,
+        "potion_reward": 6,
+        "shop": 8,
+        "rest_site": 4,
+        "card_select": 5
+      },
+      "owners": {
+        "astra_campaign": 56,
+        "program_combat": 145,
+        "only_legal": 23
+      },
+      "potion_blocks": 84,
+      "illegal_actions": 0,
+      "error": "Global expert packet cap",
+      "final_context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 7,
+        "room_type": "Event",
+        "boss": {
+          "id": "KNOWLEDGE_DEMON_BOSS",
+          "name": "Knowledge Demon"
+        }
+      },
+      "final_hp": 60,
+      "final_hash": "9fa2b1f758cce089e3c30845433199a797fb30069a1497472a84e4898d4652bf",
+      "transition_hash": "969dabe46b1a2500451735bf431b868052f913116d7a79794d9cfde15cb2ff5e",
+      "readonly_map_queries": 23,
+      "expert_packets": 56,
+      "expert_wait_seconds": 1775.1345546247903,
+      "expert_input_chars": 539659,
+      "expert_output_chars": 30323,
+      "teacher_packets": [
+        {
+          "seq": 1,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/001.json",
+          "commit": "c2650fd63b7be7f4ecc81b83b6157669cc59b1c5",
+          "packet_hash": "13eb7d392aa790fda3be0522cd0db0144f1cf26aa698403c127bdf5c5e4dd997",
+          "request_hash": "275a3b05b6e43da28169437881e2e3da8f5517b8a30101f8a4311dd1352ae4a1",
+          "state_hash": "dada79c13b5270db13206ca2c7df923b8d504c7acea253d2b93c5c3cd5888faf",
+          "decision": "event_choice",
+          "choice": {
+            "cmd": "action",
+            "action": "choose_option",
+            "args": {
+              "option_index": 0
+            }
+          }
+        },
+        {
+          "seq": 2,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/002.json",
+          "commit": "55c80b8a249f07e8c5de09e7bc7892ae45d8e8b0",
+          "packet_hash": "a1c2edbdb2e07f5f5d3504427368b36f72ceccd81dc2d1232167dcf08266a01d",
+          "request_hash": "9f3988e8abcef9d19c904a1073fa55490997473c5aab81b60ec2af1f391c08e3",
+          "state_hash": "9edac33968766320a110f54c714add1102b63d83208d9c0007cb404de17b624c",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 3,
+              "row": 1
+            }
+          }
+        },
+        {
+          "seq": 3,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/003.json",
+          "commit": "6210c9065b65a2ca82e9bb006af5bba6fc08ad77",
+          "packet_hash": "a468d7f5926ade95163651bd4f389adde370b288c9f31b7bf17062553ab63bcb",
+          "request_hash": "bf4b9ea586134eaf5bd42e661e9ebc7174414d24847ec02d3be022a090f262fc",
+          "state_hash": "fdba4f32fbf67740df50bc201a0a1aefa1fdf971f6d46efb7404407c6d43a3a5",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 0
+            }
+          }
+        },
+        {
+          "seq": 4,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/004.json",
+          "commit": "a013de2f1745f65b8a743112dc40ea45858aa9ca",
+          "packet_hash": "8721d6a4764e792dc011367104ef4923fc9ee2567841b41a161b00a19d273efe",
+          "request_hash": "f3a7539a18a76e4cd8e3e425c0ebc6e702f18a4cd2fcb087cc4a5aa714712117",
+          "state_hash": "b83f618ab1a2c8bc98c6da143e1041855b5a6348a2d4caf2c732249fd136dbac",
+          "decision": "potion_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "claim_potion_reward",
+            "args": {}
+          }
+        },
+        {
+          "seq": 5,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/005.json",
+          "commit": "d752ca93e2e8aab6913962c7f882045d88a31985",
+          "packet_hash": "e3640d8eabb528781530c3169c25aec39b328fddea70a295233133db33622c6b",
+          "request_hash": "fb3e87cc06e975a2b13cda934a2299096c61e25891bb793730eca24985842836",
+          "state_hash": "99b3009d22a76d0f4b0a8ea99567c38cf93001f9b741aebfc23cf7b2667e1463",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 1
+            }
+          }
+        },
+        {
+          "seq": 6,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/006.json",
+          "commit": "58987319235962b746095c280cec44c3380d7643",
+          "packet_hash": "36a33e59a8e3da7a8d266025aac07d585532568e2e876d0aedd3d01f12f8998b",
+          "request_hash": "d7f6613c8a7202eecf279b29b54da4635b03908f5fb5025d6c504ab14e0b6782",
+          "state_hash": "9f50b4ce554e4f1dafc7bda2d11c8901987ec5bb68ebc052eaa6227567b25ef0",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 3,
+              "row": 3
+            }
+          }
+        },
+        {
+          "seq": 7,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/007.json",
+          "commit": "5464065b8631373e4c2b33da270b3875936075d1",
+          "packet_hash": "5de69a60bccce780ffbfd7975b38d8498718e496c7412283362b5f2151aa7501",
+          "request_hash": "3700c947649d343697b052efc66d47983a9e8d0a09016c0aff3dd141acd9cd33",
+          "state_hash": "683234589be6cdd6d70eb76ec19f7de08e1d47b809039803a44a552a69702a22",
+          "decision": "potion_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "claim_potion_reward",
+            "args": {}
+          }
+        },
+        {
+          "seq": 8,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/008.json",
+          "commit": "9bf6ada9628e60e02cf7bc0f017b7eea6791cbe7",
+          "packet_hash": "52cf6f8d03e72b2a2bfe32ecbc5fe161246dbc2828b61bb24ac0e80d453941b8",
+          "request_hash": "ce2c8754f9336abbf0688654c2acfd9355a5cec90bbead352d5c74e4f9b55359",
+          "state_hash": "4e422077d47f844935b7aea92f78f27eb71a7549a505928d5bb556dc986084d1",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 1
+            }
+          }
+        },
+        {
+          "seq": 9,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/009.json",
+          "commit": "732e212de25ca396ffcdb26f34cada6ce19ade7d",
+          "packet_hash": "26a6a00eca3d6c8f465a4ec7bc1985f061c00f0d38bd99a495c78f6b58f4f142",
+          "request_hash": "4738d16796a73c1de4a9d66f09c3f58bb867deb14c7942067ee07574fcc3f79b",
+          "state_hash": "1558d4e31343321b93b20e2ae195589962602136fd5b1363f71deecbbb4be01b",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 3,
+              "row": 4
+            }
+          }
+        },
+        {
+          "seq": 10,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/010.json",
+          "commit": "79fde08d2439d9b261946e67758a372cafe380b7",
+          "packet_hash": "590f667651dfd5e32db001ba395a9f4758402734439436a049dc9d013b527e56",
+          "request_hash": "3160f805ba72c9f3c541150805eb485396704262bf8b80d593677d29ae650b55",
+          "state_hash": "0e03c0ec32ee6481561e90525d41beb6cace75431e0451edb785fe078b0dcb50",
+          "decision": "shop",
+          "choice": {
+            "cmd": "action",
+            "action": "buy_card",
+            "args": {
+              "card_index": 0
+            }
+          }
+        },
+        {
+          "seq": 11,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/011.json",
+          "commit": "be8bdfac585bdcd79b43b5672df4001c51864d9b",
+          "packet_hash": "ad4ac97ac1f9af7a0444a180c624ccda17c3d9725538153f09181e3d6b11b1fd",
+          "request_hash": "62193314f20becabaf3c099753e0819529eb4f126ca978848cf47b8c0b1c92b6",
+          "state_hash": "9a16f53110d6e33e74ba14bad0da099861da4b8f25ef3916aea6ef96c1d8e843",
+          "decision": "shop",
+          "choice": {
+            "cmd": "action",
+            "action": "buy_potion",
+            "args": {
+              "potion_index": 1
+            }
+          }
+        },
+        {
+          "seq": 12,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/012.json",
+          "commit": "1ef0ba56f7e83b685de46c43485686abcba08a5f",
+          "packet_hash": "69c216670b907b2bfb8fdcbbfe42e2e74e1bbfd97c1c800c328434b9851ba03d",
+          "request_hash": "e1a3ce39053cf97a919a847f0a8a35393a1b7fba57a16d9b1e96e2b761bc73c8",
+          "state_hash": "a94344e567c9bf34fb7ab4a12634ac44aace489136b01a7fa2a4b9df4bdb91df",
+          "decision": "shop",
+          "choice": {
+            "cmd": "action",
+            "action": "leave_room",
+            "args": {}
+          }
+        },
+        {
+          "seq": 13,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/013.json",
+          "commit": "171a58ae931db422229ee9f550fa2eb9c4b7341d",
+          "packet_hash": "a539ee47d2ed2fcfa68625ce56d93efcc4e90531d8d7e373848735b82c4dddd9",
+          "request_hash": "cb4e65366eace6ab7f59e4cab926aa34defd35ffc907777b84538c70ba837017",
+          "state_hash": "c0b6cb51eeae15e7b2f0631dee73dae2a310a45ad6ccee0675da0e10de376d8e",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 2,
+              "row": 5
+            }
+          }
+        },
+        {
+          "seq": 14,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/014.json",
+          "commit": "fd334c119abee92fdeb77fba684bd3b57c9bd668",
+          "packet_hash": "cf9b2cca469128a3b2587d7545a4bcbc4ac160cd04be175fc69ed5867ee1994d",
+          "request_hash": "44a82d489242eb16a9125a84651e5bc49621f8526b3d43b250fcf58035741e32",
+          "state_hash": "e5f81cea8c5250ff45d46679c6d47c4512c841e223ac02f47a716d2aa0c141e3",
+          "decision": "event_choice",
+          "choice": {
+            "cmd": "action",
+            "action": "choose_option",
+            "args": {
+              "option_index": 0
+            }
+          }
+        },
+        {
+          "seq": 15,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/015.json",
+          "commit": "4f09d6a2cf13fcb05f9e59e5684b814cb7cf223e",
+          "packet_hash": "b3a4a05670f8d39e1641f366a71e2ce19481e7ff04c88d02cc6e98c9fe8f92a1",
+          "request_hash": "4adfcaa753dd915b794273feb073d5835014a7baf5c9ed0af67176d3e8928f90",
+          "state_hash": "b64cafecb40191ab9639689d658c370749c711ab41cd06108edf90781cee6023",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 3,
+              "row": 6
+            }
+          }
+        },
+        {
+          "seq": 16,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/016.json",
+          "commit": "3ec80a10e4569dc6647f2f07a7ce841f958bb285",
+          "packet_hash": "00137d3ed72382e8b44215b538b6c89ad98a0bfda189d890425d78cd736412d2",
+          "request_hash": "8889618598f85f12ef88cfd480bc09a1d45bbacb0a43c23c4b22bcfee78c6f9d",
+          "state_hash": "d34f3d59171f63a215cdf99d99016c8454c7bafecb76234523d808d669164e30",
+          "decision": "event_choice",
+          "choice": {
+            "cmd": "action",
+            "action": "choose_option",
+            "args": {
+              "option_index": 1
+            }
+          }
+        },
+        {
+          "seq": 17,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/017.json",
+          "commit": "475cffbe57aea169ab527eacad54bf892f13bb28",
+          "packet_hash": "c4d2b3946f8db49367db766124a880bdb3e5bc57140f09f1378f9dbe7770deef",
+          "request_hash": "eb75d0297afc8a090d3af046fcba8968d8221bebb67ddc1ec940fb580b97e6f5",
+          "state_hash": "2199bc9539c1dd8c0bcdeaf1ce3a843ec1e0f25bd17114bf6c15644caa75f9ef",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 2
+            }
+          }
+        },
+        {
+          "seq": 18,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/018.json",
+          "commit": "9e38ceacd57e5e4c28107e50a199f1d7a823dd5b",
+          "packet_hash": "51b0af531a73a6ff4af1f7c360a7285564c197ea2e51c103aadcf603500021eb",
+          "request_hash": "6716b5bddbae642feca37e710f401ffb0f89dadcb7e87f32dacb08cbb7c98179",
+          "state_hash": "739b8bd8ed3678ff0c88d1ce2674e49e28663795d60cc11ff062e7be4be2533f",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 4,
+              "row": 7
+            }
+          }
+        },
+        {
+          "seq": 19,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/019.json",
+          "commit": "d885250dce76f8d6b82731097b2749d4f67f4bc5",
+          "packet_hash": "cb97dd1d58670561a0e167a1e68fcba1114690ec46b8161ed7225e8a21d22cf7",
+          "request_hash": "49b0f5e381c05ed8f3c0a23f346ec935aad015aaa7b9318c85f21869187ee7af",
+          "state_hash": "e2eb430ff232cee54e59748043e6d28c9aece5006e69cdd7a25fb45880d7e7b5",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 0
+            }
+          }
+        },
+        {
+          "seq": 20,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/020.json",
+          "commit": "7e7fa2584a44016935b0cf7d98c3ecc6e2a27f5f",
+          "packet_hash": "899f0726f5f4d472fc13d7352217893a8c5eab3635ac813f2cc11c0facf5f9cf",
+          "request_hash": "53373e41b53c6db8319e8573f2f108050eacb15fe8c8ff2761040786ee418a2d",
+          "state_hash": "fce8110a4f2fc10425ea028d5c03abb32a7807e23e766898ee6cb0872666e079",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 3,
+              "row": 8
+            }
+          }
+        },
+        {
+          "seq": 21,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/021.json",
+          "commit": "90b4498be55e37a8c83a2c274301afb0ab8b2bc9",
+          "packet_hash": "00b6e23c01074f1b4ed2e5391b041e106f9140bb8b591efac8d291c3a1e733f7",
+          "request_hash": "81d4e53e4112845145aa56e7e62aaeb3ca97ca38f1b3cc22b684aa92c2c9ca8c",
+          "state_hash": "1f936bd10aef5f96b638511052ec5373471dbb67c56bc533c2953dd873e37b36",
+          "decision": "rest_site",
+          "choice": {
+            "cmd": "action",
+            "action": "choose_option",
+            "args": {
+              "option_index": 1
+            }
+          }
+        },
+        {
+          "seq": 22,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/022.json",
+          "commit": "c5a66ccdf2494172f9f4fe889b4b3c2722717a73",
+          "packet_hash": "97a83f6be47ae67a6b76ae497de451de71c1c7f24c139ee312ed136965dbadb6",
+          "request_hash": "533fc4409750f95e85ff4ce40689c02cdf9f93cb5b8ad030844ac44de6c47a08",
+          "state_hash": "9cb16d3112a91c14f4fcc74890fa52181bd1519c87218050d1ddf12e13818a87",
+          "decision": "card_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "8"
+            }
+          }
+        },
+        {
+          "seq": 23,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/023.json",
+          "commit": "90d537f7e45b951344f612f2671bf65fb18c0602",
+          "packet_hash": "7aa3bc5e0dfa488195b8d6e13c454f574d9643b849479c7048dbfd1943da9431",
+          "request_hash": "062a06abe3e866cc23d5da213f7d190637c2c020b2e6356922252e35db31938d",
+          "state_hash": "2b07f7dd21fd311fa9840460a73d763d0481b6cbf0b32149e0d3c45a3588ac8c",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 3,
+              "row": 9
+            }
+          }
+        },
+        {
+          "seq": 24,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/024.json",
+          "commit": "a041719b862eab97dda6e096f6fd4e1bcf8d1e72",
+          "packet_hash": "5d05b2a3f2ad2cf821721ad49b68876588412a250ee32e2721c79fd5278c8cfd",
+          "request_hash": "91e719305084f4fdc6dd8881454c7d18845f0d60007ebb32ebd69c2a108b1981",
+          "state_hash": "5a9314518bca5724afe37dadd02b76c11ea27a527ade5e17114303be562e462b",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 2,
+              "row": 10
+            }
+          }
+        },
+        {
+          "seq": 25,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/025.json",
+          "commit": "6f670c4f34f089892342aad6389c1d6029193b05",
+          "packet_hash": "c0b0adcf5ca08771454265613808aea189b971df46bdaa2fdd9652196c11a6c4",
+          "request_hash": "a59f4b8036abd803060c7ed49a772921eeb3b3aebbcfcd3962c56cbcf65226e9",
+          "state_hash": "f456fd633e9ebfe7c03dfbe19ef2868429511abe1da951d93738dee69af63a15",
+          "decision": "rest_site",
+          "choice": {
+            "cmd": "action",
+            "action": "choose_option",
+            "args": {
+              "option_index": 1
+            }
+          }
+        },
+        {
+          "seq": 26,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/026.json",
+          "commit": "a4397fed57e857506843d4ad16bb107ba2a0ef62",
+          "packet_hash": "6b3fb57a2d74279503e6fc79f81165891a7309601426b80264d5334041e015ae",
+          "request_hash": "44849faea1c65cfca2094d5efbec2a3a8802af69de9be7b68092ed5ec8f1e9f0",
+          "state_hash": "b930b6e6f5009a63df3849120a772ecfaef148c52af8e5b9af94cec114febd92",
+          "decision": "card_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "8"
+            }
+          }
+        },
+        {
+          "seq": 27,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/027.json",
+          "commit": "41ca592fbecd3e41964f6c0d10ef373c832ba578",
+          "packet_hash": "fc9b7465be62681000578882e96c2d3039fbd67e172e77dec3cbe729db6cc8e9",
+          "request_hash": "b93a67c5f293df99b60952ba0148bf1a7dafac30e0e765afda4a8a19a3ef772d",
+          "state_hash": "ba25d9e60aaf8eea7f8bac7400d34e155fd2b2c1c89e34489b0842498ed58989",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 3,
+              "row": 11
+            }
+          }
+        },
+        {
+          "seq": 28,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/028.json",
+          "commit": "5921a655bea5318b4429ce0b547ff1236837e751",
+          "packet_hash": "6f6bc8d4101db037273a9f8ed2569e04ff27f2747cca46fc25b5b91acf1aa12d",
+          "request_hash": "d2544c3197480891584b7b631ef3b40ad013b9537f23455889082b487be3ff6f",
+          "state_hash": "f50e08937f286fb894bffce2a7bd9c0e681e79572d96c0f49f78663cbde2b4fb",
+          "decision": "potion_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "claim_potion_reward",
+            "args": {}
+          }
+        },
+        {
+          "seq": 29,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/029.json",
+          "commit": "72d99f5f3e746d46c7656cda379f34af2226b6e9",
+          "packet_hash": "f8cb824e2fea7c2e0f8aa2e019fb67287e629cae25ae669c9a34ae704acf2fd1",
+          "request_hash": "1d93b7586bca27e981157c2cba8fb716ab3c55d8fbfc1e3c17bf524153ee1ce5",
+          "state_hash": "1e63155592b6c1d27f7a8d097274b63026e764e6abba2c1c39fc4813c2f23401",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 0
+            }
+          }
+        },
+        {
+          "seq": 30,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/030.json",
+          "commit": "0bcc92405aa03a33bdcd1c801dfd9cf4695c065e",
+          "packet_hash": "a2801209d7bda6e6a2ed586c78961d4fc9ac1502a786f30bbf4ae86be5bb6044",
+          "request_hash": "7c13fa5fbaf044e37cff69871b47782b0d9f2a5039c51375e62b95efabc4626f",
+          "state_hash": "0a54431d2f6ccf2e8fd284e8f18cbe8886a6c418dab5a99f22d05ecd95d32757",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 2,
+              "row": 12
+            }
+          }
+        },
+        {
+          "seq": 31,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/031.json",
+          "commit": "3ccc6a7a8283c398d1f173182d80ba8cffe569f0",
+          "packet_hash": "f5c99a6d07babe8bb5012508a37627939da05bcb147d053beac0251844e03686",
+          "request_hash": "3aa8be61d0db093426d4a07ac5241f874ad649e18f37f24c1710c589cd2903a4",
+          "state_hash": "b4555afb4bce9d6d7fecf5585124bed5fc5879e32127bc5b8bb70f6ea1b7cc0b",
+          "decision": "rest_site",
+          "choice": {
+            "cmd": "action",
+            "action": "choose_option",
+            "args": {
+              "option_index": 1
+            }
+          }
+        },
+        {
+          "seq": 32,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/032.json",
+          "commit": "50ed601bf79dfed596043e6012b127f3d0ee5745",
+          "packet_hash": "08c76a67f0bf4505cba154fb55fd0407291a91f364a68d5e4ad0f6985dd70565",
+          "request_hash": "70905b64965ceb0b680214f25931eebac91a706a5c44ec24e5e6f896e97dccaf",
+          "state_hash": "ecde69787b6d5d8a6df10756bfc0ceb224007c14c87d0fcf2062407687df85c1",
+          "decision": "card_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "11"
+            }
+          }
+        },
+        {
+          "seq": 33,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/033.json",
+          "commit": "40f3ccab84a7a343139e913c147e6f927f803b88",
+          "packet_hash": "473acbb96b9ec1311b2362d0cfae3cbca21719876745972a88bff514ab356584",
+          "request_hash": "e114dde44eafc7def295dcb5947a18108805645688f4e5a8ea9947b7bca42f6a",
+          "state_hash": "fd768086be429aaabc11e34c9cacfe92966759281bda829c996f6994976353a6",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 3,
+              "row": 13
+            }
+          }
+        },
+        {
+          "seq": 34,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/034.json",
+          "commit": "2bade941fe87bfa3ba622c4c2d201ca93b48963f",
+          "packet_hash": "74a323f4dc2443e852973ee4d02e59201d7958718eb2513579462e7c6eef4f23",
+          "request_hash": "e77354185204ea4b149e27c1172fcd105505c3457a6f1ebae594bf62c2a45827",
+          "state_hash": "adcf1c24cdcec8013b55e09b7391b0e025e5e6cf7fd45c859c6cd61c9b199971",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 2
+            }
+          }
+        },
+        {
+          "seq": 35,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/035.json",
+          "commit": "9482370cc1d83e0ffda307f60567ce61d3f539c4",
+          "packet_hash": "cfb4673ccdbee5a600eb3e49d37c0d06d7b6de6a8921a9bc7782a808fa75b5b5",
+          "request_hash": "58e48ff757bf4e46de92575b745b76a979d2bf841bf3ca8efd7e4b3e64c3a6fa",
+          "state_hash": "4e15c7799d40955fc69e1149f81c5f131ee606b56d7ac9abddebc6fe0c2c4991",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 3,
+              "row": 14
+            }
+          }
+        },
+        {
+          "seq": 36,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/036.json",
+          "commit": "4a979b4262e1c5bb853c78de8fd7af70284307ca",
+          "packet_hash": "3486d5036e1fbbcf3df0f754f1ac8bb0f862d803e323d89758f7dd300a9361c1",
+          "request_hash": "69216aa6fa55a2dd9ce6c1c3c675f52a3585b420b8c2b3856fdb9f7c145ca9a4",
+          "state_hash": "f2ed0728843db1c145d54585be980ee09d57cf7a7c4756494d8e1e19c5e6babf",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 1
+            }
+          }
+        },
+        {
+          "seq": 37,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/037.json",
+          "commit": "d59c98ffa0ed9f46e8b33fe00f7e38fbf8be096f",
+          "packet_hash": "23afd4c5d2bf65e99ab9a391d1a7267e262994aea1180ad436e08ed4ba463b8b",
+          "request_hash": "1bdf5469727bc3504b6e90abaffd9c817740be3391d842dac6ff4f2c43414d6d",
+          "state_hash": "4c4300afda91a01ea8f6fcf0ba37fe4ba3f798e1b79f1e29c7b122e748cc2706",
+          "decision": "rest_site",
+          "choice": {
+            "cmd": "action",
+            "action": "choose_option",
+            "args": {
+              "option_index": 1
+            }
+          }
+        },
+        {
+          "seq": 38,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/038.json",
+          "commit": "c251d4ed86c32cb12b74f2a2558d2a4e92f6dcb4",
+          "packet_hash": "baf34ead9d9d86adbcb9a9cd6d0c64654ed72f22256146bca1e46c1aca1e5111",
+          "request_hash": "872c1cce61b6008f1722165cb2326e70a9708441f16ccfae6a824a92281b8186",
+          "state_hash": "be112d9ece926f49307ed8e29aa53285c28b7f3eb469bc1198aa998f374cfb49",
+          "decision": "card_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "12"
+            }
+          }
+        },
+        {
+          "seq": 39,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/039.json",
+          "commit": "bba480f947f378aae0d3e7dec51e5d8f6f8c9c5f",
+          "packet_hash": "8c2ee5229eba53fd718f70a6cac2b055d0d6b8575b7d1e4c164ebad8705127d5",
+          "request_hash": "4943af580e78489f28a001a8bfebb316988cc0de7c848344ca0d338a4549c559",
+          "state_hash": "d810863baf1768b866bd230952f471b47d1da936706e60703f3083ccd8ea4cae",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 2
+            }
+          }
+        },
+        {
+          "seq": 40,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/040.json",
+          "commit": "264d91b28888f8bc662f7c296c50e981ab07cff0",
+          "packet_hash": "a3834393472af765f03897cc0efd352885449d793aaae6a695ace00f1c388dbd",
+          "request_hash": "dcadf57bd69a379f28f158f9ab396568bed2560a3433b569b8a536673982a156",
+          "state_hash": "c0e30091f318ccb6df34580b7752d82d3b373d63df4bf65f141a7271d30d8ec7",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 3,
+              "row": 0
+            }
+          }
+        },
+        {
+          "seq": 41,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/041.json",
+          "commit": "c04efbf9a8baee2e33764de16b819b3af89455b4",
+          "packet_hash": "b1abd410c7b7a0f2b2f0ba2c5a94e7c4f06bd5dfb8eb735388e2ff2d61ca3a96",
+          "request_hash": "8c07e25d17a7ae11f39f2b2eadd1ed15bd70a801715917cfeffa88afc2858465",
+          "state_hash": "90f9b67013890ad7603e744e449e7479dfbf37ca0d9647a076e37a5bc3f35a81",
+          "decision": "event_choice",
+          "choice": {
+            "cmd": "action",
+            "action": "choose_option",
+            "args": {
+              "option_index": 0
+            }
+          }
+        },
+        {
+          "seq": 42,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/042.json",
+          "commit": "acb56b5a469a51fd64fb2a736a37d8bf4b29e52c",
+          "packet_hash": "10ec2b4f113b568f38282e6e449939e95b9e7640e1043e357d0fa439c335bbbc",
+          "request_hash": "ffe2cbc6b348fc6383d398cac4836a55182871e03bcf6ea60a9355b2831551f5",
+          "state_hash": "f2b7be5eb705596a2cc6fc33d46409b9a3312a1f0e659932fe718f87a7b8109c",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 1,
+              "row": 1
+            }
+          }
+        },
+        {
+          "seq": 43,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/043.json",
+          "commit": "85e252aaf7fb0d3c6384817c77842160f849b11b",
+          "packet_hash": "11aeb1909b437e513535491cb9abd209ec67174ef362579c8882996691f9ba1c",
+          "request_hash": "536e7a5fac00afd6992bec7564b2e5eaee7d9326f033dcf6f90bf4dd98a0786a",
+          "state_hash": "becef6a0b020d2d2252f350e3a348d8d7e65f150cad9a2ec8c947fa058f0e1a5",
+          "decision": "potion_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "claim_potion_reward",
+            "args": {}
+          }
+        },
+        {
+          "seq": 44,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/044.json",
+          "commit": "4784393c16bf4678e3a0c057ae3db035ab1fc7de",
+          "packet_hash": "5b05551213379e352ea61563d68bca8c67626b7f269d41039e3839e91d1389e9",
+          "request_hash": "f9c5d9f6ef39668da4121bc928c55983e6af85b3a86ded944eb9a99d40d1bb26",
+          "state_hash": "5f901ab2ed1f05adb8a7ccb1733ea4fe26013e5ff15683719bdb6c6bfe2f0ed6",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 1
+            }
+          }
+        },
+        {
+          "seq": 45,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/045.json",
+          "commit": "457eb49f3b497904ee25159df87401fb0f4a26a0",
+          "packet_hash": "a59d4aab17b1f3a4e3e59d17bbf458703c45d98abeaea4649ba5aae672972fdd",
+          "request_hash": "327810cc2d08ad521c3cc3bebeb04fc9e2efc4defa9d3d35a072f74fdad71b87",
+          "state_hash": "cf2eaa6ae63c23930fdb2d7b5686a3c51de3b0b2938e15f34af49cf35be6f1fc",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 1,
+              "row": 2
+            }
+          }
+        },
+        {
+          "seq": 46,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/046.json",
+          "commit": "10eea5743246a0d7f9af5a9bb10f3b13b77ba81c",
+          "packet_hash": "6e9405d17f719648b2665e95e5e7df20c4104e51746ccc51e0de6be4f0842196",
+          "request_hash": "a6c671357887b80812b47af025eb0c405f0f1935f90c813ea4d2aa6f54f780be",
+          "state_hash": "a457fb62192146dd95951054abb25753b9df69bd5074860dc5486491e810f418",
+          "decision": "potion_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "claim_potion_reward",
+            "args": {}
+          }
+        },
+        {
+          "seq": 47,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/047.json",
+          "commit": "f2d785ea8d4dc4bfb09ad4eaa46a63fbac039321",
+          "packet_hash": "c3a109799b4c59a8b44cc340c4ff0bbc2d9efd7c535dd3da34b9cce916c44d11",
+          "request_hash": "97e7d3200def071df4dab8c25097c743f97636aa7b27e97c37dd1cc963967333",
+          "state_hash": "e23fb3562212f6d54bb82651f49de1f3104b73d8952c2ec5988e0fb78bf94426",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "skip_card_reward",
+            "args": {}
+          }
+        },
+        {
+          "seq": 48,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/048.json",
+          "commit": "8056da355669d77f9d3ea1ebb0bd04baa1bb4e9c",
+          "packet_hash": "f27509289ecd4398d3668a426486f595ff275f9afa6cf3fcd91637107cdb0b7e",
+          "request_hash": "a9bd6a4f39b6ce95b04263db4f686717e394e9f0440cba40cb9a7782c70c0a53",
+          "state_hash": "2f809ea145bd32e449a44f4675c98c2e5ec4c24ac18577b13f708503426dc61b",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 0,
+              "row": 3
+            }
+          }
+        },
+        {
+          "seq": 49,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/049.json",
+          "commit": "a80dfcd9dde58b806e571771119df847598df9c3",
+          "packet_hash": "4dadaeeae60058183d3e2b2eb60db5a258c684696adabf5b40501c7bf3af1be3",
+          "request_hash": "96e28826418f24cfe4f403d659007b1a70bb35d9d7cf29945d989653ca3b1da5",
+          "state_hash": "0b3b0b45b0ab047d49f91ccf0b210c9af8dc1ed95dfb18e6d9b299fe7543fc7c",
+          "decision": "shop",
+          "choice": {
+            "cmd": "action",
+            "action": "buy_relic",
+            "args": {
+              "relic_index": 1
+            }
+          }
+        },
+        {
+          "seq": 50,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/050.json",
+          "commit": "edbfe149aa51a26a01cf2499d0b74a918a38a725",
+          "packet_hash": "15d15c306feb49e81f755d031b51941057af751e313688f88db694cf83654aff",
+          "request_hash": "4a6072cb542b03021efb2fbbbf5d6b8594953f7e7d827fc9e877f77e998ad0f1",
+          "state_hash": "c642a683bc7a4392b4ebe7a3cc77b938bfeed4e5692d4d5fe70cba790c5bb4f1",
+          "decision": "shop",
+          "choice": {
+            "cmd": "action",
+            "action": "buy_card",
+            "args": {
+              "card_index": 5
+            }
+          }
+        },
+        {
+          "seq": 51,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/051.json",
+          "commit": "96b44ce85ec85b2d6df46659bbde416b535e53cf",
+          "packet_hash": "6acff4188d3099859d762631bf06c909a21ea4e1b3a1e97ee9f1550510bdd91b",
+          "request_hash": "7e28b68bb1eca98ffa6a4bbe3c69acdc048f56a33c0341e7b79ccc2bdb72a408",
+          "state_hash": "b48a01a26ef4b30c443f05170c8c78ff1795ffb9feff48df4c2706882adbf938",
+          "decision": "shop",
+          "choice": {
+            "cmd": "action",
+            "action": "buy_potion",
+            "args": {
+              "potion_index": 1
+            }
+          }
+        },
+        {
+          "seq": 52,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/052.json",
+          "commit": "c703112a8568e32cd3c790b80e49de4305166a48",
+          "packet_hash": "4c7fa2315bce99387ece180ba0206b09a8613e59abafdb77b44ec41d3de7dfd2",
+          "request_hash": "aeac8c69fd56c58ab30f3002f34de9cffe5cb118f375ed12342e4132b0eeec6a",
+          "state_hash": "4f0e91915f0314da50fb30a7cd7ccf6c53b3515ce1741427ece846a7811e6a61",
+          "decision": "shop",
+          "choice": {
+            "cmd": "action",
+            "action": "buy_potion",
+            "args": {
+              "potion_index": 2
+            }
+          }
+        },
+        {
+          "seq": 53,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/053.json",
+          "commit": "676eeb6ffd0470f608a960ae72be7ad89d2955aa",
+          "packet_hash": "c0d49dbea01611cbfe0630b63694c3ca9316747050618a800d53af0130cada99",
+          "request_hash": "25ff8299896455e72e843f7aeafab99e4d7e3f0f23e8707a9cf758a0435ee91b",
+          "state_hash": "df37a937f9daa4b7a7341aa4955105119768db431bb865c8f66101e48f14c5b6",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 0,
+              "row": 4
+            }
+          }
+        },
+        {
+          "seq": 54,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/054.json",
+          "commit": "d3b55bc70f435b7383842d66e00c905b4d3705d1",
+          "packet_hash": "223f7a6bf9cde489b18279288b3c4e96d544b885509022e0b4f9ae5edafc7304",
+          "request_hash": "14daa34c4bee59ba177ce34f7ef5a4a5e2747325f4ce07ec620b7ea82edfc4b0",
+          "state_hash": "e6736add8952a423a79ed393072aac424a9c46b664e06b6f7bb8009a24061e8c",
+          "decision": "potion_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "claim_potion_reward",
+            "args": {}
+          }
+        },
+        {
+          "seq": 55,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/055.json",
+          "commit": "887224a1dccc7616cfc28fbef01d099729b05ea0",
+          "packet_hash": "fc9ad876a6b0c81837f623e3be5da67ecda521e674c32a20915ac059c07fb842",
+          "request_hash": "3711341badb4eddadf441e9ab0f5a1de05b48057d2ebe94aa30e8b5643516481",
+          "state_hash": "406a591d9ccc479810ee907bcd75ea49c6e8a66e8f76656d761e01043ffb2895",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "skip_card_reward",
+            "args": {}
+          }
+        },
+        {
+          "seq": 56,
+          "path": "experiments/E160/teacher/A0-001/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/056.json",
+          "commit": "ba1771257cc72a83a085b8cd9e545fedae0264af",
+          "packet_hash": "c67748f6c312bedccb31caa009b82818feec111af37249f9ddbea47e33cfa207",
+          "request_hash": "4a4df5fd8f4aac87018d7b41c8cde7973c245b31599bb266224fe657acdcdb15",
+          "state_hash": "5acea482c77b32bdd989fd984bc81fc4c7fec971d0841974c958a36151d839e8",
+          "decision": "event_choice",
+          "choice": {
+            "cmd": "action",
+            "action": "choose_option",
+            "args": {
+              "option_index": 0
+            }
+          }
+        }
+      ],
+      "expert_tokens": null,
+      "expert_cost_usd": null,
+      "final_campaign_plan": "Choose random Power for a chance at persistent scaling that the current strike/energy deck lacks. Zero-cost random cards are less likely to improve prolonged boss fights; assess the actual result afterward.",
+      "seconds": 1785.6224477079231,
+      "wire.jsonl_sha256": "e77ed0a7cea1357749745deff0c8217d2526364babbfa21a103e542f6a23ea70",
+      "engine.stderr.log_sha256": "3968a0b8cac3cb25859ce2b57f510df36b2fcc5990eaa051103aef01b0faf010",
+      "trace_path": "artifacts/runs/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/decisions.jsonl",
+      "trace_sha256": "e8e1cf51cb04d549d56de7763209f6c6d90657494dd5e780ee45d596cc0508ef",
+      "compute_seconds": 10.487893083132803
+    },
+    {
+      "case": "A5-000",
+      "seed": "e160_campaign_Ironclad_A5_000",
+      "character": "Ironclad",
+      "ascension": 5,
+      "arm": "program_campaign",
+      "run_id": "2b923f57-e049-4512-b24a-6175c74f9666",
+      "status": "defeat",
+      "steps": 163,
+      "entries": [
+        {
+          "act": 1,
+          "floor": 2,
+          "room_type": "Monster",
+          "hp": 64,
+          "max_hp": 80,
+          "enemies": [
+            "Leaf Slime (S)",
+            "Leaf Slime (M)",
+            "Twig Slime (S)"
+          ],
+          "deck_hash": "eebf4be3a4032ffa48a79b6e9feb39d04c1d1dd70492f880fcfc272762fa1e96",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 3,
+          "room_type": "Monster",
+          "hp": 62,
+          "max_hp": 80,
+          "enemies": [
+            "Fuzzy Wurm Crawler"
+          ],
+          "deck_hash": "eb0e4c37c9348efbc60934e28504c32e8b9f0f37770dd2345f1163c4a07261f3",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 4,
+          "room_type": "Monster",
+          "hp": 64,
+          "max_hp": 80,
+          "enemies": [
+            "Nibbit"
+          ],
+          "deck_hash": "28f49e1798b17400d515c5b70619330ad579c88658643220a6e80d297c870d0f",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 6,
+          "room_type": "Monster",
+          "hp": 58,
+          "max_hp": 80,
+          "enemies": [
+            "Brute Raider",
+            "Assassin Raider",
+            "Axe Raider"
+          ],
+          "deck_hash": "da6b077c13077feb0df11d98d8ee63bcf1c2af09ee9e11155c3e8425ea66bf5a",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 7,
+          "room_type": "Monster",
+          "hp": 21,
+          "max_hp": 80,
+          "enemies": [
+            "Nibbit",
+            "Nibbit"
+          ],
+          "deck_hash": "4f2081a9bc4ea92af48be8ce80da930c32626c148f6e8a9c50ccaf0c517cbb4c",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 13,
+          "room_type": "Monster",
+          "hp": 41,
+          "max_hp": 80,
+          "enemies": [
+            "Snapping Jaxfruit",
+            "Flyconid"
+          ],
+          "deck_hash": "f1cc369c4ab11bdf2f2d62316acfcb76dce425dc145b1479d17609fcf84a85f7",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 14,
+          "room_type": "Monster",
+          "hp": 23,
+          "max_hp": 80,
+          "enemies": [
+            "Shrinker Beetle",
+            "Fuzzy Wurm Crawler"
+          ],
+          "deck_hash": "c7ad2d18b5a8d0f276064f4ddb5447d024254c0ccb352e33d1167c17635f659c",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 15,
+          "room_type": "Elite",
+          "hp": 15,
+          "max_hp": 80,
+          "enemies": [
+            "Phrog Parasite"
+          ],
+          "deck_hash": "23aedec7e0a9a15f32f18c7f8dcb50b3e9ec887ac50ddb4c7f8019832c2561a6",
+          "potions": 1
+        }
+      ],
+      "completed_battles": 7,
+      "completed_acts": 0,
+      "max_act": 1,
+      "scenes": {
+        "event_choice": 5,
+        "map_select": 14,
+        "combat_play": 121,
+        "potion_reward": 4,
+        "card_reward": 7,
+        "card_select": 11,
+        "rest_site": 1
+      },
+      "owners": {
+        "program_campaign": 27,
+        "program_combat": 99,
+        "only_legal": 37
+      },
+      "potion_blocks": 0,
+      "illegal_actions": 0,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 15,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "ee64bcf521a4fc231f0966f9f720533aeb0ee43882d9c8692e2d89a4f0e74d7a",
+      "transition_hash": "dc16730816c23f869fc6c00ed58b24a8c37127bbd9655b86dc65f7ed593c6560",
+      "readonly_map_queries": 14,
+      "expert_packets": 0,
+      "expert_wait_seconds": 0,
+      "expert_input_chars": 0,
+      "expert_output_chars": 0,
+      "teacher_packets": [],
+      "expert_tokens": null,
+      "expert_cost_usd": null,
+      "final_campaign_plan": null,
+      "seconds": 6.5594334590714425,
+      "wire.jsonl_sha256": "e2e107bd525a0bdb11ef7ce58531c15a227a2004784bc7c8277e7127bd750e29",
+      "engine.stderr.log_sha256": "36b41c4b426a9bed3a72878fa2a747d063e88d2e4592e8348994328af7ac3c6f",
+      "trace_path": "artifacts/runs/2b923f57-e049-4512-b24a-6175c74f9666/decisions.jsonl",
+      "trace_sha256": "5c3af9dccb328f972fb16f14848f0f54819c21873d08726beef39a29c1289719",
+      "compute_seconds": 6.5594334590714425,
+      "verification": {
+        "case": "A5-000",
+        "status": "match",
+        "steps": 178,
+        "outcome": "defeat",
+        "final_hash": "ee64bcf521a4fc231f0966f9f720533aeb0ee43882d9c8692e2d89a4f0e74d7a",
+        "seconds": 5.455636915983632,
+        "wire.jsonl_sha256": "76a078b6bed85ad14eaa288d4b77241c353dfb4de175e2d42fce5497d015eab2",
+        "engine.stderr.log_sha256": "36b41c4b426a9bed3a72878fa2a747d063e88d2e4592e8348994328af7ac3c6f",
+        "trace_path": "artifacts/runs/1785a1d8-3ef5-4ea3-8187-2b7bc7fdfe8f/decisions.jsonl",
+        "trace_sha256": "a7e27bdc93b41af9869abfac6d3526b1695f19e293f060a050a7d2a7236e9178"
+      }
+    },
+    {
+      "case": "A5-000",
+      "seed": "e160_campaign_Ironclad_A5_000",
+      "character": "Ironclad",
+      "ascension": 5,
+      "arm": "astra_campaign",
+      "run_id": "ae8d6342-5a5e-49ce-91fa-adce26ed5cbf",
+      "status": "timeout",
+      "steps": 323,
+      "entries": [
+        {
+          "act": 1,
+          "floor": 2,
+          "room_type": "Monster",
+          "hp": 64,
+          "max_hp": 80,
+          "enemies": [
+            "Leaf Slime (S)",
+            "Leaf Slime (M)",
+            "Twig Slime (S)"
+          ],
+          "deck_hash": "d5c855f725ec343236a7eda737dc41b695d55c74808ffd7bd2c00e55c957399f",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 3,
+          "room_type": "Monster",
+          "hp": 62,
+          "max_hp": 80,
+          "enemies": [
+            "Fuzzy Wurm Crawler"
+          ],
+          "deck_hash": "44a189ab29cd4e4f1fb2c6732fce67362aa324f34b3141932795e77540bf0ea1",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 6,
+          "room_type": "Monster",
+          "hp": 77,
+          "max_hp": 80,
+          "enemies": [
+            "Nibbit"
+          ],
+          "deck_hash": "703fa6fe6932ca48e156e47a88f324f734bdb03d89510fca32eb4b56cb8ad3b6",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 7,
+          "room_type": "Monster",
+          "hp": 75,
+          "max_hp": 80,
+          "enemies": [
+            "Brute Raider",
+            "Tracker Raider",
+            "Crossbow Raider"
+          ],
+          "deck_hash": "b9b31930eaf92f5a1df5cbabde48a96b41715378922d64b77ec8b99c2498e00f",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 9,
+          "room_type": "Monster",
+          "hp": 63,
+          "max_hp": 80,
+          "enemies": [
+            "Nibbit",
+            "Nibbit"
+          ],
+          "deck_hash": "9a4c0f1ea59ecc5d481de9deb56f0db875b3011c43873e9f3761bdb8c4277fad",
+          "potions": 2
+        },
+        {
+          "act": 1,
+          "floor": 12,
+          "room_type": "Monster",
+          "hp": 65,
+          "max_hp": 80,
+          "enemies": [
+            "Snapping Jaxfruit",
+            "Flyconid"
+          ],
+          "deck_hash": "de33e8d8d23fbeea309c61edffda100ee179ebe021d9519e3ca03a3f0a595964",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 13,
+          "room_type": "Elite",
+          "hp": 64,
+          "max_hp": 80,
+          "enemies": [
+            "Phrog Parasite"
+          ],
+          "deck_hash": "188ab78ee26708587e082e66b94335ee4505791bf9ab772da78c9d7abdbaf705",
+          "potions": 2
+        },
+        {
+          "act": 1,
+          "floor": 15,
+          "room_type": "Monster",
+          "hp": 64,
+          "max_hp": 80,
+          "enemies": [
+            "Shrinker Beetle",
+            "Fuzzy Wurm Crawler"
+          ],
+          "deck_hash": "2f08d88d0c235c956f707c9488122b09214f70b2a5fc1d6dc796c3e3c31b27fa",
+          "potions": 2
+        },
+        {
+          "act": 1,
+          "floor": 17,
+          "room_type": "Boss",
+          "hp": 70,
+          "max_hp": 80,
+          "enemies": [
+            "Ceremonial Beast"
+          ],
+          "deck_hash": "8935c723cb5f563dc1bce3f83f9e035e92a0739ba67f513de65bf108e9688af6",
+          "potions": 2
+        },
+        {
+          "act": 2,
+          "floor": 2,
+          "room_type": "Monster",
+          "hp": 79,
+          "max_hp": 80,
+          "enemies": [
+            "Thieving Hopper"
+          ],
+          "deck_hash": "3d617d0efe641f5602ea4110a8aae28a7b67126bb69b422c44c8e0181d32b7f1",
+          "potions": 1
+        },
+        {
+          "act": 2,
+          "floor": 3,
+          "room_type": "Monster",
+          "hp": 80,
+          "max_hp": 80,
+          "enemies": [
+            "Bowlbug (Rock)",
+            "Bowlbug (Nectar)"
+          ],
+          "deck_hash": "acf2af8a35f7017769d8205e041db4e39c88f1f768464c022cdad6db708896e5",
+          "potions": 2
+        },
+        {
+          "act": 2,
+          "floor": 6,
+          "room_type": "Monster",
+          "hp": 77,
+          "max_hp": 90,
+          "enemies": [
+            "Hunter Killer"
+          ],
+          "deck_hash": "f5e748d475ee18d06b568a4f17505fa6308d9d7a6160df5bc5457b95e726e14b",
+          "potions": 2
+        },
+        {
+          "act": 2,
+          "floor": 11,
+          "room_type": "Monster",
+          "hp": 83,
+          "max_hp": 90,
+          "enemies": [
+            "The Obscura"
+          ],
+          "deck_hash": "4ca3293c76d903f3938e6accf3c5f801b3b153bc59d1cfcfc00d01577f1d3850",
+          "potions": 1
+        }
+      ],
+      "completed_battles": 13,
+      "completed_acts": 1,
+      "max_act": 2,
+      "scenes": {
+        "event_choice": 6,
+        "map_select": 27,
+        "combat_play": 248,
+        "potion_reward": 7,
+        "card_reward": 13,
+        "card_select": 9,
+        "rest_site": 5,
+        "shop": 8
+      },
+      "owners": {
+        "astra_campaign": 57,
+        "program_combat": 236,
+        "only_legal": 30
+      },
+      "potion_blocks": 177,
+      "illegal_actions": 0,
+      "error": "Global expert packet cap",
+      "final_context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 11,
+        "room_type": "Map",
+        "boss": {
+          "id": "THE_INSATIABLE_BOSS",
+          "name": "The Insatiable"
+        }
+      },
+      "final_hp": 16,
+      "final_hash": "2009fd69f92a38c4577a91ca0092cde3e5f43bce0b472b630abf25f3b3cbff9f",
+      "transition_hash": "08ffeef965fb15239521f817b06b2189bd01e82e1e35a5f1768a3cc0c86e8f0d",
+      "readonly_map_queries": 28,
+      "expert_packets": 57,
+      "expert_wait_seconds": 1785.91296262783,
+      "expert_input_chars": 672627,
+      "expert_output_chars": 29758,
+      "teacher_packets": [
+        {
+          "seq": 1,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/001.json",
+          "commit": "c2650fd63b7be7f4ecc81b83b6157669cc59b1c5",
+          "packet_hash": "c99bcaf55d518f8ab9f831a613b720b7c0bb68e6b9ba80ebc463c105d871c0f5",
+          "request_hash": "d9cc8359477c4e203fcab316b491b3ec6a78bff71f9299cb82a78e289c97ac3d",
+          "state_hash": "84a69b931bbd5f01e2183aabc95fc84e8bbac28a20433717937305bc5de8e131",
+          "decision": "event_choice",
+          "choice": {
+            "cmd": "action",
+            "action": "choose_option",
+            "args": {
+              "option_index": 1
+            }
+          }
+        },
+        {
+          "seq": 2,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/002.json",
+          "commit": "55c80b8a249f07e8c5de09e7bc7892ae45d8e8b0",
+          "packet_hash": "fa382133b9df4588cf950b6f2ddd9b7db4cb5dc637f4ef87c898763b1fcfba2a",
+          "request_hash": "7bdfe1338185d396d1bb024a1a2a7e01545b6a265c56a805cf2e617a5525f7bf",
+          "state_hash": "827036555aa190104860c3591335fbffcd2f62e32479e23c2433d856613c35d8",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 5,
+              "row": 1
+            }
+          }
+        },
+        {
+          "seq": 3,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/003.json",
+          "commit": "6210c9065b65a2ca82e9bb006af5bba6fc08ad77",
+          "packet_hash": "e43990b2d4557667d479d06f5bc7b41397037b3a5bd5500711426100974237c4",
+          "request_hash": "76ab8695e2b1b397b77ceca65bf7d4ad362ce7ed752aac75ea8b86d2f70f729e",
+          "state_hash": "644b851269ca3677520bf272671cd8f0ce21aabda3fa8be89c2b5ab6e44a72a0",
+          "decision": "potion_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "claim_potion_reward",
+            "args": {}
+          }
+        },
+        {
+          "seq": 4,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/004.json",
+          "commit": "a013de2f1745f65b8a743112dc40ea45858aa9ca",
+          "packet_hash": "53243be6836b1ef2fa88f7b70d1b70d2bc4148a66951384d6820b6a292d595f4",
+          "request_hash": "7c19d48a3aa3969afd8e79587b9a9eae7d921ed875a30153851704ca41a7cb9c",
+          "state_hash": "d643a9bf311ec5fa356e265e7e9fe1365df9f7937807d8822f14c60b27544b80",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 0
+            }
+          }
+        },
+        {
+          "seq": 5,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/005.json",
+          "commit": "d752ca93e2e8aab6913962c7f882045d88a31985",
+          "packet_hash": "a862df4ea56d809e964afc31ae159d118e3e3f7557de9963b92dd45a542a932e",
+          "request_hash": "21907788e02ab9c241e8f7ae5ed908cfaba785701ea5cffb39662431d3b1fbd6",
+          "state_hash": "a06660c92bbc731cf9a36014994e48031ed5eb37528fc200138dd2831db6e7df",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 1
+            }
+          }
+        },
+        {
+          "seq": 6,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/006.json",
+          "commit": "58987319235962b746095c280cec44c3380d7643",
+          "packet_hash": "9e127c0cf0dddebc827c588776ca8e68ccfd1cb97f1f26b08ecd1e121f6241cb",
+          "request_hash": "ad27b21bdc3b205cdee96d8e6bd58c8e820f9991de625d9661fd9803f5b90b0e",
+          "state_hash": "4d0eeb6d90cafba598d0c5727287cadf0d6043779b21786a06852a4f3961b4e3",
+          "decision": "event_choice",
+          "choice": {
+            "cmd": "action",
+            "action": "choose_option",
+            "args": {
+              "option_index": 0
+            }
+          }
+        },
+        {
+          "seq": 7,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/007.json",
+          "commit": "5464065b8631373e4c2b33da270b3875936075d1",
+          "packet_hash": "356d2ba56b002598dc75e0d8b3d3e77e74b84c22acd3b63a6cc950e39ea031cf",
+          "request_hash": "79132f8443df0581c13773c161a4343c809b3d070b7902215e44577c86dee37d",
+          "state_hash": "13963667c498f2aae653932ed62442394863fe9ea41dd81760037538391b9509",
+          "decision": "event_choice",
+          "choice": {
+            "cmd": "action",
+            "action": "choose_option",
+            "args": {
+              "option_index": 0
+            }
+          }
+        },
+        {
+          "seq": 8,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/008.json",
+          "commit": "9bf6ada9628e60e02cf7bc0f017b7eea6791cbe7",
+          "packet_hash": "77244fd61d0d9aea3f3d98f3436ef61ba4643212cd54142bf1ea3ff279ceb358",
+          "request_hash": "8b6ff550086d85b077a91c49de6d8973420af1ce740d72bdea63013ada25137b",
+          "state_hash": "d9ba1fed91d298d422925764a268bd230efae030b5f54e5919935afa181c9d41",
+          "decision": "card_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "10"
+            }
+          }
+        },
+        {
+          "seq": 9,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/009.json",
+          "commit": "732e212de25ca396ffcdb26f34cada6ce19ade7d",
+          "packet_hash": "c5fffe49deff6c94d98915563d55cfa1f9f556f6a646c1dd09c280a7658b36a1",
+          "request_hash": "9ab2ec83901d08b7fbbf97958134dbe0f34e1d0dfb20d3403dca1b3dd7422517",
+          "state_hash": "8c86a5194e48d16d4aa43c683a8cd4adc394a8fb09908e68f02871ea027c7d48",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 1
+            }
+          }
+        },
+        {
+          "seq": 10,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/010.json",
+          "commit": "79fde08d2439d9b261946e67758a372cafe380b7",
+          "packet_hash": "dab799fb9478a3cd9e521a2437b3dced0f99f9b028e51ad50eadfba78136ecaf",
+          "request_hash": "37d3ab824af821850c6b450d9615340afeaa3ca49adafa7caebbd0ba045be127",
+          "state_hash": "c796c7dabcc37e45c2ead6e7be6e31fc60179f8e97efd62b480d6c546d51d31f",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 6,
+              "row": 6
+            }
+          }
+        },
+        {
+          "seq": 11,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/011.json",
+          "commit": "be8bdfac585bdcd79b43b5672df4001c51864d9b",
+          "packet_hash": "fdb3854bd81d7a899c35b51a0feaa3e18621a24a2ecc2819080a0d656a927f8f",
+          "request_hash": "30d1607b5338ce004274bd553a4acb67cfa12111674acec262f240e72e23a68c",
+          "state_hash": "d81a1454f9a6e79f2b0b26bfe16f38630214c480818f9c4638c3b536e3a4c01c",
+          "decision": "potion_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "claim_potion_reward",
+            "args": {}
+          }
+        },
+        {
+          "seq": 12,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/012.json",
+          "commit": "1ef0ba56f7e83b685de46c43485686abcba08a5f",
+          "packet_hash": "9a1e9328be6feafabde1186c573080b661e1f52e2710ad938b4ffab67ac884a5",
+          "request_hash": "18ff2bfa4f51c9dd3e488c13d5061fe17738ec1230981b53635f890a1694e5bf",
+          "state_hash": "418fa27352269cd548791f098ad3b5ae22ce7c597b49c295cf897867c974286c",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 2
+            }
+          }
+        },
+        {
+          "seq": 13,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/013.json",
+          "commit": "171a58ae931db422229ee9f550fa2eb9c4b7341d",
+          "packet_hash": "763b025c6f7a888b647ee135f7243428b9032d7f321ad1410da44bd065ff4bc9",
+          "request_hash": "609d00c50a997547ea556e287ed346fde61e7443870c1d58e061779197a3a5a5",
+          "state_hash": "2e8d0de466a42261263fa6b964606c60a0153f6e81ed819aae9b81f4bf87ec4d",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 5,
+              "row": 7
+            }
+          }
+        },
+        {
+          "seq": 14,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/014.json",
+          "commit": "fd334c119abee92fdeb77fba684bd3b57c9bd668",
+          "packet_hash": "83eebae02116a0c717f74c2302f72a0fc8d91082753111800b9600e9c3564504",
+          "request_hash": "b44e1ff89fe4ce177c0a048a73305b8f37cc035bf6196bd81fb684fa7d5fbaf0",
+          "state_hash": "e75b0f452d9a74d14174f306240819f18076fd20ffca0b6419bd80d762740a17",
+          "decision": "rest_site",
+          "choice": {
+            "cmd": "action",
+            "action": "choose_option",
+            "args": {
+              "option_index": 1
+            }
+          }
+        },
+        {
+          "seq": 15,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/015.json",
+          "commit": "4f09d6a2cf13fcb05f9e59e5684b814cb7cf223e",
+          "packet_hash": "ffafcb34926d7fdacaf04c821fb5c8f240455b32933daff978a00c0d0435852a",
+          "request_hash": "7f11a33794bfccd3ff044900d59590a46d99334928eed49102842fb618cf91e6",
+          "state_hash": "03d4b3c775d2859ff26f315dc90f9e12d87492ba3ab452a89d861574950ddfcf",
+          "decision": "card_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "9"
+            }
+          }
+        },
+        {
+          "seq": 16,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/016.json",
+          "commit": "3ec80a10e4569dc6647f2f07a7ce841f958bb285",
+          "packet_hash": "aa423ef7ac14f271ed319c6779d97e884f1ec0afbd973737df21c5174938023b",
+          "request_hash": "73a8cdf47887ef27ef14d1c9e3272d54d33f883fafd4e7789495581f1cffae1e",
+          "state_hash": "03f02f3140be57469255f82780dc046a8ff84b67c7679ff6f8fad2ad23bdbf08",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 2
+            }
+          }
+        },
+        {
+          "seq": 17,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/017.json",
+          "commit": "475cffbe57aea169ab527eacad54bf892f13bb28",
+          "packet_hash": "586a2f39e37db96e05135e93f6f735d0514e63e9b8cc163603845e94d620d287",
+          "request_hash": "843c72b6f95822fc9fb132cc8de72ff6476a89f1a1f6388dacffb768a620ecd4",
+          "state_hash": "74c652fa4b84de4ee81df1301b07dd16c3ff7c48daab02e3064ff46d1dd83cff",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 5,
+              "row": 9
+            }
+          }
+        },
+        {
+          "seq": 18,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/018.json",
+          "commit": "9e38ceacd57e5e4c28107e50a199f1d7a823dd5b",
+          "packet_hash": "b696767ec0d87896eab87ff6a83d9bf1656b0b6090bf84e6c4ef41af6b69eecd",
+          "request_hash": "ab6c8c92565b6d39b2a7941a8af1b9df3374a3576a98b2e7d0c8f4800618497a",
+          "state_hash": "c5ca4162a8a3fc90956132009df5a57116536f2a1e87fcd995786755b3465cb6",
+          "decision": "rest_site",
+          "choice": {
+            "cmd": "action",
+            "action": "choose_option",
+            "args": {
+              "option_index": 1
+            }
+          }
+        },
+        {
+          "seq": 19,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/019.json",
+          "commit": "d885250dce76f8d6b82731097b2749d4f67f4bc5",
+          "packet_hash": "3a1e1150492a1d17feffa404eb462dc430404f21bec0d7d7cca87ebb46d7ed53",
+          "request_hash": "0201c19c5989f834fe1990d0487a1f5cf7d3ff3557df89dac8b641af5d191943",
+          "state_hash": "996c2d234f3c7b3eeb5870a1781e5886f952f9e41b43fb3ced2a9c8b48c8670b",
+          "decision": "card_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "12"
+            }
+          }
+        },
+        {
+          "seq": 20,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/020.json",
+          "commit": "7e7fa2584a44016935b0cf7d98c3ecc6e2a27f5f",
+          "packet_hash": "3150853eb624e8e77c772787be556d62d758326c96bf0cf2db9805393f73f1a9",
+          "request_hash": "8fd46aa4664cb0a0361d29447a78f476c1e7756312e94310825c0b449ce2f8a1",
+          "state_hash": "127bf4a011af0a7308ba399c65784af08d7af7e6651dc43258c0b38f64e4ce1e",
+          "decision": "potion_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "claim_potion_reward",
+            "args": {}
+          }
+        },
+        {
+          "seq": 21,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/021.json",
+          "commit": "90b4498be55e37a8c83a2c274301afb0ab8b2bc9",
+          "packet_hash": "a1a7c81c68b01b91aa752f1654b06b7dfbe5428aa430394d6cf8341267071d26",
+          "request_hash": "ca08cb7696dcff383778ce2734bfd3aa320e121cd6832c2953b9819e5e6052b4",
+          "state_hash": "e7dd2773c7bef989b8c2dcecb8a2225cbf53f71e32b015021c20201572a796cb",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 0
+            }
+          }
+        },
+        {
+          "seq": 22,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/022.json",
+          "commit": "c5a66ccdf2494172f9f4fe889b4b3c2722717a73",
+          "packet_hash": "7ec4af067254e5b08d0447dc2fb0d5c67c5c9ebdb76568fcca547db38ec5807c",
+          "request_hash": "42add221d29e419b8ba93c891c9cbe9f33754d2cba0f443eaf2197a4187bb2f2",
+          "state_hash": "be7114d77ca4816f07463561549764d7eb01bce26f68667903ceea045b4401d6",
+          "decision": "potion_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "claim_potion_reward",
+            "args": {}
+          }
+        },
+        {
+          "seq": 23,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/023.json",
+          "commit": "90d537f7e45b951344f612f2671bf65fb18c0602",
+          "packet_hash": "860ac3d969df66c05183184a33ddc691a35905d36713a15cdedb05dc40006925",
+          "request_hash": "0f7da9e8ecaceb9bf1a800818d0a477ab5c205a20be42972207256e302da6bdf",
+          "state_hash": "48e151fcc0618140499f5e9ceccef552f003d21492c12c894aa00c399a25b39a",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 2
+            }
+          }
+        },
+        {
+          "seq": 24,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/024.json",
+          "commit": "a041719b862eab97dda6e096f6fd4e1bcf8d1e72",
+          "packet_hash": "0d7d6bacb924582a09fc6615773d8029d22195909ba512206e9860aaea404c60",
+          "request_hash": "f9462c64fe1480ebb4a0f6969f2bac760062f1a07107df62aa250aca4fbe0869",
+          "state_hash": "3ec1dcb589e50c17090798b11f2fba28f636075b54cb4ae299c1dd2a153f485f",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 5,
+              "row": 13
+            }
+          }
+        },
+        {
+          "seq": 25,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/025.json",
+          "commit": "6f670c4f34f089892342aad6389c1d6029193b05",
+          "packet_hash": "5ad43d6dfdf0d9485d711d51ab1f6415a458049067514eb339f13aead8c36e71",
+          "request_hash": "44454e15f89427343e43f96c60004c60237684b267b6cc70328e5097252f7239",
+          "state_hash": "e685d8213ed7280027eb45706ec8495f7478eb7f3dbb3fb3fcb79fa4688bbad0",
+          "decision": "shop",
+          "choice": {
+            "cmd": "action",
+            "action": "buy_card",
+            "args": {
+              "card_index": 2
+            }
+          }
+        },
+        {
+          "seq": 26,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/026.json",
+          "commit": "a4397fed57e857506843d4ad16bb107ba2a0ef62",
+          "packet_hash": "cc3212f86325c146a0d038969ba0fea17156a18ea22bd1f611e840c813fd1459",
+          "request_hash": "400e7101cea44d288848cbba582f2c5f99d1a988f62c629e55179f5efbd235c6",
+          "state_hash": "788091d0bf0fc86c343f6b32b7efccecd9d7e2b90d6cb010e5ef193eaa9995a2",
+          "decision": "shop",
+          "choice": {
+            "cmd": "action",
+            "action": "buy_potion",
+            "args": {
+              "potion_index": 1
+            }
+          }
+        },
+        {
+          "seq": 27,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/027.json",
+          "commit": "41ca592fbecd3e41964f6c0d10ef373c832ba578",
+          "packet_hash": "639f253e1fd2923579234d54f7e75d2c661d9f9c7a19f925c51022231b7d061e",
+          "request_hash": "623306a5bff7f2e234e8d5cabc9e4793d8e9605fec36df74860d8de7805c89b7",
+          "state_hash": "852d951cbeff96bee4d14943fb9f72bd2fea4120548cc13e50a2700ea19b940c",
+          "decision": "shop",
+          "choice": {
+            "cmd": "action",
+            "action": "buy_card",
+            "args": {
+              "card_index": 0
+            }
+          }
+        },
+        {
+          "seq": 28,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/028.json",
+          "commit": "5921a655bea5318b4429ce0b547ff1236837e751",
+          "packet_hash": "8ba9c196db0a64706e3470f1e5261f312bec603c6461f7d375b9b2636c3f9dcd",
+          "request_hash": "8916b9275b494126c1a54bc025ffa349776186cc696350e2d81e8839f26aa850",
+          "state_hash": "bf7a6b5d7a19384fb08e363767edf5f92c8b87869e0d02a8d0b4c110cd636eab",
+          "decision": "shop",
+          "choice": {
+            "cmd": "action",
+            "action": "leave_room",
+            "args": {}
+          }
+        },
+        {
+          "seq": 29,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/029.json",
+          "commit": "72d99f5f3e746d46c7656cda379f34af2226b6e9",
+          "packet_hash": "4a19bea91e46948b493c21f2e27165ae2c4541b69241aea8c12eff21532f5e2c",
+          "request_hash": "65da2dec031f75abe7a7d1bbfce939737ee411edf5a098610e97f5ee696de1a0",
+          "state_hash": "df2fc9670d23df3aa79bedd098a97ca07b009eb874a890157e4094ddc27666b7",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "skip_card_reward",
+            "args": {}
+          }
+        },
+        {
+          "seq": 30,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/030.json",
+          "commit": "0bcc92405aa03a33bdcd1c801dfd9cf4695c065e",
+          "packet_hash": "81e3f1f443d53f6d0f6cd48db53199e4c630bd89f324b8d9db42cc7a5056e105",
+          "request_hash": "58ebeddf25a176725b47750a1bae8355bc2037ff5a24fb6db5a0f5d97de1869d",
+          "state_hash": "8e67239a9e7170a568bc76b4fe3f8589eeeef0f94fb95fcc7207e2a3e75c661e",
+          "decision": "rest_site",
+          "choice": {
+            "cmd": "action",
+            "action": "choose_option",
+            "args": {
+              "option_index": 1
+            }
+          }
+        },
+        {
+          "seq": 31,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/031.json",
+          "commit": "3ccc6a7a8283c398d1f173182d80ba8cffe569f0",
+          "packet_hash": "df4bff0913b2d6e88f5959567d62233ef2ede0370f1c214aec58c81d62dc99b2",
+          "request_hash": "ff8b106dcf82f225b03e5ed0b86931e349dbbf2e52021fef82dab231078c814d",
+          "state_hash": "2de0d5bc98587550eaf85316c075a9dd31ba8c7c612e90bf44f5925e847211cc",
+          "decision": "card_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "14"
+            }
+          }
+        },
+        {
+          "seq": 32,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/032.json",
+          "commit": "50ed601bf79dfed596043e6012b127f3d0ee5745",
+          "packet_hash": "192841ee7760738622ae715c869c39dfa4858d12a03a00acc8e72cbd4ee1af43",
+          "request_hash": "e23458f9be7d67891ab487f25b497ed8255d6375b8d6fb35eaa3ef9c13e1b458",
+          "state_hash": "5b3b7f14455777141c3730d2eb46b85fc92b44b1be1558524277d20bcb49e658",
+          "decision": "potion_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "claim_potion_reward",
+            "args": {}
+          }
+        },
+        {
+          "seq": 33,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/033.json",
+          "commit": "40f3ccab84a7a343139e913c147e6f927f803b88",
+          "packet_hash": "309e507fd1437e9b28e0fcbb0f71d00968c3e00b0c7b9409e59337e67e556ec3",
+          "request_hash": "f3bc4ec099febff0a43b920abae5d1cc4b77773f13732e87c7622cf1d2773ca9",
+          "state_hash": "2c98f6c63b3d20406e4b47690c290d0d43f5413d93996d337d2bcd25ff951691",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 1
+            }
+          }
+        },
+        {
+          "seq": 34,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/034.json",
+          "commit": "2bade941fe87bfa3ba622c4c2d201ca93b48963f",
+          "packet_hash": "a212a705a6bf0bb03adfecb52e70c95a1429142228181a667c6cac905a5f2568",
+          "request_hash": "fe5278b56da0826c3b0abee90641aba8b6705ccf234706e968bdfc9eff99c43e",
+          "state_hash": "acd93d5b347c25eae5faf8c16ce4b88511a3dd6c4187bd34fc2edf21257084cf",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 3,
+              "row": 0
+            }
+          }
+        },
+        {
+          "seq": 35,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/035.json",
+          "commit": "9482370cc1d83e0ffda307f60567ce61d3f539c4",
+          "packet_hash": "b55c710dfc96f9b22b1a131d06e3076b180a3c01cabea3a74f6c26a8db8343cc",
+          "request_hash": "cf93b21f571621c74cc6720f1091d890d74f8b4cc3fb05304360acb0264f4ebf",
+          "state_hash": "07a6669da1d784adaeb180bf364d8cb3f73b7b37841fc9154ee1ad8bcbc46143",
+          "decision": "event_choice",
+          "choice": {
+            "cmd": "action",
+            "action": "choose_option",
+            "args": {
+              "option_index": 2
+            }
+          }
+        },
+        {
+          "seq": 36,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/036.json",
+          "commit": "4a979b4262e1c5bb853c78de8fd7af70284307ca",
+          "packet_hash": "d55fbe5653002c1b962863ef9841b738fc085bd8a2a87b015c5a16be0f57143b",
+          "request_hash": "cb36495d601bc36e92e409c9e473e4d7dd0c2d133d64cec8134b9bfcb81e336e",
+          "state_hash": "aaaeb2cf6b5f19c45779c9cf938ab10a3fc8e24b69c07b59a60efdf2e480b20c",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 1,
+              "row": 1
+            }
+          }
+        },
+        {
+          "seq": 37,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/037.json",
+          "commit": "d59c98ffa0ed9f46e8b33fe00f7e38fbf8be096f",
+          "packet_hash": "fe617d3dbedcaaba45bc63d33db12a926580d864bd363f0dcbb84ced3531b422",
+          "request_hash": "b64aad001d48395334a554d2fc6513de846b81e45d880d24c99ce58e2a0cebb1",
+          "state_hash": "156c9d8babdb562eab39ec96d5e29b16917b9d5aa354e31549cfff4d4842c060",
+          "decision": "potion_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "claim_potion_reward",
+            "args": {}
+          }
+        },
+        {
+          "seq": 38,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/038.json",
+          "commit": "c251d4ed86c32cb12b74f2a2558d2a4e92f6dcb4",
+          "packet_hash": "3ea4fb5df1cf0fd2108d133e3b5e236775956f2616e648c93fae54cab4298788",
+          "request_hash": "9c80be86850ad248ff6b93b9a3bce58d7796edfaa45edcd023b6ec7ea719af89",
+          "state_hash": "a7eaa5d608cca1d3c5638cf4c212d3af70c0094db035136a919eeab53a6b3b71",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 0
+            }
+          }
+        },
+        {
+          "seq": 39,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/039.json",
+          "commit": "bba480f947f378aae0d3e7dec51e5d8f6f8c9c5f",
+          "packet_hash": "d10112c1521ad3248b35fd09178837aca5a1719ebdc1827a26506220b06206a5",
+          "request_hash": "d27de2ad7c742ea2d465f48f11d22422b2d62c861824724fc3c0e0266295bc56",
+          "state_hash": "0b60b71b66304625d1bfc25af75c87a13d5810763285dc2fcbb21dbc0713ff04",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 0
+            }
+          }
+        },
+        {
+          "seq": 40,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/040.json",
+          "commit": "264d91b28888f8bc662f7c296c50e981ab07cff0",
+          "packet_hash": "88b3c4e3aaab7f6b5dc70c5065a29ac9639921ae3521aa39b4ffb89b1e48f415",
+          "request_hash": "198d8b462d3c17be22b886f119afb33d54c78f521f116c2212fb2c5fb38ad7e4",
+          "state_hash": "f8f24e73f10ce5bd34ddaa2535c6fc657ab6d76f07fc83222f151fe7746eeb5f",
+          "decision": "event_choice",
+          "choice": {
+            "cmd": "action",
+            "action": "choose_option",
+            "args": {
+              "option_index": 0
+            }
+          }
+        },
+        {
+          "seq": 41,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/041.json",
+          "commit": "c04efbf9a8baee2e33764de16b819b3af89455b4",
+          "packet_hash": "612232de2cbca92fc9a9bb807f794c4de098d57622e9d198790d5ea103703b93",
+          "request_hash": "e542577749e8122e0c967c449168b642b2a9c5031d08b48e7a264ae959f7e256",
+          "state_hash": "de6997dbff098a4c08c018ae7908c1f90953158cb06963018ca28e91ca78f23c",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 0,
+              "row": 4
+            }
+          }
+        },
+        {
+          "seq": 42,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/042.json",
+          "commit": "acb56b5a469a51fd64fb2a736a37d8bf4b29e52c",
+          "packet_hash": "ca50677539babc372cb6d63ffb673032a946628d4b98eaaaed38849ca257d727",
+          "request_hash": "2a5572fd76f3e056558326b296b24d7a4ae9e93dabcd3a2cf92b1fe6735cd854",
+          "state_hash": "b25210ad935bd58fcd99afc163b8458a89f985ef031562c025d8a9c573c7fbb9",
+          "decision": "shop",
+          "choice": {
+            "cmd": "action",
+            "action": "buy_card",
+            "args": {
+              "card_index": 2
+            }
+          }
+        },
+        {
+          "seq": 43,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/043.json",
+          "commit": "85e252aaf7fb0d3c6384817c77842160f849b11b",
+          "packet_hash": "8ebd6ef9a6cbb26f1d3866e8b102cc8d439b2f2897270b81f642808ccf7be368",
+          "request_hash": "eb6921cd9de57d33702a9fda09764e19bb71e9dbe4cbb5f0ead35d762bc23e67",
+          "state_hash": "9efb06b4027c881252835fefcaee4249b8a789210ccf6909232ba417ea1fc6e7",
+          "decision": "shop",
+          "choice": {
+            "cmd": "action",
+            "action": "remove_card",
+            "args": {}
+          }
+        },
+        {
+          "seq": 44,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/044.json",
+          "commit": "4784393c16bf4678e3a0c057ae3db035ab1fc7de",
+          "packet_hash": "0268afd617caf85b5010199654dad1a80281158e04bc42c7ad90819c5463f600",
+          "request_hash": "7c4d0e317d6c2cd2f4035aa95c1fb124576434df2770bf7ee529a1b77826810c",
+          "state_hash": "98710414deaf05ab62cd974f664319747ff1c27f5538f15b57a7b26c7cf3043a",
+          "decision": "card_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0"
+            }
+          }
+        },
+        {
+          "seq": 45,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/045.json",
+          "commit": "457eb49f3b497904ee25159df87401fb0f4a26a0",
+          "packet_hash": "7900e177964d73ab2c5cf2c7364e487e4f4fee9f490a2243cb4efce235040a57",
+          "request_hash": "16b9e15aee0dcc049b007ac8c56962bd743c2d49a0ac8e3a1940a47f6fbe03f4",
+          "state_hash": "936387c37e06c9b19d20e42422240286c3e0ccdb681ce7e924c59b51bea452d3",
+          "decision": "shop",
+          "choice": {
+            "cmd": "action",
+            "action": "buy_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        },
+        {
+          "seq": 46,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/046.json",
+          "commit": "10eea5743246a0d7f9af5a9bb10f3b13b77ba81c",
+          "packet_hash": "9be22d6a615870691d2c0fa6bb0ff107c17a5028c84dec670cb156d76134a36d",
+          "request_hash": "bda4da1747efd8f71c7b924b32388945ff90564ab8b84a5a64ca65a8bef32efb",
+          "state_hash": "a0c07b246167fc85c569f60d30dc73dec3d4ec8c28c31924c97ebeac5b341a26",
+          "decision": "shop",
+          "choice": {
+            "cmd": "action",
+            "action": "leave_room",
+            "args": {}
+          }
+        },
+        {
+          "seq": 47,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/047.json",
+          "commit": "f2d785ea8d4dc4bfb09ad4eaa46a63fbac039321",
+          "packet_hash": "bc8204781866031400e2591ed05453f05573e00f73f3f70ee6ccaa6593d2a334",
+          "request_hash": "1abbf1c3bb81f3027af0597baeb788333949485754572d7e503852cf33db285b",
+          "state_hash": "0211fbed4452cf515133ec2732b72f20923e4ada1f39ec8f20ce0810db52228b",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 0,
+              "row": 5
+            }
+          }
+        },
+        {
+          "seq": 48,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/048.json",
+          "commit": "8056da355669d77f9d3ea1ebb0bd04baa1bb4e9c",
+          "packet_hash": "1a297281fce073b007d0ad708598115e098a55dc080643aa7c192917eaac7b0b",
+          "request_hash": "4ca519605200bfdebff5a067a6467dd3d922264736dff0bc550957070d2cefca",
+          "state_hash": "409d7f900adb73f590114347388e7fd02b76bb8b8b192a876ff08e6c6c6cfd5d",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 2
+            }
+          }
+        },
+        {
+          "seq": 49,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/049.json",
+          "commit": "a80dfcd9dde58b806e571771119df847598df9c3",
+          "packet_hash": "184bcd6097346c4765236d00f6b3171cbcd970555ad0fe32c5617462070bb1cb",
+          "request_hash": "860f4ec33c5a6b40557a5410a39578914a0e44c9ba22218f160f962dd7d84389",
+          "state_hash": "60f3ea814817936a8358a977baea100687be3a9562a63deb0b7f780ca02659d2",
+          "decision": "event_choice",
+          "choice": {
+            "cmd": "action",
+            "action": "choose_option",
+            "args": {
+              "option_index": 0
+            }
+          }
+        },
+        {
+          "seq": 50,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/050.json",
+          "commit": "edbfe149aa51a26a01cf2499d0b74a918a38a725",
+          "packet_hash": "9ab2c063074a30e3d133b203ef170dce03e2058c1f3dc69d3c625edc4c818bd3",
+          "request_hash": "f9125d9a9e58c9d97910f9122e5b58148189c56121f0ee23b35aee841363a174",
+          "state_hash": "17489b42822ad505ffbd807db9fb393315209c10051b126368bf27e1c1920a70",
+          "decision": "card_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "2"
+            }
+          }
+        },
+        {
+          "seq": 51,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/051.json",
+          "commit": "96b44ce85ec85b2d6df46659bbde416b535e53cf",
+          "packet_hash": "0971207e2d10ec0904d74decbbb66f66932bc0e52e4a42c7571a62a1f31194be",
+          "request_hash": "c5976f651a29a780622a665da817c2400eff710d0aab35f6782f765c94143dd0",
+          "state_hash": "2471ec6aa4c2613ffa8f31d03fb151507adee31ac5ceaa60bca0678ef8395aa5",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 1,
+              "row": 7
+            }
+          }
+        },
+        {
+          "seq": 52,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/052.json",
+          "commit": "c703112a8568e32cd3c790b80e49de4305166a48",
+          "packet_hash": "d3a795a87c8c6d56210f9b63b607a8096785bf2dfcbcfe3bdda7bdb61d9c6787",
+          "request_hash": "f3d968e3e822c2f869d66c5b50c77b0d1cd932d82677b06c896e18f435906c04",
+          "state_hash": "2ae6034838b19d9eedc5f53181b41239b65eb609d010c862a25e3478bbaf3897",
+          "decision": "rest_site",
+          "choice": {
+            "cmd": "action",
+            "action": "choose_option",
+            "args": {
+              "option_index": 0
+            }
+          }
+        },
+        {
+          "seq": 53,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/053.json",
+          "commit": "676eeb6ffd0470f608a960ae72be7ad89d2955aa",
+          "packet_hash": "acfed6145290f59717b362be2b3729228f5709c9436e45846ca876250189a4d9",
+          "request_hash": "0d3fc9ff757f0452af356d2058f58aaae6f296198b61cbfb65adecd60b5f5716",
+          "state_hash": "9c7a6464347a7e1cce79bd35d9c024b99bdf39ecff633d9cf7dfa5fdc0224732",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 1,
+              "row": 9
+            }
+          }
+        },
+        {
+          "seq": 54,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/054.json",
+          "commit": "d3b55bc70f435b7383842d66e00c905b4d3705d1",
+          "packet_hash": "b9ac12b3bb7b9d8fe98a7dd6ed4b6b79ebe704c9eea5da52eb4bf7b212c5ba24",
+          "request_hash": "a115d3a914ffff242d436b4b9aac3537843ac22d9c75748be6027ec5bc92a250",
+          "state_hash": "efb9e05b7aee2db7459324db6c5ace56f9fd9d556ec7bda916c8fedfdf2f22b7",
+          "decision": "rest_site",
+          "choice": {
+            "cmd": "action",
+            "action": "choose_option",
+            "args": {
+              "option_index": 1
+            }
+          }
+        },
+        {
+          "seq": 55,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/055.json",
+          "commit": "887224a1dccc7616cfc28fbef01d099729b05ea0",
+          "packet_hash": "bd7f198da18af99f939d9a16bed6597898c96bb9e7b326a7b851f9c5ed86d586",
+          "request_hash": "b4c5c7c9b85147dc184a0bf1e03b534ce0e83e98700197dbd032f47adbed2ab9",
+          "state_hash": "778c1c1f7bf704b4adb2a618d77f46be24bde2e0f78ca78ae114aea2dbc66071",
+          "decision": "card_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "11"
+            }
+          }
+        },
+        {
+          "seq": 56,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/056.json",
+          "commit": "ba1771257cc72a83a085b8cd9e545fedae0264af",
+          "packet_hash": "e2d671263be30cc7498f03d73712958a218e27738d934bcd84e4cbadf6cf9026",
+          "request_hash": "44d3ea013fcd5f0e035171141588fd46a7de9b67e51cc03e2548934f42a1509d",
+          "state_hash": "723127cb4151c80048bbf91acb45bf45269918caf90d66bb61844fbe2601e4ff",
+          "decision": "potion_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "claim_potion_reward",
+            "args": {}
+          }
+        },
+        {
+          "seq": 57,
+          "path": "experiments/E160/teacher/A5-000/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/057.json",
+          "commit": "e4a4805db3b1a76bfbe9f3ff055ddf90bb47df55",
+          "packet_hash": "442a2577fbefcd6f792bad2300dc558db9476ae5d4cf77ef6170262d27ad20f8",
+          "request_hash": "480198a6114744854ef0cc1217a98332c143aa4431890cc5a1c164e9d7dc9468",
+          "state_hash": "eb95a67ebb039c2ec3fb9f408268a330ee6a318eb1e25f8b5a305dd018ca2309",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "skip_card_reward",
+            "args": {}
+          }
+        }
+      ],
+      "expert_tokens": null,
+      "expert_cost_usd": null,
+      "final_campaign_plan": "Skip more attacks; 24-card deck already has scaling and needs reliable defense. At 16/90 HP take the immediate rest route when a map decision is available; retain no potion restrictions.",
+      "seconds": 1798.2885441668332,
+      "wire.jsonl_sha256": "37e991266723c7e763050ca6fc8704feedefbaf3a9d991fc1fefd96b44a6d9ea",
+      "engine.stderr.log_sha256": "abfeecd1a6ae400c3e505e00784ebf522ce7ad28cf8371df47e9993b90506d8f",
+      "trace_path": "artifacts/runs/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/decisions.jsonl",
+      "trace_sha256": "b88ee428d3a1fb781673fbd145113d9de06471472b081638a540886d80be952e",
+      "compute_seconds": 12.375581539003178
+    },
+    {
+      "case": "A5-001",
+      "seed": "e160_campaign_Ironclad_A5_001",
+      "character": "Ironclad",
+      "ascension": 5,
+      "arm": "program_campaign",
+      "run_id": "ddc53878-1a12-4d44-ae38-37eb39064c2a",
+      "status": "defeat",
+      "steps": 213,
+      "entries": [
+        {
+          "act": 1,
+          "floor": 2,
+          "room_type": "Monster",
+          "hp": 75,
+          "max_hp": 91,
+          "enemies": [
+            "Twig Slime (S)",
+            "Leaf Slime (M)",
+            "Leaf Slime (S)"
+          ],
+          "deck_hash": "d5c855f725ec343236a7eda737dc41b695d55c74808ffd7bd2c00e55c957399f",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 3,
+          "room_type": "Monster",
+          "hp": 78,
+          "max_hp": 91,
+          "enemies": [
+            "Shrinker Beetle"
+          ],
+          "deck_hash": "3b2ea83f3dcaf6fb1eeac95f27f81cd51c978b972a9d4977b6a146abcb394061",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 6,
+          "room_type": "Monster",
+          "hp": 83,
+          "max_hp": 98,
+          "enemies": [
+            "Fuzzy Wurm Crawler"
+          ],
+          "deck_hash": "1f8c15f1ca10a10b328cc0b7c7a27de782ad55694ff25d4778eb1029b52605c5",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 7,
+          "room_type": "Monster",
+          "hp": 87,
+          "max_hp": 98,
+          "enemies": [
+            "Twig Slime (M)",
+            "Leaf Slime (M)",
+            "Twig Slime (S)",
+            "Leaf Slime (S)"
+          ],
+          "deck_hash": "ae81c367a1c0d16ba1b5fdf805395f0f35a938b4283f9c21130a2f041ae04ab1",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 9,
+          "room_type": "Elite",
+          "hp": 77,
+          "max_hp": 98,
+          "enemies": [
+            "Byrdonis"
+          ],
+          "deck_hash": "59b6d060c9ef069d0d7af12e3ace7c2177ae1c3ff3e65d7012b7daf16d978a30",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 12,
+          "room_type": "Elite",
+          "hp": 54,
+          "max_hp": 98,
+          "enemies": [
+            "Bygone Effigy"
+          ],
+          "deck_hash": "4429114149c16d99f2fb9e43b565ecf580a4da52c41a104d120da64999122ddd",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 17,
+          "room_type": "Boss",
+          "hp": 50,
+          "max_hp": 98,
+          "enemies": [
+            "Vantom"
+          ],
+          "deck_hash": "d53aa2014bcee106ac2027cfbcc89a430e165f192ca58926d68b26f371d13e85",
+          "potions": 1
+        }
+      ],
+      "completed_battles": 6,
+      "completed_acts": 0,
+      "max_act": 1,
+      "scenes": {
+        "event_choice": 4,
+        "map_select": 16,
+        "combat_play": 155,
+        "card_reward": 6,
+        "card_select": 24,
+        "potion_reward": 3,
+        "rest_site": 4,
+        "shop": 1
+      },
+      "owners": {
+        "program_campaign": 26,
+        "program_combat": 147,
+        "only_legal": 40
+      },
+      "potion_blocks": 0,
+      "illegal_actions": 0,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "3f94863fc3061185969fbd9070ccf17823e8d3e12c20f01dc615702cb512d118",
+      "transition_hash": "ac1b7f1642a649d2f2561ba2bd69d5ba7dad5f40aa2430cc75e44be2c8f60c1a",
+      "readonly_map_queries": 16,
+      "expert_packets": 0,
+      "expert_wait_seconds": 0,
+      "expert_input_chars": 0,
+      "expert_output_chars": 0,
+      "teacher_packets": [],
+      "expert_tokens": null,
+      "expert_cost_usd": null,
+      "final_campaign_plan": null,
+      "seconds": 8.935647125123069,
+      "wire.jsonl_sha256": "9272bcddf89108aa4ca8640d82edf9439e546f3c5ab479e41c48c5aaabf29a9c",
+      "engine.stderr.log_sha256": "170f81db4505a6c0337df07a2a9173a34d36c1a015b1c1319108dff21c3060ab",
+      "trace_path": "artifacts/runs/ddc53878-1a12-4d44-ae38-37eb39064c2a/decisions.jsonl",
+      "trace_sha256": "8fc277a4b25c3757b8afd790d017b5eb40efa87176ca88e17cdec7371d189b15",
+      "compute_seconds": 8.935647125123069,
+      "verification": {
+        "case": "A5-001",
+        "status": "match",
+        "steps": 230,
+        "outcome": "defeat",
+        "final_hash": "3f94863fc3061185969fbd9070ccf17823e8d3e12c20f01dc615702cb512d118",
+        "seconds": 7.436558665940538,
+        "wire.jsonl_sha256": "fba5090aa88df50d7911101a0397a491656ad56d523d2d39330bbf891ce4c2ce",
+        "engine.stderr.log_sha256": "170f81db4505a6c0337df07a2a9173a34d36c1a015b1c1319108dff21c3060ab",
+        "trace_path": "artifacts/runs/88366f3b-f6e9-43c1-883e-fc1c8731c5a6/decisions.jsonl",
+        "trace_sha256": "bf81892d981cd04982488284fabb7c2d09f20938adfd920335768262a7447cd6"
+      }
+    },
+    {
+      "case": "A5-001",
+      "seed": "e160_campaign_Ironclad_A5_001",
+      "character": "Ironclad",
+      "ascension": 5,
+      "arm": "astra_campaign",
+      "run_id": "9c4c8958-5af8-4970-9ebc-7fe483f3354b",
+      "status": "error",
+      "steps": 175,
+      "entries": [
+        {
+          "act": 1,
+          "floor": 2,
+          "room_type": "Monster",
+          "hp": 75,
+          "max_hp": 91,
+          "enemies": [
+            "Twig Slime (S)",
+            "Leaf Slime (M)",
+            "Leaf Slime (S)"
+          ],
+          "deck_hash": "d5c855f725ec343236a7eda737dc41b695d55c74808ffd7bd2c00e55c957399f",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 4,
+          "room_type": "Monster",
+          "hp": 78,
+          "max_hp": 91,
+          "enemies": [
+            "Shrinker Beetle"
+          ],
+          "deck_hash": "aabd6bdecca0abd71f4992291e492b24faa7181250a726f7206c79b77c2cb643",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 5,
+          "room_type": "Monster",
+          "hp": 84,
+          "max_hp": 91,
+          "enemies": [
+            "Fuzzy Wurm Crawler"
+          ],
+          "deck_hash": "7270099fe8b4ee60e5c841c10613536295fb46adf433d463c2bb2405600789eb",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 6,
+          "room_type": "Monster",
+          "hp": 90,
+          "max_hp": 91,
+          "enemies": [
+            "Twig Slime (M)",
+            "Leaf Slime (M)",
+            "Leaf Slime (S)",
+            "Twig Slime (S)"
+          ],
+          "deck_hash": "19833e4dadb38c8bac57f70ba8d77d8299a5591851c4c88b895fd489343df944",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 9,
+          "room_type": "Monster",
+          "hp": 84,
+          "max_hp": 98,
+          "enemies": [
+            "Mawler"
+          ],
+          "deck_hash": "4e5f519e5acad7f9b17bd5275b13568a13cfe8109ca85688af21b33f6f665d08",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 13,
+          "room_type": "Monster",
+          "hp": 84,
+          "max_hp": 103,
+          "enemies": [
+            "Nibbit",
+            "Nibbit"
+          ],
+          "deck_hash": "e9626b118f9888392e555cc2bbec1ec1e822d8c8cd72a8634c070c1f330f6e03",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 14,
+          "room_type": "Monster",
+          "hp": 70,
+          "max_hp": 103,
+          "enemies": [
+            "Snapping Jaxfruit",
+            "Flyconid"
+          ],
+          "deck_hash": "759604e072f49024e95c99115969f9e86c4ed2a8aebde351124ae846fbfd69e4",
+          "potions": 2
+        },
+        {
+          "act": 1,
+          "floor": 15,
+          "room_type": "Monster",
+          "hp": 65,
+          "max_hp": 103,
+          "enemies": [
+            "Vine Shambler"
+          ],
+          "deck_hash": "49156efdb6ccdd2f9c76caf38cc34cdf7b9c34698918564f9fbf5580e1e869fb",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 17,
+          "room_type": "Boss",
+          "hp": 94,
+          "max_hp": 103,
+          "enemies": [
+            "Vantom"
+          ],
+          "deck_hash": "a8c48df47d1723d49072340d17d883dde074a0a314723e31fbc85470d39cf6ae",
+          "potions": 1
+        }
+      ],
+      "completed_battles": 9,
+      "completed_acts": 1,
+      "max_act": 2,
+      "scenes": {
+        "event_choice": 4,
+        "map_select": 17,
+        "combat_play": 133,
+        "card_reward": 9,
+        "shop": 3,
+        "potion_reward": 4,
+        "rest_site": 3,
+        "card_select": 2
+      },
+      "owners": {
+        "astra_campaign": 31,
+        "program_combat": 112,
+        "only_legal": 32
+      },
+      "potion_blocks": 31,
+      "illegal_actions": 0,
+      "error": "ValueError: Complete selection resource bound: 8568 > 4096",
+      "final_context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 1,
+        "room_type": "Event",
+        "boss": {
+          "id": "THE_INSATIABLE_BOSS",
+          "name": "The Insatiable"
+        }
+      },
+      "final_hp": 100,
+      "final_hash": "d8e6333665c4f316ca6c3c970dd262e532df7679f63e90ebdb40f984cef4c961",
+      "transition_hash": "a064f3d422d0de1834a23b67508a2df591f899451a3bd7cbe385d180102e73ed",
+      "readonly_map_queries": 17,
+      "expert_packets": 31,
+      "expert_wait_seconds": 1057.7661442093085,
+      "expert_input_chars": 337435,
+      "expert_output_chars": 15070,
+      "teacher_packets": [
+        {
+          "seq": 1,
+          "path": "experiments/E160/teacher/A5-001/9c4c8958-5af8-4970-9ebc-7fe483f3354b/001.json",
+          "commit": "c2650fd63b7be7f4ecc81b83b6157669cc59b1c5",
+          "packet_hash": "26198f998e207d2989b6ea6b57b9e10decc031d37f8cba9d5088ca28827f0f09",
+          "request_hash": "9ad68e797c484f05ef9ae571d5cfec5e58e6057622c0c8bffe181459f538271d",
+          "state_hash": "1bd3da8c0b58a8a4a5fff46628c822c35b2ab095fa9cd5ee453db290f5439ccd",
+          "decision": "event_choice",
+          "choice": {
+            "cmd": "action",
+            "action": "choose_option",
+            "args": {
+              "option_index": 0
+            }
+          }
+        },
+        {
+          "seq": 2,
+          "path": "experiments/E160/teacher/A5-001/9c4c8958-5af8-4970-9ebc-7fe483f3354b/002.json",
+          "commit": "55c80b8a249f07e8c5de09e7bc7892ae45d8e8b0",
+          "packet_hash": "b786699e5903b2f32727465d65af35af887842a411dfe8f331e90523af19c2e2",
+          "request_hash": "694d15b88187854d7f716f342e07d09970f8f8de642e4d40e2ab35fca0ad7fb9",
+          "state_hash": "be8883102e7e1bef0e2ac2adb0e031c0bcf90adc0a900ff89facef368114a744",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 3,
+              "row": 1
+            }
+          }
+        },
+        {
+          "seq": 3,
+          "path": "experiments/E160/teacher/A5-001/9c4c8958-5af8-4970-9ebc-7fe483f3354b/003.json",
+          "commit": "6210c9065b65a2ca82e9bb006af5bba6fc08ad77",
+          "packet_hash": "f1396db8ac2432d5f41e3596ba2a4fa013a63f58445bbfcf3f373cb10a5451cc",
+          "request_hash": "e92a012b7e0db62456318062ef6a5061488f8150c4a2824dfd112f395fbec769",
+          "state_hash": "ba93f63b38513cb7e5d1b592b4a3b7426a5c38e87994f3a80c244c1e16e00d57",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 2
+            }
+          }
+        },
+        {
+          "seq": 4,
+          "path": "experiments/E160/teacher/A5-001/9c4c8958-5af8-4970-9ebc-7fe483f3354b/004.json",
+          "commit": "a013de2f1745f65b8a743112dc40ea45858aa9ca",
+          "packet_hash": "d1961694b17a688598c4685c8accb7a7c950364d03a1c62a4dd3d32f480616c2",
+          "request_hash": "cabc66b32f54f10569be81113a09bc7018868e1fe9e4320352171d4ab4687543",
+          "state_hash": "e981f1b2b2206b20615d499a273c7ee42b55bff07ba555726558a6e83431c7ae",
+          "decision": "shop",
+          "choice": {
+            "cmd": "action",
+            "action": "buy_card",
+            "args": {
+              "card_index": 1
+            }
+          }
+        },
+        {
+          "seq": 5,
+          "path": "experiments/E160/teacher/A5-001/9c4c8958-5af8-4970-9ebc-7fe483f3354b/005.json",
+          "commit": "d752ca93e2e8aab6913962c7f882045d88a31985",
+          "packet_hash": "5cf936907a9ec5970369794f50ea6554a3d2b3d6d823b4b5f07c5229b6b8ace5",
+          "request_hash": "3e5753683950e753bbe8cae04ec7778fb3f938f721c54884bcce0ab28712f85e",
+          "state_hash": "ad1a18f082d3ef6778d85372614188eab3da3094317142d7da0d235701a3ae72",
+          "decision": "shop",
+          "choice": {
+            "cmd": "action",
+            "action": "buy_card",
+            "args": {
+              "card_index": 2
+            }
+          }
+        },
+        {
+          "seq": 6,
+          "path": "experiments/E160/teacher/A5-001/9c4c8958-5af8-4970-9ebc-7fe483f3354b/006.json",
+          "commit": "58987319235962b746095c280cec44c3380d7643",
+          "packet_hash": "46eb3818f1e78302de9f42ec53efc3afa7b8d8c1e862055bb12409b35e00314a",
+          "request_hash": "6698ea368ed39a07fad9617b2663b0dceb7ee45a55d2c02fd6ff889ea259d7fd",
+          "state_hash": "c0970e77b43a023bf6b9ee8d0c4ef5cb31fbb991efda6cdd8376e776b100242d",
+          "decision": "potion_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "claim_potion_reward",
+            "args": {}
+          }
+        },
+        {
+          "seq": 7,
+          "path": "experiments/E160/teacher/A5-001/9c4c8958-5af8-4970-9ebc-7fe483f3354b/007.json",
+          "commit": "5464065b8631373e4c2b33da270b3875936075d1",
+          "packet_hash": "416c46bead011ef8f5f3cd1db4b29d7c7fd0aa8f1db7b3758ed0590d49b8753b",
+          "request_hash": "61e4013cc3e63589bddb94991b0c03999981e74222408c2478c9cdcca0489d0c",
+          "state_hash": "34cabb9b1083379644949c51bb621f9e950d7bf30f5cca1647ba8278d71ba884",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 1
+            }
+          }
+        },
+        {
+          "seq": 8,
+          "path": "experiments/E160/teacher/A5-001/9c4c8958-5af8-4970-9ebc-7fe483f3354b/008.json",
+          "commit": "9bf6ada9628e60e02cf7bc0f017b7eea6791cbe7",
+          "packet_hash": "a644a67c2dccf95287b3e3550d175c2cd4a24a25b96829e2a250e0c8b59269b9",
+          "request_hash": "5d721d7d6bc165ee03dbfe6b2cfad4317a1afdc3015a0cefdf1de4b21c5e7d23",
+          "state_hash": "a61a140ac4763236a69aaa1defd00026f2892dd0d837a1824bdf973d87e53757",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 0
+            }
+          }
+        },
+        {
+          "seq": 9,
+          "path": "experiments/E160/teacher/A5-001/9c4c8958-5af8-4970-9ebc-7fe483f3354b/009.json",
+          "commit": "732e212de25ca396ffcdb26f34cada6ce19ade7d",
+          "packet_hash": "f975eff1feccee416f4f0d8e7327b17da1beb840f96631434933aeb83ad7f6d6",
+          "request_hash": "14e52d0da9e61921cb6d23cc9f1cdcf5ca5f7a4938566a241387e1e97e312684",
+          "state_hash": "bc66da61222872708fc527c037a12b8ddc16620bc0a14faec352c210d71577de",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 0
+            }
+          }
+        },
+        {
+          "seq": 10,
+          "path": "experiments/E160/teacher/A5-001/9c4c8958-5af8-4970-9ebc-7fe483f3354b/010.json",
+          "commit": "79fde08d2439d9b261946e67758a372cafe380b7",
+          "packet_hash": "799e62aea7bae6ea1f2d8f2f45c5b0675a80aa210633c805074e09d774458df7",
+          "request_hash": "ddf34ae74faffa2c5e5fb65cbd9f472383f169a78964313a9a2d9dddc7935833",
+          "state_hash": "bcf8bc71bde81f30f0c6f063ffbc54426e187a0876b50aad7237c2b9eddcb61e",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 4,
+              "row": 6
+            }
+          }
+        },
+        {
+          "seq": 11,
+          "path": "experiments/E160/teacher/A5-001/9c4c8958-5af8-4970-9ebc-7fe483f3354b/011.json",
+          "commit": "be8bdfac585bdcd79b43b5672df4001c51864d9b",
+          "packet_hash": "e30a762256decdbb91d9167fac5e5d427f23e22362d2cd442c53e32a09e6f79e",
+          "request_hash": "6ecd4a29e1eb4d26b80c068cefd3b39188ba6828fe1db58b789aa3e41bc63723",
+          "state_hash": "c347e2b1ce20a5e33518e2125ca04afa572709fb294a10890b71aab7ed39b7dc",
+          "decision": "rest_site",
+          "choice": {
+            "cmd": "action",
+            "action": "choose_option",
+            "args": {
+              "option_index": 1
+            }
+          }
+        },
+        {
+          "seq": 12,
+          "path": "experiments/E160/teacher/A5-001/9c4c8958-5af8-4970-9ebc-7fe483f3354b/012.json",
+          "commit": "1ef0ba56f7e83b685de46c43485686abcba08a5f",
+          "packet_hash": "08ff9f5051c95c557c70cc3f7b022a258f644b9156ca8e43803394a66967b792",
+          "request_hash": "410a2ed75881b8354acb6bc8276b5e8281fb27eda1c35267e1749085d3b0fbad",
+          "state_hash": "cd56b6f523bbe3b9bf83a9c3e6634e753438f1959420714114f6b37c4d723126",
+          "decision": "card_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "13"
+            }
+          }
+        },
+        {
+          "seq": 13,
+          "path": "experiments/E160/teacher/A5-001/9c4c8958-5af8-4970-9ebc-7fe483f3354b/013.json",
+          "commit": "171a58ae931db422229ee9f550fa2eb9c4b7341d",
+          "packet_hash": "91e84161ab840b324414a49938b71911014878f75d48316d1b7035ef7d10a28f",
+          "request_hash": "20b26dfbe8aa3faa161c3a96269129afdfb057609b099ed914da49fa794489f4",
+          "state_hash": "90d47073447e85c5cf37757de6c6f6c098750c8957a3385958bda5d4a80130a5",
+          "decision": "event_choice",
+          "choice": {
+            "cmd": "action",
+            "action": "choose_option",
+            "args": {
+              "option_index": 0
+            }
+          }
+        },
+        {
+          "seq": 14,
+          "path": "experiments/E160/teacher/A5-001/9c4c8958-5af8-4970-9ebc-7fe483f3354b/014.json",
+          "commit": "fd334c119abee92fdeb77fba684bd3b57c9bd668",
+          "packet_hash": "aa8637b4d194fe1856733579f3edc5defa2eaac463f266ef82c623c5f974c8e3",
+          "request_hash": "c913297cef329fb4f5ac1849fb57b66c1cf568a45cfd7effa2dcba5a95e5cde8",
+          "state_hash": "889823b977a3f09272a98ed1d0c7ac2778640004814ca34ded7da2f6f4f79daf",
+          "decision": "potion_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "claim_potion_reward",
+            "args": {}
+          }
+        },
+        {
+          "seq": 15,
+          "path": "experiments/E160/teacher/A5-001/9c4c8958-5af8-4970-9ebc-7fe483f3354b/015.json",
+          "commit": "4f09d6a2cf13fcb05f9e59e5684b814cb7cf223e",
+          "packet_hash": "6c36a0663d65681e8609c858c765916df5d2314e6ffa15abbd25070c66bfe187",
+          "request_hash": "4b23b0afd22980062a27ece57a1e694065fdf30a59c03b60946e33f9f3f023dc",
+          "state_hash": "c5cef0ed1d34e15f2ae1b938eaed989769cd6c5859988622eb30409a37de3209",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "skip_card_reward",
+            "args": {}
+          }
+        },
+        {
+          "seq": 16,
+          "path": "experiments/E160/teacher/A5-001/9c4c8958-5af8-4970-9ebc-7fe483f3354b/016.json",
+          "commit": "3ec80a10e4569dc6647f2f07a7ce841f958bb285",
+          "packet_hash": "6fc90f02f6b40ba93d837a0390a3645e4c8a5a376fcd591c7c2d2596aaff88a4",
+          "request_hash": "a95038a834507083a34d02a4639ba8d25da1f925d619ddec6a04188591561360",
+          "state_hash": "de1e5796a77387d8d47d229760d82cfafa72e00ff6936e96bea7adeb7b06c9f7",
+          "decision": "event_choice",
+          "choice": {
+            "cmd": "action",
+            "action": "choose_option",
+            "args": {
+              "option_index": 1
+            }
+          }
+        },
+        {
+          "seq": 17,
+          "path": "experiments/E160/teacher/A5-001/9c4c8958-5af8-4970-9ebc-7fe483f3354b/017.json",
+          "commit": "475cffbe57aea169ab527eacad54bf892f13bb28",
+          "packet_hash": "038cd170975b19ec7237361a80d8b3f2d2da1ced1d7379aee625dda78ef57936",
+          "request_hash": "b102621a2c84673fc719a4449bea5d7d1db9de9afce7821f445a2cfffaaff1f8",
+          "state_hash": "b502ce369d2519cec88c4acf9db5cea92144868ada620be0ea28351bb27a00a7",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 3,
+              "row": 11
+            }
+          }
+        },
+        {
+          "seq": 18,
+          "path": "experiments/E160/teacher/A5-001/9c4c8958-5af8-4970-9ebc-7fe483f3354b/018.json",
+          "commit": "9e38ceacd57e5e4c28107e50a199f1d7a823dd5b",
+          "packet_hash": "2850b3c0035f4b30e790c6c8854225ce8583cef927ede7d2794b5c762948ebe9",
+          "request_hash": "e38b6d3b61b86b11c9d866199d115eeece985a51ece5512ad4d5cc7871d82e5d",
+          "state_hash": "9e518dfc98a864419d859f78ffeba373734d546014edde2d26bdcc302cc18de1",
+          "decision": "rest_site",
+          "choice": {
+            "cmd": "action",
+            "action": "choose_option",
+            "args": {
+              "option_index": 1
+            }
+          }
+        },
+        {
+          "seq": 19,
+          "path": "experiments/E160/teacher/A5-001/9c4c8958-5af8-4970-9ebc-7fe483f3354b/019.json",
+          "commit": "d885250dce76f8d6b82731097b2749d4f67f4bc5",
+          "packet_hash": "997c39b90acfe3510f614dd76fdefabb692b3f2c4e95fea284db1dbcb83d1e56",
+          "request_hash": "1e48d22c91b52bc1c3a72eb39881a9eec2554a1d00636bafba46379c7d90f180",
+          "state_hash": "261a2d49826f6ee161fd1b330498445de19e0f7b535ed0b2b097bbed13082e83",
+          "decision": "card_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "13"
+            }
+          }
+        },
+        {
+          "seq": 20,
+          "path": "experiments/E160/teacher/A5-001/9c4c8958-5af8-4970-9ebc-7fe483f3354b/020.json",
+          "commit": "7e7fa2584a44016935b0cf7d98c3ecc6e2a27f5f",
+          "packet_hash": "41d23822166312d004dd280744b86570ff50570c832c27f77783a5846a409f90",
+          "request_hash": "9791e72bda4eb18003207a7b130f2fba05e6b6df54eb944ca4db3f8be186e445",
+          "state_hash": "a5b18c6edc5ff8c1b76145f21fc3d8c717f769dfe0c244388a9318858e4842d8",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 4,
+              "row": 12
+            }
+          }
+        },
+        {
+          "seq": 21,
+          "path": "experiments/E160/teacher/A5-001/9c4c8958-5af8-4970-9ebc-7fe483f3354b/021.json",
+          "commit": "90b4498be55e37a8c83a2c274301afb0ab8b2bc9",
+          "packet_hash": "51c87e2f3e267542d5a840ccd822f204b337cfa0e00dad4e0958e1ac304f222c",
+          "request_hash": "037b8ae8ae10ec7d7b09d187d4de440a1820b9e20b32b5c2979befcf7ba55347",
+          "state_hash": "f23cf9873e0c20a1a1d5165588fc966a0f15aa462da4462d8a6bad4c126b1161",
+          "decision": "potion_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "claim_potion_reward",
+            "args": {}
+          }
+        },
+        {
+          "seq": 22,
+          "path": "experiments/E160/teacher/A5-001/9c4c8958-5af8-4970-9ebc-7fe483f3354b/022.json",
+          "commit": "c5a66ccdf2494172f9f4fe889b4b3c2722717a73",
+          "packet_hash": "10d5f6c8b91481e603882184fe96706a366bdaaf318238a095af0bcf4ea7c24f",
+          "request_hash": "690546ba32298ec2fa88f2bdb2403e3e0cb227b4afa6a6635ea0b7aa0efa7570",
+          "state_hash": "8f99c794c1f8a1b218aba15c0c5d813c1ee4dc23047e6b3443c1d9639cae287f",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 2
+            }
+          }
+        },
+        {
+          "seq": 23,
+          "path": "experiments/E160/teacher/A5-001/9c4c8958-5af8-4970-9ebc-7fe483f3354b/023.json",
+          "commit": "90d537f7e45b951344f612f2671bf65fb18c0602",
+          "packet_hash": "9e8936ea3ff9a19f546bb4f6af83d0021ad9e468a920c71262f9e501fec72538",
+          "request_hash": "48cc5d2d326f492b1e375b354fb1cb6b1f30f447660593963199e9477a15f424",
+          "state_hash": "ea7f4720d21988c51a019bc5752c8ee8e43b5f350ffdddfa42c1742f833a26df",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 4,
+              "row": 13
+            }
+          }
+        },
+        {
+          "seq": 24,
+          "path": "experiments/E160/teacher/A5-001/9c4c8958-5af8-4970-9ebc-7fe483f3354b/024.json",
+          "commit": "a041719b862eab97dda6e096f6fd4e1bcf8d1e72",
+          "packet_hash": "876dad1d5f39aef6cf860a9d71d5924466a763a4a3996fd136b9574f1fa4dac6",
+          "request_hash": "fa24ca78333d85eda2914d7612feab372882f1655366ba31bcdef669c78efc9c",
+          "state_hash": "f24c917808758236d663d084f49e8d5a64630ee432e51e368defe474eb9cefc8",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 0
+            }
+          }
+        },
+        {
+          "seq": 25,
+          "path": "experiments/E160/teacher/A5-001/9c4c8958-5af8-4970-9ebc-7fe483f3354b/025.json",
+          "commit": "6f670c4f34f089892342aad6389c1d6029193b05",
+          "packet_hash": "709503724e45ce8781f64ed5cedbf3296eb7fa81fe6d65c88a1e4afa89b38a78",
+          "request_hash": "ea9f4a3e48fd33b4223716ec52a9ff2d61e5df6693a750fd9123b055e2b6bb1a",
+          "state_hash": "a6543e80fc93d829ce11d5a25e195cc747d8f096f27d50b19c48ed296bcbef8a",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 5,
+              "row": 14
+            }
+          }
+        },
+        {
+          "seq": 26,
+          "path": "experiments/E160/teacher/A5-001/9c4c8958-5af8-4970-9ebc-7fe483f3354b/026.json",
+          "commit": "a4397fed57e857506843d4ad16bb107ba2a0ef62",
+          "packet_hash": "86122f79ec47458b2e9dad65cec4ddd137682cfaed0466b8b6918e45f1adc606",
+          "request_hash": "891945dab98fe238d4266e868ec9614e8d5a56e06c47c018f3cb4bd4de2a4193",
+          "state_hash": "38e35d2cd97d2943cc2e25edaba218947c1c29d09aae8f3fab0703248731eefb",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 0
+            }
+          }
+        },
+        {
+          "seq": 27,
+          "path": "experiments/E160/teacher/A5-001/9c4c8958-5af8-4970-9ebc-7fe483f3354b/027.json",
+          "commit": "41ca592fbecd3e41964f6c0d10ef373c832ba578",
+          "packet_hash": "e7a304bea79c890dcee291ac0227f2a3d40f188c0c8ed77cff231b1de423a77d",
+          "request_hash": "1fc550e98b790435c52428f217df6a4d5f9ce2ccf73e223271669318c6475d5c",
+          "state_hash": "1ff9e1e721c6be326b9fa00d5de2502c0af25b0dda75b0bf8fb26e94b68e3434",
+          "decision": "rest_site",
+          "choice": {
+            "cmd": "action",
+            "action": "choose_option",
+            "args": {
+              "option_index": 0
+            }
+          }
+        },
+        {
+          "seq": 28,
+          "path": "experiments/E160/teacher/A5-001/9c4c8958-5af8-4970-9ebc-7fe483f3354b/028.json",
+          "commit": "5921a655bea5318b4429ce0b547ff1236837e751",
+          "packet_hash": "24e78ead0ad371949d1ebb58ea96aa70eb143e41169a01c07b298e8dd8a73be2",
+          "request_hash": "262c0faabb0b1064e82565f0ceb0ff825ca7af19e47b5714c27de89774cf7a3f",
+          "state_hash": "ccb1abbd81e2a5151fa5db7d123bb0ad87a792859146ca171d045a852150f588",
+          "decision": "potion_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "claim_potion_reward",
+            "args": {}
+          }
+        },
+        {
+          "seq": 29,
+          "path": "experiments/E160/teacher/A5-001/9c4c8958-5af8-4970-9ebc-7fe483f3354b/029.json",
+          "commit": "72d99f5f3e746d46c7656cda379f34af2226b6e9",
+          "packet_hash": "e435ca7b6ce5ccb887a8420ff7232e6c8f1f7d3e93cbd26270bb5d79d5aff51d",
+          "request_hash": "6ad528329ba830ff76aec2be5d86cba67d453087abad2153a4df57979545d3da",
+          "state_hash": "1e3072e5480e69a542a410842e626a60e3cb8589a7b6956e642f47bb4aa5b91e",
+          "decision": "card_reward",
+          "choice": {
+            "cmd": "action",
+            "action": "select_card_reward",
+            "args": {
+              "card_index": 1
+            }
+          }
+        },
+        {
+          "seq": 30,
+          "path": "experiments/E160/teacher/A5-001/9c4c8958-5af8-4970-9ebc-7fe483f3354b/030.json",
+          "commit": "0bcc92405aa03a33bdcd1c801dfd9cf4695c065e",
+          "packet_hash": "2c55a922ed6b7bb287b49c3eddc586aa02f384d973ea72227130fca0096a105d",
+          "request_hash": "5ccaf4d558bca97847a18966929778b032805743e14c419cf1b9f957f9bd141c",
+          "state_hash": "8393e6fe8cbd181cb8be2e712a90b2aec8361b2fb1548294b43cd74a88089e53",
+          "decision": "map_select",
+          "choice": {
+            "cmd": "action",
+            "action": "select_map_node",
+            "args": {
+              "col": 3,
+              "row": 0
+            }
+          }
+        },
+        {
+          "seq": 31,
+          "path": "experiments/E160/teacher/A5-001/9c4c8958-5af8-4970-9ebc-7fe483f3354b/031.json",
+          "commit": "3ccc6a7a8283c398d1f173182d80ba8cffe569f0",
+          "packet_hash": "99a3443e88a0b01bf378b760a217ff4ba2ebfd129c53e234750ad2895c4eb91f",
+          "request_hash": "a34094826f749d4f8bd64edadc19fbb7658599ea011af50cfb5dcf5ff6e442db",
+          "state_hash": "9419ca547ef8d39abbf0ed71e0e43a84e14474a73caea74b6d01075cfb7098e3",
+          "decision": "event_choice",
+          "choice": {
+            "cmd": "action",
+            "action": "choose_option",
+            "args": {
+              "option_index": 1
+            }
+          }
+        }
+      ],
+      "expert_tokens": null,
+      "expert_cost_usd": null,
+      "final_campaign_plan": "Take Pael's Tooth for five targeted upgrades returned across the next five combats. Temporarily removing weak starters improves access to Hellraiser, Demon Form and draw; preserve enough defense and Strike payoffs during the transition. The alternatives depend on unused energy or deliberately skipping a turn, which this executor is not configured to seek.",
+      "seconds": 1065.4744110410102,
+      "wire.jsonl_sha256": "3368b2906d788599358d97b786914c33ecf7d2609c1680ea970935591a741345",
+      "engine.stderr.log_sha256": "18b7dd5fd9aa730fd50d2effac2e531fca2b61c301fce346e589271ec49b221f",
+      "trace_path": "artifacts/runs/9c4c8958-5af8-4970-9ebc-7fe483f3354b/decisions.jsonl",
+      "trace_sha256": "702ac0451f3a2c09850db6e774d2be013164387aa11af75504a2304d2cf92291",
+      "compute_seconds": 7.708266831701621
+    }
+  ],
+  "summary": {
+    "progress_gate": false,
+    "incomplete": true
+  },
+  "raw_audit": {
+    "raw_traces": 12,
+    "failures": [],
+    "pass": true
+  },
+  "teacher_audit": {
+    "passed": true,
+    "failures": [],
+    "decisions": 1656,
+    "responses": 200
+  },
+  "seconds": 1826.1057805421297,
+  "cpu_seconds": 62.376864000000005,
+  "costs": {
+    "expert_packets": 200,
+    "input_chars": 2165658,
+    "output_chars": 105144,
+    "wait_seconds": 6392.277318459703,
+    "tokens": null,
+    "usd": null
+  },
+  "integrity": false,
+  "budget_pass": true,
+  "continuation_gate": false
+}

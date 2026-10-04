@@ -33,3 +33,9 @@ python3 scripts/reply_campaign_e160.py /tmp/e160-answers.json
 Raw full requests/states/wire remain in ignored artifacts/runs; public teacher response packets contain concise choices/plans/reservations, bound to immutable source hashes. Replaying those recorded packets is regression verification, not new Astra reasoning or an independent win sample. Do not reuse output paths or overwrite a prior teacher response.
 
 Implementation/plan-generation SHA `b41e4aa`: six focused ownership/resource/context checks passed. All four seeds, two arms, runtime and every rsi source hash frozen before gameplay.
+
+## Frozen evaluation finished; supplementary audit planned
+
+The registered v1 failed completeness: three Astra runs stopped at the shared 200-packet budget and one failed at Pael's Tooth (8568 legal combinations >4096). All four controls naturally lost in act one; all four treatments reached act two. This is a positive first-act observation, not a completed full-run comparison; no promotion or budget extension. Do not change v1 outcomes or continue its games.
+
+A separate **read-only post-hoc** audit will replay the four recorded treatment prefixes with no new decisions (120seconds each), tabulate request overhead, and describe the A5-000 act2 floor11 Obscura fight. Exact prefix replay only verifies executed transitions; it cannot satisfy the original eight-terminal gate or produce a new victory sample. `scripts/audit_campaign_e160.py` is committed before this verification. This adds no policy, training, seed or game-state edit.
