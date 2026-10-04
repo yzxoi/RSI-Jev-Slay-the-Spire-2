@@ -1,0 +1,27 @@
+{
+  "case": "A0-000",
+  "run_id": "ea706bb8-2c06-4ae1-9d38-cd97c5e627d6",
+  "seq": 10,
+  "state_hash": "164d99b4213a8f0f9c78834fc0c196f55e1e308308b8476d076ce4943a1c5956",
+  "choice_id": "a001",
+  "campaign_plan": "Burning Pact supplies draw and controlled exhaust for Evil Eye and Drum of Battle; retain damage density. After losing 20 HP, route toward rest and avoid elites. Reserve Vulnerable for Boss or emergency rather than spend it in a trivial hallway.",
+  "potion_reservations": [
+    {
+      "potion_id": "HEART_OF_IRON",
+      "until": "Elite",
+      "release_hp_fraction": 0.4
+    },
+    {
+      "potion_id": "BLOCK_POTION",
+      "until": "Elite",
+      "release_hp_fraction": 0.5
+    },
+    {
+      "potion_id": "VULNERABLE_POTION",
+      "until": "Boss",
+      "release_hp_fraction": 0.45
+    }
+  ],
+  "acquire_reservation": null,
+  "transaction_steps": []
+}
