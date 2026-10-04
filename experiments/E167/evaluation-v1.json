@@ -1,0 +1,965 @@
+{
+  "manifest": {
+    "schema_version": 2,
+    "code_commit": "52a12144f682ce408b51171496a33cc42b82e6d1",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "a32485ef4c34641acc26f0c85454ba767bd4b06c4c06258e59baa26b5a72b54f",
+    "godot_stubs_sha256": "2bb3b99863f651decb27cf3ceead489046808e60d95ccbc28048ad094ecc856a",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+      "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772",
+      "headless-zzzzzz-godot-abi.patch": "5239d3836d279de5143f7d56bece1f061c6c4002de696fce28f9f7f3922ededc",
+      "headless-zzzzzzz-learning-observations.patch": "d51db8457fdb9348340a829c84fa77e9620c476ba16a7c6e224b286ecb2dfd07",
+      "headless-zzzzzzzz-encounter-abi.patch": "e4a730f9e58fddebef8ef924fcd8d0adc03d72d1148f8d29b2f9ea60556696cc",
+      "headless-zzzzzzzzz-native-map-odds.patch": "86ee5561968629b094a1f63e214f32e8a3ae7b5614fffcb470d52886287e1885"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4",
+    "experiment": "E167",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.5",
+    "model_calls": 0,
+    "model_cost_usd": 0,
+    "encoder": "e140-phase-context-v1",
+    "torch": "2.11.0",
+    "device": "cpu"
+  },
+  "plan": {
+    "path": "experiments/E167/plan-v1.json",
+    "sha256": "64f6affb19aadd6e7724ee5fa07e2dabe189322755477b3aebbd8bcf6aa57618"
+  },
+  "selection_labels": [
+    {
+      "run": "83523ab4-ddbb-4775-b39a-5fd28d671b14",
+      "command": 2,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "83523ab4-ddbb-4775-b39a-5fd28d671b14",
+      "command": 61,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "b158cc80-513e-427d-95ae-3f318411ffb6",
+      "command": 2,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "b158cc80-513e-427d-95ae-3f318411ffb6",
+      "command": 56,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "b158cc80-513e-427d-95ae-3f318411ffb6",
+      "command": 105,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "b158cc80-513e-427d-95ae-3f318411ffb6",
+      "command": 109,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "b158cc80-513e-427d-95ae-3f318411ffb6",
+      "command": 115,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "b158cc80-513e-427d-95ae-3f318411ffb6",
+      "command": 138,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "b158cc80-513e-427d-95ae-3f318411ffb6",
+      "command": 283,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "b158cc80-513e-427d-95ae-3f318411ffb6",
+      "command": 292,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "b158cc80-513e-427d-95ae-3f318411ffb6",
+      "command": 296,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "65cd4652-898c-40de-b0a5-a7216e2df5b8",
+      "command": 54,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "65cd4652-898c-40de-b0a5-a7216e2df5b8",
+      "command": 58,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "65cd4652-898c-40de-b0a5-a7216e2df5b8",
+      "command": 86,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "65cd4652-898c-40de-b0a5-a7216e2df5b8",
+      "command": 92,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "65cd4652-898c-40de-b0a5-a7216e2df5b8",
+      "command": 114,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "65cd4652-898c-40de-b0a5-a7216e2df5b8",
+      "command": 152,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "65cd4652-898c-40de-b0a5-a7216e2df5b8",
+      "command": 174,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+      "command": 55,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+      "command": 84,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+      "command": 90,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+      "command": 113,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+      "command": 146,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+      "command": 150,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "2b923f57-e049-4512-b24a-6175c74f9666",
+      "command": 22,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "2b923f57-e049-4512-b24a-6175c74f9666",
+      "command": 32,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "2b923f57-e049-4512-b24a-6175c74f9666",
+      "command": 81,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "2b923f57-e049-4512-b24a-6175c74f9666",
+      "command": 88,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "2b923f57-e049-4512-b24a-6175c74f9666",
+      "command": 95,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "2b923f57-e049-4512-b24a-6175c74f9666",
+      "command": 104,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "2b923f57-e049-4512-b24a-6175c74f9666",
+      "command": 108,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "2b923f57-e049-4512-b24a-6175c74f9666",
+      "command": 114,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "2b923f57-e049-4512-b24a-6175c74f9666",
+      "command": 130,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "2b923f57-e049-4512-b24a-6175c74f9666",
+      "command": 150,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "2b923f57-e049-4512-b24a-6175c74f9666",
+      "command": 163,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "ae8d6342-5a5e-49ce-91fa-adce26ed5cbf",
+      "command": 38,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "ae8d6342-5a5e-49ce-91fa-adce26ed5cbf",
+      "command": 78,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "ae8d6342-5a5e-49ce-91fa-adce26ed5cbf",
+      "command": 108,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "ae8d6342-5a5e-49ce-91fa-adce26ed5cbf",
+      "command": 170,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "ae8d6342-5a5e-49ce-91fa-adce26ed5cbf",
+      "command": 221,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "ae8d6342-5a5e-49ce-91fa-adce26ed5cbf",
+      "command": 240,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "ae8d6342-5a5e-49ce-91fa-adce26ed5cbf",
+      "command": 261,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "ae8d6342-5a5e-49ce-91fa-adce26ed5cbf",
+      "command": 273,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "ae8d6342-5a5e-49ce-91fa-adce26ed5cbf",
+      "command": 282,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "ddc53878-1a12-4d44-ae38-37eb39064c2a",
+      "command": 26,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "ddc53878-1a12-4d44-ae38-37eb39064c2a",
+      "command": 33,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "ddc53878-1a12-4d44-ae38-37eb39064c2a",
+      "command": 55,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "ddc53878-1a12-4d44-ae38-37eb39064c2a",
+      "command": 59,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "ddc53878-1a12-4d44-ae38-37eb39064c2a",
+      "command": 61,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "ddc53878-1a12-4d44-ae38-37eb39064c2a",
+      "command": 71,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "ddc53878-1a12-4d44-ae38-37eb39064c2a",
+      "command": 74,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "ddc53878-1a12-4d44-ae38-37eb39064c2a",
+      "command": 85,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "ddc53878-1a12-4d44-ae38-37eb39064c2a",
+      "command": 92,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "ddc53878-1a12-4d44-ae38-37eb39064c2a",
+      "command": 100,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "ddc53878-1a12-4d44-ae38-37eb39064c2a",
+      "command": 102,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "ddc53878-1a12-4d44-ae38-37eb39064c2a",
+      "command": 111,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "ddc53878-1a12-4d44-ae38-37eb39064c2a",
+      "command": 118,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "ddc53878-1a12-4d44-ae38-37eb39064c2a",
+      "command": 122,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "ddc53878-1a12-4d44-ae38-37eb39064c2a",
+      "command": 132,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "ddc53878-1a12-4d44-ae38-37eb39064c2a",
+      "command": 137,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "ddc53878-1a12-4d44-ae38-37eb39064c2a",
+      "command": 155,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "ddc53878-1a12-4d44-ae38-37eb39064c2a",
+      "command": 168,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "ddc53878-1a12-4d44-ae38-37eb39064c2a",
+      "command": 175,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "ddc53878-1a12-4d44-ae38-37eb39064c2a",
+      "command": 202,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "ddc53878-1a12-4d44-ae38-37eb39064c2a",
+      "command": 210,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "ddc53878-1a12-4d44-ae38-37eb39064c2a",
+      "command": 219,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "ddc53878-1a12-4d44-ae38-37eb39064c2a",
+      "command": 222,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "ddc53878-1a12-4d44-ae38-37eb39064c2a",
+      "command": 228,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "9c4c8958-5af8-4970-9ebc-7fe483f3354b",
+      "command": 76,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "9c4c8958-5af8-4970-9ebc-7fe483f3354b",
+      "command": 105,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "9c4c8958-5af8-4970-9ebc-7fe483f3354b",
+      "command": 193,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "8b9386ce-925d-44d2-ba11-48d0b9bb9474",
+      "command": 105,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "8b9386ce-925d-44d2-ba11-48d0b9bb9474",
+      "command": 121,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "8b9386ce-925d-44d2-ba11-48d0b9bb9474",
+      "command": 133,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "8b9386ce-925d-44d2-ba11-48d0b9bb9474",
+      "command": 145,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "ea706bb8-2c06-4ae1-9d38-cd97c5e627d6",
+      "command": 36,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "ea706bb8-2c06-4ae1-9d38-cd97c5e627d6",
+      "command": 69,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "ea706bb8-2c06-4ae1-9d38-cd97c5e627d6",
+      "command": 73,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "ea706bb8-2c06-4ae1-9d38-cd97c5e627d6",
+      "command": 88,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "ea706bb8-2c06-4ae1-9d38-cd97c5e627d6",
+      "command": 104,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "ea706bb8-2c06-4ae1-9d38-cd97c5e627d6",
+      "command": 115,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "ea706bb8-2c06-4ae1-9d38-cd97c5e627d6",
+      "command": 133,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "ea706bb8-2c06-4ae1-9d38-cd97c5e627d6",
+      "command": 156,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "ea706bb8-2c06-4ae1-9d38-cd97c5e627d6",
+      "command": 170,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "ea706bb8-2c06-4ae1-9d38-cd97c5e627d6",
+      "command": 181,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "ea706bb8-2c06-4ae1-9d38-cd97c5e627d6",
+      "command": 287,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "ea706bb8-2c06-4ae1-9d38-cd97c5e627d6",
+      "command": 319,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "ea706bb8-2c06-4ae1-9d38-cd97c5e627d6",
+      "command": 364,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "ea706bb8-2c06-4ae1-9d38-cd97c5e627d6",
+      "command": 368,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "ea706bb8-2c06-4ae1-9d38-cd97c5e627d6",
+      "command": 373,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "ea706bb8-2c06-4ae1-9d38-cd97c5e627d6",
+      "command": 380,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "ea706bb8-2c06-4ae1-9d38-cd97c5e627d6",
+      "command": 395,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "ea706bb8-2c06-4ae1-9d38-cd97c5e627d6",
+      "command": 399,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "ea706bb8-2c06-4ae1-9d38-cd97c5e627d6",
+      "command": 417,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "21526f07-71b7-47c0-912c-14217e63bc89",
+      "command": 124,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "21526f07-71b7-47c0-912c-14217e63bc89",
+      "command": 148,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "21526f07-71b7-47c0-912c-14217e63bc89",
+      "command": 172,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "21526f07-71b7-47c0-912c-14217e63bc89",
+      "command": 196,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    },
+    {
+      "run": "cd9a5cb9-82d9-430e-ba29-05debd6f7974",
+      "command": 70,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "cd9a5cb9-82d9-430e-ba29-05debd6f7974",
+      "command": 90,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "cd9a5cb9-82d9-430e-ba29-05debd6f7974",
+      "command": 96,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "cd9a5cb9-82d9-430e-ba29-05debd6f7974",
+      "command": 120,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "cd9a5cb9-82d9-430e-ba29-05debd6f7974",
+      "command": 248,
+      "expected": "campaign",
+      "actual": "campaign",
+      "clear": false
+    },
+    {
+      "run": "cd9a5cb9-82d9-430e-ba29-05debd6f7974",
+      "command": 306,
+      "expected": "battle",
+      "actual": "battle",
+      "clear": false
+    }
+  ],
+  "original_misrouted_requests": [
+    {
+      "run": "cd9a5cb9-82d9-430e-ba29-05debd6f7974",
+      "seq": 38,
+      "state_hash": "4a52e7e0f1b1997d8b831a5534accf35cd33b13a23672b53cd80b59cacaec032"
+    }
+  ],
+  "continuation": {
+    "case": "E165-A5-opening",
+    "status": "defeat",
+    "steps": 19,
+    "illegal_actions": 0,
+    "teacher_requests": 0,
+    "prefix_commands_verified": 306,
+    "opening_hash": "4a52e7e0f1b1997d8b831a5534accf35cd33b13a23672b53cd80b59cacaec032",
+    "hp": 0,
+    "final_hash": "6e75244c693e296237171c4f59c058388e324755c15b0bce2f468c76e9cc8c1c",
+    "transition_hash": "649ca2a3e9f882b5b0e20aebad149853bd8e31474557a442f4b6cbe18ea645b4",
+    "seconds": 10.448256500065327,
+    "wire.jsonl_sha256": "bbd065b4012739d498f0c861f090bd73505ac0a4fe36cb92b5ed4cdb448bd20b",
+    "engine.stderr.log_sha256": "d8ae08b22530995a636ff3ca2fa0fd101d832cb23057bffced6f0924586f6ae0",
+    "trace_path": "artifacts/runs/e898784d-51c5-4f38-8a71-401a2e1ab4d4/decisions.jsonl",
+    "trace_sha256": "6b00a1eb4004e9ec95b72eb9287896248009e9e20ffdf6b7f45c91873a892e2b"
+  },
+  "replays": [
+    {
+      "case": "A0-000",
+      "status": "match",
+      "steps": 138,
+      "outcome": "defeat",
+      "final_hash": "3c91f49cc17721c0fbbbc6ba6b97d992d8546109942e6f6a24a2890fdf0ecba2",
+      "seconds": 4.978128375019878,
+      "wire.jsonl_sha256": "d5fe2e99e7a7572f44bd8b963c069a66182e72222204148e15f69af4c275736b",
+      "engine.stderr.log_sha256": "2660b702f7a6c7ab8b45aaf88e90c56d9ae30adb541ff4beb1d1401a4a9ee88d",
+      "trace_path": "artifacts/runs/354eb7f5-b360-4edd-bdf3-1e18c250fddb/decisions.jsonl",
+      "trace_sha256": "dec53adce86230608cd69376bc6c3e8bf599a0a5a7192e3b79a4c0ae49664f6b"
+    },
+    {
+      "case": "A0-000",
+      "status": "match",
+      "steps": 297,
+      "outcome": null,
+      "final_hash": "df4df1dff6afa9d0283a8079c12f189da4be1b05baacfe5cd2c7dadf57b8bb00",
+      "seconds": 9.623535874998197,
+      "wire.jsonl_sha256": "e88d23f2d15cacfd4d6f0e3a3fa73be40d3cfa13ee6dca25bfaec81b28ae67fd",
+      "engine.stderr.log_sha256": "83e96ae1322a518bc830b251c799109e7692ac58ae2791832ea830813c82ec69",
+      "trace_path": "artifacts/runs/f07f4d16-49da-4f33-9108-42850b7c6b6d/decisions.jsonl",
+      "trace_sha256": "538980a0ef269b30fda5cd419d523df7cc95f1f88db1871fb08ae178bdd23881"
+    },
+    {
+      "case": "A0-001",
+      "status": "match",
+      "steps": 181,
+      "outcome": "defeat",
+      "final_hash": "95bdbfdb302cd0eaaccdb9d40ebcade2949d2bae5996886eaebd0118e6933974",
+      "seconds": 6.739051916869357,
+      "wire.jsonl_sha256": "076c3aa90ff4219092c6fb106888decdbf6a13732f38f471a5f0cc751e262644",
+      "engine.stderr.log_sha256": "d41f166c0d2858d9fa4e1d2e63f1438f5b9e524be102d1517afc958fa24cb2a2",
+      "trace_path": "artifacts/runs/2e56fb76-f7cb-4817-a0fd-3617e95faad0/decisions.jsonl",
+      "trace_sha256": "6252649ad67c14bd19c15ce8862764819f949dccdaa998efd6b5416c17bc3607"
+    },
+    {
+      "case": "A0-001",
+      "status": "match",
+      "steps": 248,
+      "outcome": null,
+      "final_hash": "9fa2b1f758cce089e3c30845433199a797fb30069a1497472a84e4898d4652bf",
+      "seconds": 8.38727366598323,
+      "wire.jsonl_sha256": "3cd422bc598f7df9d6412377e6afde8d9b7e1dcb01b73b68789faf9eb9e53083",
+      "engine.stderr.log_sha256": "3968a0b8cac3cb25859ce2b57f510df36b2fcc5990eaa051103aef01b0faf010",
+      "trace_path": "artifacts/runs/3fae028b-45f1-4b9b-a51f-41a7dc8d1dff/decisions.jsonl",
+      "trace_sha256": "82bd1cdfd3c420d28cb8d72bb9a4bef5c2b063f6fe29a92894fd026d8df66db5"
+    },
+    {
+      "case": "A5-000",
+      "status": "match",
+      "steps": 178,
+      "outcome": "defeat",
+      "final_hash": "ee64bcf521a4fc231f0966f9f720533aeb0ee43882d9c8692e2d89a4f0e74d7a",
+      "seconds": 5.404127208981663,
+      "wire.jsonl_sha256": "80b0c9d6c76c7fa6ce580c41eb24b325758ad3edf1f1a0c653316e9e9e806a2b",
+      "engine.stderr.log_sha256": "36b41c4b426a9bed3a72878fa2a747d063e88d2e4592e8348994328af7ac3c6f",
+      "trace_path": "artifacts/runs/99a197d8-05e1-48fd-93cc-71a0dcf18285/decisions.jsonl",
+      "trace_sha256": "c14a464ed7c2b0dcc5f42bd141c15343b03f16f07e168ba94ac14a62087428f2"
+    },
+    {
+      "case": "A5-000",
+      "status": "match",
+      "steps": 352,
+      "outcome": null,
+      "final_hash": "e9f078bec53e0c73cc3d4d25668ce27da32948801426981f55a13d7ecfe1eae9",
+      "seconds": 11.04126137518324,
+      "wire.jsonl_sha256": "afc5ff80db3a0d59c1b49a5fdcc06a40edbc297b6c89eed9c941239aaf621a8f",
+      "engine.stderr.log_sha256": "abfeecd1a6ae400c3e505e00784ebf522ce7ad28cf8371df47e9993b90506d8f",
+      "trace_path": "artifacts/runs/a5bab242-6dec-4921-9f00-fcbd35c408d7/decisions.jsonl",
+      "trace_sha256": "5140aed1a63637832cc3ee3f383672af601ee299d15344fda3758c312491f255"
+    },
+    {
+      "case": "A5-001",
+      "status": "match",
+      "steps": 230,
+      "outcome": "defeat",
+      "final_hash": "3f94863fc3061185969fbd9070ccf17823e8d3e12c20f01dc615702cb512d118",
+      "seconds": 7.151805417146534,
+      "wire.jsonl_sha256": "04f3267491fea2a2bfbc0d7b067d86a53bdb2b5b56a219577c17bcf3d319cc35",
+      "engine.stderr.log_sha256": "170f81db4505a6c0337df07a2a9173a34d36c1a015b1c1319108dff21c3060ab",
+      "trace_path": "artifacts/runs/83c32bfc-516d-4000-86a1-2e9998c68566/decisions.jsonl",
+      "trace_sha256": "be327590e5812e10c5d95419b2ce2683ad4c1412ba17251e31987538a9230cf9"
+    },
+    {
+      "case": "A5-001",
+      "status": "match",
+      "steps": 193,
+      "outcome": null,
+      "final_hash": "d8e6333665c4f316ca6c3c970dd262e532df7679f63e90ebdb40f984cef4c961",
+      "seconds": 6.555118374992162,
+      "wire.jsonl_sha256": "f7c579c0e56a39e646f7ee95f4ddd9d60e1cdd92ed3c7d498f79e39dd96dc47b",
+      "engine.stderr.log_sha256": "18b7dd5fd9aa730fd50d2effac2e531fca2b61c301fce346e589271ec49b221f",
+      "trace_path": "artifacts/runs/28372b3e-e422-4cec-88c2-c420eb657f45/decisions.jsonl",
+      "trace_sha256": "c1f469149c74f358bd72db48b76dd78276cefac44424496797af778c5f620a85"
+    },
+    {
+      "case": "A0-000",
+      "status": "match",
+      "steps": 154,
+      "outcome": "defeat",
+      "final_hash": "3c9453cab4383ba3356a4931575d21c25d517e684d355a1ea9558def08dc3d2c",
+      "seconds": 5.527679500170052,
+      "wire.jsonl_sha256": "7c43a9982b17ee730771cb51a03221ba32fbc1cfafdb2359a572c416ffbf3892",
+      "engine.stderr.log_sha256": "3548886ff90142145ee9f92ab9f77edd2797fce9634559b5267af9e4cfcd9975",
+      "trace_path": "artifacts/runs/29d2f534-4cef-4f0c-a87c-bbace476d73b/decisions.jsonl",
+      "trace_sha256": "e504bf59b5c77c230fe6d249c2171c7fc13405e342d1746f02e40aea0cf37b8b"
+    },
+    {
+      "case": "A0-000",
+      "status": "match",
+      "steps": 426,
+      "outcome": "defeat",
+      "final_hash": "29de2d9f91525d883b1061c7a1add8fe9c0098de59d78b18385a309980e83a03",
+      "seconds": 12.776890416163951,
+      "wire.jsonl_sha256": "87619fc63fe2581d19fe9fd5bea9f6277bca17058be044c9643f90a539d33eb3",
+      "engine.stderr.log_sha256": "083e2289d089281a90f69227e4dbf5a66c0d7b0effef99b7a5ecbdd90af81ebd",
+      "trace_path": "artifacts/runs/c65b6a83-6ce6-4a98-a63e-3925b6b46aa6/decisions.jsonl",
+      "trace_sha256": "8a1d55e4087ddd441af153b7eee7d18f0b7f73a925b53e50ec75a0f342819af8"
+    },
+    {
+      "case": "A5-000",
+      "status": "match",
+      "steps": 208,
+      "outcome": "defeat",
+      "final_hash": "5210e3d4c568472396b9855da215886d910037a3b2966a784074a065075c3d90",
+      "seconds": 7.424686624901369,
+      "wire.jsonl_sha256": "26d924a48a8e49df34a4d19456bb4ce07d3613c0348aa7b41455bc3269ffdfe3",
+      "engine.stderr.log_sha256": "d998b65fef72d7a5b6e3ea4d462343c12e4d2bc6a47ef22051e6d72942b5faa2",
+      "trace_path": "artifacts/runs/5025b7d6-182d-4359-bb1c-72283b081fd5/decisions.jsonl",
+      "trace_sha256": "c94c4d17e428efd7af9af7eebeea5fdb2153ea706e85bc7db2dbba247a93d5a7"
+    },
+    {
+      "case": "A5-000",
+      "status": "match",
+      "steps": 306,
+      "outcome": null,
+      "final_hash": "4a52e7e0f1b1997d8b831a5534accf35cd33b13a23672b53cd80b59cacaec032",
+      "seconds": 9.827280167024583,
+      "wire.jsonl_sha256": "8dfe79269c4c62346a1f029cebe93410ad2200a4a2e54e6cf25d8435daba7f2a",
+      "engine.stderr.log_sha256": "adbfd7694fdeb9984bb5e1068767832a57b8ac98659973990b3af8202878e947",
+      "trace_path": "artifacts/runs/6a4f92a7-41bc-49ff-be86-a1759c0149be/decisions.jsonl",
+      "trace_sha256": "2257968611b9e6ade3ae74689b01d80e5200e81f2b7c77477b95b8a338e9dde4"
+    },
+    {
+      "case": "E165-A5-opening",
+      "status": "match",
+      "steps": 325,
+      "outcome": "defeat",
+      "final_hash": "6e75244c693e296237171c4f59c058388e324755c15b0bce2f468c76e9cc8c1c",
+      "seconds": 10.349581083049998,
+      "wire.jsonl_sha256": "a92b932b87298c78d1a60c80063c18c3bc46cacc925ac2d70f2c1a5f903a65f3",
+      "engine.stderr.log_sha256": "d8ae08b22530995a636ff3ca2fa0fd101d832cb23057bffced6f0924586f6ae0",
+      "trace_path": "artifacts/runs/a1a24375-e7fc-4922-b91d-de72b9785ab5/decisions.jsonl",
+      "trace_sha256": "98113e5b2b19361bc3e1000a89c5e6ac71f8e5d2bf9bf74e41fcbb00722dfd32"
+    }
+  ],
+  "raw_audit": {
+    "raw_traces": 14,
+    "failures": [],
+    "pass": true
+  },
+  "seconds": 117.40956837497652,
+  "compatibility_gate": true,
+  "full_run_wins": 0,
+  "scope": "Known prefixes only; no battle selection quality improvement claimed",
+  "model_api_calls": 0
+}
