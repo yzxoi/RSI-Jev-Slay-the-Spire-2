@@ -1,0 +1,146 @@
+{
+  "manifest": {
+    "schema_version": 2,
+    "code_commit": "d86f6b58e07e1b9f3d2f3a8df2f9869bc462736f",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "a32485ef4c34641acc26f0c85454ba767bd4b06c4c06258e59baa26b5a72b54f",
+    "godot_stubs_sha256": "2bb3b99863f651decb27cf3ceead489046808e60d95ccbc28048ad094ecc856a",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+      "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772",
+      "headless-zzzzzz-godot-abi.patch": "5239d3836d279de5143f7d56bece1f061c6c4002de696fce28f9f7f3922ededc",
+      "headless-zzzzzzz-learning-observations.patch": "d51db8457fdb9348340a829c84fa77e9620c476ba16a7c6e224b286ecb2dfd07",
+      "headless-zzzzzzzz-encounter-abi.patch": "e4a730f9e58fddebef8ef924fcd8d0adc03d72d1148f8d29b2f9ea60556696cc",
+      "headless-zzzzzzzzz-native-map-odds.patch": "86ee5561968629b094a1f63e214f32e8a3ae7b5614fffcb470d52886287e1885"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4",
+    "experiment": "E162",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.5",
+    "model_calls": 0,
+    "model_cost_usd": 0
+  },
+  "source_sha256": "7d7d86a9c75b5b920a7f45fe3b4ea03a0782e575ca54b18ff657598263214564",
+  "synthetic": {
+    "accepted": 7,
+    "rejected": 7
+  },
+  "recorded": {
+    "buys": 9,
+    "claims": 22,
+    "historical_packets": 200
+  },
+  "records": [
+    {
+      "case": "baseline",
+      "status": "clear",
+      "steps": 16,
+      "run_id": "48678554-102b-49b4-b37f-85050a72fc0c",
+      "emergency_releases": 0,
+      "blocked_decisions": 16,
+      "prefix_commands_verified": 114,
+      "entry_hash": "89060222b160fd9044365307208360669038f554b4d0ebf95040352a8f2ccab9",
+      "final_hash": "88748615bb9aeb84ce6841580cf749b05ea592900c9c16cd75d89da6ee1624c4",
+      "hp": 56,
+      "potions": [
+        "POWER_POTION"
+      ],
+      "extra_expert_calls": 0,
+      "reservations": [
+        {
+          "potion_id": "POWER_POTION",
+          "until": "Boss",
+          "release_hp_fraction": 0.35
+        }
+      ],
+      "baseline_boundary_match": true,
+      "seconds": 5.1046312500257045,
+      "wire.jsonl_sha256": "7efd97f6838689ec28f17ceb57927ad8b226b9131d995479260d749099f5b01d",
+      "engine.stderr.log_sha256": "1d0c33ae87f512be150ced54d44cf6fa817b8c02cff8d0bb87c3e2dc3c071248",
+      "trace_path": "artifacts/runs/48678554-102b-49b4-b37f-85050a72fc0c/decisions.jsonl",
+      "trace_sha256": "7d19e795991a86d0b0e00bf72c6cb5b15e67370aa53d80768e771a69479aeb24"
+    },
+    {
+      "case": "acquire_reserve",
+      "status": "clear",
+      "steps": 16,
+      "run_id": "c2e49760-43f1-4f37-a7cb-e677dcd1d56e",
+      "emergency_releases": 0,
+      "blocked_decisions": 16,
+      "prefix_commands_verified": 114,
+      "entry_hash": "89060222b160fd9044365307208360669038f554b4d0ebf95040352a8f2ccab9",
+      "final_hash": "f21cf3f1031c1be4e3662d0296a245187cd50999544c749757b7645b80b2e9e9",
+      "hp": 53,
+      "potions": [
+        "VULNERABLE_POTION",
+        "POWER_POTION"
+      ],
+      "extra_expert_calls": 0,
+      "reservations": [
+        {
+          "potion_id": "POWER_POTION",
+          "until": "Boss",
+          "release_hp_fraction": 0.35
+        },
+        {
+          "potion_id": "VULNERABLE_POTION",
+          "until": "Boss",
+          "release_hp_fraction": 0.35
+        }
+      ],
+      "baseline_boundary_match": null,
+      "seconds": 4.635562665993348,
+      "wire.jsonl_sha256": "41bdcff3ed6733ef827af7538802a80786a6821d8c410d9ca14932c2d4ca5739",
+      "engine.stderr.log_sha256": "1c06b85ce63b3b7aae9a37edaa3301dbf0abe4ec2e02bea17c29bfe876bd6b2a",
+      "trace_path": "artifacts/runs/c2e49760-43f1-4f37-a7cb-e677dcd1d56e/decisions.jsonl",
+      "trace_sha256": "2598d0d7ea1acb81a9b59adfb59bdd030aeb7cf53dd6030655cbb27c17dc2845"
+    }
+  ],
+  "replays": [
+    {
+      "case": "baseline",
+      "status": "match",
+      "steps": 130,
+      "outcome": null,
+      "final_hash": "88748615bb9aeb84ce6841580cf749b05ea592900c9c16cd75d89da6ee1624c4",
+      "seconds": 4.520309041021392,
+      "wire.jsonl_sha256": "7f9dd74d1eb11a22fccbcf6de2cf9978c9a443a0a6529ae9acf16619458f6f2b",
+      "engine.stderr.log_sha256": "1d0c33ae87f512be150ced54d44cf6fa817b8c02cff8d0bb87c3e2dc3c071248",
+      "trace_path": "artifacts/runs/9643a575-6ab8-48c9-a92c-a9cd8272a187/decisions.jsonl",
+      "trace_sha256": "c7b9848ec4bae8bad1c75d77d71e9b4793f9ecad8d68ad30161a623e1564326e"
+    },
+    {
+      "case": "acquire_reserve",
+      "status": "match",
+      "steps": 130,
+      "outcome": null,
+      "final_hash": "f21cf3f1031c1be4e3662d0296a245187cd50999544c749757b7645b80b2e9e9",
+      "seconds": 4.501208500005305,
+      "wire.jsonl_sha256": "bef91f0eccf62be51e4437007434ca0d8ad6b737d5083c95c28c351b6a2699cc",
+      "engine.stderr.log_sha256": "1c06b85ce63b3b7aae9a37edaa3301dbf0abe4ec2e02bea17c29bfe876bd6b2a",
+      "trace_path": "artifacts/runs/a1ade168-dbb0-441b-abb2-9b9f1e2c0112/decisions.jsonl",
+      "trace_sha256": "18b41a75999e4d5633c961980e0d61a539c028ff0809f6e4c7e454da8fee6556"
+    }
+  ],
+  "scope": "Compatibility/handoff only; one known counterfactual, not win rate",
+  "audit": {
+    "raw_traces": 4,
+    "failures": [],
+    "pass": true
+  },
+  "seconds": 19.191903457976878,
+  "passed": true
+}
