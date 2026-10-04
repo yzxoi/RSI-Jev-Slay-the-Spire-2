@@ -1,0 +1,101 @@
+{
+  "manifest": {
+    "schema_version": 2,
+    "code_commit": "358949b393dedc93e5a79187899b295a765bf0b7",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "a32485ef4c34641acc26f0c85454ba767bd4b06c4c06258e59baa26b5a72b54f",
+    "godot_stubs_sha256": "2bb3b99863f651decb27cf3ceead489046808e60d95ccbc28048ad094ecc856a",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+      "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772",
+      "headless-zzzzzz-godot-abi.patch": "5239d3836d279de5143f7d56bece1f061c6c4002de696fce28f9f7f3922ededc",
+      "headless-zzzzzzz-learning-observations.patch": "d51db8457fdb9348340a829c84fa77e9620c476ba16a7c6e224b286ecb2dfd07",
+      "headless-zzzzzzzz-encounter-abi.patch": "e4a730f9e58fddebef8ef924fcd8d0adc03d72d1148f8d29b2f9ea60556696cc",
+      "headless-zzzzzzzzz-native-map-odds.patch": "86ee5561968629b094a1f63e214f32e8a3ae7b5614fffcb470d52886287e1885"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4",
+    "experiment": "E166",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.5",
+    "model_calls": 0,
+    "model_cost_usd": 0,
+    "encoder": "e140-phase-context-v1",
+    "torch": "2.11.0",
+    "device": "cpu"
+  },
+  "source": {
+    "path": "artifacts/runs/e165-evaluation-v1.json",
+    "sha256": "24b14f688ea64e30b701ca6659a085c3b1ca7243bd8645e52c27072bc21db190"
+  },
+  "roots": [
+    {
+      "case": "A0-000-act1-floor17",
+      "source_case": "A0-000",
+      "act": 1,
+      "floor": 17,
+      "wire": {
+        "path": "artifacts/runs/ea706bb8-2c06-4ae1-9d38-cd97c5e627d6/wire.jsonl",
+        "sha256": "08fd0841c42b8474c41f025d2616dc457ec62bb3e3d285769d5dcc688b38e22c"
+      },
+      "prefix_count": 141,
+      "entry_hash": "59e0c581b52d08671a7ee9fd071c2de5546d697680c7cb81fc2d71748f5f65ab",
+      "expected_final_hash": "29f4feb5e6d16a8eed0ffb70cc39a529af3a7b7d8cadf5fb3a6b82dc84144de3",
+      "expected_status": "clear",
+      "expected_hp": 39
+    },
+    {
+      "case": "A0-000-act2-floor16",
+      "source_case": "A0-000",
+      "act": 2,
+      "floor": 16,
+      "wire": {
+        "path": "artifacts/runs/ea706bb8-2c06-4ae1-9d38-cd97c5e627d6/wire.jsonl",
+        "sha256": "08fd0841c42b8474c41f025d2616dc457ec62bb3e3d285769d5dcc688b38e22c"
+      },
+      "prefix_count": 367,
+      "entry_hash": "a68dbf559abb4cbf490455fb3f2b85f0dab2f3bcd164211493e19272beaea56e",
+      "expected_final_hash": "29de2d9f91525d883b1061c7a1add8fe9c0098de59d78b18385a309980e83a03",
+      "expected_status": "defeat",
+      "expected_hp": 0
+    },
+    {
+      "case": "A5-000-act1-floor17",
+      "source_case": "A5-000",
+      "act": 1,
+      "floor": 17,
+      "wire": {
+        "path": "artifacts/runs/cd9a5cb9-82d9-430e-ba29-05debd6f7974/wire.jsonl",
+        "sha256": "db7cb66c6c05c0782e4f3ce3cdc168b4af9815431853567bb87d4b763b92ccff"
+      },
+      "prefix_count": 165,
+      "entry_hash": "7cbd4a5cdbcf35094162f28a7647b7d8d25e83f9ff9da63a9bc0ab75bc633f80",
+      "expected_final_hash": "3f153b2fc3f29341b956c7e84956e4438741095e33b890d8794d0b1cb205e1da",
+      "expected_status": "clear",
+      "expected_hp": 36
+    }
+  ],
+  "arms": [
+    "legacy",
+    "typed_ashwater"
+  ],
+  "budgets": {
+    "actions": 300,
+    "trial_seconds": 120,
+    "replay_seconds": 120,
+    "wall_seconds": 600
+  },
+  "scope": "Known natural battle entries, not new full runs or held-out win rate"
+}
