@@ -1,0 +1,1007 @@
+{
+  "source_manifest": {
+    "schema_version": 2,
+    "code_commit": "3ac6417a206937ea5a6dc9cc4e970f09522a2277",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "a32485ef4c34641acc26f0c85454ba767bd4b06c4c06258e59baa26b5a72b54f",
+    "godot_stubs_sha256": "2bb3b99863f651decb27cf3ceead489046808e60d95ccbc28048ad094ecc856a",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+      "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772",
+      "headless-zzzzzz-godot-abi.patch": "5239d3836d279de5143f7d56bece1f061c6c4002de696fce28f9f7f3922ededc",
+      "headless-zzzzzzz-learning-observations.patch": "d51db8457fdb9348340a829c84fa77e9620c476ba16a7c6e224b286ecb2dfd07",
+      "headless-zzzzzzzz-encounter-abi.patch": "e4a730f9e58fddebef8ef924fcd8d0adc03d72d1148f8d29b2f9ea60556696cc",
+      "headless-zzzzzzzzz-native-map-odds.patch": "86ee5561968629b094a1f63e214f32e8a3ae7b5614fffcb470d52886287e1885"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4",
+    "experiment": "E165",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.5",
+    "model_calls": 0,
+    "model_cost_usd": 0,
+    "encoder": "e140-phase-context-v1",
+    "torch": "2.11.0",
+    "device": "cpu"
+  },
+  "source_plan": {
+    "path": "experiments/E165/plan-v1.json",
+    "sha256": "ba082e79c41c4c2aad2e81ca07fd23ac7d53141716e9bc46f4287db075db266b"
+  },
+  "note": "Read-only descriptive trace audit; no causal counterfactual or new gameplay. Baseline revealed only after all treatment decisions ended.",
+  "cases": [
+    {
+      "case": "A0-000",
+      "arm": "program_campaign",
+      "status": "defeat",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 7,
+        "room_type": "Monster",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "cleared_fights": 5,
+      "completed_acts": 0,
+      "requests": 0,
+      "accepted_responses": 0,
+      "all_request_chars": 0,
+      "accepted_request_chars": 0,
+      "avoided": {},
+      "power_use": {
+        "Vicious": {
+          "affordable_turns": [
+            [
+              1,
+              3,
+              1
+            ],
+            [
+              1,
+              4,
+              2
+            ],
+            [
+              1,
+              5,
+              3
+            ],
+            [
+              1,
+              6,
+              1
+            ],
+            [
+              1,
+              7,
+              3
+            ]
+          ],
+          "plays": [
+            {
+              "act": 1,
+              "floor": 3,
+              "round": 1,
+              "energy": 1
+            },
+            {
+              "act": 1,
+              "floor": 4,
+              "round": 2,
+              "energy": 3
+            },
+            {
+              "act": 1,
+              "floor": 5,
+              "round": 3,
+              "energy": 3
+            },
+            {
+              "act": 1,
+              "floor": 6,
+              "round": 1,
+              "energy": 1
+            },
+            {
+              "act": 1,
+              "floor": 7,
+              "round": 3,
+              "energy": 3
+            }
+          ]
+        }
+      },
+      "potion_use": [
+        {
+          "act": 1,
+          "floor": 5,
+          "round": 1,
+          "potion": "Fire Potion",
+          "hp": 79,
+          "intents": [
+            [
+              {
+                "type": "StatusCard"
+              }
+            ],
+            [
+              {
+                "type": "Attack",
+                "damage": 4
+              }
+            ],
+            [
+              {
+                "type": "Debuff"
+              }
+            ]
+          ]
+        }
+      ],
+      "boss_turns": [],
+      "boss_selections": []
+    },
+    {
+      "case": "A0-000",
+      "arm": "astra_campaign",
+      "status": "defeat",
+      "final_context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 16,
+        "room_type": "Boss",
+        "boss": {
+          "id": "KNOWLEDGE_DEMON_BOSS",
+          "name": "Knowledge Demon"
+        }
+      },
+      "cleared_fights": 13,
+      "completed_acts": 1,
+      "requests": 48,
+      "accepted_responses": 48,
+      "all_request_chars": 633440,
+      "accepted_request_chars": 633440,
+      "avoided": {
+        "campaign_mechanical": 5,
+        "campaign_transaction": 5
+      },
+      "power_use": {
+        "Hellraiser": {
+          "affordable_turns": [
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              2,
+              7,
+              3
+            ],
+            [
+              2,
+              7,
+              4
+            ],
+            [
+              2,
+              8,
+              1
+            ],
+            [
+              2,
+              11,
+              4
+            ],
+            [
+              2,
+              13,
+              3
+            ],
+            [
+              2,
+              14,
+              3
+            ],
+            [
+              2,
+              16,
+              1
+            ]
+          ],
+          "plays": [
+            {
+              "act": 2,
+              "floor": 13,
+              "round": 3,
+              "energy": 3
+            },
+            {
+              "act": 2,
+              "floor": 14,
+              "round": 3,
+              "energy": 2
+            }
+          ]
+        },
+        "Vicious": {
+          "affordable_turns": [
+            [
+              2,
+              16,
+              1
+            ]
+          ],
+          "plays": []
+        }
+      },
+      "potion_use": [
+        {
+          "act": 1,
+          "floor": 5,
+          "round": 1,
+          "potion": "Attack Potion",
+          "hp": 80,
+          "intents": [
+            [
+              {
+                "type": "Attack",
+                "damage": 4
+              }
+            ]
+          ]
+        },
+        {
+          "act": 1,
+          "floor": 17,
+          "round": 1,
+          "potion": "Heart of Iron",
+          "hp": 72,
+          "intents": [
+            [
+              {
+                "type": "Buff"
+              }
+            ],
+            [
+              {
+                "type": "Attack",
+                "damage": 3
+              }
+            ],
+            [
+              {
+                "type": "Attack",
+                "damage": 6
+              },
+              {
+                "type": "Debuff"
+              }
+            ]
+          ]
+        },
+        {
+          "act": 1,
+          "floor": 17,
+          "round": 1,
+          "potion": "Block Potion",
+          "hp": 72,
+          "intents": [
+            [
+              {
+                "type": "Buff"
+              }
+            ],
+            [
+              {
+                "type": "Attack",
+                "damage": 3
+              }
+            ],
+            [
+              {
+                "type": "Attack",
+                "damage": 6
+              },
+              {
+                "type": "Debuff"
+              }
+            ]
+          ]
+        },
+        {
+          "act": 1,
+          "floor": 17,
+          "round": 1,
+          "potion": "Vulnerable Potion",
+          "hp": 72,
+          "intents": [
+            [
+              {
+                "type": "Buff"
+              }
+            ],
+            [
+              {
+                "type": "Attack",
+                "damage": 3
+              }
+            ],
+            [
+              {
+                "type": "Attack",
+                "damage": 6
+              },
+              {
+                "type": "Debuff"
+              }
+            ]
+          ]
+        },
+        {
+          "act": 2,
+          "floor": 16,
+          "round": 1,
+          "potion": "Power Potion",
+          "hp": 72,
+          "intents": [
+            [
+              {
+                "type": "Debuff"
+              }
+            ]
+          ]
+        },
+        {
+          "act": 2,
+          "floor": 16,
+          "round": 1,
+          "potion": "Regen Potion",
+          "hp": 72,
+          "intents": [
+            [
+              {
+                "type": "Debuff"
+              }
+            ]
+          ]
+        },
+        {
+          "act": 2,
+          "floor": 16,
+          "round": 1,
+          "potion": "Snecko Oil",
+          "hp": 72,
+          "intents": [
+            [
+              {
+                "type": "Debuff"
+              }
+            ]
+          ]
+        },
+        {
+          "act": 2,
+          "floor": 16,
+          "round": 1,
+          "potion": "Block Potion",
+          "hp": 72,
+          "intents": [
+            [
+              {
+                "type": "Debuff"
+              }
+            ]
+          ]
+        },
+        {
+          "act": 2,
+          "floor": 16,
+          "round": 1,
+          "potion": "Ashwater",
+          "hp": 72,
+          "intents": [
+            [
+              {
+                "type": "Debuff"
+              }
+            ]
+          ]
+        },
+        {
+          "act": 2,
+          "floor": 16,
+          "round": 1,
+          "potion": "Fire Potion",
+          "hp": 72,
+          "intents": [
+            [
+              {
+                "type": "Debuff"
+              }
+            ]
+          ]
+        },
+        {
+          "act": 2,
+          "floor": 16,
+          "round": 1,
+          "potion": "Vulnerable Potion",
+          "hp": 72,
+          "intents": [
+            [
+              {
+                "type": "Debuff"
+              }
+            ]
+          ]
+        }
+      ],
+      "boss_turns": [
+        {
+          "round": 1,
+          "hp": 72,
+          "enemies": [
+            {
+              "name": "Knowledge Demon",
+              "hp": 379
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "hp": 77,
+          "enemies": [
+            {
+              "name": "Knowledge Demon",
+              "hp": 295
+            }
+          ]
+        },
+        {
+          "round": 3,
+          "hp": 70,
+          "enemies": [
+            {
+              "name": "Knowledge Demon",
+              "hp": 272
+            }
+          ]
+        },
+        {
+          "round": 4,
+          "hp": 68,
+          "enemies": [
+            {
+              "name": "Knowledge Demon",
+              "hp": 245
+            }
+          ]
+        },
+        {
+          "round": 5,
+          "hp": 70,
+          "enemies": [
+            {
+              "name": "Knowledge Demon",
+              "hp": 245
+            }
+          ]
+        },
+        {
+          "round": 6,
+          "hp": 71,
+          "enemies": [
+            {
+              "name": "Knowledge Demon",
+              "hp": 211
+            }
+          ]
+        },
+        {
+          "round": 7,
+          "hp": 55,
+          "enemies": [
+            {
+              "name": "Knowledge Demon",
+              "hp": 177
+            }
+          ]
+        },
+        {
+          "round": 8,
+          "hp": 28,
+          "enemies": [
+            {
+              "name": "Knowledge Demon",
+              "hp": 150
+            }
+          ]
+        },
+        {
+          "round": 9,
+          "hp": 28,
+          "enemies": [
+            {
+              "name": "Knowledge Demon",
+              "hp": 140
+            }
+          ]
+        },
+        {
+          "round": 10,
+          "hp": 28,
+          "enemies": [
+            {
+              "name": "Knowledge Demon",
+              "hp": 100
+            }
+          ]
+        },
+        {
+          "round": 11,
+          "hp": 10,
+          "enemies": [
+            {
+              "name": "Knowledge Demon",
+              "hp": 78
+            }
+          ]
+        }
+      ],
+      "boss_selections": [
+        {
+          "chosen": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "2"
+            }
+          },
+          "chosen_cards": [
+            {
+              "index": 2,
+              "name": "Vicious",
+              "id": "CARD.VICIOUS"
+            }
+          ],
+          "parent": {
+            "id": "p004",
+            "action": {
+              "cmd": "action",
+              "action": "use_potion",
+              "args": {
+                "potion_index": 4
+              }
+            },
+            "name": "Power Potion",
+            "details": {
+              "index": 4,
+              "name": "Power Potion",
+              "description": "Choose 1 of 3 random Power cards to add into your Hand. It's free to play this turn.",
+              "vars": null,
+              "target_type": "AnyPlayer",
+              "id": "POWER_POTION",
+              "slot_index": 4,
+              "usage": "CombatOnly",
+              "can_use": true,
+              "can_discard": true
+            }
+          },
+          "state_hash": "553428a08756b3160212095f6cf61d3a47a50ac0aa13b9cf32974f054a29e52f"
+        },
+        {
+          "chosen": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,2,3,4,5,8,9"
+            }
+          },
+          "chosen_cards": [
+            {
+              "index": 0,
+              "name": "Hellraiser",
+              "id": "CARD.HELLRAISER"
+            },
+            {
+              "index": 2,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 3,
+              "name": "Pillage",
+              "id": "CARD.PILLAGE"
+            },
+            {
+              "index": 4,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 5,
+              "name": "Vicious",
+              "id": "CARD.VICIOUS"
+            },
+            {
+              "index": 8,
+              "name": "Iron Wave",
+              "id": "CARD.IRON_WAVE"
+            },
+            {
+              "index": 9,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            }
+          ],
+          "parent": {
+            "id": "p002",
+            "action": {
+              "cmd": "action",
+              "action": "use_potion",
+              "args": {
+                "potion_index": 2
+              }
+            },
+            "name": "Ashwater",
+            "details": {
+              "index": 2,
+              "name": "Ashwater",
+              "description": "Exhaust any number of cards in your Hand.",
+              "vars": null,
+              "target_type": "AnyPlayer",
+              "id": "ASHWATER",
+              "slot_index": 6,
+              "usage": "CombatOnly",
+              "can_use": true,
+              "can_discard": true
+            }
+          },
+          "state_hash": "7597915e691336fab15c696df1bd53318311bfbdc08d5757217597ee4208d515"
+        },
+        {
+          "chosen": {
+            "cmd": "action",
+            "action": "skip_select",
+            "args": {}
+          },
+          "chosen_cards": null,
+          "parent": {
+            "action": {
+              "cmd": "action",
+              "action": "end_turn",
+              "args": {}
+            },
+            "name": "End turn",
+            "id": "a000"
+          },
+          "state_hash": "3b822f694f5c9ec3ef07b89773d2f74433233c7022366f1bc13b47cd3e09c838"
+        },
+        {
+          "chosen": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "1"
+            }
+          },
+          "chosen_cards": [
+            {
+              "index": 1,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            }
+          ],
+          "parent": {
+            "action": {
+              "cmd": "action",
+              "action": "play_card",
+              "args": {
+                "card_index": 4
+              }
+            },
+            "card_id": "CARD.BURNING_PACT",
+            "name": "Burning Pact",
+            "id": "a004"
+          },
+          "state_hash": "efc0b751e2c9017cda940b8f403ec313abb3930caa23c550683a017ad18561a6"
+        },
+        {
+          "chosen": {
+            "cmd": "action",
+            "action": "skip_select",
+            "args": {}
+          },
+          "chosen_cards": null,
+          "parent": {
+            "action": {
+              "cmd": "action",
+              "action": "end_turn",
+              "args": {}
+            },
+            "name": "End turn",
+            "id": "a000"
+          },
+          "state_hash": "6eaf2031ed9e9b7d338d6c71737184c818431e71297b173f25b110c01175d1f6"
+        },
+        {
+          "chosen": {
+            "cmd": "action",
+            "action": "skip_select",
+            "args": {}
+          },
+          "chosen_cards": null,
+          "parent": {
+            "action": {
+              "cmd": "action",
+              "action": "end_turn",
+              "args": {}
+            },
+            "name": "End turn",
+            "id": "a000"
+          },
+          "state_hash": "a8a63a714a098aad284f0d4182f29b00b6b16f5bc479d2aa29573c214b74d9f1"
+        }
+      ]
+    },
+    {
+      "case": "A5-000",
+      "arm": "program_campaign",
+      "status": "defeat",
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "cleared_fights": 9,
+      "completed_acts": 0,
+      "requests": 0,
+      "accepted_responses": 0,
+      "all_request_chars": 0,
+      "accepted_request_chars": 0,
+      "avoided": {},
+      "power_use": {},
+      "potion_use": [
+        {
+          "act": 1,
+          "floor": 3,
+          "round": 1,
+          "potion": "Speed Potion",
+          "hp": 67,
+          "intents": [
+            [
+              {
+                "type": "DebuffStrong"
+              }
+            ]
+          ]
+        },
+        {
+          "act": 1,
+          "floor": 5,
+          "round": 1,
+          "potion": "Stable Serum",
+          "hp": 70,
+          "intents": [
+            [
+              {
+                "type": "Attack",
+                "damage": 6,
+                "hits": 2,
+                "total_damage": 12
+              }
+            ]
+          ]
+        },
+        {
+          "act": 1,
+          "floor": 8,
+          "round": 1,
+          "potion": "Distilled Chaos",
+          "hp": 26,
+          "intents": [
+            [
+              {
+                "type": "DebuffStrong"
+              }
+            ],
+            [
+              {
+                "type": "Attack",
+                "damage": 4
+              }
+            ]
+          ]
+        },
+        {
+          "act": 1,
+          "floor": 14,
+          "round": 1,
+          "potion": "Fortifier",
+          "hp": 46,
+          "intents": [
+            [
+              {
+                "type": "Attack",
+                "damage": 3
+              }
+            ],
+            [
+              {
+                "type": "Attack",
+                "damage": 2,
+                "hits": 3,
+                "total_damage": 6
+              }
+            ],
+            [
+              {
+                "type": "Attack",
+                "damage": 3
+              }
+            ]
+          ]
+        },
+        {
+          "act": 1,
+          "floor": 15,
+          "round": 1,
+          "potion": "Blessing of the Forge",
+          "hp": 40,
+          "intents": [
+            [
+              {
+                "type": "Attack",
+                "damage": 3
+              },
+              {
+                "type": "Buff"
+              }
+            ],
+            [
+              {
+                "type": "Attack",
+                "damage": 8
+              },
+              {
+                "type": "Debuff"
+              }
+            ]
+          ]
+        }
+      ],
+      "boss_turns": [],
+      "boss_selections": []
+    },
+    {
+      "case": "A5-000",
+      "arm": "astra_campaign",
+      "status": "error",
+      "final_context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 11,
+        "room_type": "Elite",
+        "boss": {
+          "id": "KNOWLEDGE_DEMON_BOSS",
+          "name": "Knowledge Demon"
+        }
+      },
+      "cleared_fights": 12,
+      "completed_acts": 1,
+      "requests": 38,
+      "accepted_responses": 37,
+      "all_request_chars": 479114,
+      "accepted_request_chars": 465539,
+      "avoided": {
+        "campaign_mechanical": 5,
+        "campaign_transaction": 5
+      },
+      "power_use": {
+        "Crimson Mantle": {
+          "affordable_turns": [
+            [
+              2,
+              2,
+              1
+            ],
+            [
+              2,
+              4,
+              2
+            ],
+            [
+              2,
+              6,
+              2
+            ],
+            [
+              2,
+              8,
+              1
+            ]
+          ],
+          "plays": [
+            {
+              "act": 2,
+              "floor": 6,
+              "round": 2,
+              "energy": 1
+            }
+          ]
+        }
+      },
+      "potion_use": [
+        {
+          "act": 1,
+          "floor": 17,
+          "round": 1,
+          "potion": "Cure All",
+          "hp": 80,
+          "intents": [
+            [
+              {
+                "type": "Attack",
+                "damage": 7
+              }
+            ]
+          ]
+        },
+        {
+          "act": 1,
+          "floor": 17,
+          "round": 1,
+          "potion": "Weak Potion",
+          "hp": 80,
+          "intents": [
+            [
+              {
+                "type": "Attack",
+                "damage": 7
+              }
+            ]
+          ]
+        }
+      ],
+      "boss_turns": [],
+      "boss_selections": []
+    }
+  ],
+  "manual_ownership_audit": {
+    "passed": false,
+    "reason": "A5 seq38 Gambling Chip was a battle-opening selection routed to Astra; expert abstained before an engine action. Runtime audit was circular because it trusted its own combat_active flag.",
+    "abstention": "experiments/E165/ownership-abstention-v1.json"
+  },
+  "request_accounting": {
+    "actual_requests": 86,
+    "accepted_decisions": 85,
+    "all_request_chars": 1112554,
+    "avoided_nontrivial": 20,
+    "same_trajectory_equivalent_accepted": 105,
+    "accepted_reduction_fraction": 0.19047619047619047,
+    "actual_tokens": null,
+    "actual_usd": null,
+    "note": "Input characters are serialized protocol size, not actual conversational tokens; include rejected request separately. Native tool/engineering/read-only diagnosis tokens remain unmetered."
+  }
+}
