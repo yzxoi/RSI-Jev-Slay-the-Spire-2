@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>STS2 决策观察窗</title>
+  <link rel="stylesheet" href="/monitor.css">
+  <script src="/monitor.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="brand"><span class="mark">✦</span><div><strong>STS2 决策观察窗</strong><small>Jev · Astra · Trace</small></div></div>
+    <span id="mode" class="badge">连接中</span>
+  </header>
+  <main>
+    <section class="run-strip">
+      <div><span class="eyebrow">对局</span><strong id="run-id">—</strong></div>
+      <div><span class="eyebrow">楼层 / 回合</span><strong id="position">—</strong></div>
+      <div><span class="eyebrow">生命</span><strong id="hp">—</strong></div>
+    </section>
+    <section class="hero">
+      <div class="hero-top"><span id="source" class="source">等待决策</span><span id="state" class="state">—</span></div>
+      <h1 id="action">等待 trace…</h1>
+      <p id="screen" class="muted">窗口只读取本地记录，不控制游戏。</p>
+      <div class="confidence"><div><span>Jev confidence</span><strong id="confidence">—</strong></div><div class="meter"><span id="confidence-fill"></span></div></div>
+      <p class="explain">模型对本次选择的自报集中度；不是通关概率。Astra 和自动动作不提供此值。</p>
+    </section>
+    <section class="options-section"><div class="section-head"><h2>候选选项</h2><span id="option-count" class="muted">—</span></div><div id="options" class="options"><p class="empty">等待候选记录</p></div></section>
+    <section id="plan-section" class="plan-section" hidden><div class="section-head"><h2>Astra 方案</h2><span id="plan-scope" class="muted"></span></div><p id="plan-text"></p></section>
+    <section class="history-section"><div class="section-head"><h2>最近决策</h2><button id="live-button" type="button" hidden>返回最新</button></div><div id="history" class="history"></div></section>
+  </main>
+  <footer><span id="connection">等待本地 trace</span><span id="segment">—</span></footer>
+</body>
+</html>
