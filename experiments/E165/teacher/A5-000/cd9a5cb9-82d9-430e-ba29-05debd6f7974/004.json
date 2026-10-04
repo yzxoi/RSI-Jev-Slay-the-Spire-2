@@ -1,0 +1,33 @@
+{
+  "case": "A5-000",
+  "run_id": "cd9a5cb9-82d9-430e-ba29-05debd6f7974",
+  "seq": 4,
+  "state_hash": "651daee00438dacc30fd7491e47973df0b30ee7af654cec8901f94fd5b6ee21d",
+  "choice_id": "a000",
+  "campaign_plan": "Buy Iron Wave for immediate mixed offense/defense, then Weak Potion for Vantom or HP emergency, and leave. Avoid adding low-impact exhaust powers without an exhaust engine.",
+  "potion_reservations": [
+    {
+      "potion_id": "SPEED_POTION",
+      "until": "Elite",
+      "release_hp_fraction": 0.5
+    }
+  ],
+  "acquire_reservation": null,
+  "transaction_steps": [
+    {
+      "kind": "buy_potion",
+      "index": 1,
+      "potion_reservations": null,
+      "acquire_reservation": {
+        "potion_id": "WEAK_POTION",
+        "until": "Boss",
+        "release_hp_fraction": 0.45
+      }
+    },
+    {
+      "kind": "leave_room",
+      "index": null,
+      "potion_reservations": null
+    }
+  ]
+}
