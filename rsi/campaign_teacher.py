@@ -166,10 +166,10 @@ class CampaignTeacher:
         self.acquisition=None
 
 
-def episode(config,manifest,budget,pending,deadline):
+def episode(config,manifest,budget,pending,deadline,program=None):
     trace=Trace(ROOT/'artifacts/runs'/str(uuid.uuid4()),{**manifest,'scope':'E160_full_run','config':config})
     start=time.monotonic();engine=None;state={};previous=None;history={};trans=[];map_state=None;query_count=0
-    owner=Ownership();program=FrozenProgram(None);teacher=None
+    owner=Ownership();program=program if program is not None else FrozenProgram(None);teacher=None
     r={**config,'run_id':trace.directory.name,'status':'error','steps':0,'entries':[],
         'completed_battles':0,'completed_acts':0,'max_act':1,'scenes':Counter(),'owners':Counter(),
         'potion_blocks':0,'illegal_actions':0}
