@@ -65,7 +65,8 @@ class Transaction:
         self.shop_catalog=catalog(state) if state['decision']=='shop' else None
         previous=first;last_selection=None
         for step in steps:
-            if set(step)!={'kind','index','potion_reservations'}:raise ValueError('Unknown transaction fields')
+            if not {'kind','index','potion_reservations'}<=set(step) or set(step)-{'kind','index','potion_reservations','acquire_reservation'}:
+                raise ValueError('Unknown transaction fields')
             kind=step['kind'];compiled=copy.deepcopy(step)
             if kind in SHOP:
                 if type(step['index']) is not int:raise ValueError('Offer index must be an integer')
@@ -92,7 +93,7 @@ class Transaction:
         self.steps=[];self.pending=None;self.invalid=reason
 
     def accepted(self,before,chosen,after):
-        if not self.steps and self.pending is None:return
+        if not self.steps:self.pending=None;return
         if digest(before)!=self.expected_hash:
             self.invalidate('stale_before_state');return
         if after.get('context')!=self.context:
@@ -142,6 +143,9 @@ class Transaction:
                 idx=matches[step['occurrence']]['index']
                 cmd=action('select_cards',indices=str(idx))
                 selected=next((c for c in choices if c['action']==cmd),None)
+                if selected is None and not choices:
+                    from .subset_action import contract,resolve
+                    selected=resolve(contract(state),[idx],digest(state))
         elif state['decision']=='shop':
             if catalog(state)!=self.shop_catalog:self.invalidate('offer_changed');return None
             for c in choices:
