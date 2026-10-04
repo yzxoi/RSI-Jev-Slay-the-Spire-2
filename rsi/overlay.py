@@ -61,6 +61,7 @@ def run(feed, *, opacity=0.90, width=430, height=540, margin=20, screen_index=No
             NSWindowStyleMaskNonactivatingPanel, NSMutableParagraphStyle, NSView,
             NSWindowStyleMaskTitled, NSWindowStyleMaskClosable, NSWindowStyleMaskResizable,
             NSWindowStyleMaskMiniaturizable,
+            NSAppearance, NSAppearanceNameDarkAqua,
         )
         from Foundation import NSObject, NSProcessInfo, NSString, NSTimer
     except ImportError as exc:
@@ -205,7 +206,7 @@ def run(feed, *, opacity=0.90, width=430, height=540, margin=20, screen_index=No
 
     app = NSApplication.sharedApplication()
     app.setActivationPolicy_(NSApplicationActivationPolicyAccessory)
-    NSProcessInfo.processInfo().setProcessName_("STS2 Decision Overlay")
+    NSProcessInfo.processInfo().setProcessName_("Spire Overlay")
     screens = NSScreen.screens()
     if builtin and screen_index is None:
         screen_index = next((i for i, s in enumerate(screens)
@@ -224,15 +225,16 @@ def run(feed, *, opacity=0.90, width=430, height=540, margin=20, screen_index=No
     panel = DecisionPanel.alloc().initWithContentRect_styleMask_backing_defer_(
         frame, style,
         NSBackingStoreBuffered, False)
-    panel.setTitle_("STS2 Decision Overlay")
-    panel.setTitlebarAppearsTransparent_(True)
+    panel.setTitle_("Spire · 决策面板")
+    panel.setAppearance_(NSAppearance.appearanceNamed_(NSAppearanceNameDarkAqua))
+    panel.setTitlebarAppearsTransparent_(False)
     panel.setContentMinSize_((360, 490))
     panel.setReleasedWhenClosed_(False)
     panel.setLevel_(NSFloatingWindowLevel)
     panel.setCollectionBehavior_(NSWindowCollectionBehaviorCanJoinAllSpaces |
                                  NSWindowCollectionBehaviorFullScreenAuxiliary)
     panel.setOpaque_(False)
-    panel.setBackgroundColor_(NSColor.clearColor())
+    panel.setBackgroundColor_(bg)
     panel.setHasShadow_(True)
     panel.setAlphaValue_(opacity)
     panel.setIgnoresMouseEvents_(not interactive)
