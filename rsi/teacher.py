@@ -91,10 +91,20 @@ def selection_choice(state, choices, policy, previous):
     prior_name = (previous or {}).get('name', '').lower()
     harmful = any(word in context for word in ('discard', 'exhaust', 'remove', 'put on top'))
     harmful |= prior_name in ('survivor', 'photon cut', 'true grit', 'burning pact')
-    def value(choice):
+    # E166 opt-in: the CLI omits selection purpose, but the triggering potion
+    # has a stable identity. Never infer destruction merely from an unknown name.
+    typed_ashwater = (policy.get('typed_ashwater', False) and
+                      (previous or {}).get('details', {}).get('id') == 'ASHWATER')
+    if typed_ashwater:
+        if state.get('min_select') != 0:
+            raise ValueError('Ashwater expected an optional exhaust selection')
+        harmful = True
+    def indexes_for(choice):
         args = choice['action']['args']
-        indexes = ([args['card_index']] if 'card_index' in args else
-                   [int(x) for x in args.get('indices', '').split(',') if x])
+        return ([args['card_index']] if 'card_index' in args else
+                [int(x) for x in args.get('indices', '').split(',') if x])
+    def value(choice):
+        indexes = indexes_for(choice)
         total = 0
         for idx in indexes:
             c = cards.get(idx, {})
@@ -106,7 +116,10 @@ def selection_choice(state, choices, policy, previous):
             if c.get('id', '').endswith('.NO_ESCAPE'):
                 total += 25
         return (-total if harmful else total)
-    ordered = sorted(choices, key=value, reverse=True)
+    # A zero-valued card is not evidence that destroying it helps. Prefer fewer
+    # removals on ties; all legacy modes retain their original stable ordering.
+    ordered = sorted(choices, key=lambda c: (value(c),
+        -len(indexes_for(c)) if typed_ashwater else 0), reverse=True)
     return ordered[min(policy.get('selection_rank', 0), len(ordered) - 1)]
 
 
