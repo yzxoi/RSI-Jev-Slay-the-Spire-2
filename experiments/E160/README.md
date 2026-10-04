@@ -39,3 +39,28 @@ Implementation/plan-generation SHA `b41e4aa`: six focused ownership/resource/con
 The registered v1 failed completeness: three Astra runs stopped at the shared 200-packet budget and one failed at Pael's Tooth (8568 legal combinations >4096). All four controls naturally lost in act one; all four treatments reached act two. This is a positive first-act observation, not a completed full-run comparison; no promotion or budget extension. Do not change v1 outcomes or continue its games.
 
 A separate **read-only post-hoc** audit will replay the four recorded treatment prefixes with no new decisions (120seconds each), tabulate request overhead, and describe the A5-000 act2 floor11 Obscura fight. Exact prefix replay only verifies executed transitions; it cannot satisfy the original eight-terminal gate or produce a new victory sample. `scripts/audit_campaign_e160.py` is committed before this verification. This adds no policy, training, seed or game-state edit.
+
+## v1 result and disposition
+
+Tested gameplay SHA `e99d72bb918d70b705267280a9e2a5708207e4b9`; frozen source hashes remained unchanged. Teacher commits bind 200 packets from `c2650fd` through `e4a4805`. See `evaluation-v1.json`, `audit-v1.json`, and the [D024 report](../../docs/research/learning-search/2026-10-04-hybrid-campaign.md).
+
+| Case | Control | Astra | Cleared fights control/Astra | Expert packets |
+|---|---|---|---|---|
+| A0-000 | defeat Act1 floor12 | packet cap Act2 floor12,80HP | 5/11 | 56 |
+| A0-001 | defeat Act1 floor17 | packet cap Act2 floor7,60HP | 7/11 | 56 |
+| A5-000 | defeat Act1 floor15 | packet cap Act2 floor11,16HP | 7/13 | 57 |
+| A5-001 | defeat Act1 floor17 | selection error Act2 floor1,100HP | 6/9 | 31 |
+
+First-act passage0/4→4/4 is an exploratory observation. Zero full victories observed; all treatment outcomes are incomplete, so no full-run win-rate estimate or formal paired progress promotion. This cautious macro baseline is weak, and treatment cases share expert context/cross-case discoveries. No final330acceptance seeds used.
+
+Registered evaluation:1826.106wall seconds,62.377aggregate CPU seconds;200requests,2,165,658input characters,105,144output characters. Actual expert tokens/USD unknown. The generic manifest's zero model API usage does not measure Codex/Astra task inference. Combined waits6392.277seconds sum concurrent runs, not wall time. Shared cap causes scheduler-dependent truncation and should be replaced by fair independent run budgets in a new protocol.
+
+Raw audit12bundles passed;1656actions and200committed expert packets passed fresh legal/ownership/binding checks. Four control terminal replays matched. Supplementary audit SHA `5e7e2a43b4fad6238caa1f4e62511ded77f115f9`: all four treatment recorded-prefix replays matched every wire command,4more bundles passed,36.575seconds. This does not repair the eight-terminal gate. No HP/reward/state edits, seed replacement, resumed run or native gameplay.
+
+```sh
+python3 scripts/audit_campaign_e160.py --source experiments/E160/evaluation-v1.json --output artifacts/runs/e160-audit-v1.json
+```
+
+Request phases: map48,card_reward46,shop26,potion_reward22,event21,card_select19,rest18;7maps had a sole route plus resource alternative. Obscura diagnostic:83HP→10HP before BurningBlood→16HP;15turns;30targeted card plays at reviving minion vs11at leader;Juggernaut+ playable turns3/5/7/13,never played. This is observational, no alternative outcome proven. Expert evaluation also overestimated Gorget's durability: Plating decays each turn.
+
+Decision: merge opt-in harness, complete positive/negative evidence and research records only. Do not promote a default policy or continue this per-button recipe. Follow-up atomic proposals #310–#313 are registered, not executed; address subset representation, acquire-and-reserve handoff, macro call compression and encounter objectives. Evidence supports further hybrid engineering, not a cheap/stable full-run claim.

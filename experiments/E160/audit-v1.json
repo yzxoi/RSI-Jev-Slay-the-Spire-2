@@ -1,0 +1,703 @@
+{
+  "scope": "Post-hoc descriptive audit; interrupted prefix replays are not terminal runs or new win samples",
+  "source_sha256": "7d7d86a9c75b5b920a7f45fe3b4ea03a0782e575ca54b18ff657598263214564",
+  "audit_code_commit": "5e7e2a43b4fad6238caa1f4e62511ded77f115f9",
+  "original_gate_unchanged": false,
+  "requests": [
+    {
+      "case": "A0-000",
+      "phases": {
+        "event_choice": 6,
+        "card_reward": 12,
+        "map_select": 12,
+        "potion_reward": 5,
+        "rest_site": 6,
+        "card_select": 6,
+        "shop": 9
+      },
+      "single_route_with_alternative_resource_action": 0,
+      "input_chars": 615937,
+      "packets": 56
+    },
+    {
+      "case": "A0-001",
+      "phases": {
+        "event_choice": 5,
+        "map_select": 18,
+        "card_reward": 12,
+        "potion_reward": 6,
+        "shop": 7,
+        "rest_site": 4,
+        "card_select": 4
+      },
+      "single_route_with_alternative_resource_action": 6,
+      "input_chars": 539659,
+      "packets": 56
+    },
+    {
+      "case": "A5-000",
+      "phases": {
+        "event_choice": 6,
+        "map_select": 11,
+        "potion_reward": 7,
+        "card_reward": 13,
+        "card_select": 7,
+        "rest_site": 5,
+        "shop": 8
+      },
+      "single_route_with_alternative_resource_action": 1,
+      "input_chars": 672627,
+      "packets": 57
+    },
+    {
+      "case": "A5-001",
+      "phases": {
+        "event_choice": 4,
+        "map_select": 7,
+        "card_reward": 9,
+        "shop": 2,
+        "potion_reward": 4,
+        "rest_site": 3,
+        "card_select": 2
+      },
+      "single_route_with_alternative_resource_action": 0,
+      "input_chars": 337435,
+      "packets": 31
+    }
+  ],
+  "treatment_prefix_replays": [
+    {
+      "case": "A0-000",
+      "status": "match",
+      "steps": 297,
+      "outcome": null,
+      "final_hash": "df4df1dff6afa9d0283a8079c12f189da4be1b05baacfe5cd2c7dadf57b8bb00",
+      "seconds": 10.131768540944904,
+      "wire.jsonl_sha256": "a5d9e28b6074daee5226ded4568d36f3dc1c328cea8c8ccaccecc2c4c3e2b2f7",
+      "engine.stderr.log_sha256": "83e96ae1322a518bc830b251c799109e7692ac58ae2791832ea830813c82ec69",
+      "trace_path": "artifacts/runs/1868e0d7-0c44-405d-a5fa-7c466663e5de/decisions.jsonl",
+      "trace_sha256": "0d6c7e371cc2c587a46613d1d2892ccb24b0cb975a212485363e7d3a68e32038"
+    },
+    {
+      "case": "A0-001",
+      "status": "match",
+      "steps": 248,
+      "outcome": null,
+      "final_hash": "9fa2b1f758cce089e3c30845433199a797fb30069a1497472a84e4898d4652bf",
+      "seconds": 8.420922833960503,
+      "wire.jsonl_sha256": "575c01daa2794c8c418724af67d37161d47fac871d552c206777dcdc292fd955",
+      "engine.stderr.log_sha256": "3968a0b8cac3cb25859ce2b57f510df36b2fcc5990eaa051103aef01b0faf010",
+      "trace_path": "artifacts/runs/08eabdbf-2699-4b29-9b07-06e0e3b078b4/decisions.jsonl",
+      "trace_sha256": "da458f2327e976f742db9ab4d90602fd197e6c272466ec03c8456240bf86f2c3"
+    },
+    {
+      "case": "A5-000",
+      "status": "match",
+      "steps": 352,
+      "outcome": null,
+      "final_hash": "e9f078bec53e0c73cc3d4d25668ce27da32948801426981f55a13d7ecfe1eae9",
+      "seconds": 11.396774666151032,
+      "wire.jsonl_sha256": "a6d4f3d650c8931ad5e1a6d60c21bedb940835b1bd6fb374e033bfc81985b10d",
+      "engine.stderr.log_sha256": "abfeecd1a6ae400c3e505e00784ebf522ce7ad28cf8371df47e9993b90506d8f",
+      "trace_path": "artifacts/runs/d8568ae4-6c3d-4f6c-9e79-a25adc3f000d/decisions.jsonl",
+      "trace_sha256": "89e3c2d9b262f95992e6ece87edd99ef9a0b15933f840b9d367e07fb49452ca2"
+    },
+    {
+      "case": "A5-001",
+      "status": "match",
+      "steps": 193,
+      "outcome": null,
+      "final_hash": "d8e6333665c4f316ca6c3c970dd262e532df7679f63e90ebdb40f984cef4c961",
+      "seconds": 6.355193166993558,
+      "wire.jsonl_sha256": "7512911ff49549fc240a9d4ac078db352877e46fbd18561a300a7e6e611e7adf",
+      "engine.stderr.log_sha256": "18b7dd5fd9aa730fd50d2effac2e531fca2b61c301fce346e589271ec49b221f",
+      "trace_path": "artifacts/runs/3f370674-be26-4faa-9d85-abeb6c9432cc/decisions.jsonl",
+      "trace_sha256": "72e8be36599e390e29a1f393a3bac36e7c64df9aa80ad8a08852261ad169cb9f"
+    }
+  ],
+  "obscura": {
+    "case": "A5-000",
+    "act": 2,
+    "floor": 11,
+    "start_hp": 83,
+    "post_reward_hp": 16,
+    "attack_targets": {
+      "The Obscura": 11,
+      "Parafright": 30
+    },
+    "juggernaut_playable_but_other_chosen": [
+      {
+        "trace_seq": 377,
+        "round": 3,
+        "chosen": "Perfected Strike"
+      },
+      {
+        "trace_seq": 385,
+        "round": 5,
+        "chosen": "Perfected Strike"
+      },
+      {
+        "trace_seq": 392,
+        "round": 7,
+        "chosen": "Bash"
+      },
+      {
+        "trace_seq": 418,
+        "round": 13,
+        "chosen": "Bash"
+      }
+    ],
+    "juggernaut_plays": 0,
+    "rounds": {
+      "1": [
+        {
+          "trace_seq": 368,
+          "hp": 83,
+          "energy": 3,
+          "choice": "Inflame",
+          "target": null,
+          "leader_hp": 123
+        },
+        {
+          "trace_seq": 369,
+          "hp": 83,
+          "energy": 2,
+          "choice": "Strike",
+          "target": "The Obscura",
+          "leader_hp": 123
+        },
+        {
+          "trace_seq": 370,
+          "hp": 83,
+          "energy": 1,
+          "choice": "Strike",
+          "target": "The Obscura",
+          "leader_hp": 115
+        },
+        {
+          "trace_seq": 371,
+          "hp": 83,
+          "energy": 0,
+          "choice": "End turn",
+          "target": null,
+          "leader_hp": 107
+        }
+      ],
+      "2": [
+        {
+          "trace_seq": 372,
+          "hp": 83,
+          "energy": 3,
+          "choice": "Setup Strike",
+          "target": "Parafright",
+          "leader_hp": 107
+        },
+        {
+          "trace_seq": 373,
+          "hp": 83,
+          "energy": 2,
+          "choice": "Strike",
+          "target": "Parafright",
+          "leader_hp": 107
+        },
+        {
+          "trace_seq": 374,
+          "hp": 83,
+          "energy": 1,
+          "choice": "Forgotten Ritual",
+          "target": null,
+          "leader_hp": 107
+        },
+        {
+          "trace_seq": 375,
+          "hp": 83,
+          "energy": 4,
+          "choice": "Thrash",
+          "target": "Parafright",
+          "leader_hp": 107
+        },
+        {
+          "trace_seq": 376,
+          "hp": 83,
+          "energy": 3,
+          "choice": "End turn",
+          "target": null,
+          "leader_hp": 107
+        }
+      ],
+      "3": [
+        {
+          "trace_seq": 377,
+          "hp": 83,
+          "energy": 3,
+          "choice": "Perfected Strike",
+          "target": "Parafright",
+          "leader_hp": 107
+        },
+        {
+          "trace_seq": 378,
+          "hp": 83,
+          "energy": 1,
+          "choice": "Taunt",
+          "target": "The Obscura",
+          "leader_hp": 107
+        },
+        {
+          "trace_seq": 379,
+          "hp": 83,
+          "energy": 0,
+          "choice": "End turn",
+          "target": null,
+          "leader_hp": 107
+        }
+      ],
+      "4": [
+        {
+          "trace_seq": 380,
+          "hp": 83,
+          "energy": 3,
+          "choice": "Flame Barrier",
+          "target": null,
+          "leader_hp": 107
+        },
+        {
+          "trace_seq": 381,
+          "hp": 83,
+          "energy": 1,
+          "choice": "Pommel Strike",
+          "target": "Parafright",
+          "leader_hp": 107
+        },
+        {
+          "trace_seq": 382,
+          "hp": 83,
+          "energy": 0,
+          "choice": "Battle Trance",
+          "target": null,
+          "leader_hp": 107
+        },
+        {
+          "trace_seq": 383,
+          "hp": 83,
+          "energy": 0,
+          "choice": "Anger",
+          "target": "Parafright",
+          "leader_hp": 107
+        },
+        {
+          "trace_seq": 384,
+          "hp": 83,
+          "energy": 0,
+          "choice": "End turn",
+          "target": null,
+          "leader_hp": 107
+        }
+      ],
+      "5": [
+        {
+          "trace_seq": 385,
+          "hp": 68,
+          "energy": 3,
+          "choice": "Perfected Strike",
+          "target": "The Obscura",
+          "leader_hp": 101
+        },
+        {
+          "trace_seq": 386,
+          "hp": 68,
+          "energy": 1,
+          "choice": "Strike",
+          "target": "The Obscura",
+          "leader_hp": 72
+        },
+        {
+          "trace_seq": 387,
+          "hp": 68,
+          "energy": 0,
+          "choice": "End turn",
+          "target": null,
+          "leader_hp": 64
+        }
+      ],
+      "6": [
+        {
+          "trace_seq": 388,
+          "hp": 68,
+          "energy": 3,
+          "choice": "Taunt",
+          "target": "Parafright",
+          "leader_hp": 64
+        },
+        {
+          "trace_seq": 389,
+          "hp": 68,
+          "energy": 2,
+          "choice": "Setup Strike",
+          "target": "Parafright",
+          "leader_hp": 64
+        },
+        {
+          "trace_seq": 390,
+          "hp": 68,
+          "energy": 1,
+          "choice": "Strike",
+          "target": "Parafright",
+          "leader_hp": 64
+        },
+        {
+          "trace_seq": 391,
+          "hp": 68,
+          "energy": 0,
+          "choice": "End turn",
+          "target": null,
+          "leader_hp": 64
+        }
+      ],
+      "7": [
+        {
+          "trace_seq": 392,
+          "hp": 68,
+          "energy": 3,
+          "choice": "Bash",
+          "target": "Parafright",
+          "leader_hp": 64
+        },
+        {
+          "trace_seq": 393,
+          "hp": 68,
+          "energy": 1,
+          "choice": "Strike",
+          "target": "Parafright",
+          "leader_hp": 64
+        },
+        {
+          "trace_seq": 394,
+          "hp": 68,
+          "energy": 0,
+          "choice": "End turn",
+          "target": null,
+          "leader_hp": 64
+        }
+      ],
+      "8": [
+        {
+          "trace_seq": 395,
+          "hp": 52,
+          "energy": 3,
+          "choice": "Perfected Strike",
+          "target": "Parafright",
+          "leader_hp": 64
+        },
+        {
+          "trace_seq": 396,
+          "hp": 52,
+          "energy": 1,
+          "choice": "Anger",
+          "target": "The Obscura",
+          "leader_hp": 64
+        },
+        {
+          "trace_seq": 397,
+          "hp": 52,
+          "energy": 1,
+          "choice": "Anger",
+          "target": "The Obscura",
+          "leader_hp": 56
+        },
+        {
+          "trace_seq": 398,
+          "hp": 52,
+          "energy": 1,
+          "choice": "End turn",
+          "target": null,
+          "leader_hp": 48
+        }
+      ],
+      "9": [
+        {
+          "trace_seq": 399,
+          "hp": 52,
+          "energy": 3,
+          "choice": "Strike",
+          "target": "Parafright",
+          "leader_hp": 48
+        },
+        {
+          "trace_seq": 400,
+          "hp": 52,
+          "energy": 2,
+          "choice": "Strike",
+          "target": "Parafright",
+          "leader_hp": 48
+        },
+        {
+          "trace_seq": 401,
+          "hp": 52,
+          "energy": 1,
+          "choice": "Strike",
+          "target": "Parafright",
+          "leader_hp": 48
+        },
+        {
+          "trace_seq": 402,
+          "hp": 52,
+          "energy": 0,
+          "choice": "End turn",
+          "target": null,
+          "leader_hp": 48
+        }
+      ],
+      "10": [
+        {
+          "trace_seq": 403,
+          "hp": 37,
+          "energy": 3,
+          "choice": "Taunt",
+          "target": "Parafright",
+          "leader_hp": 48
+        },
+        {
+          "trace_seq": 404,
+          "hp": 37,
+          "energy": 2,
+          "choice": "Pommel Strike",
+          "target": "Parafright",
+          "leader_hp": 48
+        },
+        {
+          "trace_seq": 405,
+          "hp": 37,
+          "energy": 1,
+          "choice": "Setup Strike",
+          "target": "Parafright",
+          "leader_hp": 48
+        },
+        {
+          "trace_seq": 406,
+          "hp": 37,
+          "energy": 0,
+          "choice": "Battle Trance",
+          "target": null,
+          "leader_hp": 48
+        },
+        {
+          "trace_seq": 407,
+          "hp": 37,
+          "energy": 0,
+          "choice": "Anger",
+          "target": "The Obscura",
+          "leader_hp": 48
+        },
+        {
+          "trace_seq": 408,
+          "hp": 37,
+          "energy": 0,
+          "choice": "End turn",
+          "target": null,
+          "leader_hp": 43
+        }
+      ],
+      "11": [
+        {
+          "trace_seq": 409,
+          "hp": 30,
+          "energy": 3,
+          "choice": "Dexterity Potion",
+          "target": null,
+          "leader_hp": 43
+        },
+        {
+          "trace_seq": 410,
+          "hp": 30,
+          "energy": 3,
+          "choice": "Taunt",
+          "target": "Parafright",
+          "leader_hp": 43
+        },
+        {
+          "trace_seq": 411,
+          "hp": 30,
+          "energy": 2,
+          "choice": "Setup Strike",
+          "target": "Parafright",
+          "leader_hp": 43
+        },
+        {
+          "trace_seq": 412,
+          "hp": 30,
+          "energy": 1,
+          "choice": "Anger",
+          "target": "Parafright",
+          "leader_hp": 43
+        },
+        {
+          "trace_seq": 413,
+          "hp": 30,
+          "energy": 1,
+          "choice": "Defend",
+          "target": null,
+          "leader_hp": 43
+        },
+        {
+          "trace_seq": 414,
+          "hp": 30,
+          "energy": 0,
+          "choice": "End turn",
+          "target": null,
+          "leader_hp": 43
+        }
+      ],
+      "12": [
+        {
+          "trace_seq": 415,
+          "hp": 30,
+          "energy": 3,
+          "choice": "Perfected Strike",
+          "target": "Parafright",
+          "leader_hp": 43
+        },
+        {
+          "trace_seq": 416,
+          "hp": 30,
+          "energy": 1,
+          "choice": "Shrug It Off",
+          "target": null,
+          "leader_hp": 43
+        },
+        {
+          "trace_seq": 417,
+          "hp": 30,
+          "energy": 0,
+          "choice": "End turn",
+          "target": null,
+          "leader_hp": 43
+        }
+      ],
+      "13": [
+        {
+          "trace_seq": 418,
+          "hp": 30,
+          "energy": 3,
+          "choice": "Bash",
+          "target": "Parafright",
+          "leader_hp": 43
+        },
+        {
+          "trace_seq": 419,
+          "hp": 30,
+          "energy": 1,
+          "choice": "Strike",
+          "target": "Parafright",
+          "leader_hp": 43
+        },
+        {
+          "trace_seq": 420,
+          "hp": 30,
+          "energy": 0,
+          "choice": "Anger",
+          "target": "The Obscura",
+          "leader_hp": 43
+        },
+        {
+          "trace_seq": 421,
+          "hp": 30,
+          "energy": 0,
+          "choice": "Anger",
+          "target": "The Obscura",
+          "leader_hp": 35
+        },
+        {
+          "trace_seq": 422,
+          "hp": 30,
+          "energy": 0,
+          "choice": "End turn",
+          "target": null,
+          "leader_hp": 27
+        }
+      ],
+      "14": [
+        {
+          "trace_seq": 423,
+          "hp": 15,
+          "energy": 3,
+          "choice": "Pommel Strike",
+          "target": "Parafright",
+          "leader_hp": 27
+        },
+        {
+          "trace_seq": 424,
+          "hp": 15,
+          "energy": 2,
+          "choice": "Anger",
+          "target": "Parafright",
+          "leader_hp": 27
+        },
+        {
+          "trace_seq": 425,
+          "hp": 15,
+          "energy": 2,
+          "choice": "Thrash",
+          "target": "Parafright",
+          "leader_hp": 27
+        },
+        {
+          "trace_seq": 426,
+          "hp": 15,
+          "energy": 1,
+          "choice": "Defend",
+          "target": null,
+          "leader_hp": 27
+        },
+        {
+          "trace_seq": 427,
+          "hp": 15,
+          "energy": 0,
+          "choice": "End turn",
+          "target": null,
+          "leader_hp": 27
+        }
+      ],
+      "15": [
+        {
+          "trace_seq": 428,
+          "hp": 10,
+          "energy": 3,
+          "choice": "Anger",
+          "target": "Parafright",
+          "leader_hp": 27
+        },
+        {
+          "trace_seq": 429,
+          "hp": 10,
+          "energy": 3,
+          "choice": "Strike",
+          "target": "Parafright",
+          "leader_hp": 27
+        },
+        {
+          "trace_seq": 430,
+          "hp": 10,
+          "energy": 2,
+          "choice": "Anger",
+          "target": "Parafright",
+          "leader_hp": 27
+        },
+        {
+          "trace_seq": 431,
+          "hp": 10,
+          "energy": 2,
+          "choice": "Perfected Strike",
+          "target": "The Obscura",
+          "leader_hp": 27
+        }
+      ]
+    },
+    "causal_limit": "Observed execution mismatch; no alternative policy outcome or causal HP saving measured."
+  },
+  "prefix_raw_audit": {
+    "raw_traces": 4,
+    "failures": [],
+    "pass": true
+  },
+  "seconds": 36.575143582886085
+}
