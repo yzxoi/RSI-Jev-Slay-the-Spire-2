@@ -1,0 +1,33 @@
+{
+  "case": "A0-000",
+  "run_id": "ea706bb8-2c06-4ae1-9d38-cd97c5e627d6",
+  "seq": 12,
+  "state_hash": "d68bf6de3215326d52f5d0c00944bb9b8876811dd45c6d96ad4ded34d3360ada",
+  "choice_id": "a001",
+  "campaign_plan": "Upgrade Uppercut for two turns of Weak and Vulnerable; with 60 HP, potions, and another rest after one scheduled fight, improve recurring mitigation rather than heal immediately.",
+  "potion_reservations": [
+    {
+      "potion_id": "HEART_OF_IRON",
+      "until": "Elite",
+      "release_hp_fraction": 0.4
+    },
+    {
+      "potion_id": "BLOCK_POTION",
+      "until": "Elite",
+      "release_hp_fraction": 0.5
+    },
+    {
+      "potion_id": "VULNERABLE_POTION",
+      "until": "Boss",
+      "release_hp_fraction": 0.45
+    }
+  ],
+  "acquire_reservation": null,
+  "transaction_steps": [
+    {
+      "kind": "select_deck_card",
+      "index": 13,
+      "potion_reservations": null
+    }
+  ]
+}
