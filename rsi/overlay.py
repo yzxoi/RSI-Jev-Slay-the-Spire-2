@@ -103,6 +103,12 @@ def run(feed, *, opacity=0.90, width=430, height=540, margin=20, screen_index=No
         def isOpaque(self):
             return False
 
+        def acceptsFirstMouse_(self, event):
+            return True
+
+        def mouseDown_(self, event):
+            self.window().performWindowDragWithEvent_(event)
+
         def drawRect_(self, rect):
             snap = self.snapshot
             decision = snap.get("current") or snap.get("latest") or {}
@@ -226,8 +232,9 @@ def run(feed, *, opacity=0.90, width=430, height=540, margin=20, screen_index=No
     rect = screen.visibleFrame()
     frame = ((rect.origin.x + rect.size.width - width - margin,
               rect.origin.y + rect.size.height - height - margin), (width, height))
-    style = NSWindowStyleMaskNonactivatingPanel | (NSWindowStyleMaskTitled | NSWindowStyleMaskClosable |
-        NSWindowStyleMaskResizable | NSWindowStyleMaskMiniaturizable if interactive else NSWindowStyleMaskBorderless)
+    style = (NSWindowStyleMaskTitled | NSWindowStyleMaskClosable |
+        NSWindowStyleMaskResizable | NSWindowStyleMaskMiniaturizable if interactive else
+        NSWindowStyleMaskBorderless | NSWindowStyleMaskNonactivatingPanel)
     panel = DecisionPanel.alloc().initWithContentRect_styleMask_backing_defer_(
         frame, style,
         NSBackingStoreBuffered, False)
@@ -236,6 +243,7 @@ def run(feed, *, opacity=0.90, width=430, height=540, margin=20, screen_index=No
     panel.setTitlebarAppearsTransparent_(False)
     panel.setContentMinSize_((360, 490))
     panel.setReleasedWhenClosed_(False)
+    panel.setHidesOnDeactivate_(False)
     panel.setLevel_(NSFloatingWindowLevel)
     panel.setCollectionBehavior_(NSWindowCollectionBehaviorCanJoinAllSpaces |
                                  NSWindowCollectionBehaviorFullScreenAuxiliary)
