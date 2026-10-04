@@ -1,0 +1,28 @@
+{
+  "case": "A5-000",
+  "run_id": "cd9a5cb9-82d9-430e-ba29-05debd6f7974",
+  "seq": 9,
+  "state_hash": "a8f113e2e69157ca918a0b01c09dc27a20554c9d6745dcfc89be2b828d068b1b",
+  "choice_id": "a001",
+  "campaign_plan": "At 71 HP with further rests ahead, upgrade Bash to extend Vulnerable for Perfected Strike. Preserve five starter Strikes. Seek cheap block/draw and avoid unnecessary elites before Vantom.",
+  "potion_reservations": [
+    {
+      "potion_id": "WEAK_POTION",
+      "until": "Boss",
+      "release_hp_fraction": 0.45
+    },
+    {
+      "potion_id": "BLOCK_POTION",
+      "until": "Elite",
+      "release_hp_fraction": 0.5
+    }
+  ],
+  "acquire_reservation": null,
+  "transaction_steps": [
+    {
+      "kind": "select_deck_card",
+      "index": 9,
+      "potion_reservations": null
+    }
+  ]
+}
