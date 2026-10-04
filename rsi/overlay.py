@@ -197,6 +197,12 @@ def run(feed, *, opacity=0.90, width=430, height=540, margin=20, screen_index=No
             print('Overlay closed; game controller unchanged.', flush=True)
             NSApplication.sharedApplication().terminate_(None)
 
+        def windowDidMove_(self, notification):
+            print('Overlay moved:', notification.object().frame(), flush=True)
+
+        def windowDidResize_(self, notification):
+            print('Overlay resized:', notification.object().frame(), flush=True)
+
     class DecisionPanel(NSPanel):
         def canBecomeKeyWindow(self):
             return True
@@ -247,6 +253,7 @@ def run(feed, *, opacity=0.90, width=430, height=540, margin=20, screen_index=No
     timer = NSTimer.scheduledTimerWithTimeInterval_target_selector_userInfo_repeats_(
         .5, controller, "tick:", None, True)
     panel.orderFrontRegardless()
+    print('Overlay frame:', panel.frame(), flush=True)
     print(f"Native overlay on screen {screen_index if screen_index is not None else 'main'}: {width}x{height}, opacity {opacity:.2f}, click-through {not interactive}", flush=True)
     app.run()
     timer.invalidate()
