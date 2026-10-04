@@ -30,3 +30,17 @@ discard action followed by a fresh buy/claim request. No speculative auto-discar
   independently replayed hashes and raw audits pass. Merge opt-in only.
 
 Command: `python3 scripts/validate_acquisition_e162.py --output experiments/E162/validation-v1.json`
+
+## Result and decision
+
+Tested `d86f6b5` (full SHA/runtime versions in validation-v1.json). Seven
+synthetic success cases and seven rejection cases passed; all 31 historical
+acquisitions and all 200 unchanged expert packets passed. Both independent
+engine continuations and their replays passed (four raw bundles, 19.192 seconds).
+
+The baseline reproduced its recorded normal fight exactly: clear at 56 HP,
+Vulnerable Potion consumed. The treatment cleared at 53 HP and retained it,
+with no emergency release or extra expert request. This is a **3 HP cost to
+retain one potion**, not evidence that saving it increases eventual win rate.
+Merge #315 as opt-in transaction correctness; the strategic reservation rule
+still needs downstream Boss/full-run evaluation. No game inventory edits.
