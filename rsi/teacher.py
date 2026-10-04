@@ -9,6 +9,7 @@ from .planner import choose_plan
 from .policy import combat_candidates
 from .potions import with_potions
 from .retaliation import hit_count
+from .potion_applicability import defer_reason
 
 
 MODES = ('balanced', 'focus_leader', 'scaling', 'draw')
@@ -146,6 +147,11 @@ def select(state, policy, previous=None):
     if schedule == 'none':
         return chosen, choices, planning
     potions = with_potions(state, [])
+    if policy.get('potion_applicability'):
+        checks=[dict(index=p['details']['index'],potion_id=p['details'].get('id'),
+                     reason=defer_reason(state,p['details'],chosen['action'])) for p in potions]
+        planning['potion_applicability']=checks
+        potions=[p for p,check in zip(potions,checks) if check['reason'] is None]
     round_min = {'early': 1, 'turn3': 3, 'turn5': 5, 'selective': 1}[schedule]
     if state['round'] < round_min:
         return chosen, choices, planning
