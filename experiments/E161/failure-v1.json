@@ -1,0 +1,57 @@
+{
+  "manifest": {
+    "schema_version": 2,
+    "code_commit": "e0362ea5a07dcc9ee35a95c25236c2bc4f56de0b",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "a32485ef4c34641acc26f0c85454ba767bd4b06c4c06258e59baa26b5a72b54f",
+    "godot_stubs_sha256": "2bb3b99863f651decb27cf3ceead489046808e60d95ccbc28048ad094ecc856a",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+      "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772",
+      "headless-zzzzzz-godot-abi.patch": "5239d3836d279de5143f7d56bece1f061c6c4002de696fce28f9f7f3922ededc",
+      "headless-zzzzzzz-learning-observations.patch": "d51db8457fdb9348340a829c84fa77e9620c476ba16a7c6e224b286ecb2dfd07",
+      "headless-zzzzzzzz-encounter-abi.patch": "e4a730f9e58fddebef8ef924fcd8d0adc03d72d1148f8d29b2f9ea60556696cc",
+      "headless-zzzzzzzzz-native-map-odds.patch": "86ee5561968629b094a1f63e214f32e8a3ae7b5614fffcb470d52886287e1885"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4",
+    "experiment": "E161",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.5",
+    "model_calls": 0,
+    "model_cost_usd": 0,
+    "scope": "E161_compatibility_continuation"
+  },
+  "status": "harness_error",
+  "error": "KeyError: case before independent replay",
+  "continuation": {
+    "status": "map_reached",
+    "steps": 1,
+    "run_id": "78b35a8e-68ed-42dd-a648-d7124075c011",
+    "prefix_commands_verified": 193,
+    "entry_hash": "d8e6333665c4f316ca6c3c970dd262e532df7679f63e90ebdb40f984cef4c961",
+    "removed_cards": 5,
+    "final_hash": "b7f0cbdefbf9ad8956ad3cebd975890a571701cf3d5b6ffa01b65363280fa339",
+    "final_decision": "map_select",
+    "domain_bytes": 239,
+    "represented_subsets": 8568,
+    "seconds": 7.077065624995157,
+    "wire.jsonl_sha256": "dda2020d6718cf5add18a0918afa6370a1212a756e5f8cc796c8f9a4293bbbec",
+    "engine.stderr.log_sha256": "b430a5383c089744778a650eca50a94feb7b5a350bb50d687632cf12a8413d40",
+    "trace_path": "artifacts/runs/78b35a8e-68ed-42dd-a648-d7124075c011/decisions.jsonl",
+    "trace_sha256": "14535a530e5e8184ede8a5114aa7f7781731155396d2765d8b29990df1e2cfc1"
+  },
+  "passed": false
+}
