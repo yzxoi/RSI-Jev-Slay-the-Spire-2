@@ -6,7 +6,7 @@ from .coop_route import route_candidates
 
 def fingerprint(raw):
     combat=dict(raw.get('combat') or {});combat.pop('action_readiness',None)
-    keys=['run_id','screen','turn','run','map','selection','reward','event','rest','shop','chest','bundles','capstone','modal','game_over','crystal_sphere']
+    keys=['run_id','screen','turn','run','map','selection','reward','event','rest','shop','chest','bundles','capstone','modal','game_over','crystal_sphere','character_select','session']
     return digest({**{k:raw.get(k) for k in keys},'combat':combat})
 
 

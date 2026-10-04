@@ -10,6 +10,11 @@ from rsi.scenes import fingerprint
 
 
 class NativeExpertTests(unittest.TestCase):
+    def test_character_and_difficulty_are_part_of_native_freshness(self):
+        base = dict(screen='CHARACTER_SELECT', run_id='run_unknown', character_select=dict(selected_character_id='IRONCLAD', ascension=0))
+        for selection in (dict(selected_character_id='IRONCLAD', ascension=1), dict(selected_character_id='REGENT', ascension=0)):
+            self.assertNotEqual(fingerprint(base), fingerprint({**base, 'character_select': selection}))
+
     def test_fresh_packet_binds_plan_and_rejects_stale_or_illegal_action(self):
         raw = dict(screen='MAP', run_id='test', run=dict(floor=1))
         action = dict(action='choose_map_node', option_index=2)
