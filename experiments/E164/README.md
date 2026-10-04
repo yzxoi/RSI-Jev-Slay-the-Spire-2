@@ -63,3 +63,18 @@ harness replaced its current decision with get_map's read-only map response.
 v4 verifies that query response separately and preserves the decision state,
 matching the existing live episode loop. No transaction policy change. All v3
 failed traces and result hashes retained; rerun into validation-v4.json.
+
+## Result and decision
+
+v4 tested `e64c5e6` (full SHA/runtime manifest in validation-v4.json): **gate
+passed**. All 200 original expert packets preserve actions and active potion
+rules; 138 compiled requests remain (62 saved, 31%). Breakdown:33 transaction
+followups,22 open-slot potion claims,7 sole-route choices. Per case remaining
+requests41/36/37/24, from56/56/57/31. All four independent engine prefixes match,
+38 synthetic guards pass, four raw bundles pass hash/stderr audit,13.054 seconds.
+
+Merge PR317 as optional protocol infrastructure. Do not report the offline
+compression bound as a measured new-run expert-call/token reduction. The compiler
+knows the historical choices, although all transaction references are verified
+visible at entry; live expert planning quality is still untested. New seeds and
+independent per-run budgets require the separately registered next experiment.
