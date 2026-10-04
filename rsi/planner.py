@@ -17,11 +17,17 @@ def letter_opener_config(state):
     return None
 
 
-def choose_plan(state, candidates, width=40, depth=8, triggers=False, retaliation=False, force_first=False, letter_opener=False):
+def choose_plan(state, candidates, width=40, depth=8, triggers=False, retaliation=False, force_first=False, letter_opener=False, objective=None):
+    if objective not in (None,'leader','setup','leader_setup'):raise ValueError('Unknown encounter objective')
     cards={c['index']:c for c in state.get('hand',[])}
     enemies={e['index']:e for e in state.get('enemies',[])}
     initial_hp={i:e['hp'] for i,e in enemies.items()}; incoming={i:intent_damage(e) for i,e in enemies.items()}
     hp=state.get('player',{}).get('hp',100)
+    minions={i for i,e in enemies.items() if any(p.get('name')=='Minion' and p.get('amount',0)>0 for p in e.get('powers') or [])}
+    leaders=set(enemies)-minions
+    leader_focus=objective in ('leader','leader_setup') and bool(minions) and bool(leaders)
+    setup=objective in ('setup','leader_setup') and state.get('round',0)<=5
+    power_indexes={i for i,c in cards.items() if c.get('type')=='Power'}
     letter_config=letter_opener_config(state) if letter_opener else None
     starting_skills=state.get('skills_played_this_turn')
     letter_active=bool(letter_config and isinstance(starting_skills,int) and starting_skills>=0 and letter_config[0]>0)
@@ -31,8 +37,12 @@ def choose_plan(state, candidates, width=40, depth=8, triggers=False, retaliatio
     def score(n):
         loss=n['self_loss']+max(0,sum(incoming[i] for i,h in n['hp'].items() if h>0)-n['block']-state.get('player',{}).get('end_turn_block',0))
         kills=sum(h<=0 for h in n['hp'].values());damage=sum(initial_hp[i]-max(0,h) for i,h in n['hp'].items())
-        return (damage*.85 + kills*9 + (150 if kills==len(enemies) else 0)
-                - loss*1.5 - (10000 if n['self_loss']>=hp else 1000 if loss>=hp else 0) + n['utility'])
+        # Experimental objective priors, not certified future damage or survival.
+        if leader_focus:damage+=.8*sum(initial_hp[i]-max(0,n['hp'][i]) for i in leaders)
+        clear=kills==len(enemies) or (leader_focus and all(n['hp'][i]<=0 for i in leaders))
+        setup_value=18*len(n['used'] & power_indexes) if setup else 0
+        return (damage*.85 + kills*9 + (150 if clear else 0)
+                - loss*1.5 - (10000 if n['self_loss']>=hp else 1000 if loss>=hp else 0) + n['utility'] + setup_value)
     frontier=[start]; best=start;expanded=0
     for _ in range(min(depth,len(cards))):
         children=[]

@@ -118,7 +118,7 @@ def select(state, policy, previous=None):
         return chosen, choices, {'selection_rule': 'estimated_card_value'}
     choices = combat_candidates(state)
     if policy['mode'] == 'legacy':
-        chosen, planning = choose_plan(state, choices, triggers=True, retaliation=True)
+        chosen, planning = choose_plan(state, choices, triggers=True, retaliation=True,objective=policy.get('objective'))
     else:
         cards = {c['index']: c for c in state['hand']}
         values = {}
