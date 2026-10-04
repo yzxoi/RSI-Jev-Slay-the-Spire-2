@@ -1,0 +1,545 @@
+{
+  "manifest": {
+    "schema_version": 2,
+    "code_commit": "f80730dca162a6737188b2f69b6b5006cb848950",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "a32485ef4c34641acc26f0c85454ba767bd4b06c4c06258e59baa26b5a72b54f",
+    "godot_stubs_sha256": "2bb3b99863f651decb27cf3ceead489046808e60d95ccbc28048ad094ecc856a",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+      "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772",
+      "headless-zzzzzz-godot-abi.patch": "5239d3836d279de5143f7d56bece1f061c6c4002de696fce28f9f7f3922ededc",
+      "headless-zzzzzzz-learning-observations.patch": "d51db8457fdb9348340a829c84fa77e9620c476ba16a7c6e224b286ecb2dfd07",
+      "headless-zzzzzzzz-encounter-abi.patch": "e4a730f9e58fddebef8ef924fcd8d0adc03d72d1148f8d29b2f9ea60556696cc",
+      "headless-zzzzzzzzz-native-map-odds.patch": "86ee5561968629b094a1f63e214f32e8a3ae7b5614fffcb470d52886287e1885"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4",
+    "experiment": "E171",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.5",
+    "model_calls": 0,
+    "model_cost_usd": 0,
+    "encoder": "e140-phase-context-v1",
+    "torch": "2.11.0",
+    "device": "cpu"
+  },
+  "collection": [
+    {
+      "case": "A0-000",
+      "seed": "e171_opening_Ironclad_A0_000",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 0
+    },
+    {
+      "case": "A5-000",
+      "seed": "e171_opening_Ironclad_A5_000",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 0
+    },
+    {
+      "case": "A0-001",
+      "seed": "e171_opening_Ironclad_A0_001",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 1
+    },
+    {
+      "case": "A5-001",
+      "seed": "e171_opening_Ironclad_A5_001",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 1
+    },
+    {
+      "case": "A0-002",
+      "seed": "e171_opening_Ironclad_A0_002",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 2
+    },
+    {
+      "case": "A5-002",
+      "seed": "e171_opening_Ironclad_A5_002",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 2
+    },
+    {
+      "case": "A0-003",
+      "seed": "e171_opening_Ironclad_A0_003",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 3
+    },
+    {
+      "case": "A5-003",
+      "seed": "e171_opening_Ironclad_A5_003",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 3
+    },
+    {
+      "case": "A0-004",
+      "seed": "e171_opening_Ironclad_A0_004",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 4
+    },
+    {
+      "case": "A5-004",
+      "seed": "e171_opening_Ironclad_A5_004",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 4
+    },
+    {
+      "case": "A0-005",
+      "seed": "e171_opening_Ironclad_A0_005",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 5
+    },
+    {
+      "case": "A5-005",
+      "seed": "e171_opening_Ironclad_A5_005",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 5
+    },
+    {
+      "case": "A0-006",
+      "seed": "e171_opening_Ironclad_A0_006",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 6
+    },
+    {
+      "case": "A5-006",
+      "seed": "e171_opening_Ironclad_A5_006",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 6
+    },
+    {
+      "case": "A0-007",
+      "seed": "e171_opening_Ironclad_A0_007",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 7
+    },
+    {
+      "case": "A5-007",
+      "seed": "e171_opening_Ironclad_A5_007",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 7
+    },
+    {
+      "case": "A0-008",
+      "seed": "e171_opening_Ironclad_A0_008",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 8
+    },
+    {
+      "case": "A5-008",
+      "seed": "e171_opening_Ironclad_A5_008",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 8
+    },
+    {
+      "case": "A0-009",
+      "seed": "e171_opening_Ironclad_A0_009",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 9
+    },
+    {
+      "case": "A5-009",
+      "seed": "e171_opening_Ironclad_A5_009",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 9
+    },
+    {
+      "case": "A0-010",
+      "seed": "e171_opening_Ironclad_A0_010",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 10
+    },
+    {
+      "case": "A5-010",
+      "seed": "e171_opening_Ironclad_A5_010",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 10
+    },
+    {
+      "case": "A0-011",
+      "seed": "e171_opening_Ironclad_A0_011",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 11
+    },
+    {
+      "case": "A5-011",
+      "seed": "e171_opening_Ironclad_A5_011",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 11
+    },
+    {
+      "case": "A0-012",
+      "seed": "e171_opening_Ironclad_A0_012",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 12
+    },
+    {
+      "case": "A5-012",
+      "seed": "e171_opening_Ironclad_A5_012",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 12
+    },
+    {
+      "case": "A0-013",
+      "seed": "e171_opening_Ironclad_A0_013",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 13
+    },
+    {
+      "case": "A5-013",
+      "seed": "e171_opening_Ironclad_A5_013",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 13
+    },
+    {
+      "case": "A0-014",
+      "seed": "e171_opening_Ironclad_A0_014",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 14
+    },
+    {
+      "case": "A5-014",
+      "seed": "e171_opening_Ironclad_A5_014",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 14
+    },
+    {
+      "case": "A0-015",
+      "seed": "e171_opening_Ironclad_A0_015",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 15
+    },
+    {
+      "case": "A5-015",
+      "seed": "e171_opening_Ironclad_A5_015",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 15
+    },
+    {
+      "case": "A0-016",
+      "seed": "e171_opening_Ironclad_A0_016",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 16
+    },
+    {
+      "case": "A5-016",
+      "seed": "e171_opening_Ironclad_A5_016",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 16
+    },
+    {
+      "case": "A0-017",
+      "seed": "e171_opening_Ironclad_A0_017",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 17
+    },
+    {
+      "case": "A5-017",
+      "seed": "e171_opening_Ironclad_A5_017",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 17
+    },
+    {
+      "case": "A0-018",
+      "seed": "e171_opening_Ironclad_A0_018",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 18
+    },
+    {
+      "case": "A5-018",
+      "seed": "e171_opening_Ironclad_A5_018",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 18
+    },
+    {
+      "case": "A0-019",
+      "seed": "e171_opening_Ironclad_A0_019",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 19
+    },
+    {
+      "case": "A5-019",
+      "seed": "e171_opening_Ironclad_A5_019",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 19
+    },
+    {
+      "case": "A0-020",
+      "seed": "e171_opening_Ironclad_A0_020",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 20
+    },
+    {
+      "case": "A5-020",
+      "seed": "e171_opening_Ironclad_A5_020",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 20
+    },
+    {
+      "case": "A0-021",
+      "seed": "e171_opening_Ironclad_A0_021",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 21
+    },
+    {
+      "case": "A5-021",
+      "seed": "e171_opening_Ironclad_A5_021",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 21
+    },
+    {
+      "case": "A0-022",
+      "seed": "e171_opening_Ironclad_A0_022",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 22
+    },
+    {
+      "case": "A5-022",
+      "seed": "e171_opening_Ironclad_A5_022",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 22
+    },
+    {
+      "case": "A0-023",
+      "seed": "e171_opening_Ironclad_A0_023",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 23
+    },
+    {
+      "case": "A5-023",
+      "seed": "e171_opening_Ironclad_A5_023",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 23
+    },
+    {
+      "case": "A0-024",
+      "seed": "e171_opening_Ironclad_A0_024",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 24
+    },
+    {
+      "case": "A5-024",
+      "seed": "e171_opening_Ironclad_A5_024",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 24
+    },
+    {
+      "case": "A0-025",
+      "seed": "e171_opening_Ironclad_A0_025",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 25
+    },
+    {
+      "case": "A5-025",
+      "seed": "e171_opening_Ironclad_A5_025",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 25
+    },
+    {
+      "case": "A0-026",
+      "seed": "e171_opening_Ironclad_A0_026",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 26
+    },
+    {
+      "case": "A5-026",
+      "seed": "e171_opening_Ironclad_A5_026",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 26
+    },
+    {
+      "case": "A0-027",
+      "seed": "e171_opening_Ironclad_A0_027",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 27
+    },
+    {
+      "case": "A5-027",
+      "seed": "e171_opening_Ironclad_A5_027",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 27
+    },
+    {
+      "case": "A0-028",
+      "seed": "e171_opening_Ironclad_A0_028",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 28
+    },
+    {
+      "case": "A5-028",
+      "seed": "e171_opening_Ironclad_A5_028",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 28
+    },
+    {
+      "case": "A0-029",
+      "seed": "e171_opening_Ironclad_A0_029",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 29
+    },
+    {
+      "case": "A5-029",
+      "seed": "e171_opening_Ironclad_A5_029",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 29
+    },
+    {
+      "case": "A0-030",
+      "seed": "e171_opening_Ironclad_A0_030",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 30
+    },
+    {
+      "case": "A5-030",
+      "seed": "e171_opening_Ironclad_A5_030",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 30
+    },
+    {
+      "case": "A0-031",
+      "seed": "e171_opening_Ironclad_A0_031",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 31
+    },
+    {
+      "case": "A5-031",
+      "seed": "e171_opening_Ironclad_A5_031",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 31
+    }
+  ],
+  "policy_sources": [
+    {
+      "path": "rsi/bounded_opening.py",
+      "sha256": "9774a186d6b40922b1cbb23ac983ea6385549c5f7d78c26298a649b5dc810919"
+    },
+    {
+      "path": "rsi/opening_subset.py",
+      "sha256": "4e462ba5d8c0ffbccfb0f83c25b1f9fab240ca99b8fca8198d5a882334247808"
+    },
+    {
+      "path": "rsi/continuation.py",
+      "sha256": "fb83c86f1101df4401bb900fb61e6978f610fb03e37dd0e405efbfdf4799affc"
+    },
+    {
+      "path": "rsi/teacher.py",
+      "sha256": "93f5b264bea6372877635384788d4713a697a9794269320e6ed4050405360b9f"
+    },
+    {
+      "path": "rsi/planner.py",
+      "sha256": "14c306a6ed751bcfd667e2368d9384972b3018b8fc03650f630a0a206c09399a"
+    },
+    {
+      "path": "rsi/ppo_actions.py",
+      "sha256": "6375a879282afd8dd931c069de2d4a3bbec935c78e6b2b1cfaeb4466189db536"
+    },
+    {
+      "path": "rsi/potions.py",
+      "sha256": "646d1130569fae5398cb0d664a7acfb28f931a410665ec95d63c8c68220e74f5"
+    },
+    {
+      "path": "rsi/curriculum.py",
+      "sha256": "33715eca5aa9e6a263ad69c9a93181d8e1cc5442ca9d403c12bf30eb7d5fb7fe"
+    },
+    {
+      "path": "scripts/search_opening_e169.py",
+      "sha256": "de60956ba05446fed8d64e113b08dec676742590fe627c766047d4b29be7519c"
+    },
+    {
+      "path": "scripts/compare_opening_e171.py",
+      "sha256": "1df8db2e6adc2ba6387896b71b735e0499badb2cca9ae7babab3cf8947939c33"
+    }
+  ],
+  "budgets": {
+    "collection": 300,
+    "evaluation": 900,
+    "seed_seconds": 120,
+    "seed_actions": 2400,
+    "trial_seconds": 120,
+    "trial_actions": 300,
+    "workers": 4
+  },
+  "protocol": {
+    "path": "experiments/E171/README.md",
+    "sha256": "81cdf27ceaea92ef6c4e8b5b8443ed30321cf7484cfda3b5053de0de248e4866"
+  },
+  "scope": "Mechanism-conditioned new seeds. No replacement, no full-run or native claim."
+}
