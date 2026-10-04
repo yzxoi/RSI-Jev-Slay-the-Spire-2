@@ -6,7 +6,9 @@
 
 [阶段反思与后续路线](docs/research/learning-search/2026-10-03-strategic-review.md)已整理：可信训练环境、搜索驱动学习、整局资源策略、组合表示四个方向；建议先证明可靠教师再形成多轮学习循环。历史恢复与搜索教师结果保留；2026-10-04 主线按用户反馈转向混合系统。
 
-最新完成[E167/E168/E170验证](docs/research/learning-search/2026-10-04-ownership-potions.md)：开战归属修复通过；18已知入口的药水对照中，同一Boss从33→80HP并留两瓶，另一seed提升12HP。但8新seed完整程序对局两组均未过第一幕，只有2seed遇到目标药水，整局改善尚未验证。保留可选修正，默认策略不变。
+最新完成[E169开局集合搜索](docs/research/learning-search/2026-10-04-opening-search.md)：五个已知入口共160分支，同一后续程序下救回精英（败→36HP胜），另三场普通战保留更多HP；175份trace bundle通过。只有一个源seed、约92%耗时用于恢复，尚非通用快速求解器；E171已登记未见seed验证，默认策略不变。
+
+此前完成[E167/E168/E170验证](docs/research/learning-search/2026-10-04-ownership-potions.md)：开战归属修复通过；18已知入口的药水对照中，同一Boss从33→80HP并留两瓶，另一seed提升12HP。但8新seed完整程序对局两组均未过第一幕，只有2seed遇到目标药水，整局改善尚未验证。保留可选修正，默认策略不变。
 
 此前完成[E164–E166验证与反思](docs/research/learning-search/2026-10-04-typed-selection.md)：宏观事务在新轨迹节省约19%的等价请求；两个新seed均过第一幕，但一局第二幕Boss战败、一局开战选牌归属错误中止。仅修正Ashwater消耗选牌方向，同一Boss反事实由败转为33HP胜；可选修正已合入，尚无新增完整通关。
 
