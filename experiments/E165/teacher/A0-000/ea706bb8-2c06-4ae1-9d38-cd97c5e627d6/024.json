@@ -1,0 +1,27 @@
+{
+  "case": "A0-000",
+  "run_id": "ea706bb8-2c06-4ae1-9d38-cd97c5e627d6",
+  "seq": 24,
+  "state_hash": "9dcb8612ad5a38d672b4c50981b4bd8331abaf268e977b4befe50a17c62e082b",
+  "choice_id": "a000",
+  "campaign_plan": "Heal before Kin Priest, increasing HP from 48 to 72. Upgraded damage/block and three reserved potions are ready; let the unchanged battle program handle the Boss.",
+  "potion_reservations": [
+    {
+      "potion_id": "HEART_OF_IRON",
+      "until": "Elite",
+      "release_hp_fraction": 0.4
+    },
+    {
+      "potion_id": "BLOCK_POTION",
+      "until": "Elite",
+      "release_hp_fraction": 0.5
+    },
+    {
+      "potion_id": "VULNERABLE_POTION",
+      "until": "Boss",
+      "release_hp_fraction": 0.45
+    }
+  ],
+  "acquire_reservation": null,
+  "transaction_steps": []
+}
