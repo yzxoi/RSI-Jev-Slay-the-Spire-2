@@ -1,0 +1,53 @@
+{
+  "case": "A0-000",
+  "run_id": "ea706bb8-2c06-4ae1-9d38-cd97c5e627d6",
+  "seq": 48,
+  "state_hash": "a6787017a0405fc19fc7e36e1de8d3a7ccdc163c90a3d472b0910bab2ebdbb34",
+  "choice_id": "a001",
+  "campaign_plan": "Upgrade Evil Eye for recurring eleven block, doubled after exhaust. At 70 HP with regeneration, direct block, damage and other potions available, improve long-fight defense rather than heal only ten HP. All reservations release on the Boss boundary; battle remains entirely program-controlled.",
+  "potion_reservations": [
+    {
+      "potion_id": "BLOCK_POTION",
+      "until": "Elite",
+      "release_hp_fraction": 0.5
+    },
+    {
+      "potion_id": "POWER_POTION",
+      "until": "Elite",
+      "release_hp_fraction": 0.5
+    },
+    {
+      "potion_id": "VULNERABLE_POTION",
+      "until": "Boss",
+      "release_hp_fraction": 0.5
+    },
+    {
+      "potion_id": "ASHWATER",
+      "until": "Boss",
+      "release_hp_fraction": 0.25
+    },
+    {
+      "potion_id": "REGEN_POTION",
+      "until": "Elite",
+      "release_hp_fraction": 0.5
+    },
+    {
+      "potion_id": "FIRE_POTION",
+      "until": "Elite",
+      "release_hp_fraction": 0.5
+    },
+    {
+      "potion_id": "SNECKO_OIL",
+      "until": "Boss",
+      "release_hp_fraction": 0.25
+    }
+  ],
+  "acquire_reservation": null,
+  "transaction_steps": [
+    {
+      "kind": "select_deck_card",
+      "index": 14,
+      "potion_reservations": null
+    }
+  ]
+}
