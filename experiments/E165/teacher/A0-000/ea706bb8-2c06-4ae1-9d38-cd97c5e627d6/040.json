@@ -1,0 +1,48 @@
+{
+  "case": "A0-000",
+  "run_id": "ea706bb8-2c06-4ae1-9d38-cd97c5e627d6",
+  "seq": 40,
+  "state_hash": "cdb7553af28785a5a9d0ff80e25324bbe596961bfa651baf037bd28f4139fb7f",
+  "choice_id": "a001",
+  "campaign_plan": "Upgrade Hellraiser from two energy to one. The deck contains eight Strikes including two upgraded Perfected Strikes; earlier installation can matter more than eighteen HP with another rest after one normal fight.",
+  "potion_reservations": [
+    {
+      "potion_id": "BLOCK_POTION",
+      "until": "Elite",
+      "release_hp_fraction": 0.5
+    },
+    {
+      "potion_id": "POWER_POTION",
+      "until": "Elite",
+      "release_hp_fraction": 0.5
+    },
+    {
+      "potion_id": "VULNERABLE_POTION",
+      "until": "Boss",
+      "release_hp_fraction": 0.5
+    },
+    {
+      "potion_id": "ASHWATER",
+      "until": "Boss",
+      "release_hp_fraction": 0.25
+    },
+    {
+      "potion_id": "REGEN_POTION",
+      "until": "Elite",
+      "release_hp_fraction": 0.5
+    },
+    {
+      "potion_id": "FIRE_POTION",
+      "until": "Elite",
+      "release_hp_fraction": 0.5
+    }
+  ],
+  "acquire_reservation": null,
+  "transaction_steps": [
+    {
+      "kind": "select_deck_card",
+      "index": 18,
+      "potion_reservations": null
+    }
+  ]
+}
