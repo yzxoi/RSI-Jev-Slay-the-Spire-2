@@ -40,3 +40,17 @@ evaluation harness then failed before independent verification (`KeyError:
 case` in shared replay). Preserve this partial result; it does not pass the gate.
 v2 adds the missing case metadata, with no policy/protocol/sample changes, and
 reruns the entire gate into validation-v2.json.
+
+## Result and decision
+
+v2 tested SHA is recorded in validation-v2.json. 165 small domains / 9,727
+legal small subsets matched baseline exactly; 10,374 invalid submissions were
+rejected; all 8,568 large subsets validated. Pael's 193-command prefix matched,
+five cards were removed, and the living map was reached in one new action.
+The 194-command independent replay matched every state. The compact selection
+domain was 239 serialized bytes (card descriptions remain in the state).
+Total validation: 14.080 seconds; two raw bundles hash-audited successfully.
+Existing campaign suite: three tests passed.
+
+Merge #314 as opt-in campaign compatibility. This does not change combat/PPO
+selection, demonstrate better strategy, complete E160, or verify native MCP.
