@@ -1,0 +1,132 @@
+{
+  "manifest": {
+    "schema_version": 2,
+    "code_commit": "4e99be6e776101e4884b3cd25f1559cae4da5d04",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "a32485ef4c34641acc26f0c85454ba767bd4b06c4c06258e59baa26b5a72b54f",
+    "godot_stubs_sha256": "2bb3b99863f651decb27cf3ceead489046808e60d95ccbc28048ad094ecc856a",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+      "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772",
+      "headless-zzzzzz-godot-abi.patch": "5239d3836d279de5143f7d56bece1f061c6c4002de696fce28f9f7f3922ededc",
+      "headless-zzzzzzz-learning-observations.patch": "d51db8457fdb9348340a829c84fa77e9620c476ba16a7c6e224b286ecb2dfd07",
+      "headless-zzzzzzzz-encounter-abi.patch": "e4a730f9e58fddebef8ef924fcd8d0adc03d72d1148f8d29b2f9ea60556696cc",
+      "headless-zzzzzzzzz-native-map-odds.patch": "86ee5561968629b094a1f63e214f32e8a3ae7b5614fffcb470d52886287e1885"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4",
+    "experiment": "E170",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.5",
+    "model_calls": 0,
+    "model_cost_usd": 0,
+    "encoder": "e140-phase-context-v1",
+    "torch": "2.11.0",
+    "device": "cpu"
+  },
+  "prerequisite": {
+    "path": "experiments/E168/evaluation-v1.json",
+    "sha256": "c3bf31f47fc53a441762d25c2cd9fd99077448dc50f09d2cafbeba920d616667"
+  },
+  "cases": [
+    {
+      "case": "A0-000",
+      "seed": "e170_potions_Ironclad_A0_000",
+      "character": "Ironclad",
+      "ascension": 0
+    },
+    {
+      "case": "A0-001",
+      "seed": "e170_potions_Ironclad_A0_001",
+      "character": "Ironclad",
+      "ascension": 0
+    },
+    {
+      "case": "A0-002",
+      "seed": "e170_potions_Ironclad_A0_002",
+      "character": "Ironclad",
+      "ascension": 0
+    },
+    {
+      "case": "A0-003",
+      "seed": "e170_potions_Ironclad_A0_003",
+      "character": "Ironclad",
+      "ascension": 0
+    },
+    {
+      "case": "A5-000",
+      "seed": "e170_potions_Ironclad_A5_000",
+      "character": "Ironclad",
+      "ascension": 5
+    },
+    {
+      "case": "A5-001",
+      "seed": "e170_potions_Ironclad_A5_001",
+      "character": "Ironclad",
+      "ascension": 5
+    },
+    {
+      "case": "A5-002",
+      "seed": "e170_potions_Ironclad_A5_002",
+      "character": "Ironclad",
+      "ascension": 5
+    },
+    {
+      "case": "A5-003",
+      "seed": "e170_potions_Ironclad_A5_003",
+      "character": "Ironclad",
+      "ascension": 5
+    }
+  ],
+  "arms": [
+    "typed",
+    "combined"
+  ],
+  "budgets": {
+    "actions": 2400,
+    "run_seconds": 120,
+    "replay_seconds": 120,
+    "wall_seconds": 600,
+    "workers": 4
+  },
+  "policy_sources": [
+    {
+      "path": "rsi/campaign_teacher.py",
+      "sha256": "18dea990ff0f2c4bede7feef8a685af1f5c11d6d12afc20274a356d89bcd5417"
+    },
+    {
+      "path": "rsi/potion_program.py",
+      "sha256": "7c772b286baaf1c0385429448ce0373a7df1cb090b18a509644d7e02cf01ec0d"
+    },
+    {
+      "path": "rsi/potion_applicability.py",
+      "sha256": "c5bbcc1bebeeecdec513dd463f3f034ae2bd743b984406b8340410e2061092db"
+    },
+    {
+      "path": "rsi/selection_semantics.py",
+      "sha256": "e153a8d27e8e5f573e0dbd7a27a2f5d9ef34cd4ca4e535f57e4a7a83bfd80871"
+    },
+    {
+      "path": "rsi/teacher.py",
+      "sha256": "93f5b264bea6372877635384788d4713a697a9794269320e6ed4050405360b9f"
+    },
+    {
+      "path": "rsi/continuation.py",
+      "sha256": "fb83c86f1101df4401bb900fb61e6978f610fb03e37dd0e405efbfdf4799affc"
+    }
+  ],
+  "scope": "New-seed autonomous program macro screen; not Astra hybrid acceptance",
+  "gate": "All genuine terminals, exact replays, no illegal action; no negative (victory,completed acts,cleared fights) pair, >=2 positive pairs, >=4 seeds expose guarded potions."
+}
