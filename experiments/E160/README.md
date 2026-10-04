@@ -31,3 +31,5 @@ python3 scripts/reply_campaign_e160.py /tmp/e160-answers.json
 ```
 
 Raw full requests/states/wire remain in ignored artifacts/runs; public teacher response packets contain concise choices/plans/reservations, bound to immutable source hashes. Replaying those recorded packets is regression verification, not new Astra reasoning or an independent win sample. Do not reuse output paths or overwrite a prior teacher response.
+
+Implementation/plan-generation SHA `b41e4aa`: six focused ownership/resource/context checks passed. All four seeds, two arms, runtime and every rsi source hash frozen before gameplay.
