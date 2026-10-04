@@ -49,3 +49,77 @@ python3 scripts/pilot_objectives_e163.py freeze --output experiments/E163/plan-v
 # commit plan before execute
 python3 scripts/pilot_objectives_e163.py evaluate --output experiments/E163/evaluation-v1.json
 ```
+
+## Result
+
+Tested SHA `3915c95e6240f3e523d12baa3f4662d2d90f0e36`; historical
+v0.111.0 / SDK 9.0.318 / Python 3.13.5, exact dependency/assembly hashes in
+evaluation-v1.json. Wall time 314.340 seconds. No external model API calls;
+this excludes the present task's unmetered expert analysis/engineering cost.
+
+All 15 discovery baselines exactly reproduced recorded battle boundaries.
+76 full battle probes (60 discovery + 16 held-out), 76 independent command/state
+replays, 19 independent executions of the selected objective, and 6 natural
+fixture collections: 177 raw bundles audited, zero hash/stderr failures.
+Search uses the same deterministic future as execution, with baseline included;
+its discovery non-regression is partly by construction, not generalization.
+
+| Known root | Baseline HP | Leader | Setup | Both | Search selects |
+|---|---:|---:|---:|---:|---|
+| A0-000 Kin Priest | 51 | 21 | 43 | 23 | Baseline |
+| A0-000 Mytes | 65 | 65 | 74 | 74 | Setup |
+| A5-000 Hunter Killer | 56 | 56 | 74 | 74 | Setup |
+| A5-000 Obscura | 16 | 66 | 20 | 66 | Leader |
+| A5-001 Vantom | 28 | 28 | 36 | 36 | Setup |
+
+The other ten discovery roots have unchanged ending HP. Search gains 85 total
+HP / 15 encounters (mean +5.667) across three of four source seeds, no lost
+clears. Obscura falls from 15 to 5 turns and retains Dexterity Potion. Setup
+alone plays Juggernaut on turn 5, ends at 20 HP/13 turns and consumes the potion;
+the better leader policy does not play Juggernaut. Target choice dominates the
+observed failure; the original missing-power diagnosis was incomplete.
+The discovery-selected fixed program is leader_setup (mean +3.8 HP), but it
+loses 28 HP against Kin Priest. No global always-focus-leader rule is justified.
+
+| New seed | Entry outcome | Baseline / searched encounter outcome |
+|---|---|---|
+| A0-000 | Defeat before entry | No root; retained failure |
+| A0-001 | Bygone Effigy, 69 HP | Both clear at 20 HP |
+| A5-000 | Bygone Effigy, 77 HP | Both clear at 37 HP |
+| A5-001 | Phrog Parasite, 1 HP | Both defeat |
+| A10-000 | Defeat before entry | No root; retained failure |
+| A10-001 | Byrdonis, 29 HP | Both defeat |
+
+Four roots available out of six preselected seeds; baseline/fixed/search all
+clear 2/4 available fights, or reach-and-clear 2/6 selected fixture attempts.
+Neither denominator is full-run win rate. Mean held-out HP gain = 0. Three
+of four roots have exactly identical action/state transitions across all four
+programs; A5-001 has two distinct sequences but both lose. Two Bygone Effigy
+decks have no Power cards. The narrow policy family cannot invent a useful
+alternative in these cases. Poor entry preparation is also evident; 1 HP at
+an elite does not prove the fight mathematically unwinnable.
+
+Search cost including four cold-prefix restorations: median 29.733 seconds,
+maximum 41.310, all below the registered 60-second cap. At these held-out roots
+that cost buys no improvement. HP reward plus four per potion is a declared
+local proxy, not a calibrated full-run value function.
+
+## Decision and limitations
+
+**Local gate failed**: two unreachable roots and zero held-out gain. Fidelity
+passed. Close PR #316 without merging the objective heuristics; preserve this
+branch, every probe/result and the preregistration. No default changes, full-run
+evaluation, network training, native run, or final acceptance seed use.
+
+The unseen collector intentionally uses the older fixed macro policy, not
+Astra's campaign policy. Its early elites and poorer decks differ from E160
+act-two/Boss discovery. This stress test rejects broad promotion of this narrow
+family, not the Astra-macro architecture. Do not patch coefficients against
+these six seeds or turn their repeated replays into new independent samples.
+
+Next: complete macro transactions (#312), collect fresh natural Astra-built
+campaign roots, then separately evaluate a broader action/turn search versus
+this objective-family baseline with explicit trigger coverage and latency.
+Use independent per-run expert budgets for eventual full-run tests. First
+reduce decisions that merely repeat an already specified transaction; do not
+extend E160's interrupted paths and call them new complete runs.
