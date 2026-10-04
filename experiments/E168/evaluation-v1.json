@@ -1,0 +1,5114 @@
+{
+  "manifest": {
+    "schema_version": 2,
+    "code_commit": "d2cb91700d5c81732463aa4970d65e732fc12393",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "a32485ef4c34641acc26f0c85454ba767bd4b06c4c06258e59baa26b5a72b54f",
+    "godot_stubs_sha256": "2bb3b99863f651decb27cf3ceead489046808e60d95ccbc28048ad094ecc856a",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+      "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772",
+      "headless-zzzzzz-godot-abi.patch": "5239d3836d279de5143f7d56bece1f061c6c4002de696fce28f9f7f3922ededc",
+      "headless-zzzzzzz-learning-observations.patch": "d51db8457fdb9348340a829c84fa77e9620c476ba16a7c6e224b286ecb2dfd07",
+      "headless-zzzzzzzz-encounter-abi.patch": "e4a730f9e58fddebef8ef924fcd8d0adc03d72d1148f8d29b2f9ea60556696cc",
+      "headless-zzzzzzzzz-native-map-odds.patch": "86ee5561968629b094a1f63e214f32e8a3ae7b5614fffcb470d52886287e1885"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4",
+    "experiment": "E168",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.5",
+    "model_calls": 0,
+    "model_cost_usd": 0,
+    "encoder": "e140-phase-context-v1",
+    "torch": "2.11.0",
+    "device": "cpu"
+  },
+  "plan": {
+    "path": "experiments/E168/plan-v1.json",
+    "sha256": "dcab352edbb74270fc3a0b93fd6774e455bfb1ec99eb393b0fdb45eeae6378ce"
+  },
+  "records": [
+    {
+      "case": "E160-A0-000-act1-floor17-legacy",
+      "root": "E160-A0-000-act1-floor17",
+      "seed": "e160_campaign_Ironclad_A0_000",
+      "arm": "legacy",
+      "status": "clear",
+      "steps": 57,
+      "potion_uses": [
+        {
+          "state_hash": "9bb52fbe6e3dec55ecd0ecf3e9f5662c3108117a4c0cb78c02ab0828adced5b1",
+          "round": 1,
+          "potion_id": "POWER_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 1
+            }
+          }
+        },
+        {
+          "state_hash": "ae83fd90d4451dbf813181b276df4ecc9760248179cebfa4d56dcff87569fa07",
+          "round": 1,
+          "potion_id": "SHACKLING_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        }
+      ],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 137,
+      "hp": 51,
+      "potions": [],
+      "final_hash": "74b3452fa993bb3e638e1ef8af3eb9b9888e0dcd88476c6be4de37744040d9a1",
+      "transition_hash": "af284fc41a4c0376943738fc7f126f128d85b5ec400b50355e0e0f784f9cf2b5",
+      "original_final_match": true,
+      "seconds": 7.8458372910972685,
+      "wire.jsonl_sha256": "0c78f8e82b5ea856b3db6b26e561ec5e01d0b414f6fc10f40cbcaa1922fc4694",
+      "engine.stderr.log_sha256": "d0f166fc8597c2d84ed626b70dcab91f08273ad66c0fc1aba80254aee3a68732",
+      "trace_path": "artifacts/runs/993da643-21b0-4a03-920c-590ab705064b/decisions.jsonl",
+      "trace_sha256": "2f3367933c15aceef8d4a173830749b6b864ca505f2753d2374eccfa03ee6ef8",
+      "verification": {
+        "case": "E160-A0-000-act1-floor17-legacy",
+        "status": "match",
+        "steps": 194,
+        "outcome": null,
+        "final_hash": "74b3452fa993bb3e638e1ef8af3eb9b9888e0dcd88476c6be4de37744040d9a1",
+        "seconds": 6.6611240829806775,
+        "wire.jsonl_sha256": "c3496f873e35df9d4a0a18b0aac8036df9629332235ab8d98118326c5cdd11b5",
+        "engine.stderr.log_sha256": "d0f166fc8597c2d84ed626b70dcab91f08273ad66c0fc1aba80254aee3a68732",
+        "trace_path": "artifacts/runs/4dcec90c-8bd6-4235-b5d0-134be60ecba0/decisions.jsonl",
+        "trace_sha256": "b24e6851f5f6da446511f5d475fdfa1297fdb85d9857f3a06ee6f7af1033d3fc"
+      }
+    },
+    {
+      "case": "E160-A0-000-act1-floor17-typed",
+      "root": "E160-A0-000-act1-floor17",
+      "seed": "e160_campaign_Ironclad_A0_000",
+      "arm": "typed",
+      "status": "clear",
+      "steps": 57,
+      "potion_uses": [
+        {
+          "state_hash": "9bb52fbe6e3dec55ecd0ecf3e9f5662c3108117a4c0cb78c02ab0828adced5b1",
+          "round": 1,
+          "potion_id": "POWER_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 1
+            }
+          }
+        },
+        {
+          "state_hash": "ae83fd90d4451dbf813181b276df4ecc9760248179cebfa4d56dcff87569fa07",
+          "round": 1,
+          "potion_id": "SHACKLING_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        }
+      ],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 137,
+      "hp": 51,
+      "potions": [],
+      "final_hash": "74b3452fa993bb3e638e1ef8af3eb9b9888e0dcd88476c6be4de37744040d9a1",
+      "transition_hash": "af284fc41a4c0376943738fc7f126f128d85b5ec400b50355e0e0f784f9cf2b5",
+      "original_final_match": true,
+      "seconds": 7.426311125047505,
+      "wire.jsonl_sha256": "6dc2cf88bab24922fc996c4975c71ddb4325d44485b9ce22f39fb50ad9d81c75",
+      "engine.stderr.log_sha256": "d0f166fc8597c2d84ed626b70dcab91f08273ad66c0fc1aba80254aee3a68732",
+      "trace_path": "artifacts/runs/65cfec8f-2296-4900-ad99-781a7a5aacea/decisions.jsonl",
+      "trace_sha256": "abced6fa48a1ca28dc7ad540e4a65278e2ca1e205ed7c2c29143d29bb9a5154f",
+      "verification": {
+        "case": "E160-A0-000-act1-floor17-typed",
+        "status": "match",
+        "steps": 194,
+        "outcome": null,
+        "final_hash": "74b3452fa993bb3e638e1ef8af3eb9b9888e0dcd88476c6be4de37744040d9a1",
+        "seconds": 6.69402033300139,
+        "wire.jsonl_sha256": "bd124e4e9afb642630f9df0ba037ae96d47478d39a02ae48c1de1974f8cff604",
+        "engine.stderr.log_sha256": "d0f166fc8597c2d84ed626b70dcab91f08273ad66c0fc1aba80254aee3a68732",
+        "trace_path": "artifacts/runs/78801705-7be6-44ef-8bd4-a2fe35970c4c/decisions.jsonl",
+        "trace_sha256": "d4b5c89a1e619d58a337ac11623f027bf0397bb859eabd2c9d6f0fffbbb846d3"
+      }
+    },
+    {
+      "case": "E160-A0-000-act1-floor17-applicable",
+      "root": "E160-A0-000-act1-floor17",
+      "seed": "e160_campaign_Ironclad_A0_000",
+      "arm": "applicable",
+      "status": "clear",
+      "steps": 57,
+      "potion_uses": [
+        {
+          "state_hash": "9bb52fbe6e3dec55ecd0ecf3e9f5662c3108117a4c0cb78c02ab0828adced5b1",
+          "round": 1,
+          "potion_id": "POWER_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 1
+            }
+          }
+        },
+        {
+          "state_hash": "ae83fd90d4451dbf813181b276df4ecc9760248179cebfa4d56dcff87569fa07",
+          "round": 1,
+          "potion_id": "SHACKLING_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        }
+      ],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 137,
+      "hp": 51,
+      "potions": [],
+      "final_hash": "74b3452fa993bb3e638e1ef8af3eb9b9888e0dcd88476c6be4de37744040d9a1",
+      "transition_hash": "af284fc41a4c0376943738fc7f126f128d85b5ec400b50355e0e0f784f9cf2b5",
+      "original_final_match": true,
+      "seconds": 8.33466412499547,
+      "wire.jsonl_sha256": "69c3628be090613b2c948f5ceaaae4dd598844874115d12d471a09dcec1ab4ed",
+      "engine.stderr.log_sha256": "d0f166fc8597c2d84ed626b70dcab91f08273ad66c0fc1aba80254aee3a68732",
+      "trace_path": "artifacts/runs/be84097d-7a44-4793-97e3-719105b9d0e4/decisions.jsonl",
+      "trace_sha256": "e10929158666b36c86bede5d19f90bb00bfc90aad0b3d3fcfa4b80e847b92b1d",
+      "verification": {
+        "case": "E160-A0-000-act1-floor17-applicable",
+        "status": "match",
+        "steps": 194,
+        "outcome": null,
+        "final_hash": "74b3452fa993bb3e638e1ef8af3eb9b9888e0dcd88476c6be4de37744040d9a1",
+        "seconds": 6.737174249952659,
+        "wire.jsonl_sha256": "df16d1de0edfe8dd1667e79730837e2e0b4e07f4fda85c8e492afdaaf4657fae",
+        "engine.stderr.log_sha256": "d0f166fc8597c2d84ed626b70dcab91f08273ad66c0fc1aba80254aee3a68732",
+        "trace_path": "artifacts/runs/1413c62b-95eb-41c7-81e6-d52b81d3cc9e/decisions.jsonl",
+        "trace_sha256": "7542b846197d49d22749ee12b158f0b2fa289c8bffe236d24ea50e2a3f100d15"
+      }
+    },
+    {
+      "case": "E160-A0-000-act1-floor17-combined",
+      "root": "E160-A0-000-act1-floor17",
+      "seed": "e160_campaign_Ironclad_A0_000",
+      "arm": "combined",
+      "status": "clear",
+      "steps": 57,
+      "potion_uses": [
+        {
+          "state_hash": "9bb52fbe6e3dec55ecd0ecf3e9f5662c3108117a4c0cb78c02ab0828adced5b1",
+          "round": 1,
+          "potion_id": "POWER_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 1
+            }
+          }
+        },
+        {
+          "state_hash": "ae83fd90d4451dbf813181b276df4ecc9760248179cebfa4d56dcff87569fa07",
+          "round": 1,
+          "potion_id": "SHACKLING_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        }
+      ],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 137,
+      "hp": 51,
+      "potions": [],
+      "final_hash": "74b3452fa993bb3e638e1ef8af3eb9b9888e0dcd88476c6be4de37744040d9a1",
+      "transition_hash": "af284fc41a4c0376943738fc7f126f128d85b5ec400b50355e0e0f784f9cf2b5",
+      "original_final_match": true,
+      "seconds": 8.116235207999125,
+      "wire.jsonl_sha256": "a344b613f0c2787a33c94edee16755ae28333b94856be79a805dc59910885e24",
+      "engine.stderr.log_sha256": "d0f166fc8597c2d84ed626b70dcab91f08273ad66c0fc1aba80254aee3a68732",
+      "trace_path": "artifacts/runs/3e765fef-90c1-44eb-b40e-24c2aad64784/decisions.jsonl",
+      "trace_sha256": "e3bb9700ae535d3c9a1b9eb59785487b9b3354ac2e34bd82ce74f467a5a62285",
+      "verification": {
+        "case": "E160-A0-000-act1-floor17-combined",
+        "status": "match",
+        "steps": 194,
+        "outcome": null,
+        "final_hash": "74b3452fa993bb3e638e1ef8af3eb9b9888e0dcd88476c6be4de37744040d9a1",
+        "seconds": 6.654051749967039,
+        "wire.jsonl_sha256": "f64a0bbf902155ba01d9ba3ff7cabd3bcafdcffb03653b948bc4bbe765f672f6",
+        "engine.stderr.log_sha256": "d0f166fc8597c2d84ed626b70dcab91f08273ad66c0fc1aba80254aee3a68732",
+        "trace_path": "artifacts/runs/8356513e-1aaf-4d6c-b323-516647abb881/decisions.jsonl",
+        "trace_sha256": "d9f8404e1fe5e104a1a6a8f16e8be4242fdbc82850b3b9acf24b4381835076a8"
+      }
+    },
+    {
+      "case": "E160-A0-000-act2-floor2-legacy",
+      "root": "E160-A0-000-act2-floor2",
+      "seed": "e160_campaign_Ironclad_A0_000",
+      "arm": "legacy",
+      "status": "clear",
+      "steps": 13,
+      "potion_uses": [],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 200,
+      "hp": 80,
+      "potions": [],
+      "final_hash": "60199a77e6dd16fcc381e290251e837cc2541215f7292a80708f066fa3b29cfb",
+      "transition_hash": "a43529fc886e8902e9b2cd4c7eed3ddeb7cfa3dcbdd0f06dd54f68575cc61fae",
+      "original_final_match": true,
+      "seconds": 7.613154916092753,
+      "wire.jsonl_sha256": "f368985bfc0a835d61a17c16f6d50b5f382efada93c969c8842d65635f631595",
+      "engine.stderr.log_sha256": "9e887d36b6312231fd7b883df5cba4f527513c0a6ee336c307bc7fd42f6568a2",
+      "trace_path": "artifacts/runs/bc98c15a-b460-431f-a84a-06fc823a1028/decisions.jsonl",
+      "trace_sha256": "353f30f03ddde1e208b7108b73d521411f42accbc4fcaf3519005355a8f11173",
+      "verification": {
+        "case": "E160-A0-000-act2-floor2-legacy",
+        "status": "match",
+        "steps": 213,
+        "outcome": null,
+        "final_hash": "60199a77e6dd16fcc381e290251e837cc2541215f7292a80708f066fa3b29cfb",
+        "seconds": 7.533720084000379,
+        "wire.jsonl_sha256": "01963bf6e0fee2d79dc4590b5b06fe6a29df86b694683f8c2bcde2ad65bbbc60",
+        "engine.stderr.log_sha256": "9e887d36b6312231fd7b883df5cba4f527513c0a6ee336c307bc7fd42f6568a2",
+        "trace_path": "artifacts/runs/eec8fe6e-a87c-4823-9267-4a96faa2a896/decisions.jsonl",
+        "trace_sha256": "05ba4b61be45a83e97a4db6cb144319f382bcffef1d41feb4dfcd442abf2cbb2"
+      }
+    },
+    {
+      "case": "E160-A0-000-act2-floor2-typed",
+      "root": "E160-A0-000-act2-floor2",
+      "seed": "e160_campaign_Ironclad_A0_000",
+      "arm": "typed",
+      "status": "clear",
+      "steps": 13,
+      "potion_uses": [],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 200,
+      "hp": 80,
+      "potions": [],
+      "final_hash": "60199a77e6dd16fcc381e290251e837cc2541215f7292a80708f066fa3b29cfb",
+      "transition_hash": "a43529fc886e8902e9b2cd4c7eed3ddeb7cfa3dcbdd0f06dd54f68575cc61fae",
+      "original_final_match": true,
+      "seconds": 7.998980458127335,
+      "wire.jsonl_sha256": "d35b04d21b0e74a6aa9805eca1c245c3b8b158e60d215f911f3302656a8c3cae",
+      "engine.stderr.log_sha256": "9e887d36b6312231fd7b883df5cba4f527513c0a6ee336c307bc7fd42f6568a2",
+      "trace_path": "artifacts/runs/c49b71c9-a8fd-4b47-9c22-2703fcd4c974/decisions.jsonl",
+      "trace_sha256": "ba0d6a24fb7a18a7fe285baf152a3aeb06c47b014b97ee5fd71c3556cb62b1ed",
+      "verification": {
+        "case": "E160-A0-000-act2-floor2-typed",
+        "status": "match",
+        "steps": 213,
+        "outcome": null,
+        "final_hash": "60199a77e6dd16fcc381e290251e837cc2541215f7292a80708f066fa3b29cfb",
+        "seconds": 7.539111916907132,
+        "wire.jsonl_sha256": "3a4de78e2ef237a209c3c27b48017b4650f1c8f56218ff1ad61860885cfc9d04",
+        "engine.stderr.log_sha256": "9e887d36b6312231fd7b883df5cba4f527513c0a6ee336c307bc7fd42f6568a2",
+        "trace_path": "artifacts/runs/453602ed-4896-4a0e-b509-4573b7af8ed6/decisions.jsonl",
+        "trace_sha256": "f086ae58702dbd1d8961ecac2a0058c50862a3ce7c4c331ad75b2f43acf34656"
+      }
+    },
+    {
+      "case": "E160-A0-000-act2-floor2-applicable",
+      "root": "E160-A0-000-act2-floor2",
+      "seed": "e160_campaign_Ironclad_A0_000",
+      "arm": "applicable",
+      "status": "clear",
+      "steps": 13,
+      "potion_uses": [],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 200,
+      "hp": 80,
+      "potions": [],
+      "final_hash": "60199a77e6dd16fcc381e290251e837cc2541215f7292a80708f066fa3b29cfb",
+      "transition_hash": "a43529fc886e8902e9b2cd4c7eed3ddeb7cfa3dcbdd0f06dd54f68575cc61fae",
+      "original_final_match": true,
+      "seconds": 8.075081916060299,
+      "wire.jsonl_sha256": "b1c89f824175afb273e6313777e2407240d09b2f349dbefb5f88c9cfdfde6588",
+      "engine.stderr.log_sha256": "9e887d36b6312231fd7b883df5cba4f527513c0a6ee336c307bc7fd42f6568a2",
+      "trace_path": "artifacts/runs/306b94e9-6390-4f59-aa1a-0c0dbed619b7/decisions.jsonl",
+      "trace_sha256": "bc8d23efd21886ddf238a77575a115eca41e3613a21b27e118e4466925e971d5",
+      "verification": {
+        "case": "E160-A0-000-act2-floor2-applicable",
+        "status": "match",
+        "steps": 213,
+        "outcome": null,
+        "final_hash": "60199a77e6dd16fcc381e290251e837cc2541215f7292a80708f066fa3b29cfb",
+        "seconds": 7.590431957971305,
+        "wire.jsonl_sha256": "3ad338b5749526def0f8f1a5272d9d498439f5c130cf87032601de74705d8c12",
+        "engine.stderr.log_sha256": "9e887d36b6312231fd7b883df5cba4f527513c0a6ee336c307bc7fd42f6568a2",
+        "trace_path": "artifacts/runs/75ccdc66-29fe-4dac-b2e1-c86f211149ec/decisions.jsonl",
+        "trace_sha256": "46e590128736cf1c8898c5d905bbb22dd29a0f194de9cb895d9350de65ab6ba8"
+      }
+    },
+    {
+      "case": "E160-A0-000-act2-floor2-combined",
+      "root": "E160-A0-000-act2-floor2",
+      "seed": "e160_campaign_Ironclad_A0_000",
+      "arm": "combined",
+      "status": "clear",
+      "steps": 13,
+      "potion_uses": [],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 200,
+      "hp": 80,
+      "potions": [],
+      "final_hash": "60199a77e6dd16fcc381e290251e837cc2541215f7292a80708f066fa3b29cfb",
+      "transition_hash": "a43529fc886e8902e9b2cd4c7eed3ddeb7cfa3dcbdd0f06dd54f68575cc61fae",
+      "original_final_match": true,
+      "seconds": 8.516502583865076,
+      "wire.jsonl_sha256": "78962d3ceedb005b2112b05bcdecb382bce5b17490756104efc07f936a5a6d49",
+      "engine.stderr.log_sha256": "9e887d36b6312231fd7b883df5cba4f527513c0a6ee336c307bc7fd42f6568a2",
+      "trace_path": "artifacts/runs/b0879924-d229-4f2e-adbd-1cd773f0473c/decisions.jsonl",
+      "trace_sha256": "12d881c6808649352e9d2b7efeef042f0d29ac49b2aaec68323a54d164c692a5",
+      "verification": {
+        "case": "E160-A0-000-act2-floor2-combined",
+        "status": "match",
+        "steps": 213,
+        "outcome": null,
+        "final_hash": "60199a77e6dd16fcc381e290251e837cc2541215f7292a80708f066fa3b29cfb",
+        "seconds": 7.621576125035062,
+        "wire.jsonl_sha256": "ac2b9e1a301453b13d2cd4b59071829b9219df8717078e9c61e06ee096ec7cd8",
+        "engine.stderr.log_sha256": "9e887d36b6312231fd7b883df5cba4f527513c0a6ee336c307bc7fd42f6568a2",
+        "trace_path": "artifacts/runs/4df76763-7f15-4936-9303-5cec3e2227b9/decisions.jsonl",
+        "trace_sha256": "d4e5b693bf7081fe9a9569583f79a820ed81a631e23335b491f666a8767b9803"
+      }
+    },
+    {
+      "case": "E160-A0-000-act2-floor3-legacy",
+      "root": "E160-A0-000-act2-floor3",
+      "seed": "e160_campaign_Ironclad_A0_000",
+      "arm": "legacy",
+      "status": "clear",
+      "steps": 14,
+      "potion_uses": [],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 216,
+      "hp": 80,
+      "potions": [],
+      "final_hash": "8cd886eb8df82964c19e18ce3606c33eda99924e8a19a93cfd49f059dbac7ac0",
+      "transition_hash": "618c62cf5e64e70025d0bd45bd69d92f1ed0418b8c9ec34d7ac5d1b2fe2cea8f",
+      "original_final_match": true,
+      "seconds": 9.173426915891469,
+      "wire.jsonl_sha256": "da203a1a69e6247e0cbccb0d788fcdf2d662cd4ab8e8263dcc39a0ee10b4b52b",
+      "engine.stderr.log_sha256": "093dd2bdfaf67d442a86c0a206e4299c2478f7794290ab3fce3f76d74765f69c",
+      "trace_path": "artifacts/runs/aa3bb5a6-351d-4010-9ef9-ccae7613b566/decisions.jsonl",
+      "trace_sha256": "a24ce6fd0d4f4aa5c08554106ffe856cc71704ef417801a15ead381b1ea4a46d",
+      "verification": {
+        "case": "E160-A0-000-act2-floor3-legacy",
+        "status": "match",
+        "steps": 230,
+        "outcome": null,
+        "final_hash": "8cd886eb8df82964c19e18ce3606c33eda99924e8a19a93cfd49f059dbac7ac0",
+        "seconds": 7.785750082926825,
+        "wire.jsonl_sha256": "61925904f792f1925832f5940c02591815bba3983009c604a0be72272d09f615",
+        "engine.stderr.log_sha256": "093dd2bdfaf67d442a86c0a206e4299c2478f7794290ab3fce3f76d74765f69c",
+        "trace_path": "artifacts/runs/6e56e2ed-b2b3-4d80-b86d-ef517fa30ff5/decisions.jsonl",
+        "trace_sha256": "f9addb15cd9d5be704246076c1b8e4772226430426928bcf8f88852129387953"
+      }
+    },
+    {
+      "case": "E160-A0-000-act2-floor3-typed",
+      "root": "E160-A0-000-act2-floor3",
+      "seed": "e160_campaign_Ironclad_A0_000",
+      "arm": "typed",
+      "status": "clear",
+      "steps": 14,
+      "potion_uses": [],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 216,
+      "hp": 80,
+      "potions": [],
+      "final_hash": "8cd886eb8df82964c19e18ce3606c33eda99924e8a19a93cfd49f059dbac7ac0",
+      "transition_hash": "618c62cf5e64e70025d0bd45bd69d92f1ed0418b8c9ec34d7ac5d1b2fe2cea8f",
+      "original_final_match": true,
+      "seconds": 9.043037499999627,
+      "wire.jsonl_sha256": "7b2d47faaf2067c27cf0a92118cf39c051125a29aede655bdc7314b390893112",
+      "engine.stderr.log_sha256": "093dd2bdfaf67d442a86c0a206e4299c2478f7794290ab3fce3f76d74765f69c",
+      "trace_path": "artifacts/runs/efbdb535-6f07-49fa-9cb6-678bbd1f1046/decisions.jsonl",
+      "trace_sha256": "f0d9c486f372075535ff0f1a04fe1acaa87acfb14f23742bc303382453571896",
+      "verification": {
+        "case": "E160-A0-000-act2-floor3-typed",
+        "status": "match",
+        "steps": 230,
+        "outcome": null,
+        "final_hash": "8cd886eb8df82964c19e18ce3606c33eda99924e8a19a93cfd49f059dbac7ac0",
+        "seconds": 7.815042125061154,
+        "wire.jsonl_sha256": "7170a059b822d821fc619dbae4874c2d307e383a33b28c937ae48d9b6b9723e4",
+        "engine.stderr.log_sha256": "093dd2bdfaf67d442a86c0a206e4299c2478f7794290ab3fce3f76d74765f69c",
+        "trace_path": "artifacts/runs/a800b31b-4acb-4f0b-8238-67af84767f57/decisions.jsonl",
+        "trace_sha256": "3be396b0f1647a192812727098bb5560d07d75b4733ff0a5149d12de35545468"
+      }
+    },
+    {
+      "case": "E160-A0-000-act2-floor3-applicable",
+      "root": "E160-A0-000-act2-floor3",
+      "seed": "e160_campaign_Ironclad_A0_000",
+      "arm": "applicable",
+      "status": "clear",
+      "steps": 14,
+      "potion_uses": [],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 216,
+      "hp": 80,
+      "potions": [],
+      "final_hash": "8cd886eb8df82964c19e18ce3606c33eda99924e8a19a93cfd49f059dbac7ac0",
+      "transition_hash": "618c62cf5e64e70025d0bd45bd69d92f1ed0418b8c9ec34d7ac5d1b2fe2cea8f",
+      "original_final_match": true,
+      "seconds": 8.941753125051036,
+      "wire.jsonl_sha256": "28b6676008eecce2fbc8970bb8aec6fcbcbbb013f388605a344e83348d208030",
+      "engine.stderr.log_sha256": "093dd2bdfaf67d442a86c0a206e4299c2478f7794290ab3fce3f76d74765f69c",
+      "trace_path": "artifacts/runs/fa767d27-45f0-4f44-9b18-94261381b697/decisions.jsonl",
+      "trace_sha256": "cd71d560a7e9eb422c756e5a64a5e962e208c18c4c7b2254eaed0824479bce96",
+      "verification": {
+        "case": "E160-A0-000-act2-floor3-applicable",
+        "status": "match",
+        "steps": 230,
+        "outcome": null,
+        "final_hash": "8cd886eb8df82964c19e18ce3606c33eda99924e8a19a93cfd49f059dbac7ac0",
+        "seconds": 7.919664792018011,
+        "wire.jsonl_sha256": "cf6317b9a8f31f7e354214a987ba4fbd245cea3fe5254ed5aa317944896aa370",
+        "engine.stderr.log_sha256": "093dd2bdfaf67d442a86c0a206e4299c2478f7794290ab3fce3f76d74765f69c",
+        "trace_path": "artifacts/runs/1a314b3c-d9ff-4582-9503-c2181d021c09/decisions.jsonl",
+        "trace_sha256": "2f76947264a17f8e7e05be1c908899baea686cb2034c9ba755cd06a13e471526"
+      }
+    },
+    {
+      "case": "E160-A0-000-act2-floor3-combined",
+      "root": "E160-A0-000-act2-floor3",
+      "seed": "e160_campaign_Ironclad_A0_000",
+      "arm": "combined",
+      "status": "clear",
+      "steps": 14,
+      "potion_uses": [],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 216,
+      "hp": 80,
+      "potions": [],
+      "final_hash": "8cd886eb8df82964c19e18ce3606c33eda99924e8a19a93cfd49f059dbac7ac0",
+      "transition_hash": "618c62cf5e64e70025d0bd45bd69d92f1ed0418b8c9ec34d7ac5d1b2fe2cea8f",
+      "original_final_match": true,
+      "seconds": 8.711631250102073,
+      "wire.jsonl_sha256": "c63ac77afee2c1419b64ce6b7dd041054c8ec474ceff2b7342321a9e377c3d09",
+      "engine.stderr.log_sha256": "093dd2bdfaf67d442a86c0a206e4299c2478f7794290ab3fce3f76d74765f69c",
+      "trace_path": "artifacts/runs/9f6f950c-7cd0-4677-9070-8eb1218c9b36/decisions.jsonl",
+      "trace_sha256": "79caf878791180ed161bfee0942c75bf248a85248593573f6eae565e065336bc",
+      "verification": {
+        "case": "E160-A0-000-act2-floor3-combined",
+        "status": "match",
+        "steps": 230,
+        "outcome": null,
+        "final_hash": "8cd886eb8df82964c19e18ce3606c33eda99924e8a19a93cfd49f059dbac7ac0",
+        "seconds": 7.854465792188421,
+        "wire.jsonl_sha256": "a959825f190f895b286f7be83d7db68203f48fff2fec5bb66e013187ece31adc",
+        "engine.stderr.log_sha256": "093dd2bdfaf67d442a86c0a206e4299c2478f7794290ab3fce3f76d74765f69c",
+        "trace_path": "artifacts/runs/43e1676b-b6ae-4905-8cb1-839484680866/decisions.jsonl",
+        "trace_sha256": "c097a5819707362893b6c918f6f8ce07bb7bf1899a333b2d1c27565eda1ea67b"
+      }
+    },
+    {
+      "case": "E160-A0-000-act2-floor6-legacy",
+      "root": "E160-A0-000-act2-floor6",
+      "seed": "e160_campaign_Ironclad_A0_000",
+      "arm": "legacy",
+      "status": "clear",
+      "steps": 25,
+      "potion_uses": [],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 241,
+      "hp": 69,
+      "potions": [
+        "MAZALETHS_GIFT",
+        "FIRE_POTION"
+      ],
+      "final_hash": "7e430e4f1a40d95e385aa2839f66f3ab61fb657b279eb58a2af93275a2975e7c",
+      "transition_hash": "41953410e67089f8606991eee8d920cc6d3f6b38e31aa3c7641c092b1a90786d",
+      "original_final_match": true,
+      "seconds": 9.063591375015676,
+      "wire.jsonl_sha256": "8e9d3ffbcf0da1b871c4595d59761d6f921a12a37bf8860d5ca0f559e4dd4023",
+      "engine.stderr.log_sha256": "b02ec731cd48e9ef6f24902c74db3597e5912a9d5c4d040d7584d65d3976dd5c",
+      "trace_path": "artifacts/runs/7f53f795-37e8-4d53-92f4-436c72e21ccf/decisions.jsonl",
+      "trace_sha256": "67dff5f95386b67f2bcda1ad22ecdf59e54daf0c53b8669540c1c12ffb97523d",
+      "verification": {
+        "case": "E160-A0-000-act2-floor6-legacy",
+        "status": "match",
+        "steps": 266,
+        "outcome": null,
+        "final_hash": "7e430e4f1a40d95e385aa2839f66f3ab61fb657b279eb58a2af93275a2975e7c",
+        "seconds": 8.6159114590846,
+        "wire.jsonl_sha256": "9cde05f83bac9cb9256c23fa37704151abbd57909dfd21899459a7ec6baf6a72",
+        "engine.stderr.log_sha256": "b02ec731cd48e9ef6f24902c74db3597e5912a9d5c4d040d7584d65d3976dd5c",
+        "trace_path": "artifacts/runs/7992501b-484a-4f84-8f33-8936f1c06a98/decisions.jsonl",
+        "trace_sha256": "2d60a50b4d08598f829b314188d7065ae9b056c0813e171ad988a252378c9f1d"
+      }
+    },
+    {
+      "case": "E160-A0-000-act2-floor6-typed",
+      "root": "E160-A0-000-act2-floor6",
+      "seed": "e160_campaign_Ironclad_A0_000",
+      "arm": "typed",
+      "status": "clear",
+      "steps": 25,
+      "potion_uses": [],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 241,
+      "hp": 69,
+      "potions": [
+        "MAZALETHS_GIFT",
+        "FIRE_POTION"
+      ],
+      "final_hash": "7e430e4f1a40d95e385aa2839f66f3ab61fb657b279eb58a2af93275a2975e7c",
+      "transition_hash": "41953410e67089f8606991eee8d920cc6d3f6b38e31aa3c7641c092b1a90786d",
+      "original_final_match": true,
+      "seconds": 9.211265082936734,
+      "wire.jsonl_sha256": "1a14480bc00b0af932530e27badc00cc86ba3082ce8eef76506c416da5aa2765",
+      "engine.stderr.log_sha256": "b02ec731cd48e9ef6f24902c74db3597e5912a9d5c4d040d7584d65d3976dd5c",
+      "trace_path": "artifacts/runs/12a61624-00f6-4988-bb62-61d8646e3f9a/decisions.jsonl",
+      "trace_sha256": "96c4440a30b4e8f8bcca1e93f3038c8da71e5886e15d88f434ca16e32a89a519",
+      "verification": {
+        "case": "E160-A0-000-act2-floor6-typed",
+        "status": "match",
+        "steps": 266,
+        "outcome": null,
+        "final_hash": "7e430e4f1a40d95e385aa2839f66f3ab61fb657b279eb58a2af93275a2975e7c",
+        "seconds": 8.435815874952823,
+        "wire.jsonl_sha256": "9ab88e2be4002cb309b6973dfc6030b34515a186b1a480affa967438522b7bcd",
+        "engine.stderr.log_sha256": "b02ec731cd48e9ef6f24902c74db3597e5912a9d5c4d040d7584d65d3976dd5c",
+        "trace_path": "artifacts/runs/0457c47c-726f-4094-a1d9-86148c9ccc78/decisions.jsonl",
+        "trace_sha256": "e632548a7112cb9a058e9237d50379578660de40ffc87cbcc403fe0b9755b247"
+      }
+    },
+    {
+      "case": "E160-A0-000-act2-floor6-applicable",
+      "root": "E160-A0-000-act2-floor6",
+      "seed": "e160_campaign_Ironclad_A0_000",
+      "arm": "applicable",
+      "status": "clear",
+      "steps": 25,
+      "potion_uses": [],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 241,
+      "hp": 69,
+      "potions": [
+        "MAZALETHS_GIFT",
+        "FIRE_POTION"
+      ],
+      "final_hash": "7e430e4f1a40d95e385aa2839f66f3ab61fb657b279eb58a2af93275a2975e7c",
+      "transition_hash": "41953410e67089f8606991eee8d920cc6d3f6b38e31aa3c7641c092b1a90786d",
+      "original_final_match": true,
+      "seconds": 9.390499709174037,
+      "wire.jsonl_sha256": "5e4b0245c0c83d12f9803718ee834c78af2e7809572f655cda45a49c7c0f4568",
+      "engine.stderr.log_sha256": "b02ec731cd48e9ef6f24902c74db3597e5912a9d5c4d040d7584d65d3976dd5c",
+      "trace_path": "artifacts/runs/899f51da-7a36-4a1c-bb5d-7f8b22d7eed0/decisions.jsonl",
+      "trace_sha256": "b3b8945cdbfae0d90a8c7385b0e2184b9f2da4aec860f6f22b5fdab12a4f60dc",
+      "verification": {
+        "case": "E160-A0-000-act2-floor6-applicable",
+        "status": "match",
+        "steps": 266,
+        "outcome": null,
+        "final_hash": "7e430e4f1a40d95e385aa2839f66f3ab61fb657b279eb58a2af93275a2975e7c",
+        "seconds": 8.488820667145774,
+        "wire.jsonl_sha256": "78e3c660781e37af16b280e8f3215ae5f9b03e615cdc28f1a65ad9bf4323d3ea",
+        "engine.stderr.log_sha256": "b02ec731cd48e9ef6f24902c74db3597e5912a9d5c4d040d7584d65d3976dd5c",
+        "trace_path": "artifacts/runs/8ce93f87-b8b8-4d98-b0b7-d608e81e5943/decisions.jsonl",
+        "trace_sha256": "c8656412f33968f7f0a581829219de9c19498a5d5f009f9d69728739011532c0"
+      }
+    },
+    {
+      "case": "E160-A0-000-act2-floor6-combined",
+      "root": "E160-A0-000-act2-floor6",
+      "seed": "e160_campaign_Ironclad_A0_000",
+      "arm": "combined",
+      "status": "clear",
+      "steps": 25,
+      "potion_uses": [],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 241,
+      "hp": 69,
+      "potions": [
+        "MAZALETHS_GIFT",
+        "FIRE_POTION"
+      ],
+      "final_hash": "7e430e4f1a40d95e385aa2839f66f3ab61fb657b279eb58a2af93275a2975e7c",
+      "transition_hash": "41953410e67089f8606991eee8d920cc6d3f6b38e31aa3c7641c092b1a90786d",
+      "original_final_match": true,
+      "seconds": 9.350120708113536,
+      "wire.jsonl_sha256": "7e11ad8d9e4cf9cdfcd3eda6f69dfce3eeea1f41f81332b84208c8733762d43f",
+      "engine.stderr.log_sha256": "b02ec731cd48e9ef6f24902c74db3597e5912a9d5c4d040d7584d65d3976dd5c",
+      "trace_path": "artifacts/runs/e8222b34-c7fe-497b-a244-886865a1b7c2/decisions.jsonl",
+      "trace_sha256": "3fe83ac66752b71a2968fba6c8a968456d9d3c55cb87d8d18c0a4bb161ea3dc9",
+      "verification": {
+        "case": "E160-A0-000-act2-floor6-combined",
+        "status": "match",
+        "steps": 266,
+        "outcome": null,
+        "final_hash": "7e430e4f1a40d95e385aa2839f66f3ab61fb657b279eb58a2af93275a2975e7c",
+        "seconds": 8.541405665921047,
+        "wire.jsonl_sha256": "12936a3055840719d59bca9acf5afa55b07f959722848c0b8736302a1105772f",
+        "engine.stderr.log_sha256": "b02ec731cd48e9ef6f24902c74db3597e5912a9d5c4d040d7584d65d3976dd5c",
+        "trace_path": "artifacts/runs/fe58961a-18cc-42c8-ad97-22de64ae8e21/decisions.jsonl",
+        "trace_sha256": "51154fde7abe908423614e5927fc40fb10c1f4b4e8eaaab6af748b2c7fd05bc1"
+      }
+    },
+    {
+      "case": "E160-A0-000-act2-floor7-legacy",
+      "root": "E160-A0-000-act2-floor7",
+      "seed": "e160_campaign_Ironclad_A0_000",
+      "arm": "legacy",
+      "status": "clear",
+      "steps": 9,
+      "potion_uses": [],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 269,
+      "hp": 65,
+      "potions": [
+        "MAZALETHS_GIFT",
+        "FIRE_POTION"
+      ],
+      "final_hash": "15c88a0f7c281e1131f71147edb61e8973ec4d7de944279c03c161463edda08d",
+      "transition_hash": "d2ce3adcf93c93151f342e9009b4219af8f3b42e31cbceb58a1cd862fca5a1df",
+      "original_final_match": true,
+      "seconds": 8.78907912503928,
+      "wire.jsonl_sha256": "877250803f0baf0fd380e71b14e1df17aaede28a031878e7789114efe3284db9",
+      "engine.stderr.log_sha256": "fe5b036da5037308691a373b992ab4e24c744b43c564316a06111fd4c637c0bc",
+      "trace_path": "artifacts/runs/5dfb42c8-bdf9-4564-bf4f-686d0bda63ca/decisions.jsonl",
+      "trace_sha256": "38a45d7a2c397cbb9062a38bb4211d9a42c186180fd5760ef80e3b7ac36ec0c6",
+      "verification": {
+        "case": "E160-A0-000-act2-floor7-legacy",
+        "status": "match",
+        "steps": 278,
+        "outcome": null,
+        "final_hash": "15c88a0f7c281e1131f71147edb61e8973ec4d7de944279c03c161463edda08d",
+        "seconds": 8.756507334066555,
+        "wire.jsonl_sha256": "220ce0548d0d2c6712889fd46adf09a485a4343428792a95eef0fdee0aaede09",
+        "engine.stderr.log_sha256": "fe5b036da5037308691a373b992ab4e24c744b43c564316a06111fd4c637c0bc",
+        "trace_path": "artifacts/runs/6b165364-b915-4a88-9b8b-8b84bf8f06b1/decisions.jsonl",
+        "trace_sha256": "b7e5a57c4524b251f5936ba23a8326095786776ce2a7424d6a98f17b29518322"
+      }
+    },
+    {
+      "case": "E160-A0-000-act2-floor7-typed",
+      "root": "E160-A0-000-act2-floor7",
+      "seed": "e160_campaign_Ironclad_A0_000",
+      "arm": "typed",
+      "status": "clear",
+      "steps": 9,
+      "potion_uses": [],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 269,
+      "hp": 65,
+      "potions": [
+        "MAZALETHS_GIFT",
+        "FIRE_POTION"
+      ],
+      "final_hash": "15c88a0f7c281e1131f71147edb61e8973ec4d7de944279c03c161463edda08d",
+      "transition_hash": "d2ce3adcf93c93151f342e9009b4219af8f3b42e31cbceb58a1cd862fca5a1df",
+      "original_final_match": true,
+      "seconds": 8.885902083013207,
+      "wire.jsonl_sha256": "a9acc5a7fb1f28f604dd904ea2adda6ae1bd6b99104bd32ec77159805e5a8c8e",
+      "engine.stderr.log_sha256": "fe5b036da5037308691a373b992ab4e24c744b43c564316a06111fd4c637c0bc",
+      "trace_path": "artifacts/runs/4f1e8b2f-b577-4dc1-bb1a-1ad904706d7d/decisions.jsonl",
+      "trace_sha256": "1f5af3309cd29d392fc00bdebcc6e8d90bbcfa5538f94bb612dd246a92364d26",
+      "verification": {
+        "case": "E160-A0-000-act2-floor7-typed",
+        "status": "match",
+        "steps": 278,
+        "outcome": null,
+        "final_hash": "15c88a0f7c281e1131f71147edb61e8973ec4d7de944279c03c161463edda08d",
+        "seconds": 8.70351175009273,
+        "wire.jsonl_sha256": "86ba661d920c93ad9e7116c70e0423e54c06c744cd70dfad3b08c1e1ee4e6ee0",
+        "engine.stderr.log_sha256": "fe5b036da5037308691a373b992ab4e24c744b43c564316a06111fd4c637c0bc",
+        "trace_path": "artifacts/runs/931ca9d2-3be2-45ee-aeba-5ecd403426b8/decisions.jsonl",
+        "trace_sha256": "4afe16ce05896e5103ba0e0e408e959f5bab9198d9560d98e6e8814a74ae4cc4"
+      }
+    },
+    {
+      "case": "E160-A0-000-act2-floor7-applicable",
+      "root": "E160-A0-000-act2-floor7",
+      "seed": "e160_campaign_Ironclad_A0_000",
+      "arm": "applicable",
+      "status": "clear",
+      "steps": 9,
+      "potion_uses": [],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 269,
+      "hp": 65,
+      "potions": [
+        "MAZALETHS_GIFT",
+        "FIRE_POTION"
+      ],
+      "final_hash": "15c88a0f7c281e1131f71147edb61e8973ec4d7de944279c03c161463edda08d",
+      "transition_hash": "d2ce3adcf93c93151f342e9009b4219af8f3b42e31cbceb58a1cd862fca5a1df",
+      "original_final_match": true,
+      "seconds": 8.879038957878947,
+      "wire.jsonl_sha256": "55bb7554962c6ada9e8999aa7b39257b4fc1945eaf01bcc97430cfc88b8876e9",
+      "engine.stderr.log_sha256": "fe5b036da5037308691a373b992ab4e24c744b43c564316a06111fd4c637c0bc",
+      "trace_path": "artifacts/runs/9fee7914-e7f0-4172-85cf-eff5040350ea/decisions.jsonl",
+      "trace_sha256": "8d3b73f9a89ded454f87873b20b1381cfbb567713dc1474b82dc22a37cc37974",
+      "verification": {
+        "case": "E160-A0-000-act2-floor7-applicable",
+        "status": "match",
+        "steps": 278,
+        "outcome": null,
+        "final_hash": "15c88a0f7c281e1131f71147edb61e8973ec4d7de944279c03c161463edda08d",
+        "seconds": 8.687709625111893,
+        "wire.jsonl_sha256": "67d12ed7fa57c96999193d6ce324b9e01db6a139cebb456509c128b6bc8d6ce2",
+        "engine.stderr.log_sha256": "fe5b036da5037308691a373b992ab4e24c744b43c564316a06111fd4c637c0bc",
+        "trace_path": "artifacts/runs/4dab3848-f74b-481c-b4d5-661809dcbb88/decisions.jsonl",
+        "trace_sha256": "e0d7978fc9a16413a341220ac3f3f8cd2762ac2ca5db7a9c862bc8590a656385"
+      }
+    },
+    {
+      "case": "E160-A0-000-act2-floor7-combined",
+      "root": "E160-A0-000-act2-floor7",
+      "seed": "e160_campaign_Ironclad_A0_000",
+      "arm": "combined",
+      "status": "clear",
+      "steps": 9,
+      "potion_uses": [],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 269,
+      "hp": 65,
+      "potions": [
+        "MAZALETHS_GIFT",
+        "FIRE_POTION"
+      ],
+      "final_hash": "15c88a0f7c281e1131f71147edb61e8973ec4d7de944279c03c161463edda08d",
+      "transition_hash": "d2ce3adcf93c93151f342e9009b4219af8f3b42e31cbceb58a1cd862fca5a1df",
+      "original_final_match": true,
+      "seconds": 8.884701374918222,
+      "wire.jsonl_sha256": "83113cbc7baec878ee821667b7b53f3b10b2d1e268e38da1d9705c4aedb24350",
+      "engine.stderr.log_sha256": "fe5b036da5037308691a373b992ab4e24c744b43c564316a06111fd4c637c0bc",
+      "trace_path": "artifacts/runs/f622fb89-519e-4804-96f1-2679eefe1d66/decisions.jsonl",
+      "trace_sha256": "79f177845cda904499876b901ac0ab95b07584bf82796b6cdce12b394602819e",
+      "verification": {
+        "case": "E160-A0-000-act2-floor7-combined",
+        "status": "match",
+        "steps": 278,
+        "outcome": null,
+        "final_hash": "15c88a0f7c281e1131f71147edb61e8973ec4d7de944279c03c161463edda08d",
+        "seconds": 8.638582917163149,
+        "wire.jsonl_sha256": "aea0d84987feb1295466b2ecf977fc015124bb1152613d451508ddd603713dfc",
+        "engine.stderr.log_sha256": "fe5b036da5037308691a373b992ab4e24c744b43c564316a06111fd4c637c0bc",
+        "trace_path": "artifacts/runs/7a5db3e9-eb92-4d92-a2aa-82c4df0ec7de/decisions.jsonl",
+        "trace_sha256": "874c9a3e21abc6ff838918b4ae5299c827d835a867d5011bf51fadc956b830e9"
+      }
+    },
+    {
+      "case": "E160-A0-001-act1-floor17-legacy",
+      "root": "E160-A0-001-act1-floor17",
+      "seed": "e160_campaign_Ironclad_A0_001",
+      "arm": "legacy",
+      "status": "clear",
+      "steps": 30,
+      "potion_uses": [
+        {
+          "state_hash": "1e1e93679c07b26f80759fd6d4f69388a286449bf8abf116c6a93363bce89f35",
+          "round": 1,
+          "potion_id": "POWER_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        }
+      ],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 149,
+      "hp": 43,
+      "potions": [],
+      "final_hash": "d810863baf1768b866bd230952f471b47d1da936706e60703f3083ccd8ea4cae",
+      "transition_hash": "6ff6df76061a51fcb2ab248715b87004e755d1355fb1a42390228b1313ae851a",
+      "original_final_match": true,
+      "seconds": 6.792527750134468,
+      "wire.jsonl_sha256": "aeef35de9b688c46dd2cf562dc8946facfefaa675c6c5a00b40faa10d13bc63d",
+      "engine.stderr.log_sha256": "963079219fd2021a4a342fb8feb2f3077a1f40c9288a4481db45219e169a85ff",
+      "trace_path": "artifacts/runs/07554875-992e-4cd0-bd4b-b50c39c901df/decisions.jsonl",
+      "trace_sha256": "51f295281d61a978ef501be48ef4e6dd4d014d2514cafdc06cc6835107affd63",
+      "verification": {
+        "case": "E160-A0-001-act1-floor17-legacy",
+        "status": "match",
+        "steps": 179,
+        "outcome": null,
+        "final_hash": "d810863baf1768b866bd230952f471b47d1da936706e60703f3083ccd8ea4cae",
+        "seconds": 6.960036084055901,
+        "wire.jsonl_sha256": "f438d71070ff9aa0d71d0d733c4490c2397e20764847213c91a97c5ec5d96888",
+        "engine.stderr.log_sha256": "963079219fd2021a4a342fb8feb2f3077a1f40c9288a4481db45219e169a85ff",
+        "trace_path": "artifacts/runs/cf2a1e08-87de-416c-905c-c08bada651a0/decisions.jsonl",
+        "trace_sha256": "72d0f69e5253b566f6e0191d7857a2db3bbaea6d2ffc692d9405a26e76ce29e1"
+      }
+    },
+    {
+      "case": "E160-A0-001-act1-floor17-typed",
+      "root": "E160-A0-001-act1-floor17",
+      "seed": "e160_campaign_Ironclad_A0_001",
+      "arm": "typed",
+      "status": "clear",
+      "steps": 30,
+      "potion_uses": [
+        {
+          "state_hash": "1e1e93679c07b26f80759fd6d4f69388a286449bf8abf116c6a93363bce89f35",
+          "round": 1,
+          "potion_id": "POWER_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        }
+      ],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 149,
+      "hp": 43,
+      "potions": [],
+      "final_hash": "d810863baf1768b866bd230952f471b47d1da936706e60703f3083ccd8ea4cae",
+      "transition_hash": "6ff6df76061a51fcb2ab248715b87004e755d1355fb1a42390228b1313ae851a",
+      "original_final_match": true,
+      "seconds": 6.8603881248272955,
+      "wire.jsonl_sha256": "15627cb653adb3d2abc46eff4c41682a79acb5354d7ba7ab17508c904856c325",
+      "engine.stderr.log_sha256": "963079219fd2021a4a342fb8feb2f3077a1f40c9288a4481db45219e169a85ff",
+      "trace_path": "artifacts/runs/8fd2ac22-afce-47a4-bdce-50d97834c763/decisions.jsonl",
+      "trace_sha256": "28f7ecb702bcccb069b232b18bb2f2bfd6df5469bcd042afd95e113023373092",
+      "verification": {
+        "case": "E160-A0-001-act1-floor17-typed",
+        "status": "match",
+        "steps": 179,
+        "outcome": null,
+        "final_hash": "d810863baf1768b866bd230952f471b47d1da936706e60703f3083ccd8ea4cae",
+        "seconds": 6.999094041064382,
+        "wire.jsonl_sha256": "6cbc2854a09d3faf7aed50daee03b1401b1f04a7d3f615f8ac066faa9a112d33",
+        "engine.stderr.log_sha256": "963079219fd2021a4a342fb8feb2f3077a1f40c9288a4481db45219e169a85ff",
+        "trace_path": "artifacts/runs/106acb09-b920-4916-b8b8-8c9892beb433/decisions.jsonl",
+        "trace_sha256": "c93ee4d20a3b2c271603d01c46b1613e45947afaa1fa48a676f1a4ebda8fc6a4"
+      }
+    },
+    {
+      "case": "E160-A0-001-act1-floor17-applicable",
+      "root": "E160-A0-001-act1-floor17",
+      "seed": "e160_campaign_Ironclad_A0_001",
+      "arm": "applicable",
+      "status": "clear",
+      "steps": 30,
+      "potion_uses": [
+        {
+          "state_hash": "1e1e93679c07b26f80759fd6d4f69388a286449bf8abf116c6a93363bce89f35",
+          "round": 1,
+          "potion_id": "POWER_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        }
+      ],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 149,
+      "hp": 43,
+      "potions": [],
+      "final_hash": "d810863baf1768b866bd230952f471b47d1da936706e60703f3083ccd8ea4cae",
+      "transition_hash": "6ff6df76061a51fcb2ab248715b87004e755d1355fb1a42390228b1313ae851a",
+      "original_final_match": true,
+      "seconds": 6.735997584182769,
+      "wire.jsonl_sha256": "c8c887aad674e296f65481f9bc83ee8b9bcd620fc3d71a7df4a1236b6dcf06bb",
+      "engine.stderr.log_sha256": "963079219fd2021a4a342fb8feb2f3077a1f40c9288a4481db45219e169a85ff",
+      "trace_path": "artifacts/runs/4ffdc3bd-7a72-4d56-8d21-fbdb1d49eacf/decisions.jsonl",
+      "trace_sha256": "0c20cb96025a498d6df2fa3a7f5e408aa46b702d55237e13afbb41b6332b1553",
+      "verification": {
+        "case": "E160-A0-001-act1-floor17-applicable",
+        "status": "match",
+        "steps": 179,
+        "outcome": null,
+        "final_hash": "d810863baf1768b866bd230952f471b47d1da936706e60703f3083ccd8ea4cae",
+        "seconds": 7.054366125026718,
+        "wire.jsonl_sha256": "9f5b24eadbaf65e525cae04cabd4db8dc267a3fab383afd1594cc08d86d6c04e",
+        "engine.stderr.log_sha256": "963079219fd2021a4a342fb8feb2f3077a1f40c9288a4481db45219e169a85ff",
+        "trace_path": "artifacts/runs/a4c6dbb8-b8de-49f2-a66b-beb92771aafa/decisions.jsonl",
+        "trace_sha256": "a8bea2157b98cad2eed2c524fffb5e5f6b43f052eccbb7c27fca79c18b39d9f1"
+      }
+    },
+    {
+      "case": "E160-A0-001-act1-floor17-combined",
+      "root": "E160-A0-001-act1-floor17",
+      "seed": "e160_campaign_Ironclad_A0_001",
+      "arm": "combined",
+      "status": "clear",
+      "steps": 30,
+      "potion_uses": [
+        {
+          "state_hash": "1e1e93679c07b26f80759fd6d4f69388a286449bf8abf116c6a93363bce89f35",
+          "round": 1,
+          "potion_id": "POWER_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        }
+      ],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 149,
+      "hp": 43,
+      "potions": [],
+      "final_hash": "d810863baf1768b866bd230952f471b47d1da936706e60703f3083ccd8ea4cae",
+      "transition_hash": "6ff6df76061a51fcb2ab248715b87004e755d1355fb1a42390228b1313ae851a",
+      "original_final_match": true,
+      "seconds": 6.762388417031616,
+      "wire.jsonl_sha256": "0d81fad36d74cc23d58dd66262138ce285cf14041935c267b9cb036a74687d4d",
+      "engine.stderr.log_sha256": "963079219fd2021a4a342fb8feb2f3077a1f40c9288a4481db45219e169a85ff",
+      "trace_path": "artifacts/runs/61b5f920-1c87-4592-b01c-78a716f67cb6/decisions.jsonl",
+      "trace_sha256": "d235ca358889e0cf14d701bc9ac7df6520064a5bc287fd6b5de1cf2d57044058",
+      "verification": {
+        "case": "E160-A0-001-act1-floor17-combined",
+        "status": "match",
+        "steps": 179,
+        "outcome": null,
+        "final_hash": "d810863baf1768b866bd230952f471b47d1da936706e60703f3083ccd8ea4cae",
+        "seconds": 6.998993332963437,
+        "wire.jsonl_sha256": "1d7a909960fd7a6737876fa1573e36f75e8fd8d56810733a0f6000b98b218f42",
+        "engine.stderr.log_sha256": "963079219fd2021a4a342fb8feb2f3077a1f40c9288a4481db45219e169a85ff",
+        "trace_path": "artifacts/runs/3df0d6fd-e62d-4d47-8275-7b32c6f42fc9/decisions.jsonl",
+        "trace_sha256": "c53ee750aa33dcfa71bf71f182eb68457185307cdd778266e409412f2f29a546"
+      }
+    },
+    {
+      "case": "E160-A0-001-act2-floor2-legacy",
+      "root": "E160-A0-001-act2-floor2",
+      "seed": "e160_campaign_Ironclad_A0_001",
+      "arm": "legacy",
+      "status": "clear",
+      "steps": 17,
+      "potion_uses": [],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 185,
+      "hp": 68,
+      "potions": [],
+      "final_hash": "becef6a0b020d2d2252f350e3a348d8d7e65f150cad9a2ec8c947fa058f0e1a5",
+      "transition_hash": "fe8343e47539a3d1023b5d5b3cb5fb27bb4a51ddedf4f781c5ffb6ae52fdc307",
+      "original_final_match": true,
+      "seconds": 7.554181542014703,
+      "wire.jsonl_sha256": "1099d28d9ea604a12ba0feab6f7ece8f1987d518617ee5e44874d78e7177e8f1",
+      "engine.stderr.log_sha256": "8c2cb4ae9896020a8ff5491263438eb1fa5759686438d47c2fb2496ce5e8b2f4",
+      "trace_path": "artifacts/runs/5a3478bf-9090-4c4e-b479-3e1f4134e3a8/decisions.jsonl",
+      "trace_sha256": "bcfc3579033a2bc467af45fa85bbeb30cc85b1ddbc32d3466a36a0e0688ed76a",
+      "verification": {
+        "case": "E160-A0-001-act2-floor2-legacy",
+        "status": "match",
+        "steps": 202,
+        "outcome": null,
+        "final_hash": "becef6a0b020d2d2252f350e3a348d8d7e65f150cad9a2ec8c947fa058f0e1a5",
+        "seconds": 7.5178562079090625,
+        "wire.jsonl_sha256": "98e52a3763b64095e06bc5e80374e4431e8b3951272b18c9d632b8956419c1d4",
+        "engine.stderr.log_sha256": "8c2cb4ae9896020a8ff5491263438eb1fa5759686438d47c2fb2496ce5e8b2f4",
+        "trace_path": "artifacts/runs/aae1608f-ceb9-4fb0-9380-b8207ecfba62/decisions.jsonl",
+        "trace_sha256": "468dfaa24043efeaf653837467ce5b75cdd12ed5e88c133f6b22017b1a5393b4"
+      }
+    },
+    {
+      "case": "E160-A0-001-act2-floor2-typed",
+      "root": "E160-A0-001-act2-floor2",
+      "seed": "e160_campaign_Ironclad_A0_001",
+      "arm": "typed",
+      "status": "clear",
+      "steps": 17,
+      "potion_uses": [],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 185,
+      "hp": 68,
+      "potions": [],
+      "final_hash": "becef6a0b020d2d2252f350e3a348d8d7e65f150cad9a2ec8c947fa058f0e1a5",
+      "transition_hash": "fe8343e47539a3d1023b5d5b3cb5fb27bb4a51ddedf4f781c5ffb6ae52fdc307",
+      "original_final_match": true,
+      "seconds": 7.619548874907196,
+      "wire.jsonl_sha256": "1a1ea631eb5d0fd31392bdba32d77e224814608fda981ddec34ba500d07ea18c",
+      "engine.stderr.log_sha256": "8c2cb4ae9896020a8ff5491263438eb1fa5759686438d47c2fb2496ce5e8b2f4",
+      "trace_path": "artifacts/runs/34677456-7157-4084-90ac-19a0ae1c3be1/decisions.jsonl",
+      "trace_sha256": "de04bad13947f813cd06998ffe68a6b3ef0f5bce4dcb086412f641b2a4e21eb3",
+      "verification": {
+        "case": "E160-A0-001-act2-floor2-typed",
+        "status": "match",
+        "steps": 202,
+        "outcome": null,
+        "final_hash": "becef6a0b020d2d2252f350e3a348d8d7e65f150cad9a2ec8c947fa058f0e1a5",
+        "seconds": 7.567812332883477,
+        "wire.jsonl_sha256": "2ea26688d41051fe6fd3019eda74eb45e46d6a3f447d2b3308bb87f5a6fcba55",
+        "engine.stderr.log_sha256": "8c2cb4ae9896020a8ff5491263438eb1fa5759686438d47c2fb2496ce5e8b2f4",
+        "trace_path": "artifacts/runs/9f00f138-75b0-45a3-ad1e-1c43ea6c54d4/decisions.jsonl",
+        "trace_sha256": "aceed8af1ff54b41aac0cea65ff8a86079a035dda7f9093bc22a57f8bf223842"
+      }
+    },
+    {
+      "case": "E160-A0-001-act2-floor2-applicable",
+      "root": "E160-A0-001-act2-floor2",
+      "seed": "e160_campaign_Ironclad_A0_001",
+      "arm": "applicable",
+      "status": "clear",
+      "steps": 17,
+      "potion_uses": [],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 185,
+      "hp": 68,
+      "potions": [],
+      "final_hash": "becef6a0b020d2d2252f350e3a348d8d7e65f150cad9a2ec8c947fa058f0e1a5",
+      "transition_hash": "fe8343e47539a3d1023b5d5b3cb5fb27bb4a51ddedf4f781c5ffb6ae52fdc307",
+      "original_final_match": true,
+      "seconds": 7.684219166869298,
+      "wire.jsonl_sha256": "4b8d3acac9d51f14c814007444e637db717c3457e68192b33ff7edc6499ca946",
+      "engine.stderr.log_sha256": "8c2cb4ae9896020a8ff5491263438eb1fa5759686438d47c2fb2496ce5e8b2f4",
+      "trace_path": "artifacts/runs/fdb8433b-9045-4df0-be30-d5fb7501407b/decisions.jsonl",
+      "trace_sha256": "913d12b8acec8641a71a05db800614c3cf34a1de831401ecd29e317cd59bcd5c",
+      "verification": {
+        "case": "E160-A0-001-act2-floor2-applicable",
+        "status": "match",
+        "steps": 202,
+        "outcome": null,
+        "final_hash": "becef6a0b020d2d2252f350e3a348d8d7e65f150cad9a2ec8c947fa058f0e1a5",
+        "seconds": 7.527222457807511,
+        "wire.jsonl_sha256": "171d327001325492dfe56d572e462082dc5cd7503d8b04ccff2922bb2d02c516",
+        "engine.stderr.log_sha256": "8c2cb4ae9896020a8ff5491263438eb1fa5759686438d47c2fb2496ce5e8b2f4",
+        "trace_path": "artifacts/runs/e806f572-5b22-47ce-8ec4-ad79b50006a7/decisions.jsonl",
+        "trace_sha256": "2164e9b27e454a8086a0d926a0e9699b4a265d1defa0d89f7880322cfc273941"
+      }
+    },
+    {
+      "case": "E160-A0-001-act2-floor2-combined",
+      "root": "E160-A0-001-act2-floor2",
+      "seed": "e160_campaign_Ironclad_A0_001",
+      "arm": "combined",
+      "status": "clear",
+      "steps": 17,
+      "potion_uses": [],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 185,
+      "hp": 68,
+      "potions": [],
+      "final_hash": "becef6a0b020d2d2252f350e3a348d8d7e65f150cad9a2ec8c947fa058f0e1a5",
+      "transition_hash": "fe8343e47539a3d1023b5d5b3cb5fb27bb4a51ddedf4f781c5ffb6ae52fdc307",
+      "original_final_match": true,
+      "seconds": 7.68041729205288,
+      "wire.jsonl_sha256": "c2f96f9f06f5272ea7224feae28b1abd04159c37d1c7558d86a1255caa8f2712",
+      "engine.stderr.log_sha256": "8c2cb4ae9896020a8ff5491263438eb1fa5759686438d47c2fb2496ce5e8b2f4",
+      "trace_path": "artifacts/runs/ae647acd-84c3-4f5c-81f8-88cc9b3f9f2f/decisions.jsonl",
+      "trace_sha256": "1bb46d09029be945011b8cf7896ede823f7619ca713722d7052aa47a4ed63c98",
+      "verification": {
+        "case": "E160-A0-001-act2-floor2-combined",
+        "status": "match",
+        "steps": 202,
+        "outcome": null,
+        "final_hash": "becef6a0b020d2d2252f350e3a348d8d7e65f150cad9a2ec8c947fa058f0e1a5",
+        "seconds": 7.655421416973695,
+        "wire.jsonl_sha256": "18306d2d345bb4e5ebade6c0aa28f950c846bf296097427bacbbbe11b7883dbc",
+        "engine.stderr.log_sha256": "8c2cb4ae9896020a8ff5491263438eb1fa5759686438d47c2fb2496ce5e8b2f4",
+        "trace_path": "artifacts/runs/b254d129-1b7b-47f9-8617-c899db976d05/decisions.jsonl",
+        "trace_sha256": "29b156fe637bc0b5db07db2d1bd8008c4e1612ca156849b87f4b0853631c0a4d"
+      }
+    },
+    {
+      "case": "E160-A0-001-act2-floor3-legacy",
+      "root": "E160-A0-001-act2-floor3",
+      "seed": "e160_campaign_Ironclad_A0_001",
+      "arm": "legacy",
+      "status": "clear",
+      "steps": 12,
+      "potion_uses": [
+        {
+          "state_hash": "7d73f9ce564ecf3debf464e2add32225b36281f823838aae9ef6a884a761dc71",
+          "round": 1,
+          "potion_id": "BLOOD_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        }
+      ],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 206,
+      "hp": 73,
+      "potions": [],
+      "final_hash": "a457fb62192146dd95951054abb25753b9df69bd5074860dc5486491e810f418",
+      "transition_hash": "fc359e684728ed73920f5591b3a25ab053a4b6af82b63ef726996dd8fbe9c86d",
+      "original_final_match": true,
+      "seconds": 8.84558420907706,
+      "wire.jsonl_sha256": "737a7c826ab7b9556e22d5433bb401ef842a8a4b51f748e247de33afda8a363e",
+      "engine.stderr.log_sha256": "1dc33cd3ac825fa4710e7a36dde717f1f51fb9293c1292d9da069a392430981c",
+      "trace_path": "artifacts/runs/298def73-cbee-477c-8a07-87c14ef7af74/decisions.jsonl",
+      "trace_sha256": "a66be6db1308a3bc49829921418bf6b5222ce2c7d1da4d06e8d677ede95b20ae",
+      "verification": {
+        "case": "E160-A0-001-act2-floor3-legacy",
+        "status": "match",
+        "steps": 218,
+        "outcome": null,
+        "final_hash": "a457fb62192146dd95951054abb25753b9df69bd5074860dc5486491e810f418",
+        "seconds": 7.832315333886072,
+        "wire.jsonl_sha256": "96151094a7afdef8a759b403c1161c0ef933e3fc1c70c187795351e63f3a625b",
+        "engine.stderr.log_sha256": "1dc33cd3ac825fa4710e7a36dde717f1f51fb9293c1292d9da069a392430981c",
+        "trace_path": "artifacts/runs/b09606dd-a29d-461b-9761-4007bd7479ff/decisions.jsonl",
+        "trace_sha256": "7f4c86a8fdbd23fa1adf613df202dd715a4f213660a6949477252c1866080538"
+      }
+    },
+    {
+      "case": "E160-A0-001-act2-floor3-typed",
+      "root": "E160-A0-001-act2-floor3",
+      "seed": "e160_campaign_Ironclad_A0_001",
+      "arm": "typed",
+      "status": "clear",
+      "steps": 12,
+      "potion_uses": [
+        {
+          "state_hash": "7d73f9ce564ecf3debf464e2add32225b36281f823838aae9ef6a884a761dc71",
+          "round": 1,
+          "potion_id": "BLOOD_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        }
+      ],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 206,
+      "hp": 73,
+      "potions": [],
+      "final_hash": "a457fb62192146dd95951054abb25753b9df69bd5074860dc5486491e810f418",
+      "transition_hash": "fc359e684728ed73920f5591b3a25ab053a4b6af82b63ef726996dd8fbe9c86d",
+      "original_final_match": true,
+      "seconds": 9.224692833144218,
+      "wire.jsonl_sha256": "7c81f0fd7f89ed5a9a4f7bf1f661634b6333008af371ede8a11ddd165a48c447",
+      "engine.stderr.log_sha256": "1dc33cd3ac825fa4710e7a36dde717f1f51fb9293c1292d9da069a392430981c",
+      "trace_path": "artifacts/runs/196c4e6b-3386-4fe0-a62c-7fd4bf04a771/decisions.jsonl",
+      "trace_sha256": "e69506f3ebea3bd088023f36ae0b663632935093fcad7b1e3e6f1af4d5c8187c",
+      "verification": {
+        "case": "E160-A0-001-act2-floor3-typed",
+        "status": "match",
+        "steps": 218,
+        "outcome": null,
+        "final_hash": "a457fb62192146dd95951054abb25753b9df69bd5074860dc5486491e810f418",
+        "seconds": 7.672906750114635,
+        "wire.jsonl_sha256": "8fda286ebdaf6a0d9784d6fa4c6cbd4c5c16cc4046a9daaa105d18acd18aabeb",
+        "engine.stderr.log_sha256": "1dc33cd3ac825fa4710e7a36dde717f1f51fb9293c1292d9da069a392430981c",
+        "trace_path": "artifacts/runs/78e02197-3a64-4a0b-9ace-a62dc9684924/decisions.jsonl",
+        "trace_sha256": "a43dbd0f13f138407e6e03cb5c8facedf9f25d58c06497a24e021178080c9082"
+      }
+    },
+    {
+      "case": "E160-A0-001-act2-floor3-applicable",
+      "root": "E160-A0-001-act2-floor3",
+      "seed": "e160_campaign_Ironclad_A0_001",
+      "arm": "applicable",
+      "status": "clear",
+      "steps": 12,
+      "potion_uses": [
+        {
+          "state_hash": "7d73f9ce564ecf3debf464e2add32225b36281f823838aae9ef6a884a761dc71",
+          "round": 1,
+          "potion_id": "BLOOD_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        }
+      ],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 206,
+      "hp": 73,
+      "potions": [],
+      "final_hash": "a457fb62192146dd95951054abb25753b9df69bd5074860dc5486491e810f418",
+      "transition_hash": "fc359e684728ed73920f5591b3a25ab053a4b6af82b63ef726996dd8fbe9c86d",
+      "original_final_match": true,
+      "seconds": 9.297449917066842,
+      "wire.jsonl_sha256": "3d573f32e0ce78e8ed5411a0fafcfb695e4ba88c80e496a07afa69cc16cdd1e4",
+      "engine.stderr.log_sha256": "1dc33cd3ac825fa4710e7a36dde717f1f51fb9293c1292d9da069a392430981c",
+      "trace_path": "artifacts/runs/079c86d9-3847-4d03-9936-09988c05affc/decisions.jsonl",
+      "trace_sha256": "1b3d7c9193e56199d5407c0b535116d48cb3fc0438722eaa8d302dd9d97ca798",
+      "verification": {
+        "case": "E160-A0-001-act2-floor3-applicable",
+        "status": "match",
+        "steps": 218,
+        "outcome": null,
+        "final_hash": "a457fb62192146dd95951054abb25753b9df69bd5074860dc5486491e810f418",
+        "seconds": 7.840180750004947,
+        "wire.jsonl_sha256": "70a0f05c0be679a818e6fe1d045f8f0341f8499610cee0d161c944245fa0beb0",
+        "engine.stderr.log_sha256": "1dc33cd3ac825fa4710e7a36dde717f1f51fb9293c1292d9da069a392430981c",
+        "trace_path": "artifacts/runs/fa17195e-6981-4af1-87b3-4068ed45b588/decisions.jsonl",
+        "trace_sha256": "f29aea4df1473f8580c1c98126bea896786b029f81a224b25a0ce95967a5f8f0"
+      }
+    },
+    {
+      "case": "E160-A0-001-act2-floor3-combined",
+      "root": "E160-A0-001-act2-floor3",
+      "seed": "e160_campaign_Ironclad_A0_001",
+      "arm": "combined",
+      "status": "clear",
+      "steps": 12,
+      "potion_uses": [
+        {
+          "state_hash": "7d73f9ce564ecf3debf464e2add32225b36281f823838aae9ef6a884a761dc71",
+          "round": 1,
+          "potion_id": "BLOOD_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        }
+      ],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 206,
+      "hp": 73,
+      "potions": [],
+      "final_hash": "a457fb62192146dd95951054abb25753b9df69bd5074860dc5486491e810f418",
+      "transition_hash": "fc359e684728ed73920f5591b3a25ab053a4b6af82b63ef726996dd8fbe9c86d",
+      "original_final_match": true,
+      "seconds": 9.182046249974519,
+      "wire.jsonl_sha256": "541d7918a5fc47d18f296d99df43f10ed6d1dd9c263c1897618a121e6a5f5447",
+      "engine.stderr.log_sha256": "1dc33cd3ac825fa4710e7a36dde717f1f51fb9293c1292d9da069a392430981c",
+      "trace_path": "artifacts/runs/c7521df2-bedb-48cf-abb2-27fd3b814408/decisions.jsonl",
+      "trace_sha256": "b150192ec05167c9ed58eae4053f1a393412967085e847de435b4310b44ea775",
+      "verification": {
+        "case": "E160-A0-001-act2-floor3-combined",
+        "status": "match",
+        "steps": 218,
+        "outcome": null,
+        "final_hash": "a457fb62192146dd95951054abb25753b9df69bd5074860dc5486491e810f418",
+        "seconds": 7.8207518751733005,
+        "wire.jsonl_sha256": "437df1e4e5fd1daec26bf490ba8a635ed025da145d120861b1a8f67678d9f172",
+        "engine.stderr.log_sha256": "1dc33cd3ac825fa4710e7a36dde717f1f51fb9293c1292d9da069a392430981c",
+        "trace_path": "artifacts/runs/2538d840-13fa-450a-8bea-49f023e61af1/decisions.jsonl",
+        "trace_sha256": "7cb8dc766c8c331a94bab63904ce9a5c548a8ea8c0e14163c0773be8099518db"
+      }
+    },
+    {
+      "case": "E160-A0-001-act2-floor5-legacy",
+      "root": "E160-A0-001-act2-floor5",
+      "seed": "e160_campaign_Ironclad_A0_001",
+      "arm": "legacy",
+      "status": "clear",
+      "steps": 12,
+      "potion_uses": [
+        {
+          "state_hash": "78f24a89f97195c9eb3cf42561dd63fef5606c4b9b94f5243181d7624b966ad9",
+          "round": 1,
+          "potion_id": "BLOCK_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 2
+            }
+          }
+        }
+      ],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 229,
+      "hp": 60,
+      "potions": [
+        "FYSH_OIL",
+        "ENERGY_POTION"
+      ],
+      "final_hash": "e6736add8952a423a79ed393072aac424a9c46b664e06b6f7bb8009a24061e8c",
+      "transition_hash": "630d335edb7d73f2f87657395ad5900114a46e3413c2f173f3028ff425cc6623",
+      "original_final_match": true,
+      "seconds": 8.173606500029564,
+      "wire.jsonl_sha256": "beba3fa85546288eef4dc59e57dca422979caa115a307cd99cae45e516b020a3",
+      "engine.stderr.log_sha256": "18d4d3b7fb472432d0ee295ac470892eae2ee6242b5700a58e49649d8e14fb99",
+      "trace_path": "artifacts/runs/fe386bc6-930b-444e-af9a-d0bf7e7e33e3/decisions.jsonl",
+      "trace_sha256": "f1e8a8e1d1881b56e3c5c090900fec6b1e99523565b86bc3757c5d54d9414d7f",
+      "verification": {
+        "case": "E160-A0-001-act2-floor5-legacy",
+        "status": "match",
+        "steps": 241,
+        "outcome": null,
+        "final_hash": "e6736add8952a423a79ed393072aac424a9c46b664e06b6f7bb8009a24061e8c",
+        "seconds": 8.342163667082787,
+        "wire.jsonl_sha256": "581341a792cf975cda85c806b8e18c3c22bc022f9f9dc0ddc581f6ed23bff7ce",
+        "engine.stderr.log_sha256": "18d4d3b7fb472432d0ee295ac470892eae2ee6242b5700a58e49649d8e14fb99",
+        "trace_path": "artifacts/runs/b9d380e3-8fb8-4abc-a195-f91cb25b900d/decisions.jsonl",
+        "trace_sha256": "b2f2cae8c86b99e51f8cfbf73e25c07bf58bc49762a6626aeeea33a2c6fc4eb9"
+      }
+    },
+    {
+      "case": "E160-A0-001-act2-floor5-typed",
+      "root": "E160-A0-001-act2-floor5",
+      "seed": "e160_campaign_Ironclad_A0_001",
+      "arm": "typed",
+      "status": "clear",
+      "steps": 12,
+      "potion_uses": [
+        {
+          "state_hash": "78f24a89f97195c9eb3cf42561dd63fef5606c4b9b94f5243181d7624b966ad9",
+          "round": 1,
+          "potion_id": "BLOCK_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 2
+            }
+          }
+        }
+      ],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 229,
+      "hp": 60,
+      "potions": [
+        "FYSH_OIL",
+        "ENERGY_POTION"
+      ],
+      "final_hash": "e6736add8952a423a79ed393072aac424a9c46b664e06b6f7bb8009a24061e8c",
+      "transition_hash": "630d335edb7d73f2f87657395ad5900114a46e3413c2f173f3028ff425cc6623",
+      "original_final_match": true,
+      "seconds": 8.252340416889638,
+      "wire.jsonl_sha256": "d7d8520366d968b9c03a581d1ad5731ce8f948d67674f6ccea561226c422b8c9",
+      "engine.stderr.log_sha256": "18d4d3b7fb472432d0ee295ac470892eae2ee6242b5700a58e49649d8e14fb99",
+      "trace_path": "artifacts/runs/c904633b-cd6e-42f7-b3d4-3846870e618d/decisions.jsonl",
+      "trace_sha256": "43341a4c00208b51d2f3d8bb073a0a423e392128c4ec32420e43e019541af0ee",
+      "verification": {
+        "case": "E160-A0-001-act2-floor5-typed",
+        "status": "match",
+        "steps": 241,
+        "outcome": null,
+        "final_hash": "e6736add8952a423a79ed393072aac424a9c46b664e06b6f7bb8009a24061e8c",
+        "seconds": 8.38145341607742,
+        "wire.jsonl_sha256": "99a6c407fb1b9d4c13cdad7bf4ee836ca5858933b634e03da49ab09fb9e8e680",
+        "engine.stderr.log_sha256": "18d4d3b7fb472432d0ee295ac470892eae2ee6242b5700a58e49649d8e14fb99",
+        "trace_path": "artifacts/runs/6d55f75a-81e1-45ff-be77-867d782b1f6b/decisions.jsonl",
+        "trace_sha256": "585d4bb35a7742ce2cea7168498f4428080341903dc3aaa9d1c0e4d488d1cbb8"
+      }
+    },
+    {
+      "case": "E160-A0-001-act2-floor5-applicable",
+      "root": "E160-A0-001-act2-floor5",
+      "seed": "e160_campaign_Ironclad_A0_001",
+      "arm": "applicable",
+      "status": "clear",
+      "steps": 12,
+      "potion_uses": [
+        {
+          "state_hash": "39df33ee8ac56ade3a223c89f8a29f5a26e4ab878096395ddd07a3cad397e177",
+          "round": 3,
+          "potion_id": "BLOCK_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 2
+            }
+          }
+        }
+      ],
+      "deferred": {
+        "finish_cards_before_block": 7,
+        "no_visible_unblocked_attack": 2
+      },
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 229,
+      "hp": 72,
+      "potions": [
+        "FYSH_OIL",
+        "ENERGY_POTION"
+      ],
+      "final_hash": "5075d1ef53522308106d65bfe485c88deee7ade8d3acaec21c67f9bbe5d1cbba",
+      "transition_hash": "ed7f0b24b8e312ee103a3ba3e6c6a28c6f729d658b5bdb4f9e35c3737ea726bb",
+      "original_final_match": false,
+      "seconds": 8.101526082959026,
+      "wire.jsonl_sha256": "ae7f535fda7b741b534aa517ff11880e5bf3a81455fd95ea554a12e86a8f3fd3",
+      "engine.stderr.log_sha256": "0333f1f005ac5396ac20e786cb884a44c23c485127200ada6f0f1f19eda05177",
+      "trace_path": "artifacts/runs/63657846-5cfd-4515-82a4-e32132e4983a/decisions.jsonl",
+      "trace_sha256": "635003e01f30c616b92ffdc84e3a703eca3146f383214c96b17e23760197ec4c",
+      "verification": {
+        "case": "E160-A0-001-act2-floor5-applicable",
+        "status": "match",
+        "steps": 241,
+        "outcome": null,
+        "final_hash": "5075d1ef53522308106d65bfe485c88deee7ade8d3acaec21c67f9bbe5d1cbba",
+        "seconds": 8.807903832988814,
+        "wire.jsonl_sha256": "127b25ddee8d18290e2295b6bb92436d1b0c48f0e8a73c4a981ab4384871bab0",
+        "engine.stderr.log_sha256": "0333f1f005ac5396ac20e786cb884a44c23c485127200ada6f0f1f19eda05177",
+        "trace_path": "artifacts/runs/b1294394-ed69-4e56-a7d8-c621c2171abe/decisions.jsonl",
+        "trace_sha256": "97792777cd4aadcea08ed656c296c26e90fa5b2063f39206e290e733b94ddfc5"
+      }
+    },
+    {
+      "case": "E160-A0-001-act2-floor5-combined",
+      "root": "E160-A0-001-act2-floor5",
+      "seed": "e160_campaign_Ironclad_A0_001",
+      "arm": "combined",
+      "status": "clear",
+      "steps": 12,
+      "potion_uses": [
+        {
+          "state_hash": "39df33ee8ac56ade3a223c89f8a29f5a26e4ab878096395ddd07a3cad397e177",
+          "round": 3,
+          "potion_id": "BLOCK_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 2
+            }
+          }
+        }
+      ],
+      "deferred": {
+        "finish_cards_before_block": 7,
+        "no_visible_unblocked_attack": 2
+      },
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 229,
+      "hp": 72,
+      "potions": [
+        "FYSH_OIL",
+        "ENERGY_POTION"
+      ],
+      "final_hash": "5075d1ef53522308106d65bfe485c88deee7ade8d3acaec21c67f9bbe5d1cbba",
+      "transition_hash": "ed7f0b24b8e312ee103a3ba3e6c6a28c6f729d658b5bdb4f9e35c3737ea726bb",
+      "original_final_match": false,
+      "seconds": 8.325028458843008,
+      "wire.jsonl_sha256": "4cf907cf30405db06ca8f18c63f32a95e4f86fb180c2aae0e01ca6bc04566d2c",
+      "engine.stderr.log_sha256": "0333f1f005ac5396ac20e786cb884a44c23c485127200ada6f0f1f19eda05177",
+      "trace_path": "artifacts/runs/6a6f3cf9-1158-4a32-9590-8e0a7946146f/decisions.jsonl",
+      "trace_sha256": "40e7775b23e472fcdc768f1726a925ffdd2af595d14f95057e347602dcaca9dc",
+      "verification": {
+        "case": "E160-A0-001-act2-floor5-combined",
+        "status": "match",
+        "steps": 241,
+        "outcome": null,
+        "final_hash": "5075d1ef53522308106d65bfe485c88deee7ade8d3acaec21c67f9bbe5d1cbba",
+        "seconds": 8.748806542018428,
+        "wire.jsonl_sha256": "c39865c69c6aa49a9c2fa527695558cb543a73d65b3fb0f9e2e0e6b90d63e742",
+        "engine.stderr.log_sha256": "0333f1f005ac5396ac20e786cb884a44c23c485127200ada6f0f1f19eda05177",
+        "trace_path": "artifacts/runs/0eb18dbb-f824-4d66-83cc-e17172c2e3a8/decisions.jsonl",
+        "trace_sha256": "af9d6b035625562b4ef90e7380f8b33609dc56680e1dab9da6bf6438b89421c9"
+      }
+    },
+    {
+      "case": "E160-A5-000-act1-floor17-legacy",
+      "root": "E160-A5-000-act1-floor17",
+      "seed": "e160_campaign_Ironclad_A5_000",
+      "arm": "legacy",
+      "status": "clear",
+      "steps": 18,
+      "potion_uses": [
+        {
+          "state_hash": "bb94e9d0294f2d2ecb02e0db31a000c6557a008cb19f058089d6053ce12d9b00",
+          "round": 1,
+          "potion_id": "STRENGTH_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        },
+        {
+          "state_hash": "f2d43f6a96809242aae078dff55c97e2ae065b0a4e7f0a095b8564cbbd8de234",
+          "round": 1,
+          "potion_id": "VULNERABLE_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0,
+              "target_index": 0
+            }
+          }
+        }
+      ],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 173,
+      "hp": 62,
+      "potions": [],
+      "final_hash": "5b3b7f14455777141c3730d2eb46b85fc92b44b1be1558524277d20bcb49e658",
+      "transition_hash": "bd131f4cf7d849184ec3234d9a313ee24bed17876df61ddeceb4b71c668de0a0",
+      "original_final_match": true,
+      "seconds": 7.088429082883522,
+      "wire.jsonl_sha256": "bd87f3931f74c96b2735cd5ae0c494e6bc52ef142d5952388fd7c47df863a3fe",
+      "engine.stderr.log_sha256": "b5f78aea14dd2a1ad9868306bed82fc0d0cd3824fb9c1c8577f3ec0535ab672d",
+      "trace_path": "artifacts/runs/3f2547ff-200c-43da-87d3-b9f7e451b9b4/decisions.jsonl",
+      "trace_sha256": "491bdccef14a09718e2dd35bd8d8bab8bd2be384cccdba0369814afdd3b16670",
+      "verification": {
+        "case": "E160-A5-000-act1-floor17-legacy",
+        "status": "match",
+        "steps": 191,
+        "outcome": null,
+        "final_hash": "5b3b7f14455777141c3730d2eb46b85fc92b44b1be1558524277d20bcb49e658",
+        "seconds": 6.242609333014116,
+        "wire.jsonl_sha256": "61d72a629763299ece5928bed4002723a0bbc7f7252c6d36f9c7f52e53418faf",
+        "engine.stderr.log_sha256": "b5f78aea14dd2a1ad9868306bed82fc0d0cd3824fb9c1c8577f3ec0535ab672d",
+        "trace_path": "artifacts/runs/f3f56031-89b9-4730-9987-e001e6049d57/decisions.jsonl",
+        "trace_sha256": "f5b6a324e0fa83cfe28d148e2bf0d971eb20d66ca5348240b0643cfa4d00e284"
+      }
+    },
+    {
+      "case": "E160-A5-000-act1-floor17-typed",
+      "root": "E160-A5-000-act1-floor17",
+      "seed": "e160_campaign_Ironclad_A5_000",
+      "arm": "typed",
+      "status": "clear",
+      "steps": 18,
+      "potion_uses": [
+        {
+          "state_hash": "bb94e9d0294f2d2ecb02e0db31a000c6557a008cb19f058089d6053ce12d9b00",
+          "round": 1,
+          "potion_id": "STRENGTH_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        },
+        {
+          "state_hash": "f2d43f6a96809242aae078dff55c97e2ae065b0a4e7f0a095b8564cbbd8de234",
+          "round": 1,
+          "potion_id": "VULNERABLE_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0,
+              "target_index": 0
+            }
+          }
+        }
+      ],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 173,
+      "hp": 62,
+      "potions": [],
+      "final_hash": "5b3b7f14455777141c3730d2eb46b85fc92b44b1be1558524277d20bcb49e658",
+      "transition_hash": "bd131f4cf7d849184ec3234d9a313ee24bed17876df61ddeceb4b71c668de0a0",
+      "original_final_match": true,
+      "seconds": 6.765732208965346,
+      "wire.jsonl_sha256": "c9ec86614be2c34ce46ebeb2d455daeed3fd11ef80c2cc685d06b595776df4f6",
+      "engine.stderr.log_sha256": "b5f78aea14dd2a1ad9868306bed82fc0d0cd3824fb9c1c8577f3ec0535ab672d",
+      "trace_path": "artifacts/runs/8552d70a-f1ab-4e15-92d1-0f444620fecd/decisions.jsonl",
+      "trace_sha256": "2a56a97570d4964dc68091344ce275e88c76c7af30c2dfcb5cfc2ba33018a0cd",
+      "verification": {
+        "case": "E160-A5-000-act1-floor17-typed",
+        "status": "match",
+        "steps": 191,
+        "outcome": null,
+        "final_hash": "5b3b7f14455777141c3730d2eb46b85fc92b44b1be1558524277d20bcb49e658",
+        "seconds": 6.166965167038143,
+        "wire.jsonl_sha256": "a51f4e3d885e119ea60a95a59780c3c0d666d24542e47bef42be86a893d7f96f",
+        "engine.stderr.log_sha256": "b5f78aea14dd2a1ad9868306bed82fc0d0cd3824fb9c1c8577f3ec0535ab672d",
+        "trace_path": "artifacts/runs/fbf68986-6557-4b80-9f60-3defbeb8423c/decisions.jsonl",
+        "trace_sha256": "bd1806995cbb88359933f4c6765d9fd75376bb15275ebe562c8f2fb6d4e9c883"
+      }
+    },
+    {
+      "case": "E160-A5-000-act1-floor17-applicable",
+      "root": "E160-A5-000-act1-floor17",
+      "seed": "e160_campaign_Ironclad_A5_000",
+      "arm": "applicable",
+      "status": "clear",
+      "steps": 18,
+      "potion_uses": [
+        {
+          "state_hash": "bb94e9d0294f2d2ecb02e0db31a000c6557a008cb19f058089d6053ce12d9b00",
+          "round": 1,
+          "potion_id": "STRENGTH_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        },
+        {
+          "state_hash": "f2d43f6a96809242aae078dff55c97e2ae065b0a4e7f0a095b8564cbbd8de234",
+          "round": 1,
+          "potion_id": "VULNERABLE_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0,
+              "target_index": 0
+            }
+          }
+        }
+      ],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 173,
+      "hp": 62,
+      "potions": [],
+      "final_hash": "5b3b7f14455777141c3730d2eb46b85fc92b44b1be1558524277d20bcb49e658",
+      "transition_hash": "bd131f4cf7d849184ec3234d9a313ee24bed17876df61ddeceb4b71c668de0a0",
+      "original_final_match": true,
+      "seconds": 6.372996167046949,
+      "wire.jsonl_sha256": "bdc90851cac239eaa6515bfeccc2d2d6a202cecc333e9e4ad69eb6504281c555",
+      "engine.stderr.log_sha256": "b5f78aea14dd2a1ad9868306bed82fc0d0cd3824fb9c1c8577f3ec0535ab672d",
+      "trace_path": "artifacts/runs/097b602f-873a-4e00-8c2c-3435b30b238d/decisions.jsonl",
+      "trace_sha256": "6f491d067e3f5bc5da07f8ec22f97582a04ce9c8c28269e77ff8f626482e5c33",
+      "verification": {
+        "case": "E160-A5-000-act1-floor17-applicable",
+        "status": "match",
+        "steps": 191,
+        "outcome": null,
+        "final_hash": "5b3b7f14455777141c3730d2eb46b85fc92b44b1be1558524277d20bcb49e658",
+        "seconds": 6.229625541018322,
+        "wire.jsonl_sha256": "22a2015311fc7e18419f8a51d346dbdb180ff908e69789c8c682569588b581fb",
+        "engine.stderr.log_sha256": "b5f78aea14dd2a1ad9868306bed82fc0d0cd3824fb9c1c8577f3ec0535ab672d",
+        "trace_path": "artifacts/runs/1609e7cd-5436-4b5e-b619-a9875dc9b8d2/decisions.jsonl",
+        "trace_sha256": "121f83bb072a4d36fdc9efdc663fb39f246ef9c467b24c46b705037c9e3a9cec"
+      }
+    },
+    {
+      "case": "E160-A5-000-act1-floor17-combined",
+      "root": "E160-A5-000-act1-floor17",
+      "seed": "e160_campaign_Ironclad_A5_000",
+      "arm": "combined",
+      "status": "clear",
+      "steps": 18,
+      "potion_uses": [
+        {
+          "state_hash": "bb94e9d0294f2d2ecb02e0db31a000c6557a008cb19f058089d6053ce12d9b00",
+          "round": 1,
+          "potion_id": "STRENGTH_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        },
+        {
+          "state_hash": "f2d43f6a96809242aae078dff55c97e2ae065b0a4e7f0a095b8564cbbd8de234",
+          "round": 1,
+          "potion_id": "VULNERABLE_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0,
+              "target_index": 0
+            }
+          }
+        }
+      ],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 173,
+      "hp": 62,
+      "potions": [],
+      "final_hash": "5b3b7f14455777141c3730d2eb46b85fc92b44b1be1558524277d20bcb49e658",
+      "transition_hash": "bd131f4cf7d849184ec3234d9a313ee24bed17876df61ddeceb4b71c668de0a0",
+      "original_final_match": true,
+      "seconds": 6.349257583962753,
+      "wire.jsonl_sha256": "65a7b4873478aa0b74e9e3e31e5b2cb30f78fb91e3e83a8e511cf942327f9cb7",
+      "engine.stderr.log_sha256": "b5f78aea14dd2a1ad9868306bed82fc0d0cd3824fb9c1c8577f3ec0535ab672d",
+      "trace_path": "artifacts/runs/4df96fea-a2cc-40bf-ae68-2bfeb79ae2fa/decisions.jsonl",
+      "trace_sha256": "b460b91fd84b9efbd821042a86ce9122e6949ad574471950c3f13c16ae3c516e",
+      "verification": {
+        "case": "E160-A5-000-act1-floor17-combined",
+        "status": "match",
+        "steps": 191,
+        "outcome": null,
+        "final_hash": "5b3b7f14455777141c3730d2eb46b85fc92b44b1be1558524277d20bcb49e658",
+        "seconds": 6.1966162079479545,
+        "wire.jsonl_sha256": "5017036e9b759ab25c631379afa3e4c994508503fdb1e2e58c44cff09a27da2e",
+        "engine.stderr.log_sha256": "b5f78aea14dd2a1ad9868306bed82fc0d0cd3824fb9c1c8577f3ec0535ab672d",
+        "trace_path": "artifacts/runs/c2035ff7-fd34-47ef-93ff-f411e7a7055a/decisions.jsonl",
+        "trace_sha256": "ab2b87921aa667c246013112555967c36facfb46f6e032d3d9ec29d81c6e971f"
+      }
+    },
+    {
+      "case": "E160-A5-000-act2-floor2-legacy",
+      "root": "E160-A5-000-act2-floor2",
+      "seed": "e160_campaign_Ironclad_A5_000",
+      "arm": "legacy",
+      "status": "clear",
+      "steps": 15,
+      "potion_uses": [],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 198,
+      "hp": 80,
+      "potions": [
+        "ASHWATER"
+      ],
+      "final_hash": "156c9d8babdb562eab39ec96d5e29b16917b9d5aa354e31549cfff4d4842c060",
+      "transition_hash": "76843815c89bbba2cd14428e24632650d019cd2a19a280432cd4dbd3d91509e0",
+      "original_final_match": true,
+      "seconds": 7.168266624910757,
+      "wire.jsonl_sha256": "793abe5272145adfbc6b14a28f248296f55afa10c532bbd8fe5de28f3272424e",
+      "engine.stderr.log_sha256": "45abba6ecce668e765b3867d39d275ac18128ac462a8e9d63be9e382f29681bf",
+      "trace_path": "artifacts/runs/41c67189-1655-46ce-8b0b-9426e29daf0f/decisions.jsonl",
+      "trace_sha256": "704f82d92c4c2589dbe3df46814c81ce23f9e13bbda0ba2f453349272954bb1e",
+      "verification": {
+        "case": "E160-A5-000-act2-floor2-legacy",
+        "status": "match",
+        "steps": 213,
+        "outcome": null,
+        "final_hash": "156c9d8babdb562eab39ec96d5e29b16917b9d5aa354e31549cfff4d4842c060",
+        "seconds": 7.21563704079017,
+        "wire.jsonl_sha256": "63e21c689f9dca9429472f1161bcfec26fc830559bd7ed0751c3898962e8f98d",
+        "engine.stderr.log_sha256": "45abba6ecce668e765b3867d39d275ac18128ac462a8e9d63be9e382f29681bf",
+        "trace_path": "artifacts/runs/d606249f-29e0-4ea3-9525-d4c0aeef486d/decisions.jsonl",
+        "trace_sha256": "6e97ff6df9b1128c5927c19e35b42b1afbca9a9c79df5007ec24c2714c712bc0"
+      }
+    },
+    {
+      "case": "E160-A5-000-act2-floor2-typed",
+      "root": "E160-A5-000-act2-floor2",
+      "seed": "e160_campaign_Ironclad_A5_000",
+      "arm": "typed",
+      "status": "clear",
+      "steps": 15,
+      "potion_uses": [],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 198,
+      "hp": 80,
+      "potions": [
+        "ASHWATER"
+      ],
+      "final_hash": "156c9d8babdb562eab39ec96d5e29b16917b9d5aa354e31549cfff4d4842c060",
+      "transition_hash": "76843815c89bbba2cd14428e24632650d019cd2a19a280432cd4dbd3d91509e0",
+      "original_final_match": true,
+      "seconds": 7.123293499927968,
+      "wire.jsonl_sha256": "ef9d54dfdf5a66b0fc7326d0fb0b18297f52fd5b7cf9fdbbca1f6ba757c18f96",
+      "engine.stderr.log_sha256": "45abba6ecce668e765b3867d39d275ac18128ac462a8e9d63be9e382f29681bf",
+      "trace_path": "artifacts/runs/cfad1feb-16d9-48b0-8ad9-f57962511328/decisions.jsonl",
+      "trace_sha256": "cde8feb401c6151e27f836c57bacaa5f4357ab31fa75ad37baad333771f7fa59",
+      "verification": {
+        "case": "E160-A5-000-act2-floor2-typed",
+        "status": "match",
+        "steps": 213,
+        "outcome": null,
+        "final_hash": "156c9d8babdb562eab39ec96d5e29b16917b9d5aa354e31549cfff4d4842c060",
+        "seconds": 7.277026167139411,
+        "wire.jsonl_sha256": "50ea84a4e6c0a27c2a23e914f04c0ff14efde37c50756bd5255b98f6a50937b1",
+        "engine.stderr.log_sha256": "45abba6ecce668e765b3867d39d275ac18128ac462a8e9d63be9e382f29681bf",
+        "trace_path": "artifacts/runs/29c60569-7e40-4a87-869d-3842ff627723/decisions.jsonl",
+        "trace_sha256": "4f461d710f3cc0906c497820de19c01afbc50787cced7a5dc370db28d628da5d"
+      }
+    },
+    {
+      "case": "E160-A5-000-act2-floor2-applicable",
+      "root": "E160-A5-000-act2-floor2",
+      "seed": "e160_campaign_Ironclad_A5_000",
+      "arm": "applicable",
+      "status": "clear",
+      "steps": 15,
+      "potion_uses": [],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 198,
+      "hp": 80,
+      "potions": [
+        "ASHWATER"
+      ],
+      "final_hash": "156c9d8babdb562eab39ec96d5e29b16917b9d5aa354e31549cfff4d4842c060",
+      "transition_hash": "76843815c89bbba2cd14428e24632650d019cd2a19a280432cd4dbd3d91509e0",
+      "original_final_match": true,
+      "seconds": 7.162795208161697,
+      "wire.jsonl_sha256": "9703a2e5f4a13dca1890f65ac7dfc97bb4ec2598868a111a3a0c0a5d198560de",
+      "engine.stderr.log_sha256": "45abba6ecce668e765b3867d39d275ac18128ac462a8e9d63be9e382f29681bf",
+      "trace_path": "artifacts/runs/24fd4345-98a4-49e3-854a-b665e80c0e59/decisions.jsonl",
+      "trace_sha256": "d6569bf0c5d0a0ea4eebacd6a229355c82e4da3a9d001569f967b89b80f0f7ac",
+      "verification": {
+        "case": "E160-A5-000-act2-floor2-applicable",
+        "status": "match",
+        "steps": 213,
+        "outcome": null,
+        "final_hash": "156c9d8babdb562eab39ec96d5e29b16917b9d5aa354e31549cfff4d4842c060",
+        "seconds": 7.15538129187189,
+        "wire.jsonl_sha256": "8d4983de55373dc3c1ab0ff0b79a8ca1cfa51c6e38e9a1040627d8fa19cc1b27",
+        "engine.stderr.log_sha256": "45abba6ecce668e765b3867d39d275ac18128ac462a8e9d63be9e382f29681bf",
+        "trace_path": "artifacts/runs/87a39dae-9068-43a1-883d-354a9ca0e93d/decisions.jsonl",
+        "trace_sha256": "c0f92524f856574b0486bbb24c59022c22a80507b4c70be94a5e5a0be13fd7a5"
+      }
+    },
+    {
+      "case": "E160-A5-000-act2-floor2-combined",
+      "root": "E160-A5-000-act2-floor2",
+      "seed": "e160_campaign_Ironclad_A5_000",
+      "arm": "combined",
+      "status": "clear",
+      "steps": 15,
+      "potion_uses": [],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 198,
+      "hp": 80,
+      "potions": [
+        "ASHWATER"
+      ],
+      "final_hash": "156c9d8babdb562eab39ec96d5e29b16917b9d5aa354e31549cfff4d4842c060",
+      "transition_hash": "76843815c89bbba2cd14428e24632650d019cd2a19a280432cd4dbd3d91509e0",
+      "original_final_match": true,
+      "seconds": 7.219064499950036,
+      "wire.jsonl_sha256": "69b3374df008eacb1a3c8f2e220fce6370aa2c00632490c7bea16923347d6527",
+      "engine.stderr.log_sha256": "45abba6ecce668e765b3867d39d275ac18128ac462a8e9d63be9e382f29681bf",
+      "trace_path": "artifacts/runs/a89f6e4e-e6a1-4313-8237-042fa23de8df/decisions.jsonl",
+      "trace_sha256": "36a090b2a88074f7a62c67045f76d3fbeda0e782d6ab259b52d68732121314a0",
+      "verification": {
+        "case": "E160-A5-000-act2-floor2-combined",
+        "status": "match",
+        "steps": 213,
+        "outcome": null,
+        "final_hash": "156c9d8babdb562eab39ec96d5e29b16917b9d5aa354e31549cfff4d4842c060",
+        "seconds": 7.0941707079764456,
+        "wire.jsonl_sha256": "1e0cff6056734336d1e7d09d123b66b4722e463e2136fa252921c7bf743316ac",
+        "engine.stderr.log_sha256": "45abba6ecce668e765b3867d39d275ac18128ac462a8e9d63be9e382f29681bf",
+        "trace_path": "artifacts/runs/67119331-2d89-42b7-ba0a-36e3b46a6c3e/decisions.jsonl",
+        "trace_sha256": "96a84ce421acddbf29777611691ab00a1bf8cd7ba62a4f671363430b64ce19d3"
+      }
+    },
+    {
+      "case": "E160-A5-000-act2-floor3-legacy",
+      "root": "E160-A5-000-act2-floor3",
+      "seed": "e160_campaign_Ironclad_A5_000",
+      "arm": "legacy",
+      "status": "clear",
+      "steps": 15,
+      "potion_uses": [],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 217,
+      "hp": 67,
+      "potions": [
+        "ASHWATER",
+        "DEXTERITY_POTION"
+      ],
+      "final_hash": "0b60b71b66304625d1bfc25af75c87a13d5810763285dc2fcbb21dbc0713ff04",
+      "transition_hash": "e67d74c0ca04f9f162ff766b489cd50a6158ff30f71a1fc01738f6082eeb04f1",
+      "original_final_match": true,
+      "seconds": 7.611550708068535,
+      "wire.jsonl_sha256": "0488da304d7ec1fb1a63b5c2a56e7b740e627a7d62e52913b79320fd4c7060c7",
+      "engine.stderr.log_sha256": "cc218d03e80304ef964581e2fa6509eb3ba4af485a127ca674743b2382324556",
+      "trace_path": "artifacts/runs/db984fce-b718-4970-98ea-b159f4dc2c07/decisions.jsonl",
+      "trace_sha256": "3ac388215ed13eca0455933ad6b6a5baf111da42d26b6a6807aa97ca461979a7",
+      "verification": {
+        "case": "E160-A5-000-act2-floor3-legacy",
+        "status": "match",
+        "steps": 232,
+        "outcome": null,
+        "final_hash": "0b60b71b66304625d1bfc25af75c87a13d5810763285dc2fcbb21dbc0713ff04",
+        "seconds": 7.428114166948944,
+        "wire.jsonl_sha256": "808de2c4ae309319d91fc05ca38697ddba93874575789d93cd37562ea02782a5",
+        "engine.stderr.log_sha256": "cc218d03e80304ef964581e2fa6509eb3ba4af485a127ca674743b2382324556",
+        "trace_path": "artifacts/runs/bea8c353-9497-42b9-a140-4f68df0b88e1/decisions.jsonl",
+        "trace_sha256": "c93398fa502a6a8b5dcc977f2123c3f7117010c817ed78462cce44e35b8a09ef"
+      }
+    },
+    {
+      "case": "E160-A5-000-act2-floor3-typed",
+      "root": "E160-A5-000-act2-floor3",
+      "seed": "e160_campaign_Ironclad_A5_000",
+      "arm": "typed",
+      "status": "clear",
+      "steps": 15,
+      "potion_uses": [],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 217,
+      "hp": 67,
+      "potions": [
+        "ASHWATER",
+        "DEXTERITY_POTION"
+      ],
+      "final_hash": "0b60b71b66304625d1bfc25af75c87a13d5810763285dc2fcbb21dbc0713ff04",
+      "transition_hash": "e67d74c0ca04f9f162ff766b489cd50a6158ff30f71a1fc01738f6082eeb04f1",
+      "original_final_match": true,
+      "seconds": 7.525322749977931,
+      "wire.jsonl_sha256": "af16de23984b604dafb8c2cf85391445f2c49e7566b2fe3003159c5731094f10",
+      "engine.stderr.log_sha256": "cc218d03e80304ef964581e2fa6509eb3ba4af485a127ca674743b2382324556",
+      "trace_path": "artifacts/runs/62106505-10df-4ee2-9252-94bdbe6b8b0d/decisions.jsonl",
+      "trace_sha256": "75a945bbbbb347ac51d65cf3b6d3eb4c5243c4e4dcfd97ce5006c0913cdf5de0",
+      "verification": {
+        "case": "E160-A5-000-act2-floor3-typed",
+        "status": "match",
+        "steps": 232,
+        "outcome": null,
+        "final_hash": "0b60b71b66304625d1bfc25af75c87a13d5810763285dc2fcbb21dbc0713ff04",
+        "seconds": 7.548498667078093,
+        "wire.jsonl_sha256": "b587975decd92dac0265afa6f963dd9eec8f26451da37fdaf9c3b8bdbf517a71",
+        "engine.stderr.log_sha256": "cc218d03e80304ef964581e2fa6509eb3ba4af485a127ca674743b2382324556",
+        "trace_path": "artifacts/runs/03715135-3c5c-423d-8293-515086fc68de/decisions.jsonl",
+        "trace_sha256": "4a86138699ee9cd169cd8ecf4d2409a161598df033cfb1261f036d3c630162eb"
+      }
+    },
+    {
+      "case": "E160-A5-000-act2-floor3-applicable",
+      "root": "E160-A5-000-act2-floor3",
+      "seed": "e160_campaign_Ironclad_A5_000",
+      "arm": "applicable",
+      "status": "clear",
+      "steps": 15,
+      "potion_uses": [],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 217,
+      "hp": 67,
+      "potions": [
+        "ASHWATER",
+        "DEXTERITY_POTION"
+      ],
+      "final_hash": "0b60b71b66304625d1bfc25af75c87a13d5810763285dc2fcbb21dbc0713ff04",
+      "transition_hash": "e67d74c0ca04f9f162ff766b489cd50a6158ff30f71a1fc01738f6082eeb04f1",
+      "original_final_match": true,
+      "seconds": 7.572324791923165,
+      "wire.jsonl_sha256": "5144289c3911d4ae20e37d9b8e8725423d2205481529f38699c1b82849308038",
+      "engine.stderr.log_sha256": "cc218d03e80304ef964581e2fa6509eb3ba4af485a127ca674743b2382324556",
+      "trace_path": "artifacts/runs/68f39d0d-23d5-4af6-985e-7299468b429f/decisions.jsonl",
+      "trace_sha256": "be2a916b7790083b309aea91996c33e0783c10a918c45806be4207b8434026ea",
+      "verification": {
+        "case": "E160-A5-000-act2-floor3-applicable",
+        "status": "match",
+        "steps": 232,
+        "outcome": null,
+        "final_hash": "0b60b71b66304625d1bfc25af75c87a13d5810763285dc2fcbb21dbc0713ff04",
+        "seconds": 7.560931000160053,
+        "wire.jsonl_sha256": "2a3f1e50176c196eae610c5decff9e9074fa7b0f533b96242cad7b03ae1551df",
+        "engine.stderr.log_sha256": "cc218d03e80304ef964581e2fa6509eb3ba4af485a127ca674743b2382324556",
+        "trace_path": "artifacts/runs/f4a4b45d-8446-4603-b1be-49e6d953fa33/decisions.jsonl",
+        "trace_sha256": "fc1313f1023ce30ceadb5d8493aa5177d508f939b901515377d74e4e2847d2a4"
+      }
+    },
+    {
+      "case": "E160-A5-000-act2-floor3-combined",
+      "root": "E160-A5-000-act2-floor3",
+      "seed": "e160_campaign_Ironclad_A5_000",
+      "arm": "combined",
+      "status": "clear",
+      "steps": 15,
+      "potion_uses": [],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 217,
+      "hp": 67,
+      "potions": [
+        "ASHWATER",
+        "DEXTERITY_POTION"
+      ],
+      "final_hash": "0b60b71b66304625d1bfc25af75c87a13d5810763285dc2fcbb21dbc0713ff04",
+      "transition_hash": "e67d74c0ca04f9f162ff766b489cd50a6158ff30f71a1fc01738f6082eeb04f1",
+      "original_final_match": true,
+      "seconds": 7.518961583031341,
+      "wire.jsonl_sha256": "f29bdc5fd9bd0f7bfe98cdbbf901416728948ae8805c9f9f394b80e74d8995b5",
+      "engine.stderr.log_sha256": "cc218d03e80304ef964581e2fa6509eb3ba4af485a127ca674743b2382324556",
+      "trace_path": "artifacts/runs/ebc00f85-9281-4b5c-847b-b9148c281460/decisions.jsonl",
+      "trace_sha256": "c12b665ddddfbe757435450a72ecf1a0eb5b3483de47156c2313a45f697504a6",
+      "verification": {
+        "case": "E160-A5-000-act2-floor3-combined",
+        "status": "match",
+        "steps": 232,
+        "outcome": null,
+        "final_hash": "0b60b71b66304625d1bfc25af75c87a13d5810763285dc2fcbb21dbc0713ff04",
+        "seconds": 7.678756791865453,
+        "wire.jsonl_sha256": "9926b966b4a04389bda9160b313d5eece175c3a1de338d0299dc572fbde3fb1b",
+        "engine.stderr.log_sha256": "cc218d03e80304ef964581e2fa6509eb3ba4af485a127ca674743b2382324556",
+        "trace_path": "artifacts/runs/62ce7e00-524b-4258-94c8-fa7b062a9cbd/decisions.jsonl",
+        "trace_sha256": "d6f27e2ace1700b0f8a55875ff2fe71b21788669c8c567968e3fa1be8beb3809"
+      }
+    },
+    {
+      "case": "E160-A5-000-act2-floor6-legacy",
+      "root": "E160-A5-000-act2-floor6",
+      "seed": "e160_campaign_Ironclad_A5_000",
+      "arm": "legacy",
+      "status": "clear",
+      "steps": 24,
+      "potion_uses": [
+        {
+          "state_hash": "1447711bd5a967ab91b87a692a79aa6d4e8071099d09d6a1ea55ad406f14423e",
+          "round": 1,
+          "potion_id": "BLOOD_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        }
+      ],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 245,
+      "hp": 56,
+      "potions": [
+        "DEXTERITY_POTION"
+      ],
+      "final_hash": "409d7f900adb73f590114347388e7fd02b76bb8b8b192a876ff08e6c6c6cfd5d",
+      "transition_hash": "d3867a2d5b09b632012526f65c9b9354bafa1a97bd48dd826970141cd355057e",
+      "original_final_match": true,
+      "seconds": 8.687898749951273,
+      "wire.jsonl_sha256": "f457931c560430a583f5db08df5dc53c55cc66bc87ddb5b27cf7672196e21352",
+      "engine.stderr.log_sha256": "b1c5bbc5dc3b99d00a2620bc9f555282e2df7fb9e7d96630a585dfd9ae56ba95",
+      "trace_path": "artifacts/runs/4f39f03e-45bf-4b9b-89ec-135961d20ce1/decisions.jsonl",
+      "trace_sha256": "2425f9727b3b510b502c33583f96113af436a3707f64aed8d0c083ba3cdeefa8",
+      "verification": {
+        "case": "E160-A5-000-act2-floor6-legacy",
+        "status": "match",
+        "steps": 269,
+        "outcome": null,
+        "final_hash": "409d7f900adb73f590114347388e7fd02b76bb8b8b192a876ff08e6c6c6cfd5d",
+        "seconds": 8.62183175003156,
+        "wire.jsonl_sha256": "8a8c61a415f3db26c99bfdebf314f921294b3b99ac42e85b01b29712731dc5b4",
+        "engine.stderr.log_sha256": "b1c5bbc5dc3b99d00a2620bc9f555282e2df7fb9e7d96630a585dfd9ae56ba95",
+        "trace_path": "artifacts/runs/1ecf19f6-e9d1-49d8-9647-ecc1af4a3e9d/decisions.jsonl",
+        "trace_sha256": "55622a0e7828da7b6dcdc5ae4aa1d80568f5b71b147ba344f0c735c18217dcd8"
+      }
+    },
+    {
+      "case": "E160-A5-000-act2-floor6-typed",
+      "root": "E160-A5-000-act2-floor6",
+      "seed": "e160_campaign_Ironclad_A5_000",
+      "arm": "typed",
+      "status": "clear",
+      "steps": 24,
+      "potion_uses": [
+        {
+          "state_hash": "1447711bd5a967ab91b87a692a79aa6d4e8071099d09d6a1ea55ad406f14423e",
+          "round": 1,
+          "potion_id": "BLOOD_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        }
+      ],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 245,
+      "hp": 56,
+      "potions": [
+        "DEXTERITY_POTION"
+      ],
+      "final_hash": "409d7f900adb73f590114347388e7fd02b76bb8b8b192a876ff08e6c6c6cfd5d",
+      "transition_hash": "d3867a2d5b09b632012526f65c9b9354bafa1a97bd48dd826970141cd355057e",
+      "original_final_match": true,
+      "seconds": 8.555673165945336,
+      "wire.jsonl_sha256": "3b71373fcfb9f41f049a185ee05bb64b756803149af624db5c1a5bd8833d2877",
+      "engine.stderr.log_sha256": "b1c5bbc5dc3b99d00a2620bc9f555282e2df7fb9e7d96630a585dfd9ae56ba95",
+      "trace_path": "artifacts/runs/f61e4802-6ef1-410d-9799-d38d5e6f6a45/decisions.jsonl",
+      "trace_sha256": "e792fb00523a8833a509d87002ec70a201d34b528390f450d5cdf4fc18318bfa",
+      "verification": {
+        "case": "E160-A5-000-act2-floor6-typed",
+        "status": "match",
+        "steps": 269,
+        "outcome": null,
+        "final_hash": "409d7f900adb73f590114347388e7fd02b76bb8b8b192a876ff08e6c6c6cfd5d",
+        "seconds": 8.731943916995078,
+        "wire.jsonl_sha256": "04601efa982cb671fd00f9283599de9c741cf59fa4db8514be4e349751a5c915",
+        "engine.stderr.log_sha256": "b1c5bbc5dc3b99d00a2620bc9f555282e2df7fb9e7d96630a585dfd9ae56ba95",
+        "trace_path": "artifacts/runs/2d7fcc73-06a2-444d-b2a6-79a9e5c6afe3/decisions.jsonl",
+        "trace_sha256": "1a5cfbf4001e7ceb5860d151d1980c0942095684a5ab24dd10f75e9bdb35e5a2"
+      }
+    },
+    {
+      "case": "E160-A5-000-act2-floor6-applicable",
+      "root": "E160-A5-000-act2-floor6",
+      "seed": "e160_campaign_Ironclad_A5_000",
+      "arm": "applicable",
+      "status": "clear",
+      "steps": 24,
+      "potion_uses": [
+        {
+          "state_hash": "1447711bd5a967ab91b87a692a79aa6d4e8071099d09d6a1ea55ad406f14423e",
+          "round": 1,
+          "potion_id": "BLOOD_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        }
+      ],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 245,
+      "hp": 56,
+      "potions": [
+        "DEXTERITY_POTION"
+      ],
+      "final_hash": "409d7f900adb73f590114347388e7fd02b76bb8b8b192a876ff08e6c6c6cfd5d",
+      "transition_hash": "d3867a2d5b09b632012526f65c9b9354bafa1a97bd48dd826970141cd355057e",
+      "original_final_match": true,
+      "seconds": 8.61124866711907,
+      "wire.jsonl_sha256": "699cced4e5f63a61b51fbb9b63c518f237228357a903a3e2c450a008251d2197",
+      "engine.stderr.log_sha256": "b1c5bbc5dc3b99d00a2620bc9f555282e2df7fb9e7d96630a585dfd9ae56ba95",
+      "trace_path": "artifacts/runs/397612b5-24d2-43f8-b8e2-aae86e5832ac/decisions.jsonl",
+      "trace_sha256": "2f0a305db75a3689a5e11bf8d2f8bb7b5ce57bd6cc3767d18ce106d2ed2a681d",
+      "verification": {
+        "case": "E160-A5-000-act2-floor6-applicable",
+        "status": "match",
+        "steps": 269,
+        "outcome": null,
+        "final_hash": "409d7f900adb73f590114347388e7fd02b76bb8b8b192a876ff08e6c6c6cfd5d",
+        "seconds": 8.713477540994063,
+        "wire.jsonl_sha256": "cbdb49720dda24d14b70f148bb32ff5609214707252ee22b173df7f6998a6410",
+        "engine.stderr.log_sha256": "b1c5bbc5dc3b99d00a2620bc9f555282e2df7fb9e7d96630a585dfd9ae56ba95",
+        "trace_path": "artifacts/runs/abde229c-7557-473b-ac8b-c39f9e04b1e8/decisions.jsonl",
+        "trace_sha256": "3760ea371c2d68bb44edab6fca718e30b434ad910d31d05a8793be998c81f28e"
+      }
+    },
+    {
+      "case": "E160-A5-000-act2-floor6-combined",
+      "root": "E160-A5-000-act2-floor6",
+      "seed": "e160_campaign_Ironclad_A5_000",
+      "arm": "combined",
+      "status": "clear",
+      "steps": 24,
+      "potion_uses": [
+        {
+          "state_hash": "1447711bd5a967ab91b87a692a79aa6d4e8071099d09d6a1ea55ad406f14423e",
+          "round": 1,
+          "potion_id": "BLOOD_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        }
+      ],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 245,
+      "hp": 56,
+      "potions": [
+        "DEXTERITY_POTION"
+      ],
+      "final_hash": "409d7f900adb73f590114347388e7fd02b76bb8b8b192a876ff08e6c6c6cfd5d",
+      "transition_hash": "d3867a2d5b09b632012526f65c9b9354bafa1a97bd48dd826970141cd355057e",
+      "original_final_match": true,
+      "seconds": 8.603992332937196,
+      "wire.jsonl_sha256": "c585be15c9cb05acab50a19189859e7baadfed6906d962ff4fcdf317cdd444d6",
+      "engine.stderr.log_sha256": "b1c5bbc5dc3b99d00a2620bc9f555282e2df7fb9e7d96630a585dfd9ae56ba95",
+      "trace_path": "artifacts/runs/b2ddf233-f69f-4a95-b382-7df5a014d3ee/decisions.jsonl",
+      "trace_sha256": "8e7e0f1b98220170c99d943015349adc0a16e6f5289f01d3758b1e303f37b75f",
+      "verification": {
+        "case": "E160-A5-000-act2-floor6-combined",
+        "status": "match",
+        "steps": 269,
+        "outcome": null,
+        "final_hash": "409d7f900adb73f590114347388e7fd02b76bb8b8b192a876ff08e6c6c6cfd5d",
+        "seconds": 8.653320583049208,
+        "wire.jsonl_sha256": "e1d29e8fdc11d5e7d8f5e2ba8994cb8ac7f1cc9d4a94187ada06ea8b599d4c4b",
+        "engine.stderr.log_sha256": "b1c5bbc5dc3b99d00a2620bc9f555282e2df7fb9e7d96630a585dfd9ae56ba95",
+        "trace_path": "artifacts/runs/875aed66-85cc-4082-b31f-f55987f62b63/decisions.jsonl",
+        "trace_sha256": "e4b442a7bf31cbd5b93cf6ab454126a6a0ddf3c3d8f05a2a8d41468d6278f9c4"
+      }
+    },
+    {
+      "case": "E160-A5-000-act2-floor11-legacy",
+      "root": "E160-A5-000-act2-floor11",
+      "seed": "e160_campaign_Ironclad_A5_000",
+      "arm": "legacy",
+      "status": "clear",
+      "steps": 64,
+      "potion_uses": [
+        {
+          "state_hash": "365d207c77fe07f8f4b5aba1cd9b48530205c75b7a92e1e9408985dd11f9ec5e",
+          "round": 11,
+          "potion_id": "DEXTERITY_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        }
+      ],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 285,
+      "hp": 16,
+      "potions": [],
+      "final_hash": "723127cb4151c80048bbf91acb45bf45269918caf90d66bb61844fbe2601e4ff",
+      "transition_hash": "5540ae5151859d408271834bf4a5a1b3b1019da2179cbd1d00d469014b46c905",
+      "original_final_match": true,
+      "seconds": 11.147799958940595,
+      "wire.jsonl_sha256": "fb49a475eea831f8e64d68b68914a081070deccf1e1eb857634633f1ef3f600c",
+      "engine.stderr.log_sha256": "19bf1a3a9e2a509c68ba6ceb02cacd66b95fb915cb087987f781b8d378db2da2",
+      "trace_path": "artifacts/runs/0d823132-76aa-4c8d-a9b4-2733f742a7e6/decisions.jsonl",
+      "trace_sha256": "caa2f4f76cacb1817cba253ef29154ef17ae4b1d2f05a336be47ee7127452d42",
+      "verification": {
+        "case": "E160-A5-000-act2-floor11-legacy",
+        "status": "match",
+        "steps": 349,
+        "outcome": null,
+        "final_hash": "723127cb4151c80048bbf91acb45bf45269918caf90d66bb61844fbe2601e4ff",
+        "seconds": 11.122729541966692,
+        "wire.jsonl_sha256": "63036053ad39a8832b6f5dbba657d912dd4e4848468cdfea88f46742f79eaa14",
+        "engine.stderr.log_sha256": "19bf1a3a9e2a509c68ba6ceb02cacd66b95fb915cb087987f781b8d378db2da2",
+        "trace_path": "artifacts/runs/9a3db242-0d65-4719-a165-497bb380539e/decisions.jsonl",
+        "trace_sha256": "985ccbc5fead003fba0e067fb2a67d660e0fce017fe581a9ee74a933d6112657"
+      }
+    },
+    {
+      "case": "E160-A5-000-act2-floor11-typed",
+      "root": "E160-A5-000-act2-floor11",
+      "seed": "e160_campaign_Ironclad_A5_000",
+      "arm": "typed",
+      "status": "clear",
+      "steps": 64,
+      "potion_uses": [
+        {
+          "state_hash": "365d207c77fe07f8f4b5aba1cd9b48530205c75b7a92e1e9408985dd11f9ec5e",
+          "round": 11,
+          "potion_id": "DEXTERITY_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        }
+      ],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 285,
+      "hp": 16,
+      "potions": [],
+      "final_hash": "723127cb4151c80048bbf91acb45bf45269918caf90d66bb61844fbe2601e4ff",
+      "transition_hash": "5540ae5151859d408271834bf4a5a1b3b1019da2179cbd1d00d469014b46c905",
+      "original_final_match": true,
+      "seconds": 11.028486041817814,
+      "wire.jsonl_sha256": "c702d4fd6da1630a4585bb25be2b667d82eea31a27b434eca16d624e07a59196",
+      "engine.stderr.log_sha256": "19bf1a3a9e2a509c68ba6ceb02cacd66b95fb915cb087987f781b8d378db2da2",
+      "trace_path": "artifacts/runs/94ec8a27-6e16-4229-9254-fc3232607ecf/decisions.jsonl",
+      "trace_sha256": "0651a844c8b09a815a7e25325b3b76fd7d282dbd5cb15ebd2e9a5f45a4b22a89",
+      "verification": {
+        "case": "E160-A5-000-act2-floor11-typed",
+        "status": "match",
+        "steps": 349,
+        "outcome": null,
+        "final_hash": "723127cb4151c80048bbf91acb45bf45269918caf90d66bb61844fbe2601e4ff",
+        "seconds": 11.20524474978447,
+        "wire.jsonl_sha256": "7837bbc6c53933f12da7b0d9497be4251906395330e290768d20993419841f55",
+        "engine.stderr.log_sha256": "19bf1a3a9e2a509c68ba6ceb02cacd66b95fb915cb087987f781b8d378db2da2",
+        "trace_path": "artifacts/runs/917fea6b-c036-4d89-9705-366cf904b60c/decisions.jsonl",
+        "trace_sha256": "8136bb3bee6c3dc8bd71c88c21912c27ff7b4713c8d81db18a75d507b1c97e0b"
+      }
+    },
+    {
+      "case": "E160-A5-000-act2-floor11-applicable",
+      "root": "E160-A5-000-act2-floor11",
+      "seed": "e160_campaign_Ironclad_A5_000",
+      "arm": "applicable",
+      "status": "clear",
+      "steps": 64,
+      "potion_uses": [
+        {
+          "state_hash": "365d207c77fe07f8f4b5aba1cd9b48530205c75b7a92e1e9408985dd11f9ec5e",
+          "round": 11,
+          "potion_id": "DEXTERITY_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        }
+      ],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 285,
+      "hp": 16,
+      "potions": [],
+      "final_hash": "723127cb4151c80048bbf91acb45bf45269918caf90d66bb61844fbe2601e4ff",
+      "transition_hash": "5540ae5151859d408271834bf4a5a1b3b1019da2179cbd1d00d469014b46c905",
+      "original_final_match": true,
+      "seconds": 11.387294415850192,
+      "wire.jsonl_sha256": "2795f243063f05f2e8f076c5d9538c2a5fad2d6b6d5b3218ec482b2996be7a58",
+      "engine.stderr.log_sha256": "19bf1a3a9e2a509c68ba6ceb02cacd66b95fb915cb087987f781b8d378db2da2",
+      "trace_path": "artifacts/runs/804b1d22-8605-4ad8-b9f1-e0f2be79bfaf/decisions.jsonl",
+      "trace_sha256": "60fb7ca1781d9f13c1324461efc5ef1fd9627a4ec82b9c1365109ce3deb4f514",
+      "verification": {
+        "case": "E160-A5-000-act2-floor11-applicable",
+        "status": "match",
+        "steps": 349,
+        "outcome": null,
+        "final_hash": "723127cb4151c80048bbf91acb45bf45269918caf90d66bb61844fbe2601e4ff",
+        "seconds": 11.135616207960993,
+        "wire.jsonl_sha256": "794089c48fe50096bfb484aab8d09c31aafe313fede3c2f1d852834bab7581ba",
+        "engine.stderr.log_sha256": "19bf1a3a9e2a509c68ba6ceb02cacd66b95fb915cb087987f781b8d378db2da2",
+        "trace_path": "artifacts/runs/0c038324-c5f6-4854-a223-23312407b9f1/decisions.jsonl",
+        "trace_sha256": "3f8224ff7090d32fed92057f615d66879dffc04761e5ae70ca1cda97baa79574"
+      }
+    },
+    {
+      "case": "E160-A5-000-act2-floor11-combined",
+      "root": "E160-A5-000-act2-floor11",
+      "seed": "e160_campaign_Ironclad_A5_000",
+      "arm": "combined",
+      "status": "clear",
+      "steps": 64,
+      "potion_uses": [
+        {
+          "state_hash": "365d207c77fe07f8f4b5aba1cd9b48530205c75b7a92e1e9408985dd11f9ec5e",
+          "round": 11,
+          "potion_id": "DEXTERITY_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        }
+      ],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 285,
+      "hp": 16,
+      "potions": [],
+      "final_hash": "723127cb4151c80048bbf91acb45bf45269918caf90d66bb61844fbe2601e4ff",
+      "transition_hash": "5540ae5151859d408271834bf4a5a1b3b1019da2179cbd1d00d469014b46c905",
+      "original_final_match": true,
+      "seconds": 11.270577833987772,
+      "wire.jsonl_sha256": "d1135ccb9b1307093f6247a0bffc0632977ba2feb739057ababae1494860069c",
+      "engine.stderr.log_sha256": "19bf1a3a9e2a509c68ba6ceb02cacd66b95fb915cb087987f781b8d378db2da2",
+      "trace_path": "artifacts/runs/fc91b405-dcff-4769-a4c7-372928ad60ac/decisions.jsonl",
+      "trace_sha256": "e138694c99cfb4b30094b2f3680302c461dbebb699ba217f726fe10d94f7c3b9",
+      "verification": {
+        "case": "E160-A5-000-act2-floor11-combined",
+        "status": "match",
+        "steps": 349,
+        "outcome": null,
+        "final_hash": "723127cb4151c80048bbf91acb45bf45269918caf90d66bb61844fbe2601e4ff",
+        "seconds": 11.16317612491548,
+        "wire.jsonl_sha256": "16ff46c9c940ed979de4ebcdd69b45c61fd91e83edcc4cf6b14b366f45728e65",
+        "engine.stderr.log_sha256": "19bf1a3a9e2a509c68ba6ceb02cacd66b95fb915cb087987f781b8d378db2da2",
+        "trace_path": "artifacts/runs/e4e75e27-80cc-486d-a6dd-d851ca0f6efe/decisions.jsonl",
+        "trace_sha256": "296a271aeca1cb67ef1de58bb56552df8b8809e42699a3c7477e6ec0cff4bdd0"
+      }
+    },
+    {
+      "case": "E160-A5-001-act1-floor17-legacy",
+      "root": "E160-A5-001-act1-floor17",
+      "seed": "e160_campaign_Ironclad_A5_001",
+      "arm": "legacy",
+      "status": "clear",
+      "steps": 36,
+      "potion_uses": [
+        {
+          "state_hash": "c1787a246b2ec2d6ebc209ef052bf0b1179e9540c76565c6f07ae4d20ce477b1",
+          "round": 1,
+          "potion_id": "ENERGY_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        }
+      ],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 152,
+      "hp": 28,
+      "potions": [],
+      "final_hash": "ccb1abbd81e2a5151fa5db7d123bb0ad87a792859146ca171d045a852150f588",
+      "transition_hash": "678a2d8eced175b62067c42e46b90ade98c93cdea259b8b5cf55d28700fb35b2",
+      "original_final_match": true,
+      "seconds": 6.4981645829975605,
+      "wire.jsonl_sha256": "817a53158e93e54f9aae775a80673f95e6affd9786b5dfdd62e53e823d200a50",
+      "engine.stderr.log_sha256": "ee1e303976751d9ba285f04e3d2edbf060a580b4c7caf8557819536134d03cb5",
+      "trace_path": "artifacts/runs/6848705b-996b-4b3e-a585-ff8639e0f4d3/decisions.jsonl",
+      "trace_sha256": "053009daca6476169ef7b62814f42e3cb404a498afaee4014e12f033fa32ab55",
+      "verification": {
+        "case": "E160-A5-001-act1-floor17-legacy",
+        "status": "match",
+        "steps": 188,
+        "outcome": null,
+        "final_hash": "ccb1abbd81e2a5151fa5db7d123bb0ad87a792859146ca171d045a852150f588",
+        "seconds": 6.500971124973148,
+        "wire.jsonl_sha256": "98bf457349eb49083383a1f8378f89b921c204908133d98a3deb7a420c97167a",
+        "engine.stderr.log_sha256": "ee1e303976751d9ba285f04e3d2edbf060a580b4c7caf8557819536134d03cb5",
+        "trace_path": "artifacts/runs/f622dcc1-a404-4c15-b8f4-3ebb76003dc2/decisions.jsonl",
+        "trace_sha256": "6ca0ce571e9d357bf5297cd0d040f8016922932a5abe4f9bf7ea4a81d07a88b9"
+      }
+    },
+    {
+      "case": "E160-A5-001-act1-floor17-typed",
+      "root": "E160-A5-001-act1-floor17",
+      "seed": "e160_campaign_Ironclad_A5_001",
+      "arm": "typed",
+      "status": "clear",
+      "steps": 36,
+      "potion_uses": [
+        {
+          "state_hash": "c1787a246b2ec2d6ebc209ef052bf0b1179e9540c76565c6f07ae4d20ce477b1",
+          "round": 1,
+          "potion_id": "ENERGY_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        }
+      ],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 152,
+      "hp": 28,
+      "potions": [],
+      "final_hash": "ccb1abbd81e2a5151fa5db7d123bb0ad87a792859146ca171d045a852150f588",
+      "transition_hash": "678a2d8eced175b62067c42e46b90ade98c93cdea259b8b5cf55d28700fb35b2",
+      "original_final_match": true,
+      "seconds": 6.507032833062112,
+      "wire.jsonl_sha256": "ca4a31d1c2946f98fde8c666c8ba58201eac1e25dfcece7c9ece704445e291e9",
+      "engine.stderr.log_sha256": "ee1e303976751d9ba285f04e3d2edbf060a580b4c7caf8557819536134d03cb5",
+      "trace_path": "artifacts/runs/09170497-edb0-46e8-a519-8a54a5c42b63/decisions.jsonl",
+      "trace_sha256": "08ba583cb47b752c8313639828d41f678af7c9cce76ef5578148de2735fe40cb",
+      "verification": {
+        "case": "E160-A5-001-act1-floor17-typed",
+        "status": "match",
+        "steps": 188,
+        "outcome": null,
+        "final_hash": "ccb1abbd81e2a5151fa5db7d123bb0ad87a792859146ca171d045a852150f588",
+        "seconds": 6.451272665988654,
+        "wire.jsonl_sha256": "75f49d787a3a56b5b1f5e679a69877eba8922ed36ae968131d929a4c0bae5ea2",
+        "engine.stderr.log_sha256": "ee1e303976751d9ba285f04e3d2edbf060a580b4c7caf8557819536134d03cb5",
+        "trace_path": "artifacts/runs/d9cfae73-9838-4909-9b95-3fbf24043aa8/decisions.jsonl",
+        "trace_sha256": "a32c7134a0f5b9fb9312e290e9333052cfae18b53d5e33eb1a0e990eca50bd00"
+      }
+    },
+    {
+      "case": "E160-A5-001-act1-floor17-applicable",
+      "root": "E160-A5-001-act1-floor17",
+      "seed": "e160_campaign_Ironclad_A5_001",
+      "arm": "applicable",
+      "status": "clear",
+      "steps": 36,
+      "potion_uses": [
+        {
+          "state_hash": "c1787a246b2ec2d6ebc209ef052bf0b1179e9540c76565c6f07ae4d20ce477b1",
+          "round": 1,
+          "potion_id": "ENERGY_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        }
+      ],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 152,
+      "hp": 28,
+      "potions": [],
+      "final_hash": "ccb1abbd81e2a5151fa5db7d123bb0ad87a792859146ca171d045a852150f588",
+      "transition_hash": "678a2d8eced175b62067c42e46b90ade98c93cdea259b8b5cf55d28700fb35b2",
+      "original_final_match": true,
+      "seconds": 6.500563040841371,
+      "wire.jsonl_sha256": "fa64d9fe24a3d3ecae369ab81e48500e4954d0e9907d9ec17d9e2baf199cce96",
+      "engine.stderr.log_sha256": "ee1e303976751d9ba285f04e3d2edbf060a580b4c7caf8557819536134d03cb5",
+      "trace_path": "artifacts/runs/76300245-a159-43ca-ac4b-0d815149f494/decisions.jsonl",
+      "trace_sha256": "7fcb5ebc77e7ab499eea7ea507b7acd9fbae31c917d17a03d980cca9f83ac24a",
+      "verification": {
+        "case": "E160-A5-001-act1-floor17-applicable",
+        "status": "match",
+        "steps": 188,
+        "outcome": null,
+        "final_hash": "ccb1abbd81e2a5151fa5db7d123bb0ad87a792859146ca171d045a852150f588",
+        "seconds": 6.615101707866415,
+        "wire.jsonl_sha256": "2eec2ae583d8670f7f4edc8771bf88be2850da3c67ed009e6b18acca533514b4",
+        "engine.stderr.log_sha256": "ee1e303976751d9ba285f04e3d2edbf060a580b4c7caf8557819536134d03cb5",
+        "trace_path": "artifacts/runs/9524a5d7-1378-4f70-9d95-34a5a7818b82/decisions.jsonl",
+        "trace_sha256": "d34f76efd11584fd986f1a797eee381cc79d7e5190c75fe4e8978a8b7a22e4b7"
+      }
+    },
+    {
+      "case": "E160-A5-001-act1-floor17-combined",
+      "root": "E160-A5-001-act1-floor17",
+      "seed": "e160_campaign_Ironclad_A5_001",
+      "arm": "combined",
+      "status": "clear",
+      "steps": 36,
+      "potion_uses": [
+        {
+          "state_hash": "c1787a246b2ec2d6ebc209ef052bf0b1179e9540c76565c6f07ae4d20ce477b1",
+          "round": 1,
+          "potion_id": "ENERGY_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        }
+      ],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 152,
+      "hp": 28,
+      "potions": [],
+      "final_hash": "ccb1abbd81e2a5151fa5db7d123bb0ad87a792859146ca171d045a852150f588",
+      "transition_hash": "678a2d8eced175b62067c42e46b90ade98c93cdea259b8b5cf55d28700fb35b2",
+      "original_final_match": true,
+      "seconds": 6.343880666885525,
+      "wire.jsonl_sha256": "52f03f923e216f310044b4590069c7a6cf8b65e03abffc45f847e66d51574d02",
+      "engine.stderr.log_sha256": "ee1e303976751d9ba285f04e3d2edbf060a580b4c7caf8557819536134d03cb5",
+      "trace_path": "artifacts/runs/ce8f5b76-16c5-4513-bf8d-070d2d83933a/decisions.jsonl",
+      "trace_sha256": "52fd8fb7912f5348cc377cc9bc635178a5f5b2a3342377aa80033c38eef5ae8d",
+      "verification": {
+        "case": "E160-A5-001-act1-floor17-combined",
+        "status": "match",
+        "steps": 188,
+        "outcome": null,
+        "final_hash": "ccb1abbd81e2a5151fa5db7d123bb0ad87a792859146ca171d045a852150f588",
+        "seconds": 6.568824999965727,
+        "wire.jsonl_sha256": "65906b705afe848df147f74e1ee1a9d799826d9a7ba8598addccda680e5c0312",
+        "engine.stderr.log_sha256": "ee1e303976751d9ba285f04e3d2edbf060a580b4c7caf8557819536134d03cb5",
+        "trace_path": "artifacts/runs/a01e6539-42b6-4dd5-8fcf-f8c21945ccfe/decisions.jsonl",
+        "trace_sha256": "85c3b34c261c1d580448c14dae8cb65e02fb737b71cc013f5166fce2350a4356"
+      }
+    },
+    {
+      "case": "E165-A0-000-act1-floor17-legacy",
+      "root": "E165-A0-000-act1-floor17",
+      "seed": "e165_hybrid_Ironclad_A0_000",
+      "arm": "legacy",
+      "status": "clear",
+      "steps": 59,
+      "potion_uses": [
+        {
+          "state_hash": "59e0c581b52d08671a7ee9fd071c2de5546d697680c7cb81fc2d71748f5f65ab",
+          "round": 1,
+          "potion_id": "HEART_OF_IRON",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        },
+        {
+          "state_hash": "485df4fadabb6ea9f85aee2ce8a7e406002de8275b2a96c081db9763d2838df0",
+          "round": 1,
+          "potion_id": "BLOCK_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        },
+        {
+          "state_hash": "bb8debfbc60b7f44cecb711b7d69ccb0ca2dbce080c225b5783519a5e8115f0d",
+          "round": 1,
+          "potion_id": "VULNERABLE_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0,
+              "target_index": 0
+            }
+          }
+        }
+      ],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 141,
+      "hp": 39,
+      "potions": [],
+      "final_hash": "29f4feb5e6d16a8eed0ffb70cc39a529af3a7b7d8cadf5fb3a6b82dc84144de3",
+      "transition_hash": "0b04686a1d99ae76cbc6df11687baa79e16024898f08e41453ee271220c4c51b",
+      "original_final_match": true,
+      "seconds": 6.756772791966796,
+      "wire.jsonl_sha256": "7a8a3cdead5dd1b2d61854d3237a400ba3223ca2a2864c74eb6705fbecde0080",
+      "engine.stderr.log_sha256": "86eafd94eb1f04a8c0bf06f8e11ab59466d798c31ac5698e9d6a2d78712e4173",
+      "trace_path": "artifacts/runs/ce0f3fac-589a-41db-82df-851daf96b901/decisions.jsonl",
+      "trace_sha256": "de24cf8d89fec51e2411022d4c0c348c71cac1be7aed8f0c5c45f5ade227f829",
+      "verification": {
+        "case": "E165-A0-000-act1-floor17-legacy",
+        "status": "match",
+        "steps": 200,
+        "outcome": null,
+        "final_hash": "29f4feb5e6d16a8eed0ffb70cc39a529af3a7b7d8cadf5fb3a6b82dc84144de3",
+        "seconds": 6.850579375168309,
+        "wire.jsonl_sha256": "f4a7587861543ac02cdafdc98d7a88f30cd383d631543ecd1dcb22d2f0a674bf",
+        "engine.stderr.log_sha256": "86eafd94eb1f04a8c0bf06f8e11ab59466d798c31ac5698e9d6a2d78712e4173",
+        "trace_path": "artifacts/runs/76ac4fba-1e69-457e-b70c-96f09a75d13e/decisions.jsonl",
+        "trace_sha256": "f347c4961c50e83d80ab6a25fd55c8864663ee634eeffa04455097c18f15d230"
+      }
+    },
+    {
+      "case": "E165-A0-000-act1-floor17-typed",
+      "root": "E165-A0-000-act1-floor17",
+      "seed": "e165_hybrid_Ironclad_A0_000",
+      "arm": "typed",
+      "status": "clear",
+      "steps": 59,
+      "potion_uses": [
+        {
+          "state_hash": "59e0c581b52d08671a7ee9fd071c2de5546d697680c7cb81fc2d71748f5f65ab",
+          "round": 1,
+          "potion_id": "HEART_OF_IRON",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        },
+        {
+          "state_hash": "485df4fadabb6ea9f85aee2ce8a7e406002de8275b2a96c081db9763d2838df0",
+          "round": 1,
+          "potion_id": "BLOCK_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        },
+        {
+          "state_hash": "bb8debfbc60b7f44cecb711b7d69ccb0ca2dbce080c225b5783519a5e8115f0d",
+          "round": 1,
+          "potion_id": "VULNERABLE_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0,
+              "target_index": 0
+            }
+          }
+        }
+      ],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 141,
+      "hp": 39,
+      "potions": [],
+      "final_hash": "29f4feb5e6d16a8eed0ffb70cc39a529af3a7b7d8cadf5fb3a6b82dc84144de3",
+      "transition_hash": "0b04686a1d99ae76cbc6df11687baa79e16024898f08e41453ee271220c4c51b",
+      "original_final_match": true,
+      "seconds": 6.74396983301267,
+      "wire.jsonl_sha256": "46d01aea6c4f6e4a0a3b2f546ee530e510247aa5fb7782c557ac510714cf5e01",
+      "engine.stderr.log_sha256": "86eafd94eb1f04a8c0bf06f8e11ab59466d798c31ac5698e9d6a2d78712e4173",
+      "trace_path": "artifacts/runs/ee16e7a8-2561-4d8d-bcd8-f359f5d28d9a/decisions.jsonl",
+      "trace_sha256": "60bb4fee03a7239ec9d6b8c90a477dcc4a7c27c066e9150935e15e7d585d5958",
+      "verification": {
+        "case": "E165-A0-000-act1-floor17-typed",
+        "status": "match",
+        "steps": 200,
+        "outcome": null,
+        "final_hash": "29f4feb5e6d16a8eed0ffb70cc39a529af3a7b7d8cadf5fb3a6b82dc84144de3",
+        "seconds": 6.94934779102914,
+        "wire.jsonl_sha256": "0cbdb0a39d9d7fefb70b55155090554cde12f89b23989c85803e546cb5b89226",
+        "engine.stderr.log_sha256": "86eafd94eb1f04a8c0bf06f8e11ab59466d798c31ac5698e9d6a2d78712e4173",
+        "trace_path": "artifacts/runs/29262cad-6672-4fe8-8b3f-fbbdbd344c13/decisions.jsonl",
+        "trace_sha256": "d88ed66f187cf0930ea4c2708ec936d2cfb761b55753ce3891a9af4a5aab4dff"
+      }
+    },
+    {
+      "case": "E165-A0-000-act1-floor17-applicable",
+      "root": "E165-A0-000-act1-floor17",
+      "seed": "e165_hybrid_Ironclad_A0_000",
+      "arm": "applicable",
+      "status": "clear",
+      "steps": 59,
+      "potion_uses": [
+        {
+          "state_hash": "59e0c581b52d08671a7ee9fd071c2de5546d697680c7cb81fc2d71748f5f65ab",
+          "round": 1,
+          "potion_id": "HEART_OF_IRON",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        },
+        {
+          "state_hash": "485df4fadabb6ea9f85aee2ce8a7e406002de8275b2a96c081db9763d2838df0",
+          "round": 1,
+          "potion_id": "VULNERABLE_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 1,
+              "target_index": 0
+            }
+          }
+        },
+        {
+          "state_hash": "72b2157775c2d9062bbc12ce25192f6511002ac7fd3de61a2349eea792d6516a",
+          "round": 1,
+          "potion_id": "BLOCK_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        }
+      ],
+      "deferred": {
+        "finish_cards_before_block": 4
+      },
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 141,
+      "hp": 39,
+      "potions": [],
+      "final_hash": "29f4feb5e6d16a8eed0ffb70cc39a529af3a7b7d8cadf5fb3a6b82dc84144de3",
+      "transition_hash": "60fc97042d712ddafb7f7370587fd3745eb3aa2f4cbf203c2226f5dd6fee10be",
+      "original_final_match": true,
+      "seconds": 6.917995499912649,
+      "wire.jsonl_sha256": "99dd51cffd446aa5279a0c1d4e3c412ba127778af5f0cdb6b749ddf28c17dd32",
+      "engine.stderr.log_sha256": "852e8072f0d46b5b7caed242f767b9615f7646f6b750b9bf97e3f6e1ef0a7e0d",
+      "trace_path": "artifacts/runs/ac7e8cd0-62bb-4236-b19a-432a485a12c2/decisions.jsonl",
+      "trace_sha256": "37535406b7815ba5350657c5cd30a8e6d1fde359f4b49945c5fd019c02fc6c58",
+      "verification": {
+        "case": "E165-A0-000-act1-floor17-applicable",
+        "status": "match",
+        "steps": 200,
+        "outcome": null,
+        "final_hash": "29f4feb5e6d16a8eed0ffb70cc39a529af3a7b7d8cadf5fb3a6b82dc84144de3",
+        "seconds": 6.7958305408246815,
+        "wire.jsonl_sha256": "433b8af6515eafe31e5539eb30512379126ea42e9f288a3d414df9d8f64b11e3",
+        "engine.stderr.log_sha256": "852e8072f0d46b5b7caed242f767b9615f7646f6b750b9bf97e3f6e1ef0a7e0d",
+        "trace_path": "artifacts/runs/866ba0e7-9bd6-4505-a9f5-eefb9fcca560/decisions.jsonl",
+        "trace_sha256": "dbb2c440ef309d6f5e1bf991dc3e743328c0086e292ae17a610fa6e339644bce"
+      }
+    },
+    {
+      "case": "E165-A0-000-act1-floor17-combined",
+      "root": "E165-A0-000-act1-floor17",
+      "seed": "e165_hybrid_Ironclad_A0_000",
+      "arm": "combined",
+      "status": "clear",
+      "steps": 59,
+      "potion_uses": [
+        {
+          "state_hash": "59e0c581b52d08671a7ee9fd071c2de5546d697680c7cb81fc2d71748f5f65ab",
+          "round": 1,
+          "potion_id": "HEART_OF_IRON",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        },
+        {
+          "state_hash": "485df4fadabb6ea9f85aee2ce8a7e406002de8275b2a96c081db9763d2838df0",
+          "round": 1,
+          "potion_id": "VULNERABLE_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 1,
+              "target_index": 0
+            }
+          }
+        },
+        {
+          "state_hash": "72b2157775c2d9062bbc12ce25192f6511002ac7fd3de61a2349eea792d6516a",
+          "round": 1,
+          "potion_id": "BLOCK_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        }
+      ],
+      "deferred": {
+        "finish_cards_before_block": 4
+      },
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 141,
+      "hp": 39,
+      "potions": [],
+      "final_hash": "29f4feb5e6d16a8eed0ffb70cc39a529af3a7b7d8cadf5fb3a6b82dc84144de3",
+      "transition_hash": "60fc97042d712ddafb7f7370587fd3745eb3aa2f4cbf203c2226f5dd6fee10be",
+      "original_final_match": true,
+      "seconds": 6.803610582835972,
+      "wire.jsonl_sha256": "53f4aa6747674ca8f94fdb28de6507a3445f8f845efdd06cee97d3b2562bd23a",
+      "engine.stderr.log_sha256": "852e8072f0d46b5b7caed242f767b9615f7646f6b750b9bf97e3f6e1ef0a7e0d",
+      "trace_path": "artifacts/runs/0705c1f8-ebda-4473-8a58-bccee18500f0/decisions.jsonl",
+      "trace_sha256": "606c5ddfd3e25e692fe059f291337b9bcdcd21517358d4a8d159f7976727059d",
+      "verification": {
+        "case": "E165-A0-000-act1-floor17-combined",
+        "status": "match",
+        "steps": 200,
+        "outcome": null,
+        "final_hash": "29f4feb5e6d16a8eed0ffb70cc39a529af3a7b7d8cadf5fb3a6b82dc84144de3",
+        "seconds": 6.80236866697669,
+        "wire.jsonl_sha256": "5d9dcaf06dd23d83f0712ce8941c0f727accdf9def78cecde5b4ebc8b899da97",
+        "engine.stderr.log_sha256": "852e8072f0d46b5b7caed242f767b9615f7646f6b750b9bf97e3f6e1ef0a7e0d",
+        "trace_path": "artifacts/runs/e272390e-99cb-46f0-92b1-160ac1daa98e/decisions.jsonl",
+        "trace_sha256": "d8b849da1a97d1973db48ab04c576bc8fdb2d4a391d0ef0c4caf880d44b1097c"
+      }
+    },
+    {
+      "case": "E165-A0-000-act2-floor16-legacy",
+      "root": "E165-A0-000-act2-floor16",
+      "seed": "e165_hybrid_Ironclad_A0_000",
+      "arm": "legacy",
+      "status": "defeat",
+      "steps": 59,
+      "potion_uses": [
+        {
+          "state_hash": "a68dbf559abb4cbf490455fb3f2b85f0dab2f3bcd164211493e19272beaea56e",
+          "round": 1,
+          "potion_id": "POWER_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 4
+            }
+          }
+        },
+        {
+          "state_hash": "c6f5524ad0dfcd148c0ed96128527c14ff2de4fb315e42e7541afbcafc3f660b",
+          "round": 1,
+          "potion_id": "REGEN_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        },
+        {
+          "state_hash": "d263654a2439bbc82a188e18186fe1c16c68a51e3d437cdd89d54fa000db4043",
+          "round": 1,
+          "potion_id": "SNECKO_OIL",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 1
+            }
+          }
+        },
+        {
+          "state_hash": "2c555427d2680deae7757861bed3727bcfc9499da71da96fee7a8feb9c8af573",
+          "round": 1,
+          "potion_id": "BLOCK_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 2
+            }
+          }
+        },
+        {
+          "state_hash": "03cd51212c8ab98f964311d2bd24577c9bd66ed39c098407cb875ced61f23729",
+          "round": 1,
+          "potion_id": "ASHWATER",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 2
+            }
+          }
+        },
+        {
+          "state_hash": "973b2fbd8f3931ef33cf16af5ba41d08734e301d71dfb9b2f00a801a3cadcf3b",
+          "round": 1,
+          "potion_id": "FIRE_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0,
+              "target_index": 0
+            }
+          }
+        },
+        {
+          "state_hash": "3fffeb8d1450d98b03e949c9417d467cc5095019447ea99f1508b153f9008dee",
+          "round": 1,
+          "potion_id": "VULNERABLE_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0,
+              "target_index": 0
+            }
+          }
+        }
+      ],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 367,
+      "hp": 0,
+      "potions": [],
+      "final_hash": "29de2d9f91525d883b1061c7a1add8fe9c0098de59d78b18385a309980e83a03",
+      "transition_hash": "753ffe491865fa11122ea9a18747f54bfcd2afcbea989a9284ff024619c72322",
+      "original_final_match": true,
+      "seconds": 12.914752708980814,
+      "wire.jsonl_sha256": "d608120c5bebca7ee1787aa410817e3352fe6bfae6ce9b42a124d5b8cde9896a",
+      "engine.stderr.log_sha256": "083e2289d089281a90f69227e4dbf5a66c0d7b0effef99b7a5ecbdd90af81ebd",
+      "trace_path": "artifacts/runs/4a3e13b6-9500-4851-b578-437ff10875ba/decisions.jsonl",
+      "trace_sha256": "63b810b689e69104d82b14a73bda1f1bc1b1c2792e668b4548a133b6c984bdc8",
+      "verification": {
+        "case": "E165-A0-000-act2-floor16-legacy",
+        "status": "match",
+        "steps": 426,
+        "outcome": "defeat",
+        "final_hash": "29de2d9f91525d883b1061c7a1add8fe9c0098de59d78b18385a309980e83a03",
+        "seconds": 13.190137832891196,
+        "wire.jsonl_sha256": "705045308585a8da16c18090915c30d08678cc91390674dd9795179a16cb8ff8",
+        "engine.stderr.log_sha256": "083e2289d089281a90f69227e4dbf5a66c0d7b0effef99b7a5ecbdd90af81ebd",
+        "trace_path": "artifacts/runs/148fc04f-5e34-4fde-9e27-13f19a510a3c/decisions.jsonl",
+        "trace_sha256": "82786f7fef6fcb17aa2014545db8063cd2ab79d1ff169ed65a0ff62c5250613a"
+      }
+    },
+    {
+      "case": "E165-A0-000-act2-floor16-typed",
+      "root": "E165-A0-000-act2-floor16",
+      "seed": "e165_hybrid_Ironclad_A0_000",
+      "arm": "typed",
+      "status": "clear",
+      "steps": 61,
+      "potion_uses": [
+        {
+          "state_hash": "a68dbf559abb4cbf490455fb3f2b85f0dab2f3bcd164211493e19272beaea56e",
+          "round": 1,
+          "potion_id": "POWER_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 4
+            }
+          }
+        },
+        {
+          "state_hash": "c6f5524ad0dfcd148c0ed96128527c14ff2de4fb315e42e7541afbcafc3f660b",
+          "round": 1,
+          "potion_id": "REGEN_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        },
+        {
+          "state_hash": "d263654a2439bbc82a188e18186fe1c16c68a51e3d437cdd89d54fa000db4043",
+          "round": 1,
+          "potion_id": "SNECKO_OIL",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 1
+            }
+          }
+        },
+        {
+          "state_hash": "2c555427d2680deae7757861bed3727bcfc9499da71da96fee7a8feb9c8af573",
+          "round": 1,
+          "potion_id": "BLOCK_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 2
+            }
+          }
+        },
+        {
+          "state_hash": "03cd51212c8ab98f964311d2bd24577c9bd66ed39c098407cb875ced61f23729",
+          "round": 1,
+          "potion_id": "ASHWATER",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 2
+            }
+          }
+        },
+        {
+          "state_hash": "44b93223e16ac865cb598bf4910248dd9a98ffeeb9c5d3fe53f20368b5d5ec36",
+          "round": 1,
+          "potion_id": "FIRE_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0,
+              "target_index": 0
+            }
+          }
+        },
+        {
+          "state_hash": "1c7904656cb7ae7ff2a7a4d58f93ec3081b19bafb4942d6090013b157bbb262d",
+          "round": 1,
+          "potion_id": "VULNERABLE_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0,
+              "target_index": 0
+            }
+          }
+        }
+      ],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 367,
+      "hp": 33,
+      "potions": [],
+      "final_hash": "7adddd44198403d3d9b3c6a49fcf27737583bc0b6cb2bacdfc8a7b93e2afb4a0",
+      "transition_hash": "597d9fce1426682fa84fd43adc4faada424789ceb4bf7a0051599d0ccf5672ec",
+      "original_final_match": false,
+      "seconds": 13.344877833966166,
+      "wire.jsonl_sha256": "1f1a2ce5d9193e7fa8d4cae60c8d0fa91b222eb539f96538940a4850697288f2",
+      "engine.stderr.log_sha256": "cd1427b108ac029e6762dc131f3acf4a789d41bf464f0ad73d59199c019e35d0",
+      "trace_path": "artifacts/runs/559987a6-7bba-4467-88e5-93fb71513116/decisions.jsonl",
+      "trace_sha256": "a400a50def2aedb5a9c8fc3e7c63c6e18cf26fed7c53fb36acbd0d9bcd31c4b5",
+      "verification": {
+        "case": "E165-A0-000-act2-floor16-typed",
+        "status": "match",
+        "steps": 428,
+        "outcome": null,
+        "final_hash": "7adddd44198403d3d9b3c6a49fcf27737583bc0b6cb2bacdfc8a7b93e2afb4a0",
+        "seconds": 13.258325750008225,
+        "wire.jsonl_sha256": "a69c763985ba5e4401fc38dbe9bb637201b7d6895f4a872c0389e9cc6579b4b4",
+        "engine.stderr.log_sha256": "cd1427b108ac029e6762dc131f3acf4a789d41bf464f0ad73d59199c019e35d0",
+        "trace_path": "artifacts/runs/6e57cf9f-1e42-47fe-bda8-4579f50d7aaf/decisions.jsonl",
+        "trace_sha256": "1b5e9f57acb939b54dc8880f5fe44f501107173dfda19caae20c19b27b2ad090"
+      }
+    },
+    {
+      "case": "E165-A0-000-act2-floor16-applicable",
+      "root": "E165-A0-000-act2-floor16",
+      "seed": "e165_hybrid_Ironclad_A0_000",
+      "arm": "applicable",
+      "status": "clear",
+      "steps": 39,
+      "potion_uses": [
+        {
+          "state_hash": "a68dbf559abb4cbf490455fb3f2b85f0dab2f3bcd164211493e19272beaea56e",
+          "round": 1,
+          "potion_id": "POWER_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 4
+            }
+          }
+        },
+        {
+          "state_hash": "c6f5524ad0dfcd148c0ed96128527c14ff2de4fb315e42e7541afbcafc3f660b",
+          "round": 1,
+          "potion_id": "REGEN_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        },
+        {
+          "state_hash": "d263654a2439bbc82a188e18186fe1c16c68a51e3d437cdd89d54fa000db4043",
+          "round": 1,
+          "potion_id": "FIRE_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0,
+              "target_index": 0
+            }
+          }
+        },
+        {
+          "state_hash": "b6b3ddb7664e7ad3c710f83aee9b61694737fe424ac2df9ad25f13390c581d9c",
+          "round": 1,
+          "potion_id": "VULNERABLE_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 1,
+              "target_index": 0
+            }
+          }
+        },
+        {
+          "state_hash": "9ecbb4ef071f65eca9a92aa0b3b6b44a5bee439e607c511c4721e2cb3a8f852a",
+          "round": 3,
+          "potion_id": "BLOCK_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 1
+            }
+          }
+        }
+      ],
+      "deferred": {
+        "unverified_hand_transformation": 70,
+        "finish_cards_before_block": 16,
+        "no_visible_unblocked_attack": 2
+      },
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 367,
+      "hp": 80,
+      "potions": [
+        "SNECKO_OIL",
+        "ASHWATER"
+      ],
+      "final_hash": "5c9e71d60c15767c99b80110f601fd28f2578e7dc9e7b71e112c7a417c3fdbf9",
+      "transition_hash": "36bdc5b7c387c0f94ab9efe7f8f1f487f8a2a0ef3e8b661b5b23a174c668f81a",
+      "original_final_match": false,
+      "seconds": 12.273701458005235,
+      "wire.jsonl_sha256": "f12315d61e91c13f52d1f5a48390d62b9a1908191d9905f1761fc89b4a5bd7b9",
+      "engine.stderr.log_sha256": "a8d5e42485aec24e440d438940f2684eb31ccbde25f15631abd6ee342298ee8f",
+      "trace_path": "artifacts/runs/9c53ec64-de07-4837-a0c0-7f99baa81d46/decisions.jsonl",
+      "trace_sha256": "3bf80aaece06745f117b3eb0f06e1e45cc5e8021a273f723ce8b254eb173684d",
+      "verification": {
+        "case": "E165-A0-000-act2-floor16-applicable",
+        "status": "match",
+        "steps": 406,
+        "outcome": null,
+        "final_hash": "5c9e71d60c15767c99b80110f601fd28f2578e7dc9e7b71e112c7a417c3fdbf9",
+        "seconds": 12.343837167136371,
+        "wire.jsonl_sha256": "231265783973d8e3f3ea8e7dbf9dc2f1c27b4f6f34165bdc05d5b0942834a45a",
+        "engine.stderr.log_sha256": "a8d5e42485aec24e440d438940f2684eb31ccbde25f15631abd6ee342298ee8f",
+        "trace_path": "artifacts/runs/fa311c76-c7d2-4a8e-b9b7-721a9ea13557/decisions.jsonl",
+        "trace_sha256": "02b05a7c8484595023d989f4dafd896798b61e7ec833c1a45bcdb54f9c73a9b4"
+      }
+    },
+    {
+      "case": "E165-A0-000-act2-floor16-combined",
+      "root": "E165-A0-000-act2-floor16",
+      "seed": "e165_hybrid_Ironclad_A0_000",
+      "arm": "combined",
+      "status": "clear",
+      "steps": 39,
+      "potion_uses": [
+        {
+          "state_hash": "a68dbf559abb4cbf490455fb3f2b85f0dab2f3bcd164211493e19272beaea56e",
+          "round": 1,
+          "potion_id": "POWER_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 4
+            }
+          }
+        },
+        {
+          "state_hash": "c6f5524ad0dfcd148c0ed96128527c14ff2de4fb315e42e7541afbcafc3f660b",
+          "round": 1,
+          "potion_id": "REGEN_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        },
+        {
+          "state_hash": "d263654a2439bbc82a188e18186fe1c16c68a51e3d437cdd89d54fa000db4043",
+          "round": 1,
+          "potion_id": "FIRE_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0,
+              "target_index": 0
+            }
+          }
+        },
+        {
+          "state_hash": "b6b3ddb7664e7ad3c710f83aee9b61694737fe424ac2df9ad25f13390c581d9c",
+          "round": 1,
+          "potion_id": "VULNERABLE_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 1,
+              "target_index": 0
+            }
+          }
+        },
+        {
+          "state_hash": "9ecbb4ef071f65eca9a92aa0b3b6b44a5bee439e607c511c4721e2cb3a8f852a",
+          "round": 3,
+          "potion_id": "BLOCK_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 1
+            }
+          }
+        }
+      ],
+      "deferred": {
+        "unverified_hand_transformation": 70,
+        "finish_cards_before_block": 16,
+        "no_visible_unblocked_attack": 2
+      },
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 367,
+      "hp": 80,
+      "potions": [
+        "SNECKO_OIL",
+        "ASHWATER"
+      ],
+      "final_hash": "5c9e71d60c15767c99b80110f601fd28f2578e7dc9e7b71e112c7a417c3fdbf9",
+      "transition_hash": "36bdc5b7c387c0f94ab9efe7f8f1f487f8a2a0ef3e8b661b5b23a174c668f81a",
+      "original_final_match": false,
+      "seconds": 12.699650791008025,
+      "wire.jsonl_sha256": "0b6fc92bdb9089571897fe0b879e11b4e5b1c01ebed91a31bceff8944a5cf1e6",
+      "engine.stderr.log_sha256": "a8d5e42485aec24e440d438940f2684eb31ccbde25f15631abd6ee342298ee8f",
+      "trace_path": "artifacts/runs/aab05bda-71b6-4dcc-b83b-e2c8f547653b/decisions.jsonl",
+      "trace_sha256": "3dffb67738550b525460aa3dcb6cae8957f952b1595d79a69796fa360837924f",
+      "verification": {
+        "case": "E165-A0-000-act2-floor16-combined",
+        "status": "match",
+        "steps": 406,
+        "outcome": null,
+        "final_hash": "5c9e71d60c15767c99b80110f601fd28f2578e7dc9e7b71e112c7a417c3fdbf9",
+        "seconds": 12.4042746250052,
+        "wire.jsonl_sha256": "5856cc543afd3ed6e42885221f9a377dd5cca3efaf42314b72206bb606a4ef63",
+        "engine.stderr.log_sha256": "a8d5e42485aec24e440d438940f2684eb31ccbde25f15631abd6ee342298ee8f",
+        "trace_path": "artifacts/runs/92ff15a9-6a80-4e95-b2a9-f4f0caffb4a3/decisions.jsonl",
+        "trace_sha256": "49896b2519ac1b1d4267d2baeda896b2c099a14b1daa34fda487613c0339a322"
+      }
+    },
+    {
+      "case": "E165-A5-000-act1-floor17-legacy",
+      "root": "E165-A5-000-act1-floor17",
+      "seed": "e165_hybrid_Ironclad_A5_000",
+      "arm": "legacy",
+      "status": "clear",
+      "steps": 31,
+      "potion_uses": [
+        {
+          "state_hash": "7cbd4a5cdbcf35094162f28a7647b7d8d25e83f9ff9da63a9bc0ab75bc633f80",
+          "round": 1,
+          "potion_id": "CURE_ALL",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        },
+        {
+          "state_hash": "1757d0454ae963efdf01c3c73ab924f3bce998efd46a1b3301baaf9172e24aca",
+          "round": 1,
+          "potion_id": "WEAK_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0,
+              "target_index": 0
+            }
+          }
+        }
+      ],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 165,
+      "hp": 36,
+      "potions": [],
+      "final_hash": "3f153b2fc3f29341b956c7e84956e4438741095e33b890d8794d0b1cb205e1da",
+      "transition_hash": "47018a5f6ca95b4a2c167c8b2c545b62099566381db51271925ca39e7b011152",
+      "original_final_match": true,
+      "seconds": 6.877317915903404,
+      "wire.jsonl_sha256": "111de0d01918ce10c0b639b33429310fe1392600fdd1ba2b345533c6c4793edf",
+      "engine.stderr.log_sha256": "4caa8c5cc9f66d05aa6f36ecbce3bcba4da90b87ff819cfbcac42df858eab39f",
+      "trace_path": "artifacts/runs/55f9bfbb-6412-410c-a937-1380774bd26e/decisions.jsonl",
+      "trace_sha256": "c3813bdc86b03ab65111cfd14e4874e7a432b1f8c9baad6c57568856a9b3d7af",
+      "verification": {
+        "case": "E165-A5-000-act1-floor17-legacy",
+        "status": "match",
+        "steps": 196,
+        "outcome": null,
+        "final_hash": "3f153b2fc3f29341b956c7e84956e4438741095e33b890d8794d0b1cb205e1da",
+        "seconds": 6.7767358750570565,
+        "wire.jsonl_sha256": "aa720824115911e70db5625f555e2b2101d5540a6b4c7cfd2b5280b689fe5025",
+        "engine.stderr.log_sha256": "4caa8c5cc9f66d05aa6f36ecbce3bcba4da90b87ff819cfbcac42df858eab39f",
+        "trace_path": "artifacts/runs/08f2bfa4-3010-4d6e-9c91-252d44784218/decisions.jsonl",
+        "trace_sha256": "cc52c76310f96861a77a63a64df5f87046503f094dbc4853da35cdf3397d96b9"
+      }
+    },
+    {
+      "case": "E165-A5-000-act1-floor17-typed",
+      "root": "E165-A5-000-act1-floor17",
+      "seed": "e165_hybrid_Ironclad_A5_000",
+      "arm": "typed",
+      "status": "clear",
+      "steps": 31,
+      "potion_uses": [
+        {
+          "state_hash": "7cbd4a5cdbcf35094162f28a7647b7d8d25e83f9ff9da63a9bc0ab75bc633f80",
+          "round": 1,
+          "potion_id": "CURE_ALL",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        },
+        {
+          "state_hash": "1757d0454ae963efdf01c3c73ab924f3bce998efd46a1b3301baaf9172e24aca",
+          "round": 1,
+          "potion_id": "WEAK_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0,
+              "target_index": 0
+            }
+          }
+        }
+      ],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 165,
+      "hp": 36,
+      "potions": [],
+      "final_hash": "3f153b2fc3f29341b956c7e84956e4438741095e33b890d8794d0b1cb205e1da",
+      "transition_hash": "47018a5f6ca95b4a2c167c8b2c545b62099566381db51271925ca39e7b011152",
+      "original_final_match": true,
+      "seconds": 6.9234786671586335,
+      "wire.jsonl_sha256": "4d39c6a9e16252e6d2c5c408d3b86cb08e68ce80b46a59f85340f34ca07a77fd",
+      "engine.stderr.log_sha256": "4caa8c5cc9f66d05aa6f36ecbce3bcba4da90b87ff819cfbcac42df858eab39f",
+      "trace_path": "artifacts/runs/14e806aa-ac4d-45aa-bc9d-8b916caa910a/decisions.jsonl",
+      "trace_sha256": "bd32551afa3da56e6f740fd4940e03bc1e89402e7adc1ee3cf0721a09da4e6f3",
+      "verification": {
+        "case": "E165-A5-000-act1-floor17-typed",
+        "status": "match",
+        "steps": 196,
+        "outcome": null,
+        "final_hash": "3f153b2fc3f29341b956c7e84956e4438741095e33b890d8794d0b1cb205e1da",
+        "seconds": 6.7511567089241,
+        "wire.jsonl_sha256": "6a6365cf5bd399577e2bd8ae7abfee4dff0e44a68906d02e47db5c3597ec36db",
+        "engine.stderr.log_sha256": "4caa8c5cc9f66d05aa6f36ecbce3bcba4da90b87ff819cfbcac42df858eab39f",
+        "trace_path": "artifacts/runs/a11d65b7-4ce0-477e-a776-7cc188d8c884/decisions.jsonl",
+        "trace_sha256": "163ef9299c709f8decddb58ce16076ea5b1120f78d7478e1b118ae1d4112d421"
+      }
+    },
+    {
+      "case": "E165-A5-000-act1-floor17-applicable",
+      "root": "E165-A5-000-act1-floor17",
+      "seed": "e165_hybrid_Ironclad_A5_000",
+      "arm": "applicable",
+      "status": "clear",
+      "steps": 31,
+      "potion_uses": [
+        {
+          "state_hash": "7cbd4a5cdbcf35094162f28a7647b7d8d25e83f9ff9da63a9bc0ab75bc633f80",
+          "round": 1,
+          "potion_id": "CURE_ALL",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        },
+        {
+          "state_hash": "1757d0454ae963efdf01c3c73ab924f3bce998efd46a1b3301baaf9172e24aca",
+          "round": 1,
+          "potion_id": "WEAK_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0,
+              "target_index": 0
+            }
+          }
+        }
+      ],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 165,
+      "hp": 36,
+      "potions": [],
+      "final_hash": "3f153b2fc3f29341b956c7e84956e4438741095e33b890d8794d0b1cb205e1da",
+      "transition_hash": "47018a5f6ca95b4a2c167c8b2c545b62099566381db51271925ca39e7b011152",
+      "original_final_match": true,
+      "seconds": 6.845399375073612,
+      "wire.jsonl_sha256": "343028500bad87b7bdb4c025ca096647cda094e44fd905cb185771b69f6f6719",
+      "engine.stderr.log_sha256": "4caa8c5cc9f66d05aa6f36ecbce3bcba4da90b87ff819cfbcac42df858eab39f",
+      "trace_path": "artifacts/runs/c063434d-4cdc-45f7-bbf9-a09bc81065ec/decisions.jsonl",
+      "trace_sha256": "62ef96f683cb0e7bc02e7f0d636c7272670cb82d9723511d11428231595af75c",
+      "verification": {
+        "case": "E165-A5-000-act1-floor17-applicable",
+        "status": "match",
+        "steps": 196,
+        "outcome": null,
+        "final_hash": "3f153b2fc3f29341b956c7e84956e4438741095e33b890d8794d0b1cb205e1da",
+        "seconds": 6.750339916907251,
+        "wire.jsonl_sha256": "b81dc8afb4a330e18ba85d0be90935ea9f47e01b5cf459b51ea87a595f795914",
+        "engine.stderr.log_sha256": "4caa8c5cc9f66d05aa6f36ecbce3bcba4da90b87ff819cfbcac42df858eab39f",
+        "trace_path": "artifacts/runs/ba54d818-d294-4dfe-92b9-e2206cd6f383/decisions.jsonl",
+        "trace_sha256": "dac02ebf59a86159e7231e2896afd7c07479df4f2b1cdef0bbdd112632402bc8"
+      }
+    },
+    {
+      "case": "E165-A5-000-act1-floor17-combined",
+      "root": "E165-A5-000-act1-floor17",
+      "seed": "e165_hybrid_Ironclad_A5_000",
+      "arm": "combined",
+      "status": "clear",
+      "steps": 31,
+      "potion_uses": [
+        {
+          "state_hash": "7cbd4a5cdbcf35094162f28a7647b7d8d25e83f9ff9da63a9bc0ab75bc633f80",
+          "round": 1,
+          "potion_id": "CURE_ALL",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0
+            }
+          }
+        },
+        {
+          "state_hash": "1757d0454ae963efdf01c3c73ab924f3bce998efd46a1b3301baaf9172e24aca",
+          "round": 1,
+          "potion_id": "WEAK_POTION",
+          "action": {
+            "cmd": "action",
+            "action": "use_potion",
+            "args": {
+              "potion_index": 0,
+              "target_index": 0
+            }
+          }
+        }
+      ],
+      "deferred": {},
+      "illegal_actions": 0,
+      "reservation_violations": 0,
+      "prefix_commands_verified": 165,
+      "hp": 36,
+      "potions": [],
+      "final_hash": "3f153b2fc3f29341b956c7e84956e4438741095e33b890d8794d0b1cb205e1da",
+      "transition_hash": "47018a5f6ca95b4a2c167c8b2c545b62099566381db51271925ca39e7b011152",
+      "original_final_match": true,
+      "seconds": 6.881883125053719,
+      "wire.jsonl_sha256": "8c82adfc746e1c949ae08de5f1373ac7b793d67f7c63bb6afa8da3fd784e78e0",
+      "engine.stderr.log_sha256": "4caa8c5cc9f66d05aa6f36ecbce3bcba4da90b87ff819cfbcac42df858eab39f",
+      "trace_path": "artifacts/runs/2c30eb70-4a1c-4b82-a567-36c86f037209/decisions.jsonl",
+      "trace_sha256": "ea09f88b117999ecfc932b52c82f717c8c7e8ee4ce91a3658151a8e8512668cc",
+      "verification": {
+        "case": "E165-A5-000-act1-floor17-combined",
+        "status": "match",
+        "steps": 196,
+        "outcome": null,
+        "final_hash": "3f153b2fc3f29341b956c7e84956e4438741095e33b890d8794d0b1cb205e1da",
+        "seconds": 6.7622935408726335,
+        "wire.jsonl_sha256": "26fb6c3e502620961169a0f94c3c64223e2997f7a4c9be6510c1b475ba89beea",
+        "engine.stderr.log_sha256": "4caa8c5cc9f66d05aa6f36ecbce3bcba4da90b87ff819cfbcac42df858eab39f",
+        "trace_path": "artifacts/runs/49c5eb5f-8fb8-4fce-9e96-c3a6584ad22e/decisions.jsonl",
+        "trace_sha256": "2855d7d351a1a816a77537845402807b9112125dda81bb6cb770b6af249319c8"
+      }
+    }
+  ],
+  "diagnosis": [
+    {
+      "state_hash": "c0a68384b4bde472013373d12d962c1ed8ca7241b8fdc226111cdfdcad83557e",
+      "potion_id": "ATTACK_POTION",
+      "round": 1,
+      "context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 5,
+        "room_type": "Monster",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "defer_reason": null
+    },
+    {
+      "state_hash": "59e0c581b52d08671a7ee9fd071c2de5546d697680c7cb81fc2d71748f5f65ab",
+      "potion_id": "HEART_OF_IRON",
+      "round": 1,
+      "context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "defer_reason": null
+    },
+    {
+      "state_hash": "485df4fadabb6ea9f85aee2ce8a7e406002de8275b2a96c081db9763d2838df0",
+      "potion_id": "BLOCK_POTION",
+      "round": 1,
+      "context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "defer_reason": "finish_cards_before_block"
+    },
+    {
+      "state_hash": "bb8debfbc60b7f44cecb711b7d69ccb0ca2dbce080c225b5783519a5e8115f0d",
+      "potion_id": "VULNERABLE_POTION",
+      "round": 1,
+      "context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "defer_reason": null
+    },
+    {
+      "state_hash": "a68dbf559abb4cbf490455fb3f2b85f0dab2f3bcd164211493e19272beaea56e",
+      "potion_id": "POWER_POTION",
+      "round": 1,
+      "context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 16,
+        "room_type": "Boss",
+        "boss": {
+          "id": "KNOWLEDGE_DEMON_BOSS",
+          "name": "Knowledge Demon"
+        }
+      },
+      "defer_reason": null
+    },
+    {
+      "state_hash": "c6f5524ad0dfcd148c0ed96128527c14ff2de4fb315e42e7541afbcafc3f660b",
+      "potion_id": "REGEN_POTION",
+      "round": 1,
+      "context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 16,
+        "room_type": "Boss",
+        "boss": {
+          "id": "KNOWLEDGE_DEMON_BOSS",
+          "name": "Knowledge Demon"
+        }
+      },
+      "defer_reason": null
+    },
+    {
+      "state_hash": "d263654a2439bbc82a188e18186fe1c16c68a51e3d437cdd89d54fa000db4043",
+      "potion_id": "SNECKO_OIL",
+      "round": 1,
+      "context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 16,
+        "room_type": "Boss",
+        "boss": {
+          "id": "KNOWLEDGE_DEMON_BOSS",
+          "name": "Knowledge Demon"
+        }
+      },
+      "defer_reason": "unverified_hand_transformation"
+    },
+    {
+      "state_hash": "2c555427d2680deae7757861bed3727bcfc9499da71da96fee7a8feb9c8af573",
+      "potion_id": "BLOCK_POTION",
+      "round": 1,
+      "context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 16,
+        "room_type": "Boss",
+        "boss": {
+          "id": "KNOWLEDGE_DEMON_BOSS",
+          "name": "Knowledge Demon"
+        }
+      },
+      "defer_reason": "finish_cards_before_block"
+    },
+    {
+      "state_hash": "03cd51212c8ab98f964311d2bd24577c9bd66ed39c098407cb875ced61f23729",
+      "potion_id": "ASHWATER",
+      "round": 1,
+      "context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 16,
+        "room_type": "Boss",
+        "boss": {
+          "id": "KNOWLEDGE_DEMON_BOSS",
+          "name": "Knowledge Demon"
+        }
+      },
+      "defer_reason": "unverified_hand_transformation"
+    },
+    {
+      "state_hash": "973b2fbd8f3931ef33cf16af5ba41d08734e301d71dfb9b2f00a801a3cadcf3b",
+      "potion_id": "FIRE_POTION",
+      "round": 1,
+      "context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 16,
+        "room_type": "Boss",
+        "boss": {
+          "id": "KNOWLEDGE_DEMON_BOSS",
+          "name": "Knowledge Demon"
+        }
+      },
+      "defer_reason": null
+    },
+    {
+      "state_hash": "3fffeb8d1450d98b03e949c9417d467cc5095019447ea99f1508b153f9008dee",
+      "potion_id": "VULNERABLE_POTION",
+      "round": 1,
+      "context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 16,
+        "room_type": "Boss",
+        "boss": {
+          "id": "KNOWLEDGE_DEMON_BOSS",
+          "name": "Knowledge Demon"
+        }
+      },
+      "defer_reason": null
+    },
+    {
+      "state_hash": "7cbd4a5cdbcf35094162f28a7647b7d8d25e83f9ff9da63a9bc0ab75bc633f80",
+      "potion_id": "CURE_ALL",
+      "round": 1,
+      "context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "defer_reason": null
+    },
+    {
+      "state_hash": "1757d0454ae963efdf01c3c73ab924f3bce998efd46a1b3301baaf9172e24aca",
+      "potion_id": "WEAK_POTION",
+      "round": 1,
+      "context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "defer_reason": null
+    }
+  ],
+  "comparisons": [
+    {
+      "baseline": "legacy",
+      "treatment": "typed",
+      "rows": [
+        {
+          "case": "E160-A0-000-act1-floor17",
+          "seed": "e160_campaign_Ironclad_A0_000",
+          "baseline": [
+            "clear",
+            51,
+            []
+          ],
+          "treatment": [
+            "clear",
+            51,
+            []
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        },
+        {
+          "case": "E160-A0-000-act2-floor2",
+          "seed": "e160_campaign_Ironclad_A0_000",
+          "baseline": [
+            "clear",
+            80,
+            []
+          ],
+          "treatment": [
+            "clear",
+            80,
+            []
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        },
+        {
+          "case": "E160-A0-000-act2-floor3",
+          "seed": "e160_campaign_Ironclad_A0_000",
+          "baseline": [
+            "clear",
+            80,
+            []
+          ],
+          "treatment": [
+            "clear",
+            80,
+            []
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        },
+        {
+          "case": "E160-A0-000-act2-floor6",
+          "seed": "e160_campaign_Ironclad_A0_000",
+          "baseline": [
+            "clear",
+            69,
+            [
+              "MAZALETHS_GIFT",
+              "FIRE_POTION"
+            ]
+          ],
+          "treatment": [
+            "clear",
+            69,
+            [
+              "MAZALETHS_GIFT",
+              "FIRE_POTION"
+            ]
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        },
+        {
+          "case": "E160-A0-000-act2-floor7",
+          "seed": "e160_campaign_Ironclad_A0_000",
+          "baseline": [
+            "clear",
+            65,
+            [
+              "MAZALETHS_GIFT",
+              "FIRE_POTION"
+            ]
+          ],
+          "treatment": [
+            "clear",
+            65,
+            [
+              "MAZALETHS_GIFT",
+              "FIRE_POTION"
+            ]
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        },
+        {
+          "case": "E160-A0-001-act1-floor17",
+          "seed": "e160_campaign_Ironclad_A0_001",
+          "baseline": [
+            "clear",
+            43,
+            []
+          ],
+          "treatment": [
+            "clear",
+            43,
+            []
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        },
+        {
+          "case": "E160-A0-001-act2-floor2",
+          "seed": "e160_campaign_Ironclad_A0_001",
+          "baseline": [
+            "clear",
+            68,
+            []
+          ],
+          "treatment": [
+            "clear",
+            68,
+            []
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        },
+        {
+          "case": "E160-A0-001-act2-floor3",
+          "seed": "e160_campaign_Ironclad_A0_001",
+          "baseline": [
+            "clear",
+            73,
+            []
+          ],
+          "treatment": [
+            "clear",
+            73,
+            []
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        },
+        {
+          "case": "E160-A0-001-act2-floor5",
+          "seed": "e160_campaign_Ironclad_A0_001",
+          "baseline": [
+            "clear",
+            60,
+            [
+              "FYSH_OIL",
+              "ENERGY_POTION"
+            ]
+          ],
+          "treatment": [
+            "clear",
+            60,
+            [
+              "FYSH_OIL",
+              "ENERGY_POTION"
+            ]
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        },
+        {
+          "case": "E160-A5-000-act1-floor17",
+          "seed": "e160_campaign_Ironclad_A5_000",
+          "baseline": [
+            "clear",
+            62,
+            []
+          ],
+          "treatment": [
+            "clear",
+            62,
+            []
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        },
+        {
+          "case": "E160-A5-000-act2-floor2",
+          "seed": "e160_campaign_Ironclad_A5_000",
+          "baseline": [
+            "clear",
+            80,
+            [
+              "ASHWATER"
+            ]
+          ],
+          "treatment": [
+            "clear",
+            80,
+            [
+              "ASHWATER"
+            ]
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        },
+        {
+          "case": "E160-A5-000-act2-floor3",
+          "seed": "e160_campaign_Ironclad_A5_000",
+          "baseline": [
+            "clear",
+            67,
+            [
+              "ASHWATER",
+              "DEXTERITY_POTION"
+            ]
+          ],
+          "treatment": [
+            "clear",
+            67,
+            [
+              "ASHWATER",
+              "DEXTERITY_POTION"
+            ]
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        },
+        {
+          "case": "E160-A5-000-act2-floor6",
+          "seed": "e160_campaign_Ironclad_A5_000",
+          "baseline": [
+            "clear",
+            56,
+            [
+              "DEXTERITY_POTION"
+            ]
+          ],
+          "treatment": [
+            "clear",
+            56,
+            [
+              "DEXTERITY_POTION"
+            ]
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        },
+        {
+          "case": "E160-A5-000-act2-floor11",
+          "seed": "e160_campaign_Ironclad_A5_000",
+          "baseline": [
+            "clear",
+            16,
+            []
+          ],
+          "treatment": [
+            "clear",
+            16,
+            []
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        },
+        {
+          "case": "E160-A5-001-act1-floor17",
+          "seed": "e160_campaign_Ironclad_A5_001",
+          "baseline": [
+            "clear",
+            28,
+            []
+          ],
+          "treatment": [
+            "clear",
+            28,
+            []
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        },
+        {
+          "case": "E165-A0-000-act1-floor17",
+          "seed": "e165_hybrid_Ironclad_A0_000",
+          "baseline": [
+            "clear",
+            39,
+            []
+          ],
+          "treatment": [
+            "clear",
+            39,
+            []
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        },
+        {
+          "case": "E165-A0-000-act2-floor16",
+          "seed": "e165_hybrid_Ironclad_A0_000",
+          "baseline": [
+            "defeat",
+            0,
+            []
+          ],
+          "treatment": [
+            "clear",
+            33,
+            []
+          ],
+          "hp_delta": 33,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": true,
+          "transition_equal": false
+        },
+        {
+          "case": "E165-A5-000-act1-floor17",
+          "seed": "e165_hybrid_Ironclad_A5_000",
+          "baseline": [
+            "clear",
+            36,
+            []
+          ],
+          "treatment": [
+            "clear",
+            36,
+            []
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        }
+      ],
+      "improved_seeds": [
+        "e165_hybrid_Ironclad_A0_000"
+      ],
+      "total_hp_delta": 33,
+      "total_potion_count_delta": 0,
+      "outcome_gate": false
+    },
+    {
+      "baseline": "legacy",
+      "treatment": "applicable",
+      "rows": [
+        {
+          "case": "E160-A0-000-act1-floor17",
+          "seed": "e160_campaign_Ironclad_A0_000",
+          "baseline": [
+            "clear",
+            51,
+            []
+          ],
+          "treatment": [
+            "clear",
+            51,
+            []
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        },
+        {
+          "case": "E160-A0-000-act2-floor2",
+          "seed": "e160_campaign_Ironclad_A0_000",
+          "baseline": [
+            "clear",
+            80,
+            []
+          ],
+          "treatment": [
+            "clear",
+            80,
+            []
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        },
+        {
+          "case": "E160-A0-000-act2-floor3",
+          "seed": "e160_campaign_Ironclad_A0_000",
+          "baseline": [
+            "clear",
+            80,
+            []
+          ],
+          "treatment": [
+            "clear",
+            80,
+            []
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        },
+        {
+          "case": "E160-A0-000-act2-floor6",
+          "seed": "e160_campaign_Ironclad_A0_000",
+          "baseline": [
+            "clear",
+            69,
+            [
+              "MAZALETHS_GIFT",
+              "FIRE_POTION"
+            ]
+          ],
+          "treatment": [
+            "clear",
+            69,
+            [
+              "MAZALETHS_GIFT",
+              "FIRE_POTION"
+            ]
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        },
+        {
+          "case": "E160-A0-000-act2-floor7",
+          "seed": "e160_campaign_Ironclad_A0_000",
+          "baseline": [
+            "clear",
+            65,
+            [
+              "MAZALETHS_GIFT",
+              "FIRE_POTION"
+            ]
+          ],
+          "treatment": [
+            "clear",
+            65,
+            [
+              "MAZALETHS_GIFT",
+              "FIRE_POTION"
+            ]
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        },
+        {
+          "case": "E160-A0-001-act1-floor17",
+          "seed": "e160_campaign_Ironclad_A0_001",
+          "baseline": [
+            "clear",
+            43,
+            []
+          ],
+          "treatment": [
+            "clear",
+            43,
+            []
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        },
+        {
+          "case": "E160-A0-001-act2-floor2",
+          "seed": "e160_campaign_Ironclad_A0_001",
+          "baseline": [
+            "clear",
+            68,
+            []
+          ],
+          "treatment": [
+            "clear",
+            68,
+            []
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        },
+        {
+          "case": "E160-A0-001-act2-floor3",
+          "seed": "e160_campaign_Ironclad_A0_001",
+          "baseline": [
+            "clear",
+            73,
+            []
+          ],
+          "treatment": [
+            "clear",
+            73,
+            []
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        },
+        {
+          "case": "E160-A0-001-act2-floor5",
+          "seed": "e160_campaign_Ironclad_A0_001",
+          "baseline": [
+            "clear",
+            60,
+            [
+              "FYSH_OIL",
+              "ENERGY_POTION"
+            ]
+          ],
+          "treatment": [
+            "clear",
+            72,
+            [
+              "FYSH_OIL",
+              "ENERGY_POTION"
+            ]
+          ],
+          "hp_delta": 12,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": true,
+          "transition_equal": false
+        },
+        {
+          "case": "E160-A5-000-act1-floor17",
+          "seed": "e160_campaign_Ironclad_A5_000",
+          "baseline": [
+            "clear",
+            62,
+            []
+          ],
+          "treatment": [
+            "clear",
+            62,
+            []
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        },
+        {
+          "case": "E160-A5-000-act2-floor2",
+          "seed": "e160_campaign_Ironclad_A5_000",
+          "baseline": [
+            "clear",
+            80,
+            [
+              "ASHWATER"
+            ]
+          ],
+          "treatment": [
+            "clear",
+            80,
+            [
+              "ASHWATER"
+            ]
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        },
+        {
+          "case": "E160-A5-000-act2-floor3",
+          "seed": "e160_campaign_Ironclad_A5_000",
+          "baseline": [
+            "clear",
+            67,
+            [
+              "ASHWATER",
+              "DEXTERITY_POTION"
+            ]
+          ],
+          "treatment": [
+            "clear",
+            67,
+            [
+              "ASHWATER",
+              "DEXTERITY_POTION"
+            ]
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        },
+        {
+          "case": "E160-A5-000-act2-floor6",
+          "seed": "e160_campaign_Ironclad_A5_000",
+          "baseline": [
+            "clear",
+            56,
+            [
+              "DEXTERITY_POTION"
+            ]
+          ],
+          "treatment": [
+            "clear",
+            56,
+            [
+              "DEXTERITY_POTION"
+            ]
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        },
+        {
+          "case": "E160-A5-000-act2-floor11",
+          "seed": "e160_campaign_Ironclad_A5_000",
+          "baseline": [
+            "clear",
+            16,
+            []
+          ],
+          "treatment": [
+            "clear",
+            16,
+            []
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        },
+        {
+          "case": "E160-A5-001-act1-floor17",
+          "seed": "e160_campaign_Ironclad_A5_001",
+          "baseline": [
+            "clear",
+            28,
+            []
+          ],
+          "treatment": [
+            "clear",
+            28,
+            []
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        },
+        {
+          "case": "E165-A0-000-act1-floor17",
+          "seed": "e165_hybrid_Ironclad_A0_000",
+          "baseline": [
+            "clear",
+            39,
+            []
+          ],
+          "treatment": [
+            "clear",
+            39,
+            []
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": false
+        },
+        {
+          "case": "E165-A0-000-act2-floor16",
+          "seed": "e165_hybrid_Ironclad_A0_000",
+          "baseline": [
+            "defeat",
+            0,
+            []
+          ],
+          "treatment": [
+            "clear",
+            80,
+            [
+              "SNECKO_OIL",
+              "ASHWATER"
+            ]
+          ],
+          "hp_delta": 80,
+          "potion_count_delta": 2,
+          "lost_clear": false,
+          "pareto_improved": true,
+          "transition_equal": false
+        },
+        {
+          "case": "E165-A5-000-act1-floor17",
+          "seed": "e165_hybrid_Ironclad_A5_000",
+          "baseline": [
+            "clear",
+            36,
+            []
+          ],
+          "treatment": [
+            "clear",
+            36,
+            []
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        }
+      ],
+      "improved_seeds": [
+        "e160_campaign_Ironclad_A0_001",
+        "e165_hybrid_Ironclad_A0_000"
+      ],
+      "total_hp_delta": 92,
+      "total_potion_count_delta": 2,
+      "outcome_gate": true
+    },
+    {
+      "baseline": "typed",
+      "treatment": "combined",
+      "rows": [
+        {
+          "case": "E160-A0-000-act1-floor17",
+          "seed": "e160_campaign_Ironclad_A0_000",
+          "baseline": [
+            "clear",
+            51,
+            []
+          ],
+          "treatment": [
+            "clear",
+            51,
+            []
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        },
+        {
+          "case": "E160-A0-000-act2-floor2",
+          "seed": "e160_campaign_Ironclad_A0_000",
+          "baseline": [
+            "clear",
+            80,
+            []
+          ],
+          "treatment": [
+            "clear",
+            80,
+            []
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        },
+        {
+          "case": "E160-A0-000-act2-floor3",
+          "seed": "e160_campaign_Ironclad_A0_000",
+          "baseline": [
+            "clear",
+            80,
+            []
+          ],
+          "treatment": [
+            "clear",
+            80,
+            []
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        },
+        {
+          "case": "E160-A0-000-act2-floor6",
+          "seed": "e160_campaign_Ironclad_A0_000",
+          "baseline": [
+            "clear",
+            69,
+            [
+              "MAZALETHS_GIFT",
+              "FIRE_POTION"
+            ]
+          ],
+          "treatment": [
+            "clear",
+            69,
+            [
+              "MAZALETHS_GIFT",
+              "FIRE_POTION"
+            ]
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        },
+        {
+          "case": "E160-A0-000-act2-floor7",
+          "seed": "e160_campaign_Ironclad_A0_000",
+          "baseline": [
+            "clear",
+            65,
+            [
+              "MAZALETHS_GIFT",
+              "FIRE_POTION"
+            ]
+          ],
+          "treatment": [
+            "clear",
+            65,
+            [
+              "MAZALETHS_GIFT",
+              "FIRE_POTION"
+            ]
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        },
+        {
+          "case": "E160-A0-001-act1-floor17",
+          "seed": "e160_campaign_Ironclad_A0_001",
+          "baseline": [
+            "clear",
+            43,
+            []
+          ],
+          "treatment": [
+            "clear",
+            43,
+            []
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        },
+        {
+          "case": "E160-A0-001-act2-floor2",
+          "seed": "e160_campaign_Ironclad_A0_001",
+          "baseline": [
+            "clear",
+            68,
+            []
+          ],
+          "treatment": [
+            "clear",
+            68,
+            []
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        },
+        {
+          "case": "E160-A0-001-act2-floor3",
+          "seed": "e160_campaign_Ironclad_A0_001",
+          "baseline": [
+            "clear",
+            73,
+            []
+          ],
+          "treatment": [
+            "clear",
+            73,
+            []
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        },
+        {
+          "case": "E160-A0-001-act2-floor5",
+          "seed": "e160_campaign_Ironclad_A0_001",
+          "baseline": [
+            "clear",
+            60,
+            [
+              "FYSH_OIL",
+              "ENERGY_POTION"
+            ]
+          ],
+          "treatment": [
+            "clear",
+            72,
+            [
+              "FYSH_OIL",
+              "ENERGY_POTION"
+            ]
+          ],
+          "hp_delta": 12,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": true,
+          "transition_equal": false
+        },
+        {
+          "case": "E160-A5-000-act1-floor17",
+          "seed": "e160_campaign_Ironclad_A5_000",
+          "baseline": [
+            "clear",
+            62,
+            []
+          ],
+          "treatment": [
+            "clear",
+            62,
+            []
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        },
+        {
+          "case": "E160-A5-000-act2-floor2",
+          "seed": "e160_campaign_Ironclad_A5_000",
+          "baseline": [
+            "clear",
+            80,
+            [
+              "ASHWATER"
+            ]
+          ],
+          "treatment": [
+            "clear",
+            80,
+            [
+              "ASHWATER"
+            ]
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        },
+        {
+          "case": "E160-A5-000-act2-floor3",
+          "seed": "e160_campaign_Ironclad_A5_000",
+          "baseline": [
+            "clear",
+            67,
+            [
+              "ASHWATER",
+              "DEXTERITY_POTION"
+            ]
+          ],
+          "treatment": [
+            "clear",
+            67,
+            [
+              "ASHWATER",
+              "DEXTERITY_POTION"
+            ]
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        },
+        {
+          "case": "E160-A5-000-act2-floor6",
+          "seed": "e160_campaign_Ironclad_A5_000",
+          "baseline": [
+            "clear",
+            56,
+            [
+              "DEXTERITY_POTION"
+            ]
+          ],
+          "treatment": [
+            "clear",
+            56,
+            [
+              "DEXTERITY_POTION"
+            ]
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        },
+        {
+          "case": "E160-A5-000-act2-floor11",
+          "seed": "e160_campaign_Ironclad_A5_000",
+          "baseline": [
+            "clear",
+            16,
+            []
+          ],
+          "treatment": [
+            "clear",
+            16,
+            []
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        },
+        {
+          "case": "E160-A5-001-act1-floor17",
+          "seed": "e160_campaign_Ironclad_A5_001",
+          "baseline": [
+            "clear",
+            28,
+            []
+          ],
+          "treatment": [
+            "clear",
+            28,
+            []
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        },
+        {
+          "case": "E165-A0-000-act1-floor17",
+          "seed": "e165_hybrid_Ironclad_A0_000",
+          "baseline": [
+            "clear",
+            39,
+            []
+          ],
+          "treatment": [
+            "clear",
+            39,
+            []
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": false
+        },
+        {
+          "case": "E165-A0-000-act2-floor16",
+          "seed": "e165_hybrid_Ironclad_A0_000",
+          "baseline": [
+            "clear",
+            33,
+            []
+          ],
+          "treatment": [
+            "clear",
+            80,
+            [
+              "SNECKO_OIL",
+              "ASHWATER"
+            ]
+          ],
+          "hp_delta": 47,
+          "potion_count_delta": 2,
+          "lost_clear": false,
+          "pareto_improved": true,
+          "transition_equal": false
+        },
+        {
+          "case": "E165-A5-000-act1-floor17",
+          "seed": "e165_hybrid_Ironclad_A5_000",
+          "baseline": [
+            "clear",
+            36,
+            []
+          ],
+          "treatment": [
+            "clear",
+            36,
+            []
+          ],
+          "hp_delta": 0,
+          "potion_count_delta": 0,
+          "lost_clear": false,
+          "pareto_improved": false,
+          "transition_equal": true
+        }
+      ],
+      "improved_seeds": [
+        "e160_campaign_Ironclad_A0_001",
+        "e165_hybrid_Ironclad_A0_000"
+      ],
+      "total_hp_delta": 59,
+      "total_potion_count_delta": 2,
+      "outcome_gate": true
+    }
+  ],
+  "raw_audit": {
+    "raw_traces": 144,
+    "failures": [],
+    "pass": true
+  },
+  "integrity_pass": true,
+  "local_gate": true,
+  "default_promotion": false,
+  "seconds": 296.27290945802815,
+  "model_api_calls": 0,
+  "full_runs_evaluated": 0
+}

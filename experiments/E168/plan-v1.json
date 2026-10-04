@@ -1,0 +1,1761 @@
+{
+  "manifest": {
+    "schema_version": 2,
+    "code_commit": "23bbf127791b411be3bd902e9d95e8855387e9b6",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "a32485ef4c34641acc26f0c85454ba767bd4b06c4c06258e59baa26b5a72b54f",
+    "godot_stubs_sha256": "2bb3b99863f651decb27cf3ceead489046808e60d95ccbc28048ad094ecc856a",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+      "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772",
+      "headless-zzzzzz-godot-abi.patch": "5239d3836d279de5143f7d56bece1f061c6c4002de696fce28f9f7f3922ededc",
+      "headless-zzzzzzz-learning-observations.patch": "d51db8457fdb9348340a829c84fa77e9620c476ba16a7c6e224b286ecb2dfd07",
+      "headless-zzzzzzzz-encounter-abi.patch": "e4a730f9e58fddebef8ef924fcd8d0adc03d72d1148f8d29b2f9ea60556696cc",
+      "headless-zzzzzzzzz-native-map-odds.patch": "86ee5561968629b094a1f63e214f32e8a3ae7b5614fffcb470d52886287e1885"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4",
+    "experiment": "E168",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.5",
+    "model_calls": 0,
+    "model_cost_usd": 0,
+    "encoder": "e140-phase-context-v1",
+    "torch": "2.11.0",
+    "device": "cpu"
+  },
+  "sources": [
+    {
+      "path": "experiments/E160/evaluation-v1.json",
+      "sha256": "7d7d86a9c75b5b920a7f45fe3b4ea03a0782e575ca54b18ff657598263214564"
+    },
+    {
+      "path": "artifacts/runs/e165-evaluation-v1.json",
+      "sha256": "24b14f688ea64e30b701ca6659a085c3b1ca7243bd8645e52c27072bc21db190"
+    }
+  ],
+  "roots": [
+    {
+      "case": "E160-A0-000-act1-floor17",
+      "seed": "e160_campaign_Ironclad_A0_000",
+      "wire": {
+        "path": "artifacts/runs/b158cc80-513e-427d-95ae-3f318411ffb6/wire.jsonl",
+        "sha256": "55ff68f39f29172bae9545c3d29a05da8b9f890290eb5674e5ca4fb3c7e057b6"
+      },
+      "prefix_count": 137,
+      "entry_hash": "9bb52fbe6e3dec55ecd0ecf3e9f5662c3108117a4c0cb78c02ab0828adced5b1",
+      "expected_final_hash": "74b3452fa993bb3e638e1ef8af3eb9b9888e0dcd88476c6be4de37744040d9a1",
+      "expected_status": "clear",
+      "expected_hp": 51,
+      "reservations": [
+        {
+          "potion_id": "POWER_POTION",
+          "until": "Boss",
+          "release_hp_fraction": 0.35
+        }
+      ],
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 3,
+            "row": 16
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 3,
+          "row": 16,
+          "type": "Boss"
+        },
+        "id": "a000"
+      },
+      "context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "enemies": [
+        "Kin Follower",
+        "Kin Follower",
+        "Kin Priest"
+      ],
+      "entry_hp": 80
+    },
+    {
+      "case": "E160-A0-000-act2-floor2",
+      "seed": "e160_campaign_Ironclad_A0_000",
+      "wire": {
+        "path": "artifacts/runs/b158cc80-513e-427d-95ae-3f318411ffb6/wire.jsonl",
+        "sha256": "55ff68f39f29172bae9545c3d29a05da8b9f890290eb5674e5ca4fb3c7e057b6"
+      },
+      "prefix_count": 200,
+      "entry_hash": "d63d71e9ae0a65c3da39cf8a37b8eb91987c4c8cc36a7861291fbef4a4bf3f6d",
+      "expected_final_hash": "60199a77e6dd16fcc381e290251e837cc2541215f7292a80708f066fa3b29cfb",
+      "expected_status": "clear",
+      "expected_hp": 80,
+      "reservations": [],
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 3,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 3,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a001"
+      },
+      "context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 2,
+        "room_type": "Monster",
+        "boss": {
+          "id": "KAISER_CRAB_BOSS",
+          "name": "KAISER_CRAB.name"
+        }
+      },
+      "enemies": [
+        "Bowlbug (Rock)",
+        "Bowlbug (Nectar)"
+      ],
+      "entry_hp": 80
+    },
+    {
+      "case": "E160-A0-000-act2-floor3",
+      "seed": "e160_campaign_Ironclad_A0_000",
+      "wire": {
+        "path": "artifacts/runs/b158cc80-513e-427d-95ae-3f318411ffb6/wire.jsonl",
+        "sha256": "55ff68f39f29172bae9545c3d29a05da8b9f890290eb5674e5ca4fb3c7e057b6"
+      },
+      "prefix_count": 216,
+      "entry_hash": "6b39968c3bc9f1ad0e5cb00cbc41c5a8ac36852aa9db6a152dcbf93e3887e799",
+      "expected_final_hash": "8cd886eb8df82964c19e18ce3606c33eda99924e8a19a93cfd49f059dbac7ac0",
+      "expected_status": "clear",
+      "expected_hp": 80,
+      "reservations": [],
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 3,
+            "row": 2
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 3,
+          "row": 2,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 3,
+        "room_type": "Monster",
+        "boss": {
+          "id": "KAISER_CRAB_BOSS",
+          "name": "KAISER_CRAB.name"
+        }
+      },
+      "enemies": [
+        "Exoskeleton",
+        "Exoskeleton",
+        "Exoskeleton"
+      ],
+      "entry_hp": 80
+    },
+    {
+      "case": "E160-A0-000-act2-floor6",
+      "seed": "e160_campaign_Ironclad_A0_000",
+      "wire": {
+        "path": "artifacts/runs/b158cc80-513e-427d-95ae-3f318411ffb6/wire.jsonl",
+        "sha256": "55ff68f39f29172bae9545c3d29a05da8b9f890290eb5674e5ca4fb3c7e057b6"
+      },
+      "prefix_count": 241,
+      "entry_hash": "4210d09ad868c695bbc9e97037c7ed10b6dc2199c68e66425772a5cecb159d79",
+      "expected_final_hash": "7e430e4f1a40d95e385aa2839f66f3ab61fb657b279eb58a2af93275a2975e7c",
+      "expected_status": "clear",
+      "expected_hp": 69,
+      "reservations": [
+        {
+          "potion_id": "MAZALETHS_GIFT",
+          "until": "Boss",
+          "release_hp_fraction": 0.3
+        },
+        {
+          "potion_id": "FIRE_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.45
+        }
+      ],
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 5,
+            "row": 5
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 5,
+          "row": 5,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 6,
+        "room_type": "Monster",
+        "boss": {
+          "id": "KAISER_CRAB_BOSS",
+          "name": "KAISER_CRAB.name"
+        }
+      },
+      "enemies": [
+        "Bowlbug (Rock)",
+        "Bowlbug (Silk)",
+        "Bowlbug (Nectar)"
+      ],
+      "entry_hp": 76
+    },
+    {
+      "case": "E160-A0-000-act2-floor7",
+      "seed": "e160_campaign_Ironclad_A0_000",
+      "wire": {
+        "path": "artifacts/runs/b158cc80-513e-427d-95ae-3f318411ffb6/wire.jsonl",
+        "sha256": "55ff68f39f29172bae9545c3d29a05da8b9f890290eb5674e5ca4fb3c7e057b6"
+      },
+      "prefix_count": 269,
+      "entry_hash": "81c38421ec4b656aaf0f297f6d85443d28b4a0fcdc73ce2212e483ddc71a6079",
+      "expected_final_hash": "15c88a0f7c281e1131f71147edb61e8973ec4d7de944279c03c161463edda08d",
+      "expected_status": "clear",
+      "expected_hp": 65,
+      "reservations": [
+        {
+          "potion_id": "MAZALETHS_GIFT",
+          "until": "Boss",
+          "release_hp_fraction": 0.3
+        },
+        {
+          "potion_id": "FIRE_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.45
+        }
+      ],
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 4,
+            "row": 6
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 4,
+          "row": 6,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 7,
+        "room_type": "Monster",
+        "boss": {
+          "id": "KAISER_CRAB_BOSS",
+          "name": "KAISER_CRAB.name"
+        }
+      },
+      "enemies": [
+        "Myte",
+        "Myte"
+      ],
+      "entry_hp": 71
+    },
+    {
+      "case": "E160-A0-001-act1-floor17",
+      "seed": "e160_campaign_Ironclad_A0_001",
+      "wire": {
+        "path": "artifacts/runs/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/wire.jsonl",
+        "sha256": "e77ed0a7cea1357749745deff0c8217d2526364babbfa21a103e542f6a23ea70"
+      },
+      "prefix_count": 149,
+      "entry_hash": "1e1e93679c07b26f80759fd6d4f69388a286449bf8abf116c6a93363bce89f35",
+      "expected_final_hash": "d810863baf1768b866bd230952f471b47d1da936706e60703f3083ccd8ea4cae",
+      "expected_status": "clear",
+      "expected_hp": 43,
+      "reservations": [
+        {
+          "potion_id": "POWER_POTION",
+          "until": "Boss",
+          "release_hp_fraction": 0.35
+        }
+      ],
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 3,
+            "row": 16
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 3,
+          "row": 16,
+          "type": "Boss"
+        },
+        "id": "a000"
+      },
+      "context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "enemies": [
+        "Ceremonial Beast"
+      ],
+      "entry_hp": 80
+    },
+    {
+      "case": "E160-A0-001-act2-floor2",
+      "seed": "e160_campaign_Ironclad_A0_001",
+      "wire": {
+        "path": "artifacts/runs/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/wire.jsonl",
+        "sha256": "e77ed0a7cea1357749745deff0c8217d2526364babbfa21a103e542f6a23ea70"
+      },
+      "prefix_count": 185,
+      "entry_hash": "7b027ab962e51ce9e106ffe4474c34ed13ead5e5aee5b8e300b403d899002c2d",
+      "expected_final_hash": "becef6a0b020d2d2252f350e3a348d8d7e65f150cad9a2ec8c947fa058f0e1a5",
+      "expected_status": "clear",
+      "expected_hp": 68,
+      "reservations": [],
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 1,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 2,
+        "room_type": "Monster",
+        "boss": {
+          "id": "KNOWLEDGE_DEMON_BOSS",
+          "name": "Knowledge Demon"
+        }
+      },
+      "enemies": [
+        "Exoskeleton",
+        "Exoskeleton",
+        "Exoskeleton"
+      ],
+      "entry_hp": 80
+    },
+    {
+      "case": "E160-A0-001-act2-floor3",
+      "seed": "e160_campaign_Ironclad_A0_001",
+      "wire": {
+        "path": "artifacts/runs/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/wire.jsonl",
+        "sha256": "e77ed0a7cea1357749745deff0c8217d2526364babbfa21a103e542f6a23ea70"
+      },
+      "prefix_count": 206,
+      "entry_hash": "7d73f9ce564ecf3debf464e2add32225b36281f823838aae9ef6a884a761dc71",
+      "expected_final_hash": "a457fb62192146dd95951054abb25753b9df69bd5074860dc5486491e810f418",
+      "expected_status": "clear",
+      "expected_hp": 73,
+      "reservations": [],
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 2
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 1,
+          "row": 2,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 3,
+        "room_type": "Monster",
+        "boss": {
+          "id": "KNOWLEDGE_DEMON_BOSS",
+          "name": "Knowledge Demon"
+        }
+      },
+      "enemies": [
+        "Tunneler"
+      ],
+      "entry_hp": 68
+    },
+    {
+      "case": "E160-A0-001-act2-floor5",
+      "seed": "e160_campaign_Ironclad_A0_001",
+      "wire": {
+        "path": "artifacts/runs/ce56fcf0-19aa-4e6c-a8c2-251a638b16f9/wire.jsonl",
+        "sha256": "e77ed0a7cea1357749745deff0c8217d2526364babbfa21a103e542f6a23ea70"
+      },
+      "prefix_count": 229,
+      "entry_hash": "78f24a89f97195c9eb3cf42561dd63fef5606c4b9b94f5243181d7624b966ad9",
+      "expected_final_hash": "e6736add8952a423a79ed393072aac424a9c46b664e06b6f7bb8009a24061e8c",
+      "expected_status": "clear",
+      "expected_hp": 60,
+      "reservations": [
+        {
+          "potion_id": "FYSH_OIL",
+          "until": "Elite",
+          "release_hp_fraction": 0.45
+        },
+        {
+          "potion_id": "ENERGY_POTION",
+          "until": "Boss",
+          "release_hp_fraction": 0.4
+        }
+      ],
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 4
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 0,
+          "row": 4,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 5,
+        "room_type": "Monster",
+        "boss": {
+          "id": "KNOWLEDGE_DEMON_BOSS",
+          "name": "Knowledge Demon"
+        }
+      },
+      "enemies": [
+        "Louse Progenitor"
+      ],
+      "entry_hp": 73
+    },
+    {
+      "case": "E160-A5-000-act1-floor17",
+      "seed": "e160_campaign_Ironclad_A5_000",
+      "wire": {
+        "path": "artifacts/runs/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/wire.jsonl",
+        "sha256": "37e991266723c7e763050ca6fc8704feedefbaf3a9d991fc1fefd96b44a6d9ea"
+      },
+      "prefix_count": 173,
+      "entry_hash": "bb94e9d0294f2d2ecb02e0db31a000c6557a008cb19f058089d6053ce12d9b00",
+      "expected_final_hash": "5b3b7f14455777141c3730d2eb46b85fc92b44b1be1558524277d20bcb49e658",
+      "expected_status": "clear",
+      "expected_hp": 62,
+      "reservations": [
+        {
+          "potion_id": "STRENGTH_POTION",
+          "until": "Boss",
+          "release_hp_fraction": 0.4
+        },
+        {
+          "potion_id": "VULNERABLE_POTION",
+          "until": "Boss",
+          "release_hp_fraction": 0.4
+        }
+      ],
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 3,
+            "row": 16
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 3,
+          "row": 16,
+          "type": "Boss"
+        },
+        "id": "a000"
+      },
+      "context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "enemies": [
+        "Ceremonial Beast"
+      ],
+      "entry_hp": 70
+    },
+    {
+      "case": "E160-A5-000-act2-floor2",
+      "seed": "e160_campaign_Ironclad_A5_000",
+      "wire": {
+        "path": "artifacts/runs/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/wire.jsonl",
+        "sha256": "37e991266723c7e763050ca6fc8704feedefbaf3a9d991fc1fefd96b44a6d9ea"
+      },
+      "prefix_count": 198,
+      "entry_hash": "e38fb0ecbf70564d36cbe4ac93041455326f68ea9da7b2a19490fb61943ab850",
+      "expected_final_hash": "156c9d8babdb562eab39ec96d5e29b16917b9d5aa354e31549cfff4d4842c060",
+      "expected_status": "clear",
+      "expected_hp": 80,
+      "reservations": [
+        {
+          "potion_id": "ASHWATER",
+          "until": "Boss",
+          "release_hp_fraction": 0.4
+        }
+      ],
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 1,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 2,
+        "room_type": "Monster",
+        "boss": {
+          "id": "THE_INSATIABLE_BOSS",
+          "name": "The Insatiable"
+        }
+      },
+      "enemies": [
+        "Thieving Hopper"
+      ],
+      "entry_hp": 79
+    },
+    {
+      "case": "E160-A5-000-act2-floor3",
+      "seed": "e160_campaign_Ironclad_A5_000",
+      "wire": {
+        "path": "artifacts/runs/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/wire.jsonl",
+        "sha256": "37e991266723c7e763050ca6fc8704feedefbaf3a9d991fc1fefd96b44a6d9ea"
+      },
+      "prefix_count": 217,
+      "entry_hash": "386c2d0a0c4f9dbeaab5b9c3ba26ae75c4c3d6aa7a809ca6211f9e1b4603b2c1",
+      "expected_final_hash": "0b60b71b66304625d1bfc25af75c87a13d5810763285dc2fcbb21dbc0713ff04",
+      "expected_status": "clear",
+      "expected_hp": 67,
+      "reservations": [
+        {
+          "potion_id": "ASHWATER",
+          "until": "Boss",
+          "release_hp_fraction": 0.4
+        },
+        {
+          "potion_id": "DEXTERITY_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.4
+        }
+      ],
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 2
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 0,
+          "row": 2,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 3,
+        "room_type": "Monster",
+        "boss": {
+          "id": "THE_INSATIABLE_BOSS",
+          "name": "The Insatiable"
+        }
+      },
+      "enemies": [
+        "Bowlbug (Rock)",
+        "Bowlbug (Nectar)"
+      ],
+      "entry_hp": 80
+    },
+    {
+      "case": "E160-A5-000-act2-floor6",
+      "seed": "e160_campaign_Ironclad_A5_000",
+      "wire": {
+        "path": "artifacts/runs/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/wire.jsonl",
+        "sha256": "37e991266723c7e763050ca6fc8704feedefbaf3a9d991fc1fefd96b44a6d9ea"
+      },
+      "prefix_count": 245,
+      "entry_hash": "1447711bd5a967ab91b87a692a79aa6d4e8071099d09d6a1ea55ad406f14423e",
+      "expected_final_hash": "409d7f900adb73f590114347388e7fd02b76bb8b8b192a876ff08e6c6c6cfd5d",
+      "expected_status": "clear",
+      "expected_hp": 56,
+      "reservations": [
+        {
+          "potion_id": "DEXTERITY_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.4
+        }
+      ],
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 5
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 0,
+          "row": 5,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 6,
+        "room_type": "Monster",
+        "boss": {
+          "id": "THE_INSATIABLE_BOSS",
+          "name": "The Insatiable"
+        }
+      },
+      "enemies": [
+        "Hunter Killer"
+      ],
+      "entry_hp": 77
+    },
+    {
+      "case": "E160-A5-000-act2-floor11",
+      "seed": "e160_campaign_Ironclad_A5_000",
+      "wire": {
+        "path": "artifacts/runs/ae8d6342-5a5e-49ce-91fa-adce26ed5cbf/wire.jsonl",
+        "sha256": "37e991266723c7e763050ca6fc8704feedefbaf3a9d991fc1fefd96b44a6d9ea"
+      },
+      "prefix_count": 285,
+      "entry_hash": "32c94ddeb87aa3ded7cba4a55b288992f16e0ca9ca18b2d35966f974843e9121",
+      "expected_final_hash": "723127cb4151c80048bbf91acb45bf45269918caf90d66bb61844fbe2601e4ff",
+      "expected_status": "clear",
+      "expected_hp": 16,
+      "reservations": [
+        {
+          "potion_id": "DEXTERITY_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.4
+        }
+      ],
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 10
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 1,
+          "row": 10,
+          "type": "Unknown"
+        },
+        "id": "a000"
+      },
+      "context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 11,
+        "room_type": "Monster",
+        "boss": {
+          "id": "THE_INSATIABLE_BOSS",
+          "name": "The Insatiable"
+        }
+      },
+      "enemies": [
+        "The Obscura"
+      ],
+      "entry_hp": 83
+    },
+    {
+      "case": "E160-A5-001-act1-floor17",
+      "seed": "e160_campaign_Ironclad_A5_001",
+      "wire": {
+        "path": "artifacts/runs/9c4c8958-5af8-4970-9ebc-7fe483f3354b/wire.jsonl",
+        "sha256": "3368b2906d788599358d97b786914c33ecf7d2609c1680ea970935591a741345"
+      },
+      "prefix_count": 152,
+      "entry_hash": "2def68b45fa35cd56b7f11c7b9c1b9b32504e8992dc99b73e250d4ef57b89e8f",
+      "expected_final_hash": "ccb1abbd81e2a5151fa5db7d123bb0ad87a792859146ca171d045a852150f588",
+      "expected_status": "clear",
+      "expected_hp": 28,
+      "reservations": [
+        {
+          "potion_id": "ENERGY_POTION",
+          "until": "Boss",
+          "release_hp_fraction": 0.45
+        }
+      ],
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 3,
+            "row": 16
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 3,
+          "row": 16,
+          "type": "Boss"
+        },
+        "id": "a000"
+      },
+      "context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "enemies": [
+        "Vantom"
+      ],
+      "entry_hp": 94
+    },
+    {
+      "case": "E165-A0-000-act1-floor17",
+      "seed": "e165_hybrid_Ironclad_A0_000",
+      "wire": {
+        "path": "artifacts/runs/ea706bb8-2c06-4ae1-9d38-cd97c5e627d6/wire.jsonl",
+        "sha256": "08fd0841c42b8474c41f025d2616dc457ec62bb3e3d285769d5dcc688b38e22c"
+      },
+      "prefix_count": 141,
+      "entry_hash": "59e0c581b52d08671a7ee9fd071c2de5546d697680c7cb81fc2d71748f5f65ab",
+      "expected_final_hash": "29f4feb5e6d16a8eed0ffb70cc39a529af3a7b7d8cadf5fb3a6b82dc84144de3",
+      "expected_status": "clear",
+      "expected_hp": 39,
+      "reservations": [
+        {
+          "potion_id": "HEART_OF_IRON",
+          "until": "Elite",
+          "release_hp_fraction": 0.4
+        },
+        {
+          "potion_id": "BLOCK_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.5
+        },
+        {
+          "potion_id": "VULNERABLE_POTION",
+          "until": "Boss",
+          "release_hp_fraction": 0.45
+        }
+      ],
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 3,
+            "row": 16
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 3,
+          "row": 16,
+          "type": "Boss"
+        },
+        "id": "a000"
+      },
+      "context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "enemies": [
+        "Kin Follower",
+        "Kin Follower",
+        "Kin Priest"
+      ],
+      "entry_hp": 72
+    },
+    {
+      "case": "E165-A0-000-act2-floor16",
+      "seed": "e165_hybrid_Ironclad_A0_000",
+      "wire": {
+        "path": "artifacts/runs/ea706bb8-2c06-4ae1-9d38-cd97c5e627d6/wire.jsonl",
+        "sha256": "08fd0841c42b8474c41f025d2616dc457ec62bb3e3d285769d5dcc688b38e22c"
+      },
+      "prefix_count": 367,
+      "entry_hash": "a68dbf559abb4cbf490455fb3f2b85f0dab2f3bcd164211493e19272beaea56e",
+      "expected_final_hash": "29de2d9f91525d883b1061c7a1add8fe9c0098de59d78b18385a309980e83a03",
+      "expected_status": "defeat",
+      "expected_hp": 0,
+      "reservations": [
+        {
+          "potion_id": "BLOCK_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.5
+        },
+        {
+          "potion_id": "POWER_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.5
+        },
+        {
+          "potion_id": "VULNERABLE_POTION",
+          "until": "Boss",
+          "release_hp_fraction": 0.5
+        },
+        {
+          "potion_id": "ASHWATER",
+          "until": "Boss",
+          "release_hp_fraction": 0.25
+        },
+        {
+          "potion_id": "REGEN_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.5
+        },
+        {
+          "potion_id": "FIRE_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.5
+        },
+        {
+          "potion_id": "SNECKO_OIL",
+          "until": "Boss",
+          "release_hp_fraction": 0.25
+        }
+      ],
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 3,
+            "row": 15
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 3,
+          "row": 15,
+          "type": "Boss"
+        },
+        "id": "a000"
+      },
+      "context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 16,
+        "room_type": "Boss",
+        "boss": {
+          "id": "KNOWLEDGE_DEMON_BOSS",
+          "name": "Knowledge Demon"
+        }
+      },
+      "enemies": [
+        "Knowledge Demon"
+      ],
+      "entry_hp": 72
+    },
+    {
+      "case": "E165-A5-000-act1-floor17",
+      "seed": "e165_hybrid_Ironclad_A5_000",
+      "wire": {
+        "path": "artifacts/runs/cd9a5cb9-82d9-430e-ba29-05debd6f7974/wire.jsonl",
+        "sha256": "db7cb66c6c05c0782e4f3ce3cdc168b4af9815431853567bb87d4b763b92ccff"
+      },
+      "prefix_count": 165,
+      "entry_hash": "7cbd4a5cdbcf35094162f28a7647b7d8d25e83f9ff9da63a9bc0ab75bc633f80",
+      "expected_final_hash": "3f153b2fc3f29341b956c7e84956e4438741095e33b890d8794d0b1cb205e1da",
+      "expected_status": "clear",
+      "expected_hp": 36,
+      "reservations": [
+        {
+          "potion_id": "WEAK_POTION",
+          "until": "Boss",
+          "release_hp_fraction": 0.45
+        },
+        {
+          "potion_id": "CURE_ALL",
+          "until": "Boss",
+          "release_hp_fraction": 0.5
+        }
+      ],
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 3,
+            "row": 16
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 3,
+          "row": 16,
+          "type": "Boss"
+        },
+        "id": "a000"
+      },
+      "context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "enemies": [
+        "Vantom"
+      ],
+      "entry_hp": 80
+    }
+  ],
+  "e165_potion_states": [
+    {
+      "source": {
+        "path": "artifacts/runs/ea706bb8-2c06-4ae1-9d38-cd97c5e627d6/decisions.jsonl",
+        "sha256": "89e71e389987f2e85ef161ab2b22f08dcb224c2cd12db46ff8d06f7d86728c65"
+      },
+      "state_hash": "c0a68384b4bde472013373d12d962c1ed8ca7241b8fdc226111cdfdcad83557e",
+      "action": {
+        "cmd": "action",
+        "action": "use_potion",
+        "args": {
+          "potion_index": 1
+        }
+      },
+      "potion": {
+        "index": 1,
+        "name": "Attack Potion",
+        "description": "Choose 1 of 3 random Attack cards to add into your Hand. It's free to play this turn.",
+        "vars": null,
+        "target_type": "AnyPlayer",
+        "id": "ATTACK_POTION",
+        "slot_index": 1,
+        "usage": "CombatOnly",
+        "can_use": true,
+        "can_discard": true
+      },
+      "reservations": [
+        {
+          "potion_id": "HEART_OF_IRON",
+          "until": "Elite",
+          "release_hp_fraction": 0.4
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "artifacts/runs/ea706bb8-2c06-4ae1-9d38-cd97c5e627d6/decisions.jsonl",
+        "sha256": "89e71e389987f2e85ef161ab2b22f08dcb224c2cd12db46ff8d06f7d86728c65"
+      },
+      "state_hash": "59e0c581b52d08671a7ee9fd071c2de5546d697680c7cb81fc2d71748f5f65ab",
+      "action": {
+        "cmd": "action",
+        "action": "use_potion",
+        "args": {
+          "potion_index": 0
+        }
+      },
+      "potion": {
+        "index": 0,
+        "name": "Heart of Iron",
+        "description": "Gain {PlatingPower} Plating.",
+        "vars": {
+          "PlatingPower": 7
+        },
+        "target_type": "AnyPlayer",
+        "id": "HEART_OF_IRON",
+        "slot_index": 0,
+        "usage": "CombatOnly",
+        "can_use": true,
+        "can_discard": true
+      },
+      "reservations": [
+        {
+          "potion_id": "HEART_OF_IRON",
+          "until": "Elite",
+          "release_hp_fraction": 0.4
+        },
+        {
+          "potion_id": "BLOCK_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.5
+        },
+        {
+          "potion_id": "VULNERABLE_POTION",
+          "until": "Boss",
+          "release_hp_fraction": 0.45
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "artifacts/runs/ea706bb8-2c06-4ae1-9d38-cd97c5e627d6/decisions.jsonl",
+        "sha256": "89e71e389987f2e85ef161ab2b22f08dcb224c2cd12db46ff8d06f7d86728c65"
+      },
+      "state_hash": "485df4fadabb6ea9f85aee2ce8a7e406002de8275b2a96c081db9763d2838df0",
+      "action": {
+        "cmd": "action",
+        "action": "use_potion",
+        "args": {
+          "potion_index": 0
+        }
+      },
+      "potion": {
+        "index": 0,
+        "name": "Block Potion",
+        "description": "Gain {Block} Block.",
+        "vars": {
+          "Block": 12
+        },
+        "target_type": "AnyPlayer",
+        "id": "BLOCK_POTION",
+        "slot_index": 1,
+        "usage": "CombatOnly",
+        "can_use": true,
+        "can_discard": true
+      },
+      "reservations": [
+        {
+          "potion_id": "HEART_OF_IRON",
+          "until": "Elite",
+          "release_hp_fraction": 0.4
+        },
+        {
+          "potion_id": "BLOCK_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.5
+        },
+        {
+          "potion_id": "VULNERABLE_POTION",
+          "until": "Boss",
+          "release_hp_fraction": 0.45
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "artifacts/runs/ea706bb8-2c06-4ae1-9d38-cd97c5e627d6/decisions.jsonl",
+        "sha256": "89e71e389987f2e85ef161ab2b22f08dcb224c2cd12db46ff8d06f7d86728c65"
+      },
+      "state_hash": "bb8debfbc60b7f44cecb711b7d69ccb0ca2dbce080c225b5783519a5e8115f0d",
+      "action": {
+        "cmd": "action",
+        "action": "use_potion",
+        "args": {
+          "potion_index": 0,
+          "target_index": 0
+        }
+      },
+      "potion": {
+        "index": 0,
+        "name": "Vulnerable Potion",
+        "description": "Apply {VulnerablePower} Vulnerable.",
+        "vars": {
+          "VulnerablePower": 3
+        },
+        "target_type": "AnyEnemy",
+        "id": "VULNERABLE_POTION",
+        "slot_index": 2,
+        "usage": "CombatOnly",
+        "can_use": true,
+        "can_discard": true
+      },
+      "reservations": [
+        {
+          "potion_id": "HEART_OF_IRON",
+          "until": "Elite",
+          "release_hp_fraction": 0.4
+        },
+        {
+          "potion_id": "BLOCK_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.5
+        },
+        {
+          "potion_id": "VULNERABLE_POTION",
+          "until": "Boss",
+          "release_hp_fraction": 0.45
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "artifacts/runs/ea706bb8-2c06-4ae1-9d38-cd97c5e627d6/decisions.jsonl",
+        "sha256": "89e71e389987f2e85ef161ab2b22f08dcb224c2cd12db46ff8d06f7d86728c65"
+      },
+      "state_hash": "a68dbf559abb4cbf490455fb3f2b85f0dab2f3bcd164211493e19272beaea56e",
+      "action": {
+        "cmd": "action",
+        "action": "use_potion",
+        "args": {
+          "potion_index": 4
+        }
+      },
+      "potion": {
+        "index": 4,
+        "name": "Power Potion",
+        "description": "Choose 1 of 3 random Power cards to add into your Hand. It's free to play this turn.",
+        "vars": null,
+        "target_type": "AnyPlayer",
+        "id": "POWER_POTION",
+        "slot_index": 4,
+        "usage": "CombatOnly",
+        "can_use": true,
+        "can_discard": true
+      },
+      "reservations": [
+        {
+          "potion_id": "BLOCK_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.5
+        },
+        {
+          "potion_id": "POWER_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.5
+        },
+        {
+          "potion_id": "VULNERABLE_POTION",
+          "until": "Boss",
+          "release_hp_fraction": 0.5
+        },
+        {
+          "potion_id": "ASHWATER",
+          "until": "Boss",
+          "release_hp_fraction": 0.25
+        },
+        {
+          "potion_id": "REGEN_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.5
+        },
+        {
+          "potion_id": "FIRE_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.5
+        },
+        {
+          "potion_id": "SNECKO_OIL",
+          "until": "Boss",
+          "release_hp_fraction": 0.25
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "artifacts/runs/ea706bb8-2c06-4ae1-9d38-cd97c5e627d6/decisions.jsonl",
+        "sha256": "89e71e389987f2e85ef161ab2b22f08dcb224c2cd12db46ff8d06f7d86728c65"
+      },
+      "state_hash": "c6f5524ad0dfcd148c0ed96128527c14ff2de4fb315e42e7541afbcafc3f660b",
+      "action": {
+        "cmd": "action",
+        "action": "use_potion",
+        "args": {
+          "potion_index": 0
+        }
+      },
+      "potion": {
+        "index": 0,
+        "name": "Regen Potion",
+        "description": "Gain {RegenPower} Regen.",
+        "vars": {
+          "RegenPower": 5
+        },
+        "target_type": "AnyPlayer",
+        "id": "REGEN_POTION",
+        "slot_index": 0,
+        "usage": "CombatOnly",
+        "can_use": true,
+        "can_discard": true
+      },
+      "reservations": [
+        {
+          "potion_id": "BLOCK_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.5
+        },
+        {
+          "potion_id": "POWER_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.5
+        },
+        {
+          "potion_id": "VULNERABLE_POTION",
+          "until": "Boss",
+          "release_hp_fraction": 0.5
+        },
+        {
+          "potion_id": "ASHWATER",
+          "until": "Boss",
+          "release_hp_fraction": 0.25
+        },
+        {
+          "potion_id": "REGEN_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.5
+        },
+        {
+          "potion_id": "FIRE_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.5
+        },
+        {
+          "potion_id": "SNECKO_OIL",
+          "until": "Boss",
+          "release_hp_fraction": 0.25
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "artifacts/runs/ea706bb8-2c06-4ae1-9d38-cd97c5e627d6/decisions.jsonl",
+        "sha256": "89e71e389987f2e85ef161ab2b22f08dcb224c2cd12db46ff8d06f7d86728c65"
+      },
+      "state_hash": "d263654a2439bbc82a188e18186fe1c16c68a51e3d437cdd89d54fa000db4043",
+      "action": {
+        "cmd": "action",
+        "action": "use_potion",
+        "args": {
+          "potion_index": 1
+        }
+      },
+      "potion": {
+        "index": 1,
+        "name": "Snecko Oil",
+        "description": "Draw {Cards} cards. Randomize the cost of cards in your Hand this turn.",
+        "vars": {
+          "Cards": 7
+        },
+        "target_type": "AnyPlayer",
+        "id": "SNECKO_OIL",
+        "slot_index": 2,
+        "usage": "CombatOnly",
+        "can_use": true,
+        "can_discard": true
+      },
+      "reservations": [
+        {
+          "potion_id": "BLOCK_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.5
+        },
+        {
+          "potion_id": "POWER_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.5
+        },
+        {
+          "potion_id": "VULNERABLE_POTION",
+          "until": "Boss",
+          "release_hp_fraction": 0.5
+        },
+        {
+          "potion_id": "ASHWATER",
+          "until": "Boss",
+          "release_hp_fraction": 0.25
+        },
+        {
+          "potion_id": "REGEN_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.5
+        },
+        {
+          "potion_id": "FIRE_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.5
+        },
+        {
+          "potion_id": "SNECKO_OIL",
+          "until": "Boss",
+          "release_hp_fraction": 0.25
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "artifacts/runs/ea706bb8-2c06-4ae1-9d38-cd97c5e627d6/decisions.jsonl",
+        "sha256": "89e71e389987f2e85ef161ab2b22f08dcb224c2cd12db46ff8d06f7d86728c65"
+      },
+      "state_hash": "2c555427d2680deae7757861bed3727bcfc9499da71da96fee7a8feb9c8af573",
+      "action": {
+        "cmd": "action",
+        "action": "use_potion",
+        "args": {
+          "potion_index": 2
+        }
+      },
+      "potion": {
+        "index": 2,
+        "name": "Block Potion",
+        "description": "Gain {Block} Block.",
+        "vars": {
+          "Block": 12
+        },
+        "target_type": "AnyPlayer",
+        "id": "BLOCK_POTION",
+        "slot_index": 5,
+        "usage": "CombatOnly",
+        "can_use": true,
+        "can_discard": true
+      },
+      "reservations": [
+        {
+          "potion_id": "BLOCK_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.5
+        },
+        {
+          "potion_id": "POWER_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.5
+        },
+        {
+          "potion_id": "VULNERABLE_POTION",
+          "until": "Boss",
+          "release_hp_fraction": 0.5
+        },
+        {
+          "potion_id": "ASHWATER",
+          "until": "Boss",
+          "release_hp_fraction": 0.25
+        },
+        {
+          "potion_id": "REGEN_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.5
+        },
+        {
+          "potion_id": "FIRE_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.5
+        },
+        {
+          "potion_id": "SNECKO_OIL",
+          "until": "Boss",
+          "release_hp_fraction": 0.25
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "artifacts/runs/ea706bb8-2c06-4ae1-9d38-cd97c5e627d6/decisions.jsonl",
+        "sha256": "89e71e389987f2e85ef161ab2b22f08dcb224c2cd12db46ff8d06f7d86728c65"
+      },
+      "state_hash": "03cd51212c8ab98f964311d2bd24577c9bd66ed39c098407cb875ced61f23729",
+      "action": {
+        "cmd": "action",
+        "action": "use_potion",
+        "args": {
+          "potion_index": 2
+        }
+      },
+      "potion": {
+        "index": 2,
+        "name": "Ashwater",
+        "description": "Exhaust any number of cards in your Hand.",
+        "vars": null,
+        "target_type": "AnyPlayer",
+        "id": "ASHWATER",
+        "slot_index": 6,
+        "usage": "CombatOnly",
+        "can_use": true,
+        "can_discard": true
+      },
+      "reservations": [
+        {
+          "potion_id": "BLOCK_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.5
+        },
+        {
+          "potion_id": "POWER_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.5
+        },
+        {
+          "potion_id": "VULNERABLE_POTION",
+          "until": "Boss",
+          "release_hp_fraction": 0.5
+        },
+        {
+          "potion_id": "ASHWATER",
+          "until": "Boss",
+          "release_hp_fraction": 0.25
+        },
+        {
+          "potion_id": "REGEN_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.5
+        },
+        {
+          "potion_id": "FIRE_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.5
+        },
+        {
+          "potion_id": "SNECKO_OIL",
+          "until": "Boss",
+          "release_hp_fraction": 0.25
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "artifacts/runs/ea706bb8-2c06-4ae1-9d38-cd97c5e627d6/decisions.jsonl",
+        "sha256": "89e71e389987f2e85ef161ab2b22f08dcb224c2cd12db46ff8d06f7d86728c65"
+      },
+      "state_hash": "973b2fbd8f3931ef33cf16af5ba41d08734e301d71dfb9b2f00a801a3cadcf3b",
+      "action": {
+        "cmd": "action",
+        "action": "use_potion",
+        "args": {
+          "potion_index": 0,
+          "target_index": 0
+        }
+      },
+      "potion": {
+        "index": 0,
+        "name": "Fire Potion",
+        "description": "Deal {Damage} damage.",
+        "vars": {
+          "Damage": 20
+        },
+        "target_type": "AnyEnemy",
+        "id": "FIRE_POTION",
+        "slot_index": 1,
+        "usage": "CombatOnly",
+        "can_use": true,
+        "can_discard": true
+      },
+      "reservations": [
+        {
+          "potion_id": "BLOCK_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.5
+        },
+        {
+          "potion_id": "POWER_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.5
+        },
+        {
+          "potion_id": "VULNERABLE_POTION",
+          "until": "Boss",
+          "release_hp_fraction": 0.5
+        },
+        {
+          "potion_id": "ASHWATER",
+          "until": "Boss",
+          "release_hp_fraction": 0.25
+        },
+        {
+          "potion_id": "REGEN_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.5
+        },
+        {
+          "potion_id": "FIRE_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.5
+        },
+        {
+          "potion_id": "SNECKO_OIL",
+          "until": "Boss",
+          "release_hp_fraction": 0.25
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "artifacts/runs/ea706bb8-2c06-4ae1-9d38-cd97c5e627d6/decisions.jsonl",
+        "sha256": "89e71e389987f2e85ef161ab2b22f08dcb224c2cd12db46ff8d06f7d86728c65"
+      },
+      "state_hash": "3fffeb8d1450d98b03e949c9417d467cc5095019447ea99f1508b153f9008dee",
+      "action": {
+        "cmd": "action",
+        "action": "use_potion",
+        "args": {
+          "potion_index": 0,
+          "target_index": 0
+        }
+      },
+      "potion": {
+        "index": 0,
+        "name": "Vulnerable Potion",
+        "description": "Apply {VulnerablePower} Vulnerable.",
+        "vars": {
+          "VulnerablePower": 3
+        },
+        "target_type": "AnyEnemy",
+        "id": "VULNERABLE_POTION",
+        "slot_index": 3,
+        "usage": "CombatOnly",
+        "can_use": true,
+        "can_discard": true
+      },
+      "reservations": [
+        {
+          "potion_id": "BLOCK_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.5
+        },
+        {
+          "potion_id": "POWER_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.5
+        },
+        {
+          "potion_id": "VULNERABLE_POTION",
+          "until": "Boss",
+          "release_hp_fraction": 0.5
+        },
+        {
+          "potion_id": "ASHWATER",
+          "until": "Boss",
+          "release_hp_fraction": 0.25
+        },
+        {
+          "potion_id": "REGEN_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.5
+        },
+        {
+          "potion_id": "FIRE_POTION",
+          "until": "Elite",
+          "release_hp_fraction": 0.5
+        },
+        {
+          "potion_id": "SNECKO_OIL",
+          "until": "Boss",
+          "release_hp_fraction": 0.25
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "artifacts/runs/cd9a5cb9-82d9-430e-ba29-05debd6f7974/decisions.jsonl",
+        "sha256": "599e8b3f5aaa5edcf93d6f7ff17feb34b700fa997d80a3989e918bfb7f0071ca"
+      },
+      "state_hash": "7cbd4a5cdbcf35094162f28a7647b7d8d25e83f9ff9da63a9bc0ab75bc633f80",
+      "action": {
+        "cmd": "action",
+        "action": "use_potion",
+        "args": {
+          "potion_index": 0
+        }
+      },
+      "potion": {
+        "index": 0,
+        "name": "Cure All",
+        "description": "Gain {Energy:energyIcons()}. Draw {Cards} {Cards:plural:card|cards}.",
+        "vars": {
+          "Energy": 1,
+          "Cards": 2
+        },
+        "target_type": "AnyPlayer",
+        "id": "CURE_ALL",
+        "slot_index": 0,
+        "usage": "CombatOnly",
+        "can_use": true,
+        "can_discard": true
+      },
+      "reservations": [
+        {
+          "potion_id": "WEAK_POTION",
+          "until": "Boss",
+          "release_hp_fraction": 0.45
+        },
+        {
+          "potion_id": "CURE_ALL",
+          "until": "Boss",
+          "release_hp_fraction": 0.5
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": "artifacts/runs/cd9a5cb9-82d9-430e-ba29-05debd6f7974/decisions.jsonl",
+        "sha256": "599e8b3f5aaa5edcf93d6f7ff17feb34b700fa997d80a3989e918bfb7f0071ca"
+      },
+      "state_hash": "1757d0454ae963efdf01c3c73ab924f3bce998efd46a1b3301baaf9172e24aca",
+      "action": {
+        "cmd": "action",
+        "action": "use_potion",
+        "args": {
+          "potion_index": 0,
+          "target_index": 0
+        }
+      },
+      "potion": {
+        "index": 0,
+        "name": "Weak Potion",
+        "description": "Apply {WeakPower} Weak.",
+        "vars": {
+          "WeakPower": 3
+        },
+        "target_type": "AnyEnemy",
+        "id": "WEAK_POTION",
+        "slot_index": 1,
+        "usage": "CombatOnly",
+        "can_use": true,
+        "can_discard": true
+      },
+      "reservations": [
+        {
+          "potion_id": "WEAK_POTION",
+          "until": "Boss",
+          "release_hp_fraction": 0.45
+        },
+        {
+          "potion_id": "CURE_ALL",
+          "until": "Boss",
+          "release_hp_fraction": 0.5
+        }
+      ]
+    }
+  ],
+  "arms": {
+    "legacy": [
+      false,
+      false
+    ],
+    "typed": [
+      false,
+      true
+    ],
+    "applicable": [
+      true,
+      false
+    ],
+    "combined": [
+      true,
+      true
+    ]
+  },
+  "budgets": {
+    "actions": 300,
+    "trial_seconds": 120,
+    "replay_seconds": 120,
+    "wall_seconds": 900,
+    "workers": 4
+  },
+  "gate": "Fidelity; no HP regression or lost clear; >=2 source seeds have HP/count Pareto improvements. Compare applicable/legacy and combined/typed separately. Known roots only, no default promotion.",
+  "limitations": "Visible intents only; regen checks a present deficit, not certified future healing; Ashwater/Snecko abstain without a verified transformation model. Other potions retain baseline behavior."
+}
