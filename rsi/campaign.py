@@ -28,6 +28,7 @@ from .shop_review import funded_shop_exit_review
 from .resources import potion_decision
 from .multiplayer_guard import require_local_multiplayer
 from .coop_route import waiting_for_peer_route,wait_for_map_vote_ack
+from .native_expert import NativeExpert
 
 
 GUIDED_COMBAT_POLICIES={'planned','triggered','retaliate','floor_guided','room_guided'}
@@ -57,7 +58,8 @@ def hard_endturn_review(state):
 
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--expected-run-id',required=True);p.add_argument('--require-local-multiplayer',action='store_true');p.add_argument('--expected-player-count',type=int,default=4);p.add_argument('--max-actions',type=int,default=2000);p.add_argument('--max-seconds',type=int,default=3600);p.add_argument('--max-usd',type=float,default=3);p.add_argument('--output',required=True);p.add_argument('--execute',action='store_true');p.add_argument('--expert-choice');p.add_argument('--review-lease',action='store_true');p.add_argument('--pause-on-danger',action='store_true');p.add_argument('--danger-hp',type=int,default=20);p.add_argument('--stop-file');p.add_argument('--review-macro',action='store_true');p.add_argument('--review-cards',default='');p.add_argument('--auto-combat-selections',action='store_true');p.add_argument('--guard-exhaust-selection',action='store_true');p.add_argument('--letter-opener-plan',action='store_true');p.add_argument('--review-funded-shop',action='store_true');p.add_argument('--floor-plan');p.add_argument('--room-plan');p.add_argument('--combat-policy',choices=['jev','planned','triggered','retaliate','floor_guided','room_guided'],default='planned');a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--expected-run-id',required=True);p.add_argument('--require-local-multiplayer',action='store_true');p.add_argument('--expected-player-count',type=int,default=4);p.add_argument('--max-actions',type=int,default=2000);p.add_argument('--max-seconds',type=int,default=3600);p.add_argument('--max-usd',type=float,default=3);p.add_argument('--output',required=True);p.add_argument('--execute',action='store_true');p.add_argument('--expert-choice');p.add_argument('--review-lease',action='store_true');p.add_argument('--pause-on-danger',action='store_true');p.add_argument('--danger-hp',type=int,default=20);p.add_argument('--stop-file');p.add_argument('--review-macro',action='store_true');p.add_argument('--review-cards',default='');p.add_argument('--auto-combat-selections',action='store_true');p.add_argument('--guard-exhaust-selection',action='store_true');p.add_argument('--letter-opener-plan',action='store_true');p.add_argument('--review-funded-shop',action='store_true');p.add_argument('--floor-plan');p.add_argument('--room-plan');p.add_argument('--combat-policy',choices=['jev','planned','triggered','retaliate','floor_guided','room_guided'],default='planned');p.add_argument('--expert-directory');p.add_argument('--overlay-trace');a=p.parse_args()
+    if a.expert_directory and (not a.review_macro or not a.execute):p.error('--expert-directory requires --review-macro --execute')
     if a.review_lease and (not a.expert_choice or not a.pause_on_danger):p.error('--review-lease requires --expert-choice and --pause-on-danger')
     if (a.combat_policy=='floor_guided') != bool(a.floor_plan):p.error('floor_guided requires --floor-plan, and a floor plan requires floor_guided')
     if (a.combat_policy=='room_guided') != bool(a.room_plan) or (a.room_plan and a.floor_plan):p.error('room_guided requires --room-plan, and plans are mutually exclusive')
@@ -70,6 +72,13 @@ def main():
         uid=str(uuid.uuid4());trace=Trace(ROOT/'artifacts/runs'/uid,{**manifest,'config':vars(a),'scope':'native_complete_run'})
         budget=Budget(6000,a.max_usd,conservative_failures=True);jev=Jev(budget) if a.execute else None;start=time.monotonic();raw={};history={};scenes=Counter();last_action=None;repeated=0;waits=0
         result={'run_id':uid,'game_run_id':a.expected_run_id,'status':'error','actions':0,'rejections':0};expert=json.loads(Path(a.expert_choice).read_text()) if a.expert_choice else None;lease=None
+        macro_expert=NativeExpert(a.expert_directory,trace,start+a.max_seconds,a.stop_file) if a.expert_directory else None
+        if a.overlay_trace:
+            pointer=Path(a.overlay_trace);pointer.parent.mkdir(parents=True,exist_ok=True)
+            if pointer.exists() or pointer.is_symlink():
+                if not pointer.is_symlink():raise ValueError('Overlay pointer must be a symlink')
+                pointer.unlink()
+            pointer.symlink_to(trace.path)
         try:
             mcp=MCP('http://127.0.0.1:8080/mcp',trace);health=mcp.call('health_check')
             if health.get('play_running') or health.get('status')!='ready':raise RuntimeError('Not a healthy single-writer game')
@@ -133,7 +142,9 @@ def main():
                 if not expert and screen=='COMBAT' and any(h.get('card_id') in review_ids and h.get('playable') and any(c['action'].get('action')=='play_card' and c['action'].get('card_index')==h['index'] for c in cs) for h in (raw.get('combat') or {}).get('hand',[])):
                     result['status']='expert_required';trace.write('expert_required',{'reason':'explicit_card_review','state_hash':fingerprint(raw)});break
                 if a.review_macro and not expert and screen!='COMBAT' and len(cs)>1 and not (a.auto_combat_selections and screen=='CARD_SELECTION' and raw.get('in_combat')):
-                    result['status']='expert_required';trace.write('expert_required',{'reason':'macro_review','state_hash':fingerprint(raw)});break
+                    if macro_expert:expert=macro_expert.choose(raw,cs)
+                    else:
+                        result['status']='expert_required';trace.write('expert_required',{'reason':'macro_review','state_hash':fingerprint(raw)});break
                 encounter=sandpit_rule(raw,cs) if screen=='COMBAT' else None
                 if encounter:
                     trace.write('encounter_rule',encounter)
@@ -160,10 +171,10 @@ def main():
                     potions=[c for c in ordinary_cs if c['action']['action']=='use_potion']
                     turnkey=((raw.get('run') or {}).get('floor'),raw.get('turn'))
                     if not floor_plan and not room_plan and potions and history.get('potion_check')!=turnkey:
-                        context,reduced=potion_decision(raw.get('agent_view',raw),STRATEGY,planning,selected,potions)
+                        context,reduced=potion_decision(raw.get('agent_view',raw),STRATEGY+' '+(macro_expert.plan if macro_expert else ''),planning,selected,potions)
                         selected=jev.choose(context,reduced,trace)[0]
                         history['potion_check']=turnkey
-                else:selected=jev.choose({'state':raw.get('agent_view',raw),'strategy':STRATEGY,'previous_decision':history.get('previous'),
+                else:selected=jev.choose({'state':raw.get('agent_view',raw),'strategy':STRATEGY,'campaign_plan':macro_expert.plan if macro_expert else None,'previous_decision':history.get('previous'),
                                           **plan_context(floor_plan,raw),**room_context(room_plan,raw)},ordinary_cs,trace)[0]
                 trace.write('selected',selected)
                 if mcp.call('health_check').get('play_running'):raise RuntimeError('Competing autoplay became active')
@@ -223,7 +234,7 @@ def main():
                 print(json.dumps({'step':result['actions'],'action':selected['name'],'screen':raw.get('screen'),'floor':(raw.get('run') or {}).get('floor'),'hp':(raw.get('run') or {}).get('current_hp')},ensure_ascii=False),flush=True)
         except Exception as exc:
             result['error']=f'{type(exc).__name__}: {exc}';trace.write('failure',{'error':result['error']})
-        result.update(final_screen=raw.get('screen'),final_run=raw.get('run'),game_over=raw.get('game_over'),scenes=dict(scenes),seconds=round(time.monotonic()-start,3),model_calls=budget.calls,cost_usd=budget.spent,usage_unknown=budget.unknown,estimated_usd=budget.estimated_usd,uncertain_calls=budget.uncertain_calls,lease_suppressed_pauses=lease.suppressed_pauses if lease else 0,lease_revoked_reason=lease.revoked_reason if lease else None)
+        result.update(astra_macro_packets=macro_expert.count if macro_expert else 0,final_screen=raw.get('screen'),final_run=raw.get('run'),game_over=raw.get('game_over'),scenes=dict(scenes),seconds=round(time.monotonic()-start,3),model_calls=budget.calls,cost_usd=budget.spent,usage_unknown=budget.unknown,estimated_usd=budget.estimated_usd,uncertain_calls=budget.uncertain_calls,lease_suppressed_pauses=lease.suppressed_pauses if lease else 0,lease_revoked_reason=lease.revoked_reason if lease else None)
         trace.write('summary',result);result['trace_path']=str(trace.path.relative_to(ROOT));result['trace_sha256']=trace.close();out=Path(a.output);out.parent.mkdir(parents=True,exist_ok=True);out.write_text(json.dumps({'manifest':manifest,'result':result},ensure_ascii=False,indent=2)+'\n')
         print(json.dumps({k:v for k,v in result.items() if k not in ['initial_run','final_run','health']},ensure_ascii=False),flush=True)
         if result['status']=='error':raise SystemExit(1)
