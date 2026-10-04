@@ -9,7 +9,7 @@ from scripts.evaluate_routing_e099 import committed_response
 
 class NativeExpert:
     def __init__(self, directory, trace, deadline, stop_file=None):
-        self.directory = Path(directory)
+        self.directory = Path(directory).resolve()
         self.trace = trace
         self.deadline = deadline
         self.stop_file = stop_file
