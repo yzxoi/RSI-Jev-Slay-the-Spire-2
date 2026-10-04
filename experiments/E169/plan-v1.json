@@ -1,0 +1,4682 @@
+{
+  "manifest": {
+    "schema_version": 2,
+    "code_commit": "b2676853a2cca706a0aa9c8e2d5abe20a47d308a",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "a32485ef4c34641acc26f0c85454ba767bd4b06c4c06258e59baa26b5a72b54f",
+    "godot_stubs_sha256": "2bb3b99863f651decb27cf3ceead489046808e60d95ccbc28048ad094ecc856a",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+      "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772",
+      "headless-zzzzzz-godot-abi.patch": "5239d3836d279de5143f7d56bece1f061c6c4002de696fce28f9f7f3922ededc",
+      "headless-zzzzzzz-learning-observations.patch": "d51db8457fdb9348340a829c84fa77e9620c476ba16a7c6e224b286ecb2dfd07",
+      "headless-zzzzzzzz-encounter-abi.patch": "e4a730f9e58fddebef8ef924fcd8d0adc03d72d1148f8d29b2f9ea60556696cc",
+      "headless-zzzzzzzzz-native-map-odds.patch": "86ee5561968629b094a1f63e214f32e8a3ae7b5614fffcb470d52886287e1885"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4",
+    "experiment": "E169",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.5",
+    "model_calls": 0,
+    "model_cost_usd": 0,
+    "encoder": "e140-phase-context-v1",
+    "torch": "2.11.0",
+    "device": "cpu"
+  },
+  "sources": [
+    {
+      "path": "experiments/E167/plan-v1.json",
+      "sha256": "64f6affb19aadd6e7724ee5fa07e2dabe189322755477b3aebbd8bcf6aa57618"
+    },
+    {
+      "path": "experiments/E167/evaluation-v1.json",
+      "sha256": "3bf6ceee5a802636206afcabbc39caf764394015cb0f14d74a47fc433d8544a2"
+    }
+  ],
+  "roots": [
+    {
+      "case": "opening-21526f07-124",
+      "source_run": "21526f07-71b7-47c0-912c-14217e63bc89",
+      "seed": "e165_hybrid_Ironclad_A5_000",
+      "source_arm": "program_campaign",
+      "wire": {
+        "path": "artifacts/runs/21526f07-71b7-47c0-912c-14217e63bc89/wire.jsonl",
+        "sha256": "51cc14eab918d10c05789366e15b7b0a35a9997d0c7d1e6c4e0df823bcbff27b"
+      },
+      "prefix_count": 124,
+      "entry_hash": "cb470fbd8dcdb73ab586aae5182716e57537a6a528be990c8dc7d3a1d046cd08",
+      "domain": {
+        "protocol": "subset-v1",
+        "state_hash": "cb470fbd8dcdb73ab586aae5182716e57537a6a528be990c8dc7d3a1d046cd08",
+        "indexes": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "min_select": 0,
+        "max_select": 5,
+        "legal_subsets": 32,
+        "effect": "discard_and_redraw",
+        "evidence": "Registered Gambling Chip pre-play roots; other simultaneous opening effects are not inferred"
+      },
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 11
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 2,
+          "row": 11,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "choices": [
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            }
+          ],
+          "id": "a000"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "1"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 1,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            }
+          ],
+          "id": "a001"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "2"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 2,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            }
+          ],
+          "id": "a002"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "3"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 3,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            }
+          ],
+          "id": "a003"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 4,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            }
+          ],
+          "id": "a004"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,1"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 1,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            }
+          ],
+          "id": "a005"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,2"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 2,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            }
+          ],
+          "id": "a006"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,3"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 3,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            }
+          ],
+          "id": "a007"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 4,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            }
+          ],
+          "id": "a008"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "1,2"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 1,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 2,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            }
+          ],
+          "id": "a009"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "1,3"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 1,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 3,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            }
+          ],
+          "id": "a010"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "1,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 1,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 4,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            }
+          ],
+          "id": "a011"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "2,3"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 2,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 3,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            }
+          ],
+          "id": "a012"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "2,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 2,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 4,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            }
+          ],
+          "id": "a013"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "3,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 3,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 4,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            }
+          ],
+          "id": "a014"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,1,2"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 1,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 2,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            }
+          ],
+          "id": "a015"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,1,3"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 1,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 3,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            }
+          ],
+          "id": "a016"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,1,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 1,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 4,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            }
+          ],
+          "id": "a017"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,2,3"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 2,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 3,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            }
+          ],
+          "id": "a018"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,2,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 2,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 4,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            }
+          ],
+          "id": "a019"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,3,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 3,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 4,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            }
+          ],
+          "id": "a020"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "1,2,3"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 1,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 2,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 3,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            }
+          ],
+          "id": "a021"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "1,2,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 1,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 2,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 4,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            }
+          ],
+          "id": "a022"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "1,3,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 1,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 3,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 4,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            }
+          ],
+          "id": "a023"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "2,3,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 2,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 3,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 4,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            }
+          ],
+          "id": "a024"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,1,2,3"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 1,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 2,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 3,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            }
+          ],
+          "id": "a025"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,1,2,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 1,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 2,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 4,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            }
+          ],
+          "id": "a026"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,1,3,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 1,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 3,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 4,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            }
+          ],
+          "id": "a027"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,2,3,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 2,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 3,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 4,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            }
+          ],
+          "id": "a028"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "1,2,3,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 1,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 2,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 3,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 4,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            }
+          ],
+          "id": "a029"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,1,2,3,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 1,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 2,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 3,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 4,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            }
+          ],
+          "id": "a030"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "skip_select",
+            "args": {}
+          },
+          "name": "skip_select",
+          "details": null,
+          "id": "a031"
+        }
+      ],
+      "baseline_id": "f21b2c4c4359f798",
+      "keep_all_id": "a4125433833e081a",
+      "status_only_id": "a4125433833e081a",
+      "expected_final_hash": "dbf9b0a18a0fa1c8224dd36668eb4acc5bb84b4e2ad2acdf9801cd1d932db173",
+      "expected_status": "clear",
+      "expected_hp": 22,
+      "context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "entry_hp": 48,
+      "cards": [
+        {
+          "index": 0,
+          "name": "Strike",
+          "id": "CARD.STRIKE_IRONCLAD",
+          "type": "Attack",
+          "cost": 1,
+          "upgraded": false
+        },
+        {
+          "index": 1,
+          "name": "Defend",
+          "id": "CARD.DEFEND_IRONCLAD",
+          "type": "Skill",
+          "cost": 1,
+          "upgraded": false
+        },
+        {
+          "index": 2,
+          "name": "Strike",
+          "id": "CARD.STRIKE_IRONCLAD",
+          "type": "Attack",
+          "cost": 1,
+          "upgraded": false
+        },
+        {
+          "index": 3,
+          "name": "Strike",
+          "id": "CARD.STRIKE_IRONCLAD",
+          "type": "Attack",
+          "cost": 1,
+          "upgraded": false
+        },
+        {
+          "index": 4,
+          "name": "Fight Me!",
+          "id": "CARD.FIGHT_ME",
+          "type": "Attack",
+          "cost": 2,
+          "upgraded": false
+        }
+      ]
+    },
+    {
+      "case": "opening-21526f07-148",
+      "source_run": "21526f07-71b7-47c0-912c-14217e63bc89",
+      "seed": "e165_hybrid_Ironclad_A5_000",
+      "source_arm": "program_campaign",
+      "wire": {
+        "path": "artifacts/runs/21526f07-71b7-47c0-912c-14217e63bc89/wire.jsonl",
+        "sha256": "51cc14eab918d10c05789366e15b7b0a35a9997d0c7d1e6c4e0df823bcbff27b"
+      },
+      "prefix_count": 148,
+      "entry_hash": "85d6a69fce4ed2786db562e674eec3644d95829249c8e67279f9f73527a9f874",
+      "domain": {
+        "protocol": "subset-v1",
+        "state_hash": "85d6a69fce4ed2786db562e674eec3644d95829249c8e67279f9f73527a9f874",
+        "indexes": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "min_select": 0,
+        "max_select": 5,
+        "legal_subsets": 32,
+        "effect": "discard_and_redraw",
+        "evidence": "Registered Gambling Chip pre-play roots; other simultaneous opening effects are not inferred"
+      },
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 4,
+            "row": 13
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 4,
+          "row": 13,
+          "type": "Unknown"
+        },
+        "id": "a000"
+      },
+      "choices": [
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            }
+          ],
+          "id": "a000"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "1"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 1,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            }
+          ],
+          "id": "a001"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "2"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 2,
+              "name": "Setup Strike",
+              "id": "CARD.SETUP_STRIKE"
+            }
+          ],
+          "id": "a002"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "3"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 3,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            }
+          ],
+          "id": "a003"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 4,
+              "name": "Body Slam",
+              "id": "CARD.BODY_SLAM"
+            }
+          ],
+          "id": "a004"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,1"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 1,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            }
+          ],
+          "id": "a005"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,2"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 2,
+              "name": "Setup Strike",
+              "id": "CARD.SETUP_STRIKE"
+            }
+          ],
+          "id": "a006"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,3"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 3,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            }
+          ],
+          "id": "a007"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 4,
+              "name": "Body Slam",
+              "id": "CARD.BODY_SLAM"
+            }
+          ],
+          "id": "a008"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "1,2"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 1,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 2,
+              "name": "Setup Strike",
+              "id": "CARD.SETUP_STRIKE"
+            }
+          ],
+          "id": "a009"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "1,3"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 1,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 3,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            }
+          ],
+          "id": "a010"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "1,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 1,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 4,
+              "name": "Body Slam",
+              "id": "CARD.BODY_SLAM"
+            }
+          ],
+          "id": "a011"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "2,3"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 2,
+              "name": "Setup Strike",
+              "id": "CARD.SETUP_STRIKE"
+            },
+            {
+              "index": 3,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            }
+          ],
+          "id": "a012"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "2,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 2,
+              "name": "Setup Strike",
+              "id": "CARD.SETUP_STRIKE"
+            },
+            {
+              "index": 4,
+              "name": "Body Slam",
+              "id": "CARD.BODY_SLAM"
+            }
+          ],
+          "id": "a013"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "3,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 3,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            },
+            {
+              "index": 4,
+              "name": "Body Slam",
+              "id": "CARD.BODY_SLAM"
+            }
+          ],
+          "id": "a014"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,1,2"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 1,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 2,
+              "name": "Setup Strike",
+              "id": "CARD.SETUP_STRIKE"
+            }
+          ],
+          "id": "a015"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,1,3"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 1,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 3,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            }
+          ],
+          "id": "a016"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,1,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 1,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 4,
+              "name": "Body Slam",
+              "id": "CARD.BODY_SLAM"
+            }
+          ],
+          "id": "a017"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,2,3"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 2,
+              "name": "Setup Strike",
+              "id": "CARD.SETUP_STRIKE"
+            },
+            {
+              "index": 3,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            }
+          ],
+          "id": "a018"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,2,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 2,
+              "name": "Setup Strike",
+              "id": "CARD.SETUP_STRIKE"
+            },
+            {
+              "index": 4,
+              "name": "Body Slam",
+              "id": "CARD.BODY_SLAM"
+            }
+          ],
+          "id": "a019"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,3,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 3,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            },
+            {
+              "index": 4,
+              "name": "Body Slam",
+              "id": "CARD.BODY_SLAM"
+            }
+          ],
+          "id": "a020"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "1,2,3"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 1,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 2,
+              "name": "Setup Strike",
+              "id": "CARD.SETUP_STRIKE"
+            },
+            {
+              "index": 3,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            }
+          ],
+          "id": "a021"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "1,2,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 1,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 2,
+              "name": "Setup Strike",
+              "id": "CARD.SETUP_STRIKE"
+            },
+            {
+              "index": 4,
+              "name": "Body Slam",
+              "id": "CARD.BODY_SLAM"
+            }
+          ],
+          "id": "a022"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "1,3,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 1,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 3,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            },
+            {
+              "index": 4,
+              "name": "Body Slam",
+              "id": "CARD.BODY_SLAM"
+            }
+          ],
+          "id": "a023"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "2,3,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 2,
+              "name": "Setup Strike",
+              "id": "CARD.SETUP_STRIKE"
+            },
+            {
+              "index": 3,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            },
+            {
+              "index": 4,
+              "name": "Body Slam",
+              "id": "CARD.BODY_SLAM"
+            }
+          ],
+          "id": "a024"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,1,2,3"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 1,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 2,
+              "name": "Setup Strike",
+              "id": "CARD.SETUP_STRIKE"
+            },
+            {
+              "index": 3,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            }
+          ],
+          "id": "a025"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,1,2,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 1,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 2,
+              "name": "Setup Strike",
+              "id": "CARD.SETUP_STRIKE"
+            },
+            {
+              "index": 4,
+              "name": "Body Slam",
+              "id": "CARD.BODY_SLAM"
+            }
+          ],
+          "id": "a026"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,1,3,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 1,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 3,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            },
+            {
+              "index": 4,
+              "name": "Body Slam",
+              "id": "CARD.BODY_SLAM"
+            }
+          ],
+          "id": "a027"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,2,3,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 2,
+              "name": "Setup Strike",
+              "id": "CARD.SETUP_STRIKE"
+            },
+            {
+              "index": 3,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            },
+            {
+              "index": 4,
+              "name": "Body Slam",
+              "id": "CARD.BODY_SLAM"
+            }
+          ],
+          "id": "a028"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "1,2,3,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 1,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 2,
+              "name": "Setup Strike",
+              "id": "CARD.SETUP_STRIKE"
+            },
+            {
+              "index": 3,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            },
+            {
+              "index": 4,
+              "name": "Body Slam",
+              "id": "CARD.BODY_SLAM"
+            }
+          ],
+          "id": "a029"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,1,2,3,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 1,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 2,
+              "name": "Setup Strike",
+              "id": "CARD.SETUP_STRIKE"
+            },
+            {
+              "index": 3,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            },
+            {
+              "index": 4,
+              "name": "Body Slam",
+              "id": "CARD.BODY_SLAM"
+            }
+          ],
+          "id": "a030"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "skip_select",
+            "args": {}
+          },
+          "name": "skip_select",
+          "details": null,
+          "id": "a031"
+        }
+      ],
+      "baseline_id": "1958941d75ea1ec8",
+      "keep_all_id": "a4125433833e081a",
+      "status_only_id": "a4125433833e081a",
+      "expected_final_hash": "cf1a123db04628a016946df57a0a727f1ad0192f06c8875eefeb33aa9728ee52",
+      "expected_status": "clear",
+      "expected_hp": 40,
+      "context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 14,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "entry_hp": 46,
+      "cards": [
+        {
+          "index": 0,
+          "name": "Strike",
+          "id": "CARD.STRIKE_IRONCLAD",
+          "type": "Attack",
+          "cost": 1,
+          "upgraded": false
+        },
+        {
+          "index": 1,
+          "name": "Defend",
+          "id": "CARD.DEFEND_IRONCLAD",
+          "type": "Skill",
+          "cost": 1,
+          "upgraded": false
+        },
+        {
+          "index": 2,
+          "name": "Setup Strike",
+          "id": "CARD.SETUP_STRIKE",
+          "type": "Attack",
+          "cost": 1,
+          "upgraded": false
+        },
+        {
+          "index": 3,
+          "name": "Fight Me!",
+          "id": "CARD.FIGHT_ME",
+          "type": "Attack",
+          "cost": 2,
+          "upgraded": false
+        },
+        {
+          "index": 4,
+          "name": "Body Slam",
+          "id": "CARD.BODY_SLAM",
+          "type": "Attack",
+          "cost": 1,
+          "upgraded": false
+        }
+      ]
+    },
+    {
+      "case": "opening-21526f07-172",
+      "source_run": "21526f07-71b7-47c0-912c-14217e63bc89",
+      "seed": "e165_hybrid_Ironclad_A5_000",
+      "source_arm": "program_campaign",
+      "wire": {
+        "path": "artifacts/runs/21526f07-71b7-47c0-912c-14217e63bc89/wire.jsonl",
+        "sha256": "51cc14eab918d10c05789366e15b7b0a35a9997d0c7d1e6c4e0df823bcbff27b"
+      },
+      "prefix_count": 172,
+      "entry_hash": "bbd1edcf6034a66279b38aed6f22507cdbbba25ab741ad591359ab802d17f992",
+      "domain": {
+        "protocol": "subset-v1",
+        "state_hash": "bbd1edcf6034a66279b38aed6f22507cdbbba25ab741ad591359ab802d17f992",
+        "indexes": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "min_select": 0,
+        "max_select": 5,
+        "legal_subsets": 32,
+        "effect": "discard_and_redraw",
+        "evidence": "Registered Gambling Chip pre-play roots; other simultaneous opening effects are not inferred"
+      },
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 3,
+            "row": 14
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 3,
+          "row": 14,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "choices": [
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            }
+          ],
+          "id": "a000"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "1"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 1,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            }
+          ],
+          "id": "a001"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "2"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 2,
+              "name": "Bash",
+              "id": "CARD.BASH"
+            }
+          ],
+          "id": "a002"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "3"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 3,
+              "name": "Setup Strike",
+              "id": "CARD.SETUP_STRIKE"
+            }
+          ],
+          "id": "a003"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 4,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            }
+          ],
+          "id": "a004"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,1"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 1,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            }
+          ],
+          "id": "a005"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,2"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 2,
+              "name": "Bash",
+              "id": "CARD.BASH"
+            }
+          ],
+          "id": "a006"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,3"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 3,
+              "name": "Setup Strike",
+              "id": "CARD.SETUP_STRIKE"
+            }
+          ],
+          "id": "a007"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 4,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            }
+          ],
+          "id": "a008"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "1,2"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 1,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            },
+            {
+              "index": 2,
+              "name": "Bash",
+              "id": "CARD.BASH"
+            }
+          ],
+          "id": "a009"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "1,3"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 1,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            },
+            {
+              "index": 3,
+              "name": "Setup Strike",
+              "id": "CARD.SETUP_STRIKE"
+            }
+          ],
+          "id": "a010"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "1,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 1,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            },
+            {
+              "index": 4,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            }
+          ],
+          "id": "a011"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "2,3"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 2,
+              "name": "Bash",
+              "id": "CARD.BASH"
+            },
+            {
+              "index": 3,
+              "name": "Setup Strike",
+              "id": "CARD.SETUP_STRIKE"
+            }
+          ],
+          "id": "a012"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "2,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 2,
+              "name": "Bash",
+              "id": "CARD.BASH"
+            },
+            {
+              "index": 4,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            }
+          ],
+          "id": "a013"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "3,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 3,
+              "name": "Setup Strike",
+              "id": "CARD.SETUP_STRIKE"
+            },
+            {
+              "index": 4,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            }
+          ],
+          "id": "a014"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,1,2"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 1,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            },
+            {
+              "index": 2,
+              "name": "Bash",
+              "id": "CARD.BASH"
+            }
+          ],
+          "id": "a015"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,1,3"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 1,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            },
+            {
+              "index": 3,
+              "name": "Setup Strike",
+              "id": "CARD.SETUP_STRIKE"
+            }
+          ],
+          "id": "a016"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,1,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 1,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            },
+            {
+              "index": 4,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            }
+          ],
+          "id": "a017"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,2,3"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 2,
+              "name": "Bash",
+              "id": "CARD.BASH"
+            },
+            {
+              "index": 3,
+              "name": "Setup Strike",
+              "id": "CARD.SETUP_STRIKE"
+            }
+          ],
+          "id": "a018"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,2,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 2,
+              "name": "Bash",
+              "id": "CARD.BASH"
+            },
+            {
+              "index": 4,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            }
+          ],
+          "id": "a019"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,3,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 3,
+              "name": "Setup Strike",
+              "id": "CARD.SETUP_STRIKE"
+            },
+            {
+              "index": 4,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            }
+          ],
+          "id": "a020"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "1,2,3"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 1,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            },
+            {
+              "index": 2,
+              "name": "Bash",
+              "id": "CARD.BASH"
+            },
+            {
+              "index": 3,
+              "name": "Setup Strike",
+              "id": "CARD.SETUP_STRIKE"
+            }
+          ],
+          "id": "a021"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "1,2,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 1,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            },
+            {
+              "index": 2,
+              "name": "Bash",
+              "id": "CARD.BASH"
+            },
+            {
+              "index": 4,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            }
+          ],
+          "id": "a022"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "1,3,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 1,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            },
+            {
+              "index": 3,
+              "name": "Setup Strike",
+              "id": "CARD.SETUP_STRIKE"
+            },
+            {
+              "index": 4,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            }
+          ],
+          "id": "a023"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "2,3,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 2,
+              "name": "Bash",
+              "id": "CARD.BASH"
+            },
+            {
+              "index": 3,
+              "name": "Setup Strike",
+              "id": "CARD.SETUP_STRIKE"
+            },
+            {
+              "index": 4,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            }
+          ],
+          "id": "a024"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,1,2,3"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 1,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            },
+            {
+              "index": 2,
+              "name": "Bash",
+              "id": "CARD.BASH"
+            },
+            {
+              "index": 3,
+              "name": "Setup Strike",
+              "id": "CARD.SETUP_STRIKE"
+            }
+          ],
+          "id": "a025"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,1,2,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 1,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            },
+            {
+              "index": 2,
+              "name": "Bash",
+              "id": "CARD.BASH"
+            },
+            {
+              "index": 4,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            }
+          ],
+          "id": "a026"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,1,3,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 1,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            },
+            {
+              "index": 3,
+              "name": "Setup Strike",
+              "id": "CARD.SETUP_STRIKE"
+            },
+            {
+              "index": 4,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            }
+          ],
+          "id": "a027"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,2,3,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 2,
+              "name": "Bash",
+              "id": "CARD.BASH"
+            },
+            {
+              "index": 3,
+              "name": "Setup Strike",
+              "id": "CARD.SETUP_STRIKE"
+            },
+            {
+              "index": 4,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            }
+          ],
+          "id": "a028"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "1,2,3,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 1,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            },
+            {
+              "index": 2,
+              "name": "Bash",
+              "id": "CARD.BASH"
+            },
+            {
+              "index": 3,
+              "name": "Setup Strike",
+              "id": "CARD.SETUP_STRIKE"
+            },
+            {
+              "index": 4,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            }
+          ],
+          "id": "a029"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,1,2,3,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 1,
+              "name": "Fight Me!",
+              "id": "CARD.FIGHT_ME"
+            },
+            {
+              "index": 2,
+              "name": "Bash",
+              "id": "CARD.BASH"
+            },
+            {
+              "index": 3,
+              "name": "Setup Strike",
+              "id": "CARD.SETUP_STRIKE"
+            },
+            {
+              "index": 4,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            }
+          ],
+          "id": "a030"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "skip_select",
+            "args": {}
+          },
+          "name": "skip_select",
+          "details": null,
+          "id": "a031"
+        }
+      ],
+      "baseline_id": "f21b2c4c4359f798",
+      "keep_all_id": "a4125433833e081a",
+      "status_only_id": "a4125433833e081a",
+      "expected_final_hash": "e6f798efd9e50b569c3a3ed7334b7c0dd7964766acb4600daa8569c19b01cf14",
+      "expected_status": "clear",
+      "expected_hp": 18,
+      "context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 15,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "entry_hp": 40,
+      "cards": [
+        {
+          "index": 0,
+          "name": "Defend",
+          "id": "CARD.DEFEND_IRONCLAD",
+          "type": "Skill",
+          "cost": 1,
+          "upgraded": false
+        },
+        {
+          "index": 1,
+          "name": "Fight Me!",
+          "id": "CARD.FIGHT_ME",
+          "type": "Attack",
+          "cost": 2,
+          "upgraded": false
+        },
+        {
+          "index": 2,
+          "name": "Bash",
+          "id": "CARD.BASH",
+          "type": "Attack",
+          "cost": 2,
+          "upgraded": false
+        },
+        {
+          "index": 3,
+          "name": "Setup Strike",
+          "id": "CARD.SETUP_STRIKE",
+          "type": "Attack",
+          "cost": 1,
+          "upgraded": false
+        },
+        {
+          "index": 4,
+          "name": "Defend",
+          "id": "CARD.DEFEND_IRONCLAD",
+          "type": "Skill",
+          "cost": 1,
+          "upgraded": false
+        }
+      ]
+    },
+    {
+      "case": "opening-21526f07-196",
+      "source_run": "21526f07-71b7-47c0-912c-14217e63bc89",
+      "seed": "e165_hybrid_Ironclad_A5_000",
+      "source_arm": "program_campaign",
+      "wire": {
+        "path": "artifacts/runs/21526f07-71b7-47c0-912c-14217e63bc89/wire.jsonl",
+        "sha256": "51cc14eab918d10c05789366e15b7b0a35a9997d0c7d1e6c4e0df823bcbff27b"
+      },
+      "prefix_count": 196,
+      "entry_hash": "95335d5ad0ddc1314c7bcfa62ce24d9f706ab97d6a19e0ae29ec11afff40276e",
+      "domain": {
+        "protocol": "subset-v1",
+        "state_hash": "95335d5ad0ddc1314c7bcfa62ce24d9f706ab97d6a19e0ae29ec11afff40276e",
+        "indexes": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "min_select": 0,
+        "max_select": 5,
+        "legal_subsets": 32,
+        "effect": "discard_and_redraw",
+        "evidence": "Registered Gambling Chip pre-play roots; other simultaneous opening effects are not inferred"
+      },
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 3,
+            "row": 16
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 3,
+          "row": 16,
+          "type": "Boss"
+        },
+        "id": "a000"
+      },
+      "choices": [
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Shrug It Off",
+              "id": "CARD.SHRUG_IT_OFF"
+            }
+          ],
+          "id": "a000"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "1"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 1,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            }
+          ],
+          "id": "a001"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "2"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 2,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            }
+          ],
+          "id": "a002"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "3"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 3,
+              "name": "Ashen Strike",
+              "id": "CARD.ASHEN_STRIKE"
+            }
+          ],
+          "id": "a003"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 4,
+              "name": "Ascender's Bane",
+              "id": "CARD.ASCENDERS_BANE"
+            }
+          ],
+          "id": "a004"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,1"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Shrug It Off",
+              "id": "CARD.SHRUG_IT_OFF"
+            },
+            {
+              "index": 1,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            }
+          ],
+          "id": "a005"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,2"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Shrug It Off",
+              "id": "CARD.SHRUG_IT_OFF"
+            },
+            {
+              "index": 2,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            }
+          ],
+          "id": "a006"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,3"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Shrug It Off",
+              "id": "CARD.SHRUG_IT_OFF"
+            },
+            {
+              "index": 3,
+              "name": "Ashen Strike",
+              "id": "CARD.ASHEN_STRIKE"
+            }
+          ],
+          "id": "a007"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Shrug It Off",
+              "id": "CARD.SHRUG_IT_OFF"
+            },
+            {
+              "index": 4,
+              "name": "Ascender's Bane",
+              "id": "CARD.ASCENDERS_BANE"
+            }
+          ],
+          "id": "a008"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "1,2"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 1,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 2,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            }
+          ],
+          "id": "a009"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "1,3"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 1,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 3,
+              "name": "Ashen Strike",
+              "id": "CARD.ASHEN_STRIKE"
+            }
+          ],
+          "id": "a010"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "1,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 1,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 4,
+              "name": "Ascender's Bane",
+              "id": "CARD.ASCENDERS_BANE"
+            }
+          ],
+          "id": "a011"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "2,3"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 2,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 3,
+              "name": "Ashen Strike",
+              "id": "CARD.ASHEN_STRIKE"
+            }
+          ],
+          "id": "a012"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "2,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 2,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 4,
+              "name": "Ascender's Bane",
+              "id": "CARD.ASCENDERS_BANE"
+            }
+          ],
+          "id": "a013"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "3,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 3,
+              "name": "Ashen Strike",
+              "id": "CARD.ASHEN_STRIKE"
+            },
+            {
+              "index": 4,
+              "name": "Ascender's Bane",
+              "id": "CARD.ASCENDERS_BANE"
+            }
+          ],
+          "id": "a014"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,1,2"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Shrug It Off",
+              "id": "CARD.SHRUG_IT_OFF"
+            },
+            {
+              "index": 1,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 2,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            }
+          ],
+          "id": "a015"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,1,3"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Shrug It Off",
+              "id": "CARD.SHRUG_IT_OFF"
+            },
+            {
+              "index": 1,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 3,
+              "name": "Ashen Strike",
+              "id": "CARD.ASHEN_STRIKE"
+            }
+          ],
+          "id": "a016"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,1,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Shrug It Off",
+              "id": "CARD.SHRUG_IT_OFF"
+            },
+            {
+              "index": 1,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 4,
+              "name": "Ascender's Bane",
+              "id": "CARD.ASCENDERS_BANE"
+            }
+          ],
+          "id": "a017"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,2,3"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Shrug It Off",
+              "id": "CARD.SHRUG_IT_OFF"
+            },
+            {
+              "index": 2,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 3,
+              "name": "Ashen Strike",
+              "id": "CARD.ASHEN_STRIKE"
+            }
+          ],
+          "id": "a018"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,2,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Shrug It Off",
+              "id": "CARD.SHRUG_IT_OFF"
+            },
+            {
+              "index": 2,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 4,
+              "name": "Ascender's Bane",
+              "id": "CARD.ASCENDERS_BANE"
+            }
+          ],
+          "id": "a019"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,3,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Shrug It Off",
+              "id": "CARD.SHRUG_IT_OFF"
+            },
+            {
+              "index": 3,
+              "name": "Ashen Strike",
+              "id": "CARD.ASHEN_STRIKE"
+            },
+            {
+              "index": 4,
+              "name": "Ascender's Bane",
+              "id": "CARD.ASCENDERS_BANE"
+            }
+          ],
+          "id": "a020"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "1,2,3"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 1,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 2,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 3,
+              "name": "Ashen Strike",
+              "id": "CARD.ASHEN_STRIKE"
+            }
+          ],
+          "id": "a021"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "1,2,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 1,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 2,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 4,
+              "name": "Ascender's Bane",
+              "id": "CARD.ASCENDERS_BANE"
+            }
+          ],
+          "id": "a022"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "1,3,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 1,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 3,
+              "name": "Ashen Strike",
+              "id": "CARD.ASHEN_STRIKE"
+            },
+            {
+              "index": 4,
+              "name": "Ascender's Bane",
+              "id": "CARD.ASCENDERS_BANE"
+            }
+          ],
+          "id": "a023"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "2,3,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 2,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 3,
+              "name": "Ashen Strike",
+              "id": "CARD.ASHEN_STRIKE"
+            },
+            {
+              "index": 4,
+              "name": "Ascender's Bane",
+              "id": "CARD.ASCENDERS_BANE"
+            }
+          ],
+          "id": "a024"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,1,2,3"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Shrug It Off",
+              "id": "CARD.SHRUG_IT_OFF"
+            },
+            {
+              "index": 1,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 2,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 3,
+              "name": "Ashen Strike",
+              "id": "CARD.ASHEN_STRIKE"
+            }
+          ],
+          "id": "a025"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,1,2,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Shrug It Off",
+              "id": "CARD.SHRUG_IT_OFF"
+            },
+            {
+              "index": 1,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 2,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 4,
+              "name": "Ascender's Bane",
+              "id": "CARD.ASCENDERS_BANE"
+            }
+          ],
+          "id": "a026"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,1,3,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Shrug It Off",
+              "id": "CARD.SHRUG_IT_OFF"
+            },
+            {
+              "index": 1,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 3,
+              "name": "Ashen Strike",
+              "id": "CARD.ASHEN_STRIKE"
+            },
+            {
+              "index": 4,
+              "name": "Ascender's Bane",
+              "id": "CARD.ASCENDERS_BANE"
+            }
+          ],
+          "id": "a027"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,2,3,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Shrug It Off",
+              "id": "CARD.SHRUG_IT_OFF"
+            },
+            {
+              "index": 2,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 3,
+              "name": "Ashen Strike",
+              "id": "CARD.ASHEN_STRIKE"
+            },
+            {
+              "index": 4,
+              "name": "Ascender's Bane",
+              "id": "CARD.ASCENDERS_BANE"
+            }
+          ],
+          "id": "a028"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "1,2,3,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 1,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 2,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 3,
+              "name": "Ashen Strike",
+              "id": "CARD.ASHEN_STRIKE"
+            },
+            {
+              "index": 4,
+              "name": "Ascender's Bane",
+              "id": "CARD.ASCENDERS_BANE"
+            }
+          ],
+          "id": "a029"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,1,2,3,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Shrug It Off",
+              "id": "CARD.SHRUG_IT_OFF"
+            },
+            {
+              "index": 1,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 2,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 3,
+              "name": "Ashen Strike",
+              "id": "CARD.ASHEN_STRIKE"
+            },
+            {
+              "index": 4,
+              "name": "Ascender's Bane",
+              "id": "CARD.ASCENDERS_BANE"
+            }
+          ],
+          "id": "a030"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "skip_select",
+            "args": {}
+          },
+          "name": "skip_select",
+          "details": null,
+          "id": "a031"
+        }
+      ],
+      "baseline_id": "7130ac79afd54834",
+      "keep_all_id": "a4125433833e081a",
+      "status_only_id": "485e252ee0092e0d",
+      "expected_final_hash": "5210e3d4c568472396b9855da215886d910037a3b2966a784074a065075c3d90",
+      "expected_status": "defeat",
+      "expected_hp": 0,
+      "context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "entry_hp": 42,
+      "cards": [
+        {
+          "index": 0,
+          "name": "Shrug It Off",
+          "id": "CARD.SHRUG_IT_OFF",
+          "type": "Skill",
+          "cost": 1,
+          "upgraded": false
+        },
+        {
+          "index": 1,
+          "name": "Strike",
+          "id": "CARD.STRIKE_IRONCLAD",
+          "type": "Attack",
+          "cost": 1,
+          "upgraded": false
+        },
+        {
+          "index": 2,
+          "name": "Defend",
+          "id": "CARD.DEFEND_IRONCLAD",
+          "type": "Skill",
+          "cost": 1,
+          "upgraded": false
+        },
+        {
+          "index": 3,
+          "name": "Ashen Strike",
+          "id": "CARD.ASHEN_STRIKE",
+          "type": "Attack",
+          "cost": 1,
+          "upgraded": false
+        },
+        {
+          "index": 4,
+          "name": "Ascender's Bane",
+          "id": "CARD.ASCENDERS_BANE",
+          "type": "Curse",
+          "cost": 0,
+          "upgraded": false
+        }
+      ]
+    },
+    {
+      "case": "opening-cd9a5cb9-306",
+      "source_run": "cd9a5cb9-82d9-430e-ba29-05debd6f7974",
+      "seed": "e165_hybrid_Ironclad_A5_000",
+      "source_arm": "astra_campaign",
+      "wire": {
+        "path": "artifacts/runs/cd9a5cb9-82d9-430e-ba29-05debd6f7974/wire.jsonl",
+        "sha256": "db7cb66c6c05c0782e4f3ce3cdc168b4af9815431853567bb87d4b763b92ccff"
+      },
+      "prefix_count": 306,
+      "entry_hash": "4a52e7e0f1b1997d8b831a5534accf35cd33b13a23672b53cd80b59cacaec032",
+      "domain": {
+        "protocol": "subset-v1",
+        "state_hash": "4a52e7e0f1b1997d8b831a5534accf35cd33b13a23672b53cd80b59cacaec032",
+        "indexes": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "min_select": 0,
+        "max_select": 5,
+        "legal_subsets": 32,
+        "effect": "discard_and_redraw",
+        "evidence": "Registered Gambling Chip pre-play roots; other simultaneous opening effects are not inferred"
+      },
+      "previous": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 10
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 0,
+          "row": 10,
+          "type": "Elite"
+        },
+        "id": "a000"
+      },
+      "choices": [
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            }
+          ],
+          "id": "a000"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "1"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 1,
+              "name": "Bash",
+              "id": "CARD.BASH"
+            }
+          ],
+          "id": "a001"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "2"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 2,
+              "name": "Ultimate Defend",
+              "id": "CARD.ULTIMATE_DEFEND"
+            }
+          ],
+          "id": "a002"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "3"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 3,
+              "name": "Rupture",
+              "id": "CARD.RUPTURE"
+            }
+          ],
+          "id": "a003"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 4,
+              "name": "Armaments",
+              "id": "CARD.ARMAMENTS"
+            }
+          ],
+          "id": "a004"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,1"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 1,
+              "name": "Bash",
+              "id": "CARD.BASH"
+            }
+          ],
+          "id": "a005"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,2"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 2,
+              "name": "Ultimate Defend",
+              "id": "CARD.ULTIMATE_DEFEND"
+            }
+          ],
+          "id": "a006"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,3"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 3,
+              "name": "Rupture",
+              "id": "CARD.RUPTURE"
+            }
+          ],
+          "id": "a007"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 4,
+              "name": "Armaments",
+              "id": "CARD.ARMAMENTS"
+            }
+          ],
+          "id": "a008"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "1,2"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 1,
+              "name": "Bash",
+              "id": "CARD.BASH"
+            },
+            {
+              "index": 2,
+              "name": "Ultimate Defend",
+              "id": "CARD.ULTIMATE_DEFEND"
+            }
+          ],
+          "id": "a009"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "1,3"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 1,
+              "name": "Bash",
+              "id": "CARD.BASH"
+            },
+            {
+              "index": 3,
+              "name": "Rupture",
+              "id": "CARD.RUPTURE"
+            }
+          ],
+          "id": "a010"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "1,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 1,
+              "name": "Bash",
+              "id": "CARD.BASH"
+            },
+            {
+              "index": 4,
+              "name": "Armaments",
+              "id": "CARD.ARMAMENTS"
+            }
+          ],
+          "id": "a011"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "2,3"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 2,
+              "name": "Ultimate Defend",
+              "id": "CARD.ULTIMATE_DEFEND"
+            },
+            {
+              "index": 3,
+              "name": "Rupture",
+              "id": "CARD.RUPTURE"
+            }
+          ],
+          "id": "a012"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "2,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 2,
+              "name": "Ultimate Defend",
+              "id": "CARD.ULTIMATE_DEFEND"
+            },
+            {
+              "index": 4,
+              "name": "Armaments",
+              "id": "CARD.ARMAMENTS"
+            }
+          ],
+          "id": "a013"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "3,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 3,
+              "name": "Rupture",
+              "id": "CARD.RUPTURE"
+            },
+            {
+              "index": 4,
+              "name": "Armaments",
+              "id": "CARD.ARMAMENTS"
+            }
+          ],
+          "id": "a014"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,1,2"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 1,
+              "name": "Bash",
+              "id": "CARD.BASH"
+            },
+            {
+              "index": 2,
+              "name": "Ultimate Defend",
+              "id": "CARD.ULTIMATE_DEFEND"
+            }
+          ],
+          "id": "a015"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,1,3"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 1,
+              "name": "Bash",
+              "id": "CARD.BASH"
+            },
+            {
+              "index": 3,
+              "name": "Rupture",
+              "id": "CARD.RUPTURE"
+            }
+          ],
+          "id": "a016"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,1,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 1,
+              "name": "Bash",
+              "id": "CARD.BASH"
+            },
+            {
+              "index": 4,
+              "name": "Armaments",
+              "id": "CARD.ARMAMENTS"
+            }
+          ],
+          "id": "a017"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,2,3"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 2,
+              "name": "Ultimate Defend",
+              "id": "CARD.ULTIMATE_DEFEND"
+            },
+            {
+              "index": 3,
+              "name": "Rupture",
+              "id": "CARD.RUPTURE"
+            }
+          ],
+          "id": "a018"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,2,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 2,
+              "name": "Ultimate Defend",
+              "id": "CARD.ULTIMATE_DEFEND"
+            },
+            {
+              "index": 4,
+              "name": "Armaments",
+              "id": "CARD.ARMAMENTS"
+            }
+          ],
+          "id": "a019"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,3,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 3,
+              "name": "Rupture",
+              "id": "CARD.RUPTURE"
+            },
+            {
+              "index": 4,
+              "name": "Armaments",
+              "id": "CARD.ARMAMENTS"
+            }
+          ],
+          "id": "a020"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "1,2,3"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 1,
+              "name": "Bash",
+              "id": "CARD.BASH"
+            },
+            {
+              "index": 2,
+              "name": "Ultimate Defend",
+              "id": "CARD.ULTIMATE_DEFEND"
+            },
+            {
+              "index": 3,
+              "name": "Rupture",
+              "id": "CARD.RUPTURE"
+            }
+          ],
+          "id": "a021"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "1,2,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 1,
+              "name": "Bash",
+              "id": "CARD.BASH"
+            },
+            {
+              "index": 2,
+              "name": "Ultimate Defend",
+              "id": "CARD.ULTIMATE_DEFEND"
+            },
+            {
+              "index": 4,
+              "name": "Armaments",
+              "id": "CARD.ARMAMENTS"
+            }
+          ],
+          "id": "a022"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "1,3,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 1,
+              "name": "Bash",
+              "id": "CARD.BASH"
+            },
+            {
+              "index": 3,
+              "name": "Rupture",
+              "id": "CARD.RUPTURE"
+            },
+            {
+              "index": 4,
+              "name": "Armaments",
+              "id": "CARD.ARMAMENTS"
+            }
+          ],
+          "id": "a023"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "2,3,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 2,
+              "name": "Ultimate Defend",
+              "id": "CARD.ULTIMATE_DEFEND"
+            },
+            {
+              "index": 3,
+              "name": "Rupture",
+              "id": "CARD.RUPTURE"
+            },
+            {
+              "index": 4,
+              "name": "Armaments",
+              "id": "CARD.ARMAMENTS"
+            }
+          ],
+          "id": "a024"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,1,2,3"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 1,
+              "name": "Bash",
+              "id": "CARD.BASH"
+            },
+            {
+              "index": 2,
+              "name": "Ultimate Defend",
+              "id": "CARD.ULTIMATE_DEFEND"
+            },
+            {
+              "index": 3,
+              "name": "Rupture",
+              "id": "CARD.RUPTURE"
+            }
+          ],
+          "id": "a025"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,1,2,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 1,
+              "name": "Bash",
+              "id": "CARD.BASH"
+            },
+            {
+              "index": 2,
+              "name": "Ultimate Defend",
+              "id": "CARD.ULTIMATE_DEFEND"
+            },
+            {
+              "index": 4,
+              "name": "Armaments",
+              "id": "CARD.ARMAMENTS"
+            }
+          ],
+          "id": "a026"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,1,3,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 1,
+              "name": "Bash",
+              "id": "CARD.BASH"
+            },
+            {
+              "index": 3,
+              "name": "Rupture",
+              "id": "CARD.RUPTURE"
+            },
+            {
+              "index": 4,
+              "name": "Armaments",
+              "id": "CARD.ARMAMENTS"
+            }
+          ],
+          "id": "a027"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,2,3,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 2,
+              "name": "Ultimate Defend",
+              "id": "CARD.ULTIMATE_DEFEND"
+            },
+            {
+              "index": 3,
+              "name": "Rupture",
+              "id": "CARD.RUPTURE"
+            },
+            {
+              "index": 4,
+              "name": "Armaments",
+              "id": "CARD.ARMAMENTS"
+            }
+          ],
+          "id": "a028"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "1,2,3,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 1,
+              "name": "Bash",
+              "id": "CARD.BASH"
+            },
+            {
+              "index": 2,
+              "name": "Ultimate Defend",
+              "id": "CARD.ULTIMATE_DEFEND"
+            },
+            {
+              "index": 3,
+              "name": "Rupture",
+              "id": "CARD.RUPTURE"
+            },
+            {
+              "index": 4,
+              "name": "Armaments",
+              "id": "CARD.ARMAMENTS"
+            }
+          ],
+          "id": "a029"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,1,2,3,4"
+            }
+          },
+          "name": "select_cards",
+          "details": [
+            {
+              "index": 0,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 1,
+              "name": "Bash",
+              "id": "CARD.BASH"
+            },
+            {
+              "index": 2,
+              "name": "Ultimate Defend",
+              "id": "CARD.ULTIMATE_DEFEND"
+            },
+            {
+              "index": 3,
+              "name": "Rupture",
+              "id": "CARD.RUPTURE"
+            },
+            {
+              "index": 4,
+              "name": "Armaments",
+              "id": "CARD.ARMAMENTS"
+            }
+          ],
+          "id": "a030"
+        },
+        {
+          "action": {
+            "cmd": "action",
+            "action": "skip_select",
+            "args": {}
+          },
+          "name": "skip_select",
+          "details": null,
+          "id": "a031"
+        }
+      ],
+      "baseline_id": "f21b2c4c4359f798",
+      "keep_all_id": "a4125433833e081a",
+      "status_only_id": "a4125433833e081a",
+      "expected_final_hash": "6e75244c693e296237171c4f59c058388e324755c15b0bce2f468c76e9cc8c1c",
+      "expected_status": "defeat",
+      "expected_hp": 0,
+      "context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 11,
+        "room_type": "Elite",
+        "boss": {
+          "id": "KNOWLEDGE_DEMON_BOSS",
+          "name": "Knowledge Demon"
+        }
+      },
+      "entry_hp": 47,
+      "cards": [
+        {
+          "index": 0,
+          "name": "Defend",
+          "id": "CARD.DEFEND_IRONCLAD",
+          "type": "Skill",
+          "cost": 1,
+          "upgraded": false
+        },
+        {
+          "index": 1,
+          "name": "Bash",
+          "id": "CARD.BASH",
+          "type": "Attack",
+          "cost": 2,
+          "upgraded": true
+        },
+        {
+          "index": 2,
+          "name": "Ultimate Defend",
+          "id": "CARD.ULTIMATE_DEFEND",
+          "type": "Skill",
+          "cost": 1,
+          "upgraded": false
+        },
+        {
+          "index": 3,
+          "name": "Rupture",
+          "id": "CARD.RUPTURE",
+          "type": "Power",
+          "cost": 1,
+          "upgraded": false
+        },
+        {
+          "index": 4,
+          "name": "Armaments",
+          "id": "CARD.ARMAMENTS",
+          "type": "Skill",
+          "cost": 1,
+          "upgraded": true
+        }
+      ]
+    }
+  ],
+  "policy_sources": [
+    {
+      "path": "rsi/opening_subset.py",
+      "sha256": "4e462ba5d8c0ffbccfb0f83c25b1f9fab240ca99b8fca8198d5a882334247808"
+    },
+    {
+      "path": "rsi/continuation.py",
+      "sha256": "fb83c86f1101df4401bb900fb61e6978f610fb03e37dd0e405efbfdf4799affc"
+    },
+    {
+      "path": "rsi/teacher.py",
+      "sha256": "93f5b264bea6372877635384788d4713a697a9794269320e6ed4050405360b9f"
+    },
+    {
+      "path": "rsi/planner.py",
+      "sha256": "14c306a6ed751bcfd667e2368d9384972b3018b8fc03650f630a0a206c09399a"
+    },
+    {
+      "path": "rsi/ppo_actions.py",
+      "sha256": "6375a879282afd8dd931c069de2d4a3bbec935c78e6b2b1cfaeb4466189db536"
+    },
+    {
+      "path": "rsi/potions.py",
+      "sha256": "646d1130569fae5398cb0d664a7acfb28f931a410665ec95d63c8c68220e74f5"
+    }
+  ],
+  "budgets": {
+    "wall_seconds": 900,
+    "trial_seconds": 120,
+    "replay_seconds": 120,
+    "actions": 300,
+    "workers": 4
+  },
+  "ranking": "True clear, remaining HP, retained potion count; dead inventory has zero utility; tie fewer discards then lexical indices.",
+  "comparison": "Full bank oracle vs frozen baseline, keep-all, status/curse-only; each fixes the first action only.",
+  "scope": "One source seed, five correlated known roots; no model calls, synthetic game edits or default promotion."
+}
