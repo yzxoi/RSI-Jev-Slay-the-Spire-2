@@ -1,0 +1,3290 @@
+{
+  "manifest": {
+    "schema_version": 2,
+    "code_commit": "dc01b281a9b3456f618a01a587287e7628d57167",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "a32485ef4c34641acc26f0c85454ba767bd4b06c4c06258e59baa26b5a72b54f",
+    "godot_stubs_sha256": "2bb3b99863f651decb27cf3ceead489046808e60d95ccbc28048ad094ecc856a",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+      "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772",
+      "headless-zzzzzz-godot-abi.patch": "5239d3836d279de5143f7d56bece1f061c6c4002de696fce28f9f7f3922ededc",
+      "headless-zzzzzzz-learning-observations.patch": "d51db8457fdb9348340a829c84fa77e9620c476ba16a7c6e224b286ecb2dfd07",
+      "headless-zzzzzzzz-encounter-abi.patch": "e4a730f9e58fddebef8ef924fcd8d0adc03d72d1148f8d29b2f9ea60556696cc",
+      "headless-zzzzzzzzz-native-map-odds.patch": "86ee5561968629b094a1f63e214f32e8a3ae7b5614fffcb470d52886287e1885"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4",
+    "experiment": "E170",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.5",
+    "model_calls": 0,
+    "model_cost_usd": 0,
+    "encoder": "e140-phase-context-v1",
+    "torch": "2.11.0",
+    "device": "cpu"
+  },
+  "plan": {
+    "path": "experiments/E170/plan-v1.json",
+    "sha256": "33c7db8460b477aae7e9c3a1bda4d1a5dc254838399184ce298b9478dd50fabf"
+  },
+  "records": [
+    {
+      "case": "A0-000",
+      "seed": "e170_potions_Ironclad_A0_000",
+      "character": "Ironclad",
+      "ascension": 0,
+      "arm": "program_campaign",
+      "potion_arm": "typed",
+      "run_id": "8fbc7913-e27c-4fd9-b80d-cfd29c0f2b45",
+      "status": "defeat",
+      "steps": 206,
+      "entries": [
+        {
+          "act": 1,
+          "floor": 2,
+          "room_type": "Monster",
+          "hp": 80,
+          "max_hp": 80,
+          "enemies": [
+            "Nibbit"
+          ],
+          "deck_hash": "7ac555ce937bbb7a308b1c82bdb8aa929df0950af4bbd9160db0dfa5335028b9",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 3,
+          "room_type": "Monster",
+          "hp": 78,
+          "max_hp": 80,
+          "enemies": [
+            "Leaf Slime (S)",
+            "Twig Slime (M)",
+            "Twig Slime (S)"
+          ],
+          "deck_hash": "6c592db075528a20738fa00f0e238acdda969cc73a5ccf02803c14fa2a94e619",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 4,
+          "room_type": "Monster",
+          "hp": 80,
+          "max_hp": 80,
+          "enemies": [
+            "Shrinker Beetle"
+          ],
+          "deck_hash": "3ab07cf5b770c884a2f001c129b736a8921b4998690c590b510c38ac97f2d113",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 5,
+          "room_type": "Monster",
+          "hp": 80,
+          "max_hp": 80,
+          "enemies": [
+            "Cubex Construct"
+          ],
+          "deck_hash": "1ad08ae7dd8de928d415f6c277de529c2868d4007774b88a81dd7c040b865698",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 6,
+          "room_type": "Monster",
+          "hp": 77,
+          "max_hp": 80,
+          "enemies": [
+            "Axe Raider",
+            "Assassin Raider",
+            "Tracker Raider"
+          ],
+          "deck_hash": "da87f0970040fb7e295029e4ccc3d29d392ee0d94a055116ead4e4cff4085381",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 7,
+          "room_type": "Monster",
+          "hp": 61,
+          "max_hp": 80,
+          "enemies": [
+            "Fogmog"
+          ],
+          "deck_hash": "36e5416e021e52af12a7ff15de151c26c7b921083a0876986c10d2c56722dd9b",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 9,
+          "room_type": "Monster",
+          "hp": 68,
+          "max_hp": 80,
+          "enemies": [
+            "Snapping Jaxfruit",
+            "Flyconid"
+          ],
+          "deck_hash": "5770ffade5fed7864415ff2dac20ba41ccf24a13c671a5c7c51c76358104696b",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 12,
+          "room_type": "Monster",
+          "hp": 52,
+          "max_hp": 80,
+          "enemies": [
+            "Nibbit",
+            "Nibbit"
+          ],
+          "deck_hash": "80a7598f171edee9dac609c77504746b48bc835006da0ba281523628756291ac",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 13,
+          "room_type": "Monster",
+          "hp": 35,
+          "max_hp": 80,
+          "enemies": [
+            "Twig Slime (M)",
+            "Leaf Slime (M)",
+            "Twig Slime (S)",
+            "Leaf Slime (S)"
+          ],
+          "deck_hash": "cd8cce68c88710a98c87659afc3de4851221738b1cc75b4ef5a572b8efda7e5d",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 14,
+          "room_type": "Monster",
+          "hp": 25,
+          "max_hp": 80,
+          "enemies": [
+            "Inklet",
+            "Inklet",
+            "Inklet"
+          ],
+          "deck_hash": "1b86aeec1a80cb2731f52d5ef7e32a4c2e9ce81e352893f4df7c25165140ea46",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 15,
+          "room_type": "Monster",
+          "hp": 19,
+          "max_hp": 80,
+          "enemies": [
+            "Twig Slime (M)",
+            "Flyconid"
+          ],
+          "deck_hash": "1bf9a9e2e7018613b62ba5367ad21369479d36bdda204b91861e2bf0120c220b",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 17,
+          "room_type": "Boss",
+          "hp": 35,
+          "max_hp": 80,
+          "enemies": [
+            "Ceremonial Beast"
+          ],
+          "deck_hash": "838e25cded8e5fb32b02e13573c5115c7568ec2d630b743f3bae57e1933250a0",
+          "potions": 1
+        }
+      ],
+      "completed_battles": 11,
+      "completed_acts": 0,
+      "max_act": 1,
+      "scenes": {
+        "event_choice": 1,
+        "map_select": 16,
+        "combat_play": 159,
+        "potion_reward": 5,
+        "card_reward": 11,
+        "card_select": 11,
+        "rest_site": 3
+      },
+      "owners": {
+        "program_campaign": 28,
+        "program_combat": 136,
+        "only_legal": 42
+      },
+      "potion_blocks": 0,
+      "illegal_actions": 0,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "c9234073aef1664bc4913e8f02bc248f6b9313c7af0e2c3f6805f2b1609f9dd1",
+      "transition_hash": "f7e9bb4ccf4d11b8a8b5fe62a376a375a9bc089f7e33416914f85ca90baae676",
+      "readonly_map_queries": 16,
+      "expert_packets": 0,
+      "expert_wait_seconds": 0,
+      "expert_input_chars": 0,
+      "expert_output_chars": 0,
+      "teacher_packets": [],
+      "expert_tokens": null,
+      "expert_cost_usd": null,
+      "final_campaign_plan": null,
+      "seconds": 8.250880707986653,
+      "wire.jsonl_sha256": "5029131051cfaf97d7a6737f18f6a57b6fbc7fb25ce3f6eef8e26473c9df7206",
+      "engine.stderr.log_sha256": "826c00c468bb633d4d7be815c47f9cd7b4fd55d05c49680ae4252b7259c423f4",
+      "trace_path": "artifacts/runs/8fbc7913-e27c-4fd9-b80d-cfd29c0f2b45/decisions.jsonl",
+      "trace_sha256": "d0721c5b6b969d11fa33cb58dd07d2fec629e07a4a9619bcf2077ff8265018fb",
+      "compute_seconds": 8.250880707986653,
+      "verification": {
+        "case": "A0-000",
+        "status": "match",
+        "steps": 223,
+        "outcome": "defeat",
+        "final_hash": "c9234073aef1664bc4913e8f02bc248f6b9313c7af0e2c3f6805f2b1609f9dd1",
+        "seconds": 7.595496542053297,
+        "wire.jsonl_sha256": "2d7c547fbd5fd467f26130decc7939acc1ac5f3eb00b0ad7396cbe472384647c",
+        "engine.stderr.log_sha256": "826c00c468bb633d4d7be815c47f9cd7b4fd55d05c49680ae4252b7259c423f4",
+        "trace_path": "artifacts/runs/4da28721-d6cc-4022-9b92-425ac10f9157/decisions.jsonl",
+        "trace_sha256": "1cc6cfb2416813d29afec39ae5b0ad612f2fcd64f21077b22beccc8e20bc6dc0"
+      },
+      "potion_usage": {
+        "guarded_potions_exposed": [
+          "ASHWATER"
+        ],
+        "defer_reasons": [],
+        "potion_uses": [
+          "FIRE_POTION",
+          "SKILL_POTION",
+          "ATTACK_POTION",
+          "ASHWATER",
+          "EXPLOSIVE_AMPOULE"
+        ]
+      }
+    },
+    {
+      "case": "A0-000",
+      "seed": "e170_potions_Ironclad_A0_000",
+      "character": "Ironclad",
+      "ascension": 0,
+      "arm": "program_campaign",
+      "potion_arm": "combined",
+      "run_id": "d6f923ef-41c6-4564-9f36-0bed1b9f317c",
+      "status": "defeat",
+      "steps": 204,
+      "entries": [
+        {
+          "act": 1,
+          "floor": 2,
+          "room_type": "Monster",
+          "hp": 80,
+          "max_hp": 80,
+          "enemies": [
+            "Nibbit"
+          ],
+          "deck_hash": "7ac555ce937bbb7a308b1c82bdb8aa929df0950af4bbd9160db0dfa5335028b9",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 3,
+          "room_type": "Monster",
+          "hp": 78,
+          "max_hp": 80,
+          "enemies": [
+            "Leaf Slime (S)",
+            "Twig Slime (M)",
+            "Twig Slime (S)"
+          ],
+          "deck_hash": "6c592db075528a20738fa00f0e238acdda969cc73a5ccf02803c14fa2a94e619",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 4,
+          "room_type": "Monster",
+          "hp": 80,
+          "max_hp": 80,
+          "enemies": [
+            "Shrinker Beetle"
+          ],
+          "deck_hash": "3ab07cf5b770c884a2f001c129b736a8921b4998690c590b510c38ac97f2d113",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 5,
+          "room_type": "Monster",
+          "hp": 80,
+          "max_hp": 80,
+          "enemies": [
+            "Cubex Construct"
+          ],
+          "deck_hash": "1ad08ae7dd8de928d415f6c277de529c2868d4007774b88a81dd7c040b865698",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 6,
+          "room_type": "Monster",
+          "hp": 77,
+          "max_hp": 80,
+          "enemies": [
+            "Axe Raider",
+            "Assassin Raider",
+            "Tracker Raider"
+          ],
+          "deck_hash": "da87f0970040fb7e295029e4ccc3d29d392ee0d94a055116ead4e4cff4085381",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 7,
+          "room_type": "Monster",
+          "hp": 61,
+          "max_hp": 80,
+          "enemies": [
+            "Fogmog"
+          ],
+          "deck_hash": "36e5416e021e52af12a7ff15de151c26c7b921083a0876986c10d2c56722dd9b",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 9,
+          "room_type": "Monster",
+          "hp": 68,
+          "max_hp": 80,
+          "enemies": [
+            "Snapping Jaxfruit",
+            "Flyconid"
+          ],
+          "deck_hash": "5770ffade5fed7864415ff2dac20ba41ccf24a13c671a5c7c51c76358104696b",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 12,
+          "room_type": "Monster",
+          "hp": 52,
+          "max_hp": 80,
+          "enemies": [
+            "Nibbit",
+            "Nibbit"
+          ],
+          "deck_hash": "80a7598f171edee9dac609c77504746b48bc835006da0ba281523628756291ac",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 13,
+          "room_type": "Monster",
+          "hp": 35,
+          "max_hp": 80,
+          "enemies": [
+            "Twig Slime (M)",
+            "Leaf Slime (M)",
+            "Twig Slime (S)",
+            "Leaf Slime (S)"
+          ],
+          "deck_hash": "cd8cce68c88710a98c87659afc3de4851221738b1cc75b4ef5a572b8efda7e5d",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 14,
+          "room_type": "Monster",
+          "hp": 25,
+          "max_hp": 80,
+          "enemies": [
+            "Inklet",
+            "Inklet",
+            "Inklet"
+          ],
+          "deck_hash": "1b86aeec1a80cb2731f52d5ef7e32a4c2e9ce81e352893f4df7c25165140ea46",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 15,
+          "room_type": "Monster",
+          "hp": 19,
+          "max_hp": 80,
+          "enemies": [
+            "Twig Slime (M)",
+            "Flyconid"
+          ],
+          "deck_hash": "1bf9a9e2e7018613b62ba5367ad21369479d36bdda204b91861e2bf0120c220b",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 17,
+          "room_type": "Boss",
+          "hp": 35,
+          "max_hp": 80,
+          "enemies": [
+            "Ceremonial Beast"
+          ],
+          "deck_hash": "838e25cded8e5fb32b02e13573c5115c7568ec2d630b743f3bae57e1933250a0",
+          "potions": 2
+        }
+      ],
+      "completed_battles": 11,
+      "completed_acts": 0,
+      "max_act": 1,
+      "scenes": {
+        "event_choice": 1,
+        "map_select": 16,
+        "combat_play": 158,
+        "potion_reward": 5,
+        "card_reward": 11,
+        "card_select": 10,
+        "rest_site": 3
+      },
+      "owners": {
+        "program_campaign": 28,
+        "program_combat": 145,
+        "only_legal": 31
+      },
+      "potion_blocks": 0,
+      "illegal_actions": 0,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "2e4376e021a90c58ebf6039f41d9fbfaff771baa1b83e2fc87a0b2483acd63ef",
+      "transition_hash": "4e5a6cdf3e2b60a6a2d5d809c914da4ae0ee0beddd3f69a2560da10313c08a80",
+      "readonly_map_queries": 16,
+      "expert_packets": 0,
+      "expert_wait_seconds": 0,
+      "expert_input_chars": 0,
+      "expert_output_chars": 0,
+      "teacher_packets": [],
+      "expert_tokens": null,
+      "expert_cost_usd": null,
+      "final_campaign_plan": null,
+      "seconds": 7.946390374796465,
+      "wire.jsonl_sha256": "4984c84429d03a2e408b4de4478765445917f3a428b62e14898f7b87e9e63186",
+      "engine.stderr.log_sha256": "09c3a459bd8727c53bc01540914259785e9f4941162c52243da91351dafe07fe",
+      "trace_path": "artifacts/runs/d6f923ef-41c6-4564-9f36-0bed1b9f317c/decisions.jsonl",
+      "trace_sha256": "393798ad177958274db1482817667a21e4da091100e17cc0b7907cbd3f92204d",
+      "compute_seconds": 7.946390374796465,
+      "verification": {
+        "case": "A0-000",
+        "status": "match",
+        "steps": 221,
+        "outcome": "defeat",
+        "final_hash": "2e4376e021a90c58ebf6039f41d9fbfaff771baa1b83e2fc87a0b2483acd63ef",
+        "seconds": 7.567092708079144,
+        "wire.jsonl_sha256": "1e27c1bdb72f58b1892d496306dca6a2a35177ebf1a6b4204795ac09b0207abc",
+        "engine.stderr.log_sha256": "09c3a459bd8727c53bc01540914259785e9f4941162c52243da91351dafe07fe",
+        "trace_path": "artifacts/runs/98807e04-be3f-4d3b-99a1-bd81cc81582a/decisions.jsonl",
+        "trace_sha256": "59e95a45147e30e9875be7068531db57fa4b8a1ba88216d599914093fd789ad4"
+      },
+      "potion_usage": {
+        "guarded_potions_exposed": [
+          "ASHWATER"
+        ],
+        "defer_reasons": [
+          "unverified_hand_transformation"
+        ],
+        "potion_uses": [
+          "FIRE_POTION",
+          "SKILL_POTION",
+          "ATTACK_POTION",
+          "EXPLOSIVE_AMPOULE"
+        ]
+      }
+    },
+    {
+      "case": "A0-001",
+      "seed": "e170_potions_Ironclad_A0_001",
+      "character": "Ironclad",
+      "ascension": 0,
+      "arm": "program_campaign",
+      "potion_arm": "typed",
+      "run_id": "51a3d779-7fb6-44ed-b1b8-b7352bed85c9",
+      "status": "defeat",
+      "steps": 183,
+      "entries": [
+        {
+          "act": 1,
+          "floor": 2,
+          "room_type": "Monster",
+          "hp": 80,
+          "max_hp": 80,
+          "enemies": [
+            "Leaf Slime (S)",
+            "Twig Slime (M)",
+            "Twig Slime (S)"
+          ],
+          "deck_hash": "0e6e5c760c9bb90a7b23271121e8a4eea2552fde1bff25957bc4443a72514550",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 4,
+          "room_type": "Monster",
+          "hp": 80,
+          "max_hp": 80,
+          "enemies": [
+            "Nibbit"
+          ],
+          "deck_hash": "0ecdd2c67205f5c308097e6d346f5bd01f988bb04ab514b25ffaefc121b7451d",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 5,
+          "room_type": "Monster",
+          "hp": 78,
+          "max_hp": 80,
+          "enemies": [
+            "Shrinker Beetle"
+          ],
+          "deck_hash": "daeedf4cfb9ffd406680c7b2aed49327a8292305842716289a0da7201151ffb8",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 6,
+          "room_type": "Monster",
+          "hp": 80,
+          "max_hp": 80,
+          "enemies": [
+            "Nibbit",
+            "Nibbit"
+          ],
+          "deck_hash": "81129579ac203d7eff735166d2eea980ed2242dff921f25f942de51f8855b4a2",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 12,
+          "room_type": "Monster",
+          "hp": 71,
+          "max_hp": 80,
+          "enemies": [
+            "Inklet",
+            "Inklet",
+            "Inklet"
+          ],
+          "deck_hash": "3b4ae6367892ba823003711c19a9b533c8dfc2c75fd6347d09ff0919aa5183e9",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 14,
+          "room_type": "Monster",
+          "hp": 66,
+          "max_hp": 80,
+          "enemies": [
+            "Snapping Jaxfruit",
+            "Slithering Strangler"
+          ],
+          "deck_hash": "9f6f5f8f28038a2075e84462e535284d91a962ef3f764312b46a64a34bc2bf31",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 15,
+          "room_type": "Monster",
+          "hp": 53,
+          "max_hp": 80,
+          "enemies": [
+            "Vine Shambler"
+          ],
+          "deck_hash": "3170e1ba58874420406f72701e15fbf46a3805729d5eacd62c432e8966b64c80",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 17,
+          "room_type": "Boss",
+          "hp": 74,
+          "max_hp": 80,
+          "enemies": [
+            "Kin Follower",
+            "Kin Follower",
+            "Kin Priest"
+          ],
+          "deck_hash": "acfbb2e56a0038b8e3afc7cab7f1047a96fefb651a6efb6b1693c1ee0382dbcb",
+          "potions": 0
+        }
+      ],
+      "completed_battles": 7,
+      "completed_acts": 0,
+      "max_act": 1,
+      "scenes": {
+        "event_choice": 5,
+        "map_select": 16,
+        "combat_play": 143,
+        "card_reward": 7,
+        "card_select": 7,
+        "potion_reward": 2,
+        "shop": 1,
+        "rest_site": 2
+      },
+      "owners": {
+        "program_campaign": 25,
+        "program_combat": 115,
+        "only_legal": 43
+      },
+      "potion_blocks": 0,
+      "illegal_actions": 0,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "c6c011edda7385af1c41fc7ab961f9d4e1615838e8003dd1e030a7ef9236b17b",
+      "transition_hash": "1e6e812e041283231a732202b93c9d0ede8ed2000b4a33e4b73f62bb15781f81",
+      "readonly_map_queries": 16,
+      "expert_packets": 0,
+      "expert_wait_seconds": 0,
+      "expert_input_chars": 0,
+      "expert_output_chars": 0,
+      "teacher_packets": [],
+      "expert_tokens": null,
+      "expert_cost_usd": null,
+      "final_campaign_plan": null,
+      "seconds": 7.592968959128484,
+      "wire.jsonl_sha256": "81a10de39cb425afa92bf39a1276d68cf6fda11aeb062a4fc070017add03fcd4",
+      "engine.stderr.log_sha256": "f1dd1ab4b970bce1c767e6de7a9c9b784e4bb6bbc79b9fdf239d168ce5dbe70c",
+      "trace_path": "artifacts/runs/51a3d779-7fb6-44ed-b1b8-b7352bed85c9/decisions.jsonl",
+      "trace_sha256": "66b6ce5537a6aef5c67272fc4d0da60f907ef2acd27bd1cb89368c7ae0fabf07",
+      "compute_seconds": 7.592968959128484,
+      "verification": {
+        "case": "A0-001",
+        "status": "match",
+        "steps": 200,
+        "outcome": "defeat",
+        "final_hash": "c6c011edda7385af1c41fc7ab961f9d4e1615838e8003dd1e030a7ef9236b17b",
+        "seconds": 6.4322229160461575,
+        "wire.jsonl_sha256": "b2367b47c548bc4c09ef87a385b281bff14c11209491f4e833f43b3583672919",
+        "engine.stderr.log_sha256": "f1dd1ab4b970bce1c767e6de7a9c9b784e4bb6bbc79b9fdf239d168ce5dbe70c",
+        "trace_path": "artifacts/runs/e6d34efa-3a22-4f71-84b0-63bac3579a16/decisions.jsonl",
+        "trace_sha256": "87b09ee62732597b44462b8d1aba98e81b973a56f7b52b440eba1b0c8a5964a6"
+      },
+      "potion_usage": {
+        "guarded_potions_exposed": [],
+        "defer_reasons": [],
+        "potion_uses": [
+          "COLORLESS_POTION",
+          "COLORLESS_POTION"
+        ]
+      }
+    },
+    {
+      "case": "A0-001",
+      "seed": "e170_potions_Ironclad_A0_001",
+      "character": "Ironclad",
+      "ascension": 0,
+      "arm": "program_campaign",
+      "potion_arm": "combined",
+      "run_id": "66756ae6-2a97-4432-879a-0179b5d3e246",
+      "status": "defeat",
+      "steps": 183,
+      "entries": [
+        {
+          "act": 1,
+          "floor": 2,
+          "room_type": "Monster",
+          "hp": 80,
+          "max_hp": 80,
+          "enemies": [
+            "Leaf Slime (S)",
+            "Twig Slime (M)",
+            "Twig Slime (S)"
+          ],
+          "deck_hash": "0e6e5c760c9bb90a7b23271121e8a4eea2552fde1bff25957bc4443a72514550",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 4,
+          "room_type": "Monster",
+          "hp": 80,
+          "max_hp": 80,
+          "enemies": [
+            "Nibbit"
+          ],
+          "deck_hash": "0ecdd2c67205f5c308097e6d346f5bd01f988bb04ab514b25ffaefc121b7451d",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 5,
+          "room_type": "Monster",
+          "hp": 78,
+          "max_hp": 80,
+          "enemies": [
+            "Shrinker Beetle"
+          ],
+          "deck_hash": "daeedf4cfb9ffd406680c7b2aed49327a8292305842716289a0da7201151ffb8",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 6,
+          "room_type": "Monster",
+          "hp": 80,
+          "max_hp": 80,
+          "enemies": [
+            "Nibbit",
+            "Nibbit"
+          ],
+          "deck_hash": "81129579ac203d7eff735166d2eea980ed2242dff921f25f942de51f8855b4a2",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 12,
+          "room_type": "Monster",
+          "hp": 71,
+          "max_hp": 80,
+          "enemies": [
+            "Inklet",
+            "Inklet",
+            "Inklet"
+          ],
+          "deck_hash": "3b4ae6367892ba823003711c19a9b533c8dfc2c75fd6347d09ff0919aa5183e9",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 14,
+          "room_type": "Monster",
+          "hp": 66,
+          "max_hp": 80,
+          "enemies": [
+            "Snapping Jaxfruit",
+            "Slithering Strangler"
+          ],
+          "deck_hash": "9f6f5f8f28038a2075e84462e535284d91a962ef3f764312b46a64a34bc2bf31",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 15,
+          "room_type": "Monster",
+          "hp": 53,
+          "max_hp": 80,
+          "enemies": [
+            "Vine Shambler"
+          ],
+          "deck_hash": "3170e1ba58874420406f72701e15fbf46a3805729d5eacd62c432e8966b64c80",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 17,
+          "room_type": "Boss",
+          "hp": 74,
+          "max_hp": 80,
+          "enemies": [
+            "Kin Follower",
+            "Kin Follower",
+            "Kin Priest"
+          ],
+          "deck_hash": "acfbb2e56a0038b8e3afc7cab7f1047a96fefb651a6efb6b1693c1ee0382dbcb",
+          "potions": 0
+        }
+      ],
+      "completed_battles": 7,
+      "completed_acts": 0,
+      "max_act": 1,
+      "scenes": {
+        "event_choice": 5,
+        "map_select": 16,
+        "combat_play": 143,
+        "card_reward": 7,
+        "card_select": 7,
+        "potion_reward": 2,
+        "shop": 1,
+        "rest_site": 2
+      },
+      "owners": {
+        "program_campaign": 25,
+        "program_combat": 115,
+        "only_legal": 43
+      },
+      "potion_blocks": 0,
+      "illegal_actions": 0,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "c6c011edda7385af1c41fc7ab961f9d4e1615838e8003dd1e030a7ef9236b17b",
+      "transition_hash": "1e6e812e041283231a732202b93c9d0ede8ed2000b4a33e4b73f62bb15781f81",
+      "readonly_map_queries": 16,
+      "expert_packets": 0,
+      "expert_wait_seconds": 0,
+      "expert_input_chars": 0,
+      "expert_output_chars": 0,
+      "teacher_packets": [],
+      "expert_tokens": null,
+      "expert_cost_usd": null,
+      "final_campaign_plan": null,
+      "seconds": 7.940766999963671,
+      "wire.jsonl_sha256": "737aa7bc087d51b693dcf797d2da14b97517b821571bd47c7de0376652dc84ea",
+      "engine.stderr.log_sha256": "f1dd1ab4b970bce1c767e6de7a9c9b784e4bb6bbc79b9fdf239d168ce5dbe70c",
+      "trace_path": "artifacts/runs/66756ae6-2a97-4432-879a-0179b5d3e246/decisions.jsonl",
+      "trace_sha256": "4dfb05d986d45707ab13fdc21f8565f9f1721020c3d26e3cf5e4f4ba3278e47a",
+      "compute_seconds": 7.940766999963671,
+      "verification": {
+        "case": "A0-001",
+        "status": "match",
+        "steps": 200,
+        "outcome": "defeat",
+        "final_hash": "c6c011edda7385af1c41fc7ab961f9d4e1615838e8003dd1e030a7ef9236b17b",
+        "seconds": 6.4389237919822335,
+        "wire.jsonl_sha256": "b5df6e1e0cd54ccdcc25a8bccdc8953f0197c1594fa985622d06e01ff8b8f038",
+        "engine.stderr.log_sha256": "f1dd1ab4b970bce1c767e6de7a9c9b784e4bb6bbc79b9fdf239d168ce5dbe70c",
+        "trace_path": "artifacts/runs/8848a928-13ae-44b3-aa99-f80ef6db8d23/decisions.jsonl",
+        "trace_sha256": "ddfcab080d56ffb14b65949bf65e550d29298189270ed3cf95f6136d55af1f29"
+      },
+      "potion_usage": {
+        "guarded_potions_exposed": [],
+        "defer_reasons": [],
+        "potion_uses": [
+          "COLORLESS_POTION",
+          "COLORLESS_POTION"
+        ]
+      }
+    },
+    {
+      "case": "A0-002",
+      "seed": "e170_potions_Ironclad_A0_002",
+      "character": "Ironclad",
+      "ascension": 0,
+      "arm": "program_campaign",
+      "potion_arm": "typed",
+      "run_id": "b310bf6d-04c1-4935-9048-3f5f49eee591",
+      "status": "defeat",
+      "steps": 190,
+      "entries": [
+        {
+          "act": 1,
+          "floor": 2,
+          "room_type": "Monster",
+          "hp": 80,
+          "max_hp": 80,
+          "enemies": [
+            "Shrinker Beetle"
+          ],
+          "deck_hash": "ec6ec750427ca3871b0813e1c276c680f05351ff82654675518fa2a1d6d7b8d2",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 3,
+          "room_type": "Monster",
+          "hp": 80,
+          "max_hp": 80,
+          "enemies": [
+            "Fuzzy Wurm Crawler"
+          ],
+          "deck_hash": "fda8debdf906436e81b9e1164c611f223f8c62a38513ac8ef7238765e7604165",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 4,
+          "room_type": "Monster",
+          "hp": 80,
+          "max_hp": 80,
+          "enemies": [
+            "Nibbit"
+          ],
+          "deck_hash": "82f7201995451641612f575d0913f257cb10203b283154ec2e0586647226e390",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 5,
+          "room_type": "Monster",
+          "hp": 74,
+          "max_hp": 80,
+          "enemies": [
+            "Fogmog"
+          ],
+          "deck_hash": "bc7edc3f07006be6d44c9205caf8fb4d888226ed93b701f85a73f76440995e25",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 6,
+          "room_type": "Monster",
+          "hp": 62,
+          "max_hp": 80,
+          "enemies": [
+            "Twig Slime (M)",
+            "Leaf Slime (M)",
+            "Leaf Slime (S)",
+            "Twig Slime (S)"
+          ],
+          "deck_hash": "9282c05d428553b9ae166bc7b97af7efb127b0c7750ad18c651e92b47c156d1e",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 7,
+          "room_type": "Monster",
+          "hp": 47,
+          "max_hp": 80,
+          "enemies": [
+            "Snapping Jaxfruit",
+            "Flyconid"
+          ],
+          "deck_hash": "b79902a19eea8116cf550ceb8929bab05746d08dfecee722b3ed4ea6d8bf6f1a",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 12,
+          "room_type": "Monster",
+          "hp": 53,
+          "max_hp": 80,
+          "enemies": [
+            "Assassin Raider",
+            "Crossbow Raider",
+            "Tracker Raider"
+          ],
+          "deck_hash": "12eee252d17070ff1017beddf1391520fd1f3dabb1ee688e3eb10b7adcdac97b",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 15,
+          "room_type": "Monster",
+          "hp": 68,
+          "max_hp": 80,
+          "enemies": [
+            "Cubex Construct"
+          ],
+          "deck_hash": "f9cc5d754f0a46ea13c5b73d1a73f5f91bbffb470a34fba1d6277244822a3815",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 17,
+          "room_type": "Boss",
+          "hp": 52,
+          "max_hp": 80,
+          "enemies": [
+            "Ceremonial Beast"
+          ],
+          "deck_hash": "ff3a92f08e8a16a6975cfcb7227e9abb18228ecc6f65a12337d12c0598351772",
+          "potions": 1
+        }
+      ],
+      "completed_battles": 8,
+      "completed_acts": 0,
+      "max_act": 1,
+      "scenes": {
+        "event_choice": 3,
+        "bundle_select": 1,
+        "map_select": 16,
+        "combat_play": 141,
+        "card_select": 13,
+        "card_reward": 8,
+        "potion_reward": 4,
+        "rest_site": 4
+      },
+      "owners": {
+        "program_campaign": 30,
+        "program_combat": 119,
+        "only_legal": 41
+      },
+      "potion_blocks": 0,
+      "illegal_actions": 0,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "4a23b9bc58f222b9d2c032d9756bd86fa4b78f5063a9071726ae78dde9b60c97",
+      "transition_hash": "e790836aed2a805e57069bf54461f369a7081d321f148b133d717451be5f64d4",
+      "readonly_map_queries": 16,
+      "expert_packets": 0,
+      "expert_wait_seconds": 0,
+      "expert_input_chars": 0,
+      "expert_output_chars": 0,
+      "teacher_packets": [],
+      "expert_tokens": null,
+      "expert_cost_usd": null,
+      "final_campaign_plan": null,
+      "seconds": 7.007427375065163,
+      "wire.jsonl_sha256": "be31f339aec6022608dd9ff9bb77d2bbdb8d1c0b8618c8576cb69a3461f52d3b",
+      "engine.stderr.log_sha256": "82b8054d559e6f1eec6e91da75f4c1e4537bbb48fed7903fcf68b9f2979b012c",
+      "trace_path": "artifacts/runs/b310bf6d-04c1-4935-9048-3f5f49eee591/decisions.jsonl",
+      "trace_sha256": "6023ec92513abc494b5ce0327ead3b1b8ad2f81b5dcb54ebd411cf934c898d9b",
+      "compute_seconds": 7.007427375065163,
+      "verification": {
+        "case": "A0-002",
+        "status": "match",
+        "steps": 207,
+        "outcome": "defeat",
+        "final_hash": "4a23b9bc58f222b9d2c032d9756bd86fa4b78f5063a9071726ae78dde9b60c97",
+        "seconds": 7.002900083083659,
+        "wire.jsonl_sha256": "e13116aac24f2c1857c86f46f6fac142dd63d5698872be9f86aaea93cbe2d8b4",
+        "engine.stderr.log_sha256": "82b8054d559e6f1eec6e91da75f4c1e4537bbb48fed7903fcf68b9f2979b012c",
+        "trace_path": "artifacts/runs/0de57015-06fd-4fc6-8d0e-7e3d485dbb62/decisions.jsonl",
+        "trace_sha256": "7a7ecd0ca1a15a88221c4aae8c360946186cb9a17bb0f0636c4d15380790d690"
+      },
+      "potion_usage": {
+        "guarded_potions_exposed": [],
+        "defer_reasons": [],
+        "potion_uses": [
+          "STRENGTH_POTION",
+          "BOTTLED_POTENTIAL",
+          "LUCKY_TONIC",
+          "SPEED_POTION"
+        ]
+      }
+    },
+    {
+      "case": "A0-002",
+      "seed": "e170_potions_Ironclad_A0_002",
+      "character": "Ironclad",
+      "ascension": 0,
+      "arm": "program_campaign",
+      "potion_arm": "combined",
+      "run_id": "93e0d146-0528-424e-b275-d5d8c1bff772",
+      "status": "defeat",
+      "steps": 190,
+      "entries": [
+        {
+          "act": 1,
+          "floor": 2,
+          "room_type": "Monster",
+          "hp": 80,
+          "max_hp": 80,
+          "enemies": [
+            "Shrinker Beetle"
+          ],
+          "deck_hash": "ec6ec750427ca3871b0813e1c276c680f05351ff82654675518fa2a1d6d7b8d2",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 3,
+          "room_type": "Monster",
+          "hp": 80,
+          "max_hp": 80,
+          "enemies": [
+            "Fuzzy Wurm Crawler"
+          ],
+          "deck_hash": "fda8debdf906436e81b9e1164c611f223f8c62a38513ac8ef7238765e7604165",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 4,
+          "room_type": "Monster",
+          "hp": 80,
+          "max_hp": 80,
+          "enemies": [
+            "Nibbit"
+          ],
+          "deck_hash": "82f7201995451641612f575d0913f257cb10203b283154ec2e0586647226e390",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 5,
+          "room_type": "Monster",
+          "hp": 74,
+          "max_hp": 80,
+          "enemies": [
+            "Fogmog"
+          ],
+          "deck_hash": "bc7edc3f07006be6d44c9205caf8fb4d888226ed93b701f85a73f76440995e25",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 6,
+          "room_type": "Monster",
+          "hp": 62,
+          "max_hp": 80,
+          "enemies": [
+            "Twig Slime (M)",
+            "Leaf Slime (M)",
+            "Leaf Slime (S)",
+            "Twig Slime (S)"
+          ],
+          "deck_hash": "9282c05d428553b9ae166bc7b97af7efb127b0c7750ad18c651e92b47c156d1e",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 7,
+          "room_type": "Monster",
+          "hp": 47,
+          "max_hp": 80,
+          "enemies": [
+            "Snapping Jaxfruit",
+            "Flyconid"
+          ],
+          "deck_hash": "b79902a19eea8116cf550ceb8929bab05746d08dfecee722b3ed4ea6d8bf6f1a",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 12,
+          "room_type": "Monster",
+          "hp": 53,
+          "max_hp": 80,
+          "enemies": [
+            "Assassin Raider",
+            "Crossbow Raider",
+            "Tracker Raider"
+          ],
+          "deck_hash": "12eee252d17070ff1017beddf1391520fd1f3dabb1ee688e3eb10b7adcdac97b",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 15,
+          "room_type": "Monster",
+          "hp": 68,
+          "max_hp": 80,
+          "enemies": [
+            "Cubex Construct"
+          ],
+          "deck_hash": "f9cc5d754f0a46ea13c5b73d1a73f5f91bbffb470a34fba1d6277244822a3815",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 17,
+          "room_type": "Boss",
+          "hp": 52,
+          "max_hp": 80,
+          "enemies": [
+            "Ceremonial Beast"
+          ],
+          "deck_hash": "ff3a92f08e8a16a6975cfcb7227e9abb18228ecc6f65a12337d12c0598351772",
+          "potions": 1
+        }
+      ],
+      "completed_battles": 8,
+      "completed_acts": 0,
+      "max_act": 1,
+      "scenes": {
+        "event_choice": 3,
+        "bundle_select": 1,
+        "map_select": 16,
+        "combat_play": 141,
+        "card_select": 13,
+        "card_reward": 8,
+        "potion_reward": 4,
+        "rest_site": 4
+      },
+      "owners": {
+        "program_campaign": 30,
+        "program_combat": 119,
+        "only_legal": 41
+      },
+      "potion_blocks": 0,
+      "illegal_actions": 0,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "4a23b9bc58f222b9d2c032d9756bd86fa4b78f5063a9071726ae78dde9b60c97",
+      "transition_hash": "e790836aed2a805e57069bf54461f369a7081d321f148b133d717451be5f64d4",
+      "readonly_map_queries": 16,
+      "expert_packets": 0,
+      "expert_wait_seconds": 0,
+      "expert_input_chars": 0,
+      "expert_output_chars": 0,
+      "teacher_packets": [],
+      "expert_tokens": null,
+      "expert_cost_usd": null,
+      "final_campaign_plan": null,
+      "seconds": 6.990488541079685,
+      "wire.jsonl_sha256": "bf4654c82e87320525894d0e884f3c7fc7cc4b234a34312db546342a0efaabf9",
+      "engine.stderr.log_sha256": "82b8054d559e6f1eec6e91da75f4c1e4537bbb48fed7903fcf68b9f2979b012c",
+      "trace_path": "artifacts/runs/93e0d146-0528-424e-b275-d5d8c1bff772/decisions.jsonl",
+      "trace_sha256": "f0033a54981b847cb5fd5a9946a49a51404b691cbff7f50ec1e3b9c31424527e",
+      "compute_seconds": 6.990488541079685,
+      "verification": {
+        "case": "A0-002",
+        "status": "match",
+        "steps": 207,
+        "outcome": "defeat",
+        "final_hash": "4a23b9bc58f222b9d2c032d9756bd86fa4b78f5063a9071726ae78dde9b60c97",
+        "seconds": 6.9707847910467535,
+        "wire.jsonl_sha256": "0f5e66b88970eb418e7b40870d67ccfaf7efd732912cbc0e2f13492234e8306a",
+        "engine.stderr.log_sha256": "82b8054d559e6f1eec6e91da75f4c1e4537bbb48fed7903fcf68b9f2979b012c",
+        "trace_path": "artifacts/runs/a4fd2e45-012c-49f6-95b7-9e6acf3c6be7/decisions.jsonl",
+        "trace_sha256": "b4d5c266b73c886966bd3b23208ade350d47c549d5b9c5e9edb55acb7e47291c"
+      },
+      "potion_usage": {
+        "guarded_potions_exposed": [],
+        "defer_reasons": [],
+        "potion_uses": [
+          "STRENGTH_POTION",
+          "BOTTLED_POTENTIAL",
+          "LUCKY_TONIC",
+          "SPEED_POTION"
+        ]
+      }
+    },
+    {
+      "case": "A0-003",
+      "seed": "e170_potions_Ironclad_A0_003",
+      "character": "Ironclad",
+      "ascension": 0,
+      "arm": "program_campaign",
+      "potion_arm": "typed",
+      "run_id": "3bc2a605-501c-41c5-a5cd-f544ab928dda",
+      "status": "defeat",
+      "steps": 154,
+      "entries": [
+        {
+          "act": 1,
+          "floor": 2,
+          "room_type": "Monster",
+          "hp": 80,
+          "max_hp": 80,
+          "enemies": [
+            "Shrinker Beetle"
+          ],
+          "deck_hash": "23b667b6cb8ab19ea6ec5f0277c1e5e9952b06db3bb2022496d7acec948c2e29",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 3,
+          "room_type": "Monster",
+          "hp": 79,
+          "max_hp": 80,
+          "enemies": [
+            "Fuzzy Wurm Crawler"
+          ],
+          "deck_hash": "6067616f9f510d8f6a679b40700b346451482efec612fe318ac9e2605afc5f7c",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 4,
+          "room_type": "Monster",
+          "hp": 80,
+          "max_hp": 80,
+          "enemies": [
+            "Leaf Slime (S)",
+            "Twig Slime (M)",
+            "Twig Slime (S)"
+          ],
+          "deck_hash": "ca69ef9b3f28556bad5cb4fbbd0dc910bd485a63b7a4f2301ab57bd0685ce72d",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 5,
+          "room_type": "Monster",
+          "hp": 80,
+          "max_hp": 80,
+          "enemies": [
+            "Inklet",
+            "Inklet",
+            "Inklet"
+          ],
+          "deck_hash": "392a4269716385fba0e685e216c5b68418854f85f3e263c66244f19deea55c21",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 6,
+          "room_type": "Monster",
+          "hp": 66,
+          "max_hp": 80,
+          "enemies": [
+            "Cubex Construct"
+          ],
+          "deck_hash": "7c6052e1e69ac7291ea4e7cb46281ebfcdae5ca2a4fb64d06eb7e2f90467a569",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 12,
+          "room_type": "Monster",
+          "hp": 67,
+          "max_hp": 80,
+          "enemies": [
+            "Brute Raider",
+            "Crossbow Raider",
+            "Axe Raider"
+          ],
+          "deck_hash": "187400a7aeab4460e06e9c004a648b4df9f1c3b8b38e4f85ab3434937b4e97fa",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 15,
+          "room_type": "Monster",
+          "hp": 63,
+          "max_hp": 80,
+          "enemies": [
+            "Twig Slime (M)",
+            "Slithering Strangler"
+          ],
+          "deck_hash": "d0022c6978bc2886f2e105ac0a3f8a446de293232221b5b018a7bee9013cf6ab",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 17,
+          "room_type": "Boss",
+          "hp": 61,
+          "max_hp": 80,
+          "enemies": [
+            "Ceremonial Beast"
+          ],
+          "deck_hash": "2c8b0ebec8e233cfd628b0d99435a90da34ec08469083a1506ba271979c3a14e",
+          "potions": 0
+        }
+      ],
+      "completed_battles": 7,
+      "completed_acts": 0,
+      "max_act": 1,
+      "scenes": {
+        "event_choice": 2,
+        "bundle_select": 1,
+        "map_select": 16,
+        "combat_play": 114,
+        "potion_reward": 3,
+        "card_reward": 7,
+        "rest_site": 4,
+        "card_select": 5,
+        "shop": 2
+      },
+      "owners": {
+        "program_campaign": 31,
+        "program_combat": 86,
+        "only_legal": 37
+      },
+      "potion_blocks": 0,
+      "illegal_actions": 0,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "aea8d678b5200b63192f91386194e940259de842fde53cccf6033990e211e58e",
+      "transition_hash": "f3308ec5648371c73a8b3a9939562784a089312b0114f95474733965e4b392a0",
+      "readonly_map_queries": 16,
+      "expert_packets": 0,
+      "expert_wait_seconds": 0,
+      "expert_input_chars": 0,
+      "expert_output_chars": 0,
+      "teacher_packets": [],
+      "expert_tokens": null,
+      "expert_cost_usd": null,
+      "final_campaign_plan": null,
+      "seconds": 6.1988810419570655,
+      "wire.jsonl_sha256": "735813ba92bc352b9ce8a7bcf981071e9f39ae296e025792164e2b45fda9786c",
+      "engine.stderr.log_sha256": "4f9be783b32bc13a402f4747675600c392a96837bf7457638c33a4898205e91e",
+      "trace_path": "artifacts/runs/3bc2a605-501c-41c5-a5cd-f544ab928dda/decisions.jsonl",
+      "trace_sha256": "b754b0b52391967d9c703980e8f2c8cdde6d848b50177bbea74a92734367bca2",
+      "compute_seconds": 6.1988810419570655,
+      "verification": {
+        "case": "A0-003",
+        "status": "match",
+        "steps": 171,
+        "outcome": "defeat",
+        "final_hash": "aea8d678b5200b63192f91386194e940259de842fde53cccf6033990e211e58e",
+        "seconds": 6.267511750105768,
+        "wire.jsonl_sha256": "5a06d35ae00672149b8e1ab4d540e409a63adfd72c0fa0bcaf9e612b28143d22",
+        "engine.stderr.log_sha256": "4f9be783b32bc13a402f4747675600c392a96837bf7457638c33a4898205e91e",
+        "trace_path": "artifacts/runs/eb7fb46c-4912-4a5f-bf6c-a2ab8be963f2/decisions.jsonl",
+        "trace_sha256": "8f30cd11322e8d97226d46027663bc4df9d92db1d788bec8f845d69e3de38e69"
+      },
+      "potion_usage": {
+        "guarded_potions_exposed": [],
+        "defer_reasons": [],
+        "potion_uses": [
+          "HEART_OF_IRON",
+          "POWDERED_DEMISE",
+          "DEXTERITY_POTION"
+        ]
+      }
+    },
+    {
+      "case": "A0-003",
+      "seed": "e170_potions_Ironclad_A0_003",
+      "character": "Ironclad",
+      "ascension": 0,
+      "arm": "program_campaign",
+      "potion_arm": "combined",
+      "run_id": "28b98ea0-bd99-4924-9778-382db6513c27",
+      "status": "defeat",
+      "steps": 154,
+      "entries": [
+        {
+          "act": 1,
+          "floor": 2,
+          "room_type": "Monster",
+          "hp": 80,
+          "max_hp": 80,
+          "enemies": [
+            "Shrinker Beetle"
+          ],
+          "deck_hash": "23b667b6cb8ab19ea6ec5f0277c1e5e9952b06db3bb2022496d7acec948c2e29",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 3,
+          "room_type": "Monster",
+          "hp": 79,
+          "max_hp": 80,
+          "enemies": [
+            "Fuzzy Wurm Crawler"
+          ],
+          "deck_hash": "6067616f9f510d8f6a679b40700b346451482efec612fe318ac9e2605afc5f7c",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 4,
+          "room_type": "Monster",
+          "hp": 80,
+          "max_hp": 80,
+          "enemies": [
+            "Leaf Slime (S)",
+            "Twig Slime (M)",
+            "Twig Slime (S)"
+          ],
+          "deck_hash": "ca69ef9b3f28556bad5cb4fbbd0dc910bd485a63b7a4f2301ab57bd0685ce72d",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 5,
+          "room_type": "Monster",
+          "hp": 80,
+          "max_hp": 80,
+          "enemies": [
+            "Inklet",
+            "Inklet",
+            "Inklet"
+          ],
+          "deck_hash": "392a4269716385fba0e685e216c5b68418854f85f3e263c66244f19deea55c21",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 6,
+          "room_type": "Monster",
+          "hp": 66,
+          "max_hp": 80,
+          "enemies": [
+            "Cubex Construct"
+          ],
+          "deck_hash": "7c6052e1e69ac7291ea4e7cb46281ebfcdae5ca2a4fb64d06eb7e2f90467a569",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 12,
+          "room_type": "Monster",
+          "hp": 67,
+          "max_hp": 80,
+          "enemies": [
+            "Brute Raider",
+            "Crossbow Raider",
+            "Axe Raider"
+          ],
+          "deck_hash": "187400a7aeab4460e06e9c004a648b4df9f1c3b8b38e4f85ab3434937b4e97fa",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 15,
+          "room_type": "Monster",
+          "hp": 63,
+          "max_hp": 80,
+          "enemies": [
+            "Twig Slime (M)",
+            "Slithering Strangler"
+          ],
+          "deck_hash": "d0022c6978bc2886f2e105ac0a3f8a446de293232221b5b018a7bee9013cf6ab",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 17,
+          "room_type": "Boss",
+          "hp": 61,
+          "max_hp": 80,
+          "enemies": [
+            "Ceremonial Beast"
+          ],
+          "deck_hash": "2c8b0ebec8e233cfd628b0d99435a90da34ec08469083a1506ba271979c3a14e",
+          "potions": 0
+        }
+      ],
+      "completed_battles": 7,
+      "completed_acts": 0,
+      "max_act": 1,
+      "scenes": {
+        "event_choice": 2,
+        "bundle_select": 1,
+        "map_select": 16,
+        "combat_play": 114,
+        "potion_reward": 3,
+        "card_reward": 7,
+        "rest_site": 4,
+        "card_select": 5,
+        "shop": 2
+      },
+      "owners": {
+        "program_campaign": 31,
+        "program_combat": 86,
+        "only_legal": 37
+      },
+      "potion_blocks": 0,
+      "illegal_actions": 0,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "aea8d678b5200b63192f91386194e940259de842fde53cccf6033990e211e58e",
+      "transition_hash": "f3308ec5648371c73a8b3a9939562784a089312b0114f95474733965e4b392a0",
+      "readonly_map_queries": 16,
+      "expert_packets": 0,
+      "expert_wait_seconds": 0,
+      "expert_input_chars": 0,
+      "expert_output_chars": 0,
+      "teacher_packets": [],
+      "expert_tokens": null,
+      "expert_cost_usd": null,
+      "final_campaign_plan": null,
+      "seconds": 6.267546791117638,
+      "wire.jsonl_sha256": "15bccae8e5fea3b93765dfff655d1105d903a5ef01227a890a07f69d40ab627a",
+      "engine.stderr.log_sha256": "4f9be783b32bc13a402f4747675600c392a96837bf7457638c33a4898205e91e",
+      "trace_path": "artifacts/runs/28b98ea0-bd99-4924-9778-382db6513c27/decisions.jsonl",
+      "trace_sha256": "49c161baf67dfebbfb359ba2221307653effa6410420b762e9cdca7855c40097",
+      "compute_seconds": 6.267546791117638,
+      "verification": {
+        "case": "A0-003",
+        "status": "match",
+        "steps": 171,
+        "outcome": "defeat",
+        "final_hash": "aea8d678b5200b63192f91386194e940259de842fde53cccf6033990e211e58e",
+        "seconds": 6.252979249926284,
+        "wire.jsonl_sha256": "e624abfdcddf3228c857d974dadfb8bff71b4cdb1528e62f580ce9d1176a9ea5",
+        "engine.stderr.log_sha256": "4f9be783b32bc13a402f4747675600c392a96837bf7457638c33a4898205e91e",
+        "trace_path": "artifacts/runs/0d52472b-da59-46db-95d5-237327d75f02/decisions.jsonl",
+        "trace_sha256": "9e1d1fee60994052ae3a9ca4cd67f77061e7735eb15656426fa4149579ec349d"
+      },
+      "potion_usage": {
+        "guarded_potions_exposed": [],
+        "defer_reasons": [],
+        "potion_uses": [
+          "HEART_OF_IRON",
+          "POWDERED_DEMISE",
+          "DEXTERITY_POTION"
+        ]
+      }
+    },
+    {
+      "case": "A5-000",
+      "seed": "e170_potions_Ironclad_A5_000",
+      "character": "Ironclad",
+      "ascension": 5,
+      "arm": "program_campaign",
+      "potion_arm": "typed",
+      "run_id": "282f8687-0663-4245-ad7f-c5b48aca3e2d",
+      "status": "defeat",
+      "steps": 186,
+      "entries": [
+        {
+          "act": 1,
+          "floor": 2,
+          "room_type": "Monster",
+          "hp": 64,
+          "max_hp": 80,
+          "enemies": [
+            "Shrinker Beetle"
+          ],
+          "deck_hash": "eebf4be3a4032ffa48a79b6e9feb39d04c1d1dd70492f880fcfc272762fa1e96",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 3,
+          "room_type": "Monster",
+          "hp": 63,
+          "max_hp": 80,
+          "enemies": [
+            "Nibbit"
+          ],
+          "deck_hash": "61655e5f9a7f9cb13c910de5e23cd5798118f23672dbbc8947972be8a9352863",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 4,
+          "room_type": "Monster",
+          "hp": 60,
+          "max_hp": 80,
+          "enemies": [
+            "Leaf Slime (S)",
+            "Leaf Slime (M)",
+            "Twig Slime (S)"
+          ],
+          "deck_hash": "c0a09473f492abc3890a37c56bab061b9e53ec951db1f53e5e78929566ea3a3c",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 5,
+          "room_type": "Monster",
+          "hp": 63,
+          "max_hp": 80,
+          "enemies": [
+            "Cubex Construct"
+          ],
+          "deck_hash": "3dd30230e9aafcaaebaac9e213a4690aa16999eae848209e756f3391429ffda6",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 6,
+          "room_type": "Monster",
+          "hp": 45,
+          "max_hp": 80,
+          "enemies": [
+            "Fogmog"
+          ],
+          "deck_hash": "77c209f2bad99817e0e7550377476052bb8eccfed8c0d167fdfc0bbe16a13637",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 11,
+          "room_type": "Elite",
+          "hp": 58,
+          "max_hp": 80,
+          "enemies": [
+            "Byrdonis"
+          ],
+          "deck_hash": "b95fb23fbe4d310f960034bbbdced1f12c0bab0553c1f54b5a1579cea6ebcb94",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 13,
+          "room_type": "Elite",
+          "hp": 55,
+          "max_hp": 80,
+          "enemies": [
+            "Bygone Effigy"
+          ],
+          "deck_hash": "87412b1b6ffc6c170d24514e64cf73ad515a36ef754423af484b6eb28ae7e601",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 15,
+          "room_type": "Monster",
+          "hp": 31,
+          "max_hp": 80,
+          "enemies": [
+            "Nibbit",
+            "Nibbit"
+          ],
+          "deck_hash": "bd7c6e783d9dec19bb43dc72ff38869c1819df6b9fc671cdaf691fa5a63c7524",
+          "potions": 2
+        },
+        {
+          "act": 1,
+          "floor": 17,
+          "room_type": "Boss",
+          "hp": 44,
+          "max_hp": 80,
+          "enemies": [
+            "Vantom"
+          ],
+          "deck_hash": "4d6a9db42d300eb121d9c25a1c01a800503728b7c0b2ba185e0f78699dde5712",
+          "potions": 1
+        }
+      ],
+      "completed_battles": 8,
+      "completed_acts": 0,
+      "max_act": 1,
+      "scenes": {
+        "event_choice": 2,
+        "map_select": 16,
+        "combat_play": 144,
+        "potion_reward": 3,
+        "card_reward": 8,
+        "card_select": 8,
+        "rest_site": 4,
+        "shop": 1
+      },
+      "owners": {
+        "program_campaign": 27,
+        "program_combat": 116,
+        "only_legal": 43
+      },
+      "potion_blocks": 0,
+      "illegal_actions": 0,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "eca0ca7bfe2d0f162e0f56b89122762abe24aa4fce70e081a270ef02ec0b7978",
+      "transition_hash": "6d8937e4aa462c67c6f5a19a1211cd41e38bb3b69aca83d5336bc3d207ae638f",
+      "readonly_map_queries": 16,
+      "expert_packets": 0,
+      "expert_wait_seconds": 0,
+      "expert_input_chars": 0,
+      "expert_output_chars": 0,
+      "teacher_packets": [],
+      "expert_tokens": null,
+      "expert_cost_usd": null,
+      "final_campaign_plan": null,
+      "seconds": 7.161810499848798,
+      "wire.jsonl_sha256": "08cf3f0593e6ba75bf390e04ce40d85595570e8332a485314047db593f0cb25d",
+      "engine.stderr.log_sha256": "25530028ac7390586fc8d27a263494d73e861b4989bd89d7b5b965e7709a7ab3",
+      "trace_path": "artifacts/runs/282f8687-0663-4245-ad7f-c5b48aca3e2d/decisions.jsonl",
+      "trace_sha256": "7ea7301441adbab91e3f98c3f415a44c46e5819611d397188e82d146b2bab9c1",
+      "compute_seconds": 7.161810499848798,
+      "verification": {
+        "case": "A5-000",
+        "status": "match",
+        "steps": 203,
+        "outcome": "defeat",
+        "final_hash": "eca0ca7bfe2d0f162e0f56b89122762abe24aa4fce70e081a270ef02ec0b7978",
+        "seconds": 6.97389766597189,
+        "wire.jsonl_sha256": "ce314ea9024ccd091c8f9b2881bf5d9aa6c74f4b8e2d043e2149ea8784cfb324",
+        "engine.stderr.log_sha256": "25530028ac7390586fc8d27a263494d73e861b4989bd89d7b5b965e7709a7ab3",
+        "trace_path": "artifacts/runs/31c8cf68-b629-406d-a46f-54be9181de1e/decisions.jsonl",
+        "trace_sha256": "9e96705eafde652245093c4fecfa0ea8fa3cd464f4f4504fc38046f00dbb767a"
+      },
+      "potion_usage": {
+        "guarded_potions_exposed": [],
+        "defer_reasons": [],
+        "potion_uses": [
+          "POTION_OF_BINDING",
+          "COLORLESS_POTION",
+          "VULNERABLE_POTION",
+          "POTION_SHAPED_ROCK",
+          "POTION_SHAPED_ROCK"
+        ]
+      }
+    },
+    {
+      "case": "A5-000",
+      "seed": "e170_potions_Ironclad_A5_000",
+      "character": "Ironclad",
+      "ascension": 5,
+      "arm": "program_campaign",
+      "potion_arm": "combined",
+      "run_id": "731ddf5b-7449-4345-93c8-ead52c40bb09",
+      "status": "defeat",
+      "steps": 186,
+      "entries": [
+        {
+          "act": 1,
+          "floor": 2,
+          "room_type": "Monster",
+          "hp": 64,
+          "max_hp": 80,
+          "enemies": [
+            "Shrinker Beetle"
+          ],
+          "deck_hash": "eebf4be3a4032ffa48a79b6e9feb39d04c1d1dd70492f880fcfc272762fa1e96",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 3,
+          "room_type": "Monster",
+          "hp": 63,
+          "max_hp": 80,
+          "enemies": [
+            "Nibbit"
+          ],
+          "deck_hash": "61655e5f9a7f9cb13c910de5e23cd5798118f23672dbbc8947972be8a9352863",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 4,
+          "room_type": "Monster",
+          "hp": 60,
+          "max_hp": 80,
+          "enemies": [
+            "Leaf Slime (S)",
+            "Leaf Slime (M)",
+            "Twig Slime (S)"
+          ],
+          "deck_hash": "c0a09473f492abc3890a37c56bab061b9e53ec951db1f53e5e78929566ea3a3c",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 5,
+          "room_type": "Monster",
+          "hp": 63,
+          "max_hp": 80,
+          "enemies": [
+            "Cubex Construct"
+          ],
+          "deck_hash": "3dd30230e9aafcaaebaac9e213a4690aa16999eae848209e756f3391429ffda6",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 6,
+          "room_type": "Monster",
+          "hp": 45,
+          "max_hp": 80,
+          "enemies": [
+            "Fogmog"
+          ],
+          "deck_hash": "77c209f2bad99817e0e7550377476052bb8eccfed8c0d167fdfc0bbe16a13637",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 11,
+          "room_type": "Elite",
+          "hp": 58,
+          "max_hp": 80,
+          "enemies": [
+            "Byrdonis"
+          ],
+          "deck_hash": "b95fb23fbe4d310f960034bbbdced1f12c0bab0553c1f54b5a1579cea6ebcb94",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 13,
+          "room_type": "Elite",
+          "hp": 55,
+          "max_hp": 80,
+          "enemies": [
+            "Bygone Effigy"
+          ],
+          "deck_hash": "87412b1b6ffc6c170d24514e64cf73ad515a36ef754423af484b6eb28ae7e601",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 15,
+          "room_type": "Monster",
+          "hp": 31,
+          "max_hp": 80,
+          "enemies": [
+            "Nibbit",
+            "Nibbit"
+          ],
+          "deck_hash": "bd7c6e783d9dec19bb43dc72ff38869c1819df6b9fc671cdaf691fa5a63c7524",
+          "potions": 2
+        },
+        {
+          "act": 1,
+          "floor": 17,
+          "room_type": "Boss",
+          "hp": 44,
+          "max_hp": 80,
+          "enemies": [
+            "Vantom"
+          ],
+          "deck_hash": "4d6a9db42d300eb121d9c25a1c01a800503728b7c0b2ba185e0f78699dde5712",
+          "potions": 1
+        }
+      ],
+      "completed_battles": 8,
+      "completed_acts": 0,
+      "max_act": 1,
+      "scenes": {
+        "event_choice": 2,
+        "map_select": 16,
+        "combat_play": 144,
+        "potion_reward": 3,
+        "card_reward": 8,
+        "card_select": 8,
+        "rest_site": 4,
+        "shop": 1
+      },
+      "owners": {
+        "program_campaign": 27,
+        "program_combat": 116,
+        "only_legal": 43
+      },
+      "potion_blocks": 0,
+      "illegal_actions": 0,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "eca0ca7bfe2d0f162e0f56b89122762abe24aa4fce70e081a270ef02ec0b7978",
+      "transition_hash": "6d8937e4aa462c67c6f5a19a1211cd41e38bb3b69aca83d5336bc3d207ae638f",
+      "readonly_map_queries": 16,
+      "expert_packets": 0,
+      "expert_wait_seconds": 0,
+      "expert_input_chars": 0,
+      "expert_output_chars": 0,
+      "teacher_packets": [],
+      "expert_tokens": null,
+      "expert_cost_usd": null,
+      "final_campaign_plan": null,
+      "seconds": 7.524791290983558,
+      "wire.jsonl_sha256": "95e162b00529f6a1d3ba7acb41b93edc532ce924be0f449ecb02c2eb8a498dce",
+      "engine.stderr.log_sha256": "25530028ac7390586fc8d27a263494d73e861b4989bd89d7b5b965e7709a7ab3",
+      "trace_path": "artifacts/runs/731ddf5b-7449-4345-93c8-ead52c40bb09/decisions.jsonl",
+      "trace_sha256": "a3a9b8838a45f92e95cbdcb015f908b87c4b9a0766142851fce4d768714b97bc",
+      "compute_seconds": 7.524791290983558,
+      "verification": {
+        "case": "A5-000",
+        "status": "match",
+        "steps": 203,
+        "outcome": "defeat",
+        "final_hash": "eca0ca7bfe2d0f162e0f56b89122762abe24aa4fce70e081a270ef02ec0b7978",
+        "seconds": 6.965260749915615,
+        "wire.jsonl_sha256": "bb643b9ab2968fc2e8e6366c886d3897be0442570f85f3dfdda2178507e21806",
+        "engine.stderr.log_sha256": "25530028ac7390586fc8d27a263494d73e861b4989bd89d7b5b965e7709a7ab3",
+        "trace_path": "artifacts/runs/476f9f49-5284-4bff-a577-481e745c77e3/decisions.jsonl",
+        "trace_sha256": "df0c139fe45fa5a7b897bb5cab60a00ac48c1e0e6e499dc5ea36c5814d4c1194"
+      },
+      "potion_usage": {
+        "guarded_potions_exposed": [],
+        "defer_reasons": [],
+        "potion_uses": [
+          "POTION_OF_BINDING",
+          "COLORLESS_POTION",
+          "VULNERABLE_POTION",
+          "POTION_SHAPED_ROCK",
+          "POTION_SHAPED_ROCK"
+        ]
+      }
+    },
+    {
+      "case": "A5-001",
+      "seed": "e170_potions_Ironclad_A5_001",
+      "character": "Ironclad",
+      "ascension": 5,
+      "arm": "program_campaign",
+      "potion_arm": "typed",
+      "run_id": "03144011-e44e-43be-992b-629c2f65733c",
+      "status": "defeat",
+      "steps": 144,
+      "entries": [
+        {
+          "act": 1,
+          "floor": 2,
+          "room_type": "Monster",
+          "hp": 64,
+          "max_hp": 80,
+          "enemies": [
+            "Leaf Slime (S)",
+            "Twig Slime (M)",
+            "Twig Slime (S)"
+          ],
+          "deck_hash": "d5c855f725ec343236a7eda737dc41b695d55c74808ffd7bd2c00e55c957399f",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 3,
+          "room_type": "Monster",
+          "hp": 60,
+          "max_hp": 80,
+          "enemies": [
+            "Shrinker Beetle"
+          ],
+          "deck_hash": "8fc8456cf798ea0421ce16974c5bb3a231e6d62b349fe66c3e8b8bd5f05ca12a",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 4,
+          "room_type": "Monster",
+          "hp": 59,
+          "max_hp": 80,
+          "enemies": [
+            "Fuzzy Wurm Crawler"
+          ],
+          "deck_hash": "93ed7965c250f44608bc64a773b7e06ab81d6dcaf69e219ab40ec3882039cc9b",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 5,
+          "room_type": "Monster",
+          "hp": 61,
+          "max_hp": 80,
+          "enemies": [
+            "Nibbit",
+            "Nibbit"
+          ],
+          "deck_hash": "bce55ac393da3b0234900d2f9e03d5e49b11b0add87011735d56f1123041eea9",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 6,
+          "room_type": "Monster",
+          "hp": 49,
+          "max_hp": 80,
+          "enemies": [
+            "Twig Slime (M)",
+            "Leaf Slime (M)",
+            "Twig Slime (S)",
+            "Leaf Slime (S)"
+          ],
+          "deck_hash": "9b6bbaa408e7eaf0e1b23c6cdd01627d0f493fb0217337a934802f987ee5e2dd",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 7,
+          "room_type": "Monster",
+          "hp": 40,
+          "max_hp": 80,
+          "enemies": [
+            "Shrinker Beetle",
+            "Fuzzy Wurm Crawler"
+          ],
+          "deck_hash": "33662da869ada6902429ec528e0a24516976928c9f4fd3d36abd8aacaa8de7de",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 9,
+          "room_type": "Monster",
+          "hp": 48,
+          "max_hp": 80,
+          "enemies": [
+            "Leaf Slime (M)",
+            "Flyconid"
+          ],
+          "deck_hash": "ae2947dfea4fd84770833c7964bf6a769dad9df988c8c53c73cdac40396a53e4",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 12,
+          "room_type": "Elite",
+          "hp": 35,
+          "max_hp": 80,
+          "enemies": [
+            "Byrdonis"
+          ],
+          "deck_hash": "e8d989d205816397dec445ea15c2c6fe5440c87846f2cdd5cf6d416a37b64817",
+          "potions": 1
+        }
+      ],
+      "completed_battles": 7,
+      "completed_acts": 0,
+      "max_act": 1,
+      "scenes": {
+        "event_choice": 2,
+        "map_select": 11,
+        "combat_play": 119,
+        "card_reward": 7,
+        "potion_reward": 4,
+        "rest_site": 1
+      },
+      "owners": {
+        "program_campaign": 18,
+        "program_combat": 89,
+        "only_legal": 37
+      },
+      "potion_blocks": 0,
+      "illegal_actions": 0,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "1a2de7e288b89f8ed1d6ffb5341299a1f99d2f7b7d57bc58cc834aa9c09f612b",
+      "transition_hash": "58731a8ef301e534e19eb6453d5bb771de811797c677948fee8e2f9d92d4c5c0",
+      "readonly_map_queries": 11,
+      "expert_packets": 0,
+      "expert_wait_seconds": 0,
+      "expert_input_chars": 0,
+      "expert_output_chars": 0,
+      "teacher_packets": [],
+      "expert_tokens": null,
+      "expert_cost_usd": null,
+      "final_campaign_plan": null,
+      "seconds": 5.717643582960591,
+      "wire.jsonl_sha256": "eb7bc89742d92ff1bbcd5143c76090e0d86815ab958090e99afec9d99dd21a29",
+      "engine.stderr.log_sha256": "890f60dc7f7b82c994cf4a85e873e019d1459f2b979806aeff6abd4db5b630d7",
+      "trace_path": "artifacts/runs/03144011-e44e-43be-992b-629c2f65733c/decisions.jsonl",
+      "trace_sha256": "40f6de5905b7d77f3b6647718a6d3d649a1f6d0b08eb9fe14fa83c4ab7babc3d",
+      "compute_seconds": 5.717643582960591,
+      "verification": {
+        "case": "A5-001",
+        "status": "match",
+        "steps": 156,
+        "outcome": "defeat",
+        "final_hash": "1a2de7e288b89f8ed1d6ffb5341299a1f99d2f7b7d57bc58cc834aa9c09f612b",
+        "seconds": 5.356722125085071,
+        "wire.jsonl_sha256": "d8ead4d41a29c3e242a6a7c9224139df255ab100bffd9ae069285922f0bae3e4",
+        "engine.stderr.log_sha256": "890f60dc7f7b82c994cf4a85e873e019d1459f2b979806aeff6abd4db5b630d7",
+        "trace_path": "artifacts/runs/a976f029-c1fb-47b5-ae30-deb9f3a14e40/decisions.jsonl",
+        "trace_sha256": "13fc00848fa554b28ce2c297cd05fe401741b4be5855072393a9eca510988bba"
+      },
+      "potion_usage": {
+        "guarded_potions_exposed": [],
+        "defer_reasons": [],
+        "potion_uses": [
+          "FIRE_POTION",
+          "FORTIFIER",
+          "SHACKLING_POTION",
+          "FLEX_POTION"
+        ]
+      }
+    },
+    {
+      "case": "A5-001",
+      "seed": "e170_potions_Ironclad_A5_001",
+      "character": "Ironclad",
+      "ascension": 5,
+      "arm": "program_campaign",
+      "potion_arm": "combined",
+      "run_id": "404df414-8302-4822-bd97-45eb61cfe6d4",
+      "status": "defeat",
+      "steps": 144,
+      "entries": [
+        {
+          "act": 1,
+          "floor": 2,
+          "room_type": "Monster",
+          "hp": 64,
+          "max_hp": 80,
+          "enemies": [
+            "Leaf Slime (S)",
+            "Twig Slime (M)",
+            "Twig Slime (S)"
+          ],
+          "deck_hash": "d5c855f725ec343236a7eda737dc41b695d55c74808ffd7bd2c00e55c957399f",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 3,
+          "room_type": "Monster",
+          "hp": 60,
+          "max_hp": 80,
+          "enemies": [
+            "Shrinker Beetle"
+          ],
+          "deck_hash": "8fc8456cf798ea0421ce16974c5bb3a231e6d62b349fe66c3e8b8bd5f05ca12a",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 4,
+          "room_type": "Monster",
+          "hp": 59,
+          "max_hp": 80,
+          "enemies": [
+            "Fuzzy Wurm Crawler"
+          ],
+          "deck_hash": "93ed7965c250f44608bc64a773b7e06ab81d6dcaf69e219ab40ec3882039cc9b",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 5,
+          "room_type": "Monster",
+          "hp": 61,
+          "max_hp": 80,
+          "enemies": [
+            "Nibbit",
+            "Nibbit"
+          ],
+          "deck_hash": "bce55ac393da3b0234900d2f9e03d5e49b11b0add87011735d56f1123041eea9",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 6,
+          "room_type": "Monster",
+          "hp": 49,
+          "max_hp": 80,
+          "enemies": [
+            "Twig Slime (M)",
+            "Leaf Slime (M)",
+            "Twig Slime (S)",
+            "Leaf Slime (S)"
+          ],
+          "deck_hash": "9b6bbaa408e7eaf0e1b23c6cdd01627d0f493fb0217337a934802f987ee5e2dd",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 7,
+          "room_type": "Monster",
+          "hp": 40,
+          "max_hp": 80,
+          "enemies": [
+            "Shrinker Beetle",
+            "Fuzzy Wurm Crawler"
+          ],
+          "deck_hash": "33662da869ada6902429ec528e0a24516976928c9f4fd3d36abd8aacaa8de7de",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 9,
+          "room_type": "Monster",
+          "hp": 48,
+          "max_hp": 80,
+          "enemies": [
+            "Leaf Slime (M)",
+            "Flyconid"
+          ],
+          "deck_hash": "ae2947dfea4fd84770833c7964bf6a769dad9df988c8c53c73cdac40396a53e4",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 12,
+          "room_type": "Elite",
+          "hp": 35,
+          "max_hp": 80,
+          "enemies": [
+            "Byrdonis"
+          ],
+          "deck_hash": "e8d989d205816397dec445ea15c2c6fe5440c87846f2cdd5cf6d416a37b64817",
+          "potions": 1
+        }
+      ],
+      "completed_battles": 7,
+      "completed_acts": 0,
+      "max_act": 1,
+      "scenes": {
+        "event_choice": 2,
+        "map_select": 11,
+        "combat_play": 119,
+        "card_reward": 7,
+        "potion_reward": 4,
+        "rest_site": 1
+      },
+      "owners": {
+        "program_campaign": 18,
+        "program_combat": 89,
+        "only_legal": 37
+      },
+      "potion_blocks": 0,
+      "illegal_actions": 0,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 12,
+        "room_type": "Elite",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "1a2de7e288b89f8ed1d6ffb5341299a1f99d2f7b7d57bc58cc834aa9c09f612b",
+      "transition_hash": "58731a8ef301e534e19eb6453d5bb771de811797c677948fee8e2f9d92d4c5c0",
+      "readonly_map_queries": 11,
+      "expert_packets": 0,
+      "expert_wait_seconds": 0,
+      "expert_input_chars": 0,
+      "expert_output_chars": 0,
+      "teacher_packets": [],
+      "expert_tokens": null,
+      "expert_cost_usd": null,
+      "final_campaign_plan": null,
+      "seconds": 6.01973329205066,
+      "wire.jsonl_sha256": "2414bc48c5e007617131dab84832dfa2b9e83818541d554d6873c92baad65684",
+      "engine.stderr.log_sha256": "890f60dc7f7b82c994cf4a85e873e019d1459f2b979806aeff6abd4db5b630d7",
+      "trace_path": "artifacts/runs/404df414-8302-4822-bd97-45eb61cfe6d4/decisions.jsonl",
+      "trace_sha256": "46760d399643d60cfc4c605092ebc30f353a8f90ddc3af1851bab019f5680f15",
+      "compute_seconds": 6.01973329205066,
+      "verification": {
+        "case": "A5-001",
+        "status": "match",
+        "steps": 156,
+        "outcome": "defeat",
+        "final_hash": "1a2de7e288b89f8ed1d6ffb5341299a1f99d2f7b7d57bc58cc834aa9c09f612b",
+        "seconds": 5.2333845410030335,
+        "wire.jsonl_sha256": "0288e4c3a341a27f58e32c23369174bcf4afa5f1766ae54664f0ec5fc31ef5de",
+        "engine.stderr.log_sha256": "890f60dc7f7b82c994cf4a85e873e019d1459f2b979806aeff6abd4db5b630d7",
+        "trace_path": "artifacts/runs/44211412-e32e-4093-bf15-e7d82506bdb1/decisions.jsonl",
+        "trace_sha256": "64042825755bee5f507b3759fe148cf911766396358fab40e8f08e9ec6453bc9"
+      },
+      "potion_usage": {
+        "guarded_potions_exposed": [],
+        "defer_reasons": [],
+        "potion_uses": [
+          "FIRE_POTION",
+          "FORTIFIER",
+          "SHACKLING_POTION",
+          "FLEX_POTION"
+        ]
+      }
+    },
+    {
+      "case": "A5-002",
+      "seed": "e170_potions_Ironclad_A5_002",
+      "character": "Ironclad",
+      "ascension": 5,
+      "arm": "program_campaign",
+      "potion_arm": "typed",
+      "run_id": "5f3c64e3-e335-4fb3-b0b3-85245ea034f9",
+      "status": "defeat",
+      "steps": 196,
+      "entries": [
+        {
+          "act": 1,
+          "floor": 2,
+          "room_type": "Monster",
+          "hp": 64,
+          "max_hp": 80,
+          "enemies": [
+            "Fuzzy Wurm Crawler"
+          ],
+          "deck_hash": "d5c855f725ec343236a7eda737dc41b695d55c74808ffd7bd2c00e55c957399f",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 3,
+          "room_type": "Monster",
+          "hp": 65,
+          "max_hp": 80,
+          "enemies": [
+            "Nibbit"
+          ],
+          "deck_hash": "3a689c7429262a6e22204f1097ec607d82d6e4de608977817b48ec45cc3efdaa",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 4,
+          "room_type": "Monster",
+          "hp": 68,
+          "max_hp": 80,
+          "enemies": [
+            "Leaf Slime (S)",
+            "Leaf Slime (M)",
+            "Twig Slime (S)"
+          ],
+          "deck_hash": "f8cbcd9e12e55fe1a3d211f92f7397bb3675951407fba629305a3ec97854b542",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 8,
+          "room_type": "Monster",
+          "hp": 71,
+          "max_hp": 80,
+          "enemies": [
+            "Cubex Construct"
+          ],
+          "deck_hash": "f8df4167f9c41337850d784d86a91b1b7bbd80218818f92492eb04f2ec51abd9",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 13,
+          "room_type": "Monster",
+          "hp": 64,
+          "max_hp": 80,
+          "enemies": [
+            "Leaf Slime (M)",
+            "Flyconid"
+          ],
+          "deck_hash": "a90801848acfdd76efa3f4ba80554854fcdce541db5631d69491437754d0c0d0",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 15,
+          "room_type": "Elite",
+          "hp": 39,
+          "max_hp": 80,
+          "enemies": [
+            "Phrog Parasite"
+          ],
+          "deck_hash": "ecd4db7d3a6a97d1169d2bfc91b0728a46f5a8efad8ebe65cf8b6e1539ffaca8",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 17,
+          "room_type": "Boss",
+          "hp": 87,
+          "max_hp": 87,
+          "enemies": [
+            "Vantom"
+          ],
+          "deck_hash": "b660a4ee83c0339212e46c49877fd2e805de3ff1dd83841ae50cd74dc23f4979",
+          "potions": 0
+        }
+      ],
+      "completed_battles": 6,
+      "completed_acts": 0,
+      "max_act": 1,
+      "scenes": {
+        "event_choice": 5,
+        "map_select": 16,
+        "combat_play": 154,
+        "potion_reward": 3,
+        "card_reward": 6,
+        "card_select": 8,
+        "rest_site": 3,
+        "shop": 1
+      },
+      "owners": {
+        "program_campaign": 27,
+        "program_combat": 126,
+        "only_legal": 43
+      },
+      "potion_blocks": 0,
+      "illegal_actions": 0,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "b47c9128f6e56e054c95c61ccba27395c754a1e53492df7deed6f211c82c2868",
+      "transition_hash": "2c23c3f6bb7dbf447df8e73b6844ee9bd0c2bcd616151dd654baf6d9d256ab2c",
+      "readonly_map_queries": 16,
+      "expert_packets": 0,
+      "expert_wait_seconds": 0,
+      "expert_input_chars": 0,
+      "expert_output_chars": 0,
+      "teacher_packets": [],
+      "expert_tokens": null,
+      "expert_cost_usd": null,
+      "final_campaign_plan": null,
+      "seconds": 7.1153342090547085,
+      "wire.jsonl_sha256": "3752cd8a8d6ed0f8623a562abcc1c3c69667f4e2c439a3f2395d28bb76f56157",
+      "engine.stderr.log_sha256": "2209170f8cf0449cbdc7e161c3daee571bef3316736080d1d465c8c6b123f957",
+      "trace_path": "artifacts/runs/5f3c64e3-e335-4fb3-b0b3-85245ea034f9/decisions.jsonl",
+      "trace_sha256": "9d8c99a3e7d2f2d82ee892e318f6bc84734c2a6786ae6fc2d41b4cabecc3fded",
+      "compute_seconds": 7.1153342090547085,
+      "verification": {
+        "case": "A5-002",
+        "status": "match",
+        "steps": 213,
+        "outcome": "defeat",
+        "final_hash": "b47c9128f6e56e054c95c61ccba27395c754a1e53492df7deed6f211c82c2868",
+        "seconds": 7.030104208970442,
+        "wire.jsonl_sha256": "7a1a66c4425cb41c414b6276525983898cd06dff083c10d0cf6fee1322c8b2f6",
+        "engine.stderr.log_sha256": "2209170f8cf0449cbdc7e161c3daee571bef3316736080d1d465c8c6b123f957",
+        "trace_path": "artifacts/runs/032e1886-4d39-4cbd-921d-f475af47d329/decisions.jsonl",
+        "trace_sha256": "c32c86d309c6c90f1ed73c8194a5d97cad0e2b1efdcce914968bf316b109d8ab"
+      },
+      "potion_usage": {
+        "guarded_potions_exposed": [],
+        "defer_reasons": [],
+        "potion_uses": [
+          "SKILL_POTION",
+          "DUPLICATOR",
+          "POWER_POTION"
+        ]
+      }
+    },
+    {
+      "case": "A5-002",
+      "seed": "e170_potions_Ironclad_A5_002",
+      "character": "Ironclad",
+      "ascension": 5,
+      "arm": "program_campaign",
+      "potion_arm": "combined",
+      "run_id": "3803acc9-7788-44a4-98f1-6f962597b157",
+      "status": "defeat",
+      "steps": 196,
+      "entries": [
+        {
+          "act": 1,
+          "floor": 2,
+          "room_type": "Monster",
+          "hp": 64,
+          "max_hp": 80,
+          "enemies": [
+            "Fuzzy Wurm Crawler"
+          ],
+          "deck_hash": "d5c855f725ec343236a7eda737dc41b695d55c74808ffd7bd2c00e55c957399f",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 3,
+          "room_type": "Monster",
+          "hp": 65,
+          "max_hp": 80,
+          "enemies": [
+            "Nibbit"
+          ],
+          "deck_hash": "3a689c7429262a6e22204f1097ec607d82d6e4de608977817b48ec45cc3efdaa",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 4,
+          "room_type": "Monster",
+          "hp": 68,
+          "max_hp": 80,
+          "enemies": [
+            "Leaf Slime (S)",
+            "Leaf Slime (M)",
+            "Twig Slime (S)"
+          ],
+          "deck_hash": "f8cbcd9e12e55fe1a3d211f92f7397bb3675951407fba629305a3ec97854b542",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 8,
+          "room_type": "Monster",
+          "hp": 71,
+          "max_hp": 80,
+          "enemies": [
+            "Cubex Construct"
+          ],
+          "deck_hash": "f8df4167f9c41337850d784d86a91b1b7bbd80218818f92492eb04f2ec51abd9",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 13,
+          "room_type": "Monster",
+          "hp": 64,
+          "max_hp": 80,
+          "enemies": [
+            "Leaf Slime (M)",
+            "Flyconid"
+          ],
+          "deck_hash": "a90801848acfdd76efa3f4ba80554854fcdce541db5631d69491437754d0c0d0",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 15,
+          "room_type": "Elite",
+          "hp": 39,
+          "max_hp": 80,
+          "enemies": [
+            "Phrog Parasite"
+          ],
+          "deck_hash": "ecd4db7d3a6a97d1169d2bfc91b0728a46f5a8efad8ebe65cf8b6e1539ffaca8",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 17,
+          "room_type": "Boss",
+          "hp": 87,
+          "max_hp": 87,
+          "enemies": [
+            "Vantom"
+          ],
+          "deck_hash": "b660a4ee83c0339212e46c49877fd2e805de3ff1dd83841ae50cd74dc23f4979",
+          "potions": 0
+        }
+      ],
+      "completed_battles": 6,
+      "completed_acts": 0,
+      "max_act": 1,
+      "scenes": {
+        "event_choice": 5,
+        "map_select": 16,
+        "combat_play": 154,
+        "potion_reward": 3,
+        "card_reward": 6,
+        "card_select": 8,
+        "rest_site": 3,
+        "shop": 1
+      },
+      "owners": {
+        "program_campaign": 27,
+        "program_combat": 126,
+        "only_legal": 43
+      },
+      "potion_blocks": 0,
+      "illegal_actions": 0,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "b47c9128f6e56e054c95c61ccba27395c754a1e53492df7deed6f211c82c2868",
+      "transition_hash": "2c23c3f6bb7dbf447df8e73b6844ee9bd0c2bcd616151dd654baf6d9d256ab2c",
+      "readonly_map_queries": 16,
+      "expert_packets": 0,
+      "expert_wait_seconds": 0,
+      "expert_input_chars": 0,
+      "expert_output_chars": 0,
+      "teacher_packets": [],
+      "expert_tokens": null,
+      "expert_cost_usd": null,
+      "final_campaign_plan": null,
+      "seconds": 7.15576666709967,
+      "wire.jsonl_sha256": "9236ba7722d74bb39bd0f6a05405bd37244749475ca340186dcd3f78ed34bec7",
+      "engine.stderr.log_sha256": "2209170f8cf0449cbdc7e161c3daee571bef3316736080d1d465c8c6b123f957",
+      "trace_path": "artifacts/runs/3803acc9-7788-44a4-98f1-6f962597b157/decisions.jsonl",
+      "trace_sha256": "abae89319c08462aea9378684cb6afd7fa11a95888573f96e6c7ec35163198d9",
+      "compute_seconds": 7.15576666709967,
+      "verification": {
+        "case": "A5-002",
+        "status": "match",
+        "steps": 213,
+        "outcome": "defeat",
+        "final_hash": "b47c9128f6e56e054c95c61ccba27395c754a1e53492df7deed6f211c82c2868",
+        "seconds": 7.0413777499925345,
+        "wire.jsonl_sha256": "50db6fda9a99845781b31532b77ef9b06b8ae720f9239c671665d04097b2b80e",
+        "engine.stderr.log_sha256": "2209170f8cf0449cbdc7e161c3daee571bef3316736080d1d465c8c6b123f957",
+        "trace_path": "artifacts/runs/1b0af161-046b-4ee4-8abc-bfa4f6fa26ee/decisions.jsonl",
+        "trace_sha256": "135bd49fa81cf3f629035b5a212eac79ab605a6d041efa94289606833ff56055"
+      },
+      "potion_usage": {
+        "guarded_potions_exposed": [],
+        "defer_reasons": [],
+        "potion_uses": [
+          "SKILL_POTION",
+          "DUPLICATOR",
+          "POWER_POTION"
+        ]
+      }
+    },
+    {
+      "case": "A5-003",
+      "seed": "e170_potions_Ironclad_A5_003",
+      "character": "Ironclad",
+      "ascension": 5,
+      "arm": "program_campaign",
+      "potion_arm": "typed",
+      "run_id": "c8b8f13e-0a97-4ef0-91e9-2693f15eb411",
+      "status": "defeat",
+      "steps": 175,
+      "entries": [
+        {
+          "act": 1,
+          "floor": 2,
+          "room_type": "Monster",
+          "hp": 64,
+          "max_hp": 80,
+          "enemies": [
+            "Leaf Slime (S)",
+            "Leaf Slime (M)",
+            "Twig Slime (S)"
+          ],
+          "deck_hash": "d5c855f725ec343236a7eda737dc41b695d55c74808ffd7bd2c00e55c957399f",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 3,
+          "room_type": "Monster",
+          "hp": 62,
+          "max_hp": 80,
+          "enemies": [
+            "Shrinker Beetle"
+          ],
+          "deck_hash": "bbf845bd7bda774a0f1d5bd5de846cef058128403bdd8a2daaf59257d833462a",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 4,
+          "room_type": "Monster",
+          "hp": 63,
+          "max_hp": 80,
+          "enemies": [
+            "Fuzzy Wurm Crawler"
+          ],
+          "deck_hash": "ede8b0789b13606b279c5e0d396d3386857d470a48758dbdc71545b486eff27c",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 6,
+          "room_type": "Monster",
+          "hp": 69,
+          "max_hp": 80,
+          "enemies": [
+            "Leaf Slime (M)",
+            "Flyconid"
+          ],
+          "deck_hash": "4a144a139ddadfe1b989796823a2dc625432e8881f59067f3c4f16bfa5ef4bd0",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 8,
+          "room_type": "Monster",
+          "hp": 57,
+          "max_hp": 80,
+          "enemies": [
+            "Cubex Construct"
+          ],
+          "deck_hash": "27ee168c6a44ca274c3a361a74fa6d8b7224f8aff5f71047084e746e11644e18",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 12,
+          "room_type": "Monster",
+          "hp": 73,
+          "max_hp": 80,
+          "enemies": [
+            "Twig Slime (M)",
+            "Slithering Strangler"
+          ],
+          "deck_hash": "a375d2aea769c986f3fe5cae5ba670066b3739991466898d2feae47cc9a982bf",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 14,
+          "room_type": "Monster",
+          "hp": 69,
+          "max_hp": 80,
+          "enemies": [
+            "Vine Shambler"
+          ],
+          "deck_hash": "bf43aec2604dc29dc02834bd0c8d7c9bc17bab96d64390caa7931be2ac65b735",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 17,
+          "room_type": "Boss",
+          "hp": 59,
+          "max_hp": 80,
+          "enemies": [
+            "Kin Follower",
+            "Kin Follower",
+            "Kin Priest"
+          ],
+          "deck_hash": "b72ddc1ec136ae2c3015f6ea90da3720bfa13fd8e7ab6bf2d3aaa0095efc5767",
+          "potions": 1
+        }
+      ],
+      "completed_battles": 7,
+      "completed_acts": 0,
+      "max_act": 1,
+      "scenes": {
+        "event_choice": 3,
+        "map_select": 16,
+        "combat_play": 138,
+        "card_reward": 7,
+        "potion_reward": 3,
+        "shop": 2,
+        "rest_site": 3,
+        "card_select": 3
+      },
+      "owners": {
+        "program_campaign": 29,
+        "program_combat": 110,
+        "only_legal": 36
+      },
+      "potion_blocks": 0,
+      "illegal_actions": 0,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "42854ab6e54c20dd8a2ca7d1929ad55e6c708916691715965faa5b9f164da91d",
+      "transition_hash": "bd8c95647202a76d0e1ff8819fa821af5f7b542cec063bdebc06d07c54dde1ba",
+      "readonly_map_queries": 16,
+      "expert_packets": 0,
+      "expert_wait_seconds": 0,
+      "expert_input_chars": 0,
+      "expert_output_chars": 0,
+      "teacher_packets": [],
+      "expert_tokens": null,
+      "expert_cost_usd": null,
+      "final_campaign_plan": null,
+      "seconds": 6.600043584126979,
+      "wire.jsonl_sha256": "1a1b33ecc92d03a62c690f990ce0cf767096ff17cd88591c8b6345d22a620eb8",
+      "engine.stderr.log_sha256": "7e1399fc87d23afc7cff4800fcd59213e466ca0895c22a1ed845cdbac6b5d800",
+      "trace_path": "artifacts/runs/c8b8f13e-0a97-4ef0-91e9-2693f15eb411/decisions.jsonl",
+      "trace_sha256": "1a8f76c80510ba9137cd5fea7cb8f211fab8d7ef33d7fe874c8811f5c3c85128",
+      "compute_seconds": 6.600043584126979,
+      "verification": {
+        "case": "A5-003",
+        "status": "match",
+        "steps": 192,
+        "outcome": "defeat",
+        "final_hash": "42854ab6e54c20dd8a2ca7d1929ad55e6c708916691715965faa5b9f164da91d",
+        "seconds": 6.488308667205274,
+        "wire.jsonl_sha256": "547def529cfd052940ace133752126e87ce0451437e70dad7b419341e1d466dc",
+        "engine.stderr.log_sha256": "7e1399fc87d23afc7cff4800fcd59213e466ca0895c22a1ed845cdbac6b5d800",
+        "trace_path": "artifacts/runs/4884fbd6-15b7-4130-93d0-f63026409bd6/decisions.jsonl",
+        "trace_sha256": "8bc2c8818aee6c25652d5391c9ff017cd8e487a8d9d58af5378f3fc8764aa1a7"
+      },
+      "potion_usage": {
+        "guarded_potions_exposed": [
+          "BLOCK_POTION"
+        ],
+        "defer_reasons": [],
+        "potion_uses": [
+          "ENTROPIC_BREW",
+          "STRENGTH_POTION",
+          "STRENGTH_POTION",
+          "SPEED_POTION",
+          "BLOCK_POTION"
+        ]
+      }
+    },
+    {
+      "case": "A5-003",
+      "seed": "e170_potions_Ironclad_A5_003",
+      "character": "Ironclad",
+      "ascension": 5,
+      "arm": "program_campaign",
+      "potion_arm": "combined",
+      "run_id": "03a24417-7401-4ad4-ab77-8aff119eb6e0",
+      "status": "defeat",
+      "steps": 175,
+      "entries": [
+        {
+          "act": 1,
+          "floor": 2,
+          "room_type": "Monster",
+          "hp": 64,
+          "max_hp": 80,
+          "enemies": [
+            "Leaf Slime (S)",
+            "Leaf Slime (M)",
+            "Twig Slime (S)"
+          ],
+          "deck_hash": "d5c855f725ec343236a7eda737dc41b695d55c74808ffd7bd2c00e55c957399f",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 3,
+          "room_type": "Monster",
+          "hp": 62,
+          "max_hp": 80,
+          "enemies": [
+            "Shrinker Beetle"
+          ],
+          "deck_hash": "bbf845bd7bda774a0f1d5bd5de846cef058128403bdd8a2daaf59257d833462a",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 4,
+          "room_type": "Monster",
+          "hp": 63,
+          "max_hp": 80,
+          "enemies": [
+            "Fuzzy Wurm Crawler"
+          ],
+          "deck_hash": "ede8b0789b13606b279c5e0d396d3386857d470a48758dbdc71545b486eff27c",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 6,
+          "room_type": "Monster",
+          "hp": 69,
+          "max_hp": 80,
+          "enemies": [
+            "Leaf Slime (M)",
+            "Flyconid"
+          ],
+          "deck_hash": "4a144a139ddadfe1b989796823a2dc625432e8881f59067f3c4f16bfa5ef4bd0",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 8,
+          "room_type": "Monster",
+          "hp": 57,
+          "max_hp": 80,
+          "enemies": [
+            "Cubex Construct"
+          ],
+          "deck_hash": "27ee168c6a44ca274c3a361a74fa6d8b7224f8aff5f71047084e746e11644e18",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 12,
+          "room_type": "Monster",
+          "hp": 73,
+          "max_hp": 80,
+          "enemies": [
+            "Twig Slime (M)",
+            "Slithering Strangler"
+          ],
+          "deck_hash": "a375d2aea769c986f3fe5cae5ba670066b3739991466898d2feae47cc9a982bf",
+          "potions": 1
+        },
+        {
+          "act": 1,
+          "floor": 14,
+          "room_type": "Monster",
+          "hp": 69,
+          "max_hp": 80,
+          "enemies": [
+            "Vine Shambler"
+          ],
+          "deck_hash": "bf43aec2604dc29dc02834bd0c8d7c9bc17bab96d64390caa7931be2ac65b735",
+          "potions": 0
+        },
+        {
+          "act": 1,
+          "floor": 17,
+          "room_type": "Boss",
+          "hp": 59,
+          "max_hp": 80,
+          "enemies": [
+            "Kin Follower",
+            "Kin Follower",
+            "Kin Priest"
+          ],
+          "deck_hash": "b72ddc1ec136ae2c3015f6ea90da3720bfa13fd8e7ab6bf2d3aaa0095efc5767",
+          "potions": 1
+        }
+      ],
+      "completed_battles": 7,
+      "completed_acts": 0,
+      "max_act": 1,
+      "scenes": {
+        "event_choice": 3,
+        "map_select": 16,
+        "combat_play": 138,
+        "card_reward": 7,
+        "potion_reward": 3,
+        "shop": 2,
+        "rest_site": 3,
+        "card_select": 3
+      },
+      "owners": {
+        "program_campaign": 29,
+        "program_combat": 110,
+        "only_legal": 36
+      },
+      "potion_blocks": 0,
+      "illegal_actions": 0,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "42854ab6e54c20dd8a2ca7d1929ad55e6c708916691715965faa5b9f164da91d",
+      "transition_hash": "b7392b952b335a5aa6bf7e8d9104a020171fab2ddc49fa1366451fa87c90787c",
+      "readonly_map_queries": 16,
+      "expert_packets": 0,
+      "expert_wait_seconds": 0,
+      "expert_input_chars": 0,
+      "expert_output_chars": 0,
+      "teacher_packets": [],
+      "expert_tokens": null,
+      "expert_cost_usd": null,
+      "final_campaign_plan": null,
+      "seconds": 6.493103791028261,
+      "wire.jsonl_sha256": "017349998d2fa54faeaed4431d6f66e9e79d067636dd8a2dd544d4510c3fe9e0",
+      "engine.stderr.log_sha256": "5abe42452c6e1f929efa8d9f5399a930515448746e35f9a7af6fd5386ba1ba2d",
+      "trace_path": "artifacts/runs/03a24417-7401-4ad4-ab77-8aff119eb6e0/decisions.jsonl",
+      "trace_sha256": "dd84648bf9661025e9e94f587b57db0dc0b16157d1d56ac95e0baf335f583fad",
+      "compute_seconds": 6.493103791028261,
+      "verification": {
+        "case": "A5-003",
+        "status": "match",
+        "steps": 192,
+        "outcome": "defeat",
+        "final_hash": "42854ab6e54c20dd8a2ca7d1929ad55e6c708916691715965faa5b9f164da91d",
+        "seconds": 6.69082170794718,
+        "wire.jsonl_sha256": "1acfcbc20544a2ba30f91d29bd14578c0b9e3b1b1462c8c5fef2e07b588ea879",
+        "engine.stderr.log_sha256": "5abe42452c6e1f929efa8d9f5399a930515448746e35f9a7af6fd5386ba1ba2d",
+        "trace_path": "artifacts/runs/410b0f01-2005-40f6-b43e-581b8fa6c85c/decisions.jsonl",
+        "trace_sha256": "c14d0dd554c87caec8573cd5dd208528f4c4d254497b9ffefd5476b491cb8d99"
+      },
+      "potion_usage": {
+        "guarded_potions_exposed": [
+          "BLOCK_POTION"
+        ],
+        "defer_reasons": [
+          "finish_cards_before_block"
+        ],
+        "potion_uses": [
+          "ENTROPIC_BREW",
+          "STRENGTH_POTION",
+          "STRENGTH_POTION",
+          "SPEED_POTION",
+          "BLOCK_POTION"
+        ]
+      }
+    }
+  ],
+  "pairs": [
+    {
+      "case": "A0-000",
+      "seed": "e170_potions_Ironclad_A0_000",
+      "baseline": [
+        0,
+        0,
+        11
+      ],
+      "treatment": [
+        0,
+        0,
+        11
+      ],
+      "sign": 0,
+      "exposed": true,
+      "transition_equal": false
+    },
+    {
+      "case": "A0-001",
+      "seed": "e170_potions_Ironclad_A0_001",
+      "baseline": [
+        0,
+        0,
+        7
+      ],
+      "treatment": [
+        0,
+        0,
+        7
+      ],
+      "sign": 0,
+      "exposed": false,
+      "transition_equal": true
+    },
+    {
+      "case": "A0-002",
+      "seed": "e170_potions_Ironclad_A0_002",
+      "baseline": [
+        0,
+        0,
+        8
+      ],
+      "treatment": [
+        0,
+        0,
+        8
+      ],
+      "sign": 0,
+      "exposed": false,
+      "transition_equal": true
+    },
+    {
+      "case": "A0-003",
+      "seed": "e170_potions_Ironclad_A0_003",
+      "baseline": [
+        0,
+        0,
+        7
+      ],
+      "treatment": [
+        0,
+        0,
+        7
+      ],
+      "sign": 0,
+      "exposed": false,
+      "transition_equal": true
+    },
+    {
+      "case": "A5-000",
+      "seed": "e170_potions_Ironclad_A5_000",
+      "baseline": [
+        0,
+        0,
+        8
+      ],
+      "treatment": [
+        0,
+        0,
+        8
+      ],
+      "sign": 0,
+      "exposed": false,
+      "transition_equal": true
+    },
+    {
+      "case": "A5-001",
+      "seed": "e170_potions_Ironclad_A5_001",
+      "baseline": [
+        0,
+        0,
+        7
+      ],
+      "treatment": [
+        0,
+        0,
+        7
+      ],
+      "sign": 0,
+      "exposed": false,
+      "transition_equal": true
+    },
+    {
+      "case": "A5-002",
+      "seed": "e170_potions_Ironclad_A5_002",
+      "baseline": [
+        0,
+        0,
+        6
+      ],
+      "treatment": [
+        0,
+        0,
+        6
+      ],
+      "sign": 0,
+      "exposed": false,
+      "transition_equal": true
+    },
+    {
+      "case": "A5-003",
+      "seed": "e170_potions_Ironclad_A5_003",
+      "baseline": [
+        0,
+        0,
+        7
+      ],
+      "treatment": [
+        0,
+        0,
+        7
+      ],
+      "sign": 0,
+      "exposed": true,
+      "transition_equal": false
+    }
+  ],
+  "raw_audit": {
+    "raw_traces": 32,
+    "failures": [],
+    "pass": true
+  },
+  "seconds": 55.946602958021685,
+  "integrity_pass": true,
+  "screen_gate": false,
+  "model_api_calls": 0,
+  "expert_decisions": 0,
+  "default_promotion": false,
+  "scope": "New-seed autonomous program macro screen; not Astra hybrid acceptance"
+}

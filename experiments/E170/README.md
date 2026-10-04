@@ -14,3 +14,13 @@ python3 scripts/validate_fresh_potions_e170.py plan --output experiments/E170/pl
 # commit frozen plan
 python3 scripts/validate_fresh_potions_e170.py evaluate --plan experiments/E170/plan-v1.json --output artifacts/runs/e170-evaluation-v1.json
 ```
+
+## v1 result and decision
+
+Tested `dc01b28` (implementation `4e99be6`). Six routing/teacher tests pass. All16 full attempts reached real defeat, all16 independent replays match,32 bundles pass, no illegal actions, no teacher/API calls,55.947s. No caps, errors, replacement seeds or rollbacks.
+
+Both arms:0/8 full wins and0/8 completed acts. Seven seeds die at act1 floor17 Boss; A5-001 dies at floor12 Elite. Completed battles are identical across arms: A0 [11,7,8,7], A5 [8,7,6,7]. Thus zero positive or negative progress pairs.
+
+Only A0-000 (Ashwater) and A5-003 (Block Potion) expose guarded potion types. Their actions differ but final progress ties. The other six pairs have identical full transition hashes. Exposure2/8 misses the >=4 coverage requirement; do not interpret this as proving no local effect. The new-seed screen fails both improvement and exposure gates, despite integrity passing. This program-macro screen is not evidence about fresh Astra-built decks.
+
+Decision: close PR unmerged, preserve branch/results, do not promote or expand this fixed recipe. E168's opt-in known-entry policy/evidence remains available on main; default unchanged. Next registered distinct hypothesis is E169/#326 typed opening-subset search. It remains unexecuted; no claim that changing Gambling Chip selection rescues E167.
