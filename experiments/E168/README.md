@@ -20,3 +20,17 @@ python3 scripts/validate_potions_e168.py evaluate --plan experiments/E168/plan-v
 ```
 
 Versions, exact tested SHA, trace hashes and complete outcomes are recorded in result manifests. Failed attempts remain committed. No native game equivalence or broad win-rate claim.
+
+## v1 result and decision
+
+Tested `d2cb91700d5c81732463aa4970d65e732fc12393` (implementation `23bbf12`). Nine focused tests passed. All72 trials and72 independent replays completed; all18 legacy boundaries match their originals,144 bundles pass, zero illegal/reservation violations,296.273s wall, zero API calls. These are18 correlated entries from6 source seeds, not72 new games.
+
+| Entry | Legacy | Typed only | Applicability only | Combined |
+|---|---|---|---|---|
+| E160 A0-001 act2 floor5 | clear60HP | clear60HP | clear72HP | clear72HP |
+| E165 A0-000 Knowledge Demon | defeat0HP | clear33HP | clear80HP,2 bottles | clear80HP,2 bottles |
+| Other16 entries | unchanged | unchanged | unchanged | unchanged |
+
+Combined vs typed: +59 summedHP across18 entries (two improving source seeds), two retained bottles, no lost clear/HP regression. The retained bottles are Snecko Oil and Ashwater. The full applicability bundle changes several actions; this factorial isolates it from selection polarity, not the causal contribution of each timing sub-rule. Current-health Regen checks do not establish optimal regeneration scheduling. Historical reservations remain intact.
+
+Decision: merge the opt-in experiment and evidence, keep default execution unchanged. The local gate passes; proceed to separately registered E170/#327 new-seed full-run screen before considering promotion. E169/#326 opening-subset search is a separate unexecuted proposal. No full run was played by E168 and no new-seed win rate is claimed.
