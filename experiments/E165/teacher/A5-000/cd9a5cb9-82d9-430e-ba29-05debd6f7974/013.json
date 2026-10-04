@@ -1,0 +1,28 @@
+{
+  "case": "A5-000",
+  "run_id": "cd9a5cb9-82d9-430e-ba29-05debd6f7974",
+  "seq": 13,
+  "state_hash": "c28e699fe736edccfeb09b76f73bc1c7ee84e433d0d364cd66a7b43536d32056",
+  "choice_id": "a001",
+  "campaign_plan": "Upgrade Iron Wave for reliable damage and block each cycle. At 69 HP and with no forced elite, healing would waste most of the rest value; retain a final pre-Boss heal if needed.",
+  "potion_reservations": [
+    {
+      "potion_id": "WEAK_POTION",
+      "until": "Boss",
+      "release_hp_fraction": 0.45
+    },
+    {
+      "potion_id": "BLOCK_POTION",
+      "until": "Elite",
+      "release_hp_fraction": 0.5
+    }
+  ],
+  "acquire_reservation": null,
+  "transaction_steps": [
+    {
+      "kind": "select_deck_card",
+      "index": 12,
+      "potion_reservations": null
+    }
+  ]
+}
