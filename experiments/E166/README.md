@@ -32,3 +32,37 @@ E165 raw source is ignored `artifacts/runs/e165-evaluation-v1.json`; published
 evidence remains on closed PR319 / `codex/e165-live-campaign-transactions`.
 Ownership of Gambling Chip and indiscriminate early potion use are separate
 defects and are not changed in this experiment.
+
+## Result — local semantic gate passed
+
+Frozen tested SHA `c916e916755837f252f2b67cb67b5ca543e22f8e`.
+Two synthetic semantic tests pass: optional exhaust removes a Status while
+preserving a Power and a zero-preview attack; generation keeps positive
+selection polarity; inconsistent mandatory Ashwater context rejects.
+
+| Known natural entry | Legacy | Typed Ashwater |
+|---|---|---|
+| A0 Kin Priest | clear,39HP | clear,39HP; identical transitions |
+| A0 Knowledge Demon | defeat,0HP | **clear,33HP** |
+| A5 Vantom | clear,36HP | clear,36HP; identical transitions |
+
+All three legacy arms exactly reproduce the original E165 boundaries. Six
+complete trials and six independent complete-prefix replays match;12 raw bundles
+pass hash/stderr checks; all budgets pass,106.157 seconds wall. Full versions,
+commands, root/state/DLL/source hashes and every outcome are in
+[evaluation-v1.json](evaluation-v1.json). No external model/API use or game edits.
+
+At the identical Ashwater menu (`7597915e...`), legacy exhausts seven positive
+cards; typed selection skips optional exhaust. Both arms still use the same
+early-potion program. The revised fight plays Vicious on turn1 and Hellraiser on
+turn7, then wins on turn11 (61 decisions); legacy loses on turn11 (59 decisions)
+without playing either Power. The intervention preserves multiple cards and
+changes subsequent draws; do not attribute the entire gain to Hellraiser alone.
+
+Decision: merge PR322 as an **opt-in semantic correction and diagnostic**. Do not
+change default FrozenProgram, potion timing, native gameplay or neural policies.
+This is one previously observed failing encounter plus two non-trigger controls,
+not new seed/generalization evidence. E165 remains one natural defeat and one
+ownership interruption; this counterfactual is not a resumed full-run victory.
+Opening ownership is tracked separately in E167/#321 and resource usefulness in
+E168/#323. Fix those before another expensive fresh hybrid full-run trial.
