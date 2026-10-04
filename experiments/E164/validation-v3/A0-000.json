@@ -1,0 +1,2242 @@
+{
+  "case": "A0-000",
+  "bundles": {
+    "6a692d95d5594a185cb6706f0afc9aa58e4193a49af79ff83f1b1ea5d3ba6e98": {
+      "packet": {
+        "case": "A0-000",
+        "run_id": "b158cc80-513e-427d-95ae-3f318411ffb6",
+        "seq": 1,
+        "state_hash": "6a692d95d5594a185cb6706f0afc9aa58e4193a49af79ff83f1b1ea5d3ba6e98",
+        "choice_id": "a001",
+        "campaign_plan": "Take Lost Coffer for an early selectable damage card and potion without adding a curse. Build efficient frontloaded damage first, then block and scaling for Kin Priest. Prefer paths allowing a campfire before an elite; evaluate potion reservation after its identity is known.",
+        "potion_reservations": [],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 1
+          }
+        },
+        "name": "choose_option",
+        "details": {
+          "index": 1,
+          "title": "Lost Coffer",
+          "description": "Upon pickup, gain 1 card reward and procure 1 random potion.",
+          "text_key": "NEOW.pages.INITIAL.options.LOST_COFFER",
+          "is_locked": false,
+          "vars": null
+        },
+        "id": "a001"
+      },
+      "steps": []
+    },
+    "43d8da6a23face3ec9a1f3598735005162c2bfec01615de9d072aa3adf63be20": {
+      "packet": {
+        "case": "A0-000",
+        "run_id": "b158cc80-513e-427d-95ae-3f318411ffb6",
+        "seq": 2,
+        "state_hash": "43d8da6a23face3ec9a1f3598735005162c2bfec01615de9d072aa3adf63be20",
+        "choice_id": "a002",
+        "campaign_plan": "Take Inflame for persistent Strength; the starter deck has six attacks and needs scaling. Seek efficient direct damage next. Hold Fortifier for an elite or boss, with emergency release below 35% HP; avoid consuming a scaling block potion in a trivial hallway.",
+        "potion_reservations": [
+          {
+            "potion_id": "FORTIFIER",
+            "until": "Elite",
+            "release_hp_fraction": 0.35
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 2
+          }
+        },
+        "name": "select_card_reward",
+        "details": {
+          "index": 2,
+          "id": "CARD.INFLAME",
+          "name": "Inflame",
+          "cost": 1,
+          "type": "Power",
+          "rarity": "Uncommon",
+          "description": "Gain {StrengthPower:diff()} Strength.",
+          "stats": {
+            "strengthpower": 2
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "strengthpower": 3
+            },
+            "description": "Gain {StrengthPower:diff()} Strength.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        "id": "a002"
+      },
+      "steps": []
+    },
+    "b62e9cef92413f72a21739a5b200a84e4eb31dd6898d7206d6538ba245286f55": {
+      "packet": {
+        "case": "A0-000",
+        "run_id": "b158cc80-513e-427d-95ae-3f318411ffb6",
+        "seq": 3,
+        "state_hash": "b62e9cef92413f72a21739a5b200a84e4eb31dd6898d7206d6538ba245286f55",
+        "choice_id": "a001",
+        "campaign_plan": "Start column 2 for two fights and an optional third before the row-6 campfire. Preserve the choice of a prepared row-7 elite or unknown/shop route. Inflame provides scaling; next priorities are immediate damage and efficient block. Keep Fortifier reserved for elites with the existing emergency release.",
+        "potion_reservations": [
+          {
+            "potion_id": "FORTIFIER",
+            "until": "Elite",
+            "release_hp_fraction": 0.35
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 2,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a001"
+      },
+      "steps": []
+    },
+    "66823ab27344e5cb91d8027f22890e89c657a383a0ae615988dc9c1f55872bc8": {
+      "packet": {
+        "case": "A0-000",
+        "run_id": "b158cc80-513e-427d-95ae-3f318411ffb6",
+        "seq": 4,
+        "state_hash": "66823ab27344e5cb91d8027f22890e89c657a383a0ae615988dc9c1f55872bc8",
+        "choice_id": "a001",
+        "campaign_plan": "Take Anger: zero-energy damage benefits from Inflame, leaves energy for block, and fills the immediate damage gap. Next look for efficient defense or card draw rather than many redundant attacks. Retain Fortifier reservation.",
+        "potion_reservations": [
+          {
+            "potion_id": "FORTIFIER",
+            "until": "Elite",
+            "release_hp_fraction": 0.35
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 1
+          }
+        },
+        "name": "select_card_reward",
+        "details": {
+          "index": 1,
+          "id": "CARD.ANGER",
+          "name": "Anger",
+          "cost": 0,
+          "type": "Attack",
+          "rarity": "Common",
+          "description": "Deal {Damage:diff()} damage.\nAdd a copy of this card into your Discard Pile.",
+          "stats": {
+            "damage": 6
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 0,
+            "stats": {
+              "damage": 8
+            },
+            "description": "Deal {Damage:diff()} damage.\nAdd a copy of this card into your Discard Pile.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        "id": "a001"
+      },
+      "steps": []
+    },
+    "5a2a4e2d3e52c0fb594306863e7079929eddcf6244811f03854e7640900baeb2": {
+      "packet": {
+        "case": "A0-000",
+        "run_id": "b158cc80-513e-427d-95ae-3f318411ffb6",
+        "seq": 6,
+        "state_hash": "5a2a4e2d3e52c0fb594306863e7079929eddcf6244811f03854e7640900baeb2",
+        "choice_id": "a002",
+        "campaign_plan": "Take Breakthrough to cover the missing area-damage role before elites and Kin Priest. Inflame also improves it; the 1 HP cost is supported by Burning Blood. Avoid further low-quality damage additions and seek block/draw next.",
+        "potion_reservations": [
+          {
+            "potion_id": "FORTIFIER",
+            "until": "Elite",
+            "release_hp_fraction": 0.35
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 2
+          }
+        },
+        "name": "select_card_reward",
+        "details": {
+          "index": 2,
+          "id": "CARD.BREAKTHROUGH",
+          "name": "Breakthrough",
+          "cost": 1,
+          "type": "Attack",
+          "rarity": "Common",
+          "description": "Lose {HpLoss:diff()} HP.\nDeal {Damage:diff()} damage to ALL enemies.",
+          "stats": {
+            "damage": 9,
+            "hploss": 1
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "damage": 13,
+              "hploss": 1
+            },
+            "description": "Lose {HpLoss:diff()} HP.\nDeal {Damage:diff()} damage to ALL enemies.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        "id": "a002"
+      },
+      "steps": []
+    },
+    "18df9474bd988ce6245bff8ec9e7af24bf84611ffeb143822914c9df2ecc08df": {
+      "packet": {
+        "case": "A0-000",
+        "run_id": "b158cc80-513e-427d-95ae-3f318411ffb6",
+        "seq": 7,
+        "state_hash": "18df9474bd988ce6245bff8ec9e7af24bf84611ffeb143822914c9df2ecc08df",
+        "choice_id": "a001",
+        "campaign_plan": "Take the third early monster while HP is 74/80 and damage is adequate. A guaranteed card/potion opportunity can improve elite preparation before the two unknown rooms and campfire. Fortifier stays reserved; Weak is available to protect HP.",
+        "potion_reservations": [
+          {
+            "potion_id": "FORTIFIER",
+            "until": "Elite",
+            "release_hp_fraction": 0.35
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 3,
+            "row": 3
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 3,
+          "row": 3,
+          "type": "Monster"
+        },
+        "id": "a001"
+      },
+      "steps": []
+    },
+    "743178f7deb6fd2922700a9280380e0b4c560dc34e44da7ef34db3b2a11b9323": {
+      "packet": {
+        "case": "A0-000",
+        "run_id": "b158cc80-513e-427d-95ae-3f318411ffb6",
+        "seq": 8,
+        "state_hash": "743178f7deb6fd2922700a9280380e0b4c560dc34e44da7ef34db3b2a11b9323",
+        "choice_id": "a001",
+        "campaign_plan": "Take Stone Armor to add persistent defense alongside Inflame and Anger. Rupture has only one current self-damage enabler and would add unnecessary setup; the deck needs damage mitigation more than another attack.",
+        "potion_reservations": [
+          {
+            "potion_id": "FORTIFIER",
+            "until": "Elite",
+            "release_hp_fraction": 0.35
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 1
+          }
+        },
+        "name": "select_card_reward",
+        "details": {
+          "index": 1,
+          "id": "CARD.STONE_ARMOR",
+          "name": "Stone Armor",
+          "cost": 1,
+          "type": "Power",
+          "rarity": "Uncommon",
+          "description": "Gain {PlatingPower:diff()} Plating.",
+          "stats": {
+            "platingpower": 4
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "platingpower": 6
+            },
+            "description": "Gain {PlatingPower:diff()} Plating.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        "id": "a001"
+      },
+      "steps": []
+    },
+    "7355a4ae2ef17df2c4fe1c0823f1d051e9b622b3fbf25a8ce235fd73ea1378d1": {
+      "packet": {
+        "case": "A0-000",
+        "run_id": "b158cc80-513e-427d-95ae-3f318411ffb6",
+        "seq": 9,
+        "state_hash": "7355a4ae2ef17df2c4fe1c0823f1d051e9b622b3fbf25a8ce235fd73ea1378d1",
+        "choice_id": "a001",
+        "campaign_plan": "Trade 7 HP for 109 gold: current HP is 79/80 and a campfire is two rooms away, with an optional row-8 shop. Another treatment run has now revealed Sword of Stone needs five elite kills, so favor immediately spendable resources over that delayed relic.",
+        "potion_reservations": [
+          {
+            "potion_id": "FORTIFIER",
+            "until": "Elite",
+            "release_hp_fraction": 0.35
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 1
+          }
+        },
+        "name": "choose_option",
+        "details": {
+          "index": 1,
+          "title": "Dive into the Water",
+          "description": "Gain {Gold} Gold. Lose {HpLoss} HP.",
+          "text_key": "SUNKEN_STATUE.pages.INITIAL.options.DIVE_INTO_WATER",
+          "is_locked": false,
+          "vars": {
+            "Relic": 0,
+            "Gold": 109,
+            "HpLoss": 7
+          }
+        },
+        "id": "a001"
+      },
+      "steps": []
+    },
+    "ed645c17db586c0c71a2f300f7c8fbcc2a6df94465d99c89085c41a96bfd6c2e": {
+      "packet": {
+        "case": "A0-000",
+        "run_id": "b158cc80-513e-427d-95ae-3f318411ffb6",
+        "seq": 10,
+        "state_hash": "ed645c17db586c0c71a2f300f7c8fbcc2a6df94465d99c89085c41a96bfd6c2e",
+        "choice_id": "a000",
+        "campaign_plan": "Take 62 gold for 8 HP rather than a forced event fight that would waste most of its healing. This leaves 64/80 HP before a campfire and funds a strong shop purchase. Prefer the shop path unless later preparation justifies an elite.",
+        "potion_reservations": [
+          {
+            "potion_id": "FORTIFIER",
+            "until": "Elite",
+            "release_hp_fraction": 0.35
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        "name": "choose_option",
+        "details": {
+          "index": 0,
+          "title": "Trudge On",
+          "description": "Gain {Gold} Gold. Lose {HpLoss} HP.",
+          "text_key": "DENSE_VEGETATION.pages.INITIAL.options.TRUDGE_ON",
+          "is_locked": false,
+          "vars": {
+            "Gold": 62,
+            "Heal": 24,
+            "HpLoss": 8
+          }
+        },
+        "id": "a000"
+      },
+      "steps": []
+    },
+    "dca1e239e9dddcf03f049a9df077a3500ef56815001ec8074adc191b2cca8757": {
+      "packet": {
+        "case": "A0-000",
+        "run_id": "b158cc80-513e-427d-95ae-3f318411ffb6",
+        "seq": 11,
+        "state_hash": "dca1e239e9dddcf03f049a9df077a3500ef56815001ec8074adc191b2cca8757",
+        "choice_id": "a001",
+        "campaign_plan": "Smith at 64/80 HP because the next route can avoid an elite and reach the shop. Upgrade Stone Armor for stronger recurring defense, supporting longer fights and the Fortifier resource. Use gold to improve the deck before the mandatory later elite.",
+        "potion_reservations": [
+          {
+            "potion_id": "FORTIFIER",
+            "until": "Elite",
+            "release_hp_fraction": 0.35
+          }
+        ],
+        "transaction_steps": [
+          {
+            "kind": "select_deck_card",
+            "index": 13,
+            "potion_reservations": [
+              {
+                "potion_id": "FORTIFIER",
+                "until": "Elite",
+                "release_hp_fraction": 0.35
+              }
+            ]
+          }
+        ]
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 1
+          }
+        },
+        "name": "choose_option",
+        "details": {
+          "index": 1,
+          "option_id": "SMITH",
+          "name": "SmithRestSiteOption",
+          "is_enabled": true
+        },
+        "id": "a001"
+      },
+      "steps": [
+        {
+          "kind": "select_deck_card",
+          "index": 13,
+          "potion_reservations": [
+            {
+              "potion_id": "FORTIFIER",
+              "until": "Elite",
+              "release_hp_fraction": 0.35
+            }
+          ]
+        }
+      ]
+    },
+    "59a722314b7a6e14582b99dd6b63fbf680bdbb4e15b03fb6f1ce14cf4eadd026": {
+      "packet": {
+        "case": "A0-000",
+        "run_id": "b158cc80-513e-427d-95ae-3f318411ffb6",
+        "seq": 13,
+        "state_hash": "59a722314b7a6e14582b99dd6b63fbf680bdbb4e15b03fb6f1ce14cf4eadd026",
+        "choice_id": "a000",
+        "campaign_plan": "Choose the unknown leading to the shop, so 314 gold becomes strength before the mandatory later elite. Current HP is adequate but the only potion is defensive; do not add an optional elite before spending this resource.",
+        "potion_reservations": [
+          {
+            "potion_id": "FORTIFIER",
+            "until": "Elite",
+            "release_hp_fraction": 0.35
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 7
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 2,
+          "row": 7,
+          "type": "Unknown"
+        },
+        "id": "a000"
+      },
+      "steps": []
+    },
+    "d127306a663b552e8822a14921927a11b71642eb1d5b90f5bfdfc97c88adc6b7": {
+      "packet": {
+        "case": "A0-000",
+        "run_id": "b158cc80-513e-427d-95ae-3f318411ffb6",
+        "seq": 15,
+        "state_hash": "d127306a663b552e8822a14921927a11b71642eb1d5b90f5bfdfc97c88adc6b7",
+        "choice_id": "a003",
+        "campaign_plan": "Skip this reward. Anger already supplies zero-energy damage, and these options do not solve the current draw and defense gaps. Preserve consistency of Inflame, Stone Armor+ and Breakthrough; spend 326 gold at the next shop.",
+        "potion_reservations": [
+          {
+            "potion_id": "FORTIFIER",
+            "until": "Elite",
+            "release_hp_fraction": 0.35
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "skip_card_reward",
+          "args": {}
+        },
+        "name": "skip_card_reward",
+        "details": null,
+        "id": "a003"
+      },
+      "steps": []
+    },
+    "628194335317330777a47ed6c9ecfae28b6486a3f76308076203848fa3285d74": {
+      "packet": {
+        "case": "A0-000",
+        "run_id": "b158cc80-513e-427d-95ae-3f318411ffb6",
+        "seq": 16,
+        "state_hash": "628194335317330777a47ed6c9ecfae28b6486a3f76308076203848fa3285d74",
+        "choice_id": "a007",
+        "campaign_plan": "Buy Happy Flower for recurring energy without HP cost or an extra draw slot. It supports establishing Inflame and Stone Armor while retaining defense. Plan to buy Pommel Strike for cycling and a Power Potion with the remaining 156 gold.",
+        "potion_reservations": [
+          {
+            "potion_id": "FORTIFIER",
+            "until": "Elite",
+            "release_hp_fraction": 0.35
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "buy_relic",
+          "args": {
+            "relic_index": 0
+          }
+        },
+        "name": "buy_relic",
+        "details": {
+          "index": 0,
+          "name": "Happy Flower",
+          "description": "Every {Turns} {Turns:plural:turn|turns}, gain {Energy:energyIcons()}.",
+          "cost": 170,
+          "is_stocked": true
+        },
+        "id": "a007"
+      },
+      "steps": []
+    },
+    "7e93ea95eef62bf0fcea6d3e6c6afc210a57fd850d6401a39830e0f4d6bbd3ba": {
+      "packet": {
+        "case": "A0-000",
+        "run_id": "b158cc80-513e-427d-95ae-3f318411ffb6",
+        "seq": 17,
+        "state_hash": "7e93ea95eef62bf0fcea6d3e6c6afc210a57fd850d6401a39830e0f4d6bbd3ba",
+        "choice_id": "a001",
+        "campaign_plan": "Buy Pommel Strike for 49 gold to improve cycling toward Stone Armor+ and Inflame while adding useful damage. Happy Flower provides recurring energy; retain funds for a boss Power Potion instead of an uncertain transformation card.",
+        "potion_reservations": [
+          {
+            "potion_id": "FORTIFIER",
+            "until": "Elite",
+            "release_hp_fraction": 0.35
+          }
+        ],
+        "transaction_steps": [
+          {
+            "kind": "buy_potion",
+            "index": 2,
+            "potion_reservations": [
+              {
+                "potion_id": "FORTIFIER",
+                "until": "Elite",
+                "release_hp_fraction": 0.35
+              }
+            ]
+          },
+          {
+            "kind": "leave_room",
+            "index": null,
+            "potion_reservations": [
+              {
+                "potion_id": "FORTIFIER",
+                "until": "Elite",
+                "release_hp_fraction": 0.35
+              },
+              {
+                "potion_id": "POWER_POTION",
+                "until": "Boss",
+                "release_hp_fraction": 0.35
+              }
+            ]
+          }
+        ]
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "buy_card",
+          "args": {
+            "card_index": 1
+          }
+        },
+        "name": "buy_card",
+        "details": {
+          "index": 1,
+          "name": "Pommel Strike",
+          "type": "Attack",
+          "rarity": "Common",
+          "card_cost": 1,
+          "description": "Deal {Damage:diff()} damage.\nDraw {Cards:diff()} {Cards:plural:card|cards}.",
+          "stats": {
+            "damage": 9,
+            "cards": 1
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "damage": 10,
+              "cards": 2
+            },
+            "description": "Deal {Damage:diff()} damage.\nDraw {Cards:diff()} {Cards:plural:card|cards}.",
+            "added_keywords": null,
+            "removed_keywords": null
+          },
+          "cost": 49,
+          "is_stocked": true,
+          "on_sale": false
+        },
+        "id": "a001"
+      },
+      "steps": [
+        {
+          "kind": "buy_potion",
+          "index": 2,
+          "potion_reservations": [
+            {
+              "potion_id": "FORTIFIER",
+              "until": "Elite",
+              "release_hp_fraction": 0.35
+            }
+          ]
+        },
+        {
+          "kind": "leave_room",
+          "index": null,
+          "potion_reservations": [
+            {
+              "potion_id": "FORTIFIER",
+              "until": "Elite",
+              "release_hp_fraction": 0.35
+            },
+            {
+              "potion_id": "POWER_POTION",
+              "until": "Boss",
+              "release_hp_fraction": 0.35
+            }
+          ]
+        }
+      ]
+    },
+    "4d02cb3027acb4980bf7de20b43baa01ba9bcc7cb7f853aa7f3f7e3b4faf3b08": {
+      "packet": {
+        "case": "A0-000",
+        "run_id": "b158cc80-513e-427d-95ae-3f318411ffb6",
+        "seq": 20,
+        "state_hash": "4d02cb3027acb4980bf7de20b43baa01ba9bcc7cb7f853aa7f3f7e3b4faf3b08",
+        "choice_id": "a000",
+        "campaign_plan": "Choose column-4 treasure. Both branches lead to a campfire and forced elite, but the right branch also offers a campfire immediately after the elite, giving a safer recovery schedule at 49/80 HP.",
+        "potion_reservations": [
+          {
+            "potion_id": "FORTIFIER",
+            "until": "Elite",
+            "release_hp_fraction": 0.35
+          },
+          {
+            "potion_id": "POWER_POTION",
+            "until": "Boss",
+            "release_hp_fraction": 0.35
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 4,
+            "row": 9
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 4,
+          "row": 9,
+          "type": "Treasure"
+        },
+        "id": "a000"
+      },
+      "steps": []
+    },
+    "73faee3132120b877954c57e7feecd0f0257df78a09a93252829b75280c579fd": {
+      "packet": {
+        "case": "A0-000",
+        "run_id": "b158cc80-513e-427d-95ae-3f318411ffb6",
+        "seq": 21,
+        "state_hash": "73faee3132120b877954c57e7feecd0f0257df78a09a93252829b75280c579fd",
+        "choice_id": "a000",
+        "campaign_plan": "Heal before the compulsory elite. At 49/80 HP, the roughly 24 HP rest is more valuable than another upgrade; Weak and Fortifier are available for the elite, while Power Potion can release if the battle becomes dangerous.",
+        "potion_reservations": [
+          {
+            "potion_id": "FORTIFIER",
+            "until": "Elite",
+            "release_hp_fraction": 0.35
+          },
+          {
+            "potion_id": "POWER_POTION",
+            "until": "Boss",
+            "release_hp_fraction": 0.35
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        "name": "choose_option",
+        "details": {
+          "index": 0,
+          "option_id": "HEAL",
+          "name": "HealRestSiteOption",
+          "is_enabled": true
+        },
+        "id": "a000"
+      },
+      "steps": []
+    },
+    "285a1ad09b309b67f5f2d1ddecd397991d287cd8d677445b42f4e232b45a4128": {
+      "packet": {
+        "case": "A0-000",
+        "run_id": "b158cc80-513e-427d-95ae-3f318411ffb6",
+        "seq": 23,
+        "state_hash": "285a1ad09b309b67f5f2d1ddecd397991d287cd8d677445b42f4e232b45a4128",
+        "choice_id": "a001",
+        "campaign_plan": "Take Shrug It Off for block plus draw, directly addressing the deck's current weakness. Fiend Fire has burst potential but can consume the powers or scaling attacks this deck relies on; prefer consistent defense before Kin Priest.",
+        "potion_reservations": [
+          {
+            "potion_id": "POWER_POTION",
+            "until": "Boss",
+            "release_hp_fraction": 0.35
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 1
+          }
+        },
+        "name": "select_card_reward",
+        "details": {
+          "index": 1,
+          "id": "CARD.SHRUG_IT_OFF",
+          "name": "Shrug It Off",
+          "cost": 1,
+          "type": "Skill",
+          "rarity": "Common",
+          "description": "Gain {Block:diff()} Block.\nDraw {Cards:diff()} card.",
+          "stats": {
+            "block": 8,
+            "cards": 1
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "block": 11,
+              "cards": 1
+            },
+            "description": "Gain {Block:diff()} Block.\nDraw {Cards:diff()} card.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        "id": "a001"
+      },
+      "steps": []
+    },
+    "e170e5666cfd3ee2dc15ae50a342b2255dca22d978a48b5dd301d5553ca3e493": {
+      "packet": {
+        "case": "A0-000",
+        "run_id": "b158cc80-513e-427d-95ae-3f318411ffb6",
+        "seq": 24,
+        "state_hash": "e170e5666cfd3ee2dc15ae50a342b2255dca22d978a48b5dd301d5553ca3e493",
+        "choice_id": "a000",
+        "campaign_plan": "Take the campfire for guaranteed preparation at 53/80 HP. It still leaves a choice between a shop and one normal fight, and another campfire before the boss. Juzu Bracelet now makes later unknown rooms safer.",
+        "potion_reservations": [
+          {
+            "potion_id": "POWER_POTION",
+            "until": "Boss",
+            "release_hp_fraction": 0.35
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 5,
+            "row": 12
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 5,
+          "row": 12,
+          "type": "RestSite"
+        },
+        "id": "a000"
+      },
+      "steps": []
+    },
+    "e1f050993701f9d1265b23d13102c126bdd28def118cc77453748ea9d12ed60b": {
+      "packet": {
+        "case": "A0-000",
+        "run_id": "b158cc80-513e-427d-95ae-3f318411ffb6",
+        "seq": 25,
+        "state_hash": "e1f050993701f9d1265b23d13102c126bdd28def118cc77453748ea9d12ed60b",
+        "choice_id": "a001",
+        "campaign_plan": "Upgrade Pommel Strike now: only one normal fight is needed before another campfire, and Blood Vial plus Burning Blood support the approach. Improve cycling toward powers and block; heal at the final campfire if HP remains low.",
+        "potion_reservations": [
+          {
+            "potion_id": "POWER_POTION",
+            "until": "Boss",
+            "release_hp_fraction": 0.35
+          }
+        ],
+        "transaction_steps": [
+          {
+            "kind": "select_deck_card",
+            "index": 14,
+            "potion_reservations": [
+              {
+                "potion_id": "POWER_POTION",
+                "until": "Boss",
+                "release_hp_fraction": 0.35
+              }
+            ]
+          }
+        ]
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 1
+          }
+        },
+        "name": "choose_option",
+        "details": {
+          "index": 1,
+          "option_id": "SMITH",
+          "name": "SmithRestSiteOption",
+          "is_enabled": true
+        },
+        "id": "a001"
+      },
+      "steps": [
+        {
+          "kind": "select_deck_card",
+          "index": 14,
+          "potion_reservations": [
+            {
+              "potion_id": "POWER_POTION",
+              "until": "Boss",
+              "release_hp_fraction": 0.35
+            }
+          ]
+        }
+      ]
+    },
+    "3d77d9a34a7476a3d5433aae6acfec1d2055cf43c114201d8d397819d8b03d91": {
+      "packet": {
+        "case": "A0-000",
+        "run_id": "b158cc80-513e-427d-95ae-3f318411ffb6",
+        "seq": 27,
+        "state_hash": "3d77d9a34a7476a3d5433aae6acfec1d2055cf43c114201d8d397819d8b03d91",
+        "choice_id": "a001",
+        "campaign_plan": "Visit the shop with 137 gold to seek final boss preparation or remove a weak starter. This avoids one immediate fight and leaves only one normal fight before the final campfire. Keep Power Potion for Kin Priest.",
+        "potion_reservations": [
+          {
+            "potion_id": "POWER_POTION",
+            "until": "Boss",
+            "release_hp_fraction": 0.35
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 6,
+            "row": 13
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 6,
+          "row": 13,
+          "type": "Shop"
+        },
+        "id": "a001"
+      },
+      "steps": []
+    },
+    "75554359ab91324e02d258fc52bf6caeb45ce75cbc9687c1af27cb24bee4c43e": {
+      "packet": {
+        "case": "A0-000",
+        "run_id": "b158cc80-513e-427d-95ae-3f318411ffb6",
+        "seq": 28,
+        "state_hash": "75554359ab91324e02d258fc52bf6caeb45ce75cbc9687c1af27cb24bee4c43e",
+        "choice_id": "a009",
+        "campaign_plan": "Pay 75 gold to remove a starter Strike, improving access to Inflame, Stone Armor+, Pommel Strike+ and Shrug It Off. The remaining 62 gold can buy a boss Vulnerable Potion. Avoid speculative additions immediately before Kin Priest.",
+        "potion_reservations": [
+          {
+            "potion_id": "POWER_POTION",
+            "until": "Boss",
+            "release_hp_fraction": 0.35
+          }
+        ],
+        "transaction_steps": [
+          {
+            "kind": "select_deck_card",
+            "index": 0,
+            "potion_reservations": [
+              {
+                "potion_id": "POWER_POTION",
+                "until": "Boss",
+                "release_hp_fraction": 0.35
+              }
+            ]
+          },
+          {
+            "kind": "buy_potion",
+            "index": 2,
+            "potion_reservations": [
+              {
+                "potion_id": "POWER_POTION",
+                "until": "Boss",
+                "release_hp_fraction": 0.35
+              }
+            ]
+          },
+          {
+            "kind": "leave_room",
+            "index": null,
+            "potion_reservations": null
+          }
+        ]
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "remove_card",
+          "args": {}
+        },
+        "name": "remove_card",
+        "details": {
+          "price": 75
+        },
+        "id": "a009"
+      },
+      "steps": [
+        {
+          "kind": "select_deck_card",
+          "index": 0,
+          "potion_reservations": [
+            {
+              "potion_id": "POWER_POTION",
+              "until": "Boss",
+              "release_hp_fraction": 0.35
+            }
+          ]
+        },
+        {
+          "kind": "buy_potion",
+          "index": 2,
+          "potion_reservations": [
+            {
+              "potion_id": "POWER_POTION",
+              "until": "Boss",
+              "release_hp_fraction": 0.35
+            }
+          ]
+        },
+        {
+          "kind": "leave_room",
+          "index": null,
+          "potion_reservations": null
+        }
+      ]
+    },
+    "1f8b121e6f3a4c1bba3bdca687dafebdd8ac7fdde86330ab3625a836a7acea88": {
+      "packet": {
+        "case": "A0-000",
+        "run_id": "b158cc80-513e-427d-95ae-3f318411ffb6",
+        "seq": 32,
+        "state_hash": "1f8b121e6f3a4c1bba3bdca687dafebdd8ac7fdde86330ab3625a836a7acea88",
+        "choice_id": "a000",
+        "campaign_plan": "Take Battle Trance for free draw and more consistent access to the two powers and defensive cards. Avoid redundant Anger or another attack. Rest before Kin Priest with Power and Shackling Potions available.",
+        "potion_reservations": [
+          {
+            "potion_id": "POWER_POTION",
+            "until": "Boss",
+            "release_hp_fraction": 0.35
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        "name": "select_card_reward",
+        "details": {
+          "index": 0,
+          "id": "CARD.BATTLE_TRANCE",
+          "name": "Battle Trance",
+          "cost": 0,
+          "type": "Skill",
+          "rarity": "Uncommon",
+          "description": "Draw {Cards:diff()} cards.\nYou cannot draw additional cards this turn.",
+          "stats": {
+            "cards": 3
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 0,
+            "stats": {
+              "cards": 4
+            },
+            "description": "Draw {Cards:diff()} cards.\nYou cannot draw additional cards this turn.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        "id": "a000"
+      },
+      "steps": []
+    },
+    "0932f14b61d43f0c1940b24e31f3e10940442b91f690559434a33c69d875796b": {
+      "packet": {
+        "case": "A0-000",
+        "run_id": "b158cc80-513e-427d-95ae-3f318411ffb6",
+        "seq": 33,
+        "state_hash": "0932f14b61d43f0c1940b24e31f3e10940442b91f690559434a33c69d875796b",
+        "choice_id": "a000",
+        "campaign_plan": "Final rest before Kin Priest: heal the missing 24 HP to full. Existing upgraded Stone Armor and draw package are sufficient; preserve Power Potion for this boss.",
+        "potion_reservations": [
+          {
+            "potion_id": "POWER_POTION",
+            "until": "Boss",
+            "release_hp_fraction": 0.35
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        "name": "choose_option",
+        "details": {
+          "index": 0,
+          "option_id": "HEAL",
+          "name": "HealRestSiteOption",
+          "is_enabled": true
+        },
+        "id": "a000"
+      },
+      "steps": []
+    },
+    "74b3452fa993bb3e638e1ef8af3eb9b9888e0dcd88476c6be4de37744040d9a1": {
+      "packet": {
+        "case": "A0-000",
+        "run_id": "b158cc80-513e-427d-95ae-3f318411ffb6",
+        "seq": 34,
+        "state_hash": "74b3452fa993bb3e638e1ef8af3eb9b9888e0dcd88476c6be4de37744040d9a1",
+        "choice_id": "a000",
+        "campaign_plan": "Choose Conflagration: efficient multi-hit AoE scales with Inflame and fills the next-act multi-enemy damage gap. Maintain compact draw/block deck; seek energy or scaling defense next.",
+        "potion_reservations": [],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        "name": "select_card_reward",
+        "details": {
+          "index": 0,
+          "id": "CARD.CONFLAGRATION",
+          "name": "Conflagration",
+          "cost": 1,
+          "type": "Attack",
+          "rarity": "Rare",
+          "description": "Deal {Damage:diff()} damage to ALL enemies {Repeat:diff()} {Repeat:plural:time|times}.",
+          "stats": {
+            "damage": 2,
+            "repeat": 4
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "damage": 2,
+              "repeat": 5
+            },
+            "description": "Deal {Damage:diff()} damage to ALL enemies {Repeat:diff()} {Repeat:plural:time|times}.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        "id": "a000"
+      },
+      "steps": []
+    },
+    "da52a799a0ee819a64193b48dde5e73292cc7da00b3a4eddc2e59ba709d91cdc": {
+      "packet": {
+        "case": "A0-000",
+        "run_id": "b158cc80-513e-427d-95ae-3f318411ffb6",
+        "seq": 35,
+        "state_hash": "da52a799a0ee819a64193b48dde5e73292cc7da00b3a4eddc2e59ba709d91cdc",
+        "choice_id": "a000",
+        "campaign_plan": "Visit Ancient before choosing route. Act-two goal is energy and reliable block for Inflame/Conflagration deck; favor center shop then a rest over the left normal-fight chain.",
+        "potion_reservations": [],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 3,
+            "row": 0
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 3,
+          "row": 0,
+          "type": "Ancient"
+        },
+        "id": "a000"
+      },
+      "steps": []
+    },
+    "5709f35d8ff2486a227f8f307e2577843c5e0ca82a279e994630a9f7c7e3b38a": {
+      "packet": {
+        "case": "A0-000",
+        "run_id": "b158cc80-513e-427d-95ae-3f318411ffb6",
+        "seq": 36,
+        "state_hash": "5709f35d8ff2486a227f8f307e2577843c5e0ca82a279e994630a9f7c7e3b38a",
+        "choice_id": "a000",
+        "campaign_plan": "Choose Horn; Relax semantics are absent so this is an uncertain pick. Tooth would require 6188 five-card combinations with this 17-card deck, exceeding the known adapter limit exposed by A5-001. Eye requires deliberate empty turns that the fixed executor is unlikely to exploit. This decision adapts to a compatibility finding, not baseline results.",
+        "potion_reservations": [],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        "name": "choose_option",
+        "details": {
+          "index": 0,
+          "title": "Pael's Horn",
+          "description": "Upon pickup, add 2 Relax to your Deck.",
+          "text_key": "PAEL.pages.INITIAL.options.PAELS_HORN",
+          "is_locked": false,
+          "vars": null
+        },
+        "id": "a000"
+      },
+      "steps": []
+    },
+    "c2a2fa77719843b229a11e91164e122f2700b491fa0c71bcb00bfa2d94fd4cfd": {
+      "packet": {
+        "case": "A0-000",
+        "run_id": "b158cc80-513e-427d-95ae-3f318411ffb6",
+        "seq": 37,
+        "state_hash": "c2a2fa77719843b229a11e91164e122f2700b491fa0c71bcb00bfa2d94fd4cfd",
+        "choice_id": "a001",
+        "campaign_plan": "Choose central route through early shop and later rests. Relax adds expensive defensive draw/energy; seek cheaper setup or removal of basic Strike, with Inflame/Conflagration as damage core. Preserve access to unknown rooms with Juzu.",
+        "potion_reservations": [],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 3,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 3,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a001"
+      },
+      "steps": []
+    },
+    "60199a77e6dd16fcc381e290251e837cc2541215f7292a80708f066fa3b29cfb": {
+      "packet": {
+        "case": "A0-000",
+        "run_id": "b158cc80-513e-427d-95ae-3f318411ffb6",
+        "seq": 38,
+        "state_hash": "60199a77e6dd16fcc381e290251e837cc2541215f7292a80708f066fa3b29cfb",
+        "choice_id": "a001",
+        "campaign_plan": "Add upgraded Setup Strike: +4 temporary Strength enables Conflagration multi-hits and strengthens Anger/Breakthrough turns. Prefer this immediate strength payoff over more plain attacks; next priorities are block scaling and efficient energy.",
+        "potion_reservations": [],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 1
+          }
+        },
+        "name": "select_card_reward",
+        "details": {
+          "index": 1,
+          "id": "CARD.SETUP_STRIKE",
+          "name": "Setup Strike",
+          "cost": 1,
+          "type": "Attack",
+          "rarity": "Common",
+          "description": "Deal {Damage:diff()} damage.\nGain {StrengthPower:diff()} Strength this turn.",
+          "stats": {
+            "damage": 9,
+            "strengthpower": 4
+          },
+          "keywords": null,
+          "after_upgrade": null
+        },
+        "id": "a001"
+      },
+      "steps": []
+    },
+    "8cd886eb8df82964c19e18ce3606c33eda99924e8a19a93cfd49f059dbac7ac0": {
+      "packet": {
+        "case": "A0-000",
+        "run_id": "b158cc80-513e-427d-95ae-3f318411ffb6",
+        "seq": 39,
+        "state_hash": "8cd886eb8df82964c19e18ce3606c33eda99924e8a19a93cfd49f059dbac7ac0",
+        "choice_id": "a003",
+        "campaign_plan": "Skip marginal attacks; Conflagration plus two strength sources already supplies damage. Keep draws concentrated on Relax, Stone Armor and strength setup; spend upcoming shop gold on a material improvement.",
+        "potion_reservations": [],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "skip_card_reward",
+          "args": {}
+        },
+        "name": "skip_card_reward",
+        "details": null,
+        "id": "a003"
+      },
+      "steps": []
+    },
+    "9f67d23d3a9b8338494336ea8dd8f1d88ebdb030d0358f666a580f7c79bd9aa2": {
+      "packet": {
+        "case": "A0-000",
+        "run_id": "b158cc80-513e-427d-95ae-3f318411ffb6",
+        "seq": 40,
+        "state_hash": "9f67d23d3a9b8338494336ea8dd8f1d88ebdb030d0358f666a580f7c79bd9aa2",
+        "choice_id": "a007",
+        "campaign_plan": "Buy Mazaleth's Gift for a strong boss scaling resource: repeated Strength helps Conflagration. At 152 gold, this also leaves 52 for Fire Potion as elite insurance. Reserve Ritual for boss on next owned-inventory packet; avoid spending entire budget on passive Thorns.",
+        "potion_reservations": [],
+        "transaction_steps": [
+          {
+            "kind": "buy_potion",
+            "index": 2,
+            "potion_reservations": [
+              {
+                "potion_id": "MAZALETHS_GIFT",
+                "until": "Boss",
+                "release_hp_fraction": 0.3
+              }
+            ]
+          },
+          {
+            "kind": "leave_room",
+            "index": null,
+            "potion_reservations": null
+          }
+        ]
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "buy_potion",
+          "args": {
+            "potion_index": 0
+          }
+        },
+        "name": "buy_potion",
+        "details": {
+          "index": 0,
+          "name": "Mazaleth's Gift",
+          "description": "Gain {RitualPower} Ritual.",
+          "cost": 100,
+          "is_stocked": true,
+          "id": "MAZALETHS_GIFT",
+          "can_buy": true
+        },
+        "id": "a007"
+      },
+      "steps": [
+        {
+          "kind": "buy_potion",
+          "index": 2,
+          "potion_reservations": [
+            {
+              "potion_id": "MAZALETHS_GIFT",
+              "until": "Boss",
+              "release_hp_fraction": 0.3
+            }
+          ]
+        },
+        {
+          "kind": "leave_room",
+          "index": null,
+          "potion_reservations": null
+        }
+      ]
+    },
+    "5df252db036c1590c7e0b34326debe32b5d2da5435f957d6f466669683bedf34": {
+      "packet": {
+        "case": "A0-000",
+        "run_id": "b158cc80-513e-427d-95ae-3f318411ffb6",
+        "seq": 42,
+        "state_hash": "5df252db036c1590c7e0b34326debe32b5d2da5435f957d6f466669683bedf34",
+        "choice_id": "a000",
+        "campaign_plan": "Pay 6 HP for 48 gold; Blood Vial/Burning Blood can recover this without polluting the deck with an unknown curse. Keep Ritual for boss, Fire for elite or serious injury.",
+        "potion_reservations": [
+          {
+            "potion_id": "MAZALETHS_GIFT",
+            "until": "Boss",
+            "release_hp_fraction": 0.3
+          },
+          {
+            "potion_id": "FIRE_POTION",
+            "until": "Elite",
+            "release_hp_fraction": 0.45
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        "name": "choose_option",
+        "details": {
+          "index": 0,
+          "title": "This",
+          "description": "Lose {HpLoss} HP. Gain {Gold} Gold.",
+          "text_key": "THIS_OR_THAT.pages.INITIAL.options.PLAIN",
+          "is_locked": false,
+          "vars": {
+            "HpLoss": 6,
+            "Gold": 48,
+            "Curse": 0
+          }
+        },
+        "id": "a000"
+      },
+      "steps": []
+    },
+    "7e430e4f1a40d95e385aa2839f66f3ab61fb657b279eb58a2af93275a2975e7c": {
+      "packet": {
+        "case": "A0-000",
+        "run_id": "b158cc80-513e-427d-95ae-3f318411ffb6",
+        "seq": 43,
+        "state_hash": "7e430e4f1a40d95e385aa2839f66f3ab61fb657b279eb58a2af93275a2975e7c",
+        "choice_id": "a001",
+        "campaign_plan": "Take upgraded Whirlwind: variable-energy multi-hit AoE scales with strength and Happy Flower/Relax energy. This gives a second strong payoff for Inflame and Setup Strike, reducing reliance on one Conflagration draw.",
+        "potion_reservations": [
+          {
+            "potion_id": "MAZALETHS_GIFT",
+            "until": "Boss",
+            "release_hp_fraction": 0.3
+          },
+          {
+            "potion_id": "FIRE_POTION",
+            "until": "Elite",
+            "release_hp_fraction": 0.45
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 1
+          }
+        },
+        "name": "select_card_reward",
+        "details": {
+          "index": 1,
+          "id": "CARD.WHIRLWIND",
+          "name": "Whirlwind",
+          "cost": 0,
+          "type": "Attack",
+          "rarity": "Uncommon",
+          "description": "Deal {Damage:diff()} damage to ALL enemies X times.",
+          "stats": {
+            "damage": 8
+          },
+          "keywords": null,
+          "after_upgrade": null
+        },
+        "id": "a001"
+      },
+      "steps": []
+    },
+    "69da7ec64ce0b0724acf3dab858ed1fb162aaf53b50daa564ea096c9be0ee3be": {
+      "packet": {
+        "case": "A0-000",
+        "run_id": "b158cc80-513e-427d-95ae-3f318411ffb6",
+        "seq": 44,
+        "state_hash": "69da7ec64ce0b0724acf3dab858ed1fb162aaf53b50daa564ea096c9be0ee3be",
+        "choice_id": "a000",
+        "campaign_plan": "Take center normal fight to reach rest at row7, another rest at row9 and a shop at row11. Immediate right rest would lock us into a long later normal-fight chain. At 69 HP with both potions retained, preserve the stronger future recovery route.",
+        "potion_reservations": [
+          {
+            "potion_id": "MAZALETHS_GIFT",
+            "until": "Boss",
+            "release_hp_fraction": 0.3
+          },
+          {
+            "potion_id": "FIRE_POTION",
+            "until": "Elite",
+            "release_hp_fraction": 0.45
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 4,
+            "row": 6
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 4,
+          "row": 6,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "steps": []
+    },
+    "70df6a605c766afb0957e8927e15c5906cfe6d63f6639c267177652719d1520b": {
+      "packet": {
+        "case": "A0-000",
+        "run_id": "b158cc80-513e-427d-95ae-3f318411ffb6",
+        "seq": 46,
+        "state_hash": "70df6a605c766afb0957e8927e15c5906cfe6d63f6639c267177652719d1520b",
+        "choice_id": "a003",
+        "campaign_plan": "Skip: no exhaust enabler for Drum, Inferno adds another setup card and self-damage, Blood Wall is less efficient than existing Relax. Keep draw density; Swift is available for the next fight while the two hard-fight potions remain reserved.",
+        "potion_reservations": [
+          {
+            "potion_id": "MAZALETHS_GIFT",
+            "until": "Boss",
+            "release_hp_fraction": 0.3
+          },
+          {
+            "potion_id": "FIRE_POTION",
+            "until": "Elite",
+            "release_hp_fraction": 0.45
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "skip_card_reward",
+          "args": {}
+        },
+        "name": "skip_card_reward",
+        "details": null,
+        "id": "a003"
+      },
+      "steps": []
+    },
+    "1978037f686e18d351b37ec373e10b9c43b599d33e053c443e7f196e58b947d2": {
+      "packet": {
+        "case": "A0-000",
+        "run_id": "b158cc80-513e-427d-95ae-3f318411ffb6",
+        "seq": 47,
+        "state_hash": "1978037f686e18d351b37ec373e10b9c43b599d33e053c443e7f196e58b947d2",
+        "choice_id": "a000",
+        "campaign_plan": "Take planned rest route; upgrade a core card now and retain a later rest for recovery. At 65 HP there is enough margin with three potions; avoid unnecessary extra fight.",
+        "potion_reservations": [
+          {
+            "potion_id": "MAZALETHS_GIFT",
+            "until": "Boss",
+            "release_hp_fraction": 0.3
+          },
+          {
+            "potion_id": "FIRE_POTION",
+            "until": "Elite",
+            "release_hp_fraction": 0.45
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 3,
+            "row": 7
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 3,
+          "row": 7,
+          "type": "RestSite"
+        },
+        "id": "a000"
+      },
+      "steps": []
+    },
+    "dbd1e25053e2d4efb7ac5603650066010d565a0f1425fc059a45fc50213dbec5": {
+      "packet": {
+        "case": "A0-000",
+        "run_id": "b158cc80-513e-427d-95ae-3f318411ffb6",
+        "seq": 48,
+        "state_hash": "dbd1e25053e2d4efb7ac5603650066010d565a0f1425fc059a45fc50213dbec5",
+        "choice_id": "a001",
+        "campaign_plan": "Smith Inflame for +1 persistent Strength, improving Conflagration and Whirlwind throughout every fight. Another campfire is available immediately after treasure, so the missing 15 HP can wait.",
+        "potion_reservations": [
+          {
+            "potion_id": "MAZALETHS_GIFT",
+            "until": "Boss",
+            "release_hp_fraction": 0.3
+          },
+          {
+            "potion_id": "FIRE_POTION",
+            "until": "Elite",
+            "release_hp_fraction": 0.45
+          }
+        ],
+        "transaction_steps": [
+          {
+            "kind": "select_deck_card",
+            "index": 9,
+            "potion_reservations": [
+              {
+                "potion_id": "MAZALETHS_GIFT",
+                "until": "Boss",
+                "release_hp_fraction": 0.3
+              },
+              {
+                "potion_id": "FIRE_POTION",
+                "until": "Elite",
+                "release_hp_fraction": 0.45
+              }
+            ]
+          }
+        ]
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 1
+          }
+        },
+        "name": "choose_option",
+        "details": {
+          "index": 1,
+          "option_id": "SMITH",
+          "name": "SmithRestSiteOption",
+          "is_enabled": true
+        },
+        "id": "a001"
+      },
+      "steps": [
+        {
+          "kind": "select_deck_card",
+          "index": 9,
+          "potion_reservations": [
+            {
+              "potion_id": "MAZALETHS_GIFT",
+              "until": "Boss",
+              "release_hp_fraction": 0.3
+            },
+            {
+              "potion_id": "FIRE_POTION",
+              "until": "Elite",
+              "release_hp_fraction": 0.45
+            }
+          ]
+        }
+      ]
+    },
+    "75549c549299c8c9fdca95068293d72ea633667f032a6637547009fbe41d80dc": {
+      "packet": {
+        "case": "A0-000",
+        "run_id": "b158cc80-513e-427d-95ae-3f318411ffb6",
+        "seq": 50,
+        "state_hash": "75549c549299c8c9fdca95068293d72ea633667f032a6637547009fbe41d80dc",
+        "choice_id": "a000",
+        "campaign_plan": "Take second rest before later fights. Mercury Hourglass adds passive AoE; preserve health and improve core setup, then continue through unknown and shop toward final elite/rest.",
+        "potion_reservations": [
+          {
+            "potion_id": "MAZALETHS_GIFT",
+            "until": "Boss",
+            "release_hp_fraction": 0.3
+          },
+          {
+            "potion_id": "FIRE_POTION",
+            "until": "Elite",
+            "release_hp_fraction": 0.45
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 3,
+            "row": 9
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 3,
+          "row": 9,
+          "type": "RestSite"
+        },
+        "id": "a000"
+      },
+      "steps": []
+    },
+    "80b255575d37008285b8f1027653a38621b556b08912674bd22d1c1151d7e011": {
+      "packet": {
+        "case": "A0-000",
+        "run_id": "b158cc80-513e-427d-95ae-3f318411ffb6",
+        "seq": 51,
+        "state_hash": "80b255575d37008285b8f1027653a38621b556b08912674bd22d1c1151d7e011",
+        "choice_id": "a000",
+        "campaign_plan": "Heal to full before the remaining normal/elite sequence. Inflame is now upgraded; health buffer is preferable to another small damage upgrade before uncertain elite damage.",
+        "potion_reservations": [
+          {
+            "potion_id": "MAZALETHS_GIFT",
+            "until": "Boss",
+            "release_hp_fraction": 0.3
+          },
+          {
+            "potion_id": "FIRE_POTION",
+            "until": "Elite",
+            "release_hp_fraction": 0.45
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        "name": "choose_option",
+        "details": {
+          "index": 0,
+          "option_id": "HEAL",
+          "name": "HealRestSiteOption",
+          "is_enabled": true
+        },
+        "id": "a000"
+      },
+      "steps": []
+    },
+    "d9f1901fb826339131e39da47517af2c46f6a2f2397064ce382aba922f5e66cc": {
+      "packet": {
+        "case": "A0-000",
+        "run_id": "b158cc80-513e-427d-95ae-3f318411ffb6",
+        "seq": 52,
+        "state_hash": "d9f1901fb826339131e39da47517af2c46f6a2f2397064ce382aba922f5e66cc",
+        "choice_id": "a001",
+        "campaign_plan": "Transform a basic Strike. The alternative enchantment identity is unresolved; replacing a weak starter has clear potential while preserving the strength/AoE core.",
+        "potion_reservations": [
+          {
+            "potion_id": "MAZALETHS_GIFT",
+            "until": "Boss",
+            "release_hp_fraction": 0.3
+          },
+          {
+            "potion_id": "FIRE_POTION",
+            "until": "Elite",
+            "release_hp_fraction": 0.45
+          }
+        ],
+        "transaction_steps": [
+          {
+            "kind": "select_deck_card",
+            "index": 0,
+            "potion_reservations": [
+              {
+                "potion_id": "MAZALETHS_GIFT",
+                "until": "Boss",
+                "release_hp_fraction": 0.3
+              },
+              {
+                "potion_id": "FIRE_POTION",
+                "until": "Elite",
+                "release_hp_fraction": 0.45
+              }
+            ]
+          }
+        ]
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 1
+          }
+        },
+        "name": "choose_option",
+        "details": {
+          "index": 1,
+          "title": "Kill with Fire",
+          "description": "Choose a card to Transform.",
+          "text_key": "SYMBIOTE.pages.INITIAL.options.KILL_WITH_FIRE",
+          "is_locked": false,
+          "vars": {
+            "Enchantment": 0,
+            "Cards": 1
+          }
+        },
+        "id": "a001"
+      },
+      "steps": [
+        {
+          "kind": "select_deck_card",
+          "index": 0,
+          "potion_reservations": [
+            {
+              "potion_id": "MAZALETHS_GIFT",
+              "until": "Boss",
+              "release_hp_fraction": 0.3
+            },
+            {
+              "potion_id": "FIRE_POTION",
+              "until": "Elite",
+              "release_hp_fraction": 0.45
+            }
+          ]
+        }
+      ]
+    },
+    "c4b126b824637b58f49b4d32f7d3dfcae5e8107891cc5d11565a3078f13d0fe6": {
+      "packet": {
+        "case": "A0-000",
+        "run_id": "b158cc80-513e-427d-95ae-3f318411ffb6",
+        "seq": 54,
+        "state_hash": "c4b126b824637b58f49b4d32f7d3dfcae5e8107891cc5d11565a3078f13d0fe6",
+        "choice_id": "a000",
+        "campaign_plan": "Visit shop with 126 gold to improve defense or remove the transformed card if its semantics do not fit. This route still reaches the final elite and rest with full HP and retained hard-fight potions.",
+        "potion_reservations": [
+          {
+            "potion_id": "MAZALETHS_GIFT",
+            "until": "Boss",
+            "release_hp_fraction": 0.3
+          },
+          {
+            "potion_id": "FIRE_POTION",
+            "until": "Elite",
+            "release_hp_fraction": 0.45
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 3,
+            "row": 11
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 3,
+          "row": 11,
+          "type": "Shop"
+        },
+        "id": "a000"
+      },
+      "steps": []
+    },
+    "3889c9acc964d86f85b64a28d26c45401b81bca644a8ee4122d3be393599d31f": {
+      "packet": {
+        "case": "A0-000",
+        "run_id": "b158cc80-513e-427d-95ae-3f318411ffb6",
+        "seq": 55,
+        "state_hash": "3889c9acc964d86f85b64a28d26c45401b81bca644a8ee4122d3be393599d31f",
+        "choice_id": "a008",
+        "campaign_plan": "Remove another basic Strike to improve access to Inflame, Relax and multi-hit attacks. Shop cards do not clearly solve our remaining needs; Second Wind risks exhausting key defensive/setup pieces under fixed execution. Potion inventory is already full and useful.",
+        "potion_reservations": [
+          {
+            "potion_id": "MAZALETHS_GIFT",
+            "until": "Boss",
+            "release_hp_fraction": 0.3
+          },
+          {
+            "potion_id": "FIRE_POTION",
+            "until": "Elite",
+            "release_hp_fraction": 0.45
+          }
+        ],
+        "transaction_steps": [
+          {
+            "kind": "select_deck_card",
+            "index": 0,
+            "potion_reservations": [
+              {
+                "potion_id": "MAZALETHS_GIFT",
+                "until": "Boss",
+                "release_hp_fraction": 0.3
+              },
+              {
+                "potion_id": "FIRE_POTION",
+                "until": "Elite",
+                "release_hp_fraction": 0.45
+              }
+            ]
+          }
+        ]
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "remove_card",
+          "args": {}
+        },
+        "name": "remove_card",
+        "details": {
+          "price": 100
+        },
+        "id": "a008"
+      },
+      "steps": [
+        {
+          "kind": "select_deck_card",
+          "index": 0,
+          "potion_reservations": [
+            {
+              "potion_id": "MAZALETHS_GIFT",
+              "until": "Boss",
+              "release_hp_fraction": 0.3
+            },
+            {
+              "potion_id": "FIRE_POTION",
+              "until": "Elite",
+              "release_hp_fraction": 0.45
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "groups": [
+    {
+      "seq": 1,
+      "steps": 0,
+      "state_hash": "6a692d95d5594a185cb6706f0afc9aa58e4193a49af79ff83f1b1ea5d3ba6e98"
+    },
+    {
+      "seq": 2,
+      "steps": 0,
+      "state_hash": "43d8da6a23face3ec9a1f3598735005162c2bfec01615de9d072aa3adf63be20"
+    },
+    {
+      "seq": 3,
+      "steps": 0,
+      "state_hash": "b62e9cef92413f72a21739a5b200a84e4eb31dd6898d7206d6538ba245286f55"
+    },
+    {
+      "seq": 4,
+      "steps": 0,
+      "state_hash": "66823ab27344e5cb91d8027f22890e89c657a383a0ae615988dc9c1f55872bc8"
+    },
+    {
+      "seq": 6,
+      "steps": 0,
+      "state_hash": "5a2a4e2d3e52c0fb594306863e7079929eddcf6244811f03854e7640900baeb2"
+    },
+    {
+      "seq": 7,
+      "steps": 0,
+      "state_hash": "18df9474bd988ce6245bff8ec9e7af24bf84611ffeb143822914c9df2ecc08df"
+    },
+    {
+      "seq": 8,
+      "steps": 0,
+      "state_hash": "743178f7deb6fd2922700a9280380e0b4c560dc34e44da7ef34db3b2a11b9323"
+    },
+    {
+      "seq": 9,
+      "steps": 0,
+      "state_hash": "7355a4ae2ef17df2c4fe1c0823f1d051e9b622b3fbf25a8ce235fd73ea1378d1"
+    },
+    {
+      "seq": 10,
+      "steps": 0,
+      "state_hash": "ed645c17db586c0c71a2f300f7c8fbcc2a6df94465d99c89085c41a96bfd6c2e"
+    },
+    {
+      "seq": 11,
+      "steps": 1,
+      "state_hash": "dca1e239e9dddcf03f049a9df077a3500ef56815001ec8074adc191b2cca8757"
+    },
+    {
+      "seq": 13,
+      "steps": 0,
+      "state_hash": "59a722314b7a6e14582b99dd6b63fbf680bdbb4e15b03fb6f1ce14cf4eadd026"
+    },
+    {
+      "seq": 15,
+      "steps": 0,
+      "state_hash": "d127306a663b552e8822a14921927a11b71642eb1d5b90f5bfdfc97c88adc6b7"
+    },
+    {
+      "seq": 16,
+      "steps": 0,
+      "state_hash": "628194335317330777a47ed6c9ecfae28b6486a3f76308076203848fa3285d74"
+    },
+    {
+      "seq": 17,
+      "steps": 2,
+      "state_hash": "7e93ea95eef62bf0fcea6d3e6c6afc210a57fd850d6401a39830e0f4d6bbd3ba"
+    },
+    {
+      "seq": 20,
+      "steps": 0,
+      "state_hash": "4d02cb3027acb4980bf7de20b43baa01ba9bcc7cb7f853aa7f3f7e3b4faf3b08"
+    },
+    {
+      "seq": 21,
+      "steps": 0,
+      "state_hash": "73faee3132120b877954c57e7feecd0f0257df78a09a93252829b75280c579fd"
+    },
+    {
+      "seq": 23,
+      "steps": 0,
+      "state_hash": "285a1ad09b309b67f5f2d1ddecd397991d287cd8d677445b42f4e232b45a4128"
+    },
+    {
+      "seq": 24,
+      "steps": 0,
+      "state_hash": "e170e5666cfd3ee2dc15ae50a342b2255dca22d978a48b5dd301d5553ca3e493"
+    },
+    {
+      "seq": 25,
+      "steps": 1,
+      "state_hash": "e1f050993701f9d1265b23d13102c126bdd28def118cc77453748ea9d12ed60b"
+    },
+    {
+      "seq": 27,
+      "steps": 0,
+      "state_hash": "3d77d9a34a7476a3d5433aae6acfec1d2055cf43c114201d8d397819d8b03d91"
+    },
+    {
+      "seq": 28,
+      "steps": 3,
+      "state_hash": "75554359ab91324e02d258fc52bf6caeb45ce75cbc9687c1af27cb24bee4c43e"
+    },
+    {
+      "seq": 32,
+      "steps": 0,
+      "state_hash": "1f8b121e6f3a4c1bba3bdca687dafebdd8ac7fdde86330ab3625a836a7acea88"
+    },
+    {
+      "seq": 33,
+      "steps": 0,
+      "state_hash": "0932f14b61d43f0c1940b24e31f3e10940442b91f690559434a33c69d875796b"
+    },
+    {
+      "seq": 34,
+      "steps": 0,
+      "state_hash": "74b3452fa993bb3e638e1ef8af3eb9b9888e0dcd88476c6be4de37744040d9a1"
+    },
+    {
+      "seq": 35,
+      "steps": 0,
+      "state_hash": "da52a799a0ee819a64193b48dde5e73292cc7da00b3a4eddc2e59ba709d91cdc"
+    },
+    {
+      "seq": 36,
+      "steps": 0,
+      "state_hash": "5709f35d8ff2486a227f8f307e2577843c5e0ca82a279e994630a9f7c7e3b38a"
+    },
+    {
+      "seq": 37,
+      "steps": 0,
+      "state_hash": "c2a2fa77719843b229a11e91164e122f2700b491fa0c71bcb00bfa2d94fd4cfd"
+    },
+    {
+      "seq": 38,
+      "steps": 0,
+      "state_hash": "60199a77e6dd16fcc381e290251e837cc2541215f7292a80708f066fa3b29cfb"
+    },
+    {
+      "seq": 39,
+      "steps": 0,
+      "state_hash": "8cd886eb8df82964c19e18ce3606c33eda99924e8a19a93cfd49f059dbac7ac0"
+    },
+    {
+      "seq": 40,
+      "steps": 2,
+      "state_hash": "9f67d23d3a9b8338494336ea8dd8f1d88ebdb030d0358f666a580f7c79bd9aa2"
+    },
+    {
+      "seq": 42,
+      "steps": 0,
+      "state_hash": "5df252db036c1590c7e0b34326debe32b5d2da5435f957d6f466669683bedf34"
+    },
+    {
+      "seq": 43,
+      "steps": 0,
+      "state_hash": "7e430e4f1a40d95e385aa2839f66f3ab61fb657b279eb58a2af93275a2975e7c"
+    },
+    {
+      "seq": 44,
+      "steps": 0,
+      "state_hash": "69da7ec64ce0b0724acf3dab858ed1fb162aaf53b50daa564ea096c9be0ee3be"
+    },
+    {
+      "seq": 46,
+      "steps": 0,
+      "state_hash": "70df6a605c766afb0957e8927e15c5906cfe6d63f6639c267177652719d1520b"
+    },
+    {
+      "seq": 47,
+      "steps": 0,
+      "state_hash": "1978037f686e18d351b37ec373e10b9c43b599d33e053c443e7f196e58b947d2"
+    },
+    {
+      "seq": 48,
+      "steps": 1,
+      "state_hash": "dbd1e25053e2d4efb7ac5603650066010d565a0f1425fc059a45fc50213dbec5"
+    },
+    {
+      "seq": 50,
+      "steps": 0,
+      "state_hash": "75549c549299c8c9fdca95068293d72ea633667f032a6637547009fbe41d80dc"
+    },
+    {
+      "seq": 51,
+      "steps": 0,
+      "state_hash": "80b255575d37008285b8f1027653a38621b556b08912674bd22d1c1151d7e011"
+    },
+    {
+      "seq": 52,
+      "steps": 1,
+      "state_hash": "d9f1901fb826339131e39da47517af2c46f6a2f2397064ce382aba922f5e66cc"
+    },
+    {
+      "seq": 54,
+      "steps": 0,
+      "state_hash": "c4b126b824637b58f49b4d32f7d3dfcae5e8107891cc5d11565a3078f13d0fe6"
+    },
+    {
+      "seq": 55,
+      "steps": 1,
+      "state_hash": "3889c9acc964d86f85b64a28d26c45401b81bca644a8ee4122d3be393599d31f"
+    }
+  ],
+  "counts": {
+    "expert": 41,
+    "mechanical_rule": 5,
+    "transaction": 10
+  },
+  "changed": [],
+  "saved": [
+    {
+      "seq": 5,
+      "phase": "potion_reward",
+      "owner": "mechanical_rule"
+    },
+    {
+      "seq": 12,
+      "phase": "card_select",
+      "owner": "transaction"
+    },
+    {
+      "seq": 14,
+      "phase": "potion_reward",
+      "owner": "mechanical_rule"
+    },
+    {
+      "seq": 18,
+      "phase": "shop",
+      "owner": "transaction"
+    },
+    {
+      "seq": 19,
+      "phase": "shop",
+      "owner": "transaction"
+    },
+    {
+      "seq": 22,
+      "phase": "potion_reward",
+      "owner": "mechanical_rule"
+    },
+    {
+      "seq": 26,
+      "phase": "card_select",
+      "owner": "transaction"
+    },
+    {
+      "seq": 29,
+      "phase": "card_select",
+      "owner": "transaction"
+    },
+    {
+      "seq": 30,
+      "phase": "shop",
+      "owner": "transaction"
+    },
+    {
+      "seq": 31,
+      "phase": "potion_reward",
+      "owner": "mechanical_rule"
+    },
+    {
+      "seq": 41,
+      "phase": "shop",
+      "owner": "transaction"
+    },
+    {
+      "seq": 45,
+      "phase": "potion_reward",
+      "owner": "mechanical_rule"
+    },
+    {
+      "seq": 49,
+      "phase": "card_select",
+      "owner": "transaction"
+    },
+    {
+      "seq": 53,
+      "phase": "card_select",
+      "owner": "transaction"
+    },
+    {
+      "seq": 56,
+      "phase": "card_select",
+      "owner": "transaction"
+    }
+  ],
+  "input_chars": 636843,
+  "output_chars": 24869,
+  "source_requests": 56
+}

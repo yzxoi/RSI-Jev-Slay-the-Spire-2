@@ -172,8 +172,10 @@ def replay_compiled(record,compiled,v):
                 if d['combat_active'] and len(choices)>1 and permitted_state(state,rules)[1]!=d.get('reserved_potion_indexes',[]):
                     raise ValueError('Combat reservation mask changed')
                 trace.write('decision',dict(state_hash=digest(state),source=source,chosen=selected,queue_error=tx.invalid if tx else None))
-            before=state;state=engine.send(command);r['steps']+=1
-            if digest(state)!=digest(expected):raise ValueError(f'State mismatch at {i}')
+            before=state;observed=engine.send(command);r['steps']+=1
+            if digest(observed)!=digest(expected):raise ValueError(f'State mismatch at {i}')
+            # get_map returns a separate read-only map response, not a decision state.
+            if command['cmd']!='get_map':state=observed
             if tx and selected:tx.accepted(before,selected,state)
         r.update(status='match',final_hash=digest(state))
         assert r['requests']==compiled['counts']['expert']

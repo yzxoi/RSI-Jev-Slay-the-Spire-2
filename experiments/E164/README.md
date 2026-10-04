@@ -56,3 +56,10 @@ already sold; this intentionally irrelevant change is now correctly ignored.
 The test expectation was wrong, so the harness stopped before engine replay.
 v3 mutates the first *stocked* offer's price. No policy or gate changes. Preserve
 v2 compiled output and failure; rerun all checks into validation-v3.json.
+
+v3 `9a2f4b8`: 200→138 simulated requests (31%), all action/reservation checks
+and 38 synthetic checks pass. All four engine replays failed because the new
+harness replaced its current decision with get_map's read-only map response.
+v4 verifies that query response separately and preserves the decision state,
+matching the existing live episode loop. No transaction policy change. All v3
+failed traces and result hashes retained; rerun into validation-v4.json.
