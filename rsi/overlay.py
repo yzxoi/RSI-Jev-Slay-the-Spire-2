@@ -261,6 +261,9 @@ def run(feed, *, opacity=0.90, width=430, height=540, margin=20, screen_index=No
     timer = NSTimer.scheduledTimerWithTimeInterval_target_selector_userInfo_repeats_(
         .5, controller, "tick:", None, True)
     panel.orderFrontRegardless()
+    # Titled panels may be initially constrained to the primary display.
+    panel.setFrameOrigin_((rect.origin.x + rect.size.width - width - margin,
+                          rect.origin.y + rect.size.height - panel.frame().size.height - margin))
     print('Overlay frame:', panel.frame(), flush=True)
     print(f"Native overlay on screen {screen_index if screen_index is not None else 'main'}: {width}x{height}, opacity {opacity:.2f}, click-through {not interactive}", flush=True)
     app.run()
