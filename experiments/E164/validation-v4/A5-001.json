@@ -1,0 +1,1186 @@
+{
+  "case": "A5-001",
+  "bundles": {
+    "1bd3da8c0b58a8a4a5fff46628c822c35b2ab095fa9cd5ee453db290f5439ccd": {
+      "packet": {
+        "case": "A5-001",
+        "run_id": "9c4c8958-5af8-4970-9ebc-7fe483f3354b",
+        "seq": 1,
+        "state_hash": "1bd3da8c0b58a8a4a5fff46628c822c35b2ab095fa9cd5ee453db290f5439ccd",
+        "choice_id": "a000",
+        "campaign_plan": "Take 11 maximum HP as reliable survival capacity at A5. Seek straightforward damage upgrades and scaling for Vantom while preserving enough block; do not trade away max HP before the deck can handle elites.",
+        "potion_reservations": [],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        "name": "choose_option",
+        "details": {
+          "index": 0,
+          "title": "Nutritious Oyster",
+          "description": "Upon pickup, raise your Max HP by {MaxHp}.",
+          "text_key": "NEOW.pages.INITIAL.options.NUTRITIOUS_OYSTER",
+          "is_locked": false,
+          "vars": {
+            "MaxHp": 11
+          }
+        },
+        "id": "a000"
+      },
+      "steps": []
+    },
+    "be8883102e7e1bef0e2ac2adb0e031c0bcf90adc0a900ff89facef368114a744": {
+      "packet": {
+        "case": "A5-001",
+        "run_id": "9c4c8958-5af8-4970-9ebc-7fe483f3354b",
+        "seq": 2,
+        "state_hash": "be8883102e7e1bef0e2ac2adb0e031c0bcf90adc0a900ff89facef368114a744",
+        "choice_id": "a001",
+        "campaign_plan": "Start column 3. Its early shop can convert gold into immediate strength and the route reaches a row-6 campfire without forcing a row-7 or row-8 elite. Build damage before taking optional elite risk.",
+        "potion_reservations": [],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 3,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 3,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a001"
+      },
+      "steps": []
+    },
+    "ba93f63b38513cb7e5d1b592b4a3b7426a5c38e87994f3a80c244c1e16e00d57": {
+      "packet": {
+        "case": "A5-001",
+        "run_id": "9c4c8958-5af8-4970-9ebc-7fe483f3354b",
+        "seq": 3,
+        "state_hash": "ba93f63b38513cb7e5d1b592b4a3b7426a5c38e87994f3a80c244c1e16e00d57",
+        "choice_id": "a002",
+        "campaign_plan": "Take Bully for zero-energy damage that benefits from existing Bash. Immediate damage is the current gap; look for a strong attack or scaling at the upcoming shop, and maintain a balanced number of block cards.",
+        "potion_reservations": [],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 2
+          }
+        },
+        "name": "select_card_reward",
+        "details": {
+          "index": 2,
+          "id": "CARD.BULLY",
+          "name": "Bully",
+          "cost": 0,
+          "type": "Attack",
+          "rarity": "Uncommon",
+          "description": "Deal {CalculatedDamage:diff()} damage.\nDeals {ExtraDamage:diff()} additional damage for each Vulnerable on the enemy.",
+          "stats": {
+            "calculationbase": 4,
+            "extradamage": 2,
+            "calculateddamage": 4
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 0,
+            "stats": {
+              "calculationbase": 4,
+              "extradamage": 3,
+              "calculateddamage": 4
+            },
+            "description": "Deal {CalculatedDamage:diff()} damage.\nDeals {ExtraDamage:diff()} additional damage for each Vulnerable on the enemy.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        "id": "a002"
+      },
+      "steps": []
+    },
+    "e981f1b2b2206b20615d499a273c7ee42b55bff07ba555726558a6e83431c7ae": {
+      "packet": {
+        "case": "A5-001",
+        "run_id": "9c4c8958-5af8-4970-9ebc-7fe483f3354b",
+        "seq": 4,
+        "state_hash": "e981f1b2b2206b20615d499a273c7ee42b55bff07ba555726558a6e83431c7ae",
+        "choice_id": "a001",
+        "campaign_plan": "Buy discounted Molten Fist for 24 gold: efficient immediate damage plus Vulnerable extension complements Bash and Bully. Taunt is the next attractive purchase because it adds block while making Vulnerable more consistent; avoid paying for speculative setup.",
+        "potion_reservations": [],
+        "transaction_steps": [
+          {
+            "kind": "buy_card",
+            "index": 2,
+            "potion_reservations": []
+          },
+          {
+            "kind": "leave_room",
+            "index": null,
+            "potion_reservations": null
+          }
+        ]
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "buy_card",
+          "args": {
+            "card_index": 1
+          }
+        },
+        "name": "buy_card",
+        "details": {
+          "index": 1,
+          "name": "Molten Fist",
+          "type": "Attack",
+          "rarity": "Common",
+          "card_cost": 1,
+          "description": "Deal {Damage:diff()} damage.\nDouble the enemy's Vulnerable.",
+          "stats": {
+            "damage": 10
+          },
+          "keywords": [
+            "Exhaust"
+          ],
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "damage": 14
+            },
+            "description": "Deal {Damage:diff()} damage.\nDouble the enemy's Vulnerable.",
+            "added_keywords": null,
+            "removed_keywords": null
+          },
+          "cost": 24,
+          "is_stocked": true,
+          "on_sale": true
+        },
+        "id": "a001"
+      },
+      "steps": [
+        {
+          "kind": "buy_card",
+          "index": 2,
+          "potion_reservations": []
+        },
+        {
+          "kind": "leave_room",
+          "index": null,
+          "potion_reservations": null
+        }
+      ]
+    },
+    "34cabb9b1083379644949c51bb621f9e950d7bf30f5cca1647ba8278d71ba884": {
+      "packet": {
+        "case": "A5-001",
+        "run_id": "9c4c8958-5af8-4970-9ebc-7fe483f3354b",
+        "seq": 7,
+        "state_hash": "34cabb9b1083379644949c51bb621f9e950d7bf30f5cca1647ba8278d71ba884",
+        "choice_id": "a001",
+        "campaign_plan": "Take Hellraiser as a sustained damage engine for the five starter Strikes. Prioritize its energy-cost upgrade at the upcoming campfire if HP allows; avoid deleting Strikes until this engine's role is reassessed. Seek draw and strong block next.",
+        "potion_reservations": [],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 1
+          }
+        },
+        "name": "select_card_reward",
+        "details": {
+          "index": 1,
+          "id": "CARD.HELLRAISER",
+          "name": "Hellraiser",
+          "cost": 2,
+          "type": "Power",
+          "rarity": "Rare",
+          "description": "Whenever you draw a card containing “Strike”, it is played against a random enemy.",
+          "stats": null,
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": null,
+            "description": "Whenever you draw a card containing “Strike”, it is played against a random enemy.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        "id": "a001"
+      },
+      "steps": []
+    },
+    "a61a140ac4763236a69aaa1defd00026f2892dd0d837a1824bdf973d87e53757": {
+      "packet": {
+        "case": "A5-001",
+        "run_id": "9c4c8958-5af8-4970-9ebc-7fe483f3354b",
+        "seq": 8,
+        "state_hash": "a61a140ac4763236a69aaa1defd00026f2892dd0d837a1824bdf973d87e53757",
+        "choice_id": "a000",
+        "campaign_plan": "Take Pommel Strike: it adds draw and is itself a Strike for Hellraiser. This directly strengthens the chosen sustained-damage engine. Next priorities are the Hellraiser cost upgrade and improved defense; avoid unfocused attack additions.",
+        "potion_reservations": [],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        "name": "select_card_reward",
+        "details": {
+          "index": 0,
+          "id": "CARD.POMMEL_STRIKE",
+          "name": "Pommel Strike",
+          "cost": 1,
+          "type": "Attack",
+          "rarity": "Common",
+          "description": "Deal {Damage:diff()} damage.\nDraw {Cards:diff()} {Cards:plural:card|cards}.",
+          "stats": {
+            "damage": 9,
+            "cards": 1
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "damage": 10,
+              "cards": 2
+            },
+            "description": "Deal {Damage:diff()} damage.\nDraw {Cards:diff()} {Cards:plural:card|cards}.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        "id": "a000"
+      },
+      "steps": []
+    },
+    "bc66da61222872708fc527c037a12b8ddc16620bc0a14faec352c210d71577de": {
+      "packet": {
+        "case": "A5-001",
+        "run_id": "9c4c8958-5af8-4970-9ebc-7fe483f3354b",
+        "seq": 9,
+        "state_hash": "bc66da61222872708fc527c037a12b8ddc16620bc0a14faec352c210d71577de",
+        "choice_id": "a000",
+        "campaign_plan": "Take Twin Strike as a stronger Strike for Hellraiser, with good Vulnerable payoff. The deck is now attack-heavy; prioritize defense and draw in later rewards, and skip redundant damage once this engine is established.",
+        "potion_reservations": [],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        "name": "select_card_reward",
+        "details": {
+          "index": 0,
+          "id": "CARD.TWIN_STRIKE",
+          "name": "Twin Strike",
+          "cost": 1,
+          "type": "Attack",
+          "rarity": "Common",
+          "description": "Deal {Damage:diff()} damage twice.",
+          "stats": {
+            "damage": 5
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "damage": 7
+            },
+            "description": "Deal {Damage:diff()} damage twice.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        "id": "a000"
+      },
+      "steps": []
+    },
+    "bcf8bc71bde81f30f0c6f063ffbc54426e187a0876b50aad7237c2b9eddcb61e": {
+      "packet": {
+        "case": "A5-001",
+        "run_id": "9c4c8958-5af8-4970-9ebc-7fe483f3354b",
+        "seq": 10,
+        "state_hash": "bcf8bc71bde81f30f0c6f063ffbc54426e187a0876b50aad7237c2b9eddcb61e",
+        "choice_id": "a001",
+        "campaign_plan": "Take the campfire to upgrade Hellraiser while HP is 77/91. This improves the established engine and reaches the same later path without paying HP for another low-priority reward.",
+        "potion_reservations": [],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 4,
+            "row": 6
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 4,
+          "row": 6,
+          "type": "RestSite"
+        },
+        "id": "a001"
+      },
+      "steps": []
+    },
+    "c347e2b1ce20a5e33518e2125ca04afa572709fb294a10890b71aab7ed39b7dc": {
+      "packet": {
+        "case": "A5-001",
+        "run_id": "9c4c8958-5af8-4970-9ebc-7fe483f3354b",
+        "seq": 11,
+        "state_hash": "c347e2b1ce20a5e33518e2125ca04afa572709fb294a10890b71aab7ed39b7dc",
+        "choice_id": "a001",
+        "campaign_plan": "Smith at 77/91 HP to reduce Hellraiser's cost from two to one. This makes the chosen engine easier to establish and supports the existing seven Strike cards; no forced elite is immediately ahead.",
+        "potion_reservations": [],
+        "transaction_steps": [
+          {
+            "kind": "select_deck_card",
+            "index": 14,
+            "potion_reservations": []
+          }
+        ]
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 1
+          }
+        },
+        "name": "choose_option",
+        "details": {
+          "index": 1,
+          "option_id": "SMITH",
+          "name": "SmithRestSiteOption",
+          "is_enabled": true
+        },
+        "id": "a001"
+      },
+      "steps": [
+        {
+          "kind": "select_deck_card",
+          "index": 14,
+          "potion_reservations": []
+        }
+      ]
+    },
+    "90d47073447e85c5cf37757de6c6f6c098750c8957a3385958bda5d4a80130a5": {
+      "packet": {
+        "case": "A5-001",
+        "run_id": "9c4c8958-5af8-4970-9ebc-7fe483f3354b",
+        "seq": 13,
+        "state_hash": "90d47073447e85c5cf37757de6c6f6c098750c8957a3385958bda5d4a80130a5",
+        "choice_id": "a000",
+        "campaign_plan": "Eat the egg for seven maximum HP and immediate survivability. The alternative card is not identified in the request and the current 17-card Hellraiser deck should not absorb an unknown card without evidence it helps.",
+        "potion_reservations": [],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        "name": "choose_option",
+        "details": {
+          "index": 0,
+          "title": "Eat the Egg",
+          "description": "Gain {MaxHp} Max HP.",
+          "text_key": "BYRDONIS_NEST.pages.INITIAL.options.EAT",
+          "is_locked": false,
+          "vars": {
+            "MaxHp": 7,
+            "Card": 0
+          }
+        },
+        "id": "a000"
+      },
+      "steps": []
+    },
+    "c5cef0ed1d34e15f2ae1b938eaed989769cd6c5859988622eb30409a37de3209": {
+      "packet": {
+        "case": "A5-001",
+        "run_id": "9c4c8958-5af8-4970-9ebc-7fe483f3354b",
+        "seq": 15,
+        "state_hash": "c5cef0ed1d34e15f2ae1b938eaed989769cd6c5859988622eb30409a37de3209",
+        "choice_id": "a003",
+        "campaign_plan": "Skip redundant attacks and a second modest Taunt; the 17-card deck needs stronger defense or draw without diluting Hellraiser+. Reserve Energy Potion for the boss, with release at 45% HP if survival becomes urgent.",
+        "potion_reservations": [
+          {
+            "potion_id": "ENERGY_POTION",
+            "until": "Boss",
+            "release_hp_fraction": 0.45
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "skip_card_reward",
+          "args": {}
+        },
+        "name": "skip_card_reward",
+        "details": null,
+        "id": "a003"
+      },
+      "steps": []
+    },
+    "de1e5796a77387d8d47d229760d82cfafa72e00ff6936e96bea7adeb7b06c9f7": {
+      "packet": {
+        "case": "A5-001",
+        "run_id": "9c4c8958-5af8-4970-9ebc-7fe483f3354b",
+        "seq": 16,
+        "state_hash": "de1e5796a77387d8d47d229760d82cfafa72e00ff6936e96bea7adeb7b06c9f7",
+        "choice_id": "a001",
+        "campaign_plan": "Take five maximum HP and preserve 114 gold. Paying all gold to transform two cards risks disrupting the Hellraiser Strike engine without guaranteeing better defense. Seek the nearby campfire for Pommel Strike's draw upgrade.",
+        "potion_reservations": [
+          {
+            "potion_id": "ENERGY_POTION",
+            "until": "Boss",
+            "release_hp_fraction": 0.45
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 1
+          }
+        },
+        "name": "choose_option",
+        "details": {
+          "index": 1,
+          "title": "Loner",
+          "description": "Gain {MaxHp} Max HP.",
+          "text_key": "MORPHIC_GROVE.pages.INITIAL.options.LONER",
+          "is_locked": false,
+          "vars": {
+            "MaxHp": 5
+          }
+        },
+        "id": "a001"
+      },
+      "steps": []
+    },
+    "b502ce369d2519cec88c4acf9db5cea92144868ada620be0ea28351bb27a00a7": {
+      "packet": {
+        "case": "A5-001",
+        "run_id": "9c4c8958-5af8-4970-9ebc-7fe483f3354b",
+        "seq": 17,
+        "state_hash": "b502ce369d2519cec88c4acf9db5cea92144868ada620be0ea28351bb27a00a7",
+        "choice_id": "a000",
+        "campaign_plan": "Choose the campfire to upgrade Pommel Strike rather than an optional elite with no dedicated defense potion. The deck's Hellraiser engine benefits substantially from more draw; retain Energy Potion for the boss or low-HP emergency.",
+        "potion_reservations": [
+          {
+            "potion_id": "ENERGY_POTION",
+            "until": "Boss",
+            "release_hp_fraction": 0.45
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 3,
+            "row": 11
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 3,
+          "row": 11,
+          "type": "RestSite"
+        },
+        "id": "a000"
+      },
+      "steps": []
+    },
+    "9e518dfc98a864419d859f78ffeba373734d546014edde2d26bdcc302cc18de1": {
+      "packet": {
+        "case": "A5-001",
+        "run_id": "9c4c8958-5af8-4970-9ebc-7fe483f3354b",
+        "seq": 18,
+        "state_hash": "9e518dfc98a864419d859f78ffeba373734d546014edde2d26bdcc302cc18de1",
+        "choice_id": "a001",
+        "campaign_plan": "Smith Pommel Strike for two-card draw, which advances the Hellraiser engine. HP 84/103 is sufficient for the normal-fight route to the final campfire; keep the boss Energy Potion reserved.",
+        "potion_reservations": [
+          {
+            "potion_id": "ENERGY_POTION",
+            "until": "Boss",
+            "release_hp_fraction": 0.45
+          }
+        ],
+        "transaction_steps": [
+          {
+            "kind": "select_deck_card",
+            "index": 15,
+            "potion_reservations": [
+              {
+                "potion_id": "ENERGY_POTION",
+                "until": "Boss",
+                "release_hp_fraction": 0.45
+              }
+            ]
+          }
+        ]
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 1
+          }
+        },
+        "name": "choose_option",
+        "details": {
+          "index": 1,
+          "option_id": "SMITH",
+          "name": "SmithRestSiteOption",
+          "is_enabled": true
+        },
+        "id": "a001"
+      },
+      "steps": [
+        {
+          "kind": "select_deck_card",
+          "index": 15,
+          "potion_reservations": [
+            {
+              "potion_id": "ENERGY_POTION",
+              "until": "Boss",
+              "release_hp_fraction": 0.45
+            }
+          ]
+        }
+      ]
+    },
+    "a5b18c6edc5ff8c1b76145f21fc3d8c717f769dfe0c244388a9318858e4842d8": {
+      "packet": {
+        "case": "A5-001",
+        "run_id": "9c4c8958-5af8-4970-9ebc-7fe483f3354b",
+        "seq": 20,
+        "state_hash": "a5b18c6edc5ff8c1b76145f21fc3d8c717f769dfe0c244388a9318858e4842d8",
+        "choice_id": "a000",
+        "campaign_plan": "Choose column 4: after this monster it offers an unknown room and a route around optional elites to the final campfire. Column 3 would require three consecutive normal fights; preserve HP and the boss potion.",
+        "potion_reservations": [
+          {
+            "potion_id": "ENERGY_POTION",
+            "until": "Boss",
+            "release_hp_fraction": 0.45
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 4,
+            "row": 12
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 4,
+          "row": 12,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "steps": []
+    },
+    "8f99c794c1f8a1b218aba15c0c5d813c1ee4dc23047e6b3443c1d9639cae287f": {
+      "packet": {
+        "case": "A5-001",
+        "run_id": "9c4c8958-5af8-4970-9ebc-7fe483f3354b",
+        "seq": 22,
+        "state_hash": "8f99c794c1f8a1b218aba15c0c5d813c1ee4dc23047e6b3443c1d9639cae287f",
+        "choice_id": "a002",
+        "campaign_plan": "Take Setup Strike because Hellraiser can turn it into free damage plus temporary Strength for subsequent Strikes. This is direct synergy rather than a generic attack addition. Defense remains the unresolved gap; avoid random exhaust from Cinder.",
+        "potion_reservations": [
+          {
+            "potion_id": "ENERGY_POTION",
+            "until": "Boss",
+            "release_hp_fraction": 0.45
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 2
+          }
+        },
+        "name": "select_card_reward",
+        "details": {
+          "index": 2,
+          "id": "CARD.SETUP_STRIKE",
+          "name": "Setup Strike",
+          "cost": 1,
+          "type": "Attack",
+          "rarity": "Common",
+          "description": "Deal {Damage:diff()} damage.\nGain {StrengthPower:diff()} Strength this turn.",
+          "stats": {
+            "damage": 7,
+            "strengthpower": 3
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "damage": 9,
+              "strengthpower": 4
+            },
+            "description": "Deal {Damage:diff()} damage.\nGain {StrengthPower:diff()} Strength this turn.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        "id": "a002"
+      },
+      "steps": []
+    },
+    "ea7f4720d21988c51a019bc5752c8ee8e43b5f350ffdddfa42c1742f833a26df": {
+      "packet": {
+        "case": "A5-001",
+        "run_id": "9c4c8958-5af8-4970-9ebc-7fe483f3354b",
+        "seq": 23,
+        "state_hash": "ea7f4720d21988c51a019bc5752c8ee8e43b5f350ffdddfa42c1742f833a26df",
+        "choice_id": "a001",
+        "campaign_plan": "Choose the unknown over the optional elite at 70/103 HP, preserving the remaining potions and final campfire. Prioritize healthy boss arrival; the current deck still has limited high-quality defense.",
+        "potion_reservations": [
+          {
+            "potion_id": "ENERGY_POTION",
+            "until": "Boss",
+            "release_hp_fraction": 0.45
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 4,
+            "row": 13
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 4,
+          "row": 13,
+          "type": "Unknown"
+        },
+        "id": "a001"
+      },
+      "steps": []
+    },
+    "f24c917808758236d663d084f49e8d5a64630ee432e51e368defe474eb9cefc8": {
+      "packet": {
+        "case": "A5-001",
+        "run_id": "9c4c8958-5af8-4970-9ebc-7fe483f3354b",
+        "seq": 24,
+        "state_hash": "f24c917808758236d663d084f49e8d5a64630ee432e51e368defe474eb9cefc8",
+        "choice_id": "a000",
+        "campaign_plan": "Take Expect a Fight to address missing large-block turns. Sparkling Rouge supplies one persistent Strength from turn three, Setup Strike can add more, and Hellraiser can supply damage without spending energy. This is a costly defensive option whose actual execution must be audited.",
+        "potion_reservations": [
+          {
+            "potion_id": "ENERGY_POTION",
+            "until": "Boss",
+            "release_hp_fraction": 0.45
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        "name": "select_card_reward",
+        "details": {
+          "index": 0,
+          "id": "CARD.EXPECT_A_FIGHT",
+          "name": "Expect a Fight",
+          "cost": 3,
+          "type": "Skill",
+          "rarity": "Uncommon",
+          "description": "Gain {CalculatedBlock:diff()} Block.\nGains {CalculationExtra:diff()} additional Block for each Strength you have.",
+          "stats": {
+            "calculationbase": 15,
+            "calculationextra": 5,
+            "calculatedblock": 15
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 3,
+            "stats": {
+              "calculationbase": 16,
+              "calculationextra": 8,
+              "calculatedblock": 16
+            },
+            "description": "Gain {CalculatedBlock:diff()} Block.\nGains {CalculationExtra:diff()} additional Block for each Strength you have.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        "id": "a000"
+      },
+      "steps": []
+    },
+    "a6543e80fc93d829ce11d5a25e195cc747d8f096f27d50b19c48ed296bcbef8a": {
+      "packet": {
+        "case": "A5-001",
+        "run_id": "9c4c8958-5af8-4970-9ebc-7fe483f3354b",
+        "seq": 25,
+        "state_hash": "a6543e80fc93d829ce11d5a25e195cc747d8f096f27d50b19c48ed296bcbef8a",
+        "choice_id": "a001",
+        "campaign_plan": "Take the normal fight rather than an elite immediately before the final campfire. HP 65/103 is a finite boss-preparation resource; preserve Energy Potion unless its emergency threshold is reached.",
+        "potion_reservations": [
+          {
+            "potion_id": "ENERGY_POTION",
+            "until": "Boss",
+            "release_hp_fraction": 0.45
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 5,
+            "row": 14
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 5,
+          "row": 14,
+          "type": "Monster"
+        },
+        "id": "a001"
+      },
+      "steps": []
+    },
+    "38e35d2cd97d2943cc2e25edaba218947c1c29d09aae8f3fab0703248731eefb": {
+      "packet": {
+        "case": "A5-001",
+        "run_id": "9c4c8958-5af8-4970-9ebc-7fe483f3354b",
+        "seq": 26,
+        "state_hash": "38e35d2cd97d2943cc2e25edaba218947c1c29d09aae8f3fab0703248731eefb",
+        "choice_id": "a000",
+        "campaign_plan": "Take Forgotten Ritual for a one-time net energy gain supporting Hellraiser setup and the expensive block card. Avoid another redundant Twin Strike and random-exhaust True Grit. Heal at the final campfire before Vantom.",
+        "potion_reservations": [
+          {
+            "potion_id": "ENERGY_POTION",
+            "until": "Boss",
+            "release_hp_fraction": 0.45
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        "name": "select_card_reward",
+        "details": {
+          "index": 0,
+          "id": "CARD.FORGOTTEN_RITUAL",
+          "name": "Forgotten Ritual",
+          "cost": 1,
+          "type": "Skill",
+          "rarity": "Uncommon",
+          "description": "Gain {Energy:energyIcons()}.",
+          "stats": {
+            "energy": 3
+          },
+          "keywords": [
+            "Exhaust"
+          ],
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "energy": 4
+            },
+            "description": "Gain {Energy:energyIcons()}.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        "id": "a000"
+      },
+      "steps": []
+    },
+    "1ff9e1e721c6be326b9fa00d5de2502c0af25b0dda75b0bf8fb26e94b68e3434": {
+      "packet": {
+        "case": "A5-001",
+        "run_id": "9c4c8958-5af8-4970-9ebc-7fe483f3354b",
+        "seq": 27,
+        "state_hash": "1ff9e1e721c6be326b9fa00d5de2502c0af25b0dda75b0bf8fb26e94b68e3434",
+        "choice_id": "a000",
+        "campaign_plan": "Rest before Vantom: 64/103 HP is too low to prefer a marginal upgrade. The roughly 30 HP recovery has direct survival value; Hellraiser+ and Pommel Strike+ already provide the main engine, with Energy Potion reserved for this boss.",
+        "potion_reservations": [
+          {
+            "potion_id": "ENERGY_POTION",
+            "until": "Boss",
+            "release_hp_fraction": 0.45
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        "name": "choose_option",
+        "details": {
+          "index": 0,
+          "option_id": "HEAL",
+          "name": "HealRestSiteOption",
+          "is_enabled": true
+        },
+        "id": "a000"
+      },
+      "steps": []
+    },
+    "1e3072e5480e69a542a410842e626a60e3cb8589a7b6956e642f47bb4aa5b91e": {
+      "packet": {
+        "case": "A5-001",
+        "run_id": "9c4c8958-5af8-4970-9ebc-7fe483f3354b",
+        "seq": 29,
+        "state_hash": "1e3072e5480e69a542a410842e626a60e3cb8589a7b6956e642f47bb4aa5b91e",
+        "choice_id": "a001",
+        "campaign_plan": "Take Demon Form for sustained Strength scaling: it improves Hellraiser's automatic Strikes, Twin Strike, and Expect a Fight's defense. Its three-energy setup is a risk, partly supported by Forgotten Ritual and Radiant Tincture. Improve draw/defense before adding further setup; do not reserve Tincture while HP is currently low.",
+        "potion_reservations": [],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 1
+          }
+        },
+        "name": "select_card_reward",
+        "details": {
+          "index": 1,
+          "id": "CARD.DEMON_FORM",
+          "name": "Demon Form",
+          "cost": 3,
+          "type": "Power",
+          "rarity": "Rare",
+          "description": "At the start of your turn, gain {StrengthPower:diff()} Strength.",
+          "stats": {
+            "strengthpower": 3
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 3,
+            "stats": {
+              "strengthpower": 4
+            },
+            "description": "At the start of your turn, gain {StrengthPower:diff()} Strength.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        "id": "a001"
+      },
+      "steps": []
+    },
+    "8393e6fe8cbd181cb8be2e712a90b2aec8361b2fb1548294b43cd74a88089e53": {
+      "packet": {
+        "case": "A5-001",
+        "run_id": "9c4c8958-5af8-4970-9ebc-7fe483f3354b",
+        "seq": 30,
+        "state_hash": "8393e6fe8cbd181cb8be2e712a90b2aec8361b2fb1548294b43cd74a88089e53",
+        "choice_id": "a000",
+        "campaign_plan": "Visit the Ancient before starting Act 2 rather than skipping its reward. HP has naturally recovered to 88/103. Evaluate options for energy, defense and draw around Demon Form and Hellraiser; Radiant Tincture remains available for survival.",
+        "potion_reservations": [],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 3,
+            "row": 0
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 3,
+          "row": 0,
+          "type": "Ancient"
+        },
+        "id": "a000"
+      },
+      "steps": []
+    },
+    "9419ca547ef8d39abbf0ed71e0e43a84e14474a73caea74b6d01075cfb7098e3": {
+      "packet": {
+        "case": "A5-001",
+        "run_id": "9c4c8958-5af8-4970-9ebc-7fe483f3354b",
+        "seq": 31,
+        "state_hash": "9419ca547ef8d39abbf0ed71e0e43a84e14474a73caea74b6d01075cfb7098e3",
+        "choice_id": "a001",
+        "campaign_plan": "Take Pael's Tooth for five targeted upgrades returned across the next five combats. Temporarily removing weak starters improves access to Hellraiser, Demon Form and draw; preserve enough defense and Strike payoffs during the transition. The alternatives depend on unused energy or deliberately skipping a turn, which this executor is not configured to seek.",
+        "potion_reservations": [],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 1
+          }
+        },
+        "name": "choose_option",
+        "details": {
+          "index": 1,
+          "title": "Pael's Tooth",
+          "description": "Upon pickup, remove {Cards} {Cards:plural:card|cards} from your Deck. After each combat, randomly add 1 back Upgraded.{CardTitles.StringValue:cond:\n\nCards devoured:\n{}|}",
+          "text_key": "PAEL.pages.INITIAL.options.PAELS_TOOTH",
+          "is_locked": false,
+          "vars": {
+            "Cards": 5,
+            "CardTitles": 0
+          }
+        },
+        "id": "a001"
+      },
+      "steps": []
+    }
+  },
+  "groups": [
+    {
+      "seq": 1,
+      "steps": 0,
+      "state_hash": "1bd3da8c0b58a8a4a5fff46628c822c35b2ab095fa9cd5ee453db290f5439ccd"
+    },
+    {
+      "seq": 2,
+      "steps": 0,
+      "state_hash": "be8883102e7e1bef0e2ac2adb0e031c0bcf90adc0a900ff89facef368114a744"
+    },
+    {
+      "seq": 3,
+      "steps": 0,
+      "state_hash": "ba93f63b38513cb7e5d1b592b4a3b7426a5c38e87994f3a80c244c1e16e00d57"
+    },
+    {
+      "seq": 4,
+      "steps": 2,
+      "state_hash": "e981f1b2b2206b20615d499a273c7ee42b55bff07ba555726558a6e83431c7ae"
+    },
+    {
+      "seq": 7,
+      "steps": 0,
+      "state_hash": "34cabb9b1083379644949c51bb621f9e950d7bf30f5cca1647ba8278d71ba884"
+    },
+    {
+      "seq": 8,
+      "steps": 0,
+      "state_hash": "a61a140ac4763236a69aaa1defd00026f2892dd0d837a1824bdf973d87e53757"
+    },
+    {
+      "seq": 9,
+      "steps": 0,
+      "state_hash": "bc66da61222872708fc527c037a12b8ddc16620bc0a14faec352c210d71577de"
+    },
+    {
+      "seq": 10,
+      "steps": 0,
+      "state_hash": "bcf8bc71bde81f30f0c6f063ffbc54426e187a0876b50aad7237c2b9eddcb61e"
+    },
+    {
+      "seq": 11,
+      "steps": 1,
+      "state_hash": "c347e2b1ce20a5e33518e2125ca04afa572709fb294a10890b71aab7ed39b7dc"
+    },
+    {
+      "seq": 13,
+      "steps": 0,
+      "state_hash": "90d47073447e85c5cf37757de6c6f6c098750c8957a3385958bda5d4a80130a5"
+    },
+    {
+      "seq": 15,
+      "steps": 0,
+      "state_hash": "c5cef0ed1d34e15f2ae1b938eaed989769cd6c5859988622eb30409a37de3209"
+    },
+    {
+      "seq": 16,
+      "steps": 0,
+      "state_hash": "de1e5796a77387d8d47d229760d82cfafa72e00ff6936e96bea7adeb7b06c9f7"
+    },
+    {
+      "seq": 17,
+      "steps": 0,
+      "state_hash": "b502ce369d2519cec88c4acf9db5cea92144868ada620be0ea28351bb27a00a7"
+    },
+    {
+      "seq": 18,
+      "steps": 1,
+      "state_hash": "9e518dfc98a864419d859f78ffeba373734d546014edde2d26bdcc302cc18de1"
+    },
+    {
+      "seq": 20,
+      "steps": 0,
+      "state_hash": "a5b18c6edc5ff8c1b76145f21fc3d8c717f769dfe0c244388a9318858e4842d8"
+    },
+    {
+      "seq": 22,
+      "steps": 0,
+      "state_hash": "8f99c794c1f8a1b218aba15c0c5d813c1ee4dc23047e6b3443c1d9639cae287f"
+    },
+    {
+      "seq": 23,
+      "steps": 0,
+      "state_hash": "ea7f4720d21988c51a019bc5752c8ee8e43b5f350ffdddfa42c1742f833a26df"
+    },
+    {
+      "seq": 24,
+      "steps": 0,
+      "state_hash": "f24c917808758236d663d084f49e8d5a64630ee432e51e368defe474eb9cefc8"
+    },
+    {
+      "seq": 25,
+      "steps": 0,
+      "state_hash": "a6543e80fc93d829ce11d5a25e195cc747d8f096f27d50b19c48ed296bcbef8a"
+    },
+    {
+      "seq": 26,
+      "steps": 0,
+      "state_hash": "38e35d2cd97d2943cc2e25edaba218947c1c29d09aae8f3fab0703248731eefb"
+    },
+    {
+      "seq": 27,
+      "steps": 0,
+      "state_hash": "1ff9e1e721c6be326b9fa00d5de2502c0af25b0dda75b0bf8fb26e94b68e3434"
+    },
+    {
+      "seq": 29,
+      "steps": 0,
+      "state_hash": "1e3072e5480e69a542a410842e626a60e3cb8589a7b6956e642f47bb4aa5b91e"
+    },
+    {
+      "seq": 30,
+      "steps": 0,
+      "state_hash": "8393e6fe8cbd181cb8be2e712a90b2aec8361b2fb1548294b43cd74a88089e53"
+    },
+    {
+      "seq": 31,
+      "steps": 0,
+      "state_hash": "9419ca547ef8d39abbf0ed71e0e43a84e14474a73caea74b6d01075cfb7098e3"
+    }
+  ],
+  "counts": {
+    "expert": 24,
+    "transaction": 3,
+    "mechanical_rule": 4
+  },
+  "changed": [],
+  "saved": [
+    {
+      "seq": 5,
+      "phase": "shop",
+      "owner": "transaction"
+    },
+    {
+      "seq": 6,
+      "phase": "potion_reward",
+      "owner": "mechanical_rule"
+    },
+    {
+      "seq": 12,
+      "phase": "card_select",
+      "owner": "transaction"
+    },
+    {
+      "seq": 14,
+      "phase": "potion_reward",
+      "owner": "mechanical_rule"
+    },
+    {
+      "seq": 19,
+      "phase": "card_select",
+      "owner": "transaction"
+    },
+    {
+      "seq": 21,
+      "phase": "potion_reward",
+      "owner": "mechanical_rule"
+    },
+    {
+      "seq": 28,
+      "phase": "potion_reward",
+      "owner": "mechanical_rule"
+    }
+  ],
+  "input_chars": 351551,
+  "output_chars": 12805,
+  "source_requests": 31
+}

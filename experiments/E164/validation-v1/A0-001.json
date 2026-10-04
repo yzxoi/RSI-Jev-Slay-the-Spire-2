@@ -1,0 +1,2369 @@
+{
+  "case": "A0-001",
+  "bundles": {
+    "dada79c13b5270db13206ca2c7df923b8d504c7acea253d2b93c5c3cd5888faf": {
+      "packet": {
+        "case": "A0-001",
+        "run_id": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+        "seq": 1,
+        "state_hash": "dada79c13b5270db13206ca2c7df923b8d504c7acea253d2b93c5c3cd5888faf",
+        "choice_id": "a000",
+        "campaign_plan": "Take guaranteed Strike and Defend upgrades while preserving maximum HP. Seek efficient damage and one scaling engine for Ceremonial Beast; choose routes with preparation before elites, and avoid speculative curses.",
+        "potion_reservations": [],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        "name": "choose_option",
+        "details": {
+          "index": 0,
+          "title": "Neow's Talisman",
+          "description": "Upon pickup, Upgrade 1 of your Strikes and 1 of your Defends.",
+          "text_key": "NEOW.pages.INITIAL.options.NEOWS_TALISMAN",
+          "is_locked": false,
+          "vars": null
+        },
+        "id": "a000"
+      },
+      "steps": []
+    },
+    "9edac33968766320a110f54c714add1102b63d83208d9c0007cb404de17b624c": {
+      "packet": {
+        "case": "A0-001",
+        "run_id": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+        "seq": 2,
+        "state_hash": "9edac33968766320a110f54c714add1102b63d83208d9c0007cb404de17b624c",
+        "choice_id": "a001",
+        "campaign_plan": "Start column 3 for two early fights followed by a choice between a shop and another fight. This preserves access to preparation and a later campfire before the unavoidable late elite; reassess risk using actual rewards and HP.",
+        "potion_reservations": [],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 3,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 3,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a001"
+      },
+      "steps": []
+    },
+    "fdba4f32fbf67740df50bc201a0a1aefa1fdf971f6d46efb7404407c6d43a3a5": {
+      "packet": {
+        "case": "A0-001",
+        "run_id": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+        "seq": 3,
+        "state_hash": "fdba4f32fbf67740df50bc201a0a1aefa1fdf971f6d46efb7404407c6d43a3a5",
+        "choice_id": "a000",
+        "campaign_plan": "Take Perfected Strike: five starter Strikes make it a substantial early damage upgrade and a strong upgrade target. Preserve Strikes initially, seek a cheap damage card and adequate block; avoid adding expensive attacks indiscriminately.",
+        "potion_reservations": [],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        "name": "select_card_reward",
+        "details": {
+          "index": 0,
+          "id": "CARD.PERFECTED_STRIKE",
+          "name": "Perfected Strike",
+          "cost": 2,
+          "type": "Attack",
+          "rarity": "Common",
+          "description": "Deal {CalculatedDamage:diff()} damage.\nDeals {ExtraDamage:diff()} additional damage for ALL your cards containing “Strike”.",
+          "stats": {
+            "calculationbase": 6,
+            "extradamage": 2,
+            "calculateddamage": 6
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 2,
+            "stats": {
+              "calculationbase": 6,
+              "extradamage": 3,
+              "calculateddamage": 6
+            },
+            "description": "Deal {CalculatedDamage:diff()} damage.\nDeals {ExtraDamage:diff()} additional damage for ALL your cards containing “Strike”.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        "id": "a000"
+      },
+      "steps": []
+    },
+    "99b3009d22a76d0f4b0a8ea99567c38cf93001f9b741aebfc23cf7b2667e1463": {
+      "packet": {
+        "case": "A0-001",
+        "run_id": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+        "seq": 5,
+        "state_hash": "99b3009d22a76d0f4b0a8ea99567c38cf93001f9b741aebfc23cf7b2667e1463",
+        "choice_id": "a001",
+        "campaign_plan": "Take Flame Barrier for efficient block and retaliation, complementing Perfected Strike against multi-hit enemies. Preserve Blood Potion for an elite/boss or HP below 50%; do not consume it at full health.",
+        "potion_reservations": [
+          {
+            "potion_id": "BLOOD_POTION",
+            "until": "Elite",
+            "release_hp_fraction": 0.5
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 1
+          }
+        },
+        "name": "select_card_reward",
+        "details": {
+          "index": 1,
+          "id": "CARD.FLAME_BARRIER",
+          "name": "Flame Barrier",
+          "cost": 2,
+          "type": "Skill",
+          "rarity": "Uncommon",
+          "description": "Gain {Block:diff()} Block.\nWhenever you are attacked this turn, deal {DamageBack:diff()} damage back.",
+          "stats": {
+            "block": 12,
+            "damageback": 4
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 2,
+            "stats": {
+              "block": 16,
+              "damageback": 6
+            },
+            "description": "Gain {Block:diff()} Block.\nWhenever you are attacked this turn, deal {DamageBack:diff()} damage back.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        "id": "a001"
+      },
+      "steps": []
+    },
+    "9f50b4ce554e4f1dafc7bda2d11c8901987ec5bb68ebc052eaa6227567b25ef0": {
+      "packet": {
+        "case": "A0-001",
+        "run_id": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+        "seq": 6,
+        "state_hash": "9f50b4ce554e4f1dafc7bda2d11c8901987ec5bb68ebc052eaa6227567b25ef0",
+        "choice_id": "a000",
+        "campaign_plan": "At full HP with Perfected Strike and Flame Barrier, take the third early monster reward. The next row retains a shop option with more gold; preserve Blood Potion and avoid unnecessary healing.",
+        "potion_reservations": [
+          {
+            "potion_id": "BLOOD_POTION",
+            "until": "Elite",
+            "release_hp_fraction": 0.5
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 3,
+            "row": 3
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 3,
+          "row": 3,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "steps": []
+    },
+    "4e422077d47f844935b7aea92f78f27eb71a7549a505928d5bb556dc986084d1": {
+      "packet": {
+        "case": "A0-001",
+        "run_id": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+        "seq": 8,
+        "state_hash": "4e422077d47f844935b7aea92f78f27eb71a7549a505928d5bb556dc986084d1",
+        "choice_id": "a001",
+        "campaign_plan": "Take Molten Fist for efficient one-energy damage and Vulnerable extension. Avoid a second two-energy Perfected Strike while Bash and Flame Barrier already compete for energy. Keep healing reserved and inspect the next shop.",
+        "potion_reservations": [
+          {
+            "potion_id": "BLOOD_POTION",
+            "until": "Elite",
+            "release_hp_fraction": 0.5
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 1
+          }
+        },
+        "name": "select_card_reward",
+        "details": {
+          "index": 1,
+          "id": "CARD.MOLTEN_FIST",
+          "name": "Molten Fist",
+          "cost": 1,
+          "type": "Attack",
+          "rarity": "Common",
+          "description": "Deal {Damage:diff()} damage.\nDouble the enemy's Vulnerable.",
+          "stats": {
+            "damage": 10
+          },
+          "keywords": [
+            "Exhaust"
+          ],
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "damage": 14
+            },
+            "description": "Deal {Damage:diff()} damage.\nDouble the enemy's Vulnerable.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        "id": "a001"
+      },
+      "steps": []
+    },
+    "1558d4e31343321b93b20e2ae195589962602136fd5b1363f71deecbbb4be01b": {
+      "packet": {
+        "case": "A0-001",
+        "run_id": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+        "seq": 9,
+        "state_hash": "1558d4e31343321b93b20e2ae195589962602136fd5b1363f71deecbbb4be01b",
+        "choice_id": "a001",
+        "campaign_plan": "Visit the shop with 138 gold after three successful fights. Seek affordable draw, area damage, or a high-impact relic/potion; avoid removing Strikes that currently support Perfected Strike.",
+        "potion_reservations": [
+          {
+            "potion_id": "BLOOD_POTION",
+            "until": "Elite",
+            "release_hp_fraction": 0.5
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 3,
+            "row": 4
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 3,
+          "row": 4,
+          "type": "Shop"
+        },
+        "id": "a001"
+      },
+      "steps": []
+    },
+    "0e03c0ec32ee6481561e90525d41beb6cace75431e0451edb785fe078b0dcb50": {
+      "packet": {
+        "case": "A0-001",
+        "run_id": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+        "seq": 10,
+        "state_hash": "0e03c0ec32ee6481561e90525d41beb6cace75431e0451edb785fe078b0dcb50",
+        "choice_id": "a000",
+        "campaign_plan": "Buy Thunderclap for 50 gold to add area damage and a cheaper source of Vulnerable for Perfected Strike and Molten Fist. Avoid speculative Juggling or Stratagem without an appropriate engine. Consider a reserved Power Potion with remaining gold.",
+        "potion_reservations": [
+          {
+            "potion_id": "BLOOD_POTION",
+            "until": "Elite",
+            "release_hp_fraction": 0.5
+          }
+        ],
+        "transaction_steps": [
+          {
+            "kind": "buy_potion",
+            "index": 1,
+            "potion_reservations": [
+              {
+                "potion_id": "BLOOD_POTION",
+                "until": "Elite",
+                "release_hp_fraction": 0.5
+              }
+            ]
+          },
+          {
+            "kind": "leave_room",
+            "index": null,
+            "potion_reservations": [
+              {
+                "potion_id": "BLOOD_POTION",
+                "until": "Elite",
+                "release_hp_fraction": 0.5
+              },
+              {
+                "potion_id": "POWER_POTION",
+                "until": "Boss",
+                "release_hp_fraction": 0.35
+              }
+            ]
+          }
+        ]
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "buy_card",
+          "args": {
+            "card_index": 0
+          }
+        },
+        "name": "buy_card",
+        "details": {
+          "index": 0,
+          "name": "Thunderclap",
+          "type": "Attack",
+          "rarity": "Common",
+          "card_cost": 1,
+          "description": "Deal {Damage:diff()} damage and apply {VulnerablePower:diff()} Vulnerable to ALL enemies.",
+          "stats": {
+            "damage": 4,
+            "vulnerablepower": 1
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "damage": 7,
+              "vulnerablepower": 1
+            },
+            "description": "Deal {Damage:diff()} damage and apply {VulnerablePower:diff()} Vulnerable to ALL enemies.",
+            "added_keywords": null,
+            "removed_keywords": null
+          },
+          "cost": 50,
+          "is_stocked": true,
+          "on_sale": false
+        },
+        "id": "a000"
+      },
+      "steps": [
+        {
+          "kind": "buy_potion",
+          "index": 1,
+          "potion_reservations": [
+            {
+              "potion_id": "BLOOD_POTION",
+              "until": "Elite",
+              "release_hp_fraction": 0.5
+            }
+          ]
+        },
+        {
+          "kind": "leave_room",
+          "index": null,
+          "potion_reservations": [
+            {
+              "potion_id": "BLOOD_POTION",
+              "until": "Elite",
+              "release_hp_fraction": 0.5
+            },
+            {
+              "potion_id": "POWER_POTION",
+              "until": "Boss",
+              "release_hp_fraction": 0.35
+            }
+          ]
+        }
+      ]
+    },
+    "9a16f53110d6e33e74ba14bad0da099861da4b8f25ef3916aea6ef96c1d8e843": {
+      "packet": {
+        "case": "A0-001",
+        "run_id": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+        "seq": 11,
+        "state_hash": "9a16f53110d6e33e74ba14bad0da099861da4b8f25ef3916aea6ef96c1d8e843",
+        "choice_id": "a005",
+        "campaign_plan": "Buy Power Potion for 50 gold as a reserved scaling resource for Ceremonial Beast. Current deck has immediate damage and block but no sustained power engine. Leave the remaining gold rather than adding a marginal card.",
+        "potion_reservations": [
+          {
+            "potion_id": "BLOOD_POTION",
+            "until": "Elite",
+            "release_hp_fraction": 0.5
+          }
+        ],
+        "transaction_steps": [
+          {
+            "kind": "leave_room",
+            "index": null,
+            "potion_reservations": [
+              {
+                "potion_id": "BLOOD_POTION",
+                "until": "Elite",
+                "release_hp_fraction": 0.5
+              },
+              {
+                "potion_id": "POWER_POTION",
+                "until": "Boss",
+                "release_hp_fraction": 0.35
+              }
+            ]
+          }
+        ]
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "buy_potion",
+          "args": {
+            "potion_index": 1
+          }
+        },
+        "name": "buy_potion",
+        "details": {
+          "index": 1,
+          "name": "Power Potion",
+          "description": "Choose 1 of 3 random Power cards to add into your Hand. It's free to play this turn.",
+          "cost": 50,
+          "is_stocked": true,
+          "id": "POWER_POTION",
+          "can_buy": true
+        },
+        "id": "a005"
+      },
+      "steps": [
+        {
+          "kind": "leave_room",
+          "index": null,
+          "potion_reservations": [
+            {
+              "potion_id": "BLOOD_POTION",
+              "until": "Elite",
+              "release_hp_fraction": 0.5
+            },
+            {
+              "potion_id": "POWER_POTION",
+              "until": "Boss",
+              "release_hp_fraction": 0.35
+            }
+          ]
+        }
+      ]
+    },
+    "a94344e567c9bf34fb7ab4a12634ac44aace489136b01a7fa2a4b9df4bdb91df": {
+      "packet": {
+        "case": "A0-001",
+        "run_id": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+        "seq": 12,
+        "state_hash": "a94344e567c9bf34fb7ab4a12634ac44aace489136b01a7fa2a4b9df4bdb91df",
+        "choice_id": "a001",
+        "campaign_plan": "Leave the shop; Tremble would be redundant with Bash and Thunderclap. Reserve Power Potion specifically for the boss, releasing at 35% HP; Blood Potion remains available in elites or below 50%. Skill Potion can preserve HP in normal fights.",
+        "potion_reservations": [
+          {
+            "potion_id": "BLOOD_POTION",
+            "until": "Elite",
+            "release_hp_fraction": 0.5
+          },
+          {
+            "potion_id": "POWER_POTION",
+            "until": "Boss",
+            "release_hp_fraction": 0.35
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "leave_room",
+          "args": {}
+        },
+        "name": "leave_room",
+        "details": null,
+        "id": "a001"
+      },
+      "steps": []
+    },
+    "e5f81cea8c5250ff45d46679c6d47c4512c841e223ac02f47a716d2aa0c141e3": {
+      "packet": {
+        "case": "A0-001",
+        "run_id": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+        "seq": 14,
+        "state_hash": "e5f81cea8c5250ff45d46679c6d47c4512c841e223ac02f47a716d2aa0c141e3",
+        "choice_id": "a000",
+        "campaign_plan": "Take 44 gold for 6 HP. The alternative adds an unidentified curse for a random relic, compromising draw consistency before the boss. Existing health and a healing potion make the small known cost acceptable.",
+        "potion_reservations": [
+          {
+            "potion_id": "BLOOD_POTION",
+            "until": "Elite",
+            "release_hp_fraction": 0.5
+          },
+          {
+            "potion_id": "POWER_POTION",
+            "until": "Boss",
+            "release_hp_fraction": 0.35
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        "name": "choose_option",
+        "details": {
+          "index": 0,
+          "title": "This",
+          "description": "Lose {HpLoss} HP. Gain {Gold} Gold.",
+          "text_key": "THIS_OR_THAT.pages.INITIAL.options.PLAIN",
+          "is_locked": false,
+          "vars": {
+            "HpLoss": 6,
+            "Gold": 44,
+            "Curse": 0
+          }
+        },
+        "id": "a000"
+      },
+      "steps": []
+    },
+    "b64cafecb40191ab9639689d658c370749c711ab41cd06108edf90781cee6023": {
+      "packet": {
+        "case": "A0-001",
+        "run_id": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+        "seq": 15,
+        "state_hash": "b64cafecb40191ab9639689d658c370749c711ab41cd06108edf90781cee6023",
+        "choice_id": "a000",
+        "campaign_plan": "Choose the unknown at column 3 to preserve the route through a row-7 monster into a row-8 campfire. The alternative loses that early upgrade opportunity. Keep Blood and Power Potion reservations unchanged.",
+        "potion_reservations": [
+          {
+            "potion_id": "BLOOD_POTION",
+            "until": "Elite",
+            "release_hp_fraction": 0.5
+          },
+          {
+            "potion_id": "POWER_POTION",
+            "until": "Boss",
+            "release_hp_fraction": 0.35
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 3,
+            "row": 6
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 3,
+          "row": 6,
+          "type": "Unknown"
+        },
+        "id": "a000"
+      },
+      "steps": []
+    },
+    "d34f3d59171f63a215cdf99d99016c8454c7bafecb76234523d808d669164e30": {
+      "packet": {
+        "case": "A0-001",
+        "run_id": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+        "seq": 16,
+        "state_hash": "d34f3d59171f63a215cdf99d99016c8454c7bafecb76234523d808d669164e30",
+        "choice_id": "a001",
+        "campaign_plan": "The mandatory potion-conversion choices are indistinguishable placeholders with no resolved potion/card identities. Select the middle option, tentatively expecting inventory-order Skill Potion, but this mapping is unverified. Inspect the actual result; preserve remaining healing and boss resources where possible.",
+        "potion_reservations": [
+          {
+            "potion_id": "BLOOD_POTION",
+            "until": "Elite",
+            "release_hp_fraction": 0.5
+          },
+          {
+            "potion_id": "POWER_POTION",
+            "until": "Boss",
+            "release_hp_fraction": 0.35
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 1
+          }
+        },
+        "name": "choose_option",
+        "details": {
+          "index": 1,
+          "title": "Insert {Rarity} Potion",
+          "description": "Lose {Potion}. Obtain an Upgraded {Rarity} {Type}.",
+          "text_key": "THE_FUTURE_OF_POTIONS.pages.INITIAL.options.POTION",
+          "is_locked": false,
+          "vars": null
+        },
+        "id": "a001"
+      },
+      "steps": []
+    },
+    "2199bc9539c1dd8c0bcdeaf1ce3a843ec1e0f25bd17114bf6c15644caa75f9ef": {
+      "packet": {
+        "case": "A0-001",
+        "run_id": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+        "seq": 17,
+        "state_hash": "2199bc9539c1dd8c0bcdeaf1ce3a843ec1e0f25bd17114bf6c15644caa75f9ef",
+        "choice_id": "a002",
+        "campaign_plan": "Take upgraded Shrug It Off for 11 block plus draw, directly filling the deck's efficiency gap. The event did consume Skill Potion as tentatively expected; Blood and Power Potions remain available under their previous reservations.",
+        "potion_reservations": [
+          {
+            "potion_id": "BLOOD_POTION",
+            "until": "Elite",
+            "release_hp_fraction": 0.5
+          },
+          {
+            "potion_id": "POWER_POTION",
+            "until": "Boss",
+            "release_hp_fraction": 0.35
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 2
+          }
+        },
+        "name": "select_card_reward",
+        "details": {
+          "index": 2,
+          "id": "CARD.SHRUG_IT_OFF",
+          "name": "Shrug It Off",
+          "cost": 1,
+          "type": "Skill",
+          "rarity": "Common",
+          "description": "Gain {Block:diff()} Block.\nDraw {Cards:diff()} card.",
+          "stats": {
+            "block": 11,
+            "cards": 1
+          },
+          "keywords": null,
+          "after_upgrade": null
+        },
+        "id": "a002"
+      },
+      "steps": []
+    },
+    "739b8bd8ed3678ff0c88d1ce2674e49e28663795d60cc11ff062e7be4be2533f": {
+      "packet": {
+        "case": "A0-001",
+        "run_id": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+        "seq": 18,
+        "state_hash": "739b8bd8ed3678ff0c88d1ce2674e49e28663795d60cc11ff062e7be4be2533f",
+        "choice_id": "a001",
+        "campaign_plan": "Take the monster leading to the row-8 campfire, where Perfected Strike can be upgraded. HP 74/80 and Shrug It Off+ support this preparation fight; the unknown route would miss that upgrade opportunity.",
+        "potion_reservations": [
+          {
+            "potion_id": "BLOOD_POTION",
+            "until": "Elite",
+            "release_hp_fraction": 0.5
+          },
+          {
+            "potion_id": "POWER_POTION",
+            "until": "Boss",
+            "release_hp_fraction": 0.35
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 4,
+            "row": 7
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 4,
+          "row": 7,
+          "type": "Monster"
+        },
+        "id": "a001"
+      },
+      "steps": []
+    },
+    "e2eb430ff232cee54e59748043e6d28c9aece5006e69cdd7a25fb45880d7e7b5": {
+      "packet": {
+        "case": "A0-001",
+        "run_id": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+        "seq": 19,
+        "state_hash": "e2eb430ff232cee54e59748043e6d28c9aece5006e69cdd7a25fb45880d7e7b5",
+        "choice_id": "a000",
+        "campaign_plan": "Take Setup Strike: it improves Perfected Strike's permanent Strike count and provides temporary Strength with a low energy cost. Reject the three-energy alternatives. Reach the campfire and upgrade Perfected Strike before the late elite.",
+        "potion_reservations": [
+          {
+            "potion_id": "BLOOD_POTION",
+            "until": "Elite",
+            "release_hp_fraction": 0.5
+          },
+          {
+            "potion_id": "POWER_POTION",
+            "until": "Boss",
+            "release_hp_fraction": 0.35
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        "name": "select_card_reward",
+        "details": {
+          "index": 0,
+          "id": "CARD.SETUP_STRIKE",
+          "name": "Setup Strike",
+          "cost": 1,
+          "type": "Attack",
+          "rarity": "Common",
+          "description": "Deal {Damage:diff()} damage.\nGain {StrengthPower:diff()} Strength this turn.",
+          "stats": {
+            "damage": 7,
+            "strengthpower": 3
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "damage": 9,
+              "strengthpower": 4
+            },
+            "description": "Deal {Damage:diff()} damage.\nGain {StrengthPower:diff()} Strength this turn.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        "id": "a000"
+      },
+      "steps": []
+    },
+    "fce8110a4f2fc10425ea028d5c03abb32a7807e23e766898ee6cb0872666e079": {
+      "packet": {
+        "case": "A0-001",
+        "run_id": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+        "seq": 20,
+        "state_hash": "fce8110a4f2fc10425ea028d5c03abb32a7807e23e766898ee6cb0872666e079",
+        "choice_id": "a001",
+        "campaign_plan": "Take the planned campfire rather than the elite. Upgrade Perfected Strike now, retain the healing potion for later, and use the next campfire to improve Flame Barrier or restore HP before harder fights.",
+        "potion_reservations": [
+          {
+            "potion_id": "BLOOD_POTION",
+            "until": "Elite",
+            "release_hp_fraction": 0.5
+          },
+          {
+            "potion_id": "POWER_POTION",
+            "until": "Boss",
+            "release_hp_fraction": 0.35
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 3,
+            "row": 8
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 3,
+          "row": 8,
+          "type": "RestSite"
+        },
+        "id": "a001"
+      },
+      "steps": []
+    },
+    "1f936bd10aef5f96b638511052ec5373471dbb67c56bc533c2953dd873e37b36": {
+      "packet": {
+        "case": "A0-001",
+        "run_id": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+        "seq": 21,
+        "state_hash": "1f936bd10aef5f96b638511052ec5373471dbb67c56bc533c2953dd873e37b36",
+        "choice_id": "a001",
+        "campaign_plan": "Smith Perfected Strike now. At 64/80 HP, with Blood Potion and another campfire two map rows ahead, the large damage upgrade is more useful than immediate healing. Retain the option to heal before the compulsory late elite.",
+        "potion_reservations": [
+          {
+            "potion_id": "BLOOD_POTION",
+            "until": "Elite",
+            "release_hp_fraction": 0.5
+          },
+          {
+            "potion_id": "POWER_POTION",
+            "until": "Boss",
+            "release_hp_fraction": 0.35
+          }
+        ],
+        "transaction_steps": [
+          {
+            "kind": "select_deck_card",
+            "index": 10,
+            "potion_reservations": [
+              {
+                "potion_id": "BLOOD_POTION",
+                "until": "Elite",
+                "release_hp_fraction": 0.5
+              },
+              {
+                "potion_id": "POWER_POTION",
+                "until": "Boss",
+                "release_hp_fraction": 0.35
+              }
+            ]
+          }
+        ]
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 1
+          }
+        },
+        "name": "choose_option",
+        "details": {
+          "index": 1,
+          "option_id": "SMITH",
+          "name": "SmithRestSiteOption",
+          "is_enabled": true
+        },
+        "id": "a001"
+      },
+      "steps": [
+        {
+          "kind": "select_deck_card",
+          "index": 10,
+          "potion_reservations": [
+            {
+              "potion_id": "BLOOD_POTION",
+              "until": "Elite",
+              "release_hp_fraction": 0.5
+            },
+            {
+              "potion_id": "POWER_POTION",
+              "until": "Boss",
+              "release_hp_fraction": 0.35
+            }
+          ]
+        }
+      ]
+    },
+    "f456fd633e9ebfe7c03dfbe19ef2868429511abe1da951d93738dee69af63a15": {
+      "packet": {
+        "case": "A0-001",
+        "run_id": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+        "seq": 25,
+        "state_hash": "f456fd633e9ebfe7c03dfbe19ef2868429511abe1da951d93738dee69af63a15",
+        "choice_id": "a001",
+        "campaign_plan": "Upgrade Flame Barrier for stronger block and retaliation. HP 64/80 plus Blood Potion allows another preparation upgrade, and the route can avoid the immediate optional elite while retaining a later campfire.",
+        "potion_reservations": [
+          {
+            "potion_id": "BLOOD_POTION",
+            "until": "Elite",
+            "release_hp_fraction": 0.5
+          },
+          {
+            "potion_id": "POWER_POTION",
+            "until": "Boss",
+            "release_hp_fraction": 0.35
+          }
+        ],
+        "transaction_steps": [
+          {
+            "kind": "select_deck_card",
+            "index": 11,
+            "potion_reservations": [
+              {
+                "potion_id": "BLOOD_POTION",
+                "until": "Elite",
+                "release_hp_fraction": 0.5
+              },
+              {
+                "potion_id": "POWER_POTION",
+                "until": "Boss",
+                "release_hp_fraction": 0.35
+              }
+            ]
+          }
+        ]
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 1
+          }
+        },
+        "name": "choose_option",
+        "details": {
+          "index": 1,
+          "option_id": "SMITH",
+          "name": "SmithRestSiteOption",
+          "is_enabled": true
+        },
+        "id": "a001"
+      },
+      "steps": [
+        {
+          "kind": "select_deck_card",
+          "index": 11,
+          "potion_reservations": [
+            {
+              "potion_id": "BLOOD_POTION",
+              "until": "Elite",
+              "release_hp_fraction": 0.5
+            },
+            {
+              "potion_id": "POWER_POTION",
+              "until": "Boss",
+              "release_hp_fraction": 0.35
+            }
+          ]
+        }
+      ]
+    },
+    "ba25d9e60aaf8eea7f8bac7400d34e155fd2b2c1c89e34489b0842498ed58989": {
+      "packet": {
+        "case": "A0-001",
+        "run_id": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+        "seq": 27,
+        "state_hash": "ba25d9e60aaf8eea7f8bac7400d34e155fd2b2c1c89e34489b0842498ed58989",
+        "choice_id": "a000",
+        "campaign_plan": "Take the normal fight and preserve the row-12 campfire. There is already a compulsory elite on row 14; avoid stacking two elite risks before Ceremonial Beast. Strike Dummy and upgraded core should support the normal encounter.",
+        "potion_reservations": [
+          {
+            "potion_id": "BLOOD_POTION",
+            "until": "Elite",
+            "release_hp_fraction": 0.5
+          },
+          {
+            "potion_id": "POWER_POTION",
+            "until": "Boss",
+            "release_hp_fraction": 0.35
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 3,
+            "row": 11
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 3,
+          "row": 11,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "steps": []
+    },
+    "1e63155592b6c1d27f7a8d097274b63026e764e6abba2c1c39fc4813c2f23401": {
+      "packet": {
+        "case": "A0-001",
+        "run_id": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+        "seq": 29,
+        "state_hash": "1e63155592b6c1d27f7a8d097274b63026e764e6abba2c1c39fc4813c2f23401",
+        "choice_id": "a000",
+        "campaign_plan": "Take Unrelenting to make a following expensive attack free, complementing Perfected Strike+ and Bash. This adds a concrete energy-saving combination; no need for Bludgeon or a three-energy block card. Reserve Strength Potion for an elite, and retain Blood/Power reservations.",
+        "potion_reservations": [
+          {
+            "potion_id": "BLOOD_POTION",
+            "until": "Elite",
+            "release_hp_fraction": 0.5
+          },
+          {
+            "potion_id": "POWER_POTION",
+            "until": "Boss",
+            "release_hp_fraction": 0.35
+          },
+          {
+            "potion_id": "STRENGTH_POTION",
+            "until": "Elite",
+            "release_hp_fraction": 0.4
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 0
+          }
+        },
+        "name": "select_card_reward",
+        "details": {
+          "index": 0,
+          "id": "CARD.UNRELENTING",
+          "name": "Unrelenting",
+          "cost": 2,
+          "type": "Attack",
+          "rarity": "Uncommon",
+          "description": "Deal {Damage:diff()} damage.\nThe next Attack you play costs 0 {energyPrefix:energyIcons(1)}.",
+          "stats": {
+            "damage": 14
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 2,
+            "stats": {
+              "damage": 20
+            },
+            "description": "Deal {Damage:diff()} damage.\nThe next Attack you play costs 0 {energyPrefix:energyIcons(1)}.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        "id": "a000"
+      },
+      "steps": []
+    },
+    "0a54431d2f6ccf2e8fd284e8f18cbe8886a6c418dab5a99f22d05ecd95d32757": {
+      "packet": {
+        "case": "A0-001",
+        "run_id": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+        "seq": 30,
+        "state_hash": "0a54431d2f6ccf2e8fd284e8f18cbe8886a6c418dab5a99f22d05ecd95d32757",
+        "choice_id": "a000",
+        "campaign_plan": "Choose the campfire for a guaranteed upgrade at 70/80 HP rather than another normal fight. Both routes converge before the compulsory elite; improve Unrelenting or Bash without spending HP.",
+        "potion_reservations": [
+          {
+            "potion_id": "BLOOD_POTION",
+            "until": "Elite",
+            "release_hp_fraction": 0.5
+          },
+          {
+            "potion_id": "POWER_POTION",
+            "until": "Boss",
+            "release_hp_fraction": 0.35
+          },
+          {
+            "potion_id": "STRENGTH_POTION",
+            "until": "Elite",
+            "release_hp_fraction": 0.4
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 2,
+            "row": 12
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 2,
+          "row": 12,
+          "type": "RestSite"
+        },
+        "id": "a000"
+      },
+      "steps": []
+    },
+    "b4555afb4bce9d6d7fecf5585124bed5fc5879e32127bc5b8bb70f6ea1b7cc0b": {
+      "packet": {
+        "case": "A0-001",
+        "run_id": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+        "seq": 31,
+        "state_hash": "b4555afb4bce9d6d7fecf5585124bed5fc5879e32127bc5b8bb70f6ea1b7cc0b",
+        "choice_id": "a001",
+        "campaign_plan": "Smith Unrelenting for six additional damage before the normal fight and mandatory elite. HP 70/80 plus Blood Potion is sufficient to favor improving a recurring attack over ten HP of healing.",
+        "potion_reservations": [
+          {
+            "potion_id": "BLOOD_POTION",
+            "until": "Elite",
+            "release_hp_fraction": 0.5
+          },
+          {
+            "potion_id": "POWER_POTION",
+            "until": "Boss",
+            "release_hp_fraction": 0.35
+          },
+          {
+            "potion_id": "STRENGTH_POTION",
+            "until": "Elite",
+            "release_hp_fraction": 0.4
+          }
+        ],
+        "transaction_steps": [
+          {
+            "kind": "select_deck_card",
+            "index": 16,
+            "potion_reservations": [
+              {
+                "potion_id": "BLOOD_POTION",
+                "until": "Elite",
+                "release_hp_fraction": 0.5
+              },
+              {
+                "potion_id": "POWER_POTION",
+                "until": "Boss",
+                "release_hp_fraction": 0.35
+              },
+              {
+                "potion_id": "STRENGTH_POTION",
+                "until": "Elite",
+                "release_hp_fraction": 0.4
+              }
+            ]
+          }
+        ]
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 1
+          }
+        },
+        "name": "choose_option",
+        "details": {
+          "index": 1,
+          "option_id": "SMITH",
+          "name": "SmithRestSiteOption",
+          "is_enabled": true
+        },
+        "id": "a001"
+      },
+      "steps": [
+        {
+          "kind": "select_deck_card",
+          "index": 16,
+          "potion_reservations": [
+            {
+              "potion_id": "BLOOD_POTION",
+              "until": "Elite",
+              "release_hp_fraction": 0.5
+            },
+            {
+              "potion_id": "POWER_POTION",
+              "until": "Boss",
+              "release_hp_fraction": 0.35
+            },
+            {
+              "potion_id": "STRENGTH_POTION",
+              "until": "Elite",
+              "release_hp_fraction": 0.4
+            }
+          ]
+        }
+      ]
+    },
+    "adcf1c24cdcec8013b55e09b7391b0e025e5e6cf7fd45c859c6cd61c9b199971": {
+      "packet": {
+        "case": "A0-001",
+        "run_id": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+        "seq": 34,
+        "state_hash": "adcf1c24cdcec8013b55e09b7391b0e025e5e6cf7fd45c859c6cd61c9b199971",
+        "choice_id": "a002",
+        "campaign_plan": "Add a second Shrug It Off to improve defensive draw and reach Perfected Strike reliably. Existing attacks already cover damage. Next elite gets Strength Potion; retain Power for boss.",
+        "potion_reservations": [
+          {
+            "potion_id": "BLOOD_POTION",
+            "until": "Elite",
+            "release_hp_fraction": 0.5
+          },
+          {
+            "potion_id": "POWER_POTION",
+            "until": "Boss",
+            "release_hp_fraction": 0.35
+          },
+          {
+            "potion_id": "STRENGTH_POTION",
+            "until": "Elite",
+            "release_hp_fraction": 0.4
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 2
+          }
+        },
+        "name": "select_card_reward",
+        "details": {
+          "index": 2,
+          "id": "CARD.SHRUG_IT_OFF",
+          "name": "Shrug It Off",
+          "cost": 1,
+          "type": "Skill",
+          "rarity": "Common",
+          "description": "Gain {Block:diff()} Block.\nDraw {Cards:diff()} card.",
+          "stats": {
+            "block": 8,
+            "cards": 1
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 1,
+            "stats": {
+              "block": 11,
+              "cards": 1
+            },
+            "description": "Gain {Block:diff()} Block.\nDraw {Cards:diff()} card.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        "id": "a002"
+      },
+      "steps": []
+    },
+    "f2ed0728843db1c145d54585be980ee09d57cf7a7c4756494d8e1e19c5e6babf": {
+      "packet": {
+        "case": "A0-001",
+        "run_id": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+        "seq": 36,
+        "state_hash": "f2ed0728843db1c145d54585be980ee09d57cf7a7c4756494d8e1e19c5e6babf",
+        "choice_id": "a001",
+        "campaign_plan": "Take a second Perfected Strike with Strike Dummy and eight Strike-name cards after this addition. Both copies increase damage and access to our core attack; use the upcoming full-HP campfire to upgrade this copy.",
+        "potion_reservations": [
+          {
+            "potion_id": "POWER_POTION",
+            "until": "Boss",
+            "release_hp_fraction": 0.35
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 1
+          }
+        },
+        "name": "select_card_reward",
+        "details": {
+          "index": 1,
+          "id": "CARD.PERFECTED_STRIKE",
+          "name": "Perfected Strike",
+          "cost": 2,
+          "type": "Attack",
+          "rarity": "Common",
+          "description": "Deal {CalculatedDamage:diff()} damage.\nDeals {ExtraDamage:diff()} additional damage for ALL your cards containing “Strike”.",
+          "stats": {
+            "calculationbase": 6,
+            "extradamage": 2,
+            "calculateddamage": 6
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 2,
+            "stats": {
+              "calculationbase": 6,
+              "extradamage": 3,
+              "calculateddamage": 6
+            },
+            "description": "Deal {CalculatedDamage:diff()} damage.\nDeals {ExtraDamage:diff()} additional damage for ALL your cards containing “Strike”.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        "id": "a001"
+      },
+      "steps": []
+    },
+    "4c4300afda91a01ea8f6fcf0ba37fe4ba3f798e1b79f1e29c7b122e748cc2706": {
+      "packet": {
+        "case": "A0-001",
+        "run_id": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+        "seq": 37,
+        "state_hash": "4c4300afda91a01ea8f6fcf0ba37fe4ba3f798e1b79f1e29c7b122e748cc2706",
+        "choice_id": "a001",
+        "campaign_plan": "Smith at full HP; upgrade second Perfected Strike for +8 damage with eight Strike-name cards. Power Potion supplies boss support, with upgraded Flame Barrier and two Shrugs as defense.",
+        "potion_reservations": [
+          {
+            "potion_id": "POWER_POTION",
+            "until": "Boss",
+            "release_hp_fraction": 0.35
+          }
+        ],
+        "transaction_steps": [
+          {
+            "kind": "select_deck_card",
+            "index": 18,
+            "potion_reservations": [
+              {
+                "potion_id": "POWER_POTION",
+                "until": "Boss",
+                "release_hp_fraction": 0.35
+              }
+            ]
+          }
+        ]
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 1
+          }
+        },
+        "name": "choose_option",
+        "details": {
+          "index": 1,
+          "option_id": "SMITH",
+          "name": "SmithRestSiteOption",
+          "is_enabled": true
+        },
+        "id": "a001"
+      },
+      "steps": [
+        {
+          "kind": "select_deck_card",
+          "index": 18,
+          "potion_reservations": [
+            {
+              "potion_id": "POWER_POTION",
+              "until": "Boss",
+              "release_hp_fraction": 0.35
+            }
+          ]
+        }
+      ]
+    },
+    "d810863baf1768b866bd230952f471b47d1da936706e60703f3083ccd8ea4cae": {
+      "packet": {
+        "case": "A0-001",
+        "run_id": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+        "seq": 39,
+        "state_hash": "d810863baf1768b866bd230952f471b47d1da936706e60703f3083ccd8ea4cae",
+        "choice_id": "a002",
+        "campaign_plan": "Choose Pyre to sustain expensive Perfected Strike/Flame Barrier turns. Upgrade to +2 energy at next safe campfire. Current burst is strong but three base energy prevents simultaneous offense and defense; this directly addresses that constraint.",
+        "potion_reservations": [],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 2
+          }
+        },
+        "name": "select_card_reward",
+        "details": {
+          "index": 2,
+          "id": "CARD.PYRE",
+          "name": "Pyre",
+          "cost": 2,
+          "type": "Power",
+          "rarity": "Rare",
+          "description": "Gain {Energy:energyIcons()} at the start of each turn.",
+          "stats": {
+            "energy": 1
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 2,
+            "stats": {
+              "energy": 2
+            },
+            "description": "Gain {Energy:energyIcons()} at the start of each turn.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        "id": "a002"
+      },
+      "steps": []
+    },
+    "c0e30091f318ccb6df34580b7752d82d3b373d63df4bf65f141a7271d30d8ec7": {
+      "packet": {
+        "case": "A0-001",
+        "run_id": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+        "seq": 40,
+        "state_hash": "c0e30091f318ccb6df34580b7752d82d3b373d63df4bf65f141a7271d30d8ec7",
+        "choice_id": "a000",
+        "campaign_plan": "Visit Ancient. Then take left route through early shop to spend 312 gold, followed by rests to upgrade Pyre and maintain health. Avoid adding further mediocre attacks to Strike engine.",
+        "potion_reservations": [],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 3,
+            "row": 0
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 3,
+          "row": 0,
+          "type": "Ancient"
+        },
+        "id": "a000"
+      },
+      "steps": []
+    },
+    "90f9b67013890ad7603e744e449e7479dfbf37ca0d9647a076e37a5bc3f35a81": {
+      "packet": {
+        "case": "A0-001",
+        "run_id": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+        "seq": 41,
+        "state_hash": "90f9b67013890ad7603e744e449e7479dfbf37ca0d9647a076e37a5bc3f35a81",
+        "choice_id": "a000",
+        "campaign_plan": "Choose Pael's Flesh for guaranteed +1 energy from turn three without drawing or paying for setup. It complements Pyre and our many 2-cost cards; Legion's periodic block depends on card order, while this directly improves every sustained turn.",
+        "potion_reservations": [],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        "name": "choose_option",
+        "details": {
+          "index": 0,
+          "title": "Pael's Flesh",
+          "description": "Gain an additional {Energy:energyIcons()} at the start of your 3rd turn, and every turn after that.",
+          "text_key": "PAEL.pages.INITIAL.options.PAELS_FLESH",
+          "is_locked": false,
+          "vars": {
+            "Energy": 1
+          }
+        },
+        "id": "a000"
+      },
+      "steps": []
+    },
+    "f2b7be5eb705596a2cc6fc33d46409b9a3312a1f0e659932fe718f87a7b8109c": {
+      "packet": {
+        "case": "A0-001",
+        "run_id": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+        "seq": 42,
+        "state_hash": "f2b7be5eb705596a2cc6fc33d46409b9a3312a1f0e659932fe718f87a7b8109c",
+        "choice_id": "a000",
+        "campaign_plan": "Choose left start to reach the early shop and later safe campfires. Spend 312 gold on a material defensive or draw improvement; Pyre upgrade remains high priority.",
+        "potion_reservations": [],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 1,
+            "row": 1
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 1,
+          "row": 1,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "steps": []
+    },
+    "5f901ab2ed1f05adb8a7ccb1733ea4fe26013e5ff15683719bdb6c6bfe2f0ed6": {
+      "packet": {
+        "case": "A0-001",
+        "run_id": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+        "seq": 44,
+        "state_hash": "5f901ab2ed1f05adb8a7ccb1733ea4fe26013e5ff15683719bdb6c6bfe2f0ed6",
+        "choice_id": "a001",
+        "campaign_plan": "Add Uppercut for the missing Weak debuff and more sustained Vulnerable; energy is now supported by Flesh and Pyre. Upgrade Pyre first, Uppercut next. Blood may be used by program as meaningful healing is needed.",
+        "potion_reservations": [],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_card_reward",
+          "args": {
+            "card_index": 1
+          }
+        },
+        "name": "select_card_reward",
+        "details": {
+          "index": 1,
+          "id": "CARD.UPPERCUT",
+          "name": "Uppercut",
+          "cost": 2,
+          "type": "Attack",
+          "rarity": "Uncommon",
+          "description": "Deal {Damage:diff()} damage.\nApply {Power:diff()} Weak.\nApply {Power:diff()} Vulnerable.",
+          "stats": {
+            "damage": 13,
+            "power": 1
+          },
+          "keywords": null,
+          "after_upgrade": {
+            "cost": 2,
+            "stats": {
+              "damage": 13,
+              "power": 2
+            },
+            "description": "Deal {Damage:diff()} damage.\nApply {Power:diff()} Weak.\nApply {Power:diff()} Vulnerable.",
+            "added_keywords": null,
+            "removed_keywords": null
+          }
+        },
+        "id": "a001"
+      },
+      "steps": []
+    },
+    "e23fb3562212f6d54bb82651f49de1f3104b73d8952c2ec5988e0fb78bf94426": {
+      "packet": {
+        "case": "A0-001",
+        "run_id": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+        "seq": 47,
+        "state_hash": "e23fb3562212f6d54bb82651f49de1f3104b73d8952c2ec5988e0fb78bf94426",
+        "choice_id": "a003",
+        "campaign_plan": "Skip: Bludgeon is inferior to existing Perfected Strikes at higher cost, Boomerang lacks permanent strength, and Bloodletting adds avoidable attrition now that Flesh/Pyre solve energy. Reserve Fysh Oil until elite/boss or low HP.",
+        "potion_reservations": [
+          {
+            "potion_id": "FYSH_OIL",
+            "until": "Elite",
+            "release_hp_fraction": 0.45
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "skip_card_reward",
+          "args": {}
+        },
+        "name": "skip_card_reward",
+        "details": null,
+        "id": "a003"
+      },
+      "steps": []
+    },
+    "2f809ea145bd32e449a44f4675c98c2e5ec4c24ac18577b13f708503426dc61b": {
+      "packet": {
+        "case": "A0-001",
+        "run_id": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+        "seq": 48,
+        "state_hash": "2f809ea145bd32e449a44f4675c98c2e5ec4c24ac18577b13f708503426dc61b",
+        "choice_id": "a000",
+        "campaign_plan": "Visit shop with 338 gold as planned; prioritize stronger defensive relic/card and draw consistency before more attacks.",
+        "potion_reservations": [
+          {
+            "potion_id": "FYSH_OIL",
+            "until": "Elite",
+            "release_hp_fraction": 0.45
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 3
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 0,
+          "row": 3,
+          "type": "Shop"
+        },
+        "id": "a000"
+      },
+      "steps": []
+    },
+    "0b3b0b45b0ab047d49f91ccf0b210c9af8dc1ed95dfb18e6d9b299fe7543fc7c": {
+      "packet": {
+        "case": "A0-001",
+        "run_id": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+        "seq": 49,
+        "state_hash": "0b3b0b45b0ab047d49f91ccf0b210c9af8dc1ed95dfb18e6d9b299fe7543fc7c",
+        "choice_id": "a008",
+        "campaign_plan": "Buy Anchor for reliable opening block, protecting Pyre setup before Pael's Flesh activates. Then buy Shockwave to cover multi-enemy Weak/Vulnerable; 338 gold permits both and two 50-gold potions.",
+        "potion_reservations": [
+          {
+            "potion_id": "FYSH_OIL",
+            "until": "Elite",
+            "release_hp_fraction": 0.45
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "buy_relic",
+          "args": {
+            "relic_index": 1
+          }
+        },
+        "name": "buy_relic",
+        "details": {
+          "index": 1,
+          "name": "Anchor",
+          "description": "Start each combat with {Block} Block.",
+          "cost": 150,
+          "is_stocked": true
+        },
+        "id": "a008"
+      },
+      "steps": []
+    },
+    "c642a683bc7a4392b4ebe7a3cc77b938bfeed4e5692d4d5fe70cba790c5bb4f1": {
+      "packet": {
+        "case": "A0-001",
+        "run_id": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+        "seq": 50,
+        "state_hash": "c642a683bc7a4392b4ebe7a3cc77b938bfeed4e5692d4d5fe70cba790c5bb4f1",
+        "choice_id": "a005",
+        "campaign_plan": "Buy Shockwave as planned: three turns of group Weak/Vulnerable supports survival and Strike damage, exhausting after use. Remaining 100 gold can buy Energy and Block potions.",
+        "potion_reservations": [
+          {
+            "potion_id": "FYSH_OIL",
+            "until": "Elite",
+            "release_hp_fraction": 0.45
+          }
+        ],
+        "transaction_steps": [
+          {
+            "kind": "buy_potion",
+            "index": 1,
+            "potion_reservations": [
+              {
+                "potion_id": "FYSH_OIL",
+                "until": "Elite",
+                "release_hp_fraction": 0.45
+              }
+            ]
+          },
+          {
+            "kind": "buy_potion",
+            "index": 2,
+            "potion_reservations": [
+              {
+                "potion_id": "FYSH_OIL",
+                "until": "Elite",
+                "release_hp_fraction": 0.45
+              },
+              {
+                "potion_id": "ENERGY_POTION",
+                "until": "Boss",
+                "release_hp_fraction": 0.4
+              }
+            ]
+          },
+          {
+            "kind": "leave_room",
+            "index": null,
+            "potion_reservations": null
+          }
+        ]
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "buy_card",
+          "args": {
+            "card_index": 5
+          }
+        },
+        "name": "buy_card",
+        "details": {
+          "index": 5,
+          "name": "Shockwave",
+          "type": "Skill",
+          "rarity": "Uncommon",
+          "card_cost": 2,
+          "description": "Apply {Power:diff()} Weak and Vulnerable to ALL enemies.",
+          "stats": {
+            "power": 3
+          },
+          "keywords": [
+            "Exhaust"
+          ],
+          "after_upgrade": {
+            "cost": 2,
+            "stats": {
+              "power": 5
+            },
+            "description": "Apply {Power:diff()} Weak and Vulnerable to ALL enemies.",
+            "added_keywords": null,
+            "removed_keywords": null
+          },
+          "cost": 88,
+          "is_stocked": true,
+          "on_sale": false
+        },
+        "id": "a005"
+      },
+      "steps": [
+        {
+          "kind": "buy_potion",
+          "index": 1,
+          "potion_reservations": [
+            {
+              "potion_id": "FYSH_OIL",
+              "until": "Elite",
+              "release_hp_fraction": 0.45
+            }
+          ]
+        },
+        {
+          "kind": "buy_potion",
+          "index": 2,
+          "potion_reservations": [
+            {
+              "potion_id": "FYSH_OIL",
+              "until": "Elite",
+              "release_hp_fraction": 0.45
+            },
+            {
+              "potion_id": "ENERGY_POTION",
+              "until": "Boss",
+              "release_hp_fraction": 0.4
+            }
+          ]
+        },
+        {
+          "kind": "leave_room",
+          "index": null,
+          "potion_reservations": null
+        }
+      ]
+    },
+    "b48a01a26ef4b30c443f05170c8c78ff1795ffb9feff48df4c2706882adbf938": {
+      "packet": {
+        "case": "A0-001",
+        "run_id": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+        "seq": 51,
+        "state_hash": "b48a01a26ef4b30c443f05170c8c78ff1795ffb9feff48df4c2706882adbf938",
+        "choice_id": "a005",
+        "campaign_plan": "Buy Energy Potion for hard-fight setup turns and preserve it after ownership appears. Next buy Block Potion with remaining 50 gold; Anchor plus temporary resources should protect the transition into sustained energy.",
+        "potion_reservations": [
+          {
+            "potion_id": "FYSH_OIL",
+            "until": "Elite",
+            "release_hp_fraction": 0.45
+          }
+        ],
+        "transaction_steps": [
+          {
+            "kind": "buy_potion",
+            "index": 2,
+            "potion_reservations": [
+              {
+                "potion_id": "FYSH_OIL",
+                "until": "Elite",
+                "release_hp_fraction": 0.45
+              },
+              {
+                "potion_id": "ENERGY_POTION",
+                "until": "Boss",
+                "release_hp_fraction": 0.4
+              }
+            ]
+          },
+          {
+            "kind": "leave_room",
+            "index": null,
+            "potion_reservations": null
+          }
+        ]
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "buy_potion",
+          "args": {
+            "potion_index": 1
+          }
+        },
+        "name": "buy_potion",
+        "details": {
+          "index": 1,
+          "name": "Energy Potion",
+          "description": "Gain {Energy:energyIcons()}.",
+          "cost": 50,
+          "is_stocked": true,
+          "id": "ENERGY_POTION",
+          "can_buy": true
+        },
+        "id": "a005"
+      },
+      "steps": [
+        {
+          "kind": "buy_potion",
+          "index": 2,
+          "potion_reservations": [
+            {
+              "potion_id": "FYSH_OIL",
+              "until": "Elite",
+              "release_hp_fraction": 0.45
+            },
+            {
+              "potion_id": "ENERGY_POTION",
+              "until": "Boss",
+              "release_hp_fraction": 0.4
+            }
+          ]
+        },
+        {
+          "kind": "leave_room",
+          "index": null,
+          "potion_reservations": null
+        }
+      ]
+    },
+    "4f0e91915f0314da50fb30a7cd7ccf6c53b3515ce1741427ece846a7811e6a61": {
+      "packet": {
+        "case": "A0-001",
+        "run_id": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+        "seq": 52,
+        "state_hash": "4f0e91915f0314da50fb30a7cd7ccf6c53b3515ce1741427ece846a7811e6a61",
+        "choice_id": "a003",
+        "campaign_plan": "Buy Block Potion to complete the shop plan. Reserve Energy for boss or emergency; Fysh remains reserved for elite/boss. Block can be used in the next dangerous normal fight if no reservation boundary occurs.",
+        "potion_reservations": [
+          {
+            "potion_id": "FYSH_OIL",
+            "until": "Elite",
+            "release_hp_fraction": 0.45
+          },
+          {
+            "potion_id": "ENERGY_POTION",
+            "until": "Boss",
+            "release_hp_fraction": 0.4
+          }
+        ],
+        "transaction_steps": [
+          {
+            "kind": "leave_room",
+            "index": null,
+            "potion_reservations": null
+          }
+        ]
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "buy_potion",
+          "args": {
+            "potion_index": 2
+          }
+        },
+        "name": "buy_potion",
+        "details": {
+          "index": 2,
+          "name": "Block Potion",
+          "description": "Gain {Block} Block.",
+          "cost": 50,
+          "is_stocked": true,
+          "id": "BLOCK_POTION",
+          "can_buy": true
+        },
+        "id": "a003"
+      },
+      "steps": [
+        {
+          "kind": "leave_room",
+          "index": null,
+          "potion_reservations": null
+        }
+      ]
+    },
+    "df37a937f9daa4b7a7341aa4955105119768db431bb865c8f66101e48f14c5b6": {
+      "packet": {
+        "case": "A0-001",
+        "run_id": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+        "seq": 53,
+        "state_hash": "df37a937f9daa4b7a7341aa4955105119768db431bb865c8f66101e48f14c5b6",
+        "choice_id": "a000",
+        "campaign_plan": "Take left normal fight leading to two unknowns and a rest, avoiding an extra mandatory normal fight. Reserve Energy for boss/emergency and Fysh for elite/emergency; Block is available for normal-fight damage spikes.",
+        "potion_reservations": [
+          {
+            "potion_id": "FYSH_OIL",
+            "until": "Elite",
+            "release_hp_fraction": 0.45
+          },
+          {
+            "potion_id": "ENERGY_POTION",
+            "until": "Boss",
+            "release_hp_fraction": 0.4
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "select_map_node",
+          "args": {
+            "col": 0,
+            "row": 4
+          }
+        },
+        "name": "select_map_node",
+        "details": {
+          "col": 0,
+          "row": 4,
+          "type": "Monster"
+        },
+        "id": "a000"
+      },
+      "steps": []
+    },
+    "406a591d9ccc479810ee907bcd75ea49c6e8a66e8f76656d761e01043ffb2895": {
+      "packet": {
+        "case": "A0-001",
+        "run_id": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+        "seq": 55,
+        "state_hash": "406a591d9ccc479810ee907bcd75ea49c6e8a66e8f76656d761e01043ffb2895",
+        "choice_id": "a003",
+        "campaign_plan": "Skip further cards: existing energy and vulnerability tools are sufficient, while Stomp needs attack sequencing and Thunderclap is redundant with Shockwave. Continue toward rest and upgrade Pyre.",
+        "potion_reservations": [
+          {
+            "potion_id": "FYSH_OIL",
+            "until": "Elite",
+            "release_hp_fraction": 0.45
+          },
+          {
+            "potion_id": "ENERGY_POTION",
+            "until": "Boss",
+            "release_hp_fraction": 0.4
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "skip_card_reward",
+          "args": {}
+        },
+        "name": "skip_card_reward",
+        "details": null,
+        "id": "a003"
+      },
+      "steps": []
+    },
+    "5acea482c77b32bdd989fd984bc81fc4c7fec971d0841974c958a36151d839e8": {
+      "packet": {
+        "case": "A0-001",
+        "run_id": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+        "seq": 56,
+        "state_hash": "5acea482c77b32bdd989fd984bc81fc4c7fec971d0841974c958a36151d839e8",
+        "choice_id": "a000",
+        "campaign_plan": "Choose random Power for a chance at persistent scaling that the current strike/energy deck lacks. Zero-cost random cards are less likely to improve prolonged boss fights; assess the actual result afterward.",
+        "potion_reservations": [
+          {
+            "potion_id": "FYSH_OIL",
+            "until": "Elite",
+            "release_hp_fraction": 0.45
+          },
+          {
+            "potion_id": "ENERGY_POTION",
+            "until": "Boss",
+            "release_hp_fraction": 0.4
+          }
+        ],
+        "transaction_steps": []
+      },
+      "first": {
+        "action": {
+          "cmd": "action",
+          "action": "choose_option",
+          "args": {
+            "option_index": 0
+          }
+        },
+        "name": "choose_option",
+        "details": {
+          "index": 0,
+          "title": "Study",
+          "description": "Obtain a random Power.",
+          "text_key": "INFESTED_AUTOMATON.pages.INITIAL.options.STUDY",
+          "is_locked": false,
+          "vars": null
+        },
+        "id": "a000"
+      },
+      "steps": []
+    }
+  },
+  "groups": [
+    {
+      "seq": 1,
+      "steps": 0,
+      "state_hash": "dada79c13b5270db13206ca2c7df923b8d504c7acea253d2b93c5c3cd5888faf"
+    },
+    {
+      "seq": 2,
+      "steps": 0,
+      "state_hash": "9edac33968766320a110f54c714add1102b63d83208d9c0007cb404de17b624c"
+    },
+    {
+      "seq": 3,
+      "steps": 0,
+      "state_hash": "fdba4f32fbf67740df50bc201a0a1aefa1fdf971f6d46efb7404407c6d43a3a5"
+    },
+    {
+      "seq": 5,
+      "steps": 0,
+      "state_hash": "99b3009d22a76d0f4b0a8ea99567c38cf93001f9b741aebfc23cf7b2667e1463"
+    },
+    {
+      "seq": 6,
+      "steps": 0,
+      "state_hash": "9f50b4ce554e4f1dafc7bda2d11c8901987ec5bb68ebc052eaa6227567b25ef0"
+    },
+    {
+      "seq": 8,
+      "steps": 0,
+      "state_hash": "4e422077d47f844935b7aea92f78f27eb71a7549a505928d5bb556dc986084d1"
+    },
+    {
+      "seq": 9,
+      "steps": 0,
+      "state_hash": "1558d4e31343321b93b20e2ae195589962602136fd5b1363f71deecbbb4be01b"
+    },
+    {
+      "seq": 10,
+      "steps": 2,
+      "state_hash": "0e03c0ec32ee6481561e90525d41beb6cace75431e0451edb785fe078b0dcb50"
+    },
+    {
+      "seq": 11,
+      "steps": 1,
+      "state_hash": "9a16f53110d6e33e74ba14bad0da099861da4b8f25ef3916aea6ef96c1d8e843"
+    },
+    {
+      "seq": 12,
+      "steps": 0,
+      "state_hash": "a94344e567c9bf34fb7ab4a12634ac44aace489136b01a7fa2a4b9df4bdb91df"
+    },
+    {
+      "seq": 14,
+      "steps": 0,
+      "state_hash": "e5f81cea8c5250ff45d46679c6d47c4512c841e223ac02f47a716d2aa0c141e3"
+    },
+    {
+      "seq": 15,
+      "steps": 0,
+      "state_hash": "b64cafecb40191ab9639689d658c370749c711ab41cd06108edf90781cee6023"
+    },
+    {
+      "seq": 16,
+      "steps": 0,
+      "state_hash": "d34f3d59171f63a215cdf99d99016c8454c7bafecb76234523d808d669164e30"
+    },
+    {
+      "seq": 17,
+      "steps": 0,
+      "state_hash": "2199bc9539c1dd8c0bcdeaf1ce3a843ec1e0f25bd17114bf6c15644caa75f9ef"
+    },
+    {
+      "seq": 18,
+      "steps": 0,
+      "state_hash": "739b8bd8ed3678ff0c88d1ce2674e49e28663795d60cc11ff062e7be4be2533f"
+    },
+    {
+      "seq": 19,
+      "steps": 0,
+      "state_hash": "e2eb430ff232cee54e59748043e6d28c9aece5006e69cdd7a25fb45880d7e7b5"
+    },
+    {
+      "seq": 20,
+      "steps": 0,
+      "state_hash": "fce8110a4f2fc10425ea028d5c03abb32a7807e23e766898ee6cb0872666e079"
+    },
+    {
+      "seq": 21,
+      "steps": 1,
+      "state_hash": "1f936bd10aef5f96b638511052ec5373471dbb67c56bc533c2953dd873e37b36"
+    },
+    {
+      "seq": 25,
+      "steps": 1,
+      "state_hash": "f456fd633e9ebfe7c03dfbe19ef2868429511abe1da951d93738dee69af63a15"
+    },
+    {
+      "seq": 27,
+      "steps": 0,
+      "state_hash": "ba25d9e60aaf8eea7f8bac7400d34e155fd2b2c1c89e34489b0842498ed58989"
+    },
+    {
+      "seq": 29,
+      "steps": 0,
+      "state_hash": "1e63155592b6c1d27f7a8d097274b63026e764e6abba2c1c39fc4813c2f23401"
+    },
+    {
+      "seq": 30,
+      "steps": 0,
+      "state_hash": "0a54431d2f6ccf2e8fd284e8f18cbe8886a6c418dab5a99f22d05ecd95d32757"
+    },
+    {
+      "seq": 31,
+      "steps": 1,
+      "state_hash": "b4555afb4bce9d6d7fecf5585124bed5fc5879e32127bc5b8bb70f6ea1b7cc0b"
+    },
+    {
+      "seq": 34,
+      "steps": 0,
+      "state_hash": "adcf1c24cdcec8013b55e09b7391b0e025e5e6cf7fd45c859c6cd61c9b199971"
+    },
+    {
+      "seq": 36,
+      "steps": 0,
+      "state_hash": "f2ed0728843db1c145d54585be980ee09d57cf7a7c4756494d8e1e19c5e6babf"
+    },
+    {
+      "seq": 37,
+      "steps": 1,
+      "state_hash": "4c4300afda91a01ea8f6fcf0ba37fe4ba3f798e1b79f1e29c7b122e748cc2706"
+    },
+    {
+      "seq": 39,
+      "steps": 0,
+      "state_hash": "d810863baf1768b866bd230952f471b47d1da936706e60703f3083ccd8ea4cae"
+    },
+    {
+      "seq": 40,
+      "steps": 0,
+      "state_hash": "c0e30091f318ccb6df34580b7752d82d3b373d63df4bf65f141a7271d30d8ec7"
+    },
+    {
+      "seq": 41,
+      "steps": 0,
+      "state_hash": "90f9b67013890ad7603e744e449e7479dfbf37ca0d9647a076e37a5bc3f35a81"
+    },
+    {
+      "seq": 42,
+      "steps": 0,
+      "state_hash": "f2b7be5eb705596a2cc6fc33d46409b9a3312a1f0e659932fe718f87a7b8109c"
+    },
+    {
+      "seq": 44,
+      "steps": 0,
+      "state_hash": "5f901ab2ed1f05adb8a7ccb1733ea4fe26013e5ff15683719bdb6c6bfe2f0ed6"
+    },
+    {
+      "seq": 47,
+      "steps": 0,
+      "state_hash": "e23fb3562212f6d54bb82651f49de1f3104b73d8952c2ec5988e0fb78bf94426"
+    },
+    {
+      "seq": 48,
+      "steps": 0,
+      "state_hash": "2f809ea145bd32e449a44f4675c98c2e5ec4c24ac18577b13f708503426dc61b"
+    },
+    {
+      "seq": 49,
+      "steps": 0,
+      "state_hash": "0b3b0b45b0ab047d49f91ccf0b210c9af8dc1ed95dfb18e6d9b299fe7543fc7c"
+    },
+    {
+      "seq": 50,
+      "steps": 3,
+      "state_hash": "c642a683bc7a4392b4ebe7a3cc77b938bfeed4e5692d4d5fe70cba790c5bb4f1"
+    },
+    {
+      "seq": 51,
+      "steps": 2,
+      "state_hash": "b48a01a26ef4b30c443f05170c8c78ff1795ffb9feff48df4c2706882adbf938"
+    },
+    {
+      "seq": 52,
+      "steps": 1,
+      "state_hash": "4f0e91915f0314da50fb30a7cd7ccf6c53b3515ce1741427ece846a7811e6a61"
+    },
+    {
+      "seq": 53,
+      "steps": 0,
+      "state_hash": "df37a937f9daa4b7a7341aa4955105119768db431bb865c8f66101e48f14c5b6"
+    },
+    {
+      "seq": 55,
+      "steps": 0,
+      "state_hash": "406a591d9ccc479810ee907bcd75ea49c6e8a66e8f76656d761e01043ffb2895"
+    },
+    {
+      "seq": 56,
+      "steps": 0,
+      "state_hash": "5acea482c77b32bdd989fd984bc81fc4c7fec971d0841974c958a36151d839e8"
+    }
+  ],
+  "counts": {
+    "expert": 40,
+    "mechanical_rule": 12,
+    "transaction": 4
+  },
+  "changed": [],
+  "saved": [
+    {
+      "seq": 4,
+      "phase": "potion_reward",
+      "owner": "mechanical_rule"
+    },
+    {
+      "seq": 7,
+      "phase": "potion_reward",
+      "owner": "mechanical_rule"
+    },
+    {
+      "seq": 13,
+      "phase": "map_select",
+      "owner": "mechanical_rule"
+    },
+    {
+      "seq": 22,
+      "phase": "card_select",
+      "owner": "transaction"
+    },
+    {
+      "seq": 23,
+      "phase": "map_select",
+      "owner": "mechanical_rule"
+    },
+    {
+      "seq": 24,
+      "phase": "map_select",
+      "owner": "mechanical_rule"
+    },
+    {
+      "seq": 26,
+      "phase": "card_select",
+      "owner": "transaction"
+    },
+    {
+      "seq": 28,
+      "phase": "potion_reward",
+      "owner": "mechanical_rule"
+    },
+    {
+      "seq": 32,
+      "phase": "card_select",
+      "owner": "transaction"
+    },
+    {
+      "seq": 33,
+      "phase": "map_select",
+      "owner": "mechanical_rule"
+    },
+    {
+      "seq": 35,
+      "phase": "map_select",
+      "owner": "mechanical_rule"
+    },
+    {
+      "seq": 38,
+      "phase": "card_select",
+      "owner": "transaction"
+    },
+    {
+      "seq": 43,
+      "phase": "potion_reward",
+      "owner": "mechanical_rule"
+    },
+    {
+      "seq": 45,
+      "phase": "map_select",
+      "owner": "mechanical_rule"
+    },
+    {
+      "seq": 46,
+      "phase": "potion_reward",
+      "owner": "mechanical_rule"
+    },
+    {
+      "seq": 54,
+      "phase": "potion_reward",
+      "owner": "mechanical_rule"
+    }
+  ],
+  "input_chars": 573922,
+  "output_chars": 25031,
+  "source_requests": 56
+}
