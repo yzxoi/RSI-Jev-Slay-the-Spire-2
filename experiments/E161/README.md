@@ -34,7 +34,7 @@ Implementation v1: separate subset domain/resolver; campaign teacher explicitly
 opts in and binds selection to fresh state. Existing E160 wire semantics remain
 the default. The teacher returns one set, not a numbered combination.
 
-v1 tested `e0362eaa` (full SHA in failure-v1.json): synthetic assertions passed
+v1 tested `e0362ea5` (full SHA in failure-v1.json): synthetic assertions passed
 and the 193-command Pael prefix plus five-card removal reached the map. The
 evaluation harness then failed before independent verification (`KeyError:
 case` in shared replay). Preserve this partial result; it does not pass the gate.
