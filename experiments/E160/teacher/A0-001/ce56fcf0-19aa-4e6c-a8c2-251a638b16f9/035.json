@@ -1,0 +1,25 @@
+{
+  "case": "A0-001",
+  "run_id": "ce56fcf0-19aa-4e6c-a8c2-251a638b16f9",
+  "seq": 35,
+  "state_hash": "4e15c7799d40955fc69e1149f81c5f131ee606b56d7ac9abddebc6fe0c2c4991",
+  "choice_id": "a000",
+  "campaign_plan": "Enter mandatory elite at 76/80 HP. Existing Strength reservation releases here; Blood remains available for meaningful healing, Power stays reserved for boss. Campfire follows.",
+  "potion_reservations": [
+    {
+      "potion_id": "BLOOD_POTION",
+      "until": "Elite",
+      "release_hp_fraction": 0.5
+    },
+    {
+      "potion_id": "POWER_POTION",
+      "until": "Boss",
+      "release_hp_fraction": 0.35
+    },
+    {
+      "potion_id": "STRENGTH_POTION",
+      "until": "Elite",
+      "release_hp_fraction": 0.4
+    }
+  ]
+}

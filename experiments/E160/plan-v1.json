@@ -1,0 +1,371 @@
+{
+  "manifest": {
+    "schema_version": 2,
+    "code_commit": "b41e4aaf77aaf1babbfd96cdeb6907ae67dba7da",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "a32485ef4c34641acc26f0c85454ba767bd4b06c4c06258e59baa26b5a72b54f",
+    "godot_stubs_sha256": "2bb3b99863f651decb27cf3ceead489046808e60d95ccbc28048ad094ecc856a",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+      "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772",
+      "headless-zzzzzz-godot-abi.patch": "5239d3836d279de5143f7d56bece1f061c6c4002de696fce28f9f7f3922ededc",
+      "headless-zzzzzzz-learning-observations.patch": "d51db8457fdb9348340a829c84fa77e9620c476ba16a7c6e224b286ecb2dfd07",
+      "headless-zzzzzzzz-encounter-abi.patch": "e4a730f9e58fddebef8ef924fcd8d0adc03d72d1148f8d29b2f9ea60556696cc",
+      "headless-zzzzzzzzz-native-map-odds.patch": "86ee5561968629b094a1f63e214f32e8a3ae7b5614fffcb470d52886287e1885"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4",
+    "experiment": "E160",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.5",
+    "model_calls": 0,
+    "model_cost_usd": 0,
+    "encoder": "e140-phase-context-v1",
+    "torch": "2.11.0",
+    "device": "cpu"
+  },
+  "cases": [
+    {
+      "case": "A0-000",
+      "seed": "e160_campaign_Ironclad_A0_000",
+      "character": "Ironclad",
+      "ascension": 0
+    },
+    {
+      "case": "A0-001",
+      "seed": "e160_campaign_Ironclad_A0_001",
+      "character": "Ironclad",
+      "ascension": 0
+    },
+    {
+      "case": "A5-000",
+      "seed": "e160_campaign_Ironclad_A5_000",
+      "character": "Ironclad",
+      "ascension": 5
+    },
+    {
+      "case": "A5-001",
+      "seed": "e160_campaign_Ironclad_A5_001",
+      "character": "Ironclad",
+      "ascension": 5
+    }
+  ],
+  "arms": [
+    "program_campaign",
+    "astra_campaign"
+  ],
+  "budgets": {
+    "actions": 2400,
+    "run_compute": 120,
+    "request_seconds": 600,
+    "packets_per_run": 90,
+    "packets_global": 200,
+    "wall": 5400,
+    "cpu": 1200,
+    "workers": 8
+  },
+  "controller_sources": [
+    {
+      "path": "rsi/__init__.py",
+      "sha256": "9355230d9d86c113ff25fe01b4923a076683e879fa9440bf28de5420cfafc125"
+    },
+    {
+      "path": "rsi/battle_search.py",
+      "sha256": "0326ce689a57b52b7c3ec5b70f7de6825ca3e8fb705ec22d0c0642b4372aa072"
+    },
+    {
+      "path": "rsi/boss_trial.py",
+      "sha256": "f8d52e7f4e19e18ae1e3916bcdc3392c5aa08fd72f3f2f7198b156019cde4f1e"
+    },
+    {
+      "path": "rsi/campaign.py",
+      "sha256": "3587949017cb1d9645f4b172e505ffbb17d305623542e2c3f0973428e5760b72"
+    },
+    {
+      "path": "rsi/campaign_teacher.py",
+      "sha256": "97d6a1ee194af137ffb6d293653b5aff291b38670b9f74b90972c4bd01371344"
+    },
+    {
+      "path": "rsi/checkpoints.py",
+      "sha256": "00b63743300cfe171e1edb8e647d2e7854379eec4503405fc617389b50dfb4ad"
+    },
+    {
+      "path": "rsi/compatibility.py",
+      "sha256": "d1de1d19c44f709cbdadd24eb577ed64eddff695354bbad57b9d61fc88eacac1"
+    },
+    {
+      "path": "rsi/continuation.py",
+      "sha256": "fb83c86f1101df4401bb900fb61e6978f610fb03e37dd0e405efbfdf4799affc"
+    },
+    {
+      "path": "rsi/coop_route.py",
+      "sha256": "2efb1aa3c4472c5fa308c2a805c3b224fa220df5d948978275012b13c7551674"
+    },
+    {
+      "path": "rsi/curriculum.py",
+      "sha256": "33715eca5aa9e6a263ad69c9a93181d8e1cc5442ca9d403c12bf30eb7d5fb7fe"
+    },
+    {
+      "path": "rsi/danger.py",
+      "sha256": "79ff780d20de798b10ab5fdfd4c0b95cb19f60c1a8a57e08c95b8833411e389b"
+    },
+    {
+      "path": "rsi/encounters.py",
+      "sha256": "dd018bcc6b1f73265244b54e33c8c4e482674bb7eaafbe8d578faca152f2b257"
+    },
+    {
+      "path": "rsi/end_turn_check.py",
+      "sha256": "518b457293df6b3bc384f0e8b0a1aa0a49b6179c478e6a7522a9057743802406"
+    },
+    {
+      "path": "rsi/engine.py",
+      "sha256": "051f870835b3d235773684f337712f2fa378e6a87acf6d66842dba2f24f15f63"
+    },
+    {
+      "path": "rsi/event_guard.py",
+      "sha256": "0e6b91b93b7187d3adce346cdc719d7e78d1b34b88fcf5435a77b46392720ca7"
+    },
+    {
+      "path": "rsi/floor_plan.py",
+      "sha256": "7ab3c871700b6a4239a509108f089ce683f21dc71eaa68aea2ee56cfc6edb144"
+    },
+    {
+      "path": "rsi/full.py",
+      "sha256": "6b7487c84b19a5366706d1b0306e0f4cca378a5fdae069ca8519b99c58d09370"
+    },
+    {
+      "path": "rsi/guard.py",
+      "sha256": "da07c374407980a540a0a11cff1798fd509d29c81ba5ebfa2a573b34963354f0"
+    },
+    {
+      "path": "rsi/jev.py",
+      "sha256": "e20ae82405f126d10641be1b5ea623c7e91d610d602859aaa41dafce9281da46"
+    },
+    {
+      "path": "rsi/lethal_certificate.py",
+      "sha256": "41ba960784b5bc5e4a137bb03e21c8529d4d24cc39d5ec3c4dc6ecfc64e830d8"
+    },
+    {
+      "path": "rsi/live.py",
+      "sha256": "e06f794df7ab434a823adb5c0b9e68ff45fe6d5ab9e609b33725ad3597d4a3c5"
+    },
+    {
+      "path": "rsi/live_plan.py",
+      "sha256": "0e9e7803ce274aea9a4e244a0950fe218fb6e7d8a296c5eab3a8cb400b9f01de"
+    },
+    {
+      "path": "rsi/map_prefix.py",
+      "sha256": "093d12e089fc1f78f2c2968fa72f644621277cf1ab9715dd9f522d8ad4a08827"
+    },
+    {
+      "path": "rsi/matched.py",
+      "sha256": "ef0896a6cf89e4421bc491849607df032b537d9e2ce42b7e6eeba01053a14b83"
+    },
+    {
+      "path": "rsi/mcp.py",
+      "sha256": "202c4f8be914b8f65a6b7951522eb2c090ac27c30e53e46775d178cbe2a7d449"
+    },
+    {
+      "path": "rsi/mcts.py",
+      "sha256": "3ecfe8fab8e7f217f0bf24837c7a88608513500f9f8b92fb6e4bfecec5a607c3"
+    },
+    {
+      "path": "rsi/minimal_decision.py",
+      "sha256": "90e2d1961a9f2ccd7622a4e96092439119ce487452acf7bc778c75b1af6b2575"
+    },
+    {
+      "path": "rsi/multiplayer_guard.py",
+      "sha256": "b870ad7c59bbab4b5facb3c82824f96cd0bb1abef5236472686abde5485c9bca"
+    },
+    {
+      "path": "rsi/native_step.py",
+      "sha256": "1462816a93381ac5a7c3669d684cec4238ef002026fac55606948ce7c3d85153"
+    },
+    {
+      "path": "rsi/neural_search.py",
+      "sha256": "31bcba8ad6e027facd2bad46122ffbb685126365b0497becb82f60bd1a6e5a78"
+    },
+    {
+      "path": "rsi/numerical.py",
+      "sha256": "c8ef372d4e4f9f47bb9396cc5db0b8bf2ea0d8f88e9d3660a5a67829b01b3d61"
+    },
+    {
+      "path": "rsi/phase_rl.py",
+      "sha256": "8f1aa33f38c9c16f7c364cd5486121550f6c049d6d55eb28ee25b6ecc7bb281b"
+    },
+    {
+      "path": "rsi/pilot.py",
+      "sha256": "0056a58bff0c01f681ab88788981b47cf65759d19acd8ed23489feae31a71c1e"
+    },
+    {
+      "path": "rsi/planner.py",
+      "sha256": "14c306a6ed751bcfd667e2368d9384972b3018b8fc03650f630a0a206c09399a"
+    },
+    {
+      "path": "rsi/policy.py",
+      "sha256": "c025dd3fcdc748bab0ca5c5e77283fe19310f752bfd05b68dd1cf7c795097341"
+    },
+    {
+      "path": "rsi/potion_contract.py",
+      "sha256": "5a7601c7dfe66fec355920a042326889e03245a8091d5b418014eec2ab4fe653"
+    },
+    {
+      "path": "rsi/potions.py",
+      "sha256": "646d1130569fae5398cb0d664a7acfb28f931a410665ec95d63c8c68220e74f5"
+    },
+    {
+      "path": "rsi/ppo.py",
+      "sha256": "13366b370d1cb3d10e78fa588f96a05aab8420344fec0feab81d9945483a6c5f"
+    },
+    {
+      "path": "rsi/ppo_actions.py",
+      "sha256": "6375a879282afd8dd931c069de2d4a3bbec935c78e6b2b1cfaeb4466189db536"
+    },
+    {
+      "path": "rsi/ppo_data.py",
+      "sha256": "2cf18349d501d7af8d958ebdc3b6619489f258a0654e1e22de5b2d277d8de59d"
+    },
+    {
+      "path": "rsi/ppo_env.py",
+      "sha256": "a10795dc925c52b92cf0e6235acc5192457fa0931c6b743b6698eb3f89780bd2"
+    },
+    {
+      "path": "rsi/ppo_resume.py",
+      "sha256": "d3d63a4d770c7e685dd3fa82fc74ac9ec91b7ffdda3a6e6f1721169305c62b83"
+    },
+    {
+      "path": "rsi/progress.py",
+      "sha256": "2eeb83f2b4fbbdefb3d25a59c01fb89033b7771ebbee3ca1cc3484211d3d1785"
+    },
+    {
+      "path": "rsi/research_restore.py",
+      "sha256": "127dd2d56d9f420db5e044e09c0159c3bb5453924b303bb110ee85c42f1c4771"
+    },
+    {
+      "path": "rsi/reset_fallback.py",
+      "sha256": "e26aa843ed2102fd75cf8c7ba809e2310aa7af42b5c88a0486b3fcefece72b85"
+    },
+    {
+      "path": "rsi/resources.py",
+      "sha256": "2bebd83d1a35d41e56098462d446cc2a9df3126da91c9d84f1f32d8efb813797"
+    },
+    {
+      "path": "rsi/retaliation.py",
+      "sha256": "1000b5756eeeb2c0f228897e8a69fc322c60d9eb5d402ad91fa88408090971d9"
+    },
+    {
+      "path": "rsi/review_lease.py",
+      "sha256": "b49751e5f52e40656ac7e70ec39b4b5826de2973100e19eadcc1b9e04b35dc7e"
+    },
+    {
+      "path": "rsi/rich_observation.py",
+      "sha256": "e4644c87e58330c84fb190dbc72f5717864be12c38ea95bb266a4bdfe6ac1551"
+    },
+    {
+      "path": "rsi/room_owner.py",
+      "sha256": "117707c163db16fc6d3ba5e2e1335b5b216cc57e5a6ef0c6aa57a98be2825348"
+    },
+    {
+      "path": "rsi/room_plan.py",
+      "sha256": "e6029212cd4091086cd22e3fc40645eb78b6f75b871e4f41d7e49510fd7ec552"
+    },
+    {
+      "path": "rsi/root_teacher.py",
+      "sha256": "b3dc2fb7c59da91c15243ca98d236c81e5e41b260a5f60308c5c0fee37935d03"
+    },
+    {
+      "path": "rsi/run.py",
+      "sha256": "ff8ed388624c3b227e5e626b4084aa8cd009c812599d05a85bcd30a35a2ad5a4"
+    },
+    {
+      "path": "rsi/run_env.py",
+      "sha256": "2a5957e6fdf7fdf640acd98d63b82180b9c0a253cb5ee23280f9b43e9a101b94"
+    },
+    {
+      "path": "rsi/scenes.py",
+      "sha256": "398102348a989c4318aa940274ec418f24856676106e1b969d8c5f3c2ba00bcb"
+    },
+    {
+      "path": "rsi/selection_guard.py",
+      "sha256": "d8db1ece7fa77a091d5e1c331b7e9ffb5ac6fc373150e188413060335c6d8836"
+    },
+    {
+      "path": "rsi/settle.py",
+      "sha256": "47e1aa23f723d7995e311804fa4f6e127911915997914b8dabe72ed39c0cd0cc"
+    },
+    {
+      "path": "rsi/shadow.py",
+      "sha256": "f7f91c447d93fb46ad5494c115f066a983d637077702df69c52e13255bab7856"
+    },
+    {
+      "path": "rsi/shallow_bench.py",
+      "sha256": "6973a556c7437efb7303439268ccd073510222a98322e8de9478e1d1559346fc"
+    },
+    {
+      "path": "rsi/shared_value.py",
+      "sha256": "882d700d57e93aae2c465b6020682ed851a47b24ed5dd2247d79e68a50a959b6"
+    },
+    {
+      "path": "rsi/shop_review.py",
+      "sha256": "f70916765c1b300b06105ecba01164a3b42d7705d1d1836cacc4bebd090aad67"
+    },
+    {
+      "path": "rsi/status_guard.py",
+      "sha256": "b924bd16b0dab46748e3f66d848165ee127d524d8d4d2b32e0a52f780a06b724"
+    },
+    {
+      "path": "rsi/task_value.py",
+      "sha256": "e6b4ea602ca57304547b997a1a07060843780abaa708ff29636ce2e39daeae24"
+    },
+    {
+      "path": "rsi/teacher.py",
+      "sha256": "d72f70a40b801f5b7e120a23cae9515f1a1b2975954c08d0f709b1b20577f852"
+    },
+    {
+      "path": "rsi/trace.py",
+      "sha256": "423d4c9066972bc3ec39d2affb5bfba0200781340323384c30f4a021ebf7d4c7"
+    },
+    {
+      "path": "rsi/training_bank.py",
+      "sha256": "9c2787cf407bbed494b4b61f2906750a194e777fc64a68ae824fa5ef34946a4f"
+    },
+    {
+      "path": "rsi/triggers.py",
+      "sha256": "572e4a395d545274d02e1d96112e84b4aaf4e44e2a70489245c8a046de684e62"
+    },
+    {
+      "path": "rsi/turn_advisor.py",
+      "sha256": "c779aa5973c48c11413d7641c52ce597d15facb372509834ab2eb53bd8b6de40"
+    },
+    {
+      "path": "rsi/wait_recovery.py",
+      "sha256": "e421390843cc57b4fd7b54005a5fda433c357bce3c8339f03f6f153ecebadf15"
+    }
+  ],
+  "initial_engine_certificate": {
+    "path": "experiments/E158/validation-v1.json",
+    "sha256": "b57fbf6d8a1f2c2bd7371d3f26bcdf5a263a23d683aac1409ed610426842b248"
+  },
+  "tactical": "FrozenProgram: legacy triggers/retaliation, early permitted potions; no Astra combat action",
+  "macro": "program: existing cautious macro; treatment: fresh Astra choices plus explicit reservations",
+  "response_protocol": "fresh case/run/seq/state hash; one legal choice; committed before action",
+  "gate": "8terminals+8replays+trace/teacher/ownership/budget; >=2/4positive progress pairs, positive pooled progress, no negative mean by difficulty and no lost baseline victory; exploratory only",
+  "progress": "lexicographic (victory, completed acts, cleared fights); components always reported",
+  "final_acceptance_seeds_unused": true,
+  "known_unsupported": [
+    "Trial #294",
+    "Crystal Sphere #64"
+  ]
+}
