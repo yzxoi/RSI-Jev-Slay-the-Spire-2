@@ -28,3 +28,30 @@ python3 scripts/compare_opening_e171.py evaluate --plan experiments/E171/plan-v1
 ```
 
 Exact commands, code/runtime hashes, measured results and decision will be appended without replacing failed attempts.
+
+## v1 collection: coverage failed, no search comparison performed
+
+Implementation `f80730d`, collection tested `8651445`. Seven synthetic opening tests passed. All64 registered seeds ran within118.656860s (four workers); no replacement seeds, no game edits or model/API calls. All64 raw bundles pass hash audit. This is preservation/integrity of files, not independent transition replay or proof that every engine mechanic is correct.
+
+| Difficulty | Registered seeds | Genuine defeats | Execution errors | Ever reached Act2 / Act3 | Eligible openings |
+|---|---:|---:|---:|---:|---:|
+| A0 | 32 | 31 | 1 | 7 / 1 | 0 |
+| A5 | 32 | 31 | 1 | 8 / 0 | 0 |
+
+No full-run wins, stalls or budget caps. Both errors (`A0-001`, `A5-025`) hit the already-open Crystal Sphere `Vector2I.get_One()` compatibility gap [#64](https://github.com/yzxoi/RSI-Jev-Slay-the-Spire-2/issues/64). Errors are not deaths and were not retried. These are baseline collection outcomes, not a comparison of search policies or Astra macro strength.
+
+Independent scan of all decision and wire logs found **one visible shop offer, zero acquired Gambling Chips, zero target openings**. A0-027 at Act1 floor15 had305gold and a stocked259gold Gambling Chip; FrozenProgram's fixed macro chose `leave_room`. No changed shop decision was executed. Affordability does not establish that buying it was optimal. The absence of roots is influenced by both encounters and acquisition policy; do not infer a population drop rate or absence of search benefit.
+
+The first `origin-review-v1.json` prose incorrectly said zero sightings while its machine-readable hit list already contained this shop. This wording error was corrected in a new commit, before any probes, by `origin-review-v2.json`. Preserve both versions and `bank-v1.json`; `bank-v2.json` is authoritative. The latter freezes an empty eligible cohort. No hypothetical effect-origin certification is asserted for absent roots.
+
+The evaluator at `f859b3e` consumes `bank-v2.json` and emits `evaluation-v1.json` with deployment gate=false, zero rollouts/replays/fresh executions, and null8/32 latency/gain metrics. Its0.000488s is only empty-bank bookkeeping, **not solver latency**. Fidelity=false means not established because there are no roots, not an observed replay mismatch. We cannot answer which branch budget is stronger or faster on new seeds from this sample.
+
+Actual final commands after correcting the exposure wording:
+
+```sh
+python3 scripts/compare_opening_e171.py bank --plan experiments/E171/plan-v1.json --collection experiments/E171/collection-v1.json --review experiments/E171/origin-review-v2.json --output experiments/E171/bank-v2.json
+# commit empty bank
+python3 scripts/compare_opening_e171.py evaluate --plan experiments/E171/plan-v1.json --bank experiments/E171/bank-v2.json --output artifacts/runs/e171-evaluation-v1.json
+```
+
+Decision: close PR331 without merging the unvalidated solver. Keep all implementation/results commits and raw evidence. Do not draw more seeds under this protocol, promote a controller, or reinterpret E169's one known seed as unseen evidence. Stop prioritizing rare-relic budget tuning. A better next comparison should sample natural combat states under the intended Astra campaign policy, with broader first-turn coverage and a separately frozen protocol. An explicitly legal shop-acquisition mechanism experiment would also be possible but would answer a different, conditioned question; none was performed here.
