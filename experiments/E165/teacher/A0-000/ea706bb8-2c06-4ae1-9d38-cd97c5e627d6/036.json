@@ -1,0 +1,53 @@
+{
+  "case": "A0-000",
+  "run_id": "ea706bb8-2c06-4ae1-9d38-cd97c5e627d6",
+  "seq": 36,
+  "state_hash": "97ac0ef4896b4eb3970f182d6c0d669d2d6e90a5de91d93d0477c691ede0e7a8",
+  "choice_id": "a001",
+  "campaign_plan": "Buy Pillage for draw into the Strike engine, then Fire Potion for direct emergency damage and leave. Anchor already covers the first turn; keep the new potion for elite/Boss or HP<=50%.",
+  "potion_reservations": [
+    {
+      "potion_id": "BLOCK_POTION",
+      "until": "Elite",
+      "release_hp_fraction": 0.5
+    },
+    {
+      "potion_id": "POWER_POTION",
+      "until": "Elite",
+      "release_hp_fraction": 0.5
+    },
+    {
+      "potion_id": "VULNERABLE_POTION",
+      "until": "Boss",
+      "release_hp_fraction": 0.5
+    },
+    {
+      "potion_id": "ASHWATER",
+      "until": "Boss",
+      "release_hp_fraction": 0.25
+    },
+    {
+      "potion_id": "REGEN_POTION",
+      "until": "Elite",
+      "release_hp_fraction": 0.5
+    }
+  ],
+  "acquire_reservation": null,
+  "transaction_steps": [
+    {
+      "kind": "buy_potion",
+      "index": 1,
+      "potion_reservations": null,
+      "acquire_reservation": {
+        "potion_id": "FIRE_POTION",
+        "until": "Elite",
+        "release_hp_fraction": 0.5
+      }
+    },
+    {
+      "kind": "leave_room",
+      "index": null,
+      "potion_reservations": null
+    }
+  ]
+}
