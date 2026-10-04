@@ -22,14 +22,28 @@ from scripts.evaluate_routing_e099 import committed_response
 class Ownership:
     def __init__(self):
         self.active=False
+        self.last_room=None
+        self.last_decision=None
 
     def observe(self,state):
         clear=False
+        c=state.get('context') or {}
+        room=(c.get('act'),c.get('floor'),c.get('room_type'))
+        selection=state['decision']=='card_select' or (
+            state['decision']=='card_reward' and state.get('from_event'))
+        # Room entry may block on a relic's selection before the first play phase.
+        # Requiring an actual entry prevents post-reward pickup selections from
+        # reopening a finished encounter in the same room.
+        opening=(selection and c.get('room_type') in ('Monster','Elite','Boss')
+                 and room!=self.last_room and self.last_decision in ('map_select','event_choice'))
         if self.active:
             end=boundary(state)
             if end:
                 self.active=False;clear=end=='clear'
-        if state['decision']=='combat_play':self.active=True
+        if state['decision']=='combat_play' or opening:self.active=True
+        if selection and not self.active and c.get('room_type') in ('Monster','Elite','Boss') and room!=self.last_room:
+            raise ValueError('Unbound combat selection: replay room entry before routing')
+        self.last_room=room;self.last_decision=state['decision']
         return self.active,clear
 
 

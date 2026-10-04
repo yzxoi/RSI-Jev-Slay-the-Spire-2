@@ -13,6 +13,7 @@ from rsi.campaign_teacher import episode,TeacherBudget,validate
 from rsi.checkpoints import file_hash,wire_pairs
 from rsi.run_env import replay
 from rsi.trace import digest
+from rsi.ownership_audit import campaign_request_failures
 from scripts.pilot_root_teacher_e149 import checked,info,version,same_runtime
 from scripts.evaluate_battle_search_e120 import write,audit
 
@@ -37,6 +38,9 @@ def teacher_audit(records):
     failures=[];decisions=0;responses=0
     for r in records:
         events=[json.loads(s) for s in (ROOT/r['trace_path']).read_text().splitlines()]
+        pairs=wire_pairs((ROOT/r['trace_path']).parent/'wire.jsonl')
+        failures.extend([r['case'],'independent battle request',f]
+                        for f in campaign_request_failures(events,pairs))
         requests={e['data']['seq']:e['data'] for e in events if e['kind']=='campaign_request'}
         for event in events:
             if event['kind']=='decision':
