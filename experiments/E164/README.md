@@ -37,3 +37,16 @@ total, <=4 workers, 15 seconds/RPC. If it fails, retain the result without relax
 thresholds. Any new natural-run test gets a separate issue/protocol/PR.
 
 Command: `python3 scripts/validate_transactions_e164.py --output experiments/E164/validation-v1.json`
+
+## Iterations
+
+v1 `0a00aa0`: compilation preserved all 200 action/reservation decisions but
+only reduced simulated requests to151 (24.5%). Validation stopped at a synthetic
+normal purchase: sold offers lose their description metadata, so comparing the
+old description hash after setting stock=false was overly strict. No engine
+replays started. All partial per-case outputs are preserved in validation-v1/.
+
+v2 treats an unavailable slot as (index, null, false), while retaining complete
+identity/price hashes for every stocked offer. This allows the engine's normal
+sold-out serialization without accepting changes to any buyable item. Also reject
+boolean/noninteger offer indexes. Same inputs/thresholds/budgets; output v2.

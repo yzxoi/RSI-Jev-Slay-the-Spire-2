@@ -48,7 +48,7 @@ def offer_key(offer):
 
 
 def catalog(state):
-    return {key:[(x['index'],offer_key(x),bool(x.get('is_stocked'))) for x in state.get(key,[])]
+    return {key:[(x['index'],offer_key(x) if x.get('is_stocked') else None,bool(x.get('is_stocked'))) for x in state.get(key,[])]
             for key in ('cards','potions','relics')}
 
 
@@ -68,6 +68,7 @@ class Transaction:
             if set(step)!={'kind','index','potion_reservations'}:raise ValueError('Unknown transaction fields')
             kind=step['kind'];compiled=copy.deepcopy(step)
             if kind in SHOP:
+                if type(step['index']) is not int:raise ValueError('Offer index must be an integer')
                 if self.shop_catalog is None:raise ValueError('Shop step outside visible shop')
                 offers=[x for x in state[SHOP[kind]] if x['index']==step['index'] and x.get('is_stocked')]
                 if len(offers)!=1:raise ValueError('Offer unavailable at entry')
@@ -107,7 +108,7 @@ class Transaction:
             if a=='buy_card':purchase_face=card_key(offer,shop=True,face=True)
             else:potions[offer['id']]+=1
             if self.shop_catalog is not None:
-                self.shop_catalog[SHOP[a]]=[(i,k,False if i==idx else stock) for i,k,stock in self.shop_catalog[SHOP[a]]]
+                self.shop_catalog[SHOP[a]]=[(i,None if i==idx else k,False if i==idx else stock) for i,k,stock in self.shop_catalog[SHOP[a]]]
         elif kind in ('remove','upgrade','upgrade_heal','transform'):
             if after['decision']!='card_select':self.invalidate('selection_not_opened');return
             if kind=='upgrade_heal':expected_hp=min(bp['max_hp'],bp['hp']+(chosen['details'].get('vars') or {})['Heal'])
