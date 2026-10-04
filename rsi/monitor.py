@@ -285,7 +285,7 @@ class TraceFeed:
 
     def _latest_path(self):
         if self.trace:
-            return self.trace
+            return self.trace.resolve()
         paths = (p for p in self.root.glob("*/decisions.jsonl") if self._matches(p))
         return max(paths, key=lambda p: p.stat().st_mtime_ns, default=None)
 
