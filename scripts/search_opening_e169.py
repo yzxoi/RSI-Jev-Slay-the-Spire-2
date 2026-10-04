@@ -65,13 +65,13 @@ def plan(v):
 
 def trial(root,choice,v,deadline,tag='candidate'):
     ident=candidate_id(choice);trace=Trace(ROOT/'artifacts/runs'/str(uuid.uuid4()),
-        {**v,'scope':'E169_known_opening_counterfactual','root':root['case'],'opening':choice['action'],'tag':tag})
+        {**v,'scope':root.get('scope','E169_known_opening_counterfactual'),'root':root['case'],'opening':choice['action'],'tag':tag})
     started=time.monotonic();engine=None;state={};previous=root['previous'];program=FrozenProgram(previous);trans=[]
     r=dict(case=root['case']+'-'+ident+'-'+tag,root=root['case'],candidate_id=ident,tag=tag,
         discard_indices=indexes(choice),status='unstarted',steps=0,illegal_actions=0,restore_seconds=0.)
     def send(c):
         left=min(120-(time.monotonic()-started),deadline-time.monotonic())
-        if left<=0:raise TimeoutError('E169 trial/global cap')
+        if left<=0:raise TimeoutError('Opening trial/global cap')
         engine.timeout=min(15,left);return engine.send(c)
     try:
         if time.monotonic()>=deadline:raise TimeoutError('Not started before global cap')
@@ -85,7 +85,7 @@ def trial(root,choice,v,deadline,tag='candidate'):
         for step in range(301):
             end=boundary(state)
             if end:r['status']=end;break
-            if step==300:raise TimeoutError('E169 action cap')
+            if step==300:raise TimeoutError('Opening action cap')
             choices=legal_choices(state,{})
             if step==0:
                 if digest(state)!=root['domain']['state_hash']:raise ValueError('Stale opening domain')
@@ -98,7 +98,8 @@ def trial(root,choice,v,deadline,tag='candidate'):
             before=digest(state);program.remember(state,chosen);state=send(chosen['action']);previous=chosen;r['steps']+=1
             trans.append(dict(before=before,action=chosen['action'],after=digest(state)))
         r.update(hp=state['player']['hp'],potions=[p['id'] for p in state['player']['potions']],
-            final_hash=digest(state),transition_hash=digest(trans),original_final_match=digest(state)==root['expected_final_hash'])
+            final_hash=digest(state),transition_hash=digest(trans),
+            original_final_match=digest(state)==root['expected_final_hash'] if 'expected_final_hash' in root else None)
     except TimeoutError as exc:r.update(status='timeout',error=str(exc))
     except Exception as exc:r.update(status='error',error=f'{type(exc).__name__}: {exc}')
     finish(trace,r,engine,started);return r
