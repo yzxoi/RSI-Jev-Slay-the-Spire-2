@@ -6,7 +6,9 @@
 
 [阶段反思与后续路线](docs/research/learning-search/2026-10-03-strategic-review.md)已整理：可信训练环境、搜索驱动学习、整局资源策略、组合表示四个方向；建议先证明可靠教师再形成多轮学习循环。历史恢复与搜索教师结果保留；2026-10-04 主线按用户反馈转向混合系统。
 
-最新完成[E169开局集合搜索](docs/research/learning-search/2026-10-04-opening-search.md)：五个已知入口共160分支，同一后续程序下救回精英（败→36HP胜），另三场普通战保留更多HP；175份trace bundle通过。只有一个源seed、约92%耗时用于恢复，尚非通用快速求解器；E171已登记未见seed验证，默认策略不变。
+最新完成[E171未见seed采集](docs/research/learning-search/2026-10-04-opening-coverage.md)：64个新seed中62正常战败、2次已有CLI兼容错误，零赌博筹码开局；覆盖门槛失败，无法比较8与32分支的强度或延迟。一次可负担的商店报价被固定宏观策略跳过，提示采集分布也受策略限制。PR331关闭、不合入求解器，默认不变。
+
+此前完成[E169开局集合搜索](docs/research/learning-search/2026-10-04-opening-search.md)：五个已知入口共160分支，同一后续程序下救回精英（败→36HP胜），另三场普通战保留更多HP；175份trace bundle通过。只有一个源seed、约92%耗时用于恢复，尚非通用快速求解器。
 
 此前完成[E167/E168/E170验证](docs/research/learning-search/2026-10-04-ownership-potions.md)：开战归属修复通过；18已知入口的药水对照中，同一Boss从33→80HP并留两瓶，另一seed提升12HP。但8新seed完整程序对局两组均未过第一幕，只有2seed遇到目标药水，整局改善尚未验证。保留可选修正，默认策略不变。
 
