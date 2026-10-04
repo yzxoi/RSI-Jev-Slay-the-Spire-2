@@ -14,6 +14,7 @@ from .engine import ROOT, Headless
 from .resources import require_resource_interface
 from .run_env import legal_choices, run_outcome
 from .trace import Trace, digest
+from .subset_action import contract as subset_contract, resolve as resolve_subset, validate_fresh
 from scripts.evaluate_routing_e099 import committed_response
 
 
@@ -33,12 +34,16 @@ class Ownership:
 
 def validate(packet,request):
     expected={'case','run_id','seq','state_hash','choice_id','campaign_plan','potion_reservations'}
+    if request.get('selection_contract'):expected.add('selected_indices')
     if set(packet)!=expected:raise ValueError('Unexpected campaign packet fields')
     for key in ('case','run_id','seq','state_hash'):
         if packet[key]!=request[key]:raise ValueError('Stale campaign packet: '+key)
     if not isinstance(packet['campaign_plan'],str) or not 1<=len(packet['campaign_plan'])<=1200:
         raise ValueError('Campaign plan must have 1..1200 characters')
-    chosen=next((c for c in request['choices'] if c['id']==packet['choice_id']),None)
+    if request.get('selection_contract'):
+        if packet['choice_id']!='subset':raise ValueError('Expected subset choice')
+        chosen=resolve_subset(request['selection_contract'],packet['selected_indices'],request['state_hash'])
+    else:chosen=next((c for c in request['choices'] if c['id']==packet['choice_id']),None)
     if chosen is None:raise ValueError('Choice outside current menu')
     ids={p.get('id') for p in request['state'].get('player',{}).get('potions',[])}
     seen=set()
@@ -84,12 +89,13 @@ class TeacherBudget:
 
 
 class CampaignTeacher:
-    def __init__(self,trace,case,budget,pending,deadline):
+    def __init__(self,trace,case,budget,pending,deadline,experiment='E160'):
         self.trace=trace;self.case=case;self.budget=budget;self.pending=pending;self.deadline=deadline
         self.count=0;self.wait=0.;self.input_chars=0;self.output_chars=0;self.last_fields={}
         self.plan='';self.reservations=[];self.packets=[]
+        self.experiment=experiment
 
-    def choose(self,state,choices,previous,map_state):
+    def choose(self,state,choices,previous,map_state,selection_contract=None):
         if self.count>=90:raise TimeoutError('Per-run expert packet cap')
         self.budget.acquire();self.count+=1
         seq=self.count;run_id=self.trace.directory.name
@@ -102,11 +108,14 @@ class CampaignTeacher:
         if self.last_fields.get('map')==digest(map_state):visible_map={'unchanged_hash':digest(map_state)}
         else:visible_map=map_state
         self.last_fields['map']=digest(map_state)
-        path=ROOT/f'experiments/E160/teacher/{self.case}/{run_id}/{seq:03}.json'
+        path=ROOT/f'experiments/{self.experiment}/teacher/{self.case}/{run_id}/{seq:03}.json'
         request=dict(case=self.case,run_id=run_id,seq=seq,state_hash=digest(state),state=snapshot,
             unchanged_player_fields=unchanged,choices=choices,previous=previous,map=visible_map,
             previous_plan=self.plan,potion_reservations=self.reservations,response_path=str(path.relative_to(ROOT)),
             contract='Choose one campaign action. No battle actions or tactical guidance. <=1200char campaign_plan. Reservations apply to all current copies of a potion ID until Elite/Boss, released at specified HP fraction<=.5; next packet replaces them. Battle executor is fixed legacy trigger/retaliation planner with early available potions. Preserve future resources/deck quality; objective full-run victory, not next-fight reward. Token/USD usage unknown.')
+        if selection_contract:
+            request['selection_contract']=selection_contract
+            request['contract']+=' Choose choice_id=subset and selected_indices as a list of distinct allowed integers within selection bounds.'
         self.trace.write('campaign_request',request)
         self.pending.mkdir(parents=True,exist_ok=True);target=self.pending/(self.case+'.json')
         tmp=target.with_suffix('.tmp');tmp.write_text(json.dumps(request,ensure_ascii=False,indent=2)+'\n');tmp.replace(target)
@@ -135,7 +144,7 @@ def episode(config,manifest,budget,pending,deadline):
     r={**config,'run_id':trace.directory.name,'status':'error','steps':0,'entries':[],
         'completed_battles':0,'completed_acts':0,'max_act':1,'scenes':Counter(),'owners':Counter(),
         'potion_blocks':0,'illegal_actions':0}
-    if config['arm']=='astra_campaign':teacher=CampaignTeacher(trace,config['case'],budget,pending,deadline)
+    if config['arm']=='astra_campaign':teacher=CampaignTeacher(trace,config['case'],budget,pending,deadline,manifest.get('experiment','E160'))
     def send(c):
         budget.check_cpu()
         wait=teacher.wait if teacher else 0
@@ -165,7 +174,11 @@ def episode(config,manifest,budget,pending,deadline):
             if step==2400:r['status']='action_cap';break
             before=digest(state);repeated=repeated+1 if before==last else 0;last=before
             if repeated>=5:raise ValueError('Six repeated states')
-            choices=legal_choices(state,history);extra={}
+            selection=None
+            if config.get('factored_campaign_selection') and not active and state['decision']=='card_select':
+                if teacher is None:raise ValueError('Factored campaign selection requires teacher')
+                selection=subset_contract(state)
+            choices=[] if selection else legal_choices(state,history);extra={}
             if len(choices)==1:selected=choices[0];source='only_legal'
             elif active:
                 masked,blocked=permitted_state(state,teacher.reservations if teacher else [])
@@ -174,13 +187,14 @@ def episode(config,manifest,budget,pending,deadline):
                 if selected['action']['action']=='use_potion' and selected['action']['args']['potion_index'] in blocked:
                     raise ValueError('Program violated potion reservation')
             elif teacher:
-                selected,binding=teacher.choose(state,choices,previous,map_state);source='astra_campaign'
+                selected,binding=teacher.choose(state,choices,previous,map_state,selection);source='astra_campaign'
                 extra['expert_binding']=binding
             else:selected,extra=program.choose(state,choices,previous);source='program_campaign'
-            if selected['action'] not in [x['action'] for x in choices]:
+            if selection:validate_fresh(state,selected)
+            elif selected['action'] not in [x['action'] for x in choices]:
                 r['illegal_actions']+=1;raise ValueError('Illegal current action')
             trace.write('decision',dict(before=before,state=state,candidates=choices,chosen=selected,owner=source,
-                                       combat_active=active,**extra))
+                                       combat_active=active,**({'selection_contract':selection} if selection else {}),**extra))
             program.remember(state,selected)
             if state['decision']=='map_select':history['removed_here']=False
             if selected['action']['action']=='remove_card':history['removed_here']=True
