@@ -36,7 +36,7 @@ defects and are not changed in this experiment.
 ## Result — local semantic gate passed
 
 Frozen tested SHA `c916e916755837f252f2b67cb67b5ca543e22f8e`.
-Two synthetic semantic tests pass: optional exhaust removes a Status while
+Two synthetic semantic tests and four existing `test_teacher.py` checks pass: optional exhaust removes a Status while
 preserving a Power and a zero-preview attack; generation keeps positive
 selection polarity; inconsistent mandatory Ashwater context rejects.
 

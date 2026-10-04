@@ -6,7 +6,9 @@
 
 [阶段反思与后续路线](docs/research/learning-search/2026-10-03-strategic-review.md)已整理：可信训练环境、搜索驱动学习、整局资源策略、组合表示四个方向；建议先证明可靠教师再形成多轮学习循环。历史恢复与搜索教师结果保留；2026-10-04 主线按用户反馈转向混合系统。
 
-最新完成[E161/E162/E163验证与反思](docs/research/learning-search/2026-10-04-handoff-objectives.md)：多选牌与药水交接修复已合入；四种整场目标搜索在已见Obscura结算16→66HP，但六个新seed未复现收益，E163关闭不推广，完整通关仍未验证。
+最新完成[E164–E166验证与反思](docs/research/learning-search/2026-10-04-typed-selection.md)：宏观事务在新轨迹节省约19%的等价请求；两个新seed均过第一幕，但一局第二幕Boss战败、一局开战选牌归属错误中止。仅修正Ashwater消耗选牌方向，同一Boss反事实由败转为33HP胜；可选修正已合入，尚无新增完整通关。
+
+此前完成[E161/E162/E163验证与反思](docs/research/learning-search/2026-10-04-handoff-objectives.md)：多选牌与药水交接修复已合入；四种整场目标搜索在已见Obscura结算16→66HP，但六个新seed未复现收益，E163关闭不推广，完整通关仍未验证。
 
 此前[E160](experiments/E160/README.md)完成4个新seed的宏观对照：同一战斗程序下，第一幕通过观察从0/4到4/4；三条Astra路径在第二幕耗尽200次总请求，另一条遇到五张选牌组合上限，完整通关未验证，推广门槛失败。已定位重复宏观调用、药水交接与战斗目标错配，四条治疗前缀及四条基线终局重放一致。[结果与后续提案](docs/research/learning-search/2026-10-04-hybrid-campaign.md)。
 
