@@ -62,7 +62,7 @@ def continuation(source,v):
     assert audit([source])['pass']
     pairs=wire_pairs((ROOT/source['trace_path']).parent/'wire.jsonl')
     trace=Trace(ROOT/'artifacts/runs'/str(uuid.uuid4()),{**v,'scope':'E161_compatibility_continuation'})
-    started=time.monotonic();engine=None;state={};r=dict(status='error',steps=0,run_id=trace.directory.name)
+    started=time.monotonic();engine=None;state={};r=dict(case='Pael-A5-001',status='error',steps=0,run_id=trace.directory.name)
     def send(command):
         left=120-(time.monotonic()-started)
         if left<=0:raise TimeoutError('Continuation cap')
