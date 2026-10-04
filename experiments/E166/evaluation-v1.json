@@ -1,0 +1,353 @@
+{
+  "manifest": {
+    "schema_version": 2,
+    "code_commit": "c916e916755837f252f2b67cb67b5ca543e22f8e",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "a32485ef4c34641acc26f0c85454ba767bd4b06c4c06258e59baa26b5a72b54f",
+    "godot_stubs_sha256": "2bb3b99863f651decb27cf3ceead489046808e60d95ccbc28048ad094ecc856a",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+      "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772",
+      "headless-zzzzzz-godot-abi.patch": "5239d3836d279de5143f7d56bece1f061c6c4002de696fce28f9f7f3922ededc",
+      "headless-zzzzzzz-learning-observations.patch": "d51db8457fdb9348340a829c84fa77e9620c476ba16a7c6e224b286ecb2dfd07",
+      "headless-zzzzzzzz-encounter-abi.patch": "e4a730f9e58fddebef8ef924fcd8d0adc03d72d1148f8d29b2f9ea60556696cc",
+      "headless-zzzzzzzzz-native-map-odds.patch": "86ee5561968629b094a1f63e214f32e8a3ae7b5614fffcb470d52886287e1885"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4",
+    "experiment": "E166",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.5",
+    "model_calls": 0,
+    "model_cost_usd": 0,
+    "encoder": "e140-phase-context-v1",
+    "torch": "2.11.0",
+    "device": "cpu"
+  },
+  "plan": {
+    "path": "experiments/E166/plan-v1.json",
+    "sha256": "9286c3bafa1612dc085b1e38c3b208b8eaef3fda1ae6caf8de2ed359b3fa4285"
+  },
+  "records": [
+    {
+      "case": "A0-000-act1-floor17-legacy",
+      "root": "A0-000-act1-floor17",
+      "arm": "legacy",
+      "status": "clear",
+      "steps": 59,
+      "ashwater_selections": [],
+      "illegal_actions": 0,
+      "prefix_commands_verified": 141,
+      "hp": 39,
+      "potions": [],
+      "final_hash": "29f4feb5e6d16a8eed0ffb70cc39a529af3a7b7d8cadf5fb3a6b82dc84144de3",
+      "transition_hash": "0b04686a1d99ae76cbc6df11687baa79e16024898f08e41453ee271220c4c51b",
+      "original_final_match": true,
+      "seconds": 7.154145416803658,
+      "wire.jsonl_sha256": "2ecca7a7f7d5e883313e13a8cf9e3f1b75be5df234cf5024755e82012ded92a5",
+      "engine.stderr.log_sha256": "86eafd94eb1f04a8c0bf06f8e11ab59466d798c31ac5698e9d6a2d78712e4173",
+      "trace_path": "artifacts/runs/d88e54c4-63ee-4457-b4c3-3e98bf8cba77/decisions.jsonl",
+      "trace_sha256": "0d03f5ff5c109eb214f68d816331720caea209a94ae9baf9e6c16a6971d373c2"
+    },
+    {
+      "case": "A0-000-act1-floor17-typed_ashwater",
+      "root": "A0-000-act1-floor17",
+      "arm": "typed_ashwater",
+      "status": "clear",
+      "steps": 59,
+      "ashwater_selections": [],
+      "illegal_actions": 0,
+      "prefix_commands_verified": 141,
+      "hp": 39,
+      "potions": [],
+      "final_hash": "29f4feb5e6d16a8eed0ffb70cc39a529af3a7b7d8cadf5fb3a6b82dc84144de3",
+      "transition_hash": "0b04686a1d99ae76cbc6df11687baa79e16024898f08e41453ee271220c4c51b",
+      "original_final_match": true,
+      "seconds": 6.576432625064626,
+      "wire.jsonl_sha256": "8f53b372984de0d936da074ccb10d31658d186ccbb06b6daaa7707d7b81e2782",
+      "engine.stderr.log_sha256": "86eafd94eb1f04a8c0bf06f8e11ab59466d798c31ac5698e9d6a2d78712e4173",
+      "trace_path": "artifacts/runs/b5332b21-846b-4962-8d1c-2f325a8ce037/decisions.jsonl",
+      "trace_sha256": "fbc5d0ad796151eed3bc64bcb41c58f35ad7fc147910a5280c8026da5b24db3a"
+    },
+    {
+      "case": "A0-000-act2-floor16-legacy",
+      "root": "A0-000-act2-floor16",
+      "arm": "legacy",
+      "status": "defeat",
+      "steps": 59,
+      "ashwater_selections": [
+        {
+          "before": "7597915e691336fab15c696df1bd53318311bfbdc08d5757217597ee4208d515",
+          "action": {
+            "cmd": "action",
+            "action": "select_cards",
+            "args": {
+              "indices": "0,2,3,4,5,8,9"
+            }
+          },
+          "selected": [
+            {
+              "index": 0,
+              "name": "Hellraiser",
+              "id": "CARD.HELLRAISER"
+            },
+            {
+              "index": 2,
+              "name": "Strike",
+              "id": "CARD.STRIKE_IRONCLAD"
+            },
+            {
+              "index": 3,
+              "name": "Pillage",
+              "id": "CARD.PILLAGE"
+            },
+            {
+              "index": 4,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            },
+            {
+              "index": 5,
+              "name": "Vicious",
+              "id": "CARD.VICIOUS"
+            },
+            {
+              "index": 8,
+              "name": "Iron Wave",
+              "id": "CARD.IRON_WAVE"
+            },
+            {
+              "index": 9,
+              "name": "Defend",
+              "id": "CARD.DEFEND_IRONCLAD"
+            }
+          ],
+          "parent": "Ashwater"
+        }
+      ],
+      "illegal_actions": 0,
+      "prefix_commands_verified": 367,
+      "hp": 0,
+      "potions": [],
+      "final_hash": "29de2d9f91525d883b1061c7a1add8fe9c0098de59d78b18385a309980e83a03",
+      "transition_hash": "753ffe491865fa11122ea9a18747f54bfcd2afcbea989a9284ff024619c72322",
+      "original_final_match": true,
+      "seconds": 12.888305000029504,
+      "wire.jsonl_sha256": "ac2a918d01db8ed332d0204a5cf5fd3003147c279c2ff923ea6e8ff657932759",
+      "engine.stderr.log_sha256": "083e2289d089281a90f69227e4dbf5a66c0d7b0effef99b7a5ecbdd90af81ebd",
+      "trace_path": "artifacts/runs/8332cc61-0ecc-44ef-ad1a-7d18f7daac77/decisions.jsonl",
+      "trace_sha256": "bb190814577046406fd86e73ec4f5fe1b4133459c9212dc222100df33dfc1891"
+    },
+    {
+      "case": "A0-000-act2-floor16-typed_ashwater",
+      "root": "A0-000-act2-floor16",
+      "arm": "typed_ashwater",
+      "status": "clear",
+      "steps": 61,
+      "ashwater_selections": [
+        {
+          "before": "7597915e691336fab15c696df1bd53318311bfbdc08d5757217597ee4208d515",
+          "action": {
+            "cmd": "action",
+            "action": "skip_select",
+            "args": {}
+          },
+          "selected": null,
+          "parent": "Ashwater"
+        }
+      ],
+      "illegal_actions": 0,
+      "prefix_commands_verified": 367,
+      "hp": 33,
+      "potions": [],
+      "final_hash": "7adddd44198403d3d9b3c6a49fcf27737583bc0b6cb2bacdfc8a7b93e2afb4a0",
+      "transition_hash": "597d9fce1426682fa84fd43adc4faada424789ceb4bf7a0051599d0ccf5672ec",
+      "original_final_match": false,
+      "seconds": 12.969131625024602,
+      "wire.jsonl_sha256": "714ebbfb4012d105cbdd152e26bd6177e0cfa43958050e1aab6e1ca677d75224",
+      "engine.stderr.log_sha256": "cd1427b108ac029e6762dc131f3acf4a789d41bf464f0ad73d59199c019e35d0",
+      "trace_path": "artifacts/runs/d6ca4928-da4b-447f-80e0-9f1ee981a257/decisions.jsonl",
+      "trace_sha256": "b71168eb5ad7566cfabb65a8b0273a69f3e221c9d946dee9b7924019a4114d7a"
+    },
+    {
+      "case": "A5-000-act1-floor17-legacy",
+      "root": "A5-000-act1-floor17",
+      "arm": "legacy",
+      "status": "clear",
+      "steps": 31,
+      "ashwater_selections": [],
+      "illegal_actions": 0,
+      "prefix_commands_verified": 165,
+      "hp": 36,
+      "potions": [],
+      "final_hash": "3f153b2fc3f29341b956c7e84956e4438741095e33b890d8794d0b1cb205e1da",
+      "transition_hash": "47018a5f6ca95b4a2c167c8b2c545b62099566381db51271925ca39e7b011152",
+      "original_final_match": true,
+      "seconds": 6.814339458011091,
+      "wire.jsonl_sha256": "b056ce0a9773f9a694a6adfc958f70780dfa1ea486bed0290cf3ecd2bad328a3",
+      "engine.stderr.log_sha256": "4caa8c5cc9f66d05aa6f36ecbce3bcba4da90b87ff819cfbcac42df858eab39f",
+      "trace_path": "artifacts/runs/0d561da7-8485-45c2-8262-9dda14eace32/decisions.jsonl",
+      "trace_sha256": "18ddc85c81636577a89eae29ae283f36732a5e2868e19077df773817c0a2a240"
+    },
+    {
+      "case": "A5-000-act1-floor17-typed_ashwater",
+      "root": "A5-000-act1-floor17",
+      "arm": "typed_ashwater",
+      "status": "clear",
+      "steps": 31,
+      "ashwater_selections": [],
+      "illegal_actions": 0,
+      "prefix_commands_verified": 165,
+      "hp": 36,
+      "potions": [],
+      "final_hash": "3f153b2fc3f29341b956c7e84956e4438741095e33b890d8794d0b1cb205e1da",
+      "transition_hash": "47018a5f6ca95b4a2c167c8b2c545b62099566381db51271925ca39e7b011152",
+      "original_final_match": true,
+      "seconds": 6.787435709033161,
+      "wire.jsonl_sha256": "8377ec0477c07f6058e8c281470879c9b360f190cb56d7b7e21ccfb3eb6b5c00",
+      "engine.stderr.log_sha256": "4caa8c5cc9f66d05aa6f36ecbce3bcba4da90b87ff819cfbcac42df858eab39f",
+      "trace_path": "artifacts/runs/f4f340c1-55c4-4382-845b-1caa9fe8a5ef/decisions.jsonl",
+      "trace_sha256": "d5867aed513a5ce5461c7b9651e46a074b74a07001b3498d22bbed445134e6b7"
+    }
+  ],
+  "replays": [
+    {
+      "case": "A0-000-act1-floor17-legacy",
+      "status": "match",
+      "steps": 200,
+      "outcome": null,
+      "final_hash": "29f4feb5e6d16a8eed0ffb70cc39a529af3a7b7d8cadf5fb3a6b82dc84144de3",
+      "seconds": 6.790339041966945,
+      "wire.jsonl_sha256": "8e6c60fd0fcb34ae48fa5cb74fe6ad8cef8c7ef8dc12ad327fe4a1099d6427e9",
+      "engine.stderr.log_sha256": "86eafd94eb1f04a8c0bf06f8e11ab59466d798c31ac5698e9d6a2d78712e4173",
+      "trace_path": "artifacts/runs/e8f12d30-f2ec-4ed0-a383-ae413791c27d/decisions.jsonl",
+      "trace_sha256": "66ba8cf13dfebb0723bf8dc0dfd50b45d647b71852f7c4f3adaf28e444151c08"
+    },
+    {
+      "case": "A0-000-act1-floor17-typed_ashwater",
+      "status": "match",
+      "steps": 200,
+      "outcome": null,
+      "final_hash": "29f4feb5e6d16a8eed0ffb70cc39a529af3a7b7d8cadf5fb3a6b82dc84144de3",
+      "seconds": 6.523155124858022,
+      "wire.jsonl_sha256": "93ddaaa53766379668bb58d2506925657421f4f466d021c40b62e43bf99cb3a6",
+      "engine.stderr.log_sha256": "86eafd94eb1f04a8c0bf06f8e11ab59466d798c31ac5698e9d6a2d78712e4173",
+      "trace_path": "artifacts/runs/c01260f2-41fe-46cc-8e93-a84c193a8562/decisions.jsonl",
+      "trace_sha256": "31c388eff3c43edc82b9c6c5000d5b9b03ebb32ecbe30a5a13075b7858157746"
+    },
+    {
+      "case": "A0-000-act2-floor16-legacy",
+      "status": "match",
+      "steps": 426,
+      "outcome": "defeat",
+      "final_hash": "29de2d9f91525d883b1061c7a1add8fe9c0098de59d78b18385a309980e83a03",
+      "seconds": 12.820842458866537,
+      "wire.jsonl_sha256": "bbae77cb151e902d867aa5e357df23453339ae04b78c40396315e686cf2fe0d0",
+      "engine.stderr.log_sha256": "083e2289d089281a90f69227e4dbf5a66c0d7b0effef99b7a5ecbdd90af81ebd",
+      "trace_path": "artifacts/runs/b5a331d2-bd0f-458b-b416-b6de8d6e3da9/decisions.jsonl",
+      "trace_sha256": "cfd221e0ddf58acc4ae5c3af971712634484426caafa71f9ba590b3d54fdcfe9"
+    },
+    {
+      "case": "A0-000-act2-floor16-typed_ashwater",
+      "status": "match",
+      "steps": 428,
+      "outcome": null,
+      "final_hash": "7adddd44198403d3d9b3c6a49fcf27737583bc0b6cb2bacdfc8a7b93e2afb4a0",
+      "seconds": 12.880451832897961,
+      "wire.jsonl_sha256": "339bf631a9f1e8c118983a5a5e41a41de7ac29e0607eec91defe25d37f9abbea",
+      "engine.stderr.log_sha256": "cd1427b108ac029e6762dc131f3acf4a789d41bf464f0ad73d59199c019e35d0",
+      "trace_path": "artifacts/runs/5f887bac-d0fa-4deb-ae96-01f35599d5db/decisions.jsonl",
+      "trace_sha256": "49d611760181fd6fffd8202e5cbf83dae64f067a14be3ce22bcaec883b3954b2"
+    },
+    {
+      "case": "A5-000-act1-floor17-legacy",
+      "status": "match",
+      "steps": 196,
+      "outcome": null,
+      "final_hash": "3f153b2fc3f29341b956c7e84956e4438741095e33b890d8794d0b1cb205e1da",
+      "seconds": 6.763261666987091,
+      "wire.jsonl_sha256": "96c1513812b06a28f2daaa41c0171dac4e2c231b2ccd6309923aeac6ed642582",
+      "engine.stderr.log_sha256": "4caa8c5cc9f66d05aa6f36ecbce3bcba4da90b87ff819cfbcac42df858eab39f",
+      "trace_path": "artifacts/runs/f2438dcd-46ab-48a9-b2a2-0af7ea52fdcf/decisions.jsonl",
+      "trace_sha256": "d4a27c86c38a84f9eacee48d7d94e67973297fe1a2f9753b64470298e0e9bec5"
+    },
+    {
+      "case": "A5-000-act1-floor17-typed_ashwater",
+      "status": "match",
+      "steps": 196,
+      "outcome": null,
+      "final_hash": "3f153b2fc3f29341b956c7e84956e4438741095e33b890d8794d0b1cb205e1da",
+      "seconds": 6.715923000127077,
+      "wire.jsonl_sha256": "83e67d453dc33e01230d2bcd8ef4fed5d503d9dd012fc88550e15d57f03d46ca",
+      "engine.stderr.log_sha256": "4caa8c5cc9f66d05aa6f36ecbce3bcba4da90b87ff819cfbcac42df858eab39f",
+      "trace_path": "artifacts/runs/92f233f8-083e-4f35-90e4-24693d4bd787/decisions.jsonl",
+      "trace_sha256": "cdfab05dc30d546120de76438cf7755bf2968a0946f5569b64625906a53f4ced"
+    }
+  ],
+  "pairs": [
+    {
+      "case": "A0-000-act1-floor17",
+      "baseline": [
+        "clear",
+        39
+      ],
+      "treatment": [
+        "clear",
+        39
+      ],
+      "improved": false,
+      "regressed": false,
+      "transition_equal": true
+    },
+    {
+      "case": "A0-000-act2-floor16",
+      "baseline": [
+        "defeat",
+        0
+      ],
+      "treatment": [
+        "clear",
+        33
+      ],
+      "improved": true,
+      "regressed": false,
+      "transition_equal": false
+    },
+    {
+      "case": "A5-000-act1-floor17",
+      "baseline": [
+        "clear",
+        36
+      ],
+      "treatment": [
+        "clear",
+        36
+      ],
+      "improved": false,
+      "regressed": false,
+      "transition_equal": true
+    }
+  ],
+  "raw_audit": {
+    "raw_traces": 12,
+    "failures": [],
+    "pass": true
+  },
+  "integrity_pass": true,
+  "local_gate": true,
+  "default_promotion": false,
+  "seconds": 106.15723941707984,
+  "model_api_calls": 0
+}
