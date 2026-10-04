@@ -21,3 +21,11 @@ python3 scripts/validate_ownership_e167.py evaluate --plan experiments/E167/plan
 ```
 
 Implementation and subsequent result commits preserve each iteration. Runtime/version/code SHA are in each manifest. The gate establishes routing compatibility only; opening discard quality is deliberately unchanged.
+
+## v1 result and decision
+
+Tested SHA `52a1214` (implementation `c0bb341`). Six tests passed. All 104 selection labels matched (59 battle, 45 campaign); the independent request audit found the one original E165 seq38 misroute despite its old combat_active=false flag. All 12 original prefixes and the new diagnostic reproduced exactly; 14 trace bundles passed audit. No extra clear boundaries, illegal commands or teacher/API calls. Wall 117.410s.
+
+The 306-command natural opening continued for 19 program actions and ended in **defeat at 0 HP**. This compatibility fix does not rescue the encounter, establish selection quality, or complete the original interrupted run. Raw trace and replay hashes are in evaluation-v1.json.
+
+Merge the routing/audit fix because the registered compatibility gate passes. Do not promote a battle-strength claim. Keep the failure available for a separate selection-quality hypothesis.
