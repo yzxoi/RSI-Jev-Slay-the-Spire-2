@@ -1,0 +1,110 @@
+{
+  "collection": {
+    "path": "experiments/E171/collection-v1.json",
+    "sha256": "76846953d950b6a5cfa8a153a66225af4c6461bc2e48a1b613ceb0c50acc700d"
+  },
+  "source_evidence": [
+    {
+      "path": "artifacts/private/e171-source-audit/GamblingChip.cs",
+      "sha256": "706184029b656f97354b626ccbce9eebead6510c402b48f22dd4721362aebf08"
+    }
+  ],
+  "roots": [],
+  "method": "No candidate roots. Independently scanned every decision and raw wire for Gambling Chip / GAMBLING_CHIP / GamblingChip; zero sightings. This is not effect-origin certification for absent roots.",
+  "source_audit": "Historical GamblingChip.AfterPlayerTurnStart gates owner and first turn, opens FromHandForDiscard 0..999999999, then DiscardAndDraw(count). Decompiled source stays private; game/runtime unchanged.",
+  "cohort_scan": {
+    "gambling_hits": [
+      [
+        "A0-027",
+        "decisions.jsonl"
+      ],
+      [
+        "A0-027",
+        "wire.jsonl"
+      ]
+    ],
+    "difficulty": {
+      "0": {
+        "n": 32,
+        "statuses": {
+          "defeat": 31,
+          "error": 1
+        },
+        "max_acts": {
+          "1": 25,
+          "2": 6,
+          "3": 1
+        },
+        "error_cases": [
+          "A0-001"
+        ]
+      },
+      "5": {
+        "n": 32,
+        "statuses": {
+          "defeat": 31,
+          "error": 1
+        },
+        "max_acts": {
+          "1": 24,
+          "2": 8
+        },
+        "error_cases": [
+          "A5-025"
+        ]
+      }
+    },
+    "max_acts": {
+      "1": 49,
+      "2": 14,
+      "3": 1
+    },
+    "decision_phases": {
+      "event_choice": 195,
+      "map_select": 979,
+      "combat_play": 9541,
+      "potion_reward": 246,
+      "card_reward": 555,
+      "rest_site": 163,
+      "card_select": 356,
+      "shop": 49,
+      "bundle_select": 4
+    },
+    "unique_acquired_relic_names": 76,
+    "actions": 12086,
+    "errors": [
+      {
+        "case": "A0-001",
+        "status": "error",
+        "error": "RuntimeError: Action 'choose_option' failed: MissingMethodException: Method not found: 'Godot.Vector2I Godot.Vector2I.get_One()'.",
+        "final_context": {
+          "act": 2,
+          "act_name": "Hive",
+          "floor": 5,
+          "room_type": "Event",
+          "boss": {
+            "id": "THE_INSATIABLE_BOSS",
+            "name": "The Insatiable"
+          }
+        },
+        "trace_path": "artifacts/runs/8ca67143-784a-452c-8ff0-ebd5a67bfbc5/decisions.jsonl"
+      },
+      {
+        "case": "A5-025",
+        "status": "error",
+        "error": "RuntimeError: Action 'choose_option' failed: MissingMethodException: Method not found: 'Godot.Vector2I Godot.Vector2I.get_One()'.",
+        "final_context": {
+          "act": 2,
+          "act_name": "Hive",
+          "floor": 4,
+          "room_type": "Event",
+          "boss": {
+            "id": "KNOWLEDGE_DEMON_BOSS",
+            "name": "Knowledge Demon"
+          }
+        },
+        "trace_path": "artifacts/runs/2d44fc6e-9b97-4562-8438-e6421f297c02/decisions.jsonl"
+      }
+    ]
+  }
+}

@@ -1,0 +1,1915 @@
+{
+  "manifest": {
+    "schema_version": 2,
+    "code_commit": "865144598830f6aa1d56384a900e5dbd37cbd2c5",
+    "tracked_dirty": false,
+    "headless_game_sha256": "a7741f0a300e4a1cbd71e031918949d448da6f05264c3a635f26381a0146530a",
+    "headless_assembly_sha256": "a32485ef4c34641acc26f0c85454ba767bd4b06c4c06258e59baa26b5a72b54f",
+    "godot_stubs_sha256": "2bb3b99863f651decb27cf3ceead489046808e60d95ccbc28048ad094ecc856a",
+    "patches": {
+      "headless-event-sync.patch": "ca3c6b9db29d6946a89a83e97a22fee3adafc193c72fb498d0e6ea79767ee14d",
+      "headless-potion-target.patch": "5e4c2e76389792970960be9751c0ae2b3a5b76d2866b288c5b135e9fc47f7ecc",
+      "headless-stable-boundary.patch": "fe071b849063b4e8382b3739f57cd8a5b62607ebbb363d0f8290842a82cbbc95",
+      "headless-z-event-continuation.patch": "8668f88ddbdc90df4b78ff016aa53fb2f595647b84096124b21dfd8639b2083f",
+      "headless-zz-turn-selection.patch": "2986c007c6a731415f813aa20e3af56344b7a20810fa802166701d28e21664bd",
+      "headless-zzz-native-load.patch": "c823bce1ffe7165edc65dd0704977e0065f89180c415404288bce4668839528e",
+      "headless-zzzz-shop-relic-log.patch": "151872d8956ac1d09b724d8ad201b2a7703e388fedb7f93051c4d62dc16fe87f",
+      "headless-zzzzz-resources.patch": "b6b6c5d22cc08bc255b3be5df4f51728b4d3fabcdfb087a7fd355c28bbe8a772",
+      "headless-zzzzzz-godot-abi.patch": "5239d3836d279de5143f7d56bece1f061c6c4002de696fce28f9f7f3922ededc",
+      "headless-zzzzzzz-learning-observations.patch": "d51db8457fdb9348340a829c84fa77e9620c476ba16a7c6e224b286ecb2dfd07",
+      "headless-zzzzzzzz-encounter-abi.patch": "e4a730f9e58fddebef8ef924fcd8d0adc03d72d1148f8d29b2f9ea60556696cc",
+      "headless-zzzzzzzzz-native-map-odds.patch": "86ee5561968629b094a1f63e214f32e8a3ae7b5614fffcb470d52886287e1885"
+    },
+    "dependencies": {
+      "headless_url": "https://github.com/wuhao21/sts2-cli.git",
+      "headless_commit": "084d1aa3d8e118ca7ce8d8774ad16d6be9c92367",
+      "dotnet_sdk": "9.0.318",
+      "game_version_expected": "v0.111.0"
+    },
+    "game_dll_sha256": "9cb4f1ad8c9f284aa8fec3122ffd6d780bbf543d875c817abdd12ff63fbf12b4",
+    "experiment": "E171",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.5",
+    "model_calls": 0,
+    "model_cost_usd": 0,
+    "encoder": "e140-phase-context-v1",
+    "torch": "2.11.0",
+    "device": "cpu"
+  },
+  "plan": {
+    "path": "experiments/E171/plan-v1.json",
+    "sha256": "87bfee0d6f73b8ee5fc4060bfade794f016284f2e09dbfc43031a19fcdb1427d"
+  },
+  "records": [
+    {
+      "case": "A0-000",
+      "seed": "e171_opening_Ironclad_A0_000",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 0,
+      "status": "defeat",
+      "steps": 178,
+      "illegal_actions": 0,
+      "map_queries": 16,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "64c982820f93a30c757fd3d7395d5c5a4663002ba162eb1043d328ea1a10e545",
+      "transition_hash": "7503ba344cb4202e8dffbe1eab30295781e9e7a1ac098074a125d238830543dc",
+      "seconds": 7.714118625037372,
+      "wire.jsonl_sha256": "8106e349fd9d0834a94328302f470d06edca694b526f9de736643623b9d781d2",
+      "engine.stderr.log_sha256": "a219170a2d229d406ad736ed1b40e4fb373c072ae9d1236b0d75918fe600a503",
+      "trace_path": "artifacts/runs/1ef43004-e44a-4717-a114-bb3f744ce6e0/decisions.jsonl",
+      "trace_sha256": "14d4d623edbb70f72b23ef3b9d78efae6ac63de14595ab3ae203cfe771180f75"
+    },
+    {
+      "case": "A5-000",
+      "seed": "e171_opening_Ironclad_A5_000",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 0,
+      "status": "defeat",
+      "steps": 171,
+      "illegal_actions": 0,
+      "map_queries": 16,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "9420d918875fb87f963421ce6bab426530da7b70208c18ec7df3d507de42664b",
+      "transition_hash": "6fbe35cacb253a70c5cecf968371984b5b9bee72bda00b244d0fa10cfba26c1e",
+      "seconds": 8.027089999988675,
+      "wire.jsonl_sha256": "34f76bcc8af16e163daac12f153c217fa45d5b77927066b9fb0f1108c515d530",
+      "engine.stderr.log_sha256": "e4f016087eedf5c1d701464ca1064e3f9eba839357f5c18a086d52e93949d22a",
+      "trace_path": "artifacts/runs/b7cae66c-2ff3-4479-98be-aba1a3d17f7b/decisions.jsonl",
+      "trace_sha256": "106d41f49a88b29b0ef3ea70a8fa8fbd7fb19b06c2d7fdc7f8bd0528d345b24d"
+    },
+    {
+      "case": "A0-001",
+      "seed": "e171_opening_Ironclad_A0_001",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 1,
+      "status": "error",
+      "steps": 246,
+      "illegal_actions": 0,
+      "map_queries": 20,
+      "error": "RuntimeError: Action 'choose_option' failed: MissingMethodException: Method not found: 'Godot.Vector2I Godot.Vector2I.get_One()'.",
+      "final_context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 5,
+        "room_type": "Event",
+        "boss": {
+          "id": "THE_INSATIABLE_BOSS",
+          "name": "The Insatiable"
+        }
+      },
+      "final_hp": 32,
+      "final_hash": "9221009e25df65979ea828d83a5db796431924dd8a3a67ffe309fe4ebe3636b9",
+      "transition_hash": "e4c8ca89b0c3b2c80b950ab361c6c368fc87fb87edfa5463335f2616ca02ca38",
+      "seconds": 10.277349415933713,
+      "wire.jsonl_sha256": "d92f5152e584312de82e4932c1a8144ee93abc60bbaf785750eafd46f329e841",
+      "engine.stderr.log_sha256": "f8e5a5028c1ed2bdb4e69c2883733ecaa93d74393649baa8895b97836525613a",
+      "trace_path": "artifacts/runs/8ca67143-784a-452c-8ff0-ebd5a67bfbc5/decisions.jsonl",
+      "trace_sha256": "170b076b5d8126081230654b434dbd504481e5a6e33d356ac0a49a5111fc2d46"
+    },
+    {
+      "case": "A5-001",
+      "seed": "e171_opening_Ironclad_A5_001",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 1,
+      "status": "defeat",
+      "steps": 100,
+      "illegal_actions": 0,
+      "map_queries": 10,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 11,
+        "room_type": "Monster",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "3fd65c7f9afff34466a6b3569988d7cf0dc01ea5096a7edefefedbe6aa57244a",
+      "transition_hash": "ee41736afaa2493b9fbea535d2ac6ec549b5526caf6b34392a4cbf64ee42c4a7",
+      "seconds": 4.445961750112474,
+      "wire.jsonl_sha256": "80af42c28e0b8c2deb9ae354286f975c99d2e5e26098aca2fc6cca527f14191e",
+      "engine.stderr.log_sha256": "36cd6158b19d68bc336b969e8d9bfc658c46ca892e388efaa650897448f287ef",
+      "trace_path": "artifacts/runs/26565cb4-36a8-4666-80a1-911f973f7bab/decisions.jsonl",
+      "trace_sha256": "a90d5ce6614e121189a323a4e3f7f1fd00806aae0c18242bb1223e6228b715b4"
+    },
+    {
+      "case": "A0-002",
+      "seed": "e171_opening_Ironclad_A0_002",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 2,
+      "status": "defeat",
+      "steps": 183,
+      "illegal_actions": 0,
+      "map_queries": 16,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "e6f384f25018fcc5985e03b28f2adc21a2f41976c8dab21c193fc163f1a8c7e0",
+      "transition_hash": "9976ecfa2881a9a5855aa41339549ec22fcffb7c7da1b330f5e069b347ed6290",
+      "seconds": 6.8674782500602305,
+      "wire.jsonl_sha256": "ea8eae24c8feb10c4fd0fb1648d93f8431bc74b06bb1ccb267405db28cada8bd",
+      "engine.stderr.log_sha256": "6f81d17f1b8f6373c78200d69a3c737ff093b77e7d7eed2d68aa727b0e502e47",
+      "trace_path": "artifacts/runs/b5876b84-679b-49ef-b621-8cee79166395/decisions.jsonl",
+      "trace_sha256": "86f98b6a08643a6881d2cb5b05e8d077906ba3dd4860c3cb354f32b2011f520c"
+    },
+    {
+      "case": "A5-002",
+      "seed": "e171_opening_Ironclad_A5_002",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 2,
+      "status": "defeat",
+      "steps": 122,
+      "illegal_actions": 0,
+      "map_queries": 10,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 11,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "c935eb51850adf552180873e8031382d8c456128958bd9183efafe2ef417affc",
+      "transition_hash": "d3c4204653d5c9d87dc1a3710e732f764daf5dc8eddb29f60270b32294407354",
+      "seconds": 5.049645457882434,
+      "wire.jsonl_sha256": "8775a1f9fb87485a9f632f604c4de3b5c0cfabca56595b424ab723049b6fee38",
+      "engine.stderr.log_sha256": "96606f851ccb257018e912a21b4509904169fc6862d015673c6c5b54a2fa3ee4",
+      "trace_path": "artifacts/runs/44c878a5-aa8f-4cc3-ad37-db04395c6a24/decisions.jsonl",
+      "trace_sha256": "906500a809e6934d0797c62bebaaf1153b70c8f75b17909954b907e38895ced4"
+    },
+    {
+      "case": "A0-003",
+      "seed": "e171_opening_Ironclad_A0_003",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 3,
+      "status": "defeat",
+      "steps": 228,
+      "illegal_actions": 0,
+      "map_queries": 16,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "9ec80825f9eeb7015ca99c3b3ef06a54ae79d74a54bbfcab9e8765f1202d95e8",
+      "transition_hash": "dcb855eed7eec5918916fb5afb2d772804e374b32b4a434e147a41ecda55d6e4",
+      "seconds": 7.847245582845062,
+      "wire.jsonl_sha256": "864658ba2bf61c844180f8c03dc86da07913af62772f268ca193fb9f4bbdce37",
+      "engine.stderr.log_sha256": "a1a992fc5d597dfc299e5a582a481934698b4c29b00d81c6b5d0dc8378b65259",
+      "trace_path": "artifacts/runs/48be013b-556f-4eac-8191-7159b5d61a0c/decisions.jsonl",
+      "trace_sha256": "9abc596b7b98aff69cce0ad6793caae3071a8833c419b5cab87b630e3e4b0d51"
+    },
+    {
+      "case": "A5-003",
+      "seed": "e171_opening_Ironclad_A5_003",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 3,
+      "status": "defeat",
+      "steps": 55,
+      "illegal_actions": 0,
+      "map_queries": 7,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 8,
+        "room_type": "Monster",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "0ce835e330dff101c87533cf77134e2b3057b89d79935bcadd18f809289c0f54",
+      "transition_hash": "f4e668057d097bfb48a721c0f9f289bd7e931c2e49d654d0a97f162441b50822",
+      "seconds": 2.3921747498679906,
+      "wire.jsonl_sha256": "67bdc7276480fbd2db4de88547b39967a3cee5d044b8a2031f54d191828df7f0",
+      "engine.stderr.log_sha256": "7922c6043276e108bd5fd46b221d95ac8f8a9ccc5ab59553f0488de474ff9ea4",
+      "trace_path": "artifacts/runs/2bbc5a69-3806-457d-8b85-eb688c342d31/decisions.jsonl",
+      "trace_sha256": "42533cb5cf3d7337a4c88d63c6ae1b0f83e1a81600a56ed15129ce913f24e5ea"
+    },
+    {
+      "case": "A0-004",
+      "seed": "e171_opening_Ironclad_A0_004",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 4,
+      "status": "defeat",
+      "steps": 186,
+      "illegal_actions": 0,
+      "map_queries": 16,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "87747a96b39fcd0f2d19a530ae9044e4673df2f76a05ea4e9d4036c153ee769d",
+      "transition_hash": "6cc1a72a7fbc3d18bace694468ec16d6d97b1470349344d9c4bd9e8376ddc910",
+      "seconds": 6.269123957958072,
+      "wire.jsonl_sha256": "ee5cd374b8ab0f0752a9c8bc46d11b5b93f659b96ce2fe2681309582593e3a4e",
+      "engine.stderr.log_sha256": "fffcf350edaa15d347d5878ea1a3b98e285457cd7920860d04c60bc323711cb0",
+      "trace_path": "artifacts/runs/5bacceef-dae9-4c8e-93c1-10867897b9f8/decisions.jsonl",
+      "trace_sha256": "f9b33c3098a6b760ee872394f80d665d404c6861949c96f5612645e33021a5ab"
+    },
+    {
+      "case": "A5-004",
+      "seed": "e171_opening_Ironclad_A5_004",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 4,
+      "status": "defeat",
+      "steps": 230,
+      "illegal_actions": 0,
+      "map_queries": 16,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "6ac104597b86d48067d5810884f3d4fa318c0aecfb49808e02b735d1a65c977c",
+      "transition_hash": "c2e591b87cdd86a87bbd3af63e673f723343cd9d77452f32323be9447150f4f3",
+      "seconds": 8.205348500050604,
+      "wire.jsonl_sha256": "096190f0b94309f9e9e0d9e874a9c2aed9102beb762fef495f7cf2d05574abaa",
+      "engine.stderr.log_sha256": "e424b50e1d4de626802d5ebcadca24a08c551a0005662a587a2a65e7a2ccaa1e",
+      "trace_path": "artifacts/runs/989d6575-a597-413d-8f0b-e893e56a398c/decisions.jsonl",
+      "trace_sha256": "fb12ecd20a8ef40c27ac56d07ede588fcbd4c338c61ff54c874f0ca20c2073f7"
+    },
+    {
+      "case": "A0-005",
+      "seed": "e171_opening_Ironclad_A0_005",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 5,
+      "status": "defeat",
+      "steps": 181,
+      "illegal_actions": 0,
+      "map_queries": 16,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "700093d3a743a46acf034e9913618ece3128a60e1736e680b3f1f25a15b437e6",
+      "transition_hash": "0a672c2e557b75cf0738a8b5c730afbcfdabdd724318fb7125a4035532879466",
+      "seconds": 6.522971542086452,
+      "wire.jsonl_sha256": "653ae4d3543d70309fa0e39b541f65c0623888ce22f600ecf782db09ed8b720b",
+      "engine.stderr.log_sha256": "71a2661d124e3da4af4b53138240193b4290ba58177ff5386f21ef16d3ae9926",
+      "trace_path": "artifacts/runs/1a09c1ed-958c-4ead-baf1-a691a64894f3/decisions.jsonl",
+      "trace_sha256": "ee615107905a6d9bfc21177f1e3376a9bd9e5e8143211ab48e4a33ffdf6a3671"
+    },
+    {
+      "case": "A5-005",
+      "seed": "e171_opening_Ironclad_A5_005",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 5,
+      "status": "defeat",
+      "steps": 380,
+      "illegal_actions": 0,
+      "map_queries": 31,
+      "final_context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 16,
+        "room_type": "Boss",
+        "boss": {
+          "id": "KNOWLEDGE_DEMON_BOSS",
+          "name": "Knowledge Demon"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "a10bcdb69b20edd8091d57cc49d48f06faba26270ffe83dd9df3ac727efd788e",
+      "transition_hash": "9aae4817a1c4be1489df1372908f757868cef290eb24e6727dc58fb3b1ae026d",
+      "seconds": 13.731555874925107,
+      "wire.jsonl_sha256": "dd50267323e28d2450af136047cac6a81349aff2a042ff25ab46d3435913bdfd",
+      "engine.stderr.log_sha256": "f4bc8a668489c25d04f7e33ab1751704d1c300502c94b5063713d5856d6d45a0",
+      "trace_path": "artifacts/runs/9df324f8-0374-4496-8ff9-78d1fc6dd5eb/decisions.jsonl",
+      "trace_sha256": "096d20359314b95efaa9592ea46e20e7e8ead88ead7d2a35fe8745fdcbd25126"
+    },
+    {
+      "case": "A0-006",
+      "seed": "e171_opening_Ironclad_A0_006",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 6,
+      "status": "defeat",
+      "steps": 319,
+      "illegal_actions": 0,
+      "map_queries": 25,
+      "final_context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 10,
+        "room_type": "Monster",
+        "boss": {
+          "id": "KAISER_CRAB_BOSS",
+          "name": "KAISER_CRAB.name"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "112f8583a8d99a400aa75399c36df840d245277626bcb0e165086734773f6fe2",
+      "transition_hash": "6362df03f41a4876fc5baae1dc1a1d989cafdbdcda13e2331c00ab1393b03a5a",
+      "seconds": 11.146304957801476,
+      "wire.jsonl_sha256": "a0398d79b7512669df071f36627ce12b176003f9f139a54cc4834821cafa5884",
+      "engine.stderr.log_sha256": "76b555e1c63d37e097a5dbdfd8ee8cb59558309a822adb1ec2a6f8afa34b6fd4",
+      "trace_path": "artifacts/runs/b9358e39-fdaa-4f0a-a569-34dc28e13b48/decisions.jsonl",
+      "trace_sha256": "17b0085b318749d247d802b356423f4cfa8c16b69b5955fcfa1ef57dff62f88b"
+    },
+    {
+      "case": "A5-006",
+      "seed": "e171_opening_Ironclad_A5_006",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 6,
+      "status": "defeat",
+      "steps": 225,
+      "illegal_actions": 0,
+      "map_queries": 16,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "6e7a994d7f9e77037c5ea3ac212d41f06edd8b6190d0e52ca51f7154b98ea93d",
+      "transition_hash": "6e091b2f383356e4c9890ee11f9813d4c288421c2f0b9deab1d1bb977cba7953",
+      "seconds": 8.006205832818523,
+      "wire.jsonl_sha256": "ab56180cc15d3fbdc7194e28c5f5b7a73632263a73e0ea446ab5d0fa9a093a30",
+      "engine.stderr.log_sha256": "d866d9f9f482f4e88fd1d226a2a10ee917c0f5368641ae76a2f2002481a9131c",
+      "trace_path": "artifacts/runs/021d3d7f-f9cc-4de0-9b49-abe533e8f8ca/decisions.jsonl",
+      "trace_sha256": "b4f9bcb0f7551dba30795024d063028c33e00fe8d847faf2d114fbd473e024b8"
+    },
+    {
+      "case": "A0-007",
+      "seed": "e171_opening_Ironclad_A0_007",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 7,
+      "status": "defeat",
+      "steps": 163,
+      "illegal_actions": 0,
+      "map_queries": 16,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "4f03dcec08e615dbe00c8292f91b800a24f6cd9c51881a6b36131c7ccb367812",
+      "transition_hash": "07aab5140aabcf56e2a4457e60828a9770b3de5a534389290e994a28b3cf5401",
+      "seconds": 5.945246082963422,
+      "wire.jsonl_sha256": "d6e90ef19ba0ca231c5f65e7723f2ee0db04a3388928a846d4523e3958124f68",
+      "engine.stderr.log_sha256": "b29b9e7548df6681f904179e48abda3b11e87f449b42353ca47334eaf270823e",
+      "trace_path": "artifacts/runs/3fc05f4c-acce-4678-bd1f-e833760dfe66/decisions.jsonl",
+      "trace_sha256": "8b6ffecc657d01ba2cd0d31dbe2c98fd9e06caeb0206d9dea43e35a175aa66aa"
+    },
+    {
+      "case": "A5-007",
+      "seed": "e171_opening_Ironclad_A5_007",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 7,
+      "status": "defeat",
+      "steps": 199,
+      "illegal_actions": 0,
+      "map_queries": 16,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "a14128b659f85235a91041845cfd6285e933cbf3717e5b1380eae0a1f923ef55",
+      "transition_hash": "b82ad928aa2c1d6ff079943eac894ccd5ad0bc96b84eeb707cb3970fd70bf501",
+      "seconds": 7.127694332972169,
+      "wire.jsonl_sha256": "cbc618a4cdbe3b8c88e84031b5d971cfc7511a091f7897d721f89de4a108c4db",
+      "engine.stderr.log_sha256": "39a239f0e89274bc17be1680aca21f436489a496bfd45703f0685940760384c8",
+      "trace_path": "artifacts/runs/0fb1ba38-f03f-4ede-91d0-1b609bf42347/decisions.jsonl",
+      "trace_sha256": "b731a3d16e19ffdc1c918c9a4ddc4d0f7a87cd4133a32f007c718585b69677b8"
+    },
+    {
+      "case": "A0-008",
+      "seed": "e171_opening_Ironclad_A0_008",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 8,
+      "status": "defeat",
+      "steps": 189,
+      "illegal_actions": 0,
+      "map_queries": 16,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "45fdf5d13496cc2aaa4f1f8757464848874139744c5748b8835a388da09e1da7",
+      "transition_hash": "d924744d63fba921e2b23ff2fb9f962989e4ac2b42b5fda37536fb4f8aa0cbc9",
+      "seconds": 6.679516167147085,
+      "wire.jsonl_sha256": "8e676f5eb75f3cf54bb506dbac65d6280bc95daede123ad7e9335d4876fdf497",
+      "engine.stderr.log_sha256": "82ed7e458d808395a286738dd89620e2782096681e1f88031e488a20774c6d71",
+      "trace_path": "artifacts/runs/489cc784-738c-4659-bfc3-a73685f28cd8/decisions.jsonl",
+      "trace_sha256": "98f53e7fe186c1e2675cb3588df0a58c78d25b691e70836a2ade286ac3ed4b9c"
+    },
+    {
+      "case": "A5-008",
+      "seed": "e171_opening_Ironclad_A5_008",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 8,
+      "status": "defeat",
+      "steps": 249,
+      "illegal_actions": 0,
+      "map_queries": 16,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "88c81dd2e008ba8cd77dca51a8b3e15a6893ec4f3ad3ad4205c083d388dce9d7",
+      "transition_hash": "4200566a4e845537e894fc773b6c0e4b4c8a98ea08c1906208138b98469235b3",
+      "seconds": 8.756371625000611,
+      "wire.jsonl_sha256": "cdaa144c55caab2e9154e5f4d628067ebc279a554fba9281a9e31f2e17be07ed",
+      "engine.stderr.log_sha256": "f988ec0a1d2351fa4f886f9bee539c7c5c2e1e484cef9c179c91929763b96549",
+      "trace_path": "artifacts/runs/c0ba2f73-b114-4cbd-a76b-bce8e5f68528/decisions.jsonl",
+      "trace_sha256": "e163eddb5452828b79cf1e7983e8b31f3c23ee77fb60e95150cac7083cd9ceca"
+    },
+    {
+      "case": "A0-009",
+      "seed": "e171_opening_Ironclad_A0_009",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 9,
+      "status": "defeat",
+      "steps": 52,
+      "illegal_actions": 0,
+      "map_queries": 5,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 6,
+        "room_type": "Event",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "158051d50ebaf6e241677a3496a4fbf9f9dbbd03de55a33c33667439495e8709",
+      "transition_hash": "cfb495b79090d4c26a2de84e5711f1645233834d09ec505ed4426d37c3ea7267",
+      "seconds": 2.330197208095342,
+      "wire.jsonl_sha256": "30e7f3ef30df34e133b12ae81333ad28a0380090b9d2b7313d8144db6f1f2455",
+      "engine.stderr.log_sha256": "2dbae6f8bef120eb99d3a0f54f65d489da40ea2434393ef2113062a441a39934",
+      "trace_path": "artifacts/runs/b19616e4-4b4f-4b2c-8eb5-cc5d4b429a02/decisions.jsonl",
+      "trace_sha256": "225182df30c4ceba455bd13b798708adeed81341878e360603787eb058e7802b"
+    },
+    {
+      "case": "A5-009",
+      "seed": "e171_opening_Ironclad_A5_009",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 9,
+      "status": "defeat",
+      "steps": 301,
+      "illegal_actions": 0,
+      "map_queries": 19,
+      "final_context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 4,
+        "room_type": "Monster",
+        "boss": {
+          "id": "KAISER_CRAB_BOSS",
+          "name": "KAISER_CRAB.name"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "a05ca32559ba16a17a427ce80f0a5949ea4905e437f7b6965e586a2767e96099",
+      "transition_hash": "c1c4568b3e80298e1528b7630725bcfdf3aa9b5dee57faab9b3088f61925fb7c",
+      "seconds": 10.453257500194013,
+      "wire.jsonl_sha256": "52d28f479516a9839cc2db412b7a21b08b3cbb92dd330ac6702f8b9c56f3eb5f",
+      "engine.stderr.log_sha256": "e110b30d557dcdffb480cb544c968ce64ae5bce14a7982d0bcd6116dba00c10a",
+      "trace_path": "artifacts/runs/4afcfc34-aa13-4726-9e15-88f8941ce35e/decisions.jsonl",
+      "trace_sha256": "485bb2a67beff78d3c1cadef7b90111d6a6466188cbcdfe786aac3e7c89b8687"
+    },
+    {
+      "case": "A0-010",
+      "seed": "e171_opening_Ironclad_A0_010",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 10,
+      "status": "defeat",
+      "steps": 136,
+      "illegal_actions": 0,
+      "map_queries": 8,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "54395238410a2d8d4ef848cb47b61d9ff55928485032746454713ddef5398211",
+      "transition_hash": "2aa6eb70937725139f1d962e34495a000a6e09055b0a88a3bd9a728ab18bc614",
+      "seconds": 4.995687250047922,
+      "wire.jsonl_sha256": "b26c1afea56c1e179ba146c27cb06e9401782597b4840b5ce329d4bb6e5fe9d3",
+      "engine.stderr.log_sha256": "253317bcb80a44665f80eb48b3c0e529296faeb5c5c486cbdaca53383af687e0",
+      "trace_path": "artifacts/runs/bf0c276e-4e63-4436-aeac-5fe7cc834396/decisions.jsonl",
+      "trace_sha256": "db501563d33fa6763782e88dda58978b933610e7be31a682e66ece210ae4bd59"
+    },
+    {
+      "case": "A5-010",
+      "seed": "e171_opening_Ironclad_A5_010",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 10,
+      "status": "defeat",
+      "steps": 194,
+      "illegal_actions": 0,
+      "map_queries": 16,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "19da9dd1030055783701ea4017e08e7d055d049ad5625893c587b05050603674",
+      "transition_hash": "fcefed711ea4d2b116bb5ea7071a01a01875b64b1d2166d7c668f9eae391ffe9",
+      "seconds": 7.203854499850422,
+      "wire.jsonl_sha256": "51783bf3a484ca9d4538590a2dc58509e6a206464b11caef7abc149c2b10a539",
+      "engine.stderr.log_sha256": "c0193224c82d2803559521aa1b6120f45a647383d35f276b1ee324f204e8c459",
+      "trace_path": "artifacts/runs/001ece32-5aa4-44cd-bb66-9047064e2d27/decisions.jsonl",
+      "trace_sha256": "402a235eb1fd20aa5d271bd4d0324aee9c06543e118dd2c5c6c401b6e6584c52"
+    },
+    {
+      "case": "A0-011",
+      "seed": "e171_opening_Ironclad_A0_011",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 11,
+      "status": "defeat",
+      "steps": 233,
+      "illegal_actions": 0,
+      "map_queries": 19,
+      "final_context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 4,
+        "room_type": "Monster",
+        "boss": {
+          "id": "THE_INSATIABLE_BOSS",
+          "name": "The Insatiable"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "b4bb1d4ae8735586f4685753d89d4f9fb1eebc2ecbdf744c130119907fd82117",
+      "transition_hash": "0ee86a1d38f8117210c4b0dda07d8092282fc2ac7f13fbdf68aab2b39a5b62d8",
+      "seconds": 8.212168416008353,
+      "wire.jsonl_sha256": "562a025de315c12e3b81fecae371b2e55ab3afe8afd575234bc299f4bb384e36",
+      "engine.stderr.log_sha256": "3a71954de29f1e17fb984ffaf700a1f220c3462eb5933735d51ef2673d6b3182",
+      "trace_path": "artifacts/runs/f95a3b82-a2f7-4d00-80d1-9fdf9105786d/decisions.jsonl",
+      "trace_sha256": "5f7f1a0ab7026ffc5159f75d8e7a1298f63b31082d082fc938874483bf05f83d"
+    },
+    {
+      "case": "A5-011",
+      "seed": "e171_opening_Ironclad_A5_011",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 11,
+      "status": "defeat",
+      "steps": 178,
+      "illegal_actions": 0,
+      "map_queries": 16,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "c0f26253c8ca04b1dd3dcfb40b7ca9953aa1dd4a6873a983bf04e81c63d3d707",
+      "transition_hash": "aec45f1f428301b0de4cc913c677ea3cf9a6078967ffae71c0b9d13d5b67d085",
+      "seconds": 6.544135665986687,
+      "wire.jsonl_sha256": "b4db95a9c04653d52bb15cfb10f4e293201572802d856963bbaf9b5bf8056019",
+      "engine.stderr.log_sha256": "23d11492d40147c25a1f4669a52d36a20bab40715d1eec6cb8e427d47ccb91eb",
+      "trace_path": "artifacts/runs/09d4f1d4-cb89-461a-bf7e-30ead1e89731/decisions.jsonl",
+      "trace_sha256": "8a719b930e958eb43dd3d73293b2d5bf9b88a86bc900271c21a52cf31caf8248"
+    },
+    {
+      "case": "A0-012",
+      "seed": "e171_opening_Ironclad_A0_012",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 12,
+      "status": "defeat",
+      "steps": 179,
+      "illegal_actions": 0,
+      "map_queries": 16,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "2457c5783d5fb1a4c2eab19f2d4c49307e195eda52aa44fd051039cc8f144dc5",
+      "transition_hash": "a181b0783e9a32c7e2f8319ad2348cff7c3a6fc14ae7922997cf40755df7d77b",
+      "seconds": 6.28340991679579,
+      "wire.jsonl_sha256": "4a0a67287b1630e1d2dfe57be0c9a1672076b4cfd7c4d64a00201d18c485041e",
+      "engine.stderr.log_sha256": "9e87e3df4ce5b4273da458cd4bf0ef1738c4e6a9469a85f8b63bf377cafcbdb0",
+      "trace_path": "artifacts/runs/559f2fc8-2a90-41a2-9b27-a7094bb54516/decisions.jsonl",
+      "trace_sha256": "82cd00763a685451ff1f02fa4592bfd5648ee741e79bde6e713e9089a24d6dd1"
+    },
+    {
+      "case": "A5-012",
+      "seed": "e171_opening_Ironclad_A5_012",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 12,
+      "status": "defeat",
+      "steps": 196,
+      "illegal_actions": 0,
+      "map_queries": 21,
+      "final_context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 6,
+        "room_type": "Monster",
+        "boss": {
+          "id": "KNOWLEDGE_DEMON_BOSS",
+          "name": "Knowledge Demon"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "cb3a3c8ab99c1b3537bb29d3411066ad8a05100b987c4568a70dd226fbc21d29",
+      "transition_hash": "f88792e782dac7e46c00ad0c723ec61f3b74212680dcbf1072837022d6514935",
+      "seconds": 6.598366291029379,
+      "wire.jsonl_sha256": "013bff50bd06304a8f77aaea4e7f2adf893221dc8c933ab3609ef5f782b63d79",
+      "engine.stderr.log_sha256": "1f6ed2e05b8d834f63f4e4f7c474627f53fb0bbe9dadb66381d337489ee0cbeb",
+      "trace_path": "artifacts/runs/9167dd87-c227-4eea-a823-a5aa6e6fd1c6/decisions.jsonl",
+      "trace_sha256": "f3c051bee4223edc1a3177aaee0a210ce042bd4dad57fc13c4a219f800b0432a"
+    },
+    {
+      "case": "A0-013",
+      "seed": "e171_opening_Ironclad_A0_013",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 13,
+      "status": "defeat",
+      "steps": 248,
+      "illegal_actions": 0,
+      "map_queries": 16,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "d4c0dc86e231a427cc34516e837bc4d136714d2d36a81c48562ce71770af5ea4",
+      "transition_hash": "08ebb1aa96097ca78cfd4dc8fd8244e9e15291241b541cb5d928347b8b0accd4",
+      "seconds": 8.247893332969397,
+      "wire.jsonl_sha256": "69526b19ade3b82ffbcdab617958114653aa8b8f70b7bd29b5b6928840524218",
+      "engine.stderr.log_sha256": "6cec855d3ad46fc1feb728f3db76b076a2245b9dbab5c7e06f4dd9d8274c3c11",
+      "trace_path": "artifacts/runs/a483fc53-8a28-4a1a-ac9e-95d2d606df93/decisions.jsonl",
+      "trace_sha256": "5535d9c193dafe5633b174415558d4f5299734db2dd1ad0e21f1f46cb4c3c0e9"
+    },
+    {
+      "case": "A5-013",
+      "seed": "e171_opening_Ironclad_A5_013",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 13,
+      "status": "defeat",
+      "steps": 78,
+      "illegal_actions": 0,
+      "map_queries": 6,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 7,
+        "room_type": "Elite",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "d57fd82b5631fffb56d46bf364ba2f5fcbc4bab57c6c49b5f2700dfbc927850a",
+      "transition_hash": "1940ba649a990fdc504a44e55bf261c283f4675a762d807b57f3e6578d02575e",
+      "seconds": 3.2702524170745164,
+      "wire.jsonl_sha256": "d1bfbb4ae7dc780a320efb9b828d590ddd7d399bb09afd3c8b6fe63963a91c1e",
+      "engine.stderr.log_sha256": "789a2d3fc2eb2620f308f74ba40afca82e391c110a47bd72222674a23017b1eb",
+      "trace_path": "artifacts/runs/25ac944e-6532-450e-842d-e3deb99fe017/decisions.jsonl",
+      "trace_sha256": "5023a5411a43cf06ec9f8726240d13c4afa633d6369e4ae6dce27129a5bff83c"
+    },
+    {
+      "case": "A0-014",
+      "seed": "e171_opening_Ironclad_A0_014",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 14,
+      "status": "defeat",
+      "steps": 199,
+      "illegal_actions": 0,
+      "map_queries": 16,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "8bfef6fc66b70b3d0628661507d3d5ad614984f22365e252742fa4e59385038b",
+      "transition_hash": "be3c502f51a8d55b4fcf3eb5bedd865ceff491b885bdae81507b3dd2308a6481",
+      "seconds": 7.004850624827668,
+      "wire.jsonl_sha256": "8c81e1a2183370e10b0a7c6a16d7ef2336ced4664941814787010767a56b5d83",
+      "engine.stderr.log_sha256": "c0c08c022cd592c04903c1b97cfdad021a8dcbc749c6117ab2d3c08bbdea7304",
+      "trace_path": "artifacts/runs/d56aa772-5cbf-404a-a648-39be8447cc03/decisions.jsonl",
+      "trace_sha256": "124276c094cac6ae5be8067944e16503b3e2cffa531d9ad1950a739f68724f83"
+    },
+    {
+      "case": "A5-014",
+      "seed": "e171_opening_Ironclad_A5_014",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 14,
+      "status": "defeat",
+      "steps": 221,
+      "illegal_actions": 0,
+      "map_queries": 16,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "961e87e98372949a93bd32f359cf57fd37b3f4013506bc0a3592f1da806eb7ed",
+      "transition_hash": "e23cb70e8df00826b7e54a2369e3b2af1ba8acaa0fd90c682abc456d1448f9c6",
+      "seconds": 7.896832040976733,
+      "wire.jsonl_sha256": "4399266a95b3be2eb93c2c71ae14fcabfcc9b1f0dcb16fd04e0dd5daeba87221",
+      "engine.stderr.log_sha256": "183194708778e7a6eba31f6fbf48b877da18a6722ee5a3d727d504dbbb9ddef0",
+      "trace_path": "artifacts/runs/8f1549f1-272b-422e-a4b4-9c6c3d42e0c2/decisions.jsonl",
+      "trace_sha256": "652949f1b696caaf00288b6ab7aa4ec5ff8531397f6eb7459c8f71aca316c8d8"
+    },
+    {
+      "case": "A0-015",
+      "seed": "e171_opening_Ironclad_A0_015",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 15,
+      "status": "defeat",
+      "steps": 154,
+      "illegal_actions": 0,
+      "map_queries": 10,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 11,
+        "room_type": "Elite",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "67e2cdcb943f207300f54fb1d2e2ff43f6493fbfa6274ca39cf99bec0e003ecf",
+      "transition_hash": "a56c5d054b38e753b59ac970f96a4dbed46ce98e46852227d051f05661025c9d",
+      "seconds": 5.910200000042096,
+      "wire.jsonl_sha256": "886c7db41a0978b205da3a68b1cc2f7f026e1a56703877e0d541a76bf28a5c78",
+      "engine.stderr.log_sha256": "ff902bac9e4e29e57024844df60e2dd2e9bf98ec35d4eb904f06199a7a6c7352",
+      "trace_path": "artifacts/runs/bb1b6866-8ff2-4b94-9962-02d5c1241a49/decisions.jsonl",
+      "trace_sha256": "15cc7a375e9a935b848e3c19905cb6e06d8c75a1dfe40cad9147d4912b443401"
+    },
+    {
+      "case": "A5-015",
+      "seed": "e171_opening_Ironclad_A5_015",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 15,
+      "status": "defeat",
+      "steps": 175,
+      "illegal_actions": 0,
+      "map_queries": 16,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "8a8ae08cf0a69d75344a5b2fb851fdb4866f4295b442e57317063adddfd22b44",
+      "transition_hash": "21ac7baca7b378e84bd0592368fc296ad2ac7d1216002bf9ae93b8a4ac42c84e",
+      "seconds": 6.439934500027448,
+      "wire.jsonl_sha256": "8cf24c541592c001671c986ff6ee25e5db725f4bb14ba8db615a597edb48bcc7",
+      "engine.stderr.log_sha256": "bc2d9f11273850601cf3681a35d7ee95e1a3047c1657347fb0cacd6825ce4aac",
+      "trace_path": "artifacts/runs/41ad6a79-a1eb-4bba-ac3f-b5a8baf5f89f/decisions.jsonl",
+      "trace_sha256": "b205a0dcd41f41ee1de35d10656abd3714568ef5a61b44976cfe765384f2739c"
+    },
+    {
+      "case": "A0-016",
+      "seed": "e171_opening_Ironclad_A0_016",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 16,
+      "status": "defeat",
+      "steps": 150,
+      "illegal_actions": 0,
+      "map_queries": 16,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "f9c5cb98956a3221340a78b13746bfeeea5cfbbd3b5d877b718bce456c168aa9",
+      "transition_hash": "8095da086a971422fc4a6f0dc036b871a73457f56304527ed1c0cc3d9bff5df6",
+      "seconds": 5.82597616687417,
+      "wire.jsonl_sha256": "0e606b7d6eb703f693b5fb505cc388f459e265d5fb29b9aaf7cb3eec3ccb5d9b",
+      "engine.stderr.log_sha256": "bf11d5ac845072fbef0247a923f33feff632da0a4d7aef7d7515e5a37eb67d9c",
+      "trace_path": "artifacts/runs/c781fa79-dce7-402b-922a-6c2f30a11f5b/decisions.jsonl",
+      "trace_sha256": "d448e9d1ac09d4f6f0ad97e15c1dbeee050af93afd750743925071256f535ae2"
+    },
+    {
+      "case": "A5-016",
+      "seed": "e171_opening_Ironclad_A5_016",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 16,
+      "status": "defeat",
+      "steps": 204,
+      "illegal_actions": 0,
+      "map_queries": 19,
+      "final_context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 4,
+        "room_type": "Monster",
+        "boss": {
+          "id": "THE_INSATIABLE_BOSS",
+          "name": "The Insatiable"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "d5a5414e72e000f8c02b1e9eee6664fe53ecc5602fa8ed4f2bc456acbec46a1b",
+      "transition_hash": "16a7a0037e1210ad8dacc7c55e52fc53012c5f144ebb63d69264b4732eece9fd",
+      "seconds": 7.5377787908073515,
+      "wire.jsonl_sha256": "c52d37ed7689a77b5d15f9ee2d7d4cd0087c5c78124c888112570719a4160b65",
+      "engine.stderr.log_sha256": "e12d76979a8b24d24a423faf36cd73e5afaf7a153dd12471c1f0c3ca4ed2023c",
+      "trace_path": "artifacts/runs/47390259-f4ce-4806-aebe-6faa1ee03a2b/decisions.jsonl",
+      "trace_sha256": "cbd818d520a05b01eb4a2307ef7f109c36b190e573761c5cd5e4f874fd32c309"
+    },
+    {
+      "case": "A0-017",
+      "seed": "e171_opening_Ironclad_A0_017",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 17,
+      "status": "defeat",
+      "steps": 73,
+      "illegal_actions": 0,
+      "map_queries": 7,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 8,
+        "room_type": "Monster",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "accedd8f020ef47fb08545f8940d062abbd8f0feb7f1de152784966ebb47d9f5",
+      "transition_hash": "eca8dc5e8ed7ae857b9495f281b4aaac9dbc7fb9d7a071885269892bf42dd5b0",
+      "seconds": 2.9536928329616785,
+      "wire.jsonl_sha256": "ce77bebb95bfcbc4ca231d071544f0ca2f51ae306959357315e0efc8751c0f7b",
+      "engine.stderr.log_sha256": "4977d8c40ff411d5b554078bbbe33ef5ac91e408a79bdf09f21ec4305478eaec",
+      "trace_path": "artifacts/runs/fd7b3b2d-16cc-408e-b3ca-cfa34a12254f/decisions.jsonl",
+      "trace_sha256": "25c7ed194ee727f7766cae29d744b3aa813014b08b376c66f9b77c10f3404732"
+    },
+    {
+      "case": "A5-017",
+      "seed": "e171_opening_Ironclad_A5_017",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 17,
+      "status": "defeat",
+      "steps": 202,
+      "illegal_actions": 0,
+      "map_queries": 16,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "163b1b26e0c5118e99dfe8b93f80351cec3c8bd8fa969b61f43ee6ff54d5535c",
+      "transition_hash": "6f4fc50458630e0ba0f13b99531e6560b48b4fe78d3ad69f320f6de673ad914f",
+      "seconds": 7.466693290974945,
+      "wire.jsonl_sha256": "de91deaee6eed4a270fa717aeb56439270e2d8e4851ae92a5d63dee3c748ef73",
+      "engine.stderr.log_sha256": "f896289180358973825313e82e5372fda04642463d4aff822d8795a363f641b8",
+      "trace_path": "artifacts/runs/cfd195ba-414f-4c27-be4a-dab27fcd24b8/decisions.jsonl",
+      "trace_sha256": "b7e758cddb797b6d55261aa4e0a40d3a1314e714b3f0fcd397e3e8866a1da441"
+    },
+    {
+      "case": "A0-018",
+      "seed": "e171_opening_Ironclad_A0_018",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 18,
+      "status": "defeat",
+      "steps": 268,
+      "illegal_actions": 0,
+      "map_queries": 21,
+      "final_context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 6,
+        "room_type": "Monster",
+        "boss": {
+          "id": "KNOWLEDGE_DEMON_BOSS",
+          "name": "Knowledge Demon"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "a7fd560924c96baa199f400d4a016aa6e7eb4f35c3f071f42256bed3381894a2",
+      "transition_hash": "3cbe8228a8afd8584c3abf6422d73a99b5101e58f9e73ea3733964e88fcb1337",
+      "seconds": 9.05472583300434,
+      "wire.jsonl_sha256": "643d101dcba9728ece3440b94c127e7bc085f1cc57fc35d8df7d2a97a36df8a1",
+      "engine.stderr.log_sha256": "7068cc02359b74e6671a627ebf62e385caaf69a2b1b3339190d20e8e2c30fafe",
+      "trace_path": "artifacts/runs/8e5623b3-c2e0-4bf7-9f66-3a5bd90e68c5/decisions.jsonl",
+      "trace_sha256": "b5bec02d9ae94177ff9e8aa7789d54eab3adef61cffb0e35f4c5fe5033fcca66"
+    },
+    {
+      "case": "A5-018",
+      "seed": "e171_opening_Ironclad_A5_018",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 18,
+      "status": "defeat",
+      "steps": 345,
+      "illegal_actions": 0,
+      "map_queries": 25,
+      "final_context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 10,
+        "room_type": "Elite",
+        "boss": {
+          "id": "KAISER_CRAB_BOSS",
+          "name": "KAISER_CRAB.name"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "3db8959320261a08dcf1e1fc652531dc8c4026ebed1114a1affea4302e216bc1",
+      "transition_hash": "60c3a0b3c2d98b7bc3948eada2176bcaf272cb021f0b53905e0c9973241b6cdf",
+      "seconds": 12.060633999994025,
+      "wire.jsonl_sha256": "6124f8cdfbdc2bc2df773d60e48626b864c98c817c9d1c602aa5d43d317f5dc1",
+      "engine.stderr.log_sha256": "d06cbf49b1cb801f7bf695a83704f508c65e8608f4be74bba8864f121d8e76fd",
+      "trace_path": "artifacts/runs/95d7ecd9-1f72-4760-8761-592f13df362b/decisions.jsonl",
+      "trace_sha256": "b3be4375d491bcc1c4ca65ed221b96f21bfd771745bbeb15c10b7ef7dcab68c2"
+    },
+    {
+      "case": "A0-019",
+      "seed": "e171_opening_Ironclad_A0_019",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 19,
+      "status": "defeat",
+      "steps": 217,
+      "illegal_actions": 0,
+      "map_queries": 16,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "87600850fcf02dfb3c260c8fae4b42a70c72d0c3642087cac1936f5f495131d0",
+      "transition_hash": "ed20d9e4afb19522fa41563960756580758e088b15b93742b9f41341568eba32",
+      "seconds": 8.020591291133314,
+      "wire.jsonl_sha256": "5c350bc690dc4891f25ca21665ddc33e0cb8c3a8ff809d9955106bf697a5a3a8",
+      "engine.stderr.log_sha256": "ff877a9a476e010f39275d863679c859972dab73983dbaab0dc614a1ee148d4d",
+      "trace_path": "artifacts/runs/c9da217c-e11e-4344-958a-7f359d03cafd/decisions.jsonl",
+      "trace_sha256": "681c32524f328fd78b2d4d475da0e89c81b2d57288125340c9116c45c9ac687b"
+    },
+    {
+      "case": "A5-019",
+      "seed": "e171_opening_Ironclad_A5_019",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 19,
+      "status": "defeat",
+      "steps": 120,
+      "illegal_actions": 0,
+      "map_queries": 16,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "efce186a4d8abbe851b26b4258c4a700192a89a1bcf32574b616f273beeb0cb9",
+      "transition_hash": "39b2f0fcf8b4e2e5e683cde9d005a21756bfbe73803dbcf178fc744d43c23696",
+      "seconds": 4.9020942081697285,
+      "wire.jsonl_sha256": "3bcb7474043944c8b82c9086f177ee60f69ce55437285b3860d0335d12fb2e7a",
+      "engine.stderr.log_sha256": "b971cdf61bb4f9abe93ef8bf2b4f9f966954d6b7194937c0340d297171c8d66d",
+      "trace_path": "artifacts/runs/03b31a12-0aba-4856-ac2b-05ab1e9edb83/decisions.jsonl",
+      "trace_sha256": "fc304c8c587fd503570bb15363cb4fcf6ea40be71cbe49fee4044bc435c3616b"
+    },
+    {
+      "case": "A0-020",
+      "seed": "e171_opening_Ironclad_A0_020",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 20,
+      "status": "defeat",
+      "steps": 234,
+      "illegal_actions": 0,
+      "map_queries": 20,
+      "final_context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 5,
+        "room_type": "Monster",
+        "boss": {
+          "id": "THE_INSATIABLE_BOSS",
+          "name": "The Insatiable"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "a38fd1ac98fa8a5e5b293e65cdd5ab578eb5d0dd0da94805f5f991159a436d98",
+      "transition_hash": "2a40d403bf8580065232da85bbd8703dc953568f5486da02afd50138f61d39b9",
+      "seconds": 8.454062042059377,
+      "wire.jsonl_sha256": "ed59f357cd08bf0e459a938b8d5c1fc5fec06a998ec3d05560f8436a3f94ec0a",
+      "engine.stderr.log_sha256": "4ec1aba33102e69b2b507dc95ff48216d043ee1dec8346212db5e476c6962643",
+      "trace_path": "artifacts/runs/acaa4acf-563d-466f-897c-b6d3b97521d8/decisions.jsonl",
+      "trace_sha256": "07d77bea8d79d26c1e8cc49f1463a27590b758ce4fae9778961e8f0b57cbd9fa"
+    },
+    {
+      "case": "A5-020",
+      "seed": "e171_opening_Ironclad_A5_020",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 20,
+      "status": "defeat",
+      "steps": 198,
+      "illegal_actions": 0,
+      "map_queries": 16,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "d9743c15d19696d2ea58bfd75c20edd249b9c7f57bdb1ee2671436a031df2e44",
+      "transition_hash": "564d4c256d001d1344946d58c5085a6d2a001f8852dd2a911e999c8fa8e706de",
+      "seconds": 7.625732667045668,
+      "wire.jsonl_sha256": "32bfb023868ccdee74df78a17b02634b0a467928f841158f8f909db3431236d2",
+      "engine.stderr.log_sha256": "21f3861148ca1517b4c058f1240512ef34764ba653fa13a882d3e892f083560c",
+      "trace_path": "artifacts/runs/4630d80a-fec3-4a17-b15c-2fe8a5fac60d/decisions.jsonl",
+      "trace_sha256": "c34a50eb9b9e4278145b25946e1f293e6fae3a1648c86b1e8e1d6ab34ce206be"
+    },
+    {
+      "case": "A0-021",
+      "seed": "e171_opening_Ironclad_A0_021",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 21,
+      "status": "defeat",
+      "steps": 82,
+      "illegal_actions": 0,
+      "map_queries": 8,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "51aee2d8769fd5243ef9174c0eac5c1cec4e5f699e138e6e02a7867b2a9b0ce4",
+      "transition_hash": "f4aa44961fdbfc2b245a7690ecbd6646cfbccc105966aae8db7bc9e6bc9201dc",
+      "seconds": 3.2915004999376833,
+      "wire.jsonl_sha256": "9f2880e0898e82c19ffcca8a655c679005bb739e0e623db1d3b68d2c7eb56e59",
+      "engine.stderr.log_sha256": "0e76d9edfad63f5184705962639fb3a71dfeba5a5da31e45084a0abe7852ce08",
+      "trace_path": "artifacts/runs/85c2f0d5-9f2c-4a14-934b-10a79a04af48/decisions.jsonl",
+      "trace_sha256": "c9a49a4f10f7c2f5340c2b4a4a8931ad768818e210371a4cc56813e5d9582144"
+    },
+    {
+      "case": "A5-021",
+      "seed": "e171_opening_Ironclad_A5_021",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 21,
+      "status": "defeat",
+      "steps": 196,
+      "illegal_actions": 0,
+      "map_queries": 16,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "f641c3aba7bb90d1e48317ee47f96c3fe000f379439b90fc60a89d9eaf14c81d",
+      "transition_hash": "4e8db8a82c3259cb6b0bf730de077293b9151ebcb3f0fdab4e134ad814b00c52",
+      "seconds": 7.336235375143588,
+      "wire.jsonl_sha256": "1a1dfb5b910c1ec2cbd4dc862968224f497a9c850b4ab5bc9f228168938b20ce",
+      "engine.stderr.log_sha256": "b73a2a3ce0d9e4e7862525ac1af872f5908b93cdab3c08d5dd46cac053769acb",
+      "trace_path": "artifacts/runs/31373c30-dc50-4a2e-b083-775ff0a801a7/decisions.jsonl",
+      "trace_sha256": "47858fdfb22ab7e53272672fd4bf02a7f0ef8440e55761b6affa2387b17b3589"
+    },
+    {
+      "case": "A0-022",
+      "seed": "e171_opening_Ironclad_A0_022",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 22,
+      "status": "defeat",
+      "steps": 205,
+      "illegal_actions": 0,
+      "map_queries": 16,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "161b58ed1757803104e065d3529218fea2da5c55a75a19e3a320567317e037dd",
+      "transition_hash": "3d23866d4d13b62e1a2b0c34cb18bac4a0e243bbe8a1185bee23aa65cbed0ba8",
+      "seconds": 7.013574499869719,
+      "wire.jsonl_sha256": "723cd39f22246098a03adef47e0a3a977d5ecdda992cd7c55d02eed7cfc5bd29",
+      "engine.stderr.log_sha256": "52951c28f3dc39f1ec89744e7b446842f0bce6e172e6a200158e2936a665188f",
+      "trace_path": "artifacts/runs/104137a3-d0ee-4902-b4d3-68181d7d48b4/decisions.jsonl",
+      "trace_sha256": "e87eac566b20b2c1470c3d8cada2100db35e451ca711166ccf7767ddc101fe62"
+    },
+    {
+      "case": "A5-022",
+      "seed": "e171_opening_Ironclad_A5_022",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 22,
+      "status": "defeat",
+      "steps": 254,
+      "illegal_actions": 0,
+      "map_queries": 21,
+      "final_context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 6,
+        "room_type": "Monster",
+        "boss": {
+          "id": "KAISER_CRAB_BOSS",
+          "name": "KAISER_CRAB.name"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "c612739e54e2fe43085e48c281ea48d33283e14c983143ca81bdd14d181cbfc4",
+      "transition_hash": "2015d49b1e12df9c9b2c2797efa37415503b92461df0bb7d8f9879f2be1141d9",
+      "seconds": 9.199075291864574,
+      "wire.jsonl_sha256": "ecb9b104aa761c9755b946479070ca3eb252e3f4e76334eb1e0390032ddb0fc8",
+      "engine.stderr.log_sha256": "0630c8ccef8e1fbc16ad46c4903a5ccbc62f101f371e5d7f739f2c81693900d7",
+      "trace_path": "artifacts/runs/5621f5b3-2ae8-428e-8d98-007ec3818aad/decisions.jsonl",
+      "trace_sha256": "24647b5ddd286c7cb963800deff1966f7aef071812e496d78c5fb07dc7ae06a2"
+    },
+    {
+      "case": "A0-023",
+      "seed": "e171_opening_Ironclad_A0_023",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 23,
+      "status": "defeat",
+      "steps": 189,
+      "illegal_actions": 0,
+      "map_queries": 16,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "c9fd5fb453e0bbebca04c2e2ecb7446d5b82c1392a4b2092150ef27376bd6fa6",
+      "transition_hash": "9b4a753ce516c35e4e5c6cdd799cd4c57b5ba420d82ebbb4cad9140914b13ad4",
+      "seconds": 7.045266791945323,
+      "wire.jsonl_sha256": "31b6a89ac77aaa70895c96f50606f37a1ddd7ad27c69ed86d15b092e0dd4b490",
+      "engine.stderr.log_sha256": "c985afc083ab362f2b1da1f46df2b5c547d15c9d03a3279c3122de579d037cc8",
+      "trace_path": "artifacts/runs/20e16bff-d930-4ca3-8a75-d58023793c82/decisions.jsonl",
+      "trace_sha256": "e4b6d80bfb6e3ed403d6d2f79ab761b044e406899b60ea19b7661a6a8ee50ac0"
+    },
+    {
+      "case": "A5-023",
+      "seed": "e171_opening_Ironclad_A5_023",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 23,
+      "status": "defeat",
+      "steps": 262,
+      "illegal_actions": 0,
+      "map_queries": 20,
+      "final_context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 5,
+        "room_type": "Monster",
+        "boss": {
+          "id": "KNOWLEDGE_DEMON_BOSS",
+          "name": "Knowledge Demon"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "6c11a5b2c9b8f7bb08ece98ba835b99ea876bb9e430a5450fedcee4cccc7a95b",
+      "transition_hash": "49867c442bee43c38f1a9b37042292a6d669e380e464db4a7d2ed5768590a178",
+      "seconds": 9.381557374959812,
+      "wire.jsonl_sha256": "25e1ac5af2e7e06aa33dd4b8b0f83e8cc58e64e6af5de09556ad14322608e292",
+      "engine.stderr.log_sha256": "d470076087813443c3ac338c36e7e29a4f6cafda2481a9767561cd9dfb5f1a92",
+      "trace_path": "artifacts/runs/c099f077-1e11-4404-ab63-f66e63b86b62/decisions.jsonl",
+      "trace_sha256": "117e30658cf4aa3f5f6e5d979bfdd14d83dd1ad24efb65613dd1ab13dd55716c"
+    },
+    {
+      "case": "A0-024",
+      "seed": "e171_opening_Ironclad_A0_024",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 24,
+      "status": "defeat",
+      "steps": 195,
+      "illegal_actions": 0,
+      "map_queries": 16,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "6db1313d1f9bcdf1031966b5696e13fb7730f7d1bb250e2c73cc1fd39506cfbf",
+      "transition_hash": "812e958792f9dcded13fc9a91b05e254f8250a8be12cf78f59f0cf6e2c59983d",
+      "seconds": 7.108099834062159,
+      "wire.jsonl_sha256": "61e0a0b138c312c4c261de00a54ceb1e3e63786bd13fe56cbda73c04d82a323e",
+      "engine.stderr.log_sha256": "a599538ebc0258930cb8c4afe268f0d8a1073f9366c1f73272b3de6cb170ce86",
+      "trace_path": "artifacts/runs/317e5adc-5e8a-40e1-b9bd-71ecff3af6b5/decisions.jsonl",
+      "trace_sha256": "e1d09d648a7f8df891aaa91f0e46a61e4c26bc6f6696297169fadcfcc841df21"
+    },
+    {
+      "case": "A5-024",
+      "seed": "e171_opening_Ironclad_A5_024",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 24,
+      "status": "defeat",
+      "steps": 235,
+      "illegal_actions": 0,
+      "map_queries": 16,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "cecfd83ef3a26ce8b4cd10cde89b7fb643b7962bc63f690e705df1f99618a8ea",
+      "transition_hash": "b9140e71496321a064af0c83544b67f6351ddf3b378af32c1a871d798781df40",
+      "seconds": 8.590966082876548,
+      "wire.jsonl_sha256": "ed59353818274ffe1c3e6e35412cdc8e0f835ab80615b304171978bfbb428bfb",
+      "engine.stderr.log_sha256": "1bdf13192d06f2069d03733852cdcda09864cdf9af1e9e9cac1add134e41acd9",
+      "trace_path": "artifacts/runs/d68ed5c4-2efb-42ba-b147-8c2e04c4446e/decisions.jsonl",
+      "trace_sha256": "a000e6fc115907b437323e3c385f30a5cb356d5b882b82957d61daf346ca7fe3"
+    },
+    {
+      "case": "A0-025",
+      "seed": "e171_opening_Ironclad_A0_025",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 25,
+      "status": "defeat",
+      "steps": 142,
+      "illegal_actions": 0,
+      "map_queries": 8,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Elite",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "2e58e27656e54926cc4b4a49229fb0d8c1109e466f417fdac3d7fc4b51ac195d",
+      "transition_hash": "bb2e5f1be9237286c3d57f681321dd08a14414115bc9e056c061ff09f6b60ced",
+      "seconds": 5.001924375072122,
+      "wire.jsonl_sha256": "b42aa2079f0fbddc489f7d34c7ee7ee110eb34765b94f2f9973b7a6856515592",
+      "engine.stderr.log_sha256": "fec80778581f7b348dce5bad66753b7faf1cdbde04d5107eacb5de9aba737325",
+      "trace_path": "artifacts/runs/3f2cf8b7-4660-4f46-888b-5a4a60413169/decisions.jsonl",
+      "trace_sha256": "55926516a597d3a2cc93de921b17d461690371ca4eb8622c3b164b5ac21d177e"
+    },
+    {
+      "case": "A5-025",
+      "seed": "e171_opening_Ironclad_A5_025",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 25,
+      "status": "error",
+      "steps": 261,
+      "illegal_actions": 0,
+      "map_queries": 19,
+      "error": "RuntimeError: Action 'choose_option' failed: MissingMethodException: Method not found: 'Godot.Vector2I Godot.Vector2I.get_One()'.",
+      "final_context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 4,
+        "room_type": "Event",
+        "boss": {
+          "id": "KNOWLEDGE_DEMON_BOSS",
+          "name": "Knowledge Demon"
+        }
+      },
+      "final_hp": 33,
+      "final_hash": "0c22607bcf6a24c22e73f2f14d95e5a842cc4e99adf06165c5ec17a945831e65",
+      "transition_hash": "cecba1775eef16e7e41655b64296ffe0ea3e58d55f238c1797602c8bee284a55",
+      "seconds": 9.647249417146668,
+      "wire.jsonl_sha256": "b6765421fda351bafed11fde7cbcb2b748b4701d72ddad6541954ca0702ff97e",
+      "engine.stderr.log_sha256": "6784172756085d43491be201c913da03a64b836a955109f3cfb0d03bd06321ab",
+      "trace_path": "artifacts/runs/2d44fc6e-9b97-4562-8438-e6421f297c02/decisions.jsonl",
+      "trace_sha256": "c5e963758c4eb2cb349d495baa55465c7bf97fcfdeaee8d20ec6cdb561a7043f"
+    },
+    {
+      "case": "A0-026",
+      "seed": "e171_opening_Ironclad_A0_026",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 26,
+      "status": "defeat",
+      "steps": 181,
+      "illegal_actions": 0,
+      "map_queries": 16,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "8175289f6eac1d7865a88392c4ffad850be2ce1ee8b7c75bc25bc8d1650e736d",
+      "transition_hash": "803d1fddc134283b6474bacd3dd0264c57ff73c71c15213d6f5c3151dda4b30b",
+      "seconds": 6.564930374966934,
+      "wire.jsonl_sha256": "f94692a64918d7979badd4cd42fccf654ac0fd33668b9ed7abc0dc44b017a26e",
+      "engine.stderr.log_sha256": "94021245f0c24f005b98e2d0ed38fd7aed82c9c37f221461968ff9738bb7e811",
+      "trace_path": "artifacts/runs/fec1f62a-b24e-44e0-8750-e7db21d712d6/decisions.jsonl",
+      "trace_sha256": "7f67fa38816f8a0cc7b36a577bd90e1ea0577598048351456ba51b842fc2e9d7"
+    },
+    {
+      "case": "A5-026",
+      "seed": "e171_opening_Ironclad_A5_026",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 26,
+      "status": "defeat",
+      "steps": 31,
+      "illegal_actions": 0,
+      "map_queries": 3,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 4,
+        "room_type": "Monster",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "ef0c63f9b6c7efca63f59ca1b512761139a2b21b18a240a7096f48be36417f75",
+      "transition_hash": "7da0879943f4dc7e2ff7a1da9021211552c2eaacac7b3fdc40e8a18db77d9232",
+      "seconds": 1.7885185000486672,
+      "wire.jsonl_sha256": "fd78998af4ce740c191d834ab0b54f26cdc4d6e1747c64b4452ce9094cb24a62",
+      "engine.stderr.log_sha256": "96e2ff135edbb71fbc1bdf835434eb9354a9ae7c0c57ff203c4448fc85d2bd18",
+      "trace_path": "artifacts/runs/039d67f6-3f65-48c8-88de-6f020253487d/decisions.jsonl",
+      "trace_sha256": "69b81f6e777b3b948c663902156d628400cd3e87aece753c0663897b30c5f746"
+    },
+    {
+      "case": "A0-027",
+      "seed": "e171_opening_Ironclad_A0_027",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 27,
+      "status": "defeat",
+      "steps": 260,
+      "illegal_actions": 0,
+      "map_queries": 19,
+      "final_context": {
+        "act": 2,
+        "act_name": "Hive",
+        "floor": 4,
+        "room_type": "Monster",
+        "boss": {
+          "id": "KNOWLEDGE_DEMON_BOSS",
+          "name": "Knowledge Demon"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "3340a6230bda73f6a4d6e0405e6010a587948494561ba00a074f683f6bc9e9a6",
+      "transition_hash": "9abc3b2bacf635e561c3c065b54a7a49a7b604e0a1f5ef9be68d7fc30716dd00",
+      "seconds": 9.469742415938526,
+      "wire.jsonl_sha256": "cacd49aa59fe71af5ad521cbc27acb11e602240fced8d4c2a457b9e1935a14bb",
+      "engine.stderr.log_sha256": "3b899e5f647e310c00331f6d710828fb0d71493f98e41099cafce840fec1abd7",
+      "trace_path": "artifacts/runs/eb541c07-8b21-4af7-aa91-e73fa142a16e/decisions.jsonl",
+      "trace_sha256": "7bd661ff0f27e1c888d75da9393b238c8e7c1ab98b40e5004f9cc4c63ed8b751"
+    },
+    {
+      "case": "A5-027",
+      "seed": "e171_opening_Ironclad_A5_027",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 27,
+      "status": "defeat",
+      "steps": 75,
+      "illegal_actions": 0,
+      "map_queries": 7,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 8,
+        "room_type": "Elite",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "f59f9ea92b8f610a405645579addc7c61a93036d72f532dbaa552e7530211891",
+      "transition_hash": "df2c7645646023c1fb42c8a12bfaa2f2f96d226e61ca2177eee8962e2e905bf9",
+      "seconds": 3.5617703329771757,
+      "wire.jsonl_sha256": "a0e9a214e28c9521d7ca76f69e37dac3270c92d83411ae65f64f184d0c5a9bd9",
+      "engine.stderr.log_sha256": "80a89b1737cf7a5ce21f496419f44c677943a4ed240a512a79f97d66d738c33b",
+      "trace_path": "artifacts/runs/105c4cf6-81e3-441b-bb25-3b9265a08773/decisions.jsonl",
+      "trace_sha256": "071abc59ba0996be6c68e7b4d88082b9c7465f78a59b9dd6b843f0f5770ec38e"
+    },
+    {
+      "case": "A0-028",
+      "seed": "e171_opening_Ironclad_A0_028",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 28,
+      "status": "defeat",
+      "steps": 110,
+      "illegal_actions": 0,
+      "map_queries": 8,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 9,
+        "room_type": "Monster",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "5c4b10392b14b5dbd3d5481f9de6c07bee195e8d6f6a82a689f313d937a76ae5",
+      "transition_hash": "f97056b7f7a17bc9d03bf388b6510fa5216fd9346652cf3773f7dd2bd4a93229",
+      "seconds": 4.124054000014439,
+      "wire.jsonl_sha256": "5d6fc67280f4b88792d9e981b704a4b47842a28d4964bb5f1cf584dc71a263d8",
+      "engine.stderr.log_sha256": "074094bbbcb2a2380ac7f7532347dcac4d649d9d3e96a7913134500a6e408536",
+      "trace_path": "artifacts/runs/75387564-1bb6-4c1b-882e-a5481a238c30/decisions.jsonl",
+      "trace_sha256": "6cca0b4a416c7afcbfe226e70caed2cc2ff2efe515db4e7039de1c727cc76937"
+    },
+    {
+      "case": "A5-028",
+      "seed": "e171_opening_Ironclad_A5_028",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 28,
+      "status": "defeat",
+      "steps": 178,
+      "illegal_actions": 0,
+      "map_queries": 16,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "db4eb02864ec47eeb428cfe52a447d5dc577132ffdf174515321e539fcfb1a16",
+      "transition_hash": "6b5f20fc5e09ed1691fecdf06a2a44c1d32a3dfa0e0bcf21115aff609ea6bafc",
+      "seconds": 7.867846041917801,
+      "wire.jsonl_sha256": "45b4cb42c1cc870812a56a55b2f82424dfaa35b2d0c2aafcd40ebbbc56ec0893",
+      "engine.stderr.log_sha256": "f8ccbf39a3e930aeef0c1987cd61124e7c0d7b996cecdaeb372478a6bef6199d",
+      "trace_path": "artifacts/runs/0718be03-85af-4d88-8feb-1b557dc5da8d/decisions.jsonl",
+      "trace_sha256": "48dfa0a09166ac888c74005ea7036939f0da44f788c5328e4b6878eb357ae9ba"
+    },
+    {
+      "case": "A0-029",
+      "seed": "e171_opening_Ironclad_A0_029",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 29,
+      "status": "defeat",
+      "steps": 66,
+      "illegal_actions": 0,
+      "map_queries": 6,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 7,
+        "room_type": "Elite",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "4fd7000d78599900977ba5eef63589d3745083b6407c7b06e6bdba148064501a",
+      "transition_hash": "a8fd504c65ae3910b65e071ce12a48dd1866dac156693ff4ea2c94971c73dee9",
+      "seconds": 2.90519787510857,
+      "wire.jsonl_sha256": "4d53d769217154ea365d0b59c61068ff961985dda5c593c9428482ab2b3caa41",
+      "engine.stderr.log_sha256": "23ce148394a0099a11b5bb950b5fa80b27dd89da38c3044a14def67f25809b92",
+      "trace_path": "artifacts/runs/d244ff71-3db4-4caa-939e-145dc0ff9364/decisions.jsonl",
+      "trace_sha256": "4b504e19074801dead260adb884ff67d3f9a754fb78ecaebdfb9c9111a183041"
+    },
+    {
+      "case": "A5-029",
+      "seed": "e171_opening_Ironclad_A5_029",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 29,
+      "status": "defeat",
+      "steps": 168,
+      "illegal_actions": 0,
+      "map_queries": 16,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "VANTOM_BOSS",
+          "name": "Vantom"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "5d59019d458820110429b13b634ff34c9c4f408580b94bf64cf34f4cc4577c97",
+      "transition_hash": "92035d37504a80c5b87d4653d61d629a24eff8f535be90a1bcdd757d64997a82",
+      "seconds": 6.122201875085011,
+      "wire.jsonl_sha256": "3961e297898ff2f170feae250da6846e168e43bac72e6bca7e7c6667203c390b",
+      "engine.stderr.log_sha256": "52db57975b5020448044d2e69ccb8bd687fe3f29c6c15bc7026f0f709619e72c",
+      "trace_path": "artifacts/runs/28d89322-830f-4869-84c1-1f8cfb8ed1e3/decisions.jsonl",
+      "trace_sha256": "c71430437014956616a5cf6a2db6cb63c05e3ff94b0e8923e7491df98f22989d"
+    },
+    {
+      "case": "A0-030",
+      "seed": "e171_opening_Ironclad_A0_030",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 30,
+      "status": "defeat",
+      "steps": 209,
+      "illegal_actions": 0,
+      "map_queries": 16,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 17,
+        "room_type": "Boss",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "a86ab143a728984e0c796b5dd471dcadb8e8b34ae9b67594bb0d7f4018f19bab",
+      "transition_hash": "37007a4c9baf62efcc474a7485f02ad12083ee868e47c660d3f59dbf36c1ac89",
+      "seconds": 7.891564500052482,
+      "wire.jsonl_sha256": "9406b756f3389eaaf427127804d5002f69b3769edeecf2380c87850756fb6289",
+      "engine.stderr.log_sha256": "9611e06a41a9c030bb9fce10787c54b7eb96012647075b7d47360676c4e75f3e",
+      "trace_path": "artifacts/runs/54aabd19-52a0-4b27-b1ca-eee4ac059fcc/decisions.jsonl",
+      "trace_sha256": "ec3ea51ec1f160b3964684001fa7dab3af8db9acd4efba5620aa5c9f6485a7f8"
+    },
+    {
+      "case": "A5-030",
+      "seed": "e171_opening_Ironclad_A5_030",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 30,
+      "status": "defeat",
+      "steps": 102,
+      "illegal_actions": 0,
+      "map_queries": 7,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 8,
+        "room_type": "Elite",
+        "boss": {
+          "id": "THE_KIN_BOSS",
+          "name": "Kin Priest"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "ad49a9230db4a8b4e049ac26fa2ad204fb4e5113966d65a722eebce9954e99b7",
+      "transition_hash": "f0d91bba1d0a20664dccfe79e92b08539a4f3ae58e572a52615cb82b9682da68",
+      "seconds": 4.175244708079845,
+      "wire.jsonl_sha256": "39ee2eca1739b58ad7591709e357c50198c533a8d732bcee72f40dd6920dd159",
+      "engine.stderr.log_sha256": "2cb6cff8c51a9613b74f866cdf7aa0d48b1ae66d549fb7e7fec6870732e1706a",
+      "trace_path": "artifacts/runs/aeeccd0a-d05f-41fc-9ddc-a80eda60b0b8/decisions.jsonl",
+      "trace_sha256": "4041bffd8e8abc4c6ff4a42c4569e39fe9246a5374e7dd761304d0d9db928d8a"
+    },
+    {
+      "case": "A0-031",
+      "seed": "e171_opening_Ironclad_A0_031",
+      "character": "Ironclad",
+      "ascension": 0,
+      "index": 31,
+      "status": "defeat",
+      "steps": 395,
+      "illegal_actions": 0,
+      "map_queries": 36,
+      "final_context": {
+        "act": 3,
+        "act_name": "Glory",
+        "floor": 6,
+        "room_type": "Monster",
+        "boss": {
+          "id": "AEONGLASS_BOSS",
+          "name": "Aeonglass"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "264cde9e90d61440ae5adf04485a395968fd13c45cd33872d40d3e20cd0d4c4c",
+      "transition_hash": "2a76f20c65c3102761670b9e6e49f805cfbfd29a47aaeb3eb18ec06977edd6ed",
+      "seconds": 13.37565187504515,
+      "wire.jsonl_sha256": "35262988b13478c9f9cbc590720969eeb24c17638add1112b7f6a35cb2734e01",
+      "engine.stderr.log_sha256": "8c26f6075103df31bd1ef5db916b1d527b16c3f4ae869453ed38ab94229e956b",
+      "trace_path": "artifacts/runs/ff0ff2c4-2eee-40c1-8b1d-7928a09dbd10/decisions.jsonl",
+      "trace_sha256": "000c1c37c04baa094faf3387ad30c2b7c06d24ab6a737b83621734d5ea15455d"
+    },
+    {
+      "case": "A5-031",
+      "seed": "e171_opening_Ironclad_A5_031",
+      "character": "Ironclad",
+      "ascension": 5,
+      "index": 31,
+      "status": "defeat",
+      "steps": 131,
+      "illegal_actions": 0,
+      "map_queries": 6,
+      "final_context": {
+        "act": 1,
+        "act_name": "Overgrowth",
+        "floor": 7,
+        "room_type": "Elite",
+        "boss": {
+          "id": "CEREMONIAL_BEAST_BOSS",
+          "name": "Ceremonial Beast"
+        }
+      },
+      "final_hp": 0,
+      "final_hash": "9d26e4239076edd85ac88de077588918ea25d30d33cae894e51e10d9a847d453",
+      "transition_hash": "c2d38c3f9a34b9d42b6ff78153bccf3a88b14a48049ef6a11ac0ca43fcabca6e",
+      "seconds": 4.897185291862115,
+      "wire.jsonl_sha256": "3acf94c5cd28ed11850b4d9d1704a0836a2dd44c752e79c193bd28676ba6712a",
+      "engine.stderr.log_sha256": "4328a93ad3af07aba3b931d4bc16a68623a8ac3065554473c9e5a3e6870a526f",
+      "trace_path": "artifacts/runs/ef115969-7fb9-46df-b631-fafdcf753bf1/decisions.jsonl",
+      "trace_sha256": "589f4988ed45d25f7bdfa5657962f714fa57b8f32aa5e7063c1340b723ac3538"
+    }
+  ],
+  "seconds": 118.65685962489806,
+  "statuses": {
+    "defeat": 62,
+    "error": 2
+  },
+  "raw_audit": {
+    "raw_traces": 64,
+    "failures": [],
+    "pass": true
+  },
+  "within_budget": true,
+  "model_api_calls": 0
+}
