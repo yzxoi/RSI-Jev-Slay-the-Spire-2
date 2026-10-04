@@ -1,0 +1,37 @@
+{
+  "case": "A0-000",
+  "run_id": "ea706bb8-2c06-4ae1-9d38-cd97c5e627d6",
+  "seq": 29,
+  "state_hash": "7ab1c0b705165d6b547ba04caa85a54d74decae775dcceae3322633d31e6994e",
+  "choice_id": "a001",
+  "campaign_plan": "Take Twin Strike to strengthen both Perfected Strike and Hellraiser while retaining low energy cost. Reserve Regen for an elite/Boss or substantial HP loss; leave existing reserve rules in place.",
+  "potion_reservations": [
+    {
+      "potion_id": "BLOCK_POTION",
+      "until": "Elite",
+      "release_hp_fraction": 0.5
+    },
+    {
+      "potion_id": "POWER_POTION",
+      "until": "Elite",
+      "release_hp_fraction": 0.5
+    },
+    {
+      "potion_id": "VULNERABLE_POTION",
+      "until": "Boss",
+      "release_hp_fraction": 0.5
+    },
+    {
+      "potion_id": "ASHWATER",
+      "until": "Boss",
+      "release_hp_fraction": 0.25
+    },
+    {
+      "potion_id": "REGEN_POTION",
+      "until": "Elite",
+      "release_hp_fraction": 0.5
+    }
+  ],
+  "acquire_reservation": null,
+  "transaction_steps": []
+}
