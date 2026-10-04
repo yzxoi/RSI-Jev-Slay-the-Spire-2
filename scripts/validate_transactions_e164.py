@@ -113,7 +113,7 @@ def synthetic(record):
                 lambda s:s['player']['deck'].pop(),
                 lambda s:s['player']['potions'].append(dict(id='UNEXPECTED')),
                 lambda s:s['context'].__setitem__('floor',999),
-                lambda s:s['cards'][0].__setitem__('cost',999),
+                lambda s:next(c for c in s['cards'] if c.get('is_stocked')).__setitem__('cost',999),
                 lambda s:s['cards'].pop()]
             for mutate in mutations:
                 bad=copy.deepcopy(after);mutate(bad)

@@ -50,3 +50,9 @@ v2 treats an unavailable slot as (index, null, false), while retaining complete
 identity/price hashes for every stocked offer. This allows the engine's normal
 sold-out serialization without accepting changes to any buyable item. Also reject
 boolean/noninteger offer indexes. Same inputs/thresholds/budgets; output v2.
+
+v2 `82e834f`: the price-mutation test targeted slot0 even when that slot was
+already sold; this intentionally irrelevant change is now correctly ignored.
+The test expectation was wrong, so the harness stopped before engine replay.
+v3 mutates the first *stocked* offer's price. No policy or gate changes. Preserve
+v2 compiled output and failure; rerun all checks into validation-v3.json.
