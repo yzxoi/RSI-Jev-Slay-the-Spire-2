@@ -1,0 +1,47 @@
+{
+  "case": "A0-000",
+  "run_id": "ea706bb8-2c06-4ae1-9d38-cd97c5e627d6",
+  "seq": 43,
+  "state_hash": "d5b5027249b173e839cb0789087e034d3a2de26f97b1c822d95e71887305555c",
+  "choice_id": "a001",
+  "campaign_plan": "Choose the rest and recover HP before two more ordinary fights. Avoid the optional elite at row thirteen; maintain enough life to reach the final rest and Boss.",
+  "potion_reservations": [
+    {
+      "potion_id": "BLOCK_POTION",
+      "until": "Elite",
+      "release_hp_fraction": 0.5
+    },
+    {
+      "potion_id": "POWER_POTION",
+      "until": "Elite",
+      "release_hp_fraction": 0.5
+    },
+    {
+      "potion_id": "VULNERABLE_POTION",
+      "until": "Boss",
+      "release_hp_fraction": 0.5
+    },
+    {
+      "potion_id": "ASHWATER",
+      "until": "Boss",
+      "release_hp_fraction": 0.25
+    },
+    {
+      "potion_id": "REGEN_POTION",
+      "until": "Elite",
+      "release_hp_fraction": 0.5
+    },
+    {
+      "potion_id": "FIRE_POTION",
+      "until": "Elite",
+      "release_hp_fraction": 0.5
+    },
+    {
+      "potion_id": "SNECKO_OIL",
+      "until": "Boss",
+      "release_hp_fraction": 0.25
+    }
+  ],
+  "acquire_reservation": null,
+  "transaction_steps": []
+}
