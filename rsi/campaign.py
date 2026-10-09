@@ -28,6 +28,7 @@ from .shop_review import funded_shop_exit_review
 from .resources import potion_decision
 from .multiplayer_guard import require_local_multiplayer
 from .coop_route import waiting_for_peer_route,wait_for_map_vote_ack
+from .coop_turn import wait_for_local_action
 
 
 GUIDED_COMBAT_POLICIES={'planned','triggered','retaliate','floor_guided','room_guided'}
@@ -82,8 +83,17 @@ def main():
             if room_plan:trace.write('room_plan',room_plan)
             settled_key=None
             while True:
-                if turn_key(raw) is not None and turn_key(raw)!=settled_key:
-                    raw=settle_turn(mcp,raw,trace);settled_key=turn_key(raw)
+                if a.require_local_multiplayer and turn_key(raw) is not None:
+                    raw,outcome=wait_for_local_action(
+                        mcp,raw,trace,expected_run_id=a.expected_run_id,
+                        local_player_id=local_player_id,player_count=a.expected_player_count,
+                        deadline=start+a.max_seconds,stop_file=a.stop_file)
+                    if outcome in ('budget_boundary','requested_boundary'):
+                        result['status']=outcome;break
+                    settled_key=turn_key(raw)
+                elif turn_key(raw) is not None and turn_key(raw)!=settled_key:
+                    raw=settle_turn(mcp,raw,trace)
+                    settled_key=turn_key(raw)
                 if raw.get('run_id')!=a.expected_run_id:raise RuntimeError('Game run identity changed')
                 if a.require_local_multiplayer:
                     require_local_multiplayer(raw,expected_player_count=a.expected_player_count,expected_local_id=local_player_id)
